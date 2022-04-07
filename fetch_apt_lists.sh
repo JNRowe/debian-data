@@ -31,7 +31,7 @@ for s in \
     curl -o "$p" "$u" || echo $u >>fail
 done
 
-unxz bullseye/*.xz
-bunzip2 bullseye/*.bz2
+unxz --force --verbose bullseye/*.xz
+bunzip2 --force --verbose bullseye/*.bz2
 
 find bullseye/ -size 0 -exec rm '{}' \;
