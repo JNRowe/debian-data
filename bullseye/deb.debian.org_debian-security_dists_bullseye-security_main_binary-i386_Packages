@@ -3749,6 +3749,40 @@ Filename: pool/updates/main/g/grilo/libgrilo-0.3-doc_0.3.13-1+deb11u1_all.deb
 Size: 105780
 SHA256: 0925e397ca657f6d3baa43954c084e9062599116cf94b24857c9118e54869fb4
 
+Package: gzip
+Version: 1.10-4+deb11u1
+Installed-Size: 245
+Maintainer: Milan Kupcevic <milan@debian.org>
+Architecture: i386
+Depends: dpkg (>= 1.15.4) | install-info
+Suggests: less
+Description: GNU compression utilities
+Homepage: https://www.gnu.org/software/gzip/
+Description-md5: 100720c9e2c6508f1a1f3731537b38e5
+Essential: yes
+Pre-Depends: libc6 (>= 2.28)
+Section: utils
+Priority: required
+Filename: pool/updates/main/g/gzip/gzip_1.10-4+deb11u1_i386.deb
+Size: 132868
+SHA256: 97d70ef919b682182144003d8882220aae87d129d7f0b5d3a147d8e6572ccdfd
+
+Package: gzip-win32
+Source: gzip
+Version: 1.10-4+deb11u1
+Installed-Size: 236
+Maintainer: Milan Kupcevic <milan@debian.org>
+Architecture: all
+Suggests: wine
+Description: GNU compression utility (win32 build)
+Homepage: https://www.gnu.org/software/gzip/
+Description-md5: e1c784131c15eb806040dfad0caa8369
+Section: utils
+Priority: optional
+Filename: pool/updates/main/g/gzip/gzip-win32_1.10-4+deb11u1_all.deb
+Size: 130764
+SHA256: e2845fd1aaa5b1d536ce5a2ee4ea8f02ea90a21a357588a396b9a19eaaf80523
+
 Package: libh2-java
 Source: h2database
 Version: 1.4.197-4+deb11u1
@@ -16768,6 +16802,98 @@ Priority: optional
 Filename: pool/updates/main/x/xorg-server/xwayland_1.20.11-1+deb11u1_i386.deb
 Size: 3190984
 SHA256: 9edd91e6656985e97608fb35d6bb3d602c298d71d0de38c839248534bf59cbb3
+
+Package: liblzma-dev
+Source: xz-utils
+Version: 5.2.5-2.1~deb11u1
+Installed-Size: 614
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: i386
+Depends: liblzma5 (= 5.2.5-2.1~deb11u1)
+Suggests: liblzma-doc
+Description: XZ-format compression library - development files
+Homepage: https://tukaani.org/xz/
+Description-md5: d19d3f899b3a1d8a68ae0473ad3f9283
+Multi-Arch: same
+Section: libdevel
+Priority: optional
+Filename: pool/updates/main/x/xz-utils/liblzma-dev_5.2.5-2.1~deb11u1_i386.deb
+Size: 240272
+SHA256: cacbcd5198fd45217c14ee06bc3f874c5aa8a5a22ca80e536f9439a9336468b8
+
+Package: liblzma-doc
+Source: xz-utils
+Version: 5.2.5-2.1~deb11u1
+Installed-Size: 4110
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: all
+Suggests: liblzma-dev
+Description: XZ-format compression library - API documentation
+Homepage: https://tukaani.org/xz/
+Description-md5: 69771d1d5fd604c471f896760682a908
+Section: doc
+Priority: optional
+Filename: pool/updates/main/x/xz-utils/liblzma-doc_5.2.5-2.1~deb11u1_all.deb
+Size: 374512
+SHA256: 84a453f8c0b5b3371a41fac039467cf3147445665b3009985afd7e0e08fa7ce5
+
+Package: liblzma5
+Source: xz-utils
+Version: 5.2.5-2.1~deb11u1
+Installed-Size: 292
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: i386
+Depends: libc6 (>= 2.17)
+Breaks: liblzma2 (<< 5.1.1alpha+20110809-3~)
+Description: XZ-format compression library
+Homepage: https://tukaani.org/xz/
+Description-md5: 0ceca09eb4ab99863be3578fa55e7d2b
+Multi-Arch: same
+Section: libs
+Priority: optional
+Filename: pool/updates/main/x/xz-utils/liblzma5_5.2.5-2.1~deb11u1_i386.deb
+Size: 176392
+SHA256: ce36c2f82cc4edcee8d05a150cb061b0dccb8e3feb6e36d00a3b8af89aee866b
+
+Package: xz-utils
+Version: 5.2.5-2.1~deb11u1
+Installed-Size: 622
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: i386
+Replaces: lzip (<< 1.8~rc2), xz-lzma
+Provides: lzma
+Depends: libc6 (>= 2.28), liblzma5 (>= 5.2.2)
+Conflicts: lzma (<< 9.22-1), xz-lzma
+Breaks: lzip (<< 1.8~rc2)
+Description: XZ-format compression utilities
+Homepage: https://tukaani.org/xz/
+Description-md5: ea97a558c8575aebbed2c11cbd20e0f2
+Multi-Arch: foreign
+Section: utils
+Priority: standard
+Filename: pool/updates/main/x/xz-utils/xz-utils_5.2.5-2.1~deb11u1_i386.deb
+Size: 225076
+SHA256: 29a8b32a57767bde5be4505cac84a2fd6e554f3e9fcf9a4542fa52b4fbe28b9a
+
+Package: xzdec
+Source: xz-utils
+Version: 5.2.5-2.1~deb11u1
+Installed-Size: 209
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: i386
+Replaces: xz-lzma (<< 4.999.9beta+20091004-1)
+Depends: libc6 (>= 2.4)
+Suggests: xz-utils
+Breaks: xz-lzma (<< 4.999.9beta+20091004-1)
+Description: XZ-format compression utilities - tiny decompressors
+Homepage: https://tukaani.org/xz/
+Description-md5: 30227ffce3f42144b3b624776f996bbf
+Multi-Arch: foreign
+Section: utils
+Priority: optional
+Filename: pool/updates/main/x/xz-utils/xzdec_5.2.5-2.1~deb11u1_i386.deb
+Size: 132128
+SHA256: aff24b8a4118763c5820051740c7f7592c94da7aaceb3b220db6aef89550bda7
 
 Package: lib64z1
 Source: zlib
