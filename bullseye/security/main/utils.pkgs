@@ -15,6 +15,40 @@ Filename: pool/updates/main/c/cyrus-sasl2/sasl2-bin_2.1.27+dfsg-2.1+deb11u1_i386
 Size: 164192
 SHA256: 3f8e9d32a9fb08fca2b5056236009a46a799cfe56fbb66fa32b7f390e63bb1f1
 
+Package: gzip
+Version: 1.10-4+deb11u1
+Installed-Size: 245
+Maintainer: Milan Kupcevic <milan@debian.org>
+Architecture: i386
+Depends: dpkg (>= 1.15.4) | install-info
+Suggests: less
+Description: GNU compression utilities
+Homepage: https://www.gnu.org/software/gzip/
+Description-md5: 100720c9e2c6508f1a1f3731537b38e5
+Essential: yes
+Pre-Depends: libc6 (>= 2.28)
+utils
+Priority: required
+Filename: pool/updates/main/g/gzip/gzip_1.10-4+deb11u1_i386.deb
+Size: 132868
+SHA256: 97d70ef919b682182144003d8882220aae87d129d7f0b5d3a147d8e6572ccdfd
+
+Package: gzip-win32
+Source: gzip
+Version: 1.10-4+deb11u1
+Installed-Size: 236
+Maintainer: Milan Kupcevic <milan@debian.org>
+Architecture: all
+Suggests: wine
+Description: GNU compression utility (win32 build)
+Homepage: https://www.gnu.org/software/gzip/
+Description-md5: e1c784131c15eb806040dfad0caa8369
+utils
+Priority: optional
+Filename: pool/updates/main/g/gzip/gzip-win32_1.10-4+deb11u1_all.deb
+Size: 130764
+SHA256: e2845fd1aaa5b1d536ce5a2ee4ea8f02ea90a21a357588a396b9a19eaaf80523
+
 Package: ldb-tools
 Source: ldb
 Version: 2:2.2.3-2~deb11u1
@@ -212,4 +246,44 @@ Priority: optional
 Filename: pool/updates/main/u/util-linux/uuid-runtime_2.36.1-8+deb11u1_i386.deb
 Size: 102984
 SHA256: 8ea127ce5f34c1c627589da8ac537a3a3ed5e69364d2b4587030252272f312bc
+
+Package: xz-utils
+Version: 5.2.5-2.1~deb11u1
+Installed-Size: 622
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: i386
+Replaces: lzip (<< 1.8~rc2), xz-lzma
+Provides: lzma
+Depends: libc6 (>= 2.28), liblzma5 (>= 5.2.2)
+Conflicts: lzma (<< 9.22-1), xz-lzma
+Breaks: lzip (<< 1.8~rc2)
+Description: XZ-format compression utilities
+Homepage: https://tukaani.org/xz/
+Description-md5: ea97a558c8575aebbed2c11cbd20e0f2
+Multi-Arch: foreign
+utils
+Priority: standard
+Filename: pool/updates/main/x/xz-utils/xz-utils_5.2.5-2.1~deb11u1_i386.deb
+Size: 225076
+SHA256: 29a8b32a57767bde5be4505cac84a2fd6e554f3e9fcf9a4542fa52b4fbe28b9a
+
+Package: xzdec
+Source: xz-utils
+Version: 5.2.5-2.1~deb11u1
+Installed-Size: 209
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: i386
+Replaces: xz-lzma (<< 4.999.9beta+20091004-1)
+Depends: libc6 (>= 2.4)
+Suggests: xz-utils
+Breaks: xz-lzma (<< 4.999.9beta+20091004-1)
+Description: XZ-format compression utilities - tiny decompressors
+Homepage: https://tukaani.org/xz/
+Description-md5: 30227ffce3f42144b3b624776f996bbf
+Multi-Arch: foreign
+utils
+Priority: optional
+Filename: pool/updates/main/x/xz-utils/xzdec_5.2.5-2.1~deb11u1_i386.deb
+Size: 132128
+SHA256: aff24b8a4118763c5820051740c7f7592c94da7aaceb3b220db6aef89550bda7
 
