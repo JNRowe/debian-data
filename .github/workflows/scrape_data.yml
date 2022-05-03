@@ -12,6 +12,9 @@ jobs:
     steps:
     - name: Check out this repo
       uses: actions/checkout@v2
+    - name: Set mtimes for use with fetcher
+      run: |-
+        for f in bullseye/*; do touch -d @$(git log --pretty=%at -n1 $f) $f; done
     - name: Fetch package list data
       run: |-
         ./fetch_apt_lists.sh
