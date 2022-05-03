@@ -28,7 +28,9 @@ for s in \
     debian-security/dists/bullseye-security/non-free/i18n/Translation-en.xz; do
     u=$base$s
     p=bullseye/$(echo "$u" | sed -e 's,^https://,,' -e 's,/,_,g')
-    curl -o "$p" "$u" || echo $u >>fail
+    o=$(echo "$p" | sed -e 's,\.\(bz2\|xz\)$,,')
+    [ -f "$o" ] && ref_time="$o" || ref_time="2004 Nov 13"
+    curl --time-cond "$ref_time" -o "$p" "$u"
 done
 
 unxz --force --verbose bullseye/*.xz
