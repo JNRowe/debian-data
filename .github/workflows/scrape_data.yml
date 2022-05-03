@@ -15,6 +15,13 @@ jobs:
     - name: Set mtimes for use with fetcher
       run: |-
         for f in bullseye/*; do touch -d @$(git log --pretty=%at -n1 $f) $f; done
+    - name: Cache etag data for URLs
+      uses: actions/cache@v1
+      with:
+        path: etags/
+        key: ${{ runner.OS }}-etag-cache-${{ hashFiles('fetch_apt_lists.sh') }}
+        restore-keys: |
+          ${{ runner.OS }}-etag-cache-
     - name: Fetch package list data
       run: |-
         ./fetch_apt_lists.sh
