@@ -1,10 +1,10 @@
 #! /bin/sh
 
-mkdir -p "bullseye"
+mkdir --parents "bullseye"
 
 base=https://deb.debian.org/
 
-for s in \
+for location in \
     debian/dists/bullseye/InRelease \
     debian/dists/bullseye/contrib/binary-i386/Packages.xz \
     debian/dists/bullseye/contrib/i18n/Translation-en.bz2 \
@@ -26,11 +26,11 @@ for s in \
     debian-security/dists/bullseye-security/main/i18n/Translation-en.xz \
     debian-security/dists/bullseye-security/non-free/binary-i386/Packages.xz \
     debian-security/dists/bullseye-security/non-free/i18n/Translation-en.xz; do
-    u=$base$s
-    p=bullseye/$(echo "$u" | sed -e 's,^https://,,' -e 's,/,_,g')
-    o=$(echo "$p" | sed -e 's,\.\(bz2\|xz\)$,,')
-    [ -f "$o" ] && ref_time="$o" || ref_time="2004 Nov 13"
-    curl --time-cond "$ref_time" -o "$p" "$u"
+    url=$base$location
+    filename=bullseye/$(echo "$url" | sed -e 's,^https://,,' -e 's,/,_,g')
+    output=$(echo "$filename" | sed -e 's,\.\(bz2\|xz\)$,,')
+    [ -f "$output" ] && ref_time="$output" || ref_time="2004 Nov 13"
+    curl --time-cond "$ref_time" --output "$filename" "$url"
 done
 
 unxz --force --verbose bullseye/*.xz
