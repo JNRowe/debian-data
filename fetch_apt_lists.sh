@@ -35,6 +35,7 @@ for location in \
     curl --connect-timeout 5 --max-time 30 \
         --etag-compare etags/$(basename $output) \
         --etag-save etags/$(basename $output) \
+        --verbose \
         --time-cond "$ref_time" --output "$filename" "$url"
 done
 
