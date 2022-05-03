@@ -1,6 +1,7 @@
 #! /bin/sh
 
 mkdir --parents "bullseye"
+mkdir --parents "etags"
 
 base=https://deb.debian.org/
 
@@ -32,6 +33,8 @@ for location in \
     [ -f "$output" ] && ref_time="$output" || ref_time="2004 Nov 13"
     echo "--- $url"
     curl --connect-timeout 5 --max-time 30 \
+        --etag-compare etags/$(basename $output) \
+        --etag-save etags/$(basename $output) \
         --time-cond "$ref_time" --output "$filename" "$url"
 done
 
