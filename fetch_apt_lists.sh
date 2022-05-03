@@ -31,7 +31,8 @@ for location in \
     output=$(echo "$filename" | sed -e 's,\.\(bz2\|xz\)$,,')
     [ -f "$output" ] && ref_time="$output" || ref_time="2004 Nov 13"
     echo "--- $url"
-    curl --time-cond "$ref_time" --output "$filename" "$url"
+    curl --connect-timeout 5 --max-time 30 \
+        --time-cond "$ref_time" --output "$filename" "$url"
 done
 
 unxz --force --verbose bullseye/*.xz
