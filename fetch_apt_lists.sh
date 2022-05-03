@@ -30,6 +30,7 @@ for location in \
     filename=bullseye/$(echo "$url" | sed -e 's,^https://,,' -e 's,/,_,g')
     output=$(echo "$filename" | sed -e 's,\.\(bz2\|xz\)$,,')
     [ -f "$output" ] && ref_time="$output" || ref_time="2004 Nov 13"
+    echo "--- $url"
     curl --time-cond "$ref_time" --output "$filename" "$url"
 done
 
