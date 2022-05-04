@@ -1,7 +1,7 @@
 #! /bin/sh
 
 mkdir --parents "bullseye"
-mkdir --parents "etags"
+mkdir --parents ".etags"
 
 base=https://deb.debian.org/
 
@@ -28,15 +28,26 @@ for location in \
     debian-security/dists/bullseye-security/non-free/binary-i386/Packages.xz \
     debian-security/dists/bullseye-security/non-free/i18n/Translation-en.xz; do
     url=$base$location
-    filename=bullseye/$(echo "$url" | sed -e 's,^https://,,' -e 's,/,_,g')
+    safename=$(echo "$url" | sed -e 's,^https://,,' -e 's,/,_,g')
+    filename=bullseye/$safename
     output=$(echo "$filename" | sed -e 's,\.\(bz2\|xz\)$,,')
+    etagname=.etags/$safename
     [ -f "$output" ] && ref_time="$output" || ref_time="2004 Nov 13"
+    # More recent versions of curl don't fail on missing etag file
+    [ -f "$etagname" ] && ref_etag="$etagname" || ref_etag=/dev/null
     echo "--- $url"
+    # Once a more recent version of curl is available in actions
+    # --etag-{compare,save} can return to using the same file.
     curl --connect-timeout 5 --max-time 30 \
-        --etag-compare etags/$(basename $output) \
-        --etag-save etags/$(basename $output) \
+        --etag-compare "$ref_etag" \
+        --etag-save "$etagname.tmp" \
         --verbose \
         --time-cond "$ref_time" --output "$filename" "$url"
+    if [ -s "$etagname.tmp" ]; then
+        mv "$etagname.tmp" "$etagname"
+    else
+        rm "$etagname.tmp"
+    fi
 done
 
 unxz --force --verbose bullseye/*.xz
