@@ -9517,6 +9517,23 @@ Description-en: Network Block Device protocol - server
  .
  This package provides the server binary for NBD.
 
+Package: needrestart
+Description-md5: a26ee5dd9ec37fe484bee4f1ce585d87
+Description-en: check which daemons need to be restarted after library upgrades
+ needrestart checks which daemons need to be restarted after library upgrades.
+ It is inspired by checkrestart from the debian-goodies package.
+ .
+ Features:
+  - supports (but does not require) systemd
+  - binary blacklisting (i.e. display managers)
+  - tries to detect required restarts of interpreter based daemons
+    (supports Java, Perl, Python, Ruby)
+  - tries to detect required restarts of containers (docker, LXC)
+  - tries to detect pending kernel upgrades
+  - tries to detect pending microcode upgrades for Intel CPUs
+  - could be used as nagios check_command
+  - fully integrated into apt/dpkg using hooks
+
 Package: neutron-api
 Description-md5: 68d3c6a70746a6f621a548d5d7501c84
 Description-en: OpenStack virtual network service - API service
