@@ -510,6 +510,84 @@ Filename: pool/updates/main/n/nextcloud-desktop/nextcloud-desktop-common_3.1.1-2
 Size: 355588
 SHA256: a992007b29b5c4c049a0bdd900e9e54126e4818d2147dfea94bee1a5272512cf
 
+Package: ldap-utils
+Source: openldap
+Version: 2.4.57+dfsg-3+deb11u1
+Installed-Size: 751
+Maintainer: Debian OpenLDAP Maintainers <pkg-openldap-devel@lists.alioth.debian.org>
+Architecture: i386
+Replaces: openldap-utils, openldapd, slapd (<< 2.2.23-0.pre6)
+Provides: ldap-client, openldap-utils
+Depends: libc6 (>= 2.7), libldap-2.4-2 (= 2.4.57+dfsg-3+deb11u1), libsasl2-2 (>= 2.1.27+dfsg)
+Suggests: libsasl2-modules, libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal
+Conflicts: ldap-client, openldap-utils, umich-ldap-utils
+Description: OpenLDAP utilities
+Homepage: https://www.openldap.org/
+Description-md5: f5d300156245ae8fa5972cf30bf60206
+net
+Priority: optional
+Filename: pool/updates/main/o/openldap/ldap-utils_2.4.57+dfsg-3+deb11u1_i386.deb
+Size: 203420
+SHA256: 1575165cf94a318c5064b14aad53a482548963f458dbbf99e996b084d4200f30
+
+Package: slapd
+Source: openldap
+Version: 2.4.57+dfsg-3+deb11u1
+Installed-Size: 4733
+Maintainer: Debian OpenLDAP Maintainers <pkg-openldap-devel@lists.alioth.debian.org>
+Architecture: i386
+Replaces: ldap-utils (<< 2.2.23-3), libldap2
+Provides: ldap-server, libslapi-2.4-2
+Depends: libc6 (>= 2.28), libcrypt1 (>= 1:4.1.0), libdb5.3, libldap-2.4-2 (= 2.4.57+dfsg-3+deb11u1), libltdl7 (>= 2.4.6), libodbc1 (>= 2.3.1), libperl5.32 (>= 5.32.0~rc1), libsasl2-2 (>= 2.1.27+dfsg), libwrap0 (>= 7.6-4~), coreutils (>= 4.5.1-1), psmisc, perl:any (>> 5.8.0) | libmime-base64-perl, adduser, lsb-base (>= 3.2-13), perl:any
+Suggests: libsasl2-modules, libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal
+Conflicts: ldap-server, libltdl3 (= 1.5.4-1), umich-ldapd
+Description: OpenLDAP server (slapd)
+Homepage: https://www.openldap.org/
+Description-md5: dd977840e276b3f03520c0ab1d050cf8
+Pre-Depends: debconf (>= 0.5) | debconf-2.0
+Recommends: ldap-utils
+net
+Priority: optional
+Filename: pool/updates/main/o/openldap/slapd_2.4.57+dfsg-3+deb11u1_i386.deb
+Size: 1517040
+SHA256: 952fd1decb4ddcab39c243dda69b10aab2540af5227cbede77aca7a79699689d
+
+Package: slapd-contrib
+Source: openldap
+Version: 2.4.57+dfsg-3+deb11u1
+Installed-Size: 225
+Maintainer: Debian OpenLDAP Maintainers <pkg-openldap-devel@lists.alioth.debian.org>
+Architecture: i386
+Replaces: slapd-smbk5pwd (<< 2.4.47+dfsg-2~)
+Provides: slapd-smbk5pwd
+Depends: slapd (= 2.4.57+dfsg-3+deb11u1), libargon2-1 (>= 0~20171227), libc6 (>= 2.8), libkadm5srv8-heimdal (>= 1.4.0+git20110226), libkrb5-26-heimdal (>= 1.4.0+git20110226), libldap-2.4-2 (>= 2.4.7), libnettle8
+Breaks: slapd-smbk5pwd (<< 2.4.47+dfsg-2~)
+Description: contributed plugins for OpenLDAP slapd
+Homepage: https://www.openldap.org/
+Description-md5: ff6e572efbbb94ce9953af67807dabd9
+net
+Priority: optional
+Filename: pool/updates/main/o/openldap/slapd-contrib_2.4.57+dfsg-3+deb11u1_i386.deb
+Size: 109860
+SHA256: db12812cafd73b24f762a62bc6e5ffcd56336ef06291602e65dbb044bb4b264a
+
+Package: slapd-smbk5pwd
+Source: openldap
+Version: 2.4.57+dfsg-3+deb11u1
+Installed-Size: 106
+Maintainer: Debian OpenLDAP Maintainers <pkg-openldap-devel@lists.alioth.debian.org>
+Architecture: all
+Depends: slapd-contrib
+Breaks: slapd (<< 2.4.47+dfsg-2~)
+Description: transitional package for slapd-contrib
+Homepage: https://www.openldap.org/
+Description-md5: c3ad6e9af00b91f4237f7de732bf9c27
+net
+Priority: optional
+Filename: pool/updates/main/o/openldap/slapd-smbk5pwd_2.4.57+dfsg-3+deb11u1_all.deb
+Size: 88740
+SHA256: bec0ee81a3749ecdea0e6a1747c0a47e01a5caed09584127185da68ac05d5549
+
 Package: prosody
 Version: 0.11.9-2+deb11u2
 Installed-Size: 1648
