@@ -123,6 +123,157 @@ Filename: pool/updates/main/c/cfrpki/octorpki_1.4.2-1~deb11u1_i386.deb
 Size: 2795256
 SHA256: 9665339a5eb84490936e6814b44cdb6c3c2bfae41d34056e5a80b352b764b23f
 
+Package: cups
+Version: 2.3.3op2-3+deb11u2
+Installed-Size: 1187
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: i386
+Depends: cups-client (>= 2.3.3op2-3+deb11u2), cups-common (>= 2.3.3op2-3+deb11u2), cups-core-drivers (>= 2.3.3op2-3+deb11u2), cups-daemon (>= 2.3.3op2-3+deb11u2), cups-filters, cups-ppdc, cups-server-common (>= 2.3.3op2-3+deb11u2), debconf (>= 0.5) | debconf-2.0, ghostscript, libcups2 (= 2.3.3op2-3+deb11u2), poppler-utils, procps, libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libc6 (>= 2.28), libgcc-s1 (>= 3.0), libstdc++6 (>= 5), libusb-1.0-0 (>= 2:1.0.16)
+Suggests: cups-bsd, cups-pdf, foomatic-db-compressed-ppds | foomatic-db, smbclient, udev
+Description: Common UNIX Printing System(tm) - PPD/driver support, web interface
+Homepage: https://github.com/OpenPrinting/cups/
+Description-md5: 757338adad655b8f7da62fcd23ed6453
+Multi-Arch: foreign
+Recommends: avahi-daemon, colord
+net
+Priority: optional
+Filename: pool/updates/main/c/cups/cups_2.3.3op2-3+deb11u2_i386.deb
+Size: 388908
+SHA256: 7e85fdbcac7dd7f15875aba011f28fefd543824232409e6820fb23fb343a9d1b
+
+Package: cups-bsd
+Source: cups
+Version: 2.3.3op2-3+deb11u2
+Installed-Size: 118
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: i386
+Replaces: lpr
+Provides: lpr
+Depends: cups-client (= 2.3.3op2-3+deb11u2), cups-common (>= 2.3.3op2-3+deb11u2), debconf (>= 0.5) | debconf-2.0, libcups2 (= 2.3.3op2-3+deb11u2), libc6 (>= 2.4)
+Suggests: cups, inetutils-inetd | inet-superserver, update-inetd
+Conflicts: lpr, lprng
+Description: Common UNIX Printing System(tm) - BSD commands
+Homepage: https://github.com/OpenPrinting/cups/
+Description-md5: 8ca999eda442e2096dafa2745e4db8de
+Multi-Arch: foreign
+net
+Priority: optional
+Filename: pool/updates/main/c/cups/cups-bsd_2.3.3op2-3+deb11u2_i386.deb
+Size: 35572
+SHA256: cc71306e8d7ed5f8ee8b9c9811a6acdb45e289ef141389bdcf526a62670f13e9
+
+Package: cups-client
+Source: cups
+Version: 2.3.3op2-3+deb11u2
+Installed-Size: 483
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: i386
+Depends: adduser, cups-common (>= 2.3.3op2-3+deb11u2), libcups2 (= 2.3.3op2-3+deb11u2), libc6 (>= 2.7)
+Suggests: cups, cups-bsd, smbclient
+Conflicts: lprng
+Description: Common UNIX Printing System(tm) - client programs (SysV)
+Homepage: https://github.com/OpenPrinting/cups/
+Description-md5: 49064ce8151bc5cfbb65936322a4e2ce
+Multi-Arch: foreign
+net
+Priority: optional
+Filename: pool/updates/main/c/cups/cups-client_2.3.3op2-3+deb11u2_i386.deb
+Size: 242308
+SHA256: 5c6c22201859e011d2d5669ad543cf0e7ad5455c683300907c273002a061fd7d
+
+Package: cups-common
+Source: cups
+Version: 2.3.3op2-3+deb11u2
+Installed-Size: 3857
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: all
+Description: Common UNIX Printing System(tm) - common files
+Homepage: https://github.com/OpenPrinting/cups/
+Description-md5: ae28e55960aa62a85c88769b70d73eaa
+Multi-Arch: foreign
+net
+Priority: optional
+Filename: pool/updates/main/c/cups/cups-common_2.3.3op2-3+deb11u2_all.deb
+Size: 313504
+SHA256: 059de9307d51dbf08aebaf850fd273016d6859b6938921fab07dbbb0536b238e
+
+Package: cups-core-drivers
+Source: cups
+Version: 2.3.3op2-3+deb11u2
+Installed-Size: 226
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: i386
+Replaces: cups-server-common (<< 2.1.0-7~)
+Depends: cups-daemon (>= 2.3.3op2-3+deb11u2), cups-filters-core-drivers, libcups2 (= 2.3.3op2-3+deb11u2), libc6 (>= 2.7)
+Breaks: cups-server-common (<< 2.1.0-7~)
+Description: Common UNIX Printing System(tm) - driverless printing
+Homepage: https://github.com/OpenPrinting/cups/
+Description-md5: 4f9e3623496bd3c54084d9d6fbddff87
+Multi-Arch: foreign
+Recommends: avahi-daemon
+net
+Priority: optional
+Filename: pool/updates/main/c/cups/cups-core-drivers_2.3.3op2-3+deb11u2_i386.deb
+Size: 147000
+SHA256: 2bafaa6e2d8d32da3b19a7ebf0a2ef120b907f97b9d6268055220d1cad01e061
+
+Package: cups-daemon
+Source: cups
+Version: 2.3.3op2-3+deb11u2
+Installed-Size: 1022
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: i386
+Replaces: cups (<< 2.1.0-6~)
+Depends: adduser, bc, libcups2 (= 2.3.3op2-3+deb11u2), lsb-base, procps, ssl-cert, libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libc6 (>= 2.28), libdbus-1-3 (>= 1.9.14), libgssapi-krb5-2 (>= 1.17), libpam0g (>= 0.99.7.1), libpaper1, libsystemd0
+Suggests: cups, cups-bsd, cups-client (>= 2.3.3op2-3+deb11u2), cups-common (>= 2.3.3op2-3+deb11u2), cups-filters, cups-pdf, cups-ppdc, cups-server-common (>= 2.3.3op2-3+deb11u2), foomatic-db-compressed-ppds | foomatic-db, ghostscript, poppler-utils, smbclient, udev
+Breaks: cups (<< 2.1.0-6~)
+Description: Common UNIX Printing System(tm) - daemon
+Homepage: https://github.com/OpenPrinting/cups/
+Description-md5: 559bf8b849cd67e4ad13a2a638aea615
+Multi-Arch: foreign
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: avahi-daemon, colord, cups-browsed, ipp-usb
+net
+Priority: optional
+Filename: pool/updates/main/c/cups/cups-daemon_2.3.3op2-3+deb11u2_i386.deb
+Size: 444344
+SHA256: cf9edc06b40e43620833e704848546dc34fa3ae4778da573cf458b2e814cf308
+
+Package: cups-ipp-utils
+Source: cups
+Version: 2.3.3op2-3+deb11u2
+Installed-Size: 997
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: i386
+Replaces: cups-client (<< 2.0.3-2~)
+Depends: libcups2 (= 2.3.3op2-3+deb11u2), libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libc6 (>= 2.7), libpam0g (>= 0.99.7.1)
+Breaks: cups-client (<< 2.0.3-2~)
+Description: Common UNIX Printing System(tm) - IPP developer/admin utilities
+Homepage: https://github.com/OpenPrinting/cups/
+Description-md5: fc53f48bcd5c06c739e45e5b8b3087d2
+Multi-Arch: foreign
+net
+Priority: optional
+Filename: pool/updates/main/c/cups/cups-ipp-utils_2.3.3op2-3+deb11u2_i386.deb
+Size: 296500
+SHA256: 2a0b2cea565b67c511d1441eccd4f8a0fc6206949a46bae4a6f7e0dc581229b1
+
+Package: cups-server-common
+Source: cups
+Version: 2.3.3op2-3+deb11u2
+Installed-Size: 2403
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: all
+Description: Common UNIX Printing System(tm) - server common files
+Homepage: https://github.com/OpenPrinting/cups/
+Description-md5: 78d6321e2b482147d6a44eac119c72bc
+Multi-Arch: foreign
+net
+Priority: optional
+Filename: pool/updates/main/c/cups/cups-server-common_2.3.3op2-3+deb11u2_all.deb
+Size: 519500
+SHA256: abb1e40f2e0eecfa306b303eab446f4627a80722e7f1cf463513696aa6d6ac8f
+
 Package: fort-validator
 Version: 1.5.3-1~deb11u1
 Installed-Size: 620
