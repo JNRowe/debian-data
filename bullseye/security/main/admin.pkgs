@@ -387,6 +387,209 @@ Filename: pool/updates/main/p/policykit-1/policykit-1_0.105-31+deb11u1_i386.deb
 Size: 101840
 SHA256: 44e5f6b3f704fdfec0557806abe96ea907f3a6edbab9a2c0580e142c63c797fb
 
+Package: rsyslog
+Version: 8.2102.0-2+deb11u1
+Installed-Size: 1948
+Maintainer: Michael Biebl <biebl@debian.org>
+Architecture: i386
+Provides: linux-kernel-log-daemon, system-log-daemon
+Depends: libc6 (>= 2.28), libestr0 (>= 0.1.4), libfastjson4 (>= 0.99.8), liblognorm5 (>= 2.0.3), libsystemd0 (>= 246), libuuid1 (>= 2.16), zlib1g (>= 1:1.1.4)
+Suggests: rsyslog-mysql | rsyslog-pgsql, rsyslog-mongodb, rsyslog-doc, rsyslog-openssl | rsyslog-gnutls, rsyslog-gssapi, rsyslog-relp
+Conflicts: linux-kernel-log-daemon, system-log-daemon
+Description: reliable system and kernel logging daemon
+Homepage: https://www.rsyslog.com/
+Description-md5: c25fbd9bcc88ab95bcc33eea4228fd42
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: logrotate
+admin
+Priority: important
+Filename: pool/updates/main/r/rsyslog/rsyslog_8.2102.0-2+deb11u1_i386.deb
+Size: 741996
+SHA256: a2acd92d396028d76e2ad0331c55748f2349aa94fd73eaf9d20183ca83225856
+
+Package: rsyslog-czmq
+Source: rsyslog
+Version: 8.2102.0-2+deb11u1
+Installed-Size: 332
+Maintainer: Michael Biebl <biebl@debian.org>
+Architecture: i386
+Depends: libc6 (>= 2.4), libczmq4 (>= 4.0.0), rsyslog (= 8.2102.0-2+deb11u1)
+Description: ZeroMQ protocol support for rsyslog via CZMQ
+Homepage: https://www.rsyslog.com/
+Description-md5: f3d9c0df73b612d8d59df64eb6f1efa3
+admin
+Priority: optional
+Filename: pool/updates/main/r/rsyslog/rsyslog-czmq_8.2102.0-2+deb11u1_i386.deb
+Size: 287400
+SHA256: cede93222768718c0f3913c192204d0e8d6f9629659f7d8f3da3fb44545fb739
+
+Package: rsyslog-elasticsearch
+Source: rsyslog
+Version: 8.2102.0-2+deb11u1
+Installed-Size: 335
+Maintainer: Michael Biebl <biebl@debian.org>
+Architecture: i386
+Depends: libc6 (>= 2.4), libcurl3-gnutls (>= 7.16.2), rsyslog (= 8.2102.0-2+deb11u1)
+Description: Elasticsearch output plugin for rsyslog
+Homepage: https://www.rsyslog.com/
+Description-md5: 70ea8e4a3fd075407bd491943fb8aa9f
+admin
+Priority: optional
+Filename: pool/updates/main/r/rsyslog/rsyslog-elasticsearch_8.2102.0-2+deb11u1_i386.deb
+Size: 292368
+SHA256: 5a0aadf97ae742fbed9e2ba562baeb94caccbc73a86d3b959ac7376bc337b343
+
+Package: rsyslog-gnutls
+Source: rsyslog
+Version: 8.2102.0-2+deb11u1
+Installed-Size: 327
+Maintainer: Michael Biebl <biebl@debian.org>
+Architecture: i386
+Depends: libc6 (>= 2.4), libgnutls30 (>= 3.7.0), rsyslog (= 8.2102.0-2+deb11u1)
+Suggests: gnutls-bin
+Description: TLS protocol support for rsyslog (GnuTLS)
+Homepage: https://www.rsyslog.com/
+Description-md5: 265225b5dc73eb3f29a762b048053702
+admin
+Priority: optional
+Filename: pool/updates/main/r/rsyslog/rsyslog-gnutls_8.2102.0-2+deb11u1_i386.deb
+Size: 290384
+SHA256: 5b3c67402010566266fdf7a46dadc6b40ac1de23fe3fde79b4e15aa46b1c48ff
+
+Package: rsyslog-gssapi
+Source: rsyslog
+Version: 8.2102.0-2+deb11u1
+Installed-Size: 339
+Maintainer: Michael Biebl <biebl@debian.org>
+Architecture: i386
+Depends: libc6 (>= 2.15), libgssapi-krb5-2 (>= 1.17), rsyslog (= 8.2102.0-2+deb11u1)
+Suggests: krb5-user
+Description: GSSAPI authentication and encryption support for rsyslog
+Homepage: https://www.rsyslog.com/
+Description-md5: 79a6e301e123c9629e0c4e9aaa191cae
+admin
+Priority: optional
+Filename: pool/updates/main/r/rsyslog/rsyslog-gssapi_8.2102.0-2+deb11u1_i386.deb
+Size: 288996
+SHA256: 4c239ece0ff1dd28de5c49c4c0b2e66ea02204cb7be9194ce599723dbf8b4da6
+
+Package: rsyslog-hiredis
+Source: rsyslog
+Version: 8.2102.0-2+deb11u1
+Installed-Size: 298
+Maintainer: Michael Biebl <biebl@debian.org>
+Architecture: i386
+Depends: libc6 (>= 2.4), libhiredis0.14 (>= 0.14.0), rsyslog (= 8.2102.0-2+deb11u1)
+Description: Redis output plugin for rsyslog
+Homepage: https://www.rsyslog.com/
+Description-md5: 25985930fefb6abfae5747e162ad10e3
+admin
+Priority: optional
+Filename: pool/updates/main/r/rsyslog/rsyslog-hiredis_8.2102.0-2+deb11u1_i386.deb
+Size: 280136
+SHA256: 41db1fe9684be6e0c46832541f667f7b75a981d820bc85550c4b01d0b5fcdf44
+
+Package: rsyslog-kafka
+Source: rsyslog
+Version: 8.2102.0-2+deb11u1
+Installed-Size: 360
+Maintainer: Michael Biebl <biebl@debian.org>
+Architecture: i386
+Depends: libc6 (>= 2.4), librdkafka1 (>= 1.5.0), rsyslog (= 8.2102.0-2+deb11u1)
+Description: Apache Kafka support for rsyslog
+Homepage: https://www.rsyslog.com/
+Description-md5: 859920336ebf2f34ddfcd5786e12aede
+admin
+Priority: optional
+Filename: pool/updates/main/r/rsyslog/rsyslog-kafka_8.2102.0-2+deb11u1_i386.deb
+Size: 298940
+SHA256: 0bf414ced112e883284bea12763b7c86ae7101a20487bb7b0a1778c5391266a5
+
+Package: rsyslog-mongodb
+Source: rsyslog
+Version: 8.2102.0-2+deb11u1
+Installed-Size: 308
+Maintainer: Michael Biebl <biebl@debian.org>
+Architecture: i386
+Depends: libbson-1.0-0 (>= 1.17.6), libc6 (>= 2.4), libmongoc-1.0-0 (>= 1.17.6), rsyslog (= 8.2102.0-2+deb11u1)
+Description: MongoDB output plugin for rsyslog
+Homepage: https://www.rsyslog.com/
+Description-md5: fccd547ba5d35ccbc2019238e7a767f9
+Recommends: mongodb-server
+admin
+Priority: optional
+Filename: pool/updates/main/r/rsyslog/rsyslog-mongodb_8.2102.0-2+deb11u1_i386.deb
+Size: 283848
+SHA256: ce09ce86a76608a2a60206a9f4a738e06ef9f807cdb730a6c90bf9e418bba7e9
+
+Package: rsyslog-mysql
+Source: rsyslog
+Version: 8.2102.0-2+deb11u1
+Installed-Size: 316
+Maintainer: Michael Biebl <biebl@debian.org>
+Architecture: i386
+Depends: libc6 (>= 2.4), libmariadb3 (>= 3.0.0), debconf (>= 0.5) | debconf-2.0, rsyslog (= 8.2102.0-2+deb11u1), dbconfig-common, ucf
+Suggests: default-mysql-server | virtual-mysql-server
+Description: MySQL output plugin for rsyslog
+Homepage: https://www.rsyslog.com/
+Description-md5: 73513767b35f7839dfc63fc06366fcb0
+Recommends: default-mysql-client | virtual-mysql-client
+admin
+Priority: optional
+Filename: pool/updates/main/r/rsyslog/rsyslog-mysql_8.2102.0-2+deb11u1_i386.deb
+Size: 283096
+SHA256: 0b13935e7b1b66fb5540e32747269cb3a815d101169e7c4e66e6e7dc92222599
+
+Package: rsyslog-openssl
+Source: rsyslog
+Version: 8.2102.0-2+deb11u1
+Installed-Size: 331
+Maintainer: Michael Biebl <biebl@debian.org>
+Architecture: i386
+Depends: libc6 (>= 2.4), libssl1.1 (>= 1.1.0), rsyslog (= 8.2102.0-2+deb11u1)
+Description: TLS protocol support for rsyslog (OpenSSL)
+Homepage: https://www.rsyslog.com/
+Description-md5: f4d05e7ef47ce2ae73ddcbed5a958267
+admin
+Priority: optional
+Filename: pool/updates/main/r/rsyslog/rsyslog-openssl_8.2102.0-2+deb11u1_i386.deb
+Size: 290640
+SHA256: 62b7c6d9148c4dd8a5ea849408a2cb6fb0bb03cbda299659d1c6190be5a1360f
+
+Package: rsyslog-pgsql
+Source: rsyslog
+Version: 8.2102.0-2+deb11u1
+Installed-Size: 311
+Maintainer: Michael Biebl <biebl@debian.org>
+Architecture: i386
+Depends: libc6 (>= 2.4), libpq5, debconf (>= 0.5) | debconf-2.0, rsyslog (= 8.2102.0-2+deb11u1), dbconfig-common, ucf
+Suggests: postgresql
+Description: PostgreSQL output plugin for rsyslog
+Homepage: https://www.rsyslog.com/
+Description-md5: 1d2cf23cdf0c487b7ba6462ff29414d9
+Recommends: postgresql-client
+admin
+Priority: optional
+Filename: pool/updates/main/r/rsyslog/rsyslog-pgsql_8.2102.0-2+deb11u1_i386.deb
+Size: 282212
+SHA256: 52e2f41f3dddf78dd65937469044f74cdddaff0bfc0de04680a1073e2b3f712d
+
+Package: rsyslog-relp
+Source: rsyslog
+Version: 8.2102.0-2+deb11u1
+Installed-Size: 337
+Maintainer: Michael Biebl <biebl@debian.org>
+Architecture: i386
+Depends: libc6 (>= 2.4), librelp0 (>= 1.5.0), rsyslog (= 8.2102.0-2+deb11u1)
+Description: RELP protocol support for rsyslog
+Homepage: https://www.rsyslog.com/
+Description-md5: 16c1db74c009634d13e59cd2b9fd25e9
+admin
+Priority: optional
+Filename: pool/updates/main/r/rsyslog/rsyslog-relp_8.2102.0-2+deb11u1_i386.deb
+Size: 289924
+SHA256: 4207f537c35192c172b16a3cee3172312c8411990a35e512cca361a44d0d0615
+
 Package: salt-api
 Source: salt
 Version: 3002.6+dfsg1-4+deb11u1
