@@ -18533,6 +18533,116 @@ Filename: pool/updates/main/s/squashfs-tools/squashfs-tools_4.4-2+deb11u2_i386.d
 Size: 149508
 SHA256: f6258b443a686325b4a254ace61bf0a5208bfa0036d0662df2f36b74f2ad61d9
 
+Package: squid
+Version: 4.13-10+deb11u1
+Installed-Size: 8756
+Maintainer: Luigi Gangitano <luigi@debian.org>
+Architecture: i386
+Provides: squid3
+Depends: libc6 (>= 2.29), libcap2 (>= 1:2.10), libcom-err2 (>= 1.43.9), libcrypt1 (>= 1:4.1.0), libdb5.3, libecap3 (>= 1.0.1), libexpat1 (>= 2.0.1), libgcc-s1 (>= 4.2), libgnutls30 (>= 3.7.0), libgssapi-krb5-2 (>= 1.17), libkrb5-3 (>= 1.10+dfsg~), libldap-2.4-2 (>= 2.4.7), libltdl7 (>= 2.4.6), libnetfilter-conntrack3 (>= 1.0.1), libnettle8, libnsl2 (>= 1.0), libpam0g (>= 0.99.7.1), libsasl2-2 (>= 2.1.27+dfsg), libstdc++6 (>= 9), libsystemd0, libxml2 (>= 2.7.4), netbase, logrotate (>= 3.5.4-1), squid-common (>= 4.13-10+deb11u1), lsb-base, libdbi-perl
+Suggests: squidclient, squid-cgi, squid-purge, resolvconf (>= 0.40), smbclient, ufw, winbind, apparmor
+Conflicts: squid-openssl
+Description: Full featured Web Proxy cache (HTTP proxy GnuTLS flavour)
+Homepage: http://www.squid-cache.org
+Description-md5: b87c39c34d2257909d3430ecc70c8bfb
+Pre-Depends: init-system-helpers (>= 1.54~), adduser
+Recommends: libcap2-bin, ca-certificates
+Section: web
+Priority: optional
+Filename: pool/updates/main/s/squid/squid_4.13-10+deb11u1_i386.deb
+Size: 2728880
+SHA256: ce5d411f3c4ff7c7f7119e7b7b940cc26065b7f00442233f572aef4d218812d6
+
+Package: squid-cgi
+Source: squid
+Version: 4.13-10+deb11u1
+Installed-Size: 311
+Maintainer: Luigi Gangitano <luigi@debian.org>
+Architecture: i386
+Provides: squid3-cgi
+Depends: apache2 | httpd, libc6 (>= 2.7), libgcc-s1 (>= 3.0), libnettle8, libstdc++6 (>= 5.2)
+Description: Full featured Web Proxy cache (HTTP proxy) - control CGI
+Homepage: http://www.squid-cache.org
+Description-md5: d0bf1074b507dacb37098691582296d3
+Section: web
+Priority: optional
+Filename: pool/updates/main/s/squid/squid-cgi_4.13-10+deb11u1_i386.deb
+Size: 171488
+SHA256: 25f43059a9649e368b8fc2e38a15ba70d953cdec5fb320943013ef00237100b1
+
+Package: squid-common
+Source: squid
+Version: 4.13-10+deb11u1
+Installed-Size: 479
+Maintainer: Luigi Gangitano <luigi@debian.org>
+Architecture: all
+Provides: squid3-common
+Depends: squid-langpack (>= 20110214-1)
+Description: Full featured Web Proxy cache (HTTP proxy) - common files
+Homepage: http://www.squid-cache.org
+Description-md5: 43efb35ce395950e104ddfef1cb50d1c
+Multi-Arch: foreign
+Section: web
+Priority: optional
+Filename: pool/updates/main/s/squid/squid-common_4.13-10+deb11u1_all.deb
+Size: 314620
+SHA256: 63d7c7be6ed798f7553595b629d6c4c10bd0a8113add8a8cc78fb2500daa3bdf
+
+Package: squid-openssl
+Source: squid
+Version: 4.13-10+deb11u1
+Installed-Size: 9293
+Maintainer: Luigi Gangitano <luigi@debian.org>
+Architecture: i386
+Provides: squid3
+Depends: libc6 (>= 2.29), libcap2 (>= 1:2.10), libcom-err2 (>= 1.43.9), libcrypt1 (>= 1:4.1.0), libdb5.3, libecap3 (>= 1.0.1), libexpat1 (>= 2.0.1), libgcc-s1 (>= 4.2), libgssapi-krb5-2 (>= 1.17), libkrb5-3 (>= 1.10+dfsg~), libldap-2.4-2 (>= 2.4.7), libltdl7 (>= 2.4.6), libnetfilter-conntrack3 (>= 1.0.1), libnettle8, libnsl2 (>= 1.0), libpam0g (>= 0.99.7.1), libsasl2-2 (>= 2.1.27+dfsg), libssl1.1 (>= 1.1.0), libstdc++6 (>= 9), libsystemd0, libxml2 (>= 2.7.4), netbase, logrotate (>= 3.5.4-1), squid-common (>= 4.13-10+deb11u1), lsb-base, libdbi-perl
+Suggests: squidclient, squid-cgi, squid-purge, resolvconf (>= 0.40), smbclient, ufw, winbind, apparmor
+Conflicts: squid
+Description: Full featured Web Proxy cache (HTTP proxy OpenSSL flavour)
+Homepage: http://www.squid-cache.org
+Description-md5: 5bf29475ec87cc2bfc40e9d99f9a2d6f
+Pre-Depends: init-system-helpers (>= 1.54~), adduser
+Recommends: libcap2-bin, ca-certificates
+Section: web
+Priority: optional
+Filename: pool/updates/main/s/squid/squid-openssl_4.13-10+deb11u1_i386.deb
+Size: 2897828
+SHA256: ab9203758fa575f053f4f14ddcce3507bf24f1f5c58003f23fa755d1eec9fb7e
+
+Package: squid-purge
+Source: squid
+Version: 4.13-10+deb11u1
+Installed-Size: 273
+Maintainer: Luigi Gangitano <luigi@debian.org>
+Architecture: i386
+Depends: libc6 (>= 2.4), libgcc-s1 (>= 3.0), libstdc++6 (>= 5)
+Description: Full featured Web Proxy cache (HTTP proxy) - cache management utility
+Homepage: http://www.squid-cache.org
+Description-md5: 6b0c45a8b98e5c8365894c6c648205d7
+Section: web
+Priority: optional
+Filename: pool/updates/main/s/squid/squid-purge_4.13-10+deb11u1_i386.deb
+Size: 161028
+SHA256: 41291aed1a40e885c39da7bace4d6647af4db67faf63e386aeeb1610634091a8
+
+Package: squidclient
+Source: squid
+Version: 4.13-10+deb11u1
+Installed-Size: 315
+Maintainer: Luigi Gangitano <luigi@debian.org>
+Architecture: i386
+Provides: squid3-client
+Depends: libc6 (>= 2.7), libgcc-s1 (>= 3.0), libgnutls30 (>= 3.7.0), libgssapi-krb5-2 (>= 1.17), libnettle8, libstdc++6 (>= 9)
+Description: Full featured Web Proxy cache (HTTP proxy) - HTTP(S) message utility
+Homepage: http://www.squid-cache.org
+Description-md5: 50857a05e6c54a91b3123291e8661995
+Recommends: ssl-cert, ca-certificates
+Section: web
+Priority: optional
+Filename: pool/updates/main/s/squid/squidclient_4.13-10+deb11u1_i386.deb
+Size: 173748
+SHA256: 114277de6005fc1fe235de28ab1ec57e2eaa09063d0c61b5e3d17ffc18e5541a
+
 Package: charon-cmd
 Source: strongswan
 Version: 5.9.1-1+deb11u2
