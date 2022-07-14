@@ -17486,6 +17486,156 @@ Filename: pool/updates/main/r/redis/redis-tools_6.0.16-1+deb11u2_i386.deb
 Size: 788808
 SHA256: d1786fac962fafe5b3034341d126bec7a956e8979e2de4abb5687cb31d306a41
 
+Package: request-tracker4
+Version: 4.4.4+dfsg-2+deb11u2
+Installed-Size: 27272
+Maintainer: Debian Request Tracker Group <pkg-request-tracker-maintainers@lists.alioth.debian.org>
+Architecture: all
+Replaces: rt4-extension-assettracker, rt4-extension-authenexternalauth, rt4-extension-sla, rt4-extension-spawnlinkedticketinqueue
+Depends: perl:any, debconf (>= 0.5) | debconf-2.0, rt4-clients (= 4.4.4+dfsg-2+deb11u2), rt4-standalone (= 4.4.4+dfsg-2+deb11u2) | rt4-apache2 (= 4.4.4+dfsg-2+deb11u2) | rt4-fcgi (= 4.4.4+dfsg-2+deb11u2), rt4-db-sqlite (= 4.4.4+dfsg-2+deb11u2) | rt4-db-postgresql (= 4.4.4+dfsg-2+deb11u2) | rt4-db-mysql (= 4.4.4+dfsg-2+deb11u2), dbconfig-common | dbconfig-no-thanks, default-mta | mail-transport-agent, fonts-droid-fallback, fonts-noto-hinted, libapache-session-perl, libbusiness-hours-perl, libcgi-emulate-psgi-perl, libcgi-pm-perl, libcgi-psgi-perl, libclass-accessor-perl, libclone-perl, libconvert-color-perl, libcpanel-json-xs-perl, libcrypt-eksblowfish-perl, libcrypt-x509-perl, libcss-minifier-xs-perl, libcss-squish-perl, libdata-guid-perl, libdata-ical-perl, libdata-page-pageset-perl, libdate-extract-perl, libdate-manip-perl, libdatetime-format-natural-perl, libdatetime-locale-perl (>= 1:1.02), libdatetime-perl, libdbi-perl, libdbix-searchbuilder-perl (>= 1.66), libdevel-globaldestruction-perl, libemail-address-list-perl, libemail-address-perl (>= 1.908), libfile-sharedir-perl, libfile-which-perl, libgd-graph-perl (>= 1.47), libgd-text-perl, libgnupg-interface-perl, libgraphviz-perl, libhtml-formattext-withlinks-andtables-perl, libhtml-formattext-withlinks-perl, libhtml-gumbo-perl, libhtml-mason-perl, libhtml-mason-psgihandler-perl, libhtml-quoted-perl, libhtml-rewriteattributes-perl (>= 0.05), libhtml-scrubber-perl, libhttp-message-perl, libipc-run-perl, libipc-run3-perl, libjavascript-minifier-xs-perl, libjson-perl, liblist-moreutils-perl, liblocale-maketext-fuzzy-perl, liblocale-maketext-lexicon-perl, liblog-dispatch-perl, libmailtools-perl (>= 2.12), libmime-tools-perl (>= 5.504), libmime-types-perl, libmodule-refresh-perl, libmodule-versions-report-perl, libnet-cidr-perl, libnet-ip-perl, libnet-ldap-perl, libnet-ssleay-perl, libperlio-eol-perl, libplack-perl (>= 1.0002), libpod-parser-perl, libregexp-common-net-cidr-perl, libregexp-common-perl, libregexp-ipv6-perl, librole-basic-perl, libscope-upper-perl, libstring-shellquote-perl, libsymbol-global-name-perl, libtext-autoformat-perl, libtext-password-pronounceable-perl, libtext-quoted-perl (>= 2.07), libtext-template-perl, libtext-wikiformat-perl, libtext-wrapper-perl, libtime-parsedate-perl, libtimedate-perl, libtree-simple-perl, libuniversal-require-perl, liburi-perl, libwww-perl, libxml-rss-perl, libxml-simple-perl, lsb-base, libencode-perl (>= 2.64), ucf, perl-doc
+Suggests: rt4-doc-html
+Conflicts: rt4-extension-assettracker, rt4-extension-authenexternalauth, rt4-extension-sla, rt4-extension-spawnlinkedticketinqueue
+Description: extensible trouble-ticket tracking system
+Homepage: https://bestpractical.com/rt/
+Description-md5: 8875ccade9d644e4c45bdd5dc45c475f
+Recommends: cron-daemon, libfile-dropbox-perl, libhtml-formatexternal-perl, libnet-amazon-s3-perl, w3m, rsyslog | system-log-daemon
+Section: misc
+Priority: optional
+Filename: pool/updates/main/r/request-tracker4/request-tracker4_4.4.4+dfsg-2+deb11u2_all.deb
+Size: 4856032
+SHA256: 4d89b618a56f3511891b4ab154d0ccf02895cbf594b18cb48ac7db28815dbb28
+
+Package: rt4-apache2
+Source: request-tracker4
+Version: 4.4.4+dfsg-2+deb11u2
+Installed-Size: 53
+Maintainer: Debian Request Tracker Group <pkg-request-tracker-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: apache2, libapache2-mod-fcgid | libapache2-mod-perl2
+Description: Apache 2 specific files for request-tracker4
+Homepage: https://bestpractical.com/rt/
+Description-md5: 50bf51c0ec829a522b9884787a763b28
+Section: misc
+Priority: optional
+Filename: pool/updates/main/r/request-tracker4/rt4-apache2_4.4.4+dfsg-2+deb11u2_all.deb
+Size: 23024
+SHA256: 4a1dd6181413c87176cb158901da643ab5606d88d7e51e379715944a59fbe5e5
+
+Package: rt4-clients
+Source: request-tracker4
+Version: 4.4.4+dfsg-2+deb11u2
+Installed-Size: 158
+Maintainer: Debian Request Tracker Group <pkg-request-tracker-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: perl:any, default-mta | mail-transport-agent, libterm-readkey-perl, libterm-readline-perl-perl | libterm-readline-gnu-perl, libwww-perl
+Description: mail gateway and command-line interface to request-tracker4
+Homepage: https://bestpractical.com/rt/
+Description-md5: 7e53f5d4242d4eb62d464a18be5036db
+Recommends: libio-socket-ssl-perl
+Section: misc
+Priority: optional
+Filename: pool/updates/main/r/request-tracker4/rt4-clients_4.4.4+dfsg-2+deb11u2_all.deb
+Size: 55448
+SHA256: abe4221e98c13b7dd028643af1050f5073defecc9259d43e3776f54a5ff05d7c
+
+Package: rt4-db-mysql
+Source: request-tracker4
+Version: 4.4.4+dfsg-2+deb11u2
+Installed-Size: 49
+Maintainer: Debian Request Tracker Group <pkg-request-tracker-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: debconf (>= 0.5) | debconf-2.0, default-mysql-client | virtual-mysql-client, libdbd-mysql-perl
+Suggests: default-mysql-server | virtual-mysql-server
+Description: MySQL database backend for request-tracker4
+Homepage: https://bestpractical.com/rt/
+Description-md5: 59dc2b0a1310ef261ac2c200f3207a9c
+Section: misc
+Priority: optional
+Filename: pool/updates/main/r/request-tracker4/rt4-db-mysql_4.4.4+dfsg-2+deb11u2_all.deb
+Size: 22312
+SHA256: 736a42fc599c90ce8f3849e5750ad00ed0b0ad11293d4e083bd71986e8bbc721
+
+Package: rt4-db-postgresql
+Source: request-tracker4
+Version: 4.4.4+dfsg-2+deb11u2
+Installed-Size: 49
+Maintainer: Debian Request Tracker Group <pkg-request-tracker-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: debconf (>= 0.5) | debconf-2.0, libdbd-pg-perl, postgresql-client
+Suggests: postgresql
+Description: PostgreSQL database backend for request-tracker4
+Homepage: https://bestpractical.com/rt/
+Description-md5: 039244b534dcac7b8a4db8f5eab941f7
+Section: misc
+Priority: optional
+Filename: pool/updates/main/r/request-tracker4/rt4-db-postgresql_4.4.4+dfsg-2+deb11u2_all.deb
+Size: 22308
+SHA256: 784c25ad5c9e6900423cebcc139626b5947ce8f97c7025c4949da3aa55950c26
+
+Package: rt4-db-sqlite
+Source: request-tracker4
+Version: 4.4.4+dfsg-2+deb11u2
+Installed-Size: 49
+Maintainer: Debian Request Tracker Group <pkg-request-tracker-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: debconf (>= 0.5) | debconf-2.0, libdbd-sqlite3-perl, sqlite3
+Description: SQLite database backend for request-tracker4
+Homepage: https://bestpractical.com/rt/
+Description-md5: 2c076f71081526e5a5b9d945bb119ee5
+Section: misc
+Priority: optional
+Filename: pool/updates/main/r/request-tracker4/rt4-db-sqlite_4.4.4+dfsg-2+deb11u2_all.deb
+Size: 22428
+SHA256: c9e74b2ed5886d2e6a2963b5c2e0702cd7ac76092d8ffc440710663cedc3e438
+
+Package: rt4-doc-html
+Source: request-tracker4
+Version: 4.4.4+dfsg-2+deb11u2
+Installed-Size: 4202
+Maintainer: Debian Request Tracker Group <pkg-request-tracker-maintainers@lists.alioth.debian.org>
+Architecture: all
+Description: HTML documentation for request-tracker4
+Homepage: https://bestpractical.com/rt/
+Description-md5: ea93b04bda271362a28812f38c347c43
+Section: doc
+Priority: optional
+Filename: pool/updates/main/r/request-tracker4/rt4-doc-html_4.4.4+dfsg-2+deb11u2_all.deb
+Size: 2504808
+SHA256: 8ec3ac7e106c2cfb126f106b74b4cd49535616d464eaad0524dab6b1de85fb08
+
+Package: rt4-fcgi
+Source: request-tracker4
+Version: 4.4.4+dfsg-2+deb11u2
+Installed-Size: 63
+Maintainer: Debian Request Tracker Group <pkg-request-tracker-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: libfcgi-perl, lsb-base, procps, spawn-fcgi
+Description: External FastCGI support for request-tracker4
+Homepage: https://bestpractical.com/rt/
+Description-md5: d240d10a86ffb376c5bfdef87965dcda
+Recommends: nginx-full
+Section: misc
+Priority: optional
+Filename: pool/updates/main/r/request-tracker4/rt4-fcgi_4.4.4+dfsg-2+deb11u2_all.deb
+Size: 24748
+SHA256: c4b59380e79db4904a97775227ae64d5cdd8ba47d3e891b9a99ac23b1fbb596d
+
+Package: rt4-standalone
+Source: request-tracker4
+Version: 4.4.4+dfsg-2+deb11u2
+Installed-Size: 44
+Maintainer: Debian Request Tracker Group <pkg-request-tracker-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: starlet
+Description: Standalone web server support for request-tracker4
+Homepage: https://bestpractical.com/rt/
+Description-md5: d3be531a441043d767f84a9890216947
+Section: misc
+Priority: optional
+Filename: pool/updates/main/r/request-tracker4/rt4-standalone_4.4.4+dfsg-2+deb11u2_all.deb
+Size: 21808
+SHA256: 7ea276fdd9fc8fa6b5cf50bb16905f009cc44a508747d5cea3ead6bbbc22abc4
+
 Package: roundcube
 Version: 1.4.13+dfsg.1-1~deb11u1
 Installed-Size: 13
