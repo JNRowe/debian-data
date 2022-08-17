@@ -360,6 +360,78 @@ Filename: pool/updates/main/libr/libreswan/libreswan_4.3-1+deb11u1_i386.deb
 Size: 1118140
 SHA256: 5b479675c9ec03ccc19511df475006ed1c8e60f17aad08232be2fd24c89bb8a5
 
+Package: snmp
+Source: net-snmp
+Version: 5.9+dfsg-4+deb11u1
+Installed-Size: 636
+Maintainer: Net-SNMP Packaging Team <pkg-net-snmp-devel@lists.alioth.debian.org>
+Architecture: i386
+Depends: libc6 (>= 2.7), libsnmp40 (= 5.9+dfsg-4+deb11u1), libssl1.1 (>= 1.1.0), libsnmp-base (>= 5.7.3+dfsg-5)
+Description: SNMP (Simple Network Management Protocol) applications
+Homepage: http://net-snmp.sourceforge.net/
+Description-md5: ca9254c1be9e571fd6ae9298d0545de5
+Recommends: perl
+net
+Priority: optional
+Filename: pool/updates/main/n/net-snmp/snmp_5.9+dfsg-4+deb11u1_i386.deb
+Size: 175128
+SHA256: 12f1e54978eb5edba4860a4cb4a129bee42b11b1188902fad003e2a189fa4f4d
+
+Package: snmpd
+Source: net-snmp
+Version: 5.9+dfsg-4+deb11u1
+Installed-Size: 139
+Maintainer: Net-SNMP Packaging Team <pkg-net-snmp-devel@lists.alioth.debian.org>
+Architecture: i386
+Replaces: libsnmp-dev (<< 5.8+dfsg-3)
+Depends: libc6 (>= 2.4), libsnmp40 (= 5.9+dfsg-4+deb11u1), debconf (>= 0.5) | debconf-2.0, adduser, debconf, lsb-base (>= 3.2-13), libsnmp-base
+Suggests: snmptrapd
+Breaks: libsnmp-dev (<< 5.8+dfsg-3)
+Description: SNMP (Simple Network Management Protocol) agents
+Homepage: http://net-snmp.sourceforge.net/
+Description-md5: 9dc6ec703377042ed23b16c47ed5cb6c
+Pre-Depends: init-system-helpers (>= 1.54~)
+net
+Priority: optional
+Filename: pool/updates/main/n/net-snmp/snmpd_5.9+dfsg-4+deb11u1_i386.deb
+Size: 57556
+SHA256: 6d3148b74479f2fc871fedc67cdf00cc5f7a4448ab9d9143339fd5f0a51b8c86
+
+Package: snmptrapd
+Source: net-snmp
+Version: 5.9+dfsg-4+deb11u1
+Installed-Size: 83
+Maintainer: Net-SNMP Packaging Team <pkg-net-snmp-devel@lists.alioth.debian.org>
+Architecture: i386
+Replaces: snmp (<< 5.7.3+dfsg-2)
+Depends: libc6 (>= 2.4), libnetsnmptrapd40 (>= 5.9+dfsg), libsnmp40 (= 5.9+dfsg-4+deb11u1), libwrap0 (>= 7.6-4~), init-system-helpers (>= 1.51), snmpd
+Breaks: snmp (<< 5.7.3+dfsg-2)
+Description: Net-SNMP notification receiver
+Homepage: http://net-snmp.sourceforge.net/
+Description-md5: 5813c4c7d76971aa4ce271dad1bfb061
+Recommends: perl
+net
+Priority: optional
+Filename: pool/updates/main/n/net-snmp/snmptrapd_5.9+dfsg-4+deb11u1_i386.deb
+Size: 24596
+SHA256: 4bfed130ccceac5c2a0529428ed0368cd00a2ce554c6572989dc7a8a2571366d
+
+Package: tkmib
+Source: net-snmp
+Version: 5.9+dfsg-4+deb11u1
+Installed-Size: 1635
+Maintainer: Net-SNMP Packaging Team <pkg-net-snmp-devel@lists.alioth.debian.org>
+Architecture: all
+Depends: libsnmp-perl (>= 5.9+dfsg-4+deb11u1), perl-tk
+Description: SNMP (Simple Network Management Protocol) MIB browser
+Homepage: http://net-snmp.sourceforge.net/
+Description-md5: 3e99f331a5c32c38e42f396a8c41e207
+net
+Priority: optional
+Filename: pool/updates/main/n/net-snmp/tkmib_5.9+dfsg-4+deb11u1_all.deb
+Size: 1635412
+SHA256: 8ede3d86c9120cce5b8b63b045bf12eb3a39b259f1ce6db416869ade68fbd597
+
 Package: neutron-api
 Source: neutron
 Version: 2:17.2.1-0+deb11u1
