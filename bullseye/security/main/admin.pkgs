@@ -457,6 +457,44 @@ Filename: pool/updates/main/o/open-vm-tools/open-vm-tools-sdmp_11.2.5-2+deb11u1_
 Size: 40344
 SHA256: 9d9f33c3c164fd829fb5241fb4b02af97af05e2dbdacd0276448c4de40a0ebbf
 
+Package: pcs
+Version: 0.10.8-1+deb11u1
+Installed-Size: 4765
+Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: lsb-base (>= 3.0-6), psmisc, fonts-dejavu-core, fonts-liberation, python3:any, python3-dacite, python3-dateutil, python3-distro, python3-lxml, python3-openssl, python3-pkg-resources, python3-pycurl, python3-pyparsing, python3-tornado (>= 6.0.4), ruby, ruby-backports, ruby-ethon, ruby-json, ruby-open4, ruby-sinatra, thin
+Conflicts: python3-pcs
+Breaks: pacemaker (<< 2.0)
+Description: Pacemaker Configuration System
+Homepage: https://github.com/ClusterLabs/pcs
+Description-md5: 9591f3d4966c2a44acf5838689dcc0c6
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: pacemaker (>= 2.0)
+admin
+Priority: optional
+Filename: pool/updates/main/p/pcs/pcs_0.10.8-1+deb11u1_all.deb
+Size: 863920
+SHA256: e39821fc7de92db88594ca4922eb62c8049c35075ec57d369895c69aa5114340
+
+Package: pcs-snmp
+Source: pcs
+Version: 0.10.8-1+deb11u1
+Installed-Size: 82
+Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: all
+Replaces: pcs (<< 0.9.165-3)
+Depends: pcs, python3:any, python3-pyagentx, snmpd
+Breaks: pcs (<< 0.9.165-3)
+Description: Pacemaker Configuration System SNMP agent
+Homepage: https://github.com/ClusterLabs/pcs
+Description-md5: 6fbceb85c0388ccbe279bece6a40961a
+Pre-Depends: init-system-helpers (>= 1.54~)
+admin
+Priority: optional
+Filename: pool/updates/main/p/pcs/pcs-snmp_0.10.8-1+deb11u1_all.deb
+Size: 28420
+SHA256: 62fdd1e87ed9587f53398c06c0160c573a95885c2c34e4dd9b2316c96bf3453f
+
 Package: policykit-1
 Version: 0.105-31+deb11u1
 Installed-Size: 328
