@@ -6458,7 +6458,7 @@ Description-en: NVIDIA Visual Profiler for CUDA and OpenCL
  applications.
 
 Package: libcuda1
-Description-md5: 010cdec8385615d2585b28873e7debd8
+Description-md5: 72a9c892bbee8e9b5d3e22a50f5c2e05
 Description-en: NVIDIA CUDA Driver Library
  The Compute Unified Device Architecture (CUDA) enables NVIDIA
  graphics processing units (GPUs) to be used for massively parallel
@@ -6473,7 +6473,7 @@ Description-en: NVIDIA CUDA Driver Library
  Please see the nvidia-kernel-dkms or
  nvidia-kernel-source packages
  for building the kernel module required by this package.
- This will provide nvidia-kernel-470.129.06.
+ This will provide nvidia-kernel-470.141.03.
 
 Package: libegl-nvidia0
 Description-md5: 2606f210b69a7afade1df300e773e837
@@ -6750,7 +6750,7 @@ Description-en: NVIDIA GPU detection utility
  or nvidia-legacy-390xx-driver) for installation.
 
 Package: nvidia-driver
-Description-md5: 7cdaa69e540c53185cb2429299816177
+Description-md5: ef472c126821d775ebf358512aedd0b3
 Description-en: NVIDIA metapackage
  This metapackage depends on the NVIDIA binary driver and libraries
  that provide optimized hardware acceleration of
@@ -6759,7 +6759,7 @@ Description-en: NVIDIA metapackage
  Please see the nvidia-kernel-dkms or
  nvidia-kernel-source packages
  for building the kernel module required by this package.
- This will provide nvidia-kernel-470.129.06.
+ This will provide nvidia-kernel-470.141.03.
  .
  This version only supports GeForce, NVS, Quadro, RTX, Tesla, ... GPUs based on
  the Kepler, Maxwell, Pascal, Volta, Turing, Ampere, or newer architectures.
@@ -6770,7 +6770,7 @@ Description-en: NVIDIA metapackage
  See /usr/share/doc/nvidia-driver/README.txt.gz
  for a complete list of supported GPUs and PCI IDs.
  .
- Building the kernel module has been tested up to Linux 5.18.
+ Building the kernel module has been tested up to Linux 5.19.
 
 Package: nvidia-driver-bin
 Description-md5: d0118daed7fe8c1a550944b8cecc8a53
@@ -6807,7 +6807,7 @@ Description-en: NVIDIA EGL installable client driver (ICD)
  EGL via GLVND which supports NVIDIA GPUs.
 
 Package: nvidia-kernel-dkms
-Description-md5: e4378d82b40c98e3248025e829f326a6
+Description-md5: 76e970f56e1ee4a26c32c03eec6cee84
 Description-en: NVIDIA binary kernel module DKMS source
  This package builds the NVIDIA binary kernel modules needed by
  nvidia-driver, using DKMS.
@@ -6829,11 +6829,11 @@ Description-en: NVIDIA binary kernel module DKMS source
  for a complete list of supported GPUs and PCI IDs.
  .
  This package contains the blobs for building kernel modules for the
- arm64 architecture.
- Building the kernel modules has been tested up to Linux 5.18.
+ amd64 architecture.
+ Building the kernel modules has been tested up to Linux 5.19.
 
 Package: nvidia-kernel-dkms
-Description-md5: f3d4f2a088bd3ec71ad3664e8e76fe5a
+Description-md5: ca1eaac976f13c7ae854d7670c104f24
 Description-en: NVIDIA binary kernel module DKMS source
  This package builds the NVIDIA binary kernel modules needed by
  nvidia-driver, using DKMS.
@@ -6855,15 +6855,43 @@ Description-en: NVIDIA binary kernel module DKMS source
  for a complete list of supported GPUs and PCI IDs.
  .
  This package contains the blobs for building kernel modules for the
- amd64 architecture.
- Building the kernel modules has been tested up to Linux 5.18.
+ arm64 architecture.
+ Building the kernel modules has been tested up to Linux 5.19.
 
 Package: nvidia-kernel-source
-Description-md5: 25fe1165910ec139d16c1eca287afdaa
+Description-md5: 42d2e5ac8c10c2c91997271c510bb420
 Description-en: NVIDIA binary kernel module source
  This package provides the source for the NVIDIA binary kernel modules
  needed by nvidia-driver in a form suitable
- for use by module-assistant or kernel-package.
+ for use by module-assistant.
+ .
+ The NVIDIA binary driver provides optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
+ for graphics cards using NVIDIA chip sets.
+ .
+ PLEASE read /usr/share/doc/nvidia-kernel-source/README.Debian.gz
+ for building information. If you want the kernel module to be automatically
+ installed via DKMS, install nvidia-kernel-dkms instead.
+ .
+ This version only supports GeForce, NVS, Quadro, RTX, Tesla, ... GPUs based on
+ the Kepler, Maxwell, Pascal, Volta, Turing, Ampere, or newer architectures.
+ The (Tesla) 470 drivers are the last driver series supporting GPUs based on
+ the Kepler architecture.
+ Look at the legacy driver packages for older cards.
+ .
+ See /usr/share/doc/nvidia-kernel-source/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
+ .
+ This package contains the blobs for building kernel modules for the
+ amd64 architecture.
+ Building the kernel modules has been tested up to Linux 5.19.
+
+Package: nvidia-kernel-source
+Description-md5: fde4c155520225707c54022c43e77fae
+Description-en: NVIDIA binary kernel module source
+ This package provides the source for the NVIDIA binary kernel modules
+ needed by nvidia-driver in a form suitable
+ for use by module-assistant.
  .
  The NVIDIA binary driver provides optimized hardware acceleration of
  OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
@@ -6884,35 +6912,7 @@ Description-en: NVIDIA binary kernel module source
  .
  This package contains the blobs for building kernel modules for the
  arm64 architecture.
- Building the kernel modules has been tested up to Linux 5.18.
-
-Package: nvidia-kernel-source
-Description-md5: a01f701b7869cef503490a75a8ad1324
-Description-en: NVIDIA binary kernel module source
- This package provides the source for the NVIDIA binary kernel modules
- needed by nvidia-driver in a form suitable
- for use by module-assistant or kernel-package.
- .
- The NVIDIA binary driver provides optimized hardware acceleration of
- OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
- for graphics cards using NVIDIA chip sets.
- .
- PLEASE read /usr/share/doc/nvidia-kernel-source/README.Debian.gz
- for building information. If you want the kernel module to be automatically
- installed via DKMS, install nvidia-kernel-dkms instead.
- .
- This version only supports GeForce, NVS, Quadro, RTX, Tesla, ... GPUs based on
- the Kepler, Maxwell, Pascal, Volta, Turing, Ampere, or newer architectures.
- The (Tesla) 470 drivers are the last driver series supporting GPUs based on
- the Kepler architecture.
- Look at the legacy driver packages for older cards.
- .
- See /usr/share/doc/nvidia-kernel-source/README.txt.gz
- for a complete list of supported GPUs and PCI IDs.
- .
- This package contains the blobs for building kernel modules for the
- amd64 architecture.
- Building the kernel modules has been tested up to Linux 5.18.
+ Building the kernel modules has been tested up to Linux 5.19.
 
 Package: nvidia-kernel-support
 Description-md5: 8792dd43882b8dd916f141a2ea5a842a
@@ -6986,7 +6986,7 @@ Description-en: NVIDIA System Management Interface
  further information.
 
 Package: nvidia-vdpau-driver
-Description-md5: cb043ff9812376e9062607f05e5acffd
+Description-md5: 96b80847c72eaf7aa8d88b71a6783498
 Description-en: Video Decode and Presentation API for Unix - NVIDIA driver
  These libraries provide the Video Decode and Presentation API for Unix.
  They provide accelerated video playback (incl. H.264) for the supported
@@ -7000,7 +7000,7 @@ Description-en: Video Decode and Presentation API for Unix - NVIDIA driver
  Please see the nvidia-kernel-dkms or
  nvidia-kernel-source packages
  for building the kernel module required by this package.
- This will provide nvidia-kernel-470.129.06.
+ This will provide nvidia-kernel-470.141.03.
 
 Package: nvidia-vulkan-common
 Description-md5: 89971dfca7826f5f08811a7f718f7529
@@ -7019,7 +7019,7 @@ Description-en: NVIDIA Vulkan installable client driver (ICD)
  Vulkan (GLVND variant) which supports NVIDIA GPUs.
 
 Package: xserver-xorg-video-nvidia
-Description-md5: 70e7bacc2d0486b6bb4d3cc3e6795099
+Description-md5: f3cf586de2cb9ef6e10c4c32a1ff64b2
 Description-en: NVIDIA binary Xorg driver
  The NVIDIA binary driver provides optimized hardware acceleration of
  OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
@@ -7028,7 +7028,7 @@ Description-en: NVIDIA binary Xorg driver
  Please see the nvidia-kernel-dkms or
  nvidia-kernel-source packages
  for building the kernel module required by this package.
- This will provide nvidia-kernel-470.129.06.
+ This will provide nvidia-kernel-470.141.03.
  .
  This version only supports GeForce, NVS, Quadro, RTX, Tesla, ... GPUs based on
  the Kepler, Maxwell, Pascal, Volta, Turing, Ampere, or newer architectures.
@@ -7156,7 +7156,7 @@ Description-en: NVIDIA runtime compiler library (390xx legacy version)
  This package contains the runtime compiler library.
 
 Package: libnvidia-legacy-390xx-cuda1
-Description-md5: 60ec853913d54a095d7f79ef03958e40
+Description-md5: ffab4cedb32d1f83d54a4145ee5e470f
 Description-en: NVIDIA CUDA Driver Library (390xx legacy version)
  The Compute Unified Device Architecture (CUDA) enables NVIDIA
  graphics processing units (GPUs) to be used for massively parallel
@@ -7171,7 +7171,7 @@ Description-en: NVIDIA CUDA Driver Library (390xx legacy version)
  Please see the nvidia-legacy-390xx-kernel-dkms or
  nvidia-legacy-390xx-kernel-source packages
  for building the kernel module required by this package.
- This will provide nvidia-legacy-390xx-kernel-390.151.
+ This will provide nvidia-legacy-390xx-kernel-390.154.
 
 Package: libnvidia-legacy-390xx-cuda1-i386
 Description-md5: f39b2aebe877722a81b97212f84bb0ee
@@ -7284,7 +7284,7 @@ Description-en: allows the selection of NVIDIA as GLX provider (390xx legacy ver
  nvidia-legacy-390xx-driver package instead.
 
 Package: nvidia-legacy-390xx-driver
-Description-md5: b85f84e9a1a1ec34e23489933525dbca
+Description-md5: eaaf83ba93000b5276264e0052dad2fc
 Description-en: NVIDIA metapackage (390xx legacy version)
  This metapackage depends on the NVIDIA binary driver and libraries
  that provide optimized hardware acceleration of
@@ -7293,7 +7293,7 @@ Description-en: NVIDIA metapackage (390xx legacy version)
  Please see the nvidia-legacy-390xx-kernel-dkms or
  nvidia-legacy-390xx-kernel-source packages
  for building the kernel module required by this package.
- This will provide nvidia-legacy-390xx-kernel-390.151.
+ This will provide nvidia-legacy-390xx-kernel-390.154.
  .
  This legacy version is the last release that supports the following GPUs:
  GeForce 410M [GF119M], GeForce 510 [GF119], GeForce 605 [GF119],
@@ -7372,7 +7372,7 @@ Description-en: NVIDIA metapackage (390xx legacy version)
  See /usr/share/doc/nvidia-legacy-390xx-driver/README.txt.gz
  for a complete list of supported GPUs and PCI IDs.
  .
- Building the kernel module has been tested up to Linux 5.17.
+ Building the kernel module has been tested up to Linux 5.19.
 
 Package: nvidia-legacy-390xx-driver-bin
 Description-md5: 00d4cddd256da0b3b2448703e875ed33
@@ -7422,9 +7422,9 @@ Description-en: NVIDIA EGL installable client driver (ICD)
  EGL via GLVND which supports NVIDIA GPUs.
 
 Package: nvidia-legacy-390xx-kernel-dkms
-Description-md5: 5549bf2deab198379473344b0e3ce744
+Description-md5: 32b8bdad9d02e4968132a14407d13667
 Description-en: NVIDIA binary kernel module DKMS source (390xx legacy version)
- This package builds the NVIDIA Xorg binary kernel module needed by
+ This package builds the NVIDIA binary kernel modules needed by
  nvidia-legacy-390xx-driver, using DKMS.
  Provided that you have the kernel header packages installed, the kernel
  module will be built for your running kernel and automatically rebuilt for
@@ -7513,106 +7513,12 @@ Description-en: NVIDIA binary kernel module DKMS source (390xx legacy version)
  .
  This package contains the blobs for building kernel modules for the
  i386 architecture.
- Building the kernel modules has been tested up to Linux 5.17.
+ Building the kernel modules has been tested up to Linux 5.19.
 
 Package: nvidia-legacy-390xx-kernel-dkms
-Description-md5: b2d0ec37acccbd604f85521e89f279c5
+Description-md5: 4fb31da7898fd413ebc8b7eb2984ee90
 Description-en: NVIDIA binary kernel module DKMS source (390xx legacy version)
- This package builds the NVIDIA Xorg binary kernel module needed by
- nvidia-legacy-390xx-driver, using DKMS.
- Provided that you have the kernel header packages installed, the kernel
- module will be built for your running kernel and automatically rebuilt for
- any new kernel headers that are installed.
- .
- The NVIDIA binary driver provides optimized hardware acceleration of
- OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
- for graphics cards using NVIDIA chip sets.
- .
- This legacy version is the last release that supports the following GPUs:
- GeForce 410M [GF119M], GeForce 510 [GF119], GeForce 605 [GF119],
- GeForce 610M [GF108M], GeForce 610M [GF119M], GeForce 610M [GF117M],
- GeForce 705M [GF119M], GeForce 710A [GK107M], GeForce 710M [GF117M],
- GeForce 810M [GF117M], GeForce 810M [GK107M], GeForce 820M [GF117M],
- GeForce 820M [GK107M], GeForce 825M [GK208M], GeForce 910M [GK208BM],
- GeForce GT 415M [GF108M], GeForce GT 420 [GF108], GeForce GT 420M [GF108M],
- GeForce GT 425M [GF108M], GeForce GT 430 [GF108], GeForce GT 435M [GF106M],
- GeForce GT 435M [GF108M], GeForce GT 440 [GF106], GeForce GT 440 [GF108],
- GeForce GT 445M [GF106M], GeForce GT 520 [GF108], GeForce GT 520 [GF119],
- GeForce GT 520M [GF108M], GeForce GT 520M [GF119M],
- GeForce GT 520MX [GF119M], GeForce GT 525M [GF108M], GeForce GT 530 [GF108],
- GeForce GT 540M [GF108M], GeForce GT 545 OEM [GF116], GeForce GT 545 [GF116],
- GeForce GT 550M [GF106M], GeForce GT 550M [GF108M], GeForce GT 550M [GF116M],
- GeForce GT 555M [GF106M], GeForce GT 555M [GF108M], GeForce GT 555M [GF116M],
- GeForce GT 560M [GF116M], GeForce GT 610 [GF108], GeForce GT 610 [GF119],
- GeForce GT 620 OEM [GF119], GeForce GT 620 [GF108], GeForce GT 620M [GF108M],
- GeForce GT 620M [GF117M], GeForce GT 620M LE [GF108M],
- GeForce GT 625 OEM [GF119], GeForce GT 625M [GF117M], GeForce GT 630 [GF108],
- GeForce GT 630M [GF117M], GeForce GT 630M LE [GF108M],
- GeForce GT 635M [GF108M], GeForce GT 635M [GF116M],
- GeForce GT 635M LE [GF108M], GeForce GT 640 OEM [GF116],
- GeForce GT 640M LE [GF108M], GeForce GT 640M LE [GK107M],
- GeForce GT 640M Mac Edition [GK107M], GeForce GT 645 OEM [GF114],
- GeForce GT 645M [GK107M], GeForce GT 650M [GK107M],
- GeForce GT 650M Mac Edition [GK107M], GeForce GT 705 [GF119],
- GeForce GT 720M [GF117M], GeForce GT 720M [GK208M], GeForce GT 730 [GF108],
- GeForce GT 730M [GK107M], GeForce GT 730M [GK208M], GeForce GT 735M [GK208M],
- GeForce GT 740M [GK107M], GeForce GT 745M [GK107M], GeForce GT 750M [GK107M],
- GeForce GT 750M Mac Edition [GK107M], GeForce GT 755M [GK107M],
- GeForce GT 755M Mac Edition [GK107M], GeForce GTS 450 OEM [GF106],
- GeForce GTS 450 [GF106], GeForce GTS 450 Rev. 2 [GF116],
- GeForce GTS 450 Rev. 3 [GF116], GeForce GTX 460 OEM [GF104],
- GeForce GTX 460 [GF104], GeForce GTX 460 v2 [GF114],
- GeForce GTX 460 SE [GF104], GeForce GTX 460 SE v2 [GF114],
- GeForce GTX 460M [GF106M], GeForce GTX 465 [GF100], GeForce GTX 470 [GF100],
- GeForce GTX 470M [GF104M], GeForce GTX 480 [GF100],
- GeForce GTX 480M [GF100M], GeForce GTX 485M [GF104M],
- GeForce GTX 550 Ti [GF116], GeForce GTX 555 [GF114],
- GeForce GTX 560 OEM [GF110], GeForce GTX 560 [GF114],
- GeForce GTX 560 SE [GF114], GeForce GTX 560 Ti [GF114],
- GeForce GTX 560 Ti OEM [GF110], GeForce GTX 560 Ti 448 Cores [GF110],
- GeForce GTX 570 [GF110], GeForce GTX 570 Rev. 2 [GF110],
- GeForce GTX 570M [GF114M], GeForce GTX 580 [GF110],
- GeForce GTX 580 Rev. 2 [GF110], GeForce GTX 580M [GF114M],
- GeForce GTX 590 [GF110], GeForce GTX 660M [GK107M],
- GeForce GTX 660M Mac Edition [GK107M], GeForce GTX 670M [GF114M],
- GeForce GTX 670MX [GK104M], GeForce GTX 675M [GF114M],
- GeForce GTX 675MX [GK104M], GeForce GTX 675MX Mac Edition [GK104M],
- GeForce GTX 680M [GK104M], GeForce GTX 680MX [GK104M],
- GeForce GTX 765M [GK106M], GeForce GTX 770M [GK106M],
- GeForce GTX 775M Mac Edition [GK104M], GeForce GTX 780M [GK104M],
- GeForce GTX 780M Mac Edition [GK104M], GeForce GTX 860M [GK104M],
- GeForce GTX 880M [GK104M], NVS 310 [GF119], NVS 315 [GF119],
- NVS 4200M [GF119M], NVS 5200M [GF108GLM], NVS 5400M [GF108M],
- Quadro 500M [GF108GLM], Quadro 600 [GF108GL], Quadro 1000M [GF108GLM],
- Quadro 2000 [GF106GL], Quadro 2000M [GF106GLM], Quadro 3000M [GF104GLM],
- Quadro 4000 [GF100GL], Quadro 4000M [GF104GLM], Quadro 5000 [GF100GL],
- Quadro 5000M [GF100GLM], Quadro 5010M [GF100GLM], Quadro 6000 [GF100GL],
- Quadro 7000 [GF100GL], Quadro K500M [GK107GLM], Quadro K510M [GK208GLM],
- Quadro K610M [GK208GLM], Quadro K1000M [GK107GLM], Quadro K1100M [GK107GLM],
- Quadro K2000M [GK107GLM], Quadro K2100M [GK106GLM], Quadro K3000M [GK104GLM],
- Quadro K3100M [GK104GLM], Quadro K4000M [GK104GLM], Quadro K4100M [GK104GLM],
- Quadro K5000M [GK104GLM], Quadro K5100M [GK104GLM],
- Quadro NVS 4200M [GF119M], Tesla C2050 [GF100GL], Tesla C2050 [GF110GL],
- Tesla C2070 [GF100GL], Tesla C2075 [GF110GL], Tesla M2070 [GF100GL],
- Tesla M2070-Q [GF100GL], Tesla M2075 [GF110GL], Tesla M2090 [GF110GL],
- Tesla T20 Processor [GF100GL].
- .
- There are several "more modern" GPUs supported by this package, too, but the
- updated drivers in the newer legacy packages or the current nvidia-driver
- package usually provide more features and better support.
- Look at the other legacy packages for older cards.
- .
- See /usr/share/doc/nvidia-legacy-390xx-kernel-dkms/README.txt.gz
- for a complete list of supported GPUs and PCI IDs.
- .
- This package contains the blobs for building kernel modules for the
- armhf architecture.
- Building the kernel modules has been tested up to Linux 5.17.
-
-Package: nvidia-legacy-390xx-kernel-dkms
-Description-md5: ced6056b6ef4dacf8a57f971958e05ea
-Description-en: NVIDIA binary kernel module DKMS source (390xx legacy version)
- This package builds the NVIDIA Xorg binary kernel module needed by
+ This package builds the NVIDIA binary kernel modules needed by
  nvidia-legacy-390xx-driver, using DKMS.
  Provided that you have the kernel header packages installed, the kernel
  module will be built for your running kernel and automatically rebuilt for
@@ -7701,14 +7607,108 @@ Description-en: NVIDIA binary kernel module DKMS source (390xx legacy version)
  .
  This package contains the blobs for building kernel modules for the
  amd64 architecture.
- Building the kernel modules has been tested up to Linux 5.17.
+ Building the kernel modules has been tested up to Linux 5.19.
+
+Package: nvidia-legacy-390xx-kernel-dkms
+Description-md5: 830682d2a4c16d4871c50d3d0a3e3933
+Description-en: NVIDIA binary kernel module DKMS source (390xx legacy version)
+ This package builds the NVIDIA binary kernel modules needed by
+ nvidia-legacy-390xx-driver, using DKMS.
+ Provided that you have the kernel header packages installed, the kernel
+ module will be built for your running kernel and automatically rebuilt for
+ any new kernel headers that are installed.
+ .
+ The NVIDIA binary driver provides optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
+ for graphics cards using NVIDIA chip sets.
+ .
+ This legacy version is the last release that supports the following GPUs:
+ GeForce 410M [GF119M], GeForce 510 [GF119], GeForce 605 [GF119],
+ GeForce 610M [GF108M], GeForce 610M [GF119M], GeForce 610M [GF117M],
+ GeForce 705M [GF119M], GeForce 710A [GK107M], GeForce 710M [GF117M],
+ GeForce 810M [GF117M], GeForce 810M [GK107M], GeForce 820M [GF117M],
+ GeForce 820M [GK107M], GeForce 825M [GK208M], GeForce 910M [GK208BM],
+ GeForce GT 415M [GF108M], GeForce GT 420 [GF108], GeForce GT 420M [GF108M],
+ GeForce GT 425M [GF108M], GeForce GT 430 [GF108], GeForce GT 435M [GF106M],
+ GeForce GT 435M [GF108M], GeForce GT 440 [GF106], GeForce GT 440 [GF108],
+ GeForce GT 445M [GF106M], GeForce GT 520 [GF108], GeForce GT 520 [GF119],
+ GeForce GT 520M [GF108M], GeForce GT 520M [GF119M],
+ GeForce GT 520MX [GF119M], GeForce GT 525M [GF108M], GeForce GT 530 [GF108],
+ GeForce GT 540M [GF108M], GeForce GT 545 OEM [GF116], GeForce GT 545 [GF116],
+ GeForce GT 550M [GF106M], GeForce GT 550M [GF108M], GeForce GT 550M [GF116M],
+ GeForce GT 555M [GF106M], GeForce GT 555M [GF108M], GeForce GT 555M [GF116M],
+ GeForce GT 560M [GF116M], GeForce GT 610 [GF108], GeForce GT 610 [GF119],
+ GeForce GT 620 OEM [GF119], GeForce GT 620 [GF108], GeForce GT 620M [GF108M],
+ GeForce GT 620M [GF117M], GeForce GT 620M LE [GF108M],
+ GeForce GT 625 OEM [GF119], GeForce GT 625M [GF117M], GeForce GT 630 [GF108],
+ GeForce GT 630M [GF117M], GeForce GT 630M LE [GF108M],
+ GeForce GT 635M [GF108M], GeForce GT 635M [GF116M],
+ GeForce GT 635M LE [GF108M], GeForce GT 640 OEM [GF116],
+ GeForce GT 640M LE [GF108M], GeForce GT 640M LE [GK107M],
+ GeForce GT 640M Mac Edition [GK107M], GeForce GT 645 OEM [GF114],
+ GeForce GT 645M [GK107M], GeForce GT 650M [GK107M],
+ GeForce GT 650M Mac Edition [GK107M], GeForce GT 705 [GF119],
+ GeForce GT 720M [GF117M], GeForce GT 720M [GK208M], GeForce GT 730 [GF108],
+ GeForce GT 730M [GK107M], GeForce GT 730M [GK208M], GeForce GT 735M [GK208M],
+ GeForce GT 740M [GK107M], GeForce GT 745M [GK107M], GeForce GT 750M [GK107M],
+ GeForce GT 750M Mac Edition [GK107M], GeForce GT 755M [GK107M],
+ GeForce GT 755M Mac Edition [GK107M], GeForce GTS 450 OEM [GF106],
+ GeForce GTS 450 [GF106], GeForce GTS 450 Rev. 2 [GF116],
+ GeForce GTS 450 Rev. 3 [GF116], GeForce GTX 460 OEM [GF104],
+ GeForce GTX 460 [GF104], GeForce GTX 460 v2 [GF114],
+ GeForce GTX 460 SE [GF104], GeForce GTX 460 SE v2 [GF114],
+ GeForce GTX 460M [GF106M], GeForce GTX 465 [GF100], GeForce GTX 470 [GF100],
+ GeForce GTX 470M [GF104M], GeForce GTX 480 [GF100],
+ GeForce GTX 480M [GF100M], GeForce GTX 485M [GF104M],
+ GeForce GTX 550 Ti [GF116], GeForce GTX 555 [GF114],
+ GeForce GTX 560 OEM [GF110], GeForce GTX 560 [GF114],
+ GeForce GTX 560 SE [GF114], GeForce GTX 560 Ti [GF114],
+ GeForce GTX 560 Ti OEM [GF110], GeForce GTX 560 Ti 448 Cores [GF110],
+ GeForce GTX 570 [GF110], GeForce GTX 570 Rev. 2 [GF110],
+ GeForce GTX 570M [GF114M], GeForce GTX 580 [GF110],
+ GeForce GTX 580 Rev. 2 [GF110], GeForce GTX 580M [GF114M],
+ GeForce GTX 590 [GF110], GeForce GTX 660M [GK107M],
+ GeForce GTX 660M Mac Edition [GK107M], GeForce GTX 670M [GF114M],
+ GeForce GTX 670MX [GK104M], GeForce GTX 675M [GF114M],
+ GeForce GTX 675MX [GK104M], GeForce GTX 675MX Mac Edition [GK104M],
+ GeForce GTX 680M [GK104M], GeForce GTX 680MX [GK104M],
+ GeForce GTX 765M [GK106M], GeForce GTX 770M [GK106M],
+ GeForce GTX 775M Mac Edition [GK104M], GeForce GTX 780M [GK104M],
+ GeForce GTX 780M Mac Edition [GK104M], GeForce GTX 860M [GK104M],
+ GeForce GTX 880M [GK104M], NVS 310 [GF119], NVS 315 [GF119],
+ NVS 4200M [GF119M], NVS 5200M [GF108GLM], NVS 5400M [GF108M],
+ Quadro 500M [GF108GLM], Quadro 600 [GF108GL], Quadro 1000M [GF108GLM],
+ Quadro 2000 [GF106GL], Quadro 2000M [GF106GLM], Quadro 3000M [GF104GLM],
+ Quadro 4000 [GF100GL], Quadro 4000M [GF104GLM], Quadro 5000 [GF100GL],
+ Quadro 5000M [GF100GLM], Quadro 5010M [GF100GLM], Quadro 6000 [GF100GL],
+ Quadro 7000 [GF100GL], Quadro K500M [GK107GLM], Quadro K510M [GK208GLM],
+ Quadro K610M [GK208GLM], Quadro K1000M [GK107GLM], Quadro K1100M [GK107GLM],
+ Quadro K2000M [GK107GLM], Quadro K2100M [GK106GLM], Quadro K3000M [GK104GLM],
+ Quadro K3100M [GK104GLM], Quadro K4000M [GK104GLM], Quadro K4100M [GK104GLM],
+ Quadro K5000M [GK104GLM], Quadro K5100M [GK104GLM],
+ Quadro NVS 4200M [GF119M], Tesla C2050 [GF100GL], Tesla C2050 [GF110GL],
+ Tesla C2070 [GF100GL], Tesla C2075 [GF110GL], Tesla M2070 [GF100GL],
+ Tesla M2070-Q [GF100GL], Tesla M2075 [GF110GL], Tesla M2090 [GF110GL],
+ Tesla T20 Processor [GF100GL].
+ .
+ There are several "more modern" GPUs supported by this package, too, but the
+ updated drivers in the newer legacy packages or the current nvidia-driver
+ package usually provide more features and better support.
+ Look at the other legacy packages for older cards.
+ .
+ See /usr/share/doc/nvidia-legacy-390xx-kernel-dkms/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
+ .
+ This package contains the blobs for building kernel modules for the
+ armhf architecture.
+ Building the kernel modules has been tested up to Linux 5.19.
 
 Package: nvidia-legacy-390xx-kernel-source
-Description-md5: 5c6243426eeb862e9541a78d037e4401
+Description-md5: c9e5b67a47679e391da983fa8056fb77
 Description-en: NVIDIA binary kernel module source (390xx legacy version)
- This package provides the source for the NVIDIA Xorg binary kernel module
+ This package provides the source for the NVIDIA binary kernel modules
  needed by nvidia-legacy-390xx-driver in a form suitable
- for use by module-assistant or kernel-package.
+ for use by module-assistant.
  .
  The NVIDIA binary driver provides optimized hardware acceleration of
  OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
@@ -7797,110 +7797,14 @@ Description-en: NVIDIA binary kernel module source (390xx legacy version)
  .
  This package contains the blobs for building kernel modules for the
  amd64 architecture.
- Building the kernel modules has been tested up to Linux 5.17.
+ Building the kernel modules has been tested up to Linux 5.19.
 
 Package: nvidia-legacy-390xx-kernel-source
-Description-md5: d871999c3f8ea86c75d539aaa37d130d
+Description-md5: d80ce9a1d7709ec99c6c367614021e4d
 Description-en: NVIDIA binary kernel module source (390xx legacy version)
- This package provides the source for the NVIDIA Xorg binary kernel module
+ This package provides the source for the NVIDIA binary kernel modules
  needed by nvidia-legacy-390xx-driver in a form suitable
- for use by module-assistant or kernel-package.
- .
- The NVIDIA binary driver provides optimized hardware acceleration of
- OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
- for graphics cards using NVIDIA chip sets.
- .
- PLEASE read /usr/share/doc/nvidia-legacy-390xx-kernel-source/README.Debian.gz
- for building information. If you want the kernel module to be automatically
- installed via DKMS, install nvidia-legacy-390xx-kernel-dkms instead.
- .
- This legacy version is the last release that supports the following GPUs:
- GeForce 410M [GF119M], GeForce 510 [GF119], GeForce 605 [GF119],
- GeForce 610M [GF108M], GeForce 610M [GF119M], GeForce 610M [GF117M],
- GeForce 705M [GF119M], GeForce 710A [GK107M], GeForce 710M [GF117M],
- GeForce 810M [GF117M], GeForce 810M [GK107M], GeForce 820M [GF117M],
- GeForce 820M [GK107M], GeForce 825M [GK208M], GeForce 910M [GK208BM],
- GeForce GT 415M [GF108M], GeForce GT 420 [GF108], GeForce GT 420M [GF108M],
- GeForce GT 425M [GF108M], GeForce GT 430 [GF108], GeForce GT 435M [GF106M],
- GeForce GT 435M [GF108M], GeForce GT 440 [GF106], GeForce GT 440 [GF108],
- GeForce GT 445M [GF106M], GeForce GT 520 [GF108], GeForce GT 520 [GF119],
- GeForce GT 520M [GF108M], GeForce GT 520M [GF119M],
- GeForce GT 520MX [GF119M], GeForce GT 525M [GF108M], GeForce GT 530 [GF108],
- GeForce GT 540M [GF108M], GeForce GT 545 OEM [GF116], GeForce GT 545 [GF116],
- GeForce GT 550M [GF106M], GeForce GT 550M [GF108M], GeForce GT 550M [GF116M],
- GeForce GT 555M [GF106M], GeForce GT 555M [GF108M], GeForce GT 555M [GF116M],
- GeForce GT 560M [GF116M], GeForce GT 610 [GF108], GeForce GT 610 [GF119],
- GeForce GT 620 OEM [GF119], GeForce GT 620 [GF108], GeForce GT 620M [GF108M],
- GeForce GT 620M [GF117M], GeForce GT 620M LE [GF108M],
- GeForce GT 625 OEM [GF119], GeForce GT 625M [GF117M], GeForce GT 630 [GF108],
- GeForce GT 630M [GF117M], GeForce GT 630M LE [GF108M],
- GeForce GT 635M [GF108M], GeForce GT 635M [GF116M],
- GeForce GT 635M LE [GF108M], GeForce GT 640 OEM [GF116],
- GeForce GT 640M LE [GF108M], GeForce GT 640M LE [GK107M],
- GeForce GT 640M Mac Edition [GK107M], GeForce GT 645 OEM [GF114],
- GeForce GT 645M [GK107M], GeForce GT 650M [GK107M],
- GeForce GT 650M Mac Edition [GK107M], GeForce GT 705 [GF119],
- GeForce GT 720M [GF117M], GeForce GT 720M [GK208M], GeForce GT 730 [GF108],
- GeForce GT 730M [GK107M], GeForce GT 730M [GK208M], GeForce GT 735M [GK208M],
- GeForce GT 740M [GK107M], GeForce GT 745M [GK107M], GeForce GT 750M [GK107M],
- GeForce GT 750M Mac Edition [GK107M], GeForce GT 755M [GK107M],
- GeForce GT 755M Mac Edition [GK107M], GeForce GTS 450 OEM [GF106],
- GeForce GTS 450 [GF106], GeForce GTS 450 Rev. 2 [GF116],
- GeForce GTS 450 Rev. 3 [GF116], GeForce GTX 460 OEM [GF104],
- GeForce GTX 460 [GF104], GeForce GTX 460 v2 [GF114],
- GeForce GTX 460 SE [GF104], GeForce GTX 460 SE v2 [GF114],
- GeForce GTX 460M [GF106M], GeForce GTX 465 [GF100], GeForce GTX 470 [GF100],
- GeForce GTX 470M [GF104M], GeForce GTX 480 [GF100],
- GeForce GTX 480M [GF100M], GeForce GTX 485M [GF104M],
- GeForce GTX 550 Ti [GF116], GeForce GTX 555 [GF114],
- GeForce GTX 560 OEM [GF110], GeForce GTX 560 [GF114],
- GeForce GTX 560 SE [GF114], GeForce GTX 560 Ti [GF114],
- GeForce GTX 560 Ti OEM [GF110], GeForce GTX 560 Ti 448 Cores [GF110],
- GeForce GTX 570 [GF110], GeForce GTX 570 Rev. 2 [GF110],
- GeForce GTX 570M [GF114M], GeForce GTX 580 [GF110],
- GeForce GTX 580 Rev. 2 [GF110], GeForce GTX 580M [GF114M],
- GeForce GTX 590 [GF110], GeForce GTX 660M [GK107M],
- GeForce GTX 660M Mac Edition [GK107M], GeForce GTX 670M [GF114M],
- GeForce GTX 670MX [GK104M], GeForce GTX 675M [GF114M],
- GeForce GTX 675MX [GK104M], GeForce GTX 675MX Mac Edition [GK104M],
- GeForce GTX 680M [GK104M], GeForce GTX 680MX [GK104M],
- GeForce GTX 765M [GK106M], GeForce GTX 770M [GK106M],
- GeForce GTX 775M Mac Edition [GK104M], GeForce GTX 780M [GK104M],
- GeForce GTX 780M Mac Edition [GK104M], GeForce GTX 860M [GK104M],
- GeForce GTX 880M [GK104M], NVS 310 [GF119], NVS 315 [GF119],
- NVS 4200M [GF119M], NVS 5200M [GF108GLM], NVS 5400M [GF108M],
- Quadro 500M [GF108GLM], Quadro 600 [GF108GL], Quadro 1000M [GF108GLM],
- Quadro 2000 [GF106GL], Quadro 2000M [GF106GLM], Quadro 3000M [GF104GLM],
- Quadro 4000 [GF100GL], Quadro 4000M [GF104GLM], Quadro 5000 [GF100GL],
- Quadro 5000M [GF100GLM], Quadro 5010M [GF100GLM], Quadro 6000 [GF100GL],
- Quadro 7000 [GF100GL], Quadro K500M [GK107GLM], Quadro K510M [GK208GLM],
- Quadro K610M [GK208GLM], Quadro K1000M [GK107GLM], Quadro K1100M [GK107GLM],
- Quadro K2000M [GK107GLM], Quadro K2100M [GK106GLM], Quadro K3000M [GK104GLM],
- Quadro K3100M [GK104GLM], Quadro K4000M [GK104GLM], Quadro K4100M [GK104GLM],
- Quadro K5000M [GK104GLM], Quadro K5100M [GK104GLM],
- Quadro NVS 4200M [GF119M], Tesla C2050 [GF100GL], Tesla C2050 [GF110GL],
- Tesla C2070 [GF100GL], Tesla C2075 [GF110GL], Tesla M2070 [GF100GL],
- Tesla M2070-Q [GF100GL], Tesla M2075 [GF110GL], Tesla M2090 [GF110GL],
- Tesla T20 Processor [GF100GL].
- .
- There are several "more modern" GPUs supported by this package, too, but the
- updated drivers in the newer legacy packages or the current nvidia-driver
- package usually provide more features and better support.
- Look at the other legacy packages for older cards.
- .
- See /usr/share/doc/nvidia-legacy-390xx-kernel-source/README.txt.gz
- for a complete list of supported GPUs and PCI IDs.
- .
- This package contains the blobs for building kernel modules for the
- armhf architecture.
- Building the kernel modules has been tested up to Linux 5.17.
-
-Package: nvidia-legacy-390xx-kernel-source
-Description-md5: e52d75f11c621762e499e18abee33631
-Description-en: NVIDIA binary kernel module source (390xx legacy version)
- This package provides the source for the NVIDIA Xorg binary kernel module
- needed by nvidia-legacy-390xx-driver in a form suitable
- for use by module-assistant or kernel-package.
+ for use by module-assistant.
  .
  The NVIDIA binary driver provides optimized hardware acceleration of
  OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
@@ -7989,7 +7893,103 @@ Description-en: NVIDIA binary kernel module source (390xx legacy version)
  .
  This package contains the blobs for building kernel modules for the
  i386 architecture.
- Building the kernel modules has been tested up to Linux 5.17.
+ Building the kernel modules has been tested up to Linux 5.19.
+
+Package: nvidia-legacy-390xx-kernel-source
+Description-md5: fe5781a6c88adf706ec103281afa8049
+Description-en: NVIDIA binary kernel module source (390xx legacy version)
+ This package provides the source for the NVIDIA binary kernel modules
+ needed by nvidia-legacy-390xx-driver in a form suitable
+ for use by module-assistant.
+ .
+ The NVIDIA binary driver provides optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
+ for graphics cards using NVIDIA chip sets.
+ .
+ PLEASE read /usr/share/doc/nvidia-legacy-390xx-kernel-source/README.Debian.gz
+ for building information. If you want the kernel module to be automatically
+ installed via DKMS, install nvidia-legacy-390xx-kernel-dkms instead.
+ .
+ This legacy version is the last release that supports the following GPUs:
+ GeForce 410M [GF119M], GeForce 510 [GF119], GeForce 605 [GF119],
+ GeForce 610M [GF108M], GeForce 610M [GF119M], GeForce 610M [GF117M],
+ GeForce 705M [GF119M], GeForce 710A [GK107M], GeForce 710M [GF117M],
+ GeForce 810M [GF117M], GeForce 810M [GK107M], GeForce 820M [GF117M],
+ GeForce 820M [GK107M], GeForce 825M [GK208M], GeForce 910M [GK208BM],
+ GeForce GT 415M [GF108M], GeForce GT 420 [GF108], GeForce GT 420M [GF108M],
+ GeForce GT 425M [GF108M], GeForce GT 430 [GF108], GeForce GT 435M [GF106M],
+ GeForce GT 435M [GF108M], GeForce GT 440 [GF106], GeForce GT 440 [GF108],
+ GeForce GT 445M [GF106M], GeForce GT 520 [GF108], GeForce GT 520 [GF119],
+ GeForce GT 520M [GF108M], GeForce GT 520M [GF119M],
+ GeForce GT 520MX [GF119M], GeForce GT 525M [GF108M], GeForce GT 530 [GF108],
+ GeForce GT 540M [GF108M], GeForce GT 545 OEM [GF116], GeForce GT 545 [GF116],
+ GeForce GT 550M [GF106M], GeForce GT 550M [GF108M], GeForce GT 550M [GF116M],
+ GeForce GT 555M [GF106M], GeForce GT 555M [GF108M], GeForce GT 555M [GF116M],
+ GeForce GT 560M [GF116M], GeForce GT 610 [GF108], GeForce GT 610 [GF119],
+ GeForce GT 620 OEM [GF119], GeForce GT 620 [GF108], GeForce GT 620M [GF108M],
+ GeForce GT 620M [GF117M], GeForce GT 620M LE [GF108M],
+ GeForce GT 625 OEM [GF119], GeForce GT 625M [GF117M], GeForce GT 630 [GF108],
+ GeForce GT 630M [GF117M], GeForce GT 630M LE [GF108M],
+ GeForce GT 635M [GF108M], GeForce GT 635M [GF116M],
+ GeForce GT 635M LE [GF108M], GeForce GT 640 OEM [GF116],
+ GeForce GT 640M LE [GF108M], GeForce GT 640M LE [GK107M],
+ GeForce GT 640M Mac Edition [GK107M], GeForce GT 645 OEM [GF114],
+ GeForce GT 645M [GK107M], GeForce GT 650M [GK107M],
+ GeForce GT 650M Mac Edition [GK107M], GeForce GT 705 [GF119],
+ GeForce GT 720M [GF117M], GeForce GT 720M [GK208M], GeForce GT 730 [GF108],
+ GeForce GT 730M [GK107M], GeForce GT 730M [GK208M], GeForce GT 735M [GK208M],
+ GeForce GT 740M [GK107M], GeForce GT 745M [GK107M], GeForce GT 750M [GK107M],
+ GeForce GT 750M Mac Edition [GK107M], GeForce GT 755M [GK107M],
+ GeForce GT 755M Mac Edition [GK107M], GeForce GTS 450 OEM [GF106],
+ GeForce GTS 450 [GF106], GeForce GTS 450 Rev. 2 [GF116],
+ GeForce GTS 450 Rev. 3 [GF116], GeForce GTX 460 OEM [GF104],
+ GeForce GTX 460 [GF104], GeForce GTX 460 v2 [GF114],
+ GeForce GTX 460 SE [GF104], GeForce GTX 460 SE v2 [GF114],
+ GeForce GTX 460M [GF106M], GeForce GTX 465 [GF100], GeForce GTX 470 [GF100],
+ GeForce GTX 470M [GF104M], GeForce GTX 480 [GF100],
+ GeForce GTX 480M [GF100M], GeForce GTX 485M [GF104M],
+ GeForce GTX 550 Ti [GF116], GeForce GTX 555 [GF114],
+ GeForce GTX 560 OEM [GF110], GeForce GTX 560 [GF114],
+ GeForce GTX 560 SE [GF114], GeForce GTX 560 Ti [GF114],
+ GeForce GTX 560 Ti OEM [GF110], GeForce GTX 560 Ti 448 Cores [GF110],
+ GeForce GTX 570 [GF110], GeForce GTX 570 Rev. 2 [GF110],
+ GeForce GTX 570M [GF114M], GeForce GTX 580 [GF110],
+ GeForce GTX 580 Rev. 2 [GF110], GeForce GTX 580M [GF114M],
+ GeForce GTX 590 [GF110], GeForce GTX 660M [GK107M],
+ GeForce GTX 660M Mac Edition [GK107M], GeForce GTX 670M [GF114M],
+ GeForce GTX 670MX [GK104M], GeForce GTX 675M [GF114M],
+ GeForce GTX 675MX [GK104M], GeForce GTX 675MX Mac Edition [GK104M],
+ GeForce GTX 680M [GK104M], GeForce GTX 680MX [GK104M],
+ GeForce GTX 765M [GK106M], GeForce GTX 770M [GK106M],
+ GeForce GTX 775M Mac Edition [GK104M], GeForce GTX 780M [GK104M],
+ GeForce GTX 780M Mac Edition [GK104M], GeForce GTX 860M [GK104M],
+ GeForce GTX 880M [GK104M], NVS 310 [GF119], NVS 315 [GF119],
+ NVS 4200M [GF119M], NVS 5200M [GF108GLM], NVS 5400M [GF108M],
+ Quadro 500M [GF108GLM], Quadro 600 [GF108GL], Quadro 1000M [GF108GLM],
+ Quadro 2000 [GF106GL], Quadro 2000M [GF106GLM], Quadro 3000M [GF104GLM],
+ Quadro 4000 [GF100GL], Quadro 4000M [GF104GLM], Quadro 5000 [GF100GL],
+ Quadro 5000M [GF100GLM], Quadro 5010M [GF100GLM], Quadro 6000 [GF100GL],
+ Quadro 7000 [GF100GL], Quadro K500M [GK107GLM], Quadro K510M [GK208GLM],
+ Quadro K610M [GK208GLM], Quadro K1000M [GK107GLM], Quadro K1100M [GK107GLM],
+ Quadro K2000M [GK107GLM], Quadro K2100M [GK106GLM], Quadro K3000M [GK104GLM],
+ Quadro K3100M [GK104GLM], Quadro K4000M [GK104GLM], Quadro K4100M [GK104GLM],
+ Quadro K5000M [GK104GLM], Quadro K5100M [GK104GLM],
+ Quadro NVS 4200M [GF119M], Tesla C2050 [GF100GL], Tesla C2050 [GF110GL],
+ Tesla C2070 [GF100GL], Tesla C2075 [GF110GL], Tesla M2070 [GF100GL],
+ Tesla M2070-Q [GF100GL], Tesla M2075 [GF110GL], Tesla M2090 [GF110GL],
+ Tesla T20 Processor [GF100GL].
+ .
+ There are several "more modern" GPUs supported by this package, too, but the
+ updated drivers in the newer legacy packages or the current nvidia-driver
+ package usually provide more features and better support.
+ Look at the other legacy packages for older cards.
+ .
+ See /usr/share/doc/nvidia-legacy-390xx-kernel-source/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
+ .
+ This package contains the blobs for building kernel modules for the
+ armhf architecture.
+ Building the kernel modules has been tested up to Linux 5.19.
 
 Package: nvidia-legacy-390xx-kernel-support
 Description-md5: 16dec0bb04dd8db67c4ceb2f5fa0323d
@@ -8029,7 +8029,7 @@ Description-en: NVIDIA System Management Interface (390xx legacy version)
  further information.
 
 Package: nvidia-legacy-390xx-vdpau-driver
-Description-md5: 482df6ef54581883c5e5f1dfc1dc70f5
+Description-md5: ed3b305e5bd0c6cd243d9e91234fd671
 Description-en: Video Decode and Presentation API for Unix - NVIDIA driver (390xx legacy)
  These libraries provide the Video Decode and Presentation API for Unix.
  They provide accelerated video playback (incl. H.264) for the supported
@@ -8043,7 +8043,7 @@ Description-en: Video Decode and Presentation API for Unix - NVIDIA driver (390x
  Please see the nvidia-legacy-390xx-kernel-dkms or
  nvidia-legacy-390xx-kernel-source packages
  for building the kernel module required by this package.
- This will provide nvidia-legacy-390xx-kernel-390.151.
+ This will provide nvidia-legacy-390xx-kernel-390.154.
 
 Package: nvidia-legacy-390xx-vulkan-icd
 Description-md5: 9cec1a3a6024722fe8adc81ab9b7906d
@@ -8054,7 +8054,7 @@ Description-en: NVIDIA Vulkan installable client driver (ICD) (390xx legacy vers
  Vulkan (GLVND variant) which supports NVIDIA GPUs.
 
 Package: xserver-xorg-video-nvidia-legacy-390xx
-Description-md5: d02f9ec8ad090d91dd768258674fbf17
+Description-md5: 0da9e52094eabbe89340f5c453c286cf
 Description-en: NVIDIA binary Xorg driver (390xx legacy version)
  The NVIDIA binary driver provides optimized hardware acceleration of
  OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
@@ -8063,7 +8063,7 @@ Description-en: NVIDIA binary Xorg driver (390xx legacy version)
  Please see the nvidia-legacy-390xx-kernel-dkms or
  nvidia-legacy-390xx-kernel-source packages
  for building the kernel module required by this package.
- This will provide nvidia-legacy-390xx-kernel-390.151.
+ This will provide nvidia-legacy-390xx-kernel-390.154.
  .
  This legacy version is the last release that supports the following GPUs:
  GeForce 410M [GF119M], GeForce 510 [GF119], GeForce 605 [GF119],
@@ -8778,7 +8778,7 @@ Description-en: NVIDIA runtime compiler library (Tesla 450 version)
  This package contains the runtime compiler library.
 
 Package: libnvidia-tesla-450-cuda1
-Description-md5: 983a1cafbdf94efaa5d227030c0609d7
+Description-md5: 8c11133da07cda3294e39f13a4414d1b
 Description-en: NVIDIA CUDA Driver Library (Tesla 450 version)
  The Compute Unified Device Architecture (CUDA) enables NVIDIA
  graphics processing units (GPUs) to be used for massively parallel
@@ -8793,7 +8793,7 @@ Description-en: NVIDIA CUDA Driver Library (Tesla 450 version)
  Please see the nvidia-tesla-450-kernel-dkms or
  nvidia-tesla-450-kernel-source packages
  for building the kernel module required by this package.
- This will provide nvidia-tesla-450-kernel-450.191.01.
+ This will provide nvidia-tesla-450-kernel-450.203.03.
 
 Package: libnvidia-tesla-450-eglcore
 Description-md5: e827888ea596c32123c1fa8c0dfc76ed
@@ -8939,7 +8939,7 @@ Description-en: allows the selection of NVIDIA as GLX provider (Tesla 450 versio
  nvidia-tesla-450-driver package instead.
 
 Package: nvidia-tesla-450-driver
-Description-md5: 375e2cb484be191f4be3472adfeab5cb
+Description-md5: 4393dda36816f44755727fd4643b7756
 Description-en: NVIDIA metapackage (Tesla 450 version)
  This metapackage depends on the NVIDIA binary driver and libraries
  that provide optimized hardware acceleration of
@@ -8948,7 +8948,7 @@ Description-en: NVIDIA metapackage (Tesla 450 version)
  Please see the nvidia-tesla-450-kernel-dkms or
  nvidia-tesla-450-kernel-source packages
  for building the kernel module required by this package.
- This will provide nvidia-tesla-450-kernel-450.191.01.
+ This will provide nvidia-tesla-450-kernel-450.203.03.
  .
  This version only supports GeForce, Quadro, NVS, Tesla, ... GPUs based on the
  Kepler, Maxwell, Volta, Turing, or newer architectures.
@@ -8957,7 +8957,7 @@ Description-en: NVIDIA metapackage (Tesla 450 version)
  See /usr/share/doc/nvidia-tesla-450-driver/README.txt.gz
  for a complete list of supported GPUs and PCI IDs.
  .
- Building the kernel module has been tested up to Linux 5.18.
+ Building the kernel module has been tested up to Linux 5.19.
 
 Package: nvidia-tesla-450-driver-bin
 Description-md5: 0d5ff3f349ab841d33ce00c1d30ec8e4
@@ -8985,55 +8985,7 @@ Description-en: NVIDIA EGL installable client driver (ICD)
  EGL via GLVND which supports NVIDIA GPUs.
 
 Package: nvidia-tesla-450-kernel-dkms
-Description-md5: 04f4c5ca162c21c3617c26d3fdb2c833
-Description-en: NVIDIA binary kernel module DKMS source (Tesla 450 version)
- This package builds the NVIDIA binary kernel modules needed by
- nvidia-tesla-450-driver, using DKMS.
- Provided that you have the kernel header packages installed, the kernel
- module will be built for your running kernel and automatically rebuilt for
- any new kernel headers that are installed.
- .
- The NVIDIA binary driver provides optimized hardware acceleration of
- OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
- for graphics cards using NVIDIA chip sets.
- .
- This version only supports GeForce, Quadro, NVS, Tesla, ... GPUs based on the
- Kepler, Maxwell, Volta, Turing, or newer architectures.
- Look at the legacy packages for older cards.
- .
- See /usr/share/doc/nvidia-tesla-450-kernel-dkms/README.txt.gz
- for a complete list of supported GPUs and PCI IDs.
- .
- This package contains the blobs for building kernel modules for the
- amd64 architecture.
- Building the kernel modules has been tested up to Linux 5.18.
-
-Package: nvidia-tesla-450-kernel-dkms
-Description-md5: 0649f607d15d2d21b9edb835aeeea5cd
-Description-en: NVIDIA binary kernel module DKMS source (Tesla 450 version)
- This package builds the NVIDIA binary kernel modules needed by
- nvidia-tesla-450-driver, using DKMS.
- Provided that you have the kernel header packages installed, the kernel
- module will be built for your running kernel and automatically rebuilt for
- any new kernel headers that are installed.
- .
- The NVIDIA binary driver provides optimized hardware acceleration of
- OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
- for graphics cards using NVIDIA chip sets.
- .
- This version only supports GeForce, Quadro, NVS, Tesla, ... GPUs based on the
- Kepler, Maxwell, Volta, Turing, or newer architectures.
- Look at the legacy packages for older cards.
- .
- See /usr/share/doc/nvidia-tesla-450-kernel-dkms/README.txt.gz
- for a complete list of supported GPUs and PCI IDs.
- .
- This package contains the blobs for building kernel modules for the
- ppc64el architecture.
- Building the kernel modules has been tested up to Linux 5.18.
-
-Package: nvidia-tesla-450-kernel-dkms
-Description-md5: 63fd7a895b85b6f43392261ed6892193
+Description-md5: 1156e7b4baa0d56d811282ff135ae816
 Description-en: NVIDIA binary kernel module DKMS source (Tesla 450 version)
  This package builds the NVIDIA binary kernel modules needed by
  nvidia-tesla-450-driver, using DKMS.
@@ -9054,14 +9006,62 @@ Description-en: NVIDIA binary kernel module DKMS source (Tesla 450 version)
  .
  This package contains the blobs for building kernel modules for the
  arm64 architecture.
- Building the kernel modules has been tested up to Linux 5.18.
+ Building the kernel modules has been tested up to Linux 5.19.
+
+Package: nvidia-tesla-450-kernel-dkms
+Description-md5: a27d944ed0ec2c9086ffca16a80d90b0
+Description-en: NVIDIA binary kernel module DKMS source (Tesla 450 version)
+ This package builds the NVIDIA binary kernel modules needed by
+ nvidia-tesla-450-driver, using DKMS.
+ Provided that you have the kernel header packages installed, the kernel
+ module will be built for your running kernel and automatically rebuilt for
+ any new kernel headers that are installed.
+ .
+ The NVIDIA binary driver provides optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
+ for graphics cards using NVIDIA chip sets.
+ .
+ This version only supports GeForce, Quadro, NVS, Tesla, ... GPUs based on the
+ Kepler, Maxwell, Volta, Turing, or newer architectures.
+ Look at the legacy packages for older cards.
+ .
+ See /usr/share/doc/nvidia-tesla-450-kernel-dkms/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
+ .
+ This package contains the blobs for building kernel modules for the
+ ppc64el architecture.
+ Building the kernel modules has been tested up to Linux 5.19.
+
+Package: nvidia-tesla-450-kernel-dkms
+Description-md5: b06a96dc5280041674755dca3d11630e
+Description-en: NVIDIA binary kernel module DKMS source (Tesla 450 version)
+ This package builds the NVIDIA binary kernel modules needed by
+ nvidia-tesla-450-driver, using DKMS.
+ Provided that you have the kernel header packages installed, the kernel
+ module will be built for your running kernel and automatically rebuilt for
+ any new kernel headers that are installed.
+ .
+ The NVIDIA binary driver provides optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
+ for graphics cards using NVIDIA chip sets.
+ .
+ This version only supports GeForce, Quadro, NVS, Tesla, ... GPUs based on the
+ Kepler, Maxwell, Volta, Turing, or newer architectures.
+ Look at the legacy packages for older cards.
+ .
+ See /usr/share/doc/nvidia-tesla-450-kernel-dkms/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
+ .
+ This package contains the blobs for building kernel modules for the
+ amd64 architecture.
+ Building the kernel modules has been tested up to Linux 5.19.
 
 Package: nvidia-tesla-450-kernel-source
-Description-md5: 12ca2820fa96c83d6b2fb1dca3fdde20
+Description-md5: 3c99f8596896e398dee6741aad559b0a
 Description-en: NVIDIA binary kernel module source (Tesla 450 version)
  This package provides the source for the NVIDIA binary kernel modules
  needed by nvidia-tesla-450-driver in a form suitable
- for use by module-assistant or kernel-package.
+ for use by module-assistant.
  .
  The NVIDIA binary driver provides optimized hardware acceleration of
  OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
@@ -9080,14 +9080,14 @@ Description-en: NVIDIA binary kernel module source (Tesla 450 version)
  .
  This package contains the blobs for building kernel modules for the
  amd64 architecture.
- Building the kernel modules has been tested up to Linux 5.18.
+ Building the kernel modules has been tested up to Linux 5.19.
 
 Package: nvidia-tesla-450-kernel-source
-Description-md5: 61065db1de806ec9f00b42547e7163c7
+Description-md5: 7665f363313270e728c89d0a54fee50d
 Description-en: NVIDIA binary kernel module source (Tesla 450 version)
  This package provides the source for the NVIDIA binary kernel modules
  needed by nvidia-tesla-450-driver in a form suitable
- for use by module-assistant or kernel-package.
+ for use by module-assistant.
  .
  The NVIDIA binary driver provides optimized hardware acceleration of
  OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
@@ -9106,14 +9106,14 @@ Description-en: NVIDIA binary kernel module source (Tesla 450 version)
  .
  This package contains the blobs for building kernel modules for the
  arm64 architecture.
- Building the kernel modules has been tested up to Linux 5.18.
+ Building the kernel modules has been tested up to Linux 5.19.
 
 Package: nvidia-tesla-450-kernel-source
-Description-md5: 7f712ffcb544e7c6f053bd80151da74e
+Description-md5: 7807b48f39e5385372b9f1d1ea3e56e7
 Description-en: NVIDIA binary kernel module source (Tesla 450 version)
  This package provides the source for the NVIDIA binary kernel modules
  needed by nvidia-tesla-450-driver in a form suitable
- for use by module-assistant or kernel-package.
+ for use by module-assistant.
  .
  The NVIDIA binary driver provides optimized hardware acceleration of
  OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
@@ -9132,7 +9132,7 @@ Description-en: NVIDIA binary kernel module source (Tesla 450 version)
  .
  This package contains the blobs for building kernel modules for the
  ppc64el architecture.
- Building the kernel modules has been tested up to Linux 5.18.
+ Building the kernel modules has been tested up to Linux 5.19.
 
 Package: nvidia-tesla-450-kernel-support
 Description-md5: 2853241145523d47aa1df5702b2e00fa
@@ -9164,7 +9164,7 @@ Description-en: NVIDIA System Management Interface (Tesla 450 version)
  further information.
 
 Package: nvidia-tesla-450-vdpau-driver
-Description-md5: a113d480766c1e1a6b4b4d51ebeb61b1
+Description-md5: 2b261c3e6ed8d18c0c01f4a64ab9b988
 Description-en: Video Decode and Presentation API for Unix - NVIDIA driver (Tesla 450)
  These libraries provide the Video Decode and Presentation API for Unix.
  They provide accelerated video playback (incl. H.264) for the supported
@@ -9178,7 +9178,7 @@ Description-en: Video Decode and Presentation API for Unix - NVIDIA driver (Tesl
  Please see the nvidia-tesla-450-kernel-dkms or
  nvidia-tesla-450-kernel-source packages
  for building the kernel module required by this package.
- This will provide nvidia-tesla-450-kernel-450.191.01.
+ This will provide nvidia-tesla-450-kernel-450.203.03.
 
 Package: nvidia-tesla-450-vulkan-icd
 Description-md5: 831e0e24d4194e90f372bee5cb7c6007
@@ -9189,7 +9189,7 @@ Description-en: NVIDIA Vulkan installable client driver (ICD) (Tesla 450 version
  Vulkan (GLVND variant) which supports NVIDIA GPUs.
 
 Package: xserver-xorg-video-nvidia-tesla-450
-Description-md5: ef8ce2bc4d1a75ed46de9c48bcfdf7ee
+Description-md5: c386902bc7ab0c2d8d0c0560ff5e3d04
 Description-en: NVIDIA binary Xorg driver (Tesla 450 version)
  The NVIDIA binary driver provides optimized hardware acceleration of
  OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
@@ -9198,7 +9198,7 @@ Description-en: NVIDIA binary Xorg driver (Tesla 450 version)
  Please see the nvidia-tesla-450-kernel-dkms or
  nvidia-tesla-450-kernel-source packages
  for building the kernel module required by this package.
- This will provide nvidia-tesla-450-kernel-450.191.01.
+ This will provide nvidia-tesla-450-kernel-450.203.03.
  .
  This version only supports GeForce, Quadro, NVS, Tesla, ... GPUs based on the
  Kepler, Maxwell, Volta, Turing, or newer architectures.
@@ -9864,7 +9864,7 @@ Description-en: NVIDIA runtime compiler library (Tesla 470 version)
  This package contains the runtime compiler library.
 
 Package: libnvidia-tesla-470-cuda1
-Description-md5: f36c4e7d9891103ab0c893b21eab9047
+Description-md5: e5f16c5a5cc2a33496f877f4b98f5023
 Description-en: NVIDIA CUDA Driver Library (Tesla 470 version)
  The Compute Unified Device Architecture (CUDA) enables NVIDIA
  graphics processing units (GPUs) to be used for massively parallel
@@ -9879,7 +9879,7 @@ Description-en: NVIDIA CUDA Driver Library (Tesla 470 version)
  Please see the nvidia-tesla-470-kernel-dkms or
  nvidia-tesla-470-kernel-source packages
  for building the kernel module required by this package.
- This will provide nvidia-tesla-470-kernel-470.129.06.
+ This will provide nvidia-tesla-470-kernel-470.141.03.
 
 Package: libnvidia-tesla-470-eglcore
 Description-md5: 9ce14eda75493dcc4b1af988df460106
@@ -10048,7 +10048,7 @@ Description-en: allows the selection of NVIDIA as GLX provider (Tesla 470 versio
  nvidia-tesla-470-driver package instead.
 
 Package: nvidia-tesla-470-driver
-Description-md5: 9f60d907b4bfbcd1e9330b63f9a20193
+Description-md5: b1c9a796de3bd29279e919b8eeb63d4c
 Description-en: NVIDIA metapackage (Tesla 470 version)
  This metapackage depends on the NVIDIA binary driver and libraries
  that provide optimized hardware acceleration of
@@ -10057,7 +10057,7 @@ Description-en: NVIDIA metapackage (Tesla 470 version)
  Please see the nvidia-tesla-470-kernel-dkms or
  nvidia-tesla-470-kernel-source packages
  for building the kernel module required by this package.
- This will provide nvidia-tesla-470-kernel-470.129.06.
+ This will provide nvidia-tesla-470-kernel-470.141.03.
  .
  This version only supports GeForce, NVS, Quadro, RTX, Tesla, ... GPUs based on
  the Kepler, Maxwell, Pascal, Volta, Turing, Ampere, or newer architectures.
@@ -10068,7 +10068,7 @@ Description-en: NVIDIA metapackage (Tesla 470 version)
  See /usr/share/doc/nvidia-tesla-470-driver/README.txt.gz
  for a complete list of supported GPUs and PCI IDs.
  .
- Building the kernel module has been tested up to Linux 5.18.
+ Building the kernel module has been tested up to Linux 5.19.
 
 Package: nvidia-tesla-470-driver-bin
 Description-md5: c740690eca57c0061bc17f8f28d73671
@@ -10096,59 +10096,7 @@ Description-en: NVIDIA EGL installable client driver (ICD)
  EGL via GLVND which supports NVIDIA GPUs.
 
 Package: nvidia-tesla-470-kernel-dkms
-Description-md5: 01ab08a25c33101d60fb1733248183a6
-Description-en: NVIDIA binary kernel module DKMS source (Tesla 470 version)
- This package builds the NVIDIA binary kernel modules needed by
- nvidia-tesla-470-driver, using DKMS.
- Provided that you have the kernel header packages installed, the kernel
- module will be built for your running kernel and automatically rebuilt for
- any new kernel headers that are installed.
- .
- The NVIDIA binary driver provides optimized hardware acceleration of
- OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
- for graphics cards using NVIDIA chip sets.
- .
- This version only supports GeForce, NVS, Quadro, RTX, Tesla, ... GPUs based on
- the Kepler, Maxwell, Pascal, Volta, Turing, Ampere, or newer architectures.
- The (Tesla) 470 drivers are the last driver series supporting GPUs based on
- the Kepler architecture.
- Look at the legacy driver packages for older cards.
- .
- See /usr/share/doc/nvidia-tesla-470-kernel-dkms/README.txt.gz
- for a complete list of supported GPUs and PCI IDs.
- .
- This package contains the blobs for building kernel modules for the
- amd64 architecture.
- Building the kernel modules has been tested up to Linux 5.18.
-
-Package: nvidia-tesla-470-kernel-dkms
-Description-md5: 33b174501144b8da0ddbed41be6d95b3
-Description-en: NVIDIA binary kernel module DKMS source (Tesla 470 version)
- This package builds the NVIDIA binary kernel modules needed by
- nvidia-tesla-470-driver, using DKMS.
- Provided that you have the kernel header packages installed, the kernel
- module will be built for your running kernel and automatically rebuilt for
- any new kernel headers that are installed.
- .
- The NVIDIA binary driver provides optimized hardware acceleration of
- OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
- for graphics cards using NVIDIA chip sets.
- .
- This version only supports GeForce, NVS, Quadro, RTX, Tesla, ... GPUs based on
- the Kepler, Maxwell, Pascal, Volta, Turing, Ampere, or newer architectures.
- The (Tesla) 470 drivers are the last driver series supporting GPUs based on
- the Kepler architecture.
- Look at the legacy driver packages for older cards.
- .
- See /usr/share/doc/nvidia-tesla-470-kernel-dkms/README.txt.gz
- for a complete list of supported GPUs and PCI IDs.
- .
- This package contains the blobs for building kernel modules for the
- ppc64el architecture.
- Building the kernel modules has been tested up to Linux 5.18.
-
-Package: nvidia-tesla-470-kernel-dkms
-Description-md5: c8dea95b1067c10b3f8095af57db5883
+Description-md5: 06f504220ef29cf149eb135bbd6b49ad
 Description-en: NVIDIA binary kernel module DKMS source (Tesla 470 version)
  This package builds the NVIDIA binary kernel modules needed by
  nvidia-tesla-470-driver, using DKMS.
@@ -10171,22 +10119,20 @@ Description-en: NVIDIA binary kernel module DKMS source (Tesla 470 version)
  .
  This package contains the blobs for building kernel modules for the
  arm64 architecture.
- Building the kernel modules has been tested up to Linux 5.18.
+ Building the kernel modules has been tested up to Linux 5.19.
 
-Package: nvidia-tesla-470-kernel-source
-Description-md5: 08f692d8f8950633eaf5fde1407bf633
-Description-en: NVIDIA binary kernel module source (Tesla 470 version)
- This package provides the source for the NVIDIA binary kernel modules
- needed by nvidia-tesla-470-driver in a form suitable
- for use by module-assistant or kernel-package.
+Package: nvidia-tesla-470-kernel-dkms
+Description-md5: 44398b5f0bfab59de2f84c9eebfd8837
+Description-en: NVIDIA binary kernel module DKMS source (Tesla 470 version)
+ This package builds the NVIDIA binary kernel modules needed by
+ nvidia-tesla-470-driver, using DKMS.
+ Provided that you have the kernel header packages installed, the kernel
+ module will be built for your running kernel and automatically rebuilt for
+ any new kernel headers that are installed.
  .
  The NVIDIA binary driver provides optimized hardware acceleration of
  OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
  for graphics cards using NVIDIA chip sets.
- .
- PLEASE read /usr/share/doc/nvidia-tesla-470-kernel-source/README.Debian.gz
- for building information. If you want the kernel module to be automatically
- installed via DKMS, install nvidia-tesla-470-kernel-dkms instead.
  .
  This version only supports GeForce, NVS, Quadro, RTX, Tesla, ... GPUs based on
  the Kepler, Maxwell, Pascal, Volta, Turing, Ampere, or newer architectures.
@@ -10194,47 +10140,45 @@ Description-en: NVIDIA binary kernel module source (Tesla 470 version)
  the Kepler architecture.
  Look at the legacy driver packages for older cards.
  .
- See /usr/share/doc/nvidia-tesla-470-kernel-source/README.txt.gz
+ See /usr/share/doc/nvidia-tesla-470-kernel-dkms/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
+ .
+ This package contains the blobs for building kernel modules for the
+ amd64 architecture.
+ Building the kernel modules has been tested up to Linux 5.19.
+
+Package: nvidia-tesla-470-kernel-dkms
+Description-md5: ab55c78e414072915238111fc24bd1d2
+Description-en: NVIDIA binary kernel module DKMS source (Tesla 470 version)
+ This package builds the NVIDIA binary kernel modules needed by
+ nvidia-tesla-470-driver, using DKMS.
+ Provided that you have the kernel header packages installed, the kernel
+ module will be built for your running kernel and automatically rebuilt for
+ any new kernel headers that are installed.
+ .
+ The NVIDIA binary driver provides optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
+ for graphics cards using NVIDIA chip sets.
+ .
+ This version only supports GeForce, NVS, Quadro, RTX, Tesla, ... GPUs based on
+ the Kepler, Maxwell, Pascal, Volta, Turing, Ampere, or newer architectures.
+ The (Tesla) 470 drivers are the last driver series supporting GPUs based on
+ the Kepler architecture.
+ Look at the legacy driver packages for older cards.
+ .
+ See /usr/share/doc/nvidia-tesla-470-kernel-dkms/README.txt.gz
  for a complete list of supported GPUs and PCI IDs.
  .
  This package contains the blobs for building kernel modules for the
  ppc64el architecture.
- Building the kernel modules has been tested up to Linux 5.18.
+ Building the kernel modules has been tested up to Linux 5.19.
 
 Package: nvidia-tesla-470-kernel-source
-Description-md5: 613606fee4223f8bf855345dbea7a08a
+Description-md5: 61f6ecca0b9b605c5d4ba6de6378471f
 Description-en: NVIDIA binary kernel module source (Tesla 470 version)
  This package provides the source for the NVIDIA binary kernel modules
  needed by nvidia-tesla-470-driver in a form suitable
- for use by module-assistant or kernel-package.
- .
- The NVIDIA binary driver provides optimized hardware acceleration of
- OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
- for graphics cards using NVIDIA chip sets.
- .
- PLEASE read /usr/share/doc/nvidia-tesla-470-kernel-source/README.Debian.gz
- for building information. If you want the kernel module to be automatically
- installed via DKMS, install nvidia-tesla-470-kernel-dkms instead.
- .
- This version only supports GeForce, NVS, Quadro, RTX, Tesla, ... GPUs based on
- the Kepler, Maxwell, Pascal, Volta, Turing, Ampere, or newer architectures.
- The (Tesla) 470 drivers are the last driver series supporting GPUs based on
- the Kepler architecture.
- Look at the legacy driver packages for older cards.
- .
- See /usr/share/doc/nvidia-tesla-470-kernel-source/README.txt.gz
- for a complete list of supported GPUs and PCI IDs.
- .
- This package contains the blobs for building kernel modules for the
- arm64 architecture.
- Building the kernel modules has been tested up to Linux 5.18.
-
-Package: nvidia-tesla-470-kernel-source
-Description-md5: 9c8f23178470767231b8a6efb8b25796
-Description-en: NVIDIA binary kernel module source (Tesla 470 version)
- This package provides the source for the NVIDIA binary kernel modules
- needed by nvidia-tesla-470-driver in a form suitable
- for use by module-assistant or kernel-package.
+ for use by module-assistant.
  .
  The NVIDIA binary driver provides optimized hardware acceleration of
  OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
@@ -10255,7 +10199,63 @@ Description-en: NVIDIA binary kernel module source (Tesla 470 version)
  .
  This package contains the blobs for building kernel modules for the
  amd64 architecture.
- Building the kernel modules has been tested up to Linux 5.18.
+ Building the kernel modules has been tested up to Linux 5.19.
+
+Package: nvidia-tesla-470-kernel-source
+Description-md5: 623e5832d53f2075702ce785239221ff
+Description-en: NVIDIA binary kernel module source (Tesla 470 version)
+ This package provides the source for the NVIDIA binary kernel modules
+ needed by nvidia-tesla-470-driver in a form suitable
+ for use by module-assistant.
+ .
+ The NVIDIA binary driver provides optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
+ for graphics cards using NVIDIA chip sets.
+ .
+ PLEASE read /usr/share/doc/nvidia-tesla-470-kernel-source/README.Debian.gz
+ for building information. If you want the kernel module to be automatically
+ installed via DKMS, install nvidia-tesla-470-kernel-dkms instead.
+ .
+ This version only supports GeForce, NVS, Quadro, RTX, Tesla, ... GPUs based on
+ the Kepler, Maxwell, Pascal, Volta, Turing, Ampere, or newer architectures.
+ The (Tesla) 470 drivers are the last driver series supporting GPUs based on
+ the Kepler architecture.
+ Look at the legacy driver packages for older cards.
+ .
+ See /usr/share/doc/nvidia-tesla-470-kernel-source/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
+ .
+ This package contains the blobs for building kernel modules for the
+ ppc64el architecture.
+ Building the kernel modules has been tested up to Linux 5.19.
+
+Package: nvidia-tesla-470-kernel-source
+Description-md5: 8d32b2ecfee55ed47ca7f693a42e623f
+Description-en: NVIDIA binary kernel module source (Tesla 470 version)
+ This package provides the source for the NVIDIA binary kernel modules
+ needed by nvidia-tesla-470-driver in a form suitable
+ for use by module-assistant.
+ .
+ The NVIDIA binary driver provides optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
+ for graphics cards using NVIDIA chip sets.
+ .
+ PLEASE read /usr/share/doc/nvidia-tesla-470-kernel-source/README.Debian.gz
+ for building information. If you want the kernel module to be automatically
+ installed via DKMS, install nvidia-tesla-470-kernel-dkms instead.
+ .
+ This version only supports GeForce, NVS, Quadro, RTX, Tesla, ... GPUs based on
+ the Kepler, Maxwell, Pascal, Volta, Turing, Ampere, or newer architectures.
+ The (Tesla) 470 drivers are the last driver series supporting GPUs based on
+ the Kepler architecture.
+ Look at the legacy driver packages for older cards.
+ .
+ See /usr/share/doc/nvidia-tesla-470-kernel-source/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
+ .
+ This package contains the blobs for building kernel modules for the
+ arm64 architecture.
+ Building the kernel modules has been tested up to Linux 5.19.
 
 Package: nvidia-tesla-470-kernel-support
 Description-md5: 6e7bfe61c71e67983d52361ca9600416
@@ -10287,7 +10287,7 @@ Description-en: NVIDIA System Management Interface (Tesla 470 version)
  further information.
 
 Package: nvidia-tesla-470-vdpau-driver
-Description-md5: e6c069604d5c07260e84645da6d557e2
+Description-md5: 2e4bd9410aafe280acd098c5195a2224
 Description-en: Video Decode and Presentation API for Unix - NVIDIA driver (Tesla 470)
  These libraries provide the Video Decode and Presentation API for Unix.
  They provide accelerated video playback (incl. H.264) for the supported
@@ -10301,7 +10301,7 @@ Description-en: Video Decode and Presentation API for Unix - NVIDIA driver (Tesl
  Please see the nvidia-tesla-470-kernel-dkms or
  nvidia-tesla-470-kernel-source packages
  for building the kernel module required by this package.
- This will provide nvidia-tesla-470-kernel-470.129.06.
+ This will provide nvidia-tesla-470-kernel-470.141.03.
 
 Package: nvidia-tesla-470-vulkan-icd
 Description-md5: 8932f3ac9eee7570fffc87ba6ef73025
@@ -10312,7 +10312,7 @@ Description-en: NVIDIA Vulkan installable client driver (ICD) (Tesla 470 version
  Vulkan (GLVND variant) which supports NVIDIA GPUs.
 
 Package: xserver-xorg-video-nvidia-tesla-470
-Description-md5: debd115a8eca6d0aaf066873ef975284
+Description-md5: 9502d70d59be6edeafff17d730d931da
 Description-en: NVIDIA binary Xorg driver (Tesla 470 version)
  The NVIDIA binary driver provides optimized hardware acceleration of
  OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
@@ -10321,7 +10321,7 @@ Description-en: NVIDIA binary Xorg driver (Tesla 470 version)
  Please see the nvidia-tesla-470-kernel-dkms or
  nvidia-tesla-470-kernel-source packages
  for building the kernel module required by this package.
- This will provide nvidia-tesla-470-kernel-470.129.06.
+ This will provide nvidia-tesla-470-kernel-470.141.03.
  .
  This version only supports GeForce, NVS, Quadro, RTX, Tesla, ... GPUs based on
  the Kepler, Maxwell, Pascal, Volta, Turing, Ampere, or newer architectures.
