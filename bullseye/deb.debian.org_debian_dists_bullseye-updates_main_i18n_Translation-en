@@ -162,6 +162,572 @@ Description-en: anti-virus utility for Unix - library
  recognizes and scans archives. Scanning is very fast and most of the time
  not noticeable.
 
+Package: grub-efi-amd64-signed
+Description-md5: f8d7d130b6d73ff8f5f6d3b33d090327
+Description-en: GRand Unified Bootloader, version 2 (amd64 UEFI signed by Debian)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This package contains the binaries signed by the Debian UEFI CA to be used by
+ shim-signed.
+
+Package: grub-efi-arm64-signed
+Description-md5: 6f25923f29f173a94740a4282265d0f7
+Description-en: GRand Unified Bootloader, version 2 (arm64 UEFI signed by Debian)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This package contains the binaries signed by the Debian UEFI CA to be used by
+ shim-signed.
+
+Package: grub-efi-ia32-signed
+Description-md5: 1ab4a087b782123b2bfe1feb2760d011
+Description-en: GRand Unified Bootloader, version 2 (i386 UEFI signed by Debian)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This package contains the binaries signed by the Debian UEFI CA to be used by
+ shim-signed.
+
+Package: grub-common
+Description-md5: 9c75036dc0a0792fedbc58df208ed227
+Description-en: GRand Unified Bootloader (common files)
+ This package contains common files shared by the distinct flavours of GRUB.
+ It is shared between GRUB Legacy and GRUB 2, although a number of files
+ specific to GRUB 2 are here as long as they do not break GRUB Legacy.
+ .
+ grub-mkrescue needs the suggested packages mtools (for UEFI targets) and
+ xorriso.
+
+Package: grub-coreboot
+Description-md5: 24bd58f91c5eb109ee5e6d95810f1702
+Description-en: GRand Unified Bootloader, version 2 (Coreboot version)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This is a dependency package for a version of GRUB that has been built for
+ use with platforms running the Coreboot firmware.  Installing this package
+ indicates that this version of GRUB should be the active boot loader.
+
+Package: grub-coreboot-bin
+Description-md5: be941282995956a28b42e4848b6d427b
+Description-en: GRand Unified Bootloader, version 2 (Coreboot modules)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This package contains GRUB modules that have been built for use with
+ platforms running the Coreboot firmware.  It can be installed in parallel
+ with other flavours, but will not automatically install GRUB as the active
+ boot loader nor automatically update grub.cfg on upgrade unless
+ grub-coreboot is also installed.
+
+Package: grub-coreboot-dbg
+Description-md5: ee3f45ba8ef408dea3b4e172ff46a041
+Description-en: GRand Unified Bootloader, version 2 (Coreboot debug files)
+ This package contains debugging files for grub-coreboot-bin.  You only need
+ these if you are trying to debug GRUB using its GDB stub.
+
+Package: grub-efi
+Description-md5: 2e384f4cebd455e65f849ef1c510f0be
+Description-en: GRand Unified Bootloader, version 2 (dummy package)
+ This is a dummy package that depends on the grub-efi-$ARCH package most likely
+ to be appropriate for each architecture.
+
+Package: grub-efi-amd64
+Description-md5: 1718e7ac8c2b19e7fc9fd6edaaa9c56e
+Description-en: GRand Unified Bootloader, version 2 (EFI-AMD64 version)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This is a dependency package for a version of GRUB that has been built for
+ use with the EFI-AMD64 architecture, as used by Intel Macs (unless a BIOS
+ interface has been activated).  Installing this package indicates that this
+ version of GRUB should be the active boot loader.
+
+Package: grub-efi-amd64-bin
+Description-md5: f6ad99c32640061c96401d0bc70e2f8a
+Description-en: GRand Unified Bootloader, version 2 (EFI-AMD64 modules)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This package contains GRUB modules that have been built for use with the
+ EFI-AMD64 architecture, as used by Intel Macs (unless a BIOS interface has
+ been activated).  It can be installed in parallel with other flavours, but
+ will not automatically install GRUB as the active boot loader nor
+ automatically update grub.cfg on upgrade unless grub-efi-amd64 is also
+ installed.
+
+Package: grub-efi-amd64-dbg
+Description-md5: 01a50868394847340399eb4743e46af0
+Description-en: GRand Unified Bootloader, version 2 (EFI-AMD64 debug files)
+ This package contains debugging files for grub-efi-amd64-bin.  You only
+ need these if you are trying to debug GRUB using its GDB stub.
+
+Package: grub-efi-amd64-signed-template
+Description-md5: 6505085992cc3617973cb57dcebc7eeb
+Description-en: GRand Unified Bootloader, version 2 (EFI-AMD64 signing template)
+ This package contains template files for grub-efi-amd64-signed.
+ This is only needed for Secure Boot signing.
+
+Package: grub-efi-arm
+Description-md5: 4d5d31e46506c9d22db87020959b3fd1
+Description-en: GRand Unified Bootloader, version 2 (ARM UEFI version)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This is a dependency package for a version of GRUB that has been built for
+ use on ARM systems with UEFI.  Installing this package indicates that this
+ version of GRUB should be the active boot loader.
+
+Package: grub-efi-arm-bin
+Description-md5: 6155ff69c46107c009b7f8c96d24eab0
+Description-en: GRand Unified Bootloader, version 2 (ARM UEFI modules)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This package contains GRUB modules that have been built for use on ARM
+ systems with UEFI.  It can be installed in parallel with other flavours,
+ but will not automatically install GRUB as the active boot loader nor
+ automatically update grub.cfg on upgrade unless grub-efi-arm is also
+ installed.
+
+Package: grub-efi-arm-dbg
+Description-md5: 4a1aa14a95817535f266185d8f0a9da6
+Description-en: GRand Unified Bootloader, version 2 (ARM UEFI debug files)
+ This package contains debugging files for grub-efi-arm-bin.  You only need
+ these if you are trying to debug GRUB using its GDB stub.
+
+Package: grub-efi-arm64
+Description-md5: b55085cf9509b6d6ac292cecf72edfbb
+Description-en: GRand Unified Bootloader, version 2 (ARM64 UEFI version)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This is a dependency package for a version of GRUB that has been built for
+ use on ARM64 systems with UEFI.  Installing this package indicates that
+ this version of GRUB should be the active boot loader.
+
+Package: grub-efi-arm64-bin
+Description-md5: 85b87f648ce8f6d264dba7a956fef128
+Description-en: GRand Unified Bootloader, version 2 (ARM64 UEFI modules)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This package contains GRUB modules that have been built for use on ARM64
+ systems with UEFI.  It can be installed in parallel with other flavours,
+ but will not automatically install GRUB as the active boot loader nor
+ automatically update grub.cfg on upgrade unless grub-efi-arm64 is also
+ installed.
+
+Package: grub-efi-arm64-dbg
+Description-md5: f727664e1d891cf68e928bde68e0484a
+Description-en: GRand Unified Bootloader, version 2 (ARM64 UEFI debug files)
+ This package contains debugging files for grub-efi-arm64-bin.  You only
+ need these if you are trying to debug GRUB using its GDB stub.
+
+Package: grub-efi-arm64-signed-template
+Description-md5: 5f26229874a330dedc61233a338b2cb6
+Description-en: GRand Unified Bootloader, version 2 (ARM64 UEFI signing template)
+ This package contains template files for grub-efi-arm64-signed.
+ This is only needed for Secure Boot signing.
+
+Package: grub-efi-ia32
+Description-md5: b87b1ad90490c4debbe551521ed2934e
+Description-en: GRand Unified Bootloader, version 2 (EFI-IA32 version)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This is a dependency package for a version of GRUB that has been built for
+ use with the EFI-IA32 architecture, as used by Intel Macs (unless a BIOS
+ interface has been activated).  Installing this package indicates that this
+ version of GRUB should be the active boot loader.
+
+Package: grub-efi-ia32-bin
+Description-md5: 72eca32dad838f96ef1c12b3d764e537
+Description-en: GRand Unified Bootloader, version 2 (EFI-IA32 modules)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This package contains GRUB modules that have been built for use with the
+ EFI-IA32 architecture, as used by Intel Macs (unless a BIOS interface has
+ been activated).  It can be installed in parallel with other flavours, but
+ will not automatically install GRUB as the active boot loader nor
+ automatically update grub.cfg on upgrade unless grub-efi-ia32 is also
+ installed.
+
+Package: grub-efi-ia32-dbg
+Description-md5: 985cf475352ed91c8a577b3365c0062f
+Description-en: GRand Unified Bootloader, version 2 (EFI-IA32 debug files)
+ This package contains debugging files for grub-efi-ia32-bin.  You only need
+ these if you are trying to debug GRUB using its GDB stub.
+
+Package: grub-efi-ia32-signed-template
+Description-md5: 779b34af0304911cd968b296e34406b5
+Description-en: GRand Unified Bootloader, version 2 (EFI-IA32 signing template)
+ This package contains template files for grub-efi-ia32-signed.
+ This is only needed for Secure Boot signing.
+
+Package: grub-emu
+Description-md5: eaa24f3f146f8d2e05f7109f088cfa8b
+Description-en: GRand Unified Bootloader, version 2 (emulated version)
+ This package contains grub-emu, an emulated version of GRUB.  It is only
+ provided for debugging purposes.
+
+Package: grub-emu-dbg
+Description-md5: 4066695808b06e6425e6d4c1f6d4205e
+Description-en: GRand Unified Bootloader, version 2 (emulated debug files)
+ This package contains debugging files for grub-emu.  You only need these if
+ you are trying to debug GRUB using its GDB stub.
+
+Package: grub-firmware-qemu
+Description-md5: cc3754b92a7e1d8e16c04265627088b6
+Description-en: GRUB firmware image for QEMU
+ This package contains a binary of GRUB that has been built for use as
+ firmware for QEMU.  It can be used as a replacement for other PC BIOS
+ images provided by seabios, bochsbios, and so on.
+ .
+ In order to make QEMU use this firmware, simply add `-bios grub.bin' when
+ invoking it.
+ .
+ This package behaves in the same way as GRUB for coreboot, but doesn't
+ contain any code from coreboot itself, and is only suitable for QEMU. If
+ you want to install GRUB as firmware on real hardware, you need to use the
+ grub-coreboot package, and manually combine that with coreboot.
+
+Package: grub-ieee1275
+Description-md5: 4182e3a83ecc589a21da82d455a9182d
+Description-en: GRand Unified Bootloader, version 2 (Open Firmware version)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This is a dependency package for a version of GRUB that has been built for
+ use with Open Firmware implementations.  Installing this package indicates
+ that this version of GRUB should be the active boot loader.
+
+Package: grub-ieee1275-bin
+Description-md5: 502a917bf5af6a6f686b59cff29486fd
+Description-en: GRand Unified Bootloader, version 2 (Open Firmware modules)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This package contains GRUB modules that have been built for use with Open
+ Firmware implementations.  It can be installed in parallel with other
+ flavours, but will not automatically install GRUB as the active boot loader
+ nor automatically update grub.cfg on upgrade unless grub-ieee1275 is also
+ installed.
+
+Package: grub-ieee1275-dbg
+Description-md5: 3e4b991fd886a5a8442d2e484c000e45
+Description-en: GRand Unified Bootloader, version 2 (Open Firmware debug files)
+ This package contains debugging files for grub-ieee1275-bin.  You only
+ need these if you are trying to debug GRUB using its GDB stub.
+
+Package: grub-linuxbios
+Description-md5: 8d63829707a75c424f8ce33f10391cc0
+Description-en: GRand Unified Bootloader, version 2 (dummy package)
+ This is a dummy transitional package that depends on grub-coreboot.
+
+Package: grub-pc
+Description-md5: 55663e0e8d42f469d665f9cc0013b733
+Description-en: GRand Unified Bootloader, version 2 (PC/BIOS version)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+  - VESA-based graphical mode with background image support and complete 24-bit
+    color set.
+  - Support for extended charsets.  Users can write UTF-8 text to their menu
+    entries.
+ .
+ This is a dependency package for a version of GRUB that has been built for
+ use with the traditional PC/BIOS architecture.  Installing this package
+ indicates that this version of GRUB should be the active boot loader.
+
+Package: grub-pc-bin
+Description-md5: 20901840d7f9daaf1870638db2221cb1
+Description-en: GRand Unified Bootloader, version 2 (PC/BIOS modules)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+  - VESA-based graphical mode with background image support and complete 24-bit
+    color set.
+  - Support for extended charsets.  Users can write UTF-8 text to their menu
+    entries.
+ .
+ This package contains GRUB modules that have been built for use with the
+ traditional PC/BIOS architecture.  It can be installed in parallel with
+ other flavours, but will not automatically install GRUB as the active boot
+ loader nor automatically update grub.cfg on upgrade unless grub-pc is also
+ installed.
+
+Package: grub-pc-dbg
+Description-md5: 7c0972b8a14a3f1091b6056556730eb4
+Description-en: GRand Unified Bootloader, version 2 (PC/BIOS debug files)
+ This package contains debugging files for grub-pc-bin.  You only need these
+ if you are trying to debug GRUB using its GDB stub.
+
+Package: grub-rescue-pc
+Description-md5: 5e771fe83a2112f4f90cabc9f93cbd47
+Description-en: GRUB bootable rescue images, version 2 (PC/BIOS version)
+ This package contains three GRUB rescue images that have been built for use
+ with the traditional PC/BIOS architecture:
+ .
+  - grub-rescue-floppy.img: floppy image.
+  - grub-rescue-cdrom.iso: El Torito CDROM image.
+  - grub-rescue-usb.img: USB image.
+
+Package: grub-theme-starfield
+Description-md5: 52232de4094a1dafa8ade1df40ec6451
+Description-en: GRand Unified Bootloader, version 2 (starfield theme)
+ This is the default theme for GRUB's graphical menu.
+
+Package: grub-uboot
+Description-md5: 51e34ff8f458d3a2619abc37a6ff775b
+Description-en: GRand Unified Bootloader, version 2 (ARM U-Boot version)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This is a dependency package for a version of GRUB that has been built for
+ use with ARM systems with U-Boot.  Installing this package indicates that
+ this version of GRUB should be the active boot loader.
+
+Package: grub-uboot-bin
+Description-md5: 24a22ee26258fa3949b649277c041f89
+Description-en: GRand Unified Bootloader, version 2 (ARM U-Boot modules)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This package contains GRUB modules that have been built for use with ARM
+ systems with U-Boot.  It can be installed in parallel with other flavours,
+ but will not automatically install GRUB as the active boot loader nor
+ automatically update grub.cfg on upgrade unless grub-uboot is also
+ installed.
+
+Package: grub-uboot-dbg
+Description-md5: d928ff33b34b1ff4b5357114d5813160
+Description-en: GRand Unified Bootloader, version 2 (ARM U-Boot debug files)
+ This package contains debugging files for grub-uboot-bin.  You only need
+ these if you are trying to debug GRUB using its GDB stub.
+
+Package: grub-xen
+Description-md5: 2eceba62a74d5d7f9e98f3a6f5d2a1d1
+Description-en: GRand Unified Bootloader, version 2 (Xen version)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This is a dependency package for a version of GRUB that has been built for
+ use with the Xen hypervisor (i.e. PV-GRUB).  Installing this package
+ indicates that this version of GRUB should be the active boot loader.
+
+Package: grub-xen-bin
+Description-md5: f30684489a7949e282652e8bd8f6c727
+Description-en: GRand Unified Bootloader, version 2 (Xen modules)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This package contains GRUB modules that have been built for use with the
+ Xen hypervisor (i.e. PV-GRUB).  It can be installed in parallel with other
+ flavours, but will not automatically install GRUB as the active boot loader
+ nor automatically update grub.cfg on upgrade unless grub-xen is also
+ installed.
+
+Package: grub-xen-dbg
+Description-md5: 08653de052a0b5d9f21f8d2925bd514b
+Description-en: GRand Unified Bootloader, version 2 (Xen debug files)
+ This package contains debugging files for grub-xen-bin.  You only need
+ these if you are trying to debug GRUB using its GDB stub.
+
+Package: grub-xen-host
+Description-md5: fd8c60ce62b7d58e25af7b045851f73b
+Description-en: GRand Unified Bootloader, version 2 (Xen host version)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This package arranges for GRUB binary images which can be used to boot a Xen
+ guest (i.e. PV-GRUB) to be present in the control domain filesystem.
+
+Package: grub-yeeloong
+Description-md5: 2a455fb88904312ac11474f80a156a88
+Description-en: GRand Unified Bootloader, version 2 (Yeeloong version)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This is a dependency package for a version of GRUB that has been built for
+ use with the Lemote Yeeloong laptop.  Installing this package indicates
+ that this version of GRUB should be the active boot loader.
+
+Package: grub-yeeloong-bin
+Description-md5: 35ceb7fa3845cf9b30aff29504629956
+Description-en: GRand Unified Bootloader, version 2 (Yeeloong modules)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This package contains GRUB modules that have been built for use with the
+ Lemote Yeeloong laptop.  It can be installed in parallel with other
+ flavours, but will not automatically install GRUB as the active boot loader
+ nor automatically update grub.cfg on upgrade unless grub-yeeloong is also
+ installed.
+
+Package: grub-yeeloong-dbg
+Description-md5: 540203a4f094f8ec67f5b01e9cb640c5
+Description-en: GRand Unified Bootloader, version 2 (Yeeloong debug files)
+ This package contains debugging files for grub-yeeloong-bin.  You only
+ need these if you are trying to debug GRUB using its GDB stub.
+
+Package: grub2
+Description-md5: bbb470013d1f2450dba730f10fbd09b4
+Description-en: GRand Unified Bootloader, version 2 (dummy package)
+ This is a dummy transitional package to handle GRUB 2 upgrades.  It can be
+ safely removed.
+
+Package: grub2-common
+Description-md5: a969e6536e745e177a340b30bdb5ba3f
+Description-en: GRand Unified Bootloader (common files for version 2)
+ This package contains common files shared by the distinct flavours of GRUB.
+ The files in this package are specific to GRUB 2, and would break GRUB
+ Legacy if installed on the same system.
+
 Package: libdatetime-timezone-perl
 Description-md5: 49fff32146b7c0ac14d7bcca1f92bfe6
 Description-en: framework exposing the Olson time zone database to Perl
