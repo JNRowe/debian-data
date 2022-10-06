@@ -440,6 +440,114 @@ Filename: pool/updates/main/h/haproxy/vim-haproxy_2.2.9-2+deb11u3_all.deb
 Size: 282332
 SHA256: 9d1cff10304ee5f34bcc5695570496f8b8996cbfc565239e3012641d42bb6bde
 
+Package: isc-dhcp-client
+Source: isc-dhcp
+Version: 4.4.1-2.3+deb11u1
+Installed-Size: 765
+Maintainer: Debian ISC DHCP Maintainers <isc-dhcp@packages.debian.org>
+Architecture: i386
+Provides: dhcp-client
+Depends: libc6 (>= 2.28), libdns-export1110, libisc-export1105, debianutils (>= 2.8.2), iproute2
+Suggests: resolvconf, avahi-autoipd, isc-dhcp-client-ddns
+Description: DHCP client for automatically obtaining an IP address
+Homepage: http://www.isc.org
+Description-md5: 849016b34f878b96cbdf66cb6a0cc650
+Recommends: isc-dhcp-common
+net
+Priority: important
+Filename: pool/updates/main/i/isc-dhcp/isc-dhcp-client_4.4.1-2.3+deb11u1_i386.deb
+Size: 358916
+SHA256: cdb5f9f80c99959817841a58fc8af4db9c1b5acf7fb188d39c6232b86e8de67b
+
+Package: isc-dhcp-client-ddns
+Source: isc-dhcp
+Version: 4.4.1-2.3+deb11u1
+Installed-Size: 737
+Maintainer: Debian ISC DHCP Maintainers <isc-dhcp@packages.debian.org>
+Architecture: i386
+Depends: libc6 (>= 2.28), libdns-export1110, libirs-export161, libisc-export1105, isc-dhcp-client (= 4.4.1-2.3+deb11u1)
+Description: Dynamic DNS (DDNS) enabled DHCP client
+Homepage: http://www.isc.org
+Description-md5: b50603a1b35d2890c76eeaa6a2333d69
+Enhances: isc-dhcp-client
+net
+Priority: optional
+Filename: pool/updates/main/i/isc-dhcp/isc-dhcp-client-ddns_4.4.1-2.3+deb11u1_i386.deb
+Size: 339448
+SHA256: ec3b0fe20b77293b66422034b8ab5f5cf0630614178bdfaad2e813a2b5271774
+
+Package: isc-dhcp-common
+Source: isc-dhcp
+Version: 4.4.1-2.3+deb11u1
+Installed-Size: 149
+Maintainer: Debian ISC DHCP Maintainers <isc-dhcp@packages.debian.org>
+Architecture: i386
+Depends: debianutils (>= 2.8.2)
+Description: common manpages relevant to all of the isc-dhcp packages
+Homepage: http://www.isc.org
+Description-md5: 2790388f06e46625f3fdfcb787daeb31
+net
+Priority: important
+Filename: pool/updates/main/i/isc-dhcp/isc-dhcp-common_4.4.1-2.3+deb11u1_i386.deb
+Size: 144760
+SHA256: a14773b455d1342922e62510ba716cc8f7460312711337c9a2b854125aa72b23
+
+Package: isc-dhcp-relay
+Source: isc-dhcp
+Version: 4.4.1-2.3+deb11u1
+Installed-Size: 653
+Maintainer: Debian ISC DHCP Maintainers <isc-dhcp@packages.debian.org>
+Architecture: i386
+Depends: debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.28), libdns-export1110, libirs-export161, libisc-export1105, lsb-base (>= 3.0-6), debianutils (>= 2.8.2)
+Conflicts: dhcp-relay
+Description: ISC DHCP relay daemon
+Homepage: http://www.isc.org
+Description-md5: 8caafb99fc6d2e4f67d3a9eda47b9265
+Recommends: isc-dhcp-common
+net
+Priority: optional
+Filename: pool/updates/main/i/isc-dhcp/isc-dhcp-relay_4.4.1-2.3+deb11u1_i386.deb
+Size: 306012
+SHA256: 1ca8d0fb9126a727992273b14f8da7831f23e32710d49633a23afcd0ff903f5c
+
+Package: isc-dhcp-server
+Source: isc-dhcp
+Version: 4.4.1-2.3+deb11u1
+Installed-Size: 1676
+Maintainer: Debian ISC DHCP Maintainers <isc-dhcp@packages.debian.org>
+Architecture: i386
+Replaces: isc-dhcp-common (<= 4.3.3-1)
+Depends: debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.28), libdns-export1110, libirs-export161, libisc-export1105, debianutils (>= 2.8.2), lsb-base
+Suggests: policykit-1, isc-dhcp-server-ldap
+Breaks: isc-dhcp-common (<= 4.3.3-1), logcheck-database (<= 1.3.17~)
+Description: ISC DHCP server for automatic IP address assignment
+Homepage: http://www.isc.org
+Description-md5: 38647f497f13c9a0a99f9d9cf772d70d
+Recommends: isc-dhcp-common, policycoreutils
+net
+Priority: optional
+Filename: pool/updates/main/i/isc-dhcp/isc-dhcp-server_4.4.1-2.3+deb11u1_i386.deb
+Size: 577060
+SHA256: f78e2e4861459ba72523ac3fd33bef0d0c1819df3299c692fe2f571ac9346904
+
+Package: isc-dhcp-server-ldap
+Source: isc-dhcp
+Version: 4.4.1-2.3+deb11u1
+Installed-Size: 1116
+Maintainer: Debian ISC DHCP Maintainers <isc-dhcp@packages.debian.org>
+Architecture: i386
+Depends: libc6 (>= 2.28), libdns-export1110, libirs-export161, libisc-export1105, libldap-2.4-2 (>= 2.4.7), debianutils (>= 2.8.2), isc-dhcp-server (= 4.4.1-2.3+deb11u1)
+Conflicts: dhcp
+Description: DHCP server that uses LDAP as its backend
+Homepage: http://www.isc.org
+Description-md5: 5128e40dee2335c1d24210a6ce42aae2
+Enhances: isc-dhcp-server
+net
+Priority: optional
+Filename: pool/updates/main/i/isc-dhcp/isc-dhcp-server-ldap_4.4.1-2.3+deb11u1_i386.deb
+Size: 474196
+SHA256: 4620b877a8783e666ba4c960b6e22b38e1a66175c2be4cb7421c52add1c20d71
+
 Package: libreswan
 Version: 4.3-1+deb11u1
 Installed-Size: 4719
@@ -1157,73 +1265,73 @@ SHA256: 24bae89539e29eac2b662571802f4e3b6458d724d40b91667a273902b0d92ef8
 
 Package: charon-cmd
 Source: strongswan
-Version: 5.9.1-1+deb11u2
+Version: 5.9.1-1+deb11u3
 Installed-Size: 201
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: i386
-Depends: libstrongswan (= 5.9.1-1+deb11u2), libc6 (>= 2.4), strongswan-libcharon (>= 5.9.1)
+Depends: libstrongswan (= 5.9.1-1+deb11u3), libc6 (>= 2.4), strongswan-libcharon (>= 5.9.1)
 Description: standalone IPsec client
 Homepage: http://www.strongswan.org
 Description-md5: 80fd42eb6fb38dab592c2f0b87243623
 net
 Priority: optional
-Filename: pool/updates/main/s/strongswan/charon-cmd_5.9.1-1+deb11u2_i386.deb
-Size: 102680
-SHA256: 1dbb9f953ad45f169f00aae594c1198cdcfd7bfd061c647f6f1305d6cfeaa9ab
+Filename: pool/updates/main/s/strongswan/charon-cmd_5.9.1-1+deb11u3_i386.deb
+Size: 102800
+SHA256: ad7c36d6479b068cbb868a9d199cc04584f9032894b8c3cbbdf3d4ed3b182c60
 
 Package: charon-systemd
 Source: strongswan
-Version: 5.9.1-1+deb11u2
+Version: 5.9.1-1+deb11u3
 Installed-Size: 202
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: i386
-Depends: libstrongswan (= 5.9.1-1+deb11u2), strongswan-swanctl, libc6 (>= 2.4), libsystemd0, strongswan-libcharon (>= 5.9.1)
+Depends: libstrongswan (= 5.9.1-1+deb11u3), strongswan-swanctl, libc6 (>= 2.4), libsystemd0, strongswan-libcharon (>= 5.9.1)
 Description: strongSwan IPsec client, systemd support
 Homepage: http://www.strongswan.org
 Description-md5: aa65f07fc27272b7f25aed8a94e96770
 net
 Priority: optional
-Filename: pool/updates/main/s/strongswan/charon-systemd_5.9.1-1+deb11u2_i386.deb
-Size: 98836
-SHA256: 65b76c19ea0fdf94b50ffaa6a56b201919e77100985c01d066e1a864b04e3d4d
+Filename: pool/updates/main/s/strongswan/charon-systemd_5.9.1-1+deb11u3_i386.deb
+Size: 98956
+SHA256: 67be90eab14b71caff592b6ac8ba19a524b0448efbc76dedc592e68a8661f6f5
 
 Package: libcharon-extauth-plugins
 Source: strongswan
-Version: 5.9.1-1+deb11u2
+Version: 5.9.1-1+deb11u3
 Installed-Size: 217
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: i386
 Replaces: libcharon-extra-plugins (<< 5.8.0-2~)
-Depends: libstrongswan (= 5.9.1-1+deb11u2), libc6 (>= 2.25)
+Depends: libstrongswan (= 5.9.1-1+deb11u3), libc6 (>= 2.25)
 Breaks: libcharon-extra-plugins (<< 5.8.0-2~)
 Description: strongSwan charon library (extended authentication plugins)
 Homepage: http://www.strongswan.org
 Description-md5: fc3eaf87c658452c4f81b8064e552e6c
 net
 Priority: optional
-Filename: pool/updates/main/s/strongswan/libcharon-extauth-plugins_5.9.1-1+deb11u2_i386.deb
-Size: 103624
-SHA256: 71a226235fa4dfb1c26044d605fbc29e7bf106ec9893f1aa88b5d02d7843efb5
+Filename: pool/updates/main/s/strongswan/libcharon-extauth-plugins_5.9.1-1+deb11u3_i386.deb
+Size: 103752
+SHA256: 000423046587c856f35acb95766cf1f5773bd766f3aad65cde80febff0408778
 
 Package: libcharon-extra-plugins
 Source: strongswan
-Version: 5.9.1-1+deb11u2
+Version: 5.9.1-1+deb11u3
 Installed-Size: 1004
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: i386
-Depends: libstrongswan (= 5.9.1-1+deb11u2), libc6 (>= 2.29), libpam0g (>= 0.99.7.1)
+Depends: libstrongswan (= 5.9.1-1+deb11u3), libc6 (>= 2.29), libpam0g (>= 0.99.7.1)
 Description: strongSwan charon library (extra plugins)
 Homepage: http://www.strongswan.org
 Description-md5: 1348dd26c09674033d8341f1e89baf78
 net
 Priority: optional
-Filename: pool/updates/main/s/strongswan/libcharon-extra-plugins_5.9.1-1+deb11u2_i386.deb
-Size: 283932
-SHA256: 4609884892d1810404aed9fd7651b5d6f80efcf377c62d15b28df5422bb07c62
+Filename: pool/updates/main/s/strongswan/libcharon-extra-plugins_5.9.1-1+deb11u3_i386.deb
+Size: 284088
+SHA256: cd269c2538ad0b611824a5d455821075cc5fc0f2d51834b8cb5c4bc767794421
 
 Package: libstrongswan
 Source: strongswan
-Version: 5.9.1-1+deb11u2
+Version: 5.9.1-1+deb11u3
 Installed-Size: 1442
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: i386
@@ -1235,46 +1343,46 @@ Description-md5: 397c7109a71b78fc4d9cd32308d472df
 Recommends: libstrongswan-standard-plugins
 net
 Priority: optional
-Filename: pool/updates/main/s/strongswan/libstrongswan_5.9.1-1+deb11u2_i386.deb
-Size: 462576
-SHA256: b215e5ecd7059c07b69eb52fe15c6c2877bd8250982a26bee2097c5f8e107e54
+Filename: pool/updates/main/s/strongswan/libstrongswan_5.9.1-1+deb11u3_i386.deb
+Size: 462852
+SHA256: f10a856aa94ae71b21f134f1fb0b61e375b872d0b5466b9df1e331533bd6ff26
 
 Package: libstrongswan-extra-plugins
 Source: strongswan
-Version: 5.9.1-1+deb11u2
+Version: 5.9.1-1+deb11u3
 Installed-Size: 712
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: i386
 Replaces: libcharon-extra-plugins (<= 5.5.3-1)
-Depends: libstrongswan (= 5.9.1-1+deb11u2), libc6 (>= 2.25), libcurl4 (>= 7.16.2), libgcrypt20 (>= 1.8.0), libgpg-error0 (>= 1.14), libldap-2.4-2 (>= 2.4.7)
+Depends: libstrongswan (= 5.9.1-1+deb11u3), libc6 (>= 2.25), libcurl4 (>= 7.16.2), libgcrypt20 (>= 1.8.0), libgpg-error0 (>= 1.14), libldap-2.4-2 (>= 2.4.7)
 Breaks: libcharon-extra-plugins (<= 5.5.3-1)
 Description: strongSwan utility and crypto library (extra plugins)
 Homepage: http://www.strongswan.org
 Description-md5: 112ef95d98a82ca00ff9d13bd96c5067
 net
 Priority: optional
-Filename: pool/updates/main/s/strongswan/libstrongswan-extra-plugins_5.9.1-1+deb11u2_i386.deb
-Size: 275064
-SHA256: 26fcff9da8c312999aa7023cf25ba7daf51f336cadf8e853b6fbb18e44e4d6ab
+Filename: pool/updates/main/s/strongswan/libstrongswan-extra-plugins_5.9.1-1+deb11u3_i386.deb
+Size: 275188
+SHA256: 3b823c3ba19665466cee6c711bacb10a9f48f8f79aae40c793a73bcab613c939
 
 Package: libstrongswan-standard-plugins
 Source: strongswan
-Version: 5.9.1-1+deb11u2
+Version: 5.9.1-1+deb11u3
 Installed-Size: 405
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: i386
-Depends: libstrongswan (= 5.9.1-1+deb11u2), libc6 (>= 2.25), libip4tc2 (>= 1.8.3), libssl1.1 (>= 1.1.1)
+Depends: libstrongswan (= 5.9.1-1+deb11u3), libc6 (>= 2.25), libip4tc2 (>= 1.8.3), libssl1.1 (>= 1.1.1)
 Description: strongSwan utility and crypto library (standard plugins)
 Homepage: http://www.strongswan.org
 Description-md5: 84424f5380a28b65d960aa52e6f242ea
 net
 Priority: optional
-Filename: pool/updates/main/s/strongswan/libstrongswan-standard-plugins_5.9.1-1+deb11u2_i386.deb
-Size: 153796
-SHA256: 811b678952198b040940315a51b38d87dc6ef1cef449ba524ac3f7e2600c758a
+Filename: pool/updates/main/s/strongswan/libstrongswan-standard-plugins_5.9.1-1+deb11u3_i386.deb
+Size: 153732
+SHA256: 024b969f7f38c6642e5611508bf3165fbaf307bc1113f9d31b109c5e5c3991f7
 
 Package: strongswan
-Version: 5.9.1-1+deb11u2
+Version: 5.9.1-1+deb11u3
 Installed-Size: 169
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: all
@@ -1284,36 +1392,36 @@ Homepage: http://www.strongswan.org
 Description-md5: 60d8ad9f14179591b0cca394e94e3d4b
 net
 Priority: optional
-Filename: pool/updates/main/s/strongswan/strongswan_5.9.1-1+deb11u2_all.deb
-Size: 98244
-SHA256: 0c1ee93cbce52b09dd9a336e24afee6f83545371c29112cc28c57b3edc82608a
+Filename: pool/updates/main/s/strongswan/strongswan_5.9.1-1+deb11u3_all.deb
+Size: 98372
+SHA256: 0c1362a554a45f4f4edbdc5d5d9365b888758e4c6f966e6c971f71147c6dd62c
 
 Package: strongswan-charon
 Source: strongswan
-Version: 5.9.1-1+deb11u2
+Version: 5.9.1-1+deb11u3
 Installed-Size: 225
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: i386
 Provides: ike-server
-Depends: iproute2 | iproute, libstrongswan (= 5.9.1-1+deb11u2), strongswan-starter, libc6 (>= 2.28), strongswan-libcharon (>= 5.9.1)
+Depends: iproute2 | iproute, libstrongswan (= 5.9.1-1+deb11u3), strongswan-starter, libc6 (>= 2.28), strongswan-libcharon (>= 5.9.1)
 Description: strongSwan Internet Key Exchange daemon
 Homepage: http://www.strongswan.org
 Description-md5: 3f55915d17f7e36d9b31e2c4da5c11d2
 Pre-Depends: debconf | debconf-2.0
 net
 Priority: optional
-Filename: pool/updates/main/s/strongswan/strongswan-charon_5.9.1-1+deb11u2_i386.deb
-Size: 102764
-SHA256: 7b26df32a46cc000f3775979fec150a3e9fbbf052b74903a785c24c5a1a46c8e
+Filename: pool/updates/main/s/strongswan/strongswan-charon_5.9.1-1+deb11u3_i386.deb
+Size: 102880
+SHA256: 0dc329e4414661b48a43ccd9b40aecdaa3f226d7b988ece7b5342cb76735f325
 
 Package: strongswan-libcharon
 Source: strongswan
-Version: 5.9.1-1+deb11u2
+Version: 5.9.1-1+deb11u3
 Installed-Size: 1004
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: i386
 Replaces: strongswan-starter (<= 5.6.1-2)
-Depends: libstrongswan (= 5.9.1-1+deb11u2), libc6 (>= 2.29)
+Depends: libstrongswan (= 5.9.1-1+deb11u3), libc6 (>= 2.29)
 Suggests: libcharon-extra-plugins
 Breaks: strongswan-starter (<= 5.6.1-2)
 Description: strongSwan charon library
@@ -1322,13 +1430,13 @@ Description-md5: 7ee8a1dbaf495a152a7f4be5e054abca
 Recommends: libcharon-extauth-plugins
 net
 Priority: optional
-Filename: pool/updates/main/s/strongswan/strongswan-libcharon_5.9.1-1+deb11u2_i386.deb
-Size: 357680
-SHA256: 05060849f1d3e81f4a0873339b25f24605460fd8a9fc7ac84b682b62a670eeca
+Filename: pool/updates/main/s/strongswan/strongswan-libcharon_5.9.1-1+deb11u3_i386.deb
+Size: 357940
+SHA256: 4425b90968b3358846ff6f90fc29e598572c1002cddb1d04e46236cf4dbbc7b2
 
 Package: strongswan-nm
 Source: strongswan
-Version: 5.9.1-1+deb11u2
+Version: 5.9.1-1+deb11u3
 Installed-Size: 209
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: i386
@@ -1340,49 +1448,49 @@ Description-md5: fe4e82468fec86f66c41601086865ec7
 Recommends: network-manager-strongswan
 net
 Priority: optional
-Filename: pool/updates/main/s/strongswan/strongswan-nm_5.9.1-1+deb11u2_i386.deb
-Size: 106712
-SHA256: 27b137bd96e4c767c0c5fd77d22ae7481cdd9cd3a7b8441df3a0fb2cf2ebcbda
+Filename: pool/updates/main/s/strongswan/strongswan-nm_5.9.1-1+deb11u3_i386.deb
+Size: 106812
+SHA256: 223f2ef9984de1e36fd46ab0df506dd35ff62bc0b4669806d4ff267ebf1d7634
 
 Package: strongswan-pki
 Source: strongswan
-Version: 5.9.1-1+deb11u2
+Version: 5.9.1-1+deb11u3
 Installed-Size: 289
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: i386
-Depends: libstrongswan (= 5.9.1-1+deb11u2), libc6 (>= 2.4)
+Depends: libstrongswan (= 5.9.1-1+deb11u3), libc6 (>= 2.4)
 Description: strongSwan IPsec client, pki command
 Homepage: http://www.strongswan.org
 Description-md5: e39ead8c35dce81cd768bc453bc29db7
 net
 Priority: optional
-Filename: pool/updates/main/s/strongswan/strongswan-pki_5.9.1-1+deb11u2_i386.deb
-Size: 137108
-SHA256: 3745b2305a4e3a908fadac1357b2e58d4e8ce3363e52b8f3efa3287cfb46ffcb
+Filename: pool/updates/main/s/strongswan/strongswan-pki_5.9.1-1+deb11u3_i386.deb
+Size: 137204
+SHA256: 34396a2c66cf76ad6f7499935e022076d8e0248046cb84461fc5bb14c01bb59d
 
 Package: strongswan-scepclient
 Source: strongswan
-Version: 5.9.1-1+deb11u2
+Version: 5.9.1-1+deb11u3
 Installed-Size: 213
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: i386
-Depends: libstrongswan (= 5.9.1-1+deb11u2), libc6 (>= 2.4)
+Depends: libstrongswan (= 5.9.1-1+deb11u3), libc6 (>= 2.4)
 Description: strongSwan IPsec client, SCEP client
 Homepage: http://www.strongswan.org
 Description-md5: fbc3cadf8a28f7b05798f7dbda6309c2
 net
 Priority: optional
-Filename: pool/updates/main/s/strongswan/strongswan-scepclient_5.9.1-1+deb11u2_i386.deb
-Size: 107424
-SHA256: 3a2265bd14e64d0682aa1e30b3fa2691d0f0eae8d08e852cb620308a0f005af7
+Filename: pool/updates/main/s/strongswan/strongswan-scepclient_5.9.1-1+deb11u3_i386.deb
+Size: 107532
+SHA256: bcf54eda2e5d4039d6af410e271c9e710a763ba2933c0ecc7ce03bed4a8e7bc2
 
 Package: strongswan-starter
 Source: strongswan
-Version: 5.9.1-1+deb11u2
+Version: 5.9.1-1+deb11u3
 Installed-Size: 618
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: i386
-Depends: adduser, libstrongswan (= 5.9.1-1+deb11u2), lsb-base (>= 3.0-6), debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.27)
+Depends: adduser, libstrongswan (= 5.9.1-1+deb11u3), lsb-base (>= 3.0-6), debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.27)
 Conflicts: openswan
 Description: strongSwan daemon starter and configuration file parser
 Homepage: http://www.strongswan.org
@@ -1391,27 +1499,27 @@ Pre-Depends: init-system-helpers (>= 1.54~)
 Recommends: strongswan-charon
 net
 Priority: optional
-Filename: pool/updates/main/s/strongswan/strongswan-starter_5.9.1-1+deb11u2_i386.deb
-Size: 234484
-SHA256: e0b442dd11d411af094da2374cd5cf37e68e97d562aba460b0cb52beba3533f2
+Filename: pool/updates/main/s/strongswan/strongswan-starter_5.9.1-1+deb11u3_i386.deb
+Size: 234568
+SHA256: d5784256d88cb7c5c53b6759138b4d200ec1ea1f3af895ff065f9831a9a320a8
 
 Package: strongswan-swanctl
 Source: strongswan
-Version: 5.9.1-1+deb11u2
+Version: 5.9.1-1+deb11u3
 Installed-Size: 530
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: i386
 Replaces: strongswan-starter (<< 5.8.0-1)
-Depends: libstrongswan (= 5.9.1-1+deb11u2), libc6 (>= 2.25)
+Depends: libstrongswan (= 5.9.1-1+deb11u3), libc6 (>= 2.25)
 Breaks: strongswan-starter (<< 5.8.0-1)
 Description: strongSwan IPsec client, swanctl command
 Homepage: http://www.strongswan.org
 Description-md5: 0da8661efd13d913c22e863856990337
 net
 Priority: optional
-Filename: pool/updates/main/s/strongswan/strongswan-swanctl_5.9.1-1+deb11u2_i386.deb
-Size: 202000
-SHA256: ec05fc491d3793d17a2b5e43e208c530420a5946c135bc02c66ab24b8ddefc08
+Filename: pool/updates/main/s/strongswan/strongswan-swanctl_5.9.1-1+deb11u3_i386.deb
+Size: 202136
+SHA256: d81790bba31165fad2f88d94b79049beab3c3791d936cc53b4a4aa9305ecdc35
 
 Package: tang
 Version: 8-3+deb11u1

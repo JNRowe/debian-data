@@ -1249,6 +1249,114 @@ Description-en: Cyrus SASL - administration programs for SASL users database
  This package contains administration programs for the SASL users
  database and common binary files for plugin modules.
 
+Package: dbus
+Description-md5: 8317e43242716ec7f7692a3ac5895e1c
+Description-en: simple interprocess messaging system (daemon and utilities)
+ D-Bus is a message bus, used for sending messages between applications.
+ Conceptually, it fits somewhere in between raw sockets and CORBA in
+ terms of complexity.
+ .
+ D-Bus supports broadcast messages, asynchronous messages (thus
+ decreasing latency), authentication, and more. It is designed to be
+ low-overhead; messages are sent using a binary protocol, not using
+ XML. D-Bus also supports a method call mapping for its messages, but
+ it is not required; this makes using the system quite simple.
+ .
+ It comes with several bindings, including GLib, Python, Qt and Java.
+ .
+ This package contains the D-Bus daemon and related utilities.
+ .
+ The client-side library can be found in the libdbus-1-3 package, as it is no
+ longer contained in this package.
+
+Package: dbus-1-doc
+Description-md5: 4ff746780e6dca0a27147236301ca4fd
+Description-en: simple interprocess messaging system (documentation)
+ D-Bus is a message bus, used for sending messages between applications.
+ Conceptually, it fits somewhere in between raw sockets and CORBA in
+ terms of complexity.
+ .
+ This package contains the API documentation for D-Bus, as well as
+ the protocol specification.
+ .
+ See the dbus description for more information about D-Bus in general.
+
+Package: dbus-tests
+Description-md5: 21d8962af3ce2eb690155b3d6c1a7f1b
+Description-en: simple interprocess messaging system (test infrastructure)
+ D-Bus is a message bus, used for sending messages between applications.
+ Conceptually, it fits somewhere in between raw sockets and CORBA in
+ terms of complexity.
+ .
+ This package provides automated and manual tests for D-Bus, and the
+ dbus-test-tool utility. It also provides copies of the D-Bus libraries and
+ executables compiled with extra debug information and logging.
+ .
+ See the dbus package description for more information about D-Bus in general.
+
+Package: dbus-user-session
+Description-md5: be4453093922af92deac14b4e8458a83
+Description-en: simple interprocess messaging system (systemd --user integration)
+ D-Bus is a message bus, used for sending messages between applications.
+ Conceptually, it fits somewhere in between raw sockets and CORBA in
+ terms of complexity.
+ .
+ On systemd systems, this package opts in to the session model in which
+ a user's session starts the first time they log in, and does not end
+ until all their login sessions have ended. This model merges all
+ parallel non-graphical login sessions (text mode, ssh, cron, etc.), and up
+ to one graphical session, into a single "user-session" or "super-session"
+ within which all background D-Bus services are shared.
+ .
+ Multiple graphical sessions per user are not currently supported in this
+ mode; as a result, it is particularly suitable for gdm, which responds to
+ requests to open a parallel graphical session by switching to the existing
+ graphical session and unlocking it.
+ .
+ To retain dbus' traditional session semantics, in which login sessions
+ are artificially isolated from each other, remove this package and install
+ dbus-x11 instead.
+ .
+ See the dbus package description for more information about D-Bus in general.
+
+Package: dbus-x11
+Description-md5: 101d13ea029d06116b86761850faa2f3
+Description-en: simple interprocess messaging system (X11 deps)
+ D-Bus is a message bus, used for sending messages between applications.
+ Conceptually, it fits somewhere in between raw sockets and CORBA in
+ terms of complexity.
+ .
+ This package contains the dbus-launch utility which is necessary for
+ packages using a D-Bus session bus.
+ .
+ See the dbus description for more information about D-Bus in general.
+
+Package: libdbus-1-3
+Description-md5: 394b84dd0007d22bc4bb591ca6b5fa31
+Description-en: simple interprocess messaging system (library)
+ D-Bus is a message bus, used for sending messages between applications.
+ Conceptually, it fits somewhere in between raw sockets and CORBA in
+ terms of complexity.
+ .
+ D-Bus supports broadcast messages, asynchronous messages (thus
+ decreasing latency), authentication, and more. It is designed to be
+ low-overhead; messages are sent using a binary protocol, not using
+ XML. D-Bus also supports a method call mapping for its messages, but
+ it is not required; this makes using the system quite simple.
+ .
+ It comes with several bindings, including GLib, Python, Qt and Java.
+ .
+ The daemon can be found in the dbus package.
+
+Package: libdbus-1-dev
+Description-md5: 59e71e7e764b950dc1184788af416a7e
+Description-en: simple interprocess messaging system (development headers)
+ D-Bus is a message bus, used for sending messages between applications.
+ Conceptually, it fits somewhere in between raw sockets and CORBA in
+ terms of complexity.
+ .
+ See the dbus description for more information about D-Bus in general.
+
 Package: debian-edu-config
 Description-md5: dfd57f5469319b45c0a2ee40b53d4876
 Description-en: Configuration files for Debian Edu (Skolelinux) systems
@@ -5466,6 +5574,87 @@ Description-en: Enhanced interactive Python shell (Python 3 version)
  .
  This package contains the backend terminal shell for Python 3: for
  the actual frontend install ipython3.
+
+Package: isc-dhcp-client
+Description-md5: 849016b34f878b96cbdf66cb6a0cc650
+Description-en: DHCP client for automatically obtaining an IP address
+ This is the Internet Software Consortium's DHCP client.
+ .
+ Dynamic Host Configuration Protocol (DHCP) is a protocol like BOOTP
+ (actually dhcpd includes much of the functionality of bootpd). It
+ gives client machines "leases" for IP addresses and can
+ automatically set their network configuration. If your machine
+ depends on DHCP (especially likely if it's a workstation on a large
+ network, or a laptop, or attached to a cable modem), keep this or
+ another DHCP client installed.
+ .
+ Extra documentation can be found in the package isc-dhcp-common.
+
+Package: isc-dhcp-client-ddns
+Description-md5: b50603a1b35d2890c76eeaa6a2333d69
+Description-en: Dynamic DNS (DDNS) enabled DHCP client
+ This a Dynamic DNS enabled version of the DHCP client.
+ .
+ Dynamic Host Configuration Protocol (DHCP) is a protocol like BOOTP
+ (actually dhcpd includes much of the functionality of bootpd). It
+ gives client machines "leases" for IP addresses and can
+ automatically set their network configuration. If your machine
+ depends on DHCP (especially likely if it's a workstation on a large
+ network, or a laptop, or attached to a cable modem), keep this or
+ another DHCP client installed.
+ .
+ Extra documentation can be found in the package isc-dhcp-common.
+
+Package: isc-dhcp-common
+Description-md5: 2790388f06e46625f3fdfcb787daeb31
+Description-en: common manpages relevant to all of the isc-dhcp packages
+ This package includes manpages that are relevant to the various ISC DHCP
+ packages.
+ .
+ The dhcp-options manpage describes available options for dhcpd and dhclient.
+ The dhcp-eval manpage describes evaluation of conditional expressions.
+
+Package: isc-dhcp-dev
+Description-md5: a5da96904bc2ff124317fb1545407142
+Description-en: API for accessing and modifying the DHCP server and client state
+ This package provides support for OMAPI (Object Management Application
+ Programming Interface), which is an API for accessing and modifying the DHCP
+ server and client state.
+
+Package: isc-dhcp-relay
+Description-md5: 8caafb99fc6d2e4f67d3a9eda47b9265
+Description-en: ISC DHCP relay daemon
+ This is the Internet Software Consortium's DHCP relay.
+ .
+ Installing this package will make the machine a DHCP relay, which
+ requires a reachable DHCP or BOOTP server in order to function.
+ .
+ Extra documentation can be found in the package isc-dhcp-common.
+
+Package: isc-dhcp-server
+Description-md5: 38647f497f13c9a0a99f9d9cf772d70d
+Description-en: ISC DHCP server for automatic IP address assignment
+ This is the Internet Software Consortium's DHCP server.
+ .
+ Dynamic Host Configuration Protocol (DHCP) is a protocol like BOOTP
+ (actually dhcpd includes much of the functionality of bootpd). It
+ gives client machines "leases" for IP addresses and can
+ automatically set their network configuration.
+ .
+ This server can handle multiple ethernet interfaces.
+
+Package: isc-dhcp-server-ldap
+Description-md5: 5128e40dee2335c1d24210a6ce42aae2
+Description-en: DHCP server that uses LDAP as its backend
+ This is the server from the Internet Software Consortium's implementation of
+ DHCP.
+ .
+ Dynamic Host Configuration Protocol (DHCP) is a protocol like BOOTP
+ (actually dhcpd includes much of the functionality of bootpd). It
+ gives client machines "leases" for IP addresses and can
+ automatically set their network configuration.
+ .
+ This is the DHCP server with LDAP patches applied to it.
 
 Package: jetty9
 Description-md5: 6145995b8766cbb4600d50bf0658018e

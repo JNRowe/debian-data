@@ -211,6 +211,45 @@ Filename: pool/updates/main/c/cryptsetup/cryptsetup-run_2.3.7-1+deb11u1_all.deb
 Size: 54432
 SHA256: d713ffaf03ce64ad1e536d6bc8ea77611fb39cc6d3d82c4afa924e349e30d998
 
+Package: dbus
+Version: 1.12.24-0+deb11u1
+Installed-Size: 647
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Provides: dbus-bin (= 1.12.24-0+deb11u1), dbus-daemon (= 1.12.24-0+deb11u1), dbus-session-bus-common (= 1.12.24-0+deb11u1), dbus-system-bus (= 1.12.24-0+deb11u1), dbus-system-bus-common (= 1.12.24-0+deb11u1), default-dbus-system-bus
+Depends: adduser, libapparmor1 (>= 2.8.94), libaudit1 (>= 1:2.2.1), libc6 (>= 2.28), libcap-ng0 (>= 0.7.9), libdbus-1-3 (= 1.12.24-0+deb11u1), libexpat1 (>= 2.1~beta3), libselinux1 (>= 3.1~), libsystemd0
+Suggests: default-dbus-session-bus | dbus-session-bus
+Description: simple interprocess messaging system (daemon and utilities)
+Homepage: https://dbus.freedesktop.org/
+Description-md5: 8317e43242716ec7f7692a3ac5895e1c
+Multi-Arch: foreign
+Pre-Depends: init-system-helpers (>= 1.54~)
+admin
+Priority: standard
+Filename: pool/updates/main/d/dbus/dbus_1.12.24-0+deb11u1_i386.deb
+Size: 253992
+SHA256: c676a27fe9e19253dc8b6bfc60822bc36f2d25deab919dd22886bfb9b53181a4
+
+Package: dbus-user-session
+Source: dbus
+Version: 1.12.24-0+deb11u1
+Installed-Size: 131
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Provides: dbus-session-bus, default-dbus-session-bus
+Depends: dbus (>= 1.12.24-0+deb11u1), libpam-systemd, systemd
+Breaks: dbus-x11 (<< 1.9.10-2~), policykit-1 (<< 0.105-12~), udisks2 (<< 2.1.5-2~)
+Description: simple interprocess messaging system (systemd --user integration)
+Homepage: https://dbus.freedesktop.org/
+Description-md5: be4453093922af92deac14b4e8458a83
+Multi-Arch: foreign
+Recommends: systemd-sysv
+admin
+Priority: optional
+Filename: pool/updates/main/d/dbus/dbus-user-session_1.12.24-0+deb11u1_i386.deb
+Size: 99716
+SHA256: 2fb2ead2e4faaf1b80a9bda0108d27222dbd9827f2a428fe2692c64e50ebf6e3
+
 Package: dpdk
 Version: 20.11.6-1~deb11u1
 Installed-Size: 126
