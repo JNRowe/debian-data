@@ -548,6 +548,112 @@ Filename: pool/updates/main/i/isc-dhcp/isc-dhcp-server-ldap_4.4.1-2.3+deb11u1_i3
 Size: 474196
 SHA256: 4620b877a8783e666ba4c960b6e22b38e1a66175c2be4cb7421c52add1c20d71
 
+Package: lava-common
+Source: lava
+Version: 2020.12-5+deb11u1
+Installed-Size: 294
+Maintainer: Debian LAVA team <pkg-linaro-lava-devel@lists.alioth.debian.org>
+Architecture: all
+Depends: python3-voluptuous (>= 0.8.8), python3-yaml, python3:any (>= 3.6~)
+Description: Linaro Automated Validation Architecture common
+Homepage: https://www.lavasoftware.org/
+Description-md5: f3bb7113f5dd51e81c4e33cfc1e81950
+net
+Priority: optional
+Filename: pool/updates/main/l/lava/lava-common_2020.12-5+deb11u1_all.deb
+Size: 115760
+SHA256: e5bc1455004deedf6c8c5bd42623ae85c4277f64e84d57fbe8d9033b2c104b31
+
+Package: lava-coordinator
+Source: lava
+Version: 2020.12-5+deb11u1
+Installed-Size: 173
+Maintainer: Debian LAVA team <pkg-linaro-lava-devel@lists.alioth.debian.org>
+Architecture: all
+Depends: lava-common (= 2020.12-5+deb11u1), python3
+Description: LAVA coordinator daemon
+Homepage: https://www.lavasoftware.org/
+Description-md5: 7218b6052497cfc7cf16f1a863b1a50f
+net
+Priority: optional
+Filename: pool/updates/main/l/lava/lava-coordinator_2020.12-5+deb11u1_all.deb
+Size: 105464
+SHA256: 6cd4da96e30a5e2b532f2e28b5d0d54272459bd24631a89bfc6df7543f35771d
+
+Package: lava-dispatcher
+Source: lava
+Version: 2020.12-5+deb11u1
+Installed-Size: 1276
+Maintainer: Debian LAVA team <pkg-linaro-lava-devel@lists.alioth.debian.org>
+Architecture: all
+Depends: file, lava-common (= 2020.12-5+deb11u1), lava-dispatcher-host (= 2020.12-5+deb11u1), systemd-sysv, tar (>= 1.27), bmap-tools, python3-aiohttp, python3-configobj, python3-guestfs, python3-jinja2, python3-magic, python3-netifaces (>= 0.10.0), python3-pexpect (>= 4.2), python3-pyudev (>= 0.21), python3-requests, python3-setproctitle (>= 1.1.8), python3-tz, python3-yaml, python3:any (>= 3.6~)
+Suggests: apache2, docker.io, img2simg, simg2img
+Description: Linaro Automated Validation Architecture dispatcher
+Homepage: https://www.lavasoftware.org/
+Description-md5: 97ea0a29275255f4238988908e58c94e
+Multi-Arch: foreign
+Recommends: bridge-utils, debootstrap (>= 1.0.86), dfu-util, git, libguestfs-tools (>= 1.32.7), lxc (>= 1:2.0.7), nfs-kernel-server, ntp, openbsd-inetd, qemu-system-arm (>= 2.8.0), qemu-system-x86 (>= 2.8.0), rpcbind, rsync, ser2net, sudo, telnet, tftpd-hpa, u-boot-tools, unzip, xz-utils, zstd
+net
+Priority: optional
+Filename: pool/updates/main/l/lava/lava-dispatcher_2020.12-5+deb11u1_all.deb
+Size: 255032
+SHA256: 34d2d96e542cb57d79e6efaf665d9b4730ccc54bc6d240556f71107db7d75e28
+
+Package: lava-dispatcher-host
+Source: lava
+Version: 2020.12-5+deb11u1
+Installed-Size: 156
+Maintainer: Debian LAVA team <pkg-linaro-lava-devel@lists.alioth.debian.org>
+Architecture: all
+Depends: lava-common (= 2020.12-5+deb11u1), python3, python3-requests, python3-pyudev
+Suggests: udev
+Description: LAVA dispatcher host tools
+Homepage: https://www.lavasoftware.org/
+Description-md5: 0ab3290455525453cfd5adfebb0e1518
+Multi-Arch: foreign
+net
+Priority: optional
+Filename: pool/updates/main/l/lava/lava-dispatcher-host_2020.12-5+deb11u1_all.deb
+Size: 102492
+SHA256: b10a81235fcf0663f646614a4cb01ffc1505c1d2dc5ee6d544359cc08b1a8b83
+
+Package: lava-lxc-mocker
+Source: lava
+Version: 2020.12-5+deb11u1
+Installed-Size: 125
+Maintainer: Debian LAVA team <pkg-linaro-lava-devel@lists.alioth.debian.org>
+Architecture: all
+Replaces: lxc
+Provides: lxc
+Conflicts: lxc
+Description: Linaro Automated Validation Architecture LXC Mocker
+Homepage: https://www.lavasoftware.org/
+Description-md5: 1d44f8d7943a34176756d135fd007df3
+net
+Priority: optional
+Filename: pool/updates/main/l/lava/lava-lxc-mocker_2020.12-5+deb11u1_all.deb
+Size: 105028
+SHA256: c170604a6ee68c43ad0464d959b5a9fc580f4a6f058107b00a26cd5074bba532
+
+Package: lava-server
+Source: lava
+Version: 2020.12-5+deb11u1
+Installed-Size: 2460
+Maintainer: Debian LAVA team <pkg-linaro-lava-devel@lists.alioth.debian.org>
+Architecture: all
+Depends: adduser, apache2, gunicorn (>= 19.9.0-4) | gunicorn3, lava-common (= 2020.12-5+deb11u1), lava-server-doc (= 2020.12-5+deb11u1), libjs-bootstrap, libjs-excanvas, libjs-jquery, libjs-jquery-flot (>= 0.8.2), libjs-jquery-typeahead, postgresql, postgresql-client, postgresql-common, systemd-sysv, debconf (>= 0.5) | debconf-2.0, python3-aiohttp, python3-celery, python3-django (>= 1.10), python3-django-auth-ldap (>= 1.2.12), python3-django-filters, python3-django-tables2 (>= 1.14.2), python3-djangorestframework, python3-djangorestframework-extensions, python3-djangorestframework-filters, python3-docutils (>= 0.6), python3-eventlet, python3-jinja2, python3-junit.xml (>= 1.8), python3-psycopg2, python3-requests, python3-simplejson, python3-tap, python3-tz, python3-voluptuous (>= 0.8.8), python3-whitenoise, python3-yaml, python3-zmq, python3:any (>= 3.6~)
+Suggests: lavacli
+Description: Linaro Automated Validation Architecture server
+Homepage: https://www.lavasoftware.org/
+Description-md5: 66925985ca4790b8d1bef765f8ec014a
+Pre-Depends: debconf | debconf-2.0
+Recommends: lava-coordinator (= 2020.12-5+deb11u1), lava-dispatcher (= 2020.12-5+deb11u1), ntp, openssh-client
+net
+Priority: optional
+Filename: pool/updates/main/l/lava/lava-server_2020.12-5+deb11u1_all.deb
+Size: 451724
+SHA256: 4d61b8d17c5e31f2d52bd5f91f3209388d74214f1552e7d487e7078837e3402e
+
 Package: libreswan
 Version: 4.3-1+deb11u1
 Installed-Size: 4719
