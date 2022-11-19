@@ -6512,6 +6512,334 @@ Description-en: Virtual package providing common used libraries by kicad
  size of this package, if you want to use the 3D models you need to install
  kicad-packages3d separately.
 
+Package: krb5-admin-server
+Description-md5: 768e84fbe9ad60b9ec2130a96ea21ea4
+Description-en: MIT Kerberos master server (kadmind)
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the Kerberos master server (kadmind), which handles
+ account creations and deletions, password changes, and other
+ administrative commands via the Kerberos admin protocol.  It also
+ contains the command used by the master KDC to propagate its database to
+ slave KDCs.  This package is generally only used on the master KDC for a
+ Kerberos realm.
+
+Package: krb5-doc
+Description-md5: 019f063fa3a2221f5019a253e0acb9bc
+Description-en: documentation for MIT Kerberos
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the installation, administrator, and user reference
+ manuals for MIT Kerberos and the man pages for the MIT Kerberos
+ configuration files.
+
+Package: krb5-gss-samples
+Description-md5: 6e4720c194d0de7a31bbd570993cac24
+Description-en: MIT Kerberos GSS Sample applications
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains bgss-sample and gss-server, programs used to
+ test GSS-API mechanisms. These programs are most commonly used in
+ testing newly developed GSS-API mechanisms or in testing events
+ between Kerberos or GSS implementations.
+
+Package: krb5-k5tls
+Description-md5: 5699670af87b8b1548415421a790b2b8
+Description-en: TLS plugin for MIT Kerberos
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains a plugin for the TLS functionality used by optional
+ functionality in MIT Kerberos.  The only current consumer is client support
+ for the MS-KKDCP protocol, which tunnels Kerberos protocol traffic through
+ an HTTPS proxy.
+
+Package: krb5-kdc
+Description-md5: 0a143660c97d96b64a9766db9ef769fb
+Description-en: MIT Kerberos key server (KDC)
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the Kerberos key server (KDC).  The KDC manages all
+ authentication credentials for a Kerberos realm, holds the master keys
+ for the realm, and responds to authentication requests.  This package
+ should be installed on both master and slave KDCs.
+
+Package: krb5-kdc-ldap
+Description-md5: cf27e9acb56671eabef7c903664b1b10
+Description-en: MIT Kerberos key server (KDC) LDAP plugin
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the LDAP plugin for the Kerberos key server (KDC)
+ and supporting utilities.  This plugin allows the KDC data to be stored
+ in an LDAP server rather than the default local database.  It should be
+ installed on both master and slave KDCs that use LDAP as a storage
+ backend.
+
+Package: krb5-kpropd
+Description-md5: 2ba7e7dc26d29ffeba6f320923811e2b
+Description-en: MIT Kerberos key server (Slave KDC Support)
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the Kerberos slave KDC update server (kpropd). The
+ kpropd command runs on the slave KDC server. It listens for update requests
+ made by the kprop program, and periodically requests incremental updates from
+ the master KDC. This package should be installed on slave KDCs.
+
+Package: krb5-locales
+Description-md5: 21d19741f2f6e9424950c8f1a6d5cab0
+Description-en: internationalization support for MIT Kerberos
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains internationalized messages for MIT Kerberos.
+
+Package: krb5-multidev
+Description-md5: f39b0ef69fd49cdc81c78fd16595779e
+Description-en: development files for MIT Kerberos without Heimdal conflict
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ Most users wishing to build applications against MIT Kerberos should
+ install libkrb5-dev.  However, that package conflicts with heimdal-dev.
+ This package installs libraries and headers in /usr/include/mit-krb5 and
+ /usr/lib/mit-krb5 and can be installed along side heimdal-multidev, which
+ provides the same facilities for Heimdal.
+
+Package: krb5-otp
+Description-md5: 2f5dd566c16f346d882c733b4d7b1206
+Description-en: OTP plugin for MIT Kerberos
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains a plugin for the OTP preauthentication method
+ (RFC 6560), which allows Kerberos tickets to be obtained using
+ One-Time Password authentication.  This plugin is for use on the KDC; the
+ client support is built in to libkrb5.
+
+Package: krb5-pkinit
+Description-md5: 5b95da6e663d16f53b0cdeb2712ed0f3
+Description-en: PKINIT plugin for MIT Kerberos
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains a plugin for the PKINIT protocol, which allows
+ Kerberos tickets to be obtained using public-key credentials such as
+ X.509 certificates or a smart card.  This plugin can be used by the
+ client libraries and the KDC.
+
+Package: krb5-user
+Description-md5: b10599fa748131166d0b1a01617ee6ce
+Description-en: basic programs to authenticate using MIT Kerberos
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the basic programs to authenticate to MIT Kerberos,
+ change passwords, and talk to the admin server (to create and delete
+ principals, list principals, etc.).
+
+Package: libgssapi-krb5-2
+Description-md5: 2dd7fe357b29d0ba6727171c01f0301c
+Description-en: MIT Kerberos runtime libraries - krb5 GSS-API Mechanism
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the runtime library for the MIT Kerberos
+ implementation of GSS-API used by applications and Kerberos clients.
+
+Package: libgssrpc4
+Description-md5: f18b3ce27893cc2b96de6c617dc25d94
+Description-en: MIT Kerberos runtime libraries - GSS enabled ONCRPC
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains an RPC library used by the Kerberos administrative
+ programs and potentially other applications.
+
+Package: libk5crypto3
+Description-md5: 4b107bcb8481fee0b8b11744a386a6b0
+Description-en: MIT Kerberos runtime libraries - Crypto Library
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the runtime cryptography libraries used by
+ applications and Kerberos clients.
+
+Package: libkadm5clnt-mit12
+Description-md5: 8b2bac04328bfaffc8a1b6b57144cc9b
+Description-en: MIT Kerberos runtime libraries - Administration Clients
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the runtime library used by clients of the Kerberos
+ administration protocol.
+
+Package: libkadm5srv-mit12
+Description-md5: 34bc9a3bc5f24d8493ce16a753dc317d
+Description-en: MIT Kerberos runtime libraries - KDC and Admin Server
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the runtime library used by Kerberos administrative
+ servers.
+
+Package: libkdb5-10
+Description-md5: 339dba7d5a44f05699e73cc493c3def3
+Description-en: MIT Kerberos runtime libraries - Kerberos database
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the internal Kerberos database libraries.
+
+Package: libkrad-dev
+Description-md5: f22135e65145d2c1d4adf7a6dc4266ad
+Description-en: MIT Kerberos RADIUS Library Development
+ This package includes development headers for libkrad0, the MIT
+ Kerberos RADIUS library.  You should not use this RADIUS library in
+ packages unrelated to MIT Kerberos.
+
+Package: libkrad0
+Description-md5: 2d2f7517dcfd02118262a7f5e45301dd
+Description-en: MIT Kerberos runtime libraries - RADIUS library
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the internal support library for RADIUS functionality.
+
+Package: libkrb5-3
+Description-md5: 07bb931a85fb24c6a0ef0f62a94bb26c
+Description-en: MIT Kerberos runtime libraries
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the runtime library for the main Kerberos v5 API
+ used by applications and Kerberos clients.
+
+Package: libkrb5-dbg
+Description-md5: 943dd1af23ccc316b4f620ded24f9212
+Description-en: debugging files for MIT Kerberos
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the debugging information for the MIT Kerberos
+ libraries.  Install this package if you need to trace problems inside the
+ MIT Kerberos libraries with a debugger.
+
+Package: libkrb5-dev
+Description-md5: 2f88a00ff06db459d4a3aee80c1e2778
+Description-en: headers and development libraries for MIT Kerberos
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the symlinks, headers, and development libraries
+ needed to compile and link programs that use the Kerberos libraries.
+
+Package: libkrb5support0
+Description-md5: 4f3abf66dd7bfd20406fc400a05b0693
+Description-en: MIT Kerberos runtime libraries - Support library
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains an internal runtime support library used by other
+ Kerberos libraries.
+
 Package: lava
 Description-md5: e0d51189bbae7e0aabfccaec244b7d00
 Description-en: Linaro Automated Validation Architecture metapackage
