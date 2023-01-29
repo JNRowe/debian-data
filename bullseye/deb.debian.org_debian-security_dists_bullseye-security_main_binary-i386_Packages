@@ -8324,6 +8324,268 @@ Filename: pool/updates/main/g/ghostscript/libgs9-common_9.53.3~dfsg-7+deb11u2_al
 Size: 733940
 SHA256: addf27b31c5170eef2c4c4bcc76a77fbf42528bb5e9ce4cf88dfd883c5f3afc5
 
+Package: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 39036
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: i386
+Replaces: git-core (<< 1:1.7.0.4-1.), gitweb (<< 1:1.7.4~rc1)
+Provides: git-completion, git-core
+Depends: libc6 (>= 2.28), libcurl3-gnutls (>= 7.56.1), libexpat1 (>= 2.0.1), libpcre2-8-0 (>= 10.22), zlib1g (>= 1:1.2.0), perl, liberror-perl, git-man (>> 1:2.30.2), git-man (<< 1:2.30.2-.)
+Suggests: gettext-base, git-daemon-run | git-daemon-sysvinit, git-doc, git-el, git-email, git-gui, gitk, gitweb, git-cvs, git-mediawiki, git-svn
+Breaks: bash-completion (<< 1:1.90-1), cogito (<= 0.18.2+), dgit (<< 5.1~), git-buildpackage (<< 0.6.5), git-core (<< 1:1.7.0.4-1.), gitosis (<< 0.2+20090917-7), gitpkg (<< 0.15), gitweb (<< 1:1.7.4~rc1), guilt (<< 0.33), openssh-client (<< 1:6.8), stgit (<< 0.15), stgit-contrib (<< 0.15)
+Description: fast, scalable, distributed revision control system
+Homepage: https://git-scm.com/
+Description-md5: c1f968556452a190fe359bffd151c012
+Multi-Arch: foreign
+Recommends: ca-certificates, patch, less, ssh-client
+Section: vcs
+Priority: optional
+Filename: pool/updates/main/g/git/git_2.30.2-1+deb11u1_i386.deb
+Size: 6363040
+SHA256: 03c39447306b15c292a4d8dcbfdf26ed7822064b4649e56d4e61bab4b3ba4be9
+
+Package: git-all
+Source: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 899
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: all
+Depends: git (>> 1:2.30.2), git (<< 1:2.30.2-.), git-doc, git-el, git-cvs, git-mediawiki, git-svn, git-email, git-gui, gitk, gitweb
+Suggests: git-daemon-run | git-daemon-sysvinit
+Description: fast, scalable, distributed revision control system (all subpackages)
+Homepage: https://git-scm.com/
+Description-md5: 7eb276543374432338c2d9bf7a76e9b6
+Multi-Arch: foreign
+Section: vcs
+Priority: optional
+Filename: pool/updates/main/g/git/git-all_2.30.2-1+deb11u1_all.deb
+Size: 903796
+SHA256: 184be3ab3fdc32e60c6b2eb1fae0274e572036ecf948e81e1c0bcd95760952d8
+
+Package: git-cvs
+Source: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 1282
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: all
+Depends: git (>> 1:2.30.2), git (<< 1:2.30.2-.), cvsps, libdbd-sqlite3-perl
+Suggests: git-doc, cvs
+Description: fast, scalable, distributed revision control system (cvs interoperability)
+Homepage: https://git-scm.com/
+Description-md5: 5c201c3115375a8b8f735f8e7775526c
+Multi-Arch: foreign
+Section: vcs
+Priority: optional
+Filename: pool/updates/main/g/git/git-cvs_2.30.2-1+deb11u1_all.deb
+Size: 967200
+SHA256: 31e9d0db42b8d9eee658b4273ca115621e8c5588eb0fcf4d37901d7f69bb2440
+
+Package: git-daemon-run
+Source: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 911
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: all
+Depends: git (>> 1:2.30.2), git (<< 1:2.30.2-.), runit, adduser
+Conflicts: git-daemon-sysvinit
+Description: fast, scalable, distributed revision control system (git-daemon service)
+Homepage: https://git-scm.com/
+Description-md5: f22f55ff44557b91f4d1ad32ba7df1be
+Multi-Arch: foreign
+Section: vcs
+Priority: optional
+Filename: pool/updates/main/g/git/git-daemon-run_2.30.2-1+deb11u1_all.deb
+Size: 905416
+SHA256: 84e509df53370e5be6210e08b6d0666eb58d3547f7d92a2139fb7b979d5f1296
+
+Package: git-daemon-sysvinit
+Source: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 914
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: all
+Depends: git (>> 1:2.30.2), git (<< 1:2.30.2-.), adduser, lsb-base (>= 3.0-6)
+Conflicts: git-daemon-run
+Description: fast, scalable, distributed revision control system (git-daemon service)
+Homepage: https://git-scm.com/
+Description-md5: b9035bef841508be61c9ba878690987d
+Multi-Arch: foreign
+Section: vcs
+Priority: optional
+Filename: pool/updates/main/g/git/git-daemon-sysvinit_2.30.2-1+deb11u1_all.deb
+Size: 906484
+SHA256: 52c232b058dcfb3a3f9f4dd328519fbe850bfd5a0583e9e91dc1327d2d4016f6
+
+Package: git-doc
+Source: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 11770
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: all
+Suggests: git, git-cvs, git-svn, git-email, gitk, gitweb
+Description: fast, scalable, distributed revision control system (documentation)
+Homepage: https://git-scm.com/
+Description-md5: 067fe3355198c178fc97b3730c54a120
+Multi-Arch: foreign
+Section: doc
+Priority: optional
+Filename: pool/updates/main/g/git/git-doc_2.30.2-1+deb11u1_all.deb
+Size: 1947720
+SHA256: 313215402fc91d834c39748d8909a750775756b1594b5b3f022a979cf0892e00
+
+Package: git-el
+Source: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 922
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: all
+Replaces: git (<< 1:1.7.4.1-2~)
+Depends: git (>= 1:1.7.4.1-2~), emacs | emacsen
+Breaks: emacsen-common (<< 3.0.0~), git (<< 1:1.7.4.1-2~)
+Description: fast, scalable, distributed revision control system (emacs support)
+Homepage: https://git-scm.com/
+Description-md5: 9f7473878d8650bdef3ba35cdca37738
+Multi-Arch: foreign
+Recommends: elpa-magit
+Section: vcs
+Priority: optional
+Filename: pool/updates/main/g/git/git-el_2.30.2-1+deb11u1_all.deb
+Size: 906088
+SHA256: 776e67fc58132b21c44ab8a72656beb2c742c1ead330b1ab0bd00ad4be331005
+
+Package: git-email
+Source: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 969
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: all
+Depends: git (>> 1:2.30.2), git (<< 1:2.30.2-.)
+Suggests: git-doc
+Description: fast, scalable, distributed revision control system (email add-on)
+Homepage: https://git-scm.com/
+Description-md5: 5e0c38a8609078b06fbbe0e8e9e432b4
+Multi-Arch: foreign
+Recommends: libemail-valid-perl, libmailtools-perl, perl (>> 5.21.5) | libnet-smtp-ssl-perl, libauthen-sasl-perl, libio-socket-ssl-perl (>= 1.951)
+Section: vcs
+Priority: optional
+Filename: pool/updates/main/g/git/git-email_2.30.2-1+deb11u1_all.deb
+Size: 928460
+SHA256: df7283afa3c4de6fac5eb279e456dd071bd491387574ebaab1a34755d8725c1b
+
+Package: git-gui
+Source: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 2320
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: all
+Depends: git (>> 1:2.30.2), git (<< 1:2.30.2-.), tk
+Suggests: git-doc, aspell, meld
+Description: fast, scalable, distributed revision control system (GUI)
+Homepage: https://git-scm.com/
+Description-md5: 699969d903b4df59976ab85a9e250838
+Multi-Arch: foreign
+Recommends: gitk
+Section: vcs
+Priority: optional
+Filename: pool/updates/main/g/git/git-gui_2.30.2-1+deb11u1_all.deb
+Size: 1122280
+SHA256: ac6696646508b032771976674fb0dac978ccd738c2ed0c9b2224182bab6db918
+
+Package: git-man
+Source: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 1877
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: all
+Replaces: git (<< 1:1.7.4~rc1), git-core (<< 1:1.7.0.4-1.)
+Breaks: git (<< 1:1.7.4~rc1)
+Description: fast, scalable, distributed revision control system (manual pages)
+Homepage: https://git-scm.com/
+Description-md5: 0c79f507738c0cb72351c8ae551ee47d
+Multi-Arch: foreign
+Section: doc
+Priority: optional
+Filename: pool/updates/main/g/git/git-man_2.30.2-1+deb11u1_all.deb
+Size: 1829216
+SHA256: d7fc476d3f514797f87222b42faa87c79aae29a6bfd31f76dc70be5939d5078d
+
+Package: git-mediawiki
+Source: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 959
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: all
+Depends: git (>> 1:2.30.2), git (<< 1:2.30.2-.), libmediawiki-api-perl (>= 0.39), liblwp-protocol-https-perl, libdatetime-format-iso8601-perl
+Suggests: mediawiki
+Description: fast, scalable, distributed revision control system (MediaWiki remote helper)
+Homepage: https://git-scm.com/
+Description-md5: 68f824126adee99ee64bf2b96e49bb2c
+Multi-Arch: foreign
+Section: vcs
+Priority: optional
+Filename: pool/updates/main/g/git/git-mediawiki_2.30.2-1+deb11u1_all.deb
+Size: 919140
+SHA256: 8a610f83734eb3e4377796b66e06e5305746edee12f458f2b92b8e2b6d27ac3b
+
+Package: git-svn
+Source: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 1147
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: all
+Replaces: git (<< 1:1.8.3~rc1-1.)
+Depends: git (>> 1:2.30.2), git (<< 1:2.30.2-.), libsvn-perl, libyaml-perl, libterm-readkey-perl
+Suggests: git-doc, subversion
+Breaks: git (<< 1:1.8.3~rc1-1.)
+Description: fast, scalable, distributed revision control system (svn interoperability)
+Homepage: https://git-scm.com/
+Description-md5: fe9279673cf6573640700aabf410ef25
+Multi-Arch: foreign
+Section: vcs
+Priority: optional
+Filename: pool/updates/main/g/git/git-svn_2.30.2-1+deb11u1_all.deb
+Size: 978448
+SHA256: 1e8215370dddcd4716be3323b9c693305630446b693bd73cc8f329a9201d1331
+
+Package: gitk
+Source: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 1726
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: all
+Depends: git (>> 1:2.30.2), git (<< 1:2.30.2-.), tk
+Suggests: git-doc
+Description: fast, scalable, distributed revision control system (revision tree visualizer)
+Homepage: https://git-scm.com/
+Description-md5: 09d5ab78b8aa2f432bbf841a62bb9abc
+Multi-Arch: foreign
+Section: vcs
+Priority: optional
+Filename: pool/updates/main/g/git/gitk_2.30.2-1+deb11u1_all.deb
+Size: 1039940
+SHA256: 47c0c419a6525607b3d56a4dbd4afcde98afdabbab99047eecadf07c55c13820
+
+Package: gitweb
+Source: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 921
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: all
+Depends: git (>> 1:2.30.2), git (<< 1:2.30.2-.), perl, libcgi-pm-perl
+Suggests: httpd-cgi | libcgi-fast-perl, git-doc
+Breaks: apache2.2-common (<< 2.3~)
+Description: fast, scalable, distributed revision control system (web interface)
+Homepage: https://git-scm.com/
+Description-md5: 2140d89702ec1cd621b41c71a95a910a
+Multi-Arch: foreign
+Recommends: apache2 (>= 2.4.6-4~) | lynx | httpd, libhttp-date-perl | libtime-parsedate-perl
+Section: vcs
+Priority: optional
+Filename: pool/updates/main/g/git/gitweb_2.30.2-1+deb11u1_all.deb
+Size: 908028
+SHA256: a6596e2d53fd0e4ffb216e8bb12cf8a7c25eb94d0ad52847b186d6a255539586
+
 Package: dirmngr
 Source: gnupg2
 Version: 2.2.27-2+deb11u2
@@ -27879,12 +28141,12 @@ SHA256: 329563af2771369d4e6982702b591c0f710f3b6739a1fcaeeaa97768d2dd1ee8
 
 Package: libtiff-dev
 Source: tiff
-Version: 4.2.0-1+deb11u1
-Installed-Size: 1101
+Version: 4.2.0-1+deb11u3
+Installed-Size: 1104
 Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 Architecture: i386
 Replaces: libtiff4-dev (<< 4.0.3-6~), libtiff5-alt-dev (<< 4.0.3-6~), libtiff5-dev (<< 4.0.10-1~)
-Depends: libc6-dev | libc-dev, libjbig-dev, libjpeg-dev, liblzma-dev, libtiff5 (= 4.2.0-1+deb11u1), libtiffxx5 (= 4.2.0-1+deb11u1), zlib1g-dev, libdeflate-dev
+Depends: libc6-dev | libc-dev, libjbig-dev, libjpeg-dev, liblzma-dev, libtiff5 (= 4.2.0-1+deb11u3), libtiffxx5 (= 4.2.0-1+deb11u3), zlib1g-dev, libdeflate-dev
 Breaks: libtiff4-dev (<< 4.0.3-6~), libtiff5-alt-dev (<< 4.0.3-6~), libtiff5-dev (<< 4.0.10-1~)
 Description: Tag Image File Format library (TIFF), development files
 Homepage: https://libtiff.gitlab.io/libtiff/
@@ -27892,13 +28154,13 @@ Description-md5: 9da8bcdaa4c04ca6ee4ae233236c1927
 Multi-Arch: same
 Section: oldlibs
 Priority: optional
-Filename: pool/updates/main/t/tiff/libtiff-dev_4.2.0-1+deb11u1_i386.deb
-Size: 438352
-SHA256: f1b26f1395a5bd30c5a930861f4d9b29aa81f0df1009899348be868768370ed6
+Filename: pool/updates/main/t/tiff/libtiff-dev_4.2.0-1+deb11u3_i386.deb
+Size: 438892
+SHA256: d19d93d2d1f7c5bcfda59b26725e46ebf3e996ee684a41a14ecb503755f245a3
 
 Package: libtiff-doc
 Source: tiff
-Version: 4.2.0-1+deb11u1
+Version: 4.2.0-1+deb11u3
 Installed-Size: 1321
 Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 Architecture: all
@@ -27908,13 +28170,13 @@ Description-md5: 418b6b38755ca1f970cc3282a8afc939
 Multi-Arch: foreign
 Section: doc
 Priority: optional
-Filename: pool/updates/main/t/tiff/libtiff-doc_4.2.0-1+deb11u1_all.deb
-Size: 436708
-SHA256: 02a36c6e87203644119e6890a02957be07c4915477457cc7f8f3702ae284776f
+Filename: pool/updates/main/t/tiff/libtiff-doc_4.2.0-1+deb11u3_all.deb
+Size: 437164
+SHA256: b5323a7e167006535e2ae7ca7af5fa3553d376c1cbdf8439373308f27d498fc7
 
 Package: libtiff-opengl
 Source: tiff
-Version: 4.2.0-1+deb11u1
+Version: 4.2.0-1+deb11u3
 Installed-Size: 152
 Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 Architecture: i386
@@ -27925,17 +28187,17 @@ Description-md5: 8b1debea0e0eac5de9dc7eb9a32524a2
 Multi-Arch: foreign
 Section: graphics
 Priority: optional
-Filename: pool/updates/main/t/tiff/libtiff-opengl_4.2.0-1+deb11u1_i386.deb
-Size: 133556
-SHA256: f30b9f101b4a5f2c708b35ba54879ccd2d2de89880506d8097c39438f3dd74ea
+Filename: pool/updates/main/t/tiff/libtiff-opengl_4.2.0-1+deb11u3_i386.deb
+Size: 133932
+SHA256: 7fab24d50a10fea5e73e390dbc1207634ec8c8a25e302302c5cc2c4bf931294b
 
 Package: libtiff-tools
 Source: tiff
-Version: 4.2.0-1+deb11u1
-Installed-Size: 759
+Version: 4.2.0-1+deb11u3
+Installed-Size: 763
 Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 Architecture: i386
-Depends: libc6 (>= 2.7), libtiff5 (>= 4.0.3)
+Depends: libc6 (>= 2.7), libtiff5 (>= 4.2.0-1+deb11u3)
 Suggests: libtiff-opengl
 Description: TIFF manipulation and conversion tools
 Homepage: https://libtiff.gitlab.io/libtiff/
@@ -27943,14 +28205,14 @@ Description-md5: f333fccce3ca049190b80f117d3faa92
 Multi-Arch: foreign
 Section: graphics
 Priority: optional
-Filename: pool/updates/main/t/tiff/libtiff-tools_4.2.0-1+deb11u1_i386.deb
-Size: 326536
-SHA256: 23b8bfc2b10d83ad20ea4cef47d13ed34cdf5fb2d414c8604969c85a18252748
+Filename: pool/updates/main/t/tiff/libtiff-tools_4.2.0-1+deb11u3_i386.deb
+Size: 328012
+SHA256: 926ae27fd5f1d73d3f56e874cd5e03f406d24d68dd7d9f9e1584cf88f3d27b8b
 
 Package: libtiff5
 Source: tiff
-Version: 4.2.0-1+deb11u1
-Installed-Size: 710
+Version: 4.2.0-1+deb11u3
+Installed-Size: 711
 Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 Architecture: i386
 Depends: libc6 (>= 2.29), libdeflate0 (>= 1.0), libjbig0 (>= 2.0), libjpeg62-turbo (>= 1.3.1), liblzma5 (>= 5.1.1alpha+20120614), libwebp6 (>= 0.5.1), libzstd1 (>= 1.4.0), zlib1g (>= 1:1.1.4)
@@ -27960,13 +28222,13 @@ Description-md5: bdf182da5cc17db1c9eb4ccb03647efc
 Multi-Arch: same
 Section: libs
 Priority: optional
-Filename: pool/updates/main/t/tiff/libtiff5_4.2.0-1+deb11u1_i386.deb
-Size: 305080
-SHA256: a5d7a29fc8deb209adbac55a78680bc68a2ce44cd126bc0ba7587080b3c9046a
+Filename: pool/updates/main/t/tiff/libtiff5_4.2.0-1+deb11u3_i386.deb
+Size: 305328
+SHA256: 0da6f019d0767395a9196884935cfc5232ce6e422e8512c83d9195fded98ba81
 
 Package: libtiff5-dev
 Source: tiff
-Version: 4.2.0-1+deb11u1
+Version: 4.2.0-1+deb11u3
 Installed-Size: 128
 Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 Architecture: i386
@@ -27977,13 +28239,13 @@ Description-md5: 73b8d3f4e7f02a253471dffb5c04c99a
 Recommends: pkg-config
 Section: libdevel
 Priority: optional
-Filename: pool/updates/main/t/tiff/libtiff5-dev_4.2.0-1+deb11u1_i386.deb
-Size: 125068
-SHA256: 74c0fb7aecd5ab9d693520f0b089327ec96223b47550de2e026a5b7cb9c0c4c7
+Filename: pool/updates/main/t/tiff/libtiff5-dev_4.2.0-1+deb11u3_i386.deb
+Size: 125428
+SHA256: 8662fe3f6ce01611fbcafe397c44fcab1b46564bd472343f7346fa35400b1445
 
 Package: libtiffxx5
 Source: tiff
-Version: 4.2.0-1+deb11u1
+Version: 4.2.0-1+deb11u3
 Installed-Size: 148
 Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 Architecture: i386
@@ -27994,9 +28256,9 @@ Description-md5: 3947dc613cbd7efbe601b6c89e20c44f
 Multi-Arch: same
 Section: libs
 Priority: optional
-Filename: pool/updates/main/t/tiff/libtiffxx5_4.2.0-1+deb11u1_i386.deb
-Size: 129156
-SHA256: 5e7803f037ac80def4a45531334be1bbb1ede635681570f9b473065d683a1809
+Filename: pool/updates/main/t/tiff/libtiffxx5_4.2.0-1+deb11u3_i386.deb
+Size: 129512
+SHA256: ae2b9947b016f714ad5446b5963165d1ce276098c06a4851e068b0a2e0a5cce8
 
 Package: libtinygltf-dev
 Source: tinygltf
