@@ -1,3 +1,230 @@
+Package: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 39036
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: i386
+Replaces: git-core (<< 1:1.7.0.4-1.), gitweb (<< 1:1.7.4~rc1)
+Provides: git-completion, git-core
+Depends: libc6 (>= 2.28), libcurl3-gnutls (>= 7.56.1), libexpat1 (>= 2.0.1), libpcre2-8-0 (>= 10.22), zlib1g (>= 1:1.2.0), perl, liberror-perl, git-man (>> 1:2.30.2), git-man (<< 1:2.30.2-.)
+Suggests: gettext-base, git-daemon-run | git-daemon-sysvinit, git-doc, git-el, git-email, git-gui, gitk, gitweb, git-cvs, git-mediawiki, git-svn
+Breaks: bash-completion (<< 1:1.90-1), cogito (<= 0.18.2+), dgit (<< 5.1~), git-buildpackage (<< 0.6.5), git-core (<< 1:1.7.0.4-1.), gitosis (<< 0.2+20090917-7), gitpkg (<< 0.15), gitweb (<< 1:1.7.4~rc1), guilt (<< 0.33), openssh-client (<< 1:6.8), stgit (<< 0.15), stgit-contrib (<< 0.15)
+Description: fast, scalable, distributed revision control system
+Homepage: https://git-scm.com/
+Description-md5: c1f968556452a190fe359bffd151c012
+Multi-Arch: foreign
+Recommends: ca-certificates, patch, less, ssh-client
+vcs
+Priority: optional
+Filename: pool/updates/main/g/git/git_2.30.2-1+deb11u1_i386.deb
+Size: 6363040
+SHA256: 03c39447306b15c292a4d8dcbfdf26ed7822064b4649e56d4e61bab4b3ba4be9
+
+Package: git-all
+Source: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 899
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: all
+Depends: git (>> 1:2.30.2), git (<< 1:2.30.2-.), git-doc, git-el, git-cvs, git-mediawiki, git-svn, git-email, git-gui, gitk, gitweb
+Suggests: git-daemon-run | git-daemon-sysvinit
+Description: fast, scalable, distributed revision control system (all subpackages)
+Homepage: https://git-scm.com/
+Description-md5: 7eb276543374432338c2d9bf7a76e9b6
+Multi-Arch: foreign
+vcs
+Priority: optional
+Filename: pool/updates/main/g/git/git-all_2.30.2-1+deb11u1_all.deb
+Size: 903796
+SHA256: 184be3ab3fdc32e60c6b2eb1fae0274e572036ecf948e81e1c0bcd95760952d8
+
+Package: git-cvs
+Source: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 1282
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: all
+Depends: git (>> 1:2.30.2), git (<< 1:2.30.2-.), cvsps, libdbd-sqlite3-perl
+Suggests: git-doc, cvs
+Description: fast, scalable, distributed revision control system (cvs interoperability)
+Homepage: https://git-scm.com/
+Description-md5: 5c201c3115375a8b8f735f8e7775526c
+Multi-Arch: foreign
+vcs
+Priority: optional
+Filename: pool/updates/main/g/git/git-cvs_2.30.2-1+deb11u1_all.deb
+Size: 967200
+SHA256: 31e9d0db42b8d9eee658b4273ca115621e8c5588eb0fcf4d37901d7f69bb2440
+
+Package: git-daemon-run
+Source: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 911
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: all
+Depends: git (>> 1:2.30.2), git (<< 1:2.30.2-.), runit, adduser
+Conflicts: git-daemon-sysvinit
+Description: fast, scalable, distributed revision control system (git-daemon service)
+Homepage: https://git-scm.com/
+Description-md5: f22f55ff44557b91f4d1ad32ba7df1be
+Multi-Arch: foreign
+vcs
+Priority: optional
+Filename: pool/updates/main/g/git/git-daemon-run_2.30.2-1+deb11u1_all.deb
+Size: 905416
+SHA256: 84e509df53370e5be6210e08b6d0666eb58d3547f7d92a2139fb7b979d5f1296
+
+Package: git-daemon-sysvinit
+Source: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 914
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: all
+Depends: git (>> 1:2.30.2), git (<< 1:2.30.2-.), adduser, lsb-base (>= 3.0-6)
+Conflicts: git-daemon-run
+Description: fast, scalable, distributed revision control system (git-daemon service)
+Homepage: https://git-scm.com/
+Description-md5: b9035bef841508be61c9ba878690987d
+Multi-Arch: foreign
+vcs
+Priority: optional
+Filename: pool/updates/main/g/git/git-daemon-sysvinit_2.30.2-1+deb11u1_all.deb
+Size: 906484
+SHA256: 52c232b058dcfb3a3f9f4dd328519fbe850bfd5a0583e9e91dc1327d2d4016f6
+
+Package: git-el
+Source: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 922
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: all
+Replaces: git (<< 1:1.7.4.1-2~)
+Depends: git (>= 1:1.7.4.1-2~), emacs | emacsen
+Breaks: emacsen-common (<< 3.0.0~), git (<< 1:1.7.4.1-2~)
+Description: fast, scalable, distributed revision control system (emacs support)
+Homepage: https://git-scm.com/
+Description-md5: 9f7473878d8650bdef3ba35cdca37738
+Multi-Arch: foreign
+Recommends: elpa-magit
+vcs
+Priority: optional
+Filename: pool/updates/main/g/git/git-el_2.30.2-1+deb11u1_all.deb
+Size: 906088
+SHA256: 776e67fc58132b21c44ab8a72656beb2c742c1ead330b1ab0bd00ad4be331005
+
+Package: git-email
+Source: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 969
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: all
+Depends: git (>> 1:2.30.2), git (<< 1:2.30.2-.)
+Suggests: git-doc
+Description: fast, scalable, distributed revision control system (email add-on)
+Homepage: https://git-scm.com/
+Description-md5: 5e0c38a8609078b06fbbe0e8e9e432b4
+Multi-Arch: foreign
+Recommends: libemail-valid-perl, libmailtools-perl, perl (>> 5.21.5) | libnet-smtp-ssl-perl, libauthen-sasl-perl, libio-socket-ssl-perl (>= 1.951)
+vcs
+Priority: optional
+Filename: pool/updates/main/g/git/git-email_2.30.2-1+deb11u1_all.deb
+Size: 928460
+SHA256: df7283afa3c4de6fac5eb279e456dd071bd491387574ebaab1a34755d8725c1b
+
+Package: git-gui
+Source: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 2320
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: all
+Depends: git (>> 1:2.30.2), git (<< 1:2.30.2-.), tk
+Suggests: git-doc, aspell, meld
+Description: fast, scalable, distributed revision control system (GUI)
+Homepage: https://git-scm.com/
+Description-md5: 699969d903b4df59976ab85a9e250838
+Multi-Arch: foreign
+Recommends: gitk
+vcs
+Priority: optional
+Filename: pool/updates/main/g/git/git-gui_2.30.2-1+deb11u1_all.deb
+Size: 1122280
+SHA256: ac6696646508b032771976674fb0dac978ccd738c2ed0c9b2224182bab6db918
+
+Package: git-mediawiki
+Source: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 959
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: all
+Depends: git (>> 1:2.30.2), git (<< 1:2.30.2-.), libmediawiki-api-perl (>= 0.39), liblwp-protocol-https-perl, libdatetime-format-iso8601-perl
+Suggests: mediawiki
+Description: fast, scalable, distributed revision control system (MediaWiki remote helper)
+Homepage: https://git-scm.com/
+Description-md5: 68f824126adee99ee64bf2b96e49bb2c
+Multi-Arch: foreign
+vcs
+Priority: optional
+Filename: pool/updates/main/g/git/git-mediawiki_2.30.2-1+deb11u1_all.deb
+Size: 919140
+SHA256: 8a610f83734eb3e4377796b66e06e5305746edee12f458f2b92b8e2b6d27ac3b
+
+Package: git-svn
+Source: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 1147
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: all
+Replaces: git (<< 1:1.8.3~rc1-1.)
+Depends: git (>> 1:2.30.2), git (<< 1:2.30.2-.), libsvn-perl, libyaml-perl, libterm-readkey-perl
+Suggests: git-doc, subversion
+Breaks: git (<< 1:1.8.3~rc1-1.)
+Description: fast, scalable, distributed revision control system (svn interoperability)
+Homepage: https://git-scm.com/
+Description-md5: fe9279673cf6573640700aabf410ef25
+Multi-Arch: foreign
+vcs
+Priority: optional
+Filename: pool/updates/main/g/git/git-svn_2.30.2-1+deb11u1_all.deb
+Size: 978448
+SHA256: 1e8215370dddcd4716be3323b9c693305630446b693bd73cc8f329a9201d1331
+
+Package: gitk
+Source: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 1726
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: all
+Depends: git (>> 1:2.30.2), git (<< 1:2.30.2-.), tk
+Suggests: git-doc
+Description: fast, scalable, distributed revision control system (revision tree visualizer)
+Homepage: https://git-scm.com/
+Description-md5: 09d5ab78b8aa2f432bbf841a62bb9abc
+Multi-Arch: foreign
+vcs
+Priority: optional
+Filename: pool/updates/main/g/git/gitk_2.30.2-1+deb11u1_all.deb
+Size: 1039940
+SHA256: 47c0c419a6525607b3d56a4dbd4afcde98afdabbab99047eecadf07c55c13820
+
+Package: gitweb
+Source: git
+Version: 1:2.30.2-1+deb11u1
+Installed-Size: 921
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Architecture: all
+Depends: git (>> 1:2.30.2), git (<< 1:2.30.2-.), perl, libcgi-pm-perl
+Suggests: httpd-cgi | libcgi-fast-perl, git-doc
+Breaks: apache2.2-common (<< 2.3~)
+Description: fast, scalable, distributed revision control system (web interface)
+Homepage: https://git-scm.com/
+Description-md5: 2140d89702ec1cd621b41c71a95a910a
+Multi-Arch: foreign
+Recommends: apache2 (>= 2.4.6-4~) | lynx | httpd, libhttp-date-perl | libtime-parsedate-perl
+vcs
+Priority: optional
+Filename: pool/updates/main/g/git/gitweb_2.30.2-1+deb11u1_all.deb
+Size: 908028
+SHA256: a6596e2d53fd0e4ffb216e8bb12cf8a7c25eb94d0ad52847b186d6a255539586
+
 Package: subversion
 Version: 1.14.1-3+deb11u1
 Installed-Size: 4748
