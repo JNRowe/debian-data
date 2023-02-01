@@ -187,6 +187,87 @@ Filename: pool/updates/main/c/cfrpki/octorpki_1.4.2-1~deb11u1_i386.deb
 Size: 2795256
 SHA256: 9665339a5eb84490936e6814b44cdb6c3c2bfae41d34056e5a80b352b764b23f
 
+Package: cinder-api
+Source: cinder
+Version: 2:17.0.1-1+deb11u1
+Installed-Size: 157
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: adduser, cinder-common (= 2:17.0.1-1+deb11u1), debconf, python3-keystoneclient, python3-openstackclient, python3-pastescript, q-text-as-data, uwsgi-plugin-python3, debconf (>= 0.5) | debconf-2.0, lsb-base (>= 3.0-6), python3:any
+Description: OpenStack block storage system - API server
+Homepage: https://github.com/openstack/cinder
+Description-md5: bff82f2e621feef147edaa701ca7653c
+net
+Priority: optional
+Filename: pool/updates/main/c/cinder/cinder-api_17.0.1-1+deb11u1_all.deb
+Size: 29096
+SHA256: 0eb8be4a02881999204b95db1be502ec5866fee9d8c3a1889800041f9617c26c
+
+Package: cinder-backup
+Source: cinder
+Version: 2:17.0.1-1+deb11u1
+Installed-Size: 41
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: adduser, cinder-common (= 2:17.0.1-1+deb11u1), lsb-base (>= 3.0-6), python3:any
+Description: OpenStack block storage system - Backup server
+Homepage: https://github.com/openstack/cinder
+Description-md5: 73f2900a0d8182e872df1b4487831aa0
+net
+Priority: optional
+Filename: pool/updates/main/c/cinder/cinder-backup_17.0.1-1+deb11u1_all.deb
+Size: 16000
+SHA256: 548bdc9505e28590461870df6d0a90dc724b1cd287e01d8b8074b16bdd68ca59
+
+Package: cinder-common
+Source: cinder
+Version: 2:17.0.1-1+deb11u1
+Installed-Size: 378
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: adduser, dbconfig-common, debconf, cryptsetup-bin, cgroup-tools, python3-cinder (= 2:17.0.1-1+deb11u1), thin-provisioning-tools, sqlite3, debconf (>= 0.5) | debconf-2.0, python3:any
+Description: OpenStack block storage system - common files
+Homepage: https://github.com/openstack/cinder
+Description-md5: cb01a6cfd7e60aaebcd3df60dfad9e7f
+net
+Priority: optional
+Filename: pool/updates/main/c/cinder/cinder-common_17.0.1-1+deb11u1_all.deb
+Size: 75604
+SHA256: 17c8d23b0e7277d02346c8aa2f51df02ef069d83da389217fadcfb4375314d89
+
+Package: cinder-scheduler
+Source: cinder
+Version: 2:17.0.1-1+deb11u1
+Installed-Size: 44
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: cinder-common (= 2:17.0.1-1+deb11u1), lsb-base (>= 3.0-6), python3:any
+Description: OpenStack block storage system - Scheduler server
+Homepage: https://github.com/openstack/cinder
+Description-md5: 777175fe703d7f3a75993c335b1fdb9c
+net
+Priority: optional
+Filename: pool/updates/main/c/cinder/cinder-scheduler_17.0.1-1+deb11u1_all.deb
+Size: 16328
+SHA256: 36a265341716537d412d872fa661e227e2ab5193434a1732fc6cb4382f27e9b4
+
+Package: cinder-volume
+Source: cinder
+Version: 2:17.0.1-1+deb11u1
+Installed-Size: 96
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: adduser, cinder-common (= 2:17.0.1-1+deb11u1), lvm2, qemu-utils, tgt | open-iscsi, lsb-base (>= 3.0-6), python3:any
+Suggests: ceph-common
+Description: OpenStack block storage system - Volume server
+Homepage: https://github.com/openstack/cinder
+Description-md5: 5198686c55ebe3281ca68746d6fba326
+net
+Priority: optional
+Filename: pool/updates/main/c/cinder/cinder-volume_17.0.1-1+deb11u1_all.deb
+Size: 26812
+SHA256: 0b215f555ef514cfc0c0fee795ebaaaa380c8a8a8b559fa419e34333adcf8299
+
 Package: connman
 Version: 1.36-2.2+deb11u1
 Installed-Size: 1345
@@ -1294,6 +1375,202 @@ Priority: optional
 Filename: pool/updates/main/n/nextcloud-desktop/nextcloud-desktop-common_3.1.1-2+deb11u1_all.deb
 Size: 355588
 SHA256: a992007b29b5c4c049a0bdd900e9e54126e4818d2147dfea94bee1a5272512cf
+
+Package: nova-api
+Source: nova
+Version: 2:22.0.1-2+deb11u1
+Installed-Size: 182
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: adduser, dbconfig-common, debconf, iptables, nova-common (= 2:22.0.1-2+deb11u1), python3-pastescript, uwsgi-plugin-python3, debconf (>= 0.5) | debconf-2.0, lsb-base (>= 3.0.6), python3:any
+Description: OpenStack Compute - compute API frontend
+Homepage: http://www.openstack.org/software/openstack-compute/
+Description-md5: a5840f1bccfc62e9cc93d4bbba487510
+Recommends: python3-keystone
+net
+Priority: optional
+Filename: pool/updates/main/n/nova/nova-api_22.0.1-2+deb11u1_all.deb
+Size: 44132
+SHA256: 8f1ea10d62c20697be1bcb1610e2663c91267568693823586cd84af44efb3e6d
+
+Package: nova-common
+Source: nova
+Version: 2:22.0.1-2+deb11u1
+Installed-Size: 719
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: adduser, bridge-utils, dbconfig-common, iproute2 | iproute, python3-amqplib, python3-configobj, python3-iso8601, python3-nova (= 2:22.0.1-2+deb11u1), python3-openstackclient, python3-q-text-as-data, q-text-as-data, sqlite3, debconf (>= 0.5) | debconf-2.0, python3:any
+Suggests: python3-pysqlite2 | python3-mysqldb | python3-psycopg2
+Description: OpenStack Compute - common files
+Homepage: http://www.openstack.org/software/openstack-compute/
+Description-md5: be810e37c9753e37e3fa1e6827c879cf
+net
+Priority: optional
+Filename: pool/updates/main/n/nova/nova-common_22.0.1-2+deb11u1_all.deb
+Size: 139800
+SHA256: 249a213ece6237236eef8aa82826b9464aedb08910ed438ec26735aee090bc5a
+
+Package: nova-compute
+Source: nova
+Version: 2:22.0.1-2+deb11u1
+Installed-Size: 64
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: adduser, conntrack, cgroup-tools, curl, dosfstools, ebtables, fdisk | util-linux (<< 2.29.2-3~), gawk, iptables, kpartx, nova-common (= 2:22.0.1-2+deb11u1), nova-compute-kvm | nova-compute-hypervisor, open-iscsi, parted, qemu-utils, rsync, vlan, lsb-base (>= 3.0.6), python3:any
+Description: OpenStack Compute - compute node
+Homepage: http://www.openstack.org/software/openstack-compute/
+Description-md5: abef552695fcdbc4d11dcd8d9a15c1b6
+Recommends: dmidecode
+net
+Priority: optional
+Filename: pool/updates/main/n/nova/nova-compute_22.0.1-2+deb11u1_all.deb
+Size: 30028
+SHA256: 08bede62e94972335228a5d7d41d5be6d1acec99cf7b5d856f67ca445e70fc6f
+
+Package: nova-compute-ironic
+Source: nova
+Version: 2:22.0.1-2+deb11u1
+Installed-Size: 37
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Replaces: nova-compute-uml
+Provides: nova-compute-hypervisor
+Depends: adduser, dpkg-dev, nova-common, nova-compute, python3-ironicclient (>= 3.0.0), python3-libvirt
+Conflicts: nova-baremetal, nova-compute-kvm, nova-compute-lxc, nova-compute-qemu, nova-compute-uml, nova-compute-xen
+Breaks: nova-compute-uml
+Description: OpenStack Compute - compute node (Ironic)
+Homepage: http://www.openstack.org/software/openstack-compute/
+Description-md5: 5831d0390e765e41a636fe4f9697285d
+Recommends: guestmount
+net
+Priority: optional
+Filename: pool/updates/main/n/nova/nova-compute-ironic_22.0.1-2+deb11u1_all.deb
+Size: 25508
+SHA256: 3c14f113e623e2ff4b515e60c31ac86d4fc5c7e1c6aaeb4288abc88779b666be
+
+Package: nova-compute-kvm
+Source: nova
+Version: 2:22.0.1-2+deb11u1
+Installed-Size: 38
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Provides: nova-compute-hypervisor
+Depends: adduser, dpkg-dev, libvirt-daemon-system, nova-common, nova-compute, python3-libvirt, qemu-block-extra (>= 1:5.0), qemu-system-x86 (>= 1:5.0)
+Conflicts: nova-compute-ironic, nova-compute-lxc, nova-compute-qemu, nova-compute-xen
+Breaks: qemu-system-common (<< 1:4.0)
+Description: OpenStack Compute - compute node (KVM)
+Homepage: http://www.openstack.org/software/openstack-compute/
+Description-md5: 634d4d8c048cf45b3a85a76d49728fa6
+Recommends: guestmount
+net
+Priority: optional
+Filename: pool/updates/main/n/nova/nova-compute-kvm_22.0.1-2+deb11u1_all.deb
+Size: 25644
+SHA256: 55e479bef2ab5bd7ce2e626a0e7b4577b02cc1103d82024eb213d3986711d950
+
+Package: nova-compute-lxc
+Source: nova
+Version: 2:22.0.1-2+deb11u1
+Installed-Size: 38
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Provides: nova-compute-hypervisor
+Depends: adduser, dpkg-dev, libvirt-daemon-system, lxc, nova-common, nova-compute, python3-libvirt
+Conflicts: nova-compute-ironic, nova-compute-kvm, nova-compute-qemu, nova-compute-xen
+Description: OpenStack Compute - compute node (LXC)
+Homepage: http://www.openstack.org/software/openstack-compute/
+Description-md5: ee891f2fd6c366ed399c5aac3f71eb86
+net
+Priority: optional
+Filename: pool/updates/main/n/nova/nova-compute-lxc_22.0.1-2+deb11u1_all.deb
+Size: 25480
+SHA256: 6effe7fa70b9237f5068f97fbbfc162ca32dbd397ecabae922018901e7021186
+
+Package: nova-compute-qemu
+Source: nova
+Version: 2:22.0.1-2+deb11u1
+Installed-Size: 38
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Provides: nova-compute-hypervisor
+Depends: adduser, dpkg-dev, libvirt-daemon-system, nova-common, nova-compute, python3-libvirt, qemu-system (>= 1:5.0), qemu-block-extra (>= 1:5.0)
+Conflicts: nova-compute-ironic, nova-compute-kvm, nova-compute-lxc, nova-compute-xen
+Breaks: qemu-system-common (<< 1:4.0)
+Description: OpenStack Compute - compute node (QEmu)
+Homepage: http://www.openstack.org/software/openstack-compute/
+Description-md5: 879d02d10e798a84f10ec46ba7161a9d
+net
+Priority: optional
+Filename: pool/updates/main/n/nova/nova-compute-qemu_22.0.1-2+deb11u1_all.deb
+Size: 25520
+SHA256: 30ed602372cd7aaf5c03428bef9629a6739de03240474cf488dc2bd14027bbd2
+
+Package: nova-conductor
+Source: nova
+Version: 2:22.0.1-2+deb11u1
+Installed-Size: 57
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: nova-common (= 2:22.0.1-2+deb11u1), lsb-base (>= 3.0.6), python3:any
+Description: OpenStack Compute - conductor service
+Homepage: http://www.openstack.org/software/openstack-compute/
+Description-md5: 738dfb7566d0b5037ee74eb78e1e9ace
+net
+Priority: optional
+Filename: pool/updates/main/n/nova/nova-conductor_22.0.1-2+deb11u1_all.deb
+Size: 29328
+SHA256: 779d7195b06ef3af5940d0c77e4f85743325b829534f9a51fee57e5a31c15ca6
+
+Package: nova-consoleproxy
+Source: nova
+Version: 2:22.0.1-2+deb11u1
+Installed-Size: 94
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Replaces: nova-novncproxy, nova-spicehtml5proxy
+Provides: nova-ajax-console-proxy, nova-novncproxy, nova-spicehtml5proxy, nova-spiceproxy
+Depends: debconf, nova-common (= 2:22.0.1-2+deb11u1), novnc, python3-websockify (>= 0.9.0), spice-html5, debconf (>= 0.5) | debconf-2.0, lsb-base (>= 3.0.6), python3:any
+Conflicts: nova-novncproxy, nova-spicehtml5proxy
+Description: OpenStack Compute - NoVNC proxy
+Homepage: http://www.openstack.org/software/openstack-compute/
+Description-md5: 2b5897cd672b756cada22f0e4642db6d
+net
+Priority: optional
+Filename: pool/updates/main/n/nova/nova-consoleproxy_22.0.1-2+deb11u1_all.deb
+Size: 33808
+SHA256: b1c9b20f94f1f19ad95b9828d1e2aee0056ca665f0343f763f764382e5986c9c
+
+Package: nova-scheduler
+Source: nova
+Version: 2:22.0.1-2+deb11u1
+Installed-Size: 56
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: nova-common (= 2:22.0.1-2+deb11u1), lsb-base (>= 3.0.6), python3:any
+Description: OpenStack Compute - virtual machine scheduler
+Homepage: http://www.openstack.org/software/openstack-compute/
+Description-md5: cf49148e61d8608b3a10867a86a16cbf
+net
+Priority: optional
+Filename: pool/updates/main/n/nova/nova-scheduler_22.0.1-2+deb11u1_all.deb
+Size: 29372
+SHA256: d7126e0a5b9ef944b24bb339d876ba8fc17e61b2dc702fd48db7519d3154077e
+
+Package: nova-volume
+Source: nova
+Version: 2:22.0.1-2+deb11u1
+Installed-Size: 33
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: cinder-api, cinder-scheduler, cinder-volume
+Description: OpenStack Compute - storage metapackage
+Homepage: http://www.openstack.org/software/openstack-compute/
+Description-md5: 256dc6ea5bcdebd1ea1cdf5b9831a57c
+net
+Priority: optional
+Filename: pool/updates/main/n/nova/nova-volume_22.0.1-2+deb11u1_all.deb
+Size: 25164
+SHA256: 76301f227076729e27755a7a1a2b5663af2ca5e2437e6ebd63181bac305b5cae
 
 Package: ldap-utils
 Source: openldap
