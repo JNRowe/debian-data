@@ -2010,6 +2010,83 @@ Filename: pool/updates/main/s/samba/winbind_4.13.13+dfsg-1~deb11u5_i386.deb
 Size: 620288
 SHA256: 24bae89539e29eac2b662571802f4e3b6458d724d40b91667a273902b0d92ef8
 
+Package: snort
+Version: 2.9.20-0+deb11u1
+Installed-Size: 2460
+Maintainer: Javier Fernández-Sanguino Peña <jfs@debian.org>
+Architecture: i386
+Replaces: snort-common (<< 2.0.2-3)
+Depends: snort-common-libraries (>= 2.9.20-0+deb11u1), snort-rules-default (>= 2.9.20-0+deb11u1), snort-common (>= 2.9.20-0+deb11u1), debconf (>= 0.5) | debconf-2.0, rsyslog | system-log-daemon, logrotate, net-tools, lsb-base, libc6 (>= 2.30), libdaq2 (>= 2.0.7), libdumbnet1 (>= 1.8), liblzma5 (>= 5.1.1alpha+20120614), libnetfilter-queue1 (>= 1.0.0), libnghttp2-14 (>= 1.5.0), libpcap0.8 (>= 1.0.0), libpcre3, libssl1.1 (>= 1.1.0), zlib1g (>= 1:1.1.4)
+Suggests: snort-doc
+Conflicts: snort-mysql, snort-pgsql
+Description: flexible Network Intrusion Detection System
+Homepage: https://www.snort.org/
+Description-md5: 7c97bedaa77cf5f9a17ae772993f82ac
+Pre-Depends: adduser (>= 3.11), init-system-helpers (>= 1.54~)
+Recommends: iproute2
+net
+Priority: optional
+Filename: pool/updates/main/s/snort/snort_2.9.20-0+deb11u1_i386.deb
+Size: 1006776
+SHA256: d27e010bad7f65b41afeb01258a1bca6a059d97d8efbd73cf1f19597be647b46
+
+Package: snort-common
+Source: snort
+Version: 2.9.20-0+deb11u1
+Installed-Size: 525
+Maintainer: Javier Fernández-Sanguino Peña <jfs@debian.org>
+Architecture: all
+Replaces: snort (<< 1.8.4beta1-1)
+Depends: perl, debconf (>= 0.5) | debconf-2.0, lsb-base
+Suggests: snort-doc
+Conflicts: snort (<< 2.9.20-0+deb11u1)
+Description: flexible Network Intrusion Detection System - common files
+Homepage: https://www.snort.org/
+Description-md5: 1d453a79109aceb2104287b250cfdda2
+Pre-Depends: adduser (>= 3.11), dpkg (>= 1.17.14)
+net
+Priority: optional
+Filename: pool/updates/main/s/snort/snort-common_2.9.20-0+deb11u1_all.deb
+Size: 278952
+SHA256: c634b94c9ddf35e697ef1c38e720a870ed305df93f74c72d22eddc9ceb0a343e
+
+Package: snort-common-libraries
+Source: snort
+Version: 2.9.20-0+deb11u1
+Installed-Size: 4963
+Maintainer: Javier Fernández-Sanguino Peña <jfs@debian.org>
+Architecture: i386
+Depends: libc6 (>= 2.27), libluajit-5.1-2 (>= 2.0.4+dfsg), libpcre3, libssl1.1 (>= 1.1.0)
+Suggests: snort (>= 2.7.0) | snort-pgsql (>= 2.7.0) | snort-mysql (>= 2.7.0)
+Conflicts: snort-common (<< 2.7.0-6)
+Description: flexible Network Intrusion Detection System - libraries
+Homepage: https://www.snort.org/
+Description-md5: bed61be07b89beefbd45da6918bcedd8
+net
+Priority: optional
+Filename: pool/updates/main/s/snort/snort-common-libraries_2.9.20-0+deb11u1_i386.deb
+Size: 1042120
+SHA256: 70d163be9daec4fc9d83e9a269143f1a0b810620bbd18fa18a6e0016af297ff8
+
+Package: snort-rules-default
+Source: snort
+Version: 2.9.20-0+deb11u1
+Installed-Size: 1868
+Maintainer: Javier Fernández-Sanguino Peña <jfs@debian.org>
+Architecture: all
+Provides: snort-rules
+Depends: debconf (>= 0.2.80) | debconf-2.0, adduser (>= 3.11)
+Suggests: snort (>= 2.2.0) | snort-pgsql (>= 2.2.0) | snort-mysql (>= 2.2.0)
+Description: flexible Network Intrusion Detection System - ruleset
+Homepage: http://www.snort.org/snort-rules/
+Description-md5: 4f9165fd86b9ce106e59cd6845447712
+Recommends: oinkmaster
+net
+Priority: optional
+Filename: pool/updates/main/s/snort/snort-rules-default_2.9.20-0+deb11u1_all.deb
+Size: 374224
+SHA256: 4153d386ad5e329135b5ebf266fb4316f1c2fa9c4fb1b40805fa29c1834d686a
+
 Package: charon-cmd
 Source: strongswan
 Version: 5.9.1-1+deb11u3
