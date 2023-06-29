@@ -8379,6 +8379,42 @@ Filename: pool/updates/main/f/fish/fish-common_3.1.2-3+deb11u1_all.deb
 Size: 1402092
 SHA256: 738fa7aa1140945d1f9e24b3c88ff6de6283633282fad28922691437304cd386
 
+Package: python-flask-doc
+Source: flask
+Version: 1.1.2-2+deb11u1
+Installed-Size: 3339
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: libjs-sphinxdoc (>= 2.4.3-5~)
+Description: micro web framework based on Werkzeug and Jinja2 - documentation
+Homepage: http://flask.pocoo.org/
+Description-md5: ffb117c9bc710c2c0dc04e3abcabeb7b
+Multi-Arch: foreign
+Recommends: python3-flask
+Section: doc
+Priority: optional
+Filename: pool/updates/main/f/flask/python-flask-doc_1.1.2-2+deb11u1_all.deb
+Size: 640020
+SHA256: 804392b0ce102cfc161c0c0bfabcf7b5549e1622d0c0205369e47a7eda738199
+
+Package: python3-flask
+Source: flask
+Version: 1.1.2-2+deb11u1
+Installed-Size: 410
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-click (>= 5.1), python3-itsdangerous (>= 0.24), python3-jinja2 (>= 2.10), python3-werkzeug (>= 0.15), python3:any
+Suggests: python-flask-doc
+Description: micro web framework based on Werkzeug and Jinja2 - Python 3.x
+Homepage: http://flask.pocoo.org/
+Description-md5: 641177e823dea958cab4d806a13149d6
+Recommends: python3-blinker, python3-pkg-resources
+Section: python
+Priority: optional
+Filename: pool/updates/main/f/flask/python3-flask_1.1.2-2+deb11u1_all.deb
+Size: 99060
+SHA256: cb7031eec91879fdb5c3bdbe949e340dfd9de13974e6caf7960f79426ea7a939
+
 Package: flatpak
 Version: 1.10.7-0+deb11u1
 Installed-Size: 7215
@@ -21982,6 +22018,91 @@ Priority: optional
 Filename: pool/updates/main/l/lynx/lynx-common_2.9.0dev.6-3~deb11u1_all.deb
 Size: 1192260
 SHA256: 5aae88de446469e684f78265665ec2fd6682ae90a51c0ceb649f51770ac435ae
+
+Package: duende
+Source: maradns
+Version: 2.0.13-1.4+deb11u1
+Installed-Size: 97
+Maintainer: Dariusz Dwornikowski <dariusz.dwornikowski@cs.put.poznan.pl>
+Architecture: i386
+Depends: libc6 (>= 2.4)
+Description: logging daemonizer
+Homepage: http://maradns.org
+Description-md5: bd4f7c68a0e8e4894cb2c48f52c71329
+Section: admin
+Priority: optional
+Filename: pool/updates/main/m/maradns/duende_2.0.13-1.4+deb11u1_i386.deb
+Size: 72968
+SHA256: 1c329bb8933767098c52918a7ef1ea7746c9e7b41a1456eca842a7e0e2fd3c09
+
+Package: maradns
+Version: 2.0.13-1.4+deb11u1
+Installed-Size: 920
+Maintainer: Dariusz Dwornikowski <dariusz.dwornikowski@cs.put.poznan.pl>
+Architecture: i386
+Depends: adduser, duende (>= 1.4.12), lsb-base, libc6 (>= 2.28), python3:any
+Suggests: maradns-deadwood
+Description: simple security-focused authoritative Domain Name Service server
+Homepage: http://maradns.org
+Description-md5: a523bb953b34b6ed9fc3ca0475c912a2
+Recommends: maradns-zoneserver
+Section: net
+Priority: optional
+Filename: pool/updates/main/m/maradns/maradns_2.0.13-1.4+deb11u1_i386.deb
+Size: 264440
+SHA256: 4987a70356091564b4321d688f0c128cd140bc3869bf8156a2f8706a2120d99d
+
+Package: maradns-deadwood
+Source: maradns
+Version: 2.0.13-1.4+deb11u1
+Installed-Size: 220
+Maintainer: Dariusz Dwornikowski <dariusz.dwornikowski@cs.put.poznan.pl>
+Architecture: i386
+Depends: libc6 (>= 2.28)
+Suggests: maradns (>= 2.0.09-1)
+Description: simple security-focused recursive Domain Name Service server
+Homepage: http://maradns.org
+Description-md5: cca274de24547a67199a76898043252f
+Enhances: maradns (>= 2.0.04-1)
+Recommends: duende (>= 2.0.09-1)
+Section: net
+Priority: optional
+Filename: pool/updates/main/m/maradns/maradns-deadwood_2.0.13-1.4+deb11u1_i386.deb
+Size: 131336
+SHA256: b080c8f2be0319ba89e0f28bb6a55e644531f1326759ca11183938690a281521
+
+Package: maradns-docs
+Source: maradns
+Version: 2.0.13-1.4+deb11u1
+Installed-Size: 489
+Maintainer: Dariusz Dwornikowski <dariusz.dwornikowski@cs.put.poznan.pl>
+Architecture: all
+Description: upstream documentation for the MaraDNS Domain Name Service server
+Homepage: http://maradns.org
+Description-md5: a7b3a562f88325f5f8475d9d2d62ee6a
+Enhances: duende, maradns, maradns-deadwood, maradns-zoneserver
+Recommends: dwww
+Section: doc
+Priority: optional
+Filename: pool/updates/main/m/maradns/maradns-docs_2.0.13-1.4+deb11u1_all.deb
+Size: 181756
+SHA256: 7bcabefbdfd6e032661debd0407db5aafe9cf57317679b688304f22a00ff3e6e
+
+Package: maradns-zoneserver
+Source: maradns
+Version: 2.0.13-1.4+deb11u1
+Installed-Size: 377
+Maintainer: Dariusz Dwornikowski <dariusz.dwornikowski@cs.put.poznan.pl>
+Architecture: i386
+Depends: maradns (>= 2.0.09-1), libc6 (>= 2.28)
+Description: complementary server process to TCP functions for MaraDNS
+Homepage: http://maradns.org
+Description-md5: 9e21b9ef82eb2e786065ffde995f81fa
+Section: net
+Priority: optional
+Filename: pool/updates/main/m/maradns/maradns-zoneserver_2.0.13-1.4+deb11u1_i386.deb
+Size: 154940
+SHA256: 3010f4997b80e1765a3dc727b22a1658577fd5c8dd03cb9464d45bf77aba709a
 
 Package: mat
 Source: mat2

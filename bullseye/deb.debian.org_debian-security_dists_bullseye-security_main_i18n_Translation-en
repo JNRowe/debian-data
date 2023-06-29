@@ -5021,6 +5021,42 @@ Description-en: friendly interactive shell (architecture-independent files)
  .
  This package contains the common fish files shared by all architectures.
 
+Package: python-flask-doc
+Description-md5: ffb117c9bc710c2c0dc04e3abcabeb7b
+Description-en: micro web framework based on Werkzeug and Jinja2 - documentation
+ Flask is a micro web framework for Python based on Werkzeug, Jinja 2 and good
+ intentions. A minimal Flask application looks like that:
+ .
+   from flask import Flask
+   app = Flask(__name__)
+ .
+   @app.route("/")
+   def hello():
+       return "Hello World!"
+ .
+   if __name__ == '__main__':
+       app.run()
+ .
+ This package contains the documentation for Flask.
+
+Package: python3-flask
+Description-md5: 641177e823dea958cab4d806a13149d6
+Description-en: micro web framework based on Werkzeug and Jinja2 - Python 3.x
+ Flask is a micro web framework for Python based on Werkzeug, Jinja 2 and good
+ intentions. A minimal Flask application looks like that:
+ .
+   from flask import Flask
+   app = Flask(__name__)
+ .
+   @app.route("/")
+   def hello():
+       return "Hello World!"
+ .
+   if __name__ == '__main__':
+       app.run()
+ .
+ This package contains the Python 3.x module.
+
 Package: flatpak
 Description-md5: f91acb1d2880527b2759bc5e2d99fbff
 Description-en: Application deployment framework for desktop apps
@@ -18137,6 +18173,59 @@ Description-en: shared files for lynx package
  lynx package over any architecture available in Debian.  Examples of
  such shared files are: manpages, locale and mimetype definitions, and
  configuration files.
+
+Package: duende
+Description-md5: bd4f7c68a0e8e4894cb2c48f52c71329
+Description-en: logging daemonizer
+ The duende program starts a child process as specified on the command
+ line and handles some aspects of maintaining it as a daemon process.
+ In particular it passes the standard output and error from the child
+ process to syslog. If the child process exits with a configurable exit
+ status it will be restarted. Optionally duende will provide a pid file,
+ and other features are configurable.
+
+Package: maradns
+Description-md5: a523bb953b34b6ed9fc3ca0475c912a2
+Description-en: simple security-focused authoritative Domain Name Service server
+ MaraDNS is an easy to configure DNS server that functions as an
+ authoritative domain name server. MaraDNS is
+ optimised for serving a small number of domains quickly and
+ efficiently. Well suited to host your own private DNS server
+ for making up subdomains with minimal fuss. Maradns is
+ security-aware by utilising a special string library which
+ is resistant to buffer overflows and mandating to run as an
+ unprivileged user.
+ .
+ For the recursive name server component and IPv6 support see
+ maradns-deadwood. For TCP and domain transfer support see maradns-zoneserver.
+
+Package: maradns-deadwood
+Description-md5: cca274de24547a67199a76898043252f
+Description-en: simple security-focused recursive Domain Name Service server
+ This is an experimental build of the deadwood binary, that is MaraDNS'
+ recursive domain name server. It will contain support for IPv6. However
+ the necessary integration of init scripts and config files will not be
+ done.
+
+Package: maradns-docs
+Description-md5: a7b3a562f88325f5f8475d9d2d62ee6a
+Description-en: upstream documentation for the MaraDNS Domain Name Service server
+ MaraDNS is easy to configure DNS server that functions as a recursive and/or
+ authoritative name server. This package provides the upstream documentation
+ for the MaraDNS suite. This includes more information than is available in the
+ man pages including background information on DNS, how to obtain the source
+ code, compile and install it. As a result the documentation includes none of
+ the packaging tweaks intended to fit MaraDNS into Debian.
+
+Package: maradns-zoneserver
+Description-md5: 9e21b9ef82eb2e786065ffde995f81fa
+Description-en: complementary server process to TCP functions for MaraDNS
+ The MaraDNS zoneserver listens on port 53/tcp and handles DNS zone transfers
+ and any DNS query done over TCP instead of UDP. It uses the same configuration
+ file as the MaraDNS process itself.
+ .
+ This package also includes askmara-tcp, a version of askmara that uses TCP
+ rather than UDP.
 
 Package: mat
 Description-md5: 3f8714e575d1aedab6a4e33f4b58add8
