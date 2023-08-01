@@ -960,6 +960,157 @@ Description-en: framework exposing the Olson time zone database to Perl
  The Olson time zone database is the best available source for worldwide time
  zone information and is available from <URL:ftp://ftp.iana.org/tz/releases/>.
 
+Package: libnss-myhostname
+Description-md5: 0bec93cc0b56ef90c11c1a7842dd8f8a
+Description-en: nss module providing fallback resolution for the current hostname
+ This package contains a plugin for the Name Service Switch, providing host
+ name resolution for the locally configured system hostname as returned by
+ gethostname(2). It returns all locally configured public IP addresses or -- if
+ none are configured, the IPv4 address 127.0.1.1 (which is on the local
+ loopback) and the IPv6 address ::1 (which is the local host).
+ .
+ A lot of software relies on that the local host name is resolvable. This
+ package provides an alternative to the fragile and error-prone manual editing
+ of /etc/hosts.
+ .
+ Installing this package automatically adds myhostname to /etc/nsswitch.conf.
+
+Package: libnss-mymachines
+Description-md5: 588342105e1fdd6ff74c093651cb80cc
+Description-en: nss module to resolve hostnames for local container instances
+ nss-mymachines is a plugin for the GNU Name Service Switch (NSS) functionality
+ of the GNU C Library (glibc) providing hostname resolution for local containers
+ that are registered with systemd-machined.service(8). The container names are
+ resolved to IP addresses of the specific container, ordered by their scope.
+ .
+ Installing this package automatically adds mymachines to /etc/nsswitch.conf.
+
+Package: libnss-resolve
+Description-md5: fa2bc74d218dfae9ad286df8f31fa19f
+Description-en: nss module to resolve names via systemd-resolved
+ nss-resolve is a plugin for the GNU Name Service Switch (NSS) functionality
+ of the GNU C Library (glibc) providing DNS and LLMNR resolution to programs via
+ the systemd-resolved daemon (provided in the systemd package).
+ .
+ Installing this package automatically adds resolve to /etc/nsswitch.conf.
+
+Package: libnss-systemd
+Description-md5: f5bdd7572f97a2162876ec5b0a11a2ca
+Description-en: nss module providing dynamic user and group name resolution
+ nss-systemd is a plug-in module for the GNU Name Service Switch (NSS)
+ functionality of the GNU C Library (glibc), providing UNIX user and group name
+ resolution for dynamic users and groups allocated through the DynamicUser=
+ option in systemd unit files. See systemd.exec(5) for details on this
+ option.
+ .
+ Installing this package automatically adds the module to /etc/nsswitch.conf.
+
+Package: libpam-systemd
+Description-md5: 7acf141cc9da21b0ad349b6cecc40e46
+Description-en: system and service manager - PAM module
+ This package contains the PAM module which registers user sessions in
+ the systemd control group hierarchy for logind.
+ .
+ If in doubt, do install this package.
+ .
+ Packages that depend on logind functionality need to depend on libpam-systemd.
+
+Package: libsystemd-dev
+Description-md5: 7122bf9ab5ca8703093117a2cda0fe22
+Description-en: systemd utility library - development files
+ The libsystemd0 library provides interfaces to various systemd components.
+ .
+ This package contains the development files.
+
+Package: libsystemd0
+Description-md5: 92180a6b506aa0eff52136aeb8212dc6
+Description-en: systemd utility library
+ The libsystemd0 library provides interfaces to various systemd components.
+
+Package: libudev-dev
+Description-md5: 4085049214953c1e2cf5d9aee1c32173
+Description-en: libudev development files
+ This package contains the files needed for developing applications that
+ use libudev.
+
+Package: libudev1
+Description-md5: ace5b83d7b48187416c90173a93255b6
+Description-en: libudev shared library
+ This library provides access to udev device information.
+
+Package: systemd
+Description-md5: 19399579cbc0c47a303288bf15eadcd4
+Description-en: system and service manager
+ systemd is a system and service manager for Linux. It provides aggressive
+ parallelization capabilities, uses socket and D-Bus activation for starting
+ services, offers on-demand starting of daemons, keeps track of processes using
+ Linux control groups, maintains mount and automount points and implements an
+ elaborate transactional dependency-based service control logic.
+ .
+ systemd is compatible with SysV and LSB init scripts and can work as a
+ drop-in replacement for sysvinit.
+ .
+ Installing the systemd package will not switch your init system unless you
+ boot with init=/lib/systemd/systemd or install systemd-sysv in addition.
+
+Package: systemd-container
+Description-md5: 06057fffc2ba14e4be80360a092a18b4
+Description-en: systemd container/nspawn tools
+ This package provides systemd's tools for nspawn and container/VM management:
+  * systemd-nspawn
+  * systemd-machined and machinectl
+  * systemd-importd
+  * systemd-portabled and portablectl
+
+Package: systemd-coredump
+Description-md5: 149b22bdf2366b7d731957d1b710e54f
+Description-en: tools for storing and retrieving coredumps
+ This package provides systemd tools for storing and retrieving coredumps:
+  * systemd-coredump
+  * coredumpctl
+
+Package: systemd-journal-remote
+Description-md5: 6bd80842a0c96acb169877c7a6a25ff6
+Description-en: tools for sending and receiving remote journal logs
+ This package provides tools for sending and receiving remote journal logs:
+  * systemd-journal-remote
+  * systemd-journal-upload
+  * systemd-journal-gatewayd
+
+Package: systemd-sysv
+Description-md5: b0c2db4da8d807aa3f83a2977e491907
+Description-en: system and service manager - SysV links
+ systemd is a system and service manager for Linux. It provides aggressive
+ parallelization capabilities, uses socket and D-Bus activation for starting
+ services, offers on-demand starting of daemons, keeps track of processes using
+ Linux control groups, maintains mount and automount points and implements an
+ elaborate transactional dependency-based service control logic.
+ .
+ systemd is compatible with SysV and LSB init scripts and can work as a
+ drop-in replacement for sysvinit.
+ .
+ This package provides the manual pages and links needed for systemd
+ to replace sysvinit. Installing systemd-sysv will overwrite /sbin/init with a
+ link to systemd.
+
+Package: systemd-tests
+Description-md5: ece07db851f8a2e9731975ec11eedb8d
+Description-en: tests for systemd
+ This package contains the test binaries. Those binaries are primarily used
+ for autopkgtest and not meant to be installed on regular user systems.
+
+Package: systemd-timesyncd
+Description-md5: cc67d85c248836d96a6310e58a659de0
+Description-en: minimalistic service to synchronize local time with NTP servers
+ The package contains the systemd-timesyncd system service that may be used to
+ synchronize the local system clock with a remote Network Time Protocol server.
+
+Package: udev
+Description-md5: e875ddb09f46f1f7672af537f0c875ca
+Description-en: /dev/ and hotplug management daemon
+ udev is a daemon which dynamically creates and removes device nodes from
+ /dev/, handles hotplug events and loads drivers at boot time.
+
 Package: tzdata
 Description-md5: a77a3cc9a67658dd7cfdc6547391b8f8
 Description-en: time zone and daylight-saving time data
