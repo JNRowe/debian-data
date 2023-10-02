@@ -3699,6 +3699,170 @@ Description-md5: dddb88bf2627f20726827c1d29351350
 Description-en: evolution libraries
  This package contains libraries used by Evolution.
 
+Package: exim4
+Description-md5: 458592f74d76e446735736c1d55ce615
+Description-en: metapackage to ease Exim MTA (v4) installation
+ Exim (v4) is a mail transport agent. exim4 is the metapackage depending
+ on the essential components for a basic exim4 installation.
+ .
+ The Debian exim4 packages have their own web page,
+ http://wiki.debian.org/PkgExim4. There is also a Debian-specific
+ FAQ list. Information about the way the Debian packages are
+ configured can be found in
+ /usr/share/doc/exim4-base/README.Debian.gz, which additionally contains
+ information about the way the Debian binary packages are built. The
+ very extensive upstream documentation is shipped in
+ /usr/share/doc/exim4-base/spec.txt.gz. To repeat the debconf-driven
+ configuration process in a standard setup, invoke dpkg-reconfigure
+ exim4-config. There is a Debian-centered mailing list,
+ pkg-exim4-users@lists.alioth.debian.org. Please ask Debian-specific
+ questions there, and only write to the upstream exim-users mailing
+ list if you are sure that your question is not Debian-specific. You
+ can find the subscription web page on
+ http://lists.alioth.debian.org/mailman/listinfo/pkg-exim4-users
+
+Package: exim4-base
+Description-md5: ab23a802a5e7dee33641329abf2b6565
+Description-en: support files for all Exim MTA (v4) packages
+ Exim (v4) is a mail transport agent. exim4-base provides the support
+ files needed by all exim4 daemon packages. You need an additional package
+ containing the main executable. The available packages are:
+ .
+  exim4-daemon-light
+  exim4-daemon-heavy
+ .
+ If you build exim4 from the source package locally, you can also
+ build an exim4-daemon-custom package tailored to your own feature set.
+ .
+ The Debian exim4 packages have their own web page,
+ http://wiki.debian.org/PkgExim4. There is also a Debian-specific
+ FAQ list. Information about the way the Debian packages are
+ configured can be found in
+ /usr/share/doc/exim4-base/README.Debian.gz, which additionally contains
+ information about the way the Debian binary packages are built. The
+ very extensive upstream documentation is shipped in
+ /usr/share/doc/exim4-base/spec.txt.gz. To repeat the debconf-driven
+ configuration process in a standard setup, invoke dpkg-reconfigure
+ exim4-config. There is a Debian-centered mailing list,
+ pkg-exim4-users@lists.alioth.debian.org. Please ask Debian-specific
+ questions there, and only write to the upstream exim-users mailing
+ list if you are sure that your question is not Debian-specific. You
+ can find the subscription web page on
+ http://lists.alioth.debian.org/mailman/listinfo/pkg-exim4-users
+
+Package: exim4-config
+Description-md5: 32395c972fcf7f5014c06bce8ee1c59a
+Description-en: configuration for the Exim MTA (v4)
+ Exim (v4) is a mail transport agent. exim4-config provides the configuration
+ for the exim4 daemon packages. The configuration framework has been split
+ off the main package to allow sites to replace the configuration scheme
+ with their own without having to change the actual exim4 packages.
+ .
+ Sites with special configuration needs (having a lot of identically
+ configured machines for example) can use this to distribute their own
+ custom configuration via the packaging system, using the magic
+ available with dpkg's conffile handling, without having to do local
+ changes on all of these machines.
+ .
+ The Debian exim4 packages have their own web page,
+ http://wiki.debian.org/PkgExim4. There is also a Debian-specific
+ FAQ list. Information about the way the Debian packages are
+ configured can be found in
+ /usr/share/doc/exim4-base/README.Debian.gz, which additionally contains
+ information about the way the Debian binary packages are built. The
+ very extensive upstream documentation is shipped in
+ /usr/share/doc/exim4-base/spec.txt.gz. To repeat the debconf-driven
+ configuration process in a standard setup, invoke dpkg-reconfigure
+ exim4-config. There is a Debian-centered mailing list,
+ pkg-exim4-users@lists.alioth.debian.org. Please ask Debian-specific
+ questions there, and only write to the upstream exim-users mailing
+ list if you are sure that your question is not Debian-specific. You
+ can find the subscription web page on
+ http://lists.alioth.debian.org/mailman/listinfo/pkg-exim4-users
+
+Package: exim4-daemon-heavy
+Description-md5: 29c4b395a92bdc12932f151c3643a602
+Description-en: Exim MTA (v4) daemon with extended features, including exiscan-acl
+ Exim (v4) is a mail transport agent. This package contains the exim4
+ daemon with extended features. In addition to the features already
+ supported by exim4-daemon-light, exim4-daemon-heavy includes LDAP,
+ sqlite, PostgreSQL and MySQL data lookups, SASL and SPA SMTP authentication,
+ embedded Perl interpreter, and the content scanning extension
+ (formerly known as "exiscan-acl") for integration of virus scanners
+ and spamassassin.
+ .
+ The Debian exim4 packages have their own web page,
+ http://wiki.debian.org/PkgExim4. There is also a Debian-specific
+ FAQ list. Information about the way the Debian packages are
+ configured can be found in
+ /usr/share/doc/exim4-base/README.Debian.gz, which additionally contains
+ information about the way the Debian binary packages are built. The
+ very extensive upstream documentation is shipped in
+ /usr/share/doc/exim4-base/spec.txt.gz. To repeat the debconf-driven
+ configuration process in a standard setup, invoke dpkg-reconfigure
+ exim4-config. There is a Debian-centered mailing list,
+ pkg-exim4-users@lists.alioth.debian.org. Please ask Debian-specific
+ questions there, and only write to the upstream exim-users mailing
+ list if you are sure that your question is not Debian-specific. You
+ can find the subscription web page on
+ http://lists.alioth.debian.org/mailman/listinfo/pkg-exim4-users
+
+Package: exim4-daemon-light
+Description-md5: 3f5190a801cb3e11718c951f768c4d54
+Description-en: lightweight Exim MTA (v4) daemon
+ Exim (v4) is a mail transport agent. This package contains the exim4
+ daemon with only basic features enabled. It works well with the
+ standard setups that are provided by Debian and includes support for
+ TLS encryption and the dlopen patch to allow dynamic loading of a
+ local_scan function.
+ .
+ The Debian exim4 packages have their own web page,
+ http://wiki.debian.org/PkgExim4. There is also a Debian-specific
+ FAQ list. Information about the way the Debian packages are
+ configured can be found in
+ /usr/share/doc/exim4-base/README.Debian.gz, which additionally contains
+ information about the way the Debian binary packages are built. The
+ very extensive upstream documentation is shipped in
+ /usr/share/doc/exim4-base/spec.txt.gz. To repeat the debconf-driven
+ configuration process in a standard setup, invoke dpkg-reconfigure
+ exim4-config. There is a Debian-centered mailing list,
+ pkg-exim4-users@lists.alioth.debian.org. Please ask Debian-specific
+ questions there, and only write to the upstream exim-users mailing
+ list if you are sure that your question is not Debian-specific. You
+ can find the subscription web page on
+ http://lists.alioth.debian.org/mailman/listinfo/pkg-exim4-users
+
+Package: exim4-dev
+Description-md5: d5a123381ab67fa02f35533169e299d5
+Description-en: header files for the Exim MTA (v4) packages
+ Exim (v4) is a mail transport agent. This package contains header
+ files that can be used to compile code that is then dynamically linked
+ to exim's local_scan interface.
+ .
+ The Debian exim4 packages have their own web page,
+ http://wiki.debian.org/PkgExim4. There is also a Debian-specific
+ FAQ list. Information about the way the Debian packages are
+ configured can be found in
+ /usr/share/doc/exim4-base/README.Debian.gz, which additionally contains
+ information about the way the Debian binary packages are built. The
+ very extensive upstream documentation is shipped in
+ /usr/share/doc/exim4-base/spec.txt.gz. To repeat the debconf-driven
+ configuration process in a standard setup, invoke dpkg-reconfigure
+ exim4-config. There is a Debian-centered mailing list,
+ pkg-exim4-users@lists.alioth.debian.org. Please ask Debian-specific
+ questions there, and only write to the upstream exim-users mailing
+ list if you are sure that your question is not Debian-specific. You
+ can find the subscription web page on
+ http://lists.alioth.debian.org/mailman/listinfo/pkg-exim4-users
+
+Package: eximon4
+Description-md5: 9d049018af5088cbceaa2af23692d02a
+Description-en: monitor application for the Exim MTA (v4) (X11 interface)
+ Eximon is a helper program for the Exim MTA (v4). It allows
+ administrators to view the mail queue and logs, and perform a variety
+ of actions on queued messages, such as freezing, bouncing and thawing
+ messages.
+
 Package: exiv2
 Description-md5: aeba4b7189f937a626d0f2ef05b13cbb
 Description-en: EXIF/IPTC/XMP metadata manipulation tool
@@ -15000,6 +15164,75 @@ Description-en: Tighten web applications security for Apache
      can be used to prevent many types of attacks (e.g. XSS attacks, SQL
      injection, ...) and even allow you to run insecure applications on your
      servers (if you have no other choice, of course).
+
+Package: libmosquitto-dev
+Description-md5: c7c1d296f95ce5d3f19f1eff322ffba8
+Description-en: MQTT version 5.0/3.1.1/3.1 client library, development files
+ This is the header and man page for the libmosquitto1 C library, which is a
+ library for implementing MQTT version 5.0/3.1.1/3.1 clients. This package is
+ needed to do development with libmosquitto1.
+
+Package: libmosquitto1
+Description-md5: d6db03b5024e1bf84fc82288546d2e4d
+Description-en: MQTT version 5.0/3.1.1/3.1 client library
+ This is a C library for implementing MQTT version 5.0/3.1.1/3.1 clients.
+ .
+ MQTT provides a method of carrying out messaging using a publish/subscribe
+ model. It is lightweight, both in terms of bandwidth usage and ease of
+ implementation. This makes it particularly useful at the edge of the network
+ where a sensor or other simple device may be implemented using an arduino for
+ example.
+
+Package: libmosquittopp-dev
+Description-md5: c5f9bbcc930cd67ad24072907bcd3b2a
+Description-en: MQTT version 3.1 client C++ library, development files
+ This is the header and man page for the libmosquittopp1 C++ library, which is
+ a library for implementing MQTT version 3.1 clients. This package is needed to
+ do development with libmosquittopp1.
+
+Package: libmosquittopp1
+Description-md5: 0c7667ef38834199bd13c53fd6b80d2a
+Description-en: MQTT version 5.0/3.1.1/3.1 client C++ library
+ This is a C++ library for implementing MQTT version 5.0/3.1.1/3.1 clients.
+ .
+ MQTT provides a method of carrying out messaging using a publish/subscribe
+ model. It is lightweight, both in terms of bandwidth usage and ease of
+ implementation. This makes it particularly useful at the edge of the network
+ where a sensor or other simple device may be implemented using an arduino for
+ example.
+
+Package: mosquitto
+Description-md5: f8c193c62c4a30a9acfb862fd9561343
+Description-en: MQTT version 5.0/3.1.1/3.1 compatible message broker
+ This is a message broker that supports version 3.1 and 3.1.1 of the MQTT
+ protocol.
+ .
+ MQTT provides a method of carrying out messaging using a publish/subscribe
+ model. It is lightweight, both in terms of bandwidth usage and ease of
+ implementation. This makes it particularly useful at the edge of the network
+ where a sensor or other simple device may be implemented using an arduino for
+ example.
+
+Package: mosquitto-clients
+Description-md5: 985d19effedae01383cfa3eaa155e7ec
+Description-en: Mosquitto command line MQTT clients
+ This is two MQTT version 5.0/3.1.1/3.1 command line clients. mosquitto_pub can
+ be used to publish messages to a broker and mosquitto_sub can be used to
+ subscribe to a topic to receive messages.
+ .
+ MQTT provides a method of carrying out messaging using a publish/subscribe
+ model. It is lightweight, both in terms of bandwidth usage and ease of
+ implementation. This makes it particularly useful at the edge of the network
+ where a sensor or other simple device may be implemented using an arduino for
+ example.
+
+Package: mosquitto-dev
+Description-md5: 85819cfdd218368883800fb38464ff56
+Description-en: Development files for Mosquitto
+ Mosquitto is a message broker that supports the MQTT protocol.
+ .
+ This package contains the include files used if you wish to compile a package
+ which requires Mosquitto's source file headers.
 
 Package: libmujs-dev
 Description-md5: afeeab9939eb09dc4331e18f7bb9da5a
