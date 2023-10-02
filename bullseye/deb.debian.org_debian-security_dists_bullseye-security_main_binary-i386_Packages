@@ -6250,6 +6250,134 @@ Filename: pool/updates/main/e/evolution/libevolution_3.38.3-1+deb11u2_i386.deb
 Size: 2701768
 SHA256: cfdb657ba65d6bdb777a458325e62f443bb7e32fb58dbd5e838847369366dcbf
 
+Package: exim4
+Version: 4.94.2-7+deb11u1
+Installed-Size: 27
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: debconf (>= 1.4.69) | cdebconf (>= 0.39), exim4-base (<< 4.94.2-7+deb11u1.1), exim4-base (>= 4.94.2-7+deb11u1), exim4-daemon-light (>= 4.94.2-7+deb11u1) | exim4-daemon-heavy (>= 4.94.2-7+deb11u1) | exim4-daemon-custom (>= 4.94.2-7+deb11u1), debconf (>= 0.5) | debconf-2.0
+Description: metapackage to ease Exim MTA (v4) installation
+Homepage: https://www.exim.org/
+Description-md5: 458592f74d76e446735736c1d55ce615
+Section: mail
+Priority: optional
+Filename: pool/updates/main/e/exim4/exim4_4.94.2-7+deb11u1_all.deb
+Size: 7188
+SHA256: 5392a457f0a8a85544bf70f51d580a9f5b3b5e23ba6e24e71bcb313bc92caa9c
+
+Package: exim4-base
+Source: exim4
+Version: 4.94.2-7+deb11u1
+Installed-Size: 1715
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Replaces: exim, exim-tls, exim4-daemon-custom, exim4-daemon-heavy, exim4-daemon-light
+Depends: adduser, cron | cron-daemon | anacron | systemd-sysv, exim4-config (>= 4.94) | exim4-config-2, lsb-base (>= 3.0-6), netbase, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.28), libdb5.3
+Suggests: exim4-doc-html | exim4-doc-info, eximon4, file, gnutls-bin | openssl, mail-reader, spf-tools-perl, swaks
+Conflicts: exim, exim-tls
+Breaks: exim4-daemon-custom (<< 4.94.2-6~), exim4-daemon-heavy (<< 4.94.2-6~), exim4-daemon-light (<< 4.94.2-6~)
+Description: support files for all Exim MTA (v4) packages
+Homepage: https://www.exim.org/
+Description-md5: ab23a802a5e7dee33641329abf2b6565
+Recommends: mailx, psmisc
+Section: mail
+Priority: optional
+Filename: pool/updates/main/e/exim4/exim4-base_4.94.2-7+deb11u1_i386.deb
+Size: 1176164
+SHA256: da789ac894ebe1712ef1b81a9896befce3ba3840b62c46bada5f8dfb375ca491
+
+Package: exim4-config
+Source: exim4
+Version: 4.94.2-7+deb11u1
+Installed-Size: 1001
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Architecture: all
+Provides: exim4-config-2
+Depends: adduser, debconf (>= 0.5) | debconf-2.0
+Conflicts: citadel-server, courier-mta, dma, esmtp-run, exim, exim-tls, exim4-config, exim4-config-2, hula-mta, masqmail, msmtp-mta, mta-dummy, nullmailer, opensmtpd, postfix, qmail-run, sendmail-bin, smail, ssmtp, xmail, zmailer
+Breaks: exim4-daemon-heavy (<< 4.94), exim4-daemon-light (<< 4.94)
+Description: configuration for the Exim MTA (v4)
+Homepage: https://www.exim.org/
+Description-md5: 32395c972fcf7f5014c06bce8ee1c59a
+Recommends: ca-certificates
+Section: mail
+Priority: optional
+Filename: pool/updates/main/e/exim4/exim4-config_4.94.2-7+deb11u1_all.deb
+Size: 334944
+SHA256: bfc529f7531ecc3d367b4478bb1baddd72227fbc036669b2febdcd5761bbcd99
+
+Package: exim4-daemon-heavy
+Source: exim4
+Version: 4.94.2-7+deb11u1
+Installed-Size: 1774
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Replaces: exim4-base (<= 4.61-1), mail-transport-agent
+Provides: exim4-localscanapi-4.1, mail-transport-agent
+Depends: exim4-base (>= 4.94.2), debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.29), libcrypt1 (>= 1:4.1.0), libdb5.3, libgnutls-dane0 (>= 3.7.0), libgnutls30 (>= 3.7.0), libidn11 (>= 1.13), libidn2-0 (>= 0.6), libldap-2.4-2 (>= 2.4.7), libmariadb3 (>= 3.0.0), libnsl2 (>= 1.0), libpam0g (>= 0.99.7.1), libpcre3, libperl5.32 (>= 5.32.0~rc1), libpq5, libsasl2-2 (>= 2.1.27+dfsg), libsqlite3-0 (>= 3.5.9)
+Conflicts: mail-transport-agent
+Breaks: clamav-daemon (<< 0.95)
+Description: Exim MTA (v4) daemon with extended features, including exiscan-acl
+Homepage: https://www.exim.org/
+Description-md5: 29c4b395a92bdc12932f151c3643a602
+Section: mail
+Priority: optional
+Filename: pool/updates/main/e/exim4/exim4-daemon-heavy_4.94.2-7+deb11u1_i386.deb
+Size: 744024
+SHA256: 0c29c2f60c24f1c3a083b18f46427892395146613d003bf228196453ce219fff
+
+Package: exim4-daemon-light
+Source: exim4
+Version: 4.94.2-7+deb11u1
+Installed-Size: 1612
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Replaces: exim4-base (<= 4.61-1), mail-transport-agent
+Provides: default-mta, exim4-localscanapi-4.1, mail-transport-agent
+Depends: exim4-base (>= 4.94.2), debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.29), libcrypt1 (>= 1:4.1.0), libdb5.3, libgnutls-dane0 (>= 3.7.0), libgnutls30 (>= 3.7.0), libidn11 (>= 1.13), libidn2-0 (>= 0.6), libnsl2 (>= 1.0), libpcre3
+Conflicts: mail-transport-agent
+Description: lightweight Exim MTA (v4) daemon
+Homepage: https://www.exim.org/
+Description-md5: 3f5190a801cb3e11718c951f768c4d54
+Section: mail
+Priority: optional
+Filename: pool/updates/main/e/exim4/exim4-daemon-light_4.94.2-7+deb11u1_i386.deb
+Size: 685804
+SHA256: abbb0bca51498df3de41fbeacb646ef4e65c99cf4a819bf67a0a77a7d06796d7
+
+Package: exim4-dev
+Source: exim4
+Version: 4.94.2-7+deb11u1
+Installed-Size: 158
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Description: header files for the Exim MTA (v4) packages
+Homepage: https://www.exim.org/
+Description-md5: d5a123381ab67fa02f35533169e299d5
+Section: mail
+Priority: optional
+Filename: pool/updates/main/e/exim4/exim4-dev_4.94.2-7+deb11u1_i386.deb
+Size: 117420
+SHA256: 5237c72b9048e2dcfe64cc69397fecbdf24c77ecf22cd664777c6154168c02e0
+
+Package: eximon4
+Source: exim4
+Version: 4.94.2-7+deb11u1
+Installed-Size: 241
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Replaces: eximon
+Depends: exim4-base (>= 4.10), libc6 (>= 2.28), libpcre3, libx11-6, libxaw7, libxmu6, libxt6
+Conflicts: eximon
+Description: monitor application for the Exim MTA (v4) (X11 interface)
+Homepage: https://www.exim.org/
+Description-md5: 9d049018af5088cbceaa2af23692d02a
+Section: mail
+Priority: optional
+Filename: pool/updates/main/e/exim4/eximon4_4.94.2-7+deb11u1_i386.deb
+Size: 152616
+SHA256: 40585e1e716474f739691ee5c7ba56af21c72d881bb7d05d96843d52f39df7b0
+
 Package: exiv2
 Version: 0.27.3-3+deb11u1
 Installed-Size: 336
@@ -20889,6 +21017,128 @@ Priority: optional
 Filename: pool/updates/main/m/modsecurity-apache/libapache2-mod-security2_2.9.3-3+deb11u1_i386.deb
 Size: 264272
 SHA256: 1a07ed19b27ad370dffb9f94950837cc9518281fcb3fb279f1626057ba249322
+
+Package: libmosquitto-dev
+Source: mosquitto
+Version: 2.0.11-1+deb11u1
+Installed-Size: 216
+Maintainer: Roger A. Light <roger@atchoo.org>
+Architecture: i386
+Replaces: libmosquitto0-dev (<< 1.2-1~)
+Depends: libmosquitto1 (<< 2.0.11-1+deb11u1.1~), libmosquitto1 (>= 2.0.11-1+deb11u1)
+Breaks: libmosquitto0-dev (<< 1.2-1~)
+Description: MQTT version 5.0/3.1.1/3.1 client library, development files
+Homepage: https://mosquitto.org/
+Description-md5: c7c1d296f95ce5d3f19f1eff322ffba8
+Multi-Arch: same
+Section: libdevel
+Priority: optional
+Filename: pool/updates/main/m/mosquitto/libmosquitto-dev_2.0.11-1+deb11u1_i386.deb
+Size: 73564
+SHA256: 8b43069e23f16bddcc058b19fd52ac4bc07875063b959d82f750bf3e98c19be8
+
+Package: libmosquitto1
+Source: mosquitto
+Version: 2.0.11-1+deb11u1
+Installed-Size: 198
+Maintainer: Roger A. Light <roger@atchoo.org>
+Architecture: i386
+Depends: libc6 (>= 2.28), libssl1.1 (>= 1.1.0)
+Description: MQTT version 5.0/3.1.1/3.1 client library
+Homepage: https://mosquitto.org/
+Description-md5: d6db03b5024e1bf84fc82288546d2e4d
+Multi-Arch: same
+Section: libs
+Priority: optional
+Filename: pool/updates/main/m/mosquitto/libmosquitto1_2.0.11-1+deb11u1_i386.deb
+Size: 97008
+SHA256: b1eb2750be857c2bf86b706c5ba479d451b151e3242de1cc39b644312726f4c3
+
+Package: libmosquittopp-dev
+Source: mosquitto
+Version: 2.0.11-1+deb11u1
+Installed-Size: 81
+Maintainer: Roger A. Light <roger@atchoo.org>
+Architecture: i386
+Replaces: libmosquittopp0-dev (<< 1.2-1~)
+Depends: libmosquittopp1 (<< 2.0.11-1+deb11u1.1~), libmosquittopp1 (>= 2.0.11-1+deb11u1), libmosquitto-dev
+Breaks: libmosquittopp0-dev (<< 1.2-1~)
+Description: MQTT version 3.1 client C++ library, development files
+Homepage: https://mosquitto.org/
+Description-md5: c5f9bbcc930cd67ad24072907bcd3b2a
+Multi-Arch: same
+Section: libdevel
+Priority: optional
+Filename: pool/updates/main/m/mosquitto/libmosquittopp-dev_2.0.11-1+deb11u1_i386.deb
+Size: 54944
+SHA256: e8245ff7b4c94fa1a75dec4273dfa3b919d4e583ea14cb080375da361ea2bb0c
+
+Package: libmosquittopp1
+Source: mosquitto
+Version: 2.0.11-1+deb11u1
+Installed-Size: 100
+Maintainer: Roger A. Light <roger@atchoo.org>
+Architecture: i386
+Depends: libmosquitto1 (= 2.0.11-1+deb11u1), libstdc++6 (>= 5)
+Description: MQTT version 5.0/3.1.1/3.1 client C++ library
+Homepage: https://mosquitto.org/
+Description-md5: 0c7667ef38834199bd13c53fd6b80d2a
+Multi-Arch: same
+Section: libs
+Priority: optional
+Filename: pool/updates/main/m/mosquitto/libmosquittopp1_2.0.11-1+deb11u1_i386.deb
+Size: 59420
+SHA256: 7af602fbf107711bdd208e51dcad409998f8a65224fab84a84e9063db6601dd3
+
+Package: mosquitto
+Version: 2.0.11-1+deb11u1
+Installed-Size: 756
+Maintainer: Roger A. Light <roger@atchoo.org>
+Architecture: i386
+Depends: adduser (>= 3.10), libcjson1 (>= 1.7.13), libmosquitto1 (= 2.0.11-1+deb11u1), lsb-base (>= 4.1+Debian3), libc6 (>= 2.29), libdlt2 (>= 2.18.6), libssl1.1 (>= 1.1.1), libsystemd0, libwebsockets16 (>= 1.6.0), libwrap0 (>= 7.6-4~)
+Suggests: apparmor
+Description: MQTT version 5.0/3.1.1/3.1 compatible message broker
+Homepage: https://mosquitto.org/
+Description-md5: f8c193c62c4a30a9acfb862fd9561343
+Section: net
+Priority: optional
+Filename: pool/updates/main/m/mosquitto/mosquitto_2.0.11-1+deb11u1_i386.deb
+Size: 285876
+SHA256: 583d02a73d7353ed73444009b6da2b336a21a2473eac82e2b0af7abd930f8e76
+
+Package: mosquitto-clients
+Source: mosquitto
+Version: 2.0.11-1+deb11u1
+Installed-Size: 301
+Maintainer: Roger A. Light <roger@atchoo.org>
+Architecture: i386
+Depends: libmosquitto1 (= 2.0.11-1+deb11u1), libc6 (>= 2.17), libcjson1 (>= 1.7.5)
+Description: Mosquitto command line MQTT clients
+Homepage: https://mosquitto.org/
+Description-md5: 985d19effedae01383cfa3eaa155e7ec
+Multi-Arch: foreign
+Section: net
+Priority: optional
+Filename: pool/updates/main/m/mosquitto/mosquitto-clients_2.0.11-1+deb11u1_i386.deb
+Size: 116076
+SHA256: 31326acbd57265d82493f9b7bb22946cb325c4a7c61a8d7645757a5c504e0e28
+
+Package: mosquitto-dev
+Source: mosquitto
+Version: 2.0.11-1+deb11u1
+Installed-Size: 102
+Maintainer: Roger A. Light <roger@atchoo.org>
+Architecture: all
+Depends: mosquitto (<< 2.0.11-1+deb11u1.1~), mosquitto (>= 2.0.11-1+deb11u1)
+Description: Development files for Mosquitto
+Homepage: https://mosquitto.org/
+Description-md5: 85819cfdd218368883800fb38464ff56
+Multi-Arch: foreign
+Section: devel
+Priority: optional
+Filename: pool/updates/main/m/mosquitto/mosquitto-dev_2.0.11-1+deb11u1_all.deb
+Size: 59324
+SHA256: 4cf8446909234ead13760e4d40b86c480b5262fa20cf34155d337bda11d03573
 
 Package: libmujs-dev
 Source: mujs
