@@ -9958,6 +9958,313 @@ Filename: pool/updates/main/g/glance/python3-glance_21.0.0-2+deb11u1_all.deb
 Size: 419140
 SHA256: 6580ecff90b60a5cd67280074dbe9987c007a9b4a1aa63d252c21a8141c4f2db
 
+Package: glibc-doc
+Source: glibc
+Version: 2.31-13+deb11u7
+Installed-Size: 3163
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: all
+Suggests: glibc-doc-reference
+Description: GNU C Library: Documentation
+Homepage: https://www.gnu.org/software/libc/libc.html
+Description-md5: ec34f59d4398ff8ca003177c6585bf0a
+Multi-Arch: foreign
+Section: doc
+Priority: optional
+Filename: pool/updates/main/g/glibc/glibc-doc_2.31-13+deb11u7_all.deb
+Size: 3184212
+SHA256: 2785a0723ac7f3fdf50e4a90e7410e7a83770f30aec31051b40a1b9f91492a70
+
+Package: glibc-source
+Source: glibc
+Version: 2.31-13+deb11u7
+Installed-Size: 24439
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: all
+Breaks: cross-toolchain-base (<< 45~), cross-toolchain-base-mipsen (<< 10), cross-toolchain-base-ports (<< 37~)
+Description: GNU C Library: sources
+Homepage: https://www.gnu.org/software/libc/libc.html
+Description-md5: 1892ef83f2f36db0d236ccc041158b32
+Multi-Arch: foreign
+Recommends: xz-utils
+Section: devel
+Priority: optional
+Filename: pool/updates/main/g/glibc/glibc-source_2.31-13+deb11u7_all.deb
+Size: 18614948
+SHA256: 9deff4c4dbd31eba0f3af3dd9a0f7dfefafeca2dc09f4e95fa088eeec20577a9
+
+Package: libc-bin
+Source: glibc
+Version: 2.31-13+deb11u7
+Installed-Size: 3568
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Depends: libc6 (>> 2.31), libc6 (<< 2.32)
+Description: GNU C Library: Binaries
+Homepage: https://www.gnu.org/software/libc/libc.html
+Description-md5: 7625903821514b57277d1bae69ec3c1a
+Essential: yes
+Multi-Arch: foreign
+Recommends: manpages
+Section: libs
+Priority: required
+Filename: pool/updates/main/g/glibc/libc-bin_2.31-13+deb11u7_i386.deb
+Size: 825380
+SHA256: 976e5c0f6749f890c547e89942bbbb970ed53722efd932bcbe8108000e08aa8b
+
+Package: libc-dev-bin
+Source: glibc
+Version: 2.31-13+deb11u7
+Installed-Size: 389
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Depends: libc6 (>> 2.31), libc6 (<< 2.32)
+Description: GNU C Library: Development binaries
+Homepage: https://www.gnu.org/software/libc/libc.html
+Description-md5: eb75d411df403df7feafbba2bf0cf5f7
+Multi-Arch: foreign
+Recommends: manpages, manpages-dev, libc-devtools (>> 2.31)
+Section: libdevel
+Priority: optional
+Filename: pool/updates/main/g/glibc/libc-dev-bin_2.31-13+deb11u7_i386.deb
+Size: 279652
+SHA256: d68318ca93615bc8277a503c5616a05abfa3f5b780cda5b6893e62217cc9cd5b
+
+Package: libc-devtools
+Source: glibc
+Version: 2.31-13+deb11u7
+Installed-Size: 317
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Replaces: libc-dev-bin (<< 2.31-8)
+Depends: libc6 (>= 2.4), libgd3 (>= 2.1.0~alpha~)
+Breaks: libc-dev-bin (<< 2.31-8)
+Description: GNU C Library: Development tools
+Homepage: https://www.gnu.org/software/libc/libc.html
+Description-md5: 20d92638e9360ec19e7290046eb0d8f7
+Multi-Arch: foreign
+Recommends: manpages, manpages-dev
+Section: devel
+Priority: optional
+Filename: pool/updates/main/g/glibc/libc-devtools_2.31-13+deb11u7_i386.deb
+Size: 247888
+SHA256: 13064f93a1ba59c66376f76ae3a611c3fd8ffe19f0a29ac5159405f1a0594069
+
+Package: libc-l10n
+Source: glibc
+Version: 2.31-13+deb11u7
+Installed-Size: 4398
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: all
+Description: GNU C Library: localization files
+Homepage: https://www.gnu.org/software/libc/libc.html
+Description-md5: 53ecaa40591ab16906ffe57e37f97283
+Multi-Arch: foreign
+Section: localization
+Priority: standard
+Filename: pool/updates/main/g/glibc/libc-l10n_2.31-13+deb11u7_all.deb
+Size: 864008
+SHA256: d51b92aaae14239cc9b1a1f861215c39df437b8f8ca998c518f1ae053d4dc6cb
+
+Package: libc6
+Source: glibc
+Version: 2.31-13+deb11u7
+Installed-Size: 12225
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Replaces: libc6-i386, libc6-i686
+Provides: libc6-i686
+Depends: libgcc-s1, libcrypt1
+Suggests: glibc-doc, debconf | debconf-2.0, libc-l10n, locales
+Conflicts: libc6-i686
+Breaks: busybox (<< 1.30.1-6), hurd (<< 1:0.9.git20170910-1), ioquake3 (<< 1.36+u20200211.f2c61c1~dfsg-2~), iraf-fitsutil (<< 2018.07.06-4), libgegl-0.4-0 (<< 0.4.18), libtirpc1 (<< 0.2.3), locales (<< 2.31), locales-all (<< 2.31), macs (<< 2.2.7.1-3~), nocache (<< 1.1-1~), nscd (<< 2.31), openarena (<< 0.8.8+dfsg-4~), openssh-server (<< 1:8.1p1-5), r-cran-later (<< 0.7.5+dfsg-2), wcc (<< 0.0.2+dfsg-3)
+Description: GNU C Library: Shared libraries
+Homepage: https://www.gnu.org/software/libc/libc.html
+Description-md5: fc3001b0b90a1c8e6690b283a619d57f
+Multi-Arch: same
+Recommends: libidn2-0 (>= 2.0.5~), libnss-nis, libnss-nisplus
+Section: libs
+Priority: optional
+Filename: pool/updates/main/g/glibc/libc6_2.31-13+deb11u7_i386.deb
+Size: 2760100
+SHA256: 647eae243dfdb8db73603a33030b06b0061231616bc82be3e764edfac0afebb6
+
+Package: libc6-amd64
+Source: glibc
+Version: 2.31-13+deb11u7
+Installed-Size: 12602
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Depends: libc6 (= 2.31-13+deb11u7)
+Conflicts: libc0.1-i386, libc6-amd64:x32, libc6-i386, libc6-mips32, libc6-mips64, libc6-mipsn32, libc6-powerpc, libc6-ppc64, libc6-s390, libc6-sparc, libc6-sparc64, libc6-x32:amd64
+Description: GNU C Library: 64bit Shared libraries for AMD64
+Homepage: https://www.gnu.org/software/libc/libc.html
+Description-md5: 022f588c27f2c9d2908a07c0e916177e
+Section: libs
+Priority: optional
+Filename: pool/updates/main/g/glibc/libc6-amd64_2.31-13+deb11u7_i386.deb
+Size: 2683716
+SHA256: 5a2963e1dcb481538b3d821b9085e3068ee556067d421407003a7c391510b034
+
+Package: libc6-dbg
+Source: glibc
+Version: 2.31-13+deb11u7
+Installed-Size: 16307
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Provides: libc-dbg, libc6-dbgsym
+Depends: libc6 (= 2.31-13+deb11u7)
+Description: GNU C Library: detached debugging symbols
+Homepage: https://www.gnu.org/software/libc/libc.html
+Build-Ids: 0113778366eb16bac150440e9cb08c576cb71531 013a08983a7156fff095fe8f166a846258b8b257 0220cc74959e4f4ec94ff72c211a2fe4aab678dc 0296ca3a56d187bb2e15c3bdefe0ab5fba77d3ef 03f25bc1cb3240a8cc0326aa495d8cc9844573c6 05d224a970476dd035dca3e8dbf0ed6704600f87 06a4a5c9ad117425e4b910e95c88ec2cb2bc7406 06c62794e170a96c71443ceda6be6084ac0633f2 07daa64f9c75adff506306d84544b19e3a5a1a36 097b9169c293b6166a33e9fb17a6d729a38feb5d 09f32057e1fab825cfaf5f428e1d7752243e7c32 0b2f45d7290ff4cd8ce43b530003e34d878f6233 0b6b1414913fd7d92ddf1c183910a577d4e4b02a 0def06c1fd4d080f587ef08de2a16176cfbf4835 0e8b14fc18c24f110b5fb5b6203c3d23db7d5fbf 0edfab785b8df5503a86096a2ba833c41e3df33b 0f92fbb2a1d7592740d4365a6c015363d68c345a 0fce10a4174c7e87cf4fefcb4e0266256107dab0 0fe3e120853463f8356057245e3e78ef98ca2ad3 1030d816a0cacfcd76ad84e8adc1d102bd433f1b 11315364b1db952c2771098f70bc6475a7d2fa86 131e7a0613f2bd6a97ad5e8bcadbffab804a41fa 13a6a70da3a9545aa7b3b63bc3b67479be0f3726 15275771f2f8654f0447a2902dac9e8f534985b6 15859deeb65f457da26bf8417d0bbe5fe8509bed 159914349ab507ff19f936bfe9ab55834cb71ff5 160d30c686c54f8f2a8d88ff3cf3e42ff9fb143e 16157c8aec50f4cbe4553a3338a8d68d880b7e62 16263adc6bfa1a387adaecb1f5993fd1c0ffdf28 1675dfca559011d7158e8dcf2cefae8f12bddb8f 16c539cc296b00b10089b9f9f1be4bd1d3d3ef5c 16cda5d3468139286b41bcfb656d255ded224c79 17c51e85874f4dd823a5354b09f0186329f9b03e 17fe261b619fb606b32fa4d7be668becfbf68a4e 185e11e251a12f52b5c83b6278bb328df90b1eef 189dbb491049aeb20e5e2ddb77fdd33864af5819 18f5b87d7b44efa8456ab6c8a076ac2cdbe38afd 1912c8736986479c2dffe64d867fbdf0239dedb5 194028f900f882ff4752662c41853e7d61071b5d 1a4cf4dbae85f49ae5e8714aa713d5000fa9158f 1b209e2383f93feaa71c77f7248e9db006eb07b0 1b5c951e2c3d72a4677b3b42d51d83536c7777cb 1b7c59644b923596edf18ade23e2348a11fc1d2a 1ba05e33ecc1a4c85239fc21f959a7af3b631b64 1e33a8af0e634d6f9f1de39b807b65f9b7115b7c 1e6dcf854db103d2d69502ba41b6cd728ad3271e 1f3d364c2bd2e8f31bcb169bfc954f28c2b8be29 1f6a2e268db5285eb80cd6e1b53e6db8ca91b78b 20031df683eafb2a802c2a05332d0418c92fcb9d 2025865db3def642ec865599d7bcf7f8d98f1650 21129e6df5cbb1dd7b24cdadd89ab31a1581c674 2210ebf06acd62461c1249b15d4d54b04c7a4719 2233539c616e71032bd081d292c77ec058f35747 24131c0b34d1062679984a16f3f5c51532f102ad 2432f8ad0374af532a3cd066f6e2ade5e2d2e959 255fed2a806c006df675c64f96c44dd1b17b6ad3 256fc01c919eaffd0a413869b141563996542428 26e46f70bff4b3a834263a8eeefe2b44c625152c 28e371b5ca76efc3e53d3a27ee2f6af50bb59920 293d439110ab72953ec2ad1f2a288dde1ee18914 29b7f6b8d184305d65212a356cf983d9b9b31f43 2d457a40905f9363ebf36e07cb34490bb4d7f9f9 2e7e0b19f641a613b4b2fa79cadf3d2bd671d312 311fc49d62f4306b12a5592608e29d23276e1ad1 31813fe120a9c10394eea5e3332da73f59c8d333 33c96baeebe53d37f17a96a5f3e6f244ca39633c 343a121454746d59276cf327c6d62d3ea5c807ee 34ec782a043bcb7d3249c9380558faec3096b2d3 35a968187c3ae74ad7446271c6148460234c4dc0 36814d04015cf0394a2eb267d21bdaba5638ccd5 36e31df9f18c84e8de6f85539d15aef25f747aea 37ad8b5d2a0dd88fcc79d1c50433d1341d26c3cc 39fe3392cabcccaf8928078163c563575b9f11a3 3c8edb9411d4fd8c640bf551192831f265686b21 3ec4721f5298a11c0d6e2bacc3121749e3718f35 3ff774bd76a5b578d7bd41bc94ba1ee996cde856 40c316867e93d201d24cd554271359940e2d0272 4165637409575d9387118295be0c706495fc3626 42c89463b2580a7865d049728be14b9cd87ed960 432e39deff863670ab5e78061a5090e07d55602b 43cdd0578b0dbadbf78d4c598bdc862696832045 4439d87e9acab8651aaea3b4af39826ab847bd5a 44632ca9955f0a11c08d61239e25b4d8db1c4e7c 44693fdbbe12e70099934cc358ab4cdac0cd9c4a 4749ff1af10542ab07ff1aeb21b81a402d96bdf5 4ab30c01be84e8628acb7191361ab9b7bc08df3a 4bacd580b98344b27423fd48e12cc4e32b4d7680 4bf4315f8288519210524c8e29bbbc5007d0570e 4c020298b3e89c940b31b78a554e5f7f7788f4e8 4e699cecb13d6cfeb83fb46c690f5c0a6a5c4de9 4f1b1c022bf63c39bff515d14835ef9924d9c117 4ffad5bec45b96216d77cec9d65b2ef7833b9f25 5016a23a228d330582f680a5e85e195e8f2a0e0d 507998448750ada321251ea30c3894b17f22bf3f 50f41340ee25560f93fc44afcb5853d7d3bbc511 52249a74d09aa6539ee618330512ddf1099b5d14 543329038b2e68551b285f487b0af9a5c8821285 557fa03ab5688c267e588e0d9d3994aa7975fd4d 5625da0b9ce89952045310a5f3c6f946e5c250ad 5bdc5bfb64e6081e3b6aa2c0ff2ec4d4e8905e19 5daf377a1802d73738184584dd97d5a688c749f7 5e1071ad145ba2944e1e810e1b6cf3edaeddfb79 5e4379ed6c1a760802a3be59f0d602fefa9c20f7 5ed0bb380cfab333e6af47c22edefe64f8e50e69 5f1a8a26ab6615ff0e40411f76240c473dea883b 60b3e1a9a66472772f27cccabc728d8f7782262f 6104a85482c195c1ade51a46c366548595b8e3ea 6126db24463fd0276c890fb2a6790af38e3b630f 616135837ef2a1966adb761c0198cc72db215cd8 623413b20f0b88e98573b555d51b2fae44d32f0a 62a8d2577972c1caaf3cb94852aa5d7ecbb84101 6439f7a8b57dd390dfe043404c5af253616f9909 64fa092a9c14b852736cbc57c9c287bb3b7d5bb1 65703b556d34a72a5fb86528a42319a498157678 668d26189f253fa3d2aab583bc924f5e8e129e48 670e63b7dc00d7526ea017adcbb6b7abebfcfc4a 69cce705b87b4e840775796e1415aa1961fa7947 6cbbb664b234e637781faf5105ea21b93d608af0 6d022b8993381f6446eed14d3a1f15da248c3c18 6d12c354c0ccc52301ed757f90b1e8505117162e 6d8e26449388e5b8ddb72ed11ddd8e478566917b 6dcbf6dcc4f463b67f8a7b1018741a500439af20 709bf6b83c20f6ffdeabbb99cb0cedbf0ea5f522 717050c0da1f9fbbf31628896a03440c548ba37d 71cb39354b421ca64d544e251613475d14056226 71f21dd48dd7151180e940cdcd09477f41014488 731213b408992d00b2e0615d3c936cab3bdea217 73aebf39a2e74ce9baa688e1c05a1c23805e30ee 75a14c8cf5d54631765701718055a943ce1b2d00 789669a752a1b0c09b12b3a47cb26b6ba4df6630 7a328ce6c438759f3cdd2562055fb3887e08454f 7a93418b8916e68a1ed4dadc96c1cf540ba976ec 7abd032d5dbffd2b1dbded6b7ffd6b96e395d3e1 7d5ef499b2e6ed0d562ef2c94b8030be93ceca2d 7ffea96e0aa52170cd46d3347f9943483e1d32e0 80445ba82e0293f390be7965a277d6d71e76c87d 81fb3e380c77ec3878e5ca5ea16e2ecb72805b07 8284eae928493d19dc547f63d9b60133978e0750 828c37ff28421bf91dc752d6cc1b80b7a698eeb8 82fca8ae0b63af4f92ed109064f8d955cd75370b 84618f8c9603355807478edf2c393f562a80366f 85803c705eab9cd1c02b3e646d204070807ecd31 86c0a4b13af5df6a7adbf23eed98ff83862ea28a 879a34accc1d56bb04d2049050aa00b04d8524c2 87c1c58f820608ab02836881cd50381b09992845 87eecf3c1e11bb7255f37e93462fbc6ffbf67f8b 8a421983102f0313be1210dbf177ce5ce2ab73b5 8e0cb5b7f28adac98564d68124beee3ba3307d64 902d12166f5191c851844afb8a04e04904730f1f 90b5dd932b89d5dd56a99ec4f91fba69c7f5c011 913c7a0fee954a170e6c87548c42d2e739b8b0eb 915fae8de2cd70cbdfa08f79c469904d2715f18a 9185bb99a1eb16fc17f79540ff8754f3bf4ab131 92ac533686478f52bcabd2beac0d171728edcac4 9306c728fb86e9aa8deaa9e24ff2edb61faa8b13 935d036b30741f729d8b8eafc1157853e5ca8b5b 98aace7de4864ea04c9e0188aeea08c5fe3ea5f6 9ade84e7f8ef224208af0812e61e3f80106364d4 9b394eff670cdfdaa0aed16ee86ad26907231f56 9bbeaf2df1161621fa0efce4b37daf2fcd19d646 9be999966fa1a548f2b15a2cefe4050240f0b10a a24776a5aa0073025e6c35090fa01bfe9c35f253 a36f5803d21eaef22dfb5a0be60e466f5db54485 a4371d5b283d181100ac43588981b92d9c64bd2f a4b9163eba4cf8965c300fa195effe1da5d5d251 a4d577a84f58cf3a484e1a5cedc73d826a2232ba a534f8706366bce569a66d85e169f43ed6b68afd a55eeada4436e337a54a4fe263ae8444d97f0d19 a6ba0a8f21121bceef72685ab494ff298e48fa82 a7c09348663e88f500beda671237b0e842537089 aa9a38a3393b019c95803e8e8312826022276ba1 aaf15de00aad10e2446715fd11dced903868a8c8 ab00908f1eb37490eb43a5a26f1c3653b89fd90f accb7bb6ff0529bdd88dcdd89d852e854df5be4c aceb4f54ed446640730ad41761284415c49fa0c9 ad3ccbcbd4c497c4b12879ecda22437ea63a263f ae114d6db0395393bf2752f641a715f7b794f302 aec3bdd8a2c589c8df418ce4c0cdcba8d9f8033f aeefcb1a7537acfd259662d68c327b660e3c7553 b141dc332b7a19aef69ebffe4c55205855b21341 b146a29a1fabbb32517c19fdf718106bcdaee314 b45907c0ea6ccb13b14887d0957eee04387cd76e b4747be428bfd0186b20f958dd70fa4da6188ada b58276752de8457c6a430b9f6714e2315c60cdb1 b5ae56276561fe5163de1ac55ab77a6f1dc4818f b65091aa6d29f0db1ba0358f7b8461ff0d292b6d b6d1d2213044c7c939c276cc66d30d64b941198d b909cd5e546fe3a34752a39358a80e30f5f75a2c b955278e7cd579e328c005b9561981bef0040fa0 b96587d224dfa50f41c8f9b73a1bc02c19080cce bb870326942abbeb980d6e7cd963b79a4d0f5a37 bc6df6d7748b905c9ccc5a6151464923e0d0b4b5 bcb393ff96f5e2a80389b48ff35e68c4e034218c bcb5a9803827997ebe3f720eda937d4c110ca573 bdf1717f1aaffd1c1c94858a1c94b1dc565eca8c c020383530ded1799f57013a6884b62abfd64f5f c034d028b41689c924159f4fb62135911e4cf8cf c091117301eb3aa848d92aa5237ee4c0f7008c90 c0a5b8be8d65a63a3e8d11e5ec36285c0ac3eeda c0a687a83ab7d2fb2876efea87277c1df4317e55 c18cbd2fbc60edc6f8b7ad5d7e05ef1573780bac c2705231d1fb25a7f65ff3ed59235c5ea9cc1e26 c310a93594f53b5a78ce1b35f65d7ce99505eb57 c48c44042633a42f1b4ec1343c2425c8b9d8bb4d c5084fc76d26044ace52e0777d5118409629be35 c77cd486658fdcbca68d623f1bab570d5d574441 c785fa8594d51b0e3273085fb4bef49ae15d54d5 c8e8785a032b3683dcb91954e1adb81b234c227a c8f3b75ea32c11c8deeb1146374e12dcdf2cb427 ca4f4cc2d5ef227717b387037bdf0ab2456574c2 ca9626d87fee78f5241094f6ee2e215e0f3a5123 cb1028807ad2e8fc2672147331d902fe82f4dd19 cb1663044cf4d72d833fe8d8fe87b19a01528720 cbdb5bfae81892d4155069d1b9020268f08d516a cdfc7e3ffc3e88e85aa49af0d566ee3472347c20 cebb633c4aff0c5d34afe25fc643bce9442a9a5c ced80d0f8c4d45502d50adf3de99f83d4bc82bf3 d02af2cac5e70095598ddbae92e1ed03b6e471ab d039fde985628f9ad4ebb7ea00518fa5991757b7 d0876234e06eb9dcae1a100d55c0f6e031493325 d29a515659d24d6a275256324b758f3c73d6fdfb d460316145e8cca89dcc8623ef5d4e4a0ef79d40 d4c97e021dd3cad1624211719d3e835e41910b19 d5f05c20e74166d2e56ecdf7b04ac8e542f5e8f6 d628ccdd4c47c662e05827cfb81f057a3cc0962d d8353e2be4325681a1d5b4f3ef5947c04defce15 d8728611380bf420c9911dfc18a4f459cb8659c9 d9c6de196eecbc980e324168518bd540f8012eca da6666f014ec0b9926e7ed8a38df3b8006431a23 dbe54d4280cd497719fd7df8bac16a14f61f1d39 ddf02464d9e6b076ec7f2efb5acd707bae3f1ad1 df9f3317abb5d9134918c9a08398eefea305413e e0c2627524b95efd7e31c326cd141f4c9aef1770 e1e7940c148dd7e429956dada1378cb6f430e8d7 e28d619643971c84b3642cf4466c02318f182a3e e2ae59ebfb0538366836b4c91e26b984654fd58c e2bd97935912cc105390797473e3d37f07c90d4c e499e7bae7c1c3f15ee3c4a4389a805d8a2fce75 e76e5dc2ed1665e99e447e046436b0b1f4471bdf e7722bbe857231e6f277802775f6731006992138 eaa1b63d3c8f81637d1dea92257f217cb579a369 ed80ca993d2aa4cb1a9db78e3bfe153ac042eed0 ee150c1a90810d4a989952309e9b34e460599bc4 ee805a395111a0b75763379d949b95ddd11b9851 eea9fda51136c230fba0d8ab043e0568e1eb7d7c eebc0aa934084e8b774d0d4656a779dd0eddcc47 f0e90e49e6908e0cda78a1ba47b014707bd165ce f16aab24a8f4e5651753568ac75efcd8380f77e0 f1a4b87b91717f56b3c3d1e477396cb9a7d69c52 f1f348c325da91b797acaf1c3682de152cc9e75d f20bb1267de59eef096d9ccef9e669bace478e54 f231692012084238d22f81b6fe57d935b63ad165 f26cce29bb6bf2fc6a327753ade24a75d0dd1703 f29c9ff3f8f8bb32904aba41b8891cabc556bb57 f2b79f0c97146f3ad1d92790944644e3f20fc3bc f39ac83c02d58984a161296df6e0ee3fd7b658a0 f3d7e017d63926026fede90a4c39534dbdcd5aa3 f3fdc637855592436717425c3c58c27fdbda4cc9 f415c401a44b8ddd3e2ce8b0e8edc356b5b06e13 f4d1a93c75f9d1304e9432d9dc9562510e780fc5 f557a234c0000827b247435baa6c54a7527d811d f6c84a90c5f8ffcd72263515730221e627473fd1 f81638549d04ad1cc4742cf9477ffbaaac28bac5 f88a3065ee1160c7aecb9f48cf97ba150430adbf fa0869c9ff9246b6003af97f88d12a4ef28baf4d fab862218ac37687bfbdccca9e2b4ec3a10b5ed1 faca6ec4265fa42a350f7002e712efc276d0e5d2 fc1cee0c7b3281729ff666519150fe53c22cdb9e fc66d6516173ba6a2543ea847c016b428429b88e fcc4d723aa6c5f892eb7cb74d9c115b847ccad7d fe0970b7fc839d6533b84fbab36fe1c4107019c8 feb4d1986c55dd98eb1cf2af3f0e11fdfb9c624a 02444f5cf921fa63badbeb648708c47c558eb0f1 18491684bcce8b1cfd23d880146d7c5f941228ce 205b8caf0f438189ed3a1c880773355e5c34e5c3 2e186d176123955098f3205f2d0129e82e53bd2b 384070f4e2ba755af15a89f80588db52873da603 3b7e412c5dbb338337a291ab0e65329801f93e08 418798600fd271f16966101816089b243cc4def5 4c7ab78792b7ee5c14582ccc3405d9eff204d60e 6208cf30f848285e974375ba3858c89d20c307c2 8a0ca4c1bd9f9060c1b9ea59d18799224e73e21e 8a4e754892f816b4a1915e437f9bb02210924bdb c8a96ef23a82359dd0408ee2d347e0b96acaeb0a cb0bc78c6dab403c53c10a302527ad44024dd199 e540ab99bc87d694df132584ac04a5d2400daabc e63a09e9c97e93db0c54aacf1d5b2ab27a99cbdf e6f36c619b17699d015bd6598a8e84f59a467df8 f16ab2ccbe144ce94bfa4417ddd01da3d87bc07b feba54ea87d24fb07cdef4e75e52081fafee0c38
+Description-md5: bbc98343da14bf76d4a45c2181fd8902
+Multi-Arch: same
+Section: debug
+Priority: optional
+Filename: pool/updates/main/g/glibc/libc6-dbg_2.31-13+deb11u7_i386.deb
+Size: 11675940
+SHA256: 28eb79bfb126fa795a3afee612df3292ced78f9246409d0e241bd7281551c068
+
+Package: libc6-dev
+Source: glibc
+Version: 2.31-13+deb11u7
+Installed-Size: 19794
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Provides: libc-dev
+Depends: libc6 (= 2.31-13+deb11u7), libc-dev-bin (= 2.31-13+deb11u7), linux-libc-dev, libcrypt-dev, libnsl-dev
+Suggests: glibc-doc, manpages-dev
+Conflicts: libc0.1-dev, libc0.3-dev, libc6.1-dev
+Breaks: libc6-dev-i386-cross (<< 2.31~), libgcc-10-dev (<< 10-20200321-1~), libgcc-7-dev (<< 7.5.0-6~), libgcc-8-dev (<< 8.4.0-2~), libgcc-9-dev (<< 9.3.0-5~), libperl5.26 (<< 5.26.1-3), python3.7 (<< 3.7.7-1+b1), python3.8 (<< 3.8.2-1+b1)
+Description: GNU C Library: Development Libraries and Header Files
+Homepage: https://www.gnu.org/software/libc/libc.html
+Description-md5: 1bbdc717d9acdb44db940928d570e749
+Multi-Arch: same
+Section: libdevel
+Priority: optional
+Filename: pool/updates/main/g/glibc/libc6-dev_2.31-13+deb11u7_i386.deb
+Size: 3775740
+SHA256: d9b76a6ba857912b30c3c4e36d21884f5a840a69959c1e5ca3809cd5817ab592
+
+Package: libc6-dev-amd64
+Source: glibc
+Version: 2.31-13+deb11u7
+Installed-Size: 12037
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Provides: lib64c-dev
+Depends: libc6-amd64 (= 2.31-13+deb11u7), libc6-dev (= 2.31-13+deb11u7)
+Description: GNU C Library: 64bit Development Libraries for AMD64
+Homepage: https://www.gnu.org/software/libc/libc.html
+Description-md5: 4315f28f715f5adf117fa6a131d77331
+Recommends: gcc-multilib
+Section: libdevel
+Priority: optional
+Filename: pool/updates/main/g/glibc/libc6-dev-amd64_2.31-13+deb11u7_i386.deb
+Size: 1975956
+SHA256: ecbba6588652d74d99e295dfc077d5edf06c3014c12ef8ffab9381a48c64e2ad
+
+Package: libc6-dev-x32
+Source: glibc
+Version: 2.31-13+deb11u7
+Installed-Size: 9386
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Depends: libc6-x32 (= 2.31-13+deb11u7), libc6-dev-amd64 (= 2.31-13+deb11u7), libc6-dev (= 2.31-13+deb11u7)
+Description: GNU C Library: X32 ABI Development Libraries for AMD64
+Homepage: https://www.gnu.org/software/libc/libc.html
+Description-md5: 0859bbe63e876c4ed2ca05543b5d535f
+Recommends: gcc-multilib
+Section: libdevel
+Priority: optional
+Filename: pool/updates/main/g/glibc/libc6-dev-x32_2.31-13+deb11u7_i386.deb
+Size: 1947980
+SHA256: 5cf7bd4eb008885903a420b47260576f0591dbb9c4e14837643622d232bd566c
+
+Package: libc6-x32
+Source: glibc
+Version: 2.31-13+deb11u7
+Installed-Size: 11788
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Depends: libc6 (= 2.31-13+deb11u7)
+Conflicts: libc0.1-i386, libc6-amd64:x32, libc6-i386, libc6-mips32, libc6-mips64, libc6-mipsn32, libc6-powerpc, libc6-ppc64, libc6-s390, libc6-sparc, libc6-sparc64, libc6-x32:amd64
+Description: GNU C Library: X32 ABI Shared libraries for AMD64
+Homepage: https://www.gnu.org/software/libc/libc.html
+Description-md5: 010abf82e546e9de191aa54ef585d592
+Section: libs
+Priority: optional
+Filename: pool/updates/main/g/glibc/libc6-x32_2.31-13+deb11u7_i386.deb
+Size: 2678312
+SHA256: e687d5993c017bbea0b7489f7064f47f557f1a1c746fae43609e0f2719830589
+
+Package: libc6-xen
+Source: glibc
+Version: 2.31-13+deb11u7
+Installed-Size: 4110
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Description: GNU C Library: Shared libraries [Xen version]
+Homepage: https://www.gnu.org/software/libc/libc.html
+Description-md5: 8efa0c2cbdd983a8f6285be54808132f
+Multi-Arch: same
+Pre-Depends: libc6 (= 2.31-13+deb11u7)
+Section: libs
+Priority: optional
+Filename: pool/updates/main/g/glibc/libc6-xen_2.31-13+deb11u7_i386.deb
+Size: 1503744
+SHA256: 80f20c011035292a4da2a35359a0a187e39200646f79167f11302d2d7bacdcc2
+
+Package: locales
+Source: glibc
+Version: 2.31-13+deb11u7
+Installed-Size: 16015
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: all
+Depends: libc-bin (>> 2.31), libc-l10n (>> 2.31), debconf (>= 0.5) | debconf-2.0
+Description: GNU C Library: National Language (locale) data [support]
+Homepage: https://www.gnu.org/software/libc/libc.html
+Description-md5: 68ccf846a4935e541c4a717fc0a1f3e3
+Section: localization
+Priority: standard
+Filename: pool/updates/main/g/glibc/locales_2.31-13+deb11u7_all.deb
+Size: 4083352
+SHA256: e3208c61272dd404ff1238e690528b6fb05c8975c0ed0e0c2f854f0a71efeb75
+
+Package: locales-all
+Source: glibc
+Version: 2.31-13+deb11u7
+Installed-Size: 221936
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Depends: libc-l10n (>> 2.31)
+Description: GNU C Library: Precompiled locale data
+Homepage: https://www.gnu.org/software/libc/libc.html
+Description-md5: c360552536cba624a24a347b513939dd
+Multi-Arch: foreign
+Section: localization
+Priority: optional
+Filename: pool/updates/main/g/glibc/locales-all_2.31-13+deb11u7_i386.deb
+Size: 10850640
+SHA256: 01dfb99032716fcff0e0e2b4dd05321958367a4ea6ef426dc47227505b06cbc8
+
+Package: nscd
+Source: glibc
+Version: 2.31-13+deb11u7
+Installed-Size: 433
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Depends: lsb-base (>= 3.0-6), libaudit1 (>= 1:2.2.1), libc6 (>> 2.31), libc6 (<< 2.32), libcap2 (>= 1:2.10), libselinux1 (>= 3.1~)
+Description: GNU C Library: Name Service Cache Daemon
+Homepage: https://www.gnu.org/software/libc/libc.html
+Description-md5: e8172254ec0df735a3e44c0f557100bc
+Multi-Arch: foreign
+Section: admin
+Priority: optional
+Filename: pool/updates/main/g/glibc/nscd_2.31-13+deb11u7_i386.deb
+Size: 294000
+SHA256: 6b987c5dd04aa020597bf3ce765c49c3708a876c39d6ee7d1151e6b422f48376
+
 Package: dirmngr
 Source: gnupg2
 Version: 2.2.27-2+deb11u2
@@ -30055,12 +30362,12 @@ Size: 10149324
 SHA256: ac4844448fd4d1cbeeefe529c80c1be1899c4afe32b2bc4374cc8106b80a625f
 
 Package: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 242006
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 254774
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: i386
 Provides: mail-reader
-Depends: debianutils (>= 1.16), fontconfig, libotr5, psmisc, x11-utils | kdialog | zenity, libasound2 (>= 1.0.16), libatk1.0-0 (>= 1.12.4), libc6 (>= 2.30), libcairo-gobject2 (>= 1.10.2-1.1~), libcairo2 (>= 1.10.2-1.1~), libdbus-1-3 (>= 1.9.14), libdbus-glib-1-2 (>= 0.78), libevent-2.1-7 (>= 2.1.8-stable), libffi7 (>= 3.3~20180313), libfontconfig1 (>= 2.12.6), libfreetype6 (>= 2.10.1), libgcc-s1 (>= 4.2), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.13.7), libpango-1.0-0 (>= 1.14.0), libstdc++6 (>= 9), libvpx6 (>= 1.8.0), libx11-6, libx11-xcb1 (>= 2:1.7.2), libxcb-shm0, libxcb1, libxext6, libxrandr2 (>= 2:1.4.0), zlib1g (>= 1:1.2.11.dfsg)
+Depends: debianutils (>= 1.16), fontconfig, libotr5, psmisc, x11-utils | kdialog | zenity, libasound2 (>= 1.0.16), libatk1.0-0 (>= 1.12.4), libc6 (>= 2.30), libcairo-gobject2 (>= 1.10.2-1.1~), libcairo2 (>= 1.10.2-1.1~), libdbus-1-3 (>= 1.9.14), libdbus-glib-1-2 (>= 0.78), libevent-2.1-7 (>= 2.1.8-stable), libffi7 (>= 3.3~20180313), libfontconfig1 (>= 2.12.6), libfreetype6 (>= 2.3.5), libgcc-s1 (>= 4.2), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.37.0), libgtk-3-0 (>= 3.13.7), libpango-1.0-0 (>= 1.14.0), libstdc++6 (>= 9), libx11-6, libx11-xcb1 (>= 2:1.7.2), libxcb-shm0, libxcb1, libxext6, libxrandr2 (>= 2:1.4.0), zlib1g (>= 1:1.2.11.dfsg)
 Suggests: apparmor, fonts-lyx, libgssapi-krb5-2
 Breaks: birdtray (<< 1.7.0+ds-1~), calendar-google-provider (<= 1:68.2.1-1), enigmail (<< 2:2.2.0~), jsunit (<< 0.2.2-1~), webext-compactheader (<= 3.0.0~), webext-exteditor (<= 2.0.4-1), webext-sogo-connector (<= 68.0.1-2~), xul-ext-dispmua (<= 1.8.4.6-1), xul-ext-sieve (<= 0.3.1+dfsg-1~)
 Description: mail/news client with RSS, chat and integrated spam filter support
@@ -30069,1113 +30376,1113 @@ Description-md5: 751154d79baa86dd0bb50b2b6fd36be3
 Recommends: myspell-en-us | hunspell-dictionary | myspell-dictionary
 Section: mail
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird_102.15.1-1~deb11u1_i386.deb
-Size: 57213956
-SHA256: b98e9b9259409c10c649cc502856ffaaa744bc007f166ac7095c2f3398980e75
+Filename: pool/updates/main/t/thunderbird/thunderbird_115.3.1-1~deb11u1_i386.deb
+Size: 60914208
+SHA256: a0f59388642a63345a3d8a3a913b42165adaa572c45eb2d44623641c7c0be845
 
 Package: thunderbird-l10n-af
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 773
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 740
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Africaans language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:af
 Description-md5: b18290c6b03b670223422b9accf259da
 Recommends: hunspell-af
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-af_102.15.1-1~deb11u1_all.deb
-Size: 600260
-SHA256: 93cdbdd3670852abd2c65e49e8069b5f378b9dc30d909acf237f089be965d97a
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-af_115.3.1-1~deb11u1_all.deb
+Size: 575832
+SHA256: caa20930207cc9b437383b6fbc3efe7994a8395a1975dbccf2c127885859cbf6
 
 Package: thunderbird-l10n-all
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 216
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 197
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird-l10n-af (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-ar (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-ast (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-be (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-bg (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-br (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-ca (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-cak (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-cs (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-cy (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-da (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-de (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-dsb (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-el (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-en-ca (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-en-gb (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-es-ar (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-es-es (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-es-mx (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-et (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-eu (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-fi (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-fr (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-fy-nl (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-ga-ie (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-gd (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-gl (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-he (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-hr (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-hsb (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-hu (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-hy-am (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-id (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-is (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-it (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-ja (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-ka (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-kab (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-kk (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-ko (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-lt (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-lv (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-ms (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-nb-no (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-nl (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-nn-no (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-pa-in (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-pl (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-pt-br (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-pt-pt (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-rm (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-ro (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-ru (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-sk (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-sl (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-sq (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-sr (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-sv-se (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-th (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-tr (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-uk (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-uz (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-vi (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-zh-cn (>= 1:102.15.1-1~deb11u1), thunderbird-l10n-zh-tw (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird-l10n-af (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-ar (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-ast (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-be (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-bg (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-br (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-ca (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-cak (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-cs (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-cy (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-da (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-de (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-dsb (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-el (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-en-ca (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-en-gb (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-es-ar (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-es-es (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-es-mx (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-et (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-eu (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-fi (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-fr (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-fy-nl (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-ga-ie (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-gd (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-gl (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-he (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-hr (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-hsb (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-hu (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-hy-am (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-id (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-is (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-it (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-ja (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-ka (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-kab (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-kk (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-ko (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-lt (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-lv (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-ms (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-nb-no (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-nl (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-nn-no (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-pa-in (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-pl (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-pt-br (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-pt-pt (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-rm (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-ro (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-ru (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-sk (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-sl (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-sq (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-sr (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-sv-se (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-th (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-tr (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-uk (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-uz (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-vi (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-zh-cn (>= 1:115.3.1-1~deb11u1), thunderbird-l10n-zh-tw (>= 1:115.3.1-1~deb11u1)
 Description: All language packages for Thunderbird (meta)
 Homepage: https://www.thunderbird.net/
 Description-md5: c8ef0af31d3d956924cc1df2745f4f9a
 Section: metapackages
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-all_102.15.1-1~deb11u1_all.deb
-Size: 121608
-SHA256: 706288ccfbac9eb6a9c9a57ddadf757dd2a487ab4e9e43d8bbb145f383ba9e9e
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-all_115.3.1-1~deb11u1_all.deb
+Size: 118616
+SHA256: 461dd937fb816e105f23cd14e24a0d3d8ff8d1736d9170931958a9118ab1089e
 
 Package: thunderbird-l10n-ar
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 881
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 851
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Arabic language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:ar
 Description-md5: ace8b24dc8e4c8b3997444e322face63
 Recommends: hunspell-ar
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-ar_102.15.1-1~deb11u1_all.deb
-Size: 713756
-SHA256: dbf6884536273121d137e026d0c5313467821580609ea0143bc28182674f4ec7
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-ar_115.3.1-1~deb11u1_all.deb
+Size: 696408
+SHA256: 81d0c6ef04c73725217495ea23c95bf28ed080d2df83d5e8a8187db58971de58
 
 Package: thunderbird-l10n-ast
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 789
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 759
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Asturian language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:ast
 Description-md5: 3d35b4c3eb1666f3b11a063795ea635c
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-ast_102.15.1-1~deb11u1_all.deb
-Size: 615596
-SHA256: 8846b66172e2486b03fa4ffd58e642febf2453afd5afc6df93e91999609d2935
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-ast_115.3.1-1~deb11u1_all.deb
+Size: 597628
+SHA256: e2e667b3b31f975ece6487765114c247ba718b6ba21191c6e057e3322edaaa83
 
 Package: thunderbird-l10n-be
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 915
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 889
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Belarusian language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:be
 Description-md5: 2f6b8aae0b162656d6425071c92ba26c
 Recommends: hunspell-be
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-be_102.15.1-1~deb11u1_all.deb
-Size: 749396
-SHA256: 5b8178adadf294a192e48c69b62bd88b5232057c7e515a54343380e64a40eda4
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-be_115.3.1-1~deb11u1_all.deb
+Size: 740204
+SHA256: ba042f8a9305b957b3ed3f022df8fb71600f3d9dee7be82ceb3f765b7920fc5f
 
 Package: thunderbird-l10n-bg
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 907
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 877
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Bulgarian language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:bg
 Description-md5: 66132adbae43e41d3f896e9d764a5062
 Recommends: hunspell-bg | myspell-bg
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-bg_102.15.1-1~deb11u1_all.deb
-Size: 742936
-SHA256: b69a8dda6d6b9a3891405d886cee55f7a1341814a19abef4bee096e089304503
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-bg_115.3.1-1~deb11u1_all.deb
+Size: 724524
+SHA256: ad13a63d89804e3576f3bc806fd9c0bcf9ec7fc65fe5d45d9500f81864e36865
 
 Package: thunderbird-l10n-br
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 841
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 822
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Breton language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:br
 Description-md5: 74276ab5a350b970c2bf0173230a17fd
 Recommends: hunspell-br
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-br_102.15.1-1~deb11u1_all.deb
-Size: 674204
-SHA256: 1a1cc2f61ed00111a72d70df5754d3545a95d12020c2da9327e34234f9198664
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-br_115.3.1-1~deb11u1_all.deb
+Size: 673776
+SHA256: 145790691bac3d00c4e365c94a46ecd9d9d49b50c3866ed982a9cb1d668f32b9
 
 Package: thunderbird-l10n-ca
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 866
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 860
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Catalan/Valencian language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:ca
 Description-md5: c41cec431972576de3f3968d35a6eb68
 Recommends: hunspell-ca | myspell-ca
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-ca_102.15.1-1~deb11u1_all.deb
-Size: 703032
-SHA256: bbca5381cc105710155fe9d4b7ad6e92570309d255cc547ddeea97bccb14bc41
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-ca_115.3.1-1~deb11u1_all.deb
+Size: 715504
+SHA256: 60cee9675e73cfb561483144d2d08e82c1e642f59bb22b01619f857fc514fc24
 
 Package: thunderbird-l10n-cak
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 866
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 854
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Kacqhikel language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:cak-GT
 Description-md5: 085fc9ff468b2f6298353c3a0828f9e8
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-cak_102.15.1-1~deb11u1_all.deb
-Size: 699316
-SHA256: ee88b2953589f39f76244375ee47682a4eb263c5473e1013975c6aff30035fa7
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-cak_115.3.1-1~deb11u1_all.deb
+Size: 706232
+SHA256: 959941d74d2c17958677e38ce5e8a5203a83a7fb923aba8a104acafdfad89746
 
 Package: thunderbird-l10n-cs
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 942
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 928
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Czech language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:cs
 Description-md5: ad1845dca8daf569c2b08839df17a79e
 Recommends: hunspell-cs | myspell-cs-cz
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-cs_102.15.1-1~deb11u1_all.deb
-Size: 785004
-SHA256: 8c9ab22b65e8555d833076a254c180070287501a1688e768d8c878cfb823e551
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-cs_115.3.1-1~deb11u1_all.deb
+Size: 787560
+SHA256: 51624f70150506b0c0b80167df83a02c2e0ec8cd4f6fc1cedbfb5de7ad76d868
 
 Package: thunderbird-l10n-cy
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 919
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 898
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Welsh language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:cy
 Description-md5: a6c3347da4dda324048ece152d14b22b
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-cy_102.15.1-1~deb11u1_all.deb
-Size: 761816
-SHA256: c3a4ed9bcb81707a9775b4e4445013fec4a4f981490fd5213ddb158345561023
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-cy_115.3.1-1~deb11u1_all.deb
+Size: 756412
+SHA256: 254fd93981a8c19b03b766724e965639a9f2b6ed223313453372fa3371cab4a1
 
 Package: thunderbird-l10n-da
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 899
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 886
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Danish language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:da
 Description-md5: 99853049c3780ec0b7ef70e4292bbe5c
 Recommends: myspell-da | hunspell-da
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-da_102.15.1-1~deb11u1_all.deb
-Size: 742732
-SHA256: 0a80031cacaf52caff23e805012171d4d8903c2b0ebfb5bd351159377d3e5260
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-da_115.3.1-1~deb11u1_all.deb
+Size: 744636
+SHA256: 71cea75ea2962181106af2b610be39111494ce21c4647f429a612d67d746ff9c
 
 Package: thunderbird-l10n-de
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 930
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 914
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: German language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:de
 Description-md5: b84355301b3680934c743f3984cf95d0
 Recommends: hunspell-de-de | hunspell-de-at | hunspell-de-ch | myspell-de-de | myspell-de-at | myspell-de-ch
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-de_102.15.1-1~deb11u1_all.deb
-Size: 774612
-SHA256: 2c6ff0b92581c10d824f510ff4daf9af850df33386356e34a73904d1f73a11d3
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-de_115.3.1-1~deb11u1_all.deb
+Size: 773268
+SHA256: 67a808b998e3079c369fece362280f778cb0da2770ec270f96b69934f5e99344
 
 Package: thunderbird-l10n-dsb
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 950
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 932
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Lower Sorbian language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:dsb
 Description-md5: 10d897ff52bf09ce0206ba81cce90fb2
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-dsb_102.15.1-1~deb11u1_all.deb
-Size: 792312
-SHA256: 19711e772ef300955042494503650a6c20f453843ff6df92422cca1a92a5b292
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-dsb_115.3.1-1~deb11u1_all.deb
+Size: 790140
+SHA256: b533ba72517a49ee40434cb61c5985145c864ceecbcc915bd53c4f2c68e48e18
 
 Package: thunderbird-l10n-el
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 1051
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 1029
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Greek language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:el
 Description-md5: fbd5e9e25db5485d03c1947fadc29849
 Recommends: hunspell-el | myspell-el-gr
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-el_102.15.1-1~deb11u1_all.deb
-Size: 899176
-SHA256: 9123472e6f227e0739ac3f980bc2626aa72b1931a320f3c85abbefb2a10dac29
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-el_115.3.1-1~deb11u1_all.deb
+Size: 892632
+SHA256: 50a8130437bc8c5e63b195fcda0be67bc90cfe9493a42c9c74b8b71ecc873a5b
 
 Package: thunderbird-l10n-en-ca
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 874
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 845
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: English (Canada) language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:en-CA
 Description-md5: 39b9f12038702062df031dce4b462960
 Recommends: hunspell-en-ca
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-en-ca_102.15.1-1~deb11u1_all.deb
-Size: 709552
-SHA256: 78c9e1a6a6436b170b852b6cbec6ad64495d51170e96ee935c2a5fc1fd42dbf1
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-en-ca_115.3.1-1~deb11u1_all.deb
+Size: 695156
+SHA256: d142f8fc72800fef1bb10436cdfda01ec29d8f5368b94a61b2d10f9b08e31bf9
 
 Package: thunderbird-l10n-en-gb
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 880
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 857
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: English (Great Britain) language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:en-GB
 Description-md5: 833419bd973710ac479b91d500c3cbac
 Recommends: hunspell-en-gb | hunspell-en-au | hunspell-en-ca | hunspell-en-za
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-en-gb_102.15.1-1~deb11u1_all.deb
-Size: 715020
-SHA256: c7e0c72bf885df7484e0f7684ff3e1ad1018699b5db2923c84f6b90bdfed0f32
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-en-gb_115.3.1-1~deb11u1_all.deb
+Size: 708484
+SHA256: 4bcb227d4bce6dc340b407b93574950293786e110dbb82a01d4197d81a6efa71
 
 Package: thunderbird-l10n-es-ar
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 931
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 908
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Spanish (Argentina) language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:es-AR
 Description-md5: 38383f4e297bd15b9392f36aa763d916
 Recommends: hunspell-es | myspell-es
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-es-ar_102.15.1-1~deb11u1_all.deb
-Size: 768856
-SHA256: ec36be3e48f0372c9a09e0d6655c8616efc4b352beddb9703e62ff0c39a3db7a
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-es-ar_115.3.1-1~deb11u1_all.deb
+Size: 761708
+SHA256: 3578b469d4b8f03d3b157fccc99d2a7a64493af182bb462db72f6cabcca1f103
 
 Package: thunderbird-l10n-es-es
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 892
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 872
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Spanish (Spain) language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:es-ES
 Description-md5: d555d61f09b6b502c395c264e5e2e46a
 Recommends: hunspell-es | myspell-es
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-es-es_102.15.1-1~deb11u1_all.deb
-Size: 728032
-SHA256: c8ab54b835d7502e4c31cab14f9b31ba2cd6d8309259b49ea2d4ff34fb4e0546
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-es-es_115.3.1-1~deb11u1_all.deb
+Size: 723576
+SHA256: bf6ed7cadbd60fd0f17c3c6de4207c94543220d0e57a70df804a200b36229e3c
 
 Package: thunderbird-l10n-es-mx
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 933
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 905
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Spanish (Mexican) language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:es-MX
 Description-md5: 3a78600aea7607a9ca4c065d72e62a24
 Recommends: hunspell-es | myspell-es
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-es-mx_102.15.1-1~deb11u1_all.deb
-Size: 771308
-SHA256: 0dad7db624a7c8a7e60b3620d90525288b5e77174e1ec3cf41875c083077b337
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-es-mx_115.3.1-1~deb11u1_all.deb
+Size: 759004
+SHA256: b04b6c4bd43190c2309ae97003a0f56b124bc77e905a3f3aac9f9e2afdd042b7
 
 Package: thunderbird-l10n-et
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 890
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 867
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Estonian language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:et
 Description-md5: 86ba0d8b83d7148ad48f0d7deb046231
 Recommends: myspell-et
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-et_102.15.1-1~deb11u1_all.deb
-Size: 732764
-SHA256: 8ccfe51609fa5e28db0a89eeaf4215cea0dea9ff19aad7049876bb97f81b6290
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-et_115.3.1-1~deb11u1_all.deb
+Size: 723772
+SHA256: ea338722ffd13b709cb826e87425afa049daa73f9e3e9313d7dba4638b5ba803
 
 Package: thunderbird-l10n-eu
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 915
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 887
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Basque language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:eu
 Description-md5: 12999416c3b99d21a79f5c16b4688653
 Recommends: hunspell-eu
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-eu_102.15.1-1~deb11u1_all.deb
-Size: 758728
-SHA256: eb9710656441a1935dff319ffc2cf2b54091f51604c90a92889da889a055cc48
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-eu_115.3.1-1~deb11u1_all.deb
+Size: 746188
+SHA256: a0d14c80875d568dedeefc9ac47fe452d580c540470f71090effac2e4aa001de
 
 Package: thunderbird-l10n-fi
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 907
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 885
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Finnish language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:fi
 Description-md5: 912745673f365858b459b2dc8aafeae1
 Recommends: myspell-fi, xul-ext-mozvoikko
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-fi_102.15.1-1~deb11u1_all.deb
-Size: 750224
-SHA256: 98287571421b3a2841e36d584205dfa87e9810ad78cfb3068e6e2629e4e40762
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-fi_115.3.1-1~deb11u1_all.deb
+Size: 743340
+SHA256: 87727b680e3db474d2fa8341d4f0e6948495d61ae984269ee4cb6ad532c1355a
 
 Package: thunderbird-l10n-fr
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 943
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 919
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: French language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:fr
 Description-md5: a5c73c0e67f31c1a9306bc3e15e44f86
 Recommends: hunspell-fr | myspell-fr | myspell-fr-gut
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-fr_102.15.1-1~deb11u1_all.deb
-Size: 786244
-SHA256: 5638504aa2432c530a505e997d1f33622687f90501fadd4a2ef54f8c09086aaf
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-fr_115.3.1-1~deb11u1_all.deb
+Size: 778388
+SHA256: 66231f71676d0bd09bee7b4f982dfa9ee65f0ad988fd53a562085334e539e412
 
 Package: thunderbird-l10n-fy-nl
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 926
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 903
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Frisian language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:fy-NL
 Description-md5: 41479641c3424251d27af678a9fdadb9
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-fy-nl_102.15.1-1~deb11u1_all.deb
-Size: 762940
-SHA256: 2fa90637f8fa0b90dea4e645d00a6fe3695753895654efa54b40dd37a09be278
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-fy-nl_115.3.1-1~deb11u1_all.deb
+Size: 755928
+SHA256: 576ad8ffab58eb00ee3070cbe42867f450f82014fd9883b7c165e91ec2f87594
 
 Package: thunderbird-l10n-ga-ie
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 830
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 799
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Irish (Ireland) language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:ga-IE
 Description-md5: c3bd41eec0e685483ec87343606d8d98
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-ga-ie_102.15.1-1~deb11u1_all.deb
-Size: 653872
-SHA256: 6dec8188617d3107f881b9b85f6922545f39f408dcce29c5497fedd76abdb68a
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-ga-ie_115.3.1-1~deb11u1_all.deb
+Size: 633872
+SHA256: 3a7a1fe8de38380946e96b76381f4b83db826daaca78af487378908c683a65b3
 
 Package: thunderbird-l10n-gd
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 858
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 898
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Gaelic (Scottish) language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:gd
 Description-md5: f89dbc586dc8f1005ae395c073cd1a24
 Recommends: hunspell-gd | myspell-gd
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-gd_102.15.1-1~deb11u1_all.deb
-Size: 693604
-SHA256: db49c910496c6d2094f8495e2536e38341611bb313b6b66f8a6a371cbd6c6c0c
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-gd_115.3.1-1~deb11u1_all.deb
+Size: 754784
+SHA256: dd117dd89257b44754af8f8e0620700aaccdee3d0b9a72707336af75c18c3283
 
 Package: thunderbird-l10n-gl
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 887
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 900
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Galician language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:gl
 Description-md5: 97ff4043915656ca4ecbcdd009886955
 Recommends: hunspell-gl | hunspell-gl-es
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-gl_102.15.1-1~deb11u1_all.deb
-Size: 725492
-SHA256: 1536bb2d2909df33b58c7a5d4d587b7276237c0dbb2d7128d8956171ffdbae31
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-gl_115.3.1-1~deb11u1_all.deb
+Size: 759112
+SHA256: 6318c3ff070c805a2ac818fc86304c5ac73139a6f86c0cac458870310ad701fb
 
 Package: thunderbird-l10n-he
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 890
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 863
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Hebrew language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:he
 Description-md5: abef6efd42abe5f6fc83d63c4f98dd9d
 Recommends: hunspell-he | myspell-he
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-he_102.15.1-1~deb11u1_all.deb
-Size: 729140
-SHA256: 212f2b7d05349fabfe0b8e5a7a8cfc48444a4cc50cf86a1983f1b197214877b4
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-he_115.3.1-1~deb11u1_all.deb
+Size: 715604
+SHA256: a05038f10fc08009d47d6a46aa1661fe2abf4747175171a8127907f82303fabe
 
 Package: thunderbird-l10n-hr
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 892
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 870
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Croatian language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:hr
 Description-md5: aa3e948902f0b071c576d5c51240f276
 Recommends: hunspell-hr | myspell-hr
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-hr_102.15.1-1~deb11u1_all.deb
-Size: 733064
-SHA256: 10a70a8fb355110304f62bc24e2fa20e1656067ada36a65f40937b30c86be145
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-hr_115.3.1-1~deb11u1_all.deb
+Size: 726664
+SHA256: d97ecf796d5fbdc6d3e7224d2092e1ee2dceca9ecba7f70caa70dd23f69d6194
 
 Package: thunderbird-l10n-hsb
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 949
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 929
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Upper Sorbian language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:hsb
 Description-md5: 8da3c8f8102a21625fa07f8add143fed
 Recommends: aspell-hsb
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-hsb_102.15.1-1~deb11u1_all.deb
-Size: 791320
-SHA256: 49fecce969d34cbeddc9326dfa39120caa953cbcc825bcc0a7cc1548ec21a45e
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-hsb_115.3.1-1~deb11u1_all.deb
+Size: 786408
+SHA256: a394251ad4563c1204239b47774078b742962f825bc66a551a4ee5f96f832a50
 
 Package: thunderbird-l10n-hu
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 954
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 931
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Hungarian language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:hu
 Description-md5: 98df94f26e0989ce3c95d2fadce5ac53
 Recommends: hunspell-hu | myspell-hu
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-hu_102.15.1-1~deb11u1_all.deb
-Size: 798492
-SHA256: c47a8e54d84f92f74b7a5428e5c0476075fd872e29025b6eea775533fc001715
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-hu_115.3.1-1~deb11u1_all.deb
+Size: 790680
+SHA256: c1c742f78c26a04b0cf984f5596b7fac272baa656e0642487d8f8b6d202e088f
 
 Package: thunderbird-l10n-hy-am
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 936
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 906
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Armenian language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:hy-AM
 Description-md5: 7d5b298c9569a0d33f04ce169b67e3dd
 Recommends: myspell-hy
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-hy-am_102.15.1-1~deb11u1_all.deb
-Size: 770244
-SHA256: 6d5d40eea2862c11c848db04f7bbfce59b703162d79b7ff04e13b4c9c66f012a
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-hy-am_115.3.1-1~deb11u1_all.deb
+Size: 754520
+SHA256: 412a53fcfb67d5d57a983243cfdeb37c7bbc1646d07fcc1941f99eafa8143b34
 
 Package: thunderbird-l10n-id
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 867
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 838
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Indonesian language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:id
 Description-md5: c2e6af110fbf1ffb57a535bb48419318
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-id_102.15.1-1~deb11u1_all.deb
-Size: 704332
-SHA256: d3d2b8fc65f8651ccd5afe5b199001ec1a5d5c9195c332c3f451de931973bc8e
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-id_115.3.1-1~deb11u1_all.deb
+Size: 689932
+SHA256: fe905949f3a619245d6e9220079f5a26e856f5027187f735077b2e2fe348abd4
 
 Package: thunderbird-l10n-is
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 920
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 897
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Icelandic language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:is
 Description-md5: bd5d91259c445485d84ec50a5b932e2e
 Recommends: hunspell-is
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-is_102.15.1-1~deb11u1_all.deb
-Size: 762676
-SHA256: a610d8b1e2061d569813d7a236203a49225a16f8a0df1f42354f9c62dbebe6f2
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-is_115.3.1-1~deb11u1_all.deb
+Size: 755500
+SHA256: 969f577bd1c4bde432df7dcd9e0a4456d124a807faaaa75eb8d30021f2fc526e
 
 Package: thunderbird-l10n-it
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 854
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 839
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Italian language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:it
 Description-md5: fffae389b9571468e6baf82ecdabdfd5
 Recommends: hunspell-it | myspell-it
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-it_102.15.1-1~deb11u1_all.deb
-Size: 695584
-SHA256: e972e1993f7debd8c94ece2891db4af4c38b8245d9195b2a39317cdbbcc5bc83
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-it_115.3.1-1~deb11u1_all.deb
+Size: 695420
+SHA256: 51af96c62000889caa8aa47f01a138d88ea1362873812b88428cc8511ab80515
 
 Package: thunderbird-l10n-ja
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 993
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 974
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Japanese language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:ja
 Description-md5: 42b09367b719f9bc3bb7b6106cc4fc68
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-ja_102.15.1-1~deb11u1_all.deb
-Size: 838956
-SHA256: 00a096db6e86316c635cd8411f61205df50d0b9a3a32564a1c50b828da171d5e
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-ja_115.3.1-1~deb11u1_all.deb
+Size: 835736
+SHA256: 475495b5b11d3fb14569aedfa41006e9ee0c8a41eba0fb16ef81b3cb2085977b
 
 Package: thunderbird-l10n-ka
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 984
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 961
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Georgian language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:ka
 Description-md5: 3e07c8a11c66cece90ae5456f0fbaa3c
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-ka_102.15.1-1~deb11u1_all.deb
-Size: 830648
-SHA256: 8a2c4a0eb335fb7cb279e2e8f0f533055a78bc52e4b55e4a10b057358c7998aa
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-ka_115.3.1-1~deb11u1_all.deb
+Size: 821720
+SHA256: bf5929f8ca6364bd4baaf66efbeadca1882ab52377f376932b1286039234b95d
 
 Package: thunderbird-l10n-kab
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 916
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 894
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Kabyle language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:kab
 Description-md5: c98dfc74b0d9ba04baddca8fa7664bfe
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-kab_102.15.1-1~deb11u1_all.deb
-Size: 759292
-SHA256: 87a61f46919d9d8e38e319a9cecdd8b91297f999a9f5ebaaaba02942f4f6dc5d
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-kab_115.3.1-1~deb11u1_all.deb
+Size: 751596
+SHA256: 61a2d77f26808ac3d3e3279cac0d0a02211790916064c4abd5eab528fba45271
 
 Package: thunderbird-l10n-kk
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 1022
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 997
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Kazakh language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:kk
 Description-md5: 8debcd0025351f1c40d5a239796e23d2
 Recommends: hunspell-kk
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-kk_102.15.1-1~deb11u1_all.deb
-Size: 869532
-SHA256: 27546ba7afc4cfe8d6476f9577a233d18f6c99c055ee57cb6545df20c10c5192
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-kk_115.3.1-1~deb11u1_all.deb
+Size: 860556
+SHA256: acde2ee4a3b19da18f73753eded693a1beb2a2bd143221fc159fdd81410548bc
 
 Package: thunderbird-l10n-ko
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 929
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 907
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Korean language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:ko
 Description-md5: c7e11af8bfae1d1d63c09641c1be7112
 Recommends: hunspell-ko
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-ko_102.15.1-1~deb11u1_all.deb
-Size: 772380
-SHA256: dc0a1b59f69709508bd98af1489f018c14bbc678526136eb6f5928b5a7713cb4
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-ko_115.3.1-1~deb11u1_all.deb
+Size: 764332
+SHA256: 499ca06f8c397002e3afc331a2daea32d65be4b108153818c45f56ad1699f7e4
 
 Package: thunderbird-l10n-lt
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 904
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 875
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Lithuanian language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:lt
 Description-md5: 541787014ec72f2967364f35afd9fd63
 Recommends: hunspell-lt | myspell-lt
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-lt_102.15.1-1~deb11u1_all.deb
-Size: 744808
-SHA256: a6c0e9ac3a12cf980dcff51a55f8819d0717482a984960c51eb0662bf5cf1b30
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-lt_115.3.1-1~deb11u1_all.deb
+Size: 728284
+SHA256: c42d99c0be8625d369545c17ba41ee9a3286597db286e02016c734188a4f016e
 
 Package: thunderbird-l10n-lv
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 833
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 801
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Ltavian language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:lv
 Description-md5: 535ade03c87d5d1b9d34fc710b8b4aff
 Recommends: hunspell-lv
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-lv_102.15.1-1~deb11u1_all.deb
-Size: 666880
-SHA256: 66ffa9f77d45a8dd25076e3065b30f5db09c1643fe4a28369dc35dab5fbee773
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-lv_115.3.1-1~deb11u1_all.deb
+Size: 646748
+SHA256: 1988482d27b61b240bb23e9325651fbde8c4fe7435d0bbfa72371149961191e3
 
 Package: thunderbird-l10n-ms
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 793
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 763
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Malay language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:ms
 Description-md5: ebb6244229a3846e28713028efdf5037
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-ms_102.15.1-1~deb11u1_all.deb
-Size: 621804
-SHA256: a1db9bd8c6b3a0df7950935029e9be5b310410b609a5cd2e07d2d2428c35ac2e
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-ms_115.3.1-1~deb11u1_all.deb
+Size: 601536
+SHA256: 1ab2c66f3cfae4e6fabba8e4edf53e78a3b823a74fd13324f2af2cf8fdc48b80
 
 Package: thunderbird-l10n-nb-no
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 877
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 850
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Bokmaal (Norway) language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:nb-NO
 Description-md5: f33e572853f0761c1c18e7521579473d
 Recommends: hunspell-no | myspell-nb
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-nb-no_102.15.1-1~deb11u1_all.deb
-Size: 711172
-SHA256: c7e0e45fc6f7fffe5d6a1b17d69f901b8542de4ebcde9bc012629004bfe19a7a
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-nb-no_115.3.1-1~deb11u1_all.deb
+Size: 697984
+SHA256: dff2d75e69fdf9af6b13162d5ae5bffcafe867a0dc3d8bc09d79a05d01aef2f4
 
 Package: thunderbird-l10n-nl
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 916
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 894
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Dutch language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:nl
 Description-md5: 9dd7406e53630eadd9bcf17154695579
 Recommends: hunspell-nl | myspell-nl
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-nl_102.15.1-1~deb11u1_all.deb
-Size: 759984
-SHA256: 291cca2c6d0339c201f042ffd1667ec974e1908e39e42d9377d2309461f12a49
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-nl_115.3.1-1~deb11u1_all.deb
+Size: 753168
+SHA256: 1b75c91590eae8b095d04df1d68b0fac0f5bb8d8f6c2a6bd0b4c16bcf8c67544
 
 Package: thunderbird-l10n-nn-no
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 887
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 869
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Nynorsk (Norway) language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:nn-NO
 Description-md5: e4253e3568a9b35ec481df0c5d2fb4a2
 Recommends: hunspell-no | myspell-nn
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-nn-no_102.15.1-1~deb11u1_all.deb
-Size: 723904
-SHA256: 600bb9569c026e6f1046600cd8ae84608ca96468deece175fdf7093d4a5ee2e7
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-nn-no_115.3.1-1~deb11u1_all.deb
+Size: 721544
+SHA256: 32ba149233c8a0de09efd6ee7b82582ec9c040276aa6809b7766ddd73c189eaa
 
 Package: thunderbird-l10n-pa-in
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 883
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 853
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Punjabi (Gurmukhi) language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:pa-IN
 Description-md5: a71b13cac6269c4be6d02e05b903106b
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-pa-in_102.15.1-1~deb11u1_all.deb
-Size: 711148
-SHA256: 7001adc4ddd0f7b949eb357f3a6e61d842e3b3319aa919e4a38d6c7786fa9491
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-pa-in_115.3.1-1~deb11u1_all.deb
+Size: 693360
+SHA256: f7ef40122def3ff7e7f2ae7c46851ca73918acc23a4e09e5489bef76754676c9
 
 Package: thunderbird-l10n-pl
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 929
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 911
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Polish language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:pl
 Description-md5: 5c776795040beb0795f4c2e1f641f63c
 Recommends: hunspell-pl | myspell-pl
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-pl_102.15.1-1~deb11u1_all.deb
-Size: 772400
-SHA256: 0e7409e71bb2654b4466adfc104776398a130385c605b4783ec4b71ce16fae7d
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-pl_115.3.1-1~deb11u1_all.deb
+Size: 769704
+SHA256: bb5eafc91404cf135d36ea579d5a42e1e8e35f0728049dfae0c7c6a624b07f88
 
 Package: thunderbird-l10n-pt-br
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 925
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 903
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Portuguese (Brazil) language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:pt-BR
 Description-md5: 90da4f27867f59638b72f4cdf1698e97
 Recommends: hunspell-pt-br | myspell-pt-br | myspell-pt
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-pt-br_102.15.1-1~deb11u1_all.deb
-Size: 762376
-SHA256: e61b4939c1105632fdf9ffe2d65c8f02e00ef91b379a7680f0e15158911bfcb7
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-pt-br_115.3.1-1~deb11u1_all.deb
+Size: 755512
+SHA256: 1bdcc9e96a1649f24029584663bbce3c244adc6842b011a55c1d3e98d97c19db
 
 Package: thunderbird-l10n-pt-pt
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 901
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 884
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Portuguese (Portugal) language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:pt-PT
 Description-md5: e8b432b2f29da50363b5ccb4bdc34d09
 Recommends: hunspell-pt-pt | myspell-pt-pt | myspell-pt
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-pt-pt_102.15.1-1~deb11u1_all.deb
-Size: 737348
-SHA256: 03e530f07d4625d97ccad9a09740a414ac49ada002b772fabc096552f168594e
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-pt-pt_115.3.1-1~deb11u1_all.deb
+Size: 734112
+SHA256: ed453074e1bbde486a161906ffb06bf6bc51925ebc09a3b2c971556836ca485b
 
 Package: thunderbird-l10n-rm
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 915
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 898
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Romansh language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:rm
 Description-md5: 827170c46121c1b0bff457c5e23ed869
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-rm_102.15.1-1~deb11u1_all.deb
-Size: 758760
-SHA256: 1fe434211862cd3c9e1a86d6689b150df0bfe5e937d01906c7e685536e5cd159
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-rm_115.3.1-1~deb11u1_all.deb
+Size: 756892
+SHA256: 6ae3e195372d0f426a80ffee365116f4a8bbc1a64cb4f50b59d4c418020a1e5a
 
 Package: thunderbird-l10n-ro
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 875
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 847
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Romania language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:ro
 Description-md5: 7246f2e1d5b56d36fb7cf99672bfe434
 Recommends: hunspell-ro
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-ro_102.15.1-1~deb11u1_all.deb
-Size: 711572
-SHA256: 00e40e9bef4bb928378d9f731282797d8e49f821feee931cc70f505d30d57f17
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-ro_115.3.1-1~deb11u1_all.deb
+Size: 696668
+SHA256: 951259fc3cf2c199a1342544418b1454de0e1c00c5b6d3387c198d09a6771ca6
 
 Package: thunderbird-l10n-ru
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 1038
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 1013
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Russian language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:ru
 Description-md5: 35ceec9ad690a3a7d5494c79d1d65bf4
 Recommends: hunspell-ru | myspell-ru
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-ru_102.15.1-1~deb11u1_all.deb
-Size: 885364
-SHA256: f9873ba6e3fa035821891adaafe05d9dc15f035a050ec0a5a30939d317e7d5bf
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-ru_115.3.1-1~deb11u1_all.deb
+Size: 876556
+SHA256: 063ded992dcfa5e11e7666517355e50bb20a10c9fcf691f17645695b1ebfec3c
 
 Package: thunderbird-l10n-sk
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 954
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 931
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Slovak language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:sk
 Description-md5: 6d6954fb4cc0ae366c42e1cd4e391c13
 Recommends: hunspell-sk | myspell-sk
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-sk_102.15.1-1~deb11u1_all.deb
-Size: 798656
-SHA256: 7f279fb50d47dbc49ddfecf2f6158a0d1d995aa1aceb3ca33f9d89db5943b4c3
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-sk_115.3.1-1~deb11u1_all.deb
+Size: 790408
+SHA256: b22bcab075c8d69255d91d950fbf0cfec27475635eb1dd36fb9e7e74b9b88af3
 
 Package: thunderbird-l10n-sl
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 918
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 896
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Slovenian language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:sl
 Description-md5: 918973e5624942dabcffb17ffb8169d4
 Recommends: hunspell-sl | myspell-sl
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-sl_102.15.1-1~deb11u1_all.deb
-Size: 760204
-SHA256: 6e7c238908f3fe6daa9020ce1a2c1ef2a76e927b36580db9401068b84306463d
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-sl_115.3.1-1~deb11u1_all.deb
+Size: 754432
+SHA256: 9930da5f5f14ca739455263726a12a02337cc42d11903612db0c57f486cd1ba8
 
 Package: thunderbird-l10n-sq
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 939
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 912
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Albanian language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:sq
 Description-md5: 1a37f067e6d6b2ee261cd1e54a473d42
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-sq_102.15.1-1~deb11u1_all.deb
-Size: 782640
-SHA256: 1af1ebd85d80486c4254ee6f05b2ae5718f541b57d2d9e8bc248f1172684a366
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-sq_115.3.1-1~deb11u1_all.deb
+Size: 770636
+SHA256: 0804681575ff52ade1c44f5a496e5a7355da136073ff1861f5d18cb2ca0fee8f
 
 Package: thunderbird-l10n-sr
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 933
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 934
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Serbian language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:sr
 Description-md5: 4c22a93ccaec247b4ac348d51fe19275
 Recommends: hunspell-sr
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-sr_102.15.1-1~deb11u1_all.deb
-Size: 774864
-SHA256: d50235bd567a9e646615563d497286793bbc988d2d74f702bb3cf42d01868df4
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-sr_115.3.1-1~deb11u1_all.deb
+Size: 794808
+SHA256: 41172290b084ef57355a2937cea68c6716fb3a12a80c09f9f5cb02b64ed3d6cb
 
 Package: thunderbird-l10n-sv-se
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 921
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 898
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Swedish (Sweden) language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:sv-SE
 Description-md5: d3a726de29ef5108c1ba17fdce394dca
 Recommends: hunspell-sv | myspell-sv-se
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-sv-se_102.15.1-1~deb11u1_all.deb
-Size: 758580
-SHA256: 11c4bf1f910d8e614d879d393167ed6cf19c5ac994e0ca92406f9a1a1e84aaf7
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-sv-se_115.3.1-1~deb11u1_all.deb
+Size: 751220
+SHA256: 2faee4ddc6d0f7385e5ae004f2d461c5a611e90a305e75dafad619d57f46dc3f
 
 Package: thunderbird-l10n-th
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 971
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 956
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Thai language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:th
 Description-md5: 1567c5b26eeea7eac981071a2fc1c053
 Recommends: hunspell-th
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-th_102.15.1-1~deb11u1_all.deb
-Size: 814972
-SHA256: 37e08a7ec6d0eb1b40e6a5d3407887abe8ac0b4328ef7fb41d02a05c7eea0322
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-th_115.3.1-1~deb11u1_all.deb
+Size: 815460
+SHA256: a8a7e37eb04f81132ffe4e5344760d6c4e83926f9d423364eb7309a8cdc42aa5
 
 Package: thunderbird-l10n-tr
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 933
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 909
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Turkish language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:tr
 Description-md5: c3ddd995183dc9b8b34c53c7acd6def9
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-tr_102.15.1-1~deb11u1_all.deb
-Size: 776564
-SHA256: 8119534fd7fb61336ef28cb7e1030b04694259978150bb8bafb9745013e8dec2
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-tr_115.3.1-1~deb11u1_all.deb
+Size: 768336
+SHA256: 86133d7692cd5a22ba8776ace703b65b6107042cd2aa271d068277c807d5f2d5
 
 Package: thunderbird-l10n-uk
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 1030
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 1006
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Ukrainian language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:uk
 Description-md5: ce949b1a5a708d3f4e73936af3f98758
 Recommends: hunspell-uk | myspell-uk
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-uk_102.15.1-1~deb11u1_all.deb
-Size: 877564
-SHA256: 10b2299f7af0b9dbbea238f86a3f7e310eb8817956f45bf19f4f57672649d5c9
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-uk_115.3.1-1~deb11u1_all.deb
+Size: 869572
+SHA256: c369b1d944a4a6cec8c163da584620282d16caceefdf91a1fa111e621a940fcf
 
 Package: thunderbird-l10n-uz
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 808
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 777
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Uzbek language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:uz
 Description-md5: c455f3480d10edf4ba28c4f001e970f5
 Recommends: hunspell-uz | myspell-uz
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-uz_102.15.1-1~deb11u1_all.deb
-Size: 637532
-SHA256: 8e64668dfe3463585e0f702897553ccea22be55408523010f2fba4e7eaf97c9e
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-uz_115.3.1-1~deb11u1_all.deb
+Size: 617916
+SHA256: 8710dec2b25bcdc62258091afce37a576436209b14ea6b53248486684dcbbeba
 
 Package: thunderbird-l10n-vi
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 958
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 936
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Vietnamese language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:vi
 Description-md5: ce34afef97b8dbbc40d89db2b9b7ac88
 Recommends: hunspell-vi
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-vi_102.15.1-1~deb11u1_all.deb
-Size: 803868
-SHA256: 3d3451acc1e4b360a8628c5c30908a625ce5db567ba2fb931620c36cc76736bd
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-vi_115.3.1-1~deb11u1_all.deb
+Size: 797816
+SHA256: a5f8748c94b55f928de2268e300cbbc6feba75084b1c3468e4f83279bceb613c
 
 Package: thunderbird-l10n-zh-cn
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 953
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 935
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Chinese (China) language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:zh-CN
 Description-md5: df8750d559e5c148b4779163e7710963
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-zh-cn_102.15.1-1~deb11u1_all.deb
-Size: 791928
-SHA256: 90ce9e429c89aa1d87746eacb3e8524aba805560ba8e838ab0422f5377213f60
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-zh-cn_115.3.1-1~deb11u1_all.deb
+Size: 789404
+SHA256: fb15e768ab7d3324ec1bb1fefd2afe5aacdddc681f8e29ab82b3aae8eba52d9a
 
 Package: thunderbird-l10n-zh-tw
 Source: thunderbird
-Version: 1:102.15.1-1~deb11u1
-Installed-Size: 961
+Version: 1:115.3.1-1~deb11u1
+Installed-Size: 939
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: all
-Depends: thunderbird (<< 1:102.15.1-1~deb11u1.1~), thunderbird (>= 1:102.15.1-1~deb11u1)
+Depends: thunderbird (<< 1:115.3.1-1~deb11u1.1~), thunderbird (>= 1:115.3.1-1~deb11u1)
 Description: Chinese (Taiwan) language package for Thunderbird
 Homepage: https://wiki.mozilla.org/L10n:Teams:zh-TW
 Description-md5: 08795c790190e999a92869c9dd538034
 Section: localization
 Priority: optional
-Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-zh-tw_102.15.1-1~deb11u1_all.deb
-Size: 800816
-SHA256: 46522f8ae9484ee7e7166dd48dbd795b3e7a419c81c422107d1b5379c0fa9ec2
+Filename: pool/updates/main/t/thunderbird/thunderbird-l10n-zh-tw_115.3.1-1~deb11u1_all.deb
+Size: 794196
+SHA256: 4993d0c2ab166804d50686a265901894b6221a7a1bff8fede194843638bcc905
 
 Package: libtiff-dev
 Source: tiff
