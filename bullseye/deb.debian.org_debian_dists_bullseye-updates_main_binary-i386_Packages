@@ -1161,6 +1161,181 @@ Filename: pool/main/libd/libdatetime-timezone-perl/libdatetime-timezone-perl_2.4
 Size: 276584
 SHA256: 7d25cf1d8f460d8c5415cc71f5d4aee787e0c711b26894912686c33afa6df995
 
+Package: postfix
+Version: 3.5.23-0+deb11u1
+Installed-Size: 4101
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: i386
+Replaces: mail-transport-agent
+Provides: mail-transport-agent
+Depends: libc6 (>= 2.28), libdb5.3, libicu67 (>= 67.1-1~), libnsl2 (>= 1.0), libsasl2-2 (>= 2.1.27+dfsg), libssl1.1 (>= 1.1.1b), debconf (>= 0.5) | debconf-2.0, netbase, adduser (>= 3.48), dpkg (>= 1.8.3), lsb-base (>= 3.0-6), ssl-cert, cpio, e2fsprogs
+Recommends: python3, ca-certificates
+Suggests: procmail, postfix-mysql, postfix-pgsql, postfix-ldap, postfix-pcre, postfix-lmdb, postfix-sqlite, sasl2-bin | dovecot-common, libsasl2-modules | dovecot-common, resolvconf, postfix-cdb, mail-reader, ufw, postfix-doc
+Conflicts: mail-transport-agent, smail
+Description: High-performance mail transport agent
+Homepage: http://www.postfix.org
+Description-md5: 98656fbf1bb45b53edd367037a2e5a90
+Tag: implemented-in::c, interface::daemon, mail::smtp, mail::transport-agent,
+ network::server, protocol::smtp, role::program, works-with::mail
+Section: mail
+Priority: optional
+Filename: pool/main/p/postfix/postfix_3.5.23-0+deb11u1_i386.deb
+Size: 1593532
+SHA256: 637648ade45018bcc2f8ecd7083558602cc4e887487741ff6e4997b84f381075
+
+Package: postfix-cdb
+Source: postfix
+Version: 3.5.23-0+deb11u1
+Installed-Size: 404
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: i386
+Depends: libc6 (>= 2.4), libcdb1, postfix (= 3.5.23-0+deb11u1)
+Breaks: postfix (<< 3.1.3-7~)
+Description: CDB map support for Postfix
+Homepage: http://www.postfix.org
+Description-md5: e2d7cf0a3c214f6a9735e5ad7671b55e
+Section: mail
+Priority: optional
+Filename: pool/main/p/postfix/postfix-cdb_3.5.23-0+deb11u1_i386.deb
+Size: 362252
+SHA256: 2e3f4246dfb4b598a771f7558ae5a63bf3c19a817d66bbbf766aa1d5e77551de
+
+Package: postfix-doc
+Source: postfix
+Version: 3.5.23-0+deb11u1
+Installed-Size: 4473
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: all
+Suggests: postfix
+Description: Documentation for Postfix
+Homepage: http://www.postfix.org
+Description-md5: b22cfd4a338576617daa68c3d8c6c80a
+Tag: mail::smtp, mail::transport-agent, protocol::smtp, role::documentation,
+ role::program, works-with::mail
+Section: doc
+Priority: optional
+Filename: pool/main/p/postfix/postfix-doc_3.5.23-0+deb11u1_all.deb
+Size: 1220556
+SHA256: c06e348cdd5913255cb543a8db488419beebda6c2a8e6982bd4974c116c2691b
+
+Package: postfix-ldap
+Source: postfix
+Version: 3.5.23-0+deb11u1
+Installed-Size: 439
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: i386
+Replaces: postfix (<< 3.1.3-7~)
+Depends: libc6 (>= 2.4), libldap-2.4-2 (>= 2.4.7), postfix (= 3.5.23-0+deb11u1)
+Breaks: postfix (<< 3.1.3-7~)
+Description: LDAP map support for Postfix
+Homepage: http://www.postfix.org
+Description-md5: 6275ddb745f2250c57cc85063f27fcc4
+Tag: interface::daemon, network::server, protocol::ldap, protocol::smtp,
+ role::program, security::authentication, works-with::db,
+ works-with::mail
+Section: mail
+Priority: optional
+Filename: pool/main/p/postfix/postfix-ldap_3.5.23-0+deb11u1_i386.deb
+Size: 381072
+SHA256: 7158a6c56ae193a844cfdb0578b70fc6136212f350eaede324bc5bd90488ea7b
+
+Package: postfix-lmdb
+Source: postfix
+Version: 3.5.23-0+deb11u1
+Installed-Size: 420
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: i386
+Replaces: postfix (<< 3.1.3-7~)
+Depends: libc6 (>= 2.4), liblmdb0 (>= 0.9.14), postfix (= 3.5.23-0+deb11u1)
+Breaks: postfix (<< 3.1.3-7~)
+Description: LMDB map support for Postfix
+Homepage: http://www.postfix.org
+Description-md5: dadedd4c3edba2567b172520ab66c14b
+Section: mail
+Priority: optional
+Filename: pool/main/p/postfix/postfix-lmdb_3.5.23-0+deb11u1_i386.deb
+Size: 368816
+SHA256: a33a510bb63147fa3986a3399f9df0eb4cd968979281b4242a9e3e39411f0a47
+
+Package: postfix-mysql
+Source: postfix
+Version: 3.5.23-0+deb11u1
+Installed-Size: 416
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: i386
+Replaces: postfix (<< 3.1.3-7~)
+Depends: libc6 (>= 2.1.3), libmariadb3 (>= 3.0.0), postfix (= 3.5.23-0+deb11u1)
+Breaks: postfix (<< 3.1.3-7~)
+Description: MySQL map support for Postfix
+Homepage: http://www.postfix.org
+Description-md5: 28696ca88c5183ab5144174d86f2c973
+Tag: devel::lang:sql, interface::daemon, network::server, protocol::smtp,
+ role::program, security::authentication, use::storing, works-with::db,
+ works-with::mail
+Section: mail
+Priority: optional
+Filename: pool/main/p/postfix/postfix-mysql_3.5.23-0+deb11u1_i386.deb
+Size: 370328
+SHA256: 6c81fa2cdfa6a61e832d4de6a51bacb594d3c935edff9ccebb55bf7f3ecef240
+
+Package: postfix-pcre
+Source: postfix
+Version: 3.5.23-0+deb11u1
+Installed-Size: 418
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: i386
+Replaces: postfix (<< 3.1.3-7~)
+Depends: libc6 (>= 2.4), libpcre3, postfix (= 3.5.23-0+deb11u1)
+Breaks: postfix (<< 3.1.3-7~)
+Description: PCRE map support for Postfix
+Homepage: http://www.postfix.org
+Description-md5: 303555b1e86bf9cee974968dfd625a29
+Tag: interface::daemon, network::server, role::program,
+ security::authentication, works-with::mail
+Section: mail
+Priority: optional
+Filename: pool/main/p/postfix/postfix-pcre_3.5.23-0+deb11u1_i386.deb
+Size: 368036
+SHA256: 4ef391fcaa2e6e4f6c999298a4d5a42e6eec2bbb2d5ee13cd8ecdbf43246c9cf
+
+Package: postfix-pgsql
+Source: postfix
+Version: 3.5.23-0+deb11u1
+Installed-Size: 415
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: i386
+Replaces: postfix (<< 3.1.3-7~)
+Depends: libc6 (>= 2.4), libpq5, postfix (= 3.5.23-0+deb11u1)
+Breaks: postfix (<< 3.1.3-7~)
+Description: PostgreSQL map support for Postfix
+Homepage: http://www.postfix.org
+Description-md5: 546205f4e5c0c34da8348a5a0f8dfa40
+Tag: devel::lang:sql, interface::daemon, network::server, protocol::smtp,
+ role::program, security::authentication, use::storing, works-with::db,
+ works-with::mail
+Section: mail
+Priority: optional
+Filename: pool/main/p/postfix/postfix-pgsql_3.5.23-0+deb11u1_i386.deb
+Size: 368952
+SHA256: 532cc6f15acd2ca92a7f15d32b04b3e77ff9316e724ae1191cf654a6450caeb3
+
+Package: postfix-sqlite
+Source: postfix
+Version: 3.5.23-0+deb11u1
+Installed-Size: 408
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: i386
+Replaces: postfix (<< 3.1.3-7~)
+Depends: libc6 (>= 2.4), libsqlite3-0 (>= 3.5.9), postfix (= 3.5.23-0+deb11u1)
+Description: SQLite map support for Postfix
+Homepage: http://www.postfix.org
+Description-md5: 78969de91802d7f52e4f5b456e3732f9
+Section: mail
+Priority: optional
+Filename: pool/main/p/postfix/postfix-sqlite_3.5.23-0+deb11u1_i386.deb
+Size: 365620
+SHA256: 3ffbeb50cb2110437a45f17427524a247bfcb9a820ad2ea0d7575723269976fe
+
 Package: libnss-myhostname
 Source: systemd
 Version: 247.3-7+deb11u4
