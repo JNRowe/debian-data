@@ -40,13 +40,19 @@ Description-en: Game data files for Alien Arena
  Arena.
 
 Package: amd64-microcode
-Description-md5: 23fa6bfa66f5bae20d70af0ec3052425
-Description-en: Processor microcode firmware for AMD CPUs
- This package contains microcode patches for all AMD AMD64
+Description-md5: c5296e9fb6c0cbc6d0e238cd0cf80dc3
+Description-en: Platform firmware and microcode for AMD CPUs and SoCs
+ This package contains microcode patches for AMD AMD64
  processors.  AMD releases microcode patches to correct
  processor behavior as documented in the respective processor
- revision guides.  This package includes both AMD CPU microcode
- patches and AMD SEV firmware updates.
+ revision guides.
+ .
+ This package includes the required firmware to enable AMD
+ SEV (Secure Encrypted Virtualization) functionality.
+ .
+ This package also includes AMD TAs (Trusted Applications)
+ required by AMD platform drivers such as AMD PMF (Platform
+ Management Framework).
  .
  For Intel processors, please refer to the intel-microcode package.
 
@@ -8895,7 +8901,7 @@ Description-en: allows the selection of NVIDIA as GLX provider (Tesla 450 versio
  nvidia-tesla-450-driver package instead.
 
 Package: nvidia-tesla-450-driver
-Description-md5: 335dcd5f7dde4bb8784ee6f5cdf482c2
+Description-md5: e1e9890fd2bf1903ad42c24f8cf16f76
 Description-en: NVIDIA metapackage (Tesla 450 version)
  This metapackage depends on the NVIDIA binary driver and libraries
  that provide optimized hardware acceleration of
@@ -8913,7 +8919,7 @@ Description-en: NVIDIA metapackage (Tesla 450 version)
  See /usr/share/doc/nvidia-tesla-450-driver/README.txt.gz
  for a complete list of supported GPUs and PCI IDs.
  .
- Building the kernel module has been tested up to Linux 6.6.
+ Building the kernel module has been tested up to Linux 6.10.
 
 Package: nvidia-tesla-450-driver-bin
 Description-md5: 0d5ff3f349ab841d33ce00c1d30ec8e4
@@ -8941,55 +8947,7 @@ Description-en: NVIDIA EGL installable client driver (ICD)
  EGL via GLVND which supports NVIDIA GPUs.
 
 Package: nvidia-tesla-450-kernel-dkms
-Description-md5: 56318b66d821c95add0ea4703bc5a4a0
-Description-en: NVIDIA binary kernel module DKMS source (Tesla 450 version)
- This package builds the NVIDIA binary kernel modules needed by
- nvidia-tesla-450-driver, using DKMS.
- Provided that you have the kernel header packages installed, the kernel
- module will be built for your running kernel and automatically rebuilt for
- any new kernel headers that are installed.
- .
- The NVIDIA binary driver provides optimized hardware acceleration of
- OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
- for graphics cards using NVIDIA chip sets.
- .
- This version only supports GeForce, Quadro, NVS, Tesla, ... GPUs based on the
- Kepler, Maxwell, Volta, Turing, or newer architectures.
- Look at the legacy packages for older cards.
- .
- See /usr/share/doc/nvidia-tesla-450-kernel-dkms/README.txt.gz
- for a complete list of supported GPUs and PCI IDs.
- .
- This package contains the blobs for building kernel modules for the
- amd64 architecture.
- Building the kernel modules has been tested up to Linux 6.6.
-
-Package: nvidia-tesla-450-kernel-dkms
-Description-md5: 74c11dcfd22724ac18edf94d74516e77
-Description-en: NVIDIA binary kernel module DKMS source (Tesla 450 version)
- This package builds the NVIDIA binary kernel modules needed by
- nvidia-tesla-450-driver, using DKMS.
- Provided that you have the kernel header packages installed, the kernel
- module will be built for your running kernel and automatically rebuilt for
- any new kernel headers that are installed.
- .
- The NVIDIA binary driver provides optimized hardware acceleration of
- OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
- for graphics cards using NVIDIA chip sets.
- .
- This version only supports GeForce, Quadro, NVS, Tesla, ... GPUs based on the
- Kepler, Maxwell, Volta, Turing, or newer architectures.
- Look at the legacy packages for older cards.
- .
- See /usr/share/doc/nvidia-tesla-450-kernel-dkms/README.txt.gz
- for a complete list of supported GPUs and PCI IDs.
- .
- This package contains the blobs for building kernel modules for the
- ppc64el architecture.
- Building the kernel modules has been tested up to Linux 6.6.
-
-Package: nvidia-tesla-450-kernel-dkms
-Description-md5: ce322c1a8773d25a5f9327dd623a3d8c
+Description-md5: 2366bc267989d08f470884e2807975f7
 Description-en: NVIDIA binary kernel module DKMS source (Tesla 450 version)
  This package builds the NVIDIA binary kernel modules needed by
  nvidia-tesla-450-driver, using DKMS.
@@ -9010,62 +8968,58 @@ Description-en: NVIDIA binary kernel module DKMS source (Tesla 450 version)
  .
  This package contains the blobs for building kernel modules for the
  arm64 architecture.
- Building the kernel modules has been tested up to Linux 6.6.
+ Building the kernel modules has been tested up to Linux 6.10.
 
-Package: nvidia-tesla-450-kernel-source
-Description-md5: 04706974b3a30ae1bc4f84b2882f8ea9
-Description-en: NVIDIA binary kernel module source (Tesla 450 version)
- This package provides the source for the NVIDIA binary kernel modules
- needed by nvidia-tesla-450-driver in a form suitable
- for use by module-assistant.
+Package: nvidia-tesla-450-kernel-dkms
+Description-md5: 3d198c593e7d2c57c95ea8b49db459b1
+Description-en: NVIDIA binary kernel module DKMS source (Tesla 450 version)
+ This package builds the NVIDIA binary kernel modules needed by
+ nvidia-tesla-450-driver, using DKMS.
+ Provided that you have the kernel header packages installed, the kernel
+ module will be built for your running kernel and automatically rebuilt for
+ any new kernel headers that are installed.
  .
  The NVIDIA binary driver provides optimized hardware acceleration of
  OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
  for graphics cards using NVIDIA chip sets.
  .
- PLEASE read /usr/share/doc/nvidia-tesla-450-kernel-source/README.Debian.gz
- for building information. If you want the kernel module to be automatically
- installed via DKMS, install nvidia-tesla-450-kernel-dkms instead.
- .
  This version only supports GeForce, Quadro, NVS, Tesla, ... GPUs based on the
  Kepler, Maxwell, Volta, Turing, or newer architectures.
  Look at the legacy packages for older cards.
  .
- See /usr/share/doc/nvidia-tesla-450-kernel-source/README.txt.gz
- for a complete list of supported GPUs and PCI IDs.
- .
- This package contains the blobs for building kernel modules for the
- amd64 architecture.
- Building the kernel modules has been tested up to Linux 6.6.
-
-Package: nvidia-tesla-450-kernel-source
-Description-md5: 115201186b9d7ade03815df6dc93f32e
-Description-en: NVIDIA binary kernel module source (Tesla 450 version)
- This package provides the source for the NVIDIA binary kernel modules
- needed by nvidia-tesla-450-driver in a form suitable
- for use by module-assistant.
- .
- The NVIDIA binary driver provides optimized hardware acceleration of
- OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
- for graphics cards using NVIDIA chip sets.
- .
- PLEASE read /usr/share/doc/nvidia-tesla-450-kernel-source/README.Debian.gz
- for building information. If you want the kernel module to be automatically
- installed via DKMS, install nvidia-tesla-450-kernel-dkms instead.
- .
- This version only supports GeForce, Quadro, NVS, Tesla, ... GPUs based on the
- Kepler, Maxwell, Volta, Turing, or newer architectures.
- Look at the legacy packages for older cards.
- .
- See /usr/share/doc/nvidia-tesla-450-kernel-source/README.txt.gz
+ See /usr/share/doc/nvidia-tesla-450-kernel-dkms/README.txt.gz
  for a complete list of supported GPUs and PCI IDs.
  .
  This package contains the blobs for building kernel modules for the
  ppc64el architecture.
- Building the kernel modules has been tested up to Linux 6.6.
+ Building the kernel modules has been tested up to Linux 6.10.
+
+Package: nvidia-tesla-450-kernel-dkms
+Description-md5: 684b6969b5029db878782e9cf88355d4
+Description-en: NVIDIA binary kernel module DKMS source (Tesla 450 version)
+ This package builds the NVIDIA binary kernel modules needed by
+ nvidia-tesla-450-driver, using DKMS.
+ Provided that you have the kernel header packages installed, the kernel
+ module will be built for your running kernel and automatically rebuilt for
+ any new kernel headers that are installed.
+ .
+ The NVIDIA binary driver provides optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
+ for graphics cards using NVIDIA chip sets.
+ .
+ This version only supports GeForce, Quadro, NVS, Tesla, ... GPUs based on the
+ Kepler, Maxwell, Volta, Turing, or newer architectures.
+ Look at the legacy packages for older cards.
+ .
+ See /usr/share/doc/nvidia-tesla-450-kernel-dkms/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
+ .
+ This package contains the blobs for building kernel modules for the
+ amd64 architecture.
+ Building the kernel modules has been tested up to Linux 6.10.
 
 Package: nvidia-tesla-450-kernel-source
-Description-md5: 1f2460a3f5b226d5a9fda59bbb5a8080
+Description-md5: 3650366f35fedb08f0190552bc8546de
 Description-en: NVIDIA binary kernel module source (Tesla 450 version)
  This package provides the source for the NVIDIA binary kernel modules
  needed by nvidia-tesla-450-driver in a form suitable
@@ -9088,7 +9042,59 @@ Description-en: NVIDIA binary kernel module source (Tesla 450 version)
  .
  This package contains the blobs for building kernel modules for the
  arm64 architecture.
- Building the kernel modules has been tested up to Linux 6.6.
+ Building the kernel modules has been tested up to Linux 6.10.
+
+Package: nvidia-tesla-450-kernel-source
+Description-md5: 4833b93060689885b66e99c148193f4d
+Description-en: NVIDIA binary kernel module source (Tesla 450 version)
+ This package provides the source for the NVIDIA binary kernel modules
+ needed by nvidia-tesla-450-driver in a form suitable
+ for use by module-assistant.
+ .
+ The NVIDIA binary driver provides optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
+ for graphics cards using NVIDIA chip sets.
+ .
+ PLEASE read /usr/share/doc/nvidia-tesla-450-kernel-source/README.Debian.gz
+ for building information. If you want the kernel module to be automatically
+ installed via DKMS, install nvidia-tesla-450-kernel-dkms instead.
+ .
+ This version only supports GeForce, Quadro, NVS, Tesla, ... GPUs based on the
+ Kepler, Maxwell, Volta, Turing, or newer architectures.
+ Look at the legacy packages for older cards.
+ .
+ See /usr/share/doc/nvidia-tesla-450-kernel-source/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
+ .
+ This package contains the blobs for building kernel modules for the
+ amd64 architecture.
+ Building the kernel modules has been tested up to Linux 6.10.
+
+Package: nvidia-tesla-450-kernel-source
+Description-md5: d0b291708d69d2f8d7200d8bdb2ef89e
+Description-en: NVIDIA binary kernel module source (Tesla 450 version)
+ This package provides the source for the NVIDIA binary kernel modules
+ needed by nvidia-tesla-450-driver in a form suitable
+ for use by module-assistant.
+ .
+ The NVIDIA binary driver provides optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
+ for graphics cards using NVIDIA chip sets.
+ .
+ PLEASE read /usr/share/doc/nvidia-tesla-450-kernel-source/README.Debian.gz
+ for building information. If you want the kernel module to be automatically
+ installed via DKMS, install nvidia-tesla-450-kernel-dkms instead.
+ .
+ This version only supports GeForce, Quadro, NVS, Tesla, ... GPUs based on the
+ Kepler, Maxwell, Volta, Turing, or newer architectures.
+ Look at the legacy packages for older cards.
+ .
+ See /usr/share/doc/nvidia-tesla-450-kernel-source/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
+ .
+ This package contains the blobs for building kernel modules for the
+ ppc64el architecture.
+ Building the kernel modules has been tested up to Linux 6.10.
 
 Package: nvidia-tesla-450-kernel-support
 Description-md5: 2853241145523d47aa1df5702b2e00fa
@@ -9438,7 +9444,7 @@ Description-en: allows the selection of NVIDIA as GLX provider (Tesla 460 versio
  nvidia-tesla-460-driver package instead.
 
 Package: nvidia-tesla-460-driver
-Description-md5: 5a47421cb510da5b6305939bfcd83290
+Description-md5: 3e8ab9e930ac9867f9a517eb6b04bfbb
 Description-en: NVIDIA metapackage (Tesla 460 version)
  This metapackage depends on the NVIDIA binary driver and libraries
  that provide optimized hardware acceleration of
@@ -9456,7 +9462,7 @@ Description-en: NVIDIA metapackage (Tesla 460 version)
  See /usr/share/doc/nvidia-tesla-460-driver/README.txt.gz
  for a complete list of supported GPUs and PCI IDs.
  .
- Building the kernel module has been tested up to Linux 5.18.
+ Building the kernel module has been tested up to Linux 6.10.
 
 Package: nvidia-tesla-460-driver-bin
 Description-md5: d1f8ff34784c7b360d439d381a8e5b96
@@ -9484,31 +9490,7 @@ Description-en: NVIDIA EGL installable client driver (ICD)
  EGL via GLVND which supports NVIDIA GPUs.
 
 Package: nvidia-tesla-460-kernel-dkms
-Description-md5: 300aea21bdd89e63dce5c9fc6dcd395b
-Description-en: NVIDIA binary kernel module DKMS source (Tesla 460 version)
- This package builds the NVIDIA binary kernel modules needed by
- nvidia-tesla-460-driver, using DKMS.
- Provided that you have the kernel header packages installed, the kernel
- module will be built for your running kernel and automatically rebuilt for
- any new kernel headers that are installed.
- .
- The NVIDIA binary driver provides optimized hardware acceleration of
- OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
- for graphics cards using NVIDIA chip sets.
- .
- This version only supports GeForce, Quadro, NVS, Tesla, ... GPUs based on the
- Kepler, Maxwell, Volta, Turing, or newer architectures.
- Look at the legacy packages for older cards.
- .
- See /usr/share/doc/nvidia-tesla-460-kernel-dkms/README.txt.gz
- for a complete list of supported GPUs and PCI IDs.
- .
- This package contains the blobs for building kernel modules for the
- amd64 architecture.
- Building the kernel modules has been tested up to Linux 5.18.
-
-Package: nvidia-tesla-460-kernel-dkms
-Description-md5: 79e4a0ba09c0e25a5ca026df4003bb1b
+Description-md5: 310266b0f7c34e4562a4785b1428e0f4
 Description-en: NVIDIA binary kernel module DKMS source (Tesla 460 version)
  This package builds the NVIDIA binary kernel modules needed by
  nvidia-tesla-460-driver, using DKMS.
@@ -9529,10 +9511,34 @@ Description-en: NVIDIA binary kernel module DKMS source (Tesla 460 version)
  .
  This package contains the blobs for building kernel modules for the
  ppc64el architecture.
- Building the kernel modules has been tested up to Linux 5.18.
+ Building the kernel modules has been tested up to Linux 6.10.
 
 Package: nvidia-tesla-460-kernel-dkms
-Description-md5: cf3d4791975340bda60b2797b09faa23
+Description-md5: 5c8922a570d2107ce2258df509013da4
+Description-en: NVIDIA binary kernel module DKMS source (Tesla 460 version)
+ This package builds the NVIDIA binary kernel modules needed by
+ nvidia-tesla-460-driver, using DKMS.
+ Provided that you have the kernel header packages installed, the kernel
+ module will be built for your running kernel and automatically rebuilt for
+ any new kernel headers that are installed.
+ .
+ The NVIDIA binary driver provides optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
+ for graphics cards using NVIDIA chip sets.
+ .
+ This version only supports GeForce, Quadro, NVS, Tesla, ... GPUs based on the
+ Kepler, Maxwell, Volta, Turing, or newer architectures.
+ Look at the legacy packages for older cards.
+ .
+ See /usr/share/doc/nvidia-tesla-460-kernel-dkms/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
+ .
+ This package contains the blobs for building kernel modules for the
+ amd64 architecture.
+ Building the kernel modules has been tested up to Linux 6.10.
+
+Package: nvidia-tesla-460-kernel-dkms
+Description-md5: fbddbc0b524cf91cd9916a9f09945cc8
 Description-en: NVIDIA binary kernel module DKMS source (Tesla 460 version)
  This package builds the NVIDIA binary kernel modules needed by
  nvidia-tesla-460-driver, using DKMS.
@@ -9553,40 +9559,14 @@ Description-en: NVIDIA binary kernel module DKMS source (Tesla 460 version)
  .
  This package contains the blobs for building kernel modules for the
  arm64 architecture.
- Building the kernel modules has been tested up to Linux 5.18.
+ Building the kernel modules has been tested up to Linux 6.10.
 
 Package: nvidia-tesla-460-kernel-source
-Description-md5: 24c72b3ec8e0e657e4bedb6d372f80b3
+Description-md5: 046f882d8a15328e3df89e746334e3ab
 Description-en: NVIDIA binary kernel module source (Tesla 460 version)
  This package provides the source for the NVIDIA binary kernel modules
  needed by nvidia-tesla-460-driver in a form suitable
- for use by module-assistant or kernel-package.
- .
- The NVIDIA binary driver provides optimized hardware acceleration of
- OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
- for graphics cards using NVIDIA chip sets.
- .
- PLEASE read /usr/share/doc/nvidia-tesla-460-kernel-source/README.Debian.gz
- for building information. If you want the kernel module to be automatically
- installed via DKMS, install nvidia-tesla-460-kernel-dkms instead.
- .
- This version only supports GeForce, Quadro, NVS, Tesla, ... GPUs based on the
- Kepler, Maxwell, Volta, Turing, or newer architectures.
- Look at the legacy packages for older cards.
- .
- See /usr/share/doc/nvidia-tesla-460-kernel-source/README.txt.gz
- for a complete list of supported GPUs and PCI IDs.
- .
- This package contains the blobs for building kernel modules for the
- arm64 architecture.
- Building the kernel modules has been tested up to Linux 5.18.
-
-Package: nvidia-tesla-460-kernel-source
-Description-md5: 75b303e4c9b866e1a9cb00b201ebab93
-Description-en: NVIDIA binary kernel module source (Tesla 460 version)
- This package provides the source for the NVIDIA binary kernel modules
- needed by nvidia-tesla-460-driver in a form suitable
- for use by module-assistant or kernel-package.
+ for use by module-assistant.
  .
  The NVIDIA binary driver provides optimized hardware acceleration of
  OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
@@ -9605,14 +9585,14 @@ Description-en: NVIDIA binary kernel module source (Tesla 460 version)
  .
  This package contains the blobs for building kernel modules for the
  amd64 architecture.
- Building the kernel modules has been tested up to Linux 5.18.
+ Building the kernel modules has been tested up to Linux 6.10.
 
 Package: nvidia-tesla-460-kernel-source
-Description-md5: acd5444110417b0f792c945308e161a6
+Description-md5: 623e2717786fca33019a2a92414dd712
 Description-en: NVIDIA binary kernel module source (Tesla 460 version)
  This package provides the source for the NVIDIA binary kernel modules
  needed by nvidia-tesla-460-driver in a form suitable
- for use by module-assistant or kernel-package.
+ for use by module-assistant.
  .
  The NVIDIA binary driver provides optimized hardware acceleration of
  OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
@@ -9631,7 +9611,33 @@ Description-en: NVIDIA binary kernel module source (Tesla 460 version)
  .
  This package contains the blobs for building kernel modules for the
  ppc64el architecture.
- Building the kernel modules has been tested up to Linux 5.18.
+ Building the kernel modules has been tested up to Linux 6.10.
+
+Package: nvidia-tesla-460-kernel-source
+Description-md5: bdc8e1393546abb085274a094607f6cf
+Description-en: NVIDIA binary kernel module source (Tesla 460 version)
+ This package provides the source for the NVIDIA binary kernel modules
+ needed by nvidia-tesla-460-driver in a form suitable
+ for use by module-assistant.
+ .
+ The NVIDIA binary driver provides optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
+ for graphics cards using NVIDIA chip sets.
+ .
+ PLEASE read /usr/share/doc/nvidia-tesla-460-kernel-source/README.Debian.gz
+ for building information. If you want the kernel module to be automatically
+ installed via DKMS, install nvidia-tesla-460-kernel-dkms instead.
+ .
+ This version only supports GeForce, Quadro, NVS, Tesla, ... GPUs based on the
+ Kepler, Maxwell, Volta, Turing, or newer architectures.
+ Look at the legacy packages for older cards.
+ .
+ See /usr/share/doc/nvidia-tesla-460-kernel-source/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
+ .
+ This package contains the blobs for building kernel modules for the
+ arm64 architecture.
+ Building the kernel modules has been tested up to Linux 6.10.
 
 Package: nvidia-tesla-460-kernel-support
 Description-md5: 2f3a8b7a7e2104c9913f3abff44cb80b
@@ -9643,14 +9649,14 @@ Description-en: NVIDIA binary kernel module support files (Tesla 460 version)
  This package provides supporting configuration for the kernel module.
 
 Package: nvidia-tesla-460-opencl-icd
-Description-md5: f783a876e19685cbe081a768edefc88f
+Description-md5: 5a6f8c062326e2338f495b5ce95df738
 Description-en: NVIDIA OpenCL installable client driver (ICD) (Tesla 460 version)
  OpenCL (Open Computing Language) is a multivendor open standard for
  general-purpose parallel programming of heterogeneous systems that include
  CPUs, GPUs and other processors.
  .
  This package provides the NVIDIA installable client driver (ICD) for OpenCL
- which supports NVIDIA GPUs. This ICD supports OpenCL 1.x only.
+ which supports NVIDIA GPUs.
 
 Package: nvidia-tesla-460-smi
 Description-md5: 47c41253a057ac0aeeb67410a710329f
