@@ -10378,6 +10378,44 @@ Filename: pool/updates/main/f/frr/frr-snmp_7.5.1-1.1+deb11u3_i386.deb
 Size: 43816
 SHA256: db9c76adda59a4e5448e310472604e595153641af4718009589d972690864a4b
 
+Package: galera-4
+Version: 26.4.20-0+deb11u1
+Installed-Size: 2632
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Replaces: galera-3 (<< 26.4)
+Provides: galera4, percona-xtradb-cluster-galera-26, wsrep
+Depends: libc6 (>= 2.28), libgcc-s1 (>= 4.2), libssl1.1 (>= 1.1.1), libstdc++6 (>= 9)
+Conflicts: garbd-2, garbd-3, garbd2, garbd3, percona-galera-3, percona-galera-4, percona-xtradb-cluster-galera, percona-xtradb-cluster-galera-2.x, percona-xtradb-cluster-galera-3.x, percona-xtradb-cluster-galera-4.x, percona-xtradb-cluster-garbd-2.x, percona-xtradb-cluster-garbd-3.x
+Breaks: galera-3 (<< 26.4)
+Description: Replication framework for transactional applications
+Homepage: https://www.galeracluster.com/
+Description-md5: fe238c5e6ce783e128515e8bc966eacf
+Section: libs
+Priority: optional
+Filename: pool/updates/main/g/galera-4/galera-4_26.4.20-0+deb11u1_i386.deb
+Size: 907084
+SHA256: df7c6862879d0603d77cd3dd4cbd411b297cb2a88649d901a47adeef7437e93b
+
+Package: galera-arbitrator-4
+Source: galera-4
+Version: 26.4.20-0+deb11u1
+Installed-Size: 2105
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Replaces: percona-xtradb-cluster-galera-2.x
+Depends: lsb-base (>= 3.0-6), libboost-program-options1.74.0 (>= 1.74.0), libc6 (>= 2.28), libgcc-s1 (>= 4.2), libssl1.1 (>= 1.1.1), libstdc++6 (>= 9)
+Conflicts: galera-arbitrator-3, garbd-2, garbd2, percona-galera-arbitrator-3, percona-galera-arbitrator-4, percona-xtradb-cluster-garbd-2.x
+Breaks: percona-xtradb-cluster-galera-2.x
+Description: Galera arbitrator daemon
+Homepage: https://www.galeracluster.com/
+Description-md5: da518f05c411048167552722fda305be
+Section: database
+Priority: optional
+Filename: pool/updates/main/g/galera-4/galera-arbitrator-4_26.4.20-0+deb11u1_i386.deb
+Size: 692504
+SHA256: 160721d1d3fc700620a0a2c2779d503a94b41eb73d2418a0eb0dbb6e7b505f1d
+
 Package: gdal-bin
 Source: gdal
 Version: 3.2.2+dfsg-2+deb11u2
@@ -24383,6 +24421,435 @@ Priority: optional
 Filename: pool/updates/main/m/maradns/maradns-zoneserver_2.0.13-1.4+deb11u1_i386.deb
 Size: 154940
 SHA256: 3010f4997b80e1765a3dc727b22a1658577fd5c8dd03cb9464d45bf77aba709a
+
+Package: libmariadb-dev
+Source: mariadb-10.5
+Version: 1:10.5.26-0+deb11u1
+Installed-Size: 673
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Replaces: libmariadbclient-dev (<< 1:10.3), libmysqlclient-dev, libmysqld-dev (<< 1:10.5.26-0+deb11u1)
+Depends: libmariadb3 (= 1:10.5.26-0+deb11u1), libssl-dev, zlib1g-dev, libc6 (>= 2.4)
+Conflicts: libmariadbclient16-dev, libmysqlclient-dev
+Breaks: libmariadbclient-dev (<< 1:10.3), libmysqlclient-dev, libmysqld-dev (<< 1:10.5.26-0+deb11u1)
+Description: MariaDB database development files
+Homepage: https://mariadb.org/
+Description-md5: 5147f292c112a0def76ef58780903826
+Section: libdevel
+Priority: optional
+Filename: pool/updates/main/m/mariadb-10.5/libmariadb-dev_10.5.26-0+deb11u1_i386.deb
+Size: 185396
+SHA256: 439c8e13f777ccba50097b97acc65927bb6b457c151bd6fc7401a5b9b54ac243
+
+Package: libmariadb-dev-compat
+Source: mariadb-10.5
+Version: 1:10.5.26-0+deb11u1
+Installed-Size: 84
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Replaces: libmariadb-client-lgpl-dev-compat, libmariadbclient-dev (<< 1:10.3), libmariadbclient-dev-compat, libmysqlclient-dev
+Provides: libmariadb-client-lgpl-dev-compat, libmariadbclient-dev-compat
+Depends: libmariadb-dev (= 1:10.5.26-0+deb11u1)
+Conflicts: libmariadb-client-lgpl-dev-compat, libmariadbclient-dev-compat, libmysqlclient-dev
+Breaks: libmariadb-client-lgpl-dev-compat, libmariadbclient-dev (<< 1:10.3), libmariadbclient-dev-compat, libmysqlclient-dev
+Description: MariaDB Connector/C, compatibility symlinks
+Homepage: https://mariadb.org/
+Description-md5: 4e4bcacf382bb1ad738f392fb886a606
+Multi-Arch: same
+Section: libdevel
+Priority: optional
+Filename: pool/updates/main/m/mariadb-10.5/libmariadb-dev-compat_10.5.26-0+deb11u1_i386.deb
+Size: 36216
+SHA256: d767d660020d8e403dcb0f8b0f2ae35e2e5f4ea7a938d6346577f3e9d1c503da
+
+Package: libmariadb3
+Source: mariadb-10.5
+Version: 1:10.5.26-0+deb11u1
+Installed-Size: 483
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Replaces: libmariadbclient18
+Depends: mariadb-common, libc6 (>= 2.28), libssl1.1 (>= 1.1.1), zlib1g (>= 1:1.1.4)
+Conflicts: mariadb-galera-server-10.0, mariadb-galera-server-5.5, mariadb-server-10.0, mariadb-server-5.1, mariadb-server-5.2, mariadb-server-5.3, mariadb-server-5.5
+Breaks: libmariadbclient18
+Description: MariaDB database client library
+Homepage: https://mariadb.org/
+Description-md5: c48685b906f3842ee48fd71db5681868
+Multi-Arch: same
+Section: libs
+Priority: optional
+Filename: pool/updates/main/m/mariadb-10.5/libmariadb3_10.5.26-0+deb11u1_i386.deb
+Size: 175272
+SHA256: 61cb74ba3e6fb0de2e636e1823aaaceb7708b9b4083cd317195f24db25d7bcb3
+
+Package: libmariadbd-dev
+Source: mariadb-10.5
+Version: 1:10.5.26-0+deb11u1
+Installed-Size: 35896
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Replaces: libmariadb-dev (<< 1:10.4), libmysqld-dev
+Provides: libmysqld-dev
+Depends: libmariadb-dev (= 1:10.5.26-0+deb11u1), libmariadbd19 (= 1:10.5.26-0+deb11u1)
+Breaks: libmariadb-dev (<< 1:10.4), libmysqld-dev
+Description: MariaDB embedded database, development files
+Homepage: https://mariadb.org/
+Description-md5: f1579889611a2ce406c3c321e37d32d9
+Section: libdevel
+Priority: optional
+Filename: pool/updates/main/m/mariadb-10.5/libmariadbd-dev_10.5.26-0+deb11u1_i386.deb
+Size: 6482332
+SHA256: d7f57cae89972ce4b055e9e3207a148025bf6ca004e80a7742036844a2c3e4fc
+
+Package: libmariadbd19
+Source: mariadb-10.5
+Version: 1:10.5.26-0+deb11u1
+Installed-Size: 19180
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Depends: libaio1 (>= 0.3.93), libc6 (>= 2.30), libcrypt1 (>= 1:4.1.0), liblz4-1 (>= 0.0~r130), libpcre2-8-0 (>= 10.22), libsnappy1v5 (>= 1.1.8), libssl1.1 (>= 1.1.1), libstdc++6 (>= 9), zlib1g (>= 1:1.2.0)
+Description: MariaDB embedded database, shared library
+Homepage: https://mariadb.org/
+Description-md5: a85241d1aa0dccaa3ede8bda094b9117
+Multi-Arch: same
+Section: libs
+Priority: optional
+Filename: pool/updates/main/m/mariadb-10.5/libmariadbd19_10.5.26-0+deb11u1_i386.deb
+Size: 5122700
+SHA256: c24b2a5f1e2928f279cdf60d47e142e43841ea8d5b33143239beeab287465456
+
+Package: mariadb-backup
+Source: mariadb-10.5
+Version: 1:10.5.26-0+deb11u1
+Installed-Size: 24730
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Replaces: mariadb-backup-10.1, mariadb-backup-10.2, mariadb-backup-10.3, mariadb-client-10.1
+Depends: mariadb-client-core-10.5 (= 1:10.5.26-0+deb11u1), libaio1 (>= 0.3.93), libc6 (>= 2.30), libcrypt1 (>= 1:4.1.0), liblz4-1 (>= 0.0~r130), libpcre2-8-0 (>= 10.22), libsnappy1v5 (>= 1.1.8), libssl1.1 (>= 1.1.1), libstdc++6 (>= 9), zlib1g (>= 1:1.2.0)
+Breaks: mariadb-backup-10.1, mariadb-backup-10.2, mariadb-backup-10.3, mariadb-client-10.1
+Description: Backup tool for MariaDB server
+Homepage: https://mariadb.org/
+Description-md5: 5e80c3dd009aded10c0cfe25bd682155
+Section: database
+Priority: optional
+Filename: pool/updates/main/m/mariadb-10.5/mariadb-backup_10.5.26-0+deb11u1_i386.deb
+Size: 6033572
+SHA256: 4a457009d083f8c7ca248782d2cc3401cb5a60b59c81388d77de082cc135c3b9
+
+Package: mariadb-client
+Source: mariadb-10.5
+Version: 1:10.5.26-0+deb11u1
+Installed-Size: 74
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: all
+Depends: mariadb-client-10.5 (>= 1:10.5.26-0+deb11u1)
+Description: MariaDB database client (metapackage depending on the latest version)
+Homepage: https://mariadb.org/
+Description-md5: 6501fd3178a212adaa785da108f5aaad
+Section: database
+Priority: optional
+Filename: pool/updates/main/m/mariadb-10.5/mariadb-client_10.5.26-0+deb11u1_all.deb
+Size: 37172
+SHA256: 1eb71c3bdcf3631f604ef37bcda5fcfeb9b264a871bba758096d5eba985686be
+
+Package: mariadb-client-10.5
+Source: mariadb-10.5
+Version: 1:10.5.26-0+deb11u1
+Installed-Size: 25710
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Replaces: mariadb-client-10.0, mariadb-client-10.1, mariadb-client-10.2, mariadb-client-10.3, mariadb-client-10.4, mariadb-client-5.5, mariadb-client-core-10.0, mariadb-client-core-10.1, mariadb-client-core-10.2, mariadb-client-core-10.3, mariadb-client-core-10.4, mariadb-server-10.0, mysql-client-5.5, mysql-client-5.6, mysql-client-5.7, mysql-client-8.0, mytop, virtual-mysql-client
+Provides: virtual-mysql-client
+Depends: debianutils (>= 1.6), libconfig-inifiles-perl, mariadb-client-core-10.5 (>= 1:10.5.26-0+deb11u1), perl:any, libc6 (>= 2.28), libssl1.1 (>= 1.1.1), libstdc++6 (>= 4.1.1), zlib1g (>= 1:1.1.4)
+Conflicts: mysql-client-core-5.5, mysql-client-core-5.6, mysql-client-core-5.7, mysql-client-core-8.0, mytop, virtual-mysql-client
+Breaks: mariadb-client-10.0, mariadb-client-10.1, mariadb-client-10.2, mariadb-client-10.3, mariadb-client-10.4, mariadb-client-5.5, mariadb-client-core-10.0, mariadb-client-core-10.1, mariadb-client-core-10.2, mariadb-client-core-10.3, mariadb-client-core-10.4, mariadb-server-10.0, mysql-client-5.5, mysql-client-5.6, mysql-client-5.7, mysql-client-8.0
+Description: MariaDB database client binaries
+Homepage: https://mariadb.org/
+Description-md5: 82697f9416e5e5d0a4e7331c2c735591
+Recommends: libdbd-mariadb-perl | libdbd-mysql-perl, libdbi-perl, libterm-readkey-perl
+Section: database
+Priority: optional
+Filename: pool/updates/main/m/mariadb-10.5/mariadb-client-10.5_10.5.26-0+deb11u1_i386.deb
+Size: 1260776
+SHA256: a82da8ecb270d9ff529a514a9ab7fca33495067c8478150c0375cfe74f4d07cd
+
+Package: mariadb-client-core-10.5
+Source: mariadb-10.5
+Version: 1:10.5.26-0+deb11u1
+Installed-Size: 7488
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Replaces: mariadb-client-10.0, mariadb-client-core-10.0, mariadb-client-core-10.1, mariadb-client-core-10.2, mariadb-client-core-10.3, mariadb-client-core-10.4, mariadb-client-core-5.5, mysql-client-core-5.5, mysql-client-core-5.6, mysql-client-core-5.7, mysql-client-core-8.0, virtual-mysql-client-core
+Provides: virtual-mysql-client-core
+Depends: libmariadb3 (>= 10.5.4), mariadb-common (>= 1:10.5.26-0+deb11u1), libc6 (>= 2.28), libedit2 (>= 2.11-20080614-0), libncurses6 (>= 6), libssl1.1 (>= 1.1.1), libstdc++6 (>= 4.1.1), libtinfo6 (>= 6), zlib1g (>= 1:1.1.4)
+Conflicts: mysql-client-5.5, mysql-client-5.6, mysql-client-5.7, mysql-client-8.0, virtual-mysql-client-core
+Breaks: mariadb-client-10.0, mariadb-client-core-10.0, mariadb-client-core-10.1, mariadb-client-core-10.2, mariadb-client-core-10.3, mariadb-client-core-10.4, mariadb-client-core-5.5, mysql-client-core-5.5, mysql-client-core-5.6, mysql-client-core-5.7, mysql-client-core-8.0
+Description: MariaDB database core client binaries
+Homepage: https://mariadb.org/
+Description-md5: 2862a38a5ead2e1df7366bf661e03278
+Section: database
+Priority: optional
+Filename: pool/updates/main/m/mariadb-10.5/mariadb-client-core-10.5_10.5.26-0+deb11u1_i386.deb
+Size: 766212
+SHA256: 962d1e8d4235d54c33a4c3167211ee90b6f6056fdea51ca57b4a6802c8c341ea
+
+Package: mariadb-common
+Source: mariadb-10.5
+Version: 1:10.5.26-0+deb11u1
+Installed-Size: 82
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: all
+Depends: mysql-common (>= 5.6.25)
+Description: MariaDB common configuration files
+Homepage: https://mariadb.org/
+Description-md5: b0c32a0541f8699ec53307dabf7f987b
+Multi-Arch: foreign
+Section: database
+Priority: optional
+Filename: pool/updates/main/m/mariadb-10.5/mariadb-common_10.5.26-0+deb11u1_all.deb
+Size: 37436
+SHA256: 160b26b11d47400ed99e5745096b5ed2157315bcdc438e3bb542839b7d3242d3
+
+Package: mariadb-plugin-connect
+Source: mariadb-10.5
+Version: 1:10.5.26-0+deb11u1
+Installed-Size: 1634
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Replaces: mariadb-connect-engine-10.0, mariadb-connect-engine-10.1, mariadb-server-10.0, mariadb-server-10.1
+Depends: libxml2 (>= 2.7.4), mariadb-server-10.5, unixodbc, libc6 (>= 2.29), libodbc1 (>= 2.3.1), libstdc++6 (>= 4.1.1), zlib1g (>= 1:1.2.3.4)
+Conflicts: mariadb-connect-engine-10.0, mariadb-connect-engine-10.1
+Breaks: mariadb-connect-engine-10.0, mariadb-connect-engine-10.1, mariadb-server-10.0, mariadb-server-10.1
+Description: Connect storage engine for MariaDB
+Homepage: https://mariadb.org/
+Description-md5: a80bd9647c2961ca648b4365a4644855
+Section: database
+Priority: optional
+Filename: pool/updates/main/m/mariadb-10.5/mariadb-plugin-connect_10.5.26-0+deb11u1_i386.deb
+Size: 555548
+SHA256: accdee2f61b01431fbdc74bc7c127e6b5af64a1d373c5492ccd166e2322ca6fa
+
+Package: mariadb-plugin-cracklib-password-check
+Source: mariadb-10.5
+Version: 1:10.5.26-0+deb11u1
+Installed-Size: 94
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Depends: libcrack2 (>= 2.9.0), mariadb-server-10.5, libc6 (>= 2.4)
+Description: CrackLib Password Validation Plugin for MariaDB
+Homepage: https://mariadb.org/
+Description-md5: e7c0c56f3b8c4b41bfb5462cd78a61a0
+Section: database
+Priority: optional
+Filename: pool/updates/main/m/mariadb-10.5/mariadb-plugin-cracklib-password-check_10.5.26-0+deb11u1_i386.deb
+Size: 37976
+SHA256: 85bc2dfc7c6ef74dc09e65017479b6cf1c541395bfceab173623d8451c6da0e5
+
+Package: mariadb-plugin-gssapi-client
+Source: mariadb-10.5
+Version: 1:10.5.26-0+deb11u1
+Installed-Size: 90
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Replaces: mariadb-gssapi-client-10.1, mariadb-gssapi-client-10.2
+Depends: libgssapi-krb5-2 (>= 1.17), mariadb-client-10.5, libc6 (>= 2.4)
+Breaks: mariadb-gssapi-client-10.1, mariadb-gssapi-client-10.2
+Description: GSSAPI authentication plugin for MariaDB client
+Homepage: https://mariadb.org/
+Description-md5: ece7660a1e2293e316a2fa35c35f8b25
+Multi-Arch: same
+Section: database
+Priority: optional
+Filename: pool/updates/main/m/mariadb-10.5/mariadb-plugin-gssapi-client_10.5.26-0+deb11u1_i386.deb
+Size: 38796
+SHA256: ebf70d5f5e9a1af1e28fbf07e40194b296a9ef6faf4a9b04bf8602b6f0432df0
+
+Package: mariadb-plugin-gssapi-server
+Source: mariadb-10.5
+Version: 1:10.5.26-0+deb11u1
+Installed-Size: 94
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Replaces: mariadb-gssapi-server-10.1, mariadb-gssapi-server-10.2
+Depends: libgssapi-krb5-2 (>= 1.17), mariadb-server-10.5, libc6 (>= 2.4), libkrb5-3 (>= 1.13~alpha1+dfsg)
+Breaks: mariadb-gssapi-server-10.1, mariadb-gssapi-server-10.2
+Description: GSSAPI authentication plugin for MariaDB server
+Homepage: https://mariadb.org/
+Description-md5: 15f0c8ec89caa84121f658521f1d6501
+Section: database
+Priority: optional
+Filename: pool/updates/main/m/mariadb-10.5/mariadb-plugin-gssapi-server_10.5.26-0+deb11u1_i386.deb
+Size: 40180
+SHA256: dcedd53029fc06d06a418a45ff3b2ad091968d913c09819fa152aa354c6f6272
+
+Package: mariadb-plugin-mroonga
+Source: mariadb-10.5
+Version: 1:10.5.26-0+deb11u1
+Installed-Size: 5038
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Replaces: mariadb-server-10.0, mariadb-server-10.1
+Depends: mariadb-server-10.5, libc6 (>= 2.29), libstdc++6 (>= 4.9), zlib1g (>= 1:1.2.0)
+Breaks: mariadb-server-10.0, mariadb-server-10.1
+Description: Mroonga storage engine for MariaDB
+Homepage: https://mariadb.org/
+Description-md5: 38f273fa8679ace3c47de32b8f1ad726
+Section: database
+Priority: optional
+Filename: pool/updates/main/m/mariadb-10.5/mariadb-plugin-mroonga_10.5.26-0+deb11u1_i386.deb
+Size: 1116740
+SHA256: 63dbef9013efcd3f355410e4fee6de2f0f3acd186db7048d996c2bfd23640d68
+
+Package: mariadb-plugin-oqgraph
+Source: mariadb-10.5
+Version: 1:10.5.26-0+deb11u1
+Installed-Size: 274
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Replaces: mariadb-oqgraph-engine-10.0, mariadb-oqgraph-engine-10.1, mariadb-server-10.0, mariadb-server-10.1
+Depends: libjudydebian1, mariadb-server-10.5, libc6 (>= 2.4), libstdc++6 (>= 5.2)
+Conflicts: mariadb-oqgraph-engine-10.0, mariadb-oqgraph-engine-10.1
+Breaks: mariadb-oqgraph-engine-10.0, mariadb-oqgraph-engine-10.1, mariadb-server-10.0, mariadb-server-10.1
+Description: OQGraph storage engine for MariaDB
+Homepage: https://mariadb.org/
+Description-md5: 1fb0e876d57cfdc1cff69872c8dc754b
+Section: database
+Priority: optional
+Filename: pool/updates/main/m/mariadb-10.5/mariadb-plugin-oqgraph_10.5.26-0+deb11u1_i386.deb
+Size: 102712
+SHA256: 3e692a16aaaff79ce85b621882c5a31e317b8edcaaf8490b682ff23d274ce5b7
+
+Package: mariadb-plugin-s3
+Source: mariadb-10.5
+Version: 1:10.5.26-0+deb11u1
+Installed-Size: 4113
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Depends: libcurl4 (>= 7.16.2), mariadb-server-10.5 (= 1:10.5.26-0+deb11u1), libc6 (>= 2.29), libssl1.1 (>= 1.1.0), libstdc++6 (>= 4.1.1), zlib1g (>= 1:1.1.4)
+Description: Amazon S3 archival storage engine for MariaDB
+Homepage: https://mariadb.org/
+Description-md5: d88f880c6bea545db8b310745f58eaae
+Section: database
+Priority: optional
+Filename: pool/updates/main/m/mariadb-10.5/mariadb-plugin-s3_10.5.26-0+deb11u1_i386.deb
+Size: 818204
+SHA256: ff7ef107e88a7982f947ca2a85066bdc1e91037c705f8bf00c33ba6d0396b9af
+
+Package: mariadb-plugin-spider
+Source: mariadb-10.5
+Version: 1:10.5.26-0+deb11u1
+Installed-Size: 1096
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Replaces: mariadb-server-10.0, mariadb-server-10.1
+Depends: mariadb-server-10.5, libc6 (>= 2.4), libstdc++6 (>= 4.9)
+Breaks: mariadb-server-10.0, mariadb-server-10.1
+Description: Spider storage engine for MariaDB
+Homepage: https://mariadb.org/
+Description-md5: 0834409e7a3afca41f173143a638f5ab
+Section: database
+Priority: optional
+Filename: pool/updates/main/m/mariadb-10.5/mariadb-plugin-spider_10.5.26-0+deb11u1_i386.deb
+Size: 366348
+SHA256: 796e4c36fdf6a5121555fd401307b6e991a3396450eae3b1e2be9084e2184f35
+
+Package: mariadb-server
+Source: mariadb-10.5
+Version: 1:10.5.26-0+deb11u1
+Installed-Size: 72
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: all
+Depends: mariadb-server-10.5 (>= 1:10.5.26-0+deb11u1)
+Description: MariaDB database server (metapackage depending on the latest version)
+Homepage: https://mariadb.org/
+Description-md5: a887647d25d472f89e220ceda2b6e041
+Section: database
+Priority: optional
+Filename: pool/updates/main/m/mariadb-10.5/mariadb-server_10.5.26-0+deb11u1_all.deb
+Size: 35988
+SHA256: 421e010a87e11b5658e8b914517379059590dee4785ec682e92247a54250649b
+
+Package: mariadb-server-10.5
+Source: mariadb-10.5
+Version: 1:10.5.26-0+deb11u1
+Installed-Size: 62478
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Replaces: mariadb-galera-server, mariadb-galera-server-10.0, mariadb-galera-server-5.5, mariadb-server-10.0, mariadb-server-10.1, mariadb-server-10.2, mariadb-server-10.3, mariadb-server-10.4, mariadb-server-5.5, mariadb-tokudb-engine-10.0, mariadb-tokudb-engine-10.1, mariadb-tokudb-engine-5.5, mysql-client-5.5, mysql-client-5.7, mysql-client-core-8.0, mysql-server-5.5, mysql-server-5.6, mysql-server-5.7, mysql-server-8.0, virtual-mysql-server
+Provides: virtual-mysql-server
+Depends: galera-4 (>= 26.4), gawk, iproute2, libdbi-perl, lsb-base (>= 3.0-10), lsof, mariadb-client-10.5 (>= 1:10.5.26-0+deb11u1), mariadb-server-core-10.5 (>= 1:10.5.26-0+deb11u1), passwd, perl (>= 5.6), procps, psmisc, rsync, socat, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.29), libpam0g (>= 0.99.7.1), libssl1.1 (>= 1.1.1), libstdc++6 (>= 5.2), zlib1g (>= 1:1.2.0)
+Suggests: mailx, mariadb-test, netcat-openbsd
+Conflicts: mariadb-tokudb-engine-10.0, mariadb-tokudb-engine-10.1, mariadb-tokudb-engine-5.5, mysql-server-core-5.5, mysql-server-core-5.6, mysql-server-core-5.7, mysql-server-core-8.0, virtual-mysql-server
+Breaks: cqrlog (<< 1.9.0-5~), galera-3 (<< 26.4), mariadb-galera-server, mariadb-galera-server-10.0, mariadb-galera-server-5.5, mariadb-server-10.0, mariadb-server-10.1, mariadb-server-10.2, mariadb-server-10.3, mariadb-server-10.4, mariadb-server-5.5, mariadb-tokudb-engine-10.0, mariadb-tokudb-engine-10.1, mariadb-tokudb-engine-5.5, mysql-client-5.5, mysql-client-5.7, mysql-client-core-8.0, mysql-server-5.5, mysql-server-5.6, mysql-server-5.7, mysql-server-8.0
+Description: MariaDB database server binaries
+Homepage: https://mariadb.org/
+Description-md5: ae76dbcde4bf3e79b8228e6dad967834
+Pre-Depends: adduser (>= 3.40), debconf, mariadb-common (>= 1:10.5.26-0+deb11u1)
+Recommends: libhtml-template-perl
+Section: database
+Priority: optional
+Filename: pool/updates/main/m/mariadb-10.5/mariadb-server-10.5_10.5.26-0+deb11u1_i386.deb
+Size: 4278340
+SHA256: 6aedafbaeb125eec673349842f1475bcc191b4a2772457d32c84bd83f60851a1
+
+Package: mariadb-server-core-10.5
+Source: mariadb-10.5
+Version: 1:10.5.26-0+deb11u1
+Installed-Size: 39039
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Replaces: mariadb-client-10.1, mariadb-server-10.1, mariadb-server-10.2, mariadb-server-10.3, mariadb-server-10.4, mariadb-server-core-10.0, mariadb-server-core-10.1, mariadb-server-core-10.2, mariadb-server-core-10.3, mariadb-server-core-10.4, mariadb-server-core-5.5, mysql-client-5.5, mysql-client-5.6, mysql-client-5.7, mysql-client-8.0, mysql-server-core-5.5, mysql-server-core-5.6, mysql-server-core-5.7, mysql-server-core-8.0, virtual-mysql-server-core
+Provides: virtual-mysql-server-core
+Depends: mariadb-common (>= 1:10.5.26-0+deb11u1), libaio1 (>= 0.3.93), libc6 (>= 2.30), libcrypt1 (>= 1:4.1.0), liblz4-1 (>= 0.0~r130), libpcre2-8-0 (>= 10.22), libsnappy1v5 (>= 1.1.8), libssl1.1 (>= 1.1.1), libstdc++6 (>= 9), libsystemd0, zlib1g (>= 1:1.2.0)
+Conflicts: mariadb-galera-server-5.5, mysql-server-5.5, mysql-server-5.6, mysql-server-5.7, mysql-server-8.0, virtual-mysql-server-core
+Breaks: mariadb-client-10.1, mariadb-server-10.1, mariadb-server-10.2, mariadb-server-10.3, mariadb-server-10.4, mariadb-server-core-10.0, mariadb-server-core-10.1, mariadb-server-core-10.2, mariadb-server-core-10.3, mariadb-server-core-10.4, mariadb-server-core-5.5, mysql-client-5.5, mysql-client-5.6, mysql-server-core-5.5, mysql-server-core-5.6, mysql-server-core-5.7, mysql-server-core-8.0
+Description: MariaDB database core server files
+Homepage: https://mariadb.org/
+Description-md5: a01f76260dfbedfdfbfcd8ff440b8a4c
+Section: database
+Priority: optional
+Filename: pool/updates/main/m/mariadb-10.5/mariadb-server-core-10.5_10.5.26-0+deb11u1_i386.deb
+Size: 6969120
+SHA256: a2d908e070f77d13ee7960a0ff337a51663ff223bcc5d4d6ae0340ccc9348f9f
+
+Package: mariadb-test
+Source: mariadb-10.5
+Version: 1:10.5.26-0+deb11u1
+Installed-Size: 47828
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: i386
+Replaces: mariadb-test-10.0, mariadb-test-10.1, mariadb-test-5.5, mysql-server-5.7, mysql-server-core-8.0, mysql-testsuite, mysql-testsuite-5.5, mysql-testsuite-5.6, mysql-testsuite-5.7, mysql-testsuite-8.0, virtual-mysql-testsuite
+Provides: virtual-mysql-testsuite
+Depends: mariadb-client-10.5 (= 1:10.5.26-0+deb11u1), mariadb-server-10.5 (= 1:10.5.26-0+deb11u1), mariadb-test-data (= 1:10.5.26-0+deb11u1), libaio1 (>= 0.3.93), libc6 (>= 2.30), libcrypt1 (>= 1:4.1.0), liblz4-1 (>= 0.0~r130), libpcre2-8-0 (>= 10.22), libpcre2-posix2 (>= 10.34), libsnappy1v5 (>= 1.1.8), libssl1.1 (>= 1.1.1), libstdc++6 (>= 9), zlib1g (>= 1:1.2.0)
+Suggests: patch
+Breaks: mariadb-test-10.0, mariadb-test-10.1, mariadb-test-5.5, mysql-server-5.7, mysql-server-core-8.0, mysql-testsuite, mysql-testsuite-5.5, mysql-testsuite-5.6, mysql-testsuite-5.7, mysql-testsuite-8.0
+Description: MariaDB database regression test suite
+Homepage: https://mariadb.org/
+Description-md5: 88232ad1a9463948e9a1f1d33923b547
+Section: database
+Priority: optional
+Filename: pool/updates/main/m/mariadb-10.5/mariadb-test_10.5.26-0+deb11u1_i386.deb
+Size: 11695964
+SHA256: 00c6e0fd102b167f23c47f0f0e61981e729bb26d4226a30ddbaad6a1e2aabd8a
+
+Package: mariadb-test-data
+Source: mariadb-10.5
+Version: 1:10.5.26-0+deb11u1
+Installed-Size: 349393
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: all
+Replaces: mariadb-test-10.0, mariadb-test-10.1, mariadb-test-5.5, mariadb-test-data-10.0, mysql-testsuite, mysql-testsuite-5.5, mysql-testsuite-5.6, mysql-testsuite-5.7, mysql-testsuite-8.0
+Depends: perl:any
+Breaks: mariadb-test-10.0, mariadb-test-10.1, mariadb-test-5.5, mariadb-test-data-10.0, mysql-testsuite, mysql-testsuite-5.5, mysql-testsuite-5.6, mysql-testsuite-5.7, mysql-testsuite-8.0
+Description: MariaDB database regression test suite - data files
+Homepage: https://mariadb.org/
+Description-md5: 4e2584329df41bfe2241de957d88c44a
+Multi-Arch: foreign
+Section: database
+Priority: optional
+Filename: pool/updates/main/m/mariadb-10.5/mariadb-test-data_10.5.26-0+deb11u1_all.deb
+Size: 25676784
+SHA256: 7b557f5aa54e9b43308dab496b51b3c175198cd09dec844a3acc705fe8af2287
 
 Package: mat
 Source: mat2
