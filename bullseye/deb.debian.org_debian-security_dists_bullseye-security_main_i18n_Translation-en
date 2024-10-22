@@ -2279,6 +2279,25 @@ Description-en: Linux container runtime -- documentation
  .
  This package provides documentation for Docker.
 
+Package: docker.io
+Description-md5: 05dc9eba68f3bf418e6a0cf29d555878
+Description-en: Linux container runtime
+ Docker complements kernel namespacing with a high-level API which operates at
+ the process level. It runs unix processes with strong guarantees of isolation
+ and repeatability across servers.
+ .
+ Docker is a great building block for automating distributed systems:
+ large-scale web deployments, database clusters, continuous deployment systems,
+ private PaaS, service-oriented architectures, etc.
+ .
+ This package contains the daemon and client. Using docker.io on non-amd64 hosts
+ is not supported at this time. Please be careful when using it on anything
+ besides amd64.
+ .
+ Also, note that kernel version 3.8 or above is required for proper operation of
+ the daemon process, and that any lower versions may have subtle and/or glaring
+ issues.
+
 Package: golang-github-docker-docker-dev
 Description-md5: 692d023146a024298d2b2f3817f50ca0
 Description-en: reusable Go packages included with Docker
@@ -14482,6 +14501,46 @@ Description-en: SAX-based renderer library for SVG files (documentation)
  .
  This package provides the API documentation.
 
+Package: libsepol1
+Description-md5: d569fae7efa3328b3d40879b104d9a63
+Description-en: SELinux library for manipulating binary security policies
+ Security-enhanced Linux is a patch of the Linux kernel and a number
+ of utilities with enhanced security functionality designed to add
+ mandatory access controls to Linux.  The Security-enhanced Linux
+ kernel contains new architectural components originally developed to
+ improve the security of the Flask operating system. These
+ architectural components provide general support for the enforcement
+ of many kinds of mandatory access control policies, including those
+ based on the concepts of Type Enforcement®, Role-based Access
+ Control, and Multi-level Security.
+ .
+ libsepol provides an API for the manipulation of SELinux binary policies.
+ It is used by checkpolicy (the policy compiler) and similar tools, as well
+ as by programs like load_policy that need to perform specific transformations
+ on binary policies such as customizing policy boolean settings.
+
+Package: libsepol1-dev
+Description-md5: df6f84858afaf99b7b289c39fa4b8376
+Description-en: SELinux binary policy manipulation library and development files
+ libsepol allows programs to easily modify SELinux binary policies.  This
+ means changing the default values for booleans, or reading the policy for
+ analysis.
+ .
+ This package contains the headers and archives used for linking it into your
+ programs.
+
+Package: sepol-utils
+Description-md5: a1b596ce0ddd460c537eafbf4c1d7137
+Description-en: Security Enhanced Linux policy utility programs
+ This package provides a utility for a Security-enhanced
+ Linux system to rewrite existing mandatory access control policy with
+ different boolean setting, generating a new policy. Security-enhanced
+ Linux is a patch of the Linux kernel and a number of utilities with
+ enhanced security functionality designed to add mandatory access
+ controls to Linux. This package provides utility programs to get and
+ set process and file security contexts and to obtain security policy
+ decisions.
+
 Package: libmail-spf-xs-perl
 Description-md5: 91539b383b417fc315db89fba18caaf4
 Description-en: library for validating mail senders with SPF - Perl bindings
@@ -23315,6 +23374,19 @@ Package: python3-reportlab-accel-dbg
 Description-md5: 3a2f3d264cea475a3a1ee612a69fb526
 Description-en: C coded extension accelerator for the ReportLab Toolkit
  A C coded extension accelerator for the ReportLab Toolkit.
+
+Package: python3-sql
+Description-md5: 828954704eade1e6d08e416c49835e1c
+Description-en: Library to write SQL queries (implemented in Python 3)
+ python-sql is a library to write SQL queries in a pythonic way. It relies
+ exclusively on the Python standard library. It is database independent,
+ doesn't require the declaration of tables and allows one to manipulate the
+ generated queries.
+ .
+ To make real use of this package you will have to install a database
+ connector.
+ .
+ This package is targeting Python version 3.
 
 Package: python-werkzeug-doc
 Description-md5: 7b9c3ccf2c4ed4a2b737538d2ac89438
