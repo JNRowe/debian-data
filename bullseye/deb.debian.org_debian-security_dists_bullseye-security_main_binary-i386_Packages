@@ -14594,6 +14594,131 @@ Filename: pool/updates/main/h/hsqldb1.8.0/libhsqldb1.8.0-java_1.8.0.10+dfsg-10+d
 Size: 790980
 SHA256: b6da90dd53936a4fbae55a34a3dbe18469efac9ebdfa2f9721edc1cca8b9ecd6
 
+Package: icinga2
+Version: 2.12.3-1+deb11u1
+Installed-Size: 131
+Maintainer: Debian Nagios Maintainer Group <pkg-nagios-devel@lists.alioth.debian.org>
+Architecture: i386
+Depends: icinga2-bin (= 2.12.3-1+deb11u1), icinga2-common (= 2.12.3-1+deb11u1)
+Suggests: vim-icinga2
+Description: host and network monitoring system
+Homepage: https://icinga.com
+Description-md5: 2437d4eec840a772b3ba09c39cbe2bb3
+Recommends: icinga2-doc (= 2.12.3-1+deb11u1), monitoring-plugins-basic | nagios-plugins-basic, libreadline7
+Section: admin
+Priority: optional
+Filename: pool/updates/main/i/icinga2/icinga2_2.12.3-1+deb11u1_i386.deb
+Size: 116360
+SHA256: fd2c3210897e09b028827ae38484752f2e7e5b9facde8b72ed98e9829467a462
+
+Package: icinga2-bin
+Source: icinga2
+Version: 2.12.3-1+deb11u1
+Installed-Size: 22597
+Maintainer: Debian Nagios Maintainer Group <pkg-nagios-devel@lists.alioth.debian.org>
+Architecture: i386
+Replaces: icinga2-common (<< 2.10.1-3~)
+Depends: icinga2-common (= 2.12.3-1+deb11u1), lsb-base, libboost-coroutine1.74.0 (>= 1.74.0), libboost-filesystem1.74.0 (>= 1.74.0), libboost-program-options1.74.0 (>= 1.74.0), libboost-regex1.74.0-icu67, libboost-thread1.74.0 (>= 1.74.0), libc6 (>= 2.29), libedit2 (>= 2.11-20080614-0), libgcc-s1 (>= 4.2), libssl1.1 (>= 1.1.0), libstdc++6 (>= 9), libsystemd0
+Breaks: icinga2-common (<< 2.10.1-3~)
+Description: host and network monitoring system - daemon
+Homepage: https://icinga.com
+Description-md5: 2786f709af874963bf1e186a3d434d9f
+Pre-Depends: init-system-helpers (>= 1.54~)
+Section: admin
+Priority: optional
+Filename: pool/updates/main/i/icinga2/icinga2-bin_2.12.3-1+deb11u1_i386.deb
+Size: 4555940
+SHA256: 8fbc9ad30cdfc4c54be98de97f0e16b914272cdd606eb84db20abde1852f6d9b
+
+Package: icinga2-common
+Source: icinga2
+Version: 2.12.3-1+deb11u1
+Installed-Size: 496
+Maintainer: Debian Nagios Maintainer Group <pkg-nagios-devel@lists.alioth.debian.org>
+Architecture: all
+Replaces: python-icinga2
+Provides: python-icinga2
+Depends: adduser, lsb-base, lsb-release
+Conflicts: python-icinga2
+Description: host and network monitoring system - common files
+Homepage: https://icinga.com
+Description-md5: a606f8c9a028867e7d20cd49f3fab5ea
+Recommends: logrotate
+Section: admin
+Priority: optional
+Filename: pool/updates/main/i/icinga2/icinga2-common_2.12.3-1+deb11u1_all.deb
+Size: 162320
+SHA256: 017148439aeb2c3ff1a3c59571806da1e6e4f4cc6b322b3a7e8b86fb63843153
+
+Package: icinga2-doc
+Source: icinga2
+Version: 2.12.3-1+deb11u1
+Installed-Size: 6952
+Maintainer: Debian Nagios Maintainer Group <pkg-nagios-devel@lists.alioth.debian.org>
+Architecture: all
+Description: host and network monitoring system - documentation
+Homepage: https://icinga.com
+Description-md5: 300da885d3a11ca41475e32815b8cff1
+Section: doc
+Priority: optional
+Filename: pool/updates/main/i/icinga2/icinga2-doc_2.12.3-1+deb11u1_all.deb
+Size: 6143132
+SHA256: 804d3758ea962148ec025d2280b2580be4cd3fab8fa839c0e5c31abbd2e4dc60
+
+Package: icinga2-ido-mysql
+Source: icinga2
+Version: 2.12.3-1+deb11u1
+Installed-Size: 352
+Maintainer: Debian Nagios Maintainer Group <pkg-nagios-devel@lists.alioth.debian.org>
+Architecture: i386
+Depends: dbconfig-common, icinga2-bin (= 2.12.3-1+deb11u1), icinga2-common (= 2.12.3-1+deb11u1), ucf, debconf (>= 0.5) | debconf-2.0, libmariadb3 (>= 3.0.0), libstdc++6 (>= 4.1.1)
+Suggests: default-mysql-server | virtual-mysql-server
+Conflicts: icinga2-ido-pgsql
+Description: host and network monitoring system - MySQL support
+Homepage: https://icinga.com
+Description-md5: 52c90cfa8b96fd2c669519e8c63cec0c
+Recommends: default-mysql-client | virtual-mysql-client
+Section: admin
+Priority: optional
+Filename: pool/updates/main/i/icinga2/icinga2-ido-mysql_2.12.3-1+deb11u1_i386.deb
+Size: 124168
+SHA256: 2b35e7add3a9e7d08629c81727a4784ba76f790acc710039c9eb5a510117f02a
+
+Package: icinga2-ido-pgsql
+Source: icinga2
+Version: 2.12.3-1+deb11u1
+Installed-Size: 348
+Maintainer: Debian Nagios Maintainer Group <pkg-nagios-devel@lists.alioth.debian.org>
+Architecture: i386
+Depends: dbconfig-common, icinga2-bin (= 2.12.3-1+deb11u1), icinga2-common (= 2.12.3-1+deb11u1), ucf, debconf (>= 0.5) | debconf-2.0, libpq5, libstdc++6 (>= 4.1.1)
+Suggests: postgresql
+Conflicts: icinga2-ido-mysql
+Description: host and network monitoring system - PostgreSQL support
+Homepage: https://icinga.com
+Description-md5: 04211973d12167dab60262ef8ff3138c
+Recommends: postgresql-client
+Section: admin
+Priority: optional
+Filename: pool/updates/main/i/icinga2/icinga2-ido-pgsql_2.12.3-1+deb11u1_i386.deb
+Size: 123824
+SHA256: 7078ad74ef4448978c4986598bdf0d690c73c45d94aa3de84f45119d65265ec6
+
+Package: vim-icinga2
+Source: icinga2
+Version: 2.12.3-1+deb11u1
+Installed-Size: 145
+Maintainer: Debian Nagios Maintainer Group <pkg-nagios-devel@lists.alioth.debian.org>
+Architecture: all
+Description: syntax highlighting for Icinga 2 config files in VIM
+Homepage: https://icinga.com
+Description-md5: f9189652054d1813888c073a189ddd0c
+Recommends: vim-addon-manager
+Section: admin
+Priority: optional
+Filename: pool/updates/main/i/icinga2/vim-icinga2_2.12.3-1+deb11u1_all.deb
+Size: 113960
+SHA256: 4654cb0d5566b87f1b3944a3d2eb77f3796110c2a9cd7858e5ea7f6ceea83a70
+
 Package: imagemagick
 Version: 8:6.9.11.60+dfsg-1.3+deb11u3
 Installed-Size: 221
