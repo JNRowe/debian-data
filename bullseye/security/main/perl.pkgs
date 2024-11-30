@@ -135,6 +135,115 @@ Filename: pool/updates/main/i/imagemagick/perlmagick_6.9.11.60+dfsg-1.3+deb11u3_
 Size: 1368
 SHA256: c7aa1745a95cb06e5a6b841a34fcc321666ceee7fc5eeca0ba31657a1b6380d7
 
+Package: lemonldap-ng
+Version: 2.0.11+ds-4+deb11u6
+Installed-Size: 143
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: all
+Provides: openid-connect-provider, openid-connect-relying-party, saml-identity-provider, saml-service-provider
+Depends: lemonldap-ng-handler (= 2.0.11+ds-4+deb11u6), liblemonldap-ng-manager-perl (= 2.0.11+ds-4+deb11u6), liblemonldap-ng-portal-perl (= 2.0.11+ds-4+deb11u6)
+Description: OpenID-Connect, CAS and SAML compatible Web-SSO system
+Homepage: https://lemonldap-ng.org/
+Description-md5: d9956485953b0264aad783e87c61e25d
+perl
+Priority: optional
+Filename: pool/updates/main/l/lemonldap-ng/lemonldap-ng_2.0.11+ds-4+deb11u6_all.deb
+Size: 75752
+SHA256: a289b94ba1f90bc2cfd7419596a88d7f6fc43d2b1f78f092194231dac6129ac6
+
+Package: lemonldap-ng-handler
+Source: lemonldap-ng
+Version: 2.0.11+ds-4+deb11u6
+Installed-Size: 209
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: all
+Replaces: lemonldap-ng-fastcgi-server (<< 2.0.5~), liblemonldap-ng-handler-perl (<< 1.9.1-2~)
+Depends: liblemonldap-ng-handler-perl (= 2.0.11+ds-4+deb11u6)
+Suggests: libcache-memcached-perl, libdigest-hmac-perl, libsoap-lite-perl
+Breaks: lemonldap-ng-fastcgi-server (<< 2.0.5~), liblemonldap-ng-handler-perl (<< 1.9.1-2~)
+Description: Lemonldap::NG handler part
+Homepage: https://lemonldap-ng.org/
+Description-md5: 9581d765c8dbdafc58e31f96283b6764
+Recommends: lemonldap-ng-fastcgi-server (= 2.0.11+ds-4+deb11u6) | lemonldap-ng-uwsgi-app (= 2.0.11+ds-4+deb11u6) | libapache2-mod-perl2
+perl
+Priority: optional
+Filename: pool/updates/main/l/lemonldap-ng/lemonldap-ng-handler_2.0.11+ds-4+deb11u6_all.deb
+Size: 84852
+SHA256: eb48bcb79aa4659ffd633755f8847c7bc486cecec21fa5da482d17253d680fa7
+
+Package: liblemonldap-ng-common-perl
+Source: lemonldap-ng
+Version: 2.0.11+ds-4+deb11u6
+Installed-Size: 704
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: debconf (>= 0.5) | debconf-2.0, perl:any, debconf, libapache-session-perl, libcache-cache-perl, libconfig-inifiles-perl, libcrypt-openssl-rsa-perl, libcrypt-openssl-x509-perl, libcrypt-urandom-perl, libcrypt-rijndael-perl, libhtml-template-perl, libjson-perl, libjson-xs-perl, libmouse-perl, libplack-perl, liburi-perl, libwww-perl
+Suggests: libconvert-base32-perl, libnet-ldap-perl, libsoap-lite-perl, libxml-libxml-perl, libxml-simple-perl
+Conflicts: liblemonldap-ng-cli-perl
+Description: Lemonldap::NG common files
+Homepage: https://lemonldap-ng.org/
+Description-md5: d0b1b116b90ac4255174dccda83adf20
+Recommends: libapache-session-browseable-perl, libemail-sender-perl (>= 1.300027) | libemail-sender-transport-smtps-perl, libcookie-baker-xs-perl, libdbi-perl, libhttp-parser-xs-perl, liblwp-protocol-https-perl, libstring-random-perl
+perl
+Priority: optional
+Filename: pool/updates/main/l/lemonldap-ng/liblemonldap-ng-common-perl_2.0.11+ds-4+deb11u6_all.deb
+Size: 194936
+SHA256: fe2e384b214430b242423af8fe6c23fae1492810a559efec3767940ac9cccfe0
+
+Package: liblemonldap-ng-handler-perl
+Source: lemonldap-ng
+Version: 2.0.11+ds-4+deb11u6
+Installed-Size: 404
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: perl:any, liblemonldap-ng-common-perl (= 2.0.11+ds-4+deb11u6)
+Description: Lemonldap::NG handler common libraries
+Homepage: https://lemonldap-ng.org/
+Description-md5: c31967de31456a28e089d30c57912036
+perl
+Priority: optional
+Filename: pool/updates/main/l/lemonldap-ng/liblemonldap-ng-handler-perl_2.0.11+ds-4+deb11u6_all.deb
+Size: 127308
+SHA256: 13ff8360144363a257b9ca3c971f7eb9c35579d2b368fae9c328cd7659e730fd
+
+Package: liblemonldap-ng-manager-perl
+Source: lemonldap-ng
+Version: 2.0.11+ds-4+deb11u6
+Installed-Size: 2906
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: perl:any, libconvert-pem-perl, libregexp-common-perl, libcrypt-openssl-rsa-perl, libemail-date-format-perl, libjs-angularjs (>= 1.4), libjs-bootstrap, libjs-es5-shim, libjs-jquery, liblemonldap-ng-handler-perl (= 2.0.11+ds-4+deb11u6), lemonldap-ng-fastcgi-server (= 2.0.11+ds-4+deb11u6) | lemonldap-ng-uwsgi-app (= 2.0.11+ds-4+deb11u6) | apache2 | httpd-cgi
+Suggests: libclone-perl, libregexp-assemble-perl
+Description: Lemonldap::NG manager part
+Homepage: https://lemonldap-ng.org/
+Description-md5: ab72e3f536bf2e52dc3ca8f4623dfb67
+Pre-Depends: debconf
+Recommends: lemonldap-ng-doc (= 2.0.11+ds-4+deb11u6), libxml-libxml-perl, libxml-libxslt-perl, libxml-simple-perl
+perl
+Priority: optional
+Filename: pool/updates/main/l/lemonldap-ng/liblemonldap-ng-manager-perl_2.0.11+ds-4+deb11u6_all.deb
+Size: 453592
+SHA256: 64c2cdeaadad0732741190d55a42828b889bac4faffa26ad8c4130f0d595b82b
+
+Package: liblemonldap-ng-portal-perl
+Source: lemonldap-ng
+Version: 2.0.11+ds-4+deb11u6
+Installed-Size: 5203
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: perl:any, fonts-font-awesome, lemonldap-ng-fastcgi-server (= 2.0.11+ds-4+deb11u6) | lemonldap-ng-uwsgi-app (= 2.0.11+ds-4+deb11u6) | apache2 | httpd-cgi, libclone-perl, liblemonldap-ng-handler-perl (= 2.0.11+ds-4+deb11u6), libjs-bootstrap4, libjs-cryptojs, libjs-jquery, libjs-jquery-ui, libjs-jquery-cookie, libtext-unidecode-perl, libregexp-assemble-perl, libemail-date-format-perl
+Suggests: gpg, libcrypt-u2f-server-perl, libdbi-perl, libglib-perl, libgssapi-perl, libimage-magick-perl, liblasso-perl, libnet-facebook-oauth2-perl (>= 0.10), libnet-openid-consumer-perl, libnet-openid-server-perl, libnet-oauth-perl, libsoap-lite-perl, libweb-id-perl, slapd
+Description: Lemonldap::NG authentication portal part
+Homepage: https://lemonldap-ng.org/
+Description-md5: 81a1aa3a1c82e324ea3f426db5e03425
+Pre-Depends: debconf
+Recommends: gsfonts, libcrypt-openssl-bignum-perl, libconvert-base32-perl, libio-string-perl, libipc-run-perl, libgd-securityimage-perl, libmime-tools-perl, libnet-ldap-perl, libio-socket-timeout-perl, libunicode-string-perl
+perl
+Priority: optional
+Filename: pool/updates/main/l/lemonldap-ng/liblemonldap-ng-portal-perl_2.0.11+ds-4+deb11u6_all.deb
+Size: 2980584
+SHA256: 41b7f2da1ddf6b1cc6212bb741d08afc90e83adb723fc9a3abe07716b98e71f1
+
 Package: libencode-perl
 Version: 3.08-1+deb11u1
 Installed-Size: 5083
