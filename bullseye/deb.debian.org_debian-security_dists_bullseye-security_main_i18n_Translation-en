@@ -1143,6 +1143,24 @@ Description-en: asynchronous name resolver
  .
  This package provides the shared libraries.
 
+Package: libc-icap-mod-contentfiltering
+Description-md5: 99f03b262675e3273abfba9801638ab5
+Description-en: Content filtering Service for c-icap
+ This is an score based content filtering icap service. It is distributed with
+ c-icap and written by the same author.
+
+Package: libc-icap-mod-urlcheck
+Description-md5: 8200a081f38385b61d3569124b1e21cb
+Description-en: URL Check Service for c-icap
+ This is an URL Check Service for c-icap. It is
+ distributed with c-icap and written by the same author.
+
+Package: libc-icap-mod-virus-scan
+Description-md5: 9a1feb12d473b8a6d38b3d0fdcbffc97
+Description-en: Antivirus Service for c-icap
+ This is an antivirus Service for c-icap which uses libclamav or clamd to do
+ scanning. It is distributed with c-icap and written by the same author.
+
 Package: cacti
 Description-md5: c149f2c54502ee335699276ff204fd5d
 Description-en: web interface for graphing of monitoring systems
@@ -1391,6 +1409,170 @@ Package: libcjose0
 Description-md5: 11b499a5e761d13a3c1303aa57315ee7
 Description-en: C library implementing the Javascript Object Signing and Encryption (JOSE)
  Implementation of JOSE for C/C++
+
+Package: clamav
+Description-md5: fb7be82d5591a0f3facf827f0a60c5d6
+Description-en: anti-virus utility for Unix - command-line interface
+ Clam AntiVirus is an anti-virus toolkit for Unix. The main purpose of
+ this software is the integration with mail servers (attachment
+ scanning). The package provides a flexible and scalable
+ multi-threaded daemon in the clamav-daemon package, a command-line
+ scanner in the clamav package, and a tool for automatic updating via
+ the Internet in the clamav-freshclam package. The programs are based
+ on libclamav, which can be used by other software.
+ .
+ This package contains the command line interface. Features:
+  - built-in support for various archive formats, including Zip, Tar,
+    Gzip, Bzip2, OLE2, Cabinet, CHM, BinHex, SIS and others;
+  - built-in support for almost all mail file formats;
+  - built-in support for ELF executables and Portable Executable files
+    compressed with UPX, FSG, Petite, NsPack, wwpack32, MEW, Upack and
+    obfuscated with SUE, Y0da Cryptor and others;
+  - built-in support for popular document formats including Microsoft
+    Office and Mac Office files, HTML, RTF and PDF.
+ .
+ For scanning to work, a virus database is needed. There are two options
+ for getting it:
+  - clamav-freshclam: updates the database from Internet. This is
+    recommended with Internet access.
+  - clamav-data: for users without Internet access. The package is
+    not updated once installed. The clamav-getfiles package allows
+    creating custom packages from an Internet-connected computer.
+
+Package: clamav-base
+Description-md5: 701912f0a2cc626b57570094858a5b1d
+Description-en: anti-virus utility for Unix - base package
+ Clam AntiVirus is an anti-virus toolkit for Unix. The main purpose of
+ this software is the integration with mail servers (attachment
+ scanning). The package provides a flexible and scalable
+ multi-threaded daemon in the clamav-daemon package, a command-line
+ scanner in the clamav package, and a tool for automatic updating via
+ the Internet in the clamav-freshclam package. The programs are based
+ on libclamav, which can be used by other software.
+ .
+ This package mainly manages the clamav system account. It is not really
+ useful without the clamav or clamav-daemon package.
+
+Package: clamav-daemon
+Description-md5: dc258511e9e1f62ef33172c190a0fad6
+Description-en: anti-virus utility for Unix - scanner daemon
+ Clam AntiVirus is an anti-virus toolkit for Unix. The main purpose of
+ this software is the integration with mail servers (attachment
+ scanning). The package provides a flexible and scalable
+ multi-threaded daemon in the clamav-daemon package, a command-line
+ scanner in the clamav package, and a tool for automatic updating via
+ the Internet in the clamav-freshclam package. The programs are based
+ on libclamav, which can be used by other software.
+ .
+ This package contains the daemon featuring:
+  - fast, multi-threaded daemon;
+  - easy integration with MTA's;
+  - support for on-access scanning;
+  - remote scanning;
+  - able to be run supervised by daemon.
+
+Package: clamav-docs
+Description-md5: af78818bbdf8851b6358c15693a31419
+Description-en: anti-virus utility for Unix - documentation
+ Clam AntiVirus is an anti-virus toolkit for Unix. The main purpose of
+ this software is the integration with mail servers (attachment
+ scanning). The package provides a flexible and scalable
+ multi-threaded daemon in the clamav-daemon package, a command-line
+ scanner in the clamav package, and a tool for automatic updating via
+ the Internet in the clamav-freshclam package. The programs are based
+ on libclamav, which can be used by other software.
+ .
+ This package contains the documentation for the ClamAV suite.
+
+Package: clamav-freshclam
+Description-md5: 82c68e4f7c984e3d6bdc720ae842fca8
+Description-en: anti-virus utility for Unix - virus database update utility
+ Clam AntiVirus is an anti-virus toolkit for Unix. The main purpose of
+ this software is the integration with mail servers (attachment
+ scanning). The package provides a flexible and scalable
+ multi-threaded daemon in the clamav-daemon package, a command-line
+ scanner in the clamav package, and a tool for automatic updating via
+ the Internet in the clamav-freshclam package. The programs are based
+ on libclamav, which can be used by other software.
+ .
+ This package contains the freshclam program and scripts to automate virus
+ database updating. It relies on an Internet connection, but can be
+ run in a variety of ways to compensate for intermittent connections.
+
+Package: clamav-milter
+Description-md5: e47a1194215b5fbde13fb9217c44d83f
+Description-en: anti-virus utility for Unix - sendmail integration
+ Clam AntiVirus is an anti-virus toolkit for Unix. The main purpose of
+ this software is the integration with mail servers (attachment
+ scanning). The package provides a flexible and scalable
+ multi-threaded daemon in the clamav-daemon package, a command-line
+ scanner in the clamav package, and a tool for automatic updating via
+ the Internet in the clamav-freshclam package. The programs are based
+ on libclamav, which can be used by other software.
+ .
+ This package contains the ClamAV milter for use with sendmail. It can
+ be configured to be run either standalone, or using clamav-daemon.
+
+Package: clamav-testfiles
+Description-md5: 29437a0b8c82cc8179b64405688f062e
+Description-en: anti-virus utility for Unix - test files
+ Clam AntiVirus is an anti-virus toolkit for Unix. The main purpose of
+ this software is the integration with mail servers (attachment
+ scanning). The package provides a flexible and scalable
+ multi-threaded daemon in the clamav-daemon package, a command-line
+ scanner in the clamav package, and a tool for automatic updating via
+ the Internet in the clamav-freshclam package. The programs are based
+ on libclamav, which can be used by other software.
+ .
+ This package contains files 'infected' with a test signature. The test
+ signature (ClamAV-Test-Signature) should be detectable by all
+ anti-virus programs.
+
+Package: clamdscan
+Description-md5: ad077e4c74b9870b6e7bb55aef11c547
+Description-en: anti-virus utility for Unix - scanner client
+ Clam AntiVirus is an anti-virus toolkit for Unix. The main purpose of
+ this software is the integration with mail servers (attachment
+ scanning). The package provides a flexible and scalable
+ multi-threaded daemon in the clamav-daemon package, a command-line
+ scanner in the clamav package, and a tool for automatic updating via
+ the Internet in the clamav-freshclam package. The programs are based
+ on libclamav, which can be used by other software.
+ .
+ This package contains clamdscan, the command line interface of the clamav
+ daemon.
+
+Package: libclamav-dev
+Description-md5: 3dc197b6ebfb15522a4b7913ea796763
+Description-en: anti-virus utility for Unix - development files
+ Clam AntiVirus is an anti-virus toolkit for Unix. The main purpose of
+ this software is the integration with mail servers (attachment
+ scanning). The package provides a flexible and scalable
+ multi-threaded daemon in the clamav-daemon package, a command-line
+ scanner in the clamav package, and a tool for automatic updating via
+ the Internet in the clamav-freshclam package. The programs are based
+ on libclamav, which can be used by other software.
+ .
+ The package contains the needed headers and libraries for
+ developing software using the libclamav interface.
+ .
+ This library can be used to develop virus scanner applications.
+
+Package: libclamav11
+Description-md5: bf2e797d0e7e410776d9200761e01bd6
+Description-en: anti-virus utility for Unix - library
+ Clam AntiVirus is an anti-virus toolkit for Unix. The main purpose of
+ this software is the integration with mail servers (attachment
+ scanning). The package provides a flexible and scalable
+ multi-threaded daemon in the clamav-daemon package, a command-line
+ scanner in the clamav package, and a tool for automatic updating via
+ the Internet in the clamav-freshclam package. The programs are based
+ on libclamav, which can be used by other software.
+ .
+ For programs written using the libclamav library. Libclamav may be used to add
+ virus protection into software. The library is thread-safe, and automatically
+ recognizes and scans archives. Scanning is very fast and most of the time
+ not noticeable.
 
 Package: libcommons-configuration2-java
 Description-md5: b3e7a3525b15b9937537e5bbaab66c82
@@ -1991,6 +2173,172 @@ Description-en: development files and documentation for libcurl (OpenSSL flavour
  manual pages) that allow one to build software which uses libcurl.
  .
  SSL support is provided by OpenSSL.
+
+Package: cyrus-admin
+Description-md5: 30d4f431154e19f3badd2b37661f7170
+Description-en: Cyrus mail system - administration tools
+ This package provides the administrative tools for the Cyrus IMAPd suite.
+ It contains the cyradm tool which can be used to administer
+ both local and remote Cyrus mail systems.  It also contains sieveshell
+ and its deprecated cousin installsieve, which can be used to manage
+ sieve scripts.
+ .
+ For more information, please see the cyrus-common package.
+
+Package: cyrus-caldav
+Description-md5: 4a2a6a95eea3e87b63bd5ba8d5020b3d
+Description-en: Cyrus mail system - CalDAV and CardDAV support
+ This package contains the CalDAV and CardDAV portion of the Cyrus
+ IMAPd suite.
+ .
+ For more information, please see the cyrus-common package.
+
+Package: cyrus-clients
+Description-md5: 992ed3dec2e38f35f5825dbbb87631db
+Description-en: Cyrus mail system - test clients
+ This package contains client tools to test the Cyrus IMAPd suite.
+ It contains the mupdatetest, sivtest, smtptest, lmtptest,
+ imtest and pop3test tools which can be used to interactively talk to
+ a mupdate, Sieve, SMTP, LMTP, IMAP or POP3 server.
+ The clients are fully SASL-enabled for authentication.
+ .
+ For more information, please see the cyrus-common package.
+
+Package: cyrus-common
+Description-md5: ce477374fcdec4eb4b04c5e339e4a360
+Description-en: Cyrus mail system - common files
+ Cyrus is an IMAP server designed to handle massive quantities of mail,
+ with a number of features not found in other IMAP implementations,
+ including support for:
+  - running the daemon without root privileges;
+  - POP3 and NNTP in addition to plain IMAP;
+  - CalDAV and CardDAV;
+  - secure IMAP using SSL;
+  - server-side filtering with Sieve;
+  - mail users without login accounts;
+  - simple mail quotas;
+  - virtual domains;
+  - IPv6.
+ .
+ Cyrus doesn't support reading from and storing mail in the
+ standard mail spool. It stores mail in a separate directory in its
+ own MH-like format.
+ .
+ This package contains the common files needed by the other Cyrus
+ components. The cyrus-imapd and/or cyrus-pop3d packages are needed
+ to enable IMAP and POP3 support respectively. cyrus-murder can be
+ used to enable IMAP, POP3 and LMTP proxying. cyrus-replication
+ can be used to provide server replication between two imap servers.
+
+Package: cyrus-dev
+Description-md5: 16eb6f696ea714cc04c10da3bf1af891
+Description-en: Cyrus mail system - developer files
+ This package contains header files and the static library needed
+ to develop IMAP applications that interface with the Cyrus IMAPd suite.
+ .
+ For more information, please see the cyrus-common package.
+
+Package: cyrus-doc
+Description-md5: dc4db33c7f92d614299003a2faaa98f8
+Description-en: Cyrus mail system - documentation files
+ Cyrus is an IMAP server designed to handle massive quantities of mail,
+ with a number of features not found in other IMAP implementations,
+ including support for:
+  - running the daemon without root privileges;
+  - POP3 and NNTP in addition to plain IMAP;
+  - CalDAV and CardDAV;
+  - secure IMAP using SSL;
+  - server-side filtering with Sieve;
+  - mail users without login accounts;
+  - simple mail quotas;
+  - virtual domains;
+  - IPv6.
+ .
+ This package contains the documentation for the Cyrus IMAPd suite.
+ .
+ For more information, please see the cyrus-common package.
+
+Package: cyrus-imapd
+Description-md5: 2013b72b2b05fdd34a3b3dd1c1ba084e
+Description-en: Cyrus mail system - IMAP support
+ Cyrus is an IMAP server designed to handle massive quantities of mail,
+ with a number of features not found in other IMAP implementations,
+ including support for:
+  - running the daemon without root privileges;
+  - POP3 and NNTP in addition to plain IMAP;
+  - CalDAV and CardDAV;
+  - secure IMAP using SSL;
+  - server-side filtering with Sieve;
+  - mail users without login accounts;
+  - simple mail quotas;
+  - virtual domains;
+  - IPv6.
+ .
+ This package contains the IMAP (Internet Mail Access Protocol) portion
+ of the Cyrus IMAPd suite.
+ .
+ For more information, please see the cyrus-common package.
+
+Package: cyrus-murder
+Description-md5: ab90b0c9d4129b972ab15fe6e9c32d5d
+Description-en: Cyrus mail system - proxies and aggregator
+ This package contains the Cyrus IMAPd suite murder aggregator system,
+ i.e. IMAP, POP3  and LMTP proxies, and the mupdate mailbox master daemon.
+ It allows for cluster setups where there are many backend Cyrus spools and
+ frontend proxy servers.
+ .
+ For more information, please see the cyrus-common package.
+
+Package: cyrus-nntpd
+Description-md5: bcca7012a9781e9e61073187c18156df
+Description-en: Cyrus mail system - NNTP support
+ This package contains the NNTP (Network News Transfer Protocol) portion of
+ the Cyrus IMAPd suite.
+ .
+ For more information, please see the cyrus-common package.
+
+Package: cyrus-pop3d
+Description-md5: 70c2ae7050e6313a16eb7cb9d9341a7f
+Description-en: Cyrus mail system - POP3 support
+ Cyrus is an IMAP server designed to handle massive quantities of mail,
+ with a number of features not found in other IMAP implementations,
+ including support for:
+  - running the daemon without root privileges;
+  - POP3 and NNTP in addition to plain IMAP;
+  - CalDAV and CardDAV;
+  - secure IMAP using SSL;
+  - server-side filtering with Sieve;
+  - mail users without login accounts;
+  - simple mail quotas;
+  - virtual domains;
+  - IPv6.
+ .
+ This package contains the POP3 (Post Office Protocol) portion of the Cyrus
+ IMAPd suite.
+ .
+ For more information, please see the cyrus-common package.
+
+Package: cyrus-replication
+Description-md5: b418abba8bf22d6e89141717800813af
+Description-en: Cyrus mail system - replication
+ This package contains the Cyrus IMAPd suite replication system.
+ It allows the replication of the mail spool between two imap or pop servers.
+ .
+ For more information, please see the cyrus-common package.
+
+Package: libcyrus-imap-perl
+Description-md5: 494afce8d261b8e3f1678df0243f477f
+Description-en: Interface to Cyrus imap client imclient library
+ The Cyrus::IMAP module provides an interface to the Cyrus imclient
+ library.  These are primarily useful for implementing cyradm operations
+ within a Perl script; there are easier ways to implement general client
+ operations, although they may be more limited in terms of authentication
+ options when talking to a Cyrus imapd.
+ .
+ The modules that compose Cyrus::SIEVE are also included, but they are
+ undocumented upstream.
+ .
+ For more information, please see the cyrus-common package.
 
 Package: cyrus-sasl2-doc
 Description-md5: d7d08ebfc592e9842e2cf44e2e6633b0
@@ -9432,6 +9780,14 @@ Description-en: syntax highlighting for HAProxy configuration files
  .
  As per the Debian vim policy, installed addons are not activated
  automatically, but the "vim-addon-manager" tool can be used for this purpose.
+
+Package: havp
+Description-md5: 9a86c1dfa5f633dbbde0d75c2edbb28a
+Description-en: HTTP Anti Virus Proxy
+ HAVP (HTTP Antivirus Proxy) is a proxy with a ClamAV anti-virus scanner. The
+ main aims are continuous, non-blocking downloads and smooth scanning of
+ dynamic and password protected HTTP traffic. Havp antivirus proxy has a
+ parent and transparent proxy mode. It can be used with squid or standalone.
 
 Package: heimdal-clients
 Description-md5: f60ede2793e741fd3d7f011dec220928
@@ -22438,6 +22794,12 @@ Description-en: Core Perl modules
  considered an internal implementation detail of the `perl' package.
  Other packages should not depend on `perl-modules-5.32' directly, they
  should use `perl' (which depends on `perl-modules-5.32') instead.
+
+Package: postgresql-13-snakeoil
+Description-md5: 8cd2fd1a5fb69b47b2ec6bc17f7dcd91
+Description-en: PostgreSQL anti-virus scanner based on ClamAV
+ pg_snakeoil provides functions scanning PostgreSQL data for viruses using the
+ ClamAV anti-virus engine.
 
 Package: php-horde-mime-viewer
 Description-md5: 6356a238b7f6163171a4ad7f273ee429
