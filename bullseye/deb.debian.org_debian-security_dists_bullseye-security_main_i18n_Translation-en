@@ -1,3 +1,63 @@
+Package: 389-ds
+Description-md5: 72b0f037b5c7bab3e3a681a127817467
+Description-en: 389 Directory Server suite - metapackage
+ Based on the Lightweight Directory Access Protocol (LDAP), the 389
+ Directory Server is designed to manage large directories of users and
+ resources robustly and scalably.
+ .
+ This is a metapackage depending on the LDAPv3 server and a Cockpit UI plugin
+ for administration.
+
+Package: 389-ds-base
+Description-md5: 9c56eb26e44476f95f66b09921fcbf22
+Description-en: 389 Directory Server suite - server
+ Based on the Lightweight Directory Access Protocol (LDAP), the 389
+ Directory Server is designed to manage large directories of users and
+ resources robustly and scalably.
+ .
+ Its key features include:
+  * four-way multi-master replication;
+  * great scalability;
+  * extensive documentation;
+  * Active Directory user and group synchronization;
+  * secure authentication and transport;
+  * support for LDAPv3;
+  * graphical management console;
+  * on-line, zero downtime update of schema, configuration, and
+    in-tree Access Control Information.
+
+Package: 389-ds-base-dev
+Description-md5: 630be364e8b8b2a8f60ee17e872a2550
+Description-en: 389 Directory Server suite - development files
+ Based on the Lightweight Directory Access Protocol (LDAP), the 389
+ Directory Server is designed to manage large directories of users and
+ resources robustly and scalably.
+ .
+ This package contains development headers for the core libraries
+ of the 389 Directory Server, useful for developing plugins without
+ having to install the server itself.
+
+Package: 389-ds-base-libs
+Description-md5: d2ef365214ac1295f734f49594c9b579
+Description-en: 389 Directory Server suite - libraries
+ Based on the Lightweight Directory Access Protocol (LDAP), the 389
+ Directory Server is designed to manage large directories of users and
+ resources robustly and scalably.
+ .
+ This package contains core libraries for the 389 Directory Server.
+
+Package: cockpit-389-ds
+Description-md5: 29c953a4198b73567ac827862c4a3e0f
+Description-en: Cockpit user interface for 389 Directory Server
+ This package includes a Cockpit UI plugin for configuring and administering
+ the 389 Directory Server.
+
+Package: python3-lib389
+Description-md5: 312a10ddcf41c03aed17c8e2759b4410
+Description-en: Python3 module for accessing and configuring the 389 Directory Server
+ This Python3 module contains tools and libraries for accessing, testing,
+ and configuring the 389 Directory Server.
+
 Package: activemq
 Description-md5: 791aecb1e510067b381f69430a1de7af
 Description-en: Java message broker - server
@@ -1396,6 +1456,81 @@ Description-en: Resource agents to integrate booth with Pacemaker
  .
  This package contains the integration script for booth to run as
  part of a Pacemaker cluster.
+
+Package: busybox
+Description-md5: b7707908219c331294f3f9e8d926a9dc
+Description-en: Tiny utilities for small and embedded systems
+ BusyBox combines tiny versions of many common UNIX utilities into a single
+ small executable. It provides minimalist replacements for the most common
+ utilities you would usually find on your desktop system (i.e., ls, cp, mv,
+ mount, tar, etc.). The utilities in BusyBox generally have fewer options than
+ their full-featured GNU cousins; however, the options that are included
+ provide the expected functionality and behave very much like their GNU
+ counterparts.
+ .
+ This package installs the BusyBox binary but does not install
+ symlinks for any of the supported utilities. Some of the utilities
+ can be used in the system by installing the busybox-syslogd,
+ busybox-udhcpc or busybox-udhcpd packages.
+
+Package: busybox-static
+Description-md5: 1ccce12e08e4aa13a2e6bdd5ffb85b65
+Description-en: Standalone rescue shell with tons of builtin utilities
+ BusyBox combines tiny versions of many common UNIX utilities into a single
+ small executable. It provides minimalist replacements for the most common
+ utilities you would usually find on your desktop system (i.e., ls, cp, mv,
+ mount, tar, etc.).  The utilities in BusyBox generally have fewer options than
+ their full-featured GNU cousins; however, the options that are included
+ provide the expected functionality and behave very much like their GNU
+ counterparts.
+ .
+ busybox-static provides you with a statically linked simple stand alone shell
+ that provides all the utilities available in BusyBox. This package is
+ intended to be used as a rescue shell, in the event that you screw up your
+ system. Invoke "busybox sh" and you have a standalone shell ready to save
+ your system from certain destruction. Invoke "busybox", and it will list the
+ available builtin commands.
+
+Package: busybox-syslogd
+Description-md5: 6d204aacbcadc9711030ab99f904ca3b
+Description-en: Provides syslogd and klogd using busybox
+ The system log daemon is responsible for providing logging of
+ messages received from programs and facilities on the local host as
+ well as from remote hosts.
+ .
+ The kernel log daemon listens to kernel message sources and is
+ responsible for prioritizing and processing operating system
+ messages.
+ .
+ The busybox implementation of the syslogd is particular useful on
+ embedded, diskless (netboot) or flash disk based systems because it
+ can use a fixed size ring buffer for logging instead of saving logs
+ to the disk or sending it to remote logging servers. The ring buffer
+ can be read using the (also busybox based) command logread.
+ .
+ This package provides the glue to the busybox syslogd and klogd to be
+ used in the system by providing the appropriate symbolic links and
+ scripts.
+
+Package: udhcpc
+Description-md5: e2345d2807e5393b509c38303e4ee886
+Description-en: Provides the busybox DHCP client implementation
+ Busybox contains a very small yet fully functional RFC compliant DHCP
+ client formerly known as udhcpc.
+ .
+ This package contains the glue to use the busybox udhcpc as DHCP
+ client in the system by providing the appropriate symbolic links and
+ scripts.
+
+Package: udhcpd
+Description-md5: c737b2b2b9534ba766d99f6de6c31668
+Description-en: Provides the busybox DHCP server implementation
+ Busybox contains a very small yet fully function RFC compliant DHCP
+ server formerly known as udhcpd.
+ .
+ This package contains the glue to use the busybox udhcpd as DHCP
+ server in the system by providing the appropriate symbolic links and
+ scripts.
 
 Package: libc-ares-dev
 Description-md5: 457af4d18b9753c3360923898df35b1f

@@ -1,3 +1,110 @@
+Package: 389-ds
+Source: 389-ds-base
+Version: 1.4.4.11-2+deb11u1
+Installed-Size: 51
+Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
+Architecture: all
+Depends: 389-ds-base, cockpit-389-ds
+Description: 389 Directory Server suite - metapackage
+Homepage: https://directory.fedoraproject.org
+Description-md5: 72b0f037b5c7bab3e3a681a127817467
+Section: net
+Priority: optional
+Filename: pool/updates/main/3/389-ds-base/389-ds_1.4.4.11-2+deb11u1_all.deb
+Size: 21340
+SHA256: 2eb3258bfcfac8a28a289461f3c14447ca5379c459489b6c3c1e959ec909f596
+
+Package: 389-ds-base
+Version: 1.4.4.11-2+deb11u1
+Installed-Size: 5266
+Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
+Architecture: i386
+Replaces: 389-ds-base-legacy-tools
+Depends: 389-ds-base-libs (= 1.4.4.11-2+deb11u1), adduser, acl, ldap-utils, libmozilla-ldap-perl, libnetaddr-ip-perl, libsocket-getaddrinfo-perl, libsasl2-modules-gssapi-mit, perl, python3-lib389, python3-selinux, python3-semanage, python3-sepolicy, systemd, libc6 (>= 2.28), libcrypt1 (>= 1:4.1.0), libdb5.3, libicu67 (>= 67.1-1~), libldap-2.4-2 (>= 2.4.39), libnspr4 (>= 2:4.10.9), libnss3 (>= 2:3.14), libpam0g (>= 0.99.7.1), libsasl2-2 (>= 2.1.27+dfsg), libsnmp40 (>= 5.9+dfsg), libsystemd0, python3:any
+Description: 389 Directory Server suite - server
+Homepage: https://directory.fedoraproject.org
+Description-md5: 9c56eb26e44476f95f66b09921fcbf22
+Pre-Depends: debconf (>= 0.5) | debconf-2.0
+Section: net
+Priority: optional
+Filename: pool/updates/main/3/389-ds-base/389-ds-base_1.4.4.11-2+deb11u1_i386.deb
+Size: 1414080
+SHA256: 2a7365f44ccf63af648bb56d5ca4e7efd7c2f4871191871249cd7f663fb310d8
+
+Package: 389-ds-base-dev
+Source: 389-ds-base
+Version: 1.4.4.11-2+deb11u1
+Installed-Size: 413
+Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
+Architecture: i386
+Replaces: 389-ds-base (<< 1.3.6.7-4), libsvrcore-dev
+Provides: libsvrcore-dev
+Depends: 389-ds-base-libs (= 1.4.4.11-2+deb11u1), libldap2-dev, libnspr4-dev
+Breaks: 389-ds-base (<< 1.3.6.7-4), libsvrcore-dev
+Description: 389 Directory Server suite - development files
+Homepage: https://directory.fedoraproject.org
+Description-md5: 630be364e8b8b2a8f60ee17e872a2550
+Multi-Arch: same
+Section: libdevel
+Priority: optional
+Filename: pool/updates/main/3/389-ds-base/389-ds-base-dev_1.4.4.11-2+deb11u1_i386.deb
+Size: 80628
+SHA256: dd3aae17f945c3cb65711b0a11c314608f1861a2bc1a7a99c16f7904bcab0464
+
+Package: 389-ds-base-libs
+Source: 389-ds-base
+Version: 1.4.4.11-2+deb11u1
+Installed-Size: 1776
+Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
+Architecture: i386
+Replaces: 389-ds-base (<< 1.3.6.7-5), 389-ds-base-dev (<< 1.3.6.7-4), libsvrcore0
+Depends: libc6 (>= 2.28), libcom-err2 (>= 1.43.9), libcrack2 (>= 2.8.12), libkrb5-3 (>= 1.13~alpha1+dfsg), libldap-2.4-2 (>= 2.4.25), libnspr4 (>= 2:4.10.9), libnss3 (>= 2:3.44.0), libpcre3
+Breaks: 389-ds-base (<< 1.3.6.7-5), 389-ds-base-dev (<< 1.3.6.7-4), libsvrcore0
+Description: 389 Directory Server suite - libraries
+Homepage: https://directory.fedoraproject.org
+Description-md5: d2ef365214ac1295f734f49594c9b579
+Multi-Arch: same
+Section: libs
+Priority: optional
+Filename: pool/updates/main/3/389-ds-base/389-ds-base-libs_1.4.4.11-2+deb11u1_i386.deb
+Size: 578860
+SHA256: fa04233a1fafbed8072bbe859209dafdf77360ebcdb688647ce5692411307a28
+
+Package: cockpit-389-ds
+Source: 389-ds-base
+Version: 1.4.4.11-2+deb11u1
+Installed-Size: 9897
+Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
+Architecture: all
+Depends: cockpit, libjs-bootstrap, libjs-c3, libjs-d3, libjs-jquery-datatables, libjs-jquery-datatables-extensions, libjs-jquery-jstree, libjs-moment, libnss3-tools, python3, python3-lib389
+Description: Cockpit user interface for 389 Directory Server
+Homepage: https://directory.fedoraproject.org
+Description-md5: 29c953a4198b73567ac827862c4a3e0f
+Multi-Arch: foreign
+Section: net
+Priority: optional
+Filename: pool/updates/main/3/389-ds-base/cockpit-389-ds_1.4.4.11-2+deb11u1_all.deb
+Size: 1814956
+SHA256: c422aeddebbe16820e29bdad41610a588488c2c3b8ef64f09243197b51077fb0
+
+Package: python3-lib389
+Source: 389-ds-base
+Version: 1.4.4.11-2+deb11u1
+Installed-Size: 2151
+Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
+Architecture: all
+Replaces: 389-ds-base (<< 1.4.0.18-1~), python-lib389 (<< 1.3.7.8)
+Depends: python3-argcomplete, python3-argparse-manpage, python3-dateutil, python3-distro, python3-ldap, python3-pkg-resources, python3-pyasn1, python3-pyasn1-modules, python3-pytest, python3:any, libnss3-tools, openssl, python3-packaging
+Conflicts: 389-ds-base (<< 1.4.0.18-1~), python-lib389 (<< 1.3.7.8)
+Description: Python3 module for accessing and configuring the 389 Directory Server
+Homepage: https://directory.fedoraproject.org
+Description-md5: 312a10ddcf41c03aed17c8e2759b4410
+Section: net
+Priority: optional
+Filename: pool/updates/main/3/389-ds-base/python3-lib389_1.4.4.11-2+deb11u1_all.deb
+Size: 368820
+SHA256: 9780770f90a2fc1f23ecd41be378f4b71a2b6f27aff4a32b66862ebf3f4cda41
+
 Package: activemq
 Version: 5.16.1-1+deb11u1
 Installed-Size: 658
@@ -1985,6 +2092,94 @@ Priority: optional
 Filename: pool/updates/main/b/booth/booth-pacemaker_1.0-237-gdd88847-2+deb11u2_all.deb
 Size: 13952
 SHA256: a47ee78aa6b092c30c3e3d4abaa2d341e2285a10c49af601a0da46edb86ccafa
+
+Package: busybox
+Version: 1:1.30.1-6+deb11u1
+Installed-Size: 755
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: i386
+Replaces: busybox-static
+Depends: libc6 (>= 2.28)
+Conflicts: busybox-static
+Breaks: initramfs-tools (<< 0.99)
+Description: Tiny utilities for small and embedded systems
+Homepage: http://www.busybox.net
+Description-md5: b7707908219c331294f3f9e8d926a9dc
+Section: utils
+Priority: optional
+Filename: pool/updates/main/b/busybox/busybox_1.30.1-6+deb11u1_i386.deb
+Size: 428092
+SHA256: 977d2c5f10f746e6bd602fdf97814b188a26ea9d2d0adddf6e72f7627fb43e71
+
+Package: busybox-static
+Source: busybox
+Version: 1:1.30.1-6+deb11u1
+Installed-Size: 2035
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: i386
+Replaces: busybox
+Provides: busybox
+Conflicts: busybox
+Description: Standalone rescue shell with tons of builtin utilities
+Homepage: http://www.busybox.net
+Built-Using: glibc (= 2.31-13+deb11u11)
+Description-md5: 1ccce12e08e4aa13a2e6bdd5ffb85b65
+Section: shells
+Priority: optional
+Filename: pool/updates/main/b/busybox/busybox-static_1.30.1-6+deb11u1_i386.deb
+Size: 936928
+SHA256: b94ef95612931225b6856ef279f35ab219f4f52f02a054133bc8f39b8cf04a7c
+
+Package: busybox-syslogd
+Source: busybox
+Version: 1:1.30.1-6+deb11u1
+Installed-Size: 61
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Provides: linux-kernel-log-daemon, system-log-daemon
+Depends: busybox (>> 1:1.30.1) | busybox-static (>> 1:1.30.1), lsb-base
+Conflicts: linux-kernel-log-daemon, system-log-daemon
+Description: Provides syslogd and klogd using busybox
+Homepage: http://www.busybox.net
+Description-md5: 6d204aacbcadc9711030ab99f904ca3b
+Section: utils
+Priority: optional
+Filename: pool/updates/main/b/busybox/busybox-syslogd_1.30.1-6+deb11u1_all.deb
+Size: 26400
+SHA256: 39c25c110406e36bcb5f973a1eb91ef2498480bdf4f12ef24e3610bd1ef34218
+
+Package: udhcpc
+Source: busybox
+Version: 1:1.30.1-6+deb11u1
+Installed-Size: 39
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: i386
+Depends: busybox (>> 1:1.30.1) | busybox-static (>> 1:1.30.1)
+Description: Provides the busybox DHCP client implementation
+Homepage: http://www.busybox.net
+Description-md5: e2345d2807e5393b509c38303e4ee886
+Section: net
+Priority: optional
+Filename: pool/updates/main/b/busybox/udhcpc_1.30.1-6+deb11u1_i386.deb
+Size: 24616
+SHA256: 154e1b3805460d35e10b3eba061a4d511a966f895b50a32a68a2e036bb97c17b
+
+Package: udhcpd
+Source: busybox
+Version: 1:1.30.1-6+deb11u1
+Installed-Size: 54
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: i386
+Provides: dhcpd
+Depends: busybox (>> 1:1.30.1) | busybox-static (>> 1:1.30.1), lsb-base
+Description: Provides the busybox DHCP server implementation
+Homepage: http://www.busybox.net
+Description-md5: c737b2b2b9534ba766d99f6de6c31668
+Section: net
+Priority: optional
+Filename: pool/updates/main/b/busybox/udhcpd_1.30.1-6+deb11u1_i386.deb
+Size: 27340
+SHA256: 980b50b65547a76a39f803a7be522c93cead167d3f635a0f3a1fcd0d033995c4
 
 Package: libc-ares-dev
 Source: c-ares
