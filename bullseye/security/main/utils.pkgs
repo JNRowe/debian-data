@@ -71,6 +71,42 @@ Filename: pool/updates/main/a/avahi/avahi-ui-utils_0.8-5+deb11u3_i386.deb
 Size: 47580
 SHA256: a3ce8b7f1e0d49098a7c63dca1194c1db8d1a94f126d541718c4486e295c3ba1
 
+Package: busybox
+Version: 1:1.30.1-6+deb11u1
+Installed-Size: 755
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: i386
+Replaces: busybox-static
+Depends: libc6 (>= 2.28)
+Conflicts: busybox-static
+Breaks: initramfs-tools (<< 0.99)
+Description: Tiny utilities for small and embedded systems
+Homepage: http://www.busybox.net
+Description-md5: b7707908219c331294f3f9e8d926a9dc
+utils
+Priority: optional
+Filename: pool/updates/main/b/busybox/busybox_1.30.1-6+deb11u1_i386.deb
+Size: 428092
+SHA256: 977d2c5f10f746e6bd602fdf97814b188a26ea9d2d0adddf6e72f7627fb43e71
+
+Package: busybox-syslogd
+Source: busybox
+Version: 1:1.30.1-6+deb11u1
+Installed-Size: 61
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Provides: linux-kernel-log-daemon, system-log-daemon
+Depends: busybox (>> 1:1.30.1) | busybox-static (>> 1:1.30.1), lsb-base
+Conflicts: linux-kernel-log-daemon, system-log-daemon
+Description: Provides syslogd and klogd using busybox
+Homepage: http://www.busybox.net
+Description-md5: 6d204aacbcadc9711030ab99f904ca3b
+utils
+Priority: optional
+Filename: pool/updates/main/b/busybox/busybox-syslogd_1.30.1-6+deb11u1_all.deb
+Size: 26400
+SHA256: 39c25c110406e36bcb5f973a1eb91ef2498480bdf4f12ef24e3610bd1ef34218
+
 Package: clamav
 Version: 1.0.7+dfsg-1~deb11u2
 Installed-Size: 15794
