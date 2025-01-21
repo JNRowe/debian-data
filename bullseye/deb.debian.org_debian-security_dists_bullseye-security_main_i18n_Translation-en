@@ -29489,6 +29489,33 @@ Description-en: distributed virtual object store - proxy server
  This package provides a proxy server on which clients can connect to store
  object into Swift.
 
+Package: sympa
+Description-md5: f7b0e7f08562536810997073c968428b
+Description-en: Modern mailing list manager
+ Sympa is a scalable and highly customizable modern mailing list manager
+ capable of handling big setups: 20.000 lists with 700,000 subscribers.
+ .
+ Here are some of its many features:
+  - Advanced MIME support, including digests, anonymization and S/MIME
+    encryption
+  - Builtin password-based authentication, HTTPS X.509 certificates or
+    use of LDAP database or Single Sign-On CAS or Shibboleth servers
+  - Archive management with web access and RSS feeds
+  - Moderation and administration via email, web and SOAP interface
+  - Multi-lingual, translated to more than 30 languages
+  - Virtual domains (virtual robots)
+  - Local SQLite subscriber database or use of MySQL, PostgreSQL or LDAP
+  - Integrated scripting language to extend and automate routines
+  - Web interface called WWSympa providing homogenous access for both
+    users and admins to list overviews, customization, administration,
+    searchable archives and optional web-based email reply form.
+  - Clean moderation and expiration processing
+  - Customizable service messages (templates) for owner and listmaster
+  - Semi-automatic bounces management
+ .
+ SYMPA is French for 'SYstème de Multi-Postage Automatique', which means
+ 'Automatic Multi Mailing System'.
+
 Package: syslog-ng
 Description-md5: 2498a80b4edf9c00bf85d5db8c845d60
 Description-en: Enhanced system logging daemon (metapackage)
@@ -31289,6 +31316,36 @@ Description-en: time zone and daylight-saving time data
  globe. It is updated periodically to reflect changes made by
  political bodies to time zone boundaries, UTC offsets, and
  daylight-saving rules.
+
+Package: ucf
+Description-md5: 83e3ff2859524c831253d938da348878
+Description-en: Update Configuration File(s): preserve user changes to config files
+ Debian policy mandates that user changes to configuration files must be
+ preserved during package upgrades. The easy way to achieve this behavior
+ is to make the configuration file a 'conffile', in which case dpkg
+ handles the file specially during upgrades, prompting the user as
+ needed.
+ .
+ This is appropriate only if it is possible to distribute a default
+ version that will work for most installations, although some system
+ administrators may choose to modify it. This implies that the
+ default version will be part of the package distribution, and must
+ not be modified by the maintainer scripts during installation (or at
+ any other time).
+ .
+ This script attempts to provide conffile-like handling for files that
+ may not be labelled conffiles, and are not shipped in a Debian package,
+ but handled by the postinst instead. This script allows one to
+ maintain files in /etc, preserving user changes and in general
+ offering the same facilities while upgrading that dpkg normally
+ provides for 'conffiles'.
+ .
+ Additionally, this script provides facilities for transitioning a
+ file that had not been provided with conffile-like protection to come
+ under this schema, and attempts to minimize questions asked at
+ installation time. Indeed, the transitioning facility is better than the
+ one offered by dpkg while transitioning a file from a non-conffile to
+ conffile status.
 
 Package: libunbound-dev
 Description-md5: ed3009c5a462f3287f75c961064034a6
