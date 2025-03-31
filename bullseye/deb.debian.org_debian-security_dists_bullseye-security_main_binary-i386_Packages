@@ -2112,6 +2112,24 @@ Filename: pool/updates/main/b/booth/booth-pacemaker_1.0-237-gdd88847-2+deb11u2_a
 Size: 13952
 SHA256: a47ee78aa6b092c30c3e3d4abaa2d341e2285a10c49af601a0da46edb86ccafa
 
+Package: bubblewrap
+Version: 0.4.1-3+deb11u1
+Installed-Size: 112
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Depends: libc6 (>= 2.28), libcap2 (>= 1:2.10), libselinux1 (>= 3.1~)
+Breaks: flatpak (<< 0.8.0-2~)
+Description: utility for unprivileged chroot and namespace manipulation
+Homepage: https://github.com/containers/bubblewrap
+Description-md5: 93fea4e8ee77b240289ff794fd4777ea
+Multi-Arch: foreign
+Recommends: procps
+Section: admin
+Priority: optional
+Filename: pool/updates/main/b/bubblewrap/bubblewrap_0.4.1-3+deb11u1_i386.deb
+Size: 45256
+SHA256: ee3558f6f26ce3cfaefa71fc53d95c24e7f5b9eb27262e4c4e7497774b269e8a
+
 Package: busybox
 Version: 1:1.30.1-6+deb11u1
 Installed-Size: 755
@@ -11558,12 +11576,12 @@ Size: 99060
 SHA256: cb7031eec91879fdb5c3bdbe949e340dfd9de13974e6caf7960f79426ea7a939
 
 Package: flatpak
-Version: 1.10.8-0+deb11u2
-Installed-Size: 7229
+Version: 1.10.8-0+deb11u3
+Installed-Size: 7241
 Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
 Architecture: i386
 Replaces: xdg-app
-Depends: adduser, bubblewrap (>= 0.4.0), dbus, xdg-dbus-proxy (>= 0.1.0), libappstream-glib8 (>= 0.6.1), libarchive13 (>= 3.0.4), libc6 (>= 2.28), libdconf1 (>= 0.26.0), libfuse2 (>= 2.9.2), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.57.2), libgpgme11 (>= 1.1.8), libjson-glib-1.0-0 (>= 1.5.2), libmalcontent-0-0 (>= 0.6.0), libostree-1-1 (>= 2020.8), libpolkit-agent-1-0 (>= 0.105), libpolkit-gobject-1-0 (>= 0.101), libseccomp2 (>= 2.5.0), libsoup2.4-1 (>= 2.41.90), libsystemd0, libxau6 (>= 1:1.0.9), libxml2 (>= 2.7.4), libzstd1 (>= 1.4.0)
+Depends: adduser, bubblewrap (>= 0.4.1-3+deb11u1~), bubblewrap (<< 0.4.1-3.1) | bubblewrap (>= 0.8.0-2+deb12u1~), dbus, xdg-dbus-proxy (>= 0.1.0), libappstream-glib8 (>= 0.6.1), libarchive13 (>= 3.0.4), libc6 (>= 2.28), libdconf1 (>= 0.26.0), libfuse2 (>= 2.9.2), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.57.2), libgpgme11 (>= 1.1.8), libjson-glib-1.0-0 (>= 1.5.2), libmalcontent-0-0 (>= 0.6.0), libostree-1-1 (>= 2020.8), libpolkit-agent-1-0 (>= 0.105), libpolkit-gobject-1-0 (>= 0.101), libseccomp2 (>= 2.5.0), libsoup2.4-1 (>= 2.41.90), libsystemd0, libxau6 (>= 1:1.0.9), libxml2 (>= 2.7.4), libzstd1 (>= 1.4.0)
 Suggests: avahi-daemon, malcontent-gui
 Conflicts: xdg-app
 Description: Application deployment framework for desktop apps
@@ -11572,30 +11590,30 @@ Description-md5: f91acb1d2880527b2759bc5e2d99fbff
 Recommends: desktop-file-utils, hicolor-icon-theme, gtk-update-icon-cache, libpam-systemd, p11-kit, policykit-1, shared-mime-info, xdg-desktop-portal (>= 1.6), xdg-desktop-portal-gtk (>= 1.6) | xdg-desktop-portal-backend
 Section: admin
 Priority: optional
-Filename: pool/updates/main/f/flatpak/flatpak_1.10.8-0+deb11u2_i386.deb
-Size: 1333840
-SHA256: 993f182841b24948b0c6f3a58d18bb0a2f6615823d9bc555eb6af85a149c88b1
+Filename: pool/updates/main/f/flatpak/flatpak_1.10.8-0+deb11u3_i386.deb
+Size: 1337784
+SHA256: d6399e1a31d2d0f80d6f4f7e683670abefb9da52b2288af6f524f1df06c254f8
 
 Package: flatpak-tests
 Source: flatpak
-Version: 1.10.8-0+deb11u2
-Installed-Size: 6220
+Version: 1.10.8-0+deb11u3
+Installed-Size: 6230
 Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
 Architecture: i386
-Depends: attr, ca-certificates, desktop-file-utils, flatpak (= 1.10.8-0+deb11u2), fuse, gnupg, gtk-update-icon-cache, hicolor-icon-theme, ostree (>= 2020.8), policykit-1, shared-mime-info, socat, libappstream-glib8 (>= 0.5.13), libarchive13 (>= 3.0.4), libc6 (>= 2.28), libdconf1 (>= 0.26.0), libflatpak0 (>= 1.9.1), libfuse2 (>= 2.9.2), libglib2.0-0 (>= 2.55.1), libgpgme11 (>= 1.1.8), libjson-glib-1.0-0 (>= 1.5.2), libmalcontent-0-0 (>= 0.6.0), libostree-1-1 (>= 2020.8), libpolkit-gobject-1-0 (>= 0.101), libseccomp2 (>= 2.5.0), libsoup2.4-1 (>= 2.41.90), libsystemd0, libxau6 (>= 1:1.0.9), libxml2 (>= 2.7.4), libzstd1 (>= 1.4.0)
+Depends: attr, ca-certificates, desktop-file-utils, flatpak (= 1.10.8-0+deb11u3), fuse, gnupg, gtk-update-icon-cache, hicolor-icon-theme, ostree (>= 2020.8), policykit-1, shared-mime-info, socat, libappstream-glib8 (>= 0.5.13), libarchive13 (>= 3.0.4), libc6 (>= 2.28), libdconf1 (>= 0.26.0), libflatpak0 (>= 1.9.1), libfuse2 (>= 2.9.2), libglib2.0-0 (>= 2.55.1), libgpgme11 (>= 1.1.8), libjson-glib-1.0-0 (>= 1.5.2), libmalcontent-0-0 (>= 0.6.0), libostree-1-1 (>= 2020.8), libpolkit-gobject-1-0 (>= 0.101), libseccomp2 (>= 2.5.0), libsoup2.4-1 (>= 2.41.90), libsystemd0, libxau6 (>= 1:1.0.9), libxml2 (>= 2.7.4), libzstd1 (>= 1.4.0)
 Description: Application deployment framework for desktop apps (tests)
 Homepage: https://flatpak.org/
 Description-md5: 8c55ee927d2b9992e22292e7b2c097aa
 Recommends: python3
 Section: misc
 Priority: optional
-Filename: pool/updates/main/f/flatpak/flatpak-tests_1.10.8-0+deb11u2_i386.deb
-Size: 933668
-SHA256: 9a58ba2feccf694de3c0ce5ccc94296b68aa8f5b02c7fa6f1683810c5d370389
+Filename: pool/updates/main/f/flatpak/flatpak-tests_1.10.8-0+deb11u3_i386.deb
+Size: 934008
+SHA256: cf2e6644625729072bf4186e7ef60f84302fe0528fb68f9587b302c4bd9a2007
 
 Package: gir1.2-flatpak-1.0
 Source: flatpak
-Version: 1.10.8-0+deb11u2
+Version: 1.10.8-0+deb11u3
 Installed-Size: 78
 Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
 Architecture: i386
@@ -11606,17 +11624,17 @@ Description-md5: d56a77ab2a71ace5e8bdb87dcec05c28
 Multi-Arch: same
 Section: introspection
 Priority: optional
-Filename: pool/updates/main/f/flatpak/gir1.2-flatpak-1.0_1.10.8-0+deb11u2_i386.deb
-Size: 37704
-SHA256: 90777523b6c20c99a04949326f6640ddf7ee04a8aeaf7b8dcdd801bd361eac06
+Filename: pool/updates/main/f/flatpak/gir1.2-flatpak-1.0_1.10.8-0+deb11u3_i386.deb
+Size: 37776
+SHA256: af3b3d52e643cbdaa2df6aec6304b46585c28e33605d620cac1d7bef2690a5fd
 
 Package: libflatpak-dev
 Source: flatpak
-Version: 1.10.8-0+deb11u2
+Version: 1.10.8-0+deb11u3
 Installed-Size: 611
 Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
 Architecture: i386
-Depends: gir1.2-glib-2.0, gir1.2-flatpak-1.0 (= 1.10.8-0+deb11u2), libflatpak0 (= 1.10.8-0+deb11u2), libglib2.0-dev, libostree-dev (>= 2020.8), libxml2-dev (>= 2.4), pkg-config, python3:any
+Depends: gir1.2-glib-2.0, gir1.2-flatpak-1.0 (= 1.10.8-0+deb11u3), libflatpak0 (= 1.10.8-0+deb11u3), libglib2.0-dev, libostree-dev (>= 2020.8), libxml2-dev (>= 2.4), pkg-config, python3:any
 Suggests: gdb, ostree, python3-gi, systemd-coredump
 Description: Application deployment framework for desktop apps (development)
 Homepage: https://flatpak.org/
@@ -11625,13 +11643,13 @@ Multi-Arch: same
 Recommends: flatpak
 Section: libdevel
 Priority: optional
-Filename: pool/updates/main/f/flatpak/libflatpak-dev_1.10.8-0+deb11u2_i386.deb
-Size: 79568
-SHA256: fbc851a68240e47da3d0a12e973a726a917d634d03980573d15176406e368829
+Filename: pool/updates/main/f/flatpak/libflatpak-dev_1.10.8-0+deb11u3_i386.deb
+Size: 79624
+SHA256: c16e8f975020fd5ecf0bcd855d9f606073e801de79ae177abf04a5f64e35889a
 
 Package: libflatpak-doc
 Source: flatpak
-Version: 1.10.8-0+deb11u2
+Version: 1.10.8-0+deb11u3
 Installed-Size: 1127
 Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
 Architecture: all
@@ -11642,26 +11660,26 @@ Description-md5: c7d59a541c5d9998f886d74daf4ac8d6
 Multi-Arch: foreign
 Section: doc
 Priority: optional
-Filename: pool/updates/main/f/flatpak/libflatpak-doc_1.10.8-0+deb11u2_all.deb
-Size: 137564
-SHA256: 9d2ef5c476ffed57e2abad23b89d1dac63fc7623bd4bc4c538655f78af1cbdbc
+Filename: pool/updates/main/f/flatpak/libflatpak-doc_1.10.8-0+deb11u3_all.deb
+Size: 137668
+SHA256: 191997e88071b7549e9f731190ce4fc359000857cb6c32e4345c2a53acad95a9
 
 Package: libflatpak0
 Source: flatpak
-Version: 1.10.8-0+deb11u2
-Installed-Size: 1125
+Version: 1.10.8-0+deb11u3
+Installed-Size: 1129
 Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
 Architecture: i386
-Depends: bubblewrap (>= 0.4.0), libarchive13 (>= 3.0.4), libc6 (>= 2.28), libdconf1 (>= 0.26.0), libglib2.0-0 (>= 2.55.1), libgpgme11 (>= 1.1.8), libjson-glib-1.0-0 (>= 1.5.2), libmalcontent-0-0 (>= 0.6.0), libostree-1-1 (>= 2020.8), libpolkit-gobject-1-0 (>= 0.101), libseccomp2 (>= 2.5.0), libsoup2.4-1 (>= 2.41.90), libsystemd0, libxau6 (>= 1:1.0.9), libxml2 (>= 2.7.4), libzstd1 (>= 1.4.0)
+Depends: bubblewrap (>= 0.4.1-3+deb11u1~), bubblewrap (<< 0.4.1-3.1) | bubblewrap (>= 0.8.0-2+deb12u1~), libarchive13 (>= 3.0.4), libc6 (>= 2.28), libdconf1 (>= 0.26.0), libglib2.0-0 (>= 2.55.1), libgpgme11 (>= 1.1.8), libjson-glib-1.0-0 (>= 1.5.2), libmalcontent-0-0 (>= 0.6.0), libostree-1-1 (>= 2020.8), libpolkit-gobject-1-0 (>= 0.101), libseccomp2 (>= 2.5.0), libsoup2.4-1 (>= 2.41.90), libsystemd0, libxau6 (>= 1:1.0.9), libxml2 (>= 2.7.4), libzstd1 (>= 1.4.0)
 Description: Application deployment framework for desktop apps (library)
 Homepage: https://flatpak.org/
 Description-md5: 0e4073ffd5dff85f7c3cfe70f89906ed
 Multi-Arch: same
 Section: libs
 Priority: optional
-Filename: pool/updates/main/f/flatpak/libflatpak0_1.10.8-0+deb11u2_i386.deb
-Size: 378536
-SHA256: 9553edbc2b9ca7c6927779bd9de442b76ee8c8aef7e0174209ce193239223aa7
+Filename: pool/updates/main/f/flatpak/libflatpak0_1.10.8-0+deb11u3_i386.deb
+Size: 379236
+SHA256: f096968a521e1e7dceb75233d4d00894df34c376a1ca1374fff512aa6786cbeb
 
 Package: flatpak-builder
 Version: 1.0.12-1+deb11u1
@@ -19246,6 +19264,21 @@ Priority: optional
 Filename: pool/updates/main/libc/libcue/libcue2_2.2.1-3+deb11u1_i386.deb
 Size: 22680
 SHA256: 810acccd35377eb5f8200bba8053f6ec736b9b7ad0b4f1807e610d19b13b23cb
+
+Package: libdata-entropy-perl
+Version: 0.007-3.1+deb11u1
+Installed-Size: 99
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: perl:any, libcrypt-rijndael-perl, libcrypt-urandom-perl, libdata-float-perl, libhttp-lite-perl, libparams-classify-perl
+Description: Perl module for entropy (randomness) management
+Homepage: https://metacpan.org/release/Data-Entropy
+Description-md5: bf232b9f932cc0e331c5707daf63a17a
+Section: perl
+Priority: optional
+Filename: pool/updates/main/libd/libdata-entropy-perl/libdata-entropy-perl_0.007-3.1+deb11u1_all.deb
+Size: 43048
+SHA256: 30a688f2622613a44e730f49772ab3416cdb5ccbba16a487802da0249e34f3b3
 
 Package: libde265-0
 Source: libde265
