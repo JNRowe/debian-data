@@ -1466,6 +1466,22 @@ Description-en: Resource agents to integrate booth with Pacemaker
  This package contains the integration script for booth to run as
  part of a Pacemaker cluster.
 
+Package: bubblewrap
+Description-md5: 93fea4e8ee77b240289ff794fd4777ea
+Description-en: utility for unprivileged chroot and namespace manipulation
+ bubblewrap uses Linux namespaces to launch unprivileged containers.
+ These containers can be used to sandbox semi-trusted applications such
+ as Flatpak apps, image/video thumbnailers and web browser components,
+ or to run programs in a different library stack such as a Flatpak runtime
+ or a different Debian release.
+ .
+ By default, this package relies on a kernel with user namespaces enabled.
+ Official Debian and Ubuntu kernels are suitable.
+ .
+ On kernels without user namespaces, system administrators can make the
+ bwrap executable setuid root, allowing it to create unprivileged
+ containers even though ordinary user processes cannot.
+
 Package: busybox
 Description-md5: b7707908219c331294f3f9e8d926a9dc
 Description-en: Tiny utilities for small and embedded systems
@@ -13107,6 +13123,26 @@ Description-en: CUE Sheet Parser Library
  Libcue is intended to parse a so called cue sheet from a
  char string or a file pointer. For handling of the parsed
  data a convenient API is available.
+
+Package: libdata-entropy-perl
+Description-md5: bf232b9f932cc0e331c5707daf63a17a
+Description-en: Perl module for entropy (randomness) management
+ Data::Entropy maintains a concept of a current selection of entropy source.
+ Algorithms that require entropy can use the source nominated by this
+ module, avoiding the need for entropy source objects to be explicitly
+ passed around.  This is convenient because usually one entropy source
+ will be used for an entire program run and so an explicit entropy source
+ parameter would rarely vary.  There is also a default entropy source,
+ avoiding the need to explicitly configure a source at all.
+ .
+ If nothing is done to set a source then it defaults to the use of Rijndael
+ (AES) in counter mode (see Data::Entropy::RawSource::CryptCounter
+ and Crypt::Rijndael), keyed using Perl's built-in rand function.
+ This gives a data stream that looks like concentrated entropy, but really
+ only has at most the entropy of the rand seed.  Within a single run it
+ is cryptographically difficult to detect the correlation between parts
+ of the pseudo-entropy stream.  If more true entropy is required then it
+ is necessary to configure a different entropy source.
 
 Package: libde265-0
 Description-md5: e2595c4a6d2348fa129b67fcf8e11192
