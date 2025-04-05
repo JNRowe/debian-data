@@ -1,0 +1,55 @@
+Package: zfs-dkms
+Source: zfs-linux
+Version: 2.0.3-9+deb11u2
+Installed-Size: 16899
+Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
+Architecture: all
+Replaces: spl-dkms
+Provides: zfs-modules
+Depends: dkms (>> 2.1.1.2-5), file, libc6-dev | libc-dev, lsb-release, python3-distutils | libpython3-stdlib (<< 3.6.4), debconf (>= 0.5) | debconf-2.0, perl:any
+Suggests: debhelper
+Breaks: spl-dkms (<< 0.8.0~rc1)
+Description: OpenZFS filesystem kernel modules for Linux
+Homepage: https://zfsonlinux.org/
+Description-md5: 39e75ed3c1d3a5bc9c23ff32d0b5bbe1
+Recommends: zfs-zed, zfsutils-linux (>= 2.0.3-9+deb11u2), linux-libc-dev (<< 5.11~), linux-libc-dev (>= 3.10~)
+contrib/kernel
+Priority: optional
+Filename: pool/updates/contrib/z/zfs-linux/zfs-dkms_2.0.3-9+deb11u2_all.deb
+Size: 2234312
+SHA256: cb76962c30a0bbd109780aa62a3b792f7449f0876e2150bdc45f8512c0da52fb
+
+Package: zfs-dracut
+Source: zfs-linux
+Version: 2.0.3-9+deb11u2
+Installed-Size: 104
+Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
+Architecture: all
+Depends: dracut, zfs-modules | zfs-dkms, zfsutils-linux (>= 2.0.3-9+deb11u2)
+Description: OpenZFS root filesystem capabilities for Linux - dracut
+Homepage: https://zfsonlinux.org/
+Description-md5: 965d2232071aa7eaad3e0a3ca11764b0
+contrib/kernel
+Priority: optional
+Filename: pool/updates/contrib/z/zfs-linux/zfs-dracut_2.0.3-9+deb11u2_all.deb
+Size: 35128
+SHA256: 8b1661f9a5e6537b66cc46e3fa63b74a7c2f42fab8e88ac03a1994fe191a8919
+
+Package: zfs-initramfs
+Source: zfs-linux
+Version: 2.0.3-9+deb11u2
+Installed-Size: 115
+Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
+Architecture: all
+Replaces: zfsutils-linux (<= 0.7.11-2)
+Depends: busybox-initramfs | busybox-static | busybox, initramfs-tools, zfs-modules | zfs-dkms, zfsutils-linux (>= 2.0.3-9+deb11u2)
+Breaks: zfsutils-linux (<= 0.7.11-2)
+Description: OpenZFS root filesystem capabilities for Linux - initramfs
+Homepage: https://zfsonlinux.org/
+Description-md5: ed136876804c562cd1f81b87863a33a9
+contrib/kernel
+Priority: optional
+Filename: pool/updates/contrib/z/zfs-linux/zfs-initramfs_2.0.3-9+deb11u2_all.deb
+Size: 38064
+SHA256: 08a8ad027cfc433ffc7b03a003aa3f5af636dba6bf5a7216c2bc7548d12c3681
+
