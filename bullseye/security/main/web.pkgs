@@ -209,11 +209,11 @@ SHA256: 606f30f0e3864fce81005fa73ebb2c0d51b257612cbb8c405fc4f66ab4347199
 
 Package: lemonldap-ng-fastcgi-server
 Source: lemonldap-ng
-Version: 2.0.11+ds-4+deb11u6
+Version: 2.0.11+ds-4+deb11u7
 Installed-Size: 165
 Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: perl:any, lsb-base, libfcgi-perl, libfcgi-procmanager-perl, liblemonldap-ng-handler-perl (= 2.0.11+ds-4+deb11u6), libplack-perl
+Depends: perl:any, lsb-base, libfcgi-perl, libfcgi-procmanager-perl, liblemonldap-ng-handler-perl (= 2.0.11+ds-4+deb11u7), libplack-perl
 Description: Lemonldap::NG FastCGI server
 Homepage: https://lemonldap-ng.org/
 Description-md5: bc2de4a4fd7d43a3eb12419c5cb1273f
@@ -221,17 +221,17 @@ Pre-Depends: init-system-helpers (>= 1.54~)
 Recommends: libhttp-parser-xs-perl, nginx-extras | nginx
 web
 Priority: optional
-Filename: pool/updates/main/l/lemonldap-ng/lemonldap-ng-fastcgi-server_2.0.11+ds-4+deb11u6_all.deb
-Size: 82256
-SHA256: ab4dbeb8cf7342ecf977ab2b5a5b4de5b46fddee7a8e2393ba28dd7e99cb1812
+Filename: pool/updates/main/l/lemonldap-ng/lemonldap-ng-fastcgi-server_2.0.11+ds-4+deb11u7_all.deb
+Size: 82332
+SHA256: c01e88897808019649b9853f42b00c89c09de8d4a6f1ce98bd53becf3749c86e
 
 Package: lemonldap-ng-uwsgi-app
 Source: lemonldap-ng
-Version: 2.0.11+ds-4+deb11u6
+Version: 2.0.11+ds-4+deb11u7
 Installed-Size: 134
 Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: liblemonldap-ng-handler-perl (= 2.0.11+ds-4+deb11u6)
+Depends: liblemonldap-ng-handler-perl (= 2.0.11+ds-4+deb11u7)
 Suggests: nginx-extras | nginx
 Description: Lemonldap::NG uWSGI server
 Homepage: https://lemonldap-ng.org/
@@ -239,9 +239,9 @@ Description-md5: 11e1ef1ab9b2680624488ca85209bbf4
 Recommends: libhttp-parser-xs-perl, uwsgi-plugin-psgi
 web
 Priority: optional
-Filename: pool/updates/main/l/lemonldap-ng/lemonldap-ng-uwsgi-app_2.0.11+ds-4+deb11u6_all.deb
-Size: 73648
-SHA256: 0ece6e86e71b01f8d940e646d6a455c1bffb3186948763b90a25ac14a873a938
+Filename: pool/updates/main/l/lemonldap-ng/lemonldap-ng-uwsgi-app_2.0.11+ds-4+deb11u7_all.deb
+Size: 73704
+SHA256: a86444022af3fb41c11df54391500372168601872dac28b5741ccb912bb79547
 
 Package: libapache2-mod-auth-openidc
 Version: 2.4.9.4-0+deb11u3
@@ -407,6 +407,23 @@ Priority: optional
 Filename: pool/updates/main/n/nodejs/nodejs_12.22.12~dfsg-1~deb11u6_i386.deb
 Size: 149152
 SHA256: 49ae13e09ac81b1aa07777626196e041ae05edcf5f02426134deaaa1c1534cf5
+
+Package: phpmyadmin
+Version: 4:5.0.4+dfsg2-2+deb11u2
+Installed-Size: 28354
+Maintainer: phpMyAdmin Packaging Team <team+phpmyadmin@tracker.debian.org>
+Architecture: all
+Depends: dbconfig-mysql | dbconfig-no-thanks | dbconfig-common (<< 2.0.0), libjs-bootstrap4, libjs-codemirror, libjs-jquery, libjs-jquery-mousewheel, libjs-jquery-timepicker, libjs-jquery-ui, libjs-openlayers, php-cli, sensible-utils, ucf, debconf (>= 0.5) | debconf-2.0, php-common, php-json, php-mysql, php-xml, php-google-recaptcha (>= 1.1), php-google-recaptcha (<< 2~~), php-phpmyadmin-motranslator (<< 6~~), php-phpmyadmin-shapefile (>= 2.0), php-phpmyadmin-shapefile (<< 3~~), php-phpmyadmin-sql-parser (>= 5.0), php-phpmyadmin-sql-parser (<< 6~~), php-twig-i18n-extension, php-phpseclib (>= 2.0), php-phpseclib (<< 3~~), php-symfony-config (>= 4.2.8), php-symfony-config (<< 5~~), php-symfony-dependency-injection (>= 4.2.8), php-symfony-dependency-injection (<< 5~~), php-symfony-expression-language (>= 4.2), php-symfony-expression-language (<< 5~~), php-mbstring, php-symfony-yaml (>= 4.2.8), php-symfony-yaml (<< 5~~), php-twig (<< 4~~), php-mariadb-mysql-kbs (>= 1.2), php-mariadb-mysql-kbs (<< 2~~), libjs-sphinxdoc (>= 2.4.3-5~)
+Suggests: default-mysql-server | virtual-mysql-server, php-recode, www-browser, php-opcache, php-gd2, php-pragmarx-google2fa-qrcode, php-samyoul-u2f-php-server
+Description: MySQL web administration tool
+Homepage: https://www.phpmyadmin.net/
+Description-md5: b9abac2fce7719799e194516b6640871
+Recommends: apache2 | lighttpd | httpd, php-bz2, php-curl, php-gd, php-tcpdf, php-zip
+web
+Priority: optional
+Filename: pool/updates/main/p/phpmyadmin/phpmyadmin_5.0.4+dfsg2-2+deb11u2_all.deb
+Size: 4107148
+SHA256: 784893e9dd4211d10c9a06e9a8fabc26e7ad9d815003bf70a35677d760ccfe05
 
 Package: roundcube
 Version: 1.4.15+dfsg.1-1+deb11u4
