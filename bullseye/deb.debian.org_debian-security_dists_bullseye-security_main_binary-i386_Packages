@@ -20113,6 +20113,38 @@ Filename: pool/updates/main/liba/libaws/libaws6_20.2-2+deb11u1_i386.deb
 Size: 1978052
 SHA256: 4859c44249ba016161f20cc8f2de87152addaceb66940138f8a9d028e374791a
 
+Package: libbpf-dev
+Source: libbpf (0.3-2+deb11u1)
+Version: 1:0.3-2+deb11u1
+Installed-Size: 591
+Maintainer: Sudip Mukherjee <sudipm.mukherjee@gmail.com>
+Architecture: i386
+Depends: libbpf0 (= 1:0.3-2+deb11u1), libelf-dev, zlib1g-dev
+Description: eBPF helper library (development files)
+Description-md5: ebc34420621f1d340dda3a2cc4306fbc
+Multi-Arch: same
+Section: libdevel
+Priority: optional
+Filename: pool/updates/main/libb/libbpf/libbpf-dev_0.3-2+deb11u1_i386.deb
+Size: 161444
+SHA256: de177dea741f2b1de50117c1eac4116b5b1d2f16b2a20ed97170e5f1dc2d81db
+
+Package: libbpf0
+Source: libbpf (0.3-2+deb11u1)
+Version: 1:0.3-2+deb11u1
+Installed-Size: 293
+Maintainer: Sudip Mukherjee <sudipm.mukherjee@gmail.com>
+Architecture: i386
+Depends: libc6 (>= 2.22), libelf1 (>= 0.142), zlib1g (>= 1:1.2.3.3)
+Description: eBPF helper library (shared library)
+Description-md5: 9e65db5c450ca9fddd236083a364e366
+Multi-Arch: same
+Section: libs
+Priority: optional
+Filename: pool/updates/main/libb/libbpf/libbpf0_0.3-2+deb11u1_i386.deb
+Size: 107584
+SHA256: 54f4b51f04c94271f82e3c84737dbb1c0a4b2a5f80fa674c344c71a378497cc4
+
 Package: libbssolv-perl
 Version: 0.17-3+deb11u1
 Installed-Size: 230
@@ -34038,6 +34070,90 @@ Priority: optional
 Filename: pool/updates/main/o/openldap/slapi-dev_2.4.57+dfsg-3+deb11u1_i386.deb
 Size: 96340
 SHA256: 944be7b3229266a333e681827a666b980d1406ce465afe8285187b7bb7b91a1f
+
+Package: openrazer-daemon
+Source: openrazer
+Version: 2.9.0+dfsg-1+deb11u1
+Installed-Size: 425
+Maintainer: Dylan Aïssi <daissi@debian.org>
+Architecture: all
+Depends: init-system-helpers (>= 1.52), python3:any, openrazer-driver-dkms (= 2.9.0+dfsg-1+deb11u1), python3-dbus, python3-gi, python3-pyudev, python3-setproctitle, python3-notify2, python3-daemonize (>= 2.4.0), gir1.2-gtk-3.0, xautomation, dbus-user-session
+Description: OpenRazer peripheral drivers (daemon)
+Homepage: https://openrazer.github.io/
+Description-md5: 1815948141db962d7bbb282f74f11156
+Recommends: python3-openrazer (= 2.9.0+dfsg-1+deb11u1)
+Section: misc
+Priority: optional
+Filename: pool/updates/main/o/openrazer/openrazer-daemon_2.9.0+dfsg-1+deb11u1_all.deb
+Size: 56012
+SHA256: 302166545a670eafe6e413d967a76e3527f450fd07f9332e4dd5510cfb0c472b
+
+Package: openrazer-doc
+Source: openrazer
+Version: 2.9.0+dfsg-1+deb11u1
+Installed-Size: 43
+Maintainer: Dylan Aïssi <daissi@debian.org>
+Architecture: all
+Description: OpenRazer peripheral drivers (documentation)
+Homepage: https://openrazer.github.io/
+Description-md5: a0ec3f78d05e17c516cb274575c3f755
+Section: doc
+Priority: optional
+Filename: pool/updates/main/o/openrazer/openrazer-doc_2.9.0+dfsg-1+deb11u1_all.deb
+Size: 10960
+SHA256: 6b1ee639312e1dd1d2b1b01297596b9fd9042d1a13b22d7b802cda2919f40a10
+
+Package: openrazer-driver-dkms
+Source: openrazer
+Version: 2.9.0+dfsg-1+deb11u1
+Installed-Size: 526
+Maintainer: Dylan Aïssi <daissi@debian.org>
+Architecture: all
+Replaces: openrazer-kernel-modules-dkms
+Provides: openrazer-kernel-modules-dkms
+Depends: dkms (>= 2.1.0.0), udev
+Conflicts: openrazer-kernel-modules-dkms
+Description: OpenRazer peripheral drivers (DKMS)
+Homepage: https://openrazer.github.io/
+Description-md5: 7d405851056343f52bb907a59691d54a
+Section: kernel
+Priority: optional
+Filename: pool/updates/main/o/openrazer/openrazer-driver-dkms_2.9.0+dfsg-1+deb11u1_all.deb
+Size: 48600
+SHA256: 022b59a7fe7a5044d1cbaa745d6758cbe0d71aa9d13073f23611c0e2f3aafaa4
+
+Package: openrazer-meta
+Source: openrazer
+Version: 2.9.0+dfsg-1+deb11u1
+Installed-Size: 35
+Maintainer: Dylan Aïssi <daissi@debian.org>
+Architecture: all
+Depends: openrazer-driver-dkms (= 2.9.0+dfsg-1+deb11u1), openrazer-daemon (= 2.9.0+dfsg-1+deb11u1), python3-openrazer (= 2.9.0+dfsg-1+deb11u1)
+Suggests: openrazer-doc (= 2.9.0+dfsg-1+deb11u1)
+Description: OpenRazer peripheral drivers (metapackage)
+Homepage: https://openrazer.github.io/
+Description-md5: d711d58e2ae1d7a398e04812de3708a2
+Section: misc
+Priority: optional
+Filename: pool/updates/main/o/openrazer/openrazer-meta_2.9.0+dfsg-1+deb11u1_all.deb
+Size: 11924
+SHA256: 2bdd6433806215dd8ad8605129384506a04a73f17cbbdc9beb8823bf4c9620a3
+
+Package: python3-openrazer
+Source: openrazer
+Version: 2.9.0+dfsg-1+deb11u1
+Installed-Size: 131
+Maintainer: Dylan Aïssi <daissi@debian.org>
+Architecture: all
+Depends: python3:any, openrazer-daemon (= 2.9.0+dfsg-1+deb11u1), python3-dbus, python3-gi, python3-numpy
+Description: OpenRazer peripheral drivers (Python 3)
+Homepage: https://openrazer.github.io/
+Description-md5: 0d16626103a60ab0df16372f91ebe96b
+Section: python
+Priority: optional
+Filename: pool/updates/main/o/openrazer/python3-openrazer_2.9.0+dfsg-1+deb11u1_all.deb
+Size: 22952
+SHA256: aec9916d8050819711d9d12d6dda92e6ba591e57a3de35e06a6edd69cd54d043
 
 Package: libsaml-dev
 Source: opensaml
