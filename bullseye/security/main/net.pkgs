@@ -2373,6 +2373,97 @@ Filename: pool/updates/main/o/odoo/odoo-14_14.0.0+dfsg.2-7+deb11u2_all.deb
 Size: 67766584
 SHA256: 95f0532e73d2d84490355716f74ee535db16a3bb1e889d15a72ff402dbed7ecb
 
+Package: openafs-client
+Source: openafs
+Version: 1.8.6-5+deb11u1
+Installed-Size: 10253
+Maintainer: Benjamin Kaduk <kaduk@mit.edu>
+Architecture: i386
+Depends: libc6 (>= 2.28), libcrypt1 (>= 1:4.1.0), libhcrypto4-heimdal (>= 1.4.0+git20110226), libkrb5-26-heimdal (>= 1.4.0+git20110226), libncurses6 (>= 6), libroken18-heimdal (>= 1.7~git20150920), libtinfo6 (>= 6), debconf (>= 0.5) | debconf-2.0, lsb-base (>= 3.0-6)
+Suggests: openafs-doc, openafs-krb5
+Conflicts: arla
+Breaks: openafs-modules1, openafs-modules2
+Description: AFS distributed filesystem client support
+Homepage: http://www.openafs.org/
+Description-md5: 2d948f9c8a661ee8bc5d31e3f8cd9962
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: lsof, openafs-modules-dkms (>= 1.8.6-5+deb11u1) | openafs-modules-source (>= 1.8.6-5+deb11u1) | openafs-modules3
+net
+Priority: optional
+Filename: pool/updates/main/o/openafs/openafs-client_1.8.6-5+deb11u1_i386.deb
+Size: 2246388
+SHA256: a2e5dd432f85971c5ae7963619e175457c2229ef64f6c610360dc9283adeb812
+
+Package: openafs-dbserver
+Source: openafs
+Version: 1.8.6-5+deb11u1
+Installed-Size: 2470
+Maintainer: Benjamin Kaduk <kaduk@mit.edu>
+Architecture: i386
+Depends: libc6 (>= 2.28), libhcrypto4-heimdal (>= 1.4.0+git20110226), libroken18-heimdal (>= 1.7~git20150920), perl:any, openafs-fileserver
+Suggests: openafs-doc
+Description: AFS distributed filesystem database server
+Homepage: http://www.openafs.org/
+Description-md5: 900518e8d991aca7a295eb31861c8d53
+Recommends: openafs-client
+net
+Priority: optional
+Filename: pool/updates/main/o/openafs/openafs-dbserver_1.8.6-5+deb11u1_i386.deb
+Size: 712308
+SHA256: 1881c1185bd68048526da424be01fe8e2154978611ab70da96c384e5650e2a98
+
+Package: openafs-fileserver
+Source: openafs
+Version: 1.8.6-5+deb11u1
+Installed-Size: 9569
+Maintainer: Benjamin Kaduk <kaduk@mit.edu>
+Architecture: i386
+Depends: libc6 (>= 2.28), libcrypt1 (>= 1:4.1.0), libhcrypto4-heimdal (>= 1.4.0+git20110226), libroken18-heimdal (>= 1.7~git20150920), debconf (>= 0.5) | debconf-2.0, lsb-base (>= 3.0-6), openafs-client, openafs-krb5 (>= 1.8.0~pre1-1)
+Suggests: openafs-doc
+Description: AFS distributed filesystem file server
+Homepage: http://www.openafs.org/
+Description-md5: 6f505856f48ff78dd8989e4474f85129
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: ntp | time-daemon
+net
+Priority: optional
+Filename: pool/updates/main/o/openafs/openafs-fileserver_1.8.6-5+deb11u1_i386.deb
+Size: 1558680
+SHA256: a5b42e87620b4d37c3da2138ce7c81bed357b785e35907190bfbfd1fc4684308
+
+Package: openafs-fuse
+Source: openafs
+Version: 1.8.6-5+deb11u1
+Installed-Size: 904
+Maintainer: Benjamin Kaduk <kaduk@mit.edu>
+Architecture: i386
+Depends: libc6 (>= 2.28), libfuse2 (>= 2.6), libhcrypto4-heimdal (>= 1.4.0+git20110226), libroken18-heimdal (>= 1.4.0+git20110226), openafs-client (= 1.8.6-5+deb11u1)
+Description: AFS distributed file system experimental FUSE client
+Homepage: http://www.openafs.org/
+Description-md5: 5b93a5360d9c82b3edf7a7962b3ba594
+net
+Priority: optional
+Filename: pool/updates/main/o/openafs/openafs-fuse_1.8.6-5+deb11u1_i386.deb
+Size: 341892
+SHA256: a3703d8931656f84d42c90a1c0538c56fc2afc63a0744dc46d808be692aeb0d2
+
+Package: openafs-krb5
+Source: openafs
+Version: 1.8.6-5+deb11u1
+Installed-Size: 1589
+Maintainer: Benjamin Kaduk <kaduk@mit.edu>
+Architecture: i386
+Depends: libc6 (>= 2.28), libhcrypto4-heimdal (>= 1.4.0+git20110226), libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.10+dfsg~), libroken18-heimdal (>= 1.4.0+git20110226)
+Breaks: openafs-client (<< 1.4.7.dfsg1-1)
+Description: AFS distributed filesystem Kerberos 5 integration
+Homepage: http://www.openafs.org/
+Description-md5: f601778f8cbfe2c4f9aa8e886d6408dc
+net
+Priority: optional
+Filename: pool/updates/main/o/openafs/openafs-krb5_1.8.6-5+deb11u1_i386.deb
+Size: 402976
+SHA256: c1a4abc568c40991451d4831a74ffee717514009daebac2830aa7b5fef4c4e18
+
 Package: ldap-utils
 Source: openldap
 Version: 2.4.57+dfsg-3+deb11u1
