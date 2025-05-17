@@ -32609,6 +32609,213 @@ Filename: pool/updates/main/o/open-vm-tools/open-vm-tools-sdmp_11.2.5-2+deb11u4_
 Size: 41032
 SHA256: 8d9f94d8e6b5b9afd2e163d43b1de35e73e3a5e25a69b992b55c2fd1f033ce5f
 
+Package: libafsauthent2
+Source: openafs
+Version: 1.8.6-5+deb11u1
+Installed-Size: 686
+Maintainer: Benjamin Kaduk <kaduk@mit.edu>
+Architecture: i386
+Depends: libafsrpc2 (>= 1.8.0~pre1), libc6 (>= 2.12), libcrypt1 (>= 1:4.1.0), libhcrypto4-heimdal (>= 1.4.0+git20110226), libroken18-heimdal (>= 1.7~git20150920)
+Description: AFS distributed file system runtime library (authentication)
+Homepage: http://www.openafs.org/
+Description-md5: a0feedf62f2fa5d341102110cd7a1d2b
+Section: libs
+Priority: optional
+Filename: pool/updates/main/o/openafs/libafsauthent2_1.8.6-5+deb11u1_i386.deb
+Size: 282616
+SHA256: ba116946964b4b4c99cd38eae96b1c83ae944112bc8cc6fc5da5debf00a97a4b
+
+Package: libafsrpc2
+Source: openafs
+Version: 1.8.6-5+deb11u1
+Installed-Size: 543
+Maintainer: Benjamin Kaduk <kaduk@mit.edu>
+Architecture: i386
+Depends: libc6 (>= 2.28), libhcrypto4-heimdal (>= 1.4.0+git20110226), libroken18-heimdal (>= 1.4.0+git20110226)
+Description: AFS distributed file system runtime library (RPC layer)
+Homepage: http://www.openafs.org/
+Description-md5: 7523708cbcd58ca51ccd0bb131f7807a
+Section: libs
+Priority: optional
+Filename: pool/updates/main/o/openafs/libafsrpc2_1.8.6-5+deb11u1_i386.deb
+Size: 261620
+SHA256: 8d39c3b8670b1323847537ac8e267464a503632e166d421609139411930794dd
+
+Package: libkopenafs2
+Source: openafs
+Version: 1.8.6-5+deb11u1
+Installed-Size: 162
+Maintainer: Benjamin Kaduk <kaduk@mit.edu>
+Architecture: i386
+Depends: libc6 (>= 2.4)
+Description: AFS distributed file system runtime library (PAGs)
+Homepage: http://www.openafs.org/
+Description-md5: 0f99201d0fae91ddb99faa36485b802d
+Section: libs
+Priority: optional
+Filename: pool/updates/main/o/openafs/libkopenafs2_1.8.6-5+deb11u1_i386.deb
+Size: 127272
+SHA256: ad70761b3426db456766765d5a388e5fb6514e01cbc1b2cef9c4284d6d829f68
+
+Package: libopenafs-dev
+Source: openafs
+Version: 1.8.6-5+deb11u1
+Installed-Size: 10908
+Maintainer: Benjamin Kaduk <kaduk@mit.edu>
+Architecture: i386
+Depends: libc6 (>= 2.4), libafsauthent2 (= 1.8.6-5+deb11u1), libafsrpc2 (= 1.8.6-5+deb11u1), libkopenafs2 (= 1.8.6-5+deb11u1)
+Suggests: openafs-doc
+Conflicts: arla-dev, liblwp-dev
+Description: AFS distributed filesystem development libraries
+Homepage: http://www.openafs.org/
+Description-md5: b6f316eebfa1cc038bb9afed528de9fc
+Section: libdevel
+Priority: optional
+Filename: pool/updates/main/o/openafs/libopenafs-dev_1.8.6-5+deb11u1_i386.deb
+Size: 1810956
+SHA256: 42260abb9da52ec1079ac0f54f258929379bd34a925ddd33b122fbde5fac636b
+
+Package: openafs-client
+Source: openafs
+Version: 1.8.6-5+deb11u1
+Installed-Size: 10253
+Maintainer: Benjamin Kaduk <kaduk@mit.edu>
+Architecture: i386
+Depends: libc6 (>= 2.28), libcrypt1 (>= 1:4.1.0), libhcrypto4-heimdal (>= 1.4.0+git20110226), libkrb5-26-heimdal (>= 1.4.0+git20110226), libncurses6 (>= 6), libroken18-heimdal (>= 1.7~git20150920), libtinfo6 (>= 6), debconf (>= 0.5) | debconf-2.0, lsb-base (>= 3.0-6)
+Suggests: openafs-doc, openafs-krb5
+Conflicts: arla
+Breaks: openafs-modules1, openafs-modules2
+Description: AFS distributed filesystem client support
+Homepage: http://www.openafs.org/
+Description-md5: 2d948f9c8a661ee8bc5d31e3f8cd9962
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: lsof, openafs-modules-dkms (>= 1.8.6-5+deb11u1) | openafs-modules-source (>= 1.8.6-5+deb11u1) | openafs-modules3
+Section: net
+Priority: optional
+Filename: pool/updates/main/o/openafs/openafs-client_1.8.6-5+deb11u1_i386.deb
+Size: 2246388
+SHA256: a2e5dd432f85971c5ae7963619e175457c2229ef64f6c610360dc9283adeb812
+
+Package: openafs-dbserver
+Source: openafs
+Version: 1.8.6-5+deb11u1
+Installed-Size: 2470
+Maintainer: Benjamin Kaduk <kaduk@mit.edu>
+Architecture: i386
+Depends: libc6 (>= 2.28), libhcrypto4-heimdal (>= 1.4.0+git20110226), libroken18-heimdal (>= 1.7~git20150920), perl:any, openafs-fileserver
+Suggests: openafs-doc
+Description: AFS distributed filesystem database server
+Homepage: http://www.openafs.org/
+Description-md5: 900518e8d991aca7a295eb31861c8d53
+Recommends: openafs-client
+Section: net
+Priority: optional
+Filename: pool/updates/main/o/openafs/openafs-dbserver_1.8.6-5+deb11u1_i386.deb
+Size: 712308
+SHA256: 1881c1185bd68048526da424be01fe8e2154978611ab70da96c384e5650e2a98
+
+Package: openafs-doc
+Source: openafs
+Version: 1.8.6-5+deb11u1
+Installed-Size: 11538
+Maintainer: Benjamin Kaduk <kaduk@mit.edu>
+Architecture: all
+Description: AFS distributed filesystem documentation
+Homepage: http://www.openafs.org/
+Description-md5: dfed3aa1cb0c1548af7ed6d6191c122f
+Multi-Arch: foreign
+Section: doc
+Priority: optional
+Filename: pool/updates/main/o/openafs/openafs-doc_1.8.6-5+deb11u1_all.deb
+Size: 3980556
+SHA256: 105cbdade6fd4b69c7fed78f531ea80e3c92b67e0e08e44ddd826a0acc49e2dc
+
+Package: openafs-fileserver
+Source: openafs
+Version: 1.8.6-5+deb11u1
+Installed-Size: 9569
+Maintainer: Benjamin Kaduk <kaduk@mit.edu>
+Architecture: i386
+Depends: libc6 (>= 2.28), libcrypt1 (>= 1:4.1.0), libhcrypto4-heimdal (>= 1.4.0+git20110226), libroken18-heimdal (>= 1.7~git20150920), debconf (>= 0.5) | debconf-2.0, lsb-base (>= 3.0-6), openafs-client, openafs-krb5 (>= 1.8.0~pre1-1)
+Suggests: openafs-doc
+Description: AFS distributed filesystem file server
+Homepage: http://www.openafs.org/
+Description-md5: 6f505856f48ff78dd8989e4474f85129
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: ntp | time-daemon
+Section: net
+Priority: optional
+Filename: pool/updates/main/o/openafs/openafs-fileserver_1.8.6-5+deb11u1_i386.deb
+Size: 1558680
+SHA256: a5b42e87620b4d37c3da2138ce7c81bed357b785e35907190bfbfd1fc4684308
+
+Package: openafs-fuse
+Source: openafs
+Version: 1.8.6-5+deb11u1
+Installed-Size: 904
+Maintainer: Benjamin Kaduk <kaduk@mit.edu>
+Architecture: i386
+Depends: libc6 (>= 2.28), libfuse2 (>= 2.6), libhcrypto4-heimdal (>= 1.4.0+git20110226), libroken18-heimdal (>= 1.4.0+git20110226), openafs-client (= 1.8.6-5+deb11u1)
+Description: AFS distributed file system experimental FUSE client
+Homepage: http://www.openafs.org/
+Description-md5: 5b93a5360d9c82b3edf7a7962b3ba594
+Section: net
+Priority: optional
+Filename: pool/updates/main/o/openafs/openafs-fuse_1.8.6-5+deb11u1_i386.deb
+Size: 341892
+SHA256: a3703d8931656f84d42c90a1c0538c56fc2afc63a0744dc46d808be692aeb0d2
+
+Package: openafs-krb5
+Source: openafs
+Version: 1.8.6-5+deb11u1
+Installed-Size: 1589
+Maintainer: Benjamin Kaduk <kaduk@mit.edu>
+Architecture: i386
+Depends: libc6 (>= 2.28), libhcrypto4-heimdal (>= 1.4.0+git20110226), libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.10+dfsg~), libroken18-heimdal (>= 1.4.0+git20110226)
+Breaks: openafs-client (<< 1.4.7.dfsg1-1)
+Description: AFS distributed filesystem Kerberos 5 integration
+Homepage: http://www.openafs.org/
+Description-md5: f601778f8cbfe2c4f9aa8e886d6408dc
+Section: net
+Priority: optional
+Filename: pool/updates/main/o/openafs/openafs-krb5_1.8.6-5+deb11u1_i386.deb
+Size: 402976
+SHA256: c1a4abc568c40991451d4831a74ffee717514009daebac2830aa7b5fef4c4e18
+
+Package: openafs-modules-dkms
+Source: openafs
+Version: 1.8.6-5+deb11u1
+Installed-Size: 6903
+Maintainer: Benjamin Kaduk <kaduk@mit.edu>
+Architecture: all
+Depends: dkms (>= 2.1.0.0), perl:any, libc6-dev
+Description: AFS distributed filesystem kernel module DKMS source
+Homepage: http://www.openafs.org/
+Description-md5: 959c8c641c8855622b3e660d47f8f210
+Recommends: openafs-client (>= 1.8.6-5+deb11u1)
+Section: kernel
+Priority: optional
+Filename: pool/updates/main/o/openafs/openafs-modules-dkms_1.8.6-5+deb11u1_all.deb
+Size: 1032664
+SHA256: 72009b9ebc76885c2e8c5a4c5af883d27528e77329844d107d8104f90fc8f4a7
+
+Package: openafs-modules-source
+Source: openafs
+Version: 1.8.6-5+deb11u1
+Installed-Size: 1251
+Maintainer: Benjamin Kaduk <kaduk@mit.edu>
+Architecture: all
+Depends: debhelper (>= 8), module-assistant | kernel-package, perl
+Description: AFS distributed filesystem kernel module source
+Homepage: http://www.openafs.org/
+Description-md5: 01e11a95da0fec3f0bbe15d0a3897346
+Recommends: openafs-client (>= 1.8.6-5+deb11u1)
+Section: kernel
+Priority: optional
+Filename: pool/updates/main/o/openafs/openafs-modules-source_1.8.6-5+deb11u1_all.deb
+Size: 1255692
+SHA256: 412787f64bf4388f9b0274184e925021a41a5ae166fc8bdbb5d134ccc5edc369
+
 Package: libopenexr-dev
 Source: openexr
 Version: 2.5.4-2+deb11u1
