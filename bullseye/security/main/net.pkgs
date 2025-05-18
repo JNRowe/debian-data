@@ -885,6 +885,87 @@ Filename: pool/updates/main/d/dnsmasq/dnsmasq-utils_2.85-1+deb11u1_i386.deb
 Size: 25684
 SHA256: 979a725e6cf72358e75c297a71689e477ded084b823958cbe884524b9a5b492e
 
+Package: dropbear
+Version: 2020.81-3+deb11u3
+Installed-Size: 69
+Maintainer: Guilhem Moulin <guilhem@debian.org>
+Architecture: all
+Replaces: dropbear-run (<< 2019.78-1~)
+Depends: dropbear-bin (>= 2020.81-3+deb11u3), lsb-base (>= 3.0-6)
+Suggests: runit
+Breaks: dropbear-run (<< 2019.78-1~)
+Description: lightweight SSH2 server and client - startup scripts
+Homepage: https://matt.ucc.asn.au/dropbear/dropbear.html
+Description-md5: 6e452e53572d4eaad28fb343855010d0
+Multi-Arch: foreign
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: dropbear-initramfs
+net
+Priority: optional
+Filename: pool/updates/main/d/dropbear/dropbear_2020.81-3+deb11u3_all.deb
+Size: 42844
+SHA256: 3ce8b5081ab352e896e72cb840ba198af6e01afb11409fb20b90abad3f43b96b
+
+Package: dropbear-bin
+Source: dropbear
+Version: 2020.81-3+deb11u3
+Installed-Size: 614
+Maintainer: Guilhem Moulin <guilhem@debian.org>
+Architecture: i386
+Replaces: dropbear (<< 2015.68-1)
+Provides: ssh-server
+Depends: libc6 (>= 2.28), libcrypt1 (>= 1:4.1.0), libtomcrypt1 (>= 1.18.2), libtommath1 (>= 1.2.0), zlib1g (>= 1:1.1.4)
+Suggests: openssh-client
+Breaks: dropbear (<< 2015.68-1)
+Description: lightweight SSH2 server and client - command line tools
+Homepage: https://matt.ucc.asn.au/dropbear/dropbear.html
+Description-md5: c54f5ba54103eda56cc5e9da97c0c23c
+Multi-Arch: foreign
+net
+Priority: optional
+Filename: pool/updates/main/d/dropbear/dropbear-bin_2020.81-3+deb11u3_i386.deb
+Size: 164352
+SHA256: 4add642577d4becf7e59fedad431950bd0715f7933945f8356fad6801bf98478
+
+Package: dropbear-initramfs
+Source: dropbear
+Version: 2020.81-3+deb11u3
+Installed-Size: 76
+Maintainer: Guilhem Moulin <guilhem@debian.org>
+Architecture: all
+Replaces: dropbear (<< 2015.68-1)
+Depends: busybox | busybox-static, dropbear-bin (>= 2020.81-3+deb11u3), initramfs-tools (>= 0.94), udev
+Breaks: dropbear (<< 2015.68-1)
+Description: lightweight SSH2 server and client - initramfs integration
+Homepage: https://matt.ucc.asn.au/dropbear/dropbear.html
+Description-md5: 5dd10490aa9e4ec06e1152daf8823742
+Multi-Arch: foreign
+Recommends: cryptsetup-initramfs
+net
+Priority: optional
+Filename: pool/updates/main/d/dropbear/dropbear-initramfs_2020.81-3+deb11u3_all.deb
+Size: 44400
+SHA256: 67b288500eaff345591a7a67c4286268da916bb03565e7c6c99afe566c013d91
+
+Package: dropbear-run
+Source: dropbear
+Version: 2020.81-3+deb11u3
+Installed-Size: 48
+Maintainer: Guilhem Moulin <guilhem@debian.org>
+Architecture: all
+Depends: dropbear (>= 2019.78-1~)
+Breaks: dropbear (<< 2019.78-1~)
+Description: transitional dummy package for dropbear
+Homepage: https://matt.ucc.asn.au/dropbear/dropbear.html
+Description-md5: aa233599466f91006e93414accaf4d92
+Multi-Arch: foreign
+Pre-Depends: dpkg (>= 1.17.14)
+net
+Priority: optional
+Filename: pool/updates/main/d/dropbear/dropbear-run_2020.81-3+deb11u3_all.deb
+Size: 38116
+SHA256: 6b535414a6fc63ef4804368666a1cba282746d5d60a75b09cddba962eaa68d7c
+
 Package: fastdds-tools
 Source: fastdds
 Version: 2.1.0+ds-9+deb11u1
