@@ -998,6 +998,257 @@ Filename: pool/updates/main/f/fort-validator/fort-validator_1.5.3-1~deb11u2_i386
 Size: 225040
 SHA256: 6ec27dfbd0594ade1f17b4a52de172cf46eb5d58ae275431ce30d9e6cdae12f9
 
+Package: freeradius
+Version: 3.0.21+dfsg-2.2+deb11u2
+Installed-Size: 2163
+Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Provides: radius-server
+Depends: freeradius-common, freeradius-config, libfreeradius3 (= 3.0.21+dfsg-2.2+deb11u2), lsb-base (>= 3.1-23.2), libc6 (>= 2.28), libcrypt1 (>= 1:4.1.0), libct4 (>= 0.64), libgdbm6 (>= 1.16), libpam0g (>= 0.99.7.1), libperl5.32 (>= 5.32.0~rc1), libreadline8 (>= 6.0), libsqlite3-0 (>= 3.7.15), libssl1.1 (>= 1.1.1), libsystemd0, libtalloc2 (>= 2.0.4~git20101213), libwbclient0 (>= 2:4.2.1+dfsg)
+Suggests: freeradius-krb5, freeradius-ldap, freeradius-mysql, freeradius-postgresql, freeradius-python3, snmp
+Description: high-performance and highly configurable RADIUS server
+Homepage: http://www.freeradius.org/
+Description-md5: 8f93db923be1449fe3d8c09996bd75e7
+Recommends: freeradius-utils
+net
+Priority: optional
+Filename: pool/updates/main/f/freeradius/freeradius_3.0.21+dfsg-2.2+deb11u2_i386.deb
+Size: 584292
+SHA256: f0ae4d668aa7a886208cba5e51b8034a7fb226415a0b0752d68500bb98cd37b5
+
+Package: freeradius-common
+Source: freeradius
+Version: 3.0.21+dfsg-2.2+deb11u2
+Installed-Size: 1274
+Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
+Architecture: all
+Replaces: freeradius (<< 3)
+Depends: adduser
+Conflicts: radiusd-livingston, xtradius, yardradius
+Description: FreeRADIUS common files
+Homepage: http://www.freeradius.org/
+Description-md5: 1c7945f97894906b5aaee9b087c2f56c
+net
+Priority: optional
+Filename: pool/updates/main/f/freeradius/freeradius-common_3.0.21+dfsg-2.2+deb11u2_all.deb
+Size: 272952
+SHA256: cfd77770b636781de94b3963712befba10a7bc602c9fa773589d2834bafd5378
+
+Package: freeradius-config
+Source: freeradius
+Version: 3.0.21+dfsg-2.2+deb11u2
+Installed-Size: 1035
+Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Replaces: freeradius (<< 3.0.11+dfsg-1)
+Depends: adduser, ca-certificates, freeradius-common (>= 3), make, openssl, ssl-cert
+Breaks: freeradius (<< 3.0.11+dfsg-1), freeradius-config
+Description: FreeRADIUS default config files
+Homepage: http://www.freeradius.org/
+Description-md5: ac5463a5cccad417d59c5cd9a88dd876
+net
+Priority: optional
+Filename: pool/updates/main/f/freeradius/freeradius-config_3.0.21+dfsg-2.2+deb11u2_i386.deb
+Size: 222108
+SHA256: 4e6ec47d7ae271c566f26643825f75343cd6e6dbec6985a41fa6b7c51436d18c
+
+Package: freeradius-dhcp
+Source: freeradius
+Version: 3.0.21+dfsg-2.2+deb11u2
+Installed-Size: 144
+Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Depends: freeradius (= 3.0.21+dfsg-2.2+deb11u2), libc6 (>= 2.4)
+Description: DHCP module for FreeRADIUS server
+Homepage: http://www.freeradius.org/
+Description-md5: 63c03705d2b33716c280099cb1b24d9d
+net
+Priority: optional
+Filename: pool/updates/main/f/freeradius/freeradius-dhcp_3.0.21+dfsg-2.2+deb11u2_i386.deb
+Size: 77876
+SHA256: 921e1ef8a563a7ea13f489f57a5065f9148634c9551b66e3cb0ecfa5d8acfd2f
+
+Package: freeradius-iodbc
+Source: freeradius
+Version: 3.0.21+dfsg-2.2+deb11u2
+Installed-Size: 87
+Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Depends: freeradius (= 3.0.21+dfsg-2.2+deb11u2), libc6 (>= 2.4), libiodbc2 (>= 3.52.7)
+Description: iODBC module for FreeRADIUS server
+Homepage: http://www.freeradius.org/
+Description-md5: 6347edefac75f466ab02895aecb1a016
+net
+Priority: optional
+Filename: pool/updates/main/f/freeradius/freeradius-iodbc_3.0.21+dfsg-2.2+deb11u2_i386.deb
+Size: 61256
+SHA256: 213835c6d8037ba4e4cfc012ae1993e56b50a095f48338594668959eac8762ba
+
+Package: freeradius-krb5
+Source: freeradius
+Version: 3.0.21+dfsg-2.2+deb11u2
+Installed-Size: 91
+Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Depends: freeradius (= 3.0.21+dfsg-2.2+deb11u2), libc6 (>= 2.4), libcom-err2 (>= 1.43.9), libkrb5-3 (>= 1.13~alpha1+dfsg)
+Description: kerberos module for FreeRADIUS server
+Homepage: http://www.freeradius.org/
+Description-md5: 3a5c3602207569628c542943459c0429
+net
+Priority: optional
+Filename: pool/updates/main/f/freeradius/freeradius-krb5_3.0.21+dfsg-2.2+deb11u2_i386.deb
+Size: 62464
+SHA256: 6171648875247bae2c59cd33507b99b8b157c8a98ce1c8d607a6cbcc9532a03a
+
+Package: freeradius-ldap
+Source: freeradius
+Version: 3.0.21+dfsg-2.2+deb11u2
+Installed-Size: 176
+Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Depends: freeradius (= 3.0.21+dfsg-2.2+deb11u2), libc6 (>= 2.4), libldap-2.4-2 (>= 2.4.25)
+Description: LDAP module for FreeRADIUS server
+Homepage: http://www.freeradius.org/
+Description-md5: cc9ad4f60cb78e6b940d44e4c3b57d1d
+net
+Priority: optional
+Filename: pool/updates/main/f/freeradius/freeradius-ldap_3.0.21+dfsg-2.2+deb11u2_i386.deb
+Size: 89944
+SHA256: 0c0e57f54753509c28929e70df381c4325396a3f33b6321c86502cf89d4c1ccf
+
+Package: freeradius-memcached
+Source: freeradius
+Version: 3.0.21+dfsg-2.2+deb11u2
+Installed-Size: 95
+Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Depends: freeradius (= 3.0.21+dfsg-2.2+deb11u2), libc6 (>= 2.4), libmemcached11
+Description: Memcached module for FreeRADIUS server
+Homepage: http://www.freeradius.org/
+Description-md5: 6c7415181d540694968e8e8c5fbf1877
+net
+Priority: optional
+Filename: pool/updates/main/f/freeradius/freeradius-memcached_3.0.21+dfsg-2.2+deb11u2_i386.deb
+Size: 63332
+SHA256: c8e4433472e7864b07bb8e2340fd3de3a36c0f5ce7c9e384a0a093c873a5dbd2
+
+Package: freeradius-mysql
+Source: freeradius
+Version: 3.0.21+dfsg-2.2+deb11u2
+Installed-Size: 95
+Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Depends: freeradius (= 3.0.21+dfsg-2.2+deb11u2), libc6 (>= 2.4), libmariadb3 (>= 3.0.0)
+Description: MySQL module for FreeRADIUS server
+Homepage: http://www.freeradius.org/
+Description-md5: 4423793fbfc997cd42deec2bcb196555
+net
+Priority: optional
+Filename: pool/updates/main/f/freeradius/freeradius-mysql_3.0.21+dfsg-2.2+deb11u2_i386.deb
+Size: 63768
+SHA256: 49c16631266759d3014a0f196abc4fa7ad90accef9aba9010e77fd6746c63e9b
+
+Package: freeradius-postgresql
+Source: freeradius
+Version: 3.0.21+dfsg-2.2+deb11u2
+Installed-Size: 107
+Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Depends: freeradius (= 3.0.21+dfsg-2.2+deb11u2), libc6 (>= 2.15), libpq5 (>= 8.4~)
+Description: PostgreSQL module for FreeRADIUS server
+Homepage: http://www.freeradius.org/
+Description-md5: 21c022ad780dbebcad8db320d076ccd0
+net
+Priority: optional
+Filename: pool/updates/main/f/freeradius/freeradius-postgresql_3.0.21+dfsg-2.2+deb11u2_i386.deb
+Size: 66528
+SHA256: 14337a358166a959db8b6b0a2fdd176fcc738dad8c43c6d2c6d2a1eeff8db0b0
+
+Package: freeradius-python3
+Source: freeradius
+Version: 3.0.21+dfsg-2.2+deb11u2
+Installed-Size: 108
+Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Replaces: freeradius (<< 3.0.16+dfsg-4~)
+Depends: freeradius (= 3.0.21+dfsg-2.2+deb11u2), libc6 (>= 2.4), libpython3.9 (>= 3.9.1)
+Breaks: freeradius (<< 3.0.16+dfsg-4~)
+Description: Python 3 module for FreeRADIUS server
+Homepage: http://www.freeradius.org/
+Description-md5: 80f8197fc7d045314f87c86f25224510
+net
+Priority: optional
+Filename: pool/updates/main/f/freeradius/freeradius-python3_3.0.21+dfsg-2.2+deb11u2_i386.deb
+Size: 68988
+SHA256: 7c5138aeb710c3e7095eb27f20bf0932e2236920e88788eacbc259b3cc744246
+
+Package: freeradius-redis
+Source: freeradius
+Version: 3.0.21+dfsg-2.2+deb11u2
+Installed-Size: 105
+Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Depends: freeradius (= 3.0.21+dfsg-2.2+deb11u2), libc6 (>= 2.4), libhiredis0.14 (>= 0.14.0)
+Description: Redis module for FreeRADIUS server
+Homepage: http://www.freeradius.org/
+Description-md5: 409331feca6e7b06facbc4bac2a0f07b
+net
+Priority: optional
+Filename: pool/updates/main/f/freeradius/freeradius-redis_3.0.21+dfsg-2.2+deb11u2_i386.deb
+Size: 63832
+SHA256: 2cf85d986320851ac13a8f6ed90c2e677da2fc7a96b6411110fd5bf491a8d5c6
+
+Package: freeradius-rest
+Source: freeradius
+Version: 3.0.21+dfsg-2.2+deb11u2
+Installed-Size: 127
+Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Depends: freeradius (= 3.0.21+dfsg-2.2+deb11u2), libc6 (>= 2.4), libcurl4 (>= 7.16.2), libjson-c5 (>= 0.15)
+Description: REST module for FreeRADIUS server
+Homepage: http://www.freeradius.org/
+Description-md5: 84efad4f894dd87ee01e51563cfab4f8
+net
+Priority: optional
+Filename: pool/updates/main/f/freeradius/freeradius-rest_3.0.21+dfsg-2.2+deb11u2_i386.deb
+Size: 76124
+SHA256: f5a0356072f0f0ae40961b2095b146f3df4e15d0338bc6c72fb2125d10dd77af
+
+Package: freeradius-utils
+Source: freeradius
+Version: 3.0.21+dfsg-2.2+deb11u2
+Installed-Size: 384
+Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Replaces: freeradius (<< 3)
+Depends: freeradius-common, freeradius-config, libfreeradius3 (= 3.0.21+dfsg-2.2+deb11u2), libc6 (>= 2.4), libgdbm6 (>= 1.16), libpcap0.8 (>= 0.9.8), libpcre3, libssl1.1 (>= 1.1.1), libtalloc2 (>= 2.0.4~git20101213)
+Conflicts: radiusd-livingston, yardradius
+Description: FreeRADIUS client utilities
+Homepage: http://www.freeradius.org/
+Description-md5: 24b3cb63eaad19ed5b58df947d58078e
+Recommends: libdbi-perl
+net
+Priority: optional
+Filename: pool/updates/main/f/freeradius/freeradius-utils_3.0.21+dfsg-2.2+deb11u2_i386.deb
+Size: 149376
+SHA256: a2c1d9f999af7b130c0a66b103f65ddd9637cd0e46001708e87d0edd200f8c8d
+
+Package: freeradius-yubikey
+Source: freeradius
+Version: 3.0.21+dfsg-2.2+deb11u2
+Installed-Size: 99
+Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Depends: freeradius (= 3.0.21+dfsg-2.2+deb11u2), libc6 (>= 2.4), libykclient3 (>= 2.11), libyubikey0 (>= 1.5)
+Description: Yubikey module for FreeRADIUS server
+Homepage: http://www.freeradius.org/
+Description-md5: 085fe9fe99855d39801336fb78e00a38
+net
+Priority: optional
+Filename: pool/updates/main/f/freeradius/freeradius-yubikey_3.0.21+dfsg-2.2+deb11u2_i386.deb
+Size: 64544
+SHA256: e9cd136ea2fd2eeeb419770aa8cb18a531c35997371f227ab036b3266e21b642
+
 Package: frr
 Version: 7.5.1-1.1+deb11u4
 Installed-Size: 9884
