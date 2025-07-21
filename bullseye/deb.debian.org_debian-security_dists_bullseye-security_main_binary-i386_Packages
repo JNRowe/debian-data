@@ -1711,7 +1711,7 @@ SHA256: d235d9c11ecf2d374b245bb6d8fab2ee6ad2c707f1dafee45184212ebcbd4f30
 
 Package: libbatik-java
 Source: batik
-Version: 1.12-4+deb11u1
+Version: 1.12-4+deb11u3
 Installed-Size: 9059
 Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
 Architecture: all
@@ -1724,9 +1724,9 @@ Description-md5: 7b184faa1b3cf8713ca5674d8a7583ca
 Recommends: default-jre
 Section: java
 Priority: optional
-Filename: pool/updates/main/b/batik/libbatik-java_1.12-4+deb11u1_all.deb
-Size: 3908752
-SHA256: d79aef286066c608d41fbf9cdb9bdbc6d21c6f83c1455b20837a29c4bb804498
+Filename: pool/updates/main/b/batik/libbatik-java_1.12-4+deb11u3_all.deb
+Size: 3909008
+SHA256: 5b41d6a63b98230c601cad9a6208f49e1b20d25d1df8c54e84f00ce38fb299e3
 
 Package: libbcel-java
 Source: bcel
@@ -4598,6 +4598,146 @@ Priority: optional
 Filename: pool/updates/main/d/djoser/python3-djoser_2.1.0-1+deb11u1_all.deb
 Size: 23160
 SHA256: bd5f8a41123391e9c3d9b0ba3a0e16fb34d4e5debe39d16ea6be216002a73792
+
+Package: djview
+Source: djvulibre
+Version: 3.5.28-2.2~deb11u1
+Installed-Size: 28
+Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Architecture: all
+Depends: djview4 | djview3
+Description: Transition package, djview3 to djview4
+Homepage: http://djvu.sourceforge.net/
+Description-md5: 70f803a157a01cd392d199dbc03dfe1f
+Section: graphics
+Priority: optional
+Filename: pool/updates/main/d/djvulibre/djview_3.5.28-2.2~deb11u1_all.deb
+Size: 17976
+SHA256: c8f87974de14548aa7275fc74a69ee0039c508d4576d764aab50d6796d94f0d7
+
+Package: djview3
+Source: djvulibre
+Version: 3.5.28-2.2~deb11u1
+Installed-Size: 28
+Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Architecture: all
+Depends: djview4
+Description: Transition package, djview3 to djview4
+Homepage: http://djvu.sourceforge.net/
+Description-md5: 723d08e2761fe57a16db0f1a5d75091f
+Section: graphics
+Priority: optional
+Filename: pool/updates/main/d/djvulibre/djview3_3.5.28-2.2~deb11u1_all.deb
+Size: 17968
+SHA256: fdc9df5daf59449199c37ba6c92d1e983bce8be68d59234ea90e462b408faa0d
+
+Package: djvulibre-bin
+Source: djvulibre
+Version: 3.5.28-2.2~deb11u1
+Installed-Size: 1028
+Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Architecture: i386
+Depends: libc6 (>= 2.29), libdjvulibre21 (= 3.5.28-2.2~deb11u1), libgcc-s1 (>= 4.2), libstdc++6 (>= 5), libtiff5 (>= 4.0.3), curl
+Suggests: djvulibre-desktop, djview4 | djvu-viewer | evince
+Description: Utilities for the DjVu image format
+Homepage: http://djvu.sourceforge.net/
+Description-md5: c7421d25ec9e74924d5b7540e469b4bd
+Multi-Arch: foreign
+Recommends: pdf2djvu
+Section: graphics
+Priority: optional
+Filename: pool/updates/main/d/djvulibre/djvulibre-bin_3.5.28-2.2~deb11u1_i386.deb
+Size: 298176
+SHA256: 999580d78460e76f294c66d155ecd50dd8dbd60a72a50601699241e0c52b7a7b
+
+Package: djvulibre-desktop
+Source: djvulibre
+Version: 3.5.28-2.2~deb11u1
+Installed-Size: 141
+Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Architecture: all
+Replaces: libdjvulibre15 (<= 3.5.20-5)
+Suggests: djview4 | djvu-viewer | evince
+Conflicts: libdjvulibre1, libdjvulibre21 (<= 3.5.20-5)
+Description: Desktop support for the DjVu image format
+Homepage: http://djvu.sourceforge.net/
+Description-md5: e5da3aea9677bafe75a1aaa48a76c12e
+Section: libs
+Priority: optional
+Filename: pool/updates/main/d/djvulibre/djvulibre-desktop_3.5.28-2.2~deb11u1_all.deb
+Size: 101488
+SHA256: 226f3a5c04ac916d8b4a4d639af22d15da63a93c4a907551341460502a27837a
+
+Package: djvuserve
+Source: djvulibre
+Version: 3.5.28-2.2~deb11u1
+Installed-Size: 79
+Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Architecture: i386
+Depends: libc6 (>= 2.4), libdjvulibre21 (>= 3.5.28), libgcc-s1 (>= 3.0), libstdc++6 (>= 5)
+Conflicts: djvulibre-bin (<< 3.5.9-3)
+Description: CGI program for unbundling DjVu files on the fly
+Homepage: http://djvu.sourceforge.net/
+Description-md5: 1440f01db6ede771bb8636f76fcccfda
+Recommends: apache2 | apache | httpd-cgi | httpd
+Section: web
+Priority: optional
+Filename: pool/updates/main/d/djvulibre/djvuserve_3.5.28-2.2~deb11u1_i386.deb
+Size: 35136
+SHA256: 59931be2e9fc7eb879c43875ae8d268b17435864b9a3e613039869986e71289a
+
+Package: libdjvulibre-dev
+Source: djvulibre
+Version: 3.5.28-2.2~deb11u1
+Installed-Size: 5171
+Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Architecture: i386
+Depends: libdjvulibre21 (= 3.5.28-2.2~deb11u1), libjpeg-dev
+Description: Development files for the DjVu image format
+Homepage: http://djvu.sourceforge.net/
+Description-md5: 7a47b77e06ba2a68a7aff0a9650a0118
+Multi-Arch: same
+Section: libdevel
+Priority: optional
+Filename: pool/updates/main/d/djvulibre/libdjvulibre-dev_3.5.28-2.2~deb11u1_i386.deb
+Size: 2460476
+SHA256: baa6fc1476e1ff1c07ad0d814a61498e2fdda798a4d94182778c2a074d9f4c98
+
+Package: libdjvulibre-text
+Source: djvulibre
+Version: 3.5.28-2.2~deb11u1
+Installed-Size: 349
+Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Architecture: all
+Replaces: djview3 (= 3.5.20-9), djvulibre-desktop (<< 3.5.20-9), libdjvulibre15
+Description: Linguistic support files for libdjvulibre
+Homepage: http://djvu.sourceforge.net/
+Description-md5: d5fca3d4995b08f997ca3b715715e14b
+Multi-Arch: foreign
+Section: libs
+Priority: optional
+Filename: pool/updates/main/d/djvulibre/libdjvulibre-text_3.5.28-2.2~deb11u1_all.deb
+Size: 62076
+SHA256: e6dfe36e40a929bc6d52a982b411d29d9b17ad4e21a027138b6da00820db889b
+
+Package: libdjvulibre21
+Source: djvulibre
+Version: 3.5.28-2.2~deb11u1
+Installed-Size: 1838
+Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Architecture: i386
+Replaces: libdjvulibre1, libdjvulibre15
+Depends: libc6 (>= 2.29), libgcc-s1 (>= 3.0), libjpeg62-turbo (>= 1.3.1), libstdc++6 (>= 5), libdjvulibre-text (>= 3.5.28-2.2~deb11u1)
+Conflicts: libdjvulibre1
+Description: Runtime support for the DjVu image format
+Homepage: http://djvu.sourceforge.net/
+Description-md5: 377e0a8fb1d56ba31c3feadafc4781b8
+Multi-Arch: same
+Section: libs
+Priority: optional
+Filename: pool/updates/main/d/djvulibre/libdjvulibre21_3.5.28-2.2~deb11u1_i386.deb
+Size: 634672
+SHA256: 74c2e55d2adf8d3d1d235e3765241ee4862b758fe704d77c231f95ed8c569d2f
 
 Package: dmitry
 Version: 1.3a-1.1+deb11u1
