@@ -38,21 +38,11 @@ for location (
     output=${filename/%.(bz2|xz)}
     etagname=.etags/$safename
     [[ -f $output ]] && ref_time=$output || ref_time="2004 Nov 13"
-    # More recent versions of curl don't fail on missing etag file
-    [[ -f $etagname ]] && ref_etag=$etagname || ref_etag=/dev/null
     echo "--- $url"
-    # Once a more recent version of curl is available in actions
-    # --etag-{compare,save} can return to using the same file.
     curl --connect-timeout 5 --max-time 30 \
-        --etag-compare $ref_etag \
-        --etag-save $etagname.tmp \
-        --verbose \
+        --etag-compare $etagname \
+        --etag-save $etagname \
         --time-cond $ref_time --output $filename $url
-    if [[ -s $etagname.tmp ]] {
-        mv $etagname{.tmp,}
-    } else {
-        rm $etagname.tmp
-    }
 }
 
 for location (
@@ -90,21 +80,11 @@ for location (
     output=${filename/%.xz}
     etagname=.etags/$safename
     [[ -f $output ]] && ref_time=$output || ref_time="2004 Nov 13"
-    # More recent versions of curl don't fail on missing etag file
-    [[ -f $etagname ]] && ref_etag=$etagname || ref_etag=/dev/null
     echo "--- $url"
-    # Once a more recent version of curl is available in actions
-    # --etag-{compare,save} can return to using the same file.
     curl --connect-timeout 5 --max-time 30 \
-        --etag-compare $ref_etag \
-        --etag-save $etagname.tmp \
-        --verbose \
+        --etag-compare $etagname \
+        --etag-save $etagname \
         --time-cond $ref_time --output $filename $url
-    if [[ -s $etagname.tmp ]] {
-        mv $etagname{.tmp,}
-    } else {
-        rm $etagname.tmp
-    }
 }
 
 for location (
@@ -141,22 +121,11 @@ for location (
     filename=trixie/$safename
     output=${filename/%.xz}
     etagname=.etags/$safename
-    [[ -f $output ]] && ref_time=$output || ref_time="2004 Nov 13"
-    # More recent versions of curl don't fail on missing etag file
-    [[ -f $etagname ]] && ref_etag=$etagname || ref_etag=/dev/null
     echo "--- $url"
-    # Once a more recent version of curl is available in actions
-    # --etag-{compare,save} can return to using the same file.
     curl --connect-timeout 5 --max-time 30 \
-        --etag-compare $ref_etag \
-        --etag-save $etagname.tmp \
-        --verbose \
+        --etag-compare $etagname \
+        --etag-save $etagname \
         --time-cond $ref_time --output $filename $url
-    if [[ -s $etagname.tmp ]] {
-        mv $etagname{.tmp,}
-    } else {
-        rm $etagname.tmp
-    }
 }
 
 zargs --max-args 3 --max-procs $(nproc) --no-run-if-empty -- \
