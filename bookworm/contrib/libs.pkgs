@@ -1,0 +1,507 @@
+Package: glx-alternative-mesa
+Source: glx-alternatives
+Version: 1.2.2
+Installed-Size: 32
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Architecture: amd64
+Depends: update-glx (= 1.2.2)
+Pre-Depends: dpkg (>= 1.17.21)
+Recommends: glx-diversions
+Suggests: libgl1-mesa-glx | libgl1
+Breaks: nvidia-alternative (<< 390.67-3~)
+Description: allows the selection of MESA as GLX provider
+Multi-Arch: foreign
+Description-md5: 1daacf66b51fd438667e93a67d9e2770
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/g/glx-alternatives/glx-alternative-mesa_1.2.2_amd64.deb
+Size: 4760
+MD5sum: da352f3d1c91f29ee31d8c203613954c
+SHA256: a72c331f3bd6b2acb4fa75428af4a7ce37e23a0f333e5bf34c05da77fbc1a5e1
+
+Package: glx-alternative-nvidia
+Source: glx-alternatives
+Version: 1.2.2
+Installed-Size: 43
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Architecture: amd64
+Depends: update-glx (= 1.2.2), glx-diversions (= 1.2.2), glx-alternative-mesa
+Pre-Depends: dpkg (>= 1.17.21)
+Suggests: nvidia-driver | nvidia-driver-any
+Breaks: bumblebee-nvidia (<< 3.2.1-10~), nvidia-alternative (<< 390.67-3~), nvidia-alternative-legacy-173xx (<< 304), nvidia-alternative-legacy-71xx (<< 304), nvidia-alternative-legacy-96xx (<< 304), nvidia-legacy-304xx-alternative (<< 304.137-7~), nvidia-legacy-304xx-driver (<< 304.137-7~), nvidia-legacy-340xx-alternative (<< 340.93-2~), xserver-xorg-video-nvidia-legacy-304xx (<< 304.137-7~)
+Description: allows the selection of NVIDIA as GLX provider
+Multi-Arch: foreign
+Description-md5: 4980cfbba830657e456159c5314cc55f
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/g/glx-alternatives/glx-alternative-nvidia_1.2.2_amd64.deb
+Size: 5776
+MD5sum: 8fad8387297f91322f1dca40b733b6b0
+SHA256: 843665145b3a76260ae715567bbabca209f08a98420e33a1abdcf49992060f21
+
+Package: glx-diversions
+Source: glx-alternatives
+Version: 1.2.2
+Installed-Size: 35
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Architecture: amd64
+Depends: glx-alternative-mesa (= 1.2.2)
+Pre-Depends: nvidia-installer-cleanup
+Description: prepare for using accelerated GLX implementations from GPU vendors
+Multi-Arch: foreign
+Description-md5: 11d73a2c74770f5f3371f8803595735d
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/g/glx-alternatives/glx-diversions_1.2.2_amd64.deb
+Size: 7408
+MD5sum: 8256cc436a113cfab6f3eaeaaa1f107b
+SHA256: 7548ef0f58d2ff3ac1ecdb019c6581caf9ee9ea5e2eb23e7f5195e6aa8dff165
+
+Package: gstreamer1.0-fdkaac
+Source: gst-plugins-bad1.0-contrib
+Version: 1.20.0-1
+Installed-Size: 2147
+Maintainer: Maintainers of GStreamer packages <gst-plugins-bad1.0@packages.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.4), libfdk-aac2 (>= 2.0.1), libglib2.0-0 (>= 2.56), libgstreamer-plugins-base1.0-0 (>= 1.20.0), libgstreamer1.0-0 (>= 1.20.0)
+Description: GStreamer FDK AAC plugins
+Multi-Arch: same
+Homepage: https://gstreamer.freedesktop.org
+Description-md5: 8a6ba7d84515005d9fd880d33f218f45
+Gstreamer-Decoders: audio/mpeg, mpegversion=(int){ 2, 4 }, stream-format=(string){ adts, adif, raw }; audio/mpeg, mpegversion=(int)4, stream-format=(string){ latm-mcp0, latm-mcp1, loas }
+Gstreamer-Elements: fdkaacdec, fdkaacenc
+Gstreamer-Encoders: audio/mpeg, mpegversion=(int)4, stream-format=(string){ adts, adif, raw, loas, latm-mcp0, latm-mcp1 }, base-profile=(string)lc, framed=(boolean)true
+Gstreamer-Version: 1.22
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/g/gst-plugins-bad1.0-contrib/gstreamer1.0-fdkaac_1.20.0-1_amd64.deb
+Size: 2096912
+MD5sum: f78111a40ecf0829002a19b7a5439b3f
+SHA256: 849e4fdd6c9b919e0c1c5e2210ad3ae90c36c4a2473290c0fc2b471d3440a2ee
+
+Package: libgxr-openvr-0.15-0
+Source: gxr-openvr (0.15.1-2)
+Version: 0.15.1-2+b1
+Installed-Size: 90
+Maintainer: Andrew Lee (李健秋) <ajqlee@debian.org>
+Architecture: amd64
+Replaces: libgxr-0.14-0 (<< 0.15)
+Depends: libc6 (>= 2.4), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.41.1), libgraphene-1.0-0 (>= 1.5.4), libgtk-3-0 (>= 3.22), libgulkan-0.15-0, libgxr-0.15-0, libopenvr-api1, libvulkan1 (>= 1.2.131.2), libsdl2-2.0-0
+Breaks: libgxr-0.14-0 (<< 0.15)
+Description: gxr backend for nonfree OpenVR libraries
+Homepage: https://gitlab.freedesktop.org/xrdesktop/gxr
+Description-md5: 8865bb1505af7ed03e79afae03f262e4
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/g/gxr-openvr/libgxr-openvr-0.15-0_0.15.1-2+b1_amd64.deb
+Size: 25816
+MD5sum: be9683a2d7f02f5a161f127467a4c7ba
+SHA256: 2c803a9f0ff9fb236dc5f42084e2e24ffaf1da465500afdfcd1cfcb7e592d949
+
+Package: libydpdict2
+Source: libydpdict (1.0.4-3)
+Version: 1.0.4-3+b11
+Installed-Size: 43
+Maintainer: Marcin Owsiany <porridge@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.4)
+Description: library for reading Collins dictionaries
+Multi-Arch: same
+Homepage: http://toxygen.net/ydpdict/
+Description-md5: 6f0652e06ffab3cfa83214c12b0e9cd9
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/liby/libydpdict/libydpdict2_1.0.4-3+b11_amd64.deb
+Size: 10720
+MD5sum: 73c5132472f6552c487e3fd9ca6ae056
+SHA256: a7f30f8c1fe7270fc5bc35944b8aceb254145419a1d0bb4911bdd9db32c483ea
+
+Package: libmagma-sparse2
+Source: magma
+Version: 2.6.2-1
+Installed-Size: 43642
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libblas3 | libblas.so.3, libc6 (>= 2.29), libcudart11.0, libcusparse11, libgcc-s1 (>= 3.0), libgomp1 (>= 4.9), liblapack3 | liblapack.so.3, libmagma2 (>= 2.6.2), libstdc++6 (>= 4.1.1)
+Description: Matrix Algebra on GPU and Multicore Architectures (solib, sparse)
+Homepage: https://icl.cs.utk.edu/magma/
+Description-md5: 7466d1ecd53172205761e441ae3ae3e8
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/m/magma/libmagma-sparse2_2.6.2-1_amd64.deb
+Size: 4681672
+MD5sum: cd69b3b15f861f3408e82d737a9e7a11
+SHA256: 87595580ddcf37473e7a397ed11717097d94a6c0ff757498c2ff4aa6e802cf81
+
+Package: libmagma2
+Source: magma
+Version: 2.6.2-1
+Installed-Size: 436483
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libblas3 | libblas.so.3, libc6 (>= 2.29), libcublas11, libcudart11.0, libcusparse11, libgcc-s1 (>= 3.0), libgomp1 (>= 6), liblapack3 | liblapack.so.3, libstdc++6 (>= 11)
+Description: Matrix Algebra on GPU and Multicore Architectures (solib)
+Homepage: https://icl.cs.utk.edu/magma/
+Description-md5: 1b5c7a1b292272888775bfbb96c3b347
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/m/magma/libmagma2_2.6.2-1_amd64.deb
+Size: 55126648
+MD5sum: 7690e1a9b318c771eaca5c967ed46045
+SHA256: 4d2999569691980c8c7a6d8a527c5309f851c2d47f1ab07d88c5a2052d27dfe3
+
+Package: libnvidia-egl-gbm1
+Source: nvidia-egl-gbm
+Version: 1.1.0-2
+Installed-Size: 43
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34), libdrm2 (>= 2.4.75), libgbm1 (>= 8.1~0)
+Description: GBM EGL external platform library for NVIDIA
+Multi-Arch: same
+Homepage: https://github.com/NVIDIA/egl-gbm
+Description-md5: 7fed46c39bde46d5de9b80126105db9e
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/n/nvidia-egl-gbm/libnvidia-egl-gbm1_1.1.0-2_amd64.deb
+Size: 11196
+MD5sum: c6ee6297a7ac5111d23b080b29319ca9
+SHA256: e227e97a0663e6bf3760c0c0e0e6b5cc1c39b45ff2120281387490f2e47dbf43
+
+Package: libodpic4
+Source: odpic
+Version: 4.6.0-1
+Installed-Size: 377
+Maintainer: Joseph Nahmias <jello@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34)
+Recommends: libaio1
+Description: Oracle Database Programming Interface - runtime C shared library
+Multi-Arch: same
+Homepage: https://oracle.github.io/odpi/
+Description-md5: ab5d684e6cf00e24207e0ddef1bfe15f
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/o/odpic/libodpic4_4.6.0-1_amd64.deb
+Size: 130096
+MD5sum: 9cda4967ff293371f235a5af504af823
+SHA256: 5ce683c94d722472ab58b62b3c734684c890e7c5dab3318b67d9afc8a4ed15a0
+
+Package: libopenh264-cisco7
+Source: openh264
+Version: 2.3.1+dfsg-3+deb12u2
+Installed-Size: 23
+Maintainer: Bastian Germann <bage@debian.org>
+Architecture: amd64
+Provides: libopenh264-7
+Depends: bzip2, libstdc++6, wget
+Conflicts: libopenh264-7
+Description: OpenH264 Video Codec provided by Cisco Systems, Inc.
+Multi-Arch: same
+Homepage: https://www.openh264.org
+Description-md5: dff704a43d485eb325e4bc04bd302a1e
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/o/openh264/libopenh264-cisco7_2.3.1+dfsg-3+deb12u2_amd64.deb
+Size: 9828
+MD5sum: 000efb13196bb96cf43cc1cf8f20f6fe
+SHA256: b1dbdc2a7c10370d9ae4c7104fb46f39672af4c82ade382b20fb434168176e12
+
+Package: libopenvr-api1
+Source: openvr
+Version: 1.23.7~ds1-2
+Installed-Size: 126
+Maintainer: Debian xrdesktop Team <team+xrdesktop@tracker.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libjsoncpp25 (>= 1.9.5), libstdc++6 (>= 11)
+Description: OpenVR SDK
+Multi-Arch: same
+Homepage: https://github.com/ValveSoftware/openvr
+Description-md5: 8b9f036b3dab4388fb641015ae878839
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/o/openvr/libopenvr-api1_1.23.7~ds1-2_amd64.deb
+Size: 36516
+MD5sum: b433725731988217d292d676c87ba093
+SHA256: c1b4fc615ec6009439e576afec2e80ea4e6826d3a708d5c342c1a5af8c7fb5a1
+
+Package: nvidia-primus-vk-common
+Source: primus-vk
+Version: 1.6.2-2
+Installed-Size: 18
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: primus-vk-nvidia (<< 1.4-2~)
+Recommends: nvidia-primus-vk-wrapper
+Breaks: primus-vk-nvidia (<< 1.4-2~)
+Description: thin wrapper for the NVIDIA binary Vulkan ICD (common files)
+Multi-Arch: foreign
+Homepage: https://github.com/felixdoerre/primus_vk
+Description-md5: 1de48695d37b053918704fd873985909
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/p/primus-vk/nvidia-primus-vk-common_1.6.2-2_amd64.deb
+Size: 3852
+MD5sum: 5fe19605e37622620da0ff7710c6c5cf
+SHA256: 799a19fc16cf6856756ceb48268e6bd58d60e986a7e6b2c5196011fe1ed106ce
+
+Package: nvidia-primus-vk-wrapper
+Source: primus-vk
+Version: 1.6.2-2
+Installed-Size: 44
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: libnv-vulkan-wrapper1 (>= 0)
+Depends: nvidia-primus-vk-common, libvulkan1, nvidia-vulkan-icd | nvidia-tesla-vulkan-icd | nvidia-tesla-470-vulkan-icd | nvidia-vulkan-icd-any, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libglx0, libstdc++6 (>= 5.2), libx11-6
+Recommends: nvidia-primus-vk-wrapper:i386 (= 1.6.2-2)
+Breaks: libnv-vulkan-wrapper1 (>= 0)
+Description: thin wrapper for using the NVIDIA binary Vulkan ICD with bumblebee
+Multi-Arch: same
+Homepage: https://github.com/felixdoerre/primus_vk
+Description-md5: b56d29bdf2a2c1ac493d1c61f63daef4
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/p/primus-vk/nvidia-primus-vk-wrapper_1.6.2-2_amd64.deb
+Size: 9884
+MD5sum: 83960c4bc444e4035d33ed32cf1f5b27
+SHA256: 313a0638a97f83a1e188a8283c64add0fca86306ac9940a54cc9bf5db96e1b7f
+
+Package: slurm-wlm-nvml-plugin
+Source: slurm-wlm-contrib
+Version: 22.05.8-4+deb12u2
+Installed-Size: 106
+Maintainer: Gennaro Oliva <oliva.g@na.icar.cnr.it>
+Architecture: amd64
+Depends: libc6 (>= 2.7), libnvidia-ml1 (>= 450) | libnvidia-ml.so.1 (>= 450), slurm-wlm-basic-plugins (= 22.05.8-4+deb12u2)
+Enhances: slurmd (= 22.05.8-4+deb12u2)
+Description: SLURM NVML plugins
+Homepage: http://slurm.schedmd.com
+Description-md5: 382ad5eb1a96045c9ecbf90f2e89d21b
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/s/slurm-wlm-contrib/slurm-wlm-nvml-plugin_22.05.8-4+deb12u2_amd64.deb
+Size: 26656
+MD5sum: 7b7eb584c32548acb044732a431d074d
+SHA256: 6538622e7585636e21d26c66c52e01fca1db8340ebe61af03df2e74d92406caf
+
+Package: libsocl-contrib-1.3-0
+Source: starpu-contrib
+Version: 1.3.10+dfsg-1
+Installed-Size: 125
+Maintainer: Samuel Thibault <sthibault@debian.org>
+Architecture: amd64
+Provides: libsocl-any-1.3-0
+Depends: libc6 (>= 2.34), libstarpu-contrib-1.3-9 (>= 1.3.10+dfsg), ocl-icd-libopencl1 | libopencl1
+Conflicts: libsocl-1.3-0
+Description: Task scheduler for heterogeneous multicore machines
+Multi-Arch: same
+Homepage: https://starpu.gitlabpages.inria.fr/
+Description-md5: 4a69ce3f02f2cf01466ed8b9a22d8758
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/s/starpu-contrib/libsocl-contrib-1.3-0_1.3.10+dfsg-1_amd64.deb
+Size: 52416
+MD5sum: 9b8c1f3b69b5bc34c7a74abf89683828
+SHA256: dc4ce1382e15bce121dbfc935f75b87f330a5a2019ce1f765c414a6c4a1578bc
+
+Package: libstarpu-contrib-1.3-9
+Source: starpu-contrib
+Version: 1.3.10+dfsg-1
+Installed-Size: 1470
+Maintainer: Samuel Thibault <sthibault@debian.org>
+Architecture: amd64
+Provides: libstarpu-any-1.3-9
+Depends: libc6 (>= 2.34), libcublas11, libcudart11.0, libcusparse11, libgcc-s1 (>= 3.4), libglpk40 (>= 4.59), libhwloc15 (>= 2.8.0), libnvidia-ml1 (>= 384) | libnvidia-ml.so.1 (>= 384), ocl-icd-libopencl1 | libopencl1
+Conflicts: libstarpu-1.3-9
+Description: Task scheduler for heterogeneous multicore machines
+Multi-Arch: same
+Homepage: https://starpu.gitlabpages.inria.fr/
+Description-md5: f0ca811d02d6bbb6c830781bf9811bff
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/s/starpu-contrib/libstarpu-contrib-1.3-9_1.3.10+dfsg-1_amd64.deb
+Size: 481520
+MD5sum: f286adb62dd0c7ebb15aa90de0971c47
+SHA256: e594dd48d6cb795407f76b890ac832dc3b55d87050bb24783ec3fe8e2fd14cde
+
+Package: libstarpu-contribfft-1.3-2
+Source: starpu-contrib
+Version: 1.3.10+dfsg-1
+Installed-Size: 117
+Maintainer: Samuel Thibault <sthibault@debian.org>
+Architecture: amd64
+Provides: libstarpu-anyfft-1.3-2
+Depends: libc6 (>= 2.4), libcudart11.0, libcufft10, libfftw3-double3 (>= 3.3.5), libfftw3-single3 (>= 3.3.5), libstarpu-contrib-1.3-9 (>= 1.3.10+dfsg)
+Conflicts: libstarpufft-1.3-2
+Description: Task scheduler for heterogeneous multicore machines
+Multi-Arch: same
+Homepage: https://starpu.gitlabpages.inria.fr/
+Description-md5: 1079179920c93a735ab89566a3855d36
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/s/starpu-contrib/libstarpu-contribfft-1.3-2_1.3.10+dfsg-1_amd64.deb
+Size: 43800
+MD5sum: 3a5bc924dc031c801cf695a50acbea8a
+SHA256: 40408c440e21a210abbe0bb33e37783761be43767de2054293bb2b17d41ea5cd
+
+Package: libstarpu-contribmpi-1.3-3
+Source: starpu-contrib
+Version: 1.3.10+dfsg-1
+Installed-Size: 259
+Maintainer: Samuel Thibault <sthibault@debian.org>
+Architecture: amd64
+Provides: libstarpu-anympi-1.3-3
+Depends: libc6 (>= 2.34), libopenmpi3 (>= 4.1.4), libstarpu-contrib-1.3-9 (>= 1.3.10+dfsg)
+Conflicts: libstarpumpi-1.3-3
+Description: Task scheduler for heterogeneous multicore machines
+Multi-Arch: same
+Homepage: https://starpu.gitlabpages.inria.fr/
+Description-md5: 4d3ce5602db3c9fbd91b7e19dcc14e2a
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/s/starpu-contrib/libstarpu-contribmpi-1.3-3_1.3.10+dfsg-1_amd64.deb
+Size: 95832
+MD5sum: 16c78990e90050b0de72c4ff22b3a0ae
+SHA256: c3b187ff9646ec781a7cddacc351fda01b283eb9a0a7005a80e7236257637819
+
+Package: libstarpu-contribrm-1.3-2
+Source: starpu-contrib
+Version: 1.3.10+dfsg-1
+Installed-Size: 83
+Maintainer: Samuel Thibault <sthibault@debian.org>
+Architecture: amd64
+Provides: libstarpu-anyrm-1.3-2
+Depends: libc6 (>= 2.34), libhwloc15 (>= 2.8.0), libstarpu-contrib-1.3-9 (>= 1.3.10+dfsg)
+Conflicts: libstarpurm-1.3-2
+Description: Task scheduler for heterogeneous multicore machines
+Multi-Arch: same
+Homepage: https://starpu.gitlabpages.inria.fr/
+Description-md5: 3008682b6502a417f1d5f1b0170499a0
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/s/starpu-contrib/libstarpu-contribrm-1.3-2_1.3.10+dfsg-1_amd64.deb
+Size: 37852
+MD5sum: 54923aab515d41f5a54faa751aa61022
+SHA256: e83d803e52de4657d1374eea276ea229c5ea57e14fb3bd9eaeee124bbfbc5154
+
+Package: libnvpair3linux
+Source: zfs-linux
+Version: 2.1.11-1+deb12u1
+Installed-Size: 189
+Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
+Architecture: amd64
+Replaces: libnvpair1, libnvpair3
+Depends: libc6 (>= 2.7), libtirpc3 (>= 1.0.2)
+Breaks: libnvpair1, libnvpair3
+Description: Solaris name-value library for Linux
+Homepage: https://zfsonlinux.org/
+Description-md5: dff01db1623b4ac78db22bcc089d9e49
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/z/zfs-linux/libnvpair3linux_2.1.11-1+deb12u1_amd64.deb
+Size: 58544
+MD5sum: 58424de5973f57e3de055b65ae422a78
+SHA256: 674f517cf1f983b23512eaaa8873e96c1960b5cef9498899b01e28651775ffd0
+
+Package: libuutil3linux
+Source: zfs-linux
+Version: 2.1.11-1+deb12u1
+Installed-Size: 153
+Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
+Architecture: amd64
+Replaces: libuutil1, libuutil3
+Depends: libc6 (>= 2.34)
+Breaks: libuutil1, libuutil3
+Description: Solaris userland utility library for Linux
+Homepage: https://zfsonlinux.org/
+Description-md5: 9bf9c128615174d04a0bb25b39d60322
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/z/zfs-linux/libuutil3linux_2.1.11-1+deb12u1_amd64.deb
+Size: 51508
+MD5sum: 74fc83e1c5a3184e4bd7b3fe90a3cfa1
+SHA256: 02593c010ff9ef0aa3725e375153356e62c1e0d205380bf7f695091d370b6f23
+
+Package: libzfs4linux
+Source: zfs-linux
+Version: 2.1.11-1+deb12u1
+Installed-Size: 651
+Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
+Architecture: amd64
+Replaces: libzfs2, libzfs4
+Depends: libblkid1 (>= 2.16), libc6 (>= 2.34), libnvpair3linux (>= 0.8.2), libssl3 (>= 3.0.0), libudev1 (>= 183), libuuid1 (>= 2.16), libuutil3linux (>= 0.8.2), zlib1g (>= 1:1.1.4)
+Recommends: libcurl4
+Breaks: libzfs2, libzfs4
+Description: OpenZFS filesystem library for Linux - general support
+Homepage: https://zfsonlinux.org/
+Description-md5: 68404c691e40434a1c18cb823bdc6f84
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/z/zfs-linux/libzfs4linux_2.1.11-1+deb12u1_amd64.deb
+Size: 232632
+MD5sum: cbbe74828e212e51d9c204493a143fd7
+SHA256: 4e20bb93e1615a7e7c1b5c3634f4017f6247be3a4166502bb74f54d610a38ed6
+
+Package: libzfsbootenv1linux
+Source: zfs-linux
+Version: 2.1.11-1+deb12u1
+Installed-Size: 102
+Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
+Architecture: amd64
+Replaces: libzfs2, libzfs4
+Depends: libc6 (>= 2.8), libnvpair3linux (>= 0.8.2), libzfs4linux (>= 2.0)
+Breaks: libzfs2, libzfs4
+Description: OpenZFS filesystem library for Linux - label info support
+Homepage: https://zfsonlinux.org/
+Description-md5: ba1246d18e334f582c2be912dfe69655
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/z/zfs-linux/libzfsbootenv1linux_2.1.11-1+deb12u1_amd64.deb
+Size: 35336
+MD5sum: 67012990fa1f805b6be1e5822c9ab21f
+SHA256: b37eaa15482f7d942fcf035a8321885f862a4ff63da61c25eb39f61fbd2dea0f
+
+Package: libzpool5linux
+Source: zfs-linux
+Version: 2.1.11-1+deb12u1
+Installed-Size: 4144
+Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
+Architecture: amd64
+Replaces: libzpool2, libzpool5
+Depends: libc6 (>= 2.34), libnvpair3linux (>= 0.8.2), libzfs4linux (>= 2.0), zlib1g (>= 1:1.1.4)
+Breaks: libzpool2, libzpool5
+Description: OpenZFS pool library for Linux
+Homepage: https://zfsonlinux.org/
+Description-md5: 5411b703c1dae8e2c3f38bbe7330f01d
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/z/zfs-linux/libzpool5linux_2.1.11-1+deb12u1_amd64.deb
+Size: 1287944
+MD5sum: 0c8b5675d1f8e56bcf39931ebe6be301
+SHA256: 773428c2f16fb8963dae8ee7b22236bcbb037ba09c8576975960b650789495d8
+

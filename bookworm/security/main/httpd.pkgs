@@ -1,0 +1,264 @@
+Package: apache2
+Version: 2.4.62-1~deb12u2
+Installed-Size: 573
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Provides: httpd, httpd-cgi
+Depends: apache2-bin (= 2.4.62-1~deb12u2), apache2-data (= 2.4.62-1~deb12u2), apache2-utils (= 2.4.62-1~deb12u2), lsb-base, media-types, perl:any, procps
+Suggests: apache2-doc, apache2-suexec-pristine | apache2-suexec-custom, www-browser
+Description: Apache HTTP Server
+Homepage: https://httpd.apache.org/
+Description-md5: d02426bc360345e5acd45367716dc35c
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: ssl-cert
+httpd
+Priority: optional
+Filename: pool/updates/main/a/apache2/apache2_2.4.62-1~deb12u2_amd64.deb
+Size: 222756
+SHA256: cb6c8a0d8637a2fe2ee0407d853d9f445676db1275ecd648f28780cd472c9f5d
+
+Package: apache2-bin
+Source: apache2
+Version: 2.4.62-1~deb12u2
+Installed-Size: 5094
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Provides: apache2-api-20120211, apache2-api-20120211-openssl1.1
+Depends: perl:any, libapr1 (>= 1.7.0), libaprutil1 (>= 1.6.0), libaprutil1-dbd-sqlite3 | libaprutil1-dbd-mysql | libaprutil1-dbd-odbc | libaprutil1-dbd-pgsql | libaprutil1-dbd-freetds, libaprutil1-ldap, libbrotli1 (>= 0.6.0), libc6 (>= 2.36), libcrypt1 (>= 1:4.1.0), libcurl4 (>= 7.28.0), libjansson4 (>= 2.14), libldap-2.5-0 (>= 2.5.4), liblua5.3-0, libnghttp2-14 (>= 1.50.0), libpcre2-8-0 (>= 10.22), libssl3 (>= 3.0.0), libxml2 (>= 2.7.4), zlib1g (>= 1:1.1.4)
+Suggests: apache2-doc, apache2-suexec-pristine | apache2-suexec-custom, www-browser
+Description: Apache HTTP Server (modules and other binary files)
+Homepage: https://httpd.apache.org/
+Description-md5: 37901ca6bbb9305b61d0920ecc08204f
+httpd
+Priority: optional
+Filename: pool/updates/main/a/apache2/apache2-bin_2.4.62-1~deb12u2_amd64.deb
+Size: 1386212
+SHA256: 3fb70393b682d444d0273778cebb70ca8d7156bd93dbeae4dba8f4864a846d7c
+
+Package: apache2-data
+Source: apache2
+Version: 2.4.62-1~deb12u2
+Installed-Size: 849
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: all
+Description: Apache HTTP Server (common files)
+Homepage: https://httpd.apache.org/
+Description-md5: 9f2fab36019a61312dec627d1cd80365
+Multi-Arch: foreign
+httpd
+Priority: optional
+Filename: pool/updates/main/a/apache2/apache2-data_2.4.62-1~deb12u2_all.deb
+Size: 160220
+SHA256: 1a778c51678ada30b6be3952e4e13e125051e05482b2c343b7e1f1d2e7df8fd5
+
+Package: apache2-dev
+Source: apache2
+Version: 2.4.62-1~deb12u2
+Installed-Size: 1113
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Provides: dh-apache2
+Depends: debhelper (>= 10), libapr1-dev, libaprutil1-dev, libpcre2-dev, openssl, perl:any
+Description: Apache HTTP Server (development headers)
+Homepage: https://httpd.apache.org/
+Description-md5: 8ba6f3b272c39cc7a08a802594285f02
+httpd
+Priority: optional
+Filename: pool/updates/main/a/apache2/apache2-dev_2.4.62-1~deb12u2_amd64.deb
+Size: 315552
+SHA256: c7e1f47fc9cb232be8dfc3ef04e58087e7244f85cc20fcf846710ed898d19218
+
+Package: apache2-ssl-dev
+Source: apache2
+Version: 2.4.62-1~deb12u2
+Installed-Size: 13
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Depends: apache2-dev (= 2.4.62-1~deb12u2), libssl-dev
+Description: Apache HTTP Server (mod_ssl development headers)
+Homepage: https://httpd.apache.org/
+Description-md5: 160d9bdafec462b08db62740b1eb83d2
+Multi-Arch: same
+httpd
+Priority: optional
+Filename: pool/updates/main/a/apache2/apache2-ssl-dev_2.4.62-1~deb12u2_amd64.deb
+Size: 3140
+SHA256: 5082c9465d3563b4c1106ea326964479abe543b3ca328a97dacf552401e15d73
+
+Package: apache2-suexec-custom
+Source: apache2
+Version: 2.4.62-1~deb12u2
+Installed-Size: 193
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Provides: apache2-suexec
+Depends: apache2-bin, libc6 (>= 2.34)
+Description: Apache HTTP Server configurable suexec program for mod_suexec
+Homepage: https://httpd.apache.org/
+Description-md5: 116f52596e88b0c7717e1f4973ada661
+httpd
+Priority: optional
+Filename: pool/updates/main/a/apache2/apache2-suexec-custom_2.4.62-1~deb12u2_amd64.deb
+Size: 143232
+SHA256: f7199ff6693b44cd3229d558a96a38d3a405830c7fe0ed78395b9eeff8dc1072
+
+Package: apache2-suexec-pristine
+Source: apache2
+Version: 2.4.62-1~deb12u2
+Installed-Size: 183
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Provides: apache2-suexec
+Depends: apache2-bin, libc6 (>= 2.34)
+Description: Apache HTTP Server standard suexec program for mod_suexec
+Homepage: https://httpd.apache.org/
+Description-md5: 86a22eab8bdd72ac81f3d8aab53bf001
+httpd
+Priority: optional
+Filename: pool/updates/main/a/apache2/apache2-suexec-pristine_2.4.62-1~deb12u2_amd64.deb
+Size: 141668
+SHA256: af7c76d38555704e5bb178cbe30d98959acdcbbdf37381593116c49fa8d23424
+
+Package: apache2-utils
+Source: apache2
+Version: 2.4.62-1~deb12u2
+Installed-Size: 438
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Depends: libapr1 (>= 1.4.8-2~), libaprutil1 (>= 1.5.0), libc6 (>= 2.34), libcrypt1 (>= 1:4.1.0), libssl3 (>= 3.0.0)
+Description: Apache HTTP Server (utility programs for web servers)
+Homepage: https://httpd.apache.org/
+Description-md5: f1e2440381fa90571f125990da6a52fc
+Multi-Arch: foreign
+httpd
+Priority: optional
+Filename: pool/updates/main/a/apache2/apache2-utils_2.4.62-1~deb12u2_amd64.deb
+Size: 209980
+SHA256: d32116078062310ff361956f774d13f8068819c4dcafe9118b74bbf380f704e6
+
+Package: libapache2-mod-md
+Source: apache2
+Version: 2.4.62-1~deb12u2
+Installed-Size: 6
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Depends: apache2 (= 2.4.62-1~deb12u2)
+Description: transitional package
+Homepage: https://httpd.apache.org/
+Description-md5: c2abd3d451fbe9f8b62453ebd20f7096
+Multi-Arch: same
+httpd
+Priority: optional
+Filename: pool/updates/main/a/apache2/libapache2-mod-md_2.4.62-1~deb12u2_amd64.deb
+Size: 948
+SHA256: 66b917a3c1553de616b7b111bc67b1c2777e4ab924757ea49df8f30318c1e4ee
+
+Package: libapache2-mod-security2
+Source: modsecurity-apache
+Version: 2.9.7-1+deb12u1
+Installed-Size: 1086
+Maintainer: Alberto Gonzalez Iniesta <agi@inittab.org>
+Architecture: amd64
+Depends: libxml2 (>= 2.9.14), libapr1 (>= 1.2.7), libaprutil1 (>= 1.4.0), libc6 (>= 2.34), libcurl3-gnutls (>= 7.16.2), liblua5.1-0, libpcre2-8-0 (>= 10.32), libyajl2 (>= 2.0.4), apache2-api-20120211, apache2-bin (>= 2.4.16)
+Description: Tighten web applications security for Apache
+Homepage: https://github.com/SpiderLapbs/ModSecurity
+Description-md5: 198ee1322fd8f21e7b0987f6dfb5edc3
+Recommends: modsecurity-crs
+httpd
+Priority: optional
+Filename: pool/updates/main/m/modsecurity-apache/libapache2-mod-security2_2.9.7-1+deb12u1_amd64.deb
+Size: 259204
+SHA256: 9a995e9e9a017cd6b11fc4148c58882206149dfab85640871495690b24c57f94
+
+Package: nghttp2
+Version: 1.52.0-1+deb12u1
+Installed-Size: 21
+Maintainer: Tomasz Buchert <tomasz@debian.org>
+Architecture: all
+Depends: nghttp2-client (>= 1.52.0-1+deb12u1), nghttp2-proxy (>= 1.52.0-1+deb12u1), nghttp2-server (>= 1.52.0-1+deb12u1)
+Description: server, proxy and client implementing HTTP/2
+Homepage: https://nghttp2.org/
+Description-md5: ca84fd3762013e2b3766232f5365fa1f
+Multi-Arch: foreign
+httpd
+Priority: optional
+Filename: pool/updates/main/n/nghttp2/nghttp2_1.52.0-1+deb12u1_all.deb
+Size: 8504
+SHA256: 27c2cad0f445d5a78b5fc62947a00e43ac8a0b668abc2518a15c647617cc6248
+
+Package: nghttp2-client
+Source: nghttp2
+Version: 1.52.0-1+deb12u1
+Installed-Size: 582
+Maintainer: Tomasz Buchert <tomasz@debian.org>
+Architecture: amd64
+Replaces: nghttp2 (<< 1.3.4-2~)
+Depends: libnghttp2-14 (= 1.52.0-1+deb12u1), libc6 (>= 2.34), libev4 (>= 1:4.04), libgcc-s1 (>= 3.0), libjansson4 (>= 2.14), libjemalloc2 (>= 5.0.0), libssl3 (>= 3.0.0), libstdc++6 (>= 12), libxml2 (>= 2.7.4), zlib1g (>= 1:1.1.4)
+Breaks: nghttp2 (<< 1.3.4-2~)
+Description: client implementing HTTP/2 protocol
+Homepage: https://nghttp2.org/
+Description-md5: c9f9eea931674bd2c6a88fff60dc43ef
+Multi-Arch: foreign
+httpd
+Priority: optional
+Filename: pool/updates/main/n/nghttp2/nghttp2-client_1.52.0-1+deb12u1_amd64.deb
+Size: 171212
+SHA256: d252c4e96bf11b5aedb397b0e120b694077274210da191ba6c91448ceb858107
+
+Package: nghttp2-proxy
+Source: nghttp2
+Version: 1.52.0-1+deb12u1
+Installed-Size: 1126
+Maintainer: Tomasz Buchert <tomasz@debian.org>
+Architecture: amd64
+Replaces: nghttp2 (<< 1.3.4-2~)
+Depends: libnghttp2-14 (= 1.52.0-1+deb12u1), openssl, python3, libc-ares2 (>= 1.7.0), libc6 (>= 2.34), libev4 (>= 1:4.04), libgcc-s1 (>= 3.0), libjemalloc2 (>= 5.0.0), libssl3 (>= 3.0.0), libstdc++6 (>= 11), libsystemd0, zlib1g (>= 1:1.1.4)
+Breaks: nghttp2 (<< 1.3.4-2~)
+Description: reverse proxy implementing HTTP/2 protocol
+Homepage: https://nghttp2.org/
+Description-md5: 8e735de4aa891e6f34f1f0121d726cb0
+Multi-Arch: foreign
+httpd
+Priority: optional
+Filename: pool/updates/main/n/nghttp2/nghttp2-proxy_1.52.0-1+deb12u1_amd64.deb
+Size: 398176
+SHA256: cef4091a64b6dc99a93e3989044c54d934fe774cccd9024e9c39582b16c508c5
+
+Package: nghttp2-server
+Source: nghttp2
+Version: 1.52.0-1+deb12u1
+Installed-Size: 267
+Maintainer: Tomasz Buchert <tomasz@debian.org>
+Architecture: amd64
+Replaces: nghttp2 (<< 1.3.4-2~)
+Depends: libnghttp2-14 (= 1.52.0-1+deb12u1), libc6 (>= 2.34), libev4 (>= 1:4.04), libgcc-s1 (>= 3.0), libjemalloc2 (>= 5.0.0), libssl3 (>= 3.0.0), libstdc++6 (>= 11), zlib1g (>= 1:1.1.4)
+Breaks: nghttp2 (<< 1.3.4-2~)
+Description: server implementing HTTP/2 protocol
+Homepage: https://nghttp2.org/
+Description-md5: 1d388440c4e8648708dbc32d3eda635d
+Multi-Arch: foreign
+httpd
+Priority: optional
+Filename: pool/updates/main/n/nghttp2/nghttp2-server_1.52.0-1+deb12u1_amd64.deb
+Size: 98184
+SHA256: cffb6c72b54dd500e4adea0c8b7569dcb90e358202b4e4448c1ec736c18998f8
+
+Package: libapache2-mod-php8.2
+Source: php8.2
+Version: 8.2.29-1~deb12u1
+Installed-Size: 5470
+Maintainer: Debian PHP Maintainers <team+pkg-php@tracker.debian.org>
+Architecture: amd64
+Provides: libapache2-mod-php, php-json, php8.2-json, phpapi-20220829
+Depends: libmagic1, media-types | mime-support, php8.2-cli, php8.2-common (= 8.2.29-1~deb12u1), php8.2-opcache, tzdata, ucf, apache2-api-20120211, apache2-bin (>= 2.4.16), libargon2-1 (>= 0~20171227), libc6 (>= 2.35), libpcre2-8-0 (>= 10.32), libsodium23 (>= 1.0.18), libssl3 (>= 3.0.0), libxml2 (>= 2.8.0), zlib1g (>= 1:1.1.4)
+Suggests: php-pear
+Description: server-side, HTML-embedded scripting language (Apache 2 module)
+Homepage: http://www.php.net/
+Description-md5: 6a338a642132f78b17e5228372062a40
+Recommends: apache2
+httpd
+Priority: optional
+Filename: pool/updates/main/p/php8.2/libapache2-mod-php8.2_8.2.29-1~deb12u1_amd64.deb
+Size: 1678748
+SHA256: f1057f0e0a43911069f8b5eca3e70e6505e007fde61e9d09a34a3569454e147e
+
