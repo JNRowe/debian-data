@@ -1,0 +1,749 @@
+Package: ca-certificates
+Version: 20230311+deb12u1
+Installed-Size: 387
+Maintainer: Julien Cristau <jcristau@debian.org>
+Architecture: all
+Depends: openssl (>= 1.1.1), debconf (>= 0.5) | debconf-2.0
+Enhances: openssl
+Breaks: ca-certificates-java (<< 20121112+nmu1)
+Description: Common CA certificates
+Multi-Arch: foreign
+Description-md5: e867d2a359bea1800b5bff209fc65bd1
+Tag: protocol::ssl, role::app-data, security::authentication
+Section: misc
+Priority: standard
+Filename: pool/main/c/ca-certificates/ca-certificates_20230311+deb12u1_all.deb
+Size: 155260
+SHA256: 0d5f444f594e48c1e16a41d8fc628a09b24c658916a1274025c2330f2a802bed
+
+Package: openssh-client
+Source: openssh
+Version: 1:9.2p1-2+deb12u7
+Installed-Size: 5792
+Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
+Architecture: amd64
+Replaces: openssh-sk-helper, ssh, ssh-krb5
+Provides: ssh-client
+Depends: adduser, passwd, libc6 (>= 2.36), libedit2 (>= 2.11-20080614-0), libfido2-1 (>= 1.8.0), libgssapi-krb5-2 (>= 1.17), libselinux1 (>= 3.1~), libssl3 (>= 3.0.17), zlib1g (>= 1:1.1.4)
+Recommends: xauth
+Suggests: keychain, libpam-ssh, monkeysphere, ssh-askpass
+Conflicts: sftp
+Breaks: openssh-sk-helper
+Description: secure shell (SSH) client, for secure access to remote machines
+Multi-Arch: foreign
+Homepage: https://www.openssh.com/
+Description-md5: 8cde3280ebad71c16b3e8c661dae6c6d
+Tag: implemented-in::c, interface::commandline, interface::shell,
+ network::client, protocol::sftp, protocol::ssh, role::program,
+ security::authentication, security::cryptography, uitoolkit::ncurses,
+ use::login, use::transmission, works-with::file
+Section: net
+Priority: standard
+Filename: pool/main/o/openssh/openssh-client_9.2p1-2+deb12u7_amd64.deb
+Size: 992320
+SHA256: ebcf438221dabddee078bbdf79f1f126f345ed6e7f830662bf13ae1aece6b629
+
+Package: openssh-server
+Source: openssh
+Version: 1:9.2p1-2+deb12u7
+Installed-Size: 1930
+Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
+Architecture: amd64
+Replaces: openssh-client (<< 1:7.9p1-8), ssh, ssh-krb5
+Provides: ssh-server
+Depends: adduser, libpam-modules, libpam-runtime, lsb-base, openssh-client (= 1:9.2p1-2+deb12u7), openssh-sftp-server, procps, ucf, debconf (>= 0.5) | debconf-2.0, runit-helper (>= 2.14.0~), libaudit1 (>= 1:2.2.1), libc6 (>= 2.36), libcom-err2 (>= 1.43.9), libcrypt1 (>= 1:4.1.0), libgssapi-krb5-2 (>= 1.17), libkrb5-3 (>= 1.13~alpha1+dfsg), libpam0g (>= 0.99.7.1), libselinux1 (>= 3.1~), libssl3 (>= 3.0.17), libsystemd0, libwrap0 (>= 7.6-4~), zlib1g (>= 1:1.1.4)
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: default-logind | logind | libpam-systemd, ncurses-term, xauth
+Suggests: molly-guard, monkeysphere, ssh-askpass, ufw
+Conflicts: sftp, ssh-socks, ssh2
+Breaks: runit (<< 2.1.2-51~)
+Description: secure shell (SSH) server, for secure access from remote machines
+Multi-Arch: foreign
+Homepage: https://www.openssh.com/
+Description-md5: 842cc998cae371b9d8106c1696373919
+Tag: admin::login, implemented-in::c, interface::daemon, network::server,
+ protocol::ssh, role::program, security::authentication,
+ security::cryptography, use::login, use::transmission
+Section: net
+Priority: optional
+Filename: pool/main/o/openssh/openssh-server_9.2p1-2+deb12u7_amd64.deb
+Size: 456900
+SHA256: fdac7995f69e1059650de944b569a1028beb17dfa1cba5e8eb2779339f6a4785
+
+Package: openssh-sftp-server
+Source: openssh
+Version: 1:9.2p1-2+deb12u7
+Installed-Size: 217
+Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
+Architecture: amd64
+Replaces: openssh-server (<< 1:6.5p1-5)
+Depends: openssh-client (= 1:9.2p1-2+deb12u7), libc6 (>= 2.34)
+Recommends: openssh-server | ssh-server
+Enhances: openssh-server, ssh-server
+Breaks: openssh-server (<< 1:6.5p1-5)
+Description: secure shell (SSH) sftp server module, for SFTP access from remote machines
+Multi-Arch: foreign
+Homepage: https://www.openssh.com/
+Description-md5: b9a6d4f71758c154615deaec42e8415d
+Section: net
+Priority: optional
+Filename: pool/main/o/openssh/openssh-sftp-server_9.2p1-2+deb12u7_amd64.deb
+Size: 65880
+SHA256: 90ca058943735c7ad442577ee54f84ad20355a2fdae36c437769d600623557c8
+
+Package: openssh-tests
+Source: openssh
+Version: 1:9.2p1-2+deb12u7
+Installed-Size: 7666
+Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
+Architecture: amd64
+Depends: openssh-client (= 1:9.2p1-2+deb12u7), openssh-server (= 1:9.2p1-2+deb12u7), openssh-sftp-server (= 1:9.2p1-2+deb12u7), openssl, putty-tools (>= 0.67-2), python3-twisted, libc6 (>= 2.36), libmd0 (>= 0.0.0), libselinux1 (>= 3.1~), libssl3 (>= 3.0.0), zlib1g (>= 1:1.1.4)
+Description: OpenSSH regression tests
+Multi-Arch: foreign
+Homepage: https://www.openssh.com/
+Description-md5: bb7db5bf0b75d064182f67ac05d849c9
+Section: net
+Priority: optional
+Filename: pool/main/o/openssh/openssh-tests_9.2p1-2+deb12u7_amd64.deb
+Size: 1051956
+SHA256: 058b3f0a7f335021d540ba2046b40b1885921af4142689b710870670b0c4d389
+
+Package: ssh
+Source: openssh
+Version: 1:9.2p1-2+deb12u7
+Installed-Size: 183
+Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
+Architecture: all
+Depends: openssh-client (>= 1:9.2p1-2+deb12u7), openssh-server (>= 1:9.2p1-2+deb12u7)
+Description: secure shell client and server (metapackage)
+Multi-Arch: foreign
+Homepage: https://www.openssh.com/
+Description-md5: b00e309365895c14a10af55945efb136
+Tag: interface::shell, network::client, network::server, protocol::ip,
+ protocol::ipv6, protocol::ssh, role::dummy, role::metapackage,
+ role::program, scope::utility, security::cryptography, use::login
+Section: net
+Priority: optional
+Filename: pool/main/o/openssh/ssh_9.2p1-2+deb12u7_all.deb
+Size: 174580
+SHA256: 1c0e381d59d0520fcd4ab7d654ed4c7bb89e91590fb26aeab5267ebcd84e8972
+
+Package: ssh-askpass-gnome
+Source: openssh
+Version: 1:9.2p1-2+deb12u7
+Installed-Size: 220
+Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
+Architecture: amd64
+Replaces: ssh (<< 1:3.5p1-3)
+Provides: ssh-askpass
+Depends: openssh-client | ssh (>= 1:1.2pre7-4), libc6 (>= 2.34), libglib2.0-0 (>= 2.12.0), libgtk-3-0 (>= 3.19.12)
+Description: interactive X program to prompt users for a passphrase for ssh-add
+Multi-Arch: foreign
+Homepage: https://www.openssh.com/
+Description-md5: e888e7e8e5a6ee7b30f000dc22ed083f
+Tag: implemented-in::c, interface::graphical, interface::x11, protocol::ssh,
+ role::program, scope::utility, security::authentication, suite::gnome,
+ uitoolkit::gtk, use::login, x11::application
+Section: gnome
+Priority: optional
+Filename: pool/main/o/openssh/ssh-askpass-gnome_9.2p1-2+deb12u7_amd64.deb
+Size: 188116
+SHA256: ba071e77c49f083e8f044429504b7e5882e4bece754f26cb86009fedba90352c
+
+Package: libssl-dev
+Source: openssl
+Version: 3.0.17-1~deb12u1
+Installed-Size: 12358
+Maintainer: Debian OpenSSL Team <pkg-openssl-devel@alioth-lists.debian.net>
+Architecture: amd64
+Depends: libssl3 (= 3.0.17-1~deb12u1)
+Suggests: libssl-doc
+Description: Secure Sockets Layer toolkit - development files
+Multi-Arch: same
+Homepage: https://www.openssl.org/
+Description-md5: 27044468897c45b271f879c7c6e135fe
+Tag: devel::lang:c, devel::library, implemented-in::TODO, implemented-in::c,
+ protocol::ssl, role::devel-lib, security::cryptography
+Section: libdevel
+Priority: optional
+Filename: pool/main/o/openssl/libssl-dev_3.0.17-1~deb12u1_amd64.deb
+Size: 2440336
+SHA256: b3e38af0ece7db7bcb9a9a4efe86edda323f52d6642eaceb5cc03f7a834b6fcb
+
+Package: libssl-doc
+Source: openssl
+Version: 3.0.17-1~deb12u1
+Installed-Size: 7585
+Maintainer: Debian OpenSSL Team <pkg-openssl-devel@alioth-lists.debian.net>
+Architecture: all
+Description: Secure Sockets Layer toolkit - development documentation
+Multi-Arch: foreign
+Homepage: https://www.openssl.org/
+Description-md5: 863c8f0d45ab34415ebc295c04753c98
+Tag: devel::doc, protocol::ssl, role::documentation
+Section: doc
+Priority: optional
+Filename: pool/main/o/openssl/libssl-doc_3.0.17-1~deb12u1_all.deb
+Size: 2381752
+SHA256: 3bb1cb14eeb812dc5827c614b76eea52ce1262d08f713994fa91314440de31cb
+
+Package: libssl3
+Source: openssl
+Version: 3.0.17-1~deb12u1
+Installed-Size: 6021
+Maintainer: Debian OpenSSL Team <pkg-openssl-devel@alioth-lists.debian.net>
+Architecture: amd64
+Depends: libc6 (>= 2.34)
+Description: Secure Sockets Layer toolkit - shared libraries
+Multi-Arch: same
+Homepage: https://www.openssl.org/
+Description-md5: 88547c6206c7fbc4fcc7d09ce100d210
+Tag: role::shared-lib
+Section: libs
+Priority: optional
+Filename: pool/main/o/openssl/libssl3_3.0.17-1~deb12u1_amd64.deb
+Size: 2027112
+SHA256: 14075b7152724b0643b131414f0bbd6d58c737b5b1aad66f7fa5fbd4edb41c4e
+
+Package: openssl
+Version: 3.0.17-1~deb12u1
+Installed-Size: 2303
+Maintainer: Debian OpenSSL Team <pkg-openssl-devel@alioth-lists.debian.net>
+Architecture: amd64
+Depends: libc6 (>= 2.34), libssl3 (>= 3.0.9)
+Suggests: ca-certificates
+Description: Secure Sockets Layer toolkit - cryptographic utility
+Multi-Arch: foreign
+Homepage: https://www.openssl.org/
+Description-md5: 9b6de2bb6e1d9016aeb0f00bcf6617bd
+Tag: implemented-in::c, interface::commandline, protocol::ssl, role::program,
+ scope::utility, security::cryptography, security::integrity,
+ use::checking
+Section: utils
+Priority: optional
+Filename: pool/main/o/openssl/openssl_3.0.17-1~deb12u1_amd64.deb
+Size: 1430904
+SHA256: 23d69f65984c37d7136a626da6c8d9edbc9b872653e0ce60e4317c32e42b4be9
+
+Package: ctdb
+Source: samba
+Version: 2:4.17.12+dfsg-0+deb12u2
+Installed-Size: 3765
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Depends: iproute2, psmisc, samba-libs (= 2:4.17.12+dfsg-0+deb12u2), sudo, tdb-tools, time, libbsd0 (>= 0.0), libc6 (>= 2.34), libpopt0 (>= 1.14), libtalloc2 (>= 2.3.4~), libtdb1 (>= 1.4.7~), libtevent0 (>= 0.13.0~), libtirpc3 (>= 1.0.2)
+Recommends: ethtool, python3:any, python3-etcd, librados2 (>= 16.2.15+ds)
+Suggests: logrotate, lsof
+Description: clustered database to store temporary data
+Multi-Arch: foreign
+Homepage: https://www.samba.org
+Description-md5: 83dff66615250b53a0cd3df6fb3b9ea7
+Tag: admin::cluster, admin::file-distribution, implemented-in::c,
+ interface::commandline, interface::daemon, network::hiavailability,
+ network::load-balancing, protocol::ethernet, protocol::nfs,
+ protocol::smb, role::program, suite::samba, use::browsing,
+ use::synchronizing, works-with::software:running
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/ctdb_4.17.12+dfsg-0+deb12u2_amd64.deb
+Size: 699212
+SHA256: 4158ab33b5f306abdab84849a25c6debe8de12dd61d8a01e1c4ae66db66e1d2d
+
+Package: ldb-tools
+Source: samba (2:4.17.12+dfsg-0+deb12u2)
+Version: 2:2.6.2+samba4.17.12+dfsg-0+deb12u2
+Installed-Size: 199
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34), libldb2 (>= 1.1.5), libpopt0 (>= 1.14), libtalloc2 (>= 2.3.4~)
+Description: LDAP-like embedded database - tools
+Homepage: https://www.samba.org
+Description-md5: 27e8c15a8859e3368f9f6a0853f05226
+Tag: implemented-in::c, interface::commandline, network::client,
+ protocol::ldap, protocol::ssl, role::program, suite::samba,
+ use::storing, works-with-format::ldif, works-with::db
+Section: utils
+Priority: optional
+Filename: pool/main/s/samba/ldb-tools_2.6.2+samba4.17.12+dfsg-0+deb12u2_amd64.deb
+Size: 56828
+SHA256: 9b1b570a543d13814439ebf7efff843e74074df87e692cf24cb6ffc3d0327e4c
+
+Package: libldb-dev
+Source: samba (2:4.17.12+dfsg-0+deb12u2)
+Version: 2:2.6.2+samba4.17.12+dfsg-0+deb12u2
+Installed-Size: 176
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6-dev, libldb2 (= 2:2.6.2+samba4.17.12+dfsg-0+deb12u2), libtalloc-dev, libtevent-dev, libtdb-dev, pkg-config
+Description: LDAP-like embedded database - development files
+Multi-Arch: same
+Homepage: https://www.samba.org
+Description-md5: 0f2998af1c1336788fd3d4e9eca9fd09
+Tag: devel::lang:c, devel::library, implemented-in::c, role::devel-lib,
+ role::program, use::storing, works-with-format::ldif, works-with::db
+Section: libdevel
+Priority: optional
+Filename: pool/main/s/samba/libldb-dev_2.6.2+samba4.17.12+dfsg-0+deb12u2_amd64.deb
+Size: 55828
+SHA256: 348e947eb28c90c29c0ae90fc9c43ccfa4e50f45c6bbca308fef1ac07a85080d
+
+Package: libldb2
+Source: samba (2:4.17.12+dfsg-0+deb12u2)
+Version: 2:2.6.2+samba4.17.12+dfsg-0+deb12u2
+Installed-Size: 619
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34), libldap-2.5-0 (>= 2.5.4), liblmdb0 (>= 0.9.9), libtalloc2 (>= 2.3.4~), libtdb1 (>= 1.4.7~), libtevent0 (>= 0.13.0~)
+Breaks: ldb-tools (<< 1.1.30~), samba (<< 2:4.7.0~), samba-dsdb-modules (<< 2:4.7.0~), samba-libs (<< 2:4.7.0~), samba-testsuite (<< 2:4.7.0~)
+Description: LDAP-like embedded database - shared library
+Multi-Arch: same
+Homepage: https://www.samba.org
+Description-md5: afbf2b86552adbf8b69bb702e5773247
+Tag: role::shared-lib
+Section: libs
+Priority: optional
+Filename: pool/main/s/samba/libldb2_2.6.2+samba4.17.12+dfsg-0+deb12u2_amd64.deb
+Size: 162476
+SHA256: 77d58f73e4519a2b50a35bb03f5fbd05d15b4c7bee3857809370288972ba55a1
+
+Package: libnss-winbind
+Source: samba
+Version: 2:4.17.12+dfsg-0+deb12u2
+Installed-Size: 189
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Depends: winbind:any (= 2:4.17.12+dfsg-0+deb12u2), libbsd0 (>= 0.0), libc6 (>= 2.34)
+Suggests: libpam-winbind
+Description: Samba nameservice integration plugins
+Multi-Arch: same
+Homepage: https://www.samba.org
+Description-md5: 223d38d764a9bb35ad3be4c8d048957d
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/libnss-winbind_4.17.12+dfsg-0+deb12u2_amd64.deb
+Size: 59484
+SHA256: a513333e0667267432cada8e480ad36abd6b9811cea29526e69a97fa58938fba
+
+Package: libpam-winbind
+Source: samba
+Version: 2:4.17.12+dfsg-0+deb12u2
+Installed-Size: 172
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libpam-runtime (>= 1.0.1-6), libpam0g (>= 1.1.3-2~), winbind:any (= 2:4.17.12+dfsg-0+deb12u2), libbsd0 (>= 0.0), libc6 (>= 2.34), libtalloc2 (>= 2.3.4~)
+Suggests: libnss-winbind
+Description: Windows domain authentication integration plugin
+Multi-Arch: same
+Homepage: https://www.samba.org
+Description-md5: fba9076429d270720a91324cff071fed
+Tag: implemented-in::c, protocol::smb, role::plugin, suite::samba
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/libpam-winbind_4.17.12+dfsg-0+deb12u2_amd64.deb
+Size: 74760
+SHA256: 1d0b43f333e98c3ff5fd25e3ea1c829eba80a1ef3b9293637f52add127cb76c4
+
+Package: libsmbclient
+Source: samba
+Version: 2:4.17.12+dfsg-0+deb12u2
+Installed-Size: 236
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Depends: samba-libs (= 2:4.17.12+dfsg-0+deb12u2), libbsd0 (>= 0.0), libc6 (>= 2.25), libtalloc2 (>= 2.3.4~), libtevent0 (>= 0.13.0~)
+Description: shared library for communication with SMB/CIFS servers
+Multi-Arch: same
+Homepage: https://www.samba.org
+Description-md5: 483547748179a567c24665e99ab5439e
+Tag: role::shared-lib
+Section: libs
+Priority: optional
+Filename: pool/main/s/samba/libsmbclient_4.17.12+dfsg-0+deb12u2_amd64.deb
+Size: 83248
+SHA256: aceb366aa30f045f44af55c719f4496e14a1a890ba420d409eba7f635b0c8a78
+
+Package: libsmbclient-dev
+Source: samba
+Version: 2:4.17.12+dfsg-0+deb12u2
+Installed-Size: 272
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libsmbclient (= 2:4.17.12+dfsg-0+deb12u2)
+Description: development files for libsmbclient
+Multi-Arch: same
+Homepage: https://www.samba.org
+Description-md5: d6338d0aed68408023b999dd547aaecf
+Tag: devel::lang:c, devel::library, implemented-in::c, protocol::smb,
+ role::devel-lib, suite::samba
+Section: libdevel
+Priority: optional
+Filename: pool/main/s/samba/libsmbclient-dev_4.17.12+dfsg-0+deb12u2_amd64.deb
+Size: 63796
+SHA256: 9b343850c7f7c1ef37b6a25346172d5bb6b5c4b0caef5cb1a51cef3ff9eb823d
+
+Package: libwbclient-dev
+Source: samba
+Version: 2:4.17.12+dfsg-0+deb12u2
+Installed-Size: 114
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: samba-dev (<< 2:4.11)
+Depends: libwbclient0 (= 2:4.17.12+dfsg-0+deb12u2)
+Breaks: samba-dev (<< 2:4.11), samba-libs (<< 2:4.11.0+dfsg-1~)
+Description: Samba winbind client library - development files
+Multi-Arch: same
+Homepage: https://www.samba.org
+Description-md5: 2fd42f0ef62fe1cc8cfee6fb03d4b884
+Tag: devel::lang:c, devel::library, implemented-in::c, protocol::smb,
+ role::devel-lib, suite::samba
+Section: libdevel
+Priority: optional
+Filename: pool/main/s/samba/libwbclient-dev_4.17.12+dfsg-0+deb12u2_amd64.deb
+Size: 39308
+SHA256: b7f8b74c8f163cc4c4fa7b854d476c5c7b8334c355452811714a0a24733b4d5a
+
+Package: libwbclient0
+Source: samba
+Version: 2:4.17.12+dfsg-0+deb12u2
+Installed-Size: 132
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libbsd0 (>= 0.0), libc6 (>= 2.34)
+Breaks: samba-libs (<< 2:4.11.0+dfsg-1~)
+Description: Samba winbind client library
+Multi-Arch: same
+Homepage: https://www.samba.org
+Description-md5: 16c935b1d482f634b3879c2495e04db8
+Tag: role::shared-lib
+Section: libs
+Priority: optional
+Filename: pool/main/s/samba/libwbclient0_4.17.12+dfsg-0+deb12u2_amd64.deb
+Size: 54368
+SHA256: 911b27d62c13b770b346b649702b901a4b7c1ef2dfd895255f1b3e70ae170b33
+
+Package: python3-ldb
+Source: samba (2:4.17.12+dfsg-0+deb12u2)
+Version: 2:2.6.2+samba4.17.12+dfsg-0+deb12u2
+Installed-Size: 186
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libldb2 (= 2:2.6.2+samba4.17.12+dfsg-0+deb12u2), python3 (<< 3.12), python3 (>= 3.11~), python3:any, libc6 (>= 2.25), libpython3.11 (>= 3.11.0), libtalloc2 (>= 2.3.4~)
+Description: Python 3 bindings for LDB
+Homepage: https://www.samba.org
+Description-md5: c83bd92747d7e8000f766fba3a779170
+Section: python
+Priority: optional
+Filename: pool/main/s/samba/python3-ldb_2.6.2+samba4.17.12+dfsg-0+deb12u2_amd64.deb
+Size: 61204
+SHA256: cf04bf7c0a0b314762d3fb6a4b7dec0a68e0b5c5bd262553c656f44eba9ed913
+
+Package: python3-ldb-dev
+Source: samba (2:4.17.12+dfsg-0+deb12u2)
+Version: 2:2.6.2+samba4.17.12+dfsg-0+deb12u2
+Installed-Size: 64
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6-dev, libldb-dev, pkg-config, python3-ldb (= 2:2.6.2+samba4.17.12+dfsg-0+deb12u2)
+Description: LDB Python 3 bindings - development files
+Homepage: https://www.samba.org
+Description-md5: be4c40ca865d11fda345266b7a5d70fb
+Tag: devel::library, role::devel-lib
+Section: libdevel
+Priority: optional
+Filename: pool/main/s/samba/python3-ldb-dev_2.6.2+samba4.17.12+dfsg-0+deb12u2_amd64.deb
+Size: 31932
+SHA256: f34fb88a3f2be44cf2c74c336000a3ee4ad8afc1f4ca6a0d3922f8d3280ca549
+
+Package: python3-samba
+Source: samba
+Version: 2:4.17.12+dfsg-0+deb12u2
+Installed-Size: 21942
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: samba (<< 2:4.16.0+dfsg-1~), samba-libs (<< 2:4.16.0+dfsg-1~)
+Depends: python3-ldb (>= 2:2.1.0), python3-tdb, samba-libs (= 2:4.17.12+dfsg-0+deb12u2), python3 (<< 3.12), python3 (>= 3.11~), python3:any, libbsd0 (>= 0.0), libc6 (>= 2.34), libgnutls30 (>= 3.7.0), libldb2 (>= 0.9.21), libpython3.11 (>= 3.11.0), libtalloc2 (>= 2.3.4~), libtevent0 (>= 0.13.0~), python3-talloc (>= 2.3.4~)
+Recommends: python3-gpg
+Description: Python 3 bindings for Samba
+Homepage: https://www.samba.org
+Description-md5: 7593355c9f194d3f84df6ce15717d93f
+Section: python
+Priority: optional
+Filename: pool/main/s/samba/python3-samba_4.17.12+dfsg-0+deb12u2_amd64.deb
+Size: 2827848
+SHA256: 6b27320118ce4606a1802a85ac8b5ab4463cc3490f7e2bca5da280c8aabcb02e
+
+Package: registry-tools
+Source: samba
+Version: 2:4.17.12+dfsg-0+deb12u2
+Installed-Size: 157
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Depends: samba-libs (= 2:4.17.12+dfsg-0+deb12u2), libc6 (>= 2.34), libpopt0 (>= 1.14), libreadline8 (>= 6.0), libtalloc2 (>= 2.3.4~)
+Description: tools for viewing and manipulating the Windows registry
+Homepage: https://www.samba.org
+Description-md5: 31c581321b3c287173613845af74fcdb
+Tag: implemented-in::c, interface::commandline, network::client,
+ role::program, suite::samba
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/registry-tools_4.17.12+dfsg-0+deb12u2_amd64.deb
+Size: 52412
+SHA256: 9ac341eee15a113e8d666007d23f180f9856f63f6776635c2aedc1023fb8a734
+
+Package: samba
+Version: 2:4.17.12+dfsg-0+deb12u2
+Installed-Size: 3940
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Depends: passwd, libpam-modules, libpam-runtime (>= 1.0.1-11), procps, python3, python3-dnspython, python3-samba (= 2:4.17.12+dfsg-0+deb12u2), samba-common (= 2:4.17.12+dfsg-0+deb12u2), samba-common-bin (= 2:4.17.12+dfsg-0+deb12u2), tdb-tools, python3:any, libbsd0 (>= 0.6.0), libc6 (>= 2.34), libcups2 (>= 1.7.0), libgnutls30 (>= 3.7.0), libldap-2.5-0 (>= 2.5.4), libldb2 (>= 2:2.6.1), libpopt0 (>= 1.14), libtalloc2 (>= 2.3.4~), libtasn1-6 (>= 4.14), libtdb1 (>= 1.4.7~), libtevent0 (>= 0.13.0~), samba-libs (= 2:4.17.12+dfsg-0+deb12u2)
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: attr, logrotate, python3-markdown, samba-dsdb-modules, samba-vfs-modules, samba-ad-provision
+Suggests: bind9 (>= 1:9.5.1), bind9utils, ctdb, ldb-tools, ntp | chrony (>= 3.0-1), ufw, winbind
+Enhances: bind9, ntp
+Breaks: samba-ad-provision (<< 2:4.17.12+dfsg)
+Description: SMB/CIFS file, print, and login server for Unix
+Homepage: https://www.samba.org
+Description-md5: c9d307ae5cf3b46be12b53a9f95862f0
+Tag: admin::filesystem, implemented-in::c, interface::daemon,
+ network::server, network::service, protocol::smb, role::program,
+ suite::samba, use::configuring
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/samba_4.17.12+dfsg-0+deb12u2_amd64.deb
+Size: 947096
+SHA256: 3265706bb15d86613cf11166beb258bd7f20c3101d3a6ee16adafc982b216049
+
+Package: samba-ad-dc
+Source: samba
+Version: 2:4.17.12+dfsg-0+deb12u2
+Installed-Size: 50
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: all
+Depends: samba (>= 2:4.17.12+dfsg-0+deb12u2~), samba-dsdb-modules, samba-vfs-modules, winbind
+Recommends: libnss-winbind, libpam-winbind, samba-ad-provision
+Breaks: samba-ad-provision (<< 2:4.17.12+dfsg)
+Description: Samba control files to run AD Domain Controller
+Multi-Arch: foreign
+Homepage: https://www.samba.org
+Description-md5: eba517f15cc7dff6d61d4bf8f68630b3
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/samba-ad-dc_4.17.12+dfsg-0+deb12u2_all.deb
+Size: 30344
+SHA256: 26f1dbdf499c4646bdcb158fe4cecb92f8b4201b7972c4f4a51a9ff90aad3ca2
+
+Package: samba-ad-provision
+Source: samba
+Version: 2:4.17.12+dfsg-0+deb12u2
+Installed-Size: 13717
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: all
+Replaces: samba (<< 2:4.17.3+dfsg-4~)
+Breaks: samba (<< 2:4.17.3+dfsg-4~)
+Description: Samba files needed for AD domain provision
+Multi-Arch: foreign
+Homepage: https://www.samba.org
+Description-md5: 85c78259045a6d75c0722ff117cca50f
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/samba-ad-provision_4.17.12+dfsg-0+deb12u2_all.deb
+Size: 415588
+SHA256: 74a79bfba206a1041a0e1a30863b4a1a2e0ddd23ae8abd6073198a7d7b358b4a
+
+Package: samba-common
+Source: samba
+Version: 2:4.17.12+dfsg-0+deb12u2
+Installed-Size: 218
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: all
+Depends: ucf, debconf (>= 0.5) | debconf-2.0
+Recommends: samba-common-bin
+Description: common files used by both the Samba server and client
+Multi-Arch: foreign
+Homepage: https://www.samba.org
+Description-md5: a4083020b891e75d279ca48e7fd18d7b
+Tag: devel::doc, devel::examples, protocol::smb, role::app-data,
+ role::documentation, suite::samba
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/samba-common_4.17.12+dfsg-0+deb12u2_all.deb
+Size: 88332
+SHA256: dd0bd8d84f976d68e8c658dab60b5f37756f4c514033f536d91c34e4362056d3
+
+Package: samba-common-bin
+Source: samba
+Version: 2:4.17.12+dfsg-0+deb12u2
+Installed-Size: 4435
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: samba (<< 2:4.16.2+dfsg-1~)
+Depends: python3, python3-samba, samba-common (= 2:4.17.12+dfsg-0+deb12u2), samba-libs (= 2:4.17.12+dfsg-0+deb12u2), python3:any, libbsd0 (>= 0.3.0), libc6 (>= 2.34), libcups2 (>= 1.7.0), libgnutls30 (>= 3.7.0), libjansson4 (>= 2.14), libldap-2.5-0 (>= 2.5.4), libncurses6 (>= 6), libpopt0 (>= 1.14), libreadline8 (>= 6.0), libtalloc2 (>= 2.3.4~), libtdb1 (>= 1.4.7~), libtevent0 (>= 0.13.0~), libtinfo6 (>= 6), libwbclient0 (>= 2:4.0.3+dfsg1)
+Recommends: samba-dsdb-modules
+Suggests: heimdal-clients, python3-markdown, python3-dnspython
+Breaks: samba (<< 2:4.16.2+dfsg-1~)
+Description: Samba common files used by both the server and the client
+Homepage: https://www.samba.org
+Description-md5: 775fda307dffd7f9b9d7ea36ffdb4a79
+Tag: implemented-in::c, role::program, suite::samba, uitoolkit::ncurses
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/samba-common-bin_4.17.12+dfsg-0+deb12u2_amd64.deb
+Size: 1177848
+SHA256: 609857b1c21eb8a3ab49215a04a4ca2a6e100c4e6cfb324a3e5517683ced7cc9
+
+Package: samba-dev
+Source: samba
+Version: 2:4.17.12+dfsg-0+deb12u2
+Installed-Size: 1802
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: libwbclient-dev (<< 2:4.16.1+dfsg-7~)
+Depends: libc6-dev, libldb-dev (>= 2:2), libpopt-dev, libtalloc-dev, libtdb-dev, libtevent-dev, libwbclient-dev, samba-libs (= 2:4.17.12+dfsg-0+deb12u2)
+Breaks: libwbclient-dev (<< 2:4.16.1+dfsg-7~)
+Description: tools for extending Samba
+Multi-Arch: same
+Homepage: https://www.samba.org
+Description-md5: c8352d732d47c05669c4910ec031f562
+Section: devel
+Priority: optional
+Filename: pool/main/s/samba/samba-dev_4.17.12+dfsg-0+deb12u2_amd64.deb
+Size: 246844
+SHA256: b8b8309782a1b0e7e78861e7a2bb7febb50bffecefbeb47e4db1746928e5623d
+
+Package: samba-dsdb-modules
+Source: samba
+Version: 2:4.17.12+dfsg-0+deb12u2
+Installed-Size: 1563
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libgpgme11 (>= 1.2.0), samba-libs (= 2:4.17.12+dfsg-0+deb12u2), libldb2 (= 2:2.6.2+samba4.17.12+dfsg-0+deb12u2), libbsd0 (>= 0.0), libc6 (>= 2.33), libcrypt1 (>= 1:4.1.0), libgnutls30 (>= 3.7.0), libtalloc2 (>= 2.3.4~), libtdb1 (>= 1.4.7~), libtevent0 (>= 0.13.0~)
+Enhances: libldb2
+Description: Samba Directory Services Database
+Multi-Arch: same
+Homepage: https://www.samba.org
+Description-md5: ed8b020cf571b2c155dd3360d7f05bb3
+Tag: role::shared-lib
+Section: libs
+Priority: optional
+Filename: pool/main/s/samba/samba-dsdb-modules_4.17.12+dfsg-0+deb12u2_amd64.deb
+Size: 317128
+SHA256: 89122a6eeb04809ae39cb228eecc4a9126e5a74bcb539f80d1d135dd7f0842a5
+
+Package: samba-libs
+Source: samba
+Version: 2:4.17.12+dfsg-0+deb12u2
+Installed-Size: 24612
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: libwbclient0 (<< 2:4.16.1+dfsg-7~), samba (<< 2:4.17.0+dfsg-2~)
+Depends: libacl1 (>= 2.2.23), libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libbsd0 (>= 0.5.0), libc6 (>= 2.34), libcap2 (>= 1:2.10), libgnutls30 (>= 3.7.5), libicu72 (>= 72.1~rc-1~), libjansson4 (>= 2.14), libkeyutils1 (>= 1.5.9), libldap-2.5-0 (>= 2.5.4), libldb2 (>= 2:2.6.2), libpam0g (>= 0.99.7.1), libpopt0 (>= 1.14), libsystemd0, libtalloc2 (>= 2.3.4~), libtdb1 (>= 1.4.7~), libtevent0 (>= 0.13.0), libtirpc3 (>= 1.0.2), libwbclient0 (>= 2:4.5.0+dfsg), zlib1g (>= 1:1.1.4)
+Breaks: libwbclient0 (<< 2:4.16.1+dfsg-7~), samba (<< 2:4.17.0+dfsg-2~)
+Description: Samba core libraries
+Multi-Arch: same
+Homepage: https://www.samba.org
+Description-md5: 306caa16a8faeb0f0052382f8854cd17
+Tag: role::shared-lib
+Section: libs
+Priority: optional
+Filename: pool/main/s/samba/samba-libs_4.17.12+dfsg-0+deb12u2_amd64.deb
+Size: 5655212
+SHA256: 98d95b349986592a4de76998ce2131be998f1bdc647b9317d023bc4e07202f4c
+
+Package: samba-testsuite
+Source: samba
+Version: 2:4.17.12+dfsg-0+deb12u2
+Installed-Size: 9941
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Depends: samba-common-bin, samba-libs (= 2:4.17.12+dfsg-0+deb12u2), libbsd0 (>= 0.5.0), libc6 (>= 2.34), libgnutls30 (>= 3.7.0), libldb2 (>= 2:2.6.2), libpopt0 (>= 1.14), libreadline8 (>= 6.0), libsmbclient (>= 2:4.12.0+dfsg), libtalloc2 (>= 2.3.4~), libtdb1 (>= 1.4.7~), libtevent0 (>= 0.13.0), libwbclient0 (>= 2:4.0.3+dfsg1), python3-samba (= 2:4.17.12+dfsg-0+deb12u2), winbind (= 2:4.17.12+dfsg-0+deb12u2)
+Suggests: subunit
+Description: test suite from Samba
+Homepage: https://www.samba.org
+Description-md5: b3a06da306c4ba5739938a7fa8d2fe31
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/samba-testsuite_4.17.12+dfsg-0+deb12u2_amd64.deb
+Size: 2213652
+SHA256: 4a565fcf206c0a366a986d1b84038f78676086142adb7cf37f2d74700c17ba2e
+
+Package: samba-vfs-modules
+Source: samba
+Version: 2:4.17.12+dfsg-0+deb12u2
+Installed-Size: 1803
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Depends: samba-libs (= 2:4.17.12+dfsg-0+deb12u2), libbsd0 (>= 0.0), libc6 (>= 2.33), libgnutls30 (>= 3.7.0), libtalloc2 (>= 2.3.4~), libtdb1 (>= 1.4.7~), libtevent0 (>= 0.13.0~), libtirpc3 (>= 1.0.2), liburing2 (>= 2.3)
+Recommends: libcephfs2 (>= 12.0.3), libdbus-1-3 (>= 1.9.14), libgfapi0 (>= 10.3)
+Enhances: samba
+Description: Samba Virtual FileSystem plugins
+Multi-Arch: same
+Homepage: https://www.samba.org
+Description-md5: cd83b336ae9f6321d078811769d5a463
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/samba-vfs-modules_4.17.12+dfsg-0+deb12u2_amd64.deb
+Size: 428272
+SHA256: 3d54de19608ab9da177977ea5f929f0aa581b5613b465c26f3db10503f44ca29
+
+Package: smbclient
+Source: samba
+Version: 2:4.17.12+dfsg-0+deb12u2
+Installed-Size: 1979
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Provides: samba-client
+Depends: samba-common (= 2:4.17.12+dfsg-0+deb12u2), samba-libs (= 2:4.17.12+dfsg-0+deb12u2), libarchive13 (>= 3.0.4), libbsd0 (>= 0.0), libc6 (>= 2.34), libgnutls30 (>= 3.7.0), libpopt0 (>= 1.14), libreadline8 (>= 6.0), libsmbclient (>= 2:4.10.0+dfsg), libtalloc2 (>= 2.3.4~), libtevent0 (>= 0.13.0~)
+Suggests: cifs-utils, heimdal-clients
+Description: command-line SMB/CIFS clients for Unix
+Homepage: https://www.samba.org
+Description-md5: 476018eed30b7f1e76b02afe22aaf008
+Tag: implemented-in::c, interface::commandline, interface::text-mode,
+ network::client, protocol::smb, role::program, suite::samba,
+ uitoolkit::ncurses, use::browsing
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/smbclient_4.17.12+dfsg-0+deb12u2_amd64.deb
+Size: 442756
+SHA256: d5ec281d1c9e969a3e0e6f0072d06c56e017b2662594b14262e203adca3f530f
+
+Package: winbind
+Source: samba
+Version: 2:4.17.12+dfsg-0+deb12u2
+Installed-Size: 1595
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: samba (<< 2:4.16.6+dfsg-5~), samba-libs (<< 2:4.16.6+dfsg-5~)
+Depends: samba-common (= 2:4.17.12+dfsg-0+deb12u2), samba-common-bin (= 2:4.17.12+dfsg-0+deb12u2), libwbclient0 (= 2:4.17.12+dfsg-0+deb12u2), passwd, libbsd0 (>= 0.6.0), libc6 (>= 2.34), libgnutls30 (>= 3.7.0), libldap-2.5-0 (>= 2.5.4), libpopt0 (>= 1.14), libtalloc2 (>= 2.3.4~), libtdb1 (>= 1.4.7~), libtevent0 (>= 0.13.0~), samba-libs (= 2:4.17.12+dfsg-0+deb12u2)
+Pre-Depends: init-system-helpers (>= 1.54~)
+Suggests: libnss-winbind, libpam-winbind
+Enhances: libkrb5-26-heimdal
+Breaks: samba (<< 2:4.16.6+dfsg-5~), samba-libs (<< 2:4.16.6+dfsg-5~)
+Description: service to resolve user and group information from Windows NT servers
+Multi-Arch: allowed
+Homepage: https://www.samba.org
+Description-md5: 760987c6cfd5ae0abd5c47c9758b31b0
+Tag: implemented-in::c, interface::daemon, network::server, network::service,
+ protocol::smb, role::program, security::authentication, suite::samba
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/winbind_4.17.12+dfsg-0+deb12u2_amd64.deb
+Size: 417856
+SHA256: ab480f7b43e7a0ecfecba30c11c2d1e02419a1f85b9bd0616dbd24eae8bd85c0
+
+Package: tzdata
+Version: 2025b-0+deb12u1
+Installed-Size: 2563
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: all
+Provides: tzdata-bookworm
+Depends: debconf (>= 0.5) | debconf-2.0
+Description: time zone and daylight-saving time data
+Multi-Arch: foreign
+Homepage: https://www.iana.org/time-zones
+Description-md5: a77a3cc9a67658dd7cfdc6547391b8f8
+Tag: role::app-data, use::timekeeping
+Section: localization
+Priority: required
+Filename: pool/main/t/tzdata/tzdata_2025b-0+deb12u1_all.deb
+Size: 299412
+SHA256: a17042cb951b80d0c9462a73dec6ad31fc6adeae4ed92209601dc97d1019d7f2
+
