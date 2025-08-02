@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check out this repo
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     - name: Set mtimes for use with fetcher
       run: |-
         for f in bullseye/*; do touch -d @$(git log --pretty=%at -n1 $f) $f; done
