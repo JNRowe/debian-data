@@ -1,11 +1,15 @@
-#! /bin/sh
+#! /bin/zsh
+
+setopt err_exit no_unset warn_create_global
+
+autoload -U zargs
 
 mkdir --parents "bullseye"
 mkdir --parents ".etags"
 
 base=https://deb.debian.org/
 
-for location in \
+for location (
     debian/dists/bullseye/InRelease \
     debian/dists/bullseye/contrib/binary-i386/Packages.xz \
     debian/dists/bullseye/contrib/i18n/Translation-en.bz2 \
@@ -26,31 +30,36 @@ for location in \
     debian-security/dists/bullseye-security/main/binary-i386/Packages.xz \
     debian-security/dists/bullseye-security/main/i18n/Translation-en.xz \
     debian-security/dists/bullseye-security/non-free/binary-i386/Packages.xz \
-    debian-security/dists/bullseye-security/non-free/i18n/Translation-en.xz; do
+    debian-security/dists/bullseye-security/non-free/i18n/Translation-en.xz
+) {
     url=$base$location
-    safename=$(echo "$url" | sed -e 's,^https://,,' -e 's,/,_,g')
+    safename=${${url/#https:\/\/}//\//_}
     filename=bullseye/$safename
-    output=$(echo "$filename" | sed -e 's,\.\(bz2\|xz\)$,,')
+    output=${filename/%.(bz2|xz)}
     etagname=.etags/$safename
-    [ -f "$output" ] && ref_time="$output" || ref_time="2004 Nov 13"
+    [[ -f $output ]] && ref_time=$output || ref_time="2004 Nov 13"
     # More recent versions of curl don't fail on missing etag file
-    [ -f "$etagname" ] && ref_etag="$etagname" || ref_etag=/dev/null
+    [[ -f $etagname ]] && ref_etag=$etagname || ref_etag=/dev/null
     echo "--- $url"
     # Once a more recent version of curl is available in actions
     # --etag-{compare,save} can return to using the same file.
     curl --connect-timeout 5 --max-time 30 \
-        --etag-compare "$ref_etag" \
-        --etag-save "$etagname.tmp" \
+        --etag-compare $ref_etag \
+        --etag-save $etagname.tmp \
         --verbose \
-        --time-cond "$ref_time" --output "$filename" "$url"
-    if [ -s "$etagname.tmp" ]; then
-        mv "$etagname.tmp" "$etagname"
-    else
-        rm "$etagname.tmp"
-    fi
-done
+        --time-cond $ref_time --output $filename $url
+    if [[ -s $etagname.tmp ]] {
+        mv $etagname{.tmp,}
+    } else {
+        rm $etagname.tmp
+    }
+}
 
-unxz --force --verbose bullseye/*.xz
-bunzip2 --force --verbose bullseye/*.bz2
+zargs --max-args 3 --max-procs $(nproc) --no-run-if-empty -- \
+    bullseye/*.xz(N) -- \
+    unxz --force --verbose
+zargs --max-args 3 --max-procs $(nproc) --no-run-if-empty -- \
+    bullseye/*.bz2(N) -- \
+    bunzip2 --force --verbose
 
-find bullseye/ -size 0 -exec rm '{}' \;
+rm -f -- bullseye/*(NL0)
