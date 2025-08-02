@@ -19,6 +19,9 @@ jobs:
         for f in bullseye/*; do touch -d @$(git log --pretty=%at -n1 $f) $f; done
     - name: Install utilities
       run: |-
+        # We don't need man-db updates for throwaway installs
+        echo "set man-db/auto-update false" | sudo debconf-communicate
+        sudo dpkg-reconfigure man-db
         sudo eatmydata apt-get install zsh
     - name: Fetch package list data
       run: |-
