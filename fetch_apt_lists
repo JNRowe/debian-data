@@ -4,7 +4,7 @@ setopt err_exit no_unset warn_create_global
 
 autoload -U zargs
 
-mkdir --parents bullseye
+mkdir --parents bullseye bookworm
 mkdir --parents .etags
 
 base=https://deb.debian.org/
@@ -55,11 +55,63 @@ for location (
     }
 }
 
+for location (
+    debian/dists/bookworm/InRelease \
+    debian/dists/bookworm/contrib/binary-amd64/Packages.xz \
+    debian/dists/bookworm/contrib/i18n/Translation-en.xz \
+    debian/dists/bookworm/main/binary-amd64/Packages.xz \
+    debian/dists/bookworm/main/i18n/Translation-en.xz \
+    debian/dists/bookworm/non-free/binary-amd64/Packages.xz \
+    debian/dists/bookworm/non-free/i18n/Translation-en.xz \
+    debian/dists/bookworm/non-free-firmware/binary-amd64/Packages.xz \
+    debian/dists/bookworm/non-free-firmware/i18n/Translation-en.xz \
+    debian/dists/bookworm-updates/InRelease \
+    debian/dists/bookworm-updates/contrib/binary-amd64/Packages.xz \
+    debian/dists/bookworm-updates/contrib/i18n/Translation-en.xz \
+    debian/dists/bookworm-updates/main/binary-amd64/Packages.xz \
+    debian/dists/bookworm-updates/main/i18n/Translation-en.xz \
+    debian/dists/bookworm-updates/non-free/binary-amd64/Packages.xz \
+    debian/dists/bookworm-updates/non-free/i18n/Translation-en.xz \
+    debian/dists/bookworm-updates/non-free-firmware/binary-amd64/Packages.xz \
+    debian/dists/bookworm-updates/non-free-firmware/i18n/Translation-en.xz \
+    debian-security/dists/bookworm-security/InRelease \
+    debian-security/dists/bookworm-security/contrib/binary-amd64/Packages.xz \
+    debian-security/dists/bookworm-security/contrib/i18n/Translation-en.xz \
+    debian-security/dists/bookworm-security/main/binary-amd64/Packages.xz \
+    debian-security/dists/bookworm-security/main/i18n/Translation-en.xz \
+    debian-security/dists/bookworm-security/non-free/binary-amd64/Packages.xz \
+    debian-security/dists/bookworm-security/non-free/i18n/Translation-en.xz
+    debian-security/dists/bookworm-security/non-free-firmware/binary-amd64/Packages.xz \
+    debian-security/dists/bookworm-security/non-free-firmware/i18n/Translation-en.xz
+) {
+    url=$base$location
+    safename=${${url/#https:\/\/}//\//_}
+    filename=bookworm/$safename
+    output=${filename/%.xz}
+    etagname=.etags/$safename
+    [[ -f $output ]] && ref_time=$output || ref_time="2004 Nov 13"
+    # More recent versions of curl don't fail on missing etag file
+    [[ -f $etagname ]] && ref_etag=$etagname || ref_etag=/dev/null
+    echo "--- $url"
+    # Once a more recent version of curl is available in actions
+    # --etag-{compare,save} can return to using the same file.
+    curl --connect-timeout 5 --max-time 30 \
+        --etag-compare $ref_etag \
+        --etag-save $etagname.tmp \
+        --verbose \
+        --time-cond $ref_time --output $filename $url
+    if [[ -s $etagname.tmp ]] {
+        mv $etagname{.tmp,}
+    } else {
+        rm $etagname.tmp
+    }
+}
+
 zargs --max-args 3 --max-procs $(nproc) --no-run-if-empty -- \
-    bullseye/*.xz(N) -- \
+    {bullseye,bookworm}/*.xz(N) -- \
     unxz --force --verbose
 zargs --max-args 3 --max-procs $(nproc) --no-run-if-empty -- \
     bullseye/*.bz2(N) -- \
     bunzip2 --force --verbose
 
-rm -f -- bullseye/*(NL0)
+rm -f -- bullseye/*(NL0) bookworm/*(NL0)
