@@ -2,6 +2,8 @@ name: Scrape Debian package list data
 
 on:
   push:
+    paths:
+      - 'fetch_apt_lists'
   workflow_dispatch:
   schedule:
     - cron:  '11 19 * * *'
@@ -11,20 +13,35 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check out this repo
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     - name: Set mtimes for use with fetcher
       run: |-
         for f in bullseye/*; do touch -d @$(git log --pretty=%at -n1 $f) $f; done
     - name: Install utilities
       run: |-
+        # We don't need man-db updates for throwaway installs
+        echo "set man-db/auto-update false" | sudo debconf-communicate
+        sudo dpkg-reconfigure man-db
         sudo eatmydata apt-get install zsh
     - name: Fetch package list data
+      id: fetch_data
       run: |-
+        echo "start_time=$(date +%s)" >> $GITHUB_OUTPUT
         ./fetch_apt_lists
+        echo "end_time=$(date +%s)" >> $GITHUB_OUTPUT
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
         git config user.email "actions@users.noreply.github.com"
-        git add -A .etags/ bullseye/
-        git commit -m "Daily data: $(date -uI)" || exit 0
-        git push
+        git add --all .etags/ bullseye/
+        if ! git diff --staged --quiet; then
+          modified_count=$(git status --porcelain bookworm/ bullseye/ trixie/ |
+            grep -v InRelease |
+            grep -c '^M ')
+          runtime=$(( ${{ steps.fetch_data.outputs.end_time }} - ${{ steps.fetch_data.outputs.start_time }} ))
+          git commit \
+            -m "Update package lists ($(date -u +%FT%H:%M))" \
+            --trailer "X-modified-lists: $modified_count" \
+            --trailer "X-runtime: ${runtime}s"
+          git push
+        fi
