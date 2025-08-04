@@ -5,7 +5,7 @@ setopt err_exit no_unset warn_create_global
 autoload -U zargs
 
 mkdir --parents bullseye bookworm trixie
-mkdir --parents .etags
+mkdir --parents .etags logs/{bullseye,bookworm,trixie}
 
 BASE=https://deb.debian.org/
 
@@ -20,14 +20,17 @@ fetch() {
     local etagname=.etags/$safename
     local ref_time
     [[ -f $output ]] && ref_time=$output || ref_time="2004 Nov 13"
-    echo "--- $url"
-    curl --connect-timeout 5 --max-time 30 \
-        --etag-compare $etagname \
-        --etag-save $etagname \
-        --time-cond $ref_time --output $filename $url
+
+    () {
+        echo "--- $url"
+        curl --connect-timeout 5 --max-time 30 \
+            --etag-compare $etagname \
+            --etag-save $etagname \
+            --time-cond $ref_time --output $filename $url
+    } &> logs/$filename
 }
 
-for location (
+locations=(
     debian/dists/bullseye/InRelease \
     debian/dists/bullseye/contrib/binary-i386/Packages.xz \
     debian/dists/bullseye/contrib/i18n/Translation-en.bz2 \
@@ -49,11 +52,7 @@ for location (
     debian-security/dists/bullseye-security/main/i18n/Translation-en.xz \
     debian-security/dists/bullseye-security/non-free/binary-i386/Packages.xz \
     debian-security/dists/bullseye-security/non-free/i18n/Translation-en.xz
-) {
-    fetch $location
-}
 
-for location (
     debian/dists/bookworm/InRelease \
     debian/dists/bookworm/contrib/binary-amd64/Packages.xz \
     debian/dists/bookworm/contrib/i18n/Translation-en.xz \
@@ -81,11 +80,7 @@ for location (
     debian-security/dists/bookworm-security/non-free/i18n/Translation-en.xz
     debian-security/dists/bookworm-security/non-free-firmware/binary-amd64/Packages.xz \
     debian-security/dists/bookworm-security/non-free-firmware/i18n/Translation-en.xz
-) {
-    fetch $location
-}
 
-for location (
     debian/dists/trixie/InRelease \
     debian/dists/trixie/contrib/binary-amd64/Packages.xz \
     debian/dists/trixie/contrib/i18n/Translation-en.xz \
@@ -113,9 +108,8 @@ for location (
     debian-security/dists/trixie-security/non-free/i18n/Translation-en.xz
     debian-security/dists/trixie-security/non-free-firmware/binary-amd64/Packages.xz \
     debian-security/dists/trixie-security/non-free-firmware/i18n/Translation-en.xz
-) {
-    fetch $location
-}
+)
+zargs --verbose --max-args 1 --max-procs $(nproc) -- $locations -- fetch
 
 zargs --max-args 3 --max-procs $(nproc) --no-run-if-empty -- \
     {bullseye,bookworm,trixie}/*.xz(N) -- \
@@ -125,3 +119,5 @@ zargs --max-args 3 --max-procs $(nproc) --no-run-if-empty -- \
     bunzip2 --force --verbose
 
 rm -f -- {bullseye,bookworm,trixie}/*(NL0)
+
+more logs/*/* | cat
