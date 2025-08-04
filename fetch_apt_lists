@@ -7,7 +7,25 @@ autoload -U zargs
 mkdir --parents bullseye bookworm trixie
 mkdir --parents .etags
 
-base=https://deb.debian.org/
+BASE=https://deb.debian.org/
+
+fetch() {
+    local location=$1
+
+    local url=$BASE$location
+    local safename=${${url/#https:\/\/}//\//_}
+    local suite=${${${(ps:/:)location}[3]}%-*}
+    local filename=$suite/$safename
+    local output=${filename/%.(bz2|xz)}
+    local etagname=.etags/$safename
+    local ref_time
+    [[ -f $output ]] && ref_time=$output || ref_time="2004 Nov 13"
+    echo "--- $url"
+    curl --connect-timeout 5 --max-time 30 \
+        --etag-compare $etagname \
+        --etag-save $etagname \
+        --time-cond $ref_time --output $filename $url
+}
 
 for location (
     debian/dists/bullseye/InRelease \
@@ -32,17 +50,7 @@ for location (
     debian-security/dists/bullseye-security/non-free/binary-i386/Packages.xz \
     debian-security/dists/bullseye-security/non-free/i18n/Translation-en.xz
 ) {
-    url=$base$location
-    safename=${${url/#https:\/\/}//\//_}
-    filename=bullseye/$safename
-    output=${filename/%.(bz2|xz)}
-    etagname=.etags/$safename
-    [[ -f $output ]] && ref_time=$output || ref_time="2004 Nov 13"
-    echo "--- $url"
-    curl --connect-timeout 5 --max-time 30 \
-        --etag-compare $etagname \
-        --etag-save $etagname \
-        --time-cond $ref_time --output $filename $url
+    fetch $location
 }
 
 for location (
@@ -74,17 +82,7 @@ for location (
     debian-security/dists/bookworm-security/non-free-firmware/binary-amd64/Packages.xz \
     debian-security/dists/bookworm-security/non-free-firmware/i18n/Translation-en.xz
 ) {
-    url=$base$location
-    safename=${${url/#https:\/\/}//\//_}
-    filename=bookworm/$safename
-    output=${filename/%.xz}
-    etagname=.etags/$safename
-    [[ -f $output ]] && ref_time=$output || ref_time="2004 Nov 13"
-    echo "--- $url"
-    curl --connect-timeout 5 --max-time 30 \
-        --etag-compare $etagname \
-        --etag-save $etagname \
-        --time-cond $ref_time --output $filename $url
+    fetch $location
 }
 
 for location (
@@ -116,16 +114,7 @@ for location (
     debian-security/dists/trixie-security/non-free-firmware/binary-amd64/Packages.xz \
     debian-security/dists/trixie-security/non-free-firmware/i18n/Translation-en.xz
 ) {
-    url=$base$location
-    safename=${${url/#https:\/\/}//\//_}
-    filename=trixie/$safename
-    output=${filename/%.xz}
-    etagname=.etags/$safename
-    echo "--- $url"
-    curl --connect-timeout 5 --max-time 30 \
-        --etag-compare $etagname \
-        --etag-save $etagname \
-        --time-cond $ref_time --output $filename $url
+    fetch $location
 }
 
 zargs --max-args 3 --max-procs $(nproc) --no-run-if-empty -- \
