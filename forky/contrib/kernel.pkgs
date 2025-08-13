@@ -1,0 +1,172 @@
+Package: firmware-b43-installer
+Source: b43-fwcutter
+Version: 1:019-14
+Installed-Size: 33
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: all
+Replaces: firmware-b43-lpphy-installer (<= 1:015-14)
+Depends: b43-fwcutter (>= 1:019-14), bzip2, ca-certificates, pciutils, wget
+Breaks: firmware-b43-lpphy-installer (<= 1:015-14)
+Description: firmware installer for the b43 driver
+Homepage: https://wireless.wiki.kernel.org/en/users/drivers/b43
+Description-md5: 571d238de28bee9095c3b72db3bada7e
+contrib/kernel
+Priority: optional
+Filename: pool/contrib/b/b43-fwcutter/firmware-b43-installer_019-14_all.deb
+Size: 8620
+MD5sum: 602a50be8e67cbd5892d4d1c8755ee06
+SHA256: 4f1c3ff18d09382f6e1c36c5fc9f498f9ac5b111ce8af7616b792f722c729bd8
+
+Package: firmware-b43legacy-installer
+Source: b43-fwcutter
+Version: 1:019-14
+Installed-Size: 29
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: all
+Depends: b43-fwcutter (>= 1:019-14), ca-certificates, pciutils, wget
+Description: firmware installer for the b43legacy driver
+Homepage: https://wireless.wiki.kernel.org/en/users/drivers/b43
+Description-md5: abb8ff7bda8ade8bcb3e2ea7c10b69ef
+contrib/kernel
+Priority: optional
+Filename: pool/contrib/b/b43-fwcutter/firmware-b43legacy-installer_019-14_all.deb
+Size: 7660
+MD5sum: 92507645c7c337994e6bb562a81defdd
+SHA256: 86ed887108aad8ec47fbbf5e30646597d1387a607c305cbd470bf22ab825a998
+
+Package: nvidia-open-kernel-dkms
+Source: nvidia-open-gpu-kernel-modules
+Version: 550.163.01-2
+Installed-Size: 245214
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Architecture: amd64
+Provides: nvidia-open-kernel-550.163.01, nvidia-open-kernel-dkms-any (= 550.163.01)
+Depends: firmware-nvidia-gsp (= 550.163.01) | firmware-nvidia-gsp-550.163.01, nvidia-open-kernel-support--v1, dkms (>= 3.0.11)
+Pre-Depends: nvidia-installer-cleanup
+Description: NVIDIA open kernel module DKMS source
+Multi-Arch: foreign
+Homepage: https://github.com/NVIDIA/open-gpu-kernel-modules
+Description-md5: fd66cc6ba119b3694f8041effda85293
+contrib/kernel
+Priority: optional
+Filename: pool/contrib/n/nvidia-open-gpu-kernel-modules/nvidia-open-kernel-dkms_550.163.01-2_amd64.deb
+Size: 37305704
+MD5sum: d9b23f362a59fe3456e51ea49213bc52
+SHA256: 3ec4c6c5cde88d387e277ae8b22007f7ec3b5ad4638f7c4658d50fe091090529
+
+Package: nvidia-open-kernel-source
+Source: nvidia-open-gpu-kernel-modules
+Version: 550.163.01-2
+Installed-Size: 35440
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Architecture: amd64
+Depends: debhelper-compat (= 13), module-assistant
+Recommends: firmware-nvidia-gsp (= 550.163.01) | firmware-nvidia-gsp-550.163.01, nvidia-open-kernel-support--v1
+Description: NVIDIA open kernel module source
+Homepage: https://github.com/NVIDIA/open-gpu-kernel-modules
+Description-md5: a15ee579b93d5c396c5e3e166405b233
+contrib/kernel
+Priority: optional
+Filename: pool/contrib/n/nvidia-open-gpu-kernel-modules/nvidia-open-kernel-source_550.163.01-2_amd64.deb
+Size: 36273224
+MD5sum: 07633e0a9d6aaaa65b2e14cb7065d2ef
+SHA256: 8726fc25ee050f530e569b32cb4634d1f75585a11b5481de3dfd82b72abb0505
+
+Package: nvidia-open-kernel-support
+Source: nvidia-open-gpu-kernel-modules
+Version: 550.163.01-2
+Installed-Size: 42
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Architecture: amd64
+Provides: nvidia-kernel-support-any, nvidia-open-kernel-support--v1, nvidia-open-kernel-support-550.163.01
+Depends: nvidia-alternative-550.163.01 | nvidia-alternative-550.163.01, nvidia-kernel-common (>= 20151021), nvidia-modprobe (>= 550)
+Conflicts: nvidia-open-kernel-support-550.163.01
+Description: NVIDIA open kernel module support files
+Multi-Arch: foreign
+Homepage: https://github.com/NVIDIA/open-gpu-kernel-modules
+Description-md5: 6790a47ffe7f29fb1a0a127656863cc9
+contrib/kernel
+Priority: optional
+Filename: pool/contrib/n/nvidia-open-gpu-kernel-modules/nvidia-open-kernel-support_550.163.01-2_amd64.deb
+Size: 12720
+MD5sum: de83a2095a1e0f9a7fa5d460aa540d28
+SHA256: ce97584a8a1ea3a5461500936b14e007d81092c172c8597ef32ba361c6b368aa
+
+Package: nvidia-kernel-common
+Source: nvidia-support
+Version: 20240109+1
+Installed-Size: 26
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Architecture: amd64
+Breaks: nvidia-kernel-support (<< 470.86), nvidia-legacy-304xx-kernel-support (<< 305), nvidia-legacy-340xx-kernel-support (<< 340.108-12~), nvidia-legacy-390xx-kernel-support (<< 390.147), nvidia-tesla-418-kernel-support (<< 418.226.00-2~), nvidia-tesla-440-kernel-support (<< 441), nvidia-tesla-450-kernel-support (<< 450.172.01), nvidia-tesla-460-kernel-support (<< 460.106.00-2~), nvidia-tesla-470-kernel-support (<< 470.103.01)
+Description: NVIDIA binary kernel module support files
+Description-md5: 4d3664ed3e608346486328ce3ac6af6e
+Tag: implemented-in::c
+contrib/kernel
+Priority: optional
+Filename: pool/contrib/n/nvidia-support/nvidia-kernel-common_20240109+1_amd64.deb
+Size: 4572
+MD5sum: 26b42a14dd794177dc4cd29dedd11a0e
+SHA256: 18b0c696ea7b8ac1f4725b89b0dab662b587a253ef730b8c2c5ca3911d5cb920
+
+Package: zfs-dkms
+Source: zfs-linux
+Version: 2.3.2-2
+Installed-Size: 18297
+Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
+Architecture: all
+Replaces: spl-dkms
+Provides: zfs-modules
+Depends: dkms (>= 3.0.11), file, libc6-dev | libc-dev, lsb-release, libpython3-stdlib, debconf (>= 0.5) | debconf-2.0
+Recommends: zfs-zed, zfsutils-linux (>= 2.3.2-2), linux-libc-dev (<< 6.15~), linux-libc-dev (>= 4.18~)
+Suggests: debhelper
+Breaks: spl-dkms (<< 0.8.0~rc1), zfs-fuse (<< 2.3.2-2)
+Description: OpenZFS filesystem kernel modules for Linux
+Multi-Arch: foreign
+Homepage: https://zfsonlinux.org/
+Description-md5: 39e75ed3c1d3a5bc9c23ff32d0b5bbe1
+contrib/kernel
+Priority: optional
+Filename: pool/contrib/z/zfs-linux/zfs-dkms_2.3.2-2_all.deb
+Size: 2452312
+MD5sum: ffc04597b1cfbd7ad6569ee1c61eb41b
+SHA256: 71d79f602c24d5bfc6ed254bda108e04691fb38046d02d348a9f38398f73bc77
+
+Package: zfs-dracut
+Source: zfs-linux
+Version: 2.3.2-2
+Installed-Size: 111
+Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
+Architecture: all
+Depends: dracut, zfs-modules | zfs-dkms, zfsutils-linux (>= 2.3.2-2)
+Description: OpenZFS root filesystem capabilities for Linux - dracut
+Multi-Arch: foreign
+Homepage: https://zfsonlinux.org/
+Description-md5: 965d2232071aa7eaad3e0a3ca11764b0
+contrib/kernel
+Priority: optional
+Filename: pool/contrib/z/zfs-linux/zfs-dracut_2.3.2-2_all.deb
+Size: 37124
+MD5sum: d7911c937f3953ff80d937601495d9bd
+SHA256: 1b9ec0d83affd8d5b30ad034f5f5769f9cda9d00b6a255028f92a3d26d24e759
+
+Package: zfs-initramfs
+Source: zfs-linux
+Version: 2.3.2-2
+Installed-Size: 118
+Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
+Architecture: all
+Replaces: zfsutils-linux (<= 0.7.11-2)
+Depends: busybox-initramfs | busybox-static | busybox, initramfs-tools, zfs-modules | zfs-dkms, zfsutils-linux (>= 2.3.2-2)
+Breaks: zfsutils-linux (<= 0.7.11-2)
+Description: OpenZFS root filesystem capabilities for Linux - initramfs
+Multi-Arch: foreign
+Homepage: https://zfsonlinux.org/
+Description-md5: ed136876804c562cd1f81b87863a33a9
+contrib/kernel
+Priority: optional
+Filename: pool/contrib/z/zfs-linux/zfs-initramfs_2.3.2-2_all.deb
+Size: 37408
+MD5sum: 1c6d02a5dbfd4c0346fff4e217214101
+SHA256: 3598a54f688019aeaae3555f3a2515aa43384f423b431a65cba39b467ed274db
+

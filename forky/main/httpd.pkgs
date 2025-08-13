@@ -1,0 +1,2605 @@
+Package: libapache2-mod-upload-progress
+Source: apache-upload-progress-module
+Version: 0.2+git20220203.4467d50-1
+Installed-Size: 56
+Maintainer: Andreas Tille <tille@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), apache2-api-20120211, apache2-bin (>= 2.4.16)
+Description: upload progress support for the Apache web server
+Homepage: http://github.com/drogus/apache-upload-progress-module/
+Description-md5: 70ad85d8a37e0173133c9b94cf6291ac
+Tag: role::program, role::shared-lib, suite::apache, use::monitor,
+ works-with::network-traffic
+httpd
+Priority: optional
+Filename: pool/main/a/apache-upload-progress-module/libapache2-mod-upload-progress_0.2+git20220203.4467d50-1_amd64.deb
+Size: 14084
+MD5sum: 4f9c7e8451e1106646fc089a87cf04e0
+SHA256: 11cef0eb67b4dd6a7b60db7254858279b2e1d0b3da37d1f001895a416dadda65
+
+Package: apache2
+Version: 2.4.65-2
+Installed-Size: 576
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Provides: httpd, httpd-cgi
+Depends: apache2-bin (= 2.4.65-2), apache2-data (= 2.4.65-2), apache2-utils (= 2.4.65-2), media-types, procps, perl:any
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: ssl-cert
+Suggests: apache2-doc, apache2-suexec-pristine | apache2-suexec-custom, ufw, www-browser
+Description: Apache HTTP Server
+Homepage: https://httpd.apache.org/
+Description-md5: d02426bc360345e5acd45367716dc35c
+Tag: role::metapackage, suite::apache
+httpd
+Priority: optional
+Filename: pool/main/a/apache2/apache2_2.4.65-2_amd64.deb
+Size: 223624
+MD5sum: 8aa93bb21112144bfb24a863ff952e1b
+SHA256: dd131f75408c5e3f427cc438b962ddaf82ff8c0904c7fe7fd89574845a852b00
+
+Package: apache2-bin
+Source: apache2
+Version: 2.4.65-2
+Installed-Size: 5164
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Provides: apache2-api-20120211, apache2-api-20120211-openssl1.1
+Depends: perl:any, libapr1t64 (>= 1.7.0), libaprutil1-dbd-sqlite3 | libaprutil1-dbd-mysql | libaprutil1-dbd-odbc | libaprutil1-dbd-pgsql | libaprutil1-dbd-freetds, libaprutil1-ldap, libaprutil1t64 (>= 1.6.0), libbrotli1 (>= 0.6.0), libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libcurl4t64 (>= 7.28.0), libjansson4 (>= 2.14), libldap2 (>= 2.6.2), liblua5.4-0 (>= 5.4.6), libnghttp2-14 (>= 1.50.0), libpcre2-8-0 (>= 10.22), libssl3t64 (>= 3.0.0), libxml2 (>= 2.7.4), zlib1g (>= 1:1.1.4)
+Suggests: apache2-doc, apache2-suexec-pristine | apache2-suexec-custom, www-browser
+Breaks: fossil (<< 1:2.24-5~)
+Description: Apache HTTP Server (modules and other binary files)
+Homepage: https://httpd.apache.org/
+Description-md5: 37901ca6bbb9305b61d0920ecc08204f
+Tag: implemented-in::c, interface::daemon, network::server, network::service,
+ protocol::http, protocol::ipv6, role::program, suite::apache,
+ web::server, works-with-format::html, works-with::text
+httpd
+Priority: optional
+Filename: pool/main/a/apache2/apache2-bin_2.4.65-2_amd64.deb
+Size: 1405048
+MD5sum: 4d220c1afebe1a94d71a21792c08c100
+SHA256: 2f4782e1630de93a7a690736800e6894b7400c0fa4e1276d1f83c1ce08c0c5db
+
+Package: apache2-data
+Source: apache2
+Version: 2.4.65-2
+Installed-Size: 849
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: all
+Description: Apache HTTP Server (common files)
+Multi-Arch: foreign
+Homepage: https://httpd.apache.org/
+Description-md5: 9f2fab36019a61312dec627d1cd80365
+Tag: role::documentation
+httpd
+Priority: optional
+Filename: pool/main/a/apache2/apache2-data_2.4.65-2_all.deb
+Size: 160160
+MD5sum: 1f3514222a55368d7bcb5a350ed20a50
+SHA256: 88a7afa3d375095a3777f9ec3b55b34dcd00c551985ae2a5d9410b18fa686d45
+
+Package: apache2-dev
+Source: apache2
+Version: 2.4.65-2
+Installed-Size: 1119
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Provides: dh-apache2, dh-sequence-apache2
+Depends: debhelper (>= 10), libapr1-dev, libaprutil1-dev, libpcre2-dev, openssl, perl:any
+Description: Apache HTTP Server (development headers)
+Homepage: https://httpd.apache.org/
+Description-md5: 8ba6f3b272c39cc7a08a802594285f02
+Tag: devel::lang:c, devel::lang:perl, devel::library, implemented-in::c,
+ implemented-in::perl, protocol::http, role::devel-lib, role::program,
+ suite::apache
+httpd
+Priority: optional
+Filename: pool/main/a/apache2/apache2-dev_2.4.65-2_amd64.deb
+Size: 320852
+MD5sum: 3bb0c478079df41a8ca0933f9a68556a
+SHA256: 2b95c457b866f365382a741f9cfea63bfc66a981ae432a9b3373c39f03d5719d
+
+Package: apache2-ssl-dev
+Source: apache2
+Version: 2.4.65-2
+Installed-Size: 13
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Depends: apache2-dev (= 2.4.65-2), libssl-dev
+Description: Apache HTTP Server (mod_ssl development headers)
+Multi-Arch: same
+Homepage: https://httpd.apache.org/
+Description-md5: 160d9bdafec462b08db62740b1eb83d2
+httpd
+Priority: optional
+Filename: pool/main/a/apache2/apache2-ssl-dev_2.4.65-2_amd64.deb
+Size: 3132
+MD5sum: e818a9679db7e88844c33c7bbcfd6fdb
+SHA256: 0b2c5903847d235769bf17ffef741381c2755997c1a5c29d5268ff10d5088e7f
+
+Package: apache2-suexec-custom
+Source: apache2
+Version: 2.4.65-2
+Installed-Size: 199
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Provides: apache2-suexec
+Depends: apache2-bin, libc6 (>= 2.38)
+Description: Apache HTTP Server configurable suexec program for mod_suexec
+Homepage: https://httpd.apache.org/
+Description-md5: 116f52596e88b0c7717e1f4973ada661
+Tag: suite::apache
+httpd
+Priority: optional
+Filename: pool/main/a/apache2/apache2-suexec-custom_2.4.65-2_amd64.deb
+Size: 149092
+MD5sum: 6f7f4140cc0488e3680d8d0bc61526bb
+SHA256: e29225733bd1dd2e65681edb4ab5cc8e2e362c021bcf953d22a750f72055ca5a
+
+Package: apache2-suexec-pristine
+Source: apache2
+Version: 2.4.65-2
+Installed-Size: 189
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Provides: apache2-suexec
+Depends: apache2-bin, libc6 (>= 2.38)
+Description: Apache HTTP Server standard suexec program for mod_suexec
+Homepage: https://httpd.apache.org/
+Description-md5: 86a22eab8bdd72ac81f3d8aab53bf001
+httpd
+Priority: optional
+Filename: pool/main/a/apache2/apache2-suexec-pristine_2.4.65-2_amd64.deb
+Size: 147552
+MD5sum: b76ae141e552e75d3e36a72c0858e6c4
+SHA256: 9305627e6dc4ddf3b706a4c692cbc3f126b4f1c8460d97d5dca7fc0842ed0a6b
+
+Package: apache2-utils
+Source: apache2
+Version: 2.4.65-2
+Installed-Size: 444
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Depends: libapr1t64 (>= 1.4.8-2~), libaprutil1t64 (>= 1.5.0), libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libssl3t64 (>= 3.0.0)
+Description: Apache HTTP Server (utility programs for web servers)
+Multi-Arch: foreign
+Homepage: https://httpd.apache.org/
+Description-md5: f1e2440381fa90571f125990da6a52fc
+Tag: admin::configuring, devel::lang:perl, devel::library, implemented-in::c,
+ implemented-in::perl, interface::commandline, network::service,
+ protocol::http, protocol::ipv6, role::devel-lib, role::program,
+ scope::utility, security::authentication, suite::apache,
+ works-with-format::html, works-with::text
+httpd
+Priority: optional
+Filename: pool/main/a/apache2/apache2-utils_2.4.65-2_amd64.deb
+Size: 215216
+MD5sum: 78af67e206f4514de2a0bff4a4012275
+SHA256: aa40193fc46d99bda5c6ec3dc320ab797b704b39968c0b88df361a1d63654ae6
+
+Package: libapache2-mod-apparmor
+Source: apparmor
+Version: 4.1.0-1
+Installed-Size: 69
+Maintainer: Debian AppArmor Team <pkg-apparmor-team@lists.alioth.debian.org>
+Architecture: amd64
+Depends: apache2-api-20120211, apache2-bin (>= 2.4.16), libapparmor1 (>= 2.7.0~beta1+bzr1772), libc6 (>= 2.4)
+Description: changehat AppArmor library as an Apache module
+Homepage: https://apparmor.net/
+Description-md5: 675226c578343873100f70dfcbc986ad
+Tag: role::shared-lib
+httpd
+Priority: optional
+Filename: pool/main/a/apparmor/libapache2-mod-apparmor_4.1.0-1_amd64.deb
+Size: 24728
+MD5sum: 4ff1fb7b4e64d64dc13dae7588938aee
+SHA256: aed2c2065a2f02b604b60fe9ce05b896f59ee448d6daedc7431a331ff5e45447
+
+Package: caddy
+Source: caddy (2.6.2-12)
+Version: 2.6.2-12+b3
+Installed-Size: 39543
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: amd64
+Provides: httpd
+Depends: libc6 (>= 2.34), libzstd1 (>= 1.5.5), libnss3-tools, media-types, passwd
+Description: Fast, lightweight web server with automatic HTTPS
+Homepage: https://github.com/caddyserver/caddy
+Built-Using: badger (= 2.2007.2-4), go-md2man-v2 (= 2.0.4-1), golang-1.24 (= 1.24.4-1), golang-blackfriday-v2 (= 2.1.0-1), golang-filippo-edwards25519 (= 1.0.0~rc1+git20210721-0.1), golang-github-alecthomas-chroma (= 0.10.0-5), golang-github-antlr-antlr4 (= 4.11.1+ds-2), golang-github-aryann-difflib (= 0.0~git20210328.ff5ff6d-4), golang-github-beorn7-perks (= 1.0.1-3), golang-github-caddyserver-certmagic (= 0.17.2-2), golang-github-cespare-xxhash (= 2.3.0-1), golang-github-chzyer-readline (= 1.4.39.g2972be2-3), golang-github-coreos-bbolt (= 1.3.10-2), golang-github-datadog-zstd (= 1.4.5+patch1-1), golang-github-dgraph-io-ristretto (= 0.0.3-2), golang-github-dgryski-go-farm (= 0.0~git20171119.ac7624ea8da3-1.1), golang-github-dustin-go-humanize (= 1.0.1-1), golang-github-fullsailor-pkcs7 (= 0.0~git20210826.33d0574-3), golang-github-go-chi-chi (= 5.2.0-1), golang-github-go-jose-go-jose.v3 (= 3.0.3-6), golang-github-go-sql-driver-mysql (= 1.9.0-1), golang-github-golang-protobuf-1-5 (= 1.5.4-1), golang-github-golang-snappy (= 0.0.2-3), golang-github-google-uuid (= 1.6.0-1), golang-github-huandu-xstrings (= 1.3.3-1), golang-github-imdario-mergo (= 1.0.1-2), golang-github-klauspost-compress (= 1.18.0+ds1-1), golang-github-klauspost-cpuid (= 2.2.10-1), golang-github-libdns-libdns (= 0.2.0-2), golang-github-lucas-clemente-quic-go (= 0.50.1-2), golang-github-manifoldco-promptui (= 0.9.0-1), golang-github-marten-seemann-qpack (= 0.4.0-1), golang-github-masterminds-goutils (= 1.1.1-4), golang-github-masterminds-semver-dev (= 3.2.0-1), golang-github-masterminds-sprig (= 3.2.3-5), golang-github-mattn-go-colorable (= 0.1.13-1), golang-github-mattn-go-isatty (= 0.0.20-1), golang-github-mgutz-ansi (= 0.0~git20200706.d51e80e-1), golang-github-mholt-acmez (= 0.1.3-2), golang-github-micromdm-scep (= 2.3.0-1), golang-github-miekg-dns (= 1.1.64-1), golang-github-mitchellh-copystructure (= 1.2.0-1), golang-github-mitchellh-go-ps (= 0.0~git20150710.0.e6c6068-1.1), golang-github-mitchellh-reflectwalk (= 1.0.1-1), golang-github-munnerz-goautoneg (= 0.0~git20191010.a7dc8b6-2), golang-github-pkg-errors (= 0.9.1-3), golang-github-prometheus-client-golang (= 1.21.1-1), golang-github-prometheus-client-model (= 0.6.0-1), golang-github-prometheus-common (= 0.62.0-3), golang-github-prometheus-procfs (= 0.15.1-1), golang-github-rs-xid (= 1.6.0-1), golang-github-shopspring-decimal (= 1.3.1-1), golang-github-smallstep-certificates (= 0.20.0-5), golang-github-smallstep-cli (= 0.15.16+ds-4), golang-github-smallstep-crypto (= 0.57.0-2), golang-github-smallstep-nosql (= 0.3.8-3), golang-github-smallstep-pkcs7 (= 0.2.1-3), golang-github-smallstep-scep (= 0.0~git20250318.a25cabb-2), golang-github-smallstep-truststore (= 0.12.1-2), golang-github-spf13-cast (= 1.6.0-2), golang-github-spf13-cobra (= 1.8.1-1), golang-github-spf13-pflag (= 1.0.6~git20210604-d5e0c0615ace-1), golang-github-stoewer-go-strcase (= 1.2.0-4), golang-github-tailscale-tscert (= 0.0~git20220316.54bbcb9-2), golang-github-urfave-cli (= 1.22.14-1), golang-github-yuin-goldmark (= 1.7.4-1), golang-github-yuin-goldmark-highlighting (= 0.0~git20220208.594be19-1), golang-go.crypto (= 1:0.25.0-1), golang-go.uber-atomic (= 1.11.0-1), golang-go.uber-multierr (= 1.6.0-1), golang-go.uber-zap (= 1.26.0-1), golang-golang-x-exp (= 0.0~git20231006.7918f67-2), golang-golang-x-net (= 1:0.27.0-2), golang-golang-x-sys (= 0.22.0-1), golang-golang-x-term (= 0.22.0-1), golang-golang-x-text (= 0.22.0-1), golang-golang-x-time (= 0.5.0-1), golang-google-genproto (= 0.0~git20210726.e7812ac-4), golang-google-grpc (= 1.64.0-7), golang-google-protobuf (= 1.36.5-1), golang-gopkg-natefinch-lumberjack.v2 (= 2.1-2), golang-gopkg-yaml.v3 (= 3.0.1-3), golang-logrus (= 1.9.0-1), golang-step-cli-utils (= 0.7.5+ds-3), golang-step-linkedca (= 0.19.0-1), golang-toml (= 1.4.0-1), nebula (= 1.9.3+dfsg-6)
+Description-md5: f8d06ea1fde3a896633969175260f154
+Tag: implemented-in::TODO, interface::web, protocol::http, protocol::ssl,
+ role::program, system::server, web::server
+httpd
+Priority: optional
+Filename: pool/main/c/caddy/caddy_2.6.2-12+b3_amd64.deb
+Size: 10109920
+MD5sum: aa38ffbd15f142497304614f6ca62d42
+SHA256: 5c6c461e13c02916681f20faedf0132762afd59dd3637a2077ab534ec1a6e4be
+
+Package: gunicorn
+Version: 23.0.0-1
+Installed-Size: 26
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Replaces: gunicorn3
+Provides: gunicorn3, httpd-wsgi3
+Depends: python3-gunicorn (= 23.0.0-1), python3:any
+Suggests: python3-pastedeploy, python3-setproctitle, python3-tornado
+Conflicts: gunicorn3
+Description: Event-based HTTP/WSGI server
+Homepage: https://gunicorn.org/
+Description-md5: 2ff72d8c5c219c7f7f89448c09a76c6c
+httpd
+Priority: optional
+Filename: pool/main/g/gunicorn/gunicorn_23.0.0-1_all.deb
+Size: 10832
+MD5sum: 4feda2dfe3ca709e177e1b0486209409
+SHA256: fd97fb2d37775b6cf93a77804dd803fa14f009f28f6d6bacb385c25ef81c8051
+
+Package: gunicorn-examples
+Source: gunicorn
+Version: 23.0.0-1
+Installed-Size: 126
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Recommends: libjs-jquery, libjs-jquery-flot
+Description: Event-based HTTP/WSGI server (examples)
+Multi-Arch: foreign
+Homepage: https://gunicorn.org/
+Description-md5: 534f86a64db17a6022cff39be7f319e8
+httpd
+Priority: optional
+Filename: pool/main/g/gunicorn/gunicorn-examples_23.0.0-1_all.deb
+Size: 26100
+MD5sum: a41bcb86b69b0ad628f82363aeb51649
+SHA256: 960bee3dbbf1ef4e74c0e24f805417a48379aaf36a9df31af180fec1be84cddb
+
+Package: python3-gunicorn
+Source: gunicorn
+Version: 23.0.0-1
+Installed-Size: 304
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-importlib-metadata | python3-supported-min (>= 3.8), python3-packaging, python3:any
+Description: Event-based HTTP/WSGI server (Python 3 libraries)
+Homepage: https://gunicorn.org/
+Description-md5: 09a7d941cfaad6a1c9d3ac57aa53ca80
+httpd
+Priority: optional
+Filename: pool/main/g/gunicorn/python3-gunicorn_23.0.0-1_all.deb
+Size: 62768
+MD5sum: 0f931a2c383cd095d00736a17549e27f
+SHA256: 015e1e0acedb82a548bcbeb873edb493f46a38a092204362c74ae8bf7f5be38f
+
+Package: libapache2-mod-evasive
+Source: libapache-mod-evasive
+Version: 2.4.0-2
+Installed-Size: 63
+Maintainer: Christian Göttsche <cgzones@googlemail.com>
+Architecture: amd64
+Depends: apache2-api-20120211, apache2-bin (>= 2.4.16), libc6 (>= 2.38), libpcre2-8-0 (>= 10.22)
+Recommends: bsd-mailx | mailx
+Description: evasive module to minimize HTTP DoS or brute force attacks
+Homepage: https://github.com/jvdmr/mod_evasive
+Description-md5: 70a0bf40ec2f9db1f08d587bd5acf80c
+Tag: protocol::http, role::program, role::shared-lib, suite::apache
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache-mod-evasive/libapache2-mod-evasive_2.4.0-2_amd64.deb
+Size: 20120
+MD5sum: 8e40e3970d46559bb901c7ca50d9e52c
+SHA256: 8f0a63793324d8f1b4f9c46d4502478e7f14a3ad5ca4e7ab154ccebb5d23f177
+
+Package: libapache2-mod-jk
+Source: libapache-mod-jk
+Version: 1:1.2.50-1
+Installed-Size: 461
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: apache2-api-20120211, apache2-bin (>= 2.4.16), libc6 (>= 2.38)
+Suggests: libapache-mod-jk-doc, tomcat10
+Description: Apache 2 connector for the Tomcat Java servlet engine
+Homepage: https://tomcat.apache.org
+Description-md5: 9d8cafd51e3b6bdf100899bb1fbd1601
+Tag: role::shared-lib, suite::apache
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache-mod-jk/libapache2-mod-jk_1.2.50-1_amd64.deb
+Size: 167988
+MD5sum: 0ff2728401f1780bdc725fdf40f2ea21
+SHA256: a8d9cc61ba9246b23c2d4a4d8b3bd6cbde0360a42c36971bfbd07ceec577cc28
+
+Package: libapache2-mod-log-sql
+Source: libapache-mod-log-sql
+Version: 1.100-16.4
+Installed-Size: 210
+Maintainer: Thomas Goirand <zigo@debian.org>
+Architecture: amd64
+Depends: apache2-api-20120211, apache2-bin (>= 2.4.16), libc6 (>= 2.4)
+Recommends: perl
+Description: Use SQL to store/write your Apache queries logs - Base
+Homepage: https://www.outoforder.cc/projects/httpd/mod_log_sql/
+Description-md5: 0abfd07fc9a75cb22efda6bc762330ea
+Tag: admin::logging, role::shared-lib, suite::apache
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache-mod-log-sql/libapache2-mod-log-sql_1.100-16.4_amd64.deb
+Size: 58548
+MD5sum: 36441eaed347986a05bc9dbfb637cf55
+SHA256: d7915120f8ff5ce1fbcdcd28dd39e621494922016929e2b315f23364552ed63d
+
+Package: libapache2-mod-log-sql-dbi
+Source: libapache-mod-log-sql
+Version: 1.100-16.4
+Installed-Size: 48
+Maintainer: Thomas Goirand <zigo@debian.org>
+Architecture: amd64
+Depends: libapache2-mod-log-sql (= 1.100-16.4), apache2-api-20120211, apache2-bin (>= 2.4.16), libc6 (>= 2.38), libdbi1t64 (>= 0.8.4)
+Recommends: libapache2-mod-log-sql-ssl
+Description: Use SQL to store/write your Apache queries logs - DBI interface
+Homepage: https://www.outoforder.cc/projects/httpd/mod_log_sql/
+Description-md5: 245473d514cc1c723ec85dafae3a747f
+Tag: role::shared-lib, suite::apache
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache-mod-log-sql/libapache2-mod-log-sql-dbi_1.100-16.4_amd64.deb
+Size: 17060
+MD5sum: 66efe0ef13f087ef857e62aed6e210f0
+SHA256: 4f6a00efe340991505159b2bd64ba1a4759d4f6b6028a015867151f52613fd70
+
+Package: libapache2-mod-log-sql-mysql
+Source: libapache-mod-log-sql
+Version: 1.100-16.4
+Installed-Size: 48
+Maintainer: Thomas Goirand <zigo@debian.org>
+Architecture: amd64
+Depends: libapache2-mod-log-sql (= 1.100-16.4), apache2-api-20120211, apache2-bin (>= 2.4.16), libc6 (>= 2.38), libmariadb3 (>= 3.0.0)
+Recommends: libapache2-mod-log-sql-ssl
+Description: Use SQL to store/write your Apache queries logs - MySQL interface
+Homepage: https://www.outoforder.cc/projects/httpd/mod_log_sql/
+Description-md5: 7023c14befb1c1634f74dfb823363970
+Tag: admin::logging, role::shared-lib, suite::apache, works-with::logfile
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache-mod-log-sql/libapache2-mod-log-sql-mysql_1.100-16.4_amd64.deb
+Size: 16732
+MD5sum: 4e3b3e58d8cb47131c7317d4fe6b5b0a
+SHA256: 1539556f6bd614c8d46a08a6925bbaef9e10aff642a6deb223ecc78f39e0f83a
+
+Package: libapache2-mod-log-sql-ssl
+Source: libapache-mod-log-sql
+Version: 1.100-16.4
+Installed-Size: 47
+Maintainer: Thomas Goirand <zigo@debian.org>
+Architecture: amd64
+Depends: libapache2-mod-log-sql (= 1.100-16.4), libapache2-mod-log-sql-mysql (= 1.100-16.4) | libapache2-mod-log-sql-dbi (= 1.100-16.4), apache2-api-20120211, apache2-bin (>= 2.4.16)
+Description: Use SQL to store/write your Apache queries logs - SSL extension
+Homepage: https://www.outoforder.cc/projects/httpd/mod_log_sql/
+Description-md5: 45039832547e2b98bc9085595d04c025
+Tag: admin::logging, protocol::ssl, role::shared-lib, suite::apache
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache-mod-log-sql/libapache2-mod-log-sql-ssl_1.100-16.4_amd64.deb
+Size: 15176
+MD5sum: 4f667141626bd3129e54638583fa4186
+SHA256: 81d4d8e9714eb386a6793b1528117fb8121003a82c64bcb7265b16e8347aa29e
+
+Package: libapache2-mod-musicindex
+Source: libapache-mod-musicindex (1.4.1-4)
+Version: 1.4.1-4+b1
+Installed-Size: 110
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Depends: mod-musicindex-common (>= 1.4.1-4), libapr1t64 (>= 1.2.7), libarchive13t64 (>= 3.0.4), libc6 (>= 2.38), libflac14 (>= 1.5.0), libid3tag0 (>= 0.15.1b), libmad0 (>= 0.15.1b-3), libmariadb3 (>= 3.0.0), libvorbis0a (>= 1.1.2), libvorbisfile3 (>= 1.1.2), apache2-api-20120211, apache2-bin (>= 2.4.16)
+Description: Browse, stream, download and search through MP3/Ogg/FLAC files
+Homepage: http://hacks.slashdirt.org/musicindex/
+Description-md5: f614e9b744e3aaf827b6b1b40c1055aa
+Tag: implemented-in::c, interface::web, role::plugin, role::program,
+ sound::TODO, suite::apache, use::downloading, use::organizing,
+ use::searching, works-with-format::mp3, works-with-format::oggvorbis,
+ works-with::audio
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache-mod-musicindex/libapache2-mod-musicindex_1.4.1-4+b1_amd64.deb
+Size: 35168
+MD5sum: 5bb03b5bc3ca4e7a548b1c725a77d9ad
+SHA256: 6835f76b0a45951b809d5c6d4e0e170565df7c8651de47c7464aa70823a2fcf8
+
+Package: libapache2-mod-removeip
+Source: libapache-mod-removeip
+Version: 1.0b-6
+Installed-Size: 41
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.2.5), apache2-api-20120211, apache2-bin (>= 2.4.16)
+Description: Module to remove IP from apache2's logs
+Homepage: https://github.com/moba/libapache-mod-removeip
+Description-md5: aa2fec2b6ace4888779edf59427d42fa
+Tag: role::shared-lib, suite::apache
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache-mod-removeip/libapache2-mod-removeip_1.0b-6_amd64.deb
+Size: 6676
+MD5sum: 6222bf2a2e03f9a29ccc134f8eeb4328
+SHA256: 2f30614df2280a645e11154fae5fc1a4468843006ff0b016a560e1671355195c
+
+Package: libapache2-mod-auth-cas
+Version: 1.2-1.3
+Installed-Size: 122
+Maintainer: Thijs Kinkhorst <thijs@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libpcre2-8-0 (>= 10.22), apache2-api-20120211, apache2-bin (>= 2.4.16)
+Description: CAS authentication module for Apache2
+Homepage: https://github.com/apereo/mod_auth_cas
+Description-md5: 44181e795e96fb5feb9ea4c89e3f06da
+Tag: implemented-in::c, interface::web, protocol::http, role::plugin,
+ role::program, security::authentication, suite::apache
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache2-mod-auth-cas/libapache2-mod-auth-cas_1.2-1.3_amd64.deb
+Size: 39400
+MD5sum: baa2f6a308bb20236e66099268cf86b9
+SHA256: c422928e5e2ee12385c773881a57a0b3ab562b456466a5ac7ae4393f5b3a3a4b
+
+Package: libapache2-mod-auth-plain
+Version: 2.0.54
+Installed-Size: 43
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Depends: apache2-api-20120211, apache2-bin (>= 2.4.16), libc6 (>= 2.4)
+Description: Module for Apache2 which provides plaintext authentication
+Description-md5: 3e01238a16b9a1c7773380c220a515ff
+Tag: devel::library, interface::web, protocol::http, role::plugin,
+ role::program, security::authentication, suite::apache
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache2-mod-auth-plain/libapache2-mod-auth-plain_2.0.54_amd64.deb
+Size: 8692
+MD5sum: c448d9bf461d5a54260a76745212ed16
+SHA256: dbd098890a2e606a4251330b76618837ca47029017fda795ab7b2d079fec301d
+
+Package: libapache2-mod-auth-pubtkt
+Source: libapache2-mod-auth-pubtkt (0.13-1)
+Version: 0.13-1+b2
+Installed-Size: 119
+Maintainer: Ivo De Decker <ivodd@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.4), libssl3t64 (>= 3.0.0), apache2-api-20120211, apache2-bin (>= 2.4.16)
+Conflicts: libapache2-mod-auth-tkt
+Description: key-based single-sign-on authentication module for Apache
+Homepage: https://neon1.net/mod_auth_pubtkt/
+Description-md5: 37acee624d51f820dfd22568087c4f06
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache2-mod-auth-pubtkt/libapache2-mod-auth-pubtkt_0.13-1+b2_amd64.deb
+Size: 35848
+MD5sum: 092df6edb77573d9186b5dc359c40cd1
+SHA256: 9d635728f33d7be2c6d439c423d33e9e66de5793832f2dd5a288c7e34f922283
+
+Package: libapache2-mod-auth-tkt
+Version: 2.3.99~b1-1
+Installed-Size: 156
+Maintainer: Ivo De Decker <ivodd@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.14), apache2-api-20120211, apache2-bin (>= 2.4.16)
+Description: lightweight single-sign-on authentication module for Apache
+Homepage: http://www.openfusion.com.au/labs/mod_auth_tkt/
+Description-md5: 30efa5dd399b43bb9822114d93afe0e9
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache2-mod-auth-tkt/libapache2-mod-auth-tkt_2.3.99~b1-1_amd64.deb
+Size: 49548
+MD5sum: c9bdf281759ec5024144833e36a99a54
+SHA256: d99e5d51669497443af76cd405a2fa69969ef6a75fd46f35f98b4de4d5676141
+
+Package: libapache2-mod-authn-sasl
+Version: 1.2-2.1
+Installed-Size: 118
+Maintainer: Ulises Vitulli <dererk@debian.org>
+Architecture: amd64
+Depends: libapr1t64 (>= 1.2.7), libc6 (>= 2.4), libsasl2-2 (>= 2.1.28+dfsg1), sasl2-bin, apache2-api-20120211
+Description: SASL authentication backend provider for Apache
+Homepage: http://mod-authn-sasl.sourceforge.net/
+Description-md5: 4e47a2bfb812cb5fbceccba6d3ac246c
+Tag: role::shared-lib, security::authentication, suite::apache
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache2-mod-authn-sasl/libapache2-mod-authn-sasl_1.2-2.1_amd64.deb
+Size: 38420
+MD5sum: 449293098ed5de78585aca379b14e646
+SHA256: 12c3a75660443c240db54b11180ff5e8071bc901ef7a98b41c5ec1a080bcd9c5
+
+Package: libapache2-mod-authn-yubikey
+Version: 1.0-4
+Installed-Size: 57
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Depends: apache2-api-20120211, apache2-bin (>= 2.4.16), libc6 (>= 2.14), libcurl4t64 (>= 7.16.2)
+Description: Yubikey authentication provider for Apache
+Homepage: https://yubikey.coffeecrew.org
+Description-md5: bb7bfa15656c5ce7d654bd4f2ad6583c
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache2-mod-authn-yubikey/libapache2-mod-authn-yubikey_1.0-4_amd64.deb
+Size: 17548
+MD5sum: baec1e86d4ac232d8a1622607c9b3485
+SHA256: f9e4bf4d464f8bc8ef18d066d53b5bd243511ed5f04e7fab4bddead0e90506ef
+
+Package: libapache2-mod-authnz-external
+Version: 3.3.2-3
+Installed-Size: 65
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Depends: apache2-api-20120211, apache2-bin (>= 2.4.16), libc6 (>= 2.4)
+Recommends: pwauth
+Description: authenticate Apache against external authentication services
+Description-md5: 73abfe298d07637afe5c9d4fa5d55b9c
+Tag: implemented-in::c, role::shared-lib, security::authentication,
+ suite::apache
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache2-mod-authnz-external/libapache2-mod-authnz-external_3.3.2-3_amd64.deb
+Size: 25124
+MD5sum: 428a765859979a1cc3dac68e74286a8d
+SHA256: 2defb9e2ef49d8ef8442ab04a88abc324241a75c28de15f096acee01e78e12e1
+
+Package: libapache2-mod-authz-unixgroup
+Version: 1.1.0-3
+Installed-Size: 40
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Depends: apache2-api-20120211, apache2-bin (>= 2.4.16), libc6 (>= 2.38)
+Description: access control based on unix group membership for Apache
+Homepage: http://www.unixpapa.com/mod_authz_unixgroup
+Description-md5: 492a4327b9c34c18d2461cf4264526b2
+Tag: implemented-in::c, role::shared-lib, security::authentication,
+ suite::apache
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache2-mod-authz-unixgroup/libapache2-mod-authz-unixgroup_1.1.0-3_amd64.deb
+Size: 7812
+MD5sum: b39afe891226bb0f4405589c6658418a
+SHA256: 29870d6b58fbc2325ceac86a7c135db06c9814e837dfe8be958ddcf720cd9890
+
+Package: libapache2-mod-bw
+Version: 0.92-13
+Installed-Size: 68
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Depends: apache2-api-20120211, apache2-bin (>= 2.4.16), libc6 (>= 2.4)
+Description: bandwidth limiting module for apache2
+Homepage: https://wp.ivn.cl/es/apache-bandwidth-mod-es/
+Description-md5: 6f14effcc764cceb1cefb303c965ae30
+Tag: implemented-in::c, network::load-balancing, role::plugin, suite::apache
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache2-mod-bw/libapache2-mod-bw_0.92-13_amd64.deb
+Size: 22132
+MD5sum: f1ef598c2859761035d669a5701607a8
+SHA256: ce9a419857f5ef85c7d90c96fa206c229babfb39c3dbeeeedb4d130a76b3fd40
+
+Package: libapache2-mod-encoding
+Version: 20040616-9
+Installed-Size: 36
+Maintainer: Christoph Biedl <debian.axhn@manchmal.in-ulm.de>
+Architecture: amd64
+Depends: apache2-api-20120211, apache2-bin (>= 2.4.16), libc6 (>= 2.4), libiconv-hook1 (>= 0.0.20021209)
+Description: Apache2 module for non-ascii filename interoperability
+Description-md5: a23048205a8249e69f9bee3c04909579
+Tag: devel::i18n, devel::library, protocol::http, role::plugin,
+ role::program, suite::apache, use::converting
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache2-mod-encoding/libapache2-mod-encoding_20040616-9_amd64.deb
+Size: 7156
+MD5sum: f7a9aa4cd249024d9da702dd5bccf19b
+SHA256: 78a06dccafe2455fa11d87faf16319608c52fb1df806e86cf918add714bebd15
+
+Package: libapache2-mod-fcgid
+Version: 1:2.3.9-4
+Installed-Size: 240
+Maintainer: Xavier Guimard <yadd@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.14), apache2-api-20120211, apache2-bin (>= 2.4.16)
+Description: FastCGI interface module for Apache 2
+Homepage: https://httpd.apache.org/mod_fcgid/
+Description-md5: 3dc25164d71ec8a9446e3c9162ca7d3b
+Tag: devel::library, role::plugin, suite::apache, web::cgi
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache2-mod-fcgid/libapache2-mod-fcgid_2.3.9-4_amd64.deb
+Size: 71204
+MD5sum: 770edee8f1ca147a8a3ed33da8ad587d
+SHA256: a87bc64996881999589983acd325889129c3894abeb62c291617f149deb9685d
+
+Package: libapache2-mod-geoip
+Source: libapache2-mod-geoip (1.2.10-1)
+Version: 1.2.10-1+b2
+Installed-Size: 62
+Maintainer: Prach Pongpanich <prachpub@gmail.com>
+Architecture: amd64
+Depends: apache2-api-20120211, apache2-bin (>= 2.4.16), libc6 (>= 2.4), libgeoip1t64 (>= 1.6.12)
+Recommends: geoip-database
+Description: GeoIP support for apache2
+Homepage: http://www.maxmind.com/app/mod_geoip
+Description-md5: e4085008663af571952df21045e8534a
+Tag: role::plugin, suite::apache
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache2-mod-geoip/libapache2-mod-geoip_1.2.10-1+b2_amd64.deb
+Size: 19016
+MD5sum: 3b27e7896fbe455a0f56044da909ed13
+SHA256: 9d02e107524a62f83f3f4ba079f2f4a2beaba7c50785622819eaa89295ff6b0c
+
+Package: libapache2-mod-ldap-userdir
+Source: libapache2-mod-ldap-userdir (1.1.19-2.1)
+Version: 1.1.19-2.1+b4
+Installed-Size: 59
+Maintainer: John Morrissey <jwm@horde.net>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libldap2 (>= 2.6.2), apache2-api-20120211, apache2-bin (>= 2.4.16)
+Description: Apache module that provides UserDir lookups via LDAP
+Homepage: http://horde.net/~jwm/software/mod_ldap_userdir/
+Description-md5: a787db1aa7a71633fb125129a2f1688a
+Tag: admin::user-management, devel::library, protocol::ldap, role::plugin,
+ role::program, suite::apache, works-with::db
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache2-mod-ldap-userdir/libapache2-mod-ldap-userdir_1.1.19-2.1+b4_amd64.deb
+Size: 17108
+MD5sum: ac210999e477ac9030637eddc6de1f6a
+SHA256: dd2237372c302efed0422ac04872c7166a49ef648820375d96049eec056ed8fb
+
+Package: libapache2-mod-lisp
+Version: 1.3.1-2
+Installed-Size: 49
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.4), apache2-api-20120211, apache2-bin (>= 2.4.16)
+Description: An Apache2 module that interfaces with Lisp environments
+Description-md5: 0ab20b58e12b98754b55a1e4addb0f19
+Tag: implemented-in::c, role::shared-lib, suite::apache
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache2-mod-lisp/libapache2-mod-lisp_1.3.1-2_amd64.deb
+Size: 11780
+MD5sum: 3babd0a53ccbdd6ced2e46862cf837a1
+SHA256: bbd0f9ebfefabeaa0b888ae80d2c5a53fb2b1fb7749e166264a4ee9d84b16e12
+
+Package: libapache2-mod-log-slow
+Version: 1.0.8-3.1
+Installed-Size: 42
+Maintainer: Cyril Bouthors <cyb@debian.org>
+Architecture: amd64
+Depends: apache2-api-20120211, libc6 (>= 2.38)
+Description: Apache module for logging of slow requests handling
+Description-md5: c9b4aba4fa99cd7f8aa09ce8c944e3e8
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache2-mod-log-slow/libapache2-mod-log-slow_1.0.8-3.1_amd64.deb
+Size: 9344
+MD5sum: 41096a32607164cb6b1d478a0b982bcd
+SHA256: a3d3c2cf1bf1fd9b246e8a1772f0bd26d37a827d248a59b7ff7444779d0054e8
+
+Package: libapache2-mod-oauth2
+Version: 4.0.0-1
+Installed-Size: 91
+Maintainer: Moritz Schlarb <schlarbm@uni-mainz.de>
+Architecture: amd64
+Depends: apache2-api-20120211, apache2-bin (>= 2.4.16), libapr1t64 (>= 1.2.7), libc6 (>= 2.4), libjansson4 (>= 2.14), liboauth2-0 (>= 2.0.0), liboauth2-apache0 (>= 2.0.0)
+Description: OAuth 2.x Resource Server implementation for Apache
+Homepage: https://github.com/zmartzone/mod_oauth2
+Description-md5: 229f1c5b39437c93ac674f83c4e6f46a
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache2-mod-oauth2/libapache2-mod-oauth2_4.0.0-1_amd64.deb
+Size: 22776
+MD5sum: 97af78b2ea74ed1af8876a2b720761ac
+SHA256: e1c83ab737e1d824fa28af0759cd8da15bb6d4e72819bfbba04353f99e3502cc
+
+Package: libapache2-mod-perl2
+Source: libapache2-mod-perl2 (2.0.13-2)
+Version: 2.0.13-2+b2
+Installed-Size: 3270
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: apache2-api-20120211, apache2-bin (>= 2.4.16), perl (>= 5.40.0-8), perlapi-5.40.0, libapr1t64 (>= 1.2.7), libaprutil1t64 (>= 1.2.7+dfsg), libc6 (>= 2.38), libperl5.40 (>= 5.40.0), libdevel-symdump-perl, liburi-perl, libwww-perl, netbase
+Recommends: libapache2-reload-perl, libbsd-resource-perl
+Description: Integration of perl with the Apache2 web server
+Homepage: https://perl.apache.org/
+Description-md5: e23cfdfee05b531a38b9a93d5d690a15
+Tag: devel::lang:perl, devel::library, implemented-in::perl, role::plugin,
+ suite::apache
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache2-mod-perl2/libapache2-mod-perl2_2.0.13-2+b2_amd64.deb
+Size: 808700
+MD5sum: b5d743ff02ca4fa4cf8eb9d82dd2139c
+SHA256: 155631901e62eab67bd12ff56fa3076127f696c2ed5531937db444ad14cfcc8f
+
+Package: libapache2-mod-rivet
+Version: 3.2.6-1
+Installed-Size: 618
+Maintainer: Massimo Manghi <mxmanghi@apache.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libtcl8.6 (>= 8.6.0), apache2-api-20120211, apache2-bin (>= 2.4.16), tcl-itcl4 | itcl3, tcllib
+Suggests: libapache2-mod-rivet-doc
+Description: Server-side Tcl programming system combining ease of use and power
+Homepage: http://tcl.apache.org/rivet/
+Description-md5: 856334e98daba9e3599b077f8e563d94
+Tag: devel::lang:tcl, devel::web, implemented-in::c, implemented-in::tcl,
+ role::program, role::shared-lib, suite::apache
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache2-mod-rivet/libapache2-mod-rivet_3.2.6-1_amd64.deb
+Size: 116516
+MD5sum: 019cfe805bd24a9c528aa6556be28dea
+SHA256: 95eac28efbfc6f0f933d03f23446d812c88c1581ba94c95a3161a86029ed4b58
+
+Package: libapache2-mod-rpaf
+Version: 0.6-15
+Installed-Size: 41
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Depends: apache2-api-20120211, apache2-bin (>= 2.4.16), libc6 (>= 2.4)
+Description: module for Apache2 which takes the last IP from the 'X-Forwarded-For' header
+Homepage: http://www.stderr.net/apache/rpaf/
+Description-md5: 007d11f2786e93215cf2b85fc7d38162
+Tag: implemented-in::c, role::plugin, role::program, suite::apache,
+ use::proxying
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache2-mod-rpaf/libapache2-mod-rpaf_0.6-15_amd64.deb
+Size: 8788
+MD5sum: d94752760619432cda79b8ca4f0a367e
+SHA256: 161b223536743fe2a450207bf7177825f112488d9d8a1f62f64780af1e016dac
+
+Package: libapache2-mod-sts
+Source: libapache2-mod-sts (3.4.0-2)
+Version: 3.4.0-2+b1
+Installed-Size: 118
+Maintainer: Robin Gustafsson <rgson@debian.org>
+Architecture: amd64
+Depends: apache2-api-20120211, apache2-bin (>= 2.4.16), libapr1t64 (>= 1.2.7), libc6 (>= 2.4), libjansson4 (>= 2.14), liboauth2-0 (>= 1.6.0), liboauth2-apache0 (>= 1.6.0), libxml2 (>= 2.7.4)
+Description: security token exchange module for Apache 2
+Homepage: https://github.com/OpenIDC/mod_sts
+Description-md5: 65585e29b08e99216c8a0d9a38daf307
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache2-mod-sts/libapache2-mod-sts_3.4.0-2+b1_amd64.deb
+Size: 31148
+MD5sum: fd216ecd8eb69d91756de39835a64b5f
+SHA256: 524038034a84da1e38d0303c1d146099168be6940bf6668188898d1819e9f343
+
+Package: libapache2-mod-tile
+Version: 0.8.0-1
+Installed-Size: 176
+Maintainer: Debian GIS Project <pkg-grass-devel@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libapr1t64 (>= 1.2.7), libc6 (>= 2.38), libcairo2 (>= 1.2.4), libcurl3t64-gnutls (>= 7.16.2), libglib2.0-0t64 (>= 2.56.0), libiniparser4 (>= 4.0), apache2-api-20120211, apache2-bin (>= 2.4.16)
+Recommends: renderd | tirex
+Description: Apache module to deliver tiles created by renderd
+Homepage: https://wiki.openstreetmap.org/wiki/Mod_tile
+Description-md5: 0eb52688a4e671ae4f0c4fbe13514db7
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache2-mod-tile/libapache2-mod-tile_0.8.0-1_amd64.deb
+Size: 52108
+MD5sum: 5a83e0ea6b27857885b4c7c3c3ff61d3
+SHA256: 6afaa99fed0ac6aa8dc83201820e3fd0703328b95b45ca77c5a670fcc239eb68
+
+Package: libapache2-mod-xsendfile
+Version: 0.12+git20120509.f181be5+dfsg-1
+Installed-Size: 62
+Maintainer: Marco Nenciarini <mnencia@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.4), apache2-api-20120211, apache2-bin (>= 2.4.16)
+Description: Serve large static files efficiently from web applications
+Homepage: https://tn123.org/mod_xsendfile/
+Description-md5: 394a3bf522bc72bfd1e8b5e3019cc105
+Tag: role::shared-lib, suite::apache
+httpd
+Priority: optional
+Filename: pool/main/liba/libapache2-mod-xsendfile/libapache2-mod-xsendfile_0.12+git20120509.f181be5+dfsg-1_amd64.deb
+Size: 13080
+MD5sum: 6dcfac6d0e5cd0dd39ff612e0dd910a1
+SHA256: 87fd6f58e7136361dc58e2b207c3ba8b7f4e8fef940c04fc6f57582b6e3d0c88
+
+Package: libapache2-mod-apreq2
+Source: libapreq2 (2.17-7)
+Version: 2.17-7+b2
+Installed-Size: 96
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Depends: libapreq2-3t64 (= 2.17-7+b2), libapr1t64 (>= 1.2.7), libaprutil1t64 (>= 1.2.7+dfsg), libc6 (>= 2.4), apache2-api-20120211, apache2-bin (>= 2.4.16)
+Description: generic Apache request library - Apache module
+Homepage: https://httpd.apache.org/apreq/
+Description-md5: 1d2af6984c5d28eda964cc2022c20b5c
+Tag: devel::web, implemented-in::c, protocol::http, role::plugin,
+ role::program, suite::apache
+httpd
+Priority: optional
+Filename: pool/main/liba/libapreq2/libapache2-mod-apreq2_2.17-7+b2_amd64.deb
+Size: 27208
+MD5sum: 57eb4035eeed674bc596fcc6e77d1782
+SHA256: 4962ba2b84eac69d3dc3644eeee833a46ef95548ec960151dbe5f9f53cb2286a
+
+Package: libnginx-mod-http-auth-pam
+Version: 1:1.5.5-3
+Installed-Size: 35
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: nginx-abi-1.26.3-1, libc6 (>= 2.14), libpam0g (>= 0.99.7.1)
+Recommends: nginx
+Description: PAM authentication module for Nginx
+Multi-Arch: foreign
+Homepage: https://github.com/sto/ngx_http_auth_pam_module
+Description-md5: f5d57dbf0c65acd242b1a0560e3e3bfd
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-http-auth-pam/libnginx-mod-http-auth-pam_1.5.5-3_amd64.deb
+Size: 8440
+MD5sum: a64147e2a0a1458348aa93c82dce2bd5
+SHA256: ae872f8bd53c68270a7232eea7ebe9f74bc8d6d22d9a4f909384b08b51a519fe
+
+Package: libnginx-mod-http-auth-spnego
+Version: 1.1.3-1
+Installed-Size: 65
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: nginx-abi-1.26.3-1, libc6 (>= 2.14), libgssapi-krb5-2 (>= 1.17), libkrb5-3 (>= 1.6.dfsg.2)
+Recommends: nginx
+Description: SPNEGO authentication module for Nginx
+Multi-Arch: foreign
+Homepage: https://github.com/stnoonan/spnego-http-auth-nginx-module
+Description-md5: a79c15be4d6a290433d15749f69f742b
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-http-auth-spnego/libnginx-mod-http-auth-spnego_1.1.3-1_amd64.deb
+Size: 22672
+MD5sum: f91bf11b720a9c1ed3cda1c273d757d6
+SHA256: eeaeae3c3a7b6559c22619ffe51ac031793b698423d6cf2c898126f75cfb1c35
+
+Package: libnginx-mod-http-brotli-filter
+Source: libnginx-mod-http-brotli
+Version: 1.0.0~rc-6
+Installed-Size: 42
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: nginx-abi-1.26.3-1, libbrotli1 (>= 0.6.0), libc6 (>= 2.4)
+Description: Brotli lossless compression support for Nginx - filter
+Multi-Arch: foreign
+Homepage: https://github.com/google/ngx_brotli
+Description-md5: 7dba050ba818197c55675628661cc9da
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-http-brotli/libnginx-mod-http-brotli-filter_1.0.0~rc-6_amd64.deb
+Size: 8820
+MD5sum: 31a8f0782926eb41ea35343461aa46ae
+SHA256: ca6b8c9e538c73e3f8a35d16cfeba41c3657ffc34b70eefab1f054983d58cac1
+
+Package: libnginx-mod-http-brotli-static
+Source: libnginx-mod-http-brotli
+Version: 1.0.0~rc-6
+Installed-Size: 34
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: nginx-abi-1.26.3-1, libc6 (>= 2.4)
+Description: Brotli lossless compression support for Nginx - static
+Multi-Arch: foreign
+Homepage: https://github.com/google/ngx_brotli
+Description-md5: bbe2653cb5ff287965d8af352d9343f4
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-http-brotli/libnginx-mod-http-brotli-static_1.0.0~rc-6_amd64.deb
+Size: 7004
+MD5sum: 7aefdd6a0dd83334f14f2ab7945ebc65
+SHA256: 010a80445d04e1533d3244f305c194e7800062d6fac5957251e189885a9bd2d7
+
+Package: libnginx-mod-http-cache-purge
+Version: 1:2.5.3-3
+Installed-Size: 51
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: nginx-abi-1.26.3-1, libc6 (>= 2.14)
+Recommends: nginx
+Description: Purge content from Nginx caches
+Multi-Arch: foreign
+Homepage: https://github.com/FRiCKLE/ngx_cache_purge
+Description-md5: 398ab43d3187cbe8c5005bbdf7b75662
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-http-cache-purge/libnginx-mod-http-cache-purge_2.5.3-3_amd64.deb
+Size: 13172
+MD5sum: 675d18d7c4ba0bdc6ee0be952dd65923
+SHA256: c2143410df0515495da5168aedda6ef8c7ae3c1df59a4168af3aec6f88ceab3e
+
+Package: libnginx-mod-http-dav-ext
+Version: 1:3.0.0-6
+Installed-Size: 55
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: nginx-abi-1.26.3-1, libc6 (>= 2.33), libxml2 (>= 2.7.4)
+Recommends: nginx
+Description: WebDAV missing commands support for Nginx
+Multi-Arch: foreign
+Homepage: https://github.com/arut/nginx-dav-ext-module
+Description-md5: 2690910ae7bd132adb0173b9b23604dc
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-http-dav-ext/libnginx-mod-http-dav-ext_3.0.0-6_amd64.deb
+Size: 14504
+MD5sum: e075bb399a65f0dd220a0b11dbeca57e
+SHA256: 4e178e2d5e9be418c22936cf6d5af469576c198c907646b45ef2763fc0d31e4a
+
+Package: libnginx-mod-http-echo
+Version: 1:0.63-7
+Installed-Size: 68
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: nginx-abi-1.26.3-1, libc6 (>= 2.14)
+Recommends: nginx
+Description: Bring echo and more shell style goodies to Nginx
+Multi-Arch: foreign
+Homepage: https://github.com/agentzh/echo-nginx-module
+Description-md5: abf85fee1f5ab07e15ef30313071a5b7
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-http-echo/libnginx-mod-http-echo_0.63-7_amd64.deb
+Size: 19148
+MD5sum: 8444dc642495b342fba3bbb93ed9c421
+SHA256: ef25939e4870c22e9e117d1140dd34e1862e6b0f393a99ec8964baad82a4f969
+
+Package: libnginx-mod-http-fancyindex
+Version: 1:0.5.2-6
+Installed-Size: 55
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: nginx-abi-1.26.3-1, libc6 (>= 2.33)
+Suggests: nginx
+Description: Fancy indexes module for the Nginx
+Multi-Arch: foreign
+Homepage: https://github.com/aperezdc/ngx-fancyindex
+Description-md5: 6258d67cce31732f8e890750dae6ebf2
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-http-fancyindex/libnginx-mod-http-fancyindex_0.5.2-6_amd64.deb
+Size: 16436
+MD5sum: f8586f00ea94ce1bbe7f341a0e7f66ca
+SHA256: 468e895f1179b3f3681d716f80fe69bc858f560e736c0b77e953ec7fd4365bb5
+
+Package: libnginx-mod-http-geoip2
+Version: 1:3.4-6
+Installed-Size: 37
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: libnginx-mod-stream (<< 1.26.3.1~), libnginx-mod-stream (>= 1.26.3), nginx-abi-1.26.3-1, libc6 (>= 2.33), libmaxminddb0 (>= 1.0.2)
+Recommends: nginx
+Description: GeoIP2 HTTP module for Nginx
+Multi-Arch: foreign
+Homepage: https://github.com/leev/ngx_http_geoip2_module
+Description-md5: 4aa061472a244a74d11cb0a4fd296c36
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-http-geoip2/libnginx-mod-http-geoip2_3.4-6_amd64.deb
+Size: 9008
+MD5sum: f9b8f0445e3842d4a7a25197663249ac
+SHA256: 851d409cccfb38efc269747af83175294843fe2e96e29f424de3785b0c5c0823
+
+Package: libnginx-mod-stream-geoip2
+Source: libnginx-mod-http-geoip2
+Version: 1:3.4-6
+Installed-Size: 37
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: libnginx-mod-stream (<< 1.26.3.1~), libnginx-mod-stream (>= 1.26.3), nginx-abi-1.26.3-1, libc6 (>= 2.33), libmaxminddb0 (>= 1.0.2)
+Recommends: nginx
+Description: GeoIP2 Stream module for Nginx
+Multi-Arch: foreign
+Homepage: https://github.com/leev/ngx_http_geoip2_module
+Description-md5: ecbf7da9aa5b20a93ef8d10c9567853f
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-http-geoip2/libnginx-mod-stream-geoip2_3.4-6_amd64.deb
+Size: 8608
+MD5sum: a5a4763306577240624da5b1fb7db2f8
+SHA256: 378547ff7f41b0c597d1b6c9340b905958f4643368fe16d3bd955321c2a96efc
+
+Package: libnginx-mod-http-headers-more-filter
+Version: 1:0.38-2
+Installed-Size: 51
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: nginx-abi-1.26.3-1, libc6 (>= 2.14)
+Recommends: nginx
+Description: Set and clear input and output headers for Nginx
+Multi-Arch: foreign
+Homepage: https://github.com/openresty/headers-more-nginx-module
+Description-md5: 92b32d38fc0fbbbb77340cc1cd063a62
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-http-headers-more-filter/libnginx-mod-http-headers-more-filter_0.38-2_amd64.deb
+Size: 12980
+MD5sum: 3079486248ad3e2dc8d1a0eb44b647ba
+SHA256: 8a90d3fc9acc1abb078f1589290a0fd9097699453267b08e63593b8bfbd21302
+
+Package: libnginx-mod-http-lua
+Version: 1:0.10.28-2
+Installed-Size: 477
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: lua-resty-core (>= 0.1.31), libnginx-mod-http-ndk, nginx-abi-1.26.3-1, libc6 (>= 2.33), libluajit-5.1-2 (>= 2.1.0) | libluajit-5.1-2 (>= 2.1.0+openresty)
+Recommends: nginx
+Description: Lua module for Nginx
+Multi-Arch: foreign
+Homepage: https://github.com/openresty/lua-nginx-module
+Description-md5: 54f5fee9d10603d78e3df169c29b9a06
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-http-lua/libnginx-mod-http-lua_0.10.28-2_amd64.deb
+Size: 164212
+MD5sum: 5fde4051be67de893e614dc708612325
+SHA256: 80610c8cf1e439ec75710e6bf180933c54e5b57ab924c1e49a3e316de47db88d
+
+Package: libnginx-mod-http-memc
+Version: 0.20-2
+Installed-Size: 63
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: nginx-abi-1.26.3-1, libc6 (>= 2.14)
+Recommends: nginx
+Description: Extended memcached commands module for Nginx
+Multi-Arch: foreign
+Homepage: https://github.com/openresty/memc-nginx-module
+Description-md5: afc06075a90b7ce92188834379e657ca
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-http-memc/libnginx-mod-http-memc_0.20-2_amd64.deb
+Size: 16980
+MD5sum: cc4346341239eb9178e6f9cb36d32998
+SHA256: cb7568f0a49f4e45fa8cb2fe4706eb96e2ae3bc4067fcf81e72bf2e3497c3320
+
+Package: libnginx-mod-http-modsecurity
+Source: libnginx-mod-http-modsecurity (1.0.3-2)
+Version: 1.0.3-2+b2
+Installed-Size: 191
+Maintainer: Ervin Hegedus <airween@gmail.com>
+Architecture: amd64
+Depends: libmodsecurity-dev, libnginx-mod-http-ndk, nginx-abi-1.26.3-1, libc6 (>= 2.14), libmodsecurity3t64 (>= 3.0.13)
+Recommends: nginx, modsecurity-crs
+Description: WAF module for Nginx
+Homepage: https://github.com/SpiderLabs/ModSecurity-nginx
+Description-md5: cf6069c86447e84ccb42a9bc146d26f0
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-http-modsecurity/libnginx-mod-http-modsecurity_1.0.3-2+b2_amd64.deb
+Size: 25796
+MD5sum: 04d3bc4e1c81864cb4e84e30d2b6371d
+SHA256: 81f577df0b4e61d06f8a082647f6cb17249c3b1785dbca58d32a7144049d0af4
+
+Package: libnginx-mod-http-ndk
+Version: 1:0.3.4-2
+Installed-Size: 42
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: nginx-abi-1.26.3-1, libc6 (>= 2.14)
+Recommends: nginx
+Description: Nginx Development Kit module
+Multi-Arch: foreign
+Homepage: https://github.com/simpl/ngx_devel_kit
+Description-md5: bb02698c2bb350fa8b6c2dddcabc6895
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-http-ndk/libnginx-mod-http-ndk_0.3.4-2_amd64.deb
+Size: 9888
+MD5sum: 4764a5c2a49be27a41f4d6d87166e89b
+SHA256: 5d4be193d5fb624e14d897b99cf3100b63d6435176b37d7f19a3823b6db92bbd
+
+Package: libnginx-mod-http-ndk-dev
+Source: libnginx-mod-http-ndk
+Version: 1:0.3.4-2
+Installed-Size: 475
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: all
+Depends: libnginx-mod-http-ndk (<< 1:0.3.4-2.1~), libnginx-mod-http-ndk (>= 1:0.3.4-2)
+Description: Nginx Development Kit module - development files
+Multi-Arch: foreign
+Homepage: https://github.com/simpl/ngx_devel_kit
+Description-md5: d5bfb575bac18bb8782020a118890ca0
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-http-ndk/libnginx-mod-http-ndk-dev_0.3.4-2_all.deb
+Size: 32512
+MD5sum: 7bd01904e95829dc0845a257d5c13055
+SHA256: b48549b3096f4a1e54d8e3459e49c2608d1685277f6b887489998c595411b794
+
+Package: libnginx-mod-http-push-stream
+Version: 0.6.0+dfsg-4
+Installed-Size: 164
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: nginx-abi-1.26.3-1, libc6 (>= 2.33)
+Recommends: nginx
+Description: HTTP push stream module for Nginx
+Multi-Arch: foreign
+Homepage: https://github.com/wandenberg/nginx-push-stream-module
+Description-md5: c248a8a0206584b88aca7f44495c5c24
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-http-push-stream/libnginx-mod-http-push-stream_0.6.0+dfsg-4_amd64.deb
+Size: 65632
+MD5sum: 57b39d2be86b6a8c6ccc5b8289734141
+SHA256: ed7f62d5f9bda6721adfdcae7f04ff9726ec4f5971a59542060e828d78707e1a
+
+Package: libnginx-mod-http-set-misc
+Version: 0.33-6
+Installed-Size: 56
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: libnginx-mod-http-ndk, nginx-abi-1.26.3-1, libc6 (>= 2.14)
+Recommends: nginx
+Description: Extended rewrite directives module for Nginx
+Multi-Arch: foreign
+Homepage: https://github.com/openresty/set-misc-nginx-module
+Description-md5: a2bbf49ebe1dcc528e2b19ea61131151
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-http-set-misc/libnginx-mod-http-set-misc_0.33-6_amd64.deb
+Size: 12760
+MD5sum: 3d2b3ff193b0380823d3910f184594f4
+SHA256: 2d07f40c72f94c630e383b1a456ae81f4bbba483d064ce1f282198613814c0b9
+
+Package: libnginx-mod-http-srcache-filter
+Version: 0.33-4
+Installed-Size: 70
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: libnginx-mod-http-ndk, nginx-abi-1.26.3-1, libc6 (>= 2.14)
+Recommends: nginx
+Description: Transparent caching layer for Nginx
+Multi-Arch: foreign
+Homepage: https://github.com/openresty/srcache-nginx-module
+Description-md5: 5e6432a021d64b2ee25e230f89e246a5
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-http-srcache-filter/libnginx-mod-http-srcache-filter_0.33-4_amd64.deb
+Size: 18956
+MD5sum: 2bc77a7ba6399b83693cef1e37a77b5b
+SHA256: 48963ce86bcae655940f4e12eccd3f6c49476ae3d553260e5d67beefc44df567
+
+Package: libnginx-mod-http-subs-filter
+Version: 1:0.6.4-7
+Installed-Size: 41
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: nginx-abi-1.26.3-1, libc6 (>= 2.14)
+Recommends: nginx
+Description: Substitution filter module for Nginx
+Multi-Arch: foreign
+Homepage: https://github.com/yaoweibin/ngx_http_substitutions_filter_module
+Description-md5: a29d97dc83cda7588ba1e3de961c7413
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-http-subs-filter/libnginx-mod-http-subs-filter_0.6.4-7_amd64.deb
+Size: 11208
+MD5sum: d4f36acb98931a91fa528db71873aa82
+SHA256: e48406803897d2b96097b842ed4540cc25e6e94dea30565c9130575fd7cb092a
+
+Package: libnginx-mod-http-uploadprogress
+Version: 1:0.9.4-2
+Installed-Size: 57
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: nginx-abi-1.26.3-1, libc6 (>= 2.14)
+Recommends: nginx
+Description: Upload progress system for Nginx
+Multi-Arch: foreign
+Homepage: https://github.com/masterzen/nginx-upload-progress-module
+Description-md5: 488a4ddc35482d27784766b871e61d3a
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-http-uploadprogress/libnginx-mod-http-uploadprogress_0.9.4-2_amd64.deb
+Size: 15608
+MD5sum: 1c282b9f62c98586fe66c49d0e8b000d
+SHA256: 8d924600d6ccfbe4d76a180fbe8a8e13ad98697280b44c1e32e755b4b46a96ee
+
+Package: libnginx-mod-http-upstream-fair
+Version: 1:0.0~git20120408.a18b409-6
+Installed-Size: 37
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: nginx-abi-1.26.3-1, libc6 (>= 2.4)
+Recommends: nginx
+Description: Nginx Upstream Fair Proxy Load Balancer
+Multi-Arch: foreign
+Homepage: https://github.com/gnosek/nginx-upstream-fair
+Description-md5: e1780a80134775b6bb0a8cbe12e76218
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-http-upstream-fair/libnginx-mod-http-upstream-fair_0.0~git20120408.a18b409-6_amd64.deb
+Size: 10500
+MD5sum: d347b54fe5125faa820ac01cd8336242
+SHA256: 0fdd312c6e9370db7955ca538d33eac6e1aaf7459a54e0f67d91bb45894d003c
+
+Package: libnginx-mod-http-js
+Source: libnginx-mod-js
+Version: 0.8.9-1
+Installed-Size: 1048
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: libnginx-mod-stream (<< 1.26.3.1~), libnginx-mod-stream (>= 1.26.3), nginx-abi-1.26.3-1, libc6 (>= 2.38), libxml2 (>= 2.7.4)
+Recommends: nginx
+Description: JavaScript HTTP module for Nginx
+Homepage: https://nginx.org/en/docs/njs/
+Description-md5: 61959d74cc01dded460ac2dee5c00467
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-js/libnginx-mod-http-js_0.8.9-1_amd64.deb
+Size: 340476
+MD5sum: a2a5ffa632e22b261a2541346e9f2a16
+SHA256: 2892f45cb35b3893f4d331d817ad88f5fece1934dc8b83acfe6eaa6d321a6e2c
+
+Package: libnginx-mod-stream-js
+Source: libnginx-mod-js
+Version: 0.8.9-1
+Installed-Size: 1030
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: libnginx-mod-stream (<< 1.26.3.1~), libnginx-mod-stream (>= 1.26.3), nginx-abi-1.26.3-1, libc6 (>= 2.38), libxml2 (>= 2.7.4)
+Recommends: nginx
+Description: JavaScript Stream module for Nginx
+Homepage: https://nginx.org/en/docs/njs/
+Description-md5: 619066440c51bfa4f62afc9e9eceb89a
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-js/libnginx-mod-stream-js_0.8.9-1_amd64.deb
+Size: 334116
+MD5sum: c99484e729714e8287c58e01ced2ea6a
+SHA256: e5c982c9ddde74cf5d464e8ae2d932fd7598869eb9aa0ab98a451dc39bba1f5a
+
+Package: njs
+Source: libnginx-mod-js
+Version: 0.8.9-1
+Installed-Size: 892
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: libnginx-mod-stream (>= 1.26.3), libnginx-mod-stream (<< 1.26.3.1~), libc6 (>= 2.38), libedit2 (>= 3.1-20130611-0), libpcre2-8-0 (>= 10.32), libssl3t64 (>= 3.0.0)
+Description: JavaScript for Nginx command-line utility
+Homepage: https://nginx.org/en/docs/njs/
+Description-md5: 78202d4daf8eea0a23c80e3f50fdd4f7
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-js/njs_0.8.9-1_amd64.deb
+Size: 294676
+MD5sum: 94e8fecbf6e025758266734a58876f0c
+SHA256: 6a411db62c936cbd9d1edf913f3ae8db2b7cf86a7a71f6e162b43a4c8e6a179b
+
+Package: libnginx-mod-nchan
+Version: 1:1.3.7+dfsg-2
+Installed-Size: 748
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: nginx-abi-1.26.3-1, libc6 (>= 2.38)
+Recommends: nginx
+Description: Fast, flexible pub/sub server for Nginx
+Multi-Arch: foreign
+Homepage: https://github.com/slact/nchan
+Description-md5: d6ec98083d8ecb11ff9c5cd125dedf07
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-nchan/libnginx-mod-nchan_1.3.7+dfsg-2_amd64.deb
+Size: 258868
+MD5sum: 19d514cc2530f4981353f85e7cd9cc08
+SHA256: ebdd9d0570b11a3d584bebdf95d89a3322665b9e5b3834244a7a2e788f29addf
+
+Package: libnginx-mod-rtmp
+Version: 1:1.2.2+dfsg-6
+Installed-Size: 342
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: nginx-abi-1.26.3-1, libc6 (>= 2.38)
+Recommends: nginx
+Description: RTMP support for Nginx
+Multi-Arch: foreign
+Homepage: https://github.com/arut/nginx-rtmp-module
+Description-md5: 21c88e68945f219c2a8efff37ad9e624
+httpd
+Priority: optional
+Filename: pool/main/libn/libnginx-mod-rtmp/libnginx-mod-rtmp_1.2.2+dfsg-6_amd64.deb
+Size: 117180
+MD5sum: 93be36eef281d2ae2219d13815c536ad
+SHA256: 6e06cc770c8a9b30e6f4bc4a9c7c67c41da436412dc7a1e8468ef957caf81d42
+
+Package: lighttpd
+Version: 1.4.79-2
+Installed-Size: 1035
+Maintainer: Debian lighttpd maintainers <team+lighttpd@tracker.debian.org>
+Architecture: amd64
+Provides: httpd, httpd-cgi, lighttpd-mod-accesslog, lighttpd-mod-ajp13, lighttpd-mod-auth, lighttpd-mod-authn-file, lighttpd-mod-cgi, lighttpd-mod-dirlisting, lighttpd-mod-extforward, lighttpd-mod-h2, lighttpd-mod-proxy, lighttpd-mod-rrdtool, lighttpd-mod-sockproxy, lighttpd-mod-ssi, lighttpd-mod-status, lighttpd-mod-userdir, lighttpd-mod-vhostdb, lighttpd-mod-wstunnel
+Depends: libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libnettle8t64, libpcre2-8-0 (>= 10.22), libxxhash0 (>= 0.6.5)
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: lighttpd-mod-deflate, lighttpd-mod-openssl
+Suggests: openssl, php-cgi, php-fpm (>= 2:7.4), spawn-fcgi, apache2-utils, lighttpd-doc, lighttpd-mod-webdav, lighttpd-modules-dbi, lighttpd-modules-lua, media-types | mime-support
+Description: fast webserver with minimal memory footprint
+Homepage: https://www.lighttpd.net/
+Description-md5: 3cbd5b2dae1802558158d8c2aae494ab
+Tag: implemented-in::c, interface::daemon, network::server, protocol::http,
+ protocol::ipv6, protocol::ldap, protocol::ssl, role::program,
+ scope::application, web::cgi, works-with-format::html, works-with::db,
+ works-with::text
+httpd
+Priority: optional
+Filename: pool/main/l/lighttpd/lighttpd_1.4.79-2_amd64.deb
+Size: 369812
+MD5sum: 0f4f7d6b9da616a54b623f98fc9e299b
+SHA256: 18bd2c0da4b0f31d961c4952cbca7396650a151f8b743efbb60dcf2e34ad3328
+
+Package: lighttpd-mod-authn-gssapi
+Source: lighttpd
+Version: 1.4.79-2
+Installed-Size: 34
+Maintainer: Debian lighttpd maintainers <team+lighttpd@tracker.debian.org>
+Architecture: amd64
+Depends: lighttpd (= 1.4.79-2), libc6 (>= 2.4), libgssapi-krb5-2 (>= 1.17), libkrb5-3 (>= 1.10+dfsg~)
+Description: GSSAPI authentication module for lighttpd
+Homepage: https://www.lighttpd.net/
+Description-md5: b4223412d16ad8cd37775485df76d00e
+httpd
+Priority: optional
+Filename: pool/main/l/lighttpd/lighttpd-mod-authn-gssapi_1.4.79-2_amd64.deb
+Size: 8172
+MD5sum: 3c21a37bfbc3b9aaabb61c3a2e28db5c
+SHA256: f18443abae677f1561aa196979fe59e9a0b782f3ad79c0eaccc4156cd0dae3fd
+
+Package: lighttpd-mod-authn-pam
+Source: lighttpd
+Version: 1.4.79-2
+Installed-Size: 22
+Maintainer: Debian lighttpd maintainers <team+lighttpd@tracker.debian.org>
+Architecture: amd64
+Depends: lighttpd (= 1.4.79-2), libc6 (>= 2.4), libpam0g (>= 0.99.7.1)
+Description: PAM authentication module for lighttpd
+Homepage: https://www.lighttpd.net/
+Description-md5: 7401ef4cca313be6d882b4add329ae92
+httpd
+Priority: optional
+Filename: pool/main/l/lighttpd/lighttpd-mod-authn-pam_1.4.79-2_amd64.deb
+Size: 3600
+MD5sum: 246cf33e8ff1a1139a729cdecd92a750
+SHA256: 3ba269a58eeefbf4e79d7cb65115cd3f3f8f344ede7a1aff6380139babc6329b
+
+Package: lighttpd-mod-authn-sasl
+Source: lighttpd
+Version: 1.4.79-2
+Installed-Size: 22
+Maintainer: Debian lighttpd maintainers <team+lighttpd@tracker.debian.org>
+Architecture: amd64
+Depends: lighttpd (= 1.4.79-2), libc6 (>= 2.4), libsasl2-2 (>= 2.1.28+dfsg1)
+Description: SASL authentication module for lighttpd
+Homepage: https://www.lighttpd.net/
+Description-md5: d3449f2f70a74c086b093764fe6c9043
+httpd
+Priority: optional
+Filename: pool/main/l/lighttpd/lighttpd-mod-authn-sasl_1.4.79-2_amd64.deb
+Size: 4364
+MD5sum: dc89f827d33daabcbd50ea3b8ef95abf
+SHA256: c837c95520fe7625898ef4b7c6dd925614480774d7488283099905745e434605
+
+Package: lighttpd-mod-deflate
+Source: lighttpd
+Version: 1.4.79-2
+Installed-Size: 47
+Maintainer: Debian lighttpd maintainers <team+lighttpd@tracker.debian.org>
+Architecture: amd64
+Depends: lighttpd (= 1.4.79-2), libbrotli1 (>= 0.6.0), libc6 (>= 2.33), libdeflate0 (>= 1.0), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
+Description: HTTP response compression module for lighttpd
+Homepage: https://www.lighttpd.net/
+Description-md5: 30a8855db36328d73f026c9f2f15ed34
+httpd
+Priority: optional
+Filename: pool/main/l/lighttpd/lighttpd-mod-deflate_1.4.79-2_amd64.deb
+Size: 12316
+MD5sum: 0fa47e89418d8e1c307d34719b7e2fe2
+SHA256: ab9c68b81a0476f9e50788368513450491fb7647b3908d0b74e61ae15d0c4693
+
+Package: lighttpd-mod-gnutls
+Source: lighttpd
+Version: 1.4.79-2
+Installed-Size: 77
+Maintainer: Debian lighttpd maintainers <team+lighttpd@tracker.debian.org>
+Architecture: amd64
+Depends: lighttpd (= 1.4.79-2), libc6 (>= 2.33), libgnutls30t64 (>= 3.8.6)
+Description: TLS support using GnuTLS module for lighttpd
+Homepage: https://www.lighttpd.net/
+Description-md5: 6287f63ce2c94f6c5371c50d05a9b223
+httpd
+Priority: optional
+Filename: pool/main/l/lighttpd/lighttpd-mod-gnutls_1.4.79-2_amd64.deb
+Size: 21348
+MD5sum: 5c988c446739ccb4924d353dcfc02cf0
+SHA256: d3b7cc4d34698aa751d8285d9cb8d85b4f52a34ab280e1a87cd52fb39a0734a0
+
+Package: lighttpd-mod-maxminddb
+Source: lighttpd
+Version: 1.4.79-2
+Installed-Size: 22
+Maintainer: Debian lighttpd maintainers <team+lighttpd@tracker.debian.org>
+Architecture: amd64
+Depends: lighttpd (= 1.4.79-2), libc6 (>= 2.4), libmaxminddb0 (>= 1.0.2)
+Description: GeoIP2 info module for lighttpd
+Homepage: https://www.lighttpd.net/
+Description-md5: 561b4f3fdade57e37bedbe4c997ce233
+httpd
+Priority: optional
+Filename: pool/main/l/lighttpd/lighttpd-mod-maxminddb_1.4.79-2_amd64.deb
+Size: 5028
+MD5sum: d4590bb28083353fc6e3d2b83a6985d6
+SHA256: da87050dc5f1f917ef3f60cb502f1bb93af188faa321da4a8d9f7b3414ce934a
+
+Package: lighttpd-mod-mbedtls
+Source: lighttpd
+Version: 1.4.79-2
+Installed-Size: 68
+Maintainer: Debian lighttpd maintainers <team+lighttpd@tracker.debian.org>
+Architecture: amd64
+Depends: lighttpd (= 1.4.79-2), libc6 (>= 2.33), libmbedcrypto16 (>= 3.6.0), libmbedtls21 (>= 3.6.0), libmbedx509-7 (>= 3.6.0)
+Description: TLS support using mbedTLS module for lighttpd
+Homepage: https://www.lighttpd.net/
+Description-md5: 0652ebdbc541c91c6fbd18c9393770ee
+httpd
+Priority: optional
+Filename: pool/main/l/lighttpd/lighttpd-mod-mbedtls_1.4.79-2_amd64.deb
+Size: 20480
+MD5sum: a6996e92882f24a0877614b4d4ff0f93
+SHA256: b8663a5c2e0bc2aa43ef8d192366f69155a0d2ec3cd3a6b613b4773bdef24c88
+
+Package: lighttpd-mod-nss
+Source: lighttpd
+Version: 1.4.79-2
+Installed-Size: 84
+Maintainer: Debian lighttpd maintainers <team+lighttpd@tracker.debian.org>
+Architecture: amd64
+Depends: lighttpd (= 1.4.79-2), libc6 (>= 2.33), libnspr4 (>= 2:4.9-2~), libnss3 (>= 2:3.66)
+Description: TLS support using NSS crypto module for lighttpd
+Homepage: https://www.lighttpd.net/
+Description-md5: 28f3eceeab568dafbcabb92ced8ba6e3
+httpd
+Priority: optional
+Filename: pool/main/l/lighttpd/lighttpd-mod-nss_1.4.79-2_amd64.deb
+Size: 22908
+MD5sum: f1c622a83be17677d0f3cc902ae086c5
+SHA256: ab4829c27ba684087f08eb2c48781fc39a827472e0af1c2dd0260bfb4ce140fc
+
+Package: lighttpd-mod-openssl
+Source: lighttpd
+Version: 1.4.79-2
+Installed-Size: 73
+Maintainer: Debian lighttpd maintainers <team+lighttpd@tracker.debian.org>
+Architecture: amd64
+Depends: lighttpd (= 1.4.79-2), libc6 (>= 2.38), libssl3t64 (>= 3.0.0)
+Description: TLS support using OpenSSL module for lighttpd
+Homepage: https://www.lighttpd.net/
+Description-md5: c6623bb6ca744ccf80ade19e72baf918
+httpd
+Priority: optional
+Filename: pool/main/l/lighttpd/lighttpd-mod-openssl_1.4.79-2_amd64.deb
+Size: 21052
+MD5sum: b3bcf3500cea13b5070720846334f392
+SHA256: ebef8d401eb7a71c6504ea9b48bdb48b205fda7db8df6beae938f11652c249bf
+
+Package: lighttpd-mod-vhostdb-pgsql
+Source: lighttpd
+Version: 1.4.79-2
+Installed-Size: 22
+Maintainer: Debian lighttpd maintainers <team+lighttpd@tracker.debian.org>
+Architecture: amd64
+Depends: lighttpd (= 1.4.79-2), libc6 (>= 2.4), libpq5
+Description: PostgreSQL-based virtual host configuration module for lighttpd
+Homepage: https://www.lighttpd.net/
+Description-md5: b593eb5f5e091b915eff282b56159819
+httpd
+Priority: optional
+Filename: pool/main/l/lighttpd/lighttpd-mod-vhostdb-pgsql_1.4.79-2_amd64.deb
+Size: 4216
+MD5sum: 754dafa3b64abeb838fb4e49a7a1fd90
+SHA256: 93b3ca1e54ccc99cee147a22795d91ca2e54b02a81159be15e59bc58a21168bb
+
+Package: lighttpd-mod-webdav
+Source: lighttpd
+Version: 1.4.79-2
+Installed-Size: 87
+Maintainer: Debian lighttpd maintainers <team+lighttpd@tracker.debian.org>
+Architecture: amd64
+Depends: lighttpd (= 1.4.79-2), libc6 (>= 2.38), libsqlite3-0 (>= 3.20.0), libxml2 (>= 2.7.4)
+Description: WebDAV module for lighttpd
+Homepage: https://www.lighttpd.net/
+Description-md5: 50e71fca16a2374627879656f6a14337
+Tag: implemented-in::c, protocol::webdav, role::shared-lib
+httpd
+Priority: optional
+Filename: pool/main/l/lighttpd/lighttpd-mod-webdav_1.4.79-2_amd64.deb
+Size: 27148
+MD5sum: 4e8c77b655e323a0dd1cf02aba83a41a
+SHA256: 6df31bf2ab148e2da607d30a7b3692dcedfc3b898bf443bb59c79012e4d29a4c
+
+Package: lighttpd-mod-wolfssl
+Source: lighttpd
+Version: 1.4.79-2
+Installed-Size: 76
+Maintainer: Debian lighttpd maintainers <team+lighttpd@tracker.debian.org>
+Architecture: amd64
+Depends: lighttpd (= 1.4.79-2), libc6 (>= 2.33), libwolfssl42t64 (>= 5.5.3)
+Description: TLS support using wolfSSL module for lighttpd
+Homepage: https://www.lighttpd.net/
+Description-md5: b57dad97e5cca36c3a9c6283181df241
+httpd
+Priority: optional
+Filename: pool/main/l/lighttpd/lighttpd-mod-wolfssl_1.4.79-2_amd64.deb
+Size: 21084
+MD5sum: 4d20328bfb2ba62d74799c266d5c250c
+SHA256: e4128fb7bf61930e53e3986fb196de79d4584e4a9df3bd13e5e6e92c347be8be
+
+Package: lighttpd-modules-dbi
+Source: lighttpd
+Version: 1.4.79-2
+Installed-Size: 46
+Maintainer: Debian lighttpd maintainers <team+lighttpd@tracker.debian.org>
+Architecture: amd64
+Provides: lighttpd-mod-authn-dbi, lighttpd-mod-vhostdb-dbi
+Depends: lighttpd (= 1.4.79-2), libc6 (>= 2.14), libcrypt1 (>= 1:4.1.0), libdbi1t64 (>= 0.9.0), libnettle8t64
+Description: DBI-based modules for lighttpd
+Homepage: https://www.lighttpd.net/
+Description-md5: 4cd8984307699480039a82d4bd3028cd
+httpd
+Priority: optional
+Filename: pool/main/l/lighttpd/lighttpd-modules-dbi_1.4.79-2_amd64.deb
+Size: 7796
+MD5sum: dcbef003f582153be5fb271957701278
+SHA256: c951bba5284e6b035be7b73aa2307a92336b18aa939dadc9cfbe327f7352d292
+
+Package: lighttpd-modules-ldap
+Source: lighttpd
+Version: 1.4.79-2
+Installed-Size: 50
+Maintainer: Debian lighttpd maintainers <team+lighttpd@tracker.debian.org>
+Architecture: amd64
+Provides: lighttpd-mod-authn-ldap, lighttpd-mod-vhostdb-ldap
+Depends: lighttpd (= 1.4.79-2), libc6 (>= 2.38), libldap2 (>= 2.6.2)
+Description: LDAP-based modules for lighttpd
+Homepage: https://www.lighttpd.net/
+Description-md5: ccab7512c20ac6dd2f055dc6171e541e
+httpd
+Priority: optional
+Filename: pool/main/l/lighttpd/lighttpd-modules-ldap_1.4.79-2_amd64.deb
+Size: 10620
+MD5sum: eb3876dfb79bedd46d4c612dc94a83db
+SHA256: 1ab03deb2ad2b335cf741a4183227076b34edafb317c22f82e6dbc374cc45361
+
+Package: lighttpd-modules-lua
+Source: lighttpd
+Version: 1.4.79-2
+Installed-Size: 83
+Maintainer: Debian lighttpd maintainers <team+lighttpd@tracker.debian.org>
+Architecture: amd64
+Provides: lighttpd-mod-magnet
+Depends: lighttpd (= 1.4.79-2), libc6 (>= 2.38), liblua5.4-0 (>= 5.4.6), libnettle8t64
+Description: LUA-based modules for lighttpd
+Homepage: https://www.lighttpd.net/
+Description-md5: 6da7f32d5e2d0e0f8330d329063c526e
+httpd
+Priority: optional
+Filename: pool/main/l/lighttpd/lighttpd-modules-lua_1.4.79-2_amd64.deb
+Size: 22820
+MD5sum: 6a20f998b67a1e0afe4d4a321f9a2b1d
+SHA256: e5ca5c7a999ea0d1d0b5cbb5bbd9ba30cb027d83204702a5b047ed25d6a31912
+
+Package: lighttpd-modules-mysql
+Source: lighttpd
+Version: 1.4.79-2
+Installed-Size: 22
+Maintainer: Debian lighttpd maintainers <team+lighttpd@tracker.debian.org>
+Architecture: amd64
+Provides: lighttpd-mod-vhostdb-mysql
+Depends: lighttpd (= 1.4.79-2), libc6 (>= 2.38), libmariadb3 (>= 3.0.0)
+Description: MySQL-based modules for lighttpd
+Homepage: https://www.lighttpd.net/
+Description-md5: 6c76038db76e343a9cd71837c369a03f
+httpd
+Priority: optional
+Filename: pool/main/l/lighttpd/lighttpd-modules-mysql_1.4.79-2_amd64.deb
+Size: 4476
+MD5sum: 47d3bf061e0e44221695f2521af0c8c0
+SHA256: fff14cbe3e846f39cd13f96525f2c18f86b5f56d21211000af5839cc4fa8fdb3
+
+Package: micro-httpd
+Version: 20140814-3
+Installed-Size: 50
+Maintainer: Sudip Mukherjee <sudipm.mukherjee@gmail.com>
+Architecture: amd64
+Provides: httpd
+Depends: update-inetd | inet-superserver | openbsd-inetd | inetutils-inetd | rlinetd | xinetd, libc6 (>= 2.34)
+Suggests: micro-proxy
+Description: really small HTTP server
+Homepage: https://www.acme.com/software/micro_httpd
+Description-md5: 99c5bca2bdac366fb2a39cb9669e8fb8
+Tag: implemented-in::c, interface::daemon, network::server, protocol::http,
+ role::program, scope::application, web::server,
+ works-with-format::html, works-with::text
+httpd
+Priority: optional
+Filename: pool/main/m/micro-httpd/micro-httpd_20140814-3_amd64.deb
+Size: 12840
+MD5sum: 1e74d1370ca20ef3e7633f73161d140b
+SHA256: 09ae7f6aaa988768b2c12fda5373ccb5c357fc33513a25e12813884930626e84
+
+Package: mini-httpd
+Version: 1.30-13
+Installed-Size: 132
+Maintainer: Alexandru Mihail <alexandru.mihail2897@gmail.com>
+Architecture: amd64
+Provides: httpd, httpd-cgi
+Depends: libc6 (>= 2.34), libcrypt1 (>= 1:4.1.0), libssl3t64 (>= 3.0.0)
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: apache2-utils
+Description: Small HTTP server
+Homepage: https://www.acme.com/software/mini_httpd
+Description-md5: 7d12143ac090f2ecfad5af7f3b598365
+httpd
+Priority: optional
+Filename: pool/main/m/mini-httpd/mini-httpd_1.30-13_amd64.deb
+Size: 47436
+MD5sum: aacdacde2d7835922cb96e1c7ff47a16
+SHA256: 75ee4fc36d37862ca9eeaf36ea9be911837eba6f02842aa8d75144b2c06e8ad9
+
+Package: libapache2-mod-dnssd
+Source: mod-dnssd
+Version: 0.6-5
+Installed-Size: 54
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Depends: avahi-daemon (>= 0.6.5), apache2-api-20120211, apache2-bin (>= 2.4.16), libapr1t64 (>= 1.2.7), libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libc6 (>= 2.38)
+Description: Zeroconf support for Apache 2 via avahi
+Homepage: https://0pointer.de/lennart/projects/mod_dnssd/
+Description-md5: 06421ab634a09cd57984978e68878b16
+Tag: implemented-in::c, protocol::zeroconf, role::shared-lib, suite::apache
+httpd
+Priority: optional
+Filename: pool/main/m/mod-dnssd/libapache2-mod-dnssd_0.6-5_amd64.deb
+Size: 13992
+MD5sum: bcef1d422119f5559c153219d97c56d4
+SHA256: 26872d55f5b38910b417f4dc5da75cb7ed971fcf94e7837fe46a467a85164dcc
+
+Package: libapache2-mod-mime-xattr
+Source: mod-mime-xattr
+Version: 0.4-9
+Installed-Size: 37
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Depends: apache2-api-20120211, libapr1t64 (>= 1.2.7), libc6 (>= 2.4)
+Description: Apache2 module to get MIME info from filesystem extended attributes
+Description-md5: 8209d37904bea1997936de3ee2559e5e
+Tag: implemented-in::c, role::plugin, role::program, suite::apache,
+ works-with::file
+httpd
+Priority: optional
+Filename: pool/main/m/mod-mime-xattr/libapache2-mod-mime-xattr_0.4-9_amd64.deb
+Size: 8916
+MD5sum: 570470fce6a048c03e24111999255f6d
+SHA256: 0a771da8b1b357655d4edeab829d4f36d2484e532ca2eb1586292d5a4eecb288
+
+Package: libapache2-mod-qos
+Source: mod-qos
+Version: 11.76-4
+Installed-Size: 1567
+Maintainer: Daniel Baumann <daniel@debian.org>
+Architecture: amd64
+Depends: apache2-api-20120211, apache2-bin (>= 2.4.16), libapr1t64 (>= 1.3.2), libc6 (>= 2.38), libpcre2-8-0 (>= 10.22), libssl3t64 (>= 3.0.0)
+Description: quality of service module for the apache2
+Homepage: https://mod-qos.sourceforge.net
+Description-md5: 400a8d30ea4ebdb2cc235b07fd997909
+Tag: implemented-in::c, role::plugin, suite::apache
+httpd
+Priority: optional
+Filename: pool/main/m/mod-qos/libapache2-mod-qos_11.76-4_amd64.deb
+Size: 1127536
+MD5sum: 74473eaf1b4f9cf5e2568bfa90cb9374
+SHA256: c4a345ae548e8c616e9953af21a7656af71e2417077b641392a7d4c5a52fc87b
+
+Package: libapache2-mod-vhost-ldap
+Source: mod-vhost-ldap (2.4.0-1)
+Version: 2.4.0-1+b4
+Installed-Size: 57
+Maintainer: Ondřej Surý <ondrej@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libldap2 (>= 2.6.2), apache2-api-20120211, apache2-bin (>= 2.4.16)
+Description: Apache 2 module for Virtual Hosting from LDAP
+Description-md5: be61ef3709d6e9442e1c42b2b2bcc1e4
+Tag: role::shared-lib, suite::apache
+httpd
+Priority: optional
+Filename: pool/main/m/mod-vhost-ldap/libapache2-mod-vhost-ldap_2.4.0-1+b4_amd64.deb
+Size: 13388
+MD5sum: 5dc7db433ea1325aa878e820f3781408
+SHA256: e0bb4d715b7cc08f7725c51d1da346fd301003a4561c99c68265cba80640c5ca
+
+Package: libapache2-mod-wsgi-py3
+Source: mod-wsgi
+Version: 5.0.2-1
+Installed-Size: 296
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: amd64
+Provides: httpd-wsgi3
+Depends: apache2-api-20120211, apache2-bin (>= 2.4.16), python3 (>= 3.13), python3 (<< 3.14), libc6 (>= 2.38), libpython3.13 (>= 3.13.0~rc3)
+Conflicts: libapache2-mod-wsgi
+Description: Python 3 WSGI adapter module for Apache
+Homepage: http://www.modwsgi.org/
+Description-md5: 9804c7965adca269cbc58c4a8eb236d8
+Tag: role::shared-lib, suite::apache
+httpd
+Priority: optional
+Filename: pool/main/m/mod-wsgi/libapache2-mod-wsgi-py3_5.0.2-1_amd64.deb
+Size: 99160
+MD5sum: 2500439281602e3ea315349be9ca4946
+SHA256: 4f3a5467a9ed12ffc9900af06ada0e7ff598fb2dcef864d81945b94d135c85df
+
+Package: libapache2-mod-security2
+Source: modsecurity-apache
+Version: 2.9.11-1
+Installed-Size: 1113
+Maintainer: Ervin Hegedus <airween@gmail.com>
+Architecture: amd64
+Depends: libxml2 (>= 2.9.14), libapr1t64 (>= 1.2.7), libaprutil1t64 (>= 1.4.0), libc6 (>= 2.38), libcurl3t64-gnutls (>= 7.16.2), liblua5.1-0 (>= 5.1.3), libpcre2-8-0 (>= 10.32), libyajl2 (>= 2.0.4), apache2-api-20120211, apache2-bin (>= 2.4.16)
+Recommends: modsecurity-crs
+Description: Tighten web applications security for Apache
+Homepage: https://github.com/SpiderLabs/ModSecurity
+Description-md5: 198ee1322fd8f21e7b0987f6dfb5edc3
+httpd
+Priority: optional
+Filename: pool/main/m/modsecurity-apache/libapache2-mod-security2_2.9.11-1_amd64.deb
+Size: 265400
+MD5sum: 4d78daf501bd6fbbef558504916e8672
+SHA256: f24ea9da58be522938a127f926067390b1f8a57d6d8736571152f431a5cea86c
+
+Package: modsecurity-crs
+Version: 3.3.7-1
+Installed-Size: 883
+Maintainer: Ervin Hegedus <airween@gmail.com>
+Architecture: all
+Suggests: lua, geoip-database-contrib, ruby, python, libapache2-mod-security2 (>= 2.9.6)
+Description: OWASP ModSecurity Core Rule Set
+Multi-Arch: foreign
+Homepage: https://coreruleset.org
+Description-md5: 65af50bcdf2af9c91661490681ea62bd
+httpd
+Priority: optional
+Filename: pool/main/m/modsecurity-crs/modsecurity-crs_3.3.7-1_all.deb
+Size: 163748
+MD5sum: a1c48c9b5c0956778c853a53d12514e3
+SHA256: 2aa10293c1634db5bfe5fa651dca8b7c62692fdeb726245d26437cfb61008a83
+
+Package: libapache2-mpm-itk
+Source: mpm-itk
+Version: 2.4.7-04-2
+Installed-Size: 52
+Maintainer: Steinar H. Gunderson <sesse@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libcap2 (>= 1:2.10), apache2-api-20120211, apache2-bin (>= 2.4.16)
+Description: multiuser module for Apache
+Homepage: http://mpm-itk.sesse.net/
+Description-md5: b644c5fc7698218780d7e4130a4d369b
+httpd
+Priority: optional
+Filename: pool/main/m/mpm-itk/libapache2-mpm-itk_2.4.7-04-2_amd64.deb
+Size: 14508
+MD5sum: 91aaf9b53c887f84330401baf05ab328
+SHA256: 8306d31d4ae37d2771a2704cafa00f2d88dea5998a22089439d088f94fc953bd
+
+Package: libapache2-mod-neko
+Source: neko (2.4.0-2)
+Version: 2.4.0-2+b1
+Installed-Size: 31
+Maintainer: Andy Li <andy@onthewings.net>
+Architecture: amd64
+Depends: neko (>= 2.4.0-2), apache2-api-20120211, apache2-bin (>= 2.4.16)
+Description: Apache module for running server-side Neko programs
+Homepage: https://nekovm.org
+Description-md5: 32f9af8a7181300294b4450a424c758c
+Tag: role::shared-lib, suite::apache
+httpd
+Priority: optional
+Filename: pool/main/n/neko/libapache2-mod-neko_2.4.0-2+b1_amd64.deb
+Size: 12948
+MD5sum: 9ceeb273e4504dc39e82c121a42a0e43
+SHA256: bb94e117a49b6517f950c8bc491e712ec4672a92b59b4202c5a80b906a61b0d1
+
+Package: nghttp2
+Version: 1.64.0-1.1
+Installed-Size: 20
+Maintainer: Tomasz Buchert <tomasz@debian.org>
+Architecture: all
+Depends: nghttp2-client (>= 1.64.0-1.1), nghttp2-proxy (>= 1.64.0-1.1), nghttp2-server (>= 1.64.0-1.1)
+Description: server, proxy and client implementing HTTP/2
+Multi-Arch: foreign
+Homepage: https://nghttp2.org/
+Description-md5: ca84fd3762013e2b3766232f5365fa1f
+httpd
+Priority: optional
+Filename: pool/main/n/nghttp2/nghttp2_1.64.0-1.1_all.deb
+Size: 8592
+MD5sum: d287be869c750567ffad49bbb5936ca4
+SHA256: bf6efad0aebaf8b64564e8f552e376cfa43ba1da3e4e6306b4700c7f72518edb
+
+Package: nghttp2-client
+Source: nghttp2
+Version: 1.64.0-1.1
+Installed-Size: 639
+Maintainer: Tomasz Buchert <tomasz@debian.org>
+Architecture: amd64
+Replaces: nghttp2 (<< 1.3.4-2~)
+Depends: libnghttp2-14 (= 1.64.0-1.1), libc6 (>= 2.34), libev4t64 (>= 1:4.04), libgcc-s1 (>= 3.0), libjansson4 (>= 2.14), libjemalloc2 (>= 5.3.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 13.1), libxml2 (>= 2.7.4), zlib1g (>= 1:1.1.4)
+Breaks: nghttp2 (<< 1.3.4-2~)
+Description: client implementing HTTP/2 protocol
+Multi-Arch: foreign
+Homepage: https://nghttp2.org/
+Description-md5: c9f9eea931674bd2c6a88fff60dc43ef
+httpd
+Priority: optional
+Filename: pool/main/n/nghttp2/nghttp2-client_1.64.0-1.1_amd64.deb
+Size: 190788
+MD5sum: 7d13a9daf5bb8bf0fae70e258a0c76e3
+SHA256: a7b47ad6ad0d9f4f047812136fa1895de654a863eabd603806c50603afd1ab9e
+
+Package: nghttp2-proxy
+Source: nghttp2
+Version: 1.64.0-1.1
+Installed-Size: 1210
+Maintainer: Tomasz Buchert <tomasz@debian.org>
+Architecture: amd64
+Replaces: nghttp2 (<< 1.3.4-2~)
+Depends: libnghttp2-14 (= 1.64.0-1.1), openssl, python3, libc6 (>= 2.34), libcares2 (>= 1.16.0), libev4t64 (>= 1:4.04), libgcc-s1 (>= 3.0), libjemalloc2 (>= 5.3.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 13.1), libsystemd0
+Breaks: nghttp2 (<< 1.3.4-2~)
+Description: reverse proxy implementing HTTP/2 protocol
+Multi-Arch: foreign
+Homepage: https://nghttp2.org/
+Description-md5: 8e735de4aa891e6f34f1f0121d726cb0
+httpd
+Priority: optional
+Filename: pool/main/n/nghttp2/nghttp2-proxy_1.64.0-1.1_amd64.deb
+Size: 429484
+MD5sum: 02e9434a89a8257831f67da5b080ad95
+SHA256: 20309a013c41521388acb8acbd3a9d3693bf1f4bda1d63ab96c5ea7adb7177fb
+
+Package: nghttp2-server
+Source: nghttp2
+Version: 1.64.0-1.1
+Installed-Size: 295
+Maintainer: Tomasz Buchert <tomasz@debian.org>
+Architecture: amd64
+Replaces: nghttp2 (<< 1.3.4-2~)
+Depends: libnghttp2-14 (= 1.64.0-1.1), libc6 (>= 2.34), libev4t64 (>= 1:4.04), libgcc-s1 (>= 3.0), libjemalloc2 (>= 5.3.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 13.1), zlib1g (>= 1:1.1.4)
+Breaks: nghttp2 (<< 1.3.4-2~)
+Description: server implementing HTTP/2 protocol
+Multi-Arch: foreign
+Homepage: https://nghttp2.org/
+Description-md5: 1d388440c4e8648708dbc32d3eda635d
+httpd
+Priority: optional
+Filename: pool/main/n/nghttp2/nghttp2-server_1.64.0-1.1_amd64.deb
+Size: 111920
+MD5sum: 4d66449aeefb7b62c2197ade89a88d61
+SHA256: fd84f8e45aefaa58821f86a4ce58c96a268982e0983d4fdd744696bea0254153
+
+Package: libnginx-mod-http-geoip
+Source: nginx
+Version: 1.26.3-3
+Installed-Size: 117
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: nginx-abi-1.26.3-1, libc6 (>= 2.14), libgeoip1t64 (>= 1.6.12)
+Recommends: nginx
+Description: GeoIP HTTP module for Nginx
+Homepage: https://nginx.org
+Description-md5: b9336eed4064843a4bc5981a2d63799f
+httpd
+Priority: optional
+Filename: pool/main/n/nginx/libnginx-mod-http-geoip_1.26.3-3_amd64.deb
+Size: 87788
+MD5sum: ae6f43d310f3e2a15d557c3eaa4b6bdf
+SHA256: d670d301a9442c52802701d018cdadcd752cc72b631b32cf284178ae042702d7
+
+Package: libnginx-mod-http-image-filter
+Source: nginx
+Version: 1.26.3-3
+Installed-Size: 124
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: nginx-abi-1.26.3-1, libc6 (>= 2.14), libgd3 (>= 2.1.0~alpha~)
+Recommends: nginx
+Description: HTTP image filter module for Nginx
+Homepage: https://nginx.org
+Description-md5: 535a70647715aa7261dd5afba363a14e
+httpd
+Priority: optional
+Filename: pool/main/n/nginx/libnginx-mod-http-image-filter_1.26.3-3_amd64.deb
+Size: 91568
+MD5sum: 085b84df9c1f3e08593a3ec9323402ea
+SHA256: fbe286251660fb004492798bf8202befc61ef40fdceec685ef4c84e240431665
+
+Package: libnginx-mod-http-perl
+Source: nginx
+Version: 1.26.3-3
+Installed-Size: 173
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: nginx-abi-1.26.3-1, perl (>= 5.40.1-3), perlapi-5.40.1, libc6 (>= 2.34), libperl5.40 (>= 5.40.0)
+Recommends: nginx
+Description: Perl module for Nginx
+Homepage: https://nginx.org
+Description-md5: e53a1df1937247757c6e3b6896311998
+httpd
+Priority: optional
+Filename: pool/main/n/nginx/libnginx-mod-http-perl_1.26.3-3_amd64.deb
+Size: 99996
+MD5sum: 47d024bd19deacfa98416e744f79d54a
+SHA256: 31c23d71232342bdea0bec979bc2fe34435140928650f627ae8218bff7274c63
+
+Package: libnginx-mod-http-xslt-filter
+Source: nginx
+Version: 1.26.3-3
+Installed-Size: 120
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: nginx-abi-1.26.3-1, libc6 (>= 2.14), libxml2 (>= 2.7.4), libxslt1.1 (>= 1.1.25)
+Recommends: nginx
+Description: XSLT Transformation module for Nginx
+Homepage: https://nginx.org
+Description-md5: 220a355cd5960cebcfeecdf8fad48bf1
+httpd
+Priority: optional
+Filename: pool/main/n/nginx/libnginx-mod-http-xslt-filter_1.26.3-3_amd64.deb
+Size: 90044
+MD5sum: b788925fd75bfb7495ae2cda49562d25
+SHA256: 0004e01aef77db2c9d8d68112259d2c7ae2bab9dd66e276db4a783ab0bc4e7f7
+
+Package: libnginx-mod-mail
+Source: nginx
+Version: 1.26.3-3
+Installed-Size: 211
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: nginx-abi-1.26.3-1, libc6 (>= 2.14)
+Recommends: nginx
+Description: Mail module for Nginx
+Homepage: https://nginx.org
+Description-md5: 5a8936b4abef181be2268c3d9a4affdf
+httpd
+Priority: optional
+Filename: pool/main/n/nginx/libnginx-mod-mail_1.26.3-3_amd64.deb
+Size: 121800
+MD5sum: 292f4f4cb40f89d84f674a331d502fb9
+SHA256: c8e041ab3d1f0b3953edb8ba6009927cfcd18298c45a93649f4f5d37cee27dac
+
+Package: libnginx-mod-stream
+Source: nginx
+Version: 1.26.3-3
+Installed-Size: 292
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: nginx-abi-1.26.3-1, libc6 (>= 2.33)
+Recommends: nginx
+Description: Stream module for Nginx
+Homepage: https://nginx.org
+Description-md5: ba1a6cc2e678c099e6cc2d0f828a0706
+httpd
+Priority: optional
+Filename: pool/main/n/nginx/libnginx-mod-stream_1.26.3-3_amd64.deb
+Size: 151656
+MD5sum: 07a74ec164bd389579722d5518f2e5a2
+SHA256: 595432aceb022fcd316e89b5e5b83c2b741ca06e59e0aea8fa41ad8ae3066a12
+
+Package: libnginx-mod-stream-geoip
+Source: nginx
+Version: 1.26.3-3
+Installed-Size: 117
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: nginx-abi-1.26.3-1, libc6 (>= 2.14), libgeoip1t64 (>= 1.6.12), libnginx-mod-stream (= 1.26.3-3)
+Recommends: nginx
+Description: GeoIP Stream module for Nginx
+Homepage: https://nginx.org
+Description-md5: 39b7da5ef1607467992a06519853ebe5
+httpd
+Priority: optional
+Filename: pool/main/n/nginx/libnginx-mod-stream-geoip_1.26.3-3_amd64.deb
+Size: 86952
+MD5sum: a4abccac7a010d55b6f21b7f29f0d7bc
+SHA256: 3bba9e9522f5ee8193542f57960c5807412e6e3744487ef4f4b1212f25253bd0
+
+Package: nginx
+Version: 1.26.3-3
+Installed-Size: 1550
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Replaces: nginx-core (<< 1.22.1-6~), nginx-extras (<< 1.22.1-6~), nginx-light (<< 1.22.1-6~)
+Provides: httpd, httpd-cgi, nginx-abi-1.26.3-1
+Depends: libc6 (>= 2.34), libcrypt1 (>= 1:4.1.0), libpcre2-8-0 (>= 10.22), libssl3t64 (>= 3.0.0), zlib1g (>= 1:1.1.4), iproute2, nginx-common (= 1.26.3-3)
+Breaks: nginx-core (<< 1.22.1-6~), nginx-extras (<< 1.22.1-6~), nginx-light (<< 1.22.1-6~)
+Description: small, powerful, scalable web/proxy server
+Homepage: https://nginx.org
+Description-md5: cb534cf82475d3e706f730549c99229f
+Tag: implemented-in::c, interface::daemon, network::server, network::service,
+ protocol::http, role::program, use::proxying
+httpd
+Priority: optional
+Filename: pool/main/n/nginx/nginx_1.26.3-3_amd64.deb
+Size: 609368
+MD5sum: fa414ff6dbcc1a4aa630a12c3c49148b
+SHA256: 817e84368b4b4e1d90ae795841b5518c4918d59d9601042e319f5cc3483102c8
+
+Package: nginx-common
+Source: nginx
+Version: 1.26.3-3
+Installed-Size: 297
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: all
+Replaces: nginx (<< 1.22.1-8)
+Depends: debconf (>= 0.5) | debconf-2.0
+Suggests: fcgiwrap, nginx-doc, ssl-cert
+Breaks: nginx (<< 1.22.1-8)
+Description: small, powerful, scalable web/proxy server - common files
+Multi-Arch: foreign
+Homepage: https://nginx.org
+Description-md5: 9e23931d84d07adbee5412aefdad8a90
+Tag: role::app-data
+httpd
+Priority: optional
+Filename: pool/main/n/nginx/nginx-common_1.26.3-3_all.deb
+Size: 108652
+MD5sum: f44597aebd89bd72613b0c7ade9544fd
+SHA256: 4d7611b2f99e37dcc4e9a058158a51ca2d04c022b7674611c11ee7ede89b3e90
+
+Package: nginx-core
+Source: nginx
+Version: 1.26.3-3
+Installed-Size: 89
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: all
+Replaces: nginx-full (<< 1.18.0-1)
+Depends: libnginx-mod-http-geoip (>= 1.26.3-3), libnginx-mod-http-geoip (<< 1.26.3-3.1~), libnginx-mod-http-image-filter (>= 1.26.3-3), libnginx-mod-http-image-filter (<< 1.26.3-3.1~), libnginx-mod-http-xslt-filter (>= 1.26.3-3), libnginx-mod-http-xslt-filter (<< 1.26.3-3.1~), libnginx-mod-mail (>= 1.26.3-3), libnginx-mod-mail (<< 1.26.3-3.1~), libnginx-mod-stream (>= 1.26.3-3), libnginx-mod-stream (<< 1.26.3-3.1~), libnginx-mod-stream-geoip (>= 1.26.3-3), libnginx-mod-stream-geoip (<< 1.26.3-3.1~), nginx (>= 1.26.3-3), nginx (<< 1.26.3-3.1~)
+Breaks: nginx-full (<< 1.18.0-1)
+Description: nginx web/proxy server (standard version)
+Homepage: https://nginx.org
+Description-md5: e85c58ee97847a5147d2960542e84a35
+httpd
+Priority: optional
+Filename: pool/main/n/nginx/nginx-core_1.26.3-3_all.deb
+Size: 83076
+MD5sum: b52e9d6833d8c6a4a63dd0d530b01938
+SHA256: f30106b18fba7234c39b2b3566472ab3d6d5abbec9809e688a0b297df9473304
+
+Package: nginx-dev
+Source: nginx
+Version: 1.26.3-3
+Installed-Size: 921
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: all
+Provides: dh-sequence-nginx
+Depends: debhelper-compat (= 13), libexpat-dev, libgd-dev, libgeoip-dev, libpcre2-dev, libperl-dev, libssl-dev, libxslt1-dev, po-debconf, zlib1g-dev, nginx-abi-1.26.3-1, nginx (<< 1.26.3-3.1~), nginx (>= 1.26.3-3)
+Description: nginx web/proxy server - development headers
+Multi-Arch: foreign
+Homepage: https://nginx.org
+Description-md5: 387bf5738ea8e41f4461abf0d6b13b30
+httpd
+Priority: optional
+Filename: pool/main/n/nginx/nginx-dev_1.26.3-3_all.deb
+Size: 195960
+MD5sum: 2ae49c13490bc2f0b2d4fae665feb3d0
+SHA256: 9ae690f99c2a530f33726dd36aa0b076dac30ae410ad7b6c1c2945df44247d62
+
+Package: nginx-extras
+Source: nginx
+Version: 1.26.3-3
+Installed-Size: 89
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: nginx (= 1.26.3-3), libnginx-mod-http-geoip (= 1.26.3-3), libnginx-mod-http-image-filter (= 1.26.3-3), libnginx-mod-http-perl (= 1.26.3-3), libnginx-mod-http-xslt-filter (= 1.26.3-3), libnginx-mod-mail (= 1.26.3-3), libnginx-mod-stream (= 1.26.3-3), libnginx-mod-stream-geoip (= 1.26.3-3), libnginx-mod-http-auth-pam, libnginx-mod-http-cache-purge, libnginx-mod-http-dav-ext, libnginx-mod-http-echo, libnginx-mod-http-fancyindex, libnginx-mod-http-geoip2, libnginx-mod-http-headers-more-filter, libnginx-mod-http-lua, libnginx-mod-http-subs-filter, libnginx-mod-http-uploadprogress, libnginx-mod-http-upstream-fair, libnginx-mod-nchan, libnginx-mod-stream-geoip2
+Description: nginx web/proxy server (extended version)
+Homepage: https://nginx.org
+Description-md5: 1d3b9fb345563354827d5cafdc42a135
+httpd
+Priority: optional
+Filename: pool/main/n/nginx/nginx-extras_1.26.3-3_amd64.deb
+Size: 83224
+MD5sum: a5e6009c26c4268f5065662687fb1f15
+SHA256: 64f66aa413765b8f8c88f8c8d2031a2c785bf9137268221b9749c716f2bbbb16
+
+Package: nginx-full
+Source: nginx
+Version: 1.26.3-3
+Installed-Size: 89
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: all
+Depends: libnginx-mod-http-auth-pam, libnginx-mod-http-dav-ext, libnginx-mod-http-echo, libnginx-mod-http-geoip2, libnginx-mod-http-subs-filter, libnginx-mod-http-upstream-fair, libnginx-mod-stream-geoip2, nginx (>= 1.26.3-3), nginx (<< 1.26.3-3.1~)
+Description: nginx web/proxy server (standard version with 3rd parties)
+Homepage: https://nginx.org
+Description-md5: 38101909ef24536167f0acdee4f45ef9
+Tag: network::server, protocol::http, role::program
+httpd
+Priority: optional
+Filename: pool/main/n/nginx/nginx-full_1.26.3-3_all.deb
+Size: 83092
+MD5sum: 923040dfd1268fd83f70107876c1a81c
+SHA256: 4f5b1f20e47aa6e6aac7cad0b7323c3d319f34817f0a32d81108e1fa4e5f5121
+
+Package: nginx-light
+Source: nginx
+Version: 1.26.3-3
+Installed-Size: 89
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Architecture: all
+Depends: libnginx-mod-http-echo, nginx (>= 1.26.3-3), nginx (<< 1.26.3-3.1~)
+Description: nginx web/proxy server (basic version)
+Homepage: https://nginx.org
+Description-md5: 3988a4d9cebce50812e3e3cb815d6200
+Tag: implemented-in::c, interface::daemon, network::server, protocol::http,
+ role::program, web::server
+httpd
+Priority: optional
+Filename: pool/main/n/nginx/nginx-light_1.26.3-3_all.deb
+Size: 82840
+MD5sum: a44dcf4ce0cfefdb21b2fcf6b9f7fe61
+SHA256: 585fedb291193206116823846eeae6e9d87e27f02fb4d619e8274bbb79f24e43
+
+Package: libapache2-mod-netcgi-apache
+Source: ocamlnet (4.1.9-6)
+Version: 4.1.9-6+b3
+Installed-Size: 805
+Maintainer: Debian OCaml Maintainers <debian-ocaml-maint@lists.debian.org>
+Architecture: amd64
+Replaces: libapache2-mod-ocamlnet (<< 3.6)
+Provides: libapache2-mod-ocamlnet
+Depends: libocamlnet-ocaml-dev (= 4.1.9-6+b3), libc6 (>= 2.34), apache2-api-20120211, apache2-bin (>= 2.4.16)
+Breaks: libapache2-mod-ocamlnet (<< 3.6)
+Description: OCaml application-level Internet libraries - netcgi2 Apache2 connector
+Homepage: http://projects.camlcity.org/projects/ocamlnet.html
+Description-md5: 0c0de36bd4098c36644a0b2c3988d000
+httpd
+Priority: optional
+Filename: pool/main/o/ocamlnet/libapache2-mod-netcgi-apache_4.1.9-6+b3_amd64.deb
+Size: 134996
+MD5sum: 6ec2ea0bf122c789e0d653a79d6727e5
+SHA256: 4816dc00b0bc38036f1c6c2d792fe89b94d03b7d4439a31814bebe57640d92e3
+
+Package: ocsigenserver
+Source: ocsigenserver (6.0.0-1)
+Version: 6.0.0-1+b9
+Installed-Size: 21689
+Maintainer: Debian OCaml Maintainers <debian-ocaml-maint@lists.debian.org>
+Architecture: amd64
+Depends: libangstrom-ocaml-t3dv4, libastring-ocaml-5e7v3, libbase64-ocaml-he9q2, libbigstringaf-ocaml-nbhp2, libcohttp-lwt-ocaml-p3nw7, libcohttp-lwt-unix-ocaml-tu0i8, libcohttp-ocaml-r3p82, libconduit-lwt-ocaml-ugz86, libconduit-ocaml-jfus0, libcryptokit-ocaml-bygy5, libdomain-name-ocaml-bga74, libfindlib-ocaml-8k3o3, libfmt-ocaml-koo31, libipaddr-ocaml-45r10, liblogs-ocaml-jqsp7, liblwt-log-ocaml-dz1h5, liblwt-ocaml-mo111, liblwt-ssl-ocaml-v2is5, libmagic-mime-ocaml-vkdl5, libocplib-endian-ocaml-wwo11, libocsigenserver-ocaml-lf391, libppx-sexp-conv-ocaml-ozv56, libsexplib0-ocaml-yj523, libssl-ocaml-591e3, libstdlib-ocaml-m4xw9, libstringext-ocaml-568u2, liburi-ocaml-g3wp4, libxml-light-ocaml-uefm1, libzarith-ocaml-h79v1, ocaml-base-5.3.0, libc6 (>= 2.38), libev4t64 (>= 1:4.04), libgmp10 (>= 2:6.3.0+dfsg), libssl3t64 (>= 3.0.0), zlib1g (>= 1:1.1.4)
+Suggests: ocsigenserver-doc
+Description: web server of the Ocsigen project
+Homepage: https://ocsigen.org/ocsigenserver/
+Description-md5: 635eae691583f148ead250733aee1445
+httpd
+Priority: optional
+Filename: pool/main/o/ocsigenserver/ocsigenserver_6.0.0-1+b9_amd64.deb
+Size: 6680164
+MD5sum: 189c2eaa2d733ee8a0dddfc0989a26b3
+SHA256: 8e9a520ab270a577d096bd52b5acda3cf783a60b78e40654c03bdeb397b97e28
+
+Package: libapache2-mod-parser3
+Source: parser
+Version: 3.5.1-2
+Installed-Size: 1625
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Depends: parser3-common (= 3.5.1-2), apache2-api-20120211, apache2-bin (>= 2.4.16), libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libgc1 (>= 1:7.2d), libgcc-s1 (>= 3.0), libltdl7 (>= 2.5.4), libpcre2-8-0 (>= 10.22), libstdc++6 (>= 5), libxml2 (>= 2.9.0), libxslt1.1 (>= 1.1.25)
+Description: Parser 3, HTML-embedded scripting language (Apache2 module)
+Homepage: http://www.parser.ru/en/
+Description-md5: 7471b0ff89c8b76af84ea34587b1b0cd
+Tag: devel::interpreter, implemented-in::c++, role::plugin, suite::apache
+httpd
+Priority: optional
+Filename: pool/main/p/parser/libapache2-mod-parser3_3.5.1-2_amd64.deb
+Size: 521444
+MD5sum: 42dc637d46297daf03cd8561c122582b
+SHA256: 34cc87354ca818da24fe176cc42dfb77647236ba2c677a5cb8917b6a8c59dd78
+
+Package: libapache2-mod-passenger
+Source: passenger
+Version: 6.0.26+ds-1.1
+Installed-Size: 1156
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: passenger (= 6.0.26+ds-1.1), apache2-api-20120211, apache2-bin (>= 2.4.16), libapr1t64 (>= 1.2.7), libaprutil1t64 (>= 1.2.7+dfsg), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
+Description: web application server - apache2 integration
+Homepage: https://www.phusionpassenger.com/
+Description-md5: 41fdf485deea0b877e489823da479045
+Tag: implemented-in::python, implemented-in::ruby, role::plugin,
+ role::shared-lib, suite::apache
+httpd
+Priority: optional
+Filename: pool/main/p/passenger/libapache2-mod-passenger_6.0.26+ds-1.1_amd64.deb
+Size: 416192
+MD5sum: d2851d6dd7d7c15490b2e80259175ffe
+SHA256: 63f192eecd48857ace415675e04a61c0e15529f43147ace2c6a53de52d3d1630
+
+Package: libapache2-mod-php8.4
+Source: php8.4
+Version: 8.4.11-1
+Installed-Size: 5856
+Maintainer: Debian PHP Maintainers <team+pkg-php@tracker.debian.org>
+Architecture: amd64
+Provides: libapache2-mod-php, php-json, php8.4-json, phpapi-20240924
+Depends: media-types | mime-support, php8.4-cli, php8.4-common (= 8.4.11-1), php8.4-opcache, tzdata, ucf, apache2-api-20120211, apache2-bin (>= 2.4.16), libargon2-1 (>= 0~20171227), libc6 (>= 2.38), libpcre2-8-0 (>= 10.32), libsodium23 (>= 1.0.18), libssl3t64 (>= 3.0.0), libxml2 (>= 2.9.4), zlib1g (>= 1:1.1.4)
+Recommends: apache2
+Suggests: php-pear
+Description: server-side, HTML-embedded scripting language (Apache 2 module)
+Homepage: http://www.php.net/
+Description-md5: 6a338a642132f78b17e5228372062a40
+httpd
+Priority: optional
+Filename: pool/main/p/php8.4/libapache2-mod-php8.4_8.4.11-1_amd64.deb
+Size: 1787396
+MD5sum: 7f73679b851be9d61bca61db6aa57ea4
+SHA256: 6322e2ef7fb3ec74e8356b95f04f7d3114274bacaa18740ed78167e900d6169a
+
+Package: daphne
+Source: python-daphne
+Version: 4.1.2-2
+Installed-Size: 25
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-daphne (= 4.1.2-2), python3:any
+Description: Django Channels HTTP/WebSocket server
+Homepage: https://github.com/django/daphne/
+Description-md5: 422e32547e94066b2d7270b692d2b49f
+httpd
+Priority: optional
+Filename: pool/main/p/python-daphne/daphne_4.1.2-2_all.deb
+Size: 13576
+MD5sum: c2f3ddc14fb561b5e4bd6492d7444e56
+SHA256: 2f3e15ab80182057a229dff0623feb14dacd3a1e30ac02d21d1267182438a0de
+
+Package: uvicorn
+Source: python-uvicorn
+Version: 0.32.0-3
+Installed-Size: 26
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-uvicorn (= 0.32.0-3), python3:any
+Suggests: python-uvicorn-doc
+Description: ASGI server implementation, using uvloop and httptools
+Homepage: https://github.com/encode/uvicorn/
+Description-md5: 030424a3fb9dd973602e28b69738da0a
+httpd
+Priority: optional
+Filename: pool/main/p/python-uvicorn/uvicorn_0.32.0-3_all.deb
+Size: 14696
+MD5sum: b557d2603a4a3c2a6e4b47859f49b924
+SHA256: 57c386a5424f8a4a332baed798d4d5ea66122fecb2c9ed853e365227e04a9ffd
+
+Package: libapache2-mod-shib
+Source: shibboleth-sp
+Version: 3.5.0+dfsg-2
+Installed-Size: 220
+Maintainer: Debian Shib Team <pkg-shibboleth-devel@alioth-lists.debian.net>
+Architecture: amd64
+Depends: libshibsp-plugins (= 3.5.0+dfsg-2), shibboleth-sp-utils (= 3.5.0+dfsg-2), apache2-api-20120211, apache2-bin (>= 2.4.16), libapr1t64 (>= 1.2.7), libaprutil1t64 (>= 1.2.7+dfsg), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libgssapi-krb5-2 (>= 1.6.dfsg.2), libshibsp12 (>= 3.5.0+dfsg), libstdc++6 (>= 13.1), libxerces-c3.2t64, libxmltooling11 (>= 3.3.0)
+Recommends: apache2 (>= 2.4.6-4~) | httpd
+Description: Federated web single sign-on system (Apache module)
+Homepage: https://shibboleth.net/
+Description-md5: 77446271d8362079ad5a7a6a90b712bc
+httpd
+Priority: optional
+Filename: pool/main/s/shibboleth-sp/libapache2-mod-shib_3.5.0+dfsg-2_amd64.deb
+Size: 67352
+MD5sum: 3de4fc75a87df9d6742afba4e2ff8a8d
+SHA256: 5cbe37f5d74f42b2a0251a9429e9ecd2c1602224f55937518777c96e7d41c5ed
+
+Package: libapache2-mod-svn
+Source: subversion
+Version: 1.14.5-3
+Installed-Size: 406
+Maintainer: James McCoy <jamessan@debian.org>
+Architecture: amd64
+Depends: libsvn1 (= 1.14.5-3), apache2-api-20120211, apache2-bin (>= 2.4.16), libc6 (>= 2.38)
+Suggests: db5.3-util
+Description: Apache Subversion server modules for Apache httpd
+Homepage: http://subversion.apache.org/
+Description-md5: e15ffe075b3a61d7ee31166809f7092c
+httpd
+Priority: optional
+Filename: pool/main/s/subversion/libapache2-mod-svn_1.14.5-3_amd64.deb
+Size: 211772
+MD5sum: 5425522443ab78670583b5285c110485
+SHA256: 7a9af19954fe8a577479961d4483659fe16f74557429bf90b68702a2076672d3
+
+Package: tntnet
+Version: 3.0-4
+Installed-Size: 246
+Maintainer: Thorsten Alteholz <debian@alteholz.de>
+Architecture: amd64
+Provides: httpd, httpd-cgi
+Depends: libc6 (>= 2.34), libcxxtools10 (>= 3.0.0), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1), libtntnet13t64 (>= 3.0), net-tools, tntnet-runtime (= 3.0-4)
+Pre-Depends: init-system-helpers (>= 1.54~)
+Suggests: tntnet-doc, libtntnet-dev
+Description: modular, multithreaded web application server for C++
+Homepage: http://www.tntnet.org/
+Description-md5: 0f4a7a2ca2159c84605114a3a8f63bf3
+Tag: devel::web, implemented-in::c++, interface::daemon, network::server,
+ protocol::http, protocol::ssl, role::program, use::transmission,
+ web::appserver, web::server
+httpd
+Priority: optional
+Filename: pool/main/t/tntnet/tntnet_3.0-4_amd64.deb
+Size: 85060
+MD5sum: d4d3979fa77465e70d27da0bdd251cde
+SHA256: 45b25d86260aaac0425cba3ad0dfc193c9c7b7c9eb6c26014795301352b0c734
+
+Package: uwsgi-plugin-java
+Source: uwsgi-plugin-java (0.0.5)
+Version: 2.0.29+1+0.0.5+b1
+Installed-Size: 132
+Maintainer: uWSGI packaging team <pkg-uwsgi-devel@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: uwsgi-plugin-jvm-openjdk-17, uwsgi-plugin-jwsgi-openjdk-17, uwsgi-plugin-ring-openjdk-17, uwsgi-plugin-servlet-openjdk-17
+Depends: openjdk-21-jre-headless, libc6 (>= 2.34), uwsgi-abi-3ae50573f15f0ea42634e94ff97c81ba
+Conflicts: uwsgi-plugin-jvm-openjdk-17, uwsgi-plugin-jwsgi-openjdk-17, uwsgi-plugin-ring-openjdk-17, uwsgi-plugin-servlet-openjdk-17
+Description: Java plugin for uWSGI
+Homepage: https://uwsgi-docs.readthedocs.io/en/latest/
+Description-md5: edf5375774f15d03a45a3b981aa14daf
+httpd
+Priority: optional
+Filename: pool/main/u/uwsgi-plugin-java/uwsgi-plugin-java_2.0.29+1+0.0.5+b1_amd64.deb
+Size: 36840
+MD5sum: a10d1be30759a34717ad2c8e37ca28b1
+SHA256: 66c5864d7dc9bb3b74b596adcb946be4c0024cd05d5ff226a3750e8f271a6e62
+
+Package: uwsgi-plugin-luajit
+Source: uwsgi-plugin-luajit (0.0.8)
+Version: 2.0.29+1+0.0.8+b6
+Installed-Size: 71
+Maintainer: uWSGI packaging team <pkg-uwsgi-devel@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.14), libluajit-5.1-2 (>= 2.0.4) | libluajit-5.1-2 (>= 2.1.0+openresty), uwsgi-abi-3ae50573f15f0ea42634e94ff97c81ba
+Description: Lua WSAPI plugin for uWSGI (LuaJIT)
+Homepage: https://uwsgi-docs.readthedocs.io/en/latest/
+Description-md5: 0aa1a25650fd86dd6dac4ce81c89adf9
+Tag: role::plugin
+httpd
+Priority: optional
+Filename: pool/main/u/uwsgi-plugin-luajit/uwsgi-plugin-luajit_2.0.29+1+0.0.8+b6_amd64.deb
+Size: 25836
+MD5sum: d933d700915e9b16b632cfa1d185dd48
+SHA256: 712dd11647fe78a326baeb96ee99b08920d7a7e3d2779a21daf9f77cd88d248a
+
+Package: uwsgi-plugin-pypy3
+Source: uwsgi-plugin-pypy (0.0.3)
+Version: 2.0.29+1+0.0.3+b1
+Installed-Size: 97
+Maintainer: uWSGI packaging team <pkg-uwsgi-devel@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34), uwsgi-abi-3ae50573f15f0ea42634e94ff97c81ba, uuid-dev, libcap-dev, libssl-dev, libpcre2-dev, zlib1g-dev
+Description: pypy3 plugin for uWSGI
+Homepage: https://uwsgi-docs.readthedocs.io/en/latest/
+Description-md5: dfc7963ded594c66526183e3fa07ff4d
+httpd
+Priority: optional
+Filename: pool/main/u/uwsgi-plugin-pypy/uwsgi-plugin-pypy3_2.0.29+1+0.0.3+b1_amd64.deb
+Size: 14216
+MD5sum: a04f580c5dec01798a925c87747196b6
+SHA256: 390103f90ba5ecfcc3bccac28d7a22b4e0f0c51c54a3ec270eab6938a499e156
+
+Package: uwsgi-plugin-gevent-python3
+Source: uwsgi-plugin-python (0.0.2)
+Version: 2.0.29+1+0.0.2+b2
+Installed-Size: 42
+Maintainer: uWSGI packaging team <pkg-uwsgi-devel@lists.alioth.debian.org>
+Architecture: amd64
+Depends: python3-gevent, uwsgi-plugin-greenlet-python3 (= 2.0.29+1+0.0.2+b2), uwsgi-plugin-python3 (= 2.0.29+1+0.0.2+b2), libc6 (>= 2.34), uwsgi-abi-3ae50573f15f0ea42634e94ff97c81ba
+Description: gevent plugin for uWSGI (Python 3)
+Homepage: https://uwsgi-docs.readthedocs.io/en/latest/
+Description-md5: 25fe2e43e9d914bb79b68dd32242078a
+httpd
+Priority: optional
+Filename: pool/main/u/uwsgi-plugin-python/uwsgi-plugin-gevent-python3_2.0.29+1+0.0.2+b2_amd64.deb
+Size: 10280
+MD5sum: b8d866e328b7580a63c1e858d094c6c1
+SHA256: c17a8c8221fd09c4854e0dfa59ac5b5c26db542c894d6819e9ccf6d5500878b2
+
+Package: uwsgi-plugin-greenlet-python3
+Source: uwsgi-plugin-python (0.0.2)
+Version: 2.0.29+1+0.0.2+b2
+Installed-Size: 29
+Maintainer: uWSGI packaging team <pkg-uwsgi-devel@lists.alioth.debian.org>
+Architecture: amd64
+Depends: python3-greenlet, uwsgi-plugin-python3 (= 2.0.29+1+0.0.2+b2), libc6 (>= 2.34), uwsgi-abi-3ae50573f15f0ea42634e94ff97c81ba
+Description: greenlet plugin for uWSGI (Python 3)
+Homepage: https://uwsgi-docs.readthedocs.io/en/latest/
+Description-md5: f4f038375f5af611803749d95a2cd9a3
+httpd
+Priority: optional
+Filename: pool/main/u/uwsgi-plugin-python/uwsgi-plugin-greenlet-python3_2.0.29+1+0.0.2+b2_amd64.deb
+Size: 5676
+MD5sum: 2f8cec7fa4902b8e7cdaddee4512ffa6
+SHA256: df5fe903f16cef531d58d84622fe6ec9110250afbb43f93e35c2efb08c8e9fab
+
+Package: uwsgi-plugin-tornado-python3
+Source: uwsgi-plugin-python (0.0.2)
+Version: 2.0.29+1+0.0.2+b2
+Installed-Size: 37
+Maintainer: uWSGI packaging team <pkg-uwsgi-devel@lists.alioth.debian.org>
+Architecture: amd64
+Depends: uwsgi-plugin-python3 (= 2.0.29+1+0.0.2+b2), libc6 (>= 2.34), uwsgi-abi-3ae50573f15f0ea42634e94ff97c81ba
+Recommends: python3-greenlet
+Description: tornado plugin for uWSGI (Python 3)
+Homepage: https://uwsgi-docs.readthedocs.io/en/latest/
+Description-md5: 0eefdf8accf8cf531f82994c01604c02
+httpd
+Priority: optional
+Filename: pool/main/u/uwsgi-plugin-python/uwsgi-plugin-tornado-python3_2.0.29+1+0.0.2+b2_amd64.deb
+Size: 7364
+MD5sum: c1a92392ee078d42c6d5ad509198c5f7
+SHA256: 7962f2b5c9d30f015838b33d6f33d019cbdc32f665e47f5ad9ef05eae1e2c41e
+
+Package: uwsgi-plugin-ruby
+Source: uwsgi-plugin-ruby (0.0.2)
+Version: 2.0.29+1+0.0.2+b2
+Installed-Size: 135
+Maintainer: uWSGI packaging team <pkg-uwsgi-devel@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: uwsgi-plugin-fiber, uwsgi-plugin-rack-ruby3.1, uwsgi-plugin-rbthreads
+Provides: uwsgi-plugin-fiber, uwsgi-plugin-rbthreads
+Depends: libc6 (>= 2.34), libruby3.3 (>= 3.3.1), uwsgi-abi-3ae50573f15f0ea42634e94ff97c81ba, ruby-rack
+Conflicts: uwsgi-plugin-fiber, uwsgi-plugin-rack-ruby3.1, uwsgi-plugin-rbthreads
+Description: Ruby plugins for uWSGI
+Homepage: https://uwsgi-docs.readthedocs.io/en/latest/
+Description-md5: 871233241c2f8347d4e085c87d57442b
+httpd
+Priority: optional
+Filename: pool/main/u/uwsgi-plugin-ruby/uwsgi-plugin-ruby_2.0.29+1+0.0.2+b2_amd64.deb
+Size: 40988
+MD5sum: 8030333f3f0efb88087c9eee21a729a3
+SHA256: 47940bd2651dbe8b40ee4e2ab46ecec8772074793cfb97c976607432d4fc1a6c
+
+Package: webfs
+Version: 1.21+ds1-16
+Installed-Size: 204
+Maintainer: Package Salvaging Team <team+salvage@tracker.debian.org>
+Architecture: amd64
+Provides: httpd
+Depends: debconf (>= 0.5) | debconf-2.0, ucf, libc6 (>= 2.38), libgnutls30t64 (>= 3.8.1)
+Pre-Depends: init-system-helpers (>= 1.54~)
+Description: lightweight HTTP server for static content
+Homepage: http://linux.bytesex.org/misc/webfs.html
+Description-md5: 199ba99a895de05226c23ad6c18bf7c9
+Tag: implemented-in::c, interface::daemon, network::server, protocol::http,
+ protocol::ssl, role::program, web::cgi, web::server,
+ works-with-format::html, works-with::text
+httpd
+Priority: optional
+Filename: pool/main/w/webfs/webfs_1.21+ds1-16_amd64.deb
+Size: 64708
+MD5sum: 4fba174bca04c4ac5dea40dcf55d52d6
+SHA256: 1749d4b2d8b91dd223de28b2dd5de84e7bf917a9b0cf6faa44b21efdd6ed1b81
+
+Package: qweborf
+Source: weborf
+Version: 1.5-1
+Installed-Size: 128
+Maintainer: Salvo 'LtWorf' Tomaselli <ltworf@debian.org>
+Architecture: all
+Depends: python3:any, weborf (>= 1.5-1), python3-pyqt6
+Recommends: miniupnpc
+Description: Shares files using the HTTP protocol
+Homepage: https://ltworf.codeberg.page/weborf/
+Description-md5: 4ca3e76717ae55c2969586fa774cef2d
+Tag: interface::graphical, interface::x11, protocol::http, role::program,
+ uitoolkit::qt, use::transmission, works-with::file, x11::application
+httpd
+Priority: optional
+Filename: pool/main/w/weborf/qweborf_1.5-1_all.deb
+Size: 57812
+MD5sum: c18d4d4c6b4ecb205e6fdf33612f21a0
+SHA256: 51221ea6cc31ceec38b8f3363c2dc231b7569f8dd59f4ecde3d55adb8b540db1
+
+Package: weborf
+Version: 1.5-1
+Installed-Size: 102
+Maintainer: Salvo 'LtWorf' Tomaselli <ltworf@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34), libmagic1t64 (>= 5.12), libssl3t64 (>= 3.0.0)
+Suggests: php-cgi
+Description: Fast and small webserver meant to be run without root privileges
+Homepage: https://ltworf.codeberg.page/weborf/
+Description-md5: 1da211bacdd13bf19221ad49eaec0329
+Tag: implemented-in::c, protocol::http, role::program, web::server,
+ works-with-format::html, works-with::text
+httpd
+Priority: optional
+Filename: pool/main/w/weborf/weborf_1.5-1_amd64.deb
+Size: 36968
+MD5sum: 2970e2757e02302f1cdb9d51fb5836f4
+SHA256: a5711f6fea3cc703e9f2b581da804816714bba03663d2ad35534c37eb08a1585
+
+Package: weborf-daemon
+Source: weborf
+Version: 1.5-1
+Installed-Size: 47
+Maintainer: Salvo 'LtWorf' Tomaselli <ltworf@debian.org>
+Architecture: all
+Depends: weborf (>= 1.5-1)
+Pre-Depends: init-system-helpers (>= 1.54~)
+Description: init script for weborf
+Homepage: https://ltworf.codeberg.page/weborf/
+Description-md5: 44cbf5dd02152bcac57c51b0088d747a
+httpd
+Priority: optional
+Filename: pool/main/w/weborf/weborf-daemon_1.5-1_all.deb
+Size: 14444
+MD5sum: 6771828e3fcf07963c5a6c1eae8b3e95
+SHA256: 1a936988e16db9d461e5a95e9a095a8bd1a91e689cc3498a94b8004aaaa31657
+
+Package: erlang-yapp
+Source: yaws
+Version: 2.2.0+dfsg-2
+Installed-Size: 130
+Maintainer: Debian Erlang Packagers <pkg-erlang-devel@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: yaws-yapp (<< 1.99)
+Depends: erlang-base (>= 1:27.2.3+dfsg), erlang-mnesia (>= 1:27.2.3+dfsg), erlang-yaws (= 2.2.0+dfsg-2)
+Suggests: yaws-yapp
+Description: Erlang application for deploying Yaws webserver applications
+Homepage: http://yaws.hyber.org/
+Description-md5: 0317ed11120545bd2da99b5404aea656
+httpd
+Priority: optional
+Filename: pool/main/y/yaws/erlang-yapp_2.2.0+dfsg-2_amd64.deb
+Size: 81900
+MD5sum: b48146ee0b61f2edba8d713face4db86
+SHA256: 0844dc3b77cb020bbf73b63c7edc71cfd1332cf9b3bd06df43f0edfef77385f3
+
+Package: erlang-yaws
+Source: yaws
+Version: 2.2.0+dfsg-2
+Installed-Size: 1898
+Maintainer: Debian Erlang Packagers <pkg-erlang-devel@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: yaws (<< 1.88-2)
+Depends: erlang-abi (= 17.0), erlang-base (>= 1:27.2.3+dfsg), erlang-crypto (>= 1:27.2.3+dfsg), erlang-inets (>= 1:27.2.3+dfsg), erlang-mnesia (>= 1:27.2.3+dfsg), erlang-ssl (>= 1:27.2.3+dfsg), erlang-tools (>= 1:27.2.3+dfsg), erlang-xmerl (>= 1:27.2.3+dfsg), libc6 (>= 2.34), libpam0g (>= 0.99.7.1)
+Suggests: yaws, yaws-doc, zip, bzip2
+Breaks: yaws (<< 1.99), yaws-chat (<< 1.99), yaws-mail (<< 1.99), yaws-wiki (<< 1.99), yaws-yapp (<< 1.99)
+Description: Erlang application which implements HTTP webserver
+Homepage: http://yaws.hyber.org/
+Description-md5: 5b0c044f6a0b17be3335d646ccb1307c
+httpd
+Priority: optional
+Filename: pool/main/y/yaws/erlang-yaws_2.2.0+dfsg-2_amd64.deb
+Size: 1358844
+MD5sum: d12500b6d9b90ae572d8a93cba68f827
+SHA256: 2e1a3be725dc0f8f3e30d7561c90ab187a5d61a06d8c563d2a90ab1f44eb7ead
+
+Package: yaws
+Version: 2.2.0+dfsg-2
+Installed-Size: 164
+Maintainer: Debian Erlang Packagers <pkg-erlang-devel@lists.alioth.debian.org>
+Architecture: all
+Provides: httpd, httpd-cgi
+Depends: erlang-yaws (>= 2.2.0+dfsg-2), adduser, ssl-cert
+Pre-Depends: init-system-helpers (>= 1.54~)
+Suggests: yaws-doc, yaws-chat, yaws-mail, yaws-wiki, yaws-yapp, erlang-yapp, logrotate
+Description: High performance HTTP 1.1 webserver written in Erlang
+Homepage: http://yaws.hyber.org/
+Description-md5: 4a42180ab7f74c5b48d3710d8bb249a1
+Tag: implemented-in::TODO, interface::daemon, network::server,
+ protocol::http, role::program, web::server
+httpd
+Priority: optional
+Filename: pool/main/y/yaws/yaws_2.2.0+dfsg-2_all.deb
+Size: 84668
+MD5sum: f539681b14c68f7fd968d7ce16418f0c
+SHA256: 14296387e1d5d197670eaab3a929eb4a3a3db67512d251e9e78a0094566b9e31
+
