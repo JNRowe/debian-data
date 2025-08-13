@@ -30,6 +30,16 @@ fetch() {
     } &> logs/$filename
 }
 
+release_files=(
+    debian/dists/RELEASE{,-updates}/InRelease
+    debian/dists/RELEASE{,-updates}/{contrib,main,non-free{,-firmware}}/binary-amd64/Packages.xz
+    debian/dists/RELEASE{,-updates}/{contrib,main,non-free{,-firmware}}/i18n/Translation-en.xz
+    debian-security/dists/RELEASE-security/InRelease
+    debian-security/dists/RELEASE-security/{contrib,main,non-free{,-firmware}}/binary-amd64/Packages.xz
+    debian-security/dists/RELEASE-security/{contrib,main,non-free{,-firmware}}/i18n/Translation-en.xz
+)
+
+# Bullseye requires manual setup as a few files still use bzip2 compression.
 locations=(
     debian/dists/bullseye/InRelease
     debian/dists/bullseye/contrib/binary-i386/Packages.xz
@@ -52,91 +62,12 @@ locations=(
     debian-security/dists/bullseye-security/main/i18n/Translation-en.xz
     debian-security/dists/bullseye-security/non-free/binary-i386/Packages.xz
     debian-security/dists/bullseye-security/non-free/i18n/Translation-en.xz
-
-    debian/dists/bookworm/InRelease
-    debian/dists/bookworm/contrib/binary-amd64/Packages.xz
-    debian/dists/bookworm/contrib/i18n/Translation-en.xz
-    debian/dists/bookworm/main/binary-amd64/Packages.xz
-    debian/dists/bookworm/main/i18n/Translation-en.xz
-    debian/dists/bookworm/non-free/binary-amd64/Packages.xz
-    debian/dists/bookworm/non-free/i18n/Translation-en.xz
-    debian/dists/bookworm/non-free-firmware/binary-amd64/Packages.xz
-    debian/dists/bookworm/non-free-firmware/i18n/Translation-en.xz
-    debian/dists/bookworm-updates/InRelease
-    debian/dists/bookworm-updates/contrib/binary-amd64/Packages.xz
-    debian/dists/bookworm-updates/contrib/i18n/Translation-en.xz
-    debian/dists/bookworm-updates/main/binary-amd64/Packages.xz
-    debian/dists/bookworm-updates/main/i18n/Translation-en.xz
-    debian/dists/bookworm-updates/non-free/binary-amd64/Packages.xz
-    debian/dists/bookworm-updates/non-free/i18n/Translation-en.xz
-    debian/dists/bookworm-updates/non-free-firmware/binary-amd64/Packages.xz
-    debian/dists/bookworm-updates/non-free-firmware/i18n/Translation-en.xz
-    debian-security/dists/bookworm-security/InRelease
-    debian-security/dists/bookworm-security/contrib/binary-amd64/Packages.xz
-    debian-security/dists/bookworm-security/contrib/i18n/Translation-en.xz
-    debian-security/dists/bookworm-security/main/binary-amd64/Packages.xz
-    debian-security/dists/bookworm-security/main/i18n/Translation-en.xz
-    debian-security/dists/bookworm-security/non-free/binary-amd64/Packages.xz
-    debian-security/dists/bookworm-security/non-free/i18n/Translation-en.xz
-    debian-security/dists/bookworm-security/non-free-firmware/binary-amd64/Packages.xz
-    debian-security/dists/bookworm-security/non-free-firmware/i18n/Translation-en.xz
-
-    debian/dists/trixie/InRelease
-    debian/dists/trixie/contrib/binary-amd64/Packages.xz
-    debian/dists/trixie/contrib/i18n/Translation-en.xz
-    debian/dists/trixie/main/binary-amd64/Packages.xz
-    debian/dists/trixie/main/i18n/Translation-en.xz
-    debian/dists/trixie/non-free/binary-amd64/Packages.xz
-    debian/dists/trixie/non-free/i18n/Translation-en.xz
-    debian/dists/trixie/non-free-firmware/binary-amd64/Packages.xz
-    debian/dists/trixie/non-free-firmware/i18n/Translation-en.xz
-    debian/dists/trixie-updates/InRelease
-    debian/dists/trixie-updates/contrib/binary-amd64/Packages.xz
-    debian/dists/trixie-updates/contrib/i18n/Translation-en.xz
-    debian/dists/trixie-updates/main/binary-amd64/Packages.xz
-    debian/dists/trixie-updates/main/i18n/Translation-en.xz
-    debian/dists/trixie-updates/non-free/binary-amd64/Packages.xz
-    debian/dists/trixie-updates/non-free/i18n/Translation-en.xz
-    debian/dists/trixie-updates/non-free-firmware/binary-amd64/Packages.xz
-    debian/dists/trixie-updates/non-free-firmware/i18n/Translation-en.xz
-    debian-security/dists/trixie-security/InRelease
-    debian-security/dists/trixie-security/contrib/binary-amd64/Packages.xz
-    debian-security/dists/trixie-security/contrib/i18n/Translation-en.xz
-    debian-security/dists/trixie-security/main/binary-amd64/Packages.xz
-    debian-security/dists/trixie-security/main/i18n/Translation-en.xz
-    debian-security/dists/trixie-security/non-free/binary-amd64/Packages.xz
-    debian-security/dists/trixie-security/non-free/i18n/Translation-en.xz
-    debian-security/dists/trixie-security/non-free-firmware/binary-amd64/Packages.xz
-    debian-security/dists/trixie-security/non-free-firmware/i18n/Translation-en.xz
-
-    debian/dists/forky/InRelease
-    debian/dists/forky/contrib/binary-amd64/Packages.xz
-    debian/dists/forky/contrib/i18n/Translation-en.xz
-    debian/dists/forky/main/binary-amd64/Packages.xz
-    debian/dists/forky/main/i18n/Translation-en.xz
-    debian/dists/forky/non-free/binary-amd64/Packages.xz
-    debian/dists/forky/non-free/i18n/Translation-en.xz
-    debian/dists/forky/non-free-firmware/binary-amd64/Packages.xz
-    debian/dists/forky/non-free-firmware/i18n/Translation-en.xz
-    debian/dists/forky-updates/InRelease
-    debian/dists/forky-updates/contrib/binary-amd64/Packages.xz
-    debian/dists/forky-updates/contrib/i18n/Translation-en.xz
-    debian/dists/forky-updates/main/binary-amd64/Packages.xz
-    debian/dists/forky-updates/main/i18n/Translation-en.xz
-    debian/dists/forky-updates/non-free/binary-amd64/Packages.xz
-    debian/dists/forky-updates/non-free/i18n/Translation-en.xz
-    debian/dists/forky-updates/non-free-firmware/binary-amd64/Packages.xz
-    debian/dists/forky-updates/non-free-firmware/i18n/Translation-en.xz
-    debian-security/dists/forky-security/InRelease
-    debian-security/dists/forky-security/contrib/binary-amd64/Packages.xz
-    debian-security/dists/forky-security/contrib/i18n/Translation-en.xz
-    debian-security/dists/forky-security/main/binary-amd64/Packages.xz
-    debian-security/dists/forky-security/main/i18n/Translation-en.xz
-    debian-security/dists/forky-security/non-free/binary-amd64/Packages.xz
-    debian-security/dists/forky-security/non-free/i18n/Translation-en.xz
-    debian-security/dists/forky-security/non-free-firmware/binary-amd64/Packages.xz
-    debian-security/dists/forky-security/non-free-firmware/i18n/Translation-en.xz
 )
+
+for release (bookworm trixie forky) {
+    locations+=(${release_files/RELEASE/$release})
+}
+
 zargs --verbose --max-args 1 --max-procs $(nproc) -- $locations -- fetch
 
 zargs --max-args 3 --max-procs $(nproc) --no-run-if-empty -- \
