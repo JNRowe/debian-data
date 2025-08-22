@@ -19021,6 +19021,243 @@ Description-en: Interactive high-level object-oriented language (pyvenv binary, 
  .
  This package contains the pyvenv-3.11 binary.
 
+Package: qemu-block-extra
+Description-md5: 2a9d1fab06fc3d6f649bc1fb06339800
+Description-en: extra block backend modules for qemu-system and qemu-utils
+ QEMU is a fast processor emulator: currently the package supports
+ ARM, CRIS, i386, M68k (ColdFire), MicroBlaze, MIPS, PowerPC, SH4,
+ SPARC and x86-64 emulation. By using dynamic translation it achieves
+ reasonable speed while being easy to port on new host CPUs.
+ .
+ This package provides extra block device backend modules for qemu-system
+ emulation and qemu-img from qemu-utils package, which are rarely used and
+ has extra dependencies.
+
+Package: qemu-guest-agent
+Description-md5: c2bc281a0e5a8e6c2185b336580fd595
+Description-en: Guest-side qemu-system agent
+ QEMU is a fast processor emulator: currently the package supports
+ ARM, CRIS, i386, M68k (ColdFire), MicroBlaze, MIPS, PowerPC, SH4,
+ SPARC and x86-64 emulation. By using dynamic translation it achieves
+ reasonable speed while being easy to port on new host CPUs.
+ .
+ This package provides a daemon (agent) to run inside qemu-system
+ guests (full system emulation).  It communicates with the host using
+ a virtio-serial channel org.qemu.guest_agent.0, and allows one to perform
+ some functions in the guest from the host, including:
+  - querying and setting guest system time
+  - performing guest filesystem sync operation
+  - initiating guest shutdown or suspend to ram
+  - accessing guest files
+  - freezing/thawing guest filesystem operations
+  - others.
+ .
+ Install this package on a system which is running as guest inside
+ qemu virtual machine.  It is not used on the host.
+
+Package: qemu-system
+Description-md5: e4c58b37c60d1fc987e614cbc6f62355
+Description-en: QEMU full system emulation binaries
+ QEMU is a fast processor emulator: currently the package supports
+ ARM, CRIS, i386, M68k (ColdFire), MicroBlaze, MIPS, PowerPC, SH4,
+ SPARC and x86-64 emulation. By using dynamic translation it achieves
+ reasonable speed while being easy to port on new host CPUs.
+ .
+ This metapackage provides the full system emulation binaries for all supported
+ targets, by depending on all per-architecture system emulation packages which
+ QEMU supports.
+
+Package: qemu-system-arm
+Description-md5: 133b9ec73ea2f1bb3b0614f65ad95514
+Description-en: QEMU full system emulation binaries (arm)
+ QEMU is a fast processor emulator: currently the package supports
+ ARM emulation. By using dynamic translation it achieves
+ reasonable speed while being easy to port on new host CPUs.
+ .
+ This package provides the full system emulation binaries to emulate
+ the following arm hardware:  aarch64 arm.
+ .
+ In system emulation mode QEMU emulates a full system, including a processor
+ and various peripherals.  It enables easier testing and debugging of system
+ code.  It can also be used to provide virtual hosting of several virtual
+ machines on a single server.
+
+Package: qemu-system-common
+Description-md5: 9eeecae0ef6b457cabe162fc54e999b8
+Description-en: QEMU full system emulation binaries (common files)
+ QEMU is a fast processor emulator: currently the package supports
+ ARM, CRIS, i386, M68k (ColdFire), MicroBlaze, MIPS, PowerPC, SH4,
+ SPARC and x86-64 emulation. By using dynamic translation it achieves
+ reasonable speed while being easy to port on new host CPUs.
+ .
+ This package provides common files needed for target-specific
+ full system emulation (qemu-system-*) packages.
+
+Package: qemu-system-data
+Description-md5: c61105eaa5edddd1459bc7ebfd8348d6
+Description-en: QEMU full system emulation (data files)
+ This package provides architecture-neutral data files
+ (such as keyboard definitions, icons) for system-mode
+ QEMU emulation (qemu-system-*) packages.
+
+Package: qemu-system-gui
+Description-md5: 6b583b414244908259538d87e8713531
+Description-en: QEMU full system emulation binaries (user interface and audio support)
+ This package provides local graphical user interface (currently GTK)
+ and audio backends for full system emulation (qemu-system-*) packages.
+ .
+ The default GTK based qemu-system-gui is generally better and recommended,
+ but a few corner cases still need SDL which is therefore provided as well.
+
+Package: qemu-system-mips
+Description-md5: 9ae71e5c6f9c8388bc2c1a7dd03588a5
+Description-en: QEMU full system emulation binaries (mips)
+ QEMU is a fast processor emulator: currently the package supports
+ MIPS emulation. By using dynamic translation it achieves
+ reasonable speed while being easy to port on new host CPUs.
+ .
+ This package provides the full system emulation binaries to emulate
+ the following mips hardware:  mips mipsel mips64 mips64el.
+ .
+ In system emulation mode QEMU emulates a full system, including a processor
+ and various peripherals.  It enables easier testing and debugging of system
+ code.  It can also be used to provide virtual hosting of several virtual
+ machines on a single server.
+
+Package: qemu-system-misc
+Description-md5: 732d896a677105509514539a239964aa
+Description-en: QEMU full system emulation binaries (miscellaneous)
+ QEMU is a fast processor emulator: currently the package supports
+ ARM, CRIS, M68k (ColdFire), MicroBlaze, and SH4
+ emulation. By using dynamic translation it achieves
+ reasonable speed while being easy to port on new host CPUs.
+ .
+ This package provides the full system emulation binaries to emulate
+ various other hardware which did not made into separate packages.
+ Emulators for the following architectures are provided:
+   alpha avr cris hppa m68k loongarch64 microblaze microblazeel
+  nios2 or1k riscv32 riscv64 rx sh4 sh4eb s390x tricore xtensa xtensaeb.
+ .
+ In system emulation mode QEMU emulates a full system, including a processor
+ and various peripherals.  It enables easier testing and debugging of system
+ code.  It can also be used to provide virtual hosting of several virtual
+ machines on a single server.
+
+Package: qemu-system-ppc
+Description-md5: b3759806f0517587c08b45ebd7d1c192
+Description-en: QEMU full system emulation binaries (ppc)
+ QEMU is a fast processor emulator: currently the package supports
+ PowerPC emulation. By using dynamic translation it achieves
+ reasonable speed while being easy to port on new host CPUs.
+ .
+ This package provides the full system emulation binaries to emulate
+ the following PowerPC hardware:  ppc ppc64.
+ .
+ In system emulation mode QEMU emulates a full system, including a processor
+ and various peripherals.  It enables easier testing and debugging of system
+ code.  It can also be used to provide virtual hosting of several virtual
+ machines on a single server.
+
+Package: qemu-system-sparc
+Description-md5: 8584000e342fca564033238e7f61d913
+Description-en: QEMU full system emulation binaries (sparc)
+ QEMU is a fast processor emulator: currently the package supports
+ SPARC emulation. By using dynamic translation it achieves
+ reasonable speed while being easy to port on new host CPUs.
+ .
+ This package provides the full system emulation binaries to emulate
+ the following sparc hardware:  sparc sparc64.
+ .
+ In system emulation mode QEMU emulates a full system, including a processor
+ and various peripherals.  It enables easier testing and debugging of system
+ code.  It can also be used to provide virtual hosting of several virtual
+ machines on a single server.
+
+Package: qemu-system-x86
+Description-md5: 2ad3dd27a937f58ca5b2ffccbe9c63b3
+Description-en: QEMU full system emulation binaries (x86)
+ QEMU is a fast processor emulator: currently the package supports
+ i386 and x86-64 emulation. By using dynamic translation it achieves
+ reasonable speed while being easy to port on new host CPUs.
+ .
+ This package provides the full system emulation binaries to emulate
+ the following x86 hardware:  i386 x86_64.
+ .
+ In system emulation mode QEMU emulates a full system, including a processor
+ and various peripherals.  It enables easier testing and debugging of system
+ code.  It can also be used to provide virtual hosting of several virtual
+ machines on a single server.
+ .
+ On x86 host hardware this package also enables KVM kernel virtual machine
+ usage on systems which supports it.
+
+Package: qemu-system-xen
+Description-md5: aa7dcd7497006c10704a348f8ff89e3a
+Description-en: QEMU full system emulation (Xen helper package)
+ This package provides the i386 system emulation binary to work
+ together with the Xen hypervisor for some types of DomUs.
+ This package is not useful by its own.
+
+Package: qemu-user
+Description-md5: b7a34d8d1377ca0beb573e0e2b4ce914
+Description-en: QEMU user mode emulation binaries
+ QEMU is a fast processor emulator: currently the package supports
+ ARM, CRIS, i386, M68k (ColdFire), MicroBlaze, MIPS, PowerPC, SH4,
+ SPARC and x86-64 emulation. By using dynamic translation it achieves
+ reasonable speed while being easy to port on new host CPUs.
+ .
+ This package provides the user mode emulation binaries. In this mode
+ QEMU can launch Linux processes compiled for one CPU on another CPU.
+ .
+ If qemu-user-binfmt package is also installed, it will register binary
+ format handlers from this qemu-user package with the kernel so it will
+ be possible to run foreign binaries directly.  However, this might not
+ be suitable for using inside foreign chroots, in which case it is
+ possible to use qemu-user-static package instead of qemu-user-binmft, --
+ qemu-user-static will register statically linked binfmt handlers instead.
+
+Package: qemu-user-binfmt
+Description-md5: b9d172841422ce933839d1a34cce7b20
+Description-en: QEMU user mode binfmt registration for qemu-user
+ QEMU is a fast processor emulator: currently the package supports
+ ARM, CRIS, i386, M68k (ColdFire), MicroBlaze, MIPS, PowerPC, SH4,
+ SPARC and x86-64 emulation. By using dynamic translation it achieves
+ reasonable speed while being easy to port on new host CPUs.
+ .
+ This package provides binfmt support registration for the user mode
+ emulation binaries from qemu-user.  This is an empty package, it does
+ not contain any additional files, only registration scripts which run
+ at install and remove times.
+
+Package: qemu-user-static
+Description-md5: 745cf1fdce8807e14d332ae512779b8f
+Description-en: QEMU user mode emulation binaries (static version)
+ QEMU is a fast processor emulator: currently the package supports
+ ARM, CRIS, i386, M68k (ColdFire), MicroBlaze, MIPS, PowerPC, SH4,
+ SPARC and x86-64 emulation. By using dynamic translation it achieves
+ reasonable speed while being easy to port on new host CPUs.
+ .
+ This package provides the user mode emulation binaries, built
+ statically. In this mode QEMU can launch Linux processes compiled for
+ one CPU on another CPU.
+ .
+ qemu-user-static package will register binary formats which the provided
+ emulators can handle, so that it will be possible to run foreign binaries
+ directly.
+
+Package: qemu-utils
+Description-md5: 2c65298afe6300be7b1ce793bdf9fb81
+Description-en: QEMU utilities
+ QEMU is a fast processor emulator: currently the package supports
+ ARM, CRIS, i386, M68k (ColdFire), MicroBlaze, MIPS, PowerPC, SH4,
+ SPARC and x86-64 emulation. By using dynamic translation it achieves
+ reasonable speed while being easy to port on new host CPUs.
+ .
+ This package provides QEMU related utilities:
+  * qemu-img: QEMU disk image utility
+  * qemu-io:  QEMU disk exerciser
+  * qemu-nbd: QEMU disk network block device server
+
 Package: rabbitmq-server
 Description-md5: 78e91bfb996ee4ae5d16c93298f5f6e8
 Description-en: AMQP server written in Erlang
