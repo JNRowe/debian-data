@@ -5,7 +5,7 @@ setopt err_exit no_unset warn_create_global
 autoload -U zargs
 
 mkdir --parents bullseye bookworm trixie forky
-mkdir --parents .etags logs/{bullseye,bookworm,trixie,forky}
+mkdir --parents .etags
 
 BASE=https://deb.debian.org/
 
@@ -21,13 +21,31 @@ fetch() {
     local ref_time
     [[ -f $output ]] && ref_time=$output || ref_time="2004 Nov 13"
 
+    mkdir -p logs/$suite
+
     () {
-        echo "--- $url"
+        echo "--- Fetching $url"
         curl --connect-timeout 5 --max-time 30 \
             --etag-compare $etagname \
             --etag-save $etagname \
             --time-cond $ref_time --output $filename $url
     } &> logs/$filename
+}
+
+process_Packages() {
+    local filename=$1
+
+    local _parts=(${(s:_:)filename})
+    local suite=${_parts[4]/-/\/}
+    local component=${_parts[5]}
+
+    mkdir -p logs/$suite
+
+    () {
+        echo "--- Processing $filename"
+        awk -f split_packages.awk -v output_dir=$suite $filename
+        rm -f $filename
+    } &> logs/$suite/process_$component
 }
 
 release_files=(
@@ -77,6 +95,10 @@ zargs --max-args 3 --max-procs $(nproc) --no-run-if-empty -- \
     bullseye/*.bz2(N) -- \
     bunzip2 --force --verbose
 
+zargs --verbose --max-args 1 --max-procs $(nproc) --no-run-if-empty -- \
+    {bullseye,bookworm,trixie,forky}/*_Packages(N) -- \
+
 rm -f -- {bullseye,bookworm,trixie,forky}/*(NL0)
 
-more logs/*/* | cat
+more logs/*/*(.) | cat
+more logs/*/*/* | cat
