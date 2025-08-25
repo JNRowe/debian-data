@@ -33,12 +33,16 @@ fetch() {
     mkdir -p logs/$suite $suite .etags
 
     () {
+        local tmp=$1
         echo "--- Fetching $url"
         curl --connect-timeout 5 --max-time 30 \
+            --dump-header $tmp \
             --etag-compare $etagname \
             --etag-save $etagname \
-            --time-cond $ref_time --output $filename $url
-    } &> logs/$filename
+            --time-cond $ref_time \
+            --output $filename $url
+        cat $tmp
+    } =(:) &> logs/$filename
 }
 
 process_Packages() {
