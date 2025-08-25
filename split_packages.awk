@@ -34,16 +34,16 @@ BEGIN {
         target_file = section ".pkgs"
     }
 
-    # Check if we've already created directory, without this runtime
-    # explodes because of the system() call
-    if (!(target_dir in created_dirs)) {
-        system("mkdir -p " target_dir)
-        created_dirs[target_dir] = 1
-    }
     full_path = target_dir "/" target_file
 
     # Truncate file when we have new data to prevent duplication
     if (!(full_path in created_files)) {
+        # Check if we've already created directory, without this runtime
+        # explodes because of the system() call
+        if (!(target_dir in created_dirs)) {
+            system("mkdir -p " target_dir)
+            created_dirs[target_dir] = 1
+        }
         printf "" > full_path
         created_files[full_path] = 1
     }
