@@ -30,7 +30,7 @@ fetch() {
     local ref_time
     [[ -f $output ]] && ref_time=$output || ref_time="2004 Nov 13"
 
-    mkdir -p logs/$suite
+    mkdir -p logs/$suite $suite .etags
 
     () {
         echo "--- Fetching $url"
@@ -94,8 +94,6 @@ LOCATIONS=(
 for release (${RELEASES/bullseye}) {
     LOCATIONS+=(${RELEASE_FILES/RELEASE/$release})
 }
-
-mkdir --parents .etags $RELEASES
 
 zargs --verbose --max-args 1 --max-procs $(nproc) -- $LOCATIONS -- fetch
 
