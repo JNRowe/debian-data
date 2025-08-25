@@ -1,11 +1,22 @@
 #! /bin/zsh
 
-setopt err_exit no_unset warn_create_global
+setopt err_exit extended_glob no_unset warn_create_global
 
 autoload -U zargs
 
 BASE=https://deb.debian.org/
 RELEASES=(bullseye bookworm trixie forky)
+
+decompress_file() {
+    local file=$1
+    case $file:e {
+        (xz) unxz --force --verbose $file ;;
+        (bz2) bunzip2 --force --verbose $file ;;
+        (*)
+            print -u2 "Unknown compression for $file"
+            return 1 ;;
+        }
+}
 
 fetch() {
     local location=$1
@@ -88,12 +99,9 @@ mkdir --parents .etags $RELEASES
 
 zargs --verbose --max-args 1 --max-procs $(nproc) -- $LOCATIONS -- fetch
 
-zargs --max-args 3 --max-procs $(nproc) --no-run-if-empty -- \
-    ${^RELEASES}/*.xz(N) -- \
-    unxz --force --verbose
-zargs --max-args 3 --max-procs $(nproc) --no-run-if-empty -- \
-    bullseye/*.bz2(N) -- \
-    bunzip2 --force --verbose
+zargs --max-args 1 --max-procs $(nproc) --no-run-if-empty -- \
+    ${^RELEASES}/*.(bz2|xz)(N) -- \
+    decompress_file
 
 zargs --verbose --max-args 1 --max-procs $(nproc) --no-run-if-empty -- \
     ${^RELEASES}/*_Packages(N) -- \
