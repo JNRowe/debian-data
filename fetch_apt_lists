@@ -4,10 +4,8 @@ setopt err_exit no_unset warn_create_global
 
 autoload -U zargs
 
-mkdir --parents bullseye bookworm trixie forky
-mkdir --parents .etags
-
 BASE=https://deb.debian.org/
+RELEASES=(bullseye bookworm trixie forky)
 
 fetch() {
     local location=$1
@@ -48,7 +46,7 @@ process_Packages() {
     } &> logs/$suite/process_$component
 }
 
-release_files=(
+RELEASE_FILES=(
     debian/dists/RELEASE{,-updates}/InRelease
     debian/dists/RELEASE{,-updates}/{contrib,main,non-free{,-firmware}}/binary-amd64/Packages.xz
     debian/dists/RELEASE{,-updates}/{contrib,main,non-free{,-firmware}}/i18n/Translation-en.xz
@@ -58,7 +56,7 @@ release_files=(
 )
 
 # Bullseye requires manual setup as a few files still use bzip2 compression.
-locations=(
+LOCATIONS=(
     debian/dists/bullseye/InRelease
     debian/dists/bullseye/contrib/binary-i386/Packages.xz
     debian/dists/bullseye/contrib/i18n/Translation-en.bz2
@@ -82,23 +80,26 @@ locations=(
     debian-security/dists/bullseye-security/non-free/i18n/Translation-en.xz
 )
 
-for release (bookworm trixie forky) {
-    locations+=(${release_files/RELEASE/$release})
+for release (${RELEASES/bullseye}) {
+    LOCATIONS+=(${RELEASE_FILES/RELEASE/$release})
 }
 
-zargs --verbose --max-args 1 --max-procs $(nproc) -- $locations -- fetch
+mkdir --parents .etags $RELEASES
+
+zargs --verbose --max-args 1 --max-procs $(nproc) -- $LOCATIONS -- fetch
 
 zargs --max-args 3 --max-procs $(nproc) --no-run-if-empty -- \
-    {bullseye,bookworm,trixie,forky}/*.xz(N) -- \
+    ${^RELEASES}/*.xz(N) -- \
     unxz --force --verbose
 zargs --max-args 3 --max-procs $(nproc) --no-run-if-empty -- \
     bullseye/*.bz2(N) -- \
     bunzip2 --force --verbose
 
 zargs --verbose --max-args 1 --max-procs $(nproc) --no-run-if-empty -- \
-    {bullseye,bookworm,trixie,forky}/*_Packages(N) -- \
+    ${^RELEASES}/*_Packages(N) -- \
+    process_Packages
 
-rm -f -- {bullseye,bookworm,trixie,forky}/*(NL0)
+rm -f -- ${^RELEASES}/*(NL0)
 
 more logs/*/*(.) | cat
 more logs/*/*/* | cat
