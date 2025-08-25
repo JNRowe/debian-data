@@ -40,10 +40,12 @@ BEGIN {
         system("mkdir -p " target_dir)
         created_dirs[target_dir] = 1
     }
+    full_path = target_dir "/" target_file
+
     # Truncate file when we have new data to prevent duplication
-    if (!(target_file in created_files)) {
-        system("rm -f " target_dir "/" target_file)
-        created_files[target_file] = 1
+    if (!(full_path in created_files)) {
+        printf "" > full_path
+        created_files[full_path] = 1
     }
-    print $0 "\n" >> (target_dir "/" target_file)
+    print $0 "\n" >> full_path
 }
