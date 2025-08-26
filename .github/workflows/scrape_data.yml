@@ -26,7 +26,7 @@ jobs:
         # We don't need man-db updates for throwaway installs
         echo "set man-db/auto-update false" | sudo debconf-communicate
         sudo dpkg-reconfigure man-db
-        sudo eatmydata apt-get install zsh
+        sudo eatmydata apt-get -qq install --no-install-recommends zsh
     - name: Fetch package list data
       id: fetch_data
       run: |-
