@@ -41,7 +41,7 @@ jobs:
         git add --all .etags/ bookworm/ bullseye/ trixie/ forky/
         if ! git diff --staged --quiet; then
           modified_count=$(git status --porcelain bookworm/ bullseye/ trixie/ forky/ |
-            grep -c 'Packages$')
+            grep -c 'Packages$' || :)
           runtime=$(( ${{ steps.fetch_data.outputs.end_time }} - ${{ steps.fetch_data.outputs.start_time }} ))
           git commit \
             -m "Update package lists ($(date -u +%FT%H:%M))" \
