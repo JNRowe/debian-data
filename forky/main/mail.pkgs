@@ -1352,7 +1352,7 @@ SHA256: aa1e298d91628a291d975066d199db7a1af1829186f8c019e889af3bb0d154a0
 
 Package: courier-base
 Source: courier
-Version: 1.4.1-6
+Version: 1.4.1-8
 Installed-Size: 741
 Maintainer: Soren Stoutner <soren@debian.org>
 Architecture: amd64
@@ -1364,18 +1364,18 @@ Tag: interface::daemon, mail::transport-agent, network::server,
  role::program, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/c/courier/courier-base_1.4.1-6_amd64.deb
-Size: 294608
-MD5sum: 76d2420ca36b6f36af1877f1a2c1b1ec
-SHA256: 6dabdeb56e51c1eeaf702326d3fcbb5cf82c1d15c53366a0a35236c901cdcb87
+Filename: pool/main/c/courier/courier-base_1.4.1-8_amd64.deb
+Size: 295580
+MD5sum: 84b7880c8b972e5a02c38e022861dad8
+SHA256: 2b3b8e33533df3ae8fdfc03d7265202f4fd6025385b5e6a7d5f116eea22feb04
 
 Package: courier-faxmail
 Source: courier
-Version: 1.4.1-6
+Version: 1.4.1-8
 Installed-Size: 159
 Maintainer: Soren Stoutner <soren@debian.org>
 Architecture: amd64
-Depends: courier-mta (= 1.4.1-6), ghostscript, groff, mgetty-fax
+Depends: courier-mta (= 1.4.1-8), ghostscript, groff, mgetty-fax
 Recommends: netpbm
 Suggests: courier-doc
 Description: Courier mail server - Fax<->mail gateway
@@ -1385,20 +1385,21 @@ Tag: hardware::modem, interface::daemon, network::server, role::program,
  use::converting, works-with::fax, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/c/courier/courier-faxmail_1.4.1-6_amd64.deb
-Size: 96328
-MD5sum: 1f97e7c0fc8d218a5d7001181bd50694
-SHA256: 1058945b7aeb8de3095a8528d6985cd9cf918a1aef81d84881bd83cb930469a6
+Filename: pool/main/c/courier/courier-faxmail_1.4.1-8_amd64.deb
+Size: 97004
+MD5sum: 6e4dfd39ec49336c2a897df11d9ac92d
+SHA256: b5f33e040bf46088f55fced5d307fd4e336a739b75ce0b4b0157f55f759489c9
 
 Package: courier-imap
-Source: courier (1.4.1-6)
-Version: 5.2.11+1.4.1-6
+Source: courier (1.4.1-8)
+Version: 5.2.11+1.4.1-8
 Installed-Size: 564
 Maintainer: Soren Stoutner <soren@debian.org>
 Architecture: amd64
 Replaces: cyrus-imapd, imap-server
 Provides: imap-server
-Depends: courier-base (= 1.4.1-6), debconf, default-mta | mail-transport-agent, courier-authlib (>= 0.71), libc6 (>= 2.38), libcourier-unicode8 (>= 2.3.1), libgdbm6t64 (>= 1.16), libidn2-0 (>= 2.0.0)
+Depends: courier-base (= 1.4.1-8), debconf, default-mta | mail-transport-agent, courier-authlib (>= 0.71), libc6 (>= 2.38), libcourier-unicode8 (>= 2.3.1), libgdbm6t64 (>= 1.16), libidn2-0 (>= 2.0.0)
+Pre-Depends: init-system-helpers (>= 1.54~)
 Suggests: courier-doc, imap-client
 Conflicts: imap-server
 Breaks: cyrus-imapd
@@ -1409,19 +1410,20 @@ Tag: interface::daemon, mail::imap, network::server, network::service,
  protocol::imap, role::program, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/c/courier/courier-imap_5.2.11+1.4.1-6_amd64.deb
-Size: 234408
-MD5sum: af41c389ea1486578550c024a489fbb8
-SHA256: b397368f6947b89666af9105e6269673118cf3d5099aa923e07f48d1101e46d6
+Filename: pool/main/c/courier/courier-imap_5.2.11+1.4.1-8_amd64.deb
+Size: 235340
+MD5sum: bb1015d7eecd9736e88e64aba581f15f
+SHA256: fb51bd1f99e39864c3caa18b2667690b782a7ed4181de254b4ef59c983d032b4
 
 Package: courier-ldap
 Source: courier
-Version: 1.4.1-6
+Version: 1.4.1-8
 Installed-Size: 183
 Maintainer: Soren Stoutner <soren@debian.org>
 Architecture: amd64
 Replaces: courier-imap-authldap
-Depends: courier-authlib-ldap, courier-base (= 1.4.1-6), debconf, courier-authlib (>= 0.71), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libldap2 (>= 2.6.2), libstdc++6 (>= 4.1.1)
+Depends: courier-authlib-ldap, courier-base (= 1.4.1-8), debconf, courier-authlib (>= 0.71), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libldap2 (>= 2.6.2), libstdc++6 (>= 4.1.1)
+Pre-Depends: init-system-helpers (>= 1.54~)
 Suggests: courier-doc
 Conflicts: courier-imap-authldap
 Description: Courier mail server - LDAP support
@@ -1431,18 +1433,19 @@ Tag: interface::daemon, network::server, protocol::ldap, role::program,
  security::authentication, works-with::db, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/c/courier/courier-ldap_1.4.1-6_amd64.deb
-Size: 101820
-MD5sum: 4dea27d9d464b0d875bc74a0ec451c1e
-SHA256: 4a661758f1167e584aaf00cba2bd18636fb4781d2ccb340df23b4e008eb2a21b
+Filename: pool/main/c/courier/courier-ldap_1.4.1-8_amd64.deb
+Size: 102580
+MD5sum: 81d18afd7f681daae2855e3623ee3cce
+SHA256: 97169d5cb816777846c8bf2568404de2c88c930500f616b5033061a5e7cdf96d
 
 Package: courier-mlm
 Source: courier
-Version: 1.4.1-6
+Version: 1.4.1-8
 Installed-Size: 1042
 Maintainer: Soren Stoutner <soren@debian.org>
 Architecture: amd64
-Depends: courier-base (= 1.4.1-6), maildrop, libc6 (>= 2.38), libcourier-unicode8 (>= 2.3.1), libgcc-s1 (>= 3.0), libgdbm6t64 (>= 1.16), libidn2-0 (>= 2.0.0), libstdc++6 (>= 13.1)
+Depends: courier-base (= 1.4.1-8), maildrop, libc6 (>= 2.38), libcourier-unicode8 (>= 2.3.1), libgcc-s1 (>= 3.0), libgdbm6t64 (>= 1.16), libidn2-0 (>= 2.0.0), libstdc++6 (>= 13.1)
+Pre-Depends: init-system-helpers (>= 1.54~)
 Suggests: courier-doc
 Description: Courier mail server - mailing list manager
 Homepage: https://www.courier-mta.org/
@@ -1451,20 +1454,21 @@ Tag: interface::daemon, mail::list, network::server, role::program,
  works-with::mail
 mail
 Priority: optional
-Filename: pool/main/c/courier/courier-mlm_1.4.1-6_amd64.deb
-Size: 379904
-MD5sum: b12b42f09053678f6d6a6a6ca0796349
-SHA256: 5b93dcf82f0d3af3bc69014fa1447f2e278781629b1ad662c23ae173c73c602f
+Filename: pool/main/c/courier/courier-mlm_1.4.1-8_amd64.deb
+Size: 380480
+MD5sum: fda791214ae896d9e8d1dd5213028112
+SHA256: 02a7d9ca3a4323edd0e4138493e61254e3d348cf80e0b5ce28f36abb75e1de35
 
 Package: courier-mta
 Source: courier
-Version: 1.4.1-6
+Version: 1.4.1-8
 Installed-Size: 2499
 Maintainer: Soren Stoutner <soren@debian.org>
 Architecture: amd64
 Replaces: dma, esmtp-run, exim4-daemon-heavy, exim4-daemon-light, mail-transport-agent, msmtp-mta, nullmailer, opensmtpd, postfix, rmail, ssmtp
 Provides: mail-transport-agent
-Depends: courier-base (= 1.4.1-6), debconf, libnet-cidr-perl, wget, debconf (>= 0.5) | debconf-2.0, courier-authlib (>= 0.71), libc6 (>= 2.38), libcourier-unicode8 (>= 2.3.1), libgcc-s1 (>= 3.0), libgdbm6t64 (>= 1.16), libidn2-0 (>= 2.0.0), libperl5.40 (>= 5.40.0), libstdc++6 (>= 13.1), perl:any
+Depends: courier-base (= 1.4.1-8), debconf, libnet-cidr-perl, wget, debconf (>= 0.5) | debconf-2.0, courier-authlib (>= 0.71), libc6 (>= 2.38), libcourier-unicode8 (>= 2.3.1), libgcc-s1 (>= 3.0), libgdbm6t64 (>= 1.16), libidn2-0 (>= 2.0.0), libperl5.40 (>= 5.40.0), libstdc++6 (>= 13.1), perl:any
+Pre-Depends: init-system-helpers (>= 1.54~)
 Suggests: courier-doc, courier-filter-perl, mail-reader
 Conflicts: mail-transport-agent
 Breaks: dma, esmtp-run, exim4-daemon-heavy, exim4-daemon-light, msmtp-mta, nullmailer, opensmtpd, postfix, rmail, ssmtp
@@ -1475,14 +1479,14 @@ Tag: interface::daemon, mail::transport-agent, network::server,
  network::service, protocol::smtp, role::program, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/c/courier/courier-mta_1.4.1-6_amd64.deb
-Size: 613212
-MD5sum: c32bba46e91d29a676156689aad6b645
-SHA256: 62a4cfa71c384df6422c6876b9188c06778e7818ee45031324eabfaab4ddc775
+Filename: pool/main/c/courier/courier-mta_1.4.1-8_amd64.deb
+Size: 613704
+MD5sum: 6c7abadb70ff57e03a613d2c1ad18775
+SHA256: 3175a1c8c7b87bf20fe6e137ca7964ecfdd2fd77c009b2aecb8f0ba2222f6f4e
 
 Package: courier-pcp
 Source: courier
-Version: 1.4.1-6
+Version: 1.4.1-8
 Installed-Size: 220
 Maintainer: Soren Stoutner <soren@debian.org>
 Architecture: amd64
@@ -1495,20 +1499,21 @@ Tag: interface::daemon, network::server, role::program, use::organizing,
  works-with::mail, works-with::pim
 mail
 Priority: optional
-Filename: pool/main/c/courier/courier-pcp_1.4.1-6_amd64.deb
-Size: 128640
-MD5sum: 66ca0365e0b67a00e12971c8a479bec2
-SHA256: 878f42445bb34ea1425524365633cd425ed81159440ef686bc80c210bd9dd855
+Filename: pool/main/c/courier/courier-pcp_1.4.1-8_amd64.deb
+Size: 129284
+MD5sum: efba641de9d2bb60b40dc29c32c64a4a
+SHA256: c316162652dd89ef8443a3f70b82d7df2e7a2f219fb8a7c06c1856285e1eb6cc
 
 Package: courier-pop
 Source: courier
-Version: 1.4.1-6
+Version: 1.4.1-8
 Installed-Size: 292
 Maintainer: Soren Stoutner <soren@debian.org>
 Architecture: amd64
 Replaces: mailutils-pop3d, pop3-server
 Provides: pop3-server
-Depends: courier-base (= 1.4.1-6), debconf, default-mta | mail-transport-agent, courier-authlib (>= 0.71), libc6 (>= 2.38), libcourier-unicode8 (>= 2.3.1), libidn2-0 (>= 2.0.0)
+Depends: courier-base (= 1.4.1-8), debconf, default-mta | mail-transport-agent, courier-authlib (>= 0.71), libc6 (>= 2.38), libcourier-unicode8 (>= 2.3.1), libidn2-0 (>= 2.0.0)
+Pre-Depends: init-system-helpers (>= 1.54~)
 Suggests: courier-doc, mail-reader
 Conflicts: pop3-server
 Breaks: mailutils-pop3d
@@ -1519,18 +1524,19 @@ Tag: interface::daemon, mail::pop, network::server, network::service,
  protocol::pop3, role::program, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/c/courier/courier-pop_1.4.1-6_amd64.deb
-Size: 138984
-MD5sum: 0804a69a036c2e02535e8d91304a5b09
-SHA256: 282d91646ca7096985ae47c7567b28d8dc2338670b232b5290b4a176904f48d3
+Filename: pool/main/c/courier/courier-pop_1.4.1-8_amd64.deb
+Size: 139760
+MD5sum: 64ffc38a2ddfd70b4eea1c4719f7a22f
+SHA256: d2d00ec932e74d196427d7f61aa0a22845de853635aea58edc00c0e1ce18cccb
 
 Package: courier-webadmin
 Source: courier
-Version: 1.4.1-6
-Installed-Size: 237
+Version: 1.4.1-8
+Installed-Size: 235
 Maintainer: Soren Stoutner <soren@debian.org>
 Architecture: amd64
-Depends: apache2 | httpd, courier-base (= 1.4.1-6), libcgi-pm-perl, debconf, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.34), perl:any
+Depends: apache2 | httpd, courier-base (= 1.4.1-8), debconf, libcgi-pm-perl, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.34), perl:any
+Pre-Depends: init-system-helpers (>= 1.54~)
 Suggests: courier-doc
 Description: Courier mail server - web-based administration frontend
 Homepage: https://www.courier-mta.org/
@@ -1539,18 +1545,19 @@ Tag: admin::configuring, interface::web, role::program, use::configuring,
  web::application
 mail
 Priority: optional
-Filename: pool/main/c/courier/courier-webadmin_1.4.1-6_amd64.deb
-Size: 112348
-MD5sum: c0076cb8ca43f80f725d25afe12bcee5
-SHA256: f06eaf234a6180b2ba0e4dfc863a2e43c049f4d0bb78d7c27d29a33b283cda04
+Filename: pool/main/c/courier/courier-webadmin_1.4.1-8_amd64.deb
+Size: 109784
+MD5sum: 4809bee4cdc4ddfedb24e37f4c49548e
+SHA256: 3c45e3490ad0d1648b7b0fe3339d5183b9d825bc598b470e3ce4054b45f75259
 
 Package: sqwebmail
-Source: courier (1.4.1-6)
-Version: 6.2.9+1.4.1-6
+Source: courier (1.4.1-8)
+Version: 6.2.9+1.4.1-8
 Installed-Size: 1324
 Maintainer: Soren Stoutner <soren@debian.org>
 Architecture: amd64
-Depends: apache2, courier-base (= 1.4.1-6), cron, debconf, default-mta | mail-transport-agent, expect, iamerican | ispell-dictionary, ispell, maildrop, debconf (>= 0.5) | debconf-2.0, courier-authlib (>= 0.71), libc6 (>= 2.38), libcourier-unicode8 (>= 2.3.1), libgdbm6t64 (>= 1.16), libidn2-0 (>= 2.0.0), libldap2 (>= 2.6.2), libpcre2-8-0 (>= 10.22), perl:any
+Depends: apache2, courier-base (= 1.4.1-8), cron, debconf, default-mta | mail-transport-agent, expect, iamerican | ispell-dictionary, ispell, maildrop, debconf (>= 0.5) | debconf-2.0, courier-authlib (>= 0.71), libc6 (>= 2.38), libcourier-unicode8 (>= 2.3.1), libgdbm6t64 (>= 1.16), libidn2-0 (>= 2.0.0), libldap2 (>= 2.6.2), libpcre2-8-0 (>= 10.22), perl:any
+Pre-Depends: init-system-helpers (>= 1.54~)
 Recommends: apache2 (>= 2.4.6-4~) | httpd, courier-pcp
 Suggests: courier-doc, gnupg
 Description: Courier mail server - webmail server
@@ -1559,10 +1566,10 @@ Description-md5: ba58b55a2bbe8efe6abfe55d02dd61cc
 Tag: interface::web, role::program, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/c/courier/sqwebmail_6.2.9+1.4.1-6_amd64.deb
-Size: 449884
-MD5sum: b9335fade8aa77d03ea89bec6c58b303
-SHA256: 17f92c9c3bacf862081f1d3e3b2e6a30a22a32186bb35ae2b793b71bf95a698e
+Filename: pool/main/c/courier/sqwebmail_6.2.9+1.4.1-8_amd64.deb
+Size: 450508
+MD5sum: b8b6e4a1fe3e90e123dd9c4ad62963d1
+SHA256: 4af8387daa342e723655f3059e7483f6c6b4a2b0db85a4ab9e0cc686b2cc6613
 
 Package: courier-authdaemon
 Source: courier-authlib
@@ -3571,13 +3578,12 @@ MD5sum: d43da998e0a0cc81c79c14a20896828c
 SHA256: 11b38b7b55ae8fa4b9604ad5feb935869561a179fdab3a5f3632c0aeef048516
 
 Package: maildrop
-Source: maildrop (3.1.8-2)
-Version: 3.1.8-2+b1
-Installed-Size: 1307
+Version: 3.1.8-3
+Installed-Size: 1306
 Maintainer: Soren Stoutner <soren@debian.org>
 Architecture: amd64
 Depends: courier-authlib (>= 0.71), libc6 (>= 2.38), libcourier-unicode8 (>= 2.3.1), libgcc-s1 (>= 3.0), libgdbm6t64 (>= 1.16), libidn2-0 (>= 2.0.0), libpcre2-8-0 (>= 10.22), libstdc++6 (>= 13.1)
-Recommends: exim4 | mail-transport-agent
+Recommends: default-mta | mail-transport-agent
 Description: mail delivery agent with filtering abilities (set-GID=mail)
 Homepage: http://www.courier-mta.org/maildrop/
 Description-md5: eda875822ffffaedfbf2564b0e457648
@@ -3585,10 +3591,10 @@ Tag: interface::daemon, mail::delivery-agent, mail::filters, network::server,
  role::program, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/m/maildrop/maildrop_3.1.8-2+b1_amd64.deb
-Size: 384244
-MD5sum: 03d09b7d082855ff9773989e3576a22a
-SHA256: 766d4e6d888b60d46779df24a5370a31afa04a86531ab3b8424881ef8bfbff4b
+Filename: pool/main/m/maildrop/maildrop_3.1.8-3_amd64.deb
+Size: 384212
+MD5sum: 42aac3e141144c187e5c6a6822a5c53f
+SHA256: e089a68a81a25c2b528b86aa3a20d4ebf61dd6847e7a813d6f9114c4566dc7f1
 
 Package: mailfilter
 Source: mailfilter (0.8.9-1)
@@ -5284,8 +5290,8 @@ MD5sum: 8e7178f58a1042b10521635b79e5ff93
 SHA256: 7936777edef7ff06dc7e6d0cc7dae0e32bf8a4db068ca672a348566396f4594b
 
 Package: postfix
-Version: 3.10.3-3
-Installed-Size: 4010
+Version: 3.10.4-1
+Installed-Size: 4015
 Maintainer: Debian Postfix Team <team+postfix@tracker.debian.org>
 Architecture: amd64
 Replaces: mail-transport-agent, postfix-doc (<< 3.9.1-3~), postfix-ldap (<< 3.9.1-5~), postfix-lmdb (<< 3.9.1-5~), postfix-mongodb (<< 3.9.1-5~), postfix-mysql (<< 3.9.1-5~), postfix-pcre (<< 3.9.1-5~), postfix-pgsql (<< 3.9.1-5~), postfix-sqlite (<< 3.9.1-5~)
@@ -5302,35 +5308,35 @@ Tag: implemented-in::c, interface::daemon, mail::smtp, mail::transport-agent,
  network::server, protocol::smtp, role::program, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/p/postfix/postfix_3.10.3-3_amd64.deb
-Size: 1595168
-MD5sum: bfcbbf2ee1aa7146f5a979a464231a94
-SHA256: ada97590264ed70ccb1edf8420a947144d6fd43cbe6018a498aff06224522484
+Filename: pool/main/p/postfix/postfix_3.10.4-1_amd64.deb
+Size: 1596136
+MD5sum: 24c45d7cc2e488d976fa13826f353b54
+SHA256: edd9ee43ff49f34686cc753a6a09d211bdf667ca6f05d2400d190db2c5359860
 
 Package: postfix-cdb
 Source: postfix
-Version: 3.10.3-3
+Version: 3.10.4-1
 Installed-Size: 31
 Maintainer: Debian Postfix Team <team+postfix@tracker.debian.org>
 Architecture: amd64
-Depends: postfix (= 3.10.3-3), libc6 (>= 2.4), libcdb1 (>= 0.76)
+Depends: postfix (= 3.10.4-1), libc6 (>= 2.4), libcdb1 (>= 0.76)
 Description: CDB map support for Postfix
 Homepage: https://www.postfix.org
 Description-md5: 98a2f918397b1cd1bbd655c20a1b4ea7
 mail
 Priority: optional
-Filename: pool/main/p/postfix/postfix-cdb_3.10.3-3_amd64.deb
-Size: 5412
-MD5sum: d5d55913e47e9c0325471c95da45660c
-SHA256: c8c631d054ea7c5867bb36467d66af829da169e17739974708a19842406f2f90
+Filename: pool/main/p/postfix/postfix-cdb_3.10.4-1_amd64.deb
+Size: 5408
+MD5sum: 5e9a8375ecb89396fa9d258907508ab7
+SHA256: 5dd5ebe02d254db144f03dc46653f06587e84e01ef45cdcc5f32fdfb66934979
 
 Package: postfix-ldap
 Source: postfix
-Version: 3.10.3-3
+Version: 3.10.4-1
 Installed-Size: 51
 Maintainer: Debian Postfix Team <team+postfix@tracker.debian.org>
 Architecture: amd64
-Depends: postfix (= 3.10.3-3), libc6 (>= 2.11), libldap2 (>= 2.6.2)
+Depends: postfix (= 3.10.4-1), libc6 (>= 2.11), libldap2 (>= 2.6.2)
 Description: LDAP map support for Postfix
 Homepage: https://www.postfix.org
 Description-md5: aa2c870d66e93c998ac06af79764edb0
@@ -5339,52 +5345,52 @@ Tag: interface::daemon, network::server, protocol::ldap, protocol::smtp,
  works-with::mail
 mail
 Priority: optional
-Filename: pool/main/p/postfix/postfix-ldap_3.10.3-3_amd64.deb
-Size: 13052
-MD5sum: 79b38ecec9ae6affa1a55cecf2f48498
-SHA256: 5b2b4787eefde3ebe0fcd9c6a22c0a6408978133b835bc1b74f72070e67154e4
+Filename: pool/main/p/postfix/postfix-ldap_3.10.4-1_amd64.deb
+Size: 13036
+MD5sum: 6085d39a3e9e6c5ed5d8a358f1069e29
+SHA256: b979f7b34f34bb47212b40d5342113ad9abc674c14f341fcad7df2305d2af733
 
 Package: postfix-lmdb
 Source: postfix
-Version: 3.10.3-3
+Version: 3.10.4-1
 Installed-Size: 43
 Maintainer: Debian Postfix Team <team+postfix@tracker.debian.org>
 Architecture: amd64
-Depends: liblmdb0 (>= 0.9.14), postfix (= 3.10.3-3), libc6 (>= 2.33)
+Depends: liblmdb0 (>= 0.9.14), postfix (= 3.10.4-1), libc6 (>= 2.33)
 Description: LMDB map support for Postfix
 Homepage: https://www.postfix.org
 Description-md5: f5d7ffb6423a593cfcf7ce9cf4941b35
 mail
 Priority: optional
-Filename: pool/main/p/postfix/postfix-lmdb_3.10.3-3_amd64.deb
-Size: 8648
-MD5sum: 0e924f0af9e1f25ecbb38a3e7368c293
-SHA256: 46baa0a8cdee32c7607bad0d4e9dce6b647930ecf52ec7478be76f354da73d8d
+Filename: pool/main/p/postfix/postfix-lmdb_3.10.4-1_amd64.deb
+Size: 8656
+MD5sum: 6c8f0de4fbbd4bdb511a442737dedcf5
+SHA256: 8245f1c481fc5e5a7b101afa61d2d2cb1a52b13d57506b47625c3f19283e08fb
 
 Package: postfix-mongodb
 Source: postfix
-Version: 3.10.3-3
+Version: 3.10.4-1
 Installed-Size: 39
 Maintainer: Debian Postfix Team <team+postfix@tracker.debian.org>
 Architecture: amd64
-Depends: postfix (= 3.10.3-3), libbson-1.0-0t64 (>= 1.30.4), libc6 (>= 2.4), libmongoc-1.0-0t64 (>= 1.30.4)
+Depends: postfix (= 3.10.4-1), libbson2-2 (>= 2.1.0), libc6 (>= 2.4), libmongoc2-2 (>= 2.1.0)
 Description: MongoDB map support for Postfix
 Homepage: https://www.postfix.org
 Description-md5: e8fe43bfde180be47e5cb467d94ff773
 mail
 Priority: optional
-Filename: pool/main/p/postfix/postfix-mongodb_3.10.3-3_amd64.deb
-Size: 6232
-MD5sum: ad43bf605d7fea63279823be1a214f2b
-SHA256: a8ed39c6e29e971f9c9afba8129a6da1ed043206cf54d9f2f36610dd6768e372
+Filename: pool/main/p/postfix/postfix-mongodb_3.10.4-1_amd64.deb
+Size: 6176
+MD5sum: 2cd4e7cfffb3a267ba2e75217c5faedb
+SHA256: d74616be767d7ceb8c2393ea1fe3cc78f95b20a0563c573ef6805297a6d0b9fb
 
 Package: postfix-mysql
 Source: postfix
-Version: 3.10.3-3
+Version: 3.10.4-1
 Installed-Size: 39
 Maintainer: Debian Postfix Team <team+postfix@tracker.debian.org>
 Architecture: amd64
-Depends: postfix (= 3.10.3-3), libc6 (>= 2.2.5), libmariadb3 (>= 3.0.0)
+Depends: postfix (= 3.10.4-1), libc6 (>= 2.2.5), libmariadb3 (>= 3.0.0)
 Description: MySQL map support for Postfix
 Homepage: https://www.postfix.org
 Description-md5: 4407b3fa8f1490b7ac908b3ac77e40da
@@ -5393,18 +5399,18 @@ Tag: devel::lang:sql, interface::daemon, network::server, protocol::smtp,
  works-with::mail
 mail
 Priority: optional
-Filename: pool/main/p/postfix/postfix-mysql_3.10.3-3_amd64.deb
-Size: 7728
-MD5sum: 478f3bcfa13bb105a3a69f11f489d84a
-SHA256: 8032e53a438e38d1d6c1f67985a175ea89bae5f1e58746cb07eb2125422843f3
+Filename: pool/main/p/postfix/postfix-mysql_3.10.4-1_amd64.deb
+Size: 7724
+MD5sum: 0023c549b24c111c38e62ceeaadb814b
+SHA256: 075fab932b89bdc18fba034c4db6a678cb4459780f0b98e67e2d36ff94775afd
 
 Package: postfix-pcre
 Source: postfix
-Version: 3.10.3-3
+Version: 3.10.4-1
 Installed-Size: 39
 Maintainer: Debian Postfix Team <team+postfix@tracker.debian.org>
 Architecture: amd64
-Depends: postfix (= 3.10.3-3), libc6 (>= 2.4), libpcre2-8-0 (>= 10.22)
+Depends: postfix (= 3.10.4-1), libc6 (>= 2.4), libpcre2-8-0 (>= 10.22)
 Description: PCRE map support for Postfix
 Homepage: https://www.postfix.org
 Description-md5: fa414be11eebea56ff38fa8ba56d4450
@@ -5412,18 +5418,18 @@ Tag: interface::daemon, network::server, role::program,
  security::authentication, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/p/postfix/postfix-pcre_3.10.3-3_amd64.deb
-Size: 7328
-MD5sum: 56293cd72eb6b179db29a2c30ad79d51
-SHA256: c0505ec3b9f03f9af22e228b6a72ca450ecfecc3dc494ab1baa01ed0fb7f4cc9
+Filename: pool/main/p/postfix/postfix-pcre_3.10.4-1_amd64.deb
+Size: 7332
+MD5sum: a59ebc3a89ade0acbaa231cd0c196679
+SHA256: f731753f8b65c010f89daa5cb44607b6531e9fc13f176b4e0e10a022040e6b20
 
 Package: postfix-pgsql
 Source: postfix
-Version: 3.10.3-3
+Version: 3.10.4-1
 Installed-Size: 39
 Maintainer: Debian Postfix Team <team+postfix@tracker.debian.org>
 Architecture: amd64
-Depends: postfix (= 3.10.3-3), libc6 (>= 2.4), libpq5
+Depends: postfix (= 3.10.4-1), libc6 (>= 2.4), libpq5
 Description: PostgreSQL map support for Postfix
 Homepage: https://www.postfix.org
 Description-md5: ff8c2e191a6393665aaa531cc61043dd
@@ -5432,27 +5438,27 @@ Tag: devel::lang:sql, interface::daemon, network::server, protocol::smtp,
  works-with::mail
 mail
 Priority: optional
-Filename: pool/main/p/postfix/postfix-pgsql_3.10.3-3_amd64.deb
-Size: 7308
-MD5sum: f74f744fcd0a1e7aee6270541347be71
-SHA256: 0f794c9a1ecfd21e91e936ae5fb163c69bd2fa59e50249a4e6e154c5f9a20ea7
+Filename: pool/main/p/postfix/postfix-pgsql_3.10.4-1_amd64.deb
+Size: 7312
+MD5sum: 5c11361bc5d2758a5e06b7b64ba317ed
+SHA256: 4db2a38990f8999ae6084f967408ab505bf5cedf8e3981ebfd1ae22c89892d05
 
 Package: postfix-sqlite
 Source: postfix
-Version: 3.10.3-3
+Version: 3.10.4-1
 Installed-Size: 31
 Maintainer: Debian Postfix Team <team+postfix@tracker.debian.org>
 Architecture: amd64
-Depends: postfix (= 3.10.3-3), libc6 (>= 2.4), libsqlite3-0 (>= 3.5.9)
+Depends: postfix (= 3.10.4-1), libc6 (>= 2.4), libsqlite3-0 (>= 3.5.9)
 Description: SQLite map support for Postfix
 Homepage: https://www.postfix.org
 Description-md5: 2107dbd6c3011eeb90446671301d0e46
 mail
 Priority: optional
-Filename: pool/main/p/postfix/postfix-sqlite_3.10.3-3_amd64.deb
-Size: 4972
-MD5sum: 972cff2717dc69d12a3b88bcdaf292d4
-SHA256: bd07e9346397125a3357b7fd0f95f4b6c6f72fac2c578115a89f8a7c07eb3609
+Filename: pool/main/p/postfix/postfix-sqlite_3.10.4-1_amd64.deb
+Size: 4968
+MD5sum: dc4e74a55880c7a81e5c75196ac2f104
+SHA256: 6231dacbef70747d285b31b223358dddeddcf2c68162a8201cb4339236d52752
 
 Package: postfix-gld
 Version: 1.7-11
