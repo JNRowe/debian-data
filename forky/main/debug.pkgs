@@ -2371,86 +2371,26 @@ Size: 28893044
 MD5sum: 1d42b59350f16c74af2224c26a6b0cd7
 SHA256: 3af0296ade18d78c9e27f7c7bf835d7b27dd59de0643608b6f56609f483de54f
 
-Package: libmonoboehm-2.0-1-dbg
+Package: mono-libraries-debug
 Source: mono
-Version: 6.12.0.199+dfsg-6
-Installed-Size: 8304
-Maintainer: Antoine Le Gonidec <debian@vv221.fr>
-Architecture: amd64
-Depends: libmonoboehm-2.0-1 (= 6.12.0.199+dfsg-6)
-Recommends: gdb
-Description: Mono JIT library, debugging symbols (Boehm GC)
-Homepage: http://www.mono-project.com/
-Build-Ids: 80d4301f946181394836d0287bfeca27a2c3d43e
-Description-md5: 2607171726a37a3c76b8d104a4bcedd4
-Tag: role::debug-symbols
-debug
-Priority: optional
-Filename: pool/main/m/mono/libmonoboehm-2.0-1-dbg_6.12.0.199+dfsg-6_amd64.deb
-Size: 7961896
-MD5sum: c3a47af68e23a495c6fa1bf364a82733
-SHA256: 5fc3a86ceef21986ffa57abe2acc2e3db83712870b3d0c0e98b2f52cdfc04567
-
-Package: libmonosgen-2.0-1-dbg
-Source: mono
-Version: 6.12.0.199+dfsg-6
-Installed-Size: 9156
-Maintainer: Antoine Le Gonidec <debian@vv221.fr>
-Architecture: amd64
-Depends: libmonosgen-2.0-1 (= 6.12.0.199+dfsg-6)
-Recommends: gdb
-Description: Mono JIT library, debugging symbols (SGen GC)
-Homepage: http://www.mono-project.com/
-Build-Ids: 2c13365bd17a913a8d4055da9c04faf732c1a1a8
-Description-md5: 68f58a69a75e6df10ffbba7e59366ce6
-Tag: role::debug-symbols
-debug
-Priority: optional
-Filename: pool/main/m/mono/libmonosgen-2.0-1-dbg_6.12.0.199+dfsg-6_amd64.deb
-Size: 8808848
-MD5sum: c7a8928b6fd8be3d82cc71909f375d8a
-SHA256: 6963c2edb22831723f9bc0dd7530135601c70a506b8c7acdde3168d41039fbf7
-
-Package: mono-dbg
-Source: mono
-Version: 6.12.0.199+dfsg-6
-Installed-Size: 21573
-Maintainer: Antoine Le Gonidec <debian@vv221.fr>
+Version: 6.14.1+ds-6
+Installed-Size: 17284
+Maintainer: Antoine Le Gonidec <vv221@debian.org>
 Architecture: all
-Replaces: monodoc-base (<< 2.4)
-Description: Mono debugging symbols
+Replaces: mono-dbg (<< 6.14.1+ds-3)
+Provides: mono-dbg (= 6.14.1+ds-6)
+Depends: mono-libraries (= 6.14.1+ds-6)
+Breaks: mono-dbg (<< 6.14.1+ds-3)
+Description: Framework Mono - runtime libraries, debugging symbols
 Multi-Arch: foreign
 Homepage: http://www.mono-project.com/
-Description-md5: 3a82d07419414cf23ff1d696c9f1db7e
-Tag: role::debug-symbols
+Description-md5: 471242a1d5ae031454e91e9c013e0425
 debug
 Priority: optional
-Filename: pool/main/m/mono/mono-dbg_6.12.0.199+dfsg-6_all.deb
-Size: 6521784
-MD5sum: 9e5ba1e85b020e59ae0c0f73a4ff558a
-SHA256: f09be162f8407e271f5830762b47267382f26739349f015a28e74920f55e024d
-
-Package: mono-runtime-dbg
-Source: mono
-Version: 6.12.0.199+dfsg-6
-Installed-Size: 24862
-Maintainer: Antoine Le Gonidec <debian@vv221.fr>
-Architecture: amd64
-Replaces: mono-jit-dbg (<< 2.4)
-Depends: mono-runtime-sgen (= 6.12.0.199+dfsg-6), mono-runtime-boehm (= 6.12.0.199+dfsg-6)
-Recommends: gdb
-Conflicts: mono-jit-dbg (<< 2.4)
-Description: Mono runtime, debugging symbols
-Homepage: http://www.mono-project.com/
-Build-Ids: 3e63230504f714b033cdca927f9b3713a5176bb7 48af1bf314cf8a60b90e36d8360d80e33171fa76 52665e14bb433419829f3df88110623d66e38be5 9392584e93d0e4877efe779fab9386283575c547 9bba124d85dffbe582ac6aaadb1dd56ab3a30d44 c3cec44c46c547600bf5cc45b0e8d00a5ae5a496 d8c60fd14fe8506798522ae940cac71bd8fbf1c9
-Description-md5: 0f5b756bd9c313fa705058f5c7b6d0a6
-Tag: role::debug-symbols
-debug
-Priority: optional
-Filename: pool/main/m/mono/mono-runtime-dbg_6.12.0.199+dfsg-6_amd64.deb
-Size: 21357564
-MD5sum: a9a848ba7a0fa77fbc653047adda6be5
-SHA256: 41e6285c463b70a7aedeba8eb9fa9c5e6e4e79b84adb627c799cf40a9b7b5526
+Filename: pool/main/m/mono/mono-libraries-debug_6.14.1+ds-6_all.deb
+Size: 5619948
+MD5sum: 3b524ed6eaecb89adba53f4064d99f96
+SHA256: d30c2778af84c8328e987e098c62ba2f66c2474834965f5933e15633f2fedf6d
 
 Package: mp3splt-dbg
 Source: mp3splt (2.6.2+20170630-3.3)
@@ -2765,42 +2705,42 @@ SHA256: 6ab201da8cddfa0f40c664aa2a2017cd146e6c6cd32750c2c20c90dfd08e531b
 
 Package: libpython3.13-dbg
 Source: python3.13
-Version: 3.13.6-1
-Installed-Size: 116000
+Version: 3.13.7-1
+Installed-Size: 115943
 Maintainer: Matthias Klose <doko@debian.org>
 Architecture: amd64
 Replaces: libpython3.13-dbg, python3-gdbm-dbg (<< 3.12.5-2~), python3-tk-dbg (<< 3.12.5-2~)
-Depends: libpython3.13-stdlib (= 3.13.6-1), libbz2-1.0, libc6 (>= 2.38), libdb5.3t64, libexpat1 (>= 2.6.0), libffi8 (>= 3.4), libgdbm6t64 (>= 1.16), liblzma5 (>= 5.1.1alpha+20120614), libncursesw6 (>= 6.1), libreadline8t64 (>= 7.0~beta), libsqlite3-0 (>= 3.36.0), libssl3t64 (>= 3.4.0), libtcl8.6 (>= 8.6.0), libtinfo6 (>= 6), libtk8.6 (>= 8.6.0), libuuid1 (>= 2.20.1), zlib1g (>= 1:1.2.0)
-Breaks: libpython3.13-dbg (<< 3.13.6-1), python3-gdbm-dbg (<< 3.12.5-2~), python3-tk-dbg (<< 3.12.5-2~)
+Depends: libpython3.13-stdlib (= 3.13.7-1), libbz2-1.0, libc6 (>= 2.38), libdb5.3t64, libexpat1 (>= 2.6.0), libffi8 (>= 3.4), libgdbm6t64 (>= 1.16), liblzma5 (>= 5.1.1alpha+20120614), libncursesw6 (>= 6.1), libreadline8t64 (>= 7.0~beta), libsqlite3-0 (>= 3.36.0), libssl3t64 (>= 3.4.0), libtcl8.6 (>= 8.6.0), libtinfo6 (>= 6), libtk8.6 (>= 8.6.0), libuuid1 (>= 2.20.1), zlib1g (>= 1:1.2.0)
+Breaks: libpython3.13-dbg (<< 3.13.7-1), python3-gdbm-dbg (<< 3.12.5-2~), python3-tk-dbg (<< 3.12.5-2~)
 Description: Debug Build of the Python Interpreter (version 3.13)
 Multi-Arch: same
 Description-md5: db4cba440ce5f61a54a273521a2b88b6
 debug
 Priority: optional
-Filename: pool/main/p/python3.13/libpython3.13-dbg_3.13.6-1_amd64.deb
-Size: 23143448
-MD5sum: f5226c6343e35e30569d295c8e9ba53d
-SHA256: 3a7271d1e0b8ef3b8bed50b1663beb9549c29c6292c52049bd1fc21f5cc2372f
+Filename: pool/main/p/python3.13/libpython3.13-dbg_3.13.7-1_amd64.deb
+Size: 23139224
+MD5sum: 73286a0557a35e43a746f6577b4f43ee
+SHA256: 28bcb5a11add5c796ad9f322911164a80e6b23bedcb384ce457527afe01bd77d
 
 Package: python3.13-dbg
 Source: python3.13
-Version: 3.13.6-1
-Installed-Size: 88790
+Version: 3.13.7-1
+Installed-Size: 88717
 Maintainer: Matthias Klose <doko@debian.org>
 Architecture: amd64
-Depends: python3.13 (= 3.13.6-1), libpython3.13-dbg (= 3.13.6-1), libc6 (>= 2.38), libexpat1 (>= 2.6.0), zlib1g (>= 1:1.2.0)
+Depends: python3.13 (= 3.13.7-1), libpython3.13-dbg (= 3.13.7-1), libc6 (>= 2.38), libexpat1 (>= 2.6.0), zlib1g (>= 1:1.2.0)
 Recommends: gdb
 Suggests: python3-gdbm-dbg, python3-tk-dbg
 Description: Debug Build of the Python Interpreter (version 3.13)
 Multi-Arch: allowed
-Build-Ids: 00bff375987fecab51218098f56b9c8fd5eb6a18 01724332c7a2b2a2da9f41189591458bf4796a97 12a992c89062dcb01a13760426ee77ea2b7a5601 12d10df3aea244b56f3eab44a2bcabef3cab1071 225cc0d6c9199dc7922f68e3674f8d67e08f703e 236386773010644103b2738caa4cc8c17628bb19 26d337491c606ff5756c5e1cf4d29e6f24537681 286ba8ccc9578695c098d01dc923defa17920518 2be349781e151e37eb83051afd031533bd4751d5 321aac46ce84d105a382756c5e2f7ee77db39e7e 324f156c91c45fdb2cdcbff3f7ff080b084e3a77 3265c0af909d00b24cbe006ebf3a07c32253d6a1 41bb9da0fca3c7357fc7475644ea52c7173ece8d 4374ac236045377e30929c1135cc9b4f9f59d133 4439c0cea6262c50f0c695f2e72295fdafeda4d3 45cc4fcacd0b06c1c88a3544c77da60553d952dc 4611e3c8c15fbb17ea1d51487f38179c525aff27 475f84c9ef48adc677542c0f0fae93f555f5fb90 4c9aeba39bff7991a23c05cbc4e858bf8bfe9035 5729dfcc2f56153b73076145461c209aa4b9c5d4 680bda8aca246ec010ea020ee5baa7a6e2ca3d28 69065f32fc5a5f1168450a42c4e0d2bd7a42ed12 6a5446e532e6ea29e1573fbc0836a16b07906725 72e6e8b8f4198b5c0b9d7d1976cdd24540aa10bf 745bfd0dcca30f6b5b4db96998b701870db46c0a 75247cd9922efff9624f14a1325a187668635b74 79245fbbcd4e375c188c9fcd87e97a5b969dbf5b 7ca0cd9697d777bf84e335dea1f7252b9ed3d035 81e97b47aa247f7ed6dc342bacc46e6c3b10cf64 885d501e07a42c9aee18dc33ab9f1df2b4f1278e 93609ea7db7635a1f718f5150c32140cc1bfa60f 9921710bba4cd667cfc2d37eabb6c4bfefb8fd35 9b22f735e067b56208f5389f9bbcf87627821e22 a9be372a4e215d1656f861f66c838a1100f1e551 ab961fdd87fb54c89125c88c4b201586249d6a0e afbef47fae4a7e001bd3389f536d564bd8daeaa1 b18bd645142b5eb59ca91fc677afa2ebc528bc8f b5df88333eff1fd2265d93f13b2bbb06ca4dc671 b6449f4b2b0fdcc6a3788a3b95882c488d2bb4c3 c5a94f006ad986c5c07e595964e81ec4a4dad2ed d28d04d26ea2c34ab0be77b63a07b4b0581af986 dd58d530c24d0c4667921863a732020062d26dcb e07d06f4c3a50f3944c9b0d76845729d4d75d592 e0960f8218a3a6155ee54d760b378443eb7f5f2f e25c643e2a2c34422f603d90d927480431d8c3ad e31d006aa1b4a0a99dd49faeaf5c611571bac2ab e33a512c01f88d09f0f855ce92f7a8f9f85b5ffc e47c5c044dfbd719ef4a33d5e23d4de72c3f15b3 ed980a34df6c9d61ba7537b93758e3cb939b3db8 f3605dbf83712d160cbab2f69801c84a7e169368 f44fa5d4b735f438103afb5cbe35106b8c4c75e5 f4f360ca681f0fbbaf27d51ff90ad898b24b4b5c
+Build-Ids: 02a6686a9e3020f533cef58aed7bc33ec2fb7703 02ce8aae224c67dbe4c5865537d147b215e1ef6c 05b36c6f4d936a9d16676b90ea263d17174ad2ca 07f8a23ec5726e68661f7b31632f6b6dd95dc1ae 0f5839320b1839b0de46e8e9b51013cc8aaf9b65 175d2256419edcdfefa170f471f23f0bad7bfde7 21ce8a1ff9a80f73fa23ebef96d0c6da69ec165e 4938e7fe0e9324b8a61161aa92ec0a220384c582 4a7f183f464b0d93ad62630400238e898e9e5b19 4b2768d1b2a25dd8b739370f83f584039d254d28 4d13b97bdd4664ee7f5d2c52663cd111845da3ad 55a4050c8872f3625aab7d4d6315b0f0eba2e631 583107af460f21eb15c337e809825b0924938261 594994df9b9a9af25fc84f172a4fed3229d5f3bd 5b8c445d60cd330a78d69609ed8fed44c89cbbe4 5e2425a7fa01c91b4d9fab9d04bd9f02f787a3dd 64897cd00443732fc869653fe1e2d5dc094bc83d 67044e142ee976503281ecec3736ab18c2e42ff3 67cb6d1e1c87bcba714c5d23935875a9e99696fd 699992e31689f250e8e0c61e0dd6ccbcd8521bdc 6a30f7a6b994536d37061ab263ac06da7390693a 6fc416ef277bf7035f5cf19cda56d2b8573970dd 722b7f78704ad4094a0dc5e0b281539ed32693dd 7359c260bf02539e81ce6967647ea334c9f0fcd6 77b46668291165efa5ce46a5c9a485647a00155a 7fc84887b5a5ad2290999877678b6fc3a1c1c971 8f4fb1324520f2d37366d3fb8770e32667add207 90905a90793c718706d941d8df34c24b0e72d99a 93b28193d65f9a87ea31975479f5d3eb4b47d16f 9bc641aaaaa71367aa51f5bacd7710f77254e7bd 9dcad7e175a7e8369d486ea6ec10e035cf03fbcc 9e72fb1ab51f3f7dffca2d1f5bf47d2a7b71e300 ac602a751dfb67b59b76d814538e540f86bfd64c ac917ff64cd5bbf17ce4ca6f1c96e50babd374f7 ade975d29a2f2d9ae6a3bdb78f95bacaba0a6695 b0159be45aad6bc97a50180ca4f234c1ce30ea5f b08fe6e07c249d2a86b120e9d44103578dd58b36 b558d5d349cb25af9bee7b3ea4edb10620530f43 b8052a5f9bcddf5f9fb9fe2f16ddf628d7393f63 b89df33eac401ffdb3f87df20b60235ad370513a bbc404a74e65df93482c50943bf8995f49a91c91 bc920f77b640df1df5dd2e479530106c503e4c24 c440a1a75c5bbbd7055216fc7d8f0ad1d8f08cb3 c98f1df8c2bef3f53ba07b909b72b6cc399bb16c c9dfe0f0283e20bd610976a2215b09e914810c71 cc1fb8b61a526e0a789e641ba764ee199ef3c8fd d65074de61bcde4c4d2f43fc57ae3c7ed24d4d7c de2c0acc7fd32f9ec1fd33d1af60b7914f142869 e3ae080f205044d47a2a5d63641937189dc9c643 f16842466eb078563a8ddc2559ecfbba8f5dd03b f5c0f7ee8aec2629b2bf91ffdc29f409f09bd1cf f6f4aa60b1125f470a152d3334bd15599b78c416
 Description-md5: 3ebd083cfea4476f736b5a6fc3d0185d
 debug
 Priority: optional
-Filename: pool/main/p/python3.13/python3.13-dbg_3.13.6-1_amd64.deb
-Size: 55069416
-MD5sum: 8d2f39ef8e62b7b44b3f8f8920d652ae
-SHA256: 0569d829b8a0173a5ab7f69db322f6e47308796cd49a2cfd6602525223b45b30
+Filename: pool/main/p/python3.13/python3.13-dbg_3.13.7-1_amd64.deb
+Size: 55057916
+MD5sum: 16f7bd5522543b76b9aa9b56f4bcb056
+SHA256: a36c705d97832e25a0f7f60f50e301cd3c0bb6dd581d44690fb484b32bb8cb07
 
 Package: s3ql-dbg
 Source: s3ql
