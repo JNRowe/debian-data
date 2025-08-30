@@ -109,6 +109,109 @@ Description-en: web browser - minimal shell
  This package provides a minimal version of the chromium user interface
  (the content shell).
 
+Package: firebird-dev
+Description-md5: 32713afe7260e5c75bd126b0114a28f1
+Description-en: Development files for Firebird
+ C header files for Firebird, useful if one compiles programs that use the
+ Firebird client to work with Firebird databases.
+ .
+ See firebird4.0-server package for more information about Firebird.
+
+Package: firebird-utils
+Description-md5: f0558675fb6b08aafc01dd6ceec32893
+Description-en: Firebird command line utilities wrapper
+ firebird-utils contains a wrapper script which allows running specific
+ version of firebird utilities like gbak or isql-fb. If no version is
+ specified, the latest available is used.
+
+Package: firebird4.0-common
+Description-md5: 00c70a1826e3d16c3f78d8102cb68a52
+Description-en: common files for firebird 4.0 server, client and utilities
+ Common files for the Firebird server, client and user utilities.
+ .
+ These include the support scripts as well as configuration files in
+ /etc/firebird/4.0.
+
+Package: firebird4.0-common-doc
+Description-md5: 54f288f1d91bae48a7b37d1dc3b9b469
+Description-en: copyright, licensing and changelogs of firebird4.0
+ Copyright, licensing information and upstream changelog of firebird4.0.
+ .
+ Due to the size of the upstream change log and copyright/licensing summary,
+ keeping them in a separate package saves space on mirrors and when installing
+ firebird4.0 packages.
+
+Package: firebird4.0-doc
+Description-md5: 2ac84c3040dbe9d6e1cc58ef8d7de010
+Description-en: Documentation files for firebird database version 4.0
+ Various documents for firebird 4.0. These include the release notes, what's
+ new in firebird 4.0, quick start guide, upgrade guide, list of ISQL
+ enhancements etc.
+
+Package: firebird4.0-examples
+Description-md5: 70119b8521bf1e3c39007aa0088cf1fc
+Description-en: Examples for Firebird database
+ The examples included in this package are provided as samples and are also
+ used by Firebird's testing suite (TCS). The examples are in the form
+ of .h, .c, .e, .fdb and .gbk files.
+ .
+ See firebird4.0-server package for more information about Firebird.
+
+Package: firebird4.0-server
+Description-md5: 2134827313e90e2003de2a24bcb319ef
+Description-en: Firebird Server - an RDBMS based on InterBase 6.0 code
+ Firebird is a relational database offering many ANSI SQL-99 features that
+ runs on Linux, Windows, and a variety of Unix platforms. Firebird offers
+ excellent concurrency, high performance, and powerful language support
+ for stored procedures and triggers. It has been used on production systems
+ under a variety of names since 1981.
+ .
+ This package contains the server binary as well as its configuration files.
+ The default mode of operation is the so called "super", which is a
+ single-threaded server process with shared database cache between
+ connections. The two other operation modes -- "classic" (separate
+ process/cache for each connection) and "superclassic" (separate thread/cache
+ for each connection) are also available via configuration options.
+
+Package: firebird4.0-server-core
+Description-md5: 31946f9c9f7ca1ab859179fffedb7dae
+Description-en: Firebird engine core
+ Firebird database engine and support libraries. This package is required for
+ embedded (serverless) access to local databases with the tools packaged in
+ firebird4.0-utils or other binaries linked to the firebird client library,
+ libfbclient2.
+ .
+ The rest of the binaries needed for running a full-featured,
+ remotely-accessible Firebird server are in the firebird4.0-server package.
+
+Package: firebird4.0-utils
+Description-md5: abf897f55faee3358d9fb9b9a2d2b7b9
+Description-en: Firebird command line utilities
+ This package contains the utilities for managing Firebird databases:
+  * isql-fb -- interactive console (original name isql)
+  * gbak -- backup and restore databases
+  * gfix -- check and repair databases
+  * gsec -- manage users and roles
+  * fbstat -- analyze databases (original name gstat)
+  * nbackup -- incremental backup and file-level copy
+  * gpre -- preprocess sources with embedded SQL
+
+Package: libfbclient2
+Description-md5: 315a58ec4246aa82bd2b99a6b86b5f4b
+Description-en: Firebird client library
+ Client library for connecting to the Firebird server. It can also be used for
+ direct (embedded) database access.
+ .
+ See firebird4.0-server package for more information about Firebird.
+
+Package: libib-util
+Description-md5: 7265fa1fde7b4f1a189087849ad58b3d
+Description-en: Firebird UDF support library
+ Contains utility functions used by Firebird User-Defined Functions (UDF) for
+ memory management etc.
+ .
+ See firebird4.0-server package for more information about Firebird.
+
 Package: firefox-esr
 Description-md5: 88ee196fd829d9218a763b4d498a6f6a
 Description-en: Mozilla Firefox web browser - Extended Support Release (ESR)
