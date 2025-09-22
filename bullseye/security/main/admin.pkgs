@@ -343,6 +343,56 @@ Filename: pool/updates/main/c/containerd/golang-github-containerd-containerd-dev
 Size: 526484
 SHA256: ad86a2a1e731b19f949decdcf7cf0c9e469cebd8232388cc7f7786dd111b3d32
 
+Package: corosync
+Version: 3.1.2-2+deb11u1
+Installed-Size: 957
+Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Depends: libc6 (>= 2.28), libcfg7 (>= 3.1.1), libcmap4 (>= 2.99.3), libcorosync-common4 (>= 1.99.9), libcpg4 (>= 1.1.0), libknet1 (>= 1.18), libnozzle1 (>= 1.6), libqb100 (>= 2.0.3), libquorum5 (>= 1.99.9), libstatgrab10, libsystemd0, libvotequorum8 (>= 2.4.2), lsb-base (>= 3.0-6), adduser, xsltproc
+Description: cluster engine daemon and utilities
+Homepage: https://corosync.github.io/corosync/
+Description-md5: 66e7e12ea9ecefc23cd13347b02ab6dc
+Pre-Depends: init-system-helpers (>= 1.54~)
+admin
+Priority: optional
+Filename: pool/updates/main/c/corosync/corosync_3.1.2-2+deb11u1_i386.deb
+Size: 497880
+SHA256: 1eff57a6e6973108e0195166bc37fd3df5a3b5fc6f7272b23e5c961bd4d2cfa8
+
+Package: corosync-notifyd
+Source: corosync
+Version: 3.1.2-2+deb11u1
+Installed-Size: 330
+Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Depends: libc6 (>= 2.7), libcfg7 (>= 2.99.5), libcmap4 (>= 2.99.3), libcorosync-common4 (>= 1.99.9), libdbus-1-3 (>= 1.9.14), libqb100 (>= 2.0.3), libquorum5 (>= 1.99.9), libsnmp40 (>= 5.9+dfsg), libsystemd0, corosync, lsb-base (>= 3.0-6)
+Description: cluster engine notification daemon
+Homepage: https://corosync.github.io/corosync/
+Description-md5: 54aa992a2d99b457f3265c5f199abc77
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: dbus
+admin
+Priority: optional
+Filename: pool/updates/main/c/corosync/corosync-notifyd_3.1.2-2+deb11u1_i386.deb
+Size: 274248
+SHA256: 82014c67643f49b02f827515c6b3159745209e92e6c9c2dd2e2e32000357e782
+
+Package: corosync-vqsim
+Source: corosync
+Version: 3.1.2-2+deb11u1
+Installed-Size: 434
+Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Depends: libc6 (>= 2.7), libcorosync-common4 (>= 1.99.9), libqb100 (>= 2.0.3), libreadline8 (>= 6.0)
+Description: cluster engine votequorum simulator
+Homepage: https://corosync.github.io/corosync/
+Description-md5: 8c4a6d2bdb4360cac388269711eedf08
+admin
+Priority: optional
+Filename: pool/updates/main/c/corosync/corosync-vqsim_3.1.2-2+deb11u1_i386.deb
+Size: 313452
+SHA256: 895814c526656a105272f97424e59888ad33ef1a387ac297004b592fd641b4f9
+
 Package: cryptsetup
 Version: 2:2.3.7-1+deb11u1
 Installed-Size: 410
@@ -1496,6 +1546,81 @@ Priority: optional
 Filename: pool/updates/main/o/open-vm-tools/open-vm-tools-sdmp_11.2.5-2+deb11u4_i386.deb
 Size: 41032
 SHA256: 8d9f94d8e6b5b9afd2e163d43b1de35e73e3a5e25a69b992b55c2fd1f033ce5f
+
+Package: libpam-cracklib
+Source: pam
+Version: 1.4.0-9+deb11u2
+Installed-Size: 118
+Maintainer: Steve Langasek <vorlon@debian.org>
+Architecture: i386
+Replaces: libpam-modules (<< 1.1.0-3), libpam0g-cracklib
+Depends: libc6 (>= 2.4), libcrack2 (>= 2.8.12), libpam0g (>= 1.1.1), libpam-runtime (>= 1.0.1-6), cracklib-runtime, wamerican | wordlist
+Description: PAM module to enable cracklib support
+Homepage: http://www.linux-pam.org/
+Description-md5: 0f6f2fd98962cbee59aa831979aad971
+Multi-Arch: same
+admin
+Priority: optional
+Filename: pool/updates/main/p/pam/libpam-cracklib_1.4.0-9+deb11u2_i386.deb
+Size: 91276
+SHA256: 06d54f92162584015a30c24b84289f803be349bc5c9a3289601d33aa6b545d1f
+
+Package: libpam-modules
+Source: pam
+Version: 1.4.0-9+deb11u2
+Installed-Size: 1093
+Maintainer: Steve Langasek <vorlon@debian.org>
+Architecture: i386
+Replaces: libpam-umask, libpam0g-util
+Provides: libpam-mkhomedir, libpam-motd, libpam-umask
+Conflicts: libpam-mkhomedir, libpam-motd, libpam-umask
+Description: Pluggable Authentication Modules for PAM
+Homepage: http://www.linux-pam.org/
+Description-md5: 234b9429528430ead853cc8bbe97ffb4
+Multi-Arch: same
+Pre-Depends: libaudit1 (>= 1:2.2.1), libc6 (>= 2.28), libcrypt1 (>= 1:4.3.0), libdb5.3, libnsl2 (>= 1.0), libpam0g (>= 1.3.2), libselinux1 (>= 3.1~), libtirpc3 (>= 1.0.2), debconf (>= 0.5) | debconf-2.0, libpam-modules-bin (= 1.4.0-9+deb11u2)
+admin
+Priority: required
+Filename: pool/updates/main/p/pam/libpam-modules_1.4.0-9+deb11u2_i386.deb
+Size: 340268
+SHA256: 837b43aade7f0a00cf4ab2d44365da5c43fa47689f4a90bfcccd1a38a0f7dec8
+
+Package: libpam-modules-bin
+Source: pam
+Version: 1.4.0-9+deb11u2
+Installed-Size: 235
+Maintainer: Steve Langasek <vorlon@debian.org>
+Architecture: i386
+Replaces: libpam-modules (<< 1.1.3-8)
+Depends: libaudit1 (>= 1:2.2.1), libc6 (>= 2.4), libcrypt1 (>= 1:4.3.0), libpam0g (>= 0.99.7.1), libselinux1 (>= 3.1~)
+Description: Pluggable Authentication Modules for PAM - helper binaries
+Homepage: http://www.linux-pam.org/
+Description-md5: 25d278fc7450d5202a9a137f71302e58
+Multi-Arch: foreign
+admin
+Priority: required
+Filename: pool/updates/main/p/pam/libpam-modules-bin_1.4.0-9+deb11u2_i386.deb
+Size: 109740
+SHA256: 8ea30264e2c181af1676959903b56796cd2e58f871c5d3db67918db581cc5196
+
+Package: libpam-runtime
+Source: pam
+Version: 1.4.0-9+deb11u2
+Installed-Size: 966
+Maintainer: Steve Langasek <vorlon@debian.org>
+Architecture: all
+Replaces: libpam0g-dev, libpam0g-util
+Depends: debconf (>= 0.5) | debconf-2.0, debconf (>= 1.5.19) | cdebconf, libpam-modules (>= 1.0.1-6)
+Conflicts: libpam0g-util
+Description: Runtime support for the PAM library
+Homepage: http://www.linux-pam.org/
+Description-md5: bc15ddbf92ee7965a8588141c54bb5a1
+Multi-Arch: foreign
+admin
+Priority: required
+Filename: pool/updates/main/p/pam/libpam-runtime_1.4.0-9+deb11u2_all.deb
+Size: 207736
+SHA256: af07fd507e549d2ebf3698b6562ed002abe7a1fbe1759bbd5b81524fc60b39bf
 
 Package: libpam-pkcs11
 Source: pam-pkcs11
