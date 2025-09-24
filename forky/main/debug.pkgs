@@ -1739,7 +1739,7 @@ SHA256: ddd2fa236fbba502e297984439c8c244aac88357c970c53ee75c03455ca53282
 
 Package: gnumach-image-1.8-amd64-up-dbg
 Source: gnumach
-Version: 2:1.8+git20250731-5
+Version: 2:1.8+git20250731-7
 Installed-Size: 1881
 Maintainer: GNU Hurd Maintainers <debian-hurd@lists.debian.org>
 Architecture: amd64
@@ -1752,14 +1752,14 @@ Homepage: https://www.gnu.org/software/hurd/microkernel/mach/gnumach.html
 Description-md5: 3209a68cd8a7e3903d02743f9e24fc7d
 debug
 Priority: optional
-Filename: pool/main/g/gnumach/gnumach-image-1.8-amd64-up-dbg_1.8+git20250731-5_amd64.deb
-Size: 1879284
-MD5sum: 143603ef0ac47f5567b5343626086ddb
-SHA256: 63e4c883e3464297a06d7c492ed513d2585c3dc7b7b3bd8b412f23169571a206
+Filename: pool/main/g/gnumach/gnumach-image-1.8-amd64-up-dbg_1.8+git20250731-7_amd64.deb
+Size: 1879648
+MD5sum: dbda9d59a1dd1774263a66b0690afe05
+SHA256: 7dd4edc312597454ab6427f9b6758729b42327cadf848244fffa3af89dde9ed5
 
 Package: gnumach-image-1.8-xen-amd64-dbg
 Source: gnumach
-Version: 2:1.8+git20250731-5
+Version: 2:1.8+git20250731-7
 Installed-Size: 1849
 Maintainer: GNU Hurd Maintainers <debian-hurd@lists.debian.org>
 Architecture: amd64
@@ -1772,10 +1772,10 @@ Homepage: https://www.gnu.org/software/hurd/microkernel/mach/gnumach.html
 Description-md5: fd673cca9e3e60bac9dd6ae4a550992f
 debug
 Priority: optional
-Filename: pool/main/g/gnumach/gnumach-image-1.8-xen-amd64-dbg_1.8+git20250731-5_amd64.deb
-Size: 1848408
-MD5sum: a9bb1a45f7ea90414d3d72072ad5ecfe
-SHA256: 2a6c8717bd53666a8aa462d27ebce19495d63dff1fdceb5e6b1239490ed1037d
+Filename: pool/main/g/gnumach/gnumach-image-1.8-xen-amd64-dbg_1.8+git20250731-7_amd64.deb
+Size: 1848424
+MD5sum: 29f47447ac40322f603eb060f20526c3
+SHA256: 27c08c1a4f4635da77606a198d3befaa2884cd682330abb21357e0cfa668d8a8
 
 Package: graphicsmagick-dbg
 Source: graphicsmagick (1.4+really1.3.45+hg17696-1)
@@ -2645,6 +2645,45 @@ Filename: pool/main/p/python3.13/python3.13-dbg_3.13.7-1_amd64.deb
 Size: 55057916
 MD5sum: 16f7bd5522543b76b9aa9b56f4bcb056
 SHA256: a36c705d97832e25a0f7f60f50e301cd3c0bb6dd581d44690fb484b32bb8cb07
+
+Package: libpython3.14-dbg
+Source: python3.14
+Version: 3.14.0~rc3-1
+Installed-Size: 121944
+Maintainer: Matthias Klose <doko@debian.org>
+Architecture: amd64
+Replaces: libpython3.14-dbg, python3-gdbm-dbg (<< 3.12.5-2~), python3-tk-dbg (<< 3.12.5-2~)
+Depends: libpython3.14-stdlib (= 3.14.0~rc3-1), libbz2-1.0, libc6 (>= 2.38), libdb5.3t64, libexpat1 (>= 2.6.0), libffi8 (>= 3.4), libgdbm6t64 (>= 1.16), liblzma5 (>= 5.1.1alpha+20120614), libncursesw6 (>= 6.1), libreadline8t64 (>= 7.0~beta), libsqlite3-0 (>= 3.36.0), libssl3t64 (>= 3.4.0), libtcl8.6 (>= 8.6.0), libtinfo6 (>= 6), libtk8.6 (>= 8.6.0), libuuid1 (>= 2.20.1), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.2.0)
+Breaks: libpython3.14-dbg (<< 3.14.0~rc3-1), python3-gdbm-dbg (<< 3.12.5-2~), python3-tk-dbg (<< 3.12.5-2~)
+Description: Debug Build of the Python Interpreter (version 3.14)
+Multi-Arch: same
+Description-md5: 66f6b70a13a54128ccb53461e125015a
+debug
+Priority: optional
+Filename: pool/main/p/python3.14/libpython3.14-dbg_3.14.0~rc3-1_amd64.deb
+Size: 24851656
+MD5sum: 28a0fe8a5987f86c711bfa02e397754f
+SHA256: f9a0a0e1a907f9a91e16cf51190a1aba02326805711b231cf08e8db36131d491
+
+Package: python3.14-dbg
+Source: python3.14
+Version: 3.14.0~rc3-1
+Installed-Size: 93275
+Maintainer: Matthias Klose <doko@debian.org>
+Architecture: amd64
+Depends: python3.14 (= 3.14.0~rc3-1), libpython3.14-dbg (= 3.14.0~rc3-1), libc6 (>= 2.38), libexpat1 (>= 2.6.0), zlib1g (>= 1:1.2.0)
+Recommends: gdb
+Suggests: python3-gdbm-dbg, python3-tk-dbg
+Description: Debug Build of the Python Interpreter (version 3.14)
+Multi-Arch: allowed
+Build-Ids: 08c98fb30fc573c57782aaef3392c935e405b344 0b6761d1afe85a7e37c92295a2d67f1d5c63ff9f 0ccc53de1a9f9b4d4b4a51bbaa842f7a814fb68c 12c24d8274ebff8ab42d5fb4b1d64f77872b474a 15ac7f33c67753e7bd76357a285deba7554388b5 1a1a7ae2fb3ca93b916977d47b64b658f107a9d4 1b1f170809daae5992cbb5da4ca0da881cf7fb40 1cc0e2c10e8deb343dabf9c99668357c2bfaf98c 1dc28c38d0aff5753e56aab1ca2a6eac9b2bded8 1e7156a491b83fdc8324b6af5214bb4786860e36 22fab844d5526474b8a2127b82d11498a9d99151 2988e965c7b21ef25f1630a148d1c2f8c45c8fe1 2a464ba727ce53f3ff440949fe0ed1bc6e4750ff 30582d1d0fe55c1d437062416e45c0a261eb8288 3813f2a175aab80611bf0ca22f62629f60448e09 3db836ba24ded4639b767ebf1d1a1c9d21971af1 3f98d8100a3f260517e9f0a365627a039305be42 44010348d7e6b8dca6a1fbadb12c95da93ff2292 489020c75ab8c32dd0c0b79a5df3529270609c74 4e5e7852439f6d58cda0ff01c7448d4962a85963 59e8f28ab5de4de8c8339c7f5a4d06303538e4e5 5b097b6ff24ca22fb2195ef8605dca75afce9d97 634689c73ea1f259ca3b656377a3e71b73d36d82 69e039a7ae5f190d03fe815dfcf1d6d7bdfd445c 7a9a319d8f1a31d57e7251a3f2bd4df6df9ac635 7e857e357ac93d18759b70c683b69d1331977e52 837f459d8992329ab74b772bde1828ca89222537 887f1e5a95f98daa1a6810ab26c0f1673104645f 8c0db59521210995a24aa47b41b35ad95da1215c 91d2eb050d859b272706b649c3063e9e1a88d194 93b8bf3b711aa788bd61c34e983be609451c41c7 9d55a02d77ef35917b10ad802d5e414bcd63243f acb31f594f0a4d3cd4f19ff2ebe8fe64dc22fe20 b108d1e664c3e79263331cbe8f3c6a8d1dbbe7cb b208c6426271536c635201e75cc29482bfe75a5e b3faa99e3fe50ab5e8bbe20408e579c7593ef18e b838b8fda51bfa4d748a04edebac7000eb9ca65a be228e58cbde74c10b34ef369b5e38f3f8bd9dba d55266cb790d059a2cc773d42c823aaba7dfe382 d68adab91a06d528c18e4f574e688a952d55ec6f d8ac4b3e7cfa42ea0607e240cd40031ee13489ed d8d369ae085e949358432f6d0117711cfb25f5dd d9285172fa890960dfa5fdbac6d5842a566e9d8a da7a2136f83f8b9d4c15f9371e8e3b308c87764f ded48ca49b662ab4dfa9d6c72f75459301595340 e20b18f97ecf202e22ce756015c26855707ed505 e5b5ba5bb051efe8e8180232bb5172b2f56d1ca1 e657cd5282f894452b7894185625d099a017c503 ee2929bb9a728b744276fa40bc34fd16a4319a5d f2550f0d73b7e4c888793e19518d6c10567fca19 f78f80700474bdde06cc51339d3f3bae38d383f8 f9e545b07fe60d6d8e0a5f3e9ef7011cbc7e13f3
+Description-md5: 5f555e28500b1d013ebbbd809cb4a67c
+debug
+Priority: optional
+Filename: pool/main/p/python3.14/python3.14-dbg_3.14.0~rc3-1_amd64.deb
+Size: 58056516
+MD5sum: f68b38a51ef02e09089ea291bb16fd01
+SHA256: a9034d589a9bc05a3b2de0fe5564aec235454e467984231f1c685d9b7f20e32d
 
 Package: s3ql-dbg
 Source: s3ql
