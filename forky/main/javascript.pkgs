@@ -13607,20 +13607,21 @@ MD5sum: f763cd7c4cbef9dc3bd7d9170472207b
 SHA256: 7d7ef6a172cb1d610be6c7dec8206500a6d725212dc1c03df861c569e80e2d6e
 
 Package: node-form-data
-Version: 4.0.1-2
-Installed-Size: 37
+Version: 4.0.4+~2.1.0-1
+Installed-Size: 58
 Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
 Architecture: all
-Depends: node-asynckit, node-combined-stream, node-mime-types
+Provides: node-es-set-tostringtag (= 2.1.0)
+Depends: node-asynckit, node-combined-stream, node-es-errors, node-hasown, node-mime-types
 Description: Create multipart/form-data streams module for Node.js
 Homepage: https://github.com/felixge/node-form-data
 Description-md5: 51e7f485c7d6e1f2e3b411ffe4ac46c3
 javascript
 Priority: optional
-Filename: pool/main/n/node-form-data/node-form-data_4.0.1-2_all.deb
-Size: 13032
-MD5sum: c4092ddd95ccd2cbc78944ae5627f66d
-SHA256: a645a205cdb29a9da76d308478183bb32ff5d43a551923e630ae80904aa54132
+Filename: pool/main/n/node-form-data/node-form-data_4.0.4+~2.1.0-1_all.deb
+Size: 26396
+MD5sum: d77c12f99d9932c2c1aace818f3df1c3
+SHA256: 009ab42d7c2e783177146c81a1b3f7257a83d356ab8fc237e57af96fb8b1bfa2
 
 Package: node-formidable
 Version: 3.2.5+20221017git493ec88+~cs4.0.9-1
@@ -27441,22 +27442,22 @@ MD5sum: 1c242c56de62cae64454c30932625022
 SHA256: 397da9c0f85a73103482c97e92424e89dad92947707cb56520e602042ce07744
 
 Package: node-sha.js
-Version: 2.4.11+~2.4.0-2
-Installed-Size: 44
+Version: 2.4.12+~3.0.5-1
+Installed-Size: 59
 Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
 Architecture: all
-Provides: node-types-sha.js (= 2.4.0)
-Depends: node-inherits, node-safe-buffer (>= 5.0.1), nodejs:any
+Provides: node-types-sha (= 3.0.5)
+Depends: node-inherits, node-safe-buffer (>= 5.0.1), node-to-buffer, nodejs:any
 Description: Streamable SHA hashes in pure javascript
 Multi-Arch: foreign
 Homepage: https://github.com/crypto-browserify/sha.js
 Description-md5: 6fd99b1bea7b23a849b11d40aaa99355
 javascript
 Priority: optional
-Filename: pool/main/n/node-sha.js/node-sha.js_2.4.11+~2.4.0-2_all.deb
-Size: 10708
-MD5sum: e283d87369bbbad9252fca6345837dfc
-SHA256: d7353b33737ce68596efbab99e2be9845ab823c6e0917cf9654103d91814f4a0
+Filename: pool/main/n/node-sha.js/node-sha.js_2.4.12+~3.0.5-1_all.deb
+Size: 22420
+MD5sum: d448703adf534f3ec25520c3374b2467
+SHA256: 45eccb036f71b54ba48d5963d90530db6edb2dc3ad8c9250fb55d9ac326121bd
 
 Package: node-shallow-equal
 Version: 3.1.0-2
@@ -30054,6 +30055,90 @@ Filename: pool/main/n/node-to-arraybuffer/node-to-arraybuffer_1.0.1-3_all.deb
 Size: 4256
 MD5sum: e5099cead43799c8c88060b1a3a7120a
 SHA256: 18ae1aaba1c7e4c1a78634c53c7576bc36ce32ff0d3422589bf584359e117b35
+
+Package: node-call-bind-apply-helpers
+Source: node-to-buffer
+Version: 1.2.2+~cs4.3.9-1
+Installed-Size: 32
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Architecture: all
+Depends: node-es-errors, node-function-bind
+Description: Helper functions around Function call/apply/bind
+Homepage: https://github.com/browserify/to-buffer
+Description-md5: 6bfd38285fd090311765d141857d434c
+javascript
+Priority: optional
+Filename: pool/main/n/node-to-buffer/node-call-bind-apply-helpers_1.2.2+~cs4.3.9-1_all.deb
+Size: 6740
+MD5sum: 4d7c89698fa0b4457723920098c3f329
+SHA256: e7ab4666dd6c39e9377b87700519f5359f3c8e9ed6b682f5c795aba4c8da6873
+
+Package: node-call-bound
+Source: node-to-buffer
+Version: 1.2.2+~cs4.3.9-1
+Installed-Size: 24
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Architecture: all
+Depends: node-call-bind-apply-helpers, node-get-intrinsic
+Description: Robust call-bound JavaScript intrinsics, using `call-bind` and `get-intrinsic`
+Homepage: https://github.com/browserify/to-buffer
+Description-md5: 65ef404e8b23312310507d7b2822c9eb
+javascript
+Priority: optional
+Filename: pool/main/n/node-to-buffer/node-call-bound_1.2.2+~cs4.3.9-1_all.deb
+Size: 6928
+MD5sum: 7a76c30028991bc8697acdf9d2ca3995
+SHA256: 46deaa1812f394cccbf949fd9d8d1ad682503e41216c41bc86a0c4f6dfcce262
+
+Package: node-es-errors
+Source: node-to-buffer (1.2.2+~cs4.3.9-1)
+Version: 1.3.0~1.2.2+~cs4.3.9-1
+Installed-Size: 32
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Architecture: all
+Description: Simple cache for a few of the JS Error constructors
+Multi-Arch: foreign
+Homepage: https://github.com/browserify/to-buffer
+Description-md5: f8c1424e031d4c5eaa9af8f7f3ee91f7
+javascript
+Priority: optional
+Filename: pool/main/n/node-to-buffer/node-es-errors_1.3.0~1.2.2+~cs4.3.9-1_all.deb
+Size: 5612
+MD5sum: e149a1d63f484ab0e241c51bc29e346d
+SHA256: 81d76e7fbf832b2116d15ec68f6a01b2d1ea191c7b0939885b3abd8e625dceca
+
+Package: node-to-buffer
+Version: 1.2.2+~cs4.3.9-1
+Installed-Size: 21
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Architecture: all
+Depends: node-isarray, node-safe-buffer, node-typed-array-buffer
+Description: Nodejs library to get a buffer robustly from various variable types
+Homepage: https://github.com/browserify/to-buffer
+Description-md5: 12ac35277761a805779bbc369c3bcf82
+javascript
+Priority: optional
+Filename: pool/main/n/node-to-buffer/node-to-buffer_1.2.2+~cs4.3.9-1_all.deb
+Size: 7080
+MD5sum: 26f055558b7398ef15cae71140626ec3
+SHA256: 1dcb4d7ca10b6b5354878388f91876d63a925d8ff4be9513e1ee480583d70139
+
+Package: node-typed-array-buffer
+Source: node-to-buffer
+Version: 1.2.2+~cs4.3.9-1
+Installed-Size: 20
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Architecture: all
+Depends: node-call-bound, node-es-errors, node-is-typed-array
+Description: Get the ArrayBuffer out of a TypedArray
+Homepage: https://github.com/browserify/to-buffer
+Description-md5: b624b6537b0235a1a1b0d84508478b87
+javascript
+Priority: optional
+Filename: pool/main/n/node-to-buffer/node-typed-array-buffer_1.2.2+~cs4.3.9-1_all.deb
+Size: 5980
+MD5sum: 803665904dc650c6858edcfbf23a06b8
+SHA256: afff46f11738965987dc7e61f4d73de34331628f807aa8704131cc6fa05d4edd
 
 Package: node-to-fast-properties
 Version: 3.0.1-3
