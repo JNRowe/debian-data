@@ -19,79 +19,6 @@ Size: 33648
 MD5sum: 1d6a6db7e2a222fdb71d7edbfc24cf87
 SHA256: 2adf9f5e3237593e4a2343f9a87c28d6a45e7a9b82f005fce5459c88cbfa9e0b
 
-Package: 389-ds
-Source: 389-ds-base
-Version: 3.1.2+dfsg1-1
-Installed-Size: 43
-Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
-Architecture: all
-Depends: 389-ds-base, cockpit-389-ds
-Description: 389 Directory Server suite - metapackage
-Homepage: https://directory.fedoraproject.org
-Description-md5: 72b0f037b5c7bab3e3a681a127817467
-Tag: role::metapackage, security::authentication, system::server
-net
-Priority: optional
-Filename: pool/main/3/389-ds-base/389-ds_3.1.2+dfsg1-1_all.deb
-Size: 14584
-MD5sum: 5f0868016483b6ba21f331454ca63e51
-SHA256: 6fbb4e3540b4bb449c0ec19cbfb21e17a9b2b08d5ae022837443eb2dc4496636
-
-Package: 389-ds-base
-Version: 3.1.2+dfsg1-1
-Installed-Size: 11094
-Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
-Architecture: amd64
-Replaces: 389-ds-base-legacy-tools
-Depends: 389-ds-base-libs (= 3.1.2+dfsg1-1), adduser, acl, ldap-utils, libsasl2-modules-gssapi-mit, python3-lib389, python3-selinux, python3-semanage, python3-sepolicy, systemd, libc6 (>= 2.39), libcrypt1 (>= 1:4.1.0), libdb5.3t64, libgcc-s1 (>= 4.2), libicu76 (>= 76.1-1~), libldap2 (>= 2.6.2), liblmdb0 (>= 0.9.14), libnspr4 (>= 2:4.10.9), libnss3 (>= 2:3.15), libpam0g (>= 0.99.7.1), libsasl2-2 (>= 2.1.28+dfsg1), libsnmp40t64 (>= 5.9.4+dfsg), libssl3t64 (>= 3.0.0), libsystemd0, python3:any
-Pre-Depends: debconf (>= 0.5) | debconf-2.0
-Description: 389 Directory Server suite - server
-Homepage: https://directory.fedoraproject.org
-Description-md5: 9c56eb26e44476f95f66b09921fcbf22
-net
-Priority: optional
-Filename: pool/main/3/389-ds-base/389-ds-base_3.1.2+dfsg1-1_amd64.deb
-Size: 2294160
-MD5sum: 78ac87757948ad189c643462d3fb29e8
-SHA256: f95f387919ca613d708323376038725f9f98327359f265bb61f2407d4ae85962
-
-Package: cockpit-389-ds
-Source: 389-ds-base
-Version: 3.1.2+dfsg1-1
-Installed-Size: 876
-Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
-Architecture: all
-Depends: cockpit, libjs-bootstrap, libjs-c3, libjs-d3, libjs-jquery-datatables, libjs-jquery-datatables-extensions, libjs-jquery-jstree, libjs-moment, libnss3-tools, python3, python3-lib389
-Description: Cockpit user interface for 389 Directory Server
-Multi-Arch: foreign
-Homepage: https://directory.fedoraproject.org
-Description-md5: 29c953a4198b73567ac827862c4a3e0f
-net
-Priority: optional
-Filename: pool/main/3/389-ds-base/cockpit-389-ds_3.1.2+dfsg1-1_all.deb
-Size: 858896
-MD5sum: 9476a4bb57e85af5b19b6522349537c2
-SHA256: c7d9b66b1cfaebbc058d54c44ef49651c4cbf05a987fdb633697ddba657d47db
-
-Package: python3-lib389
-Source: 389-ds-base
-Version: 3.1.2+dfsg1-1
-Installed-Size: 2439
-Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
-Architecture: all
-Replaces: 389-ds-base (<< 1.4.0.18-1~), python-lib389 (<< 1.3.7.8)
-Depends: python3-argcomplete, python3-argparse-manpage, python3-cryptography, python3-dateutil, python3-distro, python3-ldap, python3-pkg-resources, python3-pyasn1, python3-pyasn1-modules, python3:any, libnss3-tools, openssl, python3-packaging, python3-pytest
-Conflicts: 389-ds-base (<< 1.4.0.18-1~), python-lib389 (<< 1.3.7.8)
-Description: Python3 module for accessing and configuring the 389 Directory Server
-Homepage: https://directory.fedoraproject.org
-Description-md5: 312a10ddcf41c03aed17c8e2759b4410
-net
-Priority: optional
-Filename: pool/main/3/389-ds-base/python3-lib389_3.1.2+dfsg1-1_all.deb
-Size: 414744
-MD5sum: 7744ae9c44b54c179fddd04755991948
-SHA256: 38e1b154a465f324c08568b7776b81df2aec38fa8e3c55518729864d712725dc
-
 Package: 6tunnel
 Version: 1:0.14-1
 Installed-Size: 49
@@ -2258,12 +2185,11 @@ MD5sum: 22d91a5b6240e7c297ca1e6475e142a4
 SHA256: 7715f7e9b4f5b697764327b7d5ce679183b92d24c563cff5bbe649bfb69d2087
 
 Package: c-icap
-Source: c-icap (1:0.5.10-6.1)
-Version: 1:0.5.10-6.1+b2
-Installed-Size: 441
+Version: 1:0.5.10-7
+Installed-Size: 448
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: amd64
-Depends: adduser, libicapapi5t64 (= 1:0.5.10-6.1+b2), sysvinit-utils (>= 3.05-4~) | lsb-base, libc6 (>= 2.38), libdb5.3t64
+Depends: adduser, libicapapi5t64 (= 1:0.5.10-7), sysvinit-utils (>= 3.05-4~) | lsb-base, libc6 (>= 2.38), libdb5.3t64
 Pre-Depends: init-system-helpers (>= 1.54~)
 Suggests: libc-icap-module, squid
 Description: ICAP server implementation
@@ -2273,10 +2199,10 @@ Tag: implemented-in::c, interface::daemon, network::server, role::program,
  security::antivirus, use::proxying, works-with::network-traffic
 net
 Priority: optional
-Filename: pool/main/c/c-icap/c-icap_0.5.10-6.1+b2_amd64.deb
-Size: 105852
-MD5sum: a7d039d4f714b413e07a47b02774fdb7
-SHA256: b6169c088749d89304f91d7a5be303ba45e97b6da2bb278d4ec537b63b4aec5c
+Filename: pool/main/c/c-icap/c-icap_0.5.10-7_amd64.deb
+Size: 107028
+MD5sum: 54442a1a2f1394c49b65177e36031af7
+SHA256: af87d52e35c5e813328330b7f1c97ad1afec3d0521f8bb6662942c55633af2d9
 
 Package: libc-icap-mod-contentfiltering
 Source: c-icap-modules
@@ -2702,11 +2628,11 @@ SHA256: 2f5a159575e0fe988c8a17f62c7d1c41b7a1bed4bbb71c4dac483f0e50a5ac27
 
 Package: cinder-api
 Source: cinder
-Version: 2:26.0.0-2
+Version: 2:27.0.0-1
 Installed-Size: 155
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: adduser, cinder-common (= 2:26.0.0-2), debconf, python3-keystoneclient, python3-openstackclient, python3-pastescript, q-text-as-data, uwsgi-plugin-python3, debconf (>= 0.5) | debconf-2.0, python3:any
+Depends: adduser, cinder-common (= 2:27.0.0-1), debconf, python3-keystoneclient, python3-openstackclient, python3-pastescript, q-text-as-data, uwsgi-plugin-python3, debconf (>= 0.5) | debconf-2.0, python3:any
 Description: OpenStack block storage system - API server
 Homepage: https://github.com/openstack/cinder
 Description-md5: bff82f2e621feef147edaa701ca7653c
@@ -2714,18 +2640,18 @@ Tag: admin::virtualization, implemented-in::python, role::program,
  suite::openstack, system::cloud, system::virtual
 net
 Priority: optional
-Filename: pool/main/c/cinder/cinder-api_26.0.0-2_all.deb
-Size: 24680
-MD5sum: 568456d2eb530b8698da744ad99d83d6
-SHA256: eb957bf0a79bf400df875122b28aab58104fe606dec33ce881b33cff5400cae6
+Filename: pool/main/c/cinder/cinder-api_27.0.0-1_all.deb
+Size: 24872
+MD5sum: cf6e64950a049c77f53f3146258b650c
+SHA256: b11a156c706ce71f61cc4b044193efb8ad9d95a800414cae2d078e17caa2402b
 
 Package: cinder-backup
 Source: cinder
-Version: 2:26.0.0-2
+Version: 2:27.0.0-1
 Installed-Size: 40
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: adduser, cinder-common (= 2:26.0.0-2), python3:any
+Depends: adduser, cinder-common (= 2:27.0.0-1), python3:any
 Description: OpenStack block storage system - Backup server
 Homepage: https://github.com/openstack/cinder
 Description-md5: 73f2900a0d8182e872df1b4487831aa0
@@ -2733,18 +2659,18 @@ Tag: admin::virtualization, implemented-in::python, role::program,
  suite::openstack, system::cloud, system::virtual
 net
 Priority: optional
-Filename: pool/main/c/cinder/cinder-backup_26.0.0-2_all.deb
-Size: 11428
-MD5sum: 398f6317da4ebe2361a63b74b7e28aaa
-SHA256: d8e8dba6098dae4d7e7ace11e75b3389e8cb86732dbd513dc71c7d8143c8a2a0
+Filename: pool/main/c/cinder/cinder-backup_27.0.0-1_all.deb
+Size: 11608
+MD5sum: 8c96a13c46388ef97d9c91088369e082
+SHA256: 7899ff704e5ff3c4396339038b8b23b33ec227cb706e8d4ff22eb90216ef69a7
 
 Package: cinder-common
 Source: cinder
-Version: 2:26.0.0-2
-Installed-Size: 476
+Version: 2:27.0.0-1
+Installed-Size: 499
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: adduser, dbconfig-common, debconf, cryptsetup-bin, cgroup-tools (>= 2.0.2), python3-cinder (= 2:26.0.0-2), thin-provisioning-tools, sqlite3, debconf (>= 0.5) | debconf-2.0, python3:any
+Depends: adduser, dbconfig-common, debconf, cryptsetup-bin, cgroup-tools (>= 2.0.2), python3-cinder (= 2:27.0.0-1), thin-provisioning-tools, sqlite3, debconf (>= 0.5) | debconf-2.0, python3:any
 Description: OpenStack block storage system - common files
 Homepage: https://github.com/openstack/cinder
 Description-md5: cb01a6cfd7e60aaebcd3df60dfad9e7f
@@ -2752,18 +2678,18 @@ Tag: admin::virtualization, implemented-in::python, role::app-data,
  role::program, suite::openstack, system::cloud, system::virtual
 net
 Priority: optional
-Filename: pool/main/c/cinder/cinder-common_26.0.0-2_all.deb
-Size: 80596
-MD5sum: f84b45936cd07c42f52dec26fd35aa0e
-SHA256: c4b743ab1aa1b3a0c96c4a2fb5e9e203645f6de5f57db171a2ca1f4192188a4a
+Filename: pool/main/c/cinder/cinder-common_27.0.0-1_all.deb
+Size: 83164
+MD5sum: 7737b52627513d7114d5ad39dc0523cd
+SHA256: f39e5a913218ce79f8341a62a349c1aad21ee1521c91afc534af880d2b14393b
 
 Package: cinder-scheduler
 Source: cinder
-Version: 2:26.0.0-2
+Version: 2:27.0.0-1
 Installed-Size: 43
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: cinder-common (= 2:26.0.0-2), python3:any
+Depends: cinder-common (= 2:27.0.0-1), python3:any
 Description: OpenStack block storage system - Scheduler server
 Homepage: https://github.com/openstack/cinder
 Description-md5: 777175fe703d7f3a75993c335b1fdb9c
@@ -2771,18 +2697,18 @@ Tag: admin::virtualization, implemented-in::python, role::program,
  suite::openstack, system::cloud, system::virtual
 net
 Priority: optional
-Filename: pool/main/c/cinder/cinder-scheduler_26.0.0-2_all.deb
-Size: 11772
-MD5sum: 709b744705b1e13c48bae49332e57899
-SHA256: 84a45448088bd0a36db3e4d025478f96cde43c09ac0b24958a0c4335149d8406
+Filename: pool/main/c/cinder/cinder-scheduler_27.0.0-1_all.deb
+Size: 11944
+MD5sum: aec4086eefe183cfba8b13a90146c391
+SHA256: e3abeb16c39bf752aca8490d061b0cb844b3eb21a923f9a73f03088b520db222
 
 Package: cinder-volume
 Source: cinder
-Version: 2:26.0.0-2
+Version: 2:27.0.0-1
 Installed-Size: 96
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: adduser, cinder-common (= 2:26.0.0-2), lvm2, qemu-utils, tgt | open-iscsi, python3:any
+Depends: adduser, cinder-common (= 2:27.0.0-1), lvm2, qemu-utils, tgt | open-iscsi, python3:any
 Suggests: ceph-common
 Description: OpenStack block storage system - Volume server
 Homepage: https://github.com/openstack/cinder
@@ -2791,10 +2717,10 @@ Tag: admin::virtualization, implemented-in::python, role::program,
  suite::openstack, system::cloud, system::virtual
 net
 Priority: optional
-Filename: pool/main/c/cinder/cinder-volume_26.0.0-2_all.deb
-Size: 22284
-MD5sum: 056fd8c304ae4fc1eec6af452f557bbf
-SHA256: 015fc49518442a11756e52222580469124758ec90356b91b66dbef837d110438
+Filename: pool/main/c/cinder/cinder-volume_27.0.0-1_all.deb
+Size: 22468
+MD5sum: 92de063f1a6b87251e4464be24497148
+SHA256: 6abab3da6c1b863ada84aaa264d40564d9bcb2ebcaed77919d41f386abce1fc6
 
 Package: cinder-tempest-plugin
 Version: 1.19.0-2
@@ -18475,7 +18401,7 @@ SHA256: 566fa7120d6d5a53a58f1544a63d8ae8e64e5b96d71c64a82ad47297574df0eb
 
 Package: a2boot
 Source: netatalk
-Version: 4.2.3~ds-1
+Version: 4.2.3~ds-2
 Installed-Size: 79
 Maintainer: Debian Netatalk team <pkg-netatalk-devel@lists.alioth.debian.org>
 Architecture: amd64
@@ -18486,18 +18412,18 @@ Homepage: https://github.com/Netatalk/netatalk
 Description-md5: b1fce2791fcaa94a110d0d7dc0d3fbfd
 net
 Priority: optional
-Filename: pool/main/n/netatalk/a2boot_4.2.3~ds-1_amd64.deb
-Size: 22868
-MD5sum: 7f3ae476e0923f0cd72535aebc682cf8
-SHA256: 7e2bbb4adf2ac26e743673ff2e26035fe721cabdf27f244208e70af7b0b9a4a0
+Filename: pool/main/n/netatalk/a2boot_4.2.3~ds-2_amd64.deb
+Size: 22900
+MD5sum: 1f8eda8036309ce422fdeb4e356201db
+SHA256: 2d03f375e0b6d1ef3a5470c26807a668d7418f6b2975209683a38d282416e4ae
 
 Package: atalkd
 Source: netatalk
-Version: 4.2.3~ds-1
+Version: 4.2.3~ds-2
 Installed-Size: 233
 Maintainer: Debian Netatalk team <pkg-netatalk-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libatalk (= 4.2.3~ds-1), netbase, libc6 (>= 2.38)
+Depends: libatalk (= 4.2.3~ds-2), netbase, libc6 (>= 2.38)
 Pre-Depends: init-system-helpers (>= 1.54~)
 Recommends: a2boot, macipgw, papd, timelord
 Enhances: netatalk
@@ -18506,14 +18432,14 @@ Homepage: https://github.com/Netatalk/netatalk
 Description-md5: 607ce944dbb83f3b3e4ddcf1c5f422bb
 net
 Priority: optional
-Filename: pool/main/n/netatalk/atalkd_4.2.3~ds-1_amd64.deb
-Size: 62928
-MD5sum: d3406c125c40435ae2a1ca106b824fef
-SHA256: c689b1a9a1d244f9c01e4a85e75e82f8fe1af36ee98d872c60e5359c4993a542
+Filename: pool/main/n/netatalk/atalkd_4.2.3~ds-2_amd64.deb
+Size: 63332
+MD5sum: 9ac5aa6ecc2f0b7b04467c25fb3f5b7d
+SHA256: 3999abd54b867ac4936dfed7d14b9e25b72512db21a118b9ee29c428f25eb782
 
 Package: macipgw
 Source: netatalk
-Version: 4.2.3~ds-1
+Version: 4.2.3~ds-2
 Installed-Size: 105
 Maintainer: Debian Netatalk team <pkg-netatalk-devel@lists.alioth.debian.org>
 Architecture: amd64
@@ -18524,17 +18450,17 @@ Homepage: https://github.com/Netatalk/netatalk
 Description-md5: 1b5e9fc8d5685975823b10af37673fdb
 net
 Priority: optional
-Filename: pool/main/n/netatalk/macipgw_4.2.3~ds-1_amd64.deb
-Size: 31660
-MD5sum: 4a4f5d1e6f76983e8d3c05bd0446266e
-SHA256: d508268eed20234ddd837d8347d0e03b80a382c70f4193e72f04bc24e195553f
+Filename: pool/main/n/netatalk/macipgw_4.2.3~ds-2_amd64.deb
+Size: 31776
+MD5sum: f7a70fa615a634ed978ad02aa2610d19
+SHA256: 1446638bc940fa2f3a73f9b9722f1335b90be86971798f2587fc7b7623465b16
 
 Package: netatalk
-Version: 4.2.3~ds-1
+Version: 4.2.3~ds-2
 Installed-Size: 810
 Maintainer: Debian Netatalk team <pkg-netatalk-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: avahi-daemon, dbus, libatalk (= 4.2.3~ds-1), localsearch, libpam-modules, netbase, libacl1 (>= 2.2.23), libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libc6 (>= 2.38), libcrack2 (>= 2.8.12), libcrypt1 (>= 1:4.1.0), libdb5.3t64, libevent-2.1-7t64 (>= 2.1.8-stable), libgcrypt20 (>= 1.11.0), libglib2.0-0t64 (>= 2.32.0), libgssapi-krb5-2 (>= 1.14+dfsg), libiniparser4 (>= 4.0), libkrb5-3 (>= 1.6.dfsg.2), libpam0g (>= 0.99.7.1), libtalloc2 (>= 2.0.4~git20101213), libtinysparql-3.0-0 (>= 3.8.1), libtirpc3t64 (>= 1.0.2)
+Depends: avahi-daemon, dbus, libatalk (= 4.2.3~ds-2), localsearch, libpam-modules, netbase, libacl1 (>= 2.2.23), libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libc6 (>= 2.38), libcrack2 (>= 2.8.12), libcrypt1 (>= 1:4.1.0), libdb5.3t64, libevent-2.1-7t64 (>= 2.1.8-stable), libgcrypt20 (>= 1.11.0), libglib2.0-0t64 (>= 2.32.0), libgssapi-krb5-2 (>= 1.14+dfsg), libiniparser4 (>= 4.0), libkrb5-3 (>= 1.6.dfsg.2), libpam0g (>= 0.99.7.1), libtalloc2 (>= 2.0.4~git20101213), libtinysparql-3.0-0 (>= 3.8.1), libtirpc3t64 (>= 1.0.2)
 Pre-Depends: init-system-helpers (>= 1.54~)
 Recommends: a2boot, atalkd, macipgw, netatalk-tools, papd, timelord
 Suggests: netatalk-doc, quota
@@ -18543,36 +18469,36 @@ Homepage: https://github.com/Netatalk/netatalk
 Description-md5: 21928dafe6d4a150ce968fcba05e0958
 net
 Priority: optional
-Filename: pool/main/n/netatalk/netatalk_4.2.3~ds-1_amd64.deb
-Size: 262468
-MD5sum: a44ccda66429ed8b57b395b5a74d22de
-SHA256: 659f1c7319b071c47f843718cc66ae0f961154b6500d5277e0ec368b9484403e
+Filename: pool/main/n/netatalk/netatalk_4.2.3~ds-2_amd64.deb
+Size: 263300
+MD5sum: 495a5cbab89ee024547a82e1110e3f7c
+SHA256: 5b85d467a550178ef8db3fa97314e612b958bdac9e56f072377d976ef5e6350c
 
 Package: netatalk-tests
 Source: netatalk
-Version: 4.2.3~ds-1
-Installed-Size: 1178
+Version: 4.2.3~ds-2
+Installed-Size: 1182
 Maintainer: Debian Netatalk team <pkg-netatalk-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libatalk (= 4.2.3~ds-1), libc6 (>= 2.38)
+Depends: libatalk (= 4.2.3~ds-2), libc6 (>= 2.38)
 Description: Apple Filing Protocol service (test tools)
 Homepage: https://github.com/Netatalk/netatalk
 Description-md5: 2f653584c12edbaec9b203d248ca8bea
 net
 Priority: optional
-Filename: pool/main/n/netatalk/netatalk-tests_4.2.3~ds-1_amd64.deb
-Size: 288180
-MD5sum: c6a18293d1f6231a19b814744ae35430
-SHA256: 4e073718bf33302b8e5852cf539dc09ec4a6cab32910903f3cc2ecb64d950038
+Filename: pool/main/n/netatalk/netatalk-tests_4.2.3~ds-2_amd64.deb
+Size: 292520
+MD5sum: 0891e06315107de42a8a517f1b38afc6
+SHA256: 1de9c390ca5ac78daa844077f580e77c3368920aa7d5ef5926af0a32736a5e9e
 
 Package: netatalk-tools
 Source: netatalk
-Version: 4.2.3~ds-1
+Version: 4.2.3~ds-2
 Installed-Size: 278
 Maintainer: Debian Netatalk team <pkg-netatalk-devel@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: netatalk (<< 4.0.0~ds-1)
-Depends: dbus, libatalk (= 4.2.3~ds-1), libio-socket-ip-perl, libnet-dbus-perl, lsof, perl, procps, perl:any, libc6 (>= 2.38), libcrack2 (>= 2.8.12), libdb5.3t64, libgcrypt20 (>= 1.11.0), libiniparser4 (>= 4.0)
+Depends: dbus, libatalk (= 4.2.3~ds-2), libio-socket-ip-perl, libnet-dbus-perl, lsof, perl, procps, perl:any, libc6 (>= 2.38), libcrack2 (>= 2.8.12), libdb5.3t64, libgcrypt20 (>= 1.11.0), libiniparser4 (>= 4.0)
 Enhances: netatalk (>= 4.0.0~ds-1)
 Breaks: netatalk (<< 4.0.0~ds-1)
 Description: Apple Filing Protocol service (administrative tools)
@@ -18580,15 +18506,15 @@ Homepage: https://github.com/Netatalk/netatalk
 Description-md5: 69df5559970535cedcc72768870dff32
 net
 Priority: optional
-Filename: pool/main/n/netatalk/netatalk-tools_4.2.3~ds-1_amd64.deb
-Size: 79292
-MD5sum: 645cc102d1e4d5031ba02deace5376f5
-SHA256: 4311a60d482c48a5c5158b41e17fc326021e0a7deb079f5003efaf60810a0fac
+Filename: pool/main/n/netatalk/netatalk-tools_4.2.3~ds-2_amd64.deb
+Size: 79416
+MD5sum: 7a0693b420f034aaa7eae9f654aa545c
+SHA256: 935ef18df3bff73c88669171c7229f42caf38eb09fa6f98f155976dd92bee2eb
 
 Package: papd
 Source: netatalk
-Version: 4.2.3~ds-1
-Installed-Size: 202
+Version: 4.2.3~ds-2
+Installed-Size: 206
 Maintainer: Debian Netatalk team <pkg-netatalk-devel@lists.alioth.debian.org>
 Architecture: amd64
 Depends: atalkd, netbase, libatalk (>= 4.2.3~ds), libc6 (>= 2.38), libcups2t64 (>= 1.6.0)
@@ -18600,14 +18526,14 @@ Homepage: https://github.com/Netatalk/netatalk
 Description-md5: 245549c90e1959b4ea172a17c9144e2f
 net
 Priority: optional
-Filename: pool/main/n/netatalk/papd_4.2.3~ds-1_amd64.deb
-Size: 66484
-MD5sum: d5b5edde182002cb58c9d7d8fd5b1c8d
-SHA256: fbebdc3b426062bf20a174ee312ec36b8c018fac825ebb505188a3327905b23f
+Filename: pool/main/n/netatalk/papd_4.2.3~ds-2_amd64.deb
+Size: 66860
+MD5sum: 7a4a656f305515b9c312c01b75f8325e
+SHA256: a656501eb2e4330f188563f05089017d0d27d935620089e25cf3c84ef79bf398
 
 Package: timelord
 Source: netatalk
-Version: 4.2.3~ds-1
+Version: 4.2.3~ds-2
 Installed-Size: 79
 Maintainer: Debian Netatalk team <pkg-netatalk-devel@lists.alioth.debian.org>
 Architecture: amd64
@@ -18618,10 +18544,10 @@ Homepage: https://github.com/Netatalk/netatalk
 Description-md5: 4432ff9db4efa10a7b97de55fe0b82a7
 net
 Priority: optional
-Filename: pool/main/n/netatalk/timelord_4.2.3~ds-1_amd64.deb
-Size: 22988
-MD5sum: caf72428fb45da5b17a9cb82dd3cc2fd
-SHA256: 79e4b1d2cd16648d1cb4876cfc4819b691fd5baf30dff62dcebcc57a40eb122c
+Filename: pool/main/n/netatalk/timelord_4.2.3~ds-2_amd64.deb
+Size: 23080
+MD5sum: 8ac3596f95fba6036a13d348d23ff772
+SHA256: 8c240db0cad4907b321a7571cfaa9532048b62c5f831579ab0548cb50a5eb8a4
 
 Package: netavark
 Version: 1.16.1-2
@@ -19789,48 +19715,48 @@ SHA256: 55fe7e43cbf19bdec1cede210bcea199006d022fcf63f7ab2df0696c0b8b90f2
 
 Package: networking-bagpipe-bgp-agent
 Source: networking-bagpipe
-Version: 22.0.0-1
+Version: 23.0.0-1
 Installed-Size: 33
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
 Replaces: python3-networking-bagpipe (<< 19.0.0-2~)
-Depends: python3-networking-bagpipe (= 22.0.0-1), python3:any
+Depends: python3-networking-bagpipe (= 23.0.0-1), python3:any
 Breaks: python3-networking-bagpipe (<< 19.0.0-2~)
 Description: OpenStack virtual network service - BGP-based VPN - agent
 Homepage: http://github.com/openstack/networking-babpipe
 Description-md5: d2b8670796c8df800aad9ed3a79e94e8
 net
 Priority: optional
-Filename: pool/main/n/networking-bagpipe/networking-bagpipe-bgp-agent_22.0.0-1_all.deb
-Size: 7304
-MD5sum: 8db94a95635d20302914823d9e7ecbe3
-SHA256: b96f2953d661d278d9fc66588fe874fdf3dd8001f7b032c4e3c06e035c2e8813
+Filename: pool/main/n/networking-bagpipe/networking-bagpipe-bgp-agent_23.0.0-1_all.deb
+Size: 7340
+MD5sum: 7f6e2df9d89ae9c20e9f788bfe2f2364
+SHA256: 580eadce0e68e15e5d9f7e2f80250677314a61afc1247bd70b8390cd1d5b81ee
 
 Package: neutron-api
 Source: neutron
-Version: 2:26.0.0-9
-Installed-Size: 144
+Version: 2:27.0.0-1
+Installed-Size: 145
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: adduser, debconf, neutron-common (= 2:26.0.0-9), python3-keystoneclient, python3-openstackclient, python3-pastescript, q-text-as-data, uwsgi-plugin-python3, debconf (>= 0.5) | debconf-2.0
+Depends: adduser, debconf, neutron-common (= 2:27.0.0-1), python3-keystoneclient, python3-openstackclient, python3-pastescript, q-text-as-data, uwsgi-plugin-python3, debconf (>= 0.5) | debconf-2.0
 Description: OpenStack virtual network service - API service
 Homepage: http://neutron.openstack.org/
 Description-md5: 68d3c6a70746a6f621a548d5d7501c84
 net
 Priority: optional
-Filename: pool/main/n/neutron/neutron-api_26.0.0-9_all.deb
-Size: 24780
-MD5sum: fa00de0eeddffb7d0b271bc0e3500440
-SHA256: 40760ad2b2e64f45d929eb1e029e05369578c5a80f15f423441a1176ec77c174
+Filename: pool/main/n/neutron/neutron-api_27.0.0-1_all.deb
+Size: 24868
+MD5sum: 80571a14a4166af8b3376afccdbbde96
+SHA256: fd83ef8babc1ff24120e9fcec6385893dc06370fc86f3c2dfa17fb583589c9b8
 
 Package: neutron-common
 Source: neutron
-Version: 2:26.0.0-9
-Installed-Size: 565
+Version: 2:27.0.0-1
+Installed-Size: 569
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
 Provides: neutron-plugin, neutron-plugin-bigswitch, neutron-plugin-brocade, neutron-plugin-cisco, neutron-plugin-hyperv, neutron-plugin-linuxbridge, neutron-plugin-metaplugin, neutron-plugin-ml2, neutron-plugin-nec, neutron-plugin-nicira, neutron-plugin-openvswitch, neutron-plugin-plumgrid, neutron-plugin-ryu, python3-networking-ovn
-Depends: adduser, dbconfig-common, debconf, dpkg-dev, python3-neutron (= 2:26.0.0-9), python3-openstackclient, python3-pyparsing, python3-sqlalchemy (>= 1.4.23), sqlite3, debconf (>= 0.5) | debconf-2.0, python3:any
+Depends: adduser, dbconfig-common, debconf, dpkg-dev, python3-neutron (= 2:27.0.0-1), python3-openstackclient, python3-pyparsing, python3-sqlalchemy, sqlite3, debconf (>= 0.5) | debconf-2.0, python3:any
 Description: OpenStack virtual network service - common files
 Homepage: http://neutron.openstack.org/
 Description-md5: c61c2ed65d5a5d765ce30a75c7a7d08c
@@ -19838,18 +19764,18 @@ Tag: admin::virtualization, implemented-in::python, role::app-data,
  suite::openstack, system::cloud, system::virtual
 net
 Priority: optional
-Filename: pool/main/n/neutron/neutron-common_26.0.0-9_all.deb
-Size: 75064
-MD5sum: 8fb5a23bc3a5c2c8fa6a77207087694d
-SHA256: 20647da5b2f5cde010f51d3dfe28ef6fc845ed6c3d799f715f66ac677cf745df
+Filename: pool/main/n/neutron/neutron-common_27.0.0-1_all.deb
+Size: 75404
+MD5sum: aa541d683af5aa79822c2f070f6232d1
+SHA256: 5a8638a94dffcc712aa87909aebe15157bc441c6d1add62bb58b819d6b5f182b
 
 Package: neutron-dhcp-agent
 Source: neutron
-Version: 2:26.0.0-9
-Installed-Size: 84
+Version: 2:27.0.0-1
+Installed-Size: 85
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: adduser, dnsmasq-base, dnsmasq-utils, haproxy, iptables, neutron-common (= 2:26.0.0-9), sudo
+Depends: adduser, dnsmasq-base, dnsmasq-utils, haproxy, iptables, neutron-common (= 2:27.0.0-1), sudo
 Description: OpenStack virtual network service - DHCP agent
 Homepage: http://neutron.openstack.org/
 Description-md5: 43c87530664414ccf407bff8f5a7f951
@@ -19857,18 +19783,18 @@ Tag: admin::virtualization, implemented-in::python, role::program,
  suite::openstack, system::cloud, system::virtual
 net
 Priority: optional
-Filename: pool/main/n/neutron/neutron-dhcp-agent_26.0.0-9_all.deb
-Size: 21796
-MD5sum: 8aacbdcdd7506efd2ed60107b76fed95
-SHA256: d5a55c88729bff865961f604a56643bab53cfe284acfca4afdde6fa2929b767e
+Filename: pool/main/n/neutron/neutron-dhcp-agent_27.0.0-1_all.deb
+Size: 21880
+MD5sum: e249d50b73f77ed84cf0e3140827d3bf
+SHA256: 96548ceea6924fc0387d0fcbc0c7542a1c406a64ca24c12b86694cdb2ac444d6
 
 Package: neutron-l3-agent
 Source: neutron
-Version: 2:26.0.0-9
-Installed-Size: 38
+Version: 2:27.0.0-1
+Installed-Size: 39
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: adduser, debconf, haproxy, iptables, iputils-arping, keepalived, neutron-common (= 2:26.0.0-9), radvd, sudo
+Depends: adduser, debconf, haproxy, iptables, iputils-arping, keepalived, neutron-common (= 2:27.0.0-1), radvd, sudo
 Recommends: openvswitch-switch
 Conflicts: neutron-vpn-agent
 Description: OpenStack virtual network service - l3 agent
@@ -19878,19 +19804,19 @@ Tag: admin::virtualization, implemented-in::python, role::program,
  suite::openstack, system::cloud, system::virtual
 net
 Priority: optional
-Filename: pool/main/n/neutron/neutron-l3-agent_26.0.0-9_all.deb
-Size: 11784
-MD5sum: e27f393beb72980523c6e1d32a6e0f1c
-SHA256: e543ae16749277d584c4e213a40fbf028e40409632ed592e0c947e2e92a934ef
+Filename: pool/main/n/neutron/neutron-l3-agent_27.0.0-1_all.deb
+Size: 11864
+MD5sum: 628f550fc864e8d16ce922bb6e734608
+SHA256: c790c165bbbbbd2cc1059786fa55bfd5deaa98c9fc0cfd9f5714dd390450b4ad
 
 Package: neutron-linuxbridge-agent
 Source: neutron
-Version: 2:26.0.0-9
-Installed-Size: 49
+Version: 2:27.0.0-1
+Installed-Size: 50
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
 Provides: neutron-plugin-linuxbridge-agent
-Depends: bridge-utils, ebtables, neutron-common (= 2:26.0.0-9), sudo
+Depends: bridge-utils, ebtables, neutron-common (= 2:27.0.0-1), sudo
 Description: OpenStack virtual network service - Linux bridge agent
 Homepage: http://neutron.openstack.org/
 Description-md5: a047d7a00c2b7d41cb9139a0c074bde5
@@ -19898,35 +19824,35 @@ Tag: admin::virtualization, implemented-in::python, role::program,
  suite::openstack, system::cloud, system::virtual
 net
 Priority: optional
-Filename: pool/main/n/neutron/neutron-linuxbridge-agent_26.0.0-9_all.deb
-Size: 14156
-MD5sum: ca92031af36acc344de7200f2123c809
-SHA256: 0a3e81929aa2c1bfdda0a5c7ba5d89f0ac0d0ee4db3ce012c651ab6dbe07b114
+Filename: pool/main/n/neutron/neutron-linuxbridge-agent_27.0.0-1_all.deb
+Size: 14236
+MD5sum: ff70e2ebd0060e50da70154177b630f9
+SHA256: 6fc6134826715f08efe63f4d7a6b25fcd4ea47d58932f8d8e8aac54c03e0c932
 
 Package: neutron-macvtap-agent
 Source: neutron
-Version: 2:26.0.0-9
-Installed-Size: 48
+Version: 2:27.0.0-1
+Installed-Size: 49
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: neutron-common (= 2:26.0.0-9)
+Depends: neutron-common (= 2:27.0.0-1)
 Description: OpenStack virtual network service - MacVTap Agent
 Homepage: http://neutron.openstack.org/
 Description-md5: 8c8b828b7e4eb543d0410950f658e1d3
 net
 Priority: optional
-Filename: pool/main/n/neutron/neutron-macvtap-agent_26.0.0-9_all.deb
-Size: 14364
-MD5sum: 5808a89008384cc6d6bbe5adb83c7b6d
-SHA256: 6d7010083fbf43765d5408c07f98693261b6844dd2316fcfaebd159d3e18c00c
+Filename: pool/main/n/neutron/neutron-macvtap-agent_27.0.0-1_all.deb
+Size: 14452
+MD5sum: bbf07b6191d2838721659a9c91d4d1e1
+SHA256: 552cb348b01423dafca005e69a9692488792c472f18f096a529b5039635c0e3c
 
 Package: neutron-metadata-agent
 Source: neutron
-Version: 2:26.0.0-9
-Installed-Size: 163
+Version: 2:27.0.0-1
+Installed-Size: 164
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: adduser, haproxy, neutron-common (= 2:26.0.0-9), debconf (>= 0.5) | debconf-2.0
+Depends: adduser, haproxy, neutron-common (= 2:27.0.0-1), debconf (>= 0.5) | debconf-2.0
 Description: OpenStack virtual network service - metadata agent
 Homepage: http://neutron.openstack.org/
 Description-md5: 193571245ba8a01144e37a055bee988d
@@ -19934,19 +19860,19 @@ Tag: admin::virtualization, implemented-in::python, role::program,
  suite::openstack, system::cloud, system::virtual
 net
 Priority: optional
-Filename: pool/main/n/neutron/neutron-metadata-agent_26.0.0-9_all.deb
-Size: 29748
-MD5sum: 1b9bfa4563e25b67f1d7e4ca813c3276
-SHA256: eae7c552779c5acf8e1c80f162d7377a85c9573680aadf75f3a0893cf979dfaf
+Filename: pool/main/n/neutron/neutron-metadata-agent_27.0.0-1_all.deb
+Size: 29840
+MD5sum: 2b397e54c16e7cda28f1deede2a0ca6a
+SHA256: cbab874ecc90cc3184b03a291b565bd3af5a67813fe9592a5acaa026605ff812
 
 Package: neutron-metering-agent
 Source: neutron
-Version: 2:26.0.0-9
-Installed-Size: 48
+Version: 2:27.0.0-1
+Installed-Size: 49
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
 Provides: neutron-plugin-metering-agent
-Depends: adduser, debconf, neutron-common (= 2:26.0.0-9)
+Depends: adduser, debconf, neutron-common (= 2:27.0.0-1)
 Description: OpenStack virtual network service - metering agent
 Homepage: http://neutron.openstack.org/
 Description-md5: f11af209387f53e9bae31e97823f7948
@@ -19954,19 +19880,19 @@ Tag: admin::virtualization, implemented-in::python, role::program,
  suite::openstack, system::cloud, system::virtual
 net
 Priority: optional
-Filename: pool/main/n/neutron/neutron-metering-agent_26.0.0-9_all.deb
-Size: 14736
-MD5sum: 64e42bd297f286b42bed9f254c7ad228
-SHA256: aa393f4ba4184f0e7457a6ff23bc223326963a0b8527abc0c0f3b8ea3a7bfd02
+Filename: pool/main/n/neutron/neutron-metering-agent_27.0.0-1_all.deb
+Size: 14820
+MD5sum: 5e80a311686180e4d91904e615b508ef
+SHA256: 6a96695083eea7164f9a3cc1e7a7cc4defe300293a3c3d95f9b4fe7d2a1b1128
 
 Package: neutron-openvswitch-agent
 Source: neutron
-Version: 2:26.0.0-9
-Installed-Size: 138
+Version: 2:27.0.0-1
+Installed-Size: 139
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
 Provides: neutron-plugin-openvswitch-agent
-Depends: neutron-common (= 2:26.0.0-9), sudo, debconf (>= 0.5) | debconf-2.0
+Depends: neutron-common (= 2:27.0.0-1), sudo, debconf (>= 0.5) | debconf-2.0
 Pre-Depends: openvswitch-switch
 Recommends: openvswitch-datapath-dkms
 Description: OpenStack virtual network service - Open vSwitch agent
@@ -19976,86 +19902,86 @@ Tag: admin::virtualization, implemented-in::python, role::program,
  suite::openstack, system::cloud, system::virtual
 net
 Priority: optional
-Filename: pool/main/n/neutron/neutron-openvswitch-agent_26.0.0-9_all.deb
-Size: 22596
-MD5sum: 8e40f456aa7d5db4191db97ad5370a13
-SHA256: 856d36a09cdeb8059829cacfe46d26da31584343a2ef4f384443fd1957f3b25d
+Filename: pool/main/n/neutron/neutron-openvswitch-agent_27.0.0-1_all.deb
+Size: 22676
+MD5sum: 3d5f955cc756e80af132346f46fc57c8
+SHA256: 3ae2ebaa6a9d2264a25b10dc94f175478e32e7f067374ceb57eba15f44b1234e
 
 Package: neutron-ovn-agent
 Source: neutron
-Version: 2:26.0.0-9
-Installed-Size: 59
+Version: 2:27.0.0-1
+Installed-Size: 60
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: neutron-common (= 2:26.0.0-9), sudo
+Depends: neutron-common (= 2:27.0.0-1), sudo
 Description: OpenStack virtual network service - OVN agent
 Homepage: http://neutron.openstack.org/
 Description-md5: f37bb656bec6673216dfb7a85a978f8d
 net
 Priority: optional
-Filename: pool/main/n/neutron/neutron-ovn-agent_26.0.0-9_all.deb
-Size: 17536
-MD5sum: 2555a0f3a3b49f40524a16d9a7403c74
-SHA256: 39f2e1d81a6a7b58ca168177adfc2c03546c5059622520381d9fda0ffe521277
+Filename: pool/main/n/neutron/neutron-ovn-agent_27.0.0-1_all.deb
+Size: 17696
+MD5sum: c13d935ce076f31d4be4a47c9813f8d8
+SHA256: b8d7136dda994cc38d16b3e3634d62d9e77d0543d662fe8d7c896a4883200fd9
 
 Package: neutron-ovn-maintenance-worker
 Source: neutron
-Version: 2:26.0.0-9
-Installed-Size: 32
+Version: 2:27.0.0-1
+Installed-Size: 33
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: neutron-common (= 2:26.0.0-9), sudo
+Depends: neutron-common (= 2:27.0.0-1), sudo
 Description: OpenStack virtual network service - OVN maintenance worker
 Homepage: http://neutron.openstack.org/
 Description-md5: 2c87e10b6da662527b68f8653324823b
 net
 Priority: optional
-Filename: pool/main/n/neutron/neutron-ovn-maintenance-worker_26.0.0-9_all.deb
-Size: 11264
-MD5sum: bf632900fadf2d16852192406367e7e4
-SHA256: 55787246e2998104d43d4251971056b0c7e262845e67f9ad97bda4631073de44
+Filename: pool/main/n/neutron/neutron-ovn-maintenance-worker_27.0.0-1_all.deb
+Size: 11352
+MD5sum: f418fe3ac8250ff04af05070bc177dca
+SHA256: a49e4953b49cdaa8d4b31bdf4939c52a6b8a53068b31ad8b005905cfcd61f9d3
 
 Package: neutron-ovn-metadata-agent
 Source: neutron
-Version: 2:26.0.0-9
-Installed-Size: 48
+Version: 2:27.0.0-1
+Installed-Size: 49
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: neutron-common (= 2:26.0.0-9), sudo
+Depends: neutron-common (= 2:27.0.0-1), sudo
 Description: OpenStack virtual network service - OVN Metadata Agent
 Homepage: http://neutron.openstack.org/
 Description-md5: 88185a2ae213a889068244467579d6cd
 net
 Priority: optional
-Filename: pool/main/n/neutron/neutron-ovn-metadata-agent_26.0.0-9_all.deb
-Size: 14952
-MD5sum: 266c475a28b8a1af326d5f2e8ee985ad
-SHA256: c02ecf79ee1d08c62a347009f29223ffe87406c51aca3f1bc1fbbebb79503d8b
+Filename: pool/main/n/neutron/neutron-ovn-metadata-agent_27.0.0-1_all.deb
+Size: 15036
+MD5sum: e0919606921b50fa955eeb21b5909e22
+SHA256: abdbeefa007d82c9e65ec5b1fb8cffcab76763c9aabad93e4e815c02031c706d
 
 Package: neutron-periodic-workers
 Source: neutron
-Version: 2:26.0.0-9
-Installed-Size: 32
+Version: 2:27.0.0-1
+Installed-Size: 33
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: neutron-common (= 2:26.0.0-9)
+Depends: neutron-common (= 2:27.0.0-1)
 Description: OpenStack virtual network service - periodic tasks
 Homepage: http://neutron.openstack.org/
 Description-md5: 4c11cbfa6a36301e0c0d93094f2cabf9
 net
 Priority: optional
-Filename: pool/main/n/neutron/neutron-periodic-workers_26.0.0-9_all.deb
-Size: 11256
-MD5sum: 9a7fa01eaa3c2b7aa65440b13d795dbf
-SHA256: 0a8a422c6641b6a49877540c0eef06fc4576600d5126204eed71b7568072cce2
+Filename: pool/main/n/neutron/neutron-periodic-workers_27.0.0-1_all.deb
+Size: 11348
+MD5sum: 3eb1ec2d696758e898c5c36d79c01a38
+SHA256: 21ede5234c0138a6be5c03d6a98b3f4a6e1c398a77315723826f0722308a8431
 
 Package: neutron-plugin-nec-agent
 Source: neutron
-Version: 2:26.0.0-9
-Installed-Size: 18
+Version: 2:27.0.0-1
+Installed-Size: 19
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: neutron-common (= 2:26.0.0-9), sudo
+Depends: neutron-common (= 2:27.0.0-1), sudo
 Description: OpenStack virtual network service - NEC agent
 Homepage: http://neutron.openstack.org/
 Description-md5: 38e73e58fdfd62f6c8d04eccd42b38c0
@@ -20063,35 +19989,35 @@ Tag: admin::virtualization, implemented-in::python, role::program,
  suite::openstack, system::cloud, system::virtual
 net
 Priority: optional
-Filename: pool/main/n/neutron/neutron-plugin-nec-agent_26.0.0-9_all.deb
-Size: 8036
-MD5sum: 4270820ce34430571da00b32fbb84df8
-SHA256: d8dfc66c749538b244b40f35c734b39531649bd1819271c72d558eea5aa02263
+Filename: pool/main/n/neutron/neutron-plugin-nec-agent_27.0.0-1_all.deb
+Size: 8112
+MD5sum: 9ba671e0a546e6cee6c5520aacf817b9
+SHA256: 4dc62b9190e48a30af4bea35e6d218fa60c25573e429496e397a2efad7b97886
 
 Package: neutron-rpc-server
 Source: neutron
-Version: 2:26.0.0-9
-Installed-Size: 37
+Version: 2:27.0.0-1
+Installed-Size: 38
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: adduser, neutron-common (= 2:26.0.0-9)
+Depends: adduser, neutron-common (= 2:27.0.0-1)
 Description: OpenStack virtual network service - RPC service
 Homepage: http://neutron.openstack.org/
 Description-md5: df65950a74c73bc11041e4938241abe0
 net
 Priority: optional
-Filename: pool/main/n/neutron/neutron-rpc-server_26.0.0-9_all.deb
-Size: 11856
-MD5sum: 9cf9a3d69de83aa33950b6044e245a76
-SHA256: 9b50e6fc3831316cf1592c96521c55a73a8d6d94425788d96f9cfc98f0344b82
+Filename: pool/main/n/neutron/neutron-rpc-server_27.0.0-1_all.deb
+Size: 11936
+MD5sum: c7a69d62265116a9bcaf15917070dabd
+SHA256: d49a4207789c6a688189cf93b9099bac72f70ff4d0514f69d3617156a2cce6df
 
 Package: neutron-server
 Source: neutron
-Version: 2:26.0.0-9
-Installed-Size: 15
+Version: 2:27.0.0-1
+Installed-Size: 16
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: neutron-api (= 2:26.0.0-9), neutron-rpc-server (= 2:26.0.0-9)
+Depends: neutron-api (= 2:27.0.0-1), neutron-rpc-server (= 2:27.0.0-1)
 Description: OpenStack virtual network service - metapackage for the server
 Homepage: http://neutron.openstack.org/
 Description-md5: 7b62a56b9122552f499d2a68a8e0f658
@@ -20099,35 +20025,35 @@ Tag: admin::virtualization, implemented-in::python, role::program,
  suite::openstack, system::cloud, system::virtual
 net
 Priority: optional
-Filename: pool/main/n/neutron/neutron-server_26.0.0-9_all.deb
-Size: 8004
-MD5sum: 52e9c35b1d7b94411d6ea0f04b9b992f
-SHA256: 42d58ac62f83d695e51a3b4ff97fdf2a4fa8f26b427697607efeef6852179bd0
+Filename: pool/main/n/neutron/neutron-server_27.0.0-1_all.deb
+Size: 8088
+MD5sum: 0c70b5c364262b30d6ae462d9822cc23
+SHA256: d2a183681d15f8a789669c3ebee854786a47986d6727b1cc19bbea404fa29861
 
 Package: neutron-services-server
 Source: neutron
-Version: 2:26.0.0-9
-Installed-Size: 37
+Version: 2:27.0.0-1
+Installed-Size: 38
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: adduser, neutron-common (= 2:26.0.0-9)
+Depends: adduser, neutron-common (= 2:27.0.0-1)
 Description: OpenStack virtual network service - services server
 Homepage: http://neutron.openstack.org/
 Description-md5: deae2190d06acb1ac74998fd6bc3c160
 net
 Priority: optional
-Filename: pool/main/n/neutron/neutron-services-server_26.0.0-9_all.deb
-Size: 11820
-MD5sum: e07bcf0375a158a79138a5ad275da3d3
-SHA256: 9b0316df1ac0305b456339c12d6005cf627468c2c3e410d92c41a6de681ad45f
+Filename: pool/main/n/neutron/neutron-services-server_27.0.0-1_all.deb
+Size: 11912
+MD5sum: 90befd601fab196160cd3efbdbaae707
+SHA256: ebe305a85315ee429c4e3e4c2603d4cd352f319e8a4795b8b9c0ca3bc789d289
 
 Package: neutron-sriov-agent
 Source: neutron
-Version: 2:26.0.0-9
-Installed-Size: 36
+Version: 2:27.0.0-1
+Installed-Size: 37
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: neutron-common (= 2:26.0.0-9)
+Depends: neutron-common (= 2:27.0.0-1)
 Description: OpenStack virtual network service - SR-IOV agent
 Homepage: http://neutron.openstack.org/
 Description-md5: 24e4dbc58813297ba840f713883dfccb
@@ -20135,44 +20061,44 @@ Tag: admin::virtualization, implemented-in::python, role::program,
  suite::openstack, system::cloud, system::virtual
 net
 Priority: optional
-Filename: pool/main/n/neutron/neutron-sriov-agent_26.0.0-9_all.deb
-Size: 11560
-MD5sum: 63e4effe1fbf530b19ea6565052f2711
-SHA256: 1499a177e0a7b160662e1df970ff719c43907bd9a05f27a0a79a4b7329d3d739
+Filename: pool/main/n/neutron/neutron-sriov-agent_27.0.0-1_all.deb
+Size: 11644
+MD5sum: c1224d7bbb425fffaaf27b35ad46d8cc
+SHA256: 467e7a45f1666b6258054e542ff46814409c0e6ed57e4143d12af0ac68b5753c
 
 Package: neutron-bgp-dragent
 Source: neutron-dynamic-routing
-Version: 2:26.0.0-3
-Installed-Size: 31
+Version: 2:27.0.0-1
+Installed-Size: 32
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: neutron-dynamic-routing-common (= 2:26.0.0-3)
+Depends: neutron-dynamic-routing-common (= 2:27.0.0-1)
 Description: OpenStack Neutron Dynamic Routing - Agent
 Homepage: https://github.com/openstack/neutron-dynamic-routing
 Description-md5: ff8bfa713accd9acf3585e7dfe788442
 net
 Priority: optional
-Filename: pool/main/n/neutron-dynamic-routing/neutron-bgp-dragent_26.0.0-3_all.deb
-Size: 8184
-MD5sum: c623e283eca4f79c58cf69a5c1bb7a4c
-SHA256: 61095d70fb47481847b2da91962e43863d23cc5dba87f6d1193c9b0b02a1f47e
+Filename: pool/main/n/neutron-dynamic-routing/neutron-bgp-dragent_27.0.0-1_all.deb
+Size: 8256
+MD5sum: f1ed36d0a47b81cb1890a85ee069b53a
+SHA256: 55e63e865917b24d47330a37526c0505433361d894212427f10b9b909f51b2eb
 
 Package: neutron-dynamic-routing-common
 Source: neutron-dynamic-routing
-Version: 2:26.0.0-3
+Version: 2:27.0.0-1
 Installed-Size: 129
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: neutron-common, python3-neutron-dynamic-routing (= 2:26.0.0-3), debconf (>= 0.5) | debconf-2.0
+Depends: neutron-common, python3-neutron-dynamic-routing (= 2:27.0.0-1), debconf (>= 0.5) | debconf-2.0
 Description: OpenStack Neutron Dynamic Routing - common files
 Homepage: https://github.com/openstack/neutron-dynamic-routing
 Description-md5: de43144c27254d31aa4dea1da5761640
 net
 Priority: optional
-Filename: pool/main/n/neutron-dynamic-routing/neutron-dynamic-routing-common_26.0.0-3_all.deb
-Size: 18496
-MD5sum: 85af0e4b48d9723d98c3e580a00ada2e
-SHA256: 8b1496678cee900465e439139ccb6d5412d6a60824e711f999d5e2932dabc4b8
+Filename: pool/main/n/neutron-dynamic-routing/neutron-dynamic-routing-common_27.0.0-1_all.deb
+Size: 18580
+MD5sum: 11cf6b78cf9afba946f195b305b14760
+SHA256: 4b553dc48127c97e23c89f5cd523fb209c4ff5d71c4c01a9b033e091004395de
 
 Package: neutron-ha-tool
 Version: 0.1.0-3
@@ -20192,20 +20118,20 @@ SHA256: 81184a643b760f84205d5fb4dde22224437794987f79cc60e1ea88f3b99c9ba2
 
 Package: neutron-taas-openvswitch-agent
 Source: neutron-taas
-Version: 15.0.0-1
+Version: 16.0.0-1
 Installed-Size: 33
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: neutron-common (>= 2:16.0.0), python3-neutron-taas (= 15.0.0-1)
+Depends: neutron-common (>= 2:16.0.0), python3-neutron-taas (= 16.0.0-1)
 Description: OpenStack virtual network service - Tap-as-a-Service agent
 Homepage: https://opendev.org/x/tap-as-a-service
 Description-md5: e7164a1f09e6e72abccfe98eabcecfcf
 net
 Priority: optional
-Filename: pool/main/n/neutron-taas/neutron-taas-openvswitch-agent_15.0.0-1_all.deb
-Size: 7392
-MD5sum: ec5da745da6ceec990a41be72e3b1447
-SHA256: fdc585e621b8995c0461ebe1546d5c0ba41e931e4b51d8608637c2b51a90613d
+Filename: pool/main/n/neutron-taas/neutron-taas-openvswitch-agent_16.0.0-1_all.deb
+Size: 7448
+MD5sum: df17de2ba531c64d8bbbedbcde4f7cda
+SHA256: 324a1c5e283d9a7fdc028ebc56a272aa87cebe352b24d035781becc9845ca8b3
 
 Package: neutron-tempest-plugin
 Version: 3.0.0-2
@@ -20227,37 +20153,37 @@ SHA256: d7add4e4a36cb64a9eaaeb194b61a9ec02a5af8efd16b5713ec6a0f8ee5e4da2
 
 Package: neutron-vpnaas-common
 Source: neutron-vpnaas
-Version: 2:26.0.0-1
+Version: 2:27.0.0-1
 Installed-Size: 128
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: python3-neutron-vpnaas (= 2:26.0.0-1), debconf (>= 0.5) | debconf-2.0
+Depends: python3-neutron-vpnaas (= 2:27.0.0-1), debconf (>= 0.5) | debconf-2.0
 Description: OpenStack virtual network service - VPNaaS common files
 Homepage: https://github.com/openstack/neutron-vpnaas
 Description-md5: bafd6eb2036750c51b24a8e3c5d3af9d
 net
 Priority: optional
-Filename: pool/main/n/neutron-vpnaas/neutron-vpnaas-common_26.0.0-1_all.deb
-Size: 18116
-MD5sum: 34012a20318394d576c0f4d3e748cd85
-SHA256: 70b3dd869c423ee785e1aa38b1180ba6e542f7aed66fdd6059774a01070b0c74
+Filename: pool/main/n/neutron-vpnaas/neutron-vpnaas-common_27.0.0-1_all.deb
+Size: 18164
+MD5sum: 1a4bdb3f2417620aff1d87eccb6aea36
+SHA256: 56cd47ce4c22d4bd749f2ab58c1bf8e3e45f27047a6d4f6a7740ab4daef299cf
 
 Package: neutron-vpnaas-vyatta-agent
 Source: neutron-vpnaas
-Version: 2:26.0.0-1
+Version: 2:27.0.0-1
 Installed-Size: 31
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: adduser, debconf, neutron-common (>= 2:25.0.0~), neutron-vpnaas-common (= 2:26.0.0-1)
+Depends: adduser, debconf, neutron-common (>= 2:25.0.0~), neutron-vpnaas-common (= 2:27.0.0-1)
 Description: OpenStack virtual network service - VPNaaS Vyatta Agent
 Homepage: https://github.com/openstack/neutron-vpnaas
 Description-md5: aeab86ab24946d6dd054d7294626ba78
 net
 Priority: optional
-Filename: pool/main/n/neutron-vpnaas/neutron-vpnaas-vyatta-agent_26.0.0-1_all.deb
-Size: 7556
-MD5sum: 2a7e8b00374a1107ede9c8f241108d86
-SHA256: 7a9530fb17d6a551fc2375247700f90a152ade6b9eebbe00edc27dd87fea81e5
+Filename: pool/main/n/neutron-vpnaas/neutron-vpnaas-vyatta-agent_27.0.0-1_all.deb
+Size: 7596
+MD5sum: d7c5033ef67415f47f983533a0c78537
+SHA256: 34f9e3176ba99e7120903570a2d1f8282533dfd344a34f67e5433cc6216d7601
 
 Package: newsboat
 Version: 2.36-1.2
@@ -20969,7 +20895,7 @@ SHA256: 64e3dfdc52892ffaf24e8485aebf4646de64d873b0bac37d3f2aad3b2cbf3522
 
 Package: nordugrid-arc-arc-exporter
 Source: nordugrid-arc
-Version: 7.1.0-1
+Version: 7.1.0-2
 Installed-Size: 30
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: all
@@ -20979,52 +20905,52 @@ Homepage: https://www.nordugrid.org
 Description-md5: 661ededc6290fb9c2dbd9e15e0c8cb83
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-arc-exporter_7.1.0-1_all.deb
-Size: 11516
-MD5sum: 2cd5b424988ba3f3f7fc8e353696b17a
-SHA256: 502856399fa347746d82c86d8ad778de6872ee41bc8adc7ee74b46fcf69bbd49
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-arc-exporter_7.1.0-2_all.deb
+Size: 11604
+MD5sum: c50bb07753edad65a33d729c72b64e49
+SHA256: 144a936e1e774ea6b3789afafc570f062fda76972f7968755f1147994fefe16b
 
 Package: nordugrid-arc-arcctl
 Source: nordugrid-arc
-Version: 7.1.0-1
+Version: 7.1.0-2
 Installed-Size: 140
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: all
 Replaces: libarccommon3v5 (<< 6.5.0~), nordugrid-arc-arex (<< 6.5.0~)
-Depends: python3:any, python3-jwcrypto, libarccommon4 (>= 7.1.0-1)
+Depends: python3:any, python3-jwcrypto, libarccommon4 (>= 7.1.0-2)
 Breaks: libarccommon3v5 (<< 6.5.0~), nordugrid-arc-arex (<< 6.5.0~)
 Description: ARC Control Tool
 Homepage: https://www.nordugrid.org
 Description-md5: 64d4f7bea30bd1dce5a276b50c8948df
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-arcctl_7.1.0-1_all.deb
-Size: 31736
-MD5sum: 9d061b573bcf8c02bc0dbdba99e87a0c
-SHA256: 6ce89ef161f46642d1a062878f6c7a20ba45c74d0f8b975c403137837d8d28ef
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-arcctl_7.1.0-2_all.deb
+Size: 31820
+MD5sum: d4085698e11f55476c5abec0c8ec19fd
+SHA256: 49e653c743d3bef30d0096917cab5681c9d671ce36e30977731dc18baa1cb2be
 
 Package: nordugrid-arc-arcctl-service
 Source: nordugrid-arc
-Version: 7.1.0-1
+Version: 7.1.0-2
 Installed-Size: 77
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: all
 Replaces: libarccommon3v5 (<< 6.5.0~), nordugrid-arc-arcctl (<< 6.6.0~), nordugrid-arc-arex (<< 6.6.0~)
-Depends: python3:any, libarccommon4 (>= 7.1.0-1), nordugrid-arc-arcctl (= 7.1.0-1)
+Depends: python3:any, libarccommon4 (>= 7.1.0-2), nordugrid-arc-arcctl (= 7.1.0-2)
 Breaks: libarccommon3v5 (<< 6.5.0~), nordugrid-arc-arcctl (<< 6.6.0~), nordugrid-arc-arex (<< 6.6.0~)
 Description: ARC Control Tool - service control modules
 Homepage: https://www.nordugrid.org
 Description-md5: 92aa063e2e896f725f57ecec78126c7c
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-arcctl-service_7.1.0-1_all.deb
-Size: 18392
-MD5sum: 2497a3bf8e3847dcb4f630b8279f2100
-SHA256: bfe82e8bfa4a76eded6e83dfca3b60503abfbeb8ab57449237c41e7580700c0f
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-arcctl-service_7.1.0-2_all.deb
+Size: 18480
+MD5sum: db910bc895ca770d22cabc914cefbe9d
+SHA256: 9319ba9d81d6b004a5921159a0217a9fc715a1c1280da4cb899df13cdd073bc1
 
 Package: nordugrid-arc-archery-manage
 Source: nordugrid-arc
-Version: 7.1.0-1
+Version: 7.1.0-2
 Installed-Size: 102
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: all
@@ -21034,20 +20960,20 @@ Homepage: https://www.nordugrid.org
 Description-md5: f89994b315a9ec7f4d8e801f098e5b1a
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-archery-manage_7.1.0-1_all.deb
-Size: 23764
-MD5sum: 15d9c18a440e32b3e10b6b47266ba422
-SHA256: e034e0f1f0c502ba8512ff429cd17fbe9bfdf0fb8e270b11613b2fb7d2644160
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-archery-manage_7.1.0-2_all.deb
+Size: 23844
+MD5sum: cc9e0a8cbd6c827ab5ef8ca25b080bb2
+SHA256: ac0ecb5c17b0ab0f889396498fa30d8488bc5a104cf907991a3d7ee631840dea
 
 Package: nordugrid-arc-arex
 Source: nordugrid-arc
-Version: 7.1.0-1
-Installed-Size: 7279
+Version: 7.1.0-2
+Installed-Size: 6791
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
 Replaces: libarccommon3v5 (<< 6.5.0~), nordugrid-arc-aris (<< 6.0.0~), nordugrid-arc-cache-service (<< 6.0.0~), nordugrid-arc-candypond (<< 6.0.0~)
 Provides: nordugrid-arc-cache-service, nordugrid-arc-candypond
-Depends: libarccommon4 (= 7.1.0-1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglibmm-2.68-1t64 (>= 2.76), libsigc++-3.0-0 (>= 2.2.0), libsqlite3-0 (>= 3.7.15), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), perl:any, python3:any, nordugrid-arc-hed (= 7.1.0-1), nordugrid-arc-plugins-needed (= 7.1.0-1), nordugrid-arc-arcctl (= 7.1.0-1), nordugrid-arc-arcctl-service (= 7.1.0-1), libjson-xs-perl, libxml-simple-perl, procps
+Depends: libarccommon4 (= 7.1.0-2), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglibmm-2.68-1t64 (>= 2.76), libsigc++-3.0-0 (>= 2.2.0), libsqlite3-0 (>= 3.7.15), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), perl:any, python3:any, nordugrid-arc-hed (= 7.1.0-2), nordugrid-arc-plugins-needed (= 7.1.0-2), nordugrid-arc-arcctl (= 7.1.0-2), nordugrid-arc-arcctl-service (= 7.1.0-2), libjson-xs-perl, libxml-simple-perl, procps
 Pre-Depends: init-system-helpers (>= 1.54~)
 Conflicts: nordugrid-arc-cache-service (<< 6.0.0~), nordugrid-arc-candypond (<< 6.0.0~)
 Breaks: libarccommon3v5 (<< 6.5.0~), nordugrid-arc-aris (<< 6.0.0~)
@@ -21056,130 +20982,128 @@ Homepage: https://www.nordugrid.org
 Description-md5: 300b960e90b117b0353dbf89c0e3b06d
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-arex_7.1.0-1_amd64.deb
-Size: 1228692
-MD5sum: e79083d375472b12eccd2677331b992d
-SHA256: e3c5343dd9dfb745189188e7cac5c43b97f2264cb38719143123abadbd4a6a54
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-arex_7.1.0-2_amd64.deb
+Size: 1174648
+MD5sum: 583d307c3547f054d88668a23b149414
+SHA256: 19c3730b4b8b6c0d0b1954b42ca94944490d6af363179435334e0427207cd927
 
 Package: nordugrid-arc-arex-lrms-contrib
 Source: nordugrid-arc
-Version: 7.1.0-1
+Version: 7.1.0-2
 Installed-Size: 351
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: all
 Replaces: nordugrid-arc-arex (<< 7.0.0~)
-Depends: nordugrid-arc-arex (>= 7.1.0-1)
+Depends: nordugrid-arc-arex (>= 7.1.0-2)
 Breaks: nordugrid-arc-arex (<< 7.0.0~)
 Description: ARC Resource-coupled EXecution service - conributed LRMS backends
 Homepage: https://www.nordugrid.org
 Description-md5: b5b15a1540b11deb06bb9614b243b73c
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-arex-lrms-contrib_7.1.0-1_all.deb
-Size: 58276
-MD5sum: 811b42ecf386ea7910343e2f41a5c711
-SHA256: 9358711a6cdc9b71259aa18213d527211e47df09ce938b4984384dc3daf1781f
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-arex-lrms-contrib_7.1.0-2_all.deb
+Size: 58356
+MD5sum: aa608e59dab03c79a079b51801166283
+SHA256: be8542528e86c5142f39187edc45fee4e039728430efc2ef8bd7a3b8d4b13d37
 
 Package: nordugrid-arc-client
 Source: nordugrid-arc
-Version: 7.1.0-1
-Installed-Size: 2645
+Version: 7.1.0-2
+Installed-Size: 2489
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
-Depends: libarccommon4 (= 7.1.0-1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.12.0), libglibmm-2.68-1t64 (>= 2.76), libsigc++-3.0-0 (>= 2.2.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 13.1), nordugrid-arc-plugins-needed (= 7.1.0-1)
+Depends: libarccommon4 (= 7.1.0-2), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.12.0), libglibmm-2.68-1t64 (>= 2.76), libsigc++-3.0-0 (>= 2.2.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 13.1), nordugrid-arc-plugins-needed (= 7.1.0-2)
 Description: ARC command line clients
 Homepage: https://www.nordugrid.org
 Description-md5: 0d8b4f034863a48ad213ffb7bf7a0c8a
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-client_7.1.0-1_amd64.deb
-Size: 441672
-MD5sum: f9eca878f69478460d0b92e825b0b2ad
-SHA256: 1160113dbe09e6618f3c3bef3f5a8b97c478ddcba813e231a26feb7b5bfcb23b
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-client_7.1.0-2_amd64.deb
+Size: 422196
+MD5sum: 11f44522bdcedb293910271b0195c6a7
+SHA256: 638700967e9fbc0b3db3ac3e9e4aa3319b49416f621301a55516a9d16b252d24
 
 Package: nordugrid-arc-community-rtes
 Source: nordugrid-arc
-Version: 7.1.0-1
+Version: 7.1.0-2
 Installed-Size: 76
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: all
-Depends: python3:any, nordugrid-arc-arex (>= 7.1.0-1), nordugrid-arc-arcctl (= 7.1.0-1), python3-dnspython
+Depends: python3:any, nordugrid-arc-arex (>= 7.1.0-2), nordugrid-arc-arcctl (= 7.1.0-2), python3-dnspython
 Description: ARC community defined RTEs support
 Homepage: https://www.nordugrid.org
 Description-md5: a8a3a087271fafa139c937a8d2419111
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-community-rtes_7.1.0-1_all.deb
-Size: 17120
-MD5sum: 4cc4c4572384ec80e385afb0bc63c3ff
-SHA256: 2f2d01e80a79268ac14017fc8cefc4796b6cf563c9ba320485cb29748cbbb5fc
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-community-rtes_7.1.0-2_all.deb
+Size: 17204
+MD5sum: 9ce9fff2e6828eff253fe1985ddb14e4
+SHA256: e55322715b1de921672e20bb91ed44826d86b2b85650ee259174e69315e22eda
 
 Package: nordugrid-arc-datadelivery-service
 Source: nordugrid-arc
-Version: 7.1.0-1
-Installed-Size: 307
+Version: 7.1.0-2
+Installed-Size: 291
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
-Depends: libarccommon4 (= 7.1.0-1), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libsigc++-3.0-0 (>= 2.2.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), nordugrid-arc-hed (= 7.1.0-1), nordugrid-arc-plugins-needed (= 7.1.0-1), nordugrid-arc-arcctl-service (= 7.1.0-1)
+Depends: libarccommon4 (= 7.1.0-2), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libsigc++-3.0-0 (>= 2.2.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), nordugrid-arc-hed (= 7.1.0-2), nordugrid-arc-plugins-needed (= 7.1.0-2), nordugrid-arc-arcctl-service (= 7.1.0-2)
 Pre-Depends: init-system-helpers (>= 1.54~)
 Description: ARC data delivery service
 Homepage: https://www.nordugrid.org
 Description-md5: 97705a857b84981d1c1728d7aafa365c
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-datadelivery-service_7.1.0-1_amd64.deb
-Size: 93960
-MD5sum: 10dadf474c4a5426e4e7a092d1a96898
-SHA256: ba557800e5c1381486ecda0fbc42b73d3c5b81dbc22e53cb0e2b058f6ab520d7
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-datadelivery-service_7.1.0-2_amd64.deb
+Size: 90076
+MD5sum: 895181e57dc3b3445280b95534085c3c
+SHA256: c2d66f521948f664a6402a2d3589dbb2e89f11ec21da303af0695284a1a9578a
 
 Package: nordugrid-arc-dev
 Source: nordugrid-arc
-Version: 7.1.0-1
-Installed-Size: 1343
+Version: 7.1.0-2
+Installed-Size: 1335
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
 Replaces: python3-nordugrid-arc (<< 6.6.0~)
-Depends: libarccommon4 (= 7.1.0-1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.12.0), libglibmm-2.68-1t64 (>= 2.76), libstdc++6 (>= 13.1), libxml2-dev (>= 2.4.0), libssl-dev, libglibmm-2.68-dev
+Depends: libarccommon4 (= 7.1.0-2), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.12.0), libglibmm-2.68-1t64 (>= 2.76), libstdc++6 (>= 13.1), libxml2-dev (>= 2.4.0), libssl-dev, libglibmm-2.68-dev
 Breaks: python3-nordugrid-arc (<< 6.6.0~)
 Description: ARC development files
 Homepage: https://www.nordugrid.org
 Description-md5: 5434707519d14230bb80c0de6395941f
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-dev_7.1.0-1_amd64.deb
-Size: 257668
-MD5sum: 2308040ab43ef316eb05e0350114aa1d
-SHA256: e8a06e1e2ddbfe12c77694e7ab163291df9c82c55bce16e7605ed604defcafcd
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-dev_7.1.0-2_amd64.deb
+Size: 256256
+MD5sum: 303d3710f540f30810538bfb8423e975
+SHA256: 806cf2aff61e43f15ca36d3b9d8d12e02b9b819ed5225cbf8420ec907f3ce295
 
 Package: nordugrid-arc-hed
 Source: nordugrid-arc
-Version: 7.1.0-1
-Installed-Size: 188
+Version: 7.1.0-2
+Installed-Size: 184
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
-Replaces: nordugrid-arc-client (<< 1.0.1~rc2~)
-Depends: libarccommon4 (= 7.1.0-1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglibmm-2.68-1t64 (>= 2.76), libsigc++-3.0-0 (>= 2.2.0), libstdc++6 (>= 14), libsystemd0
+Depends: libarccommon4 (= 7.1.0-2), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglibmm-2.68-1t64 (>= 2.76), libsigc++-3.0-0 (>= 2.2.0), libstdc++6 (>= 14), libsystemd0
 Pre-Depends: init-system-helpers (>= 1.54~)
-Breaks: nordugrid-arc-client (<< 1.0.1~rc2~)
 Description: ARC Hosting Environment Daemon
 Homepage: https://www.nordugrid.org
 Description-md5: 40545887ed24ff3927717d7dccf7eb85
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-hed_7.1.0-1_amd64.deb
-Size: 47468
-MD5sum: eb69b0b50a546fea12e66350ce7636a1
-SHA256: 3729ba97174015fdb4508187d12df1132c670df9498fee2b146c6d2a043a9883
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-hed_7.1.0-2_amd64.deb
+Size: 45808
+MD5sum: 6b644d7290137d00eb2c786c58198caa
+SHA256: ef28de7b11ccde1781f8ad79e7597c0c6f89481482ba189b15b9d564462c2d96
 
 Package: nordugrid-arc-infosys-ldap
 Source: nordugrid-arc
-Version: 7.1.0-1
+Version: 7.1.0-2
 Installed-Size: 119
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: all
 Replaces: nordugrid-arc-aris (<< 6.0.0~), nordugrid-arc-ldap-egiis (<< 6.0.0~), nordugrid-arc-ldap-infosys (<< 6.0.0~)
 Provides: nordugrid-arc-aris, nordugrid-arc-ldap-infosys
-Depends: slapd, glue-schema (>= 2.0.10), bdii, nordugrid-arc-arcctl-service (= 7.1.0-1)
+Depends: slapd, glue-schema (>= 2.0.10), bdii, nordugrid-arc-arcctl-service (= 7.1.0-2)
 Pre-Depends: init-system-helpers (>= 1.54~)
 Conflicts: nordugrid-arc-aris (<< 6.0.0~), nordugrid-arc-ldap-egiis (<< 6.0.0~), nordugrid-arc-ldap-infosys (<< 6.0.0~)
 Description: ARC LDAP-based information services
@@ -21187,14 +21111,14 @@ Homepage: https://www.nordugrid.org
 Description-md5: 038fcb4cbd40f6ec7ee5c5b89c989c4b
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-infosys-ldap_7.1.0-1_all.deb
-Size: 20412
-MD5sum: bb253638a71ba9b8e07b78f2953eda85
-SHA256: c8078c314ce22f2b9629771c9c02ad0d7561a7b4463ac5fe40502a44cccee0ec
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-infosys-ldap_7.1.0-2_all.deb
+Size: 20492
+MD5sum: c5dfdc56a1c65bfc3cc5836242a14b80
+SHA256: 768a442dff96e759227bca4edc062466c909a0768a9d37f50173e51181d274c9
 
 Package: nordugrid-arc-monitor
 Source: nordugrid-arc
-Version: 7.1.0-1
+Version: 7.1.0-2
 Installed-Size: 940
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: all
@@ -21206,180 +21130,163 @@ Homepage: https://www.nordugrid.org
 Description-md5: a95e641894a337c66eee66de73b0668f
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-monitor_7.1.0-1_all.deb
-Size: 129512
-MD5sum: ad3d99e376c4bb6fa369559194bba113
-SHA256: 7fb12af64ab747f47b38f0f06747ad242283f46524735036449b6fc824312510
-
-Package: nordugrid-arc-plugins-gfal
-Source: nordugrid-arc
-Version: 7.1.0-1
-Installed-Size: 176
-Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
-Architecture: amd64
-Depends: libarccommon4 (= 7.1.0-1), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libgfal-transfer2t64 (>= 2.23.2), libgfal2-2t64 (>= 2.23.2), libglib2.0-0t64 (>= 2.12.0), libglibmm-2.68-1t64 (>= 2.76), libstdc++6 (>= 13.1)
-Description: ARC GFAL2 plugins
-Homepage: https://www.nordugrid.org
-Description-md5: d1b320476ddaac1247ac73b13de0da78
-net
-Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-gfal_7.1.0-1_amd64.deb
-Size: 46184
-MD5sum: d1fbf0cc21eeb76cdfdd47386f61a618
-SHA256: 36a4269d63905d7d72a84844339deaced0cf8288b0dfde254e4b585e238f8146
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-monitor_7.1.0-2_all.deb
+Size: 129628
+MD5sum: f3e6773147fc4a5d41f58c88c1395acb
+SHA256: da273f18fd5d9fbe7a8298cefe66d8d52fd948df7eb6b6e16a53460976728b21
 
 Package: nordugrid-arc-plugins-gridftp
 Source: nordugrid-arc
-Version: 7.1.0-1
-Installed-Size: 319
+Version: 7.1.0-2
+Installed-Size: 303
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
 Replaces: nordugrid-arc-plugins-globus (<< 6.5.0~)
-Depends: libarccommon4 (= 7.1.0-1), libarcglobusutils4 (= 7.1.0-1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglobus-common0t64 (>= 17), libglobus-ftp-client2t64 (>= 7), libglobus-ftp-control1t64 (>= 8), libglobus-io3t64 (>= 11), libsigc++-3.0-0 (>= 2.2.0), libstdc++6 (>= 14)
+Depends: libarccommon4 (= 7.1.0-2), libarcglobusutils4 (= 7.1.0-2), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglobus-common0t64 (>= 17), libglobus-ftp-client2t64 (>= 7), libglobus-ftp-control1t64 (>= 8), libglobus-io3t64 (>= 11), libsigc++-3.0-0 (>= 2.2.0), libstdc++6 (>= 14)
 Breaks: nordugrid-arc-plugins-globus (<< 6.5.0~)
 Description: ARC Globus dependent DMCs
 Homepage: https://www.nordugrid.org
 Description-md5: ebe3acf24abbc77519d56a732feb7010
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-gridftp_7.1.0-1_amd64.deb
-Size: 97272
-MD5sum: 68383ea30ddeda3bed25aff312d9dc3e
-SHA256: 65667d9222e7b7b6795749112b3a718e4cc3ff2b10743aba66cba6f9376582b8
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-gridftp_7.1.0-2_amd64.deb
+Size: 93376
+MD5sum: ba347c207053bfd24a7ed57d4e182376
+SHA256: 3759e9c956a0f06e67801cb5ab7c6d0e7c65ccd0bbc726023cb27fe97615db14
 
 Package: nordugrid-arc-plugins-internal
 Source: nordugrid-arc
-Version: 7.1.0-1
-Installed-Size: 1636
+Version: 7.1.0-2
+Installed-Size: 1508
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
-Depends: libarccommon4 (= 7.1.0-1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglibmm-2.68-1t64 (>= 2.76), libsigc++-3.0-0 (>= 2.2.0), libsqlite3-0 (>= 3.7.15), libstdc++6 (>= 14), nordugrid-arc-arex (= 7.1.0-1)
+Depends: libarccommon4 (= 7.1.0-2), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglibmm-2.68-1t64 (>= 2.76), libsigc++-3.0-0 (>= 2.2.0), libsqlite3-0 (>= 3.7.15), libstdc++6 (>= 14), nordugrid-arc-arex (= 7.1.0-2)
 Description: ARC internal plugin
 Homepage: https://www.nordugrid.org
 Description-md5: e37e1d962770194c27de847092eb80ea
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-internal_7.1.0-1_amd64.deb
-Size: 467160
-MD5sum: b5b41a1a38a9fbb046974cb5ad04a407
-SHA256: 7bfefa1578c953ddf9e5a9149e7d5fcc52bc561b41a4955575d92d1ddfb50dbf
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-internal_7.1.0-2_amd64.deb
+Size: 445572
+MD5sum: 6cae4fd8ece09b93aad90e39ba289a35
+SHA256: b3b7a7b807ecd02a18fdba7190e28800afe09ddd600ac62b25798ad74b308461
 
 Package: nordugrid-arc-plugins-lcas-lcmaps
 Source: nordugrid-arc
-Version: 7.1.0-1
-Installed-Size: 114
+Version: 7.1.0-2
+Installed-Size: 106
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
 Replaces: nordugrid-arc-plugins-globus (<< 6.5.0~)
-Depends: libarccommon4 (= 7.1.0-1), libarcglobusutils4 (= 7.1.0-1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libglibmm-2.68-1t64 (>= 2.76), libglobus-common0t64 (>= 17), libglobus-gsi-cert-utils0t64 (>= 8), libglobus-gsi-credential1t64 (>= 6), libglobus-gssapi-gsi4t64 (>= 13), libssl3t64 (>= 3.0.0), libstdc++6 (>= 13.1)
+Depends: libarccommon4 (= 7.1.0-2), libarcglobusutils4 (= 7.1.0-2), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libglibmm-2.68-1t64 (>= 2.76), libglobus-common0t64 (>= 17), libglobus-gsi-cert-utils0t64 (>= 8), libglobus-gsi-credential1t64 (>= 6), libglobus-gssapi-gsi4t64 (>= 13), libssl3t64 (>= 3.0.0), libstdc++6 (>= 13.1)
 Breaks: nordugrid-arc-plugins-globus (<< 6.5.0~)
 Description: ARC LCAS/LCMAPS plugins
 Homepage: https://www.nordugrid.org
 Description-md5: 02696a6a76344a80ca9c5f3c3df9c02b
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-lcas-lcmaps_7.1.0-1_amd64.deb
-Size: 25692
-MD5sum: 3913df73546a1b682e425188010c8f38
-SHA256: e65c816c14cd201cf6b10711a8576c02818f64a63c8eeeb2d82535c86dbeb2ea
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-lcas-lcmaps_7.1.0-2_amd64.deb
+Size: 24276
+MD5sum: 789bbf41807d0d217355c6dee9a1a119
+SHA256: 7d605ef11dc35c58990640359a5360bfa8b7a89454f1c3852184c0e5ba79d4b1
 
 Package: nordugrid-arc-plugins-needed
 Source: nordugrid-arc
-Version: 7.1.0-1
-Installed-Size: 4019
+Version: 7.1.0-2
+Installed-Size: 3739
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
 Replaces: nordugrid-arc-plugins-arcrest (<< 7.0.0~)
 Provides: nordugrid-arc-plugins-arcrest
-Depends: libarccommon4 (= 7.1.0-1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.12.0), libglibmm-2.68-1t64 (>= 2.76), libldns3t64 (>= 1.7.1), libsigc++-3.0-0 (>= 2.2.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libxml2-16 (>= 2.14.1)
+Depends: libarccommon4 (= 7.1.0-2), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.12.0), libglibmm-2.68-1t64 (>= 2.76), libldns3t64 (>= 1.7.1), libsigc++-3.0-0 (>= 2.2.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libxml2-16 (>= 2.14.1)
 Conflicts: nordugrid-arc-plugins-arcrest (<< 7.0.0~)
 Description: ARC base plugins
 Homepage: https://www.nordugrid.org
 Description-md5: 65439e257c63108c957dc1132030d440
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-needed_7.1.0-1_amd64.deb
-Size: 979192
-MD5sum: a6bfc4f619b2f6ec4731e3e43b600a5c
-SHA256: 7cf9642e6c690823c5d711e366943a8323929334e91de46b18e594bcce3dfee1
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-needed_7.1.0-2_amd64.deb
+Size: 934996
+MD5sum: bafda0f3e3816397576f4cef9412ceca
+SHA256: a2c32ea82d0e4ca17929677aee9608623262f51332d2d7e55916be707b6a12ff
 
 Package: nordugrid-arc-plugins-python
 Source: nordugrid-arc
-Version: 7.1.0-1
-Installed-Size: 148
+Version: 7.1.0-2
+Installed-Size: 140
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
 Replaces: python3-nordugrid-arc (<< 6.6.0~)
-Depends: libarccommon4 (= 7.1.0-1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libpython3.13 (>= 3.13.0~rc3), libstdc++6 (>= 14), python3-nordugrid-arc (= 7.1.0-1)
+Depends: libarccommon4 (= 7.1.0-2), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libpython3.13 (>= 3.13.0~rc3), libstdc++6 (>= 14), python3-nordugrid-arc (= 7.1.0-2)
 Breaks: python3-nordugrid-arc (<< 6.6.0~)
 Description: ARC Python dependent plugin
 Homepage: https://www.nordugrid.org
 Description-md5: 43548e7bc6b22d368de36b322cad9de1
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-python_7.1.0-1_amd64.deb
-Size: 36352
-MD5sum: ce74775803a680e46b43151ac1e6e9e9
-SHA256: 31dd86615f1e3f2f2b415c991c221701d819296e664a8de58ad95d328359775f
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-python_7.1.0-2_amd64.deb
+Size: 35092
+MD5sum: 1413be384e6a4e03714780678b874a15
+SHA256: 0505d0dd7beb40ddd329b69d4f62d76119fb1c708b0fa2c7504c10b0f226febd
 
 Package: nordugrid-arc-plugins-s3
 Source: nordugrid-arc
-Version: 7.1.0-1
-Installed-Size: 112
+Version: 7.1.0-2
+Installed-Size: 104
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
-Depends: libarccommon4 (= 7.1.0-1), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libs3-2 (>= 2.0), libstdc++6 (>= 13.1)
+Depends: libarccommon4 (= 7.1.0-2), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libs3-2 (>= 2.0), libstdc++6 (>= 13.1)
 Description: ARC S3 plugins
 Homepage: https://www.nordugrid.org
 Description-md5: 27985dc8491b7794247009cb86e543b3
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-s3_7.1.0-1_amd64.deb
-Size: 34600
-MD5sum: 174af1b423fdf0eef811dd6d74f7cd28
-SHA256: aadadc6d669a56b16620fa14972ea544076a5b162f80620c38f2855a4b80a123
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-s3_7.1.0-2_amd64.deb
+Size: 32752
+MD5sum: 367c97f238a758fd9a35ba3a8f7606c3
+SHA256: 36ad165f6aece55a7e13980eaa0e16b497f179e67f8b2a5ab4cf1a72b0be7aa3
 
 Package: nordugrid-arc-plugins-xrootd
 Source: nordugrid-arc
-Version: 7.1.0-1
-Installed-Size: 193
+Version: 7.1.0-2
+Installed-Size: 185
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
-Depends: libarccommon4 (= 7.1.0-1), libc6 (>= 2.33), libgcc-s1 (>= 3.0), libglibmm-2.68-1t64 (>= 2.76), libsigc++-3.0-0 (>= 2.2.0), libstdc++6 (>= 13.1), libxrdcl3t64 (>= 5.8.4), libxrdposix3t64 (>= 5.8.4)
+Depends: libarccommon4 (= 7.1.0-2), libc6 (>= 2.33), libgcc-s1 (>= 3.0), libglibmm-2.68-1t64 (>= 2.76), libsigc++-3.0-0 (>= 2.2.0), libstdc++6 (>= 13.1), libxrdcl3t64 (>= 5.8.4), libxrdposix3t64 (>= 5.8.4)
 Description: ARC xrootd plugins
 Homepage: https://www.nordugrid.org
 Description-md5: 8b633e18244f79461b0a9799154f2c9f
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-xrootd_7.1.0-1_amd64.deb
-Size: 54616
-MD5sum: b8a0da3d72c6444c03ec8a3f0bbdcade
-SHA256: b9b135e6f38867ba57c25764b85e37fb19213c87642d4643dfa7449d6aeb8d5e
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-xrootd_7.1.0-2_amd64.deb
+Size: 51932
+MD5sum: f37f1d179e41a26cba0b07239c8d94e1
+SHA256: f1fc1f9292cabeb003b13c108eabc4cc3f6cb40f6061a670adf7cf6c499d6c8b
 
 Package: nordugrid-arc-test-utils
 Source: nordugrid-arc
-Version: 7.1.0-1
-Installed-Size: 53
+Version: 7.1.0-2
+Installed-Size: 49
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
 Replaces: nordugrid-arc-misc-utils (<< 6.0.0~)
 Provides: nordugrid-arc-misc-utils
-Depends: libarccommon4 (= 7.1.0-1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libsigc++-3.0-0 (>= 2.2.0), libstdc++6 (>= 13.1), nordugrid-arc-plugins-needed (= 7.1.0-1)
+Depends: libarccommon4 (= 7.1.0-2), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libsigc++-3.0-0 (>= 2.2.0), libstdc++6 (>= 13.1), nordugrid-arc-plugins-needed (= 7.1.0-2)
 Conflicts: nordugrid-arc-misc-utils (<< 6.0.0~)
 Description: ARC test tools
 Homepage: https://www.nordugrid.org
 Description-md5: 153298e16d8ee643fe1e967b8bfa0f73
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-test-utils_7.1.0-1_amd64.deb
-Size: 16648
-MD5sum: e11e2a1435bc25c6dc1fb73d44982d04
-SHA256: 67ac494337bcc906431b6ec1a00287f326bdb1e4b4b0cf9831b6c89eb6a85f7a
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-test-utils_7.1.0-2_amd64.deb
+Size: 16292
+MD5sum: 233462d40f6e246fe2912e2469aaade1
+SHA256: aa03f6df7e0aef8fedf1ded689e445f4316aa8c9365add061a4354922921966c
 
 Package: nordugrid-arc-wn
 Source: nordugrid-arc
-Version: 7.1.0-1
-Installed-Size: 41
+Version: 7.1.0-2
+Installed-Size: 37
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
 Depends: libc6 (>= 2.38)
@@ -21388,10 +21295,10 @@ Homepage: https://www.nordugrid.org
 Description-md5: eceda889f780edfaa3d83834c6c6ec3f
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-wn_7.1.0-1_amd64.deb
-Size: 12140
-MD5sum: 4320ed4ca99d3ade49ded153d4ab3cb7
-SHA256: 7e35831bf0102662c79b8a291b06a3f4d3642bd3f6b55fda8de739685fcf3aac
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-wn_7.1.0-2_amd64.deb
+Size: 11868
+MD5sum: 37ec1db59f83438970c187742886eccd
+SHA256: bf077486be5e44dbd2bd4c0b5c0e653a02538265e0e6163472097634a454a4bb
 
 Package: nordugrid-arc-nagios-plugins
 Version: 3.2.2-1
@@ -21430,11 +21337,11 @@ SHA256: f3aa2e9b4b9df4a41f964899cc8e666839f8e63b21c946159f025a0369da52e5
 
 Package: nova-api
 Source: nova
-Version: 2:31.0.0-7
-Installed-Size: 177
+Version: 2:32.0.0-1
+Installed-Size: 171
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: adduser, dbconfig-common, debconf, iptables, nova-common (= 2:31.0.0-7), python3-pastescript, uwsgi-plugin-python3, debconf (>= 0.5) | debconf-2.0, python3:any
+Depends: adduser, dbconfig-common, debconf, iptables, nova-common (= 2:32.0.0-1), python3-pastescript, uwsgi-plugin-python3, debconf (>= 0.5) | debconf-2.0
 Recommends: python3-keystone
 Description: OpenStack Compute - compute API frontend
 Homepage: http://www.openstack.org/software/openstack-compute/
@@ -21444,18 +21351,18 @@ Tag: admin::virtualization, implemented-in::python, interface::daemon,
  system::virtual
 net
 Priority: optional
-Filename: pool/main/n/nova/nova-api_31.0.0-7_all.deb
-Size: 32408
-MD5sum: 2e50260e68fa4ee00107f684f35381b2
-SHA256: 377185ff6476776b508c1f95dcc71d6a81d571885fd635df0093e228b488b5a1
+Filename: pool/main/n/nova/nova-api_32.0.0-1_all.deb
+Size: 30180
+MD5sum: 2ebafdcd3cfaa046d8d44d079dc8abc8
+SHA256: 819ca3c46c446f2a5ada9e2ad69eb3dd031b2fe8b415552470fd3c5096bcbe90
 
 Package: nova-common
 Source: nova
-Version: 2:31.0.0-7
-Installed-Size: 832
+Version: 2:32.0.0-1
+Installed-Size: 844
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: adduser, bridge-utils, dbconfig-common, iproute2 | iproute, python3-configobj, python3-iso8601, python3-nova (= 2:31.0.0-7), python3-openstackclient, q-text-as-data, sqlite3, debconf (>= 0.5) | debconf-2.0, python3:any
+Depends: adduser, bridge-utils, dbconfig-common, iproute2 | iproute, python3-configobj, python3-iso8601, python3-nova (= 2:32.0.0-1), python3-openstackclient, q-text-as-data, sqlite3, debconf (>= 0.5) | debconf-2.0, python3:any
 Suggests: python3-pysqlite2 | python3-mysqldb | python3-psycopg2
 Description: OpenStack Compute - common files
 Homepage: http://www.openstack.org/software/openstack-compute/
@@ -21465,18 +21372,18 @@ Tag: admin::virtualization, devel::lang:python, implemented-in::python,
  system::virtual
 net
 Priority: optional
-Filename: pool/main/n/nova/nova-common_31.0.0-7_all.deb
-Size: 138452
-MD5sum: f9963d57634d2f82316150f2ecb5ee0c
-SHA256: fd16d9996f3666adce13d003b585eea16538d388b1e907febc8fc472e0632a25
+Filename: pool/main/n/nova/nova-common_32.0.0-1_all.deb
+Size: 137968
+MD5sum: b87883c7d45737f4a0b79e367ed518fb
+SHA256: c3115ada6fd7980fe9836dd95ada28fc68bab7291ceb5ec24381b5fe1ff19db4
 
 Package: nova-compute
 Source: nova
-Version: 2:31.0.0-7
+Version: 2:32.0.0-1
 Installed-Size: 53
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: adduser, conntrack, cgroup-tools, curl, dosfstools, ebtables, fdisk, gawk, iptables, kpartx, mdevctl, nova-common (= 2:31.0.0-7), nova-compute-kvm | nova-compute-hypervisor, open-iscsi, ovmf, parted, qemu-utils, rsync, vlan, python3:any
+Depends: adduser, conntrack, cgroup-tools, curl, dosfstools, ebtables, fdisk, gawk, iptables, kpartx, mdevctl, nova-common (= 2:32.0.0-1), nova-compute-kvm | nova-compute-hypervisor, open-iscsi, ovmf, parted, qemu-utils, rsync, vlan, python3:any
 Recommends: dmidecode
 Description: OpenStack Compute - compute node
 Homepage: http://www.openstack.org/software/openstack-compute/
@@ -21486,15 +21393,15 @@ Tag: admin::virtualization, implemented-in::python, interface::daemon,
  system::virtual
 net
 Priority: optional
-Filename: pool/main/n/nova/nova-compute_31.0.0-7_all.deb
-Size: 17184
-MD5sum: f12fdb15354e653e292ce9bd7d7b4be9
-SHA256: b1212248508a0f2085f9ec5427464b845d66052372e18168366630e2d3ee5824
+Filename: pool/main/n/nova/nova-compute_32.0.0-1_all.deb
+Size: 17128
+MD5sum: 38e64e4c073fab68495c9a1ba30b34d9
+SHA256: c3dfeb8132a77c140ae323d85491c9239f62a1d5789d5405bfacbc94d8b6bedf
 
 Package: nova-compute-ironic
 Source: nova
-Version: 2:31.0.0-7
-Installed-Size: 22
+Version: 2:32.0.0-1
+Installed-Size: 23
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
 Provides: nova-compute-hypervisor
@@ -21508,19 +21415,19 @@ Tag: admin::virtualization, implemented-in::python, role::program,
  suite::openstack, system::cloud, system::virtual
 net
 Priority: optional
-Filename: pool/main/n/nova/nova-compute-ironic_31.0.0-7_all.deb
-Size: 10564
-MD5sum: 71f6617c8a1a9cc5cc028955345bfc5a
-SHA256: a0372f0cf37bb4629e8a32e2ad1cc2a69d26fbae5f783597f6fc510a83c3c6e4
+Filename: pool/main/n/nova/nova-compute-ironic_32.0.0-1_all.deb
+Size: 10772
+MD5sum: 979508509363265ea158220d5d9b2753
+SHA256: 217955868d189b50ffaa48a9fd85eb439e5cbb6df74668a555546c8267634e10
 
 Package: nova-compute-kvm
 Source: nova
-Version: 2:31.0.0-7
-Installed-Size: 23
+Version: 2:32.0.0-1
+Installed-Size: 24
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
 Provides: nova-compute-hypervisor
-Depends: adduser, dpkg-dev, libvirt-daemon-system, libvirt-daemon-driver-storage-rbd, nova-common (= 2:31.0.0-7), nova-compute (= 2:31.0.0-7), python3-libvirt, qemu-block-extra, qemu-system-x86, swtpm, swtpm-tools
+Depends: adduser, dpkg-dev, libvirt-daemon-system, libvirt-daemon-driver-storage-rbd, nova-common (= 2:32.0.0-1), nova-compute (= 2:32.0.0-1), python3-libvirt, qemu-block-extra, qemu-system-x86, swtpm, swtpm-tools
 Recommends: guestmount
 Conflicts: nova-compute-ironic, nova-compute-lxc, nova-compute-qemu, nova-compute-xen
 Description: OpenStack Compute - compute node (KVM)
@@ -21531,15 +21438,15 @@ Tag: admin::virtualization, implemented-in::python, interface::daemon,
  system::virtual
 net
 Priority: optional
-Filename: pool/main/n/nova/nova-compute-kvm_31.0.0-7_all.deb
-Size: 10792
-MD5sum: 6a90dfbe11363568f565dd29dfb527c5
-SHA256: b851bd617b14fe8ac3f365e3fa7c909bfb920e1cf63233c7110fff0178301637
+Filename: pool/main/n/nova/nova-compute-kvm_32.0.0-1_all.deb
+Size: 11004
+MD5sum: 82621bb3b38d74a1d614dc8576d386ba
+SHA256: 03b2bcc1c6b0f26d40fa2606cb9b58cea874a4ad1454b3ea53cf690177e69c4a
 
 Package: nova-compute-lxc
 Source: nova
-Version: 2:31.0.0-7
-Installed-Size: 23
+Version: 2:32.0.0-1
+Installed-Size: 24
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
 Provides: nova-compute-hypervisor
@@ -21553,15 +21460,15 @@ Tag: admin::virtualization, implemented-in::python, interface::daemon,
  system::virtual
 net
 Priority: optional
-Filename: pool/main/n/nova/nova-compute-lxc_31.0.0-7_all.deb
-Size: 10636
-MD5sum: 46b2f6b6c5f1a0b185711167845f8d04
-SHA256: d5244fe6e1894ba02a864880ab3dc9cde91839c6f8d559480540e3dada08956f
+Filename: pool/main/n/nova/nova-compute-lxc_32.0.0-1_all.deb
+Size: 10844
+MD5sum: 64ede527d56ba4cb71c29be3116d9f8a
+SHA256: 89976d8fd8b88eac487526b728332456155135c0ad4a696d2ee8de81acf06941
 
 Package: nova-compute-qemu
 Source: nova
-Version: 2:31.0.0-7
-Installed-Size: 23
+Version: 2:32.0.0-1
+Installed-Size: 24
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
 Provides: nova-compute-hypervisor
@@ -21574,18 +21481,18 @@ Tag: admin::virtualization, implemented-in::python, role::program,
  suite::openstack, system::cloud, system::virtual
 net
 Priority: optional
-Filename: pool/main/n/nova/nova-compute-qemu_31.0.0-7_all.deb
-Size: 10644
-MD5sum: ad43b2f11b030f980c18cc4b60af8f54
-SHA256: 8b2ca8d1c1dcdfb2103b80bdb0530a32d57cfafc5a5d8fbb5bc0db62cf19e695
+Filename: pool/main/n/nova/nova-compute-qemu_32.0.0-1_all.deb
+Size: 10852
+MD5sum: 36154fe1aae30c877ecaab964b49fdfc
+SHA256: 0238732620d4603c6bbc7ee1ea9e81c03bf6d95a6da8b4358e7a9804ae13366a
 
 Package: nova-conductor
 Source: nova
-Version: 2:31.0.0-7
+Version: 2:32.0.0-1
 Installed-Size: 46
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: nova-common (= 2:31.0.0-7), python3:any
+Depends: nova-common (= 2:32.0.0-1), python3:any
 Description: OpenStack Compute - conductor service
 Homepage: http://www.openstack.org/software/openstack-compute/
 Description-md5: 738dfb7566d0b5037ee74eb78e1e9ace
@@ -21593,20 +21500,20 @@ Tag: admin::virtualization, implemented-in::python, role::program,
  suite::openstack, system::cloud, system::virtual
 net
 Priority: optional
-Filename: pool/main/n/nova/nova-conductor_31.0.0-7_all.deb
-Size: 16500
-MD5sum: 3b22addef6bcc9cb7f323ca4fb5f93ea
-SHA256: bd752c6a886525eebd7eceea1aa65cfac46c3208ec32310e1fe811d15f3f3058
+Filename: pool/main/n/nova/nova-conductor_32.0.0-1_all.deb
+Size: 16440
+MD5sum: 9cc6c215ab0e1dcc50ea2fecfcacfc8a
+SHA256: a90ca465a11c6fc18602b320a7d5b30907a8a9a14352cd2e53e4211593dbfc63
 
 Package: nova-consoleproxy
 Source: nova
-Version: 2:31.0.0-7
-Installed-Size: 85
+Version: 2:32.0.0-1
+Installed-Size: 86
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
 Replaces: nova-novncproxy, nova-spicehtml5proxy
 Provides: nova-ajax-console-proxy, nova-novncproxy, nova-spicehtml5proxy, nova-spiceproxy
-Depends: debconf, nova-common (= 2:31.0.0-7), novnc, python3-websockify, spice-html5, debconf (>= 0.5) | debconf-2.0, python3:any
+Depends: debconf, nova-common (= 2:32.0.0-1), novnc, python3-websockify, spice-html5, debconf (>= 0.5) | debconf-2.0, python3:any
 Conflicts: nova-novncproxy, nova-spicehtml5proxy
 Description: OpenStack Compute - NoVNC proxy
 Homepage: http://www.openstack.org/software/openstack-compute/
@@ -21616,18 +21523,18 @@ Tag: admin::virtualization, implemented-in::python, interface::daemon,
  system::virtual
 net
 Priority: optional
-Filename: pool/main/n/nova/nova-consoleproxy_31.0.0-7_all.deb
-Size: 21784
-MD5sum: 8a6a1045575531c1018411a3148359f3
-SHA256: 28673ca621dd2f6383c81b510f56bdd05aa45670a66cd5fd62ef35ff21ad213e
+Filename: pool/main/n/nova/nova-consoleproxy_32.0.0-1_all.deb
+Size: 21724
+MD5sum: 4e52c414970287774b0ad3d9b5c2b5c6
+SHA256: 37e00ccf2998b28d231382c3e99836dd541a6f17af4ca2c7e55954ed841436bc
 
 Package: nova-scheduler
 Source: nova
-Version: 2:31.0.0-7
+Version: 2:32.0.0-1
 Installed-Size: 46
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: nova-common (= 2:31.0.0-7), python3:any
+Depends: nova-common (= 2:32.0.0-1), python3:any
 Description: OpenStack Compute - virtual machine scheduler
 Homepage: http://www.openstack.org/software/openstack-compute/
 Description-md5: cf49148e61d8608b3a10867a86a16cbf
@@ -21636,10 +21543,10 @@ Tag: admin::virtualization, implemented-in::python, interface::daemon,
  system::virtual
 net
 Priority: optional
-Filename: pool/main/n/nova/nova-scheduler_31.0.0-7_all.deb
-Size: 16532
-MD5sum: e3dfbc11ab3b29bd46f643d7a916c729
-SHA256: 7453aeab5a243005615cb120464aa0ca848a22086c5fbc5d5af2ebf578d45331
+Filename: pool/main/n/nova/nova-scheduler_32.0.0-1_all.deb
+Size: 16464
+MD5sum: 0fdf3f0b7be4dac53264096c97ddab72
+SHA256: dd535184b2be119490b39002b26651047aaec99c3c5cfe5e3abe7258a13bcf1a
 
 Package: npd6
 Version: 1.1.0-5
@@ -30807,22 +30714,6 @@ Size: 53880
 MD5sum: c15aea47e567a711f4d32aee1f428a5e
 SHA256: 8cfd2c579fd413fff258c9faee5c98dadd5d1db2fce7d2c4a95feeee2b917e6b
 
-Package: slapi-nis
-Version: 0.60.0-1.1
-Installed-Size: 396
-Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
-Architecture: amd64
-Depends: libc6 (>= 2.34), libnsl2 (>= 1.0), libnspr4 (>= 2:4.10.9), libpam0g (>= 0.99.7.1), libsss-nss-idmap0 (>= 2.9.5), libtirpc3t64 (>= 1.0.2), libwrap0 (>= 7.6-4~)
-Description: NIS Server and Schema Compatibility plugins for 389 Directory Server
-Homepage: https://pagure.io/slapi-nis
-Description-md5: 1941b61bf55e14a4e16b9b8e01e812e2
-net
-Priority: optional
-Filename: pool/main/s/slapi-nis/slapi-nis_0.60.0-1.1_amd64.deb
-Size: 103176
-MD5sum: 73e366aac9032bee0612032cb5c35e8c
-SHA256: 804440a6bca41389f1218818f6ed5bc748754ec29b318fc911279a54d16dfb2e
-
 Package: slinkwatch
 Source: slinkwatch (1.1-6)
 Version: 1.1-6+b8
@@ -34931,71 +34822,71 @@ SHA256: 87ebcd85c21ce25b95db8fa3bdc2ab37681a2eac4c2d4fdc8b91a6d7096958c8
 
 Package: watcher-api
 Source: watcher
-Version: 14.0.0-3
+Version: 15.0.0-1
 Installed-Size: 155
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: adduser, debconf, python3-keystoneclient, python3-openstackclient, q-text-as-data, watcher-common (= 14.0.0-3), debconf (>= 0.5) | debconf-2.0
+Depends: adduser, debconf, python3-keystoneclient, python3-openstackclient, q-text-as-data, watcher-common (= 15.0.0-1), debconf (>= 0.5) | debconf-2.0
 Description: OpenStack Cloud Optimization as a Service - API server
 Homepage: https://github.com/openstack/watcher
 Description-md5: 8d69cd513f338877cde03aead419f3ba
 net
 Priority: optional
-Filename: pool/main/w/watcher/watcher-api_14.0.0-3_all.deb
-Size: 25476
-MD5sum: 7d94d5c9482a034db6eaf50ad31e983c
-SHA256: d960f458aad260709351c07ddad3481c32fde02b593ebdff48821e34971c4fa5
+Filename: pool/main/w/watcher/watcher-api_15.0.0-1_all.deb
+Size: 25536
+MD5sum: f7028b59d93a2c24eb9ee367c5b4b403
+SHA256: e7b789a63297763256a5e4bb149fd735d17c4f7eec730aa9fbc5f3a40960a4d0
 
 Package: watcher-applier
 Source: watcher
-Version: 14.0.0-3
+Version: 15.0.0-1
 Installed-Size: 32
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: watcher-common (= 14.0.0-3)
+Depends: watcher-common (= 15.0.0-1)
 Description: OpenStack Cloud Optimization as a Service - Applier
 Homepage: https://github.com/openstack/watcher
 Description-md5: f04b574b7613006cf1d9cce18e6a5a2b
 net
 Priority: optional
-Filename: pool/main/w/watcher/watcher-applier_14.0.0-3_all.deb
-Size: 8104
-MD5sum: f146941e620ece3bd5b2b8e9a3160e85
-SHA256: 5abefc05f12237bb16c5b2765ff2c96bd498037446490ee634227f0fce54cff7
+Filename: pool/main/w/watcher/watcher-applier_15.0.0-1_all.deb
+Size: 8164
+MD5sum: f3da4e287d53db321f832b38788a9c12
+SHA256: cd85c7eddaf87bc1f59c5f7c703986d3eca8c390c39488e619190d3ee8bf6ee6
 
 Package: watcher-common
 Source: watcher
-Version: 14.0.0-3
-Installed-Size: 208
+Version: 15.0.0-1
+Installed-Size: 209
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: adduser, dbconfig-common, debconf, python3-watcher (= 14.0.0-3), sqlite3, debconf (>= 0.5) | debconf-2.0
+Depends: adduser, dbconfig-common, debconf, python3-watcher (= 15.0.0-1), sqlite3, debconf (>= 0.5) | debconf-2.0
 Description: OpenStack Cloud Optimization as a Service - common files
 Homepage: https://github.com/openstack/watcher
 Description-md5: bdf77067f4d8da3b13bc29b026778453
 net
 Priority: optional
-Filename: pool/main/w/watcher/watcher-common_14.0.0-3_all.deb
-Size: 39300
-MD5sum: 65dbee1ecd8b50e69a0764a495c4e017
-SHA256: efa5e278908233ecca243feb77510c036e974c64a267f9491848d229b50e43d8
+Filename: pool/main/w/watcher/watcher-common_15.0.0-1_all.deb
+Size: 39408
+MD5sum: 814ec4c9788a4a12a93ca65d1cf6406e
+SHA256: e63c9fd51ff4d2e49183c9791df29aa900619871c87f44a4ce63ef357d0c6a9d
 
 Package: watcher-decision-engine
 Source: watcher
-Version: 14.0.0-3
+Version: 15.0.0-1
 Installed-Size: 32
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: watcher-common (= 14.0.0-3)
+Depends: watcher-common (= 15.0.0-1)
 Description: OpenStack Cloud Optimization as a Service - Decision Engine
 Homepage: https://github.com/openstack/watcher
 Description-md5: 5264d25f321d430ad92e66939f0fb7bd
 net
 Priority: optional
-Filename: pool/main/w/watcher/watcher-decision-engine_14.0.0-3_all.deb
-Size: 8124
-MD5sum: d3b6fcab9c2dbae111db44760acbf44a
-SHA256: 32c2cbbfbf0b5a0513c1d3ef787235ceeca1d45a46f25d123a630a932a8efe46
+Filename: pool/main/w/watcher/watcher-decision-engine_15.0.0-1_all.deb
+Size: 8184
+MD5sum: bdd296d3b0034b9e7d17cdcb7c115543
+SHA256: 0995656e7489965c738dfa201f695d06b6005ab95e732d9f43a7e1d555ee5e8e
 
 Package: watcher-tempest-plugin
 Version: 3.5.0-2
