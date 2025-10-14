@@ -154,6 +154,149 @@ Filename: pool/updates/main/libr/libreoffice/libreoffice-nogui_7.0.4-4+deb11u13_
 Size: 202160
 SHA256: c67b933ba6b61b5a1dcb3531da57ae9a9b07e67dfd2f59aadf39c2d05fb5f0e0
 
+Package: progress-linux-base-system
+Source: progress-linux-metapackages
+Version: 20210101-2+deb11u1
+Installed-Size: 33
+Maintainer: Daniel Baumann <daniel.baumann@progress-linux.org>
+Architecture: i386
+Depends: progress-linux, task-ssh-server, bash-completion, powerline, powerline-gitstatus, apt-utils, debconf-utils, knot-dnsutils, knot-host, knot-resolver, socat, plzip, tarlz, libpam-systemd, acl, bc, ca-certificates, crudini, gawk, git, gnupg, htop, ioping, less, lnav, lsb-release, lynx, man-db, mc, mtr-tiny, openssl, psmisc, python3, rsync, screen, sudo, sysstat, tcpdump, vim, wget
+Conflicts: resolvconf
+Description: Progress Linux - Base System
+Homepage: https://progress-linux.org
+Description-md5: 36295bc097e6b20b8a053417ddea6ee0
+Enhances: progress-linux
+metapackages
+Priority: optional
+Filename: pool/updates/main/p/progress-linux-metapackages/progress-linux-base-system_20210101-2+deb11u1_i386.deb
+Size: 18532
+SHA256: 2a4659a5cb8b2403d18f3776cb423aad917554f9f842c03abfcaa06406f68eb9
+
+Package: progress-linux-container
+Source: progress-linux-metapackages
+Version: 20210101-2+deb11u1
+Installed-Size: 27
+Maintainer: Daniel Baumann <daniel.baumann@progress-linux.org>
+Architecture: all
+Replaces: molly-guard
+Depends: progress-linux-base-system, dbus, policykit-1, systemd-sysv
+Conflicts: molly-guard
+Description: Progress Linux - Container Metapackage
+Homepage: https://progress-linux.org
+Description-md5: 0495e2ecfb302980dc738c09604e0aeb
+Enhances: progress-linux, progress-linux-base-system
+metapackages
+Priority: optional
+Filename: pool/updates/main/p/progress-linux-metapackages/progress-linux-container_20210101-2+deb11u1_all.deb
+Size: 5432
+SHA256: 1aeb5a8548485d4b6b35724066184dbc9b9c4da3e8b248135b0f59200ce07d41
+
+Package: progress-linux-container-server
+Source: progress-linux-metapackages
+Version: 20210101-2+deb11u1
+Installed-Size: 15
+Maintainer: Daniel Baumann <daniel.baumann@progress-linux.org>
+Architecture: all
+Depends: progress-linux-server, open-infrastructure-container-tools, curl, debootstrap, irker, pv, bridge-utils, ifenslave, vlan, netdata, netdata-apache2, netdata-plugins-python, apache2, numad
+Suggests: ttyd
+Description: Progress Linux - Container Server
+Homepage: https://progress-linux.org
+Description-md5: 16a2ef92bfc88e85d427812e2c8160f8
+Enhances: progress-linux, progress-linux-base-system, progress-linux-server
+metapackages
+Priority: optional
+Filename: pool/updates/main/p/progress-linux-metapackages/progress-linux-container-server_20210101-2+deb11u1_all.deb
+Size: 4740
+SHA256: 0e089ab119defedd0387fd117cfc3c7c41c5bd687389d233fd15dd51af47e06d
+
+Package: progress-linux-desktop
+Source: progress-linux-metapackages
+Version: 20210101-2+deb11u1
+Installed-Size: 12
+Maintainer: Daniel Baumann <daniel.baumann@progress-linux.org>
+Architecture: i386
+Depends: progress-linux-base-system, task-desktop, task-laptop, task-print-server | cups, fonts-powerline, firefox | firefox-esr | www-browser, webext-privacy-badger, webext-ublock-origin, dosfstools, exfatprogs | exfat-fuse, exfatprogs | exfat-utils, nfs-common, ntfs-3g, samba-common, sshfs, gimp, gimp-plugin-registry, inkscape, inkscape-open-symbols, liferea, gir1.2-gstreamer-1.0, gir1.2-notify-0.7, network-manager-config-connectivity-debian, network-manager-ssh, pass, webext-browserpass, pass-extension-tail, tree, thunderbird, thunderbird (>= 78) | enigmail, unzip, zip, apg, hardlink, nwipe, symlinks, whois
+Suggests: deluge-gtk, deluged, webext-umatrix, virtualbox, virtualbox-dkms, virtualbox-ext-pack, virtualbox-qt
+Description: Progress Linux - Desktop Metapackage
+Homepage: https://progress-linux.org
+Description-md5: 239fa1807ffa994e6a6bd2dbc4f14788
+Enhances: progress-linux, progress-linux-base-system
+metapackages
+Priority: optional
+Filename: pool/updates/main/p/progress-linux-metapackages/progress-linux-desktop_20210101-2+deb11u1_i386.deb
+Size: 4824
+SHA256: 6fce37a778d3f3586f7d64861c8fe2eca4e3431b5724084498ce80be5b1b1d1f
+
+Package: progress-linux-gnome-desktop
+Source: progress-linux-metapackages
+Version: 20210101-2+deb11u1
+Installed-Size: 15
+Maintainer: Daniel Baumann <daniel.baumann@progress-linux.org>
+Architecture: all
+Depends: progress-linux-desktop, task-gnome-desktop, gnome-shell-extension-bluetooth-quick-connect | gnome-shell (<< 3.36), gnome-shell-extension-disconnect-wifi, gnome-shell-extension-hide-activities, gnome-shell-extension-impatience, gnome-shell-extension-multi-monitors, gnome-shell-extension-no-annoyance, gnome-shell-extension-remove-dropdown-arrows, nautilus-admin, seahorse-nautilus, network-manager-ssh-gnome
+Description: Progress Linux - GNOME Desktop
+Homepage: https://progress-linux.org
+Description-md5: 8d2df8e5da1c80778fedd85ee6c9ff16
+Enhances: progress-linux, progress-linux-base-system, progress-linux-desktop
+metapackages
+Priority: optional
+Filename: pool/updates/main/p/progress-linux-metapackages/progress-linux-gnome-desktop_20210101-2+deb11u1_all.deb
+Size: 4792
+SHA256: ba6b9dcd78b649f6a6ba28f4c8c91a7b55766b5d882cd11a7e0e755a5fec7aa3
+
+Package: progress-linux-host
+Source: progress-linux-metapackages
+Version: 20210101-2+deb11u1
+Installed-Size: 12
+Maintainer: Daniel Baumann <daniel.baumann@progress-linux.org>
+Architecture: i386
+Depends: progress-linux-base-system, cryptsetup-bin, keyutils, plymouth, firmware-linux-free, spectre-meltdown-checker, dmidecode, ethtool, gpm, hdparm, ntp, nvme-cli, parted, rng-tools | rng-tools5, smartmontools
+Suggests: fonts-powerline-extra, firmware-linux-nonfree, firmware-misc-nonfree, iucode-tool, amd64-microcode, intel-microcode, firmware-ast, intel-isdct, supermicro-ipmicfg
+Description: Progress Linux - Host Metapackage
+Homepage: https://progress-linux.org
+Description-md5: bf71449c233aa5a1db011923fad738f6
+Enhances: progress-linux, progress-linux-base-system
+metapackages
+Priority: optional
+Filename: pool/updates/main/p/progress-linux-metapackages/progress-linux-host_20210101-2+deb11u1_i386.deb
+Size: 4672
+SHA256: 4cb415715807b72efb3373caf83122cb771ecaf73982f231dd42c2c290398c3a
+
+Package: progress-linux-maintainers
+Source: progress-linux-metapackages
+Version: 20210101-2+deb11u1
+Installed-Size: 12
+Maintainer: Daniel Baumann <daniel.baumann@progress-linux.org>
+Architecture: all
+Depends: progress-linux-base-system, devscripts, python3-debian, python3-sphinx, python3-sphinx-autobuild, graphviz, autotools-dev, build-essential, debhelper, debian-keyring, debootstrap, diffstat, dput, fakeroot, git-buildpackage, lintian, myrepos
+Description: Progress Linux - Maintainers Metapackage
+Homepage: https://progress-linux.org
+Description-md5: cef056082cf28b1526a2018a7833e8b7
+Enhances: progress-linux, progress-linux-base-system
+metapackages
+Priority: optional
+Filename: pool/updates/main/p/progress-linux-metapackages/progress-linux-maintainers_20210101-2+deb11u1_all.deb
+Size: 4588
+SHA256: 9ce8a8727b50324ebe780e26adf26e41cf36dff8001b456409d62e2eafca631f
+
+Package: progress-linux-server
+Source: progress-linux-metapackages
+Version: 20210101-2+deb11u1
+Installed-Size: 12
+Maintainer: Daniel Baumann <daniel.baumann@progress-linux.org>
+Architecture: all
+Depends: progress-linux-base-system, localepurge, logrotate, molly-guard | progress-linux-container, postfix, safe-rm
+Breaks: exim4-config
+Description: Progress Linux - Server Metapackage
+Homepage: https://progress-linux.org
+Description-md5: 27fd536c6576f664b228f79e777d7076
+Enhances: progress-linux, progress-linux-base-system
+metapackages
+Priority: optional
+Filename: pool/updates/main/p/progress-linux-metapackages/progress-linux-server_20210101-2+deb11u1_all.deb
+Size: 4528
+SHA256: 7ff05cfdedda6af58146c0dffb2fab128aafb37c8c843c5594727c2567675bb8
+
 Package: thunderbird-l10n-all
 Source: thunderbird
 Version: 1:140.3.0esr-1~deb11u1
