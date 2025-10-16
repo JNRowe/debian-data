@@ -80693,7 +80693,7 @@ MD5sum: c62bcfa1f94d2a51533871f2c24ddc09
 SHA256: 0a2f88c1e73cacaafdfa350f0b75a3f2a8b324cb95f638db9c27b9a82a23787d
 
 Package: lxqt-build-tools-qt5
-Version: 0.13.0-3
+Version: 0.13.0-4
 Installed-Size: 184
 Maintainer: LXQt Packaging Team <team+lxqt@tracker.debian.org>
 Architecture: all
@@ -80705,10 +80705,10 @@ Homepage: https://github.com/lxqt/lxqt-build-tools
 Description-md5: 60afb0a90e0a539c4b1cdac6d2062230
 devel
 Priority: optional
-Filename: pool/main/l/lxqt-build-tools-qt5/lxqt-build-tools-qt5_0.13.0-3_all.deb
-Size: 31732
-MD5sum: ec97a49a67e32d4a4565102a17ac6289
-SHA256: 3039773ef5ee109a1be7c18ab8f92aaa5a791abd3c4e5a51b8d29f9cd2c623b0
+Filename: pool/main/l/lxqt-build-tools-qt5/lxqt-build-tools-qt5_0.13.0-4_all.deb
+Size: 31824
+MD5sum: a1ecf82796a1900cb9818d45c3f1d01d
+SHA256: b3593c183ed747a4fc8baf46b6788b587b06e3224370a2b8a9230589a6d2f87f
 
 Package: mage
 Source: mage (1.15.0+ds-2)
@@ -87710,12 +87710,12 @@ SHA256: 9ca945b8fcfbd1351511270b1241e64e48740ceeaaf5aa189dce368eda592b21
 
 Package: buildd
 Source: sbuild
-Version: 0.90.2
+Version: 0.91.1
 Installed-Size: 282
 Maintainer: sbuild maintainers <sbuild@packages.debian.org>
 Architecture: all
 Replaces: sbuild, ubuntu-dev-tools (<= 0.83)
-Depends: adduser, cron, default-mta | mail-transport-agent, devscripts, dupload, libsbuild-perl, libyaml-tiny-perl, sbuild (= 0.90.2), perl:any
+Depends: adduser, cron, default-mta | mail-transport-agent, devscripts, dupload, libsbuild-perl, libyaml-tiny-perl, sbuild (= 0.91.1), sbuild-schroot, perl:any
 Recommends: sudo
 Suggests: schroot, wanna-build
 Breaks: ubuntu-dev-tools (<= 0.83)
@@ -87726,67 +87726,83 @@ Tag: devel::buildtools, devel::debian, implemented-in::perl,
  scope::utility, works-with::software:source
 devel
 Priority: optional
-Filename: pool/main/s/sbuild/buildd_0.90.2_all.deb
-Size: 76912
-MD5sum: 2a31236c356aaa65966555e2a4f4ad5c
-SHA256: 3f88044b0f2856a0283673d9759bbb86f11035f8570e1a50406418f32c2d987f
+Filename: pool/main/s/sbuild/buildd_0.91.1_all.deb
+Size: 77016
+MD5sum: 75d12a1655b33ee891251d549b8178e6
+SHA256: 31c1ec3037703a8a1cf689236c5a82eea218b5e061102a729dbf6ca250a90ee8
 
 Package: sbuild
-Version: 0.90.2
-Installed-Size: 285
+Version: 0.91.1
+Installed-Size: 158
 Maintainer: sbuild maintainers <sbuild@packages.debian.org>
 Architecture: all
-Depends: adduser, libsbuild-perl (= 0.90.2), perl:any
-Recommends: autopkgtest (>= 4.0.4), debootstrap, uidmap, mmdebstrap (>= 1.4.0), iproute2
-Suggests: e2fsprogs, kmod, wget, schroot (>= 1.6.0)
+Depends: libsbuild-perl (= 0.91.1), iproute2, uidmap, perl:any
+Recommends: mmdebstrap (>= 1.4.0), sbuild-schroot
+Suggests: autopkgtest, piuparts
 Description: Tool for building Debian binary packages from Debian sources
-Description-md5: 9e15ceda32607c62e78e4f4d946f038e
+Description-md5: 52a7efe774c1dc4d9d877e9d259442b5
 Tag: devel::buildtools, devel::packaging, interface::commandline,
  role::program, scope::utility, suite::debian,
  works-with::software:package, works-with::software:source
 devel
 Priority: optional
-Filename: pool/main/s/sbuild/sbuild_0.90.2_all.deb
-Size: 112912
-MD5sum: dba7b15c2053c0d8fb8c1f39508f656e
-SHA256: 5bd126ce97e65392411867ffed415ddd69a2f9a4194f108f1888907c1cb3e60b
+Filename: pool/main/s/sbuild/sbuild_0.91.1_all.deb
+Size: 76340
+MD5sum: ef4993e7dc6aba17f0d6cfd058bdc1cc
+SHA256: aaa730a4d8aa9e8838d1650d98ed7b8e2f83450522ad6bd34ef6b799fc8a36dc
 
 Package: sbuild-debian-developer-setup
 Source: sbuild
-Version: 0.90.2
+Version: 0.91.1
 Installed-Size: 44
 Maintainer: sbuild maintainers <sbuild@packages.debian.org>
 Architecture: all
-Replaces: sbuild (<< 0.77.0-5)
-Depends: apt-cacher-ng | apt-cacher, cron | cron-daemon, sbuild (>= 0.77.0-5), schroot, debootstrap, perl:any
-Breaks: sbuild (<< 0.77.0-5)
+Depends: apt-cacher-ng | apt-cacher, cron | cron-daemon, sbuild-schroot, schroot, debootstrap, perl:any
 Description: Deprecated: Convenience script to set up an sbuild environment for Debian Developers
 Description-md5: 754fdbcdb9a7bab249d6d9611098e386
 devel
 Priority: optional
-Filename: pool/main/s/sbuild/sbuild-debian-developer-setup_0.90.2_all.deb
-Size: 20924
-MD5sum: d4ca5ed160117a23cdd6a46ebc2bf451
-SHA256: 0e699c1b8760bf370878bc0256d4a379d5638eb5af8bdf921c922de97ea2e413
+Filename: pool/main/s/sbuild/sbuild-debian-developer-setup_0.91.1_all.deb
+Size: 21024
+MD5sum: 27982c7928ac3eff3dd502eaae8fa431
+SHA256: d5ed5c71b469f40c391728812068f5362665efa25010ccc14d5aa3b432582ff1
 
 Package: sbuild-qemu
 Source: sbuild
-Version: 0.90.2
+Version: 0.91.1
 Installed-Size: 82
 Maintainer: sbuild maintainers <sbuild@packages.debian.org>
 Architecture: all
-Replaces: qemu-sbuild-utils (<< 0.2.1~)
 Depends: autopkgtest (>= 5.17~), python3-pexpect, python3-psutil, qemu-system-x86, qemu-utils, sbuild, vmdb2 (>= 0.22), python3:any
 Recommends: qemu-system-arm, qemu-system-ppc
-Breaks: qemu-sbuild-utils (<< 0.2.1~)
 Description: Utilities for using sbuild with QEMU images
 Description-md5: 7760999d8e048bb1a7d2dc08e677650c
 devel
 Priority: optional
-Filename: pool/main/s/sbuild/sbuild-qemu_0.90.2_all.deb
-Size: 34576
-MD5sum: 84c9b18cf562eab37566087992b2088c
-SHA256: b2f674914b7ce7bd2df8c5be2119c6b4840fe1ec99929c4fdad0109ad181b43f
+Filename: pool/main/s/sbuild/sbuild-qemu_0.91.1_all.deb
+Size: 34804
+MD5sum: 8a3ea3dcea8923fad8b8188af3aeddb3
+SHA256: bbb57b84c01efcdbeff2c22167a10f0df933b507f53c27da6fe7489f163d5056
+
+Package: sbuild-schroot
+Source: sbuild
+Version: 0.91.1
+Installed-Size: 158
+Maintainer: sbuild maintainers <sbuild@packages.debian.org>
+Architecture: all
+Replaces: sbuild (<< 0.90.3)
+Depends: adduser, sbuild (= 0.91.1), schroot, perl:any
+Recommends: debootstrap
+Suggests: e2fsprogs, kmod, wget
+Breaks: sbuild (<< 0.90.3)
+Description: Tool for building Debian binary packages from Debian sources (schroot version)
+Description-md5: 8a401b1fc28cce2f6e52edfa89fca207
+devel
+Priority: optional
+Filename: pool/main/s/sbuild/sbuild-schroot_0.91.1_all.deb
+Size: 57116
+MD5sum: 5ddbf090f9ba9fe6da65d954f500540e
+SHA256: 8358de7200a276f959c81c6ebb50cc7a61ee6a1804226603bdac756d579fe82b
 
 Package: scala
 Version: 2.11.12-6
@@ -87877,21 +87893,21 @@ MD5sum: 4b2aa272343ea70893ea6917fbe9aced
 SHA256: acef5f8f7e05632be04d069648b0a356ed2c3c108aaf6ff9de292589374a12a2
 
 Package: sccache
-Version: 0.10.0-10
-Installed-Size: 11133
+Version: 0.11.0-1
+Installed-Size: 11107
 Maintainer: Jonas Smedegaard <dr@jones.dk>
 Architecture: amd64
 Depends: libc6 (>= 2.39), libgcc-s1 (>= 4.2), libssl3t64 (>= 3.0.0), libzstd1 (>= 1.5.5)
 Description: compiler cache for fast recompilation of C/C++/Rust code
 Homepage: https://github.com/mozilla/sccache
 Description-md5: 5c0cd7de35c08ba4ae2d18ad23bc065b
-Static-Built-Using: rust-addr2line (= 0.24.2-2), rust-adler (= 1.0.2-3), rust-aho-corasick (= 1.1.3-1), rust-anstream (= 0.6.20-1), rust-anstyle (= 1.0.11-1), rust-anstyle-parse (= 0.2.7-1), rust-anstyle-query (= 1.1.4-1), rust-anyhow (= 1.0.99-1), rust-ar (= 0.9.0-1), rust-arrayref (= 0.3.9-1), rust-arrayvec (= 0.7.6-1), rust-atomic-waker (= 1.1.2-1), rust-backtrace (= 0.3.75-2), rust-base64 (= 0.22.1-1), rust-bincode (= 1.3.3-1), rust-bitflags (= 2.9.4-2), rust-blake3 (= 1.8.1-1), rust-block-buffer (= 0.10.4-1), rust-byteorder (= 1.5.0-1), rust-bytes (= 1.10.1-1), rust-cfg-if (= 1.0.3-2), rust-chrono (= 0.4.42-1), rust-clap (= 4.5.23-1), rust-clap-builder (= 4.5.23-1), rust-clap-lex (= 0.7.4-1), rust-colorchoice (= 1.0.0-1), rust-constant-time-eq (= 0.3.1-1), rust-cpufeatures (= 0.2.17-1), rust-crc32fast (= 1.4.2-1), rust-crypto-common (= 0.1.6-1), rust-daemonize (= 0.5.0-1), rust-digest (= 0.10.7-2), rust-directories (= 5.0.1-1), rust-dirs-sys (= 0.4.1-1), rust-either (= 1.13.0-1), rust-encoding-rs (= 0.8.35-1), rust-env-filter (= 0.1.3-1), rust-env-logger (= 0.11.8-1), rust-equivalent (= 1.0.1-1), rust-fastrand (= 2.3.0-1), rust-filetime (= 0.2.26-1), rust-flate2 (= 1.1.2-1), rust-fnv (= 1.0.7-1), rust-foreign-types-0.3 (= 0.3.2-2), rust-foreign-types-shared-0.1 (= 0.1.1-2), rust-form-urlencoded (= 1.2.1-1), rust-fs-err (= 3.1.1-1), rust-futures (= 0.3.31-2), rust-futures-channel (= 0.3.31-1), rust-futures-core (= 0.3.31-1), rust-futures-executor (= 0.3.31-1), rust-futures-io (= 0.3.31-1), rust-futures-sink (= 0.3.31-1), rust-futures-task (= 0.3.31-3), rust-futures-util (= 0.3.31-1), rust-generic-array (= 0.14.7-1), rust-getrandom (= 0.2.15-4), rust-gimli (= 0.31.1-2), rust-h2 (= 0.4.7-3), rust-hashbrown (= 0.15.5-2), rust-http (= 1.2.0-1), rust-http-body (= 1.0.1-1), rust-http-body-util (= 0.1.2-1), rust-httparse (= 1.8.0-1), rust-httpdate (= 1.0.3-1), rust-hyper (= 1.5.2-1), rust-hyper-rustls (= 0.27.6-3), rust-hyper-tls (= 0.6.0-1), rust-hyper-util (= 0.1.10-1), rust-iana-time-zone (= 0.1.64-1), rust-idna (= 1.0.3-2), rust-idna-adapter (= 1.1.0-1), rust-idna-mapping (= 1.0.0-1), rust-indexmap (= 2.7.0-3), rust-ipnet (= 2.11.0-1), rust-itertools (= 0.13.0-3), rust-itoa (= 1.0.15-1), rust-jiff (= 0.2.15-1), rust-jobserver (= 0.1.32-1), rust-libc (= 0.2.175-1), rust-linked-hash-map (= 0.5.6-1), rust-linux-raw-sys (= 0.4.14-1), rust-log (= 0.4.27-1), rust-memchr (= 2.7.5-2), rust-memmap2 (= 0.9.8-1), rust-mime (= 0.3.17-1), rust-miniz-oxide (= 0.7.1-2), rust-mio (= 1.0.2-3), rust-native-tls (= 0.2.14-1), rust-num-cpus (= 1.16.0-1), rust-num-traits (= 0.2.19-2), rust-number-prefix (= 0.4.0-1), rust-object (= 0.36.5-3), rust-once-cell (= 1.21.3-1), rust-openssl (= 0.10.73-1), rust-openssl-probe (= 0.1.2-1), rust-openssl-sys (= 0.9.109-2), rust-option-ext (= 0.2.0-1), rust-percent-encoding (= 2.3.1-1), rust-pin-project (= 1.1.3-1), rust-pin-project-lite (= 0.2.13-1), rust-pin-utils (= 0.1.0-1), rust-ppv-lite86 (= 0.2.21-2), rust-rand (= 0.8.5-1), rust-rand-chacha (= 0.3.1-2), rust-rand-core (= 0.6.4-2), rust-regex (= 1.11.2-1), rust-regex-automata (= 0.4.9-2), rust-regex-syntax (= 0.8.5-1), rust-reqwest (= 0.12.15-6), rust-retry (= 2.0.0-7), rust-ring (= 0.17.14-2), rust-rustc-demangle (= 0.1.24-2), rust-rustix (= 0.38.37-4), rust-rustls (= 0.23.32+ds-1), rust-rustls-native-certs (= 0.8.1-5), rust-rustls-pemfile (= 2.2.0-3), rust-rustls-pki-types (= 1.12.0-2), rust-rustls-webpki (= 0.103.6-1), rust-ruzstd (= 0.7.3-2), rust-ryu (= 1.0.19-1), rust-same-file (= 1.0.6-2), rust-semver (= 1.0.26-1), rust-serde (= 1.0.219-1), rust-serde-json (= 1.0.143-1), rust-serde-spanned (= 0.6.9-1), rust-serde-urlencoded (= 0.7.1-1), rust-sha2 (= 0.10.9-1), rust-shlex (= 1.3.0-1), rust-signal-hook-registry (= 1.4.0-1), rust-slab (= 0.4.9-1), rust-smallvec (= 1.15.1-1), rust-socket2 (= 0.5.8-1), rust-static-assertions (= 1.1.0-1), rust-strip-ansi-escapes (= 0.2.1-1), rust-strsim-0.10 (= 0.10.0-4), rust-subtle (= 2.6.1-1), rust-sync-wrapper (= 1.0.2-1), rust-tar (= 0.4.44-1), rust-tempfile (= 3.23.0-1), rust-terminal-size (= 0.4.1-2), rust-tinyvec (= 1.6.0-2), rust-tinyvec-macros (= 0.1.0-1), rust-tokio (= 1.47.1-2), rust-tokio-native-tls (= 0.3.1-2), rust-tokio-rustls (= 0.26.1-2), rust-tokio-serde (= 0.8.0-2), rust-tokio-util (= 0.7.10-1), rust-toml (= 0.8.19-1), rust-toml-datetime (= 0.6.11-1), rust-toml-edit (= 0.22.22-1), rust-tower (= 0.5.2-2), rust-tower-0.4 (= 0.4.13-5), rust-tower-layer (= 0.3.3-1), rust-tower-service (= 0.3.3-1), rust-tracing (= 0.1.40-1), rust-tracing-core (= 0.1.32-1), rust-try-lock (= 0.2.5-1), rust-twox-hash (= 1.6.3-1), rust-typenum (= 1.17.0-3), rust-unicode-bidi (= 0.3.17-1), rust-unicode-joining-type (= 1.0.0-1), rust-unicode-normalization (= 0.1.24-1), rust-untrusted (= 0.9.0-2), rust-url (= 2.5.4-3), rust-utf8-iter (= 1.0.4-1), rust-utf8parse (= 0.2.1-1), rust-uuid (= 1.18.0-3), rust-vte (= 0.15.0-1), rust-walkdir (= 2.5.0-2), rust-want (= 0.3.0-1), rust-which (= 8.0.0-3), rust-winnow (= 0.6.26-1), rust-xattr (= 1.5.1-1), rust-xdg-home (= 1.3.0-1), rust-zerocopy (= 0.8.26-4), rust-zeroize (= 1.8.1-1), rust-zip (= 5.1.1-2), rust-zstd (= 0.13.3-1), rust-zstd-safe (= 7.2.4-1), rust-zstd-sys (= 2.0.16-1), rustc (= 1.88.0+dfsg1-1)
+Static-Built-Using: rust-addr2line (= 0.24.2-2), rust-adler (= 1.0.2-3), rust-aho-corasick (= 1.1.3-1), rust-anstream (= 0.6.21-1), rust-anstyle (= 1.0.11-1), rust-anstyle-parse (= 0.2.7-1), rust-anstyle-query (= 1.1.4-1), rust-anyhow (= 1.0.99-1), rust-ar (= 0.9.0-1), rust-arrayref (= 0.3.9-1), rust-arrayvec (= 0.7.6-1), rust-atomic-waker (= 1.1.2-1), rust-backon (= 1.2.0-2), rust-backtrace (= 0.3.75-2), rust-base64 (= 0.22.1-1), rust-bincode (= 1.3.3-1), rust-bitflags (= 2.9.4-2), rust-blake3 (= 1.8.1-1), rust-block-buffer (= 0.10.4-1), rust-byteorder (= 1.5.0-1), rust-bytes (= 1.10.1-1), rust-cfg-if (= 1.0.3-2), rust-chrono (= 0.4.42-1), rust-clap (= 4.5.48-4), rust-clap-builder (= 4.5.48-2), rust-clap-lex (= 0.7.4-1), rust-colorchoice (= 1.0.0-1), rust-constant-time-eq (= 0.3.1-1), rust-cpufeatures (= 0.2.17-1), rust-crc32fast (= 1.5.0-1), rust-crypto-common (= 0.1.6-1), rust-daemonize (= 0.5.0-1), rust-digest (= 0.10.7-2), rust-directories (= 5.0.1-1), rust-dirs-sys (= 0.4.1-1), rust-either (= 1.13.0-1), rust-encoding-rs (= 0.8.35-1), rust-env-filter (= 0.1.3-1), rust-env-logger (= 0.11.8-1), rust-equivalent (= 1.0.1-1), rust-fastrand (= 2.3.0-1), rust-filetime (= 0.2.26-1), rust-flate2 (= 1.1.4-1), rust-fnv (= 1.0.7-1), rust-foreign-types-0.3 (= 0.3.2-2), rust-foreign-types-shared-0.1 (= 0.1.1-2), rust-form-urlencoded (= 1.2.2-1), rust-fs-err (= 3.1.1-1), rust-futures (= 0.3.31-2), rust-futures-channel (= 0.3.31-1), rust-futures-core (= 0.3.31-1), rust-futures-executor (= 0.3.31-1), rust-futures-io (= 0.3.31-1), rust-futures-sink (= 0.3.31-1), rust-futures-task (= 0.3.31-3), rust-futures-util (= 0.3.31-1), rust-generic-array (= 0.14.7-1), rust-getrandom (= 0.2.15-4), rust-gimli (= 0.31.1-2), rust-h2 (= 0.4.7-3), rust-hashbrown (= 0.15.5-2), rust-http (= 1.3.1-1), rust-http-body (= 1.0.1-1), rust-http-body-util (= 0.1.2-1), rust-httparse (= 1.10.1-1), rust-httpdate (= 1.0.3-1), rust-hyper (= 1.7.0-1), rust-hyper-rustls (= 0.27.6-3), rust-hyper-tls (= 0.6.0-1), rust-hyper-util (= 0.1.17-1), rust-iana-time-zone (= 0.1.64-1), rust-idna (= 1.0.3-2), rust-idna-adapter (= 1.1.0-1), rust-idna-mapping (= 1.0.0-1), rust-indexmap (= 2.7.0-3), rust-ipnet (= 2.11.0-1), rust-is-terminal-polyfill (= 1.70.1-1), rust-itertools (= 0.13.0-3), rust-itoa (= 1.0.15-1), rust-jiff (= 0.2.15-1), rust-jobserver (= 0.1.32-1), rust-libc (= 0.2.175-2), rust-linked-hash-map (= 0.5.6-2), rust-linux-raw-sys (= 0.10.0-3), rust-log (= 0.4.27-1), rust-memchr (= 2.7.5-2), rust-memmap2 (= 0.9.8-1), rust-mime (= 0.3.17-1), rust-miniz-oxide (= 0.7.1-2), rust-mio (= 1.0.2-3), rust-native-tls (= 0.2.14-2), rust-num-traits (= 0.2.19-2), rust-number-prefix (= 0.4.0-1), rust-object (= 0.36.5-3), rust-once-cell (= 1.21.3-1), rust-openssl (= 0.10.73-1), rust-openssl-probe (= 0.1.2-1), rust-openssl-sys (= 0.9.109-2), rust-option-ext (= 0.2.0-1), rust-percent-encoding (= 2.3.1-1), rust-pin-project (= 1.1.3-1), rust-pin-project-lite (= 0.2.13-1), rust-pin-utils (= 0.1.0-1), rust-ppv-lite86 (= 0.2.21-2), rust-rand (= 0.8.5-1), rust-rand-chacha (= 0.3.1-2), rust-rand-core (= 0.6.4-2), rust-regex (= 1.11.2-1), rust-regex-automata (= 0.4.9-2), rust-regex-syntax (= 0.8.6-1), rust-reqwest (= 0.12.15-6), rust-ring (= 0.17.14-2), rust-rustc-demangle (= 0.1.24-2), rust-rustix (= 1.0.8-3), rust-rustls (= 0.23.32+ds-2), rust-rustls-native-certs (= 0.8.1-5), rust-rustls-pemfile (= 2.2.0-3), rust-rustls-pki-types (= 1.12.0-2), rust-rustls-webpki (= 0.103.7-1), rust-ruzstd (= 0.7.3-2), rust-ryu (= 1.0.19-1), rust-same-file (= 1.0.6-2), rust-semver (= 1.0.26-1), rust-serde (= 1.0.219-1), rust-serde-json (= 1.0.143-1), rust-serde-spanned (= 0.6.9-1), rust-serde-urlencoded (= 0.7.1-1), rust-sha2 (= 0.10.9-1), rust-shlex (= 1.3.0-1), rust-signal-hook-registry (= 1.4.0-1), rust-simd-adler32 (= 0.3.7-1), rust-slab (= 0.4.9-1), rust-smallvec (= 1.15.1-1), rust-socket2 (= 0.5.10-1), rust-static-assertions (= 1.1.0-1), rust-strip-ansi-escapes (= 0.2.1-1), rust-strsim (= 0.11.1-1), rust-subtle (= 2.6.1-1), rust-sync-wrapper (= 1.0.2-1), rust-tar (= 0.4.44-1), rust-tempfile (= 3.23.0-1), rust-terminal-size (= 0.4.2-2), rust-tinyvec (= 1.6.0-2), rust-tinyvec-macros (= 0.1.0-1), rust-tokio (= 1.47.1-2), rust-tokio-native-tls (= 0.3.1-4), rust-tokio-rustls (= 0.26.1-2), rust-tokio-serde (= 0.8.0-2), rust-tokio-util (= 0.7.10-1), rust-toml (= 0.8.19-1), rust-toml-datetime (= 0.6.11-1), rust-toml-edit (= 0.22.22-1), rust-tower (= 0.5.2-2), rust-tower-0.4 (= 0.4.13-5), rust-tower-layer (= 0.3.3-1), rust-tower-service (= 0.3.3-1), rust-tracing (= 0.1.40-1), rust-tracing-core (= 0.1.32-1), rust-try-lock (= 0.2.5-1), rust-twox-hash (= 1.6.3-1), rust-typenum (= 1.17.0-3), rust-unicode-bidi (= 0.3.17-1), rust-unicode-joining-type (= 1.0.0-1), rust-unicode-normalization (= 0.1.24-1), rust-untrusted (= 0.9.0-2), rust-url (= 2.5.4-3), rust-utf8-iter (= 1.0.4-1), rust-utf8parse (= 0.2.2-1), rust-uuid (= 1.18.0-3), rust-vte (= 0.15.0-1), rust-walkdir (= 2.5.0-2), rust-want (= 0.3.0-1), rust-which (= 8.0.0-3), rust-winnow (= 0.6.26-2), rust-xattr (= 1.5.1-1), rust-xdg-home (= 1.3.0-1), rust-zerocopy (= 0.8.26-4), rust-zeroize (= 1.8.1-1), rust-zip (= 5.1.1-2), rust-zstd (= 0.13.3-1), rust-zstd-safe (= 7.2.4-1), rust-zstd-sys (= 2.0.16-1), rustc (= 1.88.0+dfsg1-2)
 devel
 Priority: optional
-Filename: pool/main/s/sccache/sccache_0.10.0-10_amd64.deb
-Size: 3484136
-MD5sum: ee68ce1a386c2062aec0eb648f0fecd3
-SHA256: b008b74390072c3a0da45658517699597b1b642700f07b893c3550fe27f00a6c
+Filename: pool/main/s/sccache/sccache_0.11.0-1_amd64.deb
+Size: 3477848
+MD5sum: 249a42d6d265bdb633a94ba2c535ac9f
+SHA256: c1ce34ee364ee0aa094e245630f26f695dd86eb6fe5cb827781e98f6fa0581f2
 
 Package: scim-dev
 Source: scim
@@ -89378,7 +89394,7 @@ SHA256: e6fa3602a9bec972f42ea5abb066721d0006ca34eb73e33813a18ce91c525781
 
 Package: systemd-dev
 Source: systemd
-Version: 258-1
+Version: 258.1-1
 Installed-Size: 723
 Maintainer: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
 Architecture: all
@@ -89390,10 +89406,10 @@ Homepage: https://systemd.io
 Description-md5: eb131ce1d6cce8efc52306fe1345c633
 devel
 Priority: optional
-Filename: pool/main/s/systemd/systemd-dev_258-1_all.deb
-Size: 75684
-MD5sum: 08ea58880a2c79a7ba4f8740075298ab
-SHA256: b53670e7b206eec3b884103756eaa39067f81dd527640184fe95eb2fd61d0857
+Filename: pool/main/s/systemd/systemd-dev_258.1-1_all.deb
+Size: 76136
+MD5sum: 336f6cfaf84dafbb4c6024990feb4d57
+SHA256: 3bc35ffaa28a2c9f598be193f957cc798cc81c9139ad9cde45dd8738ae3746c3
 
 Package: systemtap
 Version: 5.3-1
@@ -89528,27 +89544,6 @@ Filename: pool/main/t/tap.py/tappy_3.2.1-1_all.deb
 Size: 6060
 MD5sum: 42e1d3d37b00fefa1cfd297dd8fe7c49
 SHA256: 3aa5087218a77c0587eb952aef7d7d2257363990c19dfc94be8f9668440823c5
-
-Package: tcc
-Version: 0.9.27+git20200814.62c30a4a-2
-Installed-Size: 827
-Maintainer: Thomas Preud'homme <robotux@debian.org>
-Architecture: amd64
-Provides: c-compiler
-Depends: libc6 (>= 2.38)
-Recommends: libc6-dev | libc-dev
-Description: small ANSI C compiler
-Homepage: http://www.tinycc.org/
-Description-md5: dcac8a45b9295c2c42e6540299eec5fe
-Tag: devel::compiler, devel::lang:c, implemented-in::c,
- interface::commandline, role::program, scope::application,
- works-with::software:source
-devel
-Priority: optional
-Filename: pool/main/t/tcc/tcc_0.9.27+git20200814.62c30a4a-2_amd64.deb
-Size: 293816
-MD5sum: a2ce9ad5d9965c833e3e31f99b8386bf
-SHA256: 957d1607516de7f4c968193b8d89f0df535046c0f793c561aebebacf6846b2d3
 
 Package: tcl8.6-dev
 Source: tcl8.6
