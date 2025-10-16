@@ -1969,7 +1969,7 @@ MD5sum: 577b192b4adf39b45fde0dc43a0d01ff
 SHA256: da603400314156380dc934afdd1f9bcac62dfdfc628288bc44fa91a71f5ad0ba
 
 Package: mysqltuner
-Version: 2.6.0.79.g9185d90-1
+Version: 2.7.0-1
 Installed-Size: 2641
 Maintainer: Cord Beermann <cord@debian.org>
 Architecture: all
@@ -1984,10 +1984,10 @@ Tag: implemented-in::perl, interface::commandline, role::program,
  works-with::software:running
 database
 Priority: optional
-Filename: pool/main/m/mysqltuner/mysqltuner_2.6.0.79.g9185d90-1_all.deb
-Size: 151512
-MD5sum: 0588c135d0f9c5612242c5a140a2de42
-SHA256: 1507496056e66e9b1af1624cd16f0b859dda21c88736174315bb5220aed9bdb9
+Filename: pool/main/m/mysqltuner/mysqltuner_2.7.0-1_all.deb
+Size: 151636
+MD5sum: ade5b7dda3ab3847282e368f8dacea06
+SHA256: 2dffb6fd39730a3970a78bf848804d47863199073094edee8f3e5f51e72caa29
 
 Package: omnidb-common
 Source: omnidb
@@ -2059,8 +2059,8 @@ SHA256: a1fb7dd920737ac3718a11d504700f8b61af9a3f8bd5f3255b9403880fce19cf
 
 Package: postgresql-18-orafce
 Source: orafce
-Version: 4.14.6-1
-Installed-Size: 1151
+Version: 4.16.1-1
+Installed-Size: 1155
 Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
 Architecture: amd64
 Depends: postgresql-18, libc6 (>= 2.38)
@@ -2070,10 +2070,10 @@ Homepage: https://github.com/orafce/orafce
 Description-md5: 2220553f428a324936e43de378b14ef6
 database
 Priority: optional
-Filename: pool/main/o/orafce/postgresql-18-orafce_4.14.6-1_amd64.deb
-Size: 370436
-MD5sum: a31969544b24f6cb54ae1a64cca75aea
-SHA256: 8af18c3013b0ebe062d1da5b8ad6c7058b15ecf4b3a3d7d6c1143384a3e97baf
+Filename: pool/main/o/orafce/postgresql-18-orafce_4.16.1-1_amd64.deb
+Size: 373076
+MD5sum: 7dbeb61a5c8ad0602298358d6ec8121f
+SHA256: 8b4fbdfbedfcee0e312fc799ecf84ef1c32aa4b923d1aac4b9d9c235fccc0f09
 
 Package: patroni
 Version: 4.0.7-3
@@ -2718,22 +2718,41 @@ Size: 47020
 MD5sum: 6941928102ac2b3f1fe019f16c383660
 SHA256: 1fd5e43d613037db112a475193de4886c2109b7a3ff6766e322621d794506d5a
 
-Package: postgresql-17-pgauditlogtofile
-Source: pgauditlogtofile
-Version: 1.7.2-1
-Installed-Size: 165
+Package: postgresql-18-pgaudit
+Source: pgaudit-18
+Version: 18.0-2
+Installed-Size: 106
 Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
 Architecture: amd64
-Depends: postgresql-17, postgresql-17-jit-llvm (>= 19), postgresql-17-pgaudit, libc6 (>= 2.34)
+Depends: postgresql-18, libc6 (>= 2.4)
+Breaks: postgresql-18-jit-llvm (<< 19)
+Description: PostgreSQL Audit Extension
+Homepage: http://pgaudit.org/
+Description-md5: 68a25f9a2f28cb50daba2805c25fec39
+database
+Priority: optional
+Filename: pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-2_amd64.deb
+Size: 48316
+MD5sum: 2c5201bb1ac05ce99c37a43ee75d9b3d
+SHA256: fad9a5a68252897760b53108b0073f665e11b5cdf547246908e6ba2b4880b9d6
+
+Package: postgresql-18-pgauditlogtofile
+Source: pgauditlogtofile
+Version: 1.7.4-1
+Installed-Size: 171
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Architecture: amd64
+Depends: postgresql-18-pgaudit, postgresql-18, libc6 (>= 2.34)
+Breaks: postgresql-18-jit-llvm (<< 19)
 Description: PostgreSQL pgAudit Add-On to redirect audit logs
 Homepage: https://github.com/fmbiete/pgauditlogtofile
 Description-md5: 6af0f791937d1ab651d525293ad6435a
 database
 Priority: optional
-Filename: pool/main/p/pgauditlogtofile/postgresql-17-pgauditlogtofile_1.7.2-1_amd64.deb
-Size: 50556
-MD5sum: 8233f3b9bfd5f3322957111fbddd0393
-SHA256: fb84a83a37eaa29a41997f4075eb38b035bf3f117cbe4b75cffa1d6b7eccd87f
+Filename: pool/main/p/pgauditlogtofile/postgresql-18-pgauditlogtofile_1.7.4-1_amd64.deb
+Size: 51020
+MD5sum: 49783f3cce644d6c3aa7e9b23b96d483
+SHA256: d6a778ee28ee7c3aa416fcb724a894e56652049ae45b4cedbf89d18dad0656a5
 
 Package: pgbackrest
 Version: 2.56.0-2
@@ -3370,8 +3389,8 @@ SHA256: 7a4db01954523f682915d8046718cafcb24d7e0fe5a0f9a196632de8249de121
 
 Package: postgresql-18-pljs
 Source: pljs
-Version: 1.0.1-2
-Installed-Size: 1058
+Version: 1.0.3-1
+Installed-Size: 1059
 Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
 Architecture: amd64
 Depends: postgresql-18, libc6 (>= 2.17)
@@ -3381,15 +3400,15 @@ Homepage: https://github.com/plv8/pljs
 Description-md5: 06ece77e7cdb3851fcfa19f7c40deb6a
 database
 Priority: optional
-Filename: pool/main/p/pljs/postgresql-18-pljs_1.0.1-2_amd64.deb
-Size: 447056
-MD5sum: 99d29a7b81799fec4c9cc7f157dcf4eb
-SHA256: 586dc0a66997c0393de5e073163b55355cf94c30de12844804db9136ce9d8c28
+Filename: pool/main/p/pljs/postgresql-18-pljs_1.0.3-1_amd64.deb
+Size: 448072
+MD5sum: 00904e364dfd30c05fd441ae41decdcd
+SHA256: 1591ab94877cd2913f3963b163c428f28fba88a6704377fec8f59ab4ac7fcab3
 
 Package: postgresql-18-plpgsql-check
 Source: plpgsql-check
-Version: 2.8.2-2
-Installed-Size: 671
+Version: 2.8.3-1
+Installed-Size: 672
 Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
 Architecture: amd64
 Depends: postgresql-18, libc6 (>= 2.17)
@@ -3399,10 +3418,10 @@ Homepage: https://github.com/okbob/plpgsql_check
 Description-md5: 1cd172a8d9dfc067f31fcfdcf2cc9f2b
 database
 Priority: optional
-Filename: pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.8.2-2_amd64.deb
-Size: 299828
-MD5sum: 8150f3a1ff1cf2c7734e83a60dbb2365
-SHA256: 63357d652e8f3bce44cda4430bb0aa7af0116692c413a1a9132fd5c91f9feacb
+Filename: pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.8.3-1_amd64.deb
+Size: 300552
+MD5sum: 8cd12094a679b11d5da3f0fb0344b089
+SHA256: d96b2012b863bfbe9821e0052ef21a49cd1985488073c0089fd3841894a39049
 
 Package: plprofiler
 Version: 4.2.5-4
