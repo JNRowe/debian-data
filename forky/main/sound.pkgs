@@ -12696,6 +12696,42 @@ Size: 145084
 MD5sum: 4b3e600552191e4bee6c0912ad17ab8d
 SHA256: 08313104f852bfbe207578a853420057060168ec00a7219fc9d9dd21dad121b0
 
+Package: sc3-batlib
+Version: 0~20250203.8185a39-2
+Installed-Size: 26
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Architecture: all
+Depends: supercollider
+Suggests: sc3-plugins
+Description: Batuhan Bozkurt Quark extension for SuperCollider
+Multi-Arch: foreign
+Homepage: https://github.com/supercollider-quarks/BatLib
+Description-md5: c30f482370ac8a52571f7e2516ab2bc5
+sound
+Priority: optional
+Filename: pool/main/s/sc3-batlib/sc3-batlib_0~20250203.8185a39-2_all.deb
+Size: 5444
+MD5sum: d1ea9d52bc5233c7a35cbb9cca32f8bc
+SHA256: b26f0ea667120917ce62d154ddd0341ccd4167af1fdb662b555d4280d9aff29a
+
+Package: sc3-foxdot
+Version: 0~20210623.2700935-2
+Installed-Size: 18
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Architecture: all
+Depends: sc3-batlib, supercollider
+Suggests: sc3-plugins
+Description: FoxDot Quark extension for SuperCollider
+Multi-Arch: foreign
+Homepage: https://github.com/Qirky/FoxDotQuark
+Description-md5: e232c6be86afd6b66f2c95b2aec2c83f
+sound
+Priority: optional
+Filename: pool/main/s/sc3-foxdot/sc3-foxdot_0~20210623.2700935-2_all.deb
+Size: 3840
+MD5sum: 7577b9a5af20e55eb62c9de0f59cfac1
+SHA256: 68b0344727311efbccbfc89961962dffa189275db084d12831b9438623302905
+
 Package: schism
 Version: 2:20250825-1
 Installed-Size: 1203
@@ -13248,6 +13284,67 @@ Filename: pool/main/s/sonic/sonic_0.2.0-13+b1_amd64.deb
 Size: 8812
 MD5sum: 94f04e96b1870eeb8aa4437382241329
 SHA256: a60648458063a13f71b9bf7a88137dc5b103b5a8362b8caa856ca942f444531b
+
+Package: sonic-pi
+Version: 3.2.2~repack-12.1
+Installed-Size: 9020
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libqscintilla2-qt5-15 (>= 2.11.2), libqt5core5t64 (>= 5.15.1), libqt5gui5t64 (>= 5.14.1) | libqt5gui5-gles (>= 5.14.1), libqt5network5t64 (>= 5.0.2), libqt5widgets5t64 (>= 5.4.0), libstdc++6 (>= 14), sonic-pi-server (= 3.2.2~repack-12.1), alsa-utils
+Description: Live Coding for Everyone
+Homepage: https://sonic-pi.net/
+Description-md5: cfba0a7e5a8e7b5b67609733f1db5d4b
+Tag: field::computer-science, implemented-in::c++, implemented-in::ruby,
+ interface::graphical, interface::x11, role::program, sound::mixer,
+ sound::player, uitoolkit::qt, use::editing, use::learning,
+ use::playing, works-with-format::mp3, works-with-format::oggvorbis,
+ works-with-format::wav, works-with::audio, x11::application
+sound
+Priority: optional
+Filename: pool/main/s/sonic-pi/sonic-pi_3.2.2~repack-12.1_amd64.deb
+Size: 5898692
+MD5sum: c71f9af94969df4b9a9fbf8504b492fb
+SHA256: 208b7972ffe1eeb01c7376a593dc557d7ab338d73a6a2487cd99722adf19ad11
+
+Package: sonic-pi-samples
+Source: sonic-pi
+Version: 3.2.2~repack-12.1
+Installed-Size: 22987
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Architecture: all
+Description: Audio samples for Sonic Pi
+Multi-Arch: foreign
+Homepage: https://sonic-pi.net/
+Description-md5: 4261dab425530defd16645d72e7ac128
+Tag: made-of::audio, role::app-data
+sound
+Priority: optional
+Filename: pool/main/s/sonic-pi/sonic-pi-samples_3.2.2~repack-12.1_all.deb
+Size: 21882700
+MD5sum: 697c5bd1394712e7f9aaa20c4284ed38
+SHA256: 4371df2ddbb41e4585a94059daf701069de5b29d9735658d492b7154b82a47b0
+
+Package: sonic-pi-server
+Source: sonic-pi
+Version: 3.2.2~repack-12.1
+Installed-Size: 1692
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Architecture: all
+Depends: erlang-base, jack-example-tools, osmid, ruby, ruby-activesupport, ruby-aubio, ruby-hamster, ruby-kramdown, ruby-memoist, ruby-multi-json, ruby-rubame, ruby-rugged, ruby-sys-proctable, ruby-treetop, ruby-wavefile, sc3-plugins-server, sonic-pi-samples (= 3.2.2~repack-12.1), sox, supercollider-server
+Recommends: jackd | pipewire-jack
+Suggests: sonic-pi-server-doc
+Description: Backend server for Sonic Pi
+Homepage: https://sonic-pi.net/
+Description-md5: 2d864efee759bf33ce577cef58f2c17d
+Tag: implemented-in::ruby, interface::daemon, role::program, sound::player,
+ use::playing, works-with-format::mp3, works-with-format::oggvorbis,
+ works-with-format::wav, works-with::audio
+sound
+Priority: optional
+Filename: pool/main/s/sonic-pi/sonic-pi-server_3.2.2~repack-12.1_all.deb
+Size: 274756
+MD5sum: 33bd148b9e89b406b43ae0c159012749
+SHA256: 35f3f7aa08cd16cc2034ef560787d9af6e5ce501918b85adc14d755e92449700
 
 Package: sonic-visualiser
 Version: 5.2.1-1
@@ -14040,6 +14137,260 @@ Filename: pool/main/s/sublime-music/sublime-music_0.12.0-2_all.deb
 Size: 2551924
 MD5sum: 1c616ac4f7c5b6a9607ee62ce9d420a7
 SHA256: 7e022da7968ba7a5204a1215adeb6b342a75dcd0b40a58c9e2d7b0956a96207a
+
+Package: supercollider
+Version: 1:3.13.0+repack-3.1
+Installed-Size: 300
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Architecture: amd64
+Depends: supercollider-ide, supercollider-language, supercollider-server
+Recommends: supercollider-supernova
+Description: real time audio synthesis programming language - metapackage
+Homepage: https://supercollider.github.io
+Description-md5: 70a250ecf870b7c6c9b07fd4f5bbde60
+Tag: implemented-in::c++, interface::text-mode, role::program, sound::TODO,
+ sound::mixer, sound::player, sound::recorder, sound::sequencer,
+ suite::emacs, use::playing, works-with::audio
+sound
+Priority: optional
+Filename: pool/main/s/supercollider/supercollider_3.13.0+repack-3.1_amd64.deb
+Size: 69008
+MD5sum: 57968846c8292fec5825a6d6e248df7f
+SHA256: ef5ad50ab65274c4a7aa6dba32585e8b13b81c2ff5c7317ac71f5501ad6488c4
+
+Package: supercollider-common
+Source: supercollider
+Version: 1:3.13.0+repack-3.1
+Installed-Size: 9772
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Architecture: all
+Replaces: supercollider-doc
+Depends: libjs-codemirror, libjs-jquery, libjs-prettify
+Description: common files for SuperCollider
+Homepage: https://supercollider.github.io
+Description-md5: 6856889075f931634985e88f0cefd706
+Tag: role::app-data
+sound
+Priority: optional
+Filename: pool/main/s/supercollider/supercollider-common_3.13.0+repack-3.1_all.deb
+Size: 3110084
+MD5sum: 22a8e53fec5b005669cc2b8c0686e44c
+SHA256: 508e937fd4f144ec5743cce846257b3e6115ef7c785ee489218210fc1cf894da
+
+Package: supercollider-dev
+Source: supercollider
+Version: 1:3.13.0+repack-3.1
+Installed-Size: 513
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Architecture: amd64
+Replaces: supercollider-common-dev, supercollider-server-dev
+Provides: supercollider-common-dev, supercollider-server-dev
+Depends: libsndfile1-dev, supercollider-language (= 1:3.13.0+repack-3.1)
+Conflicts: supercollider-common-dev, supercollider-server-dev
+Description: development files for SuperCollider
+Homepage: https://supercollider.github.io
+Description-md5: 12313ee58fb018f25a0b088bf31045c1
+Tag: devel::lang:c++, devel::library, implemented-in::c++, role::devel-lib,
+ role::program, sound::TODO, sound::mixer, sound::player,
+ sound::recorder, sound::sequencer, use::playing, works-with::audio
+sound
+Priority: optional
+Filename: pool/main/s/supercollider/supercollider-dev_3.13.0+repack-3.1_amd64.deb
+Size: 100912
+MD5sum: fc006a037a3450478b385b8c1b3532cc
+SHA256: fb07af4ef1afca6aea6109a92b257486ea455b4fe095edca724a5bfa61f51dd8
+
+Package: supercollider-emacs
+Source: supercollider
+Version: 1:3.13.0+repack-3.1
+Installed-Size: 540
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Architecture: all
+Depends: emacs | emacsen, supercollider-language (>= 1:3.13.0+repack-3.1)
+Recommends: w3m-el
+Description: SuperCollider mode for Emacs
+Homepage: https://supercollider.github.io
+Description-md5: 0491169517790591507cc0bb541f5643
+Tag: implemented-in::lisp, role::plugin, suite::emacs
+sound
+Priority: optional
+Filename: pool/main/s/supercollider/supercollider-emacs_3.13.0+repack-3.1_all.deb
+Size: 113740
+MD5sum: 0747ffd2fd88fc76b4b8a2788dcf324d
+SHA256: bff59f72f95a4d0aa9a1f8e7aa4e9d20713ddf4499fd00bff4010e9a0bed96ec
+
+Package: supercollider-gedit
+Source: supercollider
+Version: 1:3.13.0+repack-3.1
+Installed-Size: 333
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Architecture: all
+Depends: gedit, supercollider-language (>= 1:3.13.0+repack-3.1)
+Description: SuperCollider mode for Gedit
+Homepage: https://supercollider.github.io
+Description-md5: e7ec0e380f26a8b28b16b7fee0d2a23c
+Tag: implemented-in::c++, role::plugin
+sound
+Priority: optional
+Filename: pool/main/s/supercollider/supercollider-gedit_3.13.0+repack-3.1_all.deb
+Size: 75760
+MD5sum: 59cefec795dcccaa2237835a253bede7
+SHA256: 0b8c219c5336e1f94e034ffba4f0b5deef8cf34767be43bb73389ec2b4fd61a4
+
+Package: supercollider-ide
+Source: supercollider
+Version: 1:3.13.0+repack-3.1
+Installed-Size: 1985
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Architecture: amd64
+Depends: supercollider-language (>= 1:3.13.0+repack-3.1), libboost-filesystem1.83.0 (>= 1.83.0), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libqt5core5t64 (>= 5.15.1), libqt5gui5t64 (>= 5.14.1) | libqt5gui5-gles (>= 5.14.1), libqt5network5t64 (>= 5.0.2), libqt5webchannel5 (>= 5.6.1), libqt5webenginewidgets5 (>= 5.14.1), libqt5websockets5 (>= 5.6.0), libqt5widgets5t64 (>= 5.12.2), libstdc++6 (>= 14), libyaml-cpp0.8 (>= 0.8.0+dfsg-9)
+Description: integrated development environment for supercollider audio system
+Homepage: https://supercollider.github.io
+Description-md5: 6b26d4803617382bd4f04a2ef5d095f5
+Tag: implemented-in::c++, interface::graphical, interface::x11,
+ role::program, uitoolkit::qt, x11::application
+sound
+Priority: optional
+Filename: pool/main/s/supercollider/supercollider-ide_3.13.0+repack-3.1_amd64.deb
+Size: 552368
+MD5sum: 053a66174f84fa8623a43da3557caee5
+SHA256: 1b94ff99b6d2c807ed4f0a72609b8c4b4653f2a8231b65e2cad0096fddaebbff
+
+Package: supercollider-language
+Source: supercollider
+Version: 1:3.13.0+repack-3.1
+Installed-Size: 3661
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Architecture: amd64
+Depends: supercollider-common (= 1:3.13.0+repack-3.1), libasound2t64 (>= 1.0.16), libboost-filesystem1.83.0 (>= 1.83.0), libboost-thread1.83.0 (>= 1.83.0), libc6 (>= 2.38), libgcc-s1 (>= 4.0), libqt5core5t64 (>= 5.15.1), libqt5gui5t64 (>= 5.14.1) | libqt5gui5-gles (>= 5.14.1), libqt5network5t64 (>= 5.14.1), libqt5printsupport5t64 (>= 5.0.2), libqt5svg5 (>= 5.6.0~beta), libqt5webenginewidgets5 (>= 5.14.1), libqt5widgets5t64 (>= 5.15.1), libreadline8t64 (>= 6.0), libscsynth1t64 (>= 1:3.13.0+repack), libsndfile1 (>= 1.0.20), libstdc++6 (>= 14), libudev1 (>= 183), libyaml-cpp0.8 (>= 0.8.0+dfsg-9)
+Recommends: supercollider-server (= 1:3.13.0+repack-3.1)
+Suggests: subversion, supercollider-ide
+Description: real time audio synthesis programming language
+Homepage: https://supercollider.github.io
+Description-md5: 6bce609ba936d3f93a19d187d9b61a0a
+Tag: implemented-in::c++, interface::graphical, interface::x11,
+ role::program, uitoolkit::qt, x11::application
+sound
+Priority: optional
+Filename: pool/main/s/supercollider/supercollider-language_3.13.0+repack-3.1_amd64.deb
+Size: 1141020
+MD5sum: e2fd937a770de3feeafeb1926ca1923a
+SHA256: cf713885927b65d8a054214f67452e058f270debb9c032cd72e53401d088ac03
+
+Package: supercollider-server
+Source: supercollider
+Version: 1:3.13.0+repack-3.1
+Installed-Size: 1718
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Architecture: amd64
+Depends: jackd, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libscsynth1t64 (>= 1:3.13.0+repack), libsndfile1 (>= 1.0.20), libstdc++6 (>= 12), libx11-6
+Description: real time audio synthesis server
+Homepage: https://supercollider.github.io
+Description-md5: 0efc9f1a38881679805fd7b74d820e7d
+Tag: implemented-in::c++, interface::daemon, role::program
+sound
+Priority: optional
+Filename: pool/main/s/supercollider/supercollider-server_3.13.0+repack-3.1_amd64.deb
+Size: 459136
+MD5sum: b9b39d7550aaaea5e4b0dbc7e74228f0
+SHA256: 2baa968b0ab46b9927b604a69b6d80900861766ecccac2272b7b9a6011cdee5a
+
+Package: supercollider-supernova
+Source: supercollider
+Version: 1:3.13.0+repack-3.1
+Installed-Size: 2742
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Architecture: amd64
+Depends: jackd, libboost-filesystem1.83.0 (>= 1.83.0), libboost-program-options1.83.0 (>= 1.83.0), libboost-thread1.83.0 (>= 1.83.0), libc6 (>= 2.38), libfftw3-single3 (>= 3.3.10), libgcc-s1 (>= 3.0), libjack-jackd2-0 (>= 1.9.10+20150825) | libjack-0.125, libsndfile1 (>= 1.0.20), libstdc++6 (>= 14), libx11-6
+Description: real time audio synthesis server (multiprocessor version)
+Homepage: https://supercollider.github.io
+Description-md5: 986afb0a3fe9dce2e4d0c1ce68706579
+Tag: implemented-in::c++, interface::graphical, interface::x11,
+ role::program, uitoolkit::qt, x11::application
+sound
+Priority: optional
+Filename: pool/main/s/supercollider/supercollider-supernova_3.13.0+repack-3.1_amd64.deb
+Size: 779920
+MD5sum: 317708452ae79d9ea009d02c49f6a4b5
+SHA256: 0c6f4df2ff43f394f94257a130d6e353e6e2e701692488c3d01f008c81def333
+
+Package: supercollider-vim
+Source: supercollider
+Version: 1:3.13.0+repack-3.1
+Installed-Size: 320
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Architecture: all
+Depends: ruby, supercollider-language (>= 1:3.13.0+repack-3.1), vim | gvim
+Recommends: unhtml | links, vim-addon-manager
+Suggests: unrtf
+Description: SuperCollider mode for Vim
+Homepage: https://supercollider.github.io
+Description-md5: 9f75de08f2a26b3a5b9b3183c30dfd6c
+Tag: implemented-in::c++, role::plugin
+sound
+Priority: optional
+Filename: pool/main/s/supercollider/supercollider-vim_3.13.0+repack-3.1_all.deb
+Size: 76420
+MD5sum: aa969f75c6863ddd053b395c1e6d7aa3
+SHA256: ece513db201226fd4ea41004084a8be92956704aed1a8b4b1fab7f083c65b9b5
+
+Package: ladspalist
+Source: supercollider-sc3-plugins
+Version: 3.13.0~repack-1.1
+Installed-Size: 60
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34)
+Conflicts: supercollider-sc3-plugins-ladspalist
+Description: List LADSPA plugins for use by LADSPA UGen
+Homepage: https://github.com/supercollider/sc3-plugins
+Description-md5: 8028e6b1dd62b59a466ce8d2d1fa00c9
+Tag: implemented-in::c++, role::plugin
+sound
+Priority: optional
+Filename: pool/main/s/supercollider-sc3-plugins/ladspalist_3.13.0~repack-1.1_amd64.deb
+Size: 15368
+MD5sum: 8b2f81a99d016a6b049af6150c7eac43
+SHA256: 1c0c71a17f34dd79c4cd587e491380d17f247d5e13b8a45edfe0b0d56f3ece81
+
+Package: sc3-plugins-language
+Source: supercollider-sc3-plugins
+Version: 3.13.0~repack-1.1
+Installed-Size: 2520
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Architecture: all
+Depends: supercollider-language, sc3-plugins-server (>= 3.13.0~repack-1.1), sc3-plugins-server (<< 3.13.0~repack+1~)
+Conflicts: supercollider-sc3-plugins-sclang
+Description: sclang class files of UGen plugins for SuperCollider
+Homepage: https://github.com/supercollider/sc3-plugins
+Description-md5: f2bd4e1378a61a75e1797c271d4d1e55
+Tag: implemented-in::c++, role::plugin
+sound
+Priority: optional
+Filename: pool/main/s/supercollider-sc3-plugins/sc3-plugins-language_3.13.0~repack-1.1_all.deb
+Size: 945324
+MD5sum: fc053ca02c0c8274c096adddda265cf7
+SHA256: 6502297469e4e18b2e489f84ac51802258a6afbc0968cecb3a42b08f7a6e6be8
+
+Package: sc3-plugins-server
+Source: supercollider-sc3-plugins
+Version: 3.13.0~repack-1.1
+Installed-Size: 19412
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Architecture: amd64
+Depends: supercollider-server, libc6 (>= 2.38), libfftw3-single3 (>= 3.3.10), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1), libstk-5.0.0 (>= 5.0.1+dfsg)
+Suggests: ladspalist
+Conflicts: supercollider-sc3-plugins-scsynth
+Description: Compiled scsynth UGen plugins for SuperCollider
+Homepage: https://github.com/supercollider/sc3-plugins
+Description-md5: cfb7548522c943f7f8de084e8dbb3224
+Tag: implemented-in::c++, role::plugin
+sound
+Priority: optional
+Filename: pool/main/s/supercollider-sc3-plugins/sc3-plugins-server_3.13.0~repack-1.1_amd64.deb
+Size: 2615316
+MD5sum: 62aef7678f9282433879b3b16850c7cd
+SHA256: 4bc63bdc6b146817ac3a57a779be57ba4934ffa33ab8203f40b227bc956bda61
 
 Package: supysonic
 Version: 0.7.9+ds-2
