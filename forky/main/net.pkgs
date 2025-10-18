@@ -5174,20 +5174,20 @@ MD5sum: fcf19e3b8f88529656fd42af62fd6588
 SHA256: 69afc7272574677a32e3cbcc98025d11517b3594ee171f046f870f3f31404b0b
 
 Package: dnsrecon
-Version: 1.2.0-3
-Installed-Size: 1469
+Version: 1.3.1-3
+Installed-Size: 1487
 Maintainer: Debian Security Tools <team+pkg-security@tracker.debian.org>
 Architecture: all
-Depends: python3:any, python3-dnspython, python3-netaddr, python3-lxml
+Depends: python3-dnspython, python3-loguru, python3-lxml, python3-netaddr, python3-requests, python3:any
 Description: Powerful DNS enumeration script
 Homepage: https://github.com/darkoperator/dnsrecon
 Description-md5: 5eee248ebcc53a8c58ab5a6c2c6e88ef
 net
 Priority: optional
-Filename: pool/main/d/dnsrecon/dnsrecon_1.2.0-3_all.deb
-Size: 474448
-MD5sum: 9aa85f24e59adb9b90753777741b5d4e
-SHA256: 0e743024fea9e7e321a90d33825e5d7751100e406006e6f710123bb9a317c17d
+Filename: pool/main/d/dnsrecon/dnsrecon_1.3.1-3_all.deb
+Size: 474284
+MD5sum: f6defc703af083fb7db4e21345b534aa
+SHA256: 91cc0d73d0d45a4df84b10338b4b84c158c94bc45b32ab7ae0d964840ea78e7c
 
 Package: dnss
 Source: dnss (0.1.0-1)
@@ -8224,220 +8224,6 @@ Filename: pool/main/g/getstream/getstream_20100616-2+b1_amd64.deb
 Size: 35072
 MD5sum: 707509dfffc3781fdcd396028c40389c
 SHA256: 4ba6cb2948c45a2a95d6de0082383301e74569b3539940007fa290b16bce8fca
-
-Package: gfal2
-Version: 2.23.2-1
-Installed-Size: 14
-Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
-Architecture: all
-Depends: libgfal2-2t64, libgfal-transfer2t64
-Recommends: gfal2-plugin-file, gfal2-plugin-dcap, gfal2-plugin-srm, gfal2-plugin-gridftp, gfal2-plugin-http, gfal2-plugin-xrootd, gfal2-plugin-sftp
-Description: Grid file access library 2.0
-Multi-Arch: foreign
-Homepage: https://dmc-docs.web.cern.ch/dmc-docs/gfal2/gfal2.html
-Description-md5: ec8f5d411d1de9c84970760a917feaba
-net
-Priority: optional
-Filename: pool/main/g/gfal2/gfal2_2.23.2-1_all.deb
-Size: 4532
-MD5sum: 368fcfcf4cb1224108dccbacfa4d89be
-SHA256: 04a2c03aaca797abb7610aff61d300ad5debcd014c8aad9a455c0ddae8afcd79
-
-Package: gfal2-plugin-dcap
-Source: gfal2
-Version: 2.23.2-1
-Installed-Size: 41
-Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
-Architecture: amd64
-Depends: libgfal2-2t64 (= 2.23.2-1), dcap-tunnel-gsi, libc6 (>= 2.4), libdcap1t64 (>= 2.47.14), libglib2.0-0t64 (>= 2.12.0)
-Description: Provides dcap support for gfal2
-Multi-Arch: same
-Homepage: https://dmc-docs.web.cern.ch/dmc-docs/gfal2/gfal2.html
-Description-md5: bc3a546a3c97b9a058b0a89e9196475f
-net
-Priority: optional
-Filename: pool/main/g/gfal2/gfal2-plugin-dcap_2.23.2-1_amd64.deb
-Size: 9616
-MD5sum: 4bb25a79c4e45d5a5fed5480d5a69337
-SHA256: 2d5ac40f2e5058dd65f739940e29645009e4716a5d48523cd559e7ee4153a995
-
-Package: gfal2-plugin-file
-Source: gfal2
-Version: 2.23.2-1
-Installed-Size: 41
-Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
-Architecture: amd64
-Depends: libgfal2-2t64 (= 2.23.2-1), libc6 (>= 2.33), libglib2.0-0t64 (>= 2.16.0), zlib1g (>= 1:1.1.4)
-Description: Provides file support for gfal2
-Multi-Arch: same
-Homepage: https://dmc-docs.web.cern.ch/dmc-docs/gfal2/gfal2.html
-Description-md5: ba3e5fbe395f43c022888d8e1dc0b9c3
-net
-Priority: optional
-Filename: pool/main/g/gfal2/gfal2-plugin-file_2.23.2-1_amd64.deb
-Size: 10276
-MD5sum: 408684d68a06c4e36192e95d25e86442
-SHA256: d6549c084dfa32f7cb75fa48dbefdbf5b269a48e413a5c01fd2336bafbea46cb
-
-Package: gfal2-plugin-gridftp
-Source: gfal2
-Version: 2.23.2-1
-Installed-Size: 215
-Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
-Architecture: amd64
-Depends: libgfal2-2t64 (= 2.23.2-1), libgfal-transfer2t64 (= 2.23.2-1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.24.0), libglobus-common0t64 (>= 17), libglobus-ftp-client2t64 (>= 7), libglobus-ftp-control1t64 (>= 8), libglobus-gass-copy2t64 (>= 8), libglobus-gss-assist3t64 (>= 11), libglobus-gssapi-gsi4t64 (>= 13), libstdc++6 (>= 14)
-Description: Provides the gridftp support for gfal2
-Multi-Arch: same
-Homepage: https://dmc-docs.web.cern.ch/dmc-docs/gfal2/gfal2.html
-Description-md5: dcef722123b755d14d1df142218a17f0
-net
-Priority: optional
-Filename: pool/main/g/gfal2/gfal2-plugin-gridftp_2.23.2-1_amd64.deb
-Size: 68340
-MD5sum: 59fc59ebd68db9ef9db95b3a3869fff7
-SHA256: f9d741a186fd723f172eab6fd053bb12294614bc5899738116485a0e2dc44d1b
-
-Package: gfal2-plugin-http
-Source: gfal2
-Version: 2.23.2-1
-Installed-Size: 319
-Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
-Architecture: amd64
-Depends: libgfal2-2t64 (= 2.23.2-1), libgfal-transfer2t64 (= 2.23.2-1), libc6 (>= 2.38), libcrypto++8t64 (>= 8.9.0), libdavix0t64 (>= 0.8.4), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.16.0), libjson-c5 (>= 0.15), libstdc++6 (>= 13.1)
-Description: Provides HTTP and DAV support for gfal2
-Multi-Arch: same
-Homepage: https://dmc-docs.web.cern.ch/dmc-docs/gfal2/gfal2.html
-Description-md5: 4abc95acd22eb8ad10b9cce1bb58d61c
-net
-Priority: optional
-Filename: pool/main/g/gfal2/gfal2-plugin-http_2.23.2-1_amd64.deb
-Size: 101932
-MD5sum: 7757aab2e0989e421aa5cddeb90d8788
-SHA256: 0f34ba32c6ac49a51f9b5e10ab6d53379d6a5ba34a823a66a9d878933b6873f1
-
-Package: gfal2-plugin-mock
-Source: gfal2
-Version: 2.23.2-1
-Installed-Size: 54
-Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
-Architecture: amd64
-Depends: libgfal2-2t64 (= 2.23.2-1), libgfal-transfer2t64 (= 2.23.2-1), libc6 (>= 2.38), libglib2.0-0t64 (>= 2.32.0), libuuid1 (>= 2.16)
-Description: Provides a mock dummy protocol for gfal2
-Multi-Arch: same
-Homepage: https://dmc-docs.web.cern.ch/dmc-docs/gfal2/gfal2.html
-Description-md5: 4acf8701f01b43c5fd2dcd968d70908c
-net
-Priority: optional
-Filename: pool/main/g/gfal2/gfal2-plugin-mock_2.23.2-1_amd64.deb
-Size: 14760
-MD5sum: 5e7c7dd3670028d8ab547147d7f50930
-SHA256: 4e7ecf9d8f2bd9cd513616cbbd4bf30acf388eda78ec11db36e234afc3543857
-
-Package: gfal2-plugin-sftp
-Source: gfal2
-Version: 2.23.2-1
-Installed-Size: 53
-Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
-Architecture: amd64
-Depends: libgfal2-2t64 (= 2.23.2-1), libgfal-transfer2t64 (= 2.23.2-1), libc6 (>= 2.4), libglib2.0-0t64 (>= 2.12.0), libssh2-1t64 (>= 1.2.8)
-Description: Provides sftp support for gfal2
-Multi-Arch: same
-Homepage: https://dmc-docs.web.cern.ch/dmc-docs/gfal2/gfal2.html
-Description-md5: 04ed4d28c4505de832d9b9cdf1a0ed89
-net
-Priority: optional
-Filename: pool/main/g/gfal2/gfal2-plugin-sftp_2.23.2-1_amd64.deb
-Size: 12596
-MD5sum: dd2fc8d8968cd1fe9c88c7859a009a5b
-SHA256: 50a903940411865c15e6cfb04dea68eac773565fb8cceb474f992fdd57df1672
-
-Package: gfal2-plugin-srm
-Source: gfal2
-Version: 2.23.2-1
-Installed-Size: 115
-Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
-Architecture: amd64
-Depends: libgfal2-2t64 (= 2.23.2-1), libgfal-transfer2t64 (= 2.23.2-1), libc6 (>= 2.38), libgfal-srm-ifce1t64 (>= 1.24.7), libglib2.0-0t64 (>= 2.12.0), libglobus-common0t64 (>= 17), libglobus-gss-assist3t64 (>= 11), libglobus-gssapi-gsi4t64 (>= 13)
-Description: Provides srm support for gfal2
-Multi-Arch: same
-Homepage: https://dmc-docs.web.cern.ch/dmc-docs/gfal2/gfal2.html
-Description-md5: 2ad936635e7b4c61ce8579cf186b8c4c
-net
-Priority: optional
-Filename: pool/main/g/gfal2/gfal2-plugin-srm_2.23.2-1_amd64.deb
-Size: 36420
-MD5sum: 39e42e91e991b5eec08f56ef6927b599
-SHA256: 8ba2229b504fb89b888cd72036a9a5055ee3dddbddcb24dc19aed8de03371e80
-
-Package: gfal2-plugin-xrootd
-Source: gfal2
-Version: 2.23.2-1
-Installed-Size: 158
-Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
-Architecture: amd64
-Depends: libgfal2-2t64 (= 2.23.2-1), libgfal-transfer2t64 (= 2.23.2-1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.24.0), libjson-c5 (>= 0.15), libstdc++6 (>= 13.1), libxrdcl3t64 (>= 5.8.0), libxrdposix3t64 (>= 5.8.0)
-Description: Provides xrootd support for gfal2
-Multi-Arch: same
-Homepage: https://dmc-docs.web.cern.ch/dmc-docs/gfal2/gfal2.html
-Description-md5: 0f4e91193fc0634105a4c91f9c97cf1c
-net
-Priority: optional
-Filename: pool/main/g/gfal2/gfal2-plugin-xrootd_2.23.2-1_amd64.deb
-Size: 50352
-MD5sum: 66c22c5b13b9812569fdce867a9b7f2b
-SHA256: 967003602d4c5eda4db8865f42d2be7c7ba4628e5d86639aa4078a4f266ced4f
-
-Package: python3-gfal2
-Source: gfal2-bindings (1.13.0-2)
-Version: 1.13.0-2+b1
-Installed-Size: 836
-Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
-Architecture: amd64
-Depends: libboost-python1.83.0 (>= 1.83.0), libboost-python1.83.0-py313, libc6 (>= 2.32), libgcc-s1 (>= 3.0), libgfal-transfer2t64 (>= 2.23.1), libgfal2-2t64 (>= 2.23.1), libglib2.0-0t64 (>= 2.12.0), libstdc++6 (>= 14), python3 (<< 3.14), python3 (>= 3.13~)
-Description: Python bindings for gfal2
-Homepage: https://dmc-docs.web.cern.ch/dmc-docs/gfal2-python.html
-Description-md5: 382ef2dbdfd724fd39e1acf6ad672385
-net
-Priority: optional
-Filename: pool/main/g/gfal2-bindings/python3-gfal2_1.13.0-2+b1_amd64.deb
-Size: 141196
-MD5sum: 17f04069bea7966263fe116984a804f4
-SHA256: fe5b527cf3c5c9a88e8f4023720e9e94935068c12124016b99f429770e0af172
-
-Package: gfal2-util-scripts
-Source: gfal2-util
-Version: 1.9.0-2
-Installed-Size: 91
-Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
-Architecture: all
-Depends: python3-gfal2-util (= 1.9.0-2)
-Recommends: gfal2
-Description: GFAL2 command line scripts
-Homepage: https://dmc-docs.web.cern.ch/dmc-docs/gfal2-util.html
-Description-md5: a07f1b3643d8c646a4d7fbbe05c3254e
-net
-Priority: optional
-Filename: pool/main/g/gfal2-util/gfal2-util-scripts_1.9.0-2_all.deb
-Size: 30608
-MD5sum: 1de9a4e36f7fce62bfb0a5379216a408
-SHA256: f2cc3a9e626d2a2218cf8857e736c4601dd59ef4b88453886e34cd1fcf362eb2
-
-Package: python3-gfal2-util
-Source: gfal2-util
-Version: 1.9.0-2
-Installed-Size: 97
-Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
-Architecture: all
-Depends: python3-gfal2 (>= 1.13.0), python3:any
-Description: GFAL2 clients for Python 3
-Homepage: https://dmc-docs.web.cern.ch/dmc-docs/gfal2-util.html
-Description-md5: f71c5290edbc21cc815209187d181470
-net
-Priority: optional
-Filename: pool/main/g/gfal2-util/python3-gfal2-util_1.9.0-2_all.deb
-Size: 17824
-MD5sum: 1839cf485994bc1f685f83b0af092d67
-SHA256: 02df1a83b1b4b607580a10114c0ff322330c62d8ea6ac4de6845a8c5aaeb2c59
 
 Package: gfmd
 Source: gfarm (2.7.20+dfsg-1.2)
@@ -16900,6 +16686,24 @@ Filename: pool/main/m/mistral-tempest-plugin/mistral-tempest-plugin_2.7.0-2_all.
 Size: 4628
 MD5sum: f856ad80256a920a62c8bd499ff4ea37
 SHA256: 4e5d7a52e6d6b5dc7bb80d0e17a6c32fde30849c5af62b9c184bebcb52371591
+
+Package: mitmproxy
+Version: 8.1.1-4
+Installed-Size: 3650
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: fonts-font-awesome (>= 4.2.0~dfsg), python3-h2 (>= 4.0), python3-hyperframe (>= 6.0), python3-standard-imghdr, python3-asgiref (>= 3.2.10), python3-blinker (>= 1.4), python3-brotli (>= 1.0), python3-certifi (>= 2019.9.11), python3-cryptography (>= 36), python3-flask (>= 1.1.1), python3-h11, python3-kaitaistruct (>= 0.7), python3-ldap3 (>= 2.8), python3-msgpack (>= 1.0.0), python3-openssl (>= 19.1.0), python3-passlib (>= 1.6.5), python3-protobuf (>= 3.6.0), python3-publicsuffix2 (>= 2.20190812), python3-pyparsing (>= 2.4.2), python3-pyperclip (>= 1.6.0), python3-ruamel.yaml (>= 0.16), python3-sortedcontainers (>= 2.1.0), python3-tornado (>= 4.3), python3-urwid (>= 2.1.0), python3-wsproto (>= 0.14), python3-zstandard, python3:any
+Pre-Depends: dpkg (>= 1.17.14)
+Conflicts: python-netlib
+Description: SSL-capable man-in-the-middle HTTP proxy
+Homepage: https://mitmproxy.org
+Description-md5: 6fcd19b696ed79e2ba8b30a6711c9d5d
+net
+Priority: optional
+Filename: pool/main/m/mitmproxy/mitmproxy_8.1.1-4_all.deb
+Size: 864420
+MD5sum: 3429f9db8c28d1cda3e77ed8f62f3a3d
+SHA256: 20103da4a2db26c9bd560ff48d1170a73b66db13482e4e5590574e10bc852b81
 
 Package: mktorrent
 Source: mktorrent (1.1-3)
@@ -29562,11 +29366,11 @@ SHA256: b636af1b4f635c4c418db009d7c3913b5296cd093d4d436dd0ea84f7df5e1514
 
 Package: ctdb
 Source: samba
-Version: 2:4.23.1+dfsg-1
+Version: 2:4.23.2+dfsg-1
 Installed-Size: 4350
 Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
 Architecture: amd64
-Depends: iproute2, samba-libs (= 2:4.23.1+dfsg-1), tdb-tools, libbsd0 (>= 0.6.0), libc6 (>= 2.38), libpopt0 (>= 1.14), libtalloc2 (>= 2.1.0), libtdb1 (>= 1.3.11), libtevent0t64 (>= 0.15.0)
+Depends: iproute2, samba-libs (= 2:4.23.2+dfsg-1), tdb-tools, libbsd0 (>= 0.6.0), libc6 (>= 2.38), libpopt0 (>= 1.14), libtalloc2 (>= 2.1.0), libtdb1 (>= 1.3.11), libtevent0t64 (>= 0.15.0)
 Recommends: ethtool, python3:any, python3-etcd
 Suggests: lsof, librados2 (>= 18.2.7+ds), samba-vfs-ceph
 Description: clustered database to store temporary data
@@ -29580,18 +29384,18 @@ Tag: admin::cluster, admin::file-distribution, implemented-in::c,
  use::synchronizing, works-with::software:running
 net
 Priority: optional
-Filename: pool/main/s/samba/ctdb_4.23.1+dfsg-1_amd64.deb
-Size: 789388
-MD5sum: 9d71f33473599b5545306df5fd1acdd7
-SHA256: 114f03425bddfd2311e62c41a5363f067369a74f46449ae9d515843f5756b0a5
+Filename: pool/main/s/samba/ctdb_4.23.2+dfsg-1_amd64.deb
+Size: 789820
+MD5sum: 4ceca1fa3af1c595ef9dcaa4da24e785
+SHA256: 1d343808f1eae63a0458f2afc5f79732a44da3ed82f42dfeb31cc941a90375a5
 
 Package: libnss-winbind
 Source: samba
-Version: 2:4.23.1+dfsg-1
+Version: 2:4.23.2+dfsg-1
 Installed-Size: 216
 Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
 Architecture: amd64
-Depends: winbind:any (= 2:4.23.1+dfsg-1), libbsd0 (>= 0.0), libc6 (>= 2.38)
+Depends: winbind:any (= 2:4.23.2+dfsg-1), libbsd0 (>= 0.0), libc6 (>= 2.38)
 Suggests: libpam-winbind
 Description: Samba nameservice integration plugins
 Multi-Arch: same
@@ -29599,18 +29403,18 @@ Homepage: https://www.samba.org
 Description-md5: 223d38d764a9bb35ad3be4c8d048957d
 net
 Priority: optional
-Filename: pool/main/s/samba/libnss-winbind_4.23.1+dfsg-1_amd64.deb
-Size: 75816
-MD5sum: fc2c9dbf2447af13fec0d5e970d44210
-SHA256: d5a9b7570def5fde3cfc4ca1012784008c11867faf4675be6e8102d02ae9e0d4
+Filename: pool/main/s/samba/libnss-winbind_4.23.2+dfsg-1_amd64.deb
+Size: 75908
+MD5sum: d0c656cd1ffe07c12274f2b8d26f0f11
+SHA256: b86e0c4e8e26a709964fb98a0e7d20cfa9164c0cd683c1df0f0866eb666698da
 
 Package: libpam-winbind
 Source: samba
-Version: 2:4.23.1+dfsg-1
+Version: 2:4.23.2+dfsg-1
 Installed-Size: 378
 Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libpam-runtime, winbind:any (= 2:4.23.1+dfsg-1), libbsd0 (>= 0.0), libc6 (>= 2.38), libpam0g (>= 0.99.7.1)
+Depends: libpam-runtime, winbind:any (= 2:4.23.2+dfsg-1), libbsd0 (>= 0.0), libc6 (>= 2.38), libpam0g (>= 0.99.7.1)
 Suggests: libnss-winbind
 Description: Windows domain authentication integration plugin
 Multi-Arch: same
@@ -29619,18 +29423,18 @@ Description-md5: fba9076429d270720a91324cff071fed
 Tag: implemented-in::c, protocol::smb, role::plugin, suite::samba
 net
 Priority: optional
-Filename: pool/main/s/samba/libpam-winbind_4.23.1+dfsg-1_amd64.deb
-Size: 126652
-MD5sum: 0b378463da515704847c2abfa45f91ea
-SHA256: 497b292f59c6b6ccd4b49afc5bf87746f53d674bc157880d6d6d21529511a159
+Filename: pool/main/s/samba/libpam-winbind_4.23.2+dfsg-1_amd64.deb
+Size: 126668
+MD5sum: 8cf6f3293adb1349c8ccd5cf19c631f3
+SHA256: 3819d1e7408499a63f5a9a5c048e0d3eea0591703c3bf8669797671378a74422
 
 Package: registry-tools
 Source: samba
-Version: 2:4.23.1+dfsg-1
+Version: 2:4.23.2+dfsg-1
 Installed-Size: 171
 Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
 Architecture: amd64
-Depends: samba-libs (= 2:4.23.1+dfsg-1), libc6 (>= 2.34), libndr6 (>= 2:4.17.2), libpopt0 (>= 1.14), libreadline8t64 (>= 6.0), libtalloc2 (>= 2.0.4~git20101213)
+Depends: samba-libs (= 2:4.23.2+dfsg-1), libc6 (>= 2.34), libndr6 (>= 2:4.17.2), libpopt0 (>= 1.14), libreadline8t64 (>= 6.0), libtalloc2 (>= 2.0.4~git20101213)
 Description: tools for viewing and manipulating the Windows registry
 Homepage: https://www.samba.org
 Description-md5: 31c581321b3c287173613845af74fcdb
@@ -29638,21 +29442,21 @@ Tag: implemented-in::c, interface::commandline, network::client,
  role::program, suite::samba
 net
 Priority: optional
-Filename: pool/main/s/samba/registry-tools_4.23.1+dfsg-1_amd64.deb
-Size: 67276
-MD5sum: d80dd8a47bee709ac7dd177542a4874b
-SHA256: ce133bf5c9d0d04a074e1357d9d703697c65cdd5558932db33283f64097df1b5
+Filename: pool/main/s/samba/registry-tools_4.23.2+dfsg-1_amd64.deb
+Size: 67372
+MD5sum: 1434a9afa99ab61cf0498737cd3441b0
+SHA256: fdec67fe4243dd328a37b76422c37835c4d0ad9e4331b76e028e04959b22ed05
 
 Package: samba
-Version: 2:4.23.1+dfsg-1
+Version: 2:4.23.2+dfsg-1
 Installed-Size: 5008
 Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: samba-libs (<< 2:4.19.0~), samba-vfs-modules (<< 2:4.20.2+dfsg-3~)
-Depends: passwd, samba-common, samba-common-bin (= 2:4.23.1+dfsg-1), libbsd0 (>= 0.6.0), libc6 (>= 2.38), libcups2t64 (>= 1.7.0), libdbus-1-3 (>= 1.10), libgnutls30t64 (>= 3.7.0), libldap2 (>= 2.6.2), libldb2 (>= 2:2.6.1), libndr6 (>= 2:4.20.0~rc1), libpopt0 (>= 1.14), libtalloc2 (>= 2.4.0), libtdb1 (>= 1.2.7+git20101214), libtevent0t64 (>= 0.15.0), libtirpc3t64 (>= 1.0.2), liburing2 (>= 2.3), samba-libs (= 2:4.23.1+dfsg-1)
+Depends: passwd, samba-common, samba-common-bin (= 2:4.23.2+dfsg-1), libbsd0 (>= 0.6.0), libc6 (>= 2.38), libcups2t64 (>= 1.7.0), libdbus-1-3 (>= 1.10), libgnutls30t64 (>= 3.7.0), libldap2 (>= 2.6.2), libldb2 (>= 2:2.6.1), libndr6 (>= 2:4.20.0~rc1), libpopt0 (>= 1.14), libtalloc2 (>= 2.4.0), libtdb1 (>= 1.2.7+git20101214), libtevent0t64 (>= 0.15.0), libtirpc3t64 (>= 1.0.2), liburing2 (>= 2.3), samba-libs (= 2:4.23.2+dfsg-1)
 Pre-Depends: init-system-helpers (>= 1.54~)
 Suggests: ctdb, ufw, winbind, python3-samba, samba-vfs-ceph, samba-vfs-glusterfs, attr
-Breaks: samba-ad-dc (<< 2:4.20.1+dfsg-2~), samba-ad-provision (<< 2:4.23.1+dfsg), samba-libs (<< 2:4.19.0~), samba-vfs-modules (<< 2:4.20.2+dfsg-3~)
+Breaks: samba-ad-dc (<< 2:4.20.1+dfsg-2~), samba-ad-provision (<< 2:4.23.2+dfsg), samba-libs (<< 2:4.19.0~), samba-vfs-modules (<< 2:4.20.2+dfsg-3~)
 Description: SMB/CIFS file, print, and login server for Unix
 Homepage: https://www.samba.org
 Description-md5: c9d307ae5cf3b46be12b53a9f95862f0
@@ -29661,39 +29465,39 @@ Tag: admin::filesystem, implemented-in::c, interface::daemon,
  suite::samba, use::configuring
 net
 Priority: optional
-Filename: pool/main/s/samba/samba_4.23.1+dfsg-1_amd64.deb
-Size: 1198148
-MD5sum: 64fe092818a0806235efd391f9b2a57f
-SHA256: 44496c76ca4a5a4ef5a5a6c6bd6ab84e46a1a7cd3e086599029fede800e1bcb5
+Filename: pool/main/s/samba/samba_4.23.2+dfsg-1_amd64.deb
+Size: 1199248
+MD5sum: 0007b4777686fea3f70ddf34e71f5f48
+SHA256: 7edbcadb07e15a55495b0dc18f03d790a1832a0b8a9b6048fe4a25881e9fd694
 
 Package: samba-ad-dc
 Source: samba
-Version: 2:4.23.1+dfsg-1
+Version: 2:4.23.2+dfsg-1
 Installed-Size: 203
 Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: samba-common-bin (<< 2:4.20.1+dfsg-2~)
-Depends: samba (= 2:4.23.1+dfsg-1), python3-samba (= 2:4.23.1+dfsg-1), python3-dnspython, samba-dsdb-modules (= 2:4.23.1+dfsg-1), winbind (= 2:4.23.1+dfsg-1), python3:any, libbsd0 (>= 0.6.0), libc6 (>= 2.34), libldb2 (>= 0.9.21), libpopt0 (>= 1.14), libtalloc2 (>= 2.0.4~git20101213), libtevent0t64 (>= 0.9.16), samba-libs (= 2:4.23.1+dfsg-1)
+Depends: samba (= 2:4.23.2+dfsg-1), python3-samba (= 2:4.23.2+dfsg-1), python3-dnspython, samba-dsdb-modules (= 2:4.23.2+dfsg-1), winbind (= 2:4.23.2+dfsg-1), python3:any, libbsd0 (>= 0.6.0), libc6 (>= 2.34), libldb2 (>= 0.9.21), libpopt0 (>= 1.14), libtalloc2 (>= 2.0.4~git20101213), libtevent0t64 (>= 0.9.16), samba-libs (= 2:4.23.2+dfsg-1)
 Pre-Depends: init-system-helpers (>= 1.54~)
 Recommends: libnss-winbind, libpam-winbind, samba-ad-provision, python3-gpg
 Suggests: bind9, bind9utils, ldb-tools, time-daemon | chrony | ntpsec
 Enhances: bind9, ntpsec
 Conflicts: samba (<< 2:4.20.1+dfsg-2~)
-Breaks: samba-ad-provision (<< 2:4.23.1+dfsg), samba-common-bin (<< 2:4.20.1+dfsg-2~)
+Breaks: samba-ad-provision (<< 2:4.23.2+dfsg), samba-common-bin (<< 2:4.20.1+dfsg-2~)
 Description: Samba control files to run AD Domain Controller
 Multi-Arch: foreign
 Homepage: https://www.samba.org
 Description-md5: eba517f15cc7dff6d61d4bf8f68630b3
 net
 Priority: optional
-Filename: pool/main/s/samba/samba-ad-dc_4.23.1+dfsg-1_amd64.deb
-Size: 78504
-MD5sum: 88027e80f7e3d6ee10bd16e7d2adc35d
-SHA256: eefdf4a9ac212cd284a7dbb29c01fb27c7bcf097bb3f026f11bc1513e91919db
+Filename: pool/main/s/samba/samba-ad-dc_4.23.2+dfsg-1_amd64.deb
+Size: 78648
+MD5sum: fb4075733e160e09fa37bdd529840eba
+SHA256: 9b066c48f41d04a64cd5584c539c54e6070d8aac2312884ffb5e2efee6deb12d
 
 Package: samba-ad-provision
 Source: samba
-Version: 2:4.23.1+dfsg-1
+Version: 2:4.23.2+dfsg-1
 Installed-Size: 17391
 Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
 Architecture: all
@@ -29704,14 +29508,14 @@ Homepage: https://www.samba.org
 Description-md5: 85c78259045a6d75c0722ff117cca50f
 net
 Priority: optional
-Filename: pool/main/s/samba/samba-ad-provision_4.23.1+dfsg-1_all.deb
-Size: 505756
-MD5sum: 720a36444c8fc3e4e08d3ed282d68821
-SHA256: 2a39126c2f8d2d3657f8daffe776543982e1bca2a881f810130efd02194aca12
+Filename: pool/main/s/samba/samba-ad-provision_4.23.2+dfsg-1_all.deb
+Size: 505976
+MD5sum: 404b16713cb1567922e19e11be75254f
+SHA256: 60df3d360eb743bca484494f89411158db837439ecf3de0ee9b439340dd25c8e
 
 Package: samba-common
 Source: samba
-Version: 2:4.23.1+dfsg-1
+Version: 2:4.23.2+dfsg-1
 Installed-Size: 117
 Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
 Architecture: all
@@ -29725,20 +29529,20 @@ Tag: devel::doc, devel::examples, protocol::smb, role::app-data,
  role::documentation, suite::samba
 net
 Priority: optional
-Filename: pool/main/s/samba/samba-common_4.23.1+dfsg-1_all.deb
-Size: 59568
-MD5sum: 89def18e566bdff6cf7a75c20e4faffb
-SHA256: fc84c5aaa8169fc6023e8b8ccb5c7ab6f6e9594b47957c30cf6f80bb9b155c98
+Filename: pool/main/s/samba/samba-common_4.23.2+dfsg-1_all.deb
+Size: 59908
+MD5sum: 1422a30c1191df43a5c205c827de7f94
+SHA256: 59e1da5b7fc7d73edb13fbf0486479c7b8e505cc63798976a3ea1b2f7a183661
 
 Package: samba-common-bin
 Source: samba
-Version: 2:4.23.1+dfsg-1
+Version: 2:4.23.2+dfsg-1
 Installed-Size: 5012
 Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: samba (<< 2:4.20.1+dfsg-2~), samba-libs (<< 2:4.19.0~), winexe (<< 2:4.21.1+dfsg-3~)
-Provides: winexe (= 2:4.23.1+dfsg-1)
-Depends: samba-common, libbsd0 (>= 0.4.0), libc6 (>= 2.38), libcups2t64 (>= 1.7.0), libgnutls30t64 (>= 3.7.0), libjansson4 (>= 2.14), libldap2 (>= 2.6.2), libncurses6 (>= 6), libndr6 (>= 2:4.20.0~rc1), libpopt0 (>= 1.14), libreadline8t64 (>= 6.0), libsmbldap2 (>= 2:4.16.6), libtalloc2 (>= 2.4.0), libtdb1 (>= 1.2.7+git20101214), libtevent0t64 (>= 0.15.0), libtinfo6 (>= 6), libwbclient0 (>= 2:4.0.3+dfsg1), samba-libs (= 2:4.23.1+dfsg-1)
+Provides: winexe (= 2:4.23.2+dfsg-1)
+Depends: samba-common, libbsd0 (>= 0.4.0), libc6 (>= 2.38), libcups2t64 (>= 1.7.0), libgnutls30t64 (>= 3.7.0), libjansson4 (>= 2.14), libldap2 (>= 2.6.2), libncurses6 (>= 6), libndr6 (>= 2:4.20.0~rc1), libpopt0 (>= 1.14), libreadline8t64 (>= 6.0), libsmbldap2 (>= 2:4.16.6), libtalloc2 (>= 2.4.0), libtdb1 (>= 1.2.7+git20101214), libtevent0t64 (>= 0.15.0), libtinfo6 (>= 6), libwbclient0 (>= 2:4.0.3+dfsg1), samba-libs (= 2:4.23.2+dfsg-1)
 Recommends: python3-samba
 Suggests: heimdal-clients
 Breaks: samba (<< 2:4.20.1+dfsg-2~), samba-libs (<< 2:4.19.0~), winexe (<< 2:4.21.1+dfsg-3~)
@@ -29748,19 +29552,19 @@ Description-md5: ed41b644031f2092e31e4cc4802a5fe3
 Tag: implemented-in::c, role::program, suite::samba, uitoolkit::ncurses
 net
 Priority: optional
-Filename: pool/main/s/samba/samba-common-bin_4.23.1+dfsg-1_amd64.deb
-Size: 1350772
-MD5sum: aabc8a49172f96db4b6177c03923797d
-SHA256: c6fb4ee8f05f2c3655fa737b245384f8f771dfada3dc41e29c0c6267c627553a
+Filename: pool/main/s/samba/samba-common-bin_4.23.2+dfsg-1_amd64.deb
+Size: 1349476
+MD5sum: ba3a09d9a856e3c132b5d27e06c0e11c
+SHA256: f7bb9ffe13ccfe56ce2e3a9cc0ebeb97ba586791dcce60514164c9d01a068ccc
 
 Package: samba-testsuite
 Source: samba
-Version: 2:4.23.1+dfsg-1
-Installed-Size: 10679
+Version: 2:4.23.2+dfsg-1
+Installed-Size: 10687
 Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: samba-libs (<< 2:4.19.0~)
-Depends: samba-common-bin, samba-libs (= 2:4.23.1+dfsg-1), ctdb (= 2:4.23.1+dfsg-1), libbsd0 (>= 0.4.0), libc6 (>= 2.38), libgnutls30t64 (>= 3.8.2), libldb2 (>= 2:2.8.0), libndr6 (>= 2:4.20.0~rc1), libpopt0 (>= 1.14), libreadline8t64 (>= 6.0), libsmbclient0 (>= 2:4.12.0+dfsg), libtalloc2 (>= 2.4.0), libtdb1 (>= 1.2.7+git20101214), libtevent0t64 (>= 0.15.0), libwbclient0 (>= 2:4.0.3+dfsg1), python3-samba (= 2:4.23.1+dfsg-1), winbind (= 2:4.23.1+dfsg-1)
+Depends: samba-common-bin, samba-libs (= 2:4.23.2+dfsg-1), ctdb (= 2:4.23.2+dfsg-1), libbsd0 (>= 0.4.0), libc6 (>= 2.38), libgnutls30t64 (>= 3.8.2), libldb2 (>= 2:2.8.0), libndr6 (>= 2:4.20.0~rc1), libpopt0 (>= 1.14), libreadline8t64 (>= 6.0), libsmbclient0 (>= 2:4.12.0+dfsg), libtalloc2 (>= 2.4.0), libtdb1 (>= 1.2.7+git20101214), libtevent0t64 (>= 0.15.0), libwbclient0 (>= 2:4.0.3+dfsg1), python3-samba (= 2:4.23.2+dfsg-1), winbind (= 2:4.23.2+dfsg-1)
 Suggests: subunit
 Breaks: samba-libs (<< 2:4.19.0~)
 Description: test suite from Samba
@@ -29768,19 +29572,19 @@ Homepage: https://www.samba.org
 Description-md5: b3a06da306c4ba5739938a7fa8d2fe31
 net
 Priority: optional
-Filename: pool/main/s/samba/samba-testsuite_4.23.1+dfsg-1_amd64.deb
-Size: 2387400
-MD5sum: 506e366a651b1ee8016bcaa7db92787e
-SHA256: e3e9519ae61b36b5e289950d5fd5e9665169f20dca3175aede955872fd7426d0
+Filename: pool/main/s/samba/samba-testsuite_4.23.2+dfsg-1_amd64.deb
+Size: 2389072
+MD5sum: 14f3fe032b7e9d4d58f5d5ef9f478f44
+SHA256: 2702d6028dbb2b1a2b84b23d9238e6b04da047e246658e8fe527955dbacdb15a
 
 Package: samba-vfs-ceph
 Source: samba
-Version: 2:4.23.1+dfsg-1
+Version: 2:4.23.2+dfsg-1
 Installed-Size: 301
 Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: samba-vfs-modules (<< 2:4.20.2+dfsg-3~)
-Depends: samba (= 2:4.23.1+dfsg-1), libbsd0 (>= 0.0), libc6 (>= 2.34), libcephfs2 (>= 16.2.6+ds), libtalloc2 (>= 2.0.4~git20101213), libtevent0t64 (>= 0.15.0), samba-libs (= 2:4.23.1+dfsg-1)
+Depends: samba (= 2:4.23.2+dfsg-1), libbsd0 (>= 0.0), libc6 (>= 2.34), libcephfs2 (>= 16.2.6+ds), libtalloc2 (>= 2.0.4~git20101213), libtevent0t64 (>= 0.15.0), samba-libs (= 2:4.23.2+dfsg-1)
 Enhances: samba
 Breaks: samba-vfs-modules (<< 2:4.20.2+dfsg-3~)
 Description: Samba Virtual FileSystem ceph modules
@@ -29788,19 +29592,19 @@ Homepage: https://www.samba.org
 Description-md5: 81c41d008c09fa58505d8e0a34d4e1fd
 net
 Priority: optional
-Filename: pool/main/s/samba/samba-vfs-ceph_4.23.1+dfsg-1_amd64.deb
-Size: 107840
-MD5sum: 9f92fafd04e960810c5096a4738deddb
-SHA256: 758971b26afba1ce9cbde0dfdfe756101c3d5736589fdec2960d9800d913f3a5
+Filename: pool/main/s/samba/samba-vfs-ceph_4.23.2+dfsg-1_amd64.deb
+Size: 107948
+MD5sum: 3e5943d38b30e5689a65cb293d43b195
+SHA256: cd38a9efd60081227b2445d83c559b1b1127b94757adba36016db0e2e7b1a40f
 
 Package: samba-vfs-glusterfs
 Source: samba
-Version: 2:4.23.1+dfsg-1
+Version: 2:4.23.2+dfsg-1
 Installed-Size: 164
 Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: samba-vfs-modules (<< 2:4.20.2+dfsg-3~), samba-vfs-modules-extra (<< 2:4.20.2+dfsg-3~)
-Depends: samba (= 2:4.23.1+dfsg-1), libc6 (>= 2.38), libgfapi0 (>= 11.1), libtalloc2 (>= 2.0.4~git20101213), libtevent0t64 (>= 0.15.0), samba-libs (= 2:4.23.1+dfsg-1)
+Depends: samba (= 2:4.23.2+dfsg-1), libc6 (>= 2.38), libgfapi0 (>= 11.1), libtalloc2 (>= 2.0.4~git20101213), libtevent0t64 (>= 0.15.0), samba-libs (= 2:4.23.2+dfsg-1)
 Enhances: samba
 Breaks: samba-vfs-modules (<< 2:4.20.2+dfsg-3~), samba-vfs-modules-extra (<< 2:4.20.2+dfsg-3~)
 Description: Samba Virtual FileSystem glusterfs modules
@@ -29808,14 +29612,14 @@ Homepage: https://www.samba.org
 Description-md5: e3b0be6d797b0246246b2e9ce209335e
 net
 Priority: optional
-Filename: pool/main/s/samba/samba-vfs-glusterfs_4.23.1+dfsg-1_amd64.deb
-Size: 72056
-MD5sum: b0962fe87f22fe5106f2e52afa13a3df
-SHA256: c7394f551c54028e1b54cf6904cfdc3250edea5e2afc20c15ff2d73541352231
+Filename: pool/main/s/samba/samba-vfs-glusterfs_4.23.2+dfsg-1_amd64.deb
+Size: 72140
+MD5sum: 4757b6aa2d87f4a8be1b71422de95b8b
+SHA256: 39837209fbdd9ed4db6b7c7f9f18cac3b3aa0203ff74444506736f810eaa5549
 
 Package: samba-vfs-modules
 Source: samba
-Version: 2:4.23.1+dfsg-1
+Version: 2:4.23.2+dfsg-1
 Installed-Size: 65
 Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
 Architecture: amd64
@@ -29824,19 +29628,19 @@ Homepage: https://www.samba.org
 Description-md5: 168d3f468e8cbb1620c054fea162f778
 net
 Priority: optional
-Filename: pool/main/s/samba/samba-vfs-modules_4.23.1+dfsg-1_amd64.deb
-Size: 45236
-MD5sum: 8b13953a3d0fa5052be9dafc2b98e090
-SHA256: 34280b45a8d160797db4dae6b113201c09a863322c879ed4bd2d8402242ec90d
+Filename: pool/main/s/samba/samba-vfs-modules_4.23.2+dfsg-1_amd64.deb
+Size: 45360
+MD5sum: 9de904628baad46b9029dfcce6a42cf5
+SHA256: ca9fa4ad893e23bef3907846577fd1018487af010555b774abcceaff77850891
 
 Package: smbclient
 Source: samba
-Version: 2:4.23.1+dfsg-1
+Version: 2:4.23.2+dfsg-1
 Installed-Size: 2105
 Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
 Architecture: amd64
 Provides: samba-client
-Depends: samba-common, samba-libs (= 2:4.23.1+dfsg-1), libarchive13t64 (>= 3.0.4), libbsd0 (>= 0.0), libc6 (>= 2.38), libgnutls30t64 (>= 3.7.0), libndr6 (>= 2:4.20.0~rc1), libpopt0 (>= 1.14), libreadline8t64 (>= 6.0), libsmbclient0 (>= 2:4.10.0+dfsg), libtalloc2 (>= 2.4.0), libtevent0t64 (>= 0.15.0)
+Depends: samba-common, samba-libs (= 2:4.23.2+dfsg-1), libarchive13t64 (>= 3.0.4), libbsd0 (>= 0.0), libc6 (>= 2.38), libgnutls30t64 (>= 3.7.0), libndr6 (>= 2:4.20.0~rc1), libpopt0 (>= 1.14), libreadline8t64 (>= 6.0), libsmbclient0 (>= 2:4.10.0+dfsg), libtalloc2 (>= 2.4.0), libtevent0t64 (>= 0.15.0)
 Suggests: cifs-utils, heimdal-clients
 Description: command-line SMB/CIFS clients for Unix
 Homepage: https://www.samba.org
@@ -29846,18 +29650,18 @@ Tag: implemented-in::c, interface::commandline, interface::text-mode,
  uitoolkit::ncurses, use::browsing
 net
 Priority: optional
-Filename: pool/main/s/samba/smbclient_4.23.1+dfsg-1_amd64.deb
-Size: 479236
-MD5sum: d0840aaa71d0c4a608a62414a4bf6ad4
-SHA256: fa5e5fed44baf64bce6ee9fe3414b9ec896263d61aa360310f710f41499d9b0d
+Filename: pool/main/s/samba/smbclient_4.23.2+dfsg-1_amd64.deb
+Size: 480532
+MD5sum: cbf66e6cd58604924e95c689e307d96d
+SHA256: ee3aed620539f9af75baeea0a1a85c834f00ca3454a0246a4c55005ed66210e9
 
 Package: winbind
 Source: samba
-Version: 2:4.23.1+dfsg-1
+Version: 2:4.23.2+dfsg-1
 Installed-Size: 1617
 Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
 Architecture: amd64
-Depends: samba-common, samba-common-bin (= 2:4.23.1+dfsg-1), libwbclient0 (= 2:4.23.1+dfsg-1), passwd, libbsd0 (>= 0.6.0), libc6 (>= 2.38), libgnutls30t64 (>= 3.7.0), libldap2 (>= 2.6.2), libldb2 (>= 0.9.21), libndr6 (>= 2:4.20.0~rc1), libpopt0 (>= 1.14), libsmbldap2 (>= 2:4.16.6), libtalloc2 (>= 2.4.0), libtdb1 (>= 1.2.7+git20101214), libtevent0t64 (>= 0.15.0), samba-libs (= 2:4.23.1+dfsg-1)
+Depends: samba-common, samba-common-bin (= 2:4.23.2+dfsg-1), libwbclient0 (= 2:4.23.2+dfsg-1), passwd, libbsd0 (>= 0.6.0), libc6 (>= 2.38), libgnutls30t64 (>= 3.7.0), libldap2 (>= 2.6.2), libldb2 (>= 0.9.21), libndr6 (>= 2:4.20.0~rc1), libpopt0 (>= 1.14), libsmbldap2 (>= 2:4.16.6), libtalloc2 (>= 2.4.0), libtdb1 (>= 1.2.7+git20101214), libtevent0t64 (>= 0.15.0), samba-libs (= 2:4.23.2+dfsg-1)
 Pre-Depends: init-system-helpers (>= 1.54~)
 Suggests: libnss-winbind, libpam-winbind
 Enhances: libkrb5-26t64-heimdal
@@ -29869,10 +29673,10 @@ Tag: implemented-in::c, interface::daemon, network::server, network::service,
  protocol::smb, role::program, security::authentication, suite::samba
 net
 Priority: optional
-Filename: pool/main/s/samba/winbind_4.23.1+dfsg-1_amd64.deb
-Size: 432840
-MD5sum: d21269c5a50afc87e5bc122b963a9899
-SHA256: 9b1ae87af2b4a266b9b0a81c8d7c45e358e8fef317ec047ecffb97fefafa421c
+Filename: pool/main/s/samba/winbind_4.23.2+dfsg-1_amd64.deb
+Size: 433216
+MD5sum: 788e2b31f19b1e6de6ea90163ae6737f
+SHA256: 805a2ed7f3030f07792ddc8cdecce10c526d3a9b9c609f3f81b118ddf119c4d5
 
 Package: sbws
 Version: 1.9.0-2
@@ -35079,8 +34883,8 @@ MD5sum: 8ed52bdfb508b3d4db3a42881181f651
 SHA256: 50cc11bd3e9007e91790ff8cbd846562d79a0f58115d28deae53d5309f3016d5
 
 Package: whois
-Version: 5.6.4
-Installed-Size: 388
+Version: 5.6.5
+Installed-Size: 384
 Maintainer: Marco d'Itri <md@linux.it>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libidn2-0 (>= 0.6)
@@ -35091,10 +34895,10 @@ Tag: implemented-in::c, interface::commandline, network::client,
  use::searching
 net
 Priority: optional
-Filename: pool/main/w/whois/whois_5.6.4_amd64.deb
-Size: 71764
-MD5sum: 33245f4a61d88e72f5ee98a71173a088
-SHA256: 69dfa68038026f43c10af11b04e540e13ee2e3bfe8a61c8056654e93c58e8f85
+Filename: pool/main/w/whois/whois_5.6.5_amd64.deb
+Size: 71684
+MD5sum: 5bf3d580f28ad095596ac65ddb6c8374
+SHA256: 2c29f8387ba37059169e855300ebb1e45f705fec0c9ae44b00b583043c2bb4b3
 
 Package: wide-dhcpv6-client
 Source: wide-dhcpv6
