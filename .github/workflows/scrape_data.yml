@@ -21,6 +21,12 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Cache ETag data for fetcher
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        with:
+          key: ${{ runner.os }}-${{ hashFiles('.github/workflows/scrape_data.yml', 'fetch_apt_lists') }}
+          path: .etags/
+
       - name: Set mtimes for use with fetcher
         run: |-
           # This fixes first runs with new releases
@@ -51,7 +57,7 @@ jobs:
         run: |-
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add --all .etags/ bookworm/ bullseye/ trixie/ forky/
+          git add --all bookworm/ bullseye/ trixie/ forky/
           if ! git diff --staged --quiet; then
             modified_count=$(git status --porcelain bookworm/ bullseye/ trixie/ forky/ |
               grep -c 'Packages$' || :)
