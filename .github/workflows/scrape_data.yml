@@ -45,6 +45,8 @@ jobs:
 
       - name: Commit and push if it changed
         env:
+          FETCH_END_TIME: ${{ steps.fetch_data.outputs.end_time }}
+          FETCH_START_TIME: ${{ steps.fetch_data.outputs.start_time }}
           GH_PUSH_TOKEN: ${{ secrets.GH_PUSH_TOKEN }}
         run: |-
           git config user.name "github-actions[bot]"
@@ -53,7 +55,7 @@ jobs:
           if ! git diff --staged --quiet; then
             modified_count=$(git status --porcelain bookworm/ bullseye/ trixie/ forky/ |
               grep -c 'Packages$' || :)
-            runtime=$(( ${{ steps.fetch_data.outputs.end_time }} - ${{ steps.fetch_data.outputs.start_time }} ))
+            runtime=$(( FETCH_END_TIME - FETCH_START_TIME ))
             git commit \
               -m "Update package lists ($(date -u +%FT%H:%M))" \
               --trailer "X-modified-lists: $modified_count" \
