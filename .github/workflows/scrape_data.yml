@@ -49,11 +49,11 @@ jobs:
           ./fetch_apt_lists
           echo "end_time=$(date +%s)" >> $GITHUB_OUTPUT
 
-      - name: Commit and push if it changed
+      - name: Commit, if changed
+        id: commit
         env:
           FETCH_END_TIME: ${{ steps.fetch_data.outputs.end_time }}
           FETCH_START_TIME: ${{ steps.fetch_data.outputs.start_time }}
-          GH_PUSH_TOKEN: ${{ secrets.GH_PUSH_TOKEN }}
         run: |-
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -66,5 +66,12 @@ jobs:
               -m "Update package lists ($(date -u +%FT%H:%M))" \
               --trailer "X-modified-lists: $modified_count" \
               --trailer "X-runtime: ${runtime}s"
-            git push https://x-access-token:$GH_PUSH_TOKEN@github.com/${{ github.repository }}
+            echo changed=true >> $GITHUB_OUTPUT
           fi
+
+      - name: Push on main
+        if: github.ref_name == 'main' && steps.commit.outputs.changed == 'true'
+        env:
+          GH_PUSH_TOKEN: ${{ secrets.GH_PUSH_TOKEN }}
+        run: |-
+          git push https://x-access-token:$GH_PUSH_TOKEN@github.com/${{ github.repository }}
