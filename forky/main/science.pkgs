@@ -10641,6 +10641,41 @@ Size: 57188
 MD5sum: 3f3eefca42d822713a6aa0f9f4c698b5
 SHA256: b57d475d12fedec1654217d085f2ed9010a26cba8ffbf50341d71209a3c07186
 
+Package: hhsuite
+Version: 3.3.0+ds-9
+Installed-Size: 468095
+Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libgomp1 (>= 6), libstdc++6 (>= 14), perl:any, hhsuite-data (= 3.3.0+ds-9), python3
+Conflicts: ffindex
+Description: sensitive protein sequence searching based on HMM-HMM alignment
+Homepage: https://toolkit.tuebingen.mpg.de/
+Built-Using: simde (= 0.8.2-3)
+Description-md5: 33cb7e8c769908e574aec96cb70eb73a
+science
+Priority: optional
+Filename: pool/main/h/hhsuite/hhsuite_3.3.0+ds-9_amd64.deb
+Size: 57486736
+MD5sum: d2d0848106dc1307ea9a97d1e457342f
+SHA256: 1263659401fe87b8d2b59c3ffb80578faf3fa7f5cad3a2fa80ff6bc4fb351d17
+
+Package: hhsuite-data
+Source: hhsuite
+Version: 3.3.0+ds-9
+Installed-Size: 12890
+Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
+Architecture: all
+Description: sensitive protein sequence searching based on HMM-HMM alignment (data)
+Multi-Arch: foreign
+Homepage: https://toolkit.tuebingen.mpg.de/
+Description-md5: 2ddd2546c2236539eec2c6d8d88d3111
+science
+Priority: optional
+Filename: pool/main/h/hhsuite/hhsuite-data_3.3.0+ds-9_all.deb
+Size: 4401984
+MD5sum: 60efb3bba649f78b1163675976702217
+SHA256: 14e5361537874eb5582dcbc919ad35ea3467257d8fb2302f1849512e4fbe2fae
+
 Package: highs
 Version: 1.11.0+ds-1
 Installed-Size: 421
@@ -16417,11 +16452,11 @@ MD5sum: 6eb613d558ee1cf721333f01f37ad45a
 SHA256: 04b47466bc0f692090335b07b0921d09f4a06c29eb9f6a1215e44bd03cb343c3
 
 Package: ncbi-blast+
-Version: 2.16.0+ds-7
-Installed-Size: 70546
+Version: 2.17.0+ds-6
+Installed-Size: 71955
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
 Architecture: amd64
-Depends: ncbi-data, python3, perl:any, libbz2-1.0, libc6 (>= 2.38), libgcc-s1 (>= 3.4), libgomp1 (>= 6), liblmdb0 (>= 0.9.7), libmbedcrypto16 (>= 3.6.0), libmbedtls21 (>= 3.6.0), libmbedx509-7 (>= 3.6.0), libncbi-vdb3 (>= 3.2.1+dfsg), libnghttp2-14 (>= 1.28.0), libpcre2-8-0 (>= 10.22), libsqlite3-0 (>= 3.6.12), libstdc++6 (>= 14), libuv1t64 (>= 1.33.1), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.2.11.dfsg)
+Depends: ncbi-data, python3, sse4.2-support, perl:any, libbz2-1.0, libc6 (>= 2.38), libgcc-s1 (>= 3.4), libgomp1 (>= 6), liblmdb0 (>= 0.9.7), libmbedcrypto16 (>= 3.6.0), libmbedtls21 (>= 3.6.0), libmbedx509-7 (>= 3.6.0), libncbi-vdb3 (>= 3.2.1+dfsg), libnghttp2-14 (>= 1.28.0), libpcre2-8-0 (>= 10.22), libsqlite3-0 (>= 3.6.12), libstdc++6 (>= 14), libuv1t64 (>= 1.33.1), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.2.11.dfsg)
 Enhances: t-coffee
 Description: next generation suite of BLAST sequence search tools
 Multi-Arch: foreign
@@ -16432,15 +16467,15 @@ Tag: field::biology, field::biology:bioinformatics, implemented-in::c++,
  works-with::biological-sequence
 science
 Priority: optional
-Filename: pool/main/n/ncbi-blast+/ncbi-blast+_2.16.0+ds-7_amd64.deb
-Size: 15983928
-MD5sum: f593f1cbee0d48c423237448a10a260b
-SHA256: 52306d3e33f3cf93f5e217476441b44edf0cf18fd1f3cb9f7761364fca0f717e
+Filename: pool/main/n/ncbi-blast+/ncbi-blast+_2.17.0+ds-6_amd64.deb
+Size: 16992844
+MD5sum: e0f3efd62bdd4d4a572f19ef04d057f1
+SHA256: fedaf1690ebb8f08b61125dc19a2cbb71365f29435b1ba99f0e994a075769c07
 
 Package: ncbi-blast+-legacy
 Source: ncbi-blast+
-Version: 2.16.0+ds-7
-Installed-Size: 41
+Version: 2.17.0+ds-6
+Installed-Size: 42
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
 Architecture: all
 Depends: ncbi-blast+
@@ -16452,10 +16487,10 @@ Tag: field::biology, field::biology:bioinformatics, implemented-in::shell,
  interface::commandline, role::program, scope::utility
 science
 Priority: optional
-Filename: pool/main/n/ncbi-blast+/ncbi-blast+-legacy_2.16.0+ds-7_all.deb
-Size: 12620
-MD5sum: ce26e95bbfac852d645869e8c2af6547
-SHA256: 921c87835ce3937bc42697d81a3e5376bec8f6e6a6a25747a7c0e9155ece7140
+Filename: pool/main/n/ncbi-blast+/ncbi-blast+-legacy_2.17.0+ds-6_all.deb
+Size: 13312
+MD5sum: 18b34f036e2f3491c094cb50754aae35
+SHA256: 701cf6521ba152fa5441fa9a20ecf73b48b79eaf96cc38637049a2a290d3c642
 
 Package: ncbi-entrez-direct
 Source: ncbi-entrez-direct (24.0.20250523+dfsg-1)
@@ -20767,7 +20802,7 @@ SHA256: 48a631999a0c82aae89ba71043206692abe8dca0bc489de7ff5b0a2bf328fac1
 
 Package: python-drizzle-testdata
 Source: python-drizzle
-Version: 2.1.1-1
+Version: 2.1.1-2
 Installed-Size: 202385
 Maintainer: Debian Astro Team <debian-astro-maintainers@lists.alioth.debian.org>
 Architecture: all
@@ -20777,10 +20812,10 @@ Homepage: https://spacetelescope.github.io/drizzle/
 Description-md5: 84c1e740cf54086ef87d64b82bb1eea5
 science
 Priority: optional
-Filename: pool/main/p/python-drizzle/python-drizzle-testdata_2.1.1-1_all.deb
-Size: 24279272
-MD5sum: 62b56c3c999bdf9b4fef6efd01b4a961
-SHA256: 027fd356a180046b205ad108b1d0ac6c473937610b7f2dd068085e32342cb8ad
+Filename: pool/main/p/python-drizzle/python-drizzle-testdata_2.1.1-2_all.deb
+Size: 24188712
+MD5sum: 6f765fbbd5f01476e14f0d2a8f32bec2
+SHA256: ea309c5d0e20e74ba41e95f1f9bb63ea06872463b28c2e0292a543341c36b8ba
 
 Package: python3-einops
 Source: python-einops
@@ -27596,11 +27631,11 @@ SHA256: d5ffc1f06be60bf11cc002fc6308a8536c9ab52787d6c43f1ab818ca64117b89
 
 Package: python3-xrt
 Source: xrt
-Version: 202520.2.20.151-1
-Installed-Size: 633
+Version: 202520.2.20.172-1
+Installed-Size: 689
 Maintainer: Debian Xilinx Package Maintainers <team+pkg-xilinx@tracker.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 14), libuuid1 (>= 2.16), libxrt2 (= 202520.2.20.151-1), python3
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 14), libuuid1 (>= 2.16), libxrt2 (= 202520.2.20.172-1), python3
 Description: Xilinx Runtime (XRT) - Python bindings
 Homepage: https://www.xilinx.com/products/design-tools/vitis/xrt.html
 Description-md5: c60680271716ae88b80d2c4d1178539e
@@ -27609,10 +27644,10 @@ Tag: field::physics, implemented-in::python, interface::graphical,
  use::viewing, x11::application
 science
 Priority: optional
-Filename: pool/main/x/xrt/python3-xrt_202520.2.20.151-1_amd64.deb
-Size: 181308
-MD5sum: 623dd5f24fca706f02ece01045c93a52
-SHA256: 2063b99ed8fca0f9b7f0ebb24627ceee0af17939f65e743cfe32711b8fc5ce96
+Filename: pool/main/x/xrt/python3-xrt_202520.2.20.172-1_amd64.deb
+Size: 194544
+MD5sum: 6847dd8588a3ecdac3fdc5d6edbe49fd
+SHA256: 082ccc2378ae4594dc5217f40c9648051e63c40609c7c5905ded950c7e745e1c
 
 Package: xtb
 Version: 6.7.1-3
