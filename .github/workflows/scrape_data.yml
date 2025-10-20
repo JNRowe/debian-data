@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Check out this repo
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Set mtimes for use with fetcher
         run: |-
@@ -42,6 +44,8 @@ jobs:
           echo "end_time=$(date +%s)" >> $GITHUB_OUTPUT
 
       - name: Commit and push if it changed
+        env:
+          GH_PUSH_TOKEN: ${{ secrets.GH_PUSH_TOKEN }}
         run: |-
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -54,5 +58,5 @@ jobs:
               -m "Update package lists ($(date -u +%FT%H:%M))" \
               --trailer "X-modified-lists: $modified_count" \
               --trailer "X-runtime: ${runtime}s"
-            git push
+            git push https://x-access-token:$GH_PUSH_TOKEN@github.com/${{ github.repository }}
           fi
