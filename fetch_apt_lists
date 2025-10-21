@@ -8,7 +8,7 @@ BASE=https://deb.debian.org/
 RELEASES=(bullseye bookworm trixie forky)
 
 decompress_file() {
-    local file=$1
+    readonly file=$1
     case $file:e {
     (xz) unxz --force --verbose $file ;;
     (bz2) bunzip2 --force --verbose $file ;;
@@ -19,38 +19,36 @@ decompress_file() {
 }
 
 fetch() {
-    local location=$1
+    readonly location=$1
 
-    local url=$BASE$location
-    local safename=${${url/#https:\/\/}//\//_}
-    local suite=${${${(ps:/:)location}[3]}%-*}
-    local filename=$suite/$safename
-    local output=${filename/%.(bz2|xz)}
-    local etagname=.etags/$safename
-    local ref_time
-    [[ -f $output ]] && ref_time=$output || ref_time="2004 Nov 13"
+    readonly url=$BASE$location
+    readonly _safename=${${url/#https:\/\/}//\//_}
+    readonly suite=${${${(ps:/:)location}[3]}%-*}
+    readonly filename=$suite/$_safename
+    readonly finalname=${filename/%.(bz2|xz)}
+    readonly etagname=.etags/$_safename
 
     mkdir -p logs/$suite $suite .etags
 
     () {
-        local tmp=$1
+        readonly tmp=$1
         echo "--- Fetching $url"
         curl --connect-timeout 5 --max-time 30 \
             --dump-header $tmp \
             --etag-compare $etagname \
             --etag-save $etagname \
-            --time-cond $ref_time \
+            --time-cond $finalname \
             --output $filename $url
         cat $tmp
     } =(:) &> logs/$filename
 }
 
 process_Packages() {
-    local filename=$1
+    readonly filename=$1
 
-    local _parts=(${(s:_:)filename})
-    local suite=${_parts[4]/-/\/}
-    local component=${_parts[5]}
+    readonly _parts=(${(s:_:)filename})
+    readonly suite=${_parts[4]/-/\/}
+    readonly component=${_parts[5]}
 
     mkdir -p logs/$suite
 
@@ -72,27 +70,12 @@ RELEASE_FILES=(
 
 # Bullseye requires manual setup as a few files still use bzip2 compression.
 LOCATIONS=(
-    debian/dists/bullseye/InRelease
-    debian/dists/bullseye/contrib/binary-i386/Packages.xz
-    debian/dists/bullseye/contrib/i18n/Translation-en.bz2
-    debian/dists/bullseye/main/binary-i386/Packages.xz
-    debian/dists/bullseye/main/i18n/Translation-en.bz2
-    debian/dists/bullseye/non-free/binary-i386/Packages.xz
-    debian/dists/bullseye/non-free/i18n/Translation-en.bz2
-    debian/dists/bullseye-updates/InRelease
-    debian/dists/bullseye-updates/contrib/binary-i386/Packages.xz
-    debian/dists/bullseye-updates/contrib/i18n/Translation-en.bz2
-    debian/dists/bullseye-updates/main/binary-i386/Packages.xz
-    debian/dists/bullseye-updates/main/i18n/Translation-en.bz2
-    debian/dists/bullseye-updates/non-free/binary-i386/Packages.xz
-    debian/dists/bullseye-updates/non-free/i18n/Translation-en.bz2
+    debian/dists/bullseye{,-updates}/InRelease
+    debian/dists/bullseye{,-updates}/{contrib,main,non-free}/binary-i386/Packages.xz
+    debian/dists/bullseye{,-updates}/{contrib,main,non-free}/i18n/Translation-en.bz2
     debian-security/dists/bullseye-security/InRelease
-    debian-security/dists/bullseye-security/contrib/binary-i386/Packages.xz
-    debian-security/dists/bullseye-security/contrib/i18n/Translation-en.xz
-    debian-security/dists/bullseye-security/main/binary-i386/Packages.xz
-    debian-security/dists/bullseye-security/main/i18n/Translation-en.xz
-    debian-security/dists/bullseye-security/non-free/binary-i386/Packages.xz
-    debian-security/dists/bullseye-security/non-free/i18n/Translation-en.xz
+    debian-security/dists/bullseye-security/{contrib,main,non-free}/binary-i386/Packages.xz
+    debian-security/dists/bullseye-security/{contrib,main,non-free}/i18n/Translation-en.xz
 )
 
 for release (${RELEASES/bullseye}) {
