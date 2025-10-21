@@ -8,7 +8,7 @@ BASE=https://deb.debian.org/
 RELEASES=(bullseye bookworm trixie forky)
 
 decompress_file() {
-    local file=$1
+    readonly file=$1
     case $file:e {
     (xz) unxz --force --verbose $file ;;
     (bz2) bunzip2 --force --verbose $file ;;
@@ -19,21 +19,22 @@ decompress_file() {
 }
 
 fetch() {
-    local location=$1
+    readonly location=$1
 
-    local url=$BASE$location
-    local safename=${${url/#https:\/\/}//\//_}
-    local suite=${${${(ps:/:)location}[3]}%-*}
-    local filename=$suite/$safename
-    local output=${filename/%.(bz2|xz)}
-    local etagname=.etags/$safename
+    readonly url=$BASE$location
+    readonly safename=${${url/#https:\/\/}//\//_}
+    readonly suite=${${${(ps:/:)location}[3]}%-*}
+    readonly filename=$suite/$safename
+    readonly output=${filename/%.(bz2|xz)}
+    readonly etagname=.etags/$safename
     local ref_time
     [[ -f $output ]] && ref_time=$output || ref_time="2004 Nov 13"
+    readonly ref_time
 
     mkdir -p logs/$suite $suite .etags
 
     () {
-        local tmp=$1
+        readonly tmp=$1
         echo "--- Fetching $url"
         curl --connect-timeout 5 --max-time 30 \
             --dump-header $tmp \
@@ -46,11 +47,11 @@ fetch() {
 }
 
 process_Packages() {
-    local filename=$1
+    readonly filename=$1
 
-    local _parts=(${(s:_:)filename})
-    local suite=${_parts[4]/-/\/}
-    local component=${_parts[5]}
+    readonly _parts=(${(s:_:)filename})
+    readonly suite=${_parts[4]/-/\/}
+    readonly component=${_parts[5]}
 
     mkdir -p logs/$suite
 
