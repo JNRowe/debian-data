@@ -25,7 +25,6 @@ fetch() {
     readonly _safename=${${url/#https:\/\/}//\//_}
     readonly suite=${${${(ps:/:)location}[3]}%-*}
     readonly filename=$suite/$_safename
-    readonly finalname=${filename/%.(bz2|xz)}
     readonly etagname=.etags/$_safename
 
     mkdir -p logs/$suite $suite .etags
@@ -37,7 +36,6 @@ fetch() {
             --dump-header $tmp \
             --etag-compare $etagname \
             --etag-save $etagname \
-            --time-cond $finalname \
             --output $filename $url
         cat $tmp
     } =(:) &> logs/$filename
@@ -54,6 +52,7 @@ process_Packages() {
 
     () {
         echo "--- Processing $filename"
+        rm -rf $suite/$component
         awk -f split_packages.awk -v output_dir=$suite $filename
         rm -f $filename
     } &> logs/$suite/process_$component
