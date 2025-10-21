@@ -52,6 +52,7 @@ process_Packages() {
 
     () {
         echo "--- Processing $filename"
+        rm -rf $suite/$component
         awk -f split_packages.awk -v output_dir=$suite $filename
         rm -f $filename
     } &> logs/$suite/process_$component
