@@ -25,11 +25,8 @@ fetch() {
     readonly _safename=${${url/#https:\/\/}//\//_}
     readonly suite=${${${(ps:/:)location}[3]}%-*}
     readonly filename=$suite/$_safename
-    readonly output=${filename/%.(bz2|xz)}
+    readonly finalname=${filename/%.(bz2|xz)}
     readonly etagname=.etags/$_safename
-    local ref_time
-    [[ -f $output ]] && ref_time=$output || ref_time="2004 Nov 13"
-    readonly ref_time
 
     mkdir -p logs/$suite $suite .etags
 
@@ -40,7 +37,7 @@ fetch() {
             --dump-header $tmp \
             --etag-compare $etagname \
             --etag-save $etagname \
-            --time-cond $ref_time \
+            --time-cond $finalname \
             --output $filename $url
         cat $tmp
     } =(:) &> logs/$filename
