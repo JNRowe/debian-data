@@ -27,14 +27,6 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('.github/workflows/scrape_data.yml', 'fetch_apt_lists') }}
           path: .etags/
 
-      - name: Set mtimes for use with fetcher
-        run: |-
-          # This fixes first runs with new releases
-          shopt -s nullglob
-          for f in bullseye/* bookworm/* trixie/* forky/*; do
-            touch -d @$(git log --pretty=%at -n1 $f) $f
-          done
-
       - name: Install utilities
         run: |-
           # We don't need man-db updates for throwaway installs
