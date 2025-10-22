@@ -2972,22 +2972,23 @@ MD5sum: 622cbbd99205fc5888e77a990a5593e2
 SHA256: aeac7e82f9cc89b99ef4380c90616c92fd7a5f2763bb787303f7abcbf69ac429
 
 Package: cntlm
-Version: 0.92.3-1.3
-Installed-Size: 147
-Maintainer: David Watson <dwatson@debian.org>
+Version: 0.94.0+dfsg-1
+Installed-Size: 695
+Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: amd64
 Replaces: ntlmaps
-Depends: adduser, libc6 (>= 2.34)
+Depends: adduser, libc6 (>= 2.38)
+Pre-Depends: init-system-helpers (>= 1.54~)
 Description: Fast NTLM authentication proxy with tunneling
-Homepage: http://cntlm.sourceforge.net/
+Homepage: https://github.com/versat/cntlm/
 Description-md5: a09ce14efcc2b3cdd95e19cd49ef5d70
 Tag: role::program, security::authentication, use::proxying
 net
 Priority: optional
-Filename: pool/main/c/cntlm/cntlm_0.92.3-1.3_amd64.deb
-Size: 64004
-MD5sum: b105d40217084c63dbcfb49126d9e965
-SHA256: 39540467ff3adf7dd493939d653248245d34d9312a676b383febe4ba557ef930
+Filename: pool/main/c/cntlm/cntlm_0.94.0+dfsg-1_amd64.deb
+Size: 289436
+MD5sum: fb428e3e9433ac804484922ee67dd295
+SHA256: dcc34df4f2b7d2931f787689b709c0e70fe23c55250d29fb7f37be47b0e484a6
 
 Package: comgt
 Version: 0.32-6
@@ -22678,8 +22679,8 @@ SHA256: 048f2d509f30d1e3ad6a974f5821dffce09f475055959a752d9604fd6494cec4
 
 Package: openssh-client
 Source: openssh
-Version: 1:10.0p1-8
-Installed-Size: 4998
+Version: 1:10.2p1-2
+Installed-Size: 5132
 Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
 Architecture: amd64
 Replaces: openssh-sk-helper, ssh, ssh-krb5
@@ -22698,38 +22699,38 @@ Tag: implemented-in::c, interface::commandline, interface::shell,
  use::login, use::transmission, works-with::file
 net
 Priority: standard
-Filename: pool/main/o/openssh/openssh-client_10.0p1-8_amd64.deb
-Size: 985784
-MD5sum: 74da45b091c166cf7f20b9ca57b3433a
-SHA256: 6c8afb5dfa94cba2157c4a4589803f417622fe82f6d012f63e9b4415dd211de7
+Filename: pool/main/o/openssh/openssh-client_10.2p1-2_amd64.deb
+Size: 1030632
+MD5sum: 867bb60723277cfbd99014ae172e325b
+SHA256: c2813ba777990b55372d0443756c018accd2d4877a10facc5098c64d4a977b03
 
 Package: openssh-client-gssapi
 Source: openssh
-Version: 1:10.0p1-8
-Installed-Size: 153
+Version: 1:10.2p1-2
+Installed-Size: 177
 Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
 Architecture: all
-Depends: openssh-client (>= 1:10.0p1-8)
+Depends: openssh-client (>= 1:10.2p1-2)
 Description: secure shell (SSH) client, with GSS-API support
 Multi-Arch: foreign
 Homepage: https://www.openssh.com/
 Description-md5: 1032b939c358dc15573b09b448ce55b6
 net
 Priority: optional
-Filename: pool/main/o/openssh/openssh-client-gssapi_10.0p1-8_all.deb
-Size: 143376
-MD5sum: 9558b0f00d227023299a38c6a2afd01d
-SHA256: 253ad41a9eff943241f96075ebef104c57a58ef47731221f1e9c1ba99a108b25
+Filename: pool/main/o/openssh/openssh-client-gssapi_10.2p1-2_all.deb
+Size: 168716
+MD5sum: 9743e2a2a886df40b5030d94ada5d792
+SHA256: 5d3c2522ca08b9252f59975673d2fc33b97ec8a015aa5250d36c53b6c18db13b
 
 Package: openssh-server
 Source: openssh
-Version: 1:10.0p1-8
-Installed-Size: 3429
+Version: 1:10.2p1-2
+Installed-Size: 3502
 Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
 Architecture: amd64
 Replaces: openssh-client (<< 1:7.9p1-8), ssh, ssh-krb5
 Provides: ssh-server
-Depends: libpam-modules, libpam-runtime, lsb-base, openssh-client (= 1:10.0p1-8), openssh-sftp-server, procps, ucf, debconf (>= 0.5) | debconf-2.0, runit-helper (>= 2.14.0~), systemd | systemd-standalone-sysusers | systemd-sysusers, libaudit1 (>= 1:2.2.1), libc6 (>= 2.38), libcom-err2 (>= 1.43.9), libcrypt1 (>= 1:4.1.0), libgssapi-krb5-2 (>= 1.17), libkrb5-3 (>= 1.13~alpha1+dfsg), libpam0g (>= 0.99.7.1), libselinux1 (>= 3.1~), libssl3t64 (>= 3.0.0), libwrap0 (>= 7.6-4~), libwtmpdb0 (>= 0.13.0), zlib1g (>= 1:1.1.4)
+Depends: libpam-modules, libpam-runtime, lsb-base, openssh-client (= 1:10.2p1-2), openssh-sftp-server, procps, ucf, debconf (>= 0.5) | debconf-2.0, runit-helper (>= 2.14.0~), systemd | systemd-standalone-sysusers | systemd-sysusers, libaudit1 (>= 1:2.2.1), libc6 (>= 2.38), libcom-err2 (>= 1.43.9), libcrypt1 (>= 1:4.1.0), libgssapi-krb5-2 (>= 1.17), libkrb5-3 (>= 1.13~alpha1+dfsg), libpam0g (>= 0.99.7.1), libselinux1 (>= 3.1~), libssl3t64 (>= 3.0.0), libwrap0 (>= 7.6-4~), libwtmpdb0 (>= 0.13.0), zlib1g (>= 1:1.1.4)
 Pre-Depends: init-system-helpers (>= 1.54~)
 Recommends: default-logind | logind | libpam-systemd, ncurses-term, xauth
 Suggests: molly-guard, monkeysphere, ssh-askpass, ufw
@@ -22743,37 +22744,37 @@ Tag: admin::login, implemented-in::c, interface::daemon, network::server,
  security::cryptography, use::login, use::transmission
 net
 Priority: optional
-Filename: pool/main/o/openssh/openssh-server_10.0p1-8_amd64.deb
-Size: 601368
-MD5sum: 2b95a36954002297d9ea972c68104e8b
-SHA256: 338b9fc7761a9b61cce63617094bffa773d903a80ba0b3e696e6ac22ee3d0a2c
+Filename: pool/main/o/openssh/openssh-server_10.2p1-2_amd64.deb
+Size: 625004
+MD5sum: 523d6f1a02ef3eaab1fc53db2f669475
+SHA256: 7a099d6dd15512c591e831f7c3b134e84c9a75b80985378f6b0b4842852244c3
 
 Package: openssh-server-gssapi
 Source: openssh
-Version: 1:10.0p1-8
-Installed-Size: 153
+Version: 1:10.2p1-2
+Installed-Size: 177
 Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
 Architecture: all
-Depends: openssh-client-gssapi (>= 1:10.0p1-8), openssh-server (>= 1:10.0p1-8)
+Depends: openssh-client-gssapi (>= 1:10.2p1-2), openssh-server (>= 1:10.2p1-2)
 Description: secure shell (SSH) server, with GSS-API key exchange
 Multi-Arch: foreign
 Homepage: https://www.openssh.com/
 Description-md5: e0464de7c75a87f097d73cf92e00b779
 net
 Priority: optional
-Filename: pool/main/o/openssh/openssh-server-gssapi_10.0p1-8_all.deb
-Size: 143380
-MD5sum: feee7b2d91b5c664037b37dbd78eb26c
-SHA256: ee10e39046df74584ef68bc3dca32a4f5cf2846d91235c1d6f726016dd059c6e
+Filename: pool/main/o/openssh/openssh-server-gssapi_10.2p1-2_all.deb
+Size: 168728
+MD5sum: 63a8db6d560b04643cbe0ec310d5af8e
+SHA256: 465023c40680fd808c99f9ed112bb38d7ac90de0f8e32bf9f8374b90eecbc186
 
 Package: openssh-sftp-server
 Source: openssh
-Version: 1:10.0p1-8
-Installed-Size: 173
+Version: 1:10.2p1-2
+Installed-Size: 177
 Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
 Architecture: amd64
 Replaces: openssh-server (<< 1:6.5p1-5)
-Depends: openssh-client (= 1:10.0p1-8), libc6 (>= 2.38)
+Depends: openssh-client (= 1:10.2p1-2), libc6 (>= 2.38)
 Recommends: openssh-server | ssh-server
 Enhances: openssh-server, ssh-server
 Breaks: openssh-server (<< 1:6.5p1-5)
@@ -22783,36 +22784,36 @@ Homepage: https://www.openssh.com/
 Description-md5: b9a6d4f71758c154615deaec42e8415d
 net
 Priority: optional
-Filename: pool/main/o/openssh/openssh-sftp-server_10.0p1-8_amd64.deb
-Size: 65272
-MD5sum: 2a1754206d56dc7180784ffc886816b0
-SHA256: b77ae92a1a2740efb4bca10a8cb357a5cb859daeaf38b08346c7e76caeda0729
+Filename: pool/main/o/openssh/openssh-sftp-server_10.2p1-2_amd64.deb
+Size: 66156
+MD5sum: c7881bc6f7c3985c9b5dd62acd639db7
+SHA256: 58e0b95c6854064cb3405481ad33e91960515f9da2bcb54ffcf7592ec5b5d433
 
 Package: openssh-tests
 Source: openssh
-Version: 1:10.0p1-8
-Installed-Size: 6789
+Version: 1:10.2p1-2
+Installed-Size: 7173
 Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
 Architecture: amd64
-Depends: openssh-client (= 1:10.0p1-8), openssh-server (= 1:10.0p1-8), openssh-sftp-server (= 1:10.0p1-8), openssl, putty-tools (>= 0.67-2), python3-twisted, libc6 (>= 2.38), libselinux1 (>= 3.1~), libssl3t64 (>= 3.0.0), zlib1g (>= 1:1.1.4)
+Depends: openssh-client (= 1:10.2p1-2), openssh-server (= 1:10.2p1-2), openssh-sftp-server (= 1:10.2p1-2), openssl, putty-tools (>= 0.67-2), python3-twisted, libc6 (>= 2.38), libselinux1 (>= 3.1~), libssl3t64 (>= 3.0.0), zlib1g (>= 1:1.1.4)
 Description: OpenSSH regression tests
 Multi-Arch: foreign
 Homepage: https://www.openssh.com/
 Description-md5: bb7db5bf0b75d064182f67ac05d849c9
 net
 Priority: optional
-Filename: pool/main/o/openssh/openssh-tests_10.0p1-8_amd64.deb
-Size: 1032800
-MD5sum: af2ea4e83e1ef3a66e159cc17495436b
-SHA256: 21d6fd4e9eece2b79457da8ca07bf9188def1a1dfb899af33e6955478df07b9c
+Filename: pool/main/o/openssh/openssh-tests_10.2p1-2_amd64.deb
+Size: 1105572
+MD5sum: 056f9cb5dd6c367a70c10f3efe43baa4
+SHA256: 570a7a41209143415066f799af4ea78aa07135229b7065bdfe82d429c20f0cdf
 
 Package: ssh
 Source: openssh
-Version: 1:10.0p1-8
-Installed-Size: 153
+Version: 1:10.2p1-2
+Installed-Size: 177
 Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
 Architecture: all
-Depends: openssh-client (>= 1:10.0p1-8), openssh-server (>= 1:10.0p1-8)
+Depends: openssh-client (>= 1:10.2p1-2), openssh-server (>= 1:10.2p1-2)
 Description: secure shell client and server (metapackage)
 Multi-Arch: foreign
 Homepage: https://www.openssh.com/
@@ -22822,10 +22823,10 @@ Tag: interface::shell, network::client, network::server, protocol::ip,
  role::program, scope::utility, security::cryptography, use::login
 net
 Priority: optional
-Filename: pool/main/o/openssh/ssh_10.0p1-8_all.deb
-Size: 142996
-MD5sum: 01d71aea03d9fc7f5a0f888d723850ab
-SHA256: db5e4b7bbc538de7b13815a756a77dc5fe2c2e400ab7541ad87ceb9488bec204
+Filename: pool/main/o/openssh/ssh_10.2p1-2_all.deb
+Size: 168340
+MD5sum: 639afebd76e6601ba868cd716e77bd44
+SHA256: 268051f00b2a75cfb3d8b733dc00c310ff21f0d7cf87e1b2fdc27dd332da8d26
 
 Package: openssh-known-hosts
 Version: 0.6.3-1
@@ -27951,22 +27952,21 @@ MD5sum: 5e5bf72bf151650eddf004e65c1d078e
 SHA256: cc414e92eea174157e8f0f561399c3976bfc0e8cc3135ff781d83be9ade0be34
 
 Package: rawdns
-Source: rawdns (1.6~ds1-1)
-Version: 1.6~ds1-1+b40
-Installed-Size: 6872
-Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Version: 1.6~ds1-2
+Installed-Size: 6885
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34)
 Description: raw DNS interface to the Docker API
 Homepage: https://github.com/tianon/rawdns
-Built-Using: golang-1.24 (= 1.24.4-1), golang-github-miekg-dns (= 1.1.64-1), golang-golang-x-net (= 1:0.27.0-2), golang-golang-x-sys (= 0.22.0-1)
+Built-Using: golang-1.24 (= 1.24.9-1), golang-github-miekg-dns (= 1.1.68-2), golang-golang-x-net (= 1:0.27.0-2), golang-golang-x-sys (= 0.36.0-1)
 Description-md5: 6b826e5ceb92af5abdcfe4de044e5e77
 net
 Priority: optional
-Filename: pool/main/r/rawdns/rawdns_1.6~ds1-1+b40_amd64.deb
-Size: 2254428
-MD5sum: 60afb326915f767023901a16428e21ea
-SHA256: 7bd510e529443789fde05839addbbdbb3d031904a591c36875412860e7ebca2e
+Filename: pool/main/r/rawdns/rawdns_1.6~ds1-2_amd64.deb
+Size: 2255740
+MD5sum: 5d106d833a3e63fb88d1202cee283d93
+SHA256: a09a4a3bf0380070d738b48f4ad43661fd894ce9224f1b04f5440013e33cb1f9
 
 Package: rblcheck
 Source: rblcheck (20231210-1)
@@ -32681,8 +32681,8 @@ MD5sum: 2d1893bcfbe4585a32356fb411e13194
 SHA256: 4db88538002de355e63d712e982aa02d9a2334603f679916372ad1d0fc337094
 
 Package: toil
-Version: 9.0.0-1
-Installed-Size: 4566
+Version: 9.1.0-1
+Installed-Size: 4632
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
 Architecture: all
 Provides: cwl-runner
@@ -32694,10 +32694,10 @@ Homepage: https://github.com/BD2KGenomics/toil
 Description-md5: be04c7b7e5f339860cab15c0630008b8
 net
 Priority: optional
-Filename: pool/main/t/toil/toil_9.0.0-1_all.deb
-Size: 1060216
-MD5sum: 2d6c2eebd219db1753aa5f0f4f49c475
-SHA256: 0f350aec0c270be0f508d2bbb35b0fda1ac049474104b8ed877aabd49d41142e
+Filename: pool/main/t/toil/toil_9.1.0-1_all.deb
+Size: 1097240
+MD5sum: 50b0fffb87075fe7a48d576bbcb9da3a
+SHA256: 45a4cd5fd41884b702f0ed5751b3cdaf8ac8bc9d4f489121ea85ced9e4d23dd0
 
 Package: tokodon
 Version: 25.08.1-1
