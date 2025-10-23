@@ -45,6 +45,69 @@ Description-en: Advanced Intrusion Detection Environment - transitional package
  aide-dynamic package with the normal aide package, which is now also
  dynamically linked. See NEWS.Debian for an explanation.
 
+Package: bind9
+Description-md5: 2cdf89d501b5ca6fe55e945de47cc047
+Description-en: Internet Domain Name Server
+ The Berkeley Internet Name Domain (BIND 9) implements an Internet domain
+ name server.  BIND 9 is the most widely-used name server software on the
+ Internet, and is supported by the Internet Software Consortium, www.isc.org.
+ .
+ This package provides the server and related configuration files.
+
+Package: bind9-dev
+Description-md5: 69797331ca76eb64604dd14b287f8572
+Description-en: Static Libraries and Headers used by BIND 9
+ The Berkeley Internet Name Domain (BIND 9) implements an Internet domain
+ name server.  BIND 9 is the most widely-used name server software on the
+ Internet, and is supported by the Internet Software Consortium, www.isc.org.
+ .
+ This package contains a bundle of static libraries and header files used by
+ BIND 9.
+ .
+ Please be aware that the BIND 9 libraries are considered private by upstream
+ developers and the API and ABI might break at any time.
+
+Package: bind9-dnsutils
+Description-md5: 41cc23046dad427af742ed10a4568530
+Description-en: Clients provided with BIND 9
+ The Berkeley Internet Name Domain (BIND 9) implements an Internet domain
+ name server.  BIND 9 is the most widely-used name server software on the
+ Internet, and is supported by the Internet Software Consortium, www.isc.org.
+ .
+ This package delivers various client programs related to DNS that are
+ derived from the BIND 9 source tree.
+ .
+  - dig - query the DNS in various ways
+  - nslookup - the older way to do it
+  - nsupdate - perform dynamic updates (See RFC2136)
+
+Package: bind9-doc
+Description-md5: 33e946a174be0a402f3511f1d76b9a00
+Description-en: Documentation for BIND 9
+ This package provides various documents that are useful for maintaining a
+ working BIND 9 installation.
+
+Package: bind9-host
+Description-md5: 2dd2359e6a96f700ef352e6924685162
+Description-en: DNS Lookup Utility
+ This package provides the 'host' DNS lookup utility in the form that
+ is bundled with the BIND 9 sources.
+
+Package: bind9-libs
+Description-md5: 5d0130b772445112be93a9bd80da10e6
+Description-en: Shared Libraries used by BIND 9
+ The Berkeley Internet Name Domain (BIND 9) implements an Internet domain
+ name server.  BIND 9 is the most widely-used name server software on the
+ Internet, and is supported by the Internet Software Consortium, www.isc.org.
+ .
+ This package contains a bundle of shared libraries used by BIND 9.
+
+Package: bind9-utils
+Description-md5: c30ede916daac07ed6c19887e9f7d3f2
+Description-en: Utilities for BIND 9
+ This package provides various utilities that are useful for maintaining a
+ working BIND 9 installation.
+
 Package: chromium
 Description-md5: 3a7ed4512cf49e4fe53b4490bcc1060b
 Description-en: web browser
@@ -4613,6 +4676,18 @@ Description-en: Secure Sockets Layer toolkit - cryptographic utility
  the cryptography community, or something similar.
  For details see OSSL_PROVIDER-legacy man page.
 
+Package: internetarchive
+Description-md5: 3e29b5bc60e2d746e8092710a685416d
+Description-en: commandline interface to archive.org
+ Command-line tool (`ia`) for searching, downloading and uploading
+ content to the Internet Archive.
+
+Package: python3-internetarchive
+Description-md5: ec6943212c7f5010b4286bd9dd5dc154
+Description-en: Python interface to archive.org
+ Python library for searching, downloading and uploading content to
+ the Internet Archive.
+
 Package: qemu-block-extra
 Description-md5: b5e1c6baef0716841da073a7551acbc5
 Description-en: extra block backend modules for qemu-system and qemu-utils
@@ -5056,6 +5131,199 @@ Description-en: Persistent key-value database with network interface (client)
  manipulating and querying data structures such as lists and sets.
  .
  This package contains the command line client and other tools.
+
+Package: request-tracker5
+Description-md5: cc637b64181d8b990856c5a0955b2e2e
+Description-en: extensible trouble-ticket tracking system
+ Request Tracker (RT) is a ticketing system which
+ enables a group of people to intelligently and efficiently manage
+ tasks, issues, and requests submitted by a community of users. It
+ features web, email, and command-line interfaces (see the package
+ rt5-clients).
+ .
+ RT manages key tasks such as the identification, prioritization,
+ assignment, resolution, and notification required by
+ enterprise-critical applications, including project management, help
+ desk, NOC ticketing, CRM, and software development.
+ .
+ This package provides the 5 series of RT. It can be installed alongside
+ the 3.8 and 4 series without any problems.
+ .
+ This package provides the core of RT.
+ .
+ This package supports three database types out of the box: MySQL,
+ PostgreSQL and SQLite. In order to support a zero-configuration install,
+ SQLite will be used by default, but is not recommended for production
+ use. Please see /usr/share/doc/request-tracker5/NOTES.Debian for more
+ details and consider installing rt5-db-postgresql or rt5-db-mysql at
+ the same time as this package.
+
+Package: rt5-apache2
+Description-md5: 3628f319e3d24f548764a66eea3d14d5
+Description-en: Apache 2 specific files for request-tracker5
+ Request Tracker (RT) is a ticketing system which
+ enables a group of people to intelligently and efficiently manage
+ tasks, issues, and requests submitted by a community of users. It
+ features web, email, and command-line interfaces (see the package
+ rt5-clients).
+ .
+ RT manages key tasks such as the identification, prioritization,
+ assignment, resolution, and notification required by
+ enterprise-critical applications, including project management, help
+ desk, NOC ticketing, CRM, and software development.
+ .
+ This package provides the 5 series of RT. It can be installed alongside
+ the 3.8 and 4 series without any problems.
+ .
+ This package provides various configuration files and manages the
+ necessary dependencies for running RT version 5 on the Apache 2 web
+ server.
+
+Package: rt5-clients
+Description-md5: 9548b28abdf294924085ca45be7bfca6
+Description-en: mail gateway and command-line interface to request-tracker5
+ Request Tracker (RT) is a ticketing system which
+ enables a group of people to intelligently and efficiently manage
+ tasks, issues, and requests submitted by a community of users. It
+ features web, email, and command-line interfaces (see the package
+ rt5-clients).
+ .
+ RT manages key tasks such as the identification, prioritization,
+ assignment, resolution, and notification required by
+ enterprise-critical applications, including project management, help
+ desk, NOC ticketing, CRM, and software development.
+ .
+ This package provides the 5 series of RT. It can be installed alongside
+ the 3.8 and 4 series without any problems.
+ .
+ This package provides support for injecting tickets into Request Tracker
+ from a mail server via rt-mailgate. It may be installed onto any
+ machine where you want to use the "rt" command-line interface.
+
+Package: rt5-db-mysql
+Description-md5: 9f03358a474f091bb6f231b5b132aee5
+Description-en: MySQL database backend for request-tracker5
+ Request Tracker (RT) is a ticketing system which
+ enables a group of people to intelligently and efficiently manage
+ tasks, issues, and requests submitted by a community of users. It
+ features web, email, and command-line interfaces (see the package
+ rt5-clients).
+ .
+ RT manages key tasks such as the identification, prioritization,
+ assignment, resolution, and notification required by
+ enterprise-critical applications, including project management, help
+ desk, NOC ticketing, CRM, and software development.
+ .
+ This package provides the 5 series of RT. It can be installed alongside
+ the 3.8 and 4 series without any problems.
+ .
+ This empty package provides dependencies and dbconfig-common support for
+ using Request Tracker version 5 with a MySQL database.
+
+Package: rt5-db-postgresql
+Description-md5: 5f31ea6e044651638509d39f7c4e108d
+Description-en: PostgreSQL database backend for request-tracker5
+ Request Tracker (RT) is a ticketing system which
+ enables a group of people to intelligently and efficiently manage
+ tasks, issues, and requests submitted by a community of users. It
+ features web, email, and command-line interfaces (see the package
+ rt5-clients).
+ .
+ RT manages key tasks such as the identification, prioritization,
+ assignment, resolution, and notification required by
+ enterprise-critical applications, including project management, help
+ desk, NOC ticketing, CRM, and software development.
+ .
+ This package provides the 5 series of RT. It can be installed alongside
+ the 3.8 and 4 series without any problems.
+ .
+ This empty package provides dependencies and dbconfig-common support for
+ using Request Tracker version 5 with a PostgreSQL database.
+
+Package: rt5-db-sqlite
+Description-md5: 7c8e6166928ab9570f60469dbb92264f
+Description-en: SQLite database backend for request-tracker5
+ Request Tracker (RT) is a ticketing system which
+ enables a group of people to intelligently and efficiently manage
+ tasks, issues, and requests submitted by a community of users. It
+ features web, email, and command-line interfaces (see the package
+ rt5-clients).
+ .
+ RT manages key tasks such as the identification, prioritization,
+ assignment, resolution, and notification required by
+ enterprise-critical applications, including project management, help
+ desk, NOC ticketing, CRM, and software development.
+ .
+ This package provides the 5 series of RT. It can be installed alongside
+ the 3.8 and 4 series without any problems.
+ .
+ This empty package provides dependencies and dbconfig-common support for
+ using Request Tracker version 5 with a local SQLite (version 3) database.
+ .
+ This package will be pulled in by default by request-tracker5, but SQLite
+ is not recommended for production use.  Please see
+ /usr/share/doc/request-tracker5/NOTES.Debian for more details and
+ consider installing rt5-db-postgresql or rt5-db-mysql instead of this
+ package.
+
+Package: rt5-doc-html
+Description-md5: b24b2f19791517990b3086036d358b37
+Description-en: HTML documentation for request-tracker5
+ Request Tracker (RT) is a ticketing system which
+ enables a group of people to intelligently and efficiently manage
+ tasks, issues, and requests submitted by a community of users. It
+ features web, email, and command-line interfaces (see the package
+ rt5-clients).
+ .
+ RT manages key tasks such as the identification, prioritization,
+ assignment, resolution, and notification required by
+ enterprise-critical applications, including project management, help
+ desk, NOC ticketing, CRM, and software development.
+ .
+ This package provides the 5 series of RT. It can be installed alongside
+ the 3.8 and 4 series without any problems.
+ .
+ This package provides HTML documentation for RT.
+
+Package: rt5-fcgi
+Description-md5: 7be2ac00b3384c2fd8da9d0da7beadef
+Description-en: External FastCGI support for request-tracker5
+ Request Tracker (RT) is a ticketing system which
+ enables a group of people to intelligently and efficiently manage
+ tasks, issues, and requests submitted by a community of users. It
+ features web, email, and command-line interfaces (see the package
+ rt5-clients).
+ .
+ RT manages key tasks such as the identification, prioritization,
+ assignment, resolution, and notification required by
+ enterprise-critical applications, including project management, help
+ desk, NOC ticketing, CRM, and software development.
+ .
+ This package provides the 5 series of RT. It can be installed alongside
+ the 3.8 and 4 series without any problems.
+ .
+ This package provides an external FCGI interface for web servers
+ including, but not limited to, nginx, and is not needed for web servers
+ such as Apache which invoke FCGI programs directly.
+
+Package: rt5-standalone
+Description-md5: b175ea28d891e566be025e7a60468a4c
+Description-en: Standalone web server support for request-tracker5
+ Request Tracker (RT) is a ticketing system which
+ enables a group of people to intelligently and efficiently manage
+ tasks, issues, and requests submitted by a community of users. It
+ features web, email, and command-line interfaces (see the package
+ rt5-clients).
+ .
+ RT manages key tasks such as the identification, prioritization,
+ assignment, resolution, and notification required by
+ enterprise-critical applications, including project management, help
+ desk, NOC ticketing, CRM, and software development.
+ .
+ This package provides the 5 series of RT. It can be installed alongside
+ the 3.8 and 4 series without any problems.
+ .
+ This metapackage provides the standalone web server interface.
 
 Package: libapache2-mod-shib
 Description-md5: 77446271d8362079ad5a7a6a90b712bc
@@ -5817,6 +6085,15 @@ Description-en: Tag Image File Format (TIFF) library -- C++ interface
  libtiff is a library providing support for the Tag Image File Format
  (TIFF), a widely used format for storing image data.  This package
  includes the shared library for the experimental C++ interfaces.
+
+Package: tryton-sao
+Description-md5: e21bcc92cad3abd9f738228c831b1885
+Description-en: Tryton application platform - web client
+ Tryton is a high-level general purpose application platform. It is the base
+ of a complete business solution as well as a comprehensive health and hospital
+ information system (GNUHealth).
+ .
+ This package provides the web client running on top of the server.
 
 Package: gir1.2-udisks-2.0
 Description-md5: f5f1b5062052b10eabb6cc3d51d6bd13
