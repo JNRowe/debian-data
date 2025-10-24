@@ -2241,23 +2241,23 @@ MD5sum: b11896027b78455ad331727c4b9f92c8
 SHA256: 7f7b8c0fa37da13b405b32df0641be5878017cc7b51ec4183d7850c6fe4fbfdf
 
 Package: cam2ip
-Source: cam2ip (1.6-4)
-Version: 1.6-4+b6
-Installed-Size: 6446
-Maintainer: Alex Myczko <tar@debian.org>
+Version: 1.6-5
+Installed-Size: 6449
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34), libjpeg62-turbo (>= 1.3.1)
 Description: turn any webcam into an IP camera
 Multi-Arch: foreign
 Homepage: https://github.com/gen2brain/cam2ip
-Built-Using: golang-1.24 (= 1.24.4-1), golang-github-abbot-go-http-auth (= 0.4.0-6), golang-github-antonini-golibjpegturbo (= 0.0~git20141208.c03a2fa-5), golang-github-disintegration-imaging (= 1.6.2-3), golang-github-jamiealquiza-envy (= 1.1.0-2), golang-github-korandiz-v4l (= 1.1.0-3), golang-github-pbnjay-pixfont (= 0.0~git20200714.33b7446-2), golang-github-spf13-cobra (= 1.8.1-1), golang-github-spf13-pflag (= 1.0.6~git20210604-d5e0c0615ace-1), golang-go.crypto (= 1:0.25.0-1), golang-golang-x-image (= 0.18.0-1), golang-golang-x-net (= 1:0.27.0-2), golang-nhooyr-websocket (= 1.8.12-4)
+Built-Using: golang-1.24 (= 1.24.9-1), golang-github-abbot-go-http-auth (= 0.4.0-6), golang-github-antonini-golibjpegturbo (= 0.0~git20141208.c03a2fa-5), golang-github-disintegration-imaging (= 1.6.2-3), golang-github-jamiealquiza-envy (= 1.1.0-2), golang-github-korandiz-v4l (= 1.1.0-3), golang-github-pbnjay-pixfont (= 0.0~git20200714.33b7446-2), golang-github-spf13-cobra (= 1.10.1-1), golang-github-spf13-pflag (= 1.0.10-1), golang-go.crypto (= 1:0.43.0-2), golang-golang-x-image (= 0.32.0-1), golang-golang-x-net (= 1:0.27.0-2), golang-nhooyr-websocket (= 1.8.12-4)
 Description-md5: 1eaf922df5e3ac6ca3784614dc68e9a7
+Static-Built-Using: golang-1.24 (= 1.24.9-1), golang-github-abbot-go-http-auth (= 0.4.0-6), golang-github-antonini-golibjpegturbo (= 0.0~git20141208.c03a2fa-5), golang-github-disintegration-imaging (= 1.6.2-3), golang-github-jamiealquiza-envy (= 1.1.0-2), golang-github-korandiz-v4l (= 1.1.0-3), golang-github-pbnjay-pixfont (= 0.0~git20200714.33b7446-2), golang-github-spf13-cobra (= 1.10.1-1), golang-github-spf13-pflag (= 1.0.10-1), golang-go.crypto (= 1:0.43.0-2), golang-golang-x-image (= 0.32.0-1), golang-golang-x-net (= 1:0.27.0-2), golang-nhooyr-websocket (= 1.8.12-4)
 net
 Priority: optional
-Filename: pool/main/c/cam2ip/cam2ip_1.6-4+b6_amd64.deb
-Size: 2162532
-MD5sum: 272698d644b40913bedea41263c12e85
-SHA256: eb84c56512bf97ff53aed816cce071bcca88d88426fbdb59dfeea5b3831456aa
+Filename: pool/main/c/cam2ip/cam2ip_1.6-5_amd64.deb
+Size: 2164112
+MD5sum: feef280c5f2d40cb48c0481e4f9f1212
+SHA256: a108ee802b892f16024a0fd564011e744a24680bfa681dfa85b2f93059490231
 
 Package: can-utils
 Version: 2023.03-1
@@ -5351,6 +5351,23 @@ Filename: pool/main/d/dnswalk/dnswalk_2.0.2.dfsg.1-3_all.deb
 Size: 20120
 MD5sum: ed510538f0283a29a5f39ad72cf66950
 SHA256: 3c26fcc057f408ed00df4ad10402867ece195fe586b6626446829e98f4145e40
+
+Package: doh-cli
+Version: 0.8-1
+Installed-Size: 44
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-dnspython, python3-requests, python3:any
+Recommends: jq
+Description: simple DNS-over-HTTPS client
+Homepage: https://gitlab.com/libreops/doh-cli
+Description-md5: 70cd6fc4c75070363fa4480b40b33e21
+net
+Priority: optional
+Filename: pool/main/d/doh-cli/doh-cli_0.8-1_all.deb
+Size: 11276
+MD5sum: 09eca4ed007685a45d2e8163c0fc1aa5
+SHA256: 4a9c242924ddc0292d25b1ed9f54b3c82f53e8b3c3daf3a9fa328c7d3a0503f8
 
 Package: donkey
 Version: 1.2.0-9
@@ -13614,45 +13631,60 @@ Size: 155748
 MD5sum: a7344f9c25cdc92474156bfd37020f0a
 SHA256: 598e53a24f21d31a74cbc6694730a50b7ab137eaee9786eba877ece95205991f
 
-Package: knot-resolver
-Source: knot-resolver (5.7.5-1)
-Version: 5.7.5-1+b1
-Installed-Size: 1182
+Package: knot-resolver6
+Source: knot-resolver
+Version: 6.0.15-3
+Installed-Size: 1776
 Maintainer: knot-resolver packagers <knot-resolver@packages.debian.org>
 Architecture: amd64
-Replaces: libkres9 (<< 3.2.1-2)
-Depends: adduser, debconf, dns-root-data, lua-sec, lua-socket, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38), libdnssec10 (>= 3.5.0), libedit2 (>= 2.11-20080614-0), libfstrm0 (>= 0.2.0), libgcc-s1 (>= 3.0), libgnutls30t64 (>= 3.8.1), libjemalloc2 (>= 2.1.1), libknot16 (>= 3.5.0), liblmdb0 (>= 0.9.9), libluajit-5.1-2 (>= 2.0.4) | libluajit-5.1-2 (>= 2.1.0+openresty), libnghttp2-14 (>= 1.3.0), libprotobuf-c1 (>= 1.0.1), libstdc++6 (>= 5), libsystemd0 (>= 227), libuv1t64 (>= 1.7.0), libzscanner5 (>= 3.5.0)
-Recommends: knot-resolver-module-http, lua-basexx, lua-cqueues
-Breaks: libkres9 (<< 3.2.1-2)
-Description: caching, DNSSEC-validating DNS resolver
+Replaces: knot-resolver (<< 6)
+Depends: adduser, dns-root-data, python3-aiohttp, python3-jinja2, python3-yaml, supervisor, systemd, python3 (<< 3.14), python3 (>= 3.13~), python3-typing-extensions, python3:any, libc6 (>= 2.38), libcap-ng0 (>= 0.7.9), libdnssec10 (>= 3.5.0), libgcc-s1 (>= 3.0), libgnutls30t64 (>= 3.8.1), libjemalloc2 (>= 2.1.1), libknot16 (>= 3.5.0), liblmdb0 (>= 0.9.9), libluajit-5.1-2 (>= 2.0.4) | libluajit-5.1-2 (>= 2.1.0+openresty), libnghttp2-14 (>= 1.3.0), libstdc++6 (>= 5), libsystemd0 (>= 227), libuv1t64 (>= 1.30.1), libzscanner5 (>= 3.5.0)
+Recommends: lua-basexx, lua-cqueues, lua-http, lua-psl, python3-prometheus-client, python3-watchdog
+Suggests: knot-resolver6-module-http
+Breaks: knot-resolver (<< 6)
+Description: caching, DNSSEC-validating DNS resolver - binaries
 Homepage: https://www.knot-resolver.cz/
-Description-md5: bf37c31effb987d90b9c0c9623e2590b
-Tag: uitoolkit::ncurses
+Description-md5: 3c5571c7871769e23627f380b607b9f4
 net
 Priority: optional
-Filename: pool/main/k/knot-resolver/knot-resolver_5.7.5-1+b1_amd64.deb
-Size: 344848
-MD5sum: fb7ce3af546400921fdf6fc1f7652ba6
-SHA256: 0c55d8abb234bc32328c07a272e7559ddc92ace9269aeef65fce2ddda2b33944
+Filename: pool/main/k/knot-resolver/knot-resolver6_6.0.15-3_amd64.deb
+Size: 483856
+MD5sum: 5844212d12315d51409a8b00e567efae
+SHA256: 8b8cee40197ce58d6f8fc0e9a800b32e8c4bfde26da77c8e925f293a6a4c3600
 
-Package: knot-resolver-module-http
-Source: knot-resolver (5.7.5-1)
-Version: 5.7.5-1+b1
-Installed-Size: 954
+Package: knot-resolver6-module-dnstap
+Source: knot-resolver
+Version: 6.0.15-3
+Installed-Size: 73
 Maintainer: knot-resolver packagers <knot-resolver@packages.debian.org>
 Architecture: amd64
-Depends: fonts-glyphicons-halflings, libjs-bootstrap, libjs-d3, libjs-jquery, lua-http, lua-mmdb
-Breaks: knot-resolver-module-tinyweb (<< 1.1.0~git20160713-1~)
-Description: HTTP module for Knot Resolver
-Multi-Arch: same
+Depends: knot-resolver6 (= 6.0.15-3), libfstrm0 (>= 0.2.0), libprotobuf-c1 (>= 1.0.1), libc6 (>= 2.14), libuv1t64 (>= 1.4.2)
+Description: dnstap module for Knot Resolver
 Homepage: https://www.knot-resolver.cz/
-Description-md5: da58e2b75b9d36b21fe42168683ba4aa
+Description-md5: cd9f03fdbb9f1c760abbd6a02e4920f4
 net
 Priority: optional
-Filename: pool/main/k/knot-resolver/knot-resolver-module-http_5.7.5-1+b1_amd64.deb
-Size: 256892
-MD5sum: 5645befd2d3733e199898470303c56a7
-SHA256: 2354f13f40c244e3140425bf23c255b55f4689993e11bfd397abf49491c00e35
+Filename: pool/main/k/knot-resolver/knot-resolver6-module-dnstap_6.0.15-3_amd64.deb
+Size: 22648
+MD5sum: 98e35a7c3bb883e3cfd63c5778f92d0f
+SHA256: f28c7aeaa851e8c2280cdbff5564d60c430ce84529edf0de3bf8687e7f142208
+
+Package: knot-resolver6-module-http
+Source: knot-resolver
+Version: 6.0.15-3
+Installed-Size: 517
+Maintainer: knot-resolver packagers <knot-resolver@packages.debian.org>
+Architecture: amd64
+Depends: knot-resolver6 (= 6.0.15-3), libjs-bootstrap, libjs-d3, libjs-jquery, lua-cqueues, lua-http, lua-mmdb, systemd
+Description: HTTP module for Knot Resolver
+Homepage: https://www.knot-resolver.cz/
+Description-md5: c5063c4cabf54c4f50fd8a912dfad050
+net
+Priority: optional
+Filename: pool/main/k/knot-resolver/knot-resolver6-module-http_6.0.15-3_amd64.deb
+Size: 140304
+MD5sum: fede0174b32cdd1708a0a5a90fef93ee
+SHA256: fe9eebb44e0b18fe7e2d144b38414d5bbee2943833b05235fa694eb736d076fc
 
 Package: knxd
 Version: 0.14.73-1
@@ -19244,12 +19276,11 @@ MD5sum: 1f1eeabb344663a156c0324fdd5c199b
 SHA256: ba08eedab0e663943ff1b075b0ef65a2c1d80b99d68c5b0b5be3267b3dca4ed1
 
 Package: network-manager-openconnect
-Source: network-manager-openconnect (1.2.10-3)
-Version: 1.2.10-3+b2
+Version: 1.2.10-4
 Installed-Size: 3192
 Maintainer: Mike Miller <mtmiller@debian.org>
 Architecture: amd64
-Depends: adduser, network-manager, openconnect, libc6 (>= 2.38), libglib2.0-0t64 (>= 2.30.0), libnm0 (>= 1.2.0), libopenconnect5 (>= 8.20~)
+Depends: network-manager, openconnect, systemd | systemd-standalone-sysusers | systemd-sysusers, libc6 (>= 2.38), libglib2.0-0t64 (>= 2.30.0), libnm0 (>= 1.2.0), libopenconnect5 (>= 8.20~)
 Description: network management framework (OpenConnect plugin core)
 Homepage: https://www.gnome.org/projects/NetworkManager/
 Description-md5: 6883a34247d7b5391f9b22c61d4a30d1
@@ -19257,18 +19288,18 @@ Tag: implemented-in::c, interface::graphical, interface::x11, network::vpn,
  role::plugin, role::program, role::shared-lib, uitoolkit::gtk
 net
 Priority: optional
-Filename: pool/main/n/network-manager-openconnect/network-manager-openconnect_1.2.10-3+b2_amd64.deb
-Size: 511276
-MD5sum: 5ab3f16b75ce91cad9af6c0ff66841ee
-SHA256: 6424d8ab6435c16666a5a969e8775f3308089489e7c66d769df26b4f9011ed1c
+Filename: pool/main/n/network-manager-openconnect/network-manager-openconnect_1.2.10-4_amd64.deb
+Size: 510860
+MD5sum: ac7e0b2d2262b508880bcaf23a0944ff
+SHA256: a7548d285a99507f1c8987d943fc2f6696bec85f766c85d6a611adf05522e07c
 
 Package: network-manager-openconnect-gnome
-Source: network-manager-openconnect (1.2.10-3)
-Version: 1.2.10-3+b2
-Installed-Size: 175
+Source: network-manager-openconnect
+Version: 1.2.10-4
+Installed-Size: 174
 Maintainer: Mike Miller <mtmiller@debian.org>
 Architecture: amd64
-Depends: network-manager-openconnect (= 1.2.10-3+b2), libc6 (>= 2.34), libgcr-base-3-1 (>= 3.8.0), libgcr-ui-3-1 (>= 3.8.0), libglib2.0-0t64 (>= 2.32.0), libgtk-3-0t64 (>= 3.21.4), libgtk-4-1 (>= 4.0.0), libnm0 (>= 1.2.0), libnma-gtk4-0 (>= 1.8.34), libnma0 (>= 1.8.0), libopenconnect5 (>= 9.00), libsecret-1-0 (>= 0.7), libsoup-3.0-0 (>= 2.32.2), libwebkit2gtk-4.1-0 (>= 2.19.2), libxml2-16 (>= 2.14.1)
+Depends: network-manager-openconnect (= 1.2.10-4), libc6 (>= 2.34), libgcr-base-3-1 (>= 3.8.0), libgcr-ui-3-1 (>= 3.8.0), libglib2.0-0t64 (>= 2.32.0), libgtk-3-0t64 (>= 3.21.4), libgtk-4-1 (>= 4.0.0), libnm0 (>= 1.2.0), libnma-gtk4-0 (>= 1.8.34), libnma0 (>= 1.8.0), libopenconnect5 (>= 9.00), libsecret-1-0 (>= 0.7), libsoup-3.0-0 (>= 2.32.2), libwebkit2gtk-4.1-0 (>= 2.19.2), libxml2-16 (>= 2.14.1)
 Description: network management framework (OpenConnect plugin GNOME GUI)
 Homepage: https://www.gnome.org/projects/NetworkManager/
 Description-md5: 4c10c7a11daa3b99e4ba3a0c3ac0cc7e
@@ -19276,10 +19307,10 @@ Tag: implemented-in::c, interface::graphical, interface::x11, role::plugin,
  role::program, suite::gnome, uitoolkit::gtk
 net
 Priority: optional
-Filename: pool/main/n/network-manager-openconnect/network-manager-openconnect-gnome_1.2.10-3+b2_amd64.deb
-Size: 33508
-MD5sum: 6cea89d70f5c54791574f12f0f17f188
-SHA256: a3fb88dc61d910eb296729b91d4648ffb047aba60c8f693afe9957f6b1141493
+Filename: pool/main/n/network-manager-openconnect/network-manager-openconnect-gnome_1.2.10-4_amd64.deb
+Size: 33376
+MD5sum: d79f7531a98baed63cd59d6f11c60725
+SHA256: dfdd0854850f52b0b4a8568dfa3fddf171b21b25ef014744cee24c83b1d6aedf
 
 Package: network-manager-openvpn
 Version: 1.12.3-1
@@ -23666,21 +23697,20 @@ MD5sum: 135ee20f5e0befc0117103df707cc251
 SHA256: b321e1013bcc52620994814a19da04eca6132f560e5c897538ae52b6263e42be
 
 Package: osmo-fl2k
-Source: osmo-fl2k (0.1.1-2)
-Version: 0.1.1-2+b2
-Installed-Size: 86
+Version: 0.1.1-3
+Installed-Size: 85
 Maintainer: Debian Mobcom Maintainers <Debian-mobcom-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.34), libosmo-fl2k0 (>= 0.1.1)
+Depends: libc6 (>= 2.38), libosmo-fl2k0 (>= 0.1.1)
 Description: use a VGA USB adapter as DAC and SDR transmitter
 Homepage: https://projects.osmocom.org/projects/osmo-fl2k
 Description-md5: c5f0aaa959cfbdc75256946890ce9060
 net
 Priority: optional
-Filename: pool/main/o/osmo-fl2k/osmo-fl2k_0.1.1-2+b2_amd64.deb
-Size: 17856
-MD5sum: 97f95d6baeb16d60e80993c8ea4e0ce0
-SHA256: dca9273ff1f7ed881cacd0c293c10cbbf22345ae168f962875892ed484ea3f75
+Filename: pool/main/o/osmo-fl2k/osmo-fl2k_0.1.1-3_amd64.deb
+Size: 17508
+MD5sum: 36cfd9da11a34ea62577d70151d069be
+SHA256: 4c5f832697bd4a35f9b2a404ad5f2a8a6abef5aaf3a6b16083c5504b4d8ba8d8
 
 Package: osmo-ggsn
 Version: 1.13.0-2

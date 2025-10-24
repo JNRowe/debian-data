@@ -3613,13 +3613,13 @@ SHA256: db9783d46928fb8e1eddcc4544710df6273565a9b812159879c904549b1a0c46
 
 Package: libapt-pkg7.0
 Source: apt
-Version: 3.1.8
-Installed-Size: 4070
+Version: 3.1.9
+Installed-Size: 4076
 Maintainer: APT Development Team <deity@lists.debian.org>
 Architecture: amd64
-Provides: libapt-pkg (= 3.1.8)
+Provides: libapt-pkg (= 3.1.9)
 Depends: libbz2-1.0, libc6 (>= 2.38), libgcc-s1 (>= 3.0), liblz4-1 (>= 0.0~r127), liblzma5 (>= 5.1.1alpha+20120614), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libsystemd0 (>= 221), libudev1 (>= 183), libxxhash0 (>= 0.8), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.2.2.3)
-Recommends: apt (>= 3.1.8)
+Recommends: apt (>= 3.1.9)
 Conflicts: libnettle8 (<< 3.9.1-2.2~)
 Breaks: appstream (<< 0.9.0-3~), apt (<< 1.6~), aptitude (<< 0.8.9), dpkg (<< 1.20.8), libapt-inst1.5 (<< 0.9.9~)
 Description: package management runtime library
@@ -3627,10 +3627,10 @@ Multi-Arch: same
 Description-md5: 1e225d7f6cafc33f74a452fd5c53755e
 libs
 Priority: optional
-Filename: pool/main/a/apt/libapt-pkg7.0_3.1.8_amd64.deb
-Size: 1206056
-MD5sum: 1ab634be358bb6cc2b6e79fabdb650b0
-SHA256: 3ddd97227582e7db14c4e191466acc3ec44963a84f2668311ea36cb83360bf7c
+Filename: pool/main/a/apt/libapt-pkg7.0_3.1.9_amd64.deb
+Size: 1207160
+MD5sum: af63ecac6b600a51bdc2c4522283fd05
+SHA256: b3fb9d80d707de2fc4febe61ca04de8c7a4ab3ca7f32a3d6d2e04dacf9aaff20
 
 Package: libaquamarine8
 Source: aquamarine
@@ -12785,7 +12785,7 @@ SHA256: 814f8fdf0b6043575c7f3730a911c49316c3695d93bbc4fc3abccb888c6c4227
 
 Package: libcryptopant1
 Source: cryptopant
-Version: 1.3.1-3
+Version: 1.3.2-1
 Installed-Size: 38
 Maintainer: Daniel Baumann <daniel@debian.org>
 Architecture: amd64
@@ -12796,10 +12796,10 @@ Homepage: https://ant.isi.edu/software/cryptopANT/
 Description-md5: 930fe9a1257337302d3fbab3ef9c5692
 libs
 Priority: optional
-Filename: pool/main/c/cryptopant/libcryptopant1_1.3.1-3_amd64.deb
-Size: 9108
-MD5sum: 8a725bbede52bc9559805208f1b0878d
-SHA256: 4d9f87277daca97938e0675afff26231ba872d297c314d3f08a16e3e64088db9
+Filename: pool/main/c/cryptopant/libcryptopant1_1.3.2-1_amd64.deb
+Size: 9180
+MD5sum: 3e9f723915ea1000722ffd7fd4cf795b
+SHA256: a62c561d77f22c6897e00640dbf3adea6c564eea02613a261a5380db698f1e48
 
 Package: libcryptsetup12
 Source: cryptsetup
@@ -15331,6 +15331,42 @@ Filename: pool/main/d/dolfin/libdolfin64-2019.2t64_2019.2.0~legacy20240219.1c52e
 Size: 2002376
 MD5sum: 10db882994cff0fd5cfa207cfdd240f2
 SHA256: d1dce9678ecf74397ca5a543bbcc282c59b029df43ed5f1421cb9f61cbae0623
+
+Package: libdolfinx-mpc0.9
+Source: dolfinx-mpc (0.9.3-2)
+Version: 0.9.3-2+b1
+Installed-Size: 605
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.32), libdolfinx-real0.9 (>= 1:0.9.0), libgcc-s1 (>= 4.0), libopenmpi40 (>= 5.0.8), libpetsc-real3.22 (>= 3.22.5+dfsg1), libstdc++6 (>= 13.1)
+Description: Multi-point constraints with FEniCS-X
+Multi-Arch: same
+Homepage: https://github.com/jorgensd/dolfinx_mpc
+Description-md5: 6cfb594889eda2b58d1100a278dc6840
+libs
+Priority: optional
+Filename: pool/main/d/dolfinx-mpc/libdolfinx-mpc0.9_0.9.3-2+b1_amd64.deb
+Size: 110164
+MD5sum: fcacddcefc244b40b8bc3fb9f804d6ba
+SHA256: 64c9a4f95288fe1b1ffed16879e3ec91a67a09002c8c78a8e8af677224bb0bb0
+
+Package: python3-dolfinx-mpc
+Source: dolfinx-mpc (0.9.3-2)
+Version: 0.9.3-2+b1
+Installed-Size: 1798
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libdolfinx-mpc0.9 (= 0.9.3-2+b1), python3-dolfinx-real, python3 (<< 3.14), python3 (>= 3.13~), python3-cffi-backend-api-min (<= 9729), python3-cffi-backend-api-max (>= 9729), python3-mpi4py, python3-nanobind (>= 2.6.1), python3-nanobind-abi16, python3-numpy, python3-petsc4py-real3.22, python3:any, libc6 (>= 2.32), libdolfinx-real0.9 (>= 1:0.9.0), libfmt10 (>= 10.1.1+ds1), libgcc-s1 (>= 4.0), libopenmpi40 (>= 5.0.8), libpetsc-real3.22 (>= 3.22.5+dfsg1), libspdlog1.15-fmt10, libstdc++6 (>= 14)
+Description: Multi-point constraints with FEniCS-X
+Homepage: https://github.com/jorgensd/dolfinx_mpc
+Description-md5: 6cfb594889eda2b58d1100a278dc6840
+Tag: role::shared-lib
+libs
+Priority: optional
+Filename: pool/main/d/dolfinx-mpc/python3-dolfinx-mpc_0.9.3-2+b1_amd64.deb
+Size: 477276
+MD5sum: a0815e32be53ed0161ded8ad0e8f3150
+SHA256: 13ad91c41e58642a70f9b3659813ab0284c8119d8660ed88255531efc446f4e5
 
 Package: libdolphinvcs6
 Source: dolphin (4:25.04.3-1)
@@ -22525,92 +22561,92 @@ SHA256: a7963fdcab64b270b4abe6236060926c280c2682ee83ba715d12a66d9706d5d5
 
 Package: libcamel-1.2-64t64
 Source: evolution-data-server
-Version: 3.56.2-3
-Installed-Size: 1533
+Version: 3.56.2-4
+Installed-Size: 1545
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libcamel-1.2-64
-Provides: libcamel-1.2-64 (= 3.56.2-3)
-Depends: libc6 (>= 2.34), libglib2.0-0t64 (>= 2.68.0), libgssapi-krb5-2 (>= 1.17), libicu76 (>= 76.1-1~), libnspr4 (>= 2:4.9-2~), libnss3 (>= 2:3.16), libsqlite3-0 (>= 3.6.0), zlib1g (>= 1:1.1.4)
-Breaks: libcamel-1.2-64 (<< 3.56.2-3)
+Provides: libcamel-1.2-64 (= 3.56.2-4)
+Depends: libc6 (>= 2.38), libglib2.0-0t64 (>= 2.68.0), libgssapi-krb5-2 (>= 1.17), libicu76 (>= 76.1-1~), libnspr4 (>= 2:4.9-2~), libnss3 (>= 2:3.16), libsqlite3-0 (>= 3.6.0), zlib1g (>= 1:1.1.4)
+Breaks: libcamel-1.2-64 (<< 3.56.2-4)
 Description: Evolution MIME message handling library
 Multi-Arch: same
 Homepage: https://gitlab.gnome.org/GNOME/evolution/-/wikis/home
 Description-md5: 43ee52bbe1cd65f95cd1bd1abbdbcedd
 libs
 Priority: optional
-Filename: pool/main/e/evolution-data-server/libcamel-1.2-64t64_3.56.2-3_amd64.deb
-Size: 466568
-MD5sum: fd4030b9a5f6a4dc9cbf6f16c0ec3963
-SHA256: 5a5df334db011d23fb49774e2074619fa6f9496ddc1698422a52fd1321bed9a3
+Filename: pool/main/e/evolution-data-server/libcamel-1.2-64t64_3.56.2-4_amd64.deb
+Size: 471300
+MD5sum: f87def2c46fb7f4e6fc589865b842023
+SHA256: b954f3f16642c0037ef7a4907077fc8033644dcddab58488e2f852a5c81466c2
 
 Package: libebackend-1.2-11t64
 Source: evolution-data-server
-Version: 3.56.2-3
+Version: 3.56.2-4
 Installed-Size: 381
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libebackend-1.2-11
-Provides: libebackend-1.2-11 (= 3.56.2-3)
-Depends: libc6 (>= 2.14), libcamel-1.2-64t64 (>= 3.19.92), libdb5.3t64, libedataserver-1.2-27t64 (>= 3.45.2), libglib2.0-0t64 (>= 2.68.0), libsoup-3.0-0 (>= 3.1.1), libsqlite3-0 (>= 3.6.0)
-Breaks: libebackend-1.2-11 (<< 3.56.2-3)
+Provides: libebackend-1.2-11 (= 3.56.2-4)
+Depends: libc6 (>= 2.38), libcamel-1.2-64t64 (>= 3.19.92), libdb5.3t64, libedataserver-1.2-27t64 (>= 3.45.2), libglib2.0-0t64 (>= 2.68.0), libsoup-3.0-0 (>= 3.1.1), libsqlite3-0 (>= 3.6.0)
+Breaks: libebackend-1.2-11 (<< 3.56.2-4)
 Description: Utility library for evolution data servers
 Multi-Arch: same
 Homepage: https://gitlab.gnome.org/GNOME/evolution/-/wikis/home
 Description-md5: b3d133d6b14648a896d4e2d251b6dcae
 libs
 Priority: optional
-Filename: pool/main/e/evolution-data-server/libebackend-1.2-11t64_3.56.2-3_amd64.deb
-Size: 114628
-MD5sum: 665e843627dc8fe44d0dc3a6d1014108
-SHA256: b2542144e4daff7b49a2e6acfb914c30e7501dd698f12f94c871b388f788e10e
+Filename: pool/main/e/evolution-data-server/libebackend-1.2-11t64_3.56.2-4_amd64.deb
+Size: 115548
+MD5sum: f3bc74bde620eb9346e7ef230acddbd0
+SHA256: 1d4e0a4370c84e485087d05ebff4a9459b85c5ffa6b672db4a8c6a03fb555922
 
 Package: libebook-1.2-21t64
 Source: evolution-data-server
-Version: 3.56.2-3
-Installed-Size: 362
+Version: 3.56.2-4
+Installed-Size: 366
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libebook-1.2-21
-Provides: libebook-1.2-21 (= 3.56.2-3)
-Depends: libc6 (>= 2.4), libcamel-1.2-64t64 (>= 3.42.1), libebook-contacts-1.2-4t64 (>= 3.49.2), libedata-book-1.2-27t64 (>= 3.43.2), libedataserver-1.2-27t64 (>= 3.17), libglib2.0-0t64 (>= 2.68.0), libnss3 (>= 2:3.13.4-2~), libxml2-16 (>= 2.14.1)
-Breaks: libebook-1.2-21 (<< 3.56.2-3)
+Provides: libebook-1.2-21 (= 3.56.2-4)
+Depends: libc6 (>= 2.38), libcamel-1.2-64t64 (>= 3.42.1), libebook-contacts-1.2-4t64 (>= 3.49.2), libedata-book-1.2-27t64 (>= 3.43.2), libedataserver-1.2-27t64 (>= 3.17), libglib2.0-0t64 (>= 2.68.0), libnss3 (>= 2:3.13.4-2~), libxml2-16 (>= 2.14.1)
+Breaks: libebook-1.2-21 (<< 3.56.2-4)
 Description: Client library for evolution address books
 Multi-Arch: same
 Homepage: https://gitlab.gnome.org/GNOME/evolution/-/wikis/home
 Description-md5: cb24488ae2ac69e00752272e7be5221f
 libs
 Priority: optional
-Filename: pool/main/e/evolution-data-server/libebook-1.2-21t64_3.56.2-3_amd64.deb
-Size: 91644
-MD5sum: 7a119fdef855f7646760e6dd79f8d50a
-SHA256: 7ab75ceb8a02113a25d9a26634ce268b03ee29b3f6aa0e706ca63518cf19d052
+Filename: pool/main/e/evolution-data-server/libebook-1.2-21t64_3.56.2-4_amd64.deb
+Size: 92512
+MD5sum: 45b8beea7cbe3c526e8fc09931706ad8
+SHA256: 960b6d88db36a1c5060d44a3cd7c19c34c59637bf48de29e5a5a4ce726d006ec
 
 Package: libebook-contacts-1.2-4t64
 Source: evolution-data-server
-Version: 3.56.2-3
+Version: 3.56.2-4
 Installed-Size: 220
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libebook-contacts-1.2-4
-Provides: libebook-contacts-1.2-4 (= 3.56.2-3)
+Provides: libebook-contacts-1.2-4 (= 3.56.2-4)
 Depends: libc6 (>= 2.14), libcamel-1.2-64t64 (>= 3.19.92), libedataserver-1.2-27t64 (>= 3.31.90), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.58.0), libphonenumber8t64-protobuf32, libstdc++6 (>= 13.1)
-Breaks: libebook-contacts-1.2-4 (<< 3.56.2-3)
+Breaks: libebook-contacts-1.2-4 (<< 3.56.2-4)
 Description: Client library for evolution contacts books
 Multi-Arch: same
 Homepage: https://gitlab.gnome.org/GNOME/evolution/-/wikis/home
 Description-md5: fd8f6220cee9a3b2df95847a5d20af2b
 libs
 Priority: optional
-Filename: pool/main/e/evolution-data-server/libebook-contacts-1.2-4t64_3.56.2-3_amd64.deb
-Size: 70520
-MD5sum: 790d553fea47f504a84218aa335f8756
-SHA256: 1316f695532e31dbc91ccd3cb8f3bd21b519af074fce2c4ea621f0585baec966
+Filename: pool/main/e/evolution-data-server/libebook-contacts-1.2-4t64_3.56.2-4_amd64.deb
+Size: 71252
+MD5sum: ed4c0694acf9315cce5ed7ed8581b6b5
+SHA256: 3e04be9dba873bd298ad54796305a3ef9d1b067844cdc85b4c0ed29de8ea0477
 
 Package: libecal-2.0-3
 Source: evolution-data-server
-Version: 3.56.2-3
-Installed-Size: 609
+Version: 3.56.2-4
+Installed-Size: 613
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.33), libcamel-1.2-64t64 (>= 3.24.1), libedataserver-1.2-27t64 (>= 3.51.2), libglib2.0-0t64 (>= 2.62.0), libical3t64 (>= 3.0.15)
@@ -22620,115 +22656,115 @@ Homepage: https://gitlab.gnome.org/GNOME/evolution/-/wikis/home
 Description-md5: 04cb425637b47946ccd00f8590d52db8
 libs
 Priority: optional
-Filename: pool/main/e/evolution-data-server/libecal-2.0-3_3.56.2-3_amd64.deb
-Size: 168376
-MD5sum: 6933a0f226c1d19dbc04b86ac5ea2ebf
-SHA256: 51cf2eabfe8449685e9106b4832dbdc13cfafb4261e1b9b5e6cb5f519c199e81
+Filename: pool/main/e/evolution-data-server/libecal-2.0-3_3.56.2-4_amd64.deb
+Size: 169532
+MD5sum: d275692abbcf7e89738a966198442916
+SHA256: 521995c755dd45ff4e3941c48025af7305b4d685b4c65ee7af961bfab051d240
 
 Package: libedata-book-1.2-27t64
 Source: evolution-data-server
-Version: 3.56.2-3
-Installed-Size: 910
+Version: 3.56.2-4
+Installed-Size: 914
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libedata-book-1.2-27
-Provides: libedata-book-1.2-27 (= 3.56.2-3)
-Depends: libc6 (>= 2.33), libcamel-1.2-64t64 (>= 3.24.1), libebackend-1.2-11t64 (>= 3.49.2), libebook-contacts-1.2-4t64 (>= 3.49.2), libedataserver-1.2-27t64 (>= 3.49.2), libglib2.0-0t64 (>= 2.70.0), libsoup-3.0-0 (>= 3.1.1), libsqlite3-0 (>= 3.5.9)
-Breaks: libedata-book-1.2-27 (<< 3.56.2-3)
+Provides: libedata-book-1.2-27 (= 3.56.2-4)
+Depends: libc6 (>= 2.38), libcamel-1.2-64t64 (>= 3.24.1), libebackend-1.2-11t64 (>= 3.49.2), libebook-contacts-1.2-4t64 (>= 3.49.2), libedataserver-1.2-27t64 (>= 3.49.2), libglib2.0-0t64 (>= 2.70.0), libsoup-3.0-0 (>= 3.1.1), libsqlite3-0 (>= 3.5.9)
+Breaks: libedata-book-1.2-27 (<< 3.56.2-4)
 Description: Backend library for evolution address books
 Multi-Arch: same
 Homepage: https://gitlab.gnome.org/GNOME/evolution/-/wikis/home
 Description-md5: 2951cda855016cedfd37b2b06ff0940f
 libs
 Priority: optional
-Filename: pool/main/e/evolution-data-server/libedata-book-1.2-27t64_3.56.2-3_amd64.deb
-Size: 252736
-MD5sum: ed17c3bf6489f086663d66196245e57f
-SHA256: e9db7a1125650fb669e7110e86349ec7ec9843f8de1729e23b877c9579fb8805
+Filename: pool/main/e/evolution-data-server/libedata-book-1.2-27t64_3.56.2-4_amd64.deb
+Size: 255320
+MD5sum: c23da5f5d66aad6884d29e1326bbb79d
+SHA256: cdb39acb1b9b4b76260b70b1c7e9cec6e4a1d1f9ea0c6b108eb8683045981ace
 
 Package: libedata-cal-2.0-2t64
 Source: evolution-data-server
-Version: 3.56.2-3
-Installed-Size: 495
+Version: 3.56.2-4
+Installed-Size: 491
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libedata-cal-2.0-2
-Provides: libedata-cal-2.0-2 (= 3.56.2-3)
+Provides: libedata-cal-2.0-2 (= 3.56.2-4)
 Depends: libc6 (>= 2.14), libcamel-1.2-64t64 (>= 3.24.1), libebackend-1.2-11t64 (>= 3.49.2), libecal-2.0-3 (>= 3.47.3), libedataserver-1.2-27t64 (>= 3.49.2), libglib2.0-0t64 (>= 2.70.0), libical3t64 (>= 3.0.7), libsoup-3.0-0 (>= 3.1.1), libsqlite3-0 (>= 3.5.9)
-Breaks: libedata-cal-2.0-2 (<< 3.56.2-3)
+Breaks: libedata-cal-2.0-2 (<< 3.56.2-4)
 Description: Backend library for evolution calendars
 Multi-Arch: same
 Homepage: https://gitlab.gnome.org/GNOME/evolution/-/wikis/home
 Description-md5: 6f9b6ccd1e5738678caa1d75cb84cf43
 libs
 Priority: optional
-Filename: pool/main/e/evolution-data-server/libedata-cal-2.0-2t64_3.56.2-3_amd64.deb
-Size: 134944
-MD5sum: 35f41bc165f7ff625d3d6dfd5967ec3e
-SHA256: 3700fb1159cac58f16c3683fa8821610994fe2bd8bbe932108379646120c9eeb
+Filename: pool/main/e/evolution-data-server/libedata-cal-2.0-2t64_3.56.2-4_amd64.deb
+Size: 136276
+MD5sum: fb9b60bf84610756a5dc9df39e6e9fda
+SHA256: 7432348e928657ae1841faa575f05638ea772a76246fbb5790f2f7b34c78be00
 
 Package: libedataserver-1.2-27t64
 Source: evolution-data-server
-Version: 3.56.2-3
+Version: 3.56.2-4
 Installed-Size: 1020
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libedataserver-1.2-27
-Provides: libedataserver-1.2-27 (= 3.56.2-3)
-Depends: libc6 (>= 2.14), libcamel-1.2-64t64 (>= 3.53.2), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.68.0), libicu76 (>= 76.1-1~), libjson-glib-1.0-0 (>= 1.5.2), libsecret-1-0 (>= 0.7), libsoup-3.0-0 (>= 3.3.1), libstdc++6 (>= 5.2), libuuid1 (>= 2.16), libxml2-16 (>= 2.14.1), evolution-data-server-common (>= 3.56)
-Breaks: libedataserver-1.2-27 (<< 3.56.2-3)
+Provides: libedataserver-1.2-27 (= 3.56.2-4)
+Depends: libc6 (>= 2.38), libcamel-1.2-64t64 (>= 3.53.2), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.68.0), libicu76 (>= 76.1-1~), libjson-glib-1.0-0 (>= 1.5.2), libsecret-1-0 (>= 0.7), libsoup-3.0-0 (>= 3.3.1), libstdc++6 (>= 5.2), libuuid1 (>= 2.16), libxml2-16 (>= 2.14.1), evolution-data-server-common (>= 3.56)
+Breaks: libedataserver-1.2-27 (<< 3.56.2-4)
 Description: Utility library for evolution data servers
 Multi-Arch: same
 Homepage: https://gitlab.gnome.org/GNOME/evolution/-/wikis/home
 Description-md5: fda04a0fcd5d6e38514bd04afa3d3e7f
 libs
 Priority: optional
-Filename: pool/main/e/evolution-data-server/libedataserver-1.2-27t64_3.56.2-3_amd64.deb
-Size: 273916
-MD5sum: 6c32013e20c3ec43e9f86138c1590c8b
-SHA256: 221c8a5692c7448c29ebd7637a0c4c3f915bdc93682f77131ad0b4c6190c37c0
+Filename: pool/main/e/evolution-data-server/libedataserver-1.2-27t64_3.56.2-4_amd64.deb
+Size: 275116
+MD5sum: 027d6e67409fa12943ff5f0084fae47a
+SHA256: 3a87693cfe1d5cbc83e73fd50399a7b31278a37ca4bb03c11c00e50971b69efd
 
 Package: libedataserverui-1.2-4t64
 Source: evolution-data-server
-Version: 3.56.2-3
+Version: 3.56.2-4
 Installed-Size: 257
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libedataserverui-1.2-4
-Provides: libedataserverui-1.2-4 (= 3.56.2-3)
-Depends: libc6 (>= 2.14), libcairo2 (>= 1.2.4), libcamel-1.2-64t64 (>= 3.19.92), libecal-2.0-3 (>= 3.45.2), libedataserver-1.2-27t64 (>= 3.53.2), libglib2.0-0t64 (>= 2.66.0), libgtk-3-0t64 (>= 3.19.12), libical3t64 (>= 3.0.7), libnspr4 (>= 2:4.9-2~), libnss3 (>= 2:3.13.4-2~), libpango-1.0-0 (>= 1.14.0), libsoup-3.0-0 (>= 3.1.1), libwebkit2gtk-4.1-0 (>= 2.31.1), evolution-data-server-common (>= 3.56)
-Breaks: libedataserverui-1.2-4 (<< 3.56.2-3)
+Provides: libedataserverui-1.2-4 (= 3.56.2-4)
+Depends: libc6 (>= 2.38), libcairo2 (>= 1.2.4), libcamel-1.2-64t64 (>= 3.19.92), libecal-2.0-3 (>= 3.45.2), libedataserver-1.2-27t64 (>= 3.53.2), libglib2.0-0t64 (>= 2.66.0), libgtk-3-0t64 (>= 3.19.12), libical3t64 (>= 3.0.7), libnspr4 (>= 2:4.9-2~), libnss3 (>= 2:3.13.4-2~), libpango-1.0-0 (>= 1.14.0), libsoup-3.0-0 (>= 3.1.1), libwebkit2gtk-4.1-0 (>= 2.31.1), evolution-data-server-common (>= 3.56)
+Breaks: libedataserverui-1.2-4 (<< 3.56.2-4)
 Description: Utility library for evolution data servers
 Multi-Arch: same
 Homepage: https://gitlab.gnome.org/GNOME/evolution/-/wikis/home
 Description-md5: 9029e4b9b34817b7416ca538ebbcce0f
 libs
 Priority: optional
-Filename: pool/main/e/evolution-data-server/libedataserverui-1.2-4t64_3.56.2-3_amd64.deb
-Size: 80408
-MD5sum: 8b0b0ccc74d8ba0bb2a1d70105421cbe
-SHA256: 2bbf1273b34d878b787dd5b6b5764b5c1bb198dd12c5bf54623f3ff4ae8ec66e
+Filename: pool/main/e/evolution-data-server/libedataserverui-1.2-4t64_3.56.2-4_amd64.deb
+Size: 81172
+MD5sum: aedab2ee4242ec46821c67c4bb40fd79
+SHA256: 97b11a2c848c92f5afa68906fd3c3beade0e3fc9fd213594bcdfbd7eb500102d
 
 Package: libedataserverui4-1.0-0t64
 Source: evolution-data-server
-Version: 3.56.2-3
+Version: 3.56.2-4
 Installed-Size: 257
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libedataserverui4-1.0-0
-Provides: libedataserverui4-1.0-0 (= 3.56.2-3)
-Depends: libc6 (>= 2.14), libcamel-1.2-64t64 (>= 3.19.92), libecal-2.0-3 (>= 3.45.2), libedataserver-1.2-27t64 (>= 3.53.2), libglib2.0-0t64 (>= 2.66.0), libgtk-4-1 (>= 4.4), libical3t64 (>= 3.0.7), libnspr4 (>= 2:4.9-2~), libnss3 (>= 2:3.13.4-2~), libpango-1.0-0 (>= 1.14.0), libsoup-3.0-0 (>= 3.1.1), libwebkitgtk-6.0-4 (>= 2.39.7), evolution-data-server-common (>= 3.56)
-Breaks: libedataserverui4-1.0-0 (<< 3.56.2-3)
+Provides: libedataserverui4-1.0-0 (= 3.56.2-4)
+Depends: libc6 (>= 2.38), libcamel-1.2-64t64 (>= 3.19.92), libecal-2.0-3 (>= 3.45.2), libedataserver-1.2-27t64 (>= 3.53.2), libglib2.0-0t64 (>= 2.66.0), libgtk-4-1 (>= 4.4), libical3t64 (>= 3.0.7), libnspr4 (>= 2:4.9-2~), libnss3 (>= 2:3.13.4-2~), libpango-1.0-0 (>= 1.14.0), libsoup-3.0-0 (>= 3.1.1), libwebkitgtk-6.0-4 (>= 2.39.7), evolution-data-server-common (>= 3.56)
+Breaks: libedataserverui4-1.0-0 (<< 3.56.2-4)
 Description: GTK4 utility library for evolution data servers
 Multi-Arch: same
 Homepage: https://gitlab.gnome.org/GNOME/evolution/-/wikis/home
 Description-md5: 2117f764eeb92db885602f6e92db7161
 libs
 Priority: optional
-Filename: pool/main/e/evolution-data-server/libedataserverui4-1.0-0t64_3.56.2-3_amd64.deb
-Size: 80888
-MD5sum: c80eb791b5fab96c6ad434efabad3820
-SHA256: 69aa8c68585bc8c1cf85484b4ff533853e0f04a5a899fa50cf4e08d2c0289900
+Filename: pool/main/e/evolution-data-server/libedataserverui4-1.0-0t64_3.56.2-4_amd64.deb
+Size: 82408
+MD5sum: 25ef5c3788d000a12e67a1063fb37106
+SHA256: cd81290932105d116920079d2b55263a4a793573f995eb099ecb21f5728d818a
 
 Package: libexecline2.9
 Source: execline
@@ -28789,29 +28825,29 @@ SHA256: 6db1e755dfae921190227d9bb528a0666b4229bf173d5c3fb9d92cbb5be927da
 
 Package: gdk-pixbuf-tests
 Source: gdk-pixbuf
-Version: 2.44.3+dfsg-3
+Version: 2.44.4+dfsg-1
 Installed-Size: 19967
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libgdk-pixbuf-2.0-0 (= 2.44.3+dfsg-3), libc6 (>= 2.34), libglib2.0-0t64 (>= 2.78.0)
+Depends: libgdk-pixbuf-2.0-0 (= 2.44.4+dfsg-1), libc6 (>= 2.34), libglib2.0-0t64 (>= 2.78.0)
 Description: installed tests for the GDK Pixbuf library
 Homepage: https://www.gtk.org/
 Description-md5: cf0f6aef61d499ed22f97ebc5d8c2d7b
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/g/gdk-pixbuf/gdk-pixbuf-tests_2.44.3+dfsg-3_amd64.deb
-Size: 5750096
-MD5sum: 117778da36c2fb090bfc060757cc45e3
-SHA256: 933c031eb492ba7708c2a4b9451e17f0dfc0a5e89a41220529648a533a3375f8
+Filename: pool/main/g/gdk-pixbuf/gdk-pixbuf-tests_2.44.4+dfsg-1_amd64.deb
+Size: 5750444
+MD5sum: 467495b8ddb43a0d0b60867fee9656b5
+SHA256: c05f5d45ee4b8300aef136ac7dc231ef43868d1ff42648ce9ffde99d87298735
 
 Package: libgdk-pixbuf-2.0-0
 Source: gdk-pixbuf
-Version: 2.44.3+dfsg-3
+Version: 2.44.4+dfsg-1
 Installed-Size: 486
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libgdk-pixbuf2.0-common (>= 2.44.3+dfsg-3), shared-mime-info, libc6 (>= 2.34), libglib2.0-0t64 (>= 2.80.0), libjpeg62-turbo (>= 1.3.1), libpng16-16t64 (>= 1.6.46), libtiff6 (>= 4.0.3)
+Depends: libgdk-pixbuf2.0-common (>= 2.44.4+dfsg-1), shared-mime-info, libc6 (>= 2.34), libglib2.0-0t64 (>= 2.80.0), libjpeg62-turbo (>= 1.3.1), libpng16-16t64 (>= 1.6.46), libtiff6 (>= 4.0.3)
 Recommends: libgdk-pixbuf2.0-bin
 Description: GDK Pixbuf library
 Multi-Arch: same
@@ -28820,14 +28856,14 @@ Description-md5: 63eb319f3f676573afbb3b5585491e65
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/g/gdk-pixbuf/libgdk-pixbuf-2.0-0_2.44.3+dfsg-3_amd64.deb
-Size: 144080
-MD5sum: c62d9e0cb6b5581f3e14a624064e01e2
-SHA256: 8d74430092ddfd085ddee37c1a89c0fda151dd3a0f35ea3d3403e32f34b14909
+Filename: pool/main/g/gdk-pixbuf/libgdk-pixbuf-2.0-0_2.44.4+dfsg-1_amd64.deb
+Size: 144296
+MD5sum: 9f184c43f8d2a9a9f9959348fa14d48d
+SHA256: 02b30241d1263f9007e4dfa3c0e49759908891d404f1844971866abaa33c7158
 
 Package: libgdk-pixbuf2.0-bin
 Source: gdk-pixbuf
-Version: 2.44.3+dfsg-3
+Version: 2.44.4+dfsg-1
 Installed-Size: 75
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -28839,14 +28875,14 @@ Description-md5: 35212098c2856a678bbe604af64e8ee8
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/g/gdk-pixbuf/libgdk-pixbuf2.0-bin_2.44.3+dfsg-3_amd64.deb
-Size: 19236
-MD5sum: 01066c809ccb816b7cb84dac8bbf6969
-SHA256: f7ab35c861190148c2c77a728dffb26e5bcc043277297dadd475ecc73ff7ce9b
+Filename: pool/main/g/gdk-pixbuf/libgdk-pixbuf2.0-bin_2.44.4+dfsg-1_amd64.deb
+Size: 19296
+MD5sum: bfe6b3808d40260e8fd41cb2f58208a0
+SHA256: 447d92ada4101e233979cbe6d0f89885f2f338895a0756beea778df37f371a70
 
 Package: libgdk-pixbuf2.0-common
 Source: gdk-pixbuf
-Version: 2.44.3+dfsg-3
+Version: 2.44.4+dfsg-1
 Installed-Size: 2570
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: all
@@ -28857,10 +28893,10 @@ Description-md5: cd3fff9d184ca859b9cd83a1a6a9e258
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/g/gdk-pixbuf/libgdk-pixbuf2.0-common_2.44.3+dfsg-3_all.deb
-Size: 313068
-MD5sum: a47bc30f7fc6087fce5baf5711e45fa2
-SHA256: 3e9da065e31cc7be57e2c0eabcc680bd08563bab9eb48eab06c6fe6d307c6310
+Filename: pool/main/g/gdk-pixbuf/libgdk-pixbuf2.0-common_2.44.4+dfsg-1_all.deb
+Size: 313144
+MD5sum: 218d7b2edb532ea7e120f774cb53fefe
+SHA256: cce9589bb41a6b12819d99f1c3b405106a4fa380e5a501362af5d225347bae71
 
 Package: libgdm1
 Source: gdm3
@@ -30374,50 +30410,50 @@ SHA256: 545f6d24809a79f3b527ec37c30dee0b2c3b18c1466e7983d8e7b0a2cc3a4431
 
 Package: libgirepository-2.0-0
 Source: glib2.0
-Version: 2.86.0-5
-Installed-Size: 363
+Version: 2.86.1-1
+Installed-Size: 364
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Provides: libgirepository-2.0-0-with-libffi8 (= 2.86.0-5)
-Depends: libc6 (>= 2.38), libffi8 (>= 3.4), libglib2.0-0t64 (= 2.86.0-5)
+Provides: libgirepository-2.0-0-with-libffi8 (= 2.86.1-1)
+Depends: libc6 (>= 2.38), libffi8 (>= 3.4), libglib2.0-0t64 (= 2.86.1-1)
 Description: GLib runtime library for handling GObject introspection data
 Multi-Arch: same
 Homepage: https://gitlab.gnome.org/GNOME/glib
 Description-md5: affc8d6f4ac284342f4f650559090e49
 libs
 Priority: optional
-Filename: pool/main/g/glib2.0/libgirepository-2.0-0_2.86.0-5_amd64.deb
-Size: 145080
-MD5sum: 7fe89b34abaee248a250458252815ecc
-SHA256: 760f3e841da1c53961db23114f36243b51a3cb5cb3b5ce452c859fb11a1f2721
+Filename: pool/main/g/glib2.0/libgirepository-2.0-0_2.86.1-1_amd64.deb
+Size: 145872
+MD5sum: 5f39302434b7b35a0787a65cddcc2265
+SHA256: 62303ba8971347dfa9a5af98d2c1eff48c18bec9d594aa9be27ac239818fd312
 
 Package: libglib2.0-0t64
 Source: glib2.0
-Version: 2.86.0-5
-Installed-Size: 4477
+Version: 2.86.1-1
+Installed-Size: 4479
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libglib2.0-0 (<< 2.80.0-7~)
-Provides: libgio-2.0-0 (= 2.86.0-5), libglib-2.0-0 (= 2.86.0-5), libglib2.0-0 (= 2.86.0-5), libgmodule-2.0-0 (= 2.86.0-5), libgobject-2.0-0 (= 2.86.0-5), libgthread-2.0-0 (= 2.86.0-5)
+Provides: libgio-2.0-0 (= 2.86.1-1), libglib-2.0-0 (= 2.86.1-1), libglib2.0-0 (= 2.86.1-1), libgmodule-2.0-0 (= 2.86.1-1), libgobject-2.0-0 (= 2.86.1-1), libgthread-2.0-0 (= 2.86.1-1)
 Depends: libatomic1 (>= 4.8), libc6 (>= 2.38), libffi8 (>= 3.4), libmount1 (>= 2.40~rc2), libpcre2-8-0 (>= 10.22), libselinux1 (>= 3.1~), zlib1g (>= 1:1.2.2)
 Recommends: libglib2.0-data, shared-mime-info, xdg-user-dirs
 Suggests: low-memory-monitor
-Breaks: glib-networking-tests (<< 2.70.0~), gnome-keyring (<< 40.0-3~), gnome-shell (<< 44.9-2~), libedataserver-1.2-26 (<< 3.44.3-2~), libgladeui-2-6 (<< 3.22.2), libglib2.0-0 (<< 2.80.0-7~), libsoup2.4-tests (<< 2.72.0-3~)
+Breaks: gnome-shell (<< 44.9-2~), libglib2.0-0 (<< 2.80.0-7~)
 Description: GLib library of C routines
 Multi-Arch: same
 Homepage: https://gitlab.gnome.org/GNOME/glib
 Description-md5: f44de6293be1aa02cd13d73f591580a9
 libs
 Priority: optional
-Filename: pool/main/g/glib2.0/libglib2.0-0t64_2.86.0-5_amd64.deb
-Size: 1544436
-MD5sum: 5143f3ff3c762ec7d4039bbb5ea7b28d
-SHA256: 799304d5e831add4636059dd822b64865c170b1679b8baadd84e673405333605
+Filename: pool/main/g/glib2.0/libglib2.0-0t64_2.86.1-1_amd64.deb
+Size: 1545884
+MD5sum: 9bd4f184cb2122811ff5855ece96d0d5
+SHA256: 732c60864d5b4c03a6cb4886287a0598bbf538637acad2ba92ca4a1f8f95057f
 
 Package: libglib2.0-data
 Source: glib2.0
-Version: 2.86.0-5
-Installed-Size: 9951
+Version: 2.86.1-1
+Installed-Size: 9953
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: all
 Description: Common files for GLib library
@@ -30427,18 +30463,18 @@ Description-md5: e30141317e2f372da30c78d06ac076ee
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/g/glib2.0/libglib2.0-data_2.86.0-5_all.deb
-Size: 1289932
-MD5sum: 3ae64b716e376d769a4e4df33c68d5d2
-SHA256: 575ac91dc6c76ae72f7a9b5d6333ad2cfbb5d4fb04062375140d13647a388020
+Filename: pool/main/g/glib2.0/libglib2.0-data_2.86.1-1_all.deb
+Size: 1287680
+MD5sum: ab796447c537a316512b24e449665dff
+SHA256: 7a90bfa74bc90805ef9f020ae728f590eedd2a937780dd7ab5eafe58d98c06ee
 
 Package: libglib2.0-tests
 Source: glib2.0
-Version: 2.86.0-5
-Installed-Size: 16926
+Version: 2.86.1-1
+Installed-Size: 16979
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: desktop-file-utils, gir1.2-gio-2.0-dev, gir1.2-glib-2.0-dev, gir1.2-gobject-2.0-dev, libglib2.0-bin, libglib2.0-dev-bin, python3-dbus, python3-dbusmock, python3-gi, shared-mime-info, tzdata-legacy, python3.13, python3:any, libatomic1 (>= 4.8), libc6 (>= 2.38), libdbus-1-3 (>= 1.10), libffi8 (>= 3.4), libgcc-s1 (>= 3.0), libgirepository-2.0-0 (= 2.86.0-5), libglib2.0-0t64 (= 2.86.0-5), libpcre2-8-0 (>= 10.22), libstdc++6 (>= 4.1.1)
+Depends: desktop-file-utils, gir1.2-gio-2.0-dev, gir1.2-glib-2.0-dev, gir1.2-gobject-2.0-dev, libglib2.0-bin, libglib2.0-dev-bin, python3-dbus, python3-dbusmock, python3-gi, shared-mime-info, tzdata-legacy, python3.13, python3:any, libatomic1 (>= 4.8), libc6 (>= 2.38), libdbus-1-3 (>= 1.10), libffi8 (>= 3.4), libgcc-s1 (>= 3.0), libgirepository-2.0-0 (= 2.86.1-1), libglib2.0-0t64 (= 2.86.1-1), libpcre2-8-0 (>= 10.22), libstdc++6 (>= 4.1.1)
 Recommends: xdg-desktop-portal
 Description: GLib library of C routines - installed tests
 Homepage: https://gitlab.gnome.org/GNOME/glib
@@ -30446,10 +30482,10 @@ Description-md5: 08c6a283a0e7547a1f8014a0ba341a09
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/g/glib2.0/libglib2.0-tests_2.86.0-5_amd64.deb
-Size: 2618920
-MD5sum: da05d5b5568cfc270e34f4d5309553d9
-SHA256: 61121296bd69fd022d32b994892ac3058c7f62efbb175fbc47bd09f7969c9522
+Filename: pool/main/g/glib2.0/libglib2.0-tests_2.86.1-1_amd64.deb
+Size: 2620676
+MD5sum: 9215c42e40495b982ca6394043e08869
+SHA256: d0b227a703324f9bac466b2e0152bb991cef1d9725f53d65e777d0e6ee4cf65a
 
 Package: libc-bin
 Source: glibc
@@ -36798,26 +36834,26 @@ MD5sum: bcdff11c8d9a9f83bcb5078ddc7eaae3
 SHA256: 48bb059a08727afb3c29473f410cfafecc4f948eae556bf902dac3f2bf684d6b
 
 Package: libgyoto9t64
-Source: gyoto (2.0.2-6)
-Version: 2.0.2-6+b3
-Installed-Size: 4753
+Source: gyoto
+Version: 2.0.2-7
+Installed-Size: 4516
 Maintainer: Debian Astronomy Maintainers <debian-astro-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libgyoto9
-Provides: libgyoto9 (= 2.0.2-6+b3)
+Provides: libgyoto9 (= 2.0.2-7)
 Depends: libboost-mpi1.83.0 (>= 1.83.0), libboost-serialization1.83.0 (>= 1.83.0), libc6 (>= 2.38), libcfitsio10t64 (>= 4.2.0~), libflint21 (>= 3.3.1), libgcc-s1 (>= 3.0), liblorene-debian1t64, libstdc++6 (>= 13.1), libudunits2-0 (>= 2.2.14), libxerces-c3.2t64
-Recommends: gyoto-bin (>= 2.0.2-6+b3), mpi-default-bin
-Breaks: libgyoto9 (<< 2.0.2-6)
+Recommends: gyoto-bin (>= 2.0.2-7), mpi-default-bin
+Breaks: libgyoto9 (<< 2.0.2-7)
 Description: Gyoto framework main library an standard plug-in
 Multi-Arch: same
 Homepage: http://gyoto.obspm.fr
 Description-md5: 2fddfc4f8e4feaf0bdc81b8dd73e47ac
 libs
 Priority: optional
-Filename: pool/main/g/gyoto/libgyoto9t64_2.0.2-6+b3_amd64.deb
-Size: 1400192
-MD5sum: cd7f2a628a54c74ec7f49e2f7a8c98e3
-SHA256: ae8ed48927172fabb1b2bd7833c88fb407990fd9761667782bb7d2c8860968b8
+Filename: pool/main/g/gyoto/libgyoto9t64_2.0.2-7_amd64.deb
+Size: 1350276
+MD5sum: cbe26a810cd6588375bf18520d332c3b
+SHA256: 79cd0f50b3575ab18226e2c4a231264f4303ac7974b8cf24de745d6461880af4
 
 Package: libgypsy0
 Source: gypsy
@@ -50789,64 +50825,6 @@ Size: 99656
 MD5sum: 56ffc356e5e34ee5936499f6306606e9
 SHA256: a42da6bc6090104c373843dc871e61119861ca89161f01293cf3dd53780ee297
 
-Package: libkuserfeedbackcore1
-Source: kuserfeedback
-Version: 1.3.0-9
-Installed-Size: 316
-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Architecture: amd64
-Depends: libkuserfeedback-l10n (>= 1.3.0-9), libc6 (>= 2.38), libqt5core5t64 (>= 5.15.1), libqt5gui5t64 (>= 5.8.0~) | libqt5gui5-gles (>= 5.8.0~), libqt5network5t64 (>= 5.8.0~), libstdc++6 (>= 5)
-Description: user feedback for applications - Qt 5 core library
-Multi-Arch: same
-Homepage: https://invent.kde.org/libraries/kuserfeedback
-Description-md5: b45a96e477308ee3e90ffef163db4971
-Tag: role::shared-lib
-libs
-Priority: optional
-Filename: pool/main/k/kuserfeedback/libkuserfeedbackcore1_1.3.0-9_amd64.deb
-Size: 88052
-MD5sum: c01573adb7e7868bcb5a94740700f7cb
-SHA256: db701b81a91915f1c5e82cdd2c2447c0add1778734ab4b96e2d3eb6a7180263d
-
-Package: libkuserfeedbackwidgets1
-Source: kuserfeedback
-Version: 1.3.0-9
-Installed-Size: 105
-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Architecture: amd64
-Depends: libc6 (>= 2.4), libkuserfeedbackcore1 (>= 1.0.0), libqt5core5t64 (>= 5.15.1), libqt5gui5t64 (>= 5.14.1) | libqt5gui5-gles (>= 5.14.1), libqt5widgets5t64 (>= 5.8.0~), libstdc++6 (>= 5)
-Recommends: qml-module-org-kde-userfeedback (= 1.3.0-9)
-Description: user feedback for applications - Qt 5 widgets library
-Multi-Arch: same
-Homepage: https://invent.kde.org/libraries/kuserfeedback
-Description-md5: 533a6302a90ac7b23c04344c7d7bae73
-Tag: role::shared-lib
-libs
-Priority: optional
-Filename: pool/main/k/kuserfeedback/libkuserfeedbackwidgets1_1.3.0-9_amd64.deb
-Size: 25988
-MD5sum: 862c0bd706a13c25a8c2470806708459
-SHA256: c5c270621fc4a5734424c203ef2b3d033803680457b3bdc417a7b9d8f1baa59f
-
-Package: qml-module-org-kde-userfeedback
-Source: kuserfeedback
-Version: 1.3.0-9
-Installed-Size: 125
-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Architecture: amd64
-Depends: libc6 (>= 2.14), libkuserfeedbackcore1 (>= 1.0.0), libqt5core5t64 (>= 5.15.1), libqt5qml5 (>= 5.0.2), libstdc++6 (>= 5)
-Description: user feedback for applications - Qt 5 QML module
-Multi-Arch: same
-Homepage: https://invent.kde.org/libraries/kuserfeedback
-Description-md5: 78e74affaff22aa93efc0afd1f993363
-Tag: role::shared-lib
-libs
-Priority: optional
-Filename: pool/main/k/kuserfeedback/qml-module-org-kde-userfeedback_1.3.0-9_amd64.deb
-Size: 23964
-MD5sum: 4dac3933d13e1e9a371b9e33f3335659
-SHA256: 652ae13725fdf0babf75d91e61ed6cd8a5f74516a746a7232921862f4f22b035
-
 Package: libkvazaar7
 Source: kvazaar
 Version: 2.3.2-1
@@ -50963,7 +50941,7 @@ SHA256: 028aaad4c4d7409743be45547d4081d38820acd9b4a39f1c73a11a9a5a0e2c17
 
 Package: kwayland6-data
 Source: kwayland
-Version: 4:6.3.4-1
+Version: 4:6.5.0-1
 Installed-Size: 19
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: all
@@ -50973,28 +50951,28 @@ Homepage: https://invent.kde.org/frameworks/kwayland
 Description-md5: e3766990fca3ac018441517d3288eb9c
 libs
 Priority: optional
-Filename: pool/main/k/kwayland/kwayland6-data_6.3.4-1_all.deb
-Size: 7084
-MD5sum: e61b2164e9aa26f5fb4feb95317c56d0
-SHA256: d05196d18dd2fa0ca49527732281311a98265818424abd87c6f5a93080e57453
+Filename: pool/main/k/kwayland/kwayland6-data_6.5.0-1_all.deb
+Size: 6796
+MD5sum: f869f591e3eed6bc25dc6be795b03a05
+SHA256: 47f3a371a1e6a4cd656843cccc65cb17f7bf29593dbbf592c7aeecdfd43a0131
 
 Package: libkwaylandclient6
-Source: kwayland (4:6.3.4-1)
-Version: 4:6.3.4-1+b1
-Installed-Size: 1101
+Source: kwayland
+Version: 4:6.5.0-1
+Installed-Size: 1100
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
-Depends: kwayland6-data (= 4:6.3.4-1), libc6 (>= 2.27), libqt6core6t64 (>= 6.9.1), libqt6gui6 (>= 6.7.0~), libqt6waylandclient6 (>= 6.7.0~), libstdc++6 (>= 5), libwayland-client0 (>= 1.20.0), qt6-base-private-abi (= 6.9.2), qt6-waylandclient-private-abi (= 6.9.2)
+Depends: kwayland6-data (= 4:6.5.0-1), libc6 (>= 2.27), libqt6core6t64 (>= 6.9.1), libqt6gui6 (>= 6.9.0~), libqt6waylandclient6 (>= 6.7.0~), libstdc++6 (>= 5), libwayland-client0 (>= 1.20.0), qt6-base-private-abi (= 6.9.2), qt6-waylandclient-private-abi (= 6.9.2)
 Description: Qt library wrapper for Wayland libraries
 Multi-Arch: same
 Homepage: https://invent.kde.org/frameworks/kwayland
 Description-md5: bee918373877d21733cbf5894eb67d58
 libs
 Priority: optional
-Filename: pool/main/k/kwayland/libkwaylandclient6_6.3.4-1+b1_amd64.deb
-Size: 200136
-MD5sum: 9305a71ff33ce859e82675a4674b9ab9
-SHA256: c988f3f86e167f776bc335e620812a0949fc6778dacf41da2599cb0c0fe4a22a
+Filename: pool/main/k/kwayland/libkwaylandclient6_6.5.0-1_amd64.deb
+Size: 200392
+MD5sum: d0d5fe7d32ec2f01de023bb03ef43aa3
+SHA256: 8542e517580189e8ed1fc3ea9e532f6c8440ebebf0fd2fee5f154c3d7c8cf9d3
 
 Package: kwayland5-data
 Source: kwayland-kf5
@@ -53691,25 +53669,6 @@ Size: 25128
 MD5sum: 4f4258c3cf08cffbd5b9ef0068c34179
 SHA256: 2f1525046a4dc9097f6edbe02fa05c35e7f4e6941fcc9f53c4d41ea9b622291e
 
-Package: libbitmask1
-Source: libbitmask (2.0-5)
-Version: 2.0-5+b2
-Installed-Size: 39
-Maintainer: Debian QA Group <packages@qa.debian.org>
-Architecture: amd64
-Depends: libc6 (>= 2.7)
-Description: supports multi-word bitmask operations
-Multi-Arch: same
-Homepage: http://oss.sgi.com/projects/cpusets/
-Description-md5: 5a9693fca107bda778becadeaf910e27
-Tag: role::shared-lib
-libs
-Priority: optional
-Filename: pool/main/libb/libbitmask/libbitmask1_2.0-5+b2_amd64.deb
-Size: 10544
-MD5sum: 5837cdb0d6e4afff0001ca3d9534c50c
-SHA256: e1a75e745e7e5dbb6dd7270fa0622d5f70eae0f35ab6261bc7603d170d8f19e3
-
 Package: libblkio1
 Source: libblkio
 Version: 1.5.0-3
@@ -56136,27 +56095,6 @@ Filename: pool/main/libc/libcpuid/libcpuid18_0.8.1+repack1-0.1_amd64.deb
 Size: 55508
 MD5sum: 279f38cf868f2ba521fe42631a728537
 SHA256: 28026d1b3da7ce8ff5f3970bb6be5fa1768c8fc7708f295b6cb84b7a524872b0
-
-Package: libcpuset1t64
-Source: libcpuset (1.0-6.1)
-Version: 1.0-6.1+b1
-Installed-Size: 100
-Maintainer: Debian QA Group <packages@qa.debian.org>
-Architecture: amd64
-Replaces: libcpuset1
-Provides: libcpuset1 (= 1.0-6.1+b1)
-Depends: libbitmask1 (>= 2.0), libc6 (>= 2.33)
-Breaks: libcpuset1 (<< 1.0-6.1)
-Description: assigns a set of CPUs and Memory Nodes to a set of tasks
-Multi-Arch: same
-Homepage: http://oss.sgi.com/projects/cpusets/
-Description-md5: 0d2f2166dc89c74c09c666ab94a07fdc
-libs
-Priority: optional
-Filename: pool/main/libc/libcpuset/libcpuset1t64_1.0-6.1+b1_amd64.deb
-Size: 39972
-MD5sum: 8e933c36ecfe77144d60b47295f04768
-SHA256: 85f4f46bc5f58a319d8a69c94fa023c149e9e516eb6c1b055e09cb6ae534029a
 
 Package: libcrcutil0t64
 Source: libcrcutil
@@ -71780,23 +71718,23 @@ SHA256: 6468af305c29e5c7024efbf35bb8708eff19eb15aef02434b14de19ca86bdeac
 
 Package: libpodofo0.9.8t64
 Source: libpodofo
-Version: 0.9.8+dfsg-3.2
-Installed-Size: 1898
+Version: 0.9.8+dfsg-3.3
+Installed-Size: 1899
 Maintainer: Mattia Rizzolo <mattia@debian.org>
 Architecture: amd64
 Replaces: libpodofo0.9.8
-Provides: libpodofo0.9.8 (= 0.9.8+dfsg-3.2)
-Depends: libc6 (>= 2.38), libfontconfig1 (>= 2.12.6), libfreetype6 (>= 2.2.1), libgcc-s1 (>= 3.0), libidn12 (>= 1.13), libjpeg62-turbo (>= 1.3.1), libpng16-16t64 (>= 1.6.2), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libtiff6 (>= 4.0.3), libunistring5 (>= 1.1), zlib1g (>= 1:1.1.4)
-Breaks: libpodofo0.9.8 (<< 0.9.8+dfsg-3.2)
+Provides: libpodofo0.9.8 (= 0.9.8+dfsg-3.3)
+Depends: libc6 (>= 2.38), libfontconfig1 (>= 2.12.6), libfreetype6 (>= 2.2.1), libgcc-s1 (>= 3.0), libidn12 (>= 1.13), libjpeg62-turbo (>= 1.3.1), libpng16-16t64 (>= 1.6.46), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libtiff6 (>= 4.0.3), libunistring5 (>= 1.1), zlib1g (>= 1:1.1.4)
+Breaks: libpodofo0.9.8 (<< 0.9.8+dfsg-3.3)
 Description: PoDoFo - library to work with the PDF file format
 Homepage: http://podofo.sourceforge.net
 Description-md5: d06b9c84c314e7bd8952e46d020948a4
 libs
 Priority: optional
-Filename: pool/main/libp/libpodofo/libpodofo0.9.8t64_0.9.8+dfsg-3.2_amd64.deb
-Size: 556440
-MD5sum: 763450c9b99c45c33ef1d3da9774b086
-SHA256: 03d55e413e902322ca527231c96f24507eac48cd2e0a673b9841819dcd710537
+Filename: pool/main/libp/libpodofo/libpodofo0.9.8t64_0.9.8+dfsg-3.3_amd64.deb
+Size: 557800
+MD5sum: 9a85639e8e7a2ac268b349d5ce205a2b
+SHA256: 1e43f32be70a12a9788f15059b932bc1f320cf4da976751cc74c914a8f66afd6
 
 Package: libpolyclipping22
 Source: libpolyclipping (6.4.2-8)
@@ -74655,8 +74593,8 @@ SHA256: 32a5d0694b829fc381792728073b2847cba2901e0a98c55cfa00b98631fda336
 
 Package: libselinux1
 Source: libselinux
-Version: 3.8.1-1
-Installed-Size: 229
+Version: 3.9-2
+Installed-Size: 221
 Maintainer: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libpcre2-8-0 (>= 10.22)
@@ -74667,14 +74605,14 @@ Description-md5: 90f6e1cb06c527bc3fc11ec6f969c59c
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/libs/libselinux/libselinux1_3.8.1-1_amd64.deb
-Size: 84680
-MD5sum: 6f70ae12d588cad7039e43c24449cc13
-SHA256: 68bb8d32bd8d6d7d2f5952a169db03d1484b46ae1e52abccdec42a19dccea5d5
+Filename: pool/main/libs/libselinux/libselinux1_3.9-2_amd64.deb
+Size: 85432
+MD5sum: dc53e81d630b67f3a4808e33e7dc8098
+SHA256: 56a808052245f260b851e84fb5053793ebf085609e62d76f977585671ae95032
 
 Package: libsemanage-common
 Source: libsemanage
-Version: 3.8.1-1
+Version: 3.9-1
 Installed-Size: 21
 Maintainer: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
 Architecture: all
@@ -74685,18 +74623,18 @@ Description-md5: c7a0a093650c85e838f42492add9b46b
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/libs/libsemanage/libsemanage-common_3.8.1-1_all.deb
-Size: 7812
-MD5sum: e27a7f67a7f2d8a78ccc5d7ff402a103
-SHA256: 65375d886749c236bd1da4d9990b7c2469d2fe66019a28e5614f6814376d3dcb
+Filename: pool/main/libs/libsemanage/libsemanage-common_3.9-1_all.deb
+Size: 7888
+MD5sum: 17e81c33446b359bc0ec07f31875c446
+SHA256: 1c6632ab411d32f5bbc7cd848ba9b0165865a9a052a105231af2b069fc1f2cca
 
 Package: libsemanage2
 Source: libsemanage
-Version: 3.8.1-1
-Installed-Size: 313
+Version: 3.9-1
+Installed-Size: 317
 Maintainer: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libsemanage-common (>= 3.8.1-1), libaudit1 (>= 1:2.2.1), libbz2-1.0, libc6 (>= 2.38), libselinux1 (>= 3.8.1), libsepol2 (>= 3.8.1)
+Depends: libsemanage-common (>= 3.9-1), libaudit1 (>= 1:2.2.1), libbz2-1.0, libc6 (>= 2.38), libselinux1 (>= 3.9), libsepol2 (>= 3.9)
 Description: SELinux policy management library
 Multi-Arch: same
 Homepage: https://selinuxproject.org
@@ -74704,10 +74642,10 @@ Description-md5: 8998b538051f37f69c5f1bf9a005fa56
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/libs/libsemanage/libsemanage2_3.8.1-1_amd64.deb
-Size: 95284
-MD5sum: bd188a7d6b4067f02d8b916431c7d16e
-SHA256: f97da7505d17ad3bdd8fc56302256df7e158e5e0d8b02cb766654199cbc406a9
+Filename: pool/main/libs/libsemanage/libsemanage2_3.9-1_amd64.deb
+Size: 96804
+MD5sum: 515449bbf499fdf5b910957d2197d700
+SHA256: 71858191e80e7fb928c2e4aa55f40bf0e74b8b20c1b4e73fff2ba361bc49f63e
 
 Package: libsepol2
 Source: libsepol
@@ -78746,8 +78684,8 @@ SHA256: 3e39da9ad5e17457e86b008354119a7bc2de133ad74d00c3039f287fbc9eb6b2
 
 Package: libvisio-0.1-1
 Source: libvisio
-Version: 0.1.9-1
-Installed-Size: 871
+Version: 0.1.10-1
+Installed-Size: 880
 Maintainer: Debian LibreOffice Maintainers <debian-openoffice@lists.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libicu76 (>= 76.1-1~), librevenge-0.0-0, libstdc++6 (>= 13.1), libxml2-16 (>= 2.14.1)
@@ -78759,10 +78697,10 @@ Description-md5: 3700ded3e846875ca946cbdbd9dceb3c
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/libv/libvisio/libvisio-0.1-1_0.1.9-1_amd64.deb
-Size: 325688
-MD5sum: 7cbcaa7ae2d1d653111655a758390dc7
-SHA256: 04effc73385976a0a8666d05bad95ca3656a89de7f0bf88094a0fe5bde8b87b7
+Filename: pool/main/libv/libvisio/libvisio-0.1-1_0.1.10-1_amd64.deb
+Size: 326976
+MD5sum: 994c2eb07ae3905a68ed9ce4882de3cd
+SHA256: 5265ed761256ef0f9e13d16a07695a0cc0f4bb6bfef88dede6d816a381874d09
 
 Package: libvistaio14
 Source: libvistaio
@@ -93995,12 +93933,12 @@ MD5sum: 274198a490cdf9b8f584a5011ec4eee0
 SHA256: 9627f878d22a6272b5823035eaa3f148d5f48a6086f623f9c6726563f62d8627
 
 Package: libodc-0d
-Source: odc (1.6.1-2)
-Version: 1.6.1-2+b1
-Installed-Size: 2287
+Source: odc
+Version: 1.6.2-2
+Installed-Size: 2113
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libeckit0d (>= 1.31.4), libgcc-s1 (>= 3.0), libgfortran5 (>= 10), libstdc++6 (>= 14)
+Depends: libc6 (>= 2.38), libeckit0d (>= 1.32.2), libgcc-s1 (>= 3.0), libgfortran5 (>= 10), libstdc++6 (>= 14)
 Description: Observational Database Access library for ECMWF
 Multi-Arch: same
 Homepage: https://github.com/ecmwf/odc
@@ -94008,10 +93946,10 @@ Description-md5: 56d271a856e5adac76bfc60089ca65f2
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/o/odc/libodc-0d_1.6.1-2+b1_amd64.deb
-Size: 555940
-MD5sum: 63604435044138e2492e11a21177e03f
-SHA256: 38f99d85c9c12f091c4fc304f59b2d31fe0e14883723c8ad5ce5a5086ba97913
+Filename: pool/main/o/odc/libodc-0d_1.6.2-2_amd64.deb
+Size: 524572
+MD5sum: 6195db38133ac5b638d1559b32cbdafc
+SHA256: 9c0c1b482e125875081f6902871e7aed54e47bab84578d449835c6830337d134
 
 Package: libode8t64
 Source: ode
@@ -97421,9 +97359,9 @@ MD5sum: a5a3708fffe28313c5ed20de1b498e10
 SHA256: f866547f02af690f8c4bb9ba81310840b9fd4ff1266185cfd5b0813ea9106049
 
 Package: libosmo-fl2k0
-Source: osmo-fl2k (0.1.1-2)
-Version: 0.1.1-2+b2
-Installed-Size: 41
+Source: osmo-fl2k
+Version: 0.1.1-3
+Installed-Size: 40
 Maintainer: Debian Mobcom Maintainers <Debian-mobcom-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34), libusb-1.0-0 (>= 2:1.0.21)
@@ -97434,10 +97372,10 @@ Description-md5: f3629df4c2bd4d367c47bb581d28fc6c
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/o/osmo-fl2k/libosmo-fl2k0_0.1.1-2+b2_amd64.deb
-Size: 9304
-MD5sum: fddbb370979f6b7cca27544dd0290c4b
-SHA256: 4e189c0b91f9ee3a2b2741743e7189d28741d36a1158d4152b049c06e504aa33
+Filename: pool/main/o/osmo-fl2k/libosmo-fl2k0_0.1.1-3_amd64.deb
+Size: 9076
+MD5sum: 407c5f19d407ae1339b8a9488b97e300
+SHA256: 59b36da90834bda00ac4bed304c25c7b62269eb6b0149dc9e4fe994333775fb0
 
 Package: libgtp11
 Source: osmo-ggsn
@@ -98240,9 +98178,9 @@ MD5sum: 73a33c20b229f4951dd98aef9828b095
 SHA256: 226a6a83f9e0915c6e3b154bb8d9b0bfea9c32d744413c771569c436ea0db246
 
 Package: libalpm15
-Source: pacman-package-manager (7.0.0-1)
-Version: 15.0.0-1+b1
-Installed-Size: 1268
+Source: pacman-package-manager (7.0.0-2)
+Version: 15.0.0-2
+Installed-Size: 1263
 Maintainer: Ben Westover <me@benthetechguy.net>
 Architecture: amd64
 Depends: libarchive13t64 (>= 3.0.4), libc6 (>= 2.38), libcurl4t64 (>= 7.28.0), libgpgme11t64 (>= 1.23.2), libssl3t64 (>= 3.0.0)
@@ -98252,10 +98190,10 @@ Homepage: https://archlinux.org/pacman/
 Description-md5: 26c486ee2cb65f06863d82e3cd6be1ac
 libs
 Priority: optional
-Filename: pool/main/p/pacman-package-manager/libalpm15_15.0.0-1+b1_amd64.deb
-Size: 227536
-MD5sum: a1290715d201cd13cf6ea1f9c3924a7f
-SHA256: cc469eaf753394a2c83a070d538f1721725baad749f78c5bf64231a4141d8f76
+Filename: pool/main/p/pacman-package-manager/libalpm15_15.0.0-2_amd64.deb
+Size: 227656
+MD5sum: 1480bc5546cd7eea79d59ec9fa85673b
+SHA256: 21df36f713f2ac44c999c03f3e66e528cd86cc54dac5ceb1b268898262c226bc
 
 Package: libpacparser1
 Source: pacparser (1.4.5-4)
@@ -114240,11 +114178,11 @@ SHA256: b09c4e49931db3a92db89c2ca590b5c59dae04881c895718cb31d7da56a3ff89
 
 Package: librhythmbox-core10
 Source: rhythmbox
-Version: 3.4.8-3
-Installed-Size: 1942
+Version: 3.4.9-1
+Installed-Size: 1910
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libatk1.0-0t64 (>= 1.12.4), libc6 (>= 2.29), libcairo2 (>= 1.2.4), libgdk-pixbuf-2.0-0 (>= 2.22.0), libgirepository-1.0-1 (>= 0.9.3), libglib2.0-0t64 (>= 2.80.0), libgstreamer-plugins-base1.0-0 (>= 1.4.0), libgstreamer1.0-0 (>= 1.6.0), libgtk-3-0t64 (>= 3.20.0), libgudev-1.0-0 (>= 146), libjson-glib-1.0-0 (>= 1.5.2), libmtp9t64 (>= 1.1.0), libpango-1.0-0 (>= 1.37.2), libpangocairo-1.0-0 (>= 1.14.0), libpeas-1.0-0 (>= 1.0.0), libsoup-3.0-0 (>= 3.0.3), libtdb1 (>= 1.2.7+git20101214), libtotem-plparser18 (>= 3.26.0), libxml2-16 (>= 2.14.1)
+Depends: libatk1.0-0t64 (>= 1.12.4), libc6 (>= 2.29), libcairo2 (>= 1.2.4), libgdk-pixbuf-2.0-0 (>= 2.22.0), libgirepository-1.0-1 (>= 0.9.3), libglib2.0-0t64 (>= 2.80.0), libgstreamer-plugins-base1.0-0 (>= 1.4.0), libgstreamer1.0-0 (>= 1.20.0), libgtk-3-0t64 (>= 3.20.0), libgudev-1.0-0 (>= 146), libjson-glib-1.0-0 (>= 1.5.2), libmtp9t64 (>= 1.1.0), libpango-1.0-0 (>= 1.37.2), libpangocairo-1.0-0 (>= 1.14.0), libpeas-1.0-0 (>= 1.0.0), libsoup-3.0-0 (>= 3.0.3), libtdb1 (>= 1.2.7+git20101214), libtotem-plparser18 (>= 3.26.0), libxml2-16 (>= 2.14.1)
 Description: support library for the rhythmbox music player
 Multi-Arch: same
 Homepage: https://wiki.gnome.org/Apps/Rhythmbox
@@ -114252,10 +114190,10 @@ Description-md5: c3a718f17d4a5d6b021901c3db955972
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/r/rhythmbox/librhythmbox-core10_3.4.8-3_amd64.deb
-Size: 785940
-MD5sum: 5cc76a9fe0bf4f83c3808a6a46c9e60f
-SHA256: 09afd4ca6c1e27c352f356b99e4a7a48f93f2c2e3abea58d888e703be55d721a
+Filename: pool/main/r/rhythmbox/librhythmbox-core10_3.4.9-1_amd64.deb
+Size: 774916
+MD5sum: 3d6d10cf57b12e4ec616cc2c3270092b
+SHA256: 56ef86074b8db11cb6ce06b90daf4071553418ca81c4a2ce098c9e900a65902e
 
 Package: libriemann-client0
 Source: riemann-c-client
@@ -120173,7 +120111,7 @@ SHA256: c68a78a337baa0e373dee2ed1999ddb20b233d9a28ec569c9d116632f8c2b115
 
 Package: libsope1
 Source: sope
-Version: 5.12.3-2
+Version: 5.12.4-1
 Installed-Size: 10104
 Maintainer: Debian SOGo Maintainers <pkg-sogo-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -120185,18 +120123,18 @@ Description-md5: 003bea550b2dd06ebf538363d970d82b
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/s/sope/libsope1_5.12.3-2_amd64.deb
-Size: 1838520
-MD5sum: 13c318abbdec925236e6d798c284f43a
-SHA256: 040303785e79e153c5c543d30a81c0b3685887d4ad63ac82e7f646badfbe69e6
+Filename: pool/main/s/sope/libsope1_5.12.4-1_amd64.deb
+Size: 1842624
+MD5sum: 94054fc5129f7b807f7768b35c1935d4
+SHA256: 612afe2cb7dc5d5c2ecdb97677259a5c8e2c1e45efb11267ece30d94081aa216
 
 Package: sope-bin
 Source: sope
-Version: 5.12.3-2
+Version: 5.12.4-1
 Installed-Size: 1067
 Maintainer: Debian SOGo Maintainers <pkg-sogo-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: gnustep-base-runtime (>= 1.31.1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libgnustep-base1.31 (>= 1.31.1), libobjc4 (>= 4.6), libsope1 (>= 5.12.3)
+Depends: gnustep-base-runtime (>= 1.31.1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libgnustep-base1.31 (>= 1.31.1), libobjc4 (>= 4.6), libsope1 (>= 5.12.4)
 Description: SKYRiX Object Publishing Environment (binaries)
 Multi-Arch: foreign
 Homepage: https://sogo.nu/
@@ -120204,10 +120142,10 @@ Description-md5: d8f393fe700d832e7f7885267e8eb3b9
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/s/sope/sope-bin_5.12.3-2_amd64.deb
-Size: 303828
-MD5sum: 4b91952f3b749bdcb4e8a43e1a10a0a8
-SHA256: 86a93c7337bbd45aa37fd683720f25a44a57de5c7244a22a7a04330f2819da80
+Filename: pool/main/s/sope/sope-bin_5.12.4-1_amd64.deb
+Size: 306580
+MD5sum: d29cf4fb86f0a694ccb94149feb80160
+SHA256: 00f20b975b965387ffc299b1730942dd2f06b544a1f5d88119e38d6c8c028d38
 
 Package: libsoplexshared7.1
 Source: soplex
