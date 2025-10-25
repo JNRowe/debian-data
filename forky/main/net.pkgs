@@ -19,6 +19,23 @@ Size: 33648
 MD5sum: 1d6a6db7e2a222fdb71d7edbfc24cf87
 SHA256: 2adf9f5e3237593e4a2343f9a87c28d6a45e7a9b82f005fce5459c88cbfa9e0b
 
+Package: 4g8
+Version: 1.0-7
+Installed-Size: 43
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34), libnet9 (>= 1.1.2.1), libpcap0.8t64 (>= 0.9.8)
+Description: Packet Capture and Interception for Switched Networks
+Description-md5: 08a3e421414ebaacb3294625688dc573
+Tag: admin::monitoring, implemented-in::c, protocol::udp, role::program,
+ use::analysing, works-with::network-traffic
+net
+Priority: optional
+Filename: pool/main/4/4g8/4g8_1.0-7_amd64.deb
+Size: 13412
+MD5sum: ea9d272e293fd26679bacffcc6f413fd
+SHA256: 23ad925dcfba7778acc1499906613575c7cd07c0603fde11edbea7553f34badb
+
 Package: 6tunnel
 Version: 1:0.14-1
 Installed-Size: 49
@@ -1425,13 +1442,12 @@ MD5sum: 8365fd0869044ddd67dbc1950b670f37
 SHA256: f58b6c13c7b6d0c7bbec4b3026c12576a8fb4b58549a24fc577a29d39d9cc726
 
 Package: bind9
-Source: bind9 (1:9.20.11-4)
-Version: 1:9.20.11-4+b1
-Installed-Size: 892
+Version: 1:9.20.15-1
+Installed-Size: 887
 Maintainer: Debian DNS Team <team+dns@tracker.debian.org>
 Architecture: amd64
 Replaces: bind (<< 1:9.13.6~)
-Depends: adduser, bind9-libs (= 1:9.20.11-4+b1), bind9-utils (= 1:9.20.11-4+b1), debconf | debconf-2.0, dns-root-data, iproute2, netbase, libc6 (>= 2.38), libcap2 (>= 1:2.10), libfstrm0 (>= 0.2.0), libjemalloc2 (>= 3.5.0), libjson-c5 (>= 0.15), liblmdb0 (>= 0.9.7), libmaxminddb0 (>= 1.3.0), libnghttp2-14 (>= 1.3.0), libprotobuf-c1 (>= 1.0.0), libssl3t64 (>= 3.0.0), libuv1t64 (>= 1.18.0), libxml2-16 (>= 2.14.1), zlib1g (>= 1:1.1.4)
+Depends: adduser, bind9-libs (= 1:9.20.15-1), bind9-utils (= 1:9.20.15-1), debconf | debconf-2.0, dns-root-data, iproute2, netbase, libc6 (>= 2.38), libcap2 (>= 1:2.10), libfstrm0 (>= 0.2.0), libjemalloc2 (>= 3.5.0), libjson-c5 (>= 0.15), liblmdb0 (>= 0.9.7), libmaxminddb0 (>= 1.3.0), libnghttp2-14 (>= 1.3.0), libprotobuf-c1 (>= 1.0.0), libssl3t64 (>= 3.0.0), liburcu8t64 (>= 0.13.0), libuv1t64 (>= 1.18.0), libxml2-16 (>= 2.14.1), zlib1g (>= 1:1.1.4)
 Pre-Depends: init-system-helpers (>= 1.54~)
 Suggests: bind9-doc, bind9-dnsutils, resolvconf, ufw
 Breaks: bind (<< 1:9.13.6~)
@@ -1442,39 +1458,39 @@ Tag: implemented-in::c, interface::daemon, network::server, network::service,
  protocol::dns, protocol::ipv6, protocol::ssl, role::program
 net
 Priority: optional
-Filename: pool/main/b/bind9/bind9_9.20.11-4+b1_amd64.deb
-Size: 253576
-MD5sum: 1b1a5282141d5cbea2477588386bc296
-SHA256: 0b910adacbde577a0e0a34f5000a8c41d252b10f14dccba70038b43391427745
+Filename: pool/main/b/bind9/bind9_9.20.15-1_amd64.deb
+Size: 254176
+MD5sum: f2c1fd8480a29ea70cfa0a51e9c1ed5d
+SHA256: 52dfe94de66e090908e367c6e4bed18c6723c79356304156fb18b79d378fec46
 
 Package: bind9-dnsutils
-Source: bind9 (1:9.20.11-4)
-Version: 1:9.20.11-4+b1
-Installed-Size: 525
+Source: bind9
+Version: 1:9.20.15-1
+Installed-Size: 524
 Maintainer: Debian DNS Team <team+dns@tracker.debian.org>
 Architecture: amd64
 Provides: dnsutils
-Depends: bind9-host | host, bind9-libs (= 1:9.20.11-4+b1), libc6 (>= 2.38), libedit2 (>= 2.11-20080614-0), libidn2-0 (>= 2.0.0), libjemalloc2 (>= 3.5.0), libkrb5-3 (>= 1.6.dfsg.2), libprotobuf-c1 (>= 1.0.0)
+Depends: bind9-host | host, bind9-libs (= 1:9.20.15-1), libc6 (>= 2.38), libedit2 (>= 2.11-20080614-0), libidn2-0 (>= 2.0.0), libjemalloc2 (>= 3.5.0), libkrb5-3 (>= 1.6.dfsg.2), libprotobuf-c1 (>= 1.0.0)
 Description: Clients provided with BIND 9
 Multi-Arch: foreign
 Homepage: https://www.isc.org/downloads/bind/
 Description-md5: 41cc23046dad427af742ed10a4568530
 net
 Priority: standard
-Filename: pool/main/b/bind9/bind9-dnsutils_9.20.11-4+b1_amd64.deb
-Size: 165248
-MD5sum: 843204b6561f8b711a01825ea2270534
-SHA256: ab76b1d3e33ff21ffa4c74d1b132222e67d60c36a5070d847c83da4f014baf6a
+Filename: pool/main/b/bind9/bind9-dnsutils_9.20.15-1_amd64.deb
+Size: 165104
+MD5sum: b3e71652920f2dbc8077735069302945
+SHA256: b9f67055ae543c8b8e6f93407a3e7cf4f849d49a74964444c31f187303862156
 
 Package: bind9-host
-Source: bind9 (1:9.20.11-4)
-Version: 1:9.20.11-4+b1
-Installed-Size: 141
+Source: bind9
+Version: 1:9.20.15-1
+Installed-Size: 140
 Maintainer: Debian DNS Team <team+dns@tracker.debian.org>
 Architecture: amd64
 Replaces: bind-host (<< 1:9.13.6~)
 Provides: host
-Depends: bind9-libs (= 1:9.20.11-4+b1), libc6 (>= 2.38), libidn2-0 (>= 2.0.0)
+Depends: bind9-libs (= 1:9.20.15-1), libc6 (>= 2.38), libidn2-0 (>= 2.0.0)
 Breaks: bind-host (<< 1:9.13.6~)
 Description: DNS Lookup Utility
 Multi-Arch: foreign
@@ -1484,29 +1500,29 @@ Tag: implemented-in::c, interface::commandline, network::client,
  network::service, protocol::dns, protocol::ssl, role::program
 net
 Priority: standard
-Filename: pool/main/b/bind9/bind9-host_9.20.11-4+b1_amd64.deb
-Size: 55620
-MD5sum: 550a4ff2c6965e57f59225e1a90f6941
-SHA256: 5c0122c4777e152c8c48f2801b5a402d671c8e191a15d2862f31b7556fbf71dc
+Filename: pool/main/b/bind9/bind9-host_9.20.15-1_amd64.deb
+Size: 55836
+MD5sum: 6332443989ef2c81b3a6f671c2c28723
+SHA256: 59952cf6629b2d2428b9c448a9706325409af75e3aaa1a8a17ee0cd70542f116
 
 Package: bind9-utils
-Source: bind9 (1:9.20.11-4)
-Version: 1:9.20.11-4+b1
-Installed-Size: 724
+Source: bind9
+Version: 1:9.20.15-1
+Installed-Size: 719
 Maintainer: Debian DNS Team <team+dns@tracker.debian.org>
 Architecture: amd64
 Provides: bind9utils
-Depends: bind9-libs (= 1:9.20.11-4+b1), libc6 (>= 2.38), libjemalloc2 (>= 3.5.0), libssl3t64 (>= 3.0.0), liburcu8t64 (>= 0.13.0)
+Depends: bind9-libs (= 1:9.20.15-1), libc6 (>= 2.38), libjemalloc2 (>= 3.5.0), libssl3t64 (>= 3.0.0), liburcu8t64 (>= 0.13.0)
 Breaks: freeipa
 Description: Utilities for BIND 9
 Homepage: https://www.isc.org/downloads/bind/
 Description-md5: c30ede916daac07ed6c19887e9f7d3f2
 net
 Priority: optional
-Filename: pool/main/b/bind9/bind9-utils_9.20.11-4+b1_amd64.deb
-Size: 183380
-MD5sum: 19bc4387700f9e0b74a03758667d7f50
-SHA256: 41557a8951b7d3d344e087b4ed883d91909e83460f3c37ac532a6f4b86b7b2a5
+Filename: pool/main/b/bind9/bind9-utils_9.20.15-1_amd64.deb
+Size: 183280
+MD5sum: 0e399f8ce38abc43e59b90343c8004dc
+SHA256: 8919ba9f73c2b2f385568a0cc887b87d13c8ebe295eefcc10f572724e0cf2779
 
 Package: bip
 Version: 0.9.3-1.2
@@ -18485,6 +18501,28 @@ Size: 15048
 MD5sum: b22d0766f37610785878aeff4dd3aaf1
 SHA256: 823ebb7a3d31bac9e3e0daa31a274ea4ea50a3d4903c1dd37c215489e6f724b8
 
+Package: ftp-ssl
+Source: netkit-ftp-ssl
+Version: 0.17.34+really0.17-3
+Installed-Size: 148
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Replaces: ftp (<= 0.17-31)
+Provides: ftp
+Depends: netbase, libc6 (>= 2.38), libreadline8t64 (>= 6.0), libssl3t64 (>= 3.0.0)
+Breaks: ftp (<= 0.17-31)
+Description: FTP client with SSL or TLS encryption support
+Description-md5: df54f8993102609570fe5a7e7cfe0c6b
+Tag: interface::text-mode, network::client, protocol::ftp, protocol::ssl,
+ role::program, security::cryptography, uitoolkit::ncurses,
+ use::downloading, works-with::file
+net
+Priority: optional
+Filename: pool/main/n/netkit-ftp-ssl/ftp-ssl_0.17.34+really0.17-3_amd64.deb
+Size: 62280
+MD5sum: 355394c43c07e1e7ac329f5ca045c3d2
+SHA256: f327b72083431c714d97da12b02d9055a6211cb3ee9e373cc6b6e6009ff1f1eb
+
 Package: talk
 Source: netkit-ntalk
 Version: 0.17-19
@@ -18631,6 +18669,48 @@ Filename: pool/main/n/netkit-rwho/rwhod_0.17-16_amd64.deb
 Size: 17628
 MD5sum: c4ef6fb9238dd183e747057d98e89ed3
 SHA256: f9911881d391d958f5c4fe841e9e02c7002a4db4ac286c716bb44db0f360da8d
+
+Package: telnet-ssl
+Source: netkit-telnet-ssl
+Version: 0.17.41+really0.17-7
+Installed-Size: 199
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Provides: telnet-client
+Depends: netbase, libc6 (>= 2.38), libssl3t64 (>= 3.0.0), libstdc++6 (>= 5)
+Description: telnet client with SSL encryption support
+Description-md5: c86b4e7d66c3252a99ac0e2cff11a903
+Tag: admin::login, implemented-in::c++, interface::commandline,
+ interface::shell, interface::text-mode, network::client,
+ protocol::ipv6, protocol::ssl, role::program, security::authentication,
+ security::cryptography, uitoolkit::ncurses, use::login
+net
+Priority: optional
+Filename: pool/main/n/netkit-telnet-ssl/telnet-ssl_0.17.41+really0.17-7_amd64.deb
+Size: 83944
+MD5sum: b379e700b3d26764e3d8aa73c8cb3cc6
+SHA256: be70ce72faa3c4eeb99f0f9e307bdd2c4fd45b6b2d92cb7a2caf994592bdd231
+
+Package: telnetd-ssl
+Source: netkit-telnet-ssl
+Version: 0.17.41+really0.17-7
+Installed-Size: 158
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Provides: telnet-server
+Depends: adduser, openbsd-inetd | inet-superserver, openssl, passwd, libc6 (>= 2.38), libssl3t64 (>= 3.0.0)
+Conflicts: telnet-server, telnetd
+Description: telnet server with SSL encryption support
+Description-md5: 1a10d998ad920e25b516a5fe5797e63c
+Tag: admin::login, implemented-in::c, interface::daemon, network::server,
+ protocol::ipv6, protocol::ssl, role::program, security::authentication,
+ security::cryptography, uitoolkit::ncurses, use::login
+net
+Priority: optional
+Filename: pool/main/n/netkit-telnet-ssl/telnetd-ssl_0.17.41+really0.17-7_amd64.deb
+Size: 57912
+MD5sum: 428add6907f24db3b2a6ecbec6924282
+SHA256: 8487949dbe6f9866e9061601007f3c9d700c4925a17ed05da9f7ea7ea31eeeaa
 
 Package: netlabel-tools
 Source: netlabel-tools (0.30.0-1)
@@ -21483,7 +21563,7 @@ MD5sum: 71547d12e86be962a517795b19568f0e
 SHA256: 302185c364c90647c6f0383e0031e96abac219d81b9984a840a0540ce2b970cc
 
 Package: nsd
-Version: 4.13.0-5
+Version: 4.13.0-6
 Installed-Size: 5827
 Maintainer: nsd packagers <nsd@packages.debian.org>
 Architecture: amd64
@@ -21496,10 +21576,10 @@ Tag: interface::daemon, network::server, network::service, protocol::dns,
  role::dummy, role::program
 net
 Priority: optional
-Filename: pool/main/n/nsd/nsd_4.13.0-5_amd64.deb
-Size: 850556
-MD5sum: f1d994fc725bb22ace67fa33f45f79c6
-SHA256: 7c34634fd68092d4367d572e5302061bb11d9e98729d04f7fc08ed7b66bdfda2
+Filename: pool/main/n/nsd/nsd_4.13.0-6_amd64.deb
+Size: 851396
+MD5sum: 38e4be8a3344585e6c67cfe0c1ba7b0b
+SHA256: b8540095db0b1832e24e3fc90017ede1270be6bf2282c74aa0fccfd1d155e953
 
 Package: nsdiff
 Version: 1.85-2
@@ -24376,12 +24456,12 @@ SHA256: 84ce7cf923ea9342d0ab175f1a4270e4bade31c474bd40e6d4a7c9ef9d188065
 
 Package: pd-mrpeach-net
 Source: pd-mrpeach
-Version: 0.1~svn17672-9
+Version: 0.1~svn17672-12
 Installed-Size: 307
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
 Provides: pd-net
-Depends: puredata | pd, libc6 (>= 2.34)
+Depends: puredata | pd, libc6 (>= 2.38)
 Recommends: pd-osc, pd-pddp
 Suggests: pd-slip, pd-libdir
 Description: Pd library for low-level networking
@@ -24389,10 +24469,10 @@ Homepage: https://download.puredata.info/mrpeach
 Description-md5: e18100fddf69eb2fe7d4f71055d08ac5
 net
 Priority: optional
-Filename: pool/main/p/pd-mrpeach/pd-mrpeach-net_0.1~svn17672-9_amd64.deb
-Size: 72080
-MD5sum: 329504c4b8cc83b0e6f22f3d9f4cc929
-SHA256: 1a22d47e91f1c748d26f798a54b0aefc43cf3014f580ada1681625c06fbc1ade
+Filename: pool/main/p/pd-mrpeach/pd-mrpeach-net_0.1~svn17672-12_amd64.deb
+Size: 72620
+MD5sum: e8b42c349afd1a28f65b8720b703cc9e
+SHA256: 00445cf82faa8c15e2853659f1aa803d633b2707bfa267ae4701854b9cc50f2a
 
 Package: pdns-backend-bind
 Source: pdns
@@ -27141,8 +27221,8 @@ MD5sum: f6916e4efdc3da70038effcc2d0b9488
 SHA256: bd1a0b8ca2eb2596cdcbea33b6e0c5ae2061745f83811375fb884a75ee679bc0
 
 Package: publicsuffix
-Version: 20250820.0948-0.1
-Installed-Size: 582
+Version: 20251016.1743-0.1
+Installed-Size: 584
 Maintainer: Daniel Kahn Gillmor <dkg@fifthhorseman.net>
 Architecture: all
 Provides: publicsuffix-dafsa
@@ -27152,10 +27232,10 @@ Homepage: https://publicsuffix.org
 Description-md5: 45ee5083eb35a33cb0e616ae567b7a23
 net
 Priority: optional
-Filename: pool/main/p/publicsuffix/publicsuffix_20250820.0948-0.1_all.deb
-Size: 303416
-MD5sum: b8f56d246984be4eb7f4b02ed5b0b989
-SHA256: d8bc72dd0635acf3fafd97a58c92c7a2d6e6839b21e8f0c9ae6e94e2eda81d83
+Filename: pool/main/p/publicsuffix/publicsuffix_20251016.1743-0.1_all.deb
+Size: 306036
+MD5sum: dabf411ab14bd4df32c3e3360f5a1809
+SHA256: e874049ffb196896ab8f828864e2ebee8f3a42600da5b54db06aa5ff1bf08666
 
 Package: pumpa
 Source: pumpa (0.9.3-1)
@@ -30951,6 +31031,25 @@ Size: 17748
 MD5sum: 7193448df76a0340ec9668de2445cb78
 SHA256: 5ae49cdd568f49e61cf1231bad9093940f5b3dcd8be143e5407277a3bdb5d0cb
 
+Package: sshguard
+Version: 2.5.1-1
+Installed-Size: 1547
+Maintainer: Julián Moreno Patiño <julian@debian.org>
+Architecture: amd64
+Depends: lsb-base (>= 3.0-6), libc6 (>= 2.38)
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: nftables | firewalld
+Description: Protects from brute force attacks against ssh
+Homepage: https://sshguard.sourceforge.net
+Description-md5: 3d17c43db76da983ea8c43bbdf677074
+Tag: implemented-in::c, role::program, security::firewall, security::ids
+net
+Priority: optional
+Filename: pool/main/s/sshguard/sshguard_2.5.1-1_amd64.deb
+Size: 279300
+MD5sum: 8d8cb96b5abf877d77bede73d45ba589
+SHA256: e567e3864ae574728191a96edbd4e45331c60195ef9ad7a5326e948e8986fe32
+
 Package: sshuttle
 Version: 1.3.2-1
 Installed-Size: 861
@@ -32273,14 +32372,14 @@ MD5sum: 659263df3767276d7e1c73cf50e7ec5c
 SHA256: 63bd2ca79e62da5a5e1c0bd7a1aa549bbc905c67347bfd11510c72a1583c1392
 
 Package: tcpstat
-Version: 1.5-8.3
-Installed-Size: 90
-Maintainer: Chrysostomos Nanakos <cnanakos@debian.org>
+Version: 1.5-9
+Installed-Size: 94
+Maintainer: Package Salvaging Team <team+salvage@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libdb5.3t64, libpcap0.8t64 (>= 0.9.8)
 Recommends: tcpdump
 Description: network interface statistics reporting tool
-Homepage: http://www.frenchfries.net/paul/tcpstat/
+Homepage: https://www.frenchfries.net/paul/tcpstat/
 Description-md5: 620422097caa736137f226f263e57616
 Tag: admin::benchmarking, admin::monitoring, implemented-in::c,
  interface::commandline, protocol::ip, role::program, scope::utility,
@@ -32288,10 +32387,10 @@ Tag: admin::benchmarking, admin::monitoring, implemented-in::c,
  works-with::network-traffic
 net
 Priority: optional
-Filename: pool/main/t/tcpstat/tcpstat_1.5-8.3_amd64.deb
-Size: 32620
-MD5sum: 172c2dddd99e9222ef5d59c3022bf228
-SHA256: e8f00a8d6fac728b424a412350b58e9161f8a2513515d712280d6e58367f05f0
+Filename: pool/main/t/tcpstat/tcpstat_1.5-9_amd64.deb
+Size: 31904
+MD5sum: 5847f99279a552c496e6c01cad1bdc16
+SHA256: 1237f833e9a99e4fe6796bc1b1ac74e94df6f3bfbd7ca353e73be32ec4914837
 
 Package: tcptraceroute
 Source: tcptraceroute (1.5beta7+debian-4.2)
@@ -33517,6 +33616,23 @@ Size: 379848
 MD5sum: 7b1ae9a0de7c42e0faf97d36bbaef940
 SHA256: 345c9191210c778163e566ed633a3dd8d976a43337cfa83cd39140aa9779919e
 
+Package: uhub
+Version: 0.5.1-1
+Installed-Size: 604
+Maintainer: Package Salvaging Team <team+salvage@tracker.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libsqlite3-0 (>= 3.5.9), libssl3t64 (>= 3.0.0)
+Pre-Depends: init-system-helpers (>= 1.54~)
+Description: High performance Advanced Direct Connect p2p hub
+Homepage: https://github.com/modelrockettier/uhub
+Description-md5: 30ce74cac149dfb0ce74c4fe2237ea81
+net
+Priority: optional
+Filename: pool/main/u/uhub/uhub_0.5.1-1_amd64.deb
+Size: 129588
+MD5sum: 6af6597b0e8d3029add3552d87cf678e
+SHA256: 42e470ade9fa352f0a38781d5a4b359f848d6fbbf8e0fba6f6da757450b5adce
+
 Package: uif
 Version: 1.99.0-7
 Installed-Size: 219
@@ -33677,8 +33793,8 @@ MD5sum: 67eb09b2cbc92c1cc440e6aa2d8ce694
 SHA256: 029a978ebd53075e3b5d7377826b526bbe23bfe0c5e4b2e7fb132f435b1221f5
 
 Package: unbound
-Version: 1.24.0-2
-Installed-Size: 5355
+Version: 1.24.1-1
+Installed-Size: 5360
 Maintainer: unbound packagers <unbound@packages.debian.org>
 Architecture: amd64
 Depends: adduser, libc6 (>= 2.38), libevent-2.1-7t64 (>= 2.1.8-stable), libhiredis1.1.0 (>= 1.2.0), libnghttp2-14 (>= 1.3.0), libprotobuf-c1 (>= 1.0.1), libpython3.13 (>= 3.13.0~rc3), libssl3t64 (>= 3.4.0), libsystemd0
@@ -33694,14 +33810,14 @@ Tag: implemented-in::c, interface::daemon, network::server, protocol::dns,
  security::privacy, use::checking
 net
 Priority: optional
-Filename: pool/main/u/unbound/unbound_1.24.0-2_amd64.deb
-Size: 1083620
-MD5sum: 0ffc51d5147037b7627bde594e0f484a
-SHA256: 2c608e7d2d0beb6a175092860999480ccbb2a6460610f40e3b2e2c5aec436b07
+Filename: pool/main/u/unbound/unbound_1.24.1-1_amd64.deb
+Size: 1084136
+MD5sum: 4e67154d3b45a6f9f87ec0d8131061b6
+SHA256: 3530cd89e26dfeb1c9fe07ecb96d4effd6701dc1e6cab5b615b31605cac00769
 
 Package: unbound-anchor
 Source: unbound
-Version: 1.24.0-2
+Version: 1.24.1-1
 Installed-Size: 260
 Maintainer: unbound packagers <unbound@packages.debian.org>
 Architecture: amd64
@@ -33713,14 +33829,14 @@ Homepage: https://www.unbound.net/
 Description-md5: f49fb3435120bde9cd4af959aeac719c
 net
 Priority: optional
-Filename: pool/main/u/unbound/unbound-anchor_1.24.0-2_amd64.deb
-Size: 201620
-MD5sum: cf2027cc6b3e496c84086f6fe8f149de
-SHA256: 9e2230948270380c80b4b1352b8de491e5aa587b4a037f3594db096635fd303c
+Filename: pool/main/u/unbound/unbound-anchor_1.24.1-1_amd64.deb
+Size: 201876
+MD5sum: bf360930efb1dfe9a95bf4bb90dbe421
+SHA256: f4e06bcbf704735a2283b51ccca88cdab8ed3eb81dbcb12df06cbcc60ddd78a9
 
 Package: unbound-host
 Source: unbound
-Version: 1.24.0-2
+Version: 1.24.1-1
 Installed-Size: 338
 Maintainer: unbound packagers <unbound@packages.debian.org>
 Architecture: amd64
@@ -33731,10 +33847,10 @@ Homepage: https://www.unbound.net/
 Description-md5: 287e113772f55d3575bb8577560cb3eb
 net
 Priority: optional
-Filename: pool/main/u/unbound/unbound-host_1.24.0-2_amd64.deb
-Size: 225208
-MD5sum: 78cc76b300211f95776599bfdd946afb
-SHA256: 20a5a5a5d7b509b2741c8b27ed272d914cf831796d83b24060208615ad63aac8
+Filename: pool/main/u/unbound/unbound-host_1.24.1-1_amd64.deb
+Size: 225380
+MD5sum: 3821e7c924c2547da8cea7545fd469ae
+SHA256: 54512d3acc7e9f919ee1321e42700d660d4f9d99c78e9d44ab0dda3eb76150a2
 
 Package: unworkable
 Version: 0.53-7
