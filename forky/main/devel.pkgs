@@ -7874,6 +7874,55 @@ Size: 221128
 MD5sum: 05dc73a9d2166fa456336d9c9d5afd3d
 SHA256: 102351c2c743c65c58ca3193349843c442461c88166fe0634a02fc77c231e659
 
+Package: diffoscope
+Version: 306
+Installed-Size: 51
+Maintainer: Reproducible builds folks <reproducible-builds@lists.alioth.debian.org>
+Architecture: all
+Depends: diffoscope-minimal (= 306)
+Recommends: 7zip, aapt, abootimg, acl, apksigcopier, apksigner, apktool, binutils-multiarch, bzip2, caca-utils, colord, coreboot-utils, db-util, default-jdk-headless | default-jdk | java-sdk, device-tree-compiler, dexdump, docx2txt, e2fsprogs, enjarify, ffmpeg, fontforge-extras, fonttools, fp-utils, genisoimage, gettext, ghc, ghostscript, giflib-tools, gnumeric, gnupg-utils, gpg, hdf5-tools, html2text, imagemagick, jsbeautifier, libarchive-tools, libxmlb-utils, llvm, lz4, lzip, mono-devel (>= 6.14.1+ds-3) | mono-utils (<< 6.14.1+ds-3), ocaml-nox, odt2txt, oggvideotools, openssh-client, openssl, perl, pgpdump, poppler-utils, procyon-decompiler, python3-pdfminer, r-base-core, radare2, rpm2cpio, sng, sqlite3, squashfs-tools, systemd-ukify, tcpdump, u-boot-tools, unzip, wabt, xmlbeans, xxd, xz-utils, zip, zstd, androguard, python3-argcomplete, python3-binwalk, python3-debian, python3-defusedxml, python3-guestfs, python3-jsondiff, python3-progressbar, python3-pypdf, python3-pyxattr, python3-rpm, python3-tlsh (>= 3.4.1)
+Suggests: libjs-jquery
+Enhances: diffoscope-minimal
+Description: in-depth visual diff tool for files, archives and directories
+Homepage: https://diffoscope.org
+Description-md5: aa9d1c13f6595efd0620648d809c8523
+Tag: devel::prettyprint, devel::testing-qa, implemented-in::python,
+ interface::commandline, role::program, scope::utility,
+ security::forensics, use::analysing, use::checking, use::comparing,
+ use::converting, works-with-format::diff, works-with-format::elf,
+ works-with-format::epub, works-with-format::html,
+ works-with-format::info, works-with-format::jpg,
+ works-with-format::json, works-with-format::man,
+ works-with-format::oggvorbis, works-with-format::pdf,
+ works-with-format::plaintext, works-with-format::png,
+ works-with-format::po, works-with-format::postscript,
+ works-with-format::tar, works-with-format::zip, works-with::archive,
+ works-with::file, works-with::software:package, works-with::text
+devel
+Priority: optional
+Filename: pool/main/d/diffoscope/diffoscope_306_all.deb
+Size: 42636
+MD5sum: 84cfeb8a46f455aa8f7402108d67fc5a
+SHA256: 7c983e1e3bddccb9c137f47cb82c68e5701ab1b4080fbbc2f94b69a1e7d42d7a
+
+Package: diffoscope-minimal
+Source: diffoscope
+Version: 306
+Installed-Size: 747
+Maintainer: Reproducible builds folks <reproducible-builds@lists.alioth.debian.org>
+Architecture: all
+Depends: python3-distro, python3-libarchive-c, python3-magic, python3:any
+Recommends: 7zip, aapt, abootimg, acl, apksigcopier, binutils-multiarch, bzip2, caca-utils, colord, coreboot-utils, db-util, device-tree-compiler, dexdump, docx2txt, e2fsprogs, enjarify, ffmpeg, fontforge-extras, fonttools, genisoimage, gettext, ghostscript, giflib-tools, gnupg-utils, gpg, hdf5-tools, html2text, imagemagick, jsbeautifier, libarchive-tools, libxmlb-utils, lz4, lzip, odt2txt, oggvideotools, openssh-client, openssl, perl, pgpdump, poppler-utils, procyon-decompiler, python3-pdfminer, r-base-core, rpm2cpio, sng, sqlite3, squashfs-tools, systemd-ukify, tcpdump, u-boot-tools, unzip, wabt, xxd, xz-utils, zip, zstd, androguard, python3-argcomplete, python3-debian, python3-defusedxml, python3-jsondiff, python3-progressbar, python3-pypdf, python3-pyxattr, python3-rpm, python3-tlsh (>= 3.4.1)
+Description: in-depth visual diff tool for files, archives and directories (minimal package)
+Homepage: https://diffoscope.org
+Description-md5: d49fabae383d551cbcf73179c0580314
+devel
+Priority: optional
+Filename: pool/main/d/diffoscope/diffoscope-minimal_306_all.deb
+Size: 157376
+MD5sum: 62f4fcfcdbeb6974dba5bb45ed4c9efa
+SHA256: 034299e200ec4568f1428641d8e03b46f87f271ba6bba999e0780318b2825c99
+
 Package: diffstat
 Version: 1.68-1
 Installed-Size: 79
@@ -86003,6 +86052,24 @@ Size: 30068
 MD5sum: e29df71e2e8cf7a7e7c3cef5028dd477
 SHA256: 86e1ddaca2d9e2f72339accca81e11d60d87dd4eaeb2aed64ae83ec01e081f69
 
+Package: reprotest
+Version: 0.7.30
+Installed-Size: 340
+Maintainer: Reproducible builds folks <reproducible-builds@lists.alioth.debian.org>
+Architecture: all
+Depends: apt-utils, libdpkg-perl, procps, python3-debian, python3-distro, python3-rstr, python3:any
+Recommends: disorderfs, faketime, locales-all, sudo, diffoscope-minimal
+Suggests: autodep8, qemu-system, qemu-utils, schroot
+Description: Build software and check it for reproducibility
+Homepage: https://salsa.debian.org/reproducible-builds/reprotest
+Description-md5: 72eafe04323c1b04988b407a2fd08e34
+devel
+Priority: optional
+Filename: pool/main/r/reprotest/reprotest_0.7.30_all.deb
+Size: 90672
+MD5sum: 1ed116f236b5a165175e4049902bc606
+SHA256: 5c9bbbeb9382a2e05267d313aff264fbd4ca1c4d8d91572bdaad39af3a711ab8
+
 Package: libresolv-wrapper
 Source: resolv-wrapper
 Version: 1.1.8-4
@@ -88914,21 +88981,21 @@ MD5sum: 7b1cb9669052d6d61020a9af99fbbe4b
 SHA256: 3c5c858d45049b58a7cb803c6774734538bd94c7c0173a6566ed846646f54c7b
 
 Package: subunit
-Version: 1.4.2-3
-Installed-Size: 27
+Version: 1.4.4+1-1
+Installed-Size: 28
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: libsubunit-perl (>= 1.4.2-3), python3-subunit (>= 1.4.2-3), python3:any
+Depends: python3-subunit (>= 1.4.4+1-1), python3:any
 Description: command line tools for processing Subunit streams
 Homepage: https://code.launchpad.net/subunit
 Description-md5: c4f3b986477aba30324b421056a528f1
 Tag: implemented-in::python, role::program
 devel
 Priority: optional
-Filename: pool/main/s/subunit/subunit_1.4.2-3_all.deb
-Size: 5248
-MD5sum: 31deecd0cc4239f667fdb4ba8d99289a
-SHA256: b5d4d0ef620cc94fbeab9321999a04c96941cee16c1f75d2f29c6ebb411ca39c
+Filename: pool/main/s/subunit/subunit_1.4.4+1-1_all.deb
+Size: 5488
+MD5sum: fbe9d1747bc7d8448700fa23b6a1684d
+SHA256: c3ea611d744cc729455499cb500c2d44b19d89b696b69e777e8d39ef7bcccc0a
 
 Package: sup
 Version: 20100519-8
@@ -90151,7 +90218,7 @@ MD5sum: 785209dea6e12e2d871db524d9c1a6fa
 SHA256: e416d6f044b0dce6e3339022d87f43e39018e2368437826e1f3185f8e3a3f0fe
 
 Package: umockdev
-Version: 0.19.4-1
+Version: 0.19.4-2
 Installed-Size: 294
 Maintainer: Martin Pitt <mpitt@debian.org>
 Architecture: amd64
@@ -90161,10 +90228,10 @@ Homepage: https://github.com/martinpitt/umockdev/
 Description-md5: 286db1dc230b4374b7e4132a74169450
 devel
 Priority: optional
-Filename: pool/main/u/umockdev/umockdev_0.19.4-1_amd64.deb
-Size: 85880
-MD5sum: a2b16c8b8576738122c9d91e79aa8cf0
-SHA256: 58546baff91a1de3748707836dbd13507d4cde506c3f8da2479c441e082952cf
+Filename: pool/main/u/umockdev/umockdev_0.19.4-2_amd64.deb
+Size: 85804
+MD5sum: dd22088133964660230dafad8c635f23
+SHA256: 60aab0dd6340d241af78368fc3a559ebbdac88869236e64a9767d196f48cddd3
 
 Package: uncrustify
 Version: 0.78.1+dfsg1-1
@@ -90940,12 +91007,12 @@ MD5sum: 5e2b5382b231a2ef1877f0ba12594813
 SHA256: 3f55c1ce15ce836b411f526d9bce1b21cdf2d5d197481d95925042f74e21eab5
 
 Package: wireshark-dev
-Source: wireshark (4.4.9-1)
-Version: 4.4.9-1+b1
-Installed-Size: 619
+Source: wireshark
+Version: 4.6.0-1
+Installed-Size: 708
 Maintainer: Balint Reczey <balint@balintreczey.hu>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libglib2.0-0t64 (>= 2.16.0), libwsutil16 (>= 2.3.0), omniidl, libpcap0.8-dev, python3:any, python3-ply, esnacc, libwireshark-dev, libwiretap-dev
+Depends: libc6 (>= 2.38), libglib2.0-0t64 (>= 2.16.0), libwsutil17 (>= 2.3.0), omniidl, libpcap0.8-dev, python3:any, python3-ply, esnacc, libwireshark-dev, libwiretap-dev
 Description: network traffic analyzer - development tools
 Homepage: https://www.wireshark.org/
 Description-md5: 7a344f6feb13aa3b18ede52debae4fe2
@@ -90953,10 +91020,10 @@ Tag: admin::monitoring, devel::lang:c, devel::library, implemented-in::c,
  network::scanner, role::devel-lib, role::program, use::monitor
 devel
 Priority: optional
-Filename: pool/main/w/wireshark/wireshark-dev_4.4.9-1+b1_amd64.deb
-Size: 148888
-MD5sum: 46eb3488bc88f1819f60865e40d0ffde
-SHA256: 8fb2aa618fc7e801a3dc53ba7e38bb89801c575c85602064d50d79c093809df1
+Filename: pool/main/w/wireshark/wireshark-dev_4.6.0-1_amd64.deb
+Size: 236480
+MD5sum: c0bb8faab024d8e506609aaaa066571f
+SHA256: d121639cc2aaaa96b41a0fef95498d7196860642c51557dc46bc5963bcbd919c
 
 Package: wlcs
 Version: 1.8.1-2
