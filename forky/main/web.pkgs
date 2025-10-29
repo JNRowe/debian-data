@@ -1,7 +1,7 @@
 Package: acme.sh
-Version: 3.1.1-1
-Installed-Size: 1746
-Maintainer: Jérémy Lal <kapouer@melix.org>
+Version: 3.1.1+~cs0.0.20251023-1
+Installed-Size: 1751
+Maintainer: Debian Let's Encrypt <team+letsencrypt@tracker.debian.org>
 Architecture: all
 Depends: curl | wget
 Description: Pure unix shell script implementing ACME client protocol
@@ -9,10 +9,10 @@ Homepage: https://github.com/acmesh-official/acme.sh
 Description-md5: a91ab167bf02d9b84ca9c91bd336c6bf
 web
 Priority: optional
-Filename: pool/main/a/acme.sh/acme.sh_3.1.1-1_all.deb
-Size: 387796
-MD5sum: 5b2fd92150dce955133a9ffb9fcc75e6
-SHA256: bf0c474cf11669ae96dfdfc182918b8ee4b57f41532e1debdd9d127e363b0503
+Filename: pool/main/a/acme.sh/acme.sh_3.1.1+~cs0.0.20251023-1_all.deb
+Size: 391416
+MD5sum: d36cb1a1b76d4a55c15e1263310b3350
+SHA256: 230dfbff4da3fa43b859f703ec1b65b4bc88932ea9a6def2a6f0915d4d01cfdf
 
 Package: acmetool
 Source: acmetool (0.2.2-3)
@@ -8094,6 +8094,59 @@ Filename: pool/main/w/wbox/wbox_5-4_amd64.deb
 Size: 22764
 MD5sum: 7ff25d28d43253788c39827d75f86755
 SHA256: 85b2b48e6c3f123253894b7289b0acd7270f6bbfacce9155bd12ecd5166e2c21
+
+Package: weakforced
+Version: 3.0.0-3
+Installed-Size: 3102
+Maintainer: Pierre-Elliott Bécue <peb@debian.org>
+Architecture: amd64
+Depends: weakforced-common, libboost-filesystem1.83.0 (>= 1.83.0), libc6 (>= 2.38), libcurl4t64 (>= 7.28.0), libdrogon1t64 (>= 1.9.11+ds), libgcc-s1 (>= 3.0), libgeoip1t64 (>= 1.6.12), libgetdns10t64 (>= 1.4.0), libhiredis1.1.0 (>= 1.2.0), libjsoncpp26 (>= 1.9.6), libluajit-5.1-2 (>= 2.0.4) | libluajit-5.1-2 (>= 2.1.0+openresty), libmaxminddb0 (>= 1.0.2), libprometheus-cpp-core1.0 (>= 1.0.2), libprotobuf32t64 (>= 3.21.12), libreadline8t64 (>= 6.0), libsodium23 (>= 0.6.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libsystemd0, libtrantor1 (>= 1.5.24+ds), libyaml-cpp0.8 (>= 0.8.0+dfsg-9)
+Recommends: python3
+Description: Daemon for detecting brute force attacks
+Homepage: https://github.com/PowerDNS/weakforced
+Description-md5: 084a9e4a081616d037bc671f6333ae7d
+web
+Priority: optional
+Filename: pool/main/w/weakforced/weakforced_3.0.0-3_amd64.deb
+Size: 861752
+MD5sum: 2ce960c79c8e52b3a6353b5e9ed42150
+SHA256: 1e684738153aea5a83dad209c0bf7dd372701f3a3059d7abc32e2394cbc63944
+
+Package: weakforced-common
+Source: weakforced
+Version: 3.0.0-3
+Installed-Size: 234
+Maintainer: Pierre-Elliott Bécue <peb@debian.org>
+Architecture: amd64
+Replaces: weakforced (<< 3.0.0-2)
+Depends: adduser, bsdextrautils, ucf
+Breaks: weakforced (<< 3.0.0-2)
+Description: Daemon for detecting brute force attacks
+Homepage: https://github.com/PowerDNS/weakforced
+Description-md5: e695fbf52a94dc94d60ea03290d1a6e4
+web
+Priority: optional
+Filename: pool/main/w/weakforced/weakforced-common_3.0.0-3_amd64.deb
+Size: 47624
+MD5sum: 019fe0df6dbc9378bae83a6503e77e5e
+SHA256: f277746169b23f6e837e0d440448fdc54b3519d31436ee4c8bbd502746d5b090
+
+Package: weakforced-trackalert
+Source: weakforced
+Version: 3.0.0-3
+Installed-Size: 1859
+Maintainer: Pierre-Elliott Bécue <peb@debian.org>
+Architecture: amd64
+Depends: weakforced, libboost-filesystem1.83.0 (>= 1.83.0), libc6 (>= 2.38), libcurl4t64 (>= 7.28.0), libdrogon1t64 (>= 1.9.11+ds), libgcc-s1 (>= 3.0), libgeoip1t64 (>= 1.6.12), libjsoncpp26 (>= 1.9.6), libluajit-5.1-2 (>= 2.0.4) | libluajit-5.1-2 (>= 2.1.0+openresty), libmaxminddb0 (>= 1.0.2), libprometheus-cpp-core1.0 (>= 1.0.2), libreadline8t64 (>= 6.0), libsodium23 (>= 0.6.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libsystemd0, libtrantor1 (>= 1.5.24+ds), libyaml-cpp0.8 (>= 0.8.0+dfsg-9)
+Description: Longterm abuse data reporting and alerter
+Homepage: https://github.com/PowerDNS/weakforced
+Description-md5: 3abf0fd58800d77afdf9e4316a06cb59
+web
+Priority: optional
+Filename: pool/main/w/weakforced/weakforced-trackalert_3.0.0-3_amd64.deb
+Size: 529964
+MD5sum: a8b28ca88732a4a26de625af54b86f27
+SHA256: 27c73e0bcf80646d8e3f6605982b91b0a80420ff17cfa86a25c225c3cc4c348f
 
 Package: webdeploy
 Version: 1.0-2.1
