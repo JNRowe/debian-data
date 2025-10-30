@@ -464,15 +464,15 @@ MD5sum: fa5a9d65731d2d0437a0178dcddb073a
 SHA256: 632b1d8195ee801c0a662c06303c03bba761f76bf6ba9417ba0e677c07bff51e
 
 Package: apcupsd
-Version: 3.14.14-5
-Installed-Size: 903
+Version: 3.14.14-6
+Installed-Size: 911
 Maintainer: Thorsten Alteholz <debian@alteholz.de>
 Architecture: amd64
 Provides: ups-monitor
 Depends: libc6 (>= 2.38), libgcc-s1 (>= 4.2), libusb-0.1-4 (>= 2:0.1.12), libwrap0 (>= 7.6-4~), lsb-base
 Recommends: apcupsd-doc, s-nail | mailx
 Suggests: apcupsd-cgi, udev
-Conflicts: ups-monitor
+Conflicts: nut-client, ups-monitor
 Description: APC UPS Power Management (daemon)
 Homepage: http://www.apcupsd.org/
 Description-md5: 5828ed072ad1cdcdd2a3dc847c13d193
@@ -482,10 +482,10 @@ Tag: admin::power-management, hardware::power, hardware::power:ups,
  uitoolkit::gtk, uitoolkit::ncurses, use::monitor, x11::application
 admin
 Priority: optional
-Filename: pool/main/a/apcupsd/apcupsd_3.14.14-5_amd64.deb
-Size: 260556
-MD5sum: 9684f79b50e89a78749799e639d505d2
-SHA256: a29bf0ef0ee81f638652fb8722cb34ab434b64216e8af29e16f60c5225fd94da
+Filename: pool/main/a/apcupsd/apcupsd_3.14.14-6_amd64.deb
+Size: 263604
+MD5sum: 6988d413fb4f04b72a4350c0545a0bd2
+SHA256: 84d8d94b82808ff4b491b6d4967cd98a50ba103ab46e974247636b21e89abf5e
 
 Package: apfsprogs
 Version: 0.2.1-2
@@ -5114,24 +5114,25 @@ MD5sum: 8d9835bdbcf33d978cf77e28687775b2
 SHA256: 17a0acd69a1df49c8a6d33798df852d22d987d975d332f748cdfe57bec68a623
 
 Package: crmsh
-Version: 5.0.0-1
+Version: 5.0.0-2
 Installed-Size: 4473
 Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
 Architecture: all
 Replaces: pacemaker (<< 1.1.12)
 Depends: gawk, iputils-ping, pacemaker-cli-utils, python3-dateutil, python3-lxml, python3-packaging, python3-yaml, python3:any
 Recommends: pacemaker (>= 1.1.12)
-Suggests: bash-completion, cluster-glue, csync2, dmidecode, fdisk | util-linux (<< 2.29.2-3~), ocfs2-tools, openssh-server, parted, sbd, ufw, vim-addon-manager
+Suggests: bash-completion, cluster-glue, csync2, dmidecode, fdisk | util-linux (<< 2.29.2-3~), ocfs2-tools, openssh-server, parted, sbd, ufw, util-linux-extra, vim-addon-manager
+Conflicts: crm114
 Breaks: pacemaker (<< 1.1.12)
 Description: CRM shell for the pacemaker cluster manager
 Homepage: https://crmsh.github.io/
 Description-md5: c5a831ffb32f166ac7366e6706833b86
 admin
 Priority: optional
-Filename: pool/main/c/crmsh/crmsh_5.0.0-1_all.deb
-Size: 1331052
-MD5sum: a78b118eeedc283fb9eedb4838d0f82a
-SHA256: fb201458492a9e6083e0a6c8991b844fc87cf33ca8819249161d7b7c123635c4
+Filename: pool/main/c/crmsh/crmsh_5.0.0-2_all.deb
+Size: 1331132
+MD5sum: e97b6425df1ac15e17ea5bdff303e937
+SHA256: 2428cb49a08a422e32c50caa1f614ee7507064ff35193f3bba584499cf4f104e
 
 Package: cron
 Version: 3.0pl1-200
@@ -6775,26 +6776,26 @@ MD5sum: 1d833daf2d62a86ec6309522db5f6d35
 SHA256: 2f415f2d52dbf1d37bdb1167a1da2e6674cf2b8ac619ef79f2228c07a886ee08
 
 Package: dnf
-Version: 4.23.0-1
-Installed-Size: 69
+Version: 4.24.0-1
+Installed-Size: 72
 Maintainer: RPM packaging team <team+pkg-rpm@tracker.debian.org>
 Architecture: all
-Depends: python3:any, dnf-data (= 4.23.0-1), python3-dnf (= 4.23.0-1), libmodulemd2 (>= 2.9.4-1~), python3-dbus, sqlite3
+Depends: python3:any, dnf-data (= 4.24.0-1), python3-dnf (= 4.24.0-1), libmodulemd2 (>= 2.9.4-1~), python3-dbus, sqlite3
 Description: Dandified Yum package manager
 Multi-Arch: foreign
 Homepage: https://github.com/rpm-software-management/dnf
 Description-md5: 35ecd037027703f5e8e5541dfb39e073
 admin
 Priority: optional
-Filename: pool/main/d/dnf/dnf_4.23.0-1_all.deb
-Size: 40876
-MD5sum: ff3191c0db7a9861a90a74f54a1add3a
-SHA256: c27bfb9c410cfc6fb712028db8985090c5b183e836050d308d2f5b2e18c713e7
+Filename: pool/main/d/dnf/dnf_4.24.0-1_all.deb
+Size: 41416
+MD5sum: a7b3e0d82d552649786151131361b2a8
+SHA256: 38abbf84c86936f996b5ca9d0af317e704de4bdc484aa9d9f25b0cde7f983420
 
 Package: dnf-data
 Source: dnf
-Version: 4.23.0-1
-Installed-Size: 2779
+Version: 4.24.0-1
+Installed-Size: 2780
 Maintainer: RPM packaging team <team+pkg-rpm@tracker.debian.org>
 Architecture: all
 Description: Dandified Yum package manager (data files)
@@ -6803,10 +6804,10 @@ Homepage: https://github.com/rpm-software-management/dnf
 Description-md5: 47c9c887dbef28bc2565e32b6c66e32f
 admin
 Priority: optional
-Filename: pool/main/d/dnf/dnf-data_4.23.0-1_all.deb
-Size: 418700
-MD5sum: d21bc7425dc844880d149ab403f79ebc
-SHA256: 03490d8c14541329df8721883e3117616922bd975f582ee2c99c60e450ad3b19
+Filename: pool/main/d/dnf/dnf-data_4.24.0-1_all.deb
+Size: 418824
+MD5sum: e3d6b1cf992b2c26cd4133fc171e4e91
+SHA256: 693fa23234344871dd54a49b377e1f4e47183fed39f2892bd0683e8ba4548e4e
 
 Package: dnf-plugins-core
 Version: 4.10.1-5
@@ -13496,26 +13497,25 @@ MD5sum: 4d3e3ecd9753133e927c5366675beb75
 SHA256: 0e54954c67012725fa8cf316a9226e7ecc9924bc61d05b0969eac0db0ec6e40f
 
 Package: interception-tools
-Source: interception-tools (0.6.8-3)
-Version: 0.6.8-3+b3
-Installed-Size: 521
+Version: 0.6.8-3.1
+Installed-Size: 548
 Maintainer: Osamu Aoki <osamu@debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.34), libevdev2 (>= 1.3), libgcc-s1 (>= 3.0), libstdc++6 (>= 11), libudev1 (>= 183), libyaml-cpp0.8 (>= 0.8.0+dfsg-6)
+Depends: libc6 (>= 2.38), libevdev2 (>= 1.3), libgcc-s1 (>= 3.0), libstdc++6 (>= 14), libudev1 (>= 183), libyaml-cpp0.8 (>= 0.8.0+dfsg-9)
 Suggests: interception-tools-compat
 Description: minimal composable infrastructure on top of libudev and libevdev
 Homepage: https://gitlab.com/interception/linux/tools
 Description-md5: 8977e97b36c2ca400497934d0f43f760
 admin
 Priority: optional
-Filename: pool/main/i/interception-tools/interception-tools_0.6.8-3+b3_amd64.deb
-Size: 149244
-MD5sum: 3aaa5176580ac8e34254eeb09c27e4e3
-SHA256: 150020d713ec280bdbcae3a8d0826731c5a587d9c668fa76beda6e46f8e130e1
+Filename: pool/main/i/interception-tools/interception-tools_0.6.8-3.1_amd64.deb
+Size: 156108
+MD5sum: 5c85688830030d4af9e05f58dd8ba504
+SHA256: d8a2b38f62a914b4f18d4c8a92f5b2563c24f70f91e8b6e1517fbc66dfa2774d
 
 Package: interception-tools-compat
 Source: interception-tools
-Version: 0.6.8-3
+Version: 0.6.8-3.1
 Installed-Size: 13
 Maintainer: Osamu Aoki <osamu@debian.org>
 Architecture: all
@@ -13526,10 +13526,10 @@ Homepage: https://gitlab.com/interception/linux/tools
 Description-md5: 94b691e706d4a85d5923ff1aee53ee7c
 admin
 Priority: optional
-Filename: pool/main/i/interception-tools/interception-tools-compat_0.6.8-3_all.deb
-Size: 2084
-MD5sum: e95e5b49d5b421ae5c9b3e6cd53b48ab
-SHA256: cec4a6c2953d56a8941061411b650c33a05a0de2ee22301596ee4ddceb0e7981
+Filename: pool/main/i/interception-tools/interception-tools-compat_0.6.8-3.1_all.deb
+Size: 2180
+MD5sum: 4ff55dfbae53d351569f0416d9d93971
+SHA256: 26d3db74874e257a16c98bd56bee226d45332c97b48491e55ad3276eb8ee46de
 
 Package: ioping
 Version: 1.3-1
@@ -20455,23 +20455,6 @@ Size: 21020
 MD5sum: 80c1aded6c7083ba585148c6ed707992
 SHA256: 603912843159cb17c507b88b996b7641ea977b679a784e09dd2439069d76a799
 
-Package: power-profiles-daemon
-Version: 0.30-1.1
-Installed-Size: 186
-Maintainer: Debian freedesktop.org maintainers <pkg-freedesktop-maintainers@lists.alioth.debian.org>
-Architecture: amd64
-Depends: libc6 (>= 2.34), libglib2.0-0t64 (>= 2.80.0), libgudev-1.0-0 (>= 234), libpolkit-gobject-1-0 (>= 0.99), python3:any (>= 3.11~), python3-gi
-Conflicts: laptop-mode-tools, tlp
-Description: Makes power profiles handling available over D-Bus.
-Homepage: https://gitlab.freedesktop.org/upower/power-profiles-daemon
-Description-md5: 213d6c45e73a56a85397e1ed15723d77
-admin
-Priority: optional
-Filename: pool/main/p/power-profiles-daemon/power-profiles-daemon_0.30-1.1_amd64.deb
-Size: 55840
-MD5sum: 755aa87656addbcef96e08db7670f8f6
-SHA256: 12c94dcb80a772226fe96ac7d88ddfd20bb7c066366427325aa01641e8518851
-
 Package: powercap-utils
 Source: powercap (0.6.0-1)
 Version: 0.6.0-1+b2
@@ -22650,21 +22633,21 @@ MD5sum: aef08406eb4d56929f629be05dc3a842
 SHA256: f19b6b31b6da605cb231a13577fa5c96047a34af4ee4b964e55b545940a19090
 
 Package: rear
-Version: 2.7+dfsg-1.2
-Installed-Size: 3565
-Maintainer: Frédéric Bonnard <frediz@debian.org>
+Version: 2.9+dfsg-1
+Installed-Size: 3862
+Maintainer: Karsten Schöke <karsten.schoeke@geobasis-bb.de>
 Architecture: amd64
-Depends: attr, bc, binutils, dosfstools, e2fsprogs, ethtool, fdisk | util-linux (<< 2.29.2-3~), gawk, iproute2, iputils-ping, isolinux, kbd, lsb-release, net-tools, openssl, parted, syslinux, syslinux-common, xorriso
+Depends: attr, bc, binutils, dosfstools, e2fsprogs, ethtool, fdisk, gawk, iproute2, iputils-ping, isolinux, kbd, lsb-release, net-tools, openssl, parted, syslinux, syslinux-common, xorriso
 Recommends: nfs-client, portmap, extlinux
 Description: Bare metal disaster recovery and system migration framework
 Homepage: https://relax-and-recover.org/
 Description-md5: 4de665cc6ca45ffe13b7a19630f9e260
 admin
 Priority: optional
-Filename: pool/main/r/rear/rear_2.7+dfsg-1.2_amd64.deb
-Size: 510680
-MD5sum: a39ee1cb2798fc992197909439a1aceb
-SHA256: 16d17658af86c96cde1ee698fea69e7bbfc1076bfd08d2068ed23b43013fc0b5
+Filename: pool/main/r/rear/rear_2.9+dfsg-1_amd64.deb
+Size: 567632
+MD5sum: 74feb071226c0a557fdf8aa1823a16cf
+SHA256: c1510a2000f3fc74392fb352883106d59c32ae02f916e2dfeaa99a4dabce0c20
 
 Package: reboot-notifier
 Version: 0.12
@@ -27022,21 +27005,21 @@ MD5sum: b0a564acfab2284970206c7eca1b342f
 SHA256: 44742727bd70463d4700f5f509233eb431fd11eae81a361662bfa2ea1387a319
 
 Package: systemd-boot-efi-amd64-signed
-Source: systemd-boot-efi-amd64-signed (258.1+1)
-Version: 258.1-1
+Source: systemd-boot-efi-amd64-signed (258.1+2)
+Version: 258.1-2
 Installed-Size: 144
 Maintainer: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Provides: systemd-boot-efi-signed (= 258.1-1)
+Provides: systemd-boot-efi-signed (= 258.1-2)
 Description: Tools to manage UEFI firmware updates (signed)
-Built-Using: systemd (= 258.1-1)
+Built-Using: systemd (= 258.1-2)
 Description-md5: b0b56b5e66e826ef5ce8c1e936f476cc
 admin
 Priority: optional
-Filename: pool/main/s/systemd-boot-efi-amd64-signed/systemd-boot-efi-amd64-signed_258.1-1_amd64.deb
-Size: 59360
-MD5sum: 35cd67dbd6121043bd38ca3789fdaa90
-SHA256: a51be7338ced9dd397d1c8e01e8f68e4bbd90e7179fe1072ad2ceede4a41dac7
+Filename: pool/main/s/systemd-boot-efi-amd64-signed/systemd-boot-efi-amd64-signed_258.1-2_amd64.deb
+Size: 59296
+MD5sum: 9b824f7a7359adca62a2802880559ebf
+SHA256: cee35c4d1608a89af07787970ce5b9802957754adee992dc39e427334f6e2aad
 
 Package: systemd-bootchart
 Version: 235-2
@@ -28522,27 +28505,29 @@ SHA256: 250a1c1c19d70d0aa8b013528ccb7dfd20ada052d3367e8e4509da756e8aa3a6
 
 Package: libpam-lastlog2
 Source: util-linux
-Version: 2.41.2-1
-Installed-Size: 77
+Version: 2.41.2-4
+Installed-Size: 83
 Maintainer: Chris Hofstaedtler <zeha@debian.org>
 Architecture: amd64
-Depends: libpam-runtime, libc6 (>= 2.38), liblastlog2-2 (= 2.41.2-1)
+Replaces: lastlog2 (<< 2.41.2-4~)
+Depends: libpam-runtime, libc6 (>= 2.38), liblastlog2-2 (= 2.41.2-4)
 Recommends: wtmpdb
+Breaks: lastlog2 (<< 2.41.2-4~)
 Description: lastlog2 database PAM module
 Multi-Arch: same
 Homepage: https://github.com/util-linux/util-linux
 Description-md5: 44d05a5389249ac3ace99386c8a9584d
 admin
 Priority: optional
-Filename: pool/main/u/util-linux/libpam-lastlog2_2.41.2-1_amd64.deb
-Size: 29052
-MD5sum: 49043600c288b9866b5bc40e4507014f
-SHA256: 2e0ced3bdea29677f33a5f3337e8efd91c3ed868842f434b0752d62d3d16e7ae
+Filename: pool/main/u/util-linux/libpam-lastlog2_2.41.2-4_amd64.deb
+Size: 29952
+MD5sum: da8cb061897ba2546d26a4cb82b82e1b
+SHA256: 03376d30cc1d84e551145326b09442d43d54301b39c0e964b345e06fb9af2000
 
 Package: login
-Source: util-linux (2.41.2-1)
-Version: 1:4.16.0-2+really2.41.2-1
-Installed-Size: 253
+Source: util-linux (2.41.2-4)
+Version: 1:4.16.0-2+really2.41.2-4
+Installed-Size: 254
 Maintainer: Chris Hofstaedtler <zeha@debian.org>
 Architecture: amd64
 Depends: libpam-modules, libpam-runtime, libaudit1 (>= 1:2.2.1), libc6 (>= 2.38), libpam0g (>= 0.99.7.1)
@@ -28557,18 +28542,18 @@ Tag: admin::login, implemented-in::c, interface::commandline,
  use::login
 admin
 Priority: required
-Filename: pool/main/u/util-linux/login_4.16.0-2+really2.41.2-1_amd64.deb
-Size: 104956
-MD5sum: f7e5a6a9cc43c639c8a225aee50ebc51
-SHA256: 07d0a82a115a9490b83d206f7aa15314d343d3ffab9083b0278a42cba089ab1a
+Filename: pool/main/u/util-linux/login_4.16.0-2+really2.41.2-4_amd64.deb
+Size: 105372
+MD5sum: 12c174c96498ee43d3ccc6adc3bcf6d7
+SHA256: 96695247183d2ddf5ad0a026e29f0ac269d5d7d01c0f17f67fe5b66ecf7147a3
 
 Package: mount
 Source: util-linux
-Version: 2.41.2-1
-Installed-Size: 496
+Version: 2.41.2-4
+Installed-Size: 497
 Maintainer: Chris Hofstaedtler <zeha@debian.org>
 Architecture: amd64
-Pre-Depends: libblkid1 (= 2.41.2-1), libc6 (>= 2.38), libmount1 (= 2.41.2-1), libselinux1 (>= 3.1~), libsmartcols1 (= 2.41.2-1)
+Pre-Depends: libblkid1 (= 2.41.2-4), libc6 (>= 2.38), libmount1 (= 2.41.2-4), libselinux1 (>= 3.1~), libsmartcols1 (= 2.41.2-4)
 Suggests: nfs-common
 Description: tools for mounting and manipulating filesystems
 Multi-Arch: foreign
@@ -28578,10 +28563,10 @@ Tag: admin::filesystem, hardware::storage, implemented-in::c,
  interface::commandline, role::program, scope::utility
 admin
 Priority: required
-Filename: pool/main/u/util-linux/mount_2.41.2-1_amd64.deb
-Size: 162456
-MD5sum: 4ce2ef69a399ce57955370b104a6ef7d
-SHA256: 37781eef62e13cf4ab7ef1c305b2894166a653fbacf1b9efc6ad051a12e4bbfa
+Filename: pool/main/u/util-linux/mount_2.41.2-4_amd64.deb
+Size: 163008
+MD5sum: b7641fa8d5870f97c13f1527b14f6f42
+SHA256: 2348ffca450761fe475a6b042afdbdfefd82530412473841e857ec8721d61853
 
 Package: vagrant
 Version: 2.3.7+git20230731.5fc64cde+dfsg-4
