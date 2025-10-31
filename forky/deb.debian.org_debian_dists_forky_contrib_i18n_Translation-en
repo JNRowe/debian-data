@@ -983,7 +983,7 @@ Description-en: 2D platformer game starring a quixotic frog
  This package contains game engine.
 
 Package: etqw
-Description-md5: 36f2b3fe69063b347eb3b5d032d815b7
+Description-md5: 64777a866bd5fb647ec4f1e411fa537c
 Description-en: science-fiction-themed multiplayer first person shooter
  Enemy Territory: Quake Wars is a multiplayer first-person shooter game
  by Splash Damage and id Software, released in 2007.
@@ -998,6 +998,10 @@ Description-en: science-fiction-themed multiplayer first person shooter
  etqw-bin, and etqw-data.
  Creating those packages requires data files from an "Enemy Territory:
  Quake Wars" installation or DVD.
+ .
+ Additional i386 libraries are required for sound and accelerated graphics
+ on some systems. Please see the game-data-packager-runtime-libs package's
+ description for details.
 
 Package: etqw-server
 Description-md5: f754f9e4d53d6ea1037e9dec690075b3
@@ -1262,13 +1266,30 @@ Description-en: Launcher for proprietary games
     (unreal-classic, unreal-gold, ut99)
 
 Package: game-data-packager-runtime-libs
-Description-md5: 4fb00875abd4eac5fe021d8d12a331eb
+Description-md5: 9ee54012003c00fed0ef5b1a88f30cd3
 Description-en: Helper libraries required by legacy i386 binary-only games
- Some old binary-only games released by Loki Entertainment for Linux 2.4
- in 1999-2001 requires library compatibility workarounds to run on modern
- systems.
+ This package provides Recommends and Suggests on some libraries that are
+ required for 32-bit games on some systems, but not required on others.
  .
- This package is required if you want to play any of these games:
+ For accelerated graphics:
+ .
+  * On systems that use Mesa graphics drivers, no additional graphics
+    drivers are needed: libglx-mesa0:i386 should have been installed
+    automatically by games that require it.
+  * On systems that use the Nvidia proprietary graphics driver, please
+    install nvidia-driver-libs:i386.
+ .
+ For sound:
+ .
+  * On systems that use pipewire for sound, such as default GNOME
+    desktop installations since Debian 12, please install
+    pipewire-alsa:i386.
+  * On systems that use the pulseaudio, jackd1 or jackd2 sound servers,
+    please install libasound2-plugins:i386.
+ .
+ Some old binary-only games released by Loki Entertainment for Linux 2.4
+ in 1999-2001 also require library compatibility workarounds to run on
+ modern systems, which are provided by this package. Affected games include:
  .
   * Civilization: Call to Power
   * Kohan: Immortal Sovereigns
@@ -1365,7 +1386,7 @@ Description-en: Quake III Arena dedicated server launcher scripts
  package. This requires pak0.pk3 from a Quake III installation or CD-ROM.
 
 Package: quake4
-Description-md5: 295c3a73cf8fea1b5238b2363b96ecaa
+Description-md5: 1c624756f799d1e5a9878ffca0855810
 Description-en: science-fiction-themed first person shooter
  Quake 4 is a first-person shooter game by Raven Software and id Software,
  released in 2005. This package contains a launcher script and menu
@@ -1381,6 +1402,10 @@ Description-en: science-fiction-themed first person shooter
  or quake4-censored-de-data (for the incompatible version sold in
  Germany). Creating those packages requires data files from a Quake 4
  installation or DVD.
+ .
+ Additional i386 libraries are required for sound and accelerated graphics
+ on some systems. Please see the game-data-packager-runtime-libs package's
+ description for details.
 
 Package: quake4-server
 Description-md5: 3daeb23b44625a430d820247d216d21b
@@ -3410,6 +3435,132 @@ Description-en: Speech Dispatcher: Voxin output module
  This package contains the output module for the Voxin speech synthesizer,
  which supports IBM TTS (aka Eloquence) and Vocalizer Embedded, which needs to
  be installed separately.
+
+Package: libsocl-contrib-1.4-1t64
+Description-md5: 4a69ce3f02f2cf01466ed8b9a22d8758
+Description-en: Task scheduler for heterogeneous multicore machines
+ StarPU is a runtime system that offers support for heterogeneous
+ multicore machines. While many efforts are devoted to design efficient
+ computation kernels for those architectures (e.g. to implement BLAS
+ kernels on GPUs or on Cell's SPUs), StarPU not only takes care of
+ offloading such kernels (and implementing data coherency across
+ the machine), but it also makes sure the kernels are executed as
+ efficiently as possible.
+ .
+ This package contains an OpenCL-compatible library interface to StarPU.
+ This "contrib" version is built against CUDA.
+
+Package: libstarpu-contrib-1.4-8
+Description-md5: f0ca811d02d6bbb6c830781bf9811bff
+Description-en: Task scheduler for heterogeneous multicore machines
+ StarPU is a runtime system that offers support for heterogeneous
+ multicore machines. While many efforts are devoted to design efficient
+ computation kernels for those architectures (e.g. to implement BLAS
+ kernels on GPUs or on Cell's SPUs), StarPU not only takes care of
+ offloading such kernels (and implementing data coherency across
+ the machine), but it also makes sure the kernels are executed as
+ efficiently as possible.
+ .
+ This package contains the main StarPU library
+ This "contrib" version is built against CUDA.
+
+Package: libstarpu-contrib-dev
+Description-md5: e7f42763fbe9c087a6defa203190f56e
+Description-en: Task scheduler for heterogeneous multicore machines - dev
+ StarPU is a runtime system that offers support for heterogeneous
+ multicore machines. While many efforts are devoted to design efficient
+ computation kernels for those architectures (e.g. to implement BLAS
+ kernels on GPUs or on Cell's SPUs), StarPU not only takes care of
+ offloading such kernels (and implementing data coherency across
+ the machine), but it also makes sure the kernels are executed as
+ efficiently as possible.
+ .
+ This package contains development headers and libraries.
+ This "contrib" version is built against CUDA.
+
+Package: libstarpu-contrib-openmp-llvm-1.4-1t64
+Description-md5: 0c4cf9967f5b66c184481dbb23c8faa6
+Description-en: Task scheduler for heterogeneous multicore machines
+ StarPU is a runtime system that offers support for heterogeneous
+ multicore machines. While many efforts are devoted to design efficient
+ computation kernels for those architectures (e.g. to implement BLAS
+ kernels on GPUs or on Cell's SPUs), StarPU not only takes care of
+ offloading such kernels (and implementing data coherency across
+ the machine), but it also makes sure the kernels are executed as
+ efficiently as possible.
+ .
+ This package contains the runtime support for LLVM OpenMP.
+ This "contrib" version is built against CUDA.
+
+Package: libstarpu-contribfft-1.4-1t64
+Description-md5: 1079179920c93a735ab89566a3855d36
+Description-en: Task scheduler for heterogeneous multicore machines
+ StarPU is a runtime system that offers support for heterogeneous
+ multicore machines. While many efforts are devoted to design efficient
+ computation kernels for those architectures (e.g. to implement BLAS
+ kernels on GPUs or on Cell's SPUs), StarPU not only takes care of
+ offloading such kernels (and implementing data coherency across
+ the machine), but it also makes sure the kernels are executed as
+ efficiently as possible.
+ .
+ This package contains a hybrid CPU+GPU FFT library.
+ This "contrib" version is built against CUDA.
+
+Package: libstarpu-contribmpi-1.4-3t64
+Description-md5: 4d3ce5602db3c9fbd91b7e19dcc14e2a
+Description-en: Task scheduler for heterogeneous multicore machines
+ StarPU is a runtime system that offers support for heterogeneous
+ multicore machines. While many efforts are devoted to design efficient
+ computation kernels for those architectures (e.g. to implement BLAS
+ kernels on GPUs or on Cell's SPUs), StarPU not only takes care of
+ offloading such kernels (and implementing data coherency across
+ the machine), but it also makes sure the kernels are executed as
+ efficiently as possible.
+ .
+ This package contains MPI extensions for StarPU.
+ This "contrib" version is built against CUDA.
+
+Package: libstarpu-contribrm-1.4-1t64
+Description-md5: 3008682b6502a417f1d5f1b0170499a0
+Description-en: Task scheduler for heterogeneous multicore machines
+ StarPU is a runtime system that offers support for heterogeneous
+ multicore machines. While many efforts are devoted to design efficient
+ computation kernels for those architectures (e.g. to implement BLAS
+ kernels on GPUs or on Cell's SPUs), StarPU not only takes care of
+ offloading such kernels (and implementing data coherency across
+ the machine), but it also makes sure the kernels are executed as
+ efficiently as possible.
+ .
+ This package contains the resource management library.
+ This "contrib" version is built against CUDA.
+
+Package: starpu-contrib-examples
+Description-md5: 11b8c6811b08d3b761c4e2f5fd0e0890
+Description-en: Task scheduler for heterogeneous multicore machines - exs
+ StarPU is a runtime system that offers support for heterogeneous
+ multicore machines. While many efforts are devoted to design efficient
+ computation kernels for those architectures (e.g. to implement BLAS
+ kernels on GPUs or on Cell's SPUs), StarPU not only takes care of
+ offloading such kernels (and implementing data coherency across
+ the machine), but it also makes sure the kernels are executed as
+ efficiently as possible.
+ .
+ This package contains application examples.
+ This "contrib" version is built against CUDA.
+
+Package: starpu-contrib-tools
+Description-md5: 21e204c0915cd3972a9cf41ad059d147
+Description-en: Task scheduler for heterogeneous multicore machines - tools
+ StarPU is a runtime system that offers support for heterogeneous
+ multicore machines. While many efforts are devoted to design efficient
+ computation kernels for those architectures (e.g. to implement BLAS
+ kernels on GPUs or on Cell's SPUs), StarPU not only takes care of
+ offloading such kernels (and implementing data coherency across
+ the machine), but it also makes sure the kernels are executed as
+ efficiently as possible.
+ .
+ This package contains StarPU tools.
+ This "contrib" version is built against CUDA.
 
 Package: libstdgpu-cuda-dev
 Description-md5: e4dd50a6deda827edd854dc36f6898ac
