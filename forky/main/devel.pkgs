@@ -1050,9 +1050,8 @@ MD5sum: 01f8c6590df63ab408bc7162236a3887
 SHA256: 8e116526ce26d0b25c12ba664da080dee58e516901b94c631f75d8b16407dafe
 
 Package: astyle
-Source: astyle (3.1-3)
-Version: 3.1-3+b3
-Installed-Size: 788
+Version: 3.6.12-1
+Installed-Size: 769
 Maintainer: Matteo Cypriani <mcy@lm7.fr>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libstdc++6 (>= 13.1)
@@ -1067,10 +1066,10 @@ Tag: devel::lang:c, devel::lang:c++, devel::lang:c-sharp, devel::lang:java,
  works-with::software:source
 devel
 Priority: optional
-Filename: pool/main/a/astyle/astyle_3.1-3+b3_amd64.deb
-Size: 213796
-MD5sum: 7419e054fa9a023ee1133bc508123067
-SHA256: c9d64823182e577eb2c9cc75e8e76de7fe4a4407f3bf8f3a86d073c233698d1e
+Filename: pool/main/a/astyle/astyle_3.6.12-1_amd64.deb
+Size: 214556
+MD5sum: fbbe293d45d6752b5b4609cbab9948ad
+SHA256: 458742a0732064b0803691f9302df9d63ce31dfedc165ec7b6971b75bcdb0d0d
 
 Package: ats2-lang
 Version: 0.4.2-3
@@ -7451,6 +7450,37 @@ Size: 17928
 MD5sum: 6cd81fc280c755fbbc65d0cebb118c5b
 SHA256: 7af5b7e2237e65a0991bf4e78fea6dcbdb0068b8a7ec66c2a36a62a8cbf70831
 
+Package: default-d-compiler
+Source: dh-dlang
+Version: 0.6.10
+Installed-Size: 10
+Maintainer: Debian D Language Group <team+d-team@tracker.debian.org>
+Architecture: amd64
+Depends: ldc (>= 1:1.38)
+Description: Default D compiler (metapackage)
+Description-md5: bbbd93771830b7fd3186d8c877db5ddf
+devel
+Priority: optional
+Filename: pool/main/d/dh-dlang/default-d-compiler_0.6.10_amd64.deb
+Size: 2788
+MD5sum: 655472dda51653b8010808b2d497489b
+SHA256: 6e6e4709850cd2a793a5e27c4721eadebca3d06249a93a5d3fa9991999f404dc
+
+Package: dh-dlang
+Version: 0.6.10
+Installed-Size: 18
+Maintainer: Debian D Language Group <team+d-team@tracker.debian.org>
+Architecture: all
+Depends: debhelper (>= 12), default-d-compiler, python3
+Description: Packaging helpers for building D code
+Description-md5: b6ef8d67151656ec919d17b29de6dd62
+devel
+Priority: optional
+Filename: pool/main/d/dh-dlang/dh-dlang_0.6.10_all.deb
+Size: 5088
+MD5sum: bb06b7bc2e23200f57e34cf9c55ef716
+SHA256: b37b10e70e3772378d87d4bdfad047adbc14e600af9bc81fe29c1e001a2157f3
+
 Package: dh-elpa
 Version: 2.1.9
 Installed-Size: 98
@@ -8063,6 +8093,40 @@ Size: 7108
 MD5sum: 03468c1a5a7a268317b7d2ffbf74d07f
 SHA256: 2a6497fdc91f225cd8473c36e5c050f689da8bbdf1beb582617eac81e0cb75a0
 
+Package: dlang-libevent
+Version: 2.0.16.1~really2.0.2-0.2
+Installed-Size: 256
+Maintainer: Konstantinos Margaritis <markos@debian.org>
+Architecture: all
+Depends: dlang-openssl, libevent-dev
+Recommends: default-d-compiler
+Description: D version of the C headers for libevent
+Homepage: https://github.com/D-Programming-Deimos/libevent
+Description-md5: 2173a61eac7bad456c25a6bbe11ec7c6
+devel
+Priority: optional
+Filename: pool/main/d/dlang-libevent/dlang-libevent_2.0.16.1~really2.0.2-0.2_all.deb
+Size: 54188
+MD5sum: 83f8256a7f67d0b6e4052e396c1b3265
+SHA256: 58a8b6983951a0a151848800e4095f8a18ded9ca5811930ae7e132de7fe5f3de
+
+Package: dlang-openssl
+Version: 2.0.0+1.1.0h-0.2
+Installed-Size: 1418
+Maintainer: Konstantinos Margaritis <markos@debian.org>
+Architecture: all
+Depends: libssl-dev
+Recommends: default-d-compiler
+Description: D version of the C headers for openssl
+Homepage: https://github.com/D-Programming-Deimos/openssl
+Description-md5: ceae68e070606daaea7150c57cbb6b09
+devel
+Priority: optional
+Filename: pool/main/d/dlang-openssl/dlang-openssl_2.0.0+1.1.0h-0.2_all.deb
+Size: 205504
+MD5sum: 366e0217469730e93224916b823d31bf
+SHA256: dc49b4b53d4090264750cde85bf9790f0ebbbfab971c1535675d2ab03da12748
+
 Package: dlt-viewer
 Version: 2.28.1-dfsg-1
 Installed-Size: 5814
@@ -8481,6 +8545,24 @@ Filename: pool/main/d/dput-ng/dput-ng_1.44_all.deb
 Size: 36424
 MD5sum: b7c22e9213f7d33022bb75c2da94cff4
 SHA256: 7d88736526cbdbe388e9bf3489f824e612a4736695adfd2f6fc55213abc9fe7c
+
+Package: dub
+Source: dub (1.40.0-1)
+Version: 1.40.0-1+b1
+Installed-Size: 5045
+Maintainer: Debian D Language Group <team+d-team@tracker.debian.org>
+Architecture: amd64
+Depends: default-d-compiler, libcurl3t64-gnutls | libcurl4t64, libc6 (>= 2.34), libgcc-s1 (>= 4.2), zlib1g (>= 1:1.1.4)
+Suggests: gdmd | ldc
+Description: Package and build management system for D
+Homepage: https://code.dlang.org/
+Description-md5: 0440199a3a4483ede497fdb26489f474
+devel
+Priority: optional
+Filename: pool/main/d/dub/dub_1.40.0-1+b1_amd64.deb
+Size: 1163924
+MD5sum: ab5236d3b7bfcdf3fc284b48ceaff08c
+SHA256: e558b451df118bcf62ba8d3df135cf0ad9b078fe174e085b1f28d81771b79596
 
 Package: duck
 Version: 0.14.4
@@ -71969,9 +72051,8 @@ MD5sum: 2b35bdd2caad4da753357af29a811136
 SHA256: 491c48789abcfb838d024a78367d8dfa63988923435d1727166945d7a743f004
 
 Package: git-evtag
-Source: git-evtag (2022.1-2)
-Version: 2022.1-2+b2
-Installed-Size: 54
+Version: 2022.1-3
+Installed-Size: 53
 Maintainer: Simon McVittie <smcv@debian.org>
 Architecture: amd64
 Depends: git, gnupg, libc6 (>= 2.34), libgit2-1.9 (>= 1.9.0), libglib2.0-0t64 (>= 2.70.0)
@@ -71981,10 +72062,10 @@ Homepage: https://github.com/cgwalters/git-evtag
 Description-md5: 1aa17f64c2b040e6e3b399439307f32e
 devel
 Priority: optional
-Filename: pool/main/g/git-evtag/git-evtag_2022.1-2+b2_amd64.deb
-Size: 17012
-MD5sum: 01b61c246d8285f1076b0bedcfde89a8
-SHA256: 9406ff99785c039212366e0bcba73bb48df70228355fbbfd513d9f1b99b0a2bd
+Filename: pool/main/g/git-evtag/git-evtag_2022.1-3_amd64.deb
+Size: 17160
+MD5sum: 5f8e015db9efc02d15e08940694ea611
+SHA256: 5f5b94c178be897f5dbcee704c937087361064c788a74f9a3e1e4cc0986817d3
 
 Package: git-revise
 Version: 0.7.0-1
@@ -78238,6 +78319,24 @@ Size: 399388
 MD5sum: 67b3ae8397a58ccce8e47b0b334b93c0
 SHA256: a61891e20d8aa2104884c732017dad65a3ef5ffc2376cb83ed5881485db411b5
 
+Package: ldc
+Version: 1:1.41.0-1
+Installed-Size: 18742
+Maintainer: Debian D Language Group <team+d-team@tracker.debian.org>
+Architecture: amd64
+Provides: d-compiler, d-v2-compiler
+Depends: libphobos2-ldc-shared-dev (= 1:1.41.0-1), libc6 (>= 2.38), libgcc-s1 (>= 4.2), libllvm19 (>= 1:19.1.0), libstdc++6 (>= 11), zlib1g (>= 1:1.2.0)
+Description: LLVM D Compiler
+Homepage: https://github.com/ldc-developers/ldc
+Description-md5: 5948e50786abb334aa1df283d854a913
+Tag: devel::TODO, devel::compiler, role::program
+devel
+Priority: optional
+Filename: pool/main/l/ldc/ldc_1.41.0-1_amd64.deb
+Size: 4103840
+MD5sum: 8a5aaf9429ae49d01c6375ff9accd37d
+SHA256: af0fd238b8a3ca14952513761c4c1e8734bb043f6357eb20bc28ba648fc2b6a5
+
 Package: poly1305
 Source: lib1305
 Version: 0~20250415-2
@@ -83046,13 +83145,12 @@ MD5sum: d4150a53d8718e7c1274a8c1408163f4
 SHA256: 5afcdc9f64659bbf523945845a8bc23d0c6e3b14419c652c3a3570b1e5091159
 
 Package: os-autoinst
-Source: os-autoinst (4.6.1731418769.97d9a7fd-4)
-Version: 4.6.1731418769.97d9a7fd-4+b1
-Installed-Size: 926
+Version: 5.1753993900.1487e479-1
+Installed-Size: 936
 Maintainer: Philip Hands <phil@hands.com>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libfftw3-double3 (>= 3.3.10), libgcc-s1 (>= 3.0), libogg0 (>= 1.0rc3), libopencv-core410 (>= 4.10.0+dfsg), libopencv-highgui410 (>= 4.10.0+dfsg), libopencv-imgcodecs410 (>= 4.10.0+dfsg), libopencv-imgproc410 (>= 4.10.0+dfsg), libsndfile1 (>= 1.0.20), libstdc++6 (>= 13.1), libtheoradec2 (>= 1.2), libtheoraenc2 (>= 1.2), perl (>= 5.40.1-6), perlapi-5.40.1, qemu-system-x86 (>= 4.0.0), qemu-utils, optipng, git, tesseract-ocr-all, python3, libmojolicious-perl (>= 5.60), libcarp-always-perl, libdata-dump-perl, libcrypt-des-perl, libjson-perl, libnet-dbus-perl, libipc-system-simple-perl, libxml-libxml-perl, libnet-ssh2-perl, libtest-mockmodule-perl, libdevel-cover-perl, libtest-warnings-perl, libpod-coverage-perl, libtest-fatal-perl, libtest-pod-perl, libexception-class-perl, libipc-run-perl, libtest-output-perl, libautodie-perl, libnet-ip-perl, libfile-which-perl, libnet-snmp-perl, libjson-xs-perl, libyaml-pp-perl, libtime-moment-perl, libmojo-ioloop-readwriteprocess-perl, libjson-validator-perl, libcpanel-json-xs-perl, liblist-moreutils-perl
-Recommends: x11-xkb-utils, tigervnc-standalone-server, openvswitch-switch, ffmpeg
+Recommends: x11-xkb-utils, tigervnc-standalone-server, openvswitch-switch, ffmpeg, jq, iproute2
 Enhances: openqa
 Description: automated testing of Operating Systems
 Homepage: http://open.qa
@@ -83061,10 +83159,10 @@ Tag: devel::testing-qa, implemented-in::perl, interface::commandline,
  role::program
 devel
 Priority: optional
-Filename: pool/main/o/os-autoinst/os-autoinst_4.6.1731418769.97d9a7fd-4+b1_amd64.deb
-Size: 228532
-MD5sum: a1b8f666ed466ea5e431ac145877d7b6
-SHA256: 93e60e28a6da69dd9a1e5940c2051bcb16a9bb3f7b1f7aa75bce32b9f20eb81d
+Filename: pool/main/o/os-autoinst/os-autoinst_5.1753993900.1487e479-1_amd64.deb
+Size: 232848
+MD5sum: aa78d42bd30e28a94b0b9d8d4a617945
+SHA256: e9ee8ade6502edb040a3618208b3c50c680d2d19b2de64b8ca1bc853ee842c16
 
 Package: osc
 Version: 1.15.1-1
@@ -87044,6 +87142,62 @@ Filename: pool/main/r/ros2-ament-lint/ament-lint_0.20.2-1_all.deb
 Size: 7048
 MD5sum: 40b70b93866dc5c4eac28e58720130c9
 SHA256: 6bf446ae49a2bbfae59028f24090ba3e0c49f775db9b30f5ae273b4ecffe57d7
+
+Package: rosidl-cmake
+Source: ros2-rosidl
+Version: 3.3.1-1.1
+Installed-Size: 58
+Maintainer: Debian Robotics Team <team+robotics@tracker.debian.org>
+Architecture: all
+Depends: ament-cmake, python3-empy, python3-rosidl
+Description: CMake module for ROS 2 IDL support
+Multi-Arch: foreign
+Homepage: https://github.com/ros2/rosidl
+Description-md5: 7584599743167b138081c0ca520a0704
+devel
+Priority: optional
+Filename: pool/main/r/ros2-rosidl/rosidl-cmake_3.3.1-1.1_all.deb
+Size: 10708
+MD5sum: ae6124c4df5079b052ef7876595981ef
+SHA256: 50158b3ab6e72db7a3b13e4e683d13ab3712fa99b1a0557cf67b9892a0f7036e
+
+Package: rosidl-generator-c-cpp
+Source: ros2-rosidl
+Version: 3.3.1-1.1
+Installed-Size: 173
+Maintainer: Debian Robotics Team <team+robotics@tracker.debian.org>
+Architecture: all
+Replaces: rosidl-generators (<< 3.3.0)
+Depends: librcutils-dev, librosidl-runtime-c-cpp-dev, librosidl-typesupport-interface-dev, librosidl-typesupport-introspection-c-cpp-dev, python3:any, python3-rosidl, rosidl-cmake
+Breaks: rosidl-generators (<< 3.3.0)
+Description: C/C++ Language generators for ROS 2 IDL support
+Multi-Arch: foreign
+Homepage: https://github.com/ros2/rosidl
+Description-md5: f4ad461404d1abfbf98e4b30916a75e8
+devel
+Priority: optional
+Filename: pool/main/r/ros2-rosidl/rosidl-generator-c-cpp_3.3.1-1.1_all.deb
+Size: 21152
+MD5sum: 77fb0cb54c10ce0853e1a91ebcb74e2f
+SHA256: e1c96eddaee105a9ef19fb189e27f02b2c2863c19891a102d8aa777e7d40a046
+
+Package: rosidl-tools
+Source: ros2-rosidl
+Version: 3.3.1-1.1
+Installed-Size: 17
+Maintainer: Debian Robotics Team <team+robotics@tracker.debian.org>
+Architecture: all
+Depends: python3:any, python3-rosidl
+Description: ROS 2 IDL support (CLI tools)
+Multi-Arch: foreign
+Homepage: https://github.com/ros2/rosidl
+Description-md5: f0edf0251bc319b9effdfa0fad072a50
+devel
+Priority: optional
+Filename: pool/main/r/ros2-rosidl/rosidl-tools_3.3.1-1.1_all.deb
+Size: 3956
+MD5sum: 0540dc3cc146b85f257b512533b9ee6d
+SHA256: 689a2f865782d5825ff1123d1431eaf36d901edd9b2ad5f1af64319bf14e3d1e
 
 Package: ros2-test-interface-files
 Version: 0.13.0-1
