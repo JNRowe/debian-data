@@ -112,28 +112,6 @@ Size: 57988
 MD5sum: cc8806bef4da4b69d6f75defae907ff2
 SHA256: 23bec05ef952f5c0ff1838d7b2f90376f2bae90967ee2fe2d3bd8031243f2aad
 
-Package: amavisd-milter
-Version: 1.7.2-2
-Installed-Size: 85
-Maintainer: Debian QA Group <packages@qa.debian.org>
-Architecture: amd64
-Replaces: amavisd-new-milter (<= 1:2.6.4-2)
-Provides: amavisd-new-milter
-Depends: libc6 (>= 2.38), libmilter1.0.1, amavisd-new, lsb-base
-Pre-Depends: init-system-helpers (>= 1.54~)
-Recommends: sendmail | postfix
-Breaks: amavisd-new-milter (<= 1:2.6.4-2)
-Description: amavisd-new interface for milter-capable MTAs
-Homepage: https://github.com/prehor/amavisd-milter
-Description-md5: 5aa8c00571da46088afa733d6b6dc007
-Tag: mail::filters, role::program, works-with::mail
-mail
-Priority: optional
-Filename: pool/main/a/amavisd-milter/amavisd-milter_1.7.2-2_amd64.deb
-Size: 30000
-MD5sum: 93011584d49bdbf931848c1d7109fb35
-SHA256: b4cdd7d9fcbbb14834032fafb7f9f64ddab67521e215f09ea4e9e8970a74ccaf
-
 Package: amavisd-new
 Version: 1:2.13.0-7
 Installed-Size: 2770
@@ -4360,94 +4338,6 @@ Size: 17836
 MD5sum: a6033ef03f05f62389a5a740bb09b037
 SHA256: 5cea75f8d158239ccd1fd63cf75aea871e009aaebe0b470ea320ebff45023a7e
 
-Package: mysqmail
-Version: 0.4.9-10.4
-Installed-Size: 33
-Maintainer: Thomas Goirand <zigo@debian.org>
-Architecture: all
-Depends: debconf (>= 0.5) | debconf-2.0, debconf
-Description: real-time logging system in MySQL
-Homepage: http://www.gplhost.com/software-mysqmail.html
-Description-md5: ecd6676908f8f30fea140302106a8b9d
-mail
-Priority: optional
-Filename: pool/main/m/mysqmail/mysqmail_0.4.9-10.4_all.deb
-Size: 10992
-MD5sum: dbf5d5b386dc622e3929592b7ff2ae30
-SHA256: ddccb64625652a44f32ee7620fe04321035a2494ce210227a9dc5281d11c3b33
-
-Package: mysqmail-courier-logger
-Source: mysqmail
-Version: 0.4.9-10.4
-Installed-Size: 42
-Maintainer: Thomas Goirand <zigo@debian.org>
-Architecture: amd64
-Depends: courier-imap-ssl | courier-imap | courier-pop | courier-pop-ssl, lsb-base, mysqmail, libc6 (>= 2.34), libdotconf0 (>= 1.0.13), libmariadb3 (>= 3.0.0)
-Pre-Depends: init-system-helpers (>= 1.54~)
-Description: real-time logging system in MySQL - Courier traffic-logger
-Homepage: http://www.gplhost.com/software-mysqmail.html
-Description-md5: 79bed7f401ae5231bd54a45f055afab5
-mail
-Priority: optional
-Filename: pool/main/m/mysqmail/mysqmail-courier-logger_0.4.9-10.4_amd64.deb
-Size: 8344
-MD5sum: d68d63f9fe4959a042b836bda99a551b
-SHA256: 019678b62f153c4a82c3aeb1661beabf50205d709e163af3c26eab74b9f5bf8d
-
-Package: mysqmail-dovecot-logger
-Source: mysqmail
-Version: 0.4.9-10.4
-Installed-Size: 38
-Maintainer: Thomas Goirand <zigo@debian.org>
-Architecture: amd64
-Depends: dovecot-pop3d, dovecot-imapd, lsb-base, mysqmail, libc6 (>= 2.34), libdotconf0 (>= 1.0.13), libmariadb3 (>= 3.0.0)
-Pre-Depends: init-system-helpers (>= 1.54~)
-Description: real-time logging system in MySQL - Dovecot traffic-logger
-Homepage: http://www.gplhost.com/software-mysqmail.html
-Description-md5: e0558e9f995a547580fb07d66626d5d8
-mail
-Priority: optional
-Filename: pool/main/m/mysqmail/mysqmail-dovecot-logger_0.4.9-10.4_amd64.deb
-Size: 8008
-MD5sum: 71e145addf80052d3a2e2963bf204d1a
-SHA256: 13cd7af8196386d86dbba692d0454e03f56c50706e2663c73c5f9e9c94c52118
-
-Package: mysqmail-postfix-logger
-Source: mysqmail
-Version: 0.4.9-10.4
-Installed-Size: 42
-Maintainer: Thomas Goirand <zigo@debian.org>
-Architecture: amd64
-Depends: lsb-base, postfix, mysqmail, libc6 (>= 2.34), libdotconf0 (>= 1.0.13), libmariadb3 (>= 3.0.0)
-Pre-Depends: init-system-helpers (>= 1.54~)
-Description: real-time logging system in MySQL - Postfix traffic-logger
-Homepage: http://www.gplhost.com/software-mysqmail.html
-Description-md5: d2bc38905bf38fc109437361bed37ad8
-mail
-Priority: optional
-Filename: pool/main/m/mysqmail/mysqmail-postfix-logger_0.4.9-10.4_amd64.deb
-Size: 9168
-MD5sum: c49ea0c86cb128d5ac345fd4505fa9d4
-SHA256: 5746bef90d83a3d403fbd3ec7d895901df5180fdc903799b1f01a91a3f62b274
-
-Package: mysqmail-pure-ftpd-logger
-Source: mysqmail
-Version: 0.4.9-10.4
-Installed-Size: 38
-Maintainer: Thomas Goirand <zigo@debian.org>
-Architecture: amd64
-Depends: lsb-base, pure-ftpd | pure-ftpd-mysql, mysqmail, libc6 (>= 2.34), libdotconf0 (>= 1.0.13), libmariadb3 (>= 3.0.0)
-Pre-Depends: init-system-helpers (>= 1.54~)
-Description: real-time logging system in MySQL - Pure-FTPd traffic-logger
-Homepage: http://www.gplhost.com/software-mysqmail.html
-Description-md5: 99fec3a9dda475c436b04994edda80de
-mail
-Priority: optional
-Filename: pool/main/m/mysqmail/mysqmail-pure-ftpd-logger_0.4.9-10.4_amd64.deb
-Size: 7736
-MD5sum: e807fc43943bca7a86da7eefeddf46cc
-SHA256: da9542685f35a454e2637a1135896a99308cf231948aef159e8f3547f4d7afcf
-
 Package: neomutt
 Version: 20250905+dfsg-1
 Installed-Size: 9439
@@ -4487,13 +4377,13 @@ MD5sum: f93a0d4e772f3348178098b2f312e118
 SHA256: ed6738d21a81eb3a05b3ce96826febd70f8eb93c7b3c7e6ec2092fe96d4e21a7
 
 Package: nmh
-Version: 1.8-3
-Installed-Size: 7732
+Version: 1.8-4
+Installed-Size: 7760
 Maintainer: Alexander Zangerl <az@debian.org>
 Architecture: amd64
 Replaces: mh
 Provides: mail-reader, mh
-Depends: libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libdb5.3t64, liblockfile1 (>= 1.0), libreadline8t64 (>= 6.0), libsasl2-2 (>= 2.1.28+dfsg1), libssl3t64 (>= 3.0.0), libtinfo6 (>= 6), netbase (>= 3.16-1), mailcap, sensible-utils, libsasl2-modules
+Depends: libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libgdbm-compat4t64 (>= 1.16), liblockfile1 (>= 1.0), libreadline8t64 (>= 6.0), libsasl2-2 (>= 2.1.28+dfsg1), libssl3t64 (>= 3.0.0), libtinfo6 (>= 6), netbase (>= 3.16-1), mailcap, sensible-utils, libsasl2-modules
 Recommends: default-mta | mail-transport-agent
 Suggests: exmh, mh-e, mh-book, par, libmime-tools-perl, libmailtools-perl
 Conflicts: mh
@@ -4505,10 +4395,10 @@ Tag: implemented-in::c, interface::commandline, interface::text-mode,
  uitoolkit::ncurses, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/n/nmh/nmh_1.8-3_amd64.deb
-Size: 1494040
-MD5sum: 9075d3352e0ba973d27edf1d9d22a146
-SHA256: 97f4b34b8c4795004eb601cff13f66864cb23876a573f4f127c4038d88c1920a
+Filename: pool/main/n/nmh/nmh_1.8-4_amd64.deb
+Size: 1500132
+MD5sum: 0622067b91afd608f00adf87dd463a78
+SHA256: 88e84110f23f1ee917d7090d63def1e23e69f7c5198621bf84ce6735ab047bd3
 
 Package: elpa-notmuch
 Source: notmuch
@@ -5557,25 +5447,6 @@ Size: 35072
 MD5sum: bcb09913b93bdcb3c186dc5cf4081508
 SHA256: 4d5f541fb7c807d31fa58addbce5b7036d3c152ba3f2db7425d778ea61509e97
 
-Package: qpsmtpd
-Version: 0.94-8
-Installed-Size: 992
-Maintainer: Debian QA Group <packages@qa.debian.org>
-Architecture: all
-Depends: adduser (>= 3.0), libclamav-client-perl, libdigest-hmac-perl, libio-socket-inet6-perl, libipc-shareable-perl, libmail-spf-perl (>= 2.8.0), libmailtools-perl, libnet-dns-perl, libnet-perl, libsocket6-perl, sysvinit-utils (>= 3.05-4~), debconf (>= 0.5) | debconf-2.0, perl:any
-Suggests: clamav-daemon, libnet-ldap-perl, spamassassin (>= 3.0.0), tinycdb
-Description: Flexible SMTP daemon for network-level spam detection
-Homepage: http://smtpd.develooper.com/
-Description-md5: 9047d0dbdf28ebebb1e89abaf63105ed
-Tag: interface::daemon, mail::filters, protocol::smtp, role::program,
- works-with::mail
-mail
-Priority: optional
-Filename: pool/main/q/qpsmtpd/qpsmtpd_0.94-8_all.deb
-Size: 261660
-MD5sum: c3626bf64da26ba72e429bea244d630c
-SHA256: cfbf9edfd0b4ac2d07925d5ece5eb81e8a74031bf8044262324b2983b67f2616
-
 Package: webext-quicktext
 Source: quicktext
 Version: 6.4.6-1
@@ -6118,47 +5989,6 @@ Filename: pool/main/s/sogo/sogo-common_5.12.4-1_all.deb
 Size: 18650328
 MD5sum: ed97fdc3019a5668828494f2825fbc6c
 SHA256: e04891d85e34e60290057bd31acf2bf3bcacfed24983b86d92a6464268d5eed3
-
-Package: solid-pop3d
-Version: 0.15-31
-Installed-Size: 173
-Maintainer: Robert Luberda <robert@debian.org>
-Architecture: amd64
-Provides: pop3-server
-Depends: adduser, libpam-runtime, lsb-base, netbase, update-inetd, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.14), liblockfile1 (>= 1.0), libpam0g (>= 0.99.7.1)
-Pre-Depends: init-system-helpers (>= 1.54~)
-Recommends: default-mta | mail-transport-agent
-Suggests: openbsd-inetd | inet-superserver
-Conflicts: pop3-server
-Description: POP3 server supporting Maildir, PAM, vhosting
-Description-md5: 3ce24da25b18d93f7c7eb2d5b4a7ddc6
-Tag: implemented-in::c, interface::daemon, mail::pop, network::server,
- protocol::pop3, role::program, works-with::mail
-mail
-Priority: optional
-Filename: pool/main/s/solid-pop3d/solid-pop3d_0.15-31_amd64.deb
-Size: 62164
-MD5sum: f53955fe9787d475af98b272b0061d32
-SHA256: af8675e4b3ca612d7cb621517b56d36a221c47b9ede209907e2769b751f431c6
-
-Package: spamass-milter
-Version: 0.4.0-2
-Installed-Size: 124
-Maintainer: Don Armstrong <don@debian.org>
-Architecture: amd64
-Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.0), libmilter1.0.1, libstdc++6 (>= 5.2), spamc, adduser
-Recommends: spamassassin, sendmail | postfix
-Description: milter for filtering mail through spamassassin
-Homepage: https://savannah.nongnu.org/projects/spamass-milt/
-Description-md5: 34fb2325cec6e9fda50bb6cddec02542
-Tag: implemented-in::c++, interface::daemon, mail::filters, protocol::smtp,
- role::program, use::scanning, works-with::mail
-mail
-Priority: optional
-Filename: pool/main/s/spamass-milter/spamass-milter_0.4.0-2_amd64.deb
-Size: 50724
-MD5sum: dd0b712467bf31955e3f111e8ed8b99b
-SHA256: 8007a61f32f9882a8c203855bf9e580ae33d5b30163ec196af4c0c42f0e9336b
 
 Package: sa-compile
 Source: spamassassin
