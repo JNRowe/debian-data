@@ -2232,24 +2232,24 @@ MD5sum: fc67cba6c50a4b77075c2e4bf551b0e2
 SHA256: c2bba5c14f8302a15f38a8bb71f817d4ca5b047789f0f440f4958c0cff0b23ed
 
 Package: cellbroadcastd
-Version: 0.0.2-3
+Version: 0.0.3-1
 Installed-Size: 185
 Maintainer: DebianOnMobile Maintainers <debian-on-mobile-maintainers@alioth-lists.debian.net>
 Architecture: amd64
-Depends: cellbroadcastd-common (>= 0.0.2-3), mobile-broadband-provider-info (>= 20250613), init-system-helpers (>= 1.52), libc6 (>= 2.34), libcellbroadcast-0.0-0 (>= 0.0.0~20250610), libglib2.0-0t64 (>= 2.83.0), libgmobile0 (>= 0.4.0), libmm-glib0 (>= 1.24.0)
+Depends: cellbroadcastd-common (>= 0.0.3-1), mobile-broadband-provider-info (>= 20250613), init-system-helpers (>= 1.52), libc6 (>= 2.34), libcellbroadcast-0.0-0 (>= 0.0.0~20250610), libglib2.0-0t64 (>= 2.83.0), libgmobile0 (>= 0.4.0), libmm-glib0 (>= 1.24.0)
 Description: DBus service for cellular broadcast messages
 Homepage: https://gitlab.freedesktop.org/devrtz/cellbroadcastd
 Description-md5: deede82fd3ca30dec9928857f3b903f8
 net
 Priority: optional
-Filename: pool/main/c/cellbroadcastd/cellbroadcastd_0.0.2-3_amd64.deb
-Size: 42068
-MD5sum: bdaabe53a075b9551f82051c9f9985e5
-SHA256: 8809d7ed722eefc786ec90e1b102f5a78eaa4c062b9b5a5ae2d932e16a661ce9
+Filename: pool/main/c/cellbroadcastd/cellbroadcastd_0.0.3-1_amd64.deb
+Size: 42164
+MD5sum: 66a161cc36f6f249df9a487a3336b8fa
+SHA256: dc2b9749555ed1bab307a474f0c77eab78572836df2dfb77a8a4f44b4088d885
 
 Package: cellbroadcastd-common
 Source: cellbroadcastd
-Version: 0.0.2-3
+Version: 0.0.3-1
 Installed-Size: 19
 Maintainer: DebianOnMobile Maintainers <debian-on-mobile-maintainers@alioth-lists.debian.net>
 Architecture: all
@@ -2260,10 +2260,10 @@ Homepage: https://gitlab.freedesktop.org/devrtz/cellbroadcastd
 Description-md5: 6b5cdfed8b91bdd4afc8e6af7d3e7e39
 net
 Priority: optional
-Filename: pool/main/c/cellbroadcastd/cellbroadcastd-common_0.0.2-3_all.deb
-Size: 4116
-MD5sum: 2606da4127d25db45eaff2b882ee498b
-SHA256: 2dcd0b5101c6285c13a22922fccade8adb566c36283330ea4926a598cf9f51fc
+Filename: pool/main/c/cellbroadcastd/cellbroadcastd-common_0.0.3-1_all.deb
+Size: 4380
+MD5sum: 17c13918e59d5adf838cb4d340d1a57f
+SHA256: 70895353d910f6109ec1cc4ea96c965cc246ef9641f19bc28ba8f77284ae33ae
 
 Package: ceni
 Version: 2.33-4
@@ -7111,6 +7111,79 @@ Size: 15012
 MD5sum: 389ba7a73a9e66c1bb60ec3ff648364a
 SHA256: 0cc1bd6d4e1c7b766e7e8ecaa07904b09b559eef98dbeaa9b49bd2b016831ab9
 
+Package: freeipa-client
+Source: freeipa
+Version: 4.12.4-2
+Installed-Size: 293
+Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
+Architecture: amd64
+Depends: bind9-utils, certmonger (>= 0.79.14), curl, bind9-dnsutils, freeipa-common (= 4.12.4-2), krb5-user, libnss3-tools, libnss-sss, libpam-sss, libsasl2-modules-gssapi-mit, libsss-sudo, oddjob-mkhomedir, python3-dnspython, python3-ipaclient (= 4.12.4-2), python3-gssapi, python3-ldap, python3-sss, sssd (>= 2.8.0), python3:any, libc6 (>= 2.34), libcom-err2 (>= 1.43.9), libcurl4t64 (>= 7.16.2), libini-config5t64 (>= 0.4.0), libjansson4 (>= 2.14), libk5crypto3 (>= 1.20), libkrb5-3 (>= 1.13~alpha1+dfsg), libldap2 (>= 2.6.2), libpopt0 (>= 1.14), libssl3t64 (>= 3.0.0)
+Recommends: chrony, sssd-passkey
+Suggests: libnss-myhostname, libpam-krb5
+Description: FreeIPA centralized identity framework -- client
+Homepage: http://www.freeipa.org
+Description-md5: 1aa0c0a3f974364e79585d72db619762
+net
+Priority: optional
+Filename: pool/main/f/freeipa/freeipa-client_4.12.4-2_amd64.deb
+Size: 107764
+MD5sum: 110950aa993b9296264bc2ee800fc7c5
+SHA256: e2a5d7d3d76e25c1d3e433d069a00e2ca1cbc77a9f081e5ce51267c1022d3a95
+
+Package: freeipa-client-epn
+Source: freeipa
+Version: 4.12.4-2
+Installed-Size: 54
+Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
+Architecture: amd64
+Replaces: freeipa-server (<< 4.8.10-2)
+Depends: freeipa-client (= 4.12.4-2), python3:any
+Breaks: freeipa-server (<< 4.8.10-2)
+Description: FreeIPA centralized identity framework -- tools for configuring Expiring Password Notification
+Homepage: http://www.freeipa.org
+Description-md5: e86c1026ebb3af2bf07192883a773749
+net
+Priority: optional
+Filename: pool/main/f/freeipa/freeipa-client-epn_4.12.4-2_amd64.deb
+Size: 16744
+MD5sum: 8022ffdce840f3670e8c55b11e9fecad
+SHA256: 55be618a107fdc183b4b395aa7861ae63898de0ba2e5c58535c9353b104c3596
+
+Package: freeipa-client-samba
+Source: freeipa
+Version: 4.12.4-2
+Installed-Size: 33
+Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
+Architecture: amd64
+Depends: cifs-utils, freeipa-client (= 4.12.4-2), python3-samba, samba-common-bin, smbclient, tdb-tools, winbind, python3:any
+Description: FreeIPA centralized identity framework -- Samba client
+Multi-Arch: same
+Homepage: http://www.freeipa.org
+Description-md5: c96b7178885d6e724e0833a8eaf878ea
+net
+Priority: optional
+Filename: pool/main/f/freeipa/freeipa-client-samba_4.12.4-2_amd64.deb
+Size: 12856
+MD5sum: cae58140aa531b874c1158e407222dd7
+SHA256: 3f62a30dd260b92a829916868eb769f1270455fde7da29421d2984d632f3b6fa
+
+Package: freeipa-common
+Source: freeipa
+Version: 4.12.4-2
+Installed-Size: 4302
+Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
+Architecture: all
+Description: FreeIPA centralized identity framework -- common files
+Multi-Arch: foreign
+Homepage: http://www.freeipa.org
+Description-md5: 94d7150bfe2c2b72eb5182a3b5ebf3f8
+net
+Priority: optional
+Filename: pool/main/f/freeipa/freeipa-common_4.12.4-2_all.deb
+Size: 598000
+MD5sum: b931712632450025e4c6b20afeb265d5
+SHA256: 5d5ed329fb0e254a7be99b02610a48fcfb32ae0e440b63ffeb4b7aa338d8d656
+
 Package: freeipa-healthcheck
 Version: 0.16-2
 Installed-Size: 246
@@ -9736,60 +9809,6 @@ Filename: pool/main/h/httping/httping_4.4.0-3_amd64.deb
 Size: 46332
 MD5sum: c3b24035e3a233db7be7eb71f3ae1cee
 SHA256: 7d267f8be24a07fab3dd270969820734a9892a04e2e6be5492c2bef2c2774cfc
-
-Package: httpry
-Source: httpry (0.1.8-3)
-Version: 0.1.8-3+b1
-Installed-Size: 90
-Maintainer: Debian QA Group <packages@qa.debian.org>
-Architecture: amd64
-Depends: libc6 (>= 2.34), libpcap0.8t64 (>= 0.9.8)
-Suggests: httpry-daemon, httpry-tools
-Description: HTTP logging and information retrieval tool
-Homepage: https://dumpsterventures.com/jason/httpry/
-Description-md5: 33636b7f430c389ab37a3866f20e2fb6
-net
-Priority: optional
-Filename: pool/main/h/httpry/httpry_0.1.8-3+b1_amd64.deb
-Size: 33024
-MD5sum: 1df0a033fee70ba74c65dba4dc260b17
-SHA256: e25c6b13f13258eb340a008825ac71cef32d3851ddbeada1f9766c00aba3d763
-
-Package: httpry-daemon
-Source: httpry
-Version: 0.1.8-3
-Installed-Size: 31
-Maintainer: Debian QA Group <packages@qa.debian.org>
-Architecture: all
-Depends: httpry (>= 0.1.8-3), lsb-base (>= 3.0-6)
-Breaks: httpry (<= 0.1.7-2)
-Description: HTTP logging and information retrieval tool - daemon
-Homepage: https://dumpsterventures.com/jason/httpry/
-Description-md5: c758e141aa5ce9332447ede6604262f6
-net
-Priority: optional
-Filename: pool/main/h/httpry/httpry-daemon_0.1.8-3_all.deb
-Size: 9076
-MD5sum: 924d695faa760444e1b271547f9a01dd
-SHA256: 6d6f19616f695de451b9095e66ccacab56d8d2d347b8cd74e199d83a0a6bddcf
-
-Package: httpry-tools
-Source: httpry
-Version: 0.1.8-3
-Installed-Size: 109
-Maintainer: Debian QA Group <packages@qa.debian.org>
-Architecture: all
-Depends: perl:any
-Description: HTTP logging and information retrieval tool - log parsing scripts
-Multi-Arch: foreign
-Homepage: https://dumpsterventures.com/jason/httpry/
-Description-md5: fcf4061091cfe79e33d31f3e05391607
-net
-Priority: optional
-Filename: pool/main/h/httpry/httpry-tools_0.1.8-3_all.deb
-Size: 22036
-MD5sum: 1d0c6e95fa9dac4f611aed57d8cd8ba5
-SHA256: a6e108ffde915589d8828c89784c7429b83fdac444956833050c5b18a26e8860
 
 Package: httptunnel
 Version: 3.3+dfsg-6
@@ -19802,6 +19821,41 @@ Size: 124620
 MD5sum: a70b7908a149f15acf21fa6521237f2d
 SHA256: b9af43081a23913e47019ee1485599a62ca0bda07f8bedfcd968f0b431a2fcdb
 
+Package: nfs-ganesha
+Version: 6.5-6
+Installed-Size: 2187
+Maintainer: Christoph Martin <chrism@debian.org>
+Architecture: amd64
+Replaces: python3-nfs-ganesha (<< 6.5-1)
+Depends: dbus, nfs-common, rpcbind, libacl1 (>= 2.2.23), libblkid1 (>= 2.16), libc6 (>= 2.38), libcap2 (>= 1:2.10), libcom-err2 (>= 1.43.9), libdbus-1-3 (>= 1.10), libgssapi-krb5-2 (>= 1.17), libkrb5-3 (>= 1.6.dfsg.2), libnfsidmap1 (>= 1:2.8.4), libntirpc6.3 (>= 6.3), liburcu8t64 (>= 0.13.0), libuuid1 (>= 2.16), libwbclient0 (>= 2:4.0.3+dfsg1)
+Breaks: python3-nfs-ganesha (<< 6.5-1)
+Description: NFS server in User Space
+Homepage: https://github.com/nfs-ganesha/nfs-ganesha
+Description-md5: 942aacff0266b197516fa094c2154193
+net
+Priority: optional
+Filename: pool/main/n/nfs-ganesha/nfs-ganesha_6.5-6_amd64.deb
+Size: 737092
+MD5sum: 691e913e8a8cda5e67d319530eb3bd5c
+SHA256: 9324529913adc31c3e721d113151a91e901e25ca5ff802e163222df485d3f0be
+
+Package: nfs-ganesha-rados-grace
+Source: nfs-ganesha
+Version: 6.5-6
+Installed-Size: 81
+Maintainer: Christoph Martin <chrism@debian.org>
+Architecture: amd64
+Depends: nfs-ganesha (= 6.5-6), libc6 (>= 2.34), librados2 (>= 18.2.7+ds)
+Description: nfs-ganesha ganesha-rados-grace program
+Homepage: https://github.com/nfs-ganesha/nfs-ganesha
+Description-md5: e51e89e729b6f078435bcedb81ca6eb8
+net
+Priority: optional
+Filename: pool/main/n/nfs-ganesha/nfs-ganesha-rados-grace_6.5-6_amd64.deb
+Size: 23820
+MD5sum: fa071f4dcedbe9e5fe48ececa98a2928
+SHA256: 81bb957f04bc5730728ab0b99321d32c51da1f890c9515725e0ac3b9678daaa0
+
 Package: nfs-common
 Source: nfs-utils (1:2.8.4-1)
 Version: 1:2.8.4-1+b1
@@ -20191,7 +20245,7 @@ SHA256: 3321fe446f8e3d728d9d80c74d95458ee14f8c1e055a92f294590f0449c312ba
 
 Package: nordugrid-arc-arc-exporter
 Source: nordugrid-arc
-Version: 7.1.1-1
+Version: 7.1.1-2
 Installed-Size: 30
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: all
@@ -20201,52 +20255,52 @@ Homepage: https://www.nordugrid.org
 Description-md5: 661ededc6290fb9c2dbd9e15e0c8cb83
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-arc-exporter_7.1.1-1_all.deb
-Size: 11616
-MD5sum: 20aa10d8afcedb24a22e0ec904eeb009
-SHA256: 377e40f687a288c83d129ab3b64212215807e47061999b4397dfb5f2dc2d2595
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-arc-exporter_7.1.1-2_all.deb
+Size: 11672
+MD5sum: 584591b1d34ab5d482f5dd2152e5e2e1
+SHA256: 4e848608aa3ab4deb0c6c2dad37f4b218f4b16cdee31e5635c42793e149648d9
 
 Package: nordugrid-arc-arcctl
 Source: nordugrid-arc
-Version: 7.1.1-1
+Version: 7.1.1-2
 Installed-Size: 140
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: all
 Replaces: libarccommon3v5 (<< 6.5.0~), nordugrid-arc-arex (<< 6.5.0~)
-Depends: python3:any, python3-jwcrypto, libarccommon4 (>= 7.1.1-1)
+Depends: python3:any, python3-jwcrypto, libarccommon4 (>= 7.1.1-2)
 Breaks: libarccommon3v5 (<< 6.5.0~), nordugrid-arc-arex (<< 6.5.0~)
 Description: ARC Control Tool
 Homepage: https://www.nordugrid.org
 Description-md5: 64d4f7bea30bd1dce5a276b50c8948df
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-arcctl_7.1.1-1_all.deb
-Size: 31840
-MD5sum: 5aa34e52352c1389ef0151ad2507b28b
-SHA256: 3befc2c52f67ad81a804256ad6d07857abed11b4b10c72ed2c85f629ee407366
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-arcctl_7.1.1-2_all.deb
+Size: 31892
+MD5sum: a1b903ed7f2df78f6e033133e9d9c11a
+SHA256: c0372d4d5dab89f35af39d70d8c3d16448cc4f00f2587a3d53a95ceccad0605b
 
 Package: nordugrid-arc-arcctl-service
 Source: nordugrid-arc
-Version: 7.1.1-1
+Version: 7.1.1-2
 Installed-Size: 77
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: all
 Replaces: libarccommon3v5 (<< 6.5.0~), nordugrid-arc-arcctl (<< 6.6.0~), nordugrid-arc-arex (<< 6.6.0~)
-Depends: python3:any, libarccommon4 (>= 7.1.1-1), nordugrid-arc-arcctl (= 7.1.1-1)
+Depends: python3:any, libarccommon4 (>= 7.1.1-2), nordugrid-arc-arcctl (= 7.1.1-2)
 Breaks: libarccommon3v5 (<< 6.5.0~), nordugrid-arc-arcctl (<< 6.6.0~), nordugrid-arc-arex (<< 6.6.0~)
 Description: ARC Control Tool - service control modules
 Homepage: https://www.nordugrid.org
 Description-md5: 92aa063e2e896f725f57ecec78126c7c
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-arcctl-service_7.1.1-1_all.deb
-Size: 18500
-MD5sum: cc1026d6dd5fb0a48f65f3fd66310de6
-SHA256: 6b33164e65e8d2b37e6795a549d89ad26d0d88d02ffc53938c108f338fac8b31
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-arcctl-service_7.1.1-2_all.deb
+Size: 18564
+MD5sum: 6507d341739d9160e8409abe857af02b
+SHA256: a9be4199ae13cba2ff7022f809a65975d60d861d0fa7043a578d48bfa4d76551
 
 Package: nordugrid-arc-archery-manage
 Source: nordugrid-arc
-Version: 7.1.1-1
+Version: 7.1.1-2
 Installed-Size: 102
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: all
@@ -20256,20 +20310,20 @@ Homepage: https://www.nordugrid.org
 Description-md5: f89994b315a9ec7f4d8e801f098e5b1a
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-archery-manage_7.1.1-1_all.deb
-Size: 23868
-MD5sum: 764b86b1c138d2c5d15686c9974cb28f
-SHA256: ae406449f8da423ef82f4e6335e50818ffddc532ac8106078ae0e246c5e8b7c2
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-archery-manage_7.1.1-2_all.deb
+Size: 23904
+MD5sum: ce5e5fa1e8492b2616e7936821231c79
+SHA256: 5d21f8c266a9927d47c1cc3ed55d149a662c1865b5cf22c7e67c97ffd6466395
 
 Package: nordugrid-arc-arex
 Source: nordugrid-arc
-Version: 7.1.1-1
+Version: 7.1.1-2
 Installed-Size: 6791
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
 Replaces: libarccommon3v5 (<< 6.5.0~), nordugrid-arc-aris (<< 6.0.0~), nordugrid-arc-cache-service (<< 6.0.0~), nordugrid-arc-candypond (<< 6.0.0~)
 Provides: nordugrid-arc-cache-service, nordugrid-arc-candypond
-Depends: libarccommon4 (= 7.1.1-1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglibmm-2.68-1t64 (>= 2.76), libsigc++-3.0-0 (>= 2.2.0), libsqlite3-0 (>= 3.7.15), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), perl:any, python3:any, nordugrid-arc-hed (= 7.1.1-1), nordugrid-arc-plugins-needed (= 7.1.1-1), nordugrid-arc-arcctl (= 7.1.1-1), nordugrid-arc-arcctl-service (= 7.1.1-1), libjson-xs-perl, libxml-simple-perl, procps
+Depends: libarccommon4 (= 7.1.1-2), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglibmm-2.68-1t64 (>= 2.76), libsigc++-3.0-0 (>= 2.2.0), libsqlite3-0 (>= 3.7.15), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), perl:any, python3:any, nordugrid-arc-hed (= 7.1.1-2), nordugrid-arc-plugins-needed (= 7.1.1-2), nordugrid-arc-arcctl (= 7.1.1-2), nordugrid-arc-arcctl-service (= 7.1.1-2), libjson-xs-perl, libxml-simple-perl, procps
 Pre-Depends: init-system-helpers (>= 1.54~)
 Conflicts: nordugrid-arc-cache-service (<< 6.0.0~), nordugrid-arc-candypond (<< 6.0.0~)
 Breaks: libarccommon3v5 (<< 6.5.0~), nordugrid-arc-aris (<< 6.0.0~)
@@ -20278,128 +20332,128 @@ Homepage: https://www.nordugrid.org
 Description-md5: 300b960e90b117b0353dbf89c0e3b06d
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-arex_7.1.1-1_amd64.deb
-Size: 1174400
-MD5sum: 11e0e941a554f739ad0148a945fc24da
-SHA256: beda9b3e2cda8e29a68c4e894666f23dd72182f32f5c82d75dbd7e629dd34469
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-arex_7.1.1-2_amd64.deb
+Size: 1173172
+MD5sum: 3a54b6dd5e34fd5ef38e0374ad48b155
+SHA256: 5790085bf05d83595baa938b7deb29c041ae6ae46e52348c1150657552858907
 
 Package: nordugrid-arc-arex-lrms-contrib
 Source: nordugrid-arc
-Version: 7.1.1-1
+Version: 7.1.1-2
 Installed-Size: 351
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: all
 Replaces: nordugrid-arc-arex (<< 7.0.0~)
-Depends: nordugrid-arc-arex (>= 7.1.1-1)
+Depends: nordugrid-arc-arex (>= 7.1.1-2)
 Breaks: nordugrid-arc-arex (<< 7.0.0~)
 Description: ARC Resource-coupled EXecution service - conributed LRMS backends
 Homepage: https://www.nordugrid.org
 Description-md5: b5b15a1540b11deb06bb9614b243b73c
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-arex-lrms-contrib_7.1.1-1_all.deb
-Size: 58364
-MD5sum: 3613039fd25cbb6e7dea30a3ad18a06a
-SHA256: c1b7d7da1c56a49b01d70bc9f1c6b0c4418046f356a28341b71407ab0527703b
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-arex-lrms-contrib_7.1.1-2_all.deb
+Size: 58428
+MD5sum: b883a6a839b264506afd5d81c9870bc3
+SHA256: 480f1faaf656ae465e6bbd041826297593374f89b9a91ddb9b496b8da922892c
 
 Package: nordugrid-arc-client
 Source: nordugrid-arc
-Version: 7.1.1-1
+Version: 7.1.1-2
 Installed-Size: 2489
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
-Depends: libarccommon4 (= 7.1.1-1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.12.0), libglibmm-2.68-1t64 (>= 2.76), libsigc++-3.0-0 (>= 2.2.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 13.1), nordugrid-arc-plugins-needed (= 7.1.1-1)
+Depends: libarccommon4 (= 7.1.1-2), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.12.0), libglibmm-2.68-1t64 (>= 2.76), libsigc++-3.0-0 (>= 2.2.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 13.1), nordugrid-arc-plugins-needed (= 7.1.1-2)
 Description: ARC command line clients
 Homepage: https://www.nordugrid.org
 Description-md5: 0d8b4f034863a48ad213ffb7bf7a0c8a
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-client_7.1.1-1_amd64.deb
-Size: 422064
-MD5sum: 5717a5efca8dc1724bed43eb54f9957d
-SHA256: ad3cbbf98e9440304449321cd680cdf94fc6a1f69f5edd1a11e366cd7bbbc80e
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-client_7.1.1-2_amd64.deb
+Size: 422424
+MD5sum: 91d1cb7b7ec90ad70520aca6289ad3af
+SHA256: fa08d71e67745a6d8e1ec6efbf747d1126146493cc55889f571ad52081b91861
 
 Package: nordugrid-arc-community-rtes
 Source: nordugrid-arc
-Version: 7.1.1-1
+Version: 7.1.1-2
 Installed-Size: 76
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: all
-Depends: python3:any, nordugrid-arc-arex (>= 7.1.1-1), nordugrid-arc-arcctl (= 7.1.1-1), python3-dnspython
+Depends: python3:any, nordugrid-arc-arex (>= 7.1.1-2), nordugrid-arc-arcctl (= 7.1.1-2), python3-dnspython
 Description: ARC community defined RTEs support
 Homepage: https://www.nordugrid.org
 Description-md5: a8a3a087271fafa139c937a8d2419111
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-community-rtes_7.1.1-1_all.deb
-Size: 17216
-MD5sum: 9295f504c892bd4a77dce600de7f88c8
-SHA256: e4a477a3a1d9bba068d23d362bb48fe49031cde7ed5bbb5ad85a45a3b07d9369
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-community-rtes_7.1.1-2_all.deb
+Size: 17264
+MD5sum: 79790122bf38afb7a7208f0e7028f0eb
+SHA256: 83c960aa2d1cac1c8d382d5246784be601d46041fbca9881312319f9bb4db462
 
 Package: nordugrid-arc-datadelivery-service
 Source: nordugrid-arc
-Version: 7.1.1-1
+Version: 7.1.1-2
 Installed-Size: 291
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
-Depends: libarccommon4 (= 7.1.1-1), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libsigc++-3.0-0 (>= 2.2.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), nordugrid-arc-hed (= 7.1.1-1), nordugrid-arc-plugins-needed (= 7.1.1-1), nordugrid-arc-arcctl-service (= 7.1.1-1)
+Depends: libarccommon4 (= 7.1.1-2), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libsigc++-3.0-0 (>= 2.2.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), nordugrid-arc-hed (= 7.1.1-2), nordugrid-arc-plugins-needed (= 7.1.1-2), nordugrid-arc-arcctl-service (= 7.1.1-2)
 Pre-Depends: init-system-helpers (>= 1.54~)
 Description: ARC data delivery service
 Homepage: https://www.nordugrid.org
 Description-md5: 97705a857b84981d1c1728d7aafa365c
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-datadelivery-service_7.1.1-1_amd64.deb
-Size: 90416
-MD5sum: 188c1afd8707d45d8c9f29159b2c9a7e
-SHA256: ea08aa617e53491c1cb6339e9c31cb0cf24399262ee7933010be3672acaf700b
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-datadelivery-service_7.1.1-2_amd64.deb
+Size: 90440
+MD5sum: 49e33edca5994af9bead2e015c85f26f
+SHA256: 39a0f1683c131c3a7ea8838212281859c41e6b2b6dc0fa49e1a50c32e2389f36
 
 Package: nordugrid-arc-dev
 Source: nordugrid-arc
-Version: 7.1.1-1
+Version: 7.1.1-2
 Installed-Size: 1335
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
 Replaces: python3-nordugrid-arc (<< 6.6.0~)
-Depends: libarccommon4 (= 7.1.1-1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.12.0), libglibmm-2.68-1t64 (>= 2.76), libstdc++6 (>= 13.1), libxml2-dev (>= 2.4.0), libssl-dev, libglibmm-2.68-dev
+Depends: libarccommon4 (= 7.1.1-2), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.12.0), libglibmm-2.68-1t64 (>= 2.76), libstdc++6 (>= 13.1), libxml2-dev (>= 2.4.0), libssl-dev, libglibmm-2.68-dev
 Breaks: python3-nordugrid-arc (<< 6.6.0~)
 Description: ARC development files
 Homepage: https://www.nordugrid.org
 Description-md5: 5434707519d14230bb80c0de6395941f
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-dev_7.1.1-1_amd64.deb
-Size: 256120
-MD5sum: 05e4cc6a9b9d07491d3b2380ff6c628b
-SHA256: 17c95ed012ff4411c3a72c96e1e36c258886c38a462a12386bb4bc71fbb42f3b
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-dev_7.1.1-2_amd64.deb
+Size: 256216
+MD5sum: 101913ca1a69923214754385a84d1e20
+SHA256: 8476dc2699ed6cbfed90f4dcb92b9ac2b8df73c86412b675f1df613743cef77a
 
 Package: nordugrid-arc-hed
 Source: nordugrid-arc
-Version: 7.1.1-1
+Version: 7.1.1-2
 Installed-Size: 184
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
-Depends: libarccommon4 (= 7.1.1-1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglibmm-2.68-1t64 (>= 2.76), libsigc++-3.0-0 (>= 2.2.0), libstdc++6 (>= 14), libsystemd0
+Depends: libarccommon4 (= 7.1.1-2), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglibmm-2.68-1t64 (>= 2.76), libsigc++-3.0-0 (>= 2.2.0), libstdc++6 (>= 14), libsystemd0
 Pre-Depends: init-system-helpers (>= 1.54~)
 Description: ARC Hosting Environment Daemon
 Homepage: https://www.nordugrid.org
 Description-md5: 40545887ed24ff3927717d7dccf7eb85
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-hed_7.1.1-1_amd64.deb
-Size: 45812
-MD5sum: c17692129ff8318696df791a7807860d
-SHA256: 68cb4a99f410024432aa9ef357f7cbfb35f78f4cfe76cfed41544d1f83bb556f
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-hed_7.1.1-2_amd64.deb
+Size: 45896
+MD5sum: d69a9f2cd9a84b21bbdfb087d54cce99
+SHA256: 2c7c07187a8ed45313555537ec080441f1fa862032de1568d045ae4f9d855dfa
 
 Package: nordugrid-arc-infosys-ldap
 Source: nordugrid-arc
-Version: 7.1.1-1
+Version: 7.1.1-2
 Installed-Size: 119
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: all
 Replaces: nordugrid-arc-aris (<< 6.0.0~), nordugrid-arc-ldap-egiis (<< 6.0.0~), nordugrid-arc-ldap-infosys (<< 6.0.0~)
 Provides: nordugrid-arc-aris, nordugrid-arc-ldap-infosys
-Depends: slapd, glue-schema (>= 2.0.10), bdii, nordugrid-arc-arcctl-service (= 7.1.1-1)
+Depends: slapd, glue-schema (>= 2.0.10), bdii, nordugrid-arc-arcctl-service (= 7.1.1-2)
 Pre-Depends: init-system-helpers (>= 1.54~)
 Conflicts: nordugrid-arc-aris (<< 6.0.0~), nordugrid-arc-ldap-egiis (<< 6.0.0~), nordugrid-arc-ldap-infosys (<< 6.0.0~)
 Description: ARC LDAP-based information services
@@ -20407,14 +20461,14 @@ Homepage: https://www.nordugrid.org
 Description-md5: 038fcb4cbd40f6ec7ee5c5b89c989c4b
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-infosys-ldap_7.1.1-1_all.deb
-Size: 20520
-MD5sum: 76982a2989357a17a92d14a2604ad582
-SHA256: 5d610409ba51b45fc7471d374c70835e0c037339768c1dfcfcf4a97a578419f6
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-infosys-ldap_7.1.1-2_all.deb
+Size: 20552
+MD5sum: 9c4f7adb238424ae4dee573d15f3f945
+SHA256: b847114a7f2f90ad48cf3f0b7ae85af58b684212df2cee6370c009958d1f3d71
 
 Package: nordugrid-arc-monitor
 Source: nordugrid-arc
-Version: 7.1.1-1
+Version: 7.1.1-2
 Installed-Size: 940
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: all
@@ -20426,162 +20480,162 @@ Homepage: https://www.nordugrid.org
 Description-md5: a95e641894a337c66eee66de73b0668f
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-monitor_7.1.1-1_all.deb
-Size: 129620
-MD5sum: b3ee3d766bd95201f6355472495f3982
-SHA256: b793a2c79298a4ac4b6264a96f975dfbd1ca45f6a7594d1d2d3ebc60316817ab
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-monitor_7.1.1-2_all.deb
+Size: 129684
+MD5sum: 2b156308d79a8b7ae3a57007b79f07ea
+SHA256: ca9ac2e137d4826499eb2eba744293e725ee6d3aa2fb0ef6f86e0ac0a3869c3d
 
 Package: nordugrid-arc-plugins-gridftp
 Source: nordugrid-arc
-Version: 7.1.1-1
+Version: 7.1.1-2
 Installed-Size: 303
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
 Replaces: nordugrid-arc-plugins-globus (<< 6.5.0~)
-Depends: libarccommon4 (= 7.1.1-1), libarcglobusutils4 (= 7.1.1-1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglobus-common0t64 (>= 17), libglobus-ftp-client2t64 (>= 7), libglobus-ftp-control1t64 (>= 8), libglobus-io3t64 (>= 11), libsigc++-3.0-0 (>= 2.2.0), libstdc++6 (>= 14)
+Depends: libarccommon4 (= 7.1.1-2), libarcglobusutils4 (= 7.1.1-2), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglobus-common0t64 (>= 17), libglobus-ftp-client2t64 (>= 7), libglobus-ftp-control1t64 (>= 8), libglobus-io3t64 (>= 11), libsigc++-3.0-0 (>= 2.2.0), libstdc++6 (>= 14)
 Breaks: nordugrid-arc-plugins-globus (<< 6.5.0~)
 Description: ARC Globus dependent DMCs
 Homepage: https://www.nordugrid.org
 Description-md5: ebe3acf24abbc77519d56a732feb7010
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-gridftp_7.1.1-1_amd64.deb
-Size: 93464
-MD5sum: 2f44828070996264752af957a71fc8a5
-SHA256: 8e43867e6cafa1c877da837fe98666fe070de447740696325117973093e3349c
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-gridftp_7.1.1-2_amd64.deb
+Size: 93400
+MD5sum: 3ac095b95277929a7c8d5e6d0998a35f
+SHA256: f067162c9c8c009794a2067b7eec0664b77b66cf3bf9fe54a6eca41f13e67484
 
 Package: nordugrid-arc-plugins-internal
 Source: nordugrid-arc
-Version: 7.1.1-1
+Version: 7.1.1-2
 Installed-Size: 1508
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
-Depends: libarccommon4 (= 7.1.1-1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglibmm-2.68-1t64 (>= 2.76), libsigc++-3.0-0 (>= 2.2.0), libsqlite3-0 (>= 3.7.15), libstdc++6 (>= 14), nordugrid-arc-arex (= 7.1.1-1)
+Depends: libarccommon4 (= 7.1.1-2), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglibmm-2.68-1t64 (>= 2.76), libsigc++-3.0-0 (>= 2.2.0), libsqlite3-0 (>= 3.7.15), libstdc++6 (>= 14), nordugrid-arc-arex (= 7.1.1-2)
 Description: ARC internal plugin
 Homepage: https://www.nordugrid.org
 Description-md5: e37e1d962770194c27de847092eb80ea
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-internal_7.1.1-1_amd64.deb
-Size: 444996
-MD5sum: dd3b77248e6cccddf049ffe25bfe9a31
-SHA256: 16d14141e14f60396a89e2d64dd16a4b9cec8b358ba7380d7cd8046ff107d8a7
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-internal_7.1.1-2_amd64.deb
+Size: 444916
+MD5sum: 452f98aa39f37b67f1da49b67c52616b
+SHA256: a2f7d243c3c321edf1a9ac1224177706a756c5fa95bd70c252728b89a2f22709
 
 Package: nordugrid-arc-plugins-lcas-lcmaps
 Source: nordugrid-arc
-Version: 7.1.1-1
+Version: 7.1.1-2
 Installed-Size: 106
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
 Replaces: nordugrid-arc-plugins-globus (<< 6.5.0~)
-Depends: libarccommon4 (= 7.1.1-1), libarcglobusutils4 (= 7.1.1-1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libglibmm-2.68-1t64 (>= 2.76), libglobus-common0t64 (>= 17), libglobus-gsi-cert-utils0t64 (>= 8), libglobus-gsi-credential1t64 (>= 6), libglobus-gssapi-gsi4t64 (>= 13), libssl3t64 (>= 3.0.0), libstdc++6 (>= 13.1)
+Depends: libarccommon4 (= 7.1.1-2), libarcglobusutils4 (= 7.1.1-2), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libglibmm-2.68-1t64 (>= 2.76), libglobus-common0t64 (>= 17), libglobus-gsi-cert-utils0t64 (>= 8), libglobus-gsi-credential1t64 (>= 6), libglobus-gssapi-gsi4t64 (>= 13), libssl3t64 (>= 3.0.0), libstdc++6 (>= 13.1)
 Breaks: nordugrid-arc-plugins-globus (<< 6.5.0~)
 Description: ARC LCAS/LCMAPS plugins
 Homepage: https://www.nordugrid.org
 Description-md5: 02696a6a76344a80ca9c5f3c3df9c02b
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-lcas-lcmaps_7.1.1-1_amd64.deb
-Size: 24316
-MD5sum: 9a103787b6734fdaa5d2dc79d851a979
-SHA256: 7da5904426e976ebd21741b5010f4cb2e255c6a6d950ac2e639eb8fa6e893126
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-lcas-lcmaps_7.1.1-2_amd64.deb
+Size: 24364
+MD5sum: 97d30fdf67e0fee4950e00f3df6e29d9
+SHA256: a821d930d6b62b24425d5e5faf4bf8862747600f8b8b7c64d6e4e466156d0d61
 
 Package: nordugrid-arc-plugins-needed
 Source: nordugrid-arc
-Version: 7.1.1-1
+Version: 7.1.1-2
 Installed-Size: 3739
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
 Replaces: nordugrid-arc-plugins-arcrest (<< 7.0.0~)
 Provides: nordugrid-arc-plugins-arcrest
-Depends: libarccommon4 (= 7.1.1-1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.12.0), libglibmm-2.68-1t64 (>= 2.76), libldns3t64 (>= 1.7.1), libsigc++-3.0-0 (>= 2.2.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libxml2-16 (>= 2.14.1)
+Depends: libarccommon4 (= 7.1.1-2), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.12.0), libglibmm-2.68-1t64 (>= 2.76), libldns3t64 (>= 1.7.1), libsigc++-3.0-0 (>= 2.2.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libxml2-16 (>= 2.14.1)
 Conflicts: nordugrid-arc-plugins-arcrest (<< 7.0.0~)
 Description: ARC base plugins
 Homepage: https://www.nordugrid.org
 Description-md5: 65439e257c63108c957dc1132030d440
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-needed_7.1.1-1_amd64.deb
-Size: 933192
-MD5sum: 15967d03d9a8d6e4a2d5adb7122cf712
-SHA256: fb957156bbdd9f9eead458908a94d6d9d07a8c266b8567fa8c9a5c06bfea84eb
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-needed_7.1.1-2_amd64.deb
+Size: 933260
+MD5sum: ae7276a576fd869937606d80ec02bbfd
+SHA256: 2e746b71ebfa33eb72fdd1b05f8571ff921279c206fa7813acf264b10ea3d608
 
 Package: nordugrid-arc-plugins-python
 Source: nordugrid-arc
-Version: 7.1.1-1
+Version: 7.1.1-2
 Installed-Size: 140
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
 Replaces: python3-nordugrid-arc (<< 6.6.0~)
-Depends: libarccommon4 (= 7.1.1-1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libpython3.13 (>= 3.13.0~rc3), libstdc++6 (>= 14), python3-nordugrid-arc (= 7.1.1-1)
+Depends: libarccommon4 (= 7.1.1-2), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libpython3.13 (>= 3.13.0~rc3), libstdc++6 (>= 14), python3-nordugrid-arc (= 7.1.1-2)
 Breaks: python3-nordugrid-arc (<< 6.6.0~)
 Description: ARC Python dependent plugin
 Homepage: https://www.nordugrid.org
 Description-md5: 43548e7bc6b22d368de36b322cad9de1
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-python_7.1.1-1_amd64.deb
-Size: 35112
-MD5sum: efcb8d0e606b366a58ce946834333b8a
-SHA256: 04d62dc21696dc70e55491e7aec339ccc6d4f93734c0e68e5b16a0d42ac896ab
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-python_7.1.1-2_amd64.deb
+Size: 35156
+MD5sum: 91beebc2599d147e6a4a741be4559425
+SHA256: 33e1d4e4d88e32af78dfbf0e7c7765cd5606e78de8ed79b32d97d5401e398ecc
 
 Package: nordugrid-arc-plugins-s3
 Source: nordugrid-arc
-Version: 7.1.1-1
+Version: 7.1.1-2
 Installed-Size: 104
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
-Depends: libarccommon4 (= 7.1.1-1), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libs3-2 (>= 2.0), libstdc++6 (>= 13.1)
+Depends: libarccommon4 (= 7.1.1-2), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libs3-2 (>= 2.0), libstdc++6 (>= 13.1)
 Description: ARC S3 plugins
 Homepage: https://www.nordugrid.org
 Description-md5: 27985dc8491b7794247009cb86e543b3
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-s3_7.1.1-1_amd64.deb
-Size: 32760
-MD5sum: e9c8aeabbc351b96816b728e2aeaac63
-SHA256: 9709b9b8412b0601c19cd0ba2f0b5d1977fb3466b28e69c7240f49a1e84791e7
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-s3_7.1.1-2_amd64.deb
+Size: 32740
+MD5sum: c714182d519fb1a0be17d2585fcbf183
+SHA256: ee034671df978a55a110ab43a2e557f2ebfeb8250fe8d29658cd0ca4fb14e6de
 
 Package: nordugrid-arc-plugins-xrootd
 Source: nordugrid-arc
-Version: 7.1.1-1
+Version: 7.1.1-2
 Installed-Size: 185
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
-Depends: libarccommon4 (= 7.1.1-1), libc6 (>= 2.33), libgcc-s1 (>= 3.0), libglibmm-2.68-1t64 (>= 2.76), libsigc++-3.0-0 (>= 2.2.0), libstdc++6 (>= 13.1), libxrdcl3t64 (>= 5.8.4), libxrdposix3t64 (>= 5.8.4)
+Depends: libarccommon4 (= 7.1.1-2), libc6 (>= 2.33), libgcc-s1 (>= 3.0), libglibmm-2.68-1t64 (>= 2.76), libsigc++-3.0-0 (>= 2.2.0), libstdc++6 (>= 13.1), libxrdcl3t64 (>= 5.9.0), libxrdposix3t64 (>= 5.9.0)
 Description: ARC xrootd plugins
 Homepage: https://www.nordugrid.org
 Description-md5: 8b633e18244f79461b0a9799154f2c9f
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-xrootd_7.1.1-1_amd64.deb
-Size: 51852
-MD5sum: fd942ee9095f33e0ee34b10dddbdef1f
-SHA256: d2c7e1395156470f5044e5e6f406e366b875841d5d8b68bc9742a8a417d01f40
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-plugins-xrootd_7.1.1-2_amd64.deb
+Size: 52056
+MD5sum: 48b7e088e8ccdfb8c3ecba8d2763f8f4
+SHA256: 543218fe079c5725fa473fcfadf5696aea8b3ec74d14fb30d0c2e70a5045a162
 
 Package: nordugrid-arc-test-utils
 Source: nordugrid-arc
-Version: 7.1.1-1
+Version: 7.1.1-2
 Installed-Size: 49
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
 Replaces: nordugrid-arc-misc-utils (<< 6.0.0~)
 Provides: nordugrid-arc-misc-utils
-Depends: libarccommon4 (= 7.1.1-1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libsigc++-3.0-0 (>= 2.2.0), libstdc++6 (>= 13.1), nordugrid-arc-plugins-needed (= 7.1.1-1)
+Depends: libarccommon4 (= 7.1.1-2), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libsigc++-3.0-0 (>= 2.2.0), libstdc++6 (>= 13.1), nordugrid-arc-plugins-needed (= 7.1.1-2)
 Conflicts: nordugrid-arc-misc-utils (<< 6.0.0~)
 Description: ARC test tools
 Homepage: https://www.nordugrid.org
 Description-md5: 153298e16d8ee643fe1e967b8bfa0f73
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-test-utils_7.1.1-1_amd64.deb
-Size: 16320
-MD5sum: 7a0b11a6b43b8d19fd4298bedc68cf60
-SHA256: 9be944be02a51bdb386a650923ad8fec918b40d1e843a1f87c8e80b48a0d1b3f
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-test-utils_7.1.1-2_amd64.deb
+Size: 16368
+MD5sum: 0ae2ab76be547f5d8856a4917a8ca1bd
+SHA256: 3b5646600beb3106b65067c58a158e48df0309f6cd4f5268b296c542910ce27a
 
 Package: nordugrid-arc-wn
 Source: nordugrid-arc
-Version: 7.1.1-1
+Version: 7.1.1-2
 Installed-Size: 37
 Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
 Architecture: amd64
@@ -20591,10 +20645,10 @@ Homepage: https://www.nordugrid.org
 Description-md5: eceda889f780edfaa3d83834c6c6ec3f
 net
 Priority: optional
-Filename: pool/main/n/nordugrid-arc/nordugrid-arc-wn_7.1.1-1_amd64.deb
-Size: 11880
-MD5sum: 927cc15e087bb8c828d54caadd1946d2
-SHA256: 9c6c912511d96600de24eec9b295d3331d86d3e61a0b0c20a0daf69773c2e11d
+Filename: pool/main/n/nordugrid-arc/nordugrid-arc-wn_7.1.1-2_amd64.deb
+Size: 11944
+MD5sum: bd0dcae8574f3d7243bc91f0eb5fb94d
+SHA256: 104b3eb899726c4ea35ec97a3e638582b74024cfcbdac5f02bdb676020482269
 
 Package: nordugrid-arc-nagios-plugins
 Version: 3.2.3-1
@@ -20860,6 +20914,41 @@ Filename: pool/main/n/npd6/npd6_1.1.0-5_amd64.deb
 Size: 28216
 MD5sum: bc421753de9e520cf3039fa1715f305e
 SHA256: 21b76d20def38235f856116573222bc421c8d8c71766a53507952075d8d9c854
+
+Package: ns2
+Version: 2.35+dfsg-9
+Installed-Size: 15391
+Maintainer: Marcos Talau <talau@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libotcl1 (>= 1.14), libpcap0.8t64 (>= 0.9.8), libstdc++6 (>= 13.1), libtcl8.6 (>= 8.6.0), libtclcl1 (>= 1.20), libtk8.6 (>= 8.6.0)
+Suggests: gnuplot, ns2-examples
+Description: discrete event simulator targeted at networking research
+Homepage: http://www.isi.edu/nsnam/ns/
+Description-md5: c64de8553ee691534220c7ccdd9d908a
+Tag: role::program, use::simulating, works-with::network-traffic
+net
+Priority: optional
+Filename: pool/main/n/ns2/ns2_2.35+dfsg-9_amd64.deb
+Size: 2533156
+MD5sum: cfc5e3ea60714a2583dc05f1af0a6dbe
+SHA256: e094950fbc9813bc59139c8c3b46d5a025f2f7d90f861fcf8411d2c45fe2b8e7
+
+Package: ns2-examples
+Source: ns2
+Version: 2.35+dfsg-9
+Installed-Size: 11806
+Maintainer: Marcos Talau <talau@debian.org>
+Architecture: all
+Description: discrete event simulator targeted at networking research (examples)
+Multi-Arch: foreign
+Homepage: http://www.isi.edu/nsnam/ns/
+Description-md5: 55bb354df4a5a8a906d2aceab906a12f
+net
+Priority: optional
+Filename: pool/main/n/ns2/ns2-examples_2.35+dfsg-9_all.deb
+Size: 6082104
+MD5sum: 380303086a5efd1f1ff532e89b0b7668
+SHA256: f02c37c4638d5a31c768ca89f28836dc696f9b4c5113438111375888bc0b2aff
 
 Package: ns3
 Version: 3.46-2
@@ -21323,28 +21412,6 @@ Filename: pool/main/o/ocproxy/ocproxy_1.60-1+b3_amd64.deb
 Size: 56696
 MD5sum: 4cc86397d4299f3b085a4ea68733bb14
 SHA256: 49c577868ea3dd0ef0b164b93eb28956d8dae43fd78acab55e0143389a1b13ee
-
-Package: ocserv
-Source: ocserv (1.3.0-2)
-Version: 1.3.0-2+b1
-Installed-Size: 1269
-Maintainer: Aron Xu <aron@debian.org>
-Architecture: amd64
-Depends: adduser, ssl-cert, libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libev4t64 (>= 1:4.04), libgnutls30t64 (>= 3.8.6), libgssapi-krb5-2 (>= 1.14+dfsg), liblz4-1 (>= 0.0~r130), libmaxminddb0 (>= 1.0.2), libnettle8t64, libnl-3-200 (>= 3.11.0), libnl-route-3-200 (>= 3.11.0), liboath0t64 (>= 1.8.0), libpam0g (>= 0.99.7.1), libprotobuf-c1 (>= 1.0.1), libradcli4 (>= 1.2.11), libreadline8t64 (>= 6.0), libseccomp2 (>= 0.0.0~20120605), libsystemd0, libtalloc2 (>= 2.0.4~git20101213), libtasn1-6 (>= 4.14)
-Pre-Depends: init-system-helpers (>= 1.54~)
-Recommends: ca-certificates, dnsmasq, gnutls-bin, iproute2, iputils-ping | inetutils-ping, nuttcp
-Suggests: freeradius, haproxy
-Description: OpenConnect VPN server compatible with Cisco AnyConnect VPN
-Homepage: https://www.infradead.org/ocserv/
-Description-md5: 4db510f429382469247db91a4d396ce4
-Tag: implemented-in::c, interface::daemon, network::server, network::vpn,
- role::program
-net
-Priority: optional
-Filename: pool/main/o/ocserv/ocserv_1.3.0-2+b1_amd64.deb
-Size: 525472
-MD5sum: ce96a0e5fbb804f0c9552f80f888699b
-SHA256: c13adcbf0875f953fc9b0985866e48fd62a04068b76fd2da2bad78ba25236d0b
 
 Package: ocsinventory-agent
 Version: 2:2.10.0-5
@@ -21856,9 +21923,8 @@ MD5sum: d782a25ee831ee0ab73f34fe45a1cb46
 SHA256: 31744fd82924c87e1ac480005f931a5ca80d006ca41e166c93e0658c23693a40
 
 Package: openconnect
-Source: openconnect (9.12-3)
-Version: 9.12-3+b1
-Installed-Size: 3568
+Version: 9.12-3.1
+Installed-Size: 3567
 Maintainer: Mike Miller <mtmiller@debian.org>
 Architecture: amd64
 Depends: vpnc-scripts, libc6 (>= 2.38), libgnutls30t64 (>= 3.7.0), libopenconnect5 (>= 9.12), libproxy1v5 (>= 0.5.3), libxml2-16 (>= 2.14.1)
@@ -21870,10 +21936,10 @@ Description-md5: 562198c516b1de1a9de75dba8b962f53
 Tag: implemented-in::c, network::vpn, role::program
 net
 Priority: optional
-Filename: pool/main/o/openconnect/openconnect_9.12-3+b1_amd64.deb
-Size: 651628
-MD5sum: 128013793f82d103c04c3974c5dbce17
-SHA256: 7c4c6f41b8b8da12524de7b54850cbbfda96842efda32ed8f18943fd0bde7b3d
+Filename: pool/main/o/openconnect/openconnect_9.12-3.1_amd64.deb
+Size: 651492
+MD5sum: 5804679ac7c19d8b895c9b771b3c5363
+SHA256: 795c0de66d9b418a9cf9678a17acae56dd064ff1ce76a1132459633aa4a95e8a
 
 Package: openfortivpn
 Version: 1.23.1-1
@@ -26648,6 +26714,136 @@ Size: 1193188
 MD5sum: 43957251efe1081490b948d5656ee3f3
 SHA256: 9a7a1d652b3455a061b9f1cbb4c9ef99a8bab76e05baf71b3debbe1fbbde30f8
 
+Package: psi-plus
+Version: 1.4.1456-2.2
+Installed-Size: 13530
+Maintainer: Boris Pek <tehnick@debian.org>
+Architecture: amd64
+Depends: libqca-qt5-2-plugins, libqt5sql5-sqlite, libsasl2-modules, psi-plus-common, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libhttp-parser2.9 (>= 2.1), libhunspell-1.7-0, libidn12 (>= 1.13), libminizip1t64, libqca-qt5-2 (>= 2.0.2), libqt5concurrent5t64 (>= 5.6.0~rc), libqt5core5t64 (>= 5.15.15), libqt5dbus5t64 (>= 5.14.1), libqt5gui5t64 (>= 5.14.1) | libqt5gui5-gles (>= 5.14.1), libqt5keychain1 (>= 0.7.0), libqt5multimedia5 (>= 5.6.0~beta), libqt5network5t64 (>= 5.15.1), libqt5sql5t64 (>= 5.0.2), libqt5svg5 (>= 5.6.0~beta), libqt5widgets5t64 (>= 5.15.1), libqt5x11extras5 (>= 5.6.0), libqt5xml5t64 (>= 5.0.2), libstdc++6 (>= 14), libx11-6, libxss1, zlib1g (>= 1:1.1.4)
+Recommends: psi-plus-l10n, psi-plus-plugin-psimedia, psi-plus-plugins, psi-plus-sounds, sox
+Suggests: xdg-utils
+Description: Qt-based XMPP client (basic version)
+Homepage: https://github.com/psi-plus/psi-plus-snapshots
+Description-md5: a67052675dfe3a2cc899eaaf52a5dff5
+Tag: interface::graphical, interface::x11, protocol::jabber, role::program,
+ uitoolkit::qt, x11::application
+net
+Priority: optional
+Filename: pool/main/p/psi-plus/psi-plus_1.4.1456-2.2_amd64.deb
+Size: 4006676
+MD5sum: ef094a81230a29ff129b946c31d0ce4b
+SHA256: 34a6917e45cb07dfb41d4587598fe8464bcfe2e5a5884d6e71f09c5b7ebbe436
+
+Package: psi-plus-common
+Source: psi-plus
+Version: 1.4.1456-2.2
+Installed-Size: 215
+Maintainer: Boris Pek <tehnick@debian.org>
+Architecture: all
+Description: common files for Psi+
+Multi-Arch: foreign
+Homepage: https://github.com/psi-plus/psi-plus-snapshots
+Description-md5: cfb77f90872207180c24db400adee179
+Tag: role::app-data
+net
+Priority: optional
+Filename: pool/main/p/psi-plus/psi-plus-common_1.4.1456-2.2_all.deb
+Size: 128388
+MD5sum: 350a4e2c94c12887fde624bbcc72ba2c
+SHA256: 6073d60d18ae2870b8d7dc12c11f4271cea6a7bc6c56f14b70fbb1514a6e47a4
+
+Package: psi-plus-plugin-psimedia
+Source: psi-plus
+Version: 1.4.1456-2.2
+Installed-Size: 421
+Maintainer: Boris Pek <tehnick@debian.org>
+Architecture: amd64
+Replaces: psimedia
+Depends: gstreamer1.0-plugins-base, gstreamer1.0-plugins-good, gstreamer1.0-plugins-ugly, psi-plus | psi-plus-webkit, libc6 (>= 2.14), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.76.0), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.4.0), libqt5core5t64 (>= 5.15.1), libqt5gui5t64 (>= 5.10.0) | libqt5gui5-gles (>= 5.10.0), libqt5widgets5t64 (>= 5.0.2), libstdc++6 (>= 14)
+Description: plugin for Psi+ for audio and video calls
+Homepage: https://github.com/psi-plus/psi-plus-snapshots
+Description-md5: 7dea7b3a1d44dbb80705f7bf713ec781
+net
+Priority: optional
+Filename: pool/main/p/psi-plus/psi-plus-plugin-psimedia_1.4.1456-2.2_amd64.deb
+Size: 123308
+MD5sum: 7c658b61abedc8c2a76ffc7d4ac287cd
+SHA256: 40262a8000a50009b2b0ac54abd955719dcce242d0389cdc80dbe1e6cf11eef6
+
+Package: psi-plus-plugins
+Source: psi-plus
+Version: 1.4.1456-2.2
+Installed-Size: 5624
+Maintainer: Boris Pek <tehnick@debian.org>
+Architecture: amd64
+Depends: psi-plus (= 1.4.1456-2.2) | psi-plus-webkit (= 1.4.1456-2.2), libc6 (>= 2.32), libgcc-s1 (>= 3.0), libgcrypt20 (>= 1.11.0), libotr5t64 (>= 4.0.0), libqt5core5t64 (>= 5.15.1), libqt5dbus5t64 (>= 5.0.2), libqt5gui5t64 (>= 5.11.0~rc1) | libqt5gui5-gles (>= 5.11.0~rc1), libqt5network5t64 (>= 5.14.1), libqt5printsupport5t64 (>= 5.0.2), libqt5sql5t64 (>= 5.0.2), libqt5widgets5t64 (>= 5.11.0~rc1), libqt5x11extras5 (>= 5.6.0), libqt5xml5t64 (>= 5.0.2), libsignal-protocol-c2.3.2 (>= 2.3.3), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libtidy58 (>= 1:5.2.0), libx11-6, libxcb1
+Description: plugins for Psi+
+Homepage: https://github.com/psi-plus/psi-plus-snapshots
+Description-md5: 08288709af5d202677f5c5ec34231369
+Tag: implemented-in::c++, role::plugin, uitoolkit::qt
+net
+Priority: optional
+Filename: pool/main/p/psi-plus/psi-plus-plugins_1.4.1456-2.2_amd64.deb
+Size: 1517100
+MD5sum: 488efd6096ea8ec7aa3ec30a1efffbc0
+SHA256: 19ccb571e1b110b68f1a2dcdb35f12244f0bf9fe8a9c748cb2f4d396d3139786
+
+Package: psi-plus-plugins-dev
+Source: psi-plus
+Version: 1.4.1456-2.2
+Installed-Size: 109
+Maintainer: Boris Pek <tehnick@debian.org>
+Architecture: all
+Depends: qtbase5-dev
+Description: development files for Psi+ plugins
+Homepage: https://github.com/psi-plus/psi-plus-snapshots
+Description-md5: 0890d947df28e1ec584557b95fc05f3a
+net
+Priority: optional
+Filename: pool/main/p/psi-plus/psi-plus-plugins-dev_1.4.1456-2.2_all.deb
+Size: 21212
+MD5sum: 1d3ac7b90ae7269ce0395abe770488a4
+SHA256: 0cbd673152e99f44f5033672bbfb37114c6517021a68974f804f7dec46a28576
+
+Package: psi-plus-sounds
+Source: psi-plus
+Version: 1.4.1456-2.2
+Installed-Size: 1175
+Maintainer: Boris Pek <tehnick@debian.org>
+Architecture: all
+Depends: psi-plus | psi-plus-webkit
+Description: sound files for Psi+
+Multi-Arch: foreign
+Homepage: https://github.com/psi-plus/psi-plus-snapshots
+Description-md5: 72dcd68d20df46bd09b1a3a0e482a7ce
+net
+Priority: optional
+Filename: pool/main/p/psi-plus/psi-plus-sounds_1.4.1456-2.2_all.deb
+Size: 732080
+MD5sum: c59930331e3f3590da3d2d378519f322
+SHA256: fe172c4764c43c91e568e13edd55785b6e971465f2fdfdd503242041bd7ab320
+
+Package: psi-plus-webkit
+Source: psi-plus
+Version: 1.4.1456-2.2
+Installed-Size: 14073
+Maintainer: Boris Pek <tehnick@debian.org>
+Architecture: amd64
+Depends: libqca-qt5-2-plugins, libqt5sql5-sqlite, libsasl2-modules, psi-plus-common, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libhttp-parser2.9 (>= 2.1), libhunspell-1.7-0, libidn12 (>= 1.13), libminizip1t64, libqca-qt5-2 (>= 2.0.2), libqt5concurrent5t64 (>= 5.6.0~rc), libqt5core5t64 (>= 5.15.15), libqt5dbus5t64 (>= 5.14.1), libqt5gui5t64 (>= 5.14.1) | libqt5gui5-gles (>= 5.14.1), libqt5keychain1 (>= 0.7.0), libqt5multimedia5 (>= 5.6.0~beta), libqt5network5t64 (>= 5.15.1), libqt5sql5t64 (>= 5.0.2), libqt5svg5 (>= 5.6.0~beta), libqt5webchannel5 (>= 5.6.1), libqt5webenginecore5 (>= 5.7.1), libqt5webenginewidgets5 (>= 5.14.1), libqt5widgets5t64 (>= 5.15.1), libqt5x11extras5 (>= 5.6.0), libqt5xml5t64 (>= 5.0.2), libstdc++6 (>= 14), libx11-6, libxss1, zlib1g (>= 1:1.1.4)
+Recommends: psi-plus-l10n, psi-plus-plugin-psimedia, psi-plus-plugins, psi-plus-sounds, sox
+Suggests: xdg-utils
+Description: Qt-based XMPP client (WebEngine version)
+Homepage: https://github.com/psi-plus/psi-plus-snapshots
+Description-md5: ce31578c8a44fc1b3c754d7a9699ac6c
+Tag: interface::graphical, interface::x11, protocol::jabber, role::program,
+ uitoolkit::qt, x11::application
+net
+Priority: optional
+Filename: pool/main/p/psi-plus/psi-plus-webkit_1.4.1456-2.2_amd64.deb
+Size: 4424904
+MD5sum: 6c83b82c3bed154557a789c793218fb8
+SHA256: d2ea60958e17348eeaf061e78ff90a772bffc0b60fb190d9a18270c924200afc
+
 Package: pssh
 Version: 2.3.5-2
 Installed-Size: 91
@@ -28626,6 +28822,44 @@ Filename: pool/main/r/rust-netr/netr_0.2.0-1_amd64.deb
 Size: 624308
 MD5sum: 5778a2bf2b7db926320474afe014f5e8
 SHA256: a0af783a509a3aa8b08785718c4da07da6bcce1cc88def447466217f9a9fea1d
+
+Package: librust-rebuilderd-dev
+Source: rust-rebuilderd
+Version: 0.25.0-1
+Installed-Size: 185
+Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Provides: librust-rebuilderd+default-dev (= 0.25.0-1), librust-rebuilderd-0+default-dev (= 0.25.0-1), librust-rebuilderd-0-dev (= 0.25.0-1), librust-rebuilderd-0.25+default-dev (= 0.25.0-1), librust-rebuilderd-0.25-dev (= 0.25.0-1), librust-rebuilderd-0.25.0+default-dev (= 0.25.0-1), librust-rebuilderd-0.25.0-dev (= 0.25.0-1)
+Depends: librust-actix-web-4+default-dev (>= 4.1.0-~~), librust-chrono-0.4+default-dev (>= 0.4.19-~~), librust-chrono-0.4+serde-dev (>= 0.4.19-~~), librust-clap-4+default-dev, librust-clap-4+derive-dev, librust-clap-4+env-dev, librust-data-encoding-2+default-dev, librust-diesel-2+chrono-dev, librust-diesel-2+default-dev, librust-diesel-2+i-implement-a-third-party-backend-and-opt-into-breaking-changes-dev, librust-diesel-2+r2d2-dev, librust-diesel-2+sqlite-dev, librust-diesel-migrations-2+default-dev, librust-diesel-migrations-2+sqlite-dev, librust-dirs-next-2+default-dev, librust-dotenvy-0.15+default-dev, librust-env-logger-0.11+default-dev, librust-in-toto-0.4+default-dev, librust-log-0.4+default-dev (>= 0.4.17-~~), librust-pem-3+default-dev, librust-rand-0.8+default-dev, librust-rebuilderd-common-0.25+default-dev (<< 0.25.1-~~), librust-serde-1+default-dev (>= 1.0.137-~~), librust-serde-1+derive-dev (>= 1.0.137-~~), librust-serde-json-1+default-dev (>= 1.0.81-~~), librust-tokio-1+default-dev (>= 1.44.2-~~), librust-toml-0.8+default-dev, librust-zstd-0.13+default-dev
+Description: Rebuilderd - independent build verification daemon - Rust source code
+Multi-Arch: same
+Homepage: https://github.com/kpcyrd/rebuilderd
+Description-md5: b1727f5a77d6a3fae4fcd26d6d1d4032
+net
+Priority: optional
+Filename: pool/main/r/rust-rebuilderd/librust-rebuilderd-dev_0.25.0-1_amd64.deb
+Size: 26812
+MD5sum: 254e32f11bcd57544600eb963d11a13f
+SHA256: 8376beeda9b9cfc8eaea5e4fb4428d71e7887c37e78add71dcd644d0a90ab30f
+
+Package: rebuilderd
+Source: rust-rebuilderd
+Version: 0.25.0-1
+Installed-Size: 10008
+Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: libc6 (>= 2.39), libgcc-s1 (>= 4.2), libsqlite3-0 (>= 3.20.0), libzstd1 (>= 1.5.5)
+Description: Monitor and reproduce binary packages from source - Reproducible Builds
+Homepage: https://github.com/kpcyrd/rebuilderd
+Built-Using: rust-ahash (= 0.8.12-2), rust-colored (= 2.2.0-1), rust-hyper-rustls (= 0.27.6-2), rust-rebuilderd-common (= 0.25.0-1), rust-rustls (= 0.23.31+ds-4), rust-rustls-native-certs (= 0.6.3-7), rust-rustls-pki-types (= 1.12.0-2), rust-rustls-webpki (= 0.103.4-2), rustc (= 1.86.0+dfsg1-1)
+Description-md5: cc802645a6bf4cf80ca7340a02a582e9
+Static-Built-Using: rust-actix-codec (= 0.5.2-1), rust-actix-http (= 3.9.0-3), rust-actix-router (= 0.5.3-3), rust-actix-rt (= 2.10.0-1), rust-actix-server (= 2.6.0-1), rust-actix-service (= 2.0.2-1), rust-actix-utils (= 3.0.1-1), rust-actix-web (= 4.9.0-2), rust-adler (= 1.0.2-2), rust-ahash (= 0.8.12-2), rust-aho-corasick (= 1.1.3-1), rust-alloc-no-stdlib (= 2.0.4-1), rust-alloc-stdlib (= 0.2.2-1), rust-anstream (= 0.6.15-1), rust-anstyle (= 1.0.8-1), rust-anstyle-parse (= 0.2.1-1), rust-anstyle-query (= 1.0.0-1), rust-anyhow (= 1.0.95-1), rust-atomic-waker (= 1.1.2-1), rust-base64 (= 0.22.1-1), rust-bitflags (= 2.9.1-2), rust-block-buffer (= 0.10.4-1), rust-brotli (= 6.0.0-1), rust-brotli-decompressor (= 4.0.1-1), rust-bytes (= 1.9.0-1), rust-bytestring (= 1.4.0-1), rust-cfg-if (= 1.0.0-1), rust-cfg-if-0.1 (= 0.1.10-3), rust-chrono (= 0.4.39-2), rust-clap (= 4.5.23-1), rust-clap-builder (= 4.5.23-1), rust-clap-lex (= 0.7.4-1), rust-colorchoice (= 1.0.0-1), rust-colored (= 2.2.0-1), rust-cookie (= 0.18.1-2), rust-cpufeatures (= 0.2.16-1), rust-crc32fast (= 1.4.2-1), rust-crypto-common (= 0.1.6-1), rust-data-encoding (= 2.6.0-1), rust-deranged (= 0.3.11-1), rust-derp (= 0.0.14-1), rust-diesel (= 2.2.7-2), rust-diesel-migrations (= 2.2.0-1), rust-digest (= 0.10.7-2), rust-dirs-next (= 2.0.0-1), rust-dirs-sys-next (= 0.1.1-1), rust-dotenvy (= 0.15.7-1), rust-encoding-rs (= 0.8.35-1), rust-env-filter (= 0.1.3-1), rust-env-logger (= 0.11.6-1), rust-equivalent (= 1.0.1-1), rust-flate2 (= 1.1.0-1), rust-fnv (= 1.0.7-1), rust-form-urlencoded (= 1.2.1-1), rust-futures-channel (= 0.3.31-1), rust-futures-core (= 0.3.31-1), rust-futures-io (= 0.3.31-1), rust-futures-sink (= 0.3.31-1), rust-futures-task (= 0.3.31-3), rust-futures-util (= 0.3.31-1), rust-generic-array (= 0.14.7-1), rust-getrandom (= 0.2.15-3), rust-glob (= 0.3.2-1), rust-h2 (= 0.4.7-3), rust-hashbrown (= 0.15.5-1), rust-http (= 1.2.0-1), rust-http-body (= 1.0.1-1), rust-http-body-util (= 0.1.2-1), rust-httparse (= 1.8.0-1), rust-httpdate (= 1.0.2-1), rust-humantime (= 2.1.0-2), rust-hyper (= 1.5.2-1), rust-hyper-rustls (= 0.27.6-2), rust-hyper-util (= 0.1.10-1), rust-iana-time-zone (= 0.1.63-1), rust-idna (= 1.0.3-2), rust-idna-adapter (= 1.1.0-1), rust-idna-mapping (= 1.0.0-1), rust-impl-more (= 0.1.9-1), rust-in-toto (= 0.4.0-1), rust-indexmap (= 2.7.0-3), rust-ipnet (= 2.11.0-1), rust-itoa (= 1.0.14-1), rust-language-tags (= 0.3.2-1), rust-lazy-static (= 1.5.0-1), rust-libc (= 0.2.175-1), rust-libsqlite3-sys (= 0.26.0-1), rust-local-channel (= 0.1.5-1), rust-local-waker (= 0.1.4-1), rust-lock-api (= 0.4.12-1), rust-log (= 0.4.26-1), rust-memchr (= 2.7.4-1), rust-migrations-internals (= 2.2.0-1), rust-mime (= 0.3.17-1), rust-miniz-oxide (= 0.7.1-2), rust-mio (= 1.0.2-3), rust-num-conv (= 0.1.0-1), rust-num-traits (= 0.2.19-2), rust-once-cell (= 1.20.2-1), rust-openssl-probe (= 0.1.2-1), rust-parking-lot (= 0.12.3-1), rust-parking-lot-core (= 0.9.10-1), rust-path-clean (= 1.0.1-1), rust-pem (= 3.0.4-1), rust-percent-encoding (= 2.3.1-1), rust-pin-project-lite (= 0.2.13-1), rust-pin-utils (= 0.1.0-1), rust-powerfmt (= 0.2.0-1), rust-ppv-lite86 (= 0.2.21-2), rust-r2d2 (= 0.8.10-8), rust-rand (= 0.8.5-1), rust-rand-chacha (= 0.3.1-2), rust-rand-core (= 0.6.4-2), rust-rebuilderd-common (= 0.25.0-1), rust-regex (= 1.11.1-2), rust-regex-automata (= 0.4.9-2), rust-regex-lite (= 0.1.6-2), rust-regex-syntax (= 0.8.5-1), rust-reqwest (= 0.12.15-1), rust-ring (= 0.17.14-2), rust-rustls (= 0.23.31+ds-4), rust-rustls-native-certs (= 0.6.3-7), rust-rustls-pemfile (= 2.2.0-3), rust-rustls-pki-types (= 1.12.0-2), rust-rustls-webpki (= 0.103.4-2), rust-ryu (= 1.0.19-1), rust-same-file (= 1.0.6-1), rust-scheduled-thread-pool (= 0.2.7-1), rust-scopeguard (= 1.2.0-1), rust-serde (= 1.0.219-1), rust-serde-json (= 1.0.143-1), rust-serde-spanned (= 0.6.7-1), rust-serde-urlencoded (= 0.7.1-1), rust-sha1 (= 0.10.6-1), rust-signal-hook-registry (= 1.4.0-1), rust-slab (= 0.4.9-1), rust-smallvec (= 1.15.1-1), rust-socket2 (= 0.5.8-1), rust-static-assertions (= 1.1.0-1), rust-strsim (= 0.11.1-1), rust-strum (= 0.26.3-2), rust-subtle (= 2.6.1-1), rust-sync-wrapper (= 1.0.2-1), rust-thiserror-1 (= 1.0.69-1), rust-time (= 0.3.39-1), rust-time-core (= 0.1.3-1), rust-tinyvec (= 1.6.0-2), rust-tinyvec-macros (= 0.1.0-1), rust-tokio (= 1.47.1-2), rust-tokio-rustls (= 0.26.1-2), rust-tokio-util (= 0.7.10-1), rust-toml (= 0.8.19-1), rust-toml-datetime (= 0.6.8-1), rust-toml-edit (= 0.22.22-1), rust-tower (= 0.5.2-2), rust-tower-layer (= 0.3.3-1), rust-tower-service (= 0.3.3-1), rust-tracing (= 0.1.40-1), rust-tracing-core (= 0.1.32-1), rust-try-lock (= 0.2.5-1), rust-typenum (= 1.17.0-3), rust-unicode-bidi (= 0.3.17-1), rust-unicode-joining-type (= 1.0.0-1), rust-unicode-normalization (= 0.1.24-1), rust-untrusted (= 0.9.0-2), rust-url (= 2.5.4-3), rust-utf8-iter (= 1.0.4-1), rust-utf8parse (= 0.2.1-1), rust-walkdir (= 2.5.0-1), rust-want (= 0.3.0-1), rust-winnow (= 0.6.26-1), rust-zerocopy (= 0.8.26-2), rust-zeroize (= 1.8.1-1), rust-zstd (= 0.13.2-2), rust-zstd-safe (= 7.2.1-1), rust-zstd-sys (= 2.0.13-2), rustc (= 1.86.0+dfsg1-1)
+net
+Priority: optional
+Filename: pool/main/r/rust-rebuilderd/rebuilderd_0.25.0-1_amd64.deb
+Size: 2880720
+MD5sum: 851c9002d3a67406bce415404aa07270
+SHA256: 36e05c55a9eea60f7d5fae52512acf6181d5d0a36680ab262a20e538dc1f39a9
 
 Package: rebuilderd-worker
 Source: rust-rebuilderd-worker
@@ -33535,6 +33769,23 @@ Filename: pool/main/v/vde2/vde2-cryptcab_2.3.2+r586-12+b1_amd64.deb
 Size: 25912
 MD5sum: f3800d906934972e8382ac1378328c1e
 SHA256: b7085b0c3b7416601ba1400b8581bf515c1c52003fe43cd4b6bb930e7bc6cd67
+
+Package: vdens
+Source: vdens (0.3-1)
+Version: 0.3-1+b1
+Installed-Size: 38
+Maintainer: Debian VirtualSquare Team <virtualsquare@cs.unibo.it>
+Architecture: amd64
+Depends: libc6 (>= 2.34), libcap2 (>= 1:2.10), libexecs1 (>= 1.4), libvdeplug2t64 (>= 4.0.1)
+Description: Create VDE user network namespaces
+Homepage: http://www.virtualsquare.org/
+Description-md5: 418b41b721ab46501eee3c5527ad59b9
+net
+Priority: optional
+Filename: pool/main/v/vdens/vdens_0.3-1+b1_amd64.deb
+Size: 11060
+MD5sum: 7f612778720979f96da09ae14f903b93
+SHA256: b2b4a24f01879523dfd9beba8a4cb0b7890322c1a947dc45d7271815b1f95b69
 
 Package: vdeplug
 Source: vdeplug4 (4.0.1-5.1)
