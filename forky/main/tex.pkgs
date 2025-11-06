@@ -504,17 +504,17 @@ MD5sum: 89ac75dcbfbd22891e7340374702f476
 SHA256: 806592bf37a1ebcaa7b16a75e5dab8c7f8d637f89c632b77cddce430ecf44a2b
 
 Package: context
-Version: 2025.03.05.20250324+dfsg-3
-Installed-Size: 184591
+Version: 2025.09.21.20251026+dfsg-1
+Installed-Size: 186764
 Maintainer: Debian TeX Task Force <debian-tex-maint@lists.debian.org>
 Architecture: all
-Replaces: tetex-bin (<< 2007), texlive-context
+Replaces: tetex-bin (<< 2007), texlive-base (<< 2025.20250927-4), texlive-context
 Provides: texlive-context
 Depends: ruby, luametatex, texlive-binaries (>= 2019), texlive-base (>= 2019), texlive-metapost (>= 2019), lmodern, tex-gyre, tex-common (>= 6.13), icc-profiles-free
 Recommends: fonts-gfs-artemisia, fonts-gfs-baskerville, fonts-gfs-bodoni-classic, fonts-gfs-didot-classic, fonts-gfs-didot, fonts-gfs-olga, fonts-gfs-porson, fonts-gfs-gazis, fonts-gfs-neohellenic, fonts-gfs-solomos, fonts-gfs-theokritos, fonts-freefont-otf, fonts-sil-gentium, context-modules, inkscape
 Suggests: perl-tk, libxml-parser-perl, fontforge, context-nonfree
 Conflicts: texlive-context
-Breaks: tetex-bin (<< 2007)
+Breaks: tetex-bin (<< 2007), texlive-base (<< 2025.20250927-4)
 Description: powerful TeX format
 Homepage: https://www.pragma-ade.nl/
 Description-md5: 41de4864f3fecb24d3907901e2a652a7
@@ -522,10 +522,10 @@ Tag: made-of::tex, role::program, use::editing, works-with-format::tex,
  works-with::text
 tex
 Priority: optional
-Filename: pool/main/c/context/context_2025.03.05.20250324+dfsg-3_all.deb
-Size: 116013468
-MD5sum: 8ca08ad229f1cb73fc7f2286da9e837d
-SHA256: 75cf71bd06f88f583c10f0a55c1b9011c7941d9cf5d0ec6f660b5d6a6866d55c
+Filename: pool/main/c/context/context_2025.09.21.20251026+dfsg-1_all.deb
+Size: 114477896
+MD5sum: b10f4ee9fd4ec1a494b23ac95cf4fff5
+SHA256: cbf44ab45138819a53a5390e4175d8937f85d192b728b37ad073100d4507e447
 
 Package: context-modules
 Version: 20250324-3
@@ -872,27 +872,6 @@ Size: 13828
 MD5sum: c6a68f44d872462c415f42b59c49b129
 SHA256: 78c840095e3c9faabc1ab2dc56804b746fe4ecf61343b1465156b4b104f00ef4
 
-Package: jabref
-Version: 3.8.2+ds-17
-Installed-Size: 4072
-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
-Architecture: all
-Depends: default-jre, java-wrappers, libandroid-json-java, libantlr3-runtime-java, libantlr4-runtime-java, libbcprov-java, libcommons-cli-java, libcommons-lang3-java, libcommons-logging-java, libglazedlists-java, libguava-java, libhttpasyncclient-java, libhttpclient-java, libhttpmime-java, libjava-string-similarity-java, libjaxb-java, libjempbox-java, libjgoodies-common-java, libjgoodies-forms-java, libjgoodies-looks-java, libjhlabs-filters-java, libjsoup-java (>= 1.14.2), liblibreoffice-java, liblog4j2-java, libmicroba-java, libpdfbox-java (<< 1:2), libspin-java, libswing-layout-java, libswingx-java (<< 1:1.6.4), libunirest-java-java
-Recommends: libmariadb-java, libpostgresql-jdbc-java, libreoffice-java-common, libreoffice-writer, xdg-utils
-Suggests: gv | postscript-viewer, xpdf | pdf-viewer
-Description: graphical frontend to manage BibTeX and BibLaTeX databases
-Homepage: https://www.jabref.org/
-Description-md5: 46f0e5450733eb86b4991d1ee88e7853
-Tag: implemented-in::java, interface::graphical, interface::x11,
- role::program, science::bibliography, uitoolkit::TODO, use::editing,
- works-with-format::bib, x11::application
-tex
-Priority: optional
-Filename: pool/main/j/jabref/jabref_3.8.2+ds-17_all.deb
-Size: 3850832
-MD5sum: b13d14327edb4340f2897e40887f1325
-SHA256: f0b4d2a029a90695e9a022802885c20d84a4124cdd0805d041d7eb3bda74a1a0
-
 Package: jlatex209-base
 Source: jtex-base
 Version: 2.1-1.4
@@ -952,6 +931,27 @@ Filename: pool/main/k/kile/kile_2.9.94-1_amd64.deb
 Size: 1856424
 MD5sum: 4b2f0d0b369f0711a00afc0b089b2de7
 SHA256: 5659ae197c3147eb48c0a39f52088a6672a0b5d1c77f6c2853e19bc90ed195e2
+
+Package: klatexformula
+Version: 4.1.0-1.2
+Installed-Size: 5269
+Maintainer: Tobias Winchen <tobias@winchen.de>
+Architecture: amd64
+Depends: texlive-latex-base, libqt5sql5-sqlite, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libklatexformula4 (>= 4.1.0), libqt5core5t64 (>= 5.15.1), libqt5dbus5t64 (>= 5.0.2), libqt5gui5t64 (>= 5.14.1) | libqt5gui5-gles (>= 5.14.1), libqt5sql5t64 (>= 5.0.2), libqt5widgets5t64 (>= 5.14.1), libqt5xml5t64 (>= 5.0.2), libstdc++6 (>= 14)
+Recommends: python3
+Description: GUI to easily get an image from a LaTeX formula or equation
+Homepage: https://klatexformula.sourceforge.io/
+Description-md5: 99de962965add9d4fdf1ff266c8f7a30
+Tag: field::mathematics, implemented-in::c++, interface::graphical,
+ interface::x11, role::program, scope::utility, uitoolkit::qt,
+ use::typesetting, works-with-format::tex, works-with::text,
+ x11::application
+tex
+Priority: optional
+Filename: pool/main/k/klatexformula/klatexformula_4.1.0-1.2_amd64.deb
+Size: 2011588
+MD5sum: 67fef618fcd11b2162df6ba29308a598
+SHA256: 55881244fd378dd53f9fd178c543a4c0864d07c2aeaca4256901752c77296280
 
 Package: lacheck
 Version: 1.26-17.2
@@ -1331,21 +1331,21 @@ MD5sum: 0c286fe475b8c703d71ea68e70384f49
 SHA256: 632f4eb541466b459b2c5956a396f74bac2b2ec887f4a49668141e0248934104
 
 Package: luametatex
-Version: 2.11.07+ds-2
-Installed-Size: 3519
+Version: 2.11.08+ds-1
+Installed-Size: 4105
 Maintainer: Debian TeX Task Force <debian-tex-maint@lists.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libmimalloc3 (>= 3.0.3+ds)
-Breaks: context (<< 2025)
+Depends: libc6 (>= 2.38), libmimalloc3 (>= 3.1.5+ds)
+Breaks: context (<< 2025.09.21)
 Description: Next generation ConTeXt processing engine
 Homepage: https://github.com/contextgarden/luametatex
 Description-md5: 23eadb965d7e98ba08ddf10d8ce50a7c
 tex
 Priority: optional
-Filename: pool/main/l/luametatex/luametatex_2.11.07+ds-2_amd64.deb
-Size: 1253900
-MD5sum: c8856e792b9698b372a4f50f80d03470
-SHA256: f2b47c4f4d7c13ce2262b3d6f73e097f1d5299568256186fcff8bc9a8c0b7214
+Filename: pool/main/l/luametatex/luametatex_2.11.08+ds-1_amd64.deb
+Size: 1416652
+MD5sum: 83dcdfe22e3a707ca9719239ab6ec558
+SHA256: b0ec97bb07fa580cd6bc9de9e99395dfcd6abb61bc9c232c60ee815c0902fd73
 
 Package: mftrace
 Version: 1.2.20+git20191022.3b4bc2e-3.1
