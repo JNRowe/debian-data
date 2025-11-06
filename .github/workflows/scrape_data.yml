@@ -52,7 +52,7 @@ jobs:
           git add --all bookworm/ bullseye/ trixie/ forky/
           if ! git diff --staged --quiet; then
             modified_count=$(git status --porcelain bookworm/ bullseye/ trixie/ forky/ |
-              grep -c 'Packages$' || :)
+              grep -c '\.pkgs$' || :)
             runtime=$(( FETCH_END_TIME - FETCH_START_TIME ))
             git commit \
               -m "Update package lists ($(date -u +%FT%H:%M))" \
