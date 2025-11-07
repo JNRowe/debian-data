@@ -2565,21 +2565,20 @@ MD5sum: 607596fbd7640f920eef3801f41a1568
 SHA256: 283d67b39eb9b2accc77fea45eed43a8903113b4fe03add53e0d8ec8b2103ae9
 
 Package: bio-vcf
-Version: 0.9.5-3
-Installed-Size: 141
+Version: 0.9.5-4
+Installed-Size: 140
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
 Architecture: all
-Depends: ruby
+Depends: ruby:any
 Description: domain specific language (DSL) for processing the VCF format
 Homepage: https://github.com/vcflib/bio-vcf
 Description-md5: 325080ef3e0e73c817c105e2948ac363
-Ruby-Versions: all
 science
 Priority: optional
-Filename: pool/main/b/bio-vcf/bio-vcf_0.9.5-3_all.deb
-Size: 28792
-MD5sum: 037f76c5b1d13e7b760e0c9d1fd92517
-SHA256: 7dbc2821b043525a2ed20c745a8ebae1d2defffd8c69f56781073a3919eeb21d
+Filename: pool/main/b/bio-vcf/bio-vcf_0.9.5-4_all.deb
+Size: 28928
+MD5sum: 53f14fd8bd4919f44b90205f46206613
+SHA256: 940c00b40c3fbdce407573400c3c275d0ade17dc0434b94c1dff2b1bf3d9c3b2
 
 Package: bioawk
 Version: 1.0-5
@@ -7963,9 +7962,8 @@ MD5sum: c6284a98674f3c7e65383a77000d282b
 SHA256: 7116aef5bc03cf20236854d8b90a7c13a82c9e8c00c804b5bfc572e8694fb80e
 
 Package: fastani
-Source: fastani (1.33-3)
-Version: 1.33-3+b1
-Installed-Size: 295
+Version: 1.34+ds-1
+Installed-Size: 302
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libgomp1 (>= 4.9), libgsl28 (>= 2.8+dfsg), libstdc++6 (>= 14), zlib1g (>= 1:1.1.4)
@@ -7975,10 +7973,10 @@ Homepage: https://github.com/ParBLiSS/FastANI
 Description-md5: 39a659893a128fff6f37d949f197bdc3
 science
 Priority: optional
-Filename: pool/main/f/fastani/fastani_1.33-3+b1_amd64.deb
-Size: 112968
-MD5sum: 6d5721a3fab92d4cb5a3045da1e67e1b
-SHA256: 1627c1d8c8d286804c5f36c63ac747f16e8f0bf28597ff66e2da64771e71fab5
+Filename: pool/main/f/fastani/fastani_1.34+ds-1_amd64.deb
+Size: 118036
+MD5sum: 3753cff6f5947350d75b3feed5272442
+SHA256: 0bf891c4ad2958404ed577e346aae099b933c37956b2eb485bbe44fafa2de187
 
 Package: fastaq
 Version: 3.17.0-9
@@ -17285,6 +17283,83 @@ Size: 78780
 MD5sum: baf4cf62139c421e952c07d1ea7dfc8c
 SHA256: f290b3ba149882b304be50d46fa40080057afd997a8d44926042ebce2f3514f3
 
+Package: nwchem
+Version: 7.3.0-1
+Installed-Size: 104
+Maintainer: Debichem Team <debichem-devel@lists.alioth.debian.org>
+Architecture: all
+Depends: nwchem-openmpi | nwchem-mpich | nwchem-openmpi, mpi-default-bin
+Description: High-performance computational chemistry software (default MPI)
+Homepage: https://nwchemgit.github.io
+Description-md5: bbd2b6cb9a9a3159b07de8b6bcb3f618
+Tag: field::chemistry, role::program
+science
+Priority: optional
+Filename: pool/main/n/nwchem/nwchem_7.3.0-1_all.deb
+Size: 21756
+MD5sum: 0758111c3058660485808717b38c664c
+SHA256: 7578e9c0ef4039c80e49ac3d6051e84f88be0a8cdaf3d335451040bacda95d2f
+
+Package: nwchem-data
+Source: nwchem
+Version: 7.3.0-1
+Installed-Size: 47797
+Maintainer: Debichem Team <debichem-devel@lists.alioth.debian.org>
+Architecture: all
+Replaces: nwchem (<< 7.2.3-4)
+Breaks: nwchem (<< 7.2.3-4)
+Description: High-performance computational chemistry software (data files)
+Multi-Arch: foreign
+Homepage: https://nwchemgit.github.io
+Description-md5: f2cac7e572de372c581eaf03e0dd5fc8
+Tag: role::app-data
+science
+Priority: optional
+Filename: pool/main/n/nwchem/nwchem-data_7.3.0-1_all.deb
+Size: 6129932
+MD5sum: f4237a9569cebf8d0a9c33acffb7618b
+SHA256: a98ba614026f077d4dddfeea8a13940f55be98dde744f828c50d72739e4c18db
+
+Package: nwchem-mpich
+Source: nwchem
+Version: 7.3.0-1
+Installed-Size: 71710
+Maintainer: Debichem Team <debichem-devel@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: nwchem (<< 7.2.3-4)
+Depends: mpich, nwchem-data (= 7.3.0-1), libblas3 | libblas.so.3, libc6 (>= 2.38), libgcc-s1 (>= 4.0), libgfortran5 (>= 10), liblapack3 | liblapack.so.3, libmpich12, libpython3.13 (>= 3.13.0~rc3), libscalapack-mpich2.2 (>= 2.2.2)
+Breaks: nwchem (<< 7.2.3-4)
+Description: High-performance computational chemistry software (MPICH build)
+Multi-Arch: allowed
+Homepage: https://nwchemgit.github.io
+Description-md5: 1329271868184a66e4abe540c30fd35e
+science
+Priority: optional
+Filename: pool/main/n/nwchem/nwchem-mpich_7.3.0-1_amd64.deb
+Size: 13743672
+MD5sum: d0d940412176c31a41240fd71629a176
+SHA256: 21c360477d5ab883bb8cc43b27e1bfd20a80a27b57ce7ac06ac2b8e75f5ab391
+
+Package: nwchem-openmpi
+Source: nwchem
+Version: 7.3.0-1
+Installed-Size: 71713
+Maintainer: Debichem Team <debichem-devel@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: nwchem (<< 7.2.3-4)
+Depends: openmpi-bin, nwchem-data (= 7.3.0-1), libblas3 | libblas.so.3, libc6 (>= 2.38), libgcc-s1 (>= 4.0), libgfortran5 (>= 10), liblapack3 | liblapack.so.3, libopenmpi40 (>= 5.0.8), libpython3.13 (>= 3.13.0~rc3), libscalapack-openmpi2.2 (>= 2.2.2)
+Breaks: nwchem (<< 7.2.3-4)
+Description: High-performance computational chemistry software (OpenMPI build)
+Multi-Arch: allowed
+Homepage: https://nwchemgit.github.io
+Description-md5: eed3daa9b150455e24c0e1cb76475134
+science
+Priority: optional
+Filename: pool/main/n/nwchem/nwchem-openmpi_7.3.0-1_amd64.deb
+Size: 13750836
+MD5sum: fd412a1849fa078d2fe4c74ff2841cd3
+SHA256: 145633ec6ee898ab4fa65a509a9666dc19346acc652135858ecb6dbec213d220
+
 Package: nxtrim
 Version: 0.4.3+dfsg-6
 Installed-Size: 113
@@ -21036,8 +21111,8 @@ SHA256: 0e525d96b44473540a01cea0f98cc125e832a9b2660695e797162ef5890880ee
 
 Package: python3-gffutils
 Source: python-gffutils
-Version: 0.13-3
-Installed-Size: 9772
+Version: 0.13-4
+Installed-Size: 9840
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
 Architecture: all
 Depends: python3-argcomplete, python3-argh, python3-pyfaidx, python3:any, python3-biopython
@@ -21047,10 +21122,10 @@ Homepage: https://daler.github.io/gffutils
 Description-md5: a79ef5e6695b430db7b8b73d5ce44064
 science
 Priority: optional
-Filename: pool/main/p/python-gffutils/python3-gffutils_0.13-3_all.deb
-Size: 1040840
-MD5sum: 6e16ba9f0c06f427420dd8f2ac88f2d6
-SHA256: dd1a3b32420a5d7b6406cda300438195ca24c5cf1770aa1d97b7b14a78f894a8
+Filename: pool/main/p/python-gffutils/python3-gffutils_0.13-4_all.deb
+Size: 1040988
+MD5sum: ec78f42d029b0df8c415f07c0f539032
+SHA256: b78173eaf7f80adb544615bb423530403924a9c22e579a59e04830ac0317490f
 
 Package: python3-gtfparse
 Source: python-gtfparse
@@ -24556,8 +24631,8 @@ MD5sum: 169304744fa934340b6662c57768cf75
 SHA256: 256b4b077d7d3ae64147b02d7d47ab97a74bab46cdf7278f24c11ae4c3bdb9ae
 
 Package: splash
-Version: 3.11.5-1
-Installed-Size: 4934
+Version: 3.11.6-1
+Installed-Size: 4818
 Maintainer: Debian Astro Team <debian-astro-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.35), libgcc-s1 (>= 4.0), libgfortran5 (>= 10), libgiza0 (>= 1.5.0), libgomp1 (>= 6)
@@ -24566,10 +24641,10 @@ Homepage: https://github.com/danieljprice/splash/
 Description-md5: 546d70c71158fe8683a0f326af556261
 science
 Priority: optional
-Filename: pool/main/s/splash/splash_3.11.5-1_amd64.deb
-Size: 3379516
-MD5sum: 09be4516e299387aa4fe7ab6c1beb12b
-SHA256: bb285eb3d10c13989eaa79de8bdafdd414be5e94a41f6b19cff43aa4c9523e3f
+Filename: pool/main/s/splash/splash_3.11.6-1_amd64.deb
+Size: 3349112
+MD5sum: 8f3ed156c8b523e08be44b363e7b7fd2
+SHA256: 19c0a93efdd159affb93fd7a7d255bb929a2fb38598c00fd6e79a0b1d712d14b
 
 Package: spoa
 Version: 4.1.5-1
@@ -25164,13 +25239,12 @@ MD5sum: e5430ceb2b472da7abd1c5bad5a6d3d1
 SHA256: f3747f378186ee17e65813a282269d76250e5efb57eaee653eb63801938ee171
 
 Package: survex
-Source: survex (1.4.17-1)
-Version: 1.4.17-1+b1
-Installed-Size: 2458
+Version: 1.4.18-1
+Installed-Size: 2475
 Maintainer: Olly Betts <olly@survex.com>
 Architecture: amd64
-Depends: libc6 (>= 2.35), libproj25 (>= 8.0.0)
-Recommends: survex-aven (= 1.4.17-1+b1)
+Depends: libc6 (>= 2.38), libproj25 (>= 8.0.0)
+Recommends: survex-aven (= 1.4.18-1)
 Suggests: vim-addon-manager
 Description: cave surveying and mapping software
 Homepage: https://survex.com/
@@ -25182,18 +25256,18 @@ Tag: field::geography, field::geology, implemented-in::c, interface::3d,
  works-with::text, x11::application
 science
 Priority: optional
-Filename: pool/main/s/survex/survex_1.4.17-1+b1_amd64.deb
-Size: 902432
-MD5sum: 2c02837ce5b622b1a37696ae5d8653ef
-SHA256: b03232dead6f7b7d1ae2edcb5099c25034173570d769c9465700f518e6256bc5
+Filename: pool/main/s/survex/survex_1.4.18-1_amd64.deb
+Size: 898376
+MD5sum: 9d85b9edc47bf848390912bf23bcab17
+SHA256: b5855d01824a74f8d730485900eecf654bd7577501ddb5d2482b690480c963dd
 
 Package: survex-aven
-Source: survex (1.4.17-1)
-Version: 1.4.17-1+b1
-Installed-Size: 3475
+Source: survex
+Version: 1.4.18-1
+Installed-Size: 3498
 Maintainer: Olly Betts <olly@survex.com>
 Architecture: amd64
-Depends: survex (= 1.4.17-1+b1), libavcodec61 (>= 7:7.0), libavformat61 (>= 7:7.0), libavutil59 (>= 7:7.0), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libgdal37 (>= 3.9.3), libgl1, libglu1-mesa | libglu1, libproj25 (>= 6.2.0), libstdc++6 (>= 14), libswscale8 (>= 7:7.0), libwxbase3.2-1t64 (>= 3.2.8+dfsg), libwxgtk-gl3.2-1t64 (>= 3.2.8+dfsg), libwxgtk3.2-1t64 (>= 3.2.8+dfsg)
+Depends: survex (= 1.4.18-1), libavcodec61 (>= 7:7.0), libavformat61 (>= 7:7.0), libavutil59 (>= 7:7.0), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libgdal37 (>= 3.9.3), libgl1, libglu1-mesa | libglu1, libproj25 (>= 6.2.0), libstdc++6 (>= 14), libswscale8 (>= 7:7.0), libwxbase3.2-1t64 (>= 3.2.8+dfsg), libwxgtk-gl3.2-1t64 (>= 3.2.8+dfsg), libwxgtk3.2-1t64 (>= 3.2.8+dfsg)
 Description: sophisticated cave survey viewer for Survex
 Homepage: https://survex.com/
 Description-md5: f985562ac004c0a192ac07cbfe19d447
@@ -25203,10 +25277,10 @@ Tag: implemented-in::c, implemented-in::c++, interface::3d,
  x11::application
 science
 Priority: optional
-Filename: pool/main/s/survex/survex-aven_1.4.17-1+b1_amd64.deb
-Size: 1244228
-MD5sum: e3884004175af67a2d2f88a65669a5c1
-SHA256: 0a36e11679b338b25889e4c60d1ae46e72b40e1717f5048684ede8b7f2830469
+Filename: pool/main/s/survex/survex-aven_1.4.18-1_amd64.deb
+Size: 1255568
+MD5sum: 6adb45e79867dd1510931c43c3274463
+SHA256: 2396f9b5535384d49874729c70c4dc177a403cb4e6737316cae7c031636753fa
 
 Package: survivor
 Version: 1.0.7-5
