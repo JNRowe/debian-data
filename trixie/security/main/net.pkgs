@@ -521,3 +521,123 @@ Filename: pool/updates/main/s/strongswan/strongswan-swanctl_6.0.1-6+deb13u2_amd6
 Size: 195104
 SHA256: 3d1ecf3cbbc990dda58beebde564a1cb00b0b82575591788830de2ace7b63d5f
 
+Package: swift
+Version: 2.35.1-0+deb13u1
+Installed-Size: 172
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: logrotate, python3-swift (= 2.35.1-0+deb13u1), rsyslog, python3:any
+Description: distributed virtual object store - common files
+Homepage: https://github.com/openstack/swift
+Description-md5: ae79e11cc5600f4ba17123c714a6e77f
+net
+Priority: optional
+Filename: pool/updates/main/s/swift/swift_2.35.1-0+deb13u1_all.deb
+Size: 104512
+SHA256: 42bcc470e6fdc2773d1f7451c1793868aa56cbef4e7e8859be2efca127766119
+
+Package: swift-account
+Source: swift
+Version: 2.35.1-0+deb13u1
+Installed-Size: 191
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: openstack-pkg-tools, python3-pastescript, python3-swift (= 2.35.1-0+deb13u1), rsync, swift (= 2.35.1-0+deb13u1), uwsgi-plugin-python3, python3:any
+Description: distributed virtual object store - account server
+Homepage: https://github.com/openstack/swift
+Description-md5: 3036744e8c7a33630c66000de276bc4d
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: swift-drive-audit
+net
+Priority: optional
+Filename: pool/updates/main/s/swift/swift-account_2.35.1-0+deb13u1_all.deb
+Size: 98252
+SHA256: 440a0e7b4ceea3eb05a0002240a6a7dcb33b0f846740afef7bd77ab3e9f93707
+
+Package: swift-container
+Source: swift
+Version: 2.35.1-0+deb13u1
+Installed-Size: 258
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: openstack-pkg-tools, python3-pastescript, python3-swift (= 2.35.1-0+deb13u1), rsync, swift (= 2.35.1-0+deb13u1), uwsgi-plugin-python3, python3:any
+Description: distributed virtual object store - container server
+Homepage: https://github.com/openstack/swift
+Description-md5: 91415789b0791eb87a4a509375cb71f9
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: swift-drive-audit
+net
+Priority: optional
+Filename: pool/updates/main/s/swift/swift-container_2.35.1-0+deb13u1_all.deb
+Size: 104416
+SHA256: d4074c6be9fc69380c5e75e3d876c248bc076e90a65fe34300fafd79688f3d92
+
+Package: swift-drive-audit
+Source: swift
+Version: 2.35.1-0+deb13u1
+Installed-Size: 102
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: python3-swift (= 2.35.1-0+deb13u1), swift (= 2.35.1-0+deb13u1), python3:any
+Description: distributed virtual object store - drive audit
+Homepage: https://github.com/openstack/swift
+Description-md5: 4e748f65205dbfe2c455f8eb71768fe0
+net
+Priority: optional
+Filename: pool/updates/main/s/swift/swift-drive-audit_2.35.1-0+deb13u1_all.deb
+Size: 79168
+SHA256: 493689311c667cedb72124b635f159660d09c2cc301027411e958e7760e737b5
+
+Package: swift-object
+Source: swift
+Version: 2.35.1-0+deb13u1
+Installed-Size: 256
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: python3-swift (= 2.35.1-0+deb13u1), rsync, swift (= 2.35.1-0+deb13u1), python3:any
+Description: distributed virtual object store - object server
+Homepage: https://github.com/openstack/swift
+Description-md5: 73e383e053bde1983dc84778bad843bb
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: swift-drive-audit
+net
+Priority: optional
+Filename: pool/updates/main/s/swift/swift-object_2.35.1-0+deb13u1_all.deb
+Size: 112372
+SHA256: 050b21f11464d365c7060057b81727628a03c2a74252a808992806dfa8fdd992
+
+Package: swift-object-expirer
+Source: swift
+Version: 2.35.1-0+deb13u1
+Installed-Size: 121
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: python3-swift (= 2.35.1-0+deb13u1), rsync, swift (= 2.35.1-0+deb13u1), python3:any
+Description: distributed virtual object store - object-expirer
+Homepage: https://github.com/openstack/swift
+Description-md5: f95ba63fe025cee6584ff053c757edde
+Pre-Depends: init-system-helpers (>= 1.54~)
+net
+Priority: optional
+Filename: pool/updates/main/s/swift/swift-object-expirer_2.35.1-0+deb13u1_all.deb
+Size: 83164
+SHA256: b9d91bdb1d18629ab2df9efb9e52dcd8358d3123f83dbaf28bb15974052cf67c
+
+Package: swift-proxy
+Source: swift
+Version: 2.35.1-0+deb13u1
+Installed-Size: 260
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: openstack-pkg-tools, python3-pastescript, python3-swift (= 2.35.1-0+deb13u1), swift (= 2.35.1-0+deb13u1), uwsgi-plugin-python3, python3:any
+Description: distributed virtual object store - proxy server
+Homepage: https://github.com/openstack/swift
+Description-md5: fa21167c19ef3bb5ad3d841199e8d1d3
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: python3-barbicanclient, python3-castellan, python3-keystonemiddleware
+net
+Priority: optional
+Filename: pool/updates/main/s/swift/swift-proxy_2.35.1-0+deb13u1_all.deb
+Size: 114572
+SHA256: 3846ae517963ec2a70ad7660c8f1081a244a69e89a0e818d6875ae07cbe61afc
+
