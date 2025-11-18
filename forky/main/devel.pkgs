@@ -4578,23 +4578,23 @@ SHA256: cd930861be87aa85f06fa4f83455a93acb8a210dc8d5c1f8c9670febbd5ea336
 
 Package: libcfitsio-bin
 Source: cfitsio
-Version: 4.6.2-2
+Version: 4.6.3-1
 Installed-Size: 361
 Maintainer: Debian Astronomy Maintainers <debian-astro-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: fitsverify (<< 4.22+cfitsio)
 Provides: fitsverify
-Depends: libc6 (>= 2.34), libcfitsio10t64 (>= 4.2.0~)
+Depends: libc6 (>= 2.38), libcfitsio10t64 (>= 4.2.0~)
 Breaks: fitsverify (<< 4.22+cfitsio)
 Description: CFITSIO based utilities
 Homepage: https://heasarc.gsfc.nasa.gov/fitsio/fitsio.html
 Description-md5: 02c6f20735b29de2db853899b0d4b432
 devel
 Priority: optional
-Filename: pool/main/c/cfitsio/libcfitsio-bin_4.6.2-2_amd64.deb
-Size: 157084
-MD5sum: 390e6921abdb0f2a3943e9f9dc50b1bf
-SHA256: 2074d2d0191ffbe4826204de12db42f4c2c2b254deffe3049a4e6d2400c810b9
+Filename: pool/main/c/cfitsio/libcfitsio-bin_4.6.3-1_amd64.deb
+Size: 157724
+MD5sum: 3fcbe3bdb0ca820948d195d319b89983
+SHA256: eaaf831c2d7d7822515f6a2198925bffd4bf3204509533ab7ef1d5da628f3077
 
 Package: cflow
 Version: 1:1.8-1
@@ -7513,23 +7513,39 @@ Size: 25620
 MD5sum: d04fa7f2520ade1fcb745e2022570ca4
 SHA256: 2f19c3e1dc9b5d5dfeb410419b0f4f0e33ece84c0907914e9490b2c03dca0f09
 
-Package: dh-fortran-mod
-Version: 0.45
-Installed-Size: 69
+Package: dh-fortran
+Version: 0.57
+Installed-Size: 172
 Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
-Architecture: all
-Provides: dh-sequence-fortran, dh-sequence-fortran-mod
-Depends: perl:any, debhelper (>= 13), gfortran | fortran-compiler, patchelf, libio-compress-perl, libfile-libmagic-perl
+Architecture: amd64
+Replaces: dh-fortran-mod
+Provides: dh-fortran-mod, dh-sequence-fortran, dh-sequence-fortran-mod
+Depends: perl:any, debhelper (>= 13), python3, python3:any, python3-magic, python3-click, fortran-fpm, gfortran | fortran-compiler, patchelf, libio-compress-perl, libfile-libmagic-perl
 Enhances: debhelper
-Description: debhelper add-on to handle Fortran '.mod' files
-Multi-Arch: foreign
-Description-md5: f335ff14f9816884de1d80c04e27c4ac
+Description: debhelper add-ons for packaging software written in Fortran
+Description-md5: f45a3cfa6f4224bacda53eb6753d608f
 devel
 Priority: optional
-Filename: pool/main/d/dh-fortran-mod/dh-fortran-mod_0.45_all.deb
-Size: 18892
-MD5sum: a20db105f0f70cbe6c3292dacd50e103
-SHA256: fc3f8a64991c06e95904c30445e77fb7db07412bb075f84422b11222c715c200
+Filename: pool/main/d/dh-fortran/dh-fortran_0.57_amd64.deb
+Size: 35644
+MD5sum: 2837515e7bb1335778136105113f7545
+SHA256: 4baec0f7cd3c4297521081809d4e1a6e0c7bde1cac2e1d15ef56cb4ac3a3c335
+
+Package: dh-fortran-mod
+Source: dh-fortran
+Version: 0.57
+Installed-Size: 11
+Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: dh-fortran
+Description: transitional package
+Description-md5: bfe8ebc058cce6653c20fea6f85a4246
+devel
+Priority: optional
+Filename: pool/main/d/dh-fortran/dh-fortran-mod_0.57_all.deb
+Size: 4716
+MD5sum: 6ea956afc193a7811f8da4550261af5f
+SHA256: 1a61335938b1377f6af89830e1ac910e27cf0628c58f3c4b5484a907b4f6cb4e
 
 Package: dh-golang
 Version: 1.63
@@ -7873,11 +7889,11 @@ MD5sum: 05dc73a9d2166fa456336d9c9d5afd3d
 SHA256: 102351c2c743c65c58ca3193349843c442461c88166fe0634a02fc77c231e659
 
 Package: diffoscope
-Version: 308
+Version: 309
 Installed-Size: 51
 Maintainer: Reproducible builds folks <reproducible-builds@lists.alioth.debian.org>
 Architecture: all
-Depends: diffoscope-minimal (= 308)
+Depends: diffoscope-minimal (= 309)
 Recommends: 7zip, aapt, abootimg, acl, apksigcopier, apksigner, apktool, binutils-multiarch, bzip2, caca-utils, colord, coreboot-utils, db-util, default-jdk-headless | default-jdk | java-sdk, device-tree-compiler, dexdump, docx2txt, e2fsprogs, enjarify, ffmpeg, fontforge-extras, fonttools, fp-utils, genisoimage, gettext, ghc, ghostscript, giflib-tools, gnumeric, gnupg-utils, gpg, hdf5-tools, html2text, imagemagick, jsbeautifier, libarchive-tools, libxmlb-utils, llvm, lz4, lzip, mono-devel (>= 6.14.1+ds-3) | mono-utils (<< 6.14.1+ds-3), ocaml-nox, odt2txt, oggvideotools, openssh-client, openssl, perl, pgpdump, poppler-utils, procyon-decompiler, python3-pdfminer, r-base-core, radare2, rpm2cpio, sng, sqlite3, squashfs-tools, systemd-ukify, tcpdump, u-boot-tools, unzip, wabt, xmlbeans, xxd, xz-utils, zip, zstd, androguard, python3-argcomplete, python3-binwalk, python3-debian, python3-defusedxml, python3-guestfs, python3-jsondiff, python3-progressbar, python3-pypdf, python3-pyxattr, python3-rpm, python3-tlsh (>= 3.4.1)
 Suggests: libjs-jquery
 Enhances: diffoscope-minimal
@@ -7898,14 +7914,14 @@ Tag: devel::prettyprint, devel::testing-qa, implemented-in::python,
  works-with::file, works-with::software:package, works-with::text
 devel
 Priority: optional
-Filename: pool/main/d/diffoscope/diffoscope_308_all.deb
-Size: 42804
-MD5sum: 59a3f489f80527acd9224dcf19915cf3
-SHA256: 8eb8125267818106edaa53c5b2ead16d47530b252b366c7db2ea8329b85b4c53
+Filename: pool/main/d/diffoscope/diffoscope_309_all.deb
+Size: 42844
+MD5sum: 352f974fefd9d1232e59f266f0ae733d
+SHA256: bd42631f23928f2d5dfb4eb297ff7ac91cf7813a0991b709d051534bcd302ede
 
 Package: diffoscope-minimal
 Source: diffoscope
-Version: 308
+Version: 309
 Installed-Size: 747
 Maintainer: Reproducible builds folks <reproducible-builds@lists.alioth.debian.org>
 Architecture: all
@@ -7916,10 +7932,10 @@ Homepage: https://diffoscope.org
 Description-md5: d49fabae383d551cbcf73179c0580314
 devel
 Priority: optional
-Filename: pool/main/d/diffoscope/diffoscope-minimal_308_all.deb
-Size: 157616
-MD5sum: 98956b89cd8769817d9db08fba6cf96f
-SHA256: 32d6e9e342b44c9ca23b0d2542b9879ec931fcd5e47f5715e14f755c52df1125
+Filename: pool/main/d/diffoscope/diffoscope-minimal_309_all.deb
+Size: 157644
+MD5sum: 59164ec8906884c26b0802d0a54cf5f7
+SHA256: 826555829f469a7d72927e80721811941ee6378348f1ca7b611e26b551649c00
 
 Package: diffstat
 Version: 1.68-1
@@ -11141,38 +11157,22 @@ Size: 19807856
 MD5sum: 19966dca6652cc3acd6b3dc55262c8b3
 SHA256: 6b71180627d973d358dd23d59be6bcfd70cfcb6da2ddc557caa922eb451ac9c2
 
-Package: freedict-tools
-Version: 0.7.0-2
-Installed-Size: 159
-Maintainer: Sebastian Humenda <shumenda@gmx.de>
-Architecture: all
-Depends: python3, xsltproc, dictfmt, dictzip, iso-codes, espeak-ng, licensecheck, python3-pyglossary (>= 5.0~)
-Description: Development files for the FreeDict dictionary packages
-Homepage: https://www.freedict.org/
-Description-md5: 9913d9067c914f4377757bb668d5744f
-devel
-Priority: optional
-Filename: pool/main/f/freedict-tools/freedict-tools_0.7.0-2_all.deb
-Size: 40932
-MD5sum: 69eb9d6492a0841ac87316068cae7380
-SHA256: 20886cb792f39d4b6ae2b4aae081edace084063bc073ebc1bedba1fdff80e159
-
 Package: freerdp3-dev
 Source: freerdp3
-Version: 3.17.2+dfsg-3
-Installed-Size: 1134
+Version: 3.18.0+dfsg-1
+Installed-Size: 1138
 Maintainer: Debian Remote Maintainers <debian-remote@lists.debian.org>
 Architecture: amd64
-Depends: libfreerdp-server-proxy3-3 (= 3.17.2+dfsg-3), libfreerdp-client3-3 (= 3.17.2+dfsg-3), libfreerdp-server3-3 (= 3.17.2+dfsg-3), libfreerdp-shadow-subsystem3-3 (= 3.17.2+dfsg-3), libfreerdp-shadow3-3 (= 3.17.2+dfsg-3), libfreerdp3-3 (= 3.17.2+dfsg-3), libwinpr3-dev (= 3.17.2+dfsg-3), libwinpr3-3 (= 3.17.2+dfsg-3), libfuse3-dev, winpr3-utils (= 3.17.2+dfsg-3)
+Depends: libfreerdp-server-proxy3-3 (= 3.18.0+dfsg-1), libfreerdp-client3-3 (= 3.18.0+dfsg-1), libfreerdp-server3-3 (= 3.18.0+dfsg-1), libfreerdp-shadow-subsystem3-3 (= 3.18.0+dfsg-1), libfreerdp-shadow3-3 (= 3.18.0+dfsg-1), libfreerdp3-3 (= 3.18.0+dfsg-1), libwinpr3-dev (= 3.18.0+dfsg-1), libwinpr3-3 (= 3.18.0+dfsg-1), libfuse3-dev, winpr3-utils (= 3.18.0+dfsg-1)
 Description: Free Remote Desktop Protocol library (development files)
 Homepage: https://www.freerdp.com/
 Description-md5: 87d789b26f2354d9180f00d23a677478
 devel
 Priority: optional
-Filename: pool/main/f/freerdp3/freerdp3-dev_3.17.2+dfsg-3_amd64.deb
-Size: 143388
-MD5sum: c94217e726f3ae54870f3229ebb858a4
-SHA256: 310517282c1dbd89924677efbf621dbb42692e3dade93cad11e9f055b00d674e
+Filename: pool/main/f/freerdp3/freerdp3-dev_3.18.0+dfsg-1_amd64.deb
+Size: 144188
+MD5sum: 60ec67e7741cdd50a0acbdc8b9c16cdf
+SHA256: 49d2c106024906e6b7beb33bbcd2d19b87b33fe8621517d5faeb642865fae07e
 
 Package: freetds-dev
 Source: freetds
@@ -79206,6 +79206,23 @@ Size: 424876
 MD5sum: 85ae807cce0c27c2ce23a8f3fa338b15
 SHA256: 43e0696d1ff851505c6d4e8775b05026c3df877073b82a02a38e26d156b2257e
 
+Package: libxml2-source
+Source: libxml2
+Version: 2.15.1+dfsg-0.4
+Installed-Size: 1289
+Maintainer: Debian XML/SGML Group <debian-xml-sgml-pkgs@lists.alioth.debian.org>
+Architecture: all
+Description: GNOME XML library - source code
+Multi-Arch: foreign
+Homepage: http://xmlsoft.org
+Description-md5: f61923e1f4152bcaf08026d1680eb8d0
+devel
+Priority: optional
+Filename: pool/main/libx/libxml2/libxml2-source_2.15.1+dfsg-0.4_all.deb
+Size: 1311680
+MD5sum: 6fc87e54e691a32435902334d3c303d6
+SHA256: dfc239a7ebdad6e2f687f810d969b4816c4099c50cbe1c043a1ec0bf5c866074
+
 Package: libyang3-tools
 Source: libyang
 Version: 3.13.6-1
@@ -83996,7 +84013,7 @@ MD5sum: 4445db12110fdec7ea43c3f196f203ba
 SHA256: 796d93d13db61a583fc2be7388f305a7ef99c2027feca8382385192e6d1e8a7f
 
 Package: pkg-rocm-tools
-Version: 0.9.3
+Version: 0.9.4
 Installed-Size: 44
 Maintainer: Debian ROCm Team <debian-ai@lists.debian.org>
 Architecture: all
@@ -84006,14 +84023,14 @@ Homepage: https://salsa.debian.org/rocm-team/pkg-rocm-tools
 Description-md5: cd0f1cb0c3a3a34a6fbb7c91b287e7e2
 devel
 Priority: optional
-Filename: pool/main/p/pkg-rocm-tools/pkg-rocm-tools_0.9.3_all.deb
-Size: 12656
-MD5sum: 5295686a262fd6c4cca4ffefce9a07ee
-SHA256: b8313ea130c4ff6006fddaa01b1a8af8f85b0d40e76eaf4a464fd0c777d0b202
+Filename: pool/main/p/pkg-rocm-tools/pkg-rocm-tools_0.9.4_all.deb
+Size: 12728
+MD5sum: 2bbba0501260be17788c65bbbb4d24f5
+SHA256: 44975eed2e5aafebfb6b239d84cddb13841f43c10bd310bd620f8b43cee5c4a2
 
 Package: rocm-podman-support
 Source: pkg-rocm-tools
-Version: 0.9.3
+Version: 0.9.4
 Installed-Size: 34
 Maintainer: Debian ROCm Team <debian-ai@lists.debian.org>
 Architecture: all
@@ -84024,14 +84041,14 @@ Homepage: https://salsa.debian.org/rocm-team/pkg-rocm-tools
 Description-md5: 16a77f66b420fcdd97c9720aa8032a55
 devel
 Priority: optional
-Filename: pool/main/p/pkg-rocm-tools/rocm-podman-support_0.9.3_all.deb
-Size: 12360
-MD5sum: be5fe339b93da5a75dcbf05667a8c825
-SHA256: 08d23d31f09fa782e4c470d793131755177dfcb800286d6a42ff6e6445907470
+Filename: pool/main/p/pkg-rocm-tools/rocm-podman-support_0.9.4_all.deb
+Size: 12412
+MD5sum: f3081bb2c5d222105ae753c5d0c93dd4
+SHA256: 374eb20c60f8d6ff8a4898a033f806b6c12338ec73e07ad02526b83700555d68
 
 Package: rocm-qemu-support
 Source: pkg-rocm-tools
-Version: 0.9.3
+Version: 0.9.4
 Installed-Size: 54
 Maintainer: Debian ROCm Team <debian-ai@lists.debian.org>
 Architecture: all
@@ -84042,10 +84059,10 @@ Homepage: https://salsa.debian.org/rocm-team/pkg-rocm-tools
 Description-md5: 30f068420058a1c31e0c7cc61bb6689b
 devel
 Priority: optional
-Filename: pool/main/p/pkg-rocm-tools/rocm-qemu-support_0.9.3_all.deb
-Size: 19124
-MD5sum: b9d11c68bf74e507ca4c0fe6ea7cf2dc
-SHA256: a39acaa4e10fe043def6132363aabf9a20852d7ae683af99921554e83ddfaeac
+Filename: pool/main/p/pkg-rocm-tools/rocm-qemu-support_0.9.4_all.deb
+Size: 19188
+MD5sum: 74651f9ee4fa21e773160e49af6ef335
+SHA256: 777f88424e80fe6e65e4c3e303404439e9818a4c33f0ae5f30120fabfcbc7519
 
 Package: pkg-config
 Source: pkgconf
@@ -91801,24 +91818,6 @@ Filename: pool/main/y/yder/libyder2.0t64_1.4.20-1.1+b1_amd64.deb
 Size: 10212
 MD5sum: 1832f4c62d59079e48592fca34117cdc
 SHA256: 4caa9fa13c60b55e7b8184b47a53a876197e2f6219429e94e0e51df4341c64fc
-
-Package: yotta
-Version: 0.20.5-8
-Installed-Size: 675
-Maintainer: Debian Python Team <team+python@tracker.debian.org>
-Architecture: all
-Depends: cmake, mbed-test-wrapper, valinor, python3-argcomplete, python3-certifi, python3-colorama, python3-cryptography (>= 2.8), python3-github, python3-hgapi, python3-intelhex, python3-jinja2, python3-json-pointer, python3-jsonschema, python3-jwt, python3-requests, python3-semantic-version, python3:any
-Recommends: git
-Suggests: clang, g++, gcc, gcc-arm-none-eabi, yotta-doc
-Description: build tool for C/C++ projects using modular components
-Homepage: https://github.com/ARMmbed/yotta
-Description-md5: 3ca44171acbf8464a88fffc7c14b415e
-devel
-Priority: optional
-Filename: pool/main/y/yotta/yotta_0.20.5-8_all.deb
-Size: 115720
-MD5sum: ef40a42a5706653ade45773e960b0597
-SHA256: 94a32ab7a3df96fc462f6ba9ad04c110f13c6d6b7697b1ea9df3f657e346c4c9
 
 Package: z80asm
 Version: 1.8-2
