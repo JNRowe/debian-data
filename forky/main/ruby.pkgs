@@ -206,27 +206,27 @@ MD5sum: b156c34ade6ba656a99c8ee8510025d6
 SHA256: 2027cca9814b52ab95ea20593e313faeb9b083b40dd215d1a66914753d1062a0
 
 Package: gem2deb
-Version: 2.2.5
+Version: 2.2.6
 Installed-Size: 161
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Provides: dh-sequence-ruby
-Depends: debhelper-compat (= 12), devscripts, gem2deb-test-runner (= 2.2.5), rake, ruby:any, ruby-all-dev (>= 1:2.5), perl:any
-Recommends: apt-file, build-essential, python3-debian
+Depends: debhelper-compat (= 13), gem2deb-test-runner (= 2.2.6), rake, ruby:any, ruby-all-dev (>= 1:2.5), perl:any
+Recommends: apt-file, build-essential, debian-policy, devscripts, python3-debian
 Suggests: git-buildpackage, pristine-tar
 Description: Debian Ruby packaging suite
 Description-md5: 613c3ed5ca845bb0fa2fd0980c118f19
 Tag: admin::package-management, implemented-in::ruby, role::program
 ruby
 Priority: optional
-Filename: pool/main/g/gem2deb/gem2deb_2.2.5_amd64.deb
-Size: 48028
-MD5sum: c78aa3b85a68f9f8a8af595cb4324970
-SHA256: 73255cbc4a4c53f1f31362e5ae8ae702ff59d6b12683043a0030690bb18f9b85
+Filename: pool/main/g/gem2deb/gem2deb_2.2.6_amd64.deb
+Size: 48332
+MD5sum: b08385888657eb02dad8fc25ae850d01
+SHA256: b948730379a16fe96e961b54bfbd7b425265e1198109a88434206ccc4bb095a3
 
 Package: gem2deb-test-runner
 Source: gem2deb
-Version: 2.2.5
+Version: 2.2.6
 Installed-Size: 59
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -237,10 +237,10 @@ Description: Debian Ruby packaging suite - tool to run tests
 Description-md5: 2d73a89e49a09feafa108fa3c3236787
 ruby
 Priority: optional
-Filename: pool/main/g/gem2deb/gem2deb-test-runner_2.2.5_amd64.deb
-Size: 17936
-MD5sum: a1247bbe73da7099081eebd2b60030ee
-SHA256: 269ed09e7d0ad3df4704acd245b6116578051c35baa2b7e71e99be81ebeb82c0
+Filename: pool/main/g/gem2deb/gem2deb-test-runner_2.2.6_amd64.deb
+Size: 18380
+MD5sum: 08b54ccd0c0298779deb037a61b55b28
+SHA256: 5c6388bd03c155480af78aa83d697d3233ee46ed811aeb540ad3d2aff8a4ff3c
 
 Package: gist
 Version: 6.0.0-3
@@ -8177,20 +8177,21 @@ MD5sum: 05d73f05e268a0e2ec40fe9aedd14a7c
 SHA256: f1da74a67a0efdd222f641449c7a15bf794b350696a78280f0f921723621191e
 
 Package: ruby-gpgme
-Version: 2.0.23-1.1
-Installed-Size: 189
+Source: ruby-gpgme (2.0.23-1.1)
+Version: 2.0.23-1.1+b1
+Installed-Size: 190
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: ruby, libc6 (>= 2.14), libgpgme11t64 (>= 1.23.2), libruby3.3 (>= 3.3.1), libruby (>= 1:3.3~0), libruby (<< 1:3.4~)
+Depends: ruby, libc6 (>= 2.14), libgpgme45 (>= 2.0.0), libruby3.3 (>= 3.3.1), libruby (>= 1:3.3~0), libruby (<< 1:3.4~)
 Description: Ruby GPGME binding
 Homepage: https://github.com/ueno/ruby-gpgme
 Description-md5: ba63ec59d17e3fb3fe053df9164bf318
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-gpgme/ruby-gpgme_2.0.23-1.1_amd64.deb
-Size: 38736
-MD5sum: 3f6ff727acd138dcce352a199566e9f8
-SHA256: c022f6d3030164b82fdd6236e8f52f6e9ebd9c5b9c208c9ed3ca85b1ad39ef14
+Filename: pool/main/r/ruby-gpgme/ruby-gpgme_2.0.23-1.1+b1_amd64.deb
+Size: 38804
+MD5sum: 109ab13065af1ceb6bec97afacbe1791
+SHA256: 14d54382de5450570f58ad9a8e7496d171cb62f3adc2ce99bb8d11ad46d2ed47
 
 Package: ruby-graffiti
 Version: 2.3.2-1
@@ -9076,22 +9077,21 @@ MD5sum: a454d34aae0a6b8a218dcc629351132c
 SHA256: 862b08c25bc18c650f41e27ef4c38f937ed6d42878e1533268d069e3b48454c6
 
 Package: ruby-httpclient
-Version: 2.8.3+git20211122.4658227-1
-Installed-Size: 301
+Version: 2.9.0-1
+Installed-Size: 286
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: ca-certificates, ruby-http-cookie, ruby
+Depends: ca-certificates, ruby-http-cookie, ruby, ruby-mutex-m
 Description: HTTP client library for ruby
 Homepage: https://github.com/nahi/httpclient
-Description-md5: 2d5d10560b14be8f0837dab59c56c6d9
-Ruby-Versions: all
+Description-md5: 05f95e66071404ab4c1f56c2c74399d5
 Tag: protocol::http, role::program
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-httpclient/ruby-httpclient_2.8.3+git20211122.4658227-1_all.deb
-Size: 79512
-MD5sum: 0c8559ea63693ed37098baf15971538a
-SHA256: 96f72c8025b451fd36cece810178e5dbcd70494d3f4f5882af8726c829fe6d57
+Filename: pool/main/r/ruby-httpclient/ruby-httpclient_2.9.0-1_all.deb
+Size: 61172
+MD5sum: bf7bc40d0c0f573d9dfc4f8e81e439f2
+SHA256: c22f9a0d4bd82a0cfedffa3fa6c13ec3633fb233162b8f513babe7e2599a5e5e
 
 Package: ruby-humanize
 Version: 2.5.1-2
@@ -12620,20 +12620,21 @@ MD5sum: 2361c9fa51a92f1f3333a77c55487af9
 SHA256: 745dd04df018866586d65a87dee3c216ba25e212d601b62a9499b74839231560
 
 Package: ruby-net-ldap
-Version: 0.19.0-1
-Installed-Size: 227
+Version: 0.20.0-1
+Installed-Size: 228
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
+Depends: ruby-base64, ruby-ostruct
 Description: LDAP client library for Ruby
 Multi-Arch: foreign
 Homepage: https://rubyldap.com/
 Description-md5: 7361973b336dab09de8e4fd976f50768
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-net-ldap/ruby-net-ldap_0.19.0-1_all.deb
-Size: 59464
-MD5sum: b9293e63ef464aacb6ecd68ede79614a
-SHA256: 6d93cb03ede7cb6496476b3e05c8616a7055baaad3c5c23d5e9e5083680ba699
+Filename: pool/main/r/ruby-net-ldap/ruby-net-ldap_0.20.0-1_all.deb
+Size: 59904
+MD5sum: bb8ac17c95264845f806eb8687063ec9
+SHA256: 2c65182af8f175eaf5a5757dd21279457157603611e732a8cabf099d05deb7e8
 
 Package: ruby-net-ntp
 Version: 2.1.3-4
@@ -13639,21 +13640,19 @@ MD5sum: 48007f226f3f09bff828c7808ba7e06c
 SHA256: aed35480ff5b977a5a8ca1f59e4da448b4fd7b30a0c01f7ad303a5cc2453600b
 
 Package: ruby-packable
-Version: 1.3.14-2
+Version: 1.3.18-1
 Installed-Size: 45
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: ruby-backports
 Description: extensive packing and unpacking capabilities for Ruby
 Homepage: https://github.com/marcandre/packable
 Description-md5: 6b96497d333e74ae4c5a5a0a3115ae34
-Ruby-Versions: all
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-packable/ruby-packable_1.3.14-2_all.deb
-Size: 12740
-MD5sum: 8c372f4e3bd4e4f91877777940cd6bf2
-SHA256: 5750c073ebf5d11b91973565ee8b6e7f4b16c5077c9a56c803158b3e7460278f
+Filename: pool/main/r/ruby-packable/ruby-packable_1.3.18-1_all.deb
+Size: 12708
+MD5sum: 542f531de442b6d67fccb9eb5b3d5c33
+SHA256: 3d61cd2e29bc1129cbc02be11bd846fe90d3863c02775e4bfe2f1d6b3da65c52
 
 Package: ruby-packetfu
 Version: 2.0.0-2
@@ -14084,12 +14083,11 @@ MD5sum: c48c25927ddfaf80353a2985c58734cf
 SHA256: bb911ec4d4686e18f5c82420feb99db8156f9640e09b6e0a817e712493af2708
 
 Package: ruby-pg
-Source: ruby-pg (1.5.6-1)
-Version: 1.5.6-1+b4
-Installed-Size: 1845
+Version: 1.6.2-1
+Installed-Size: 1942
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.29), libpq5 (>= 15~~), libruby3.3 (>= 3.3.0~preview2), libruby (>= 1:3.3~0), libruby (<< 1:3.4~)
+Depends: libc6 (>= 2.38), libpq5 (>= 17~~), libruby3.3 (>= 3.3.0~preview2), libruby (>= 1:3.3~0), libruby (<< 1:3.4~)
 Suggests: doc-base, libjs-jquery
 Description: PostgreSQL interface for Ruby
 Multi-Arch: same
@@ -14097,10 +14095,10 @@ Homepage: http://bitbucket.org/ged/ruby-pg
 Description-md5: 5d27f486d8d3919d33cc283d173af5da
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-pg/ruby-pg_1.5.6-1+b4_amd64.deb
-Size: 393704
-MD5sum: e144ce7f9e3f5c10da4b3e56590bc628
-SHA256: a709cd2da6d574b2561808ddb62dc8d715965e4824d1d1677715289738d23af8
+Filename: pool/main/r/ruby-pg/ruby-pg_1.6.2-1_amd64.deb
+Size: 409880
+MD5sum: c1c419bfd7adf5ade2bb16ea71bdd75b
+SHA256: f2a6da2cf41d9e8d7887df539d5e656d486aa78e1299f3db3b0dc1de8246c018
 
 Package: ruby-pgplot
 Version: 0.2.0-5
@@ -16013,20 +16011,20 @@ MD5sum: 03b51f7d27505319e32a459c4e6cb463
 SHA256: 74b89166078cd2526a224cbbea0a9ab408e607e26cc5149a45da59db496f5fd5
 
 Package: ruby-roadie-rails
-Version: 3.3.0-3
-Installed-Size: 45
+Version: 3.4.0-1
+Installed-Size: 46
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: ruby-railties (>= 2:5.1), ruby-railties (<< 2:8.1), ruby-roadie (>= 5.0)
+Depends: ruby-railties (>= 2:5.1), ruby-railties (<< 2:8.2), ruby-roadie (>= 5.0)
 Description: library for composing HTML email in Rails applications
 Homepage: https://github.com/Mange/roadie-rails
 Description-md5: eee0d4e1322557b32b5fa03c2a24f273
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-roadie-rails/ruby-roadie-rails_3.3.0-3_all.deb
-Size: 14100
-MD5sum: cf3066dd0d81cd87200c948605c2ae9c
-SHA256: 1f2072c1618f7c3799eab37d99f1dc5e2a5f754d69db39e95b3737cdb032dbd4
+Filename: pool/main/r/ruby-roadie-rails/ruby-roadie-rails_3.4.0-1_all.deb
+Size: 14288
+MD5sum: 5dbf01a161d95dad6ed6ff618ee74bc4
+SHA256: db946b5e6cf2b084c52e22ac5485bde0b1454390d3fdd91d94461e07ade7120d
 
 Package: ruby-romkan
 Version: 0.4.0-3
@@ -17622,22 +17620,21 @@ MD5sum: 05f9d3ca29b9182d33148682b03233da
 SHA256: 3c0ace351368ae6e061d8a8a745f71156622de28ff98c00092e7c591159c6027
 
 Package: ruby-shoulda-matchers
-Version: 4.3.0-2
-Installed-Size: 534
+Version: 7.0.1+dfsg-1
+Installed-Size: 642
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: ruby | ruby-interpreter, ruby-activesupport (>= 2:3.0.0)
+Depends: ruby-activesupport (>= 2:7.1)
 Breaks: ruby-shoulda (<< 4.0~)
 Description: Test helpers for Rails applications, compatible with Test::Unit and RSpec
 Homepage: https://github.com/thoughtbot/shoulda-matchers
 Description-md5: 52266030e3cbcd34ed2d0fd8f0d2267c
-Ruby-Versions: all
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-shoulda-matchers/ruby-shoulda-matchers_4.3.0-2_all.deb
-Size: 72804
-MD5sum: d525fff734d6b4710d4c6ab635d4783d
-SHA256: 141bf971c6de6320f08841d8b8e7c2137267846b6a593a88e687db808215a749
+Filename: pool/main/r/ruby-shoulda-matchers/ruby-shoulda-matchers_7.0.1+dfsg-1_all.deb
+Size: 103252
+MD5sum: f54b91fba9827436b7d57c63ee94f8dc
+SHA256: 5092cba6e806d7c1b506b368a74e8b914666395fd29929c31bc9e51d6c4b70ce
 
 Package: ruby-sidekiq
 Version: 7.3.2+dfsg-1
@@ -19903,22 +19900,21 @@ MD5sum: 05a6bac910105847f825048268718300
 SHA256: bfbf581d1b528b41d93afc576d8b4d7cae615ab0e1a3cf21e745c37b26ae881f
 
 Package: ruby-unf-ext
-Source: ruby-unf-ext (0.0.7.7-1)
-Version: 0.0.7.7-1+b7
-Installed-Size: 438
+Version: 0.0.9.1-1
+Installed-Size: 437
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: ruby | ruby-interpreter, libc6 (>= 2.4), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2), libruby3.3 (>= 3.3.0~preview1), libruby (>= 1:3.3~0), libruby (<< 1:3.4~)
+Depends: libc6 (>= 2.4), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2), libruby3.3 (>= 3.3.0~preview1), libruby (>= 1:3.3~0), libruby (<< 1:3.4~)
 Description: Unicode Normalization Form support library for CRuby
 Homepage: https://github.com/knu/ruby-unf_ext
 Description-md5: ac568bbf3ede429f10c939de20f311d2
 Tag: role::shared-lib
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-unf-ext/ruby-unf-ext_0.0.7.7-1+b7_amd64.deb
-Size: 92428
-MD5sum: 735be43a637d96cb8759e7bedca81844
-SHA256: bdb6be0e21ec8e44004db78b4dc30afbd3cb69383d8281cf7948ca89c6bd084a
+Filename: pool/main/r/ruby-unf-ext/ruby-unf-ext_0.0.9.1-1_amd64.deb
+Size: 93540
+MD5sum: 392206f8c8cb4ac4d0991be44277fd68
+SHA256: 22f821f00035daa79a69d2f6cac6e12ab0eb6e1d5f5b8f40a4ac8b256be3806e
 
 Package: ruby-unicode
 Source: ruby-unicode (0.4.4.5-1)
@@ -20829,19 +20825,20 @@ MD5sum: 90f16980287cc084559d07cf47dbad67
 SHA256: 67fa8ea91f627f49ff77717b1fdce47b1f2a48d6ce1ccdb92f88fe6083ac3c24
 
 Package: ruby-zeitwerk
-Version: 2.6.8-1
-Installed-Size: 112
+Version: 2.7.3-1
+Installed-Size: 127
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
 Description: Efficient and thread-safe constant autoloader
+Multi-Arch: foreign
 Homepage: https://github.com/fxn/zeitwerk
 Description-md5: af4b41bdffd25268c8cf104ee9933b63
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-zeitwerk/ruby-zeitwerk_2.6.8-1_all.deb
-Size: 43040
-MD5sum: c96ef2a45e3399cea2d33201a983d93a
-SHA256: 34fc765555be2a7ad1a5208b0dce1efe5332403a974d4dc162173f1eb6afbc03
+Filename: pool/main/r/ruby-zeitwerk/ruby-zeitwerk_2.7.3-1_all.deb
+Size: 48208
+MD5sum: 426b990addbf6348740830ef41821c71
+SHA256: c1d9ebd1f562a2789a2a2a811a4fea9729137330b6721b29849645c9caa99fec
 
 Package: ruby-zentest
 Version: 4.11.0-4
@@ -21062,27 +21059,28 @@ MD5sum: 0db885b04c60c0c74167734e08b45bf8
 SHA256: 0cda8974a11778bd033c0ef8d8677ee80bf6598c59efa985d4b74883994bf1a0
 
 Package: libstfl-ruby
-Source: stfl (0.22-5)
-Version: 0.22-5+b2
+Source: stfl
+Version: 0.22-6
 Installed-Size: 104
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libncursesw6 (>= 6), libruby3.3 (>= 3.3.0~preview1), libtinfo6 (>= 6)
 Description: Ruby bindings for the structured terminal forms language/library
+Multi-Arch: same
 Homepage: http://www.clifford.at/stfl/
 Description-md5: 94b34133aa2db4670ebf8f0aba20067d
 Tag: devel::lang:ruby, devel::library, implemented-in::c, role::devel-lib,
  role::program, uitoolkit::ncurses
 ruby
 Priority: optional
-Filename: pool/main/s/stfl/libstfl-ruby_0.22-5+b2_amd64.deb
-Size: 34436
-MD5sum: 48343e80029a73f14c901ea7d4ec8fdf
-SHA256: 2aa490720ced6d114ebcba4be908feb133f1c9913e09a628e39a97fbb0831ad5
+Filename: pool/main/s/stfl/libstfl-ruby_0.22-6_amd64.deb
+Size: 34944
+MD5sum: d7e348220ec259f845363fdf44899760
+SHA256: 64a74105f005c0373d76406c4a627f450af56d9c9e02f96b4687ef65787d238c
 
 Package: libstfl-ruby1.8
-Source: stfl (0.22-5)
-Version: 0.22-5+b2
+Source: stfl
+Version: 0.22-6
 Installed-Size: 16
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: amd64
@@ -21094,14 +21092,14 @@ Tag: devel::lang:ruby, devel::library, implemented-in::c, role::devel-lib,
  role::program, uitoolkit::ncurses
 ruby
 Priority: optional
-Filename: pool/main/s/stfl/libstfl-ruby1.8_0.22-5+b2_amd64.deb
-Size: 5152
-MD5sum: 3983b71b396ef1c0fa559ab28d2d4cde
-SHA256: 21d0cfee4ac78bdcfd533b9d6b4258ac04c816885ed5b9f06ba6ea90efeb86be
+Filename: pool/main/s/stfl/libstfl-ruby1.8_0.22-6_amd64.deb
+Size: 4964
+MD5sum: 87fdecca29098d5531718f6cb3e8fb86
+SHA256: 9edf1b9c751b3b8669a92589fe0a0ec8a0a40dcdfb4d199b8fa1df1fca042ec0
 
 Package: libstfl-ruby1.9.1
-Source: stfl (0.22-5)
-Version: 0.22-5+b2
+Source: stfl
+Version: 0.22-6
 Installed-Size: 16
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: amd64
@@ -21113,10 +21111,10 @@ Tag: devel::lang:ruby, devel::library, implemented-in::c, role::devel-lib,
  role::program, uitoolkit::ncurses
 ruby
 Priority: optional
-Filename: pool/main/s/stfl/libstfl-ruby1.9.1_0.22-5+b2_amd64.deb
-Size: 5148
-MD5sum: 685ec4e92b64bef7e917023d5e4d379b
-SHA256: 5465950de4f6fddee336637deefc036d067566d64d124bd3bdc9f18f9e873541
+Filename: pool/main/s/stfl/libstfl-ruby1.9.1_0.22-6_amd64.deb
+Size: 4964
+MD5sum: f9fb0c6be7592fa863a66146ca1760d3
+SHA256: 83d1467ab5e446dabc9592dfb2343c692e1bb6e3ce910dcf4f704143303daf3a
 
 Package: ruby-svn
 Source: subversion
