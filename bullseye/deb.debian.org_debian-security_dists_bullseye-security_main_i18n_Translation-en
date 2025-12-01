@@ -26077,6 +26077,21 @@ Description-en: lightweight DLNA/UPnP-AV server targeted at embedded systems
  fewer features. It does not have a web interface for administration
  and must be configured by editing a text file.
 
+Package: python3-mistral-dashboard
+Description-md5: 67495c06de74cf14822293bc31481e75
+Description-en: OpenStack Workflow Service - dashboard plugin
+ Mistral is a workflow service. Most business processes consist of multiple
+ distinct interconnected steps that need to be executed in a particular order
+ in a distributed environment. One can describe such process as a set of tasks
+ and task relations and upload such description to Mistral so that it takes
+ care of state management, correct execution order, parallelism,
+ synchronization and high availability. Mistral also provides flexible task
+ scheduling so that it can run a process according to a specified schedule
+ (i.e. every Sunday at 4.00pm) instead of running it immediately. Such set of
+ tasks and relations between them is called a workflow.
+ .
+ This package contains the OpenStack dashboard plugin.
+
 Package: libapache2-mod-security2
 Description-md5: 198ee1322fd8f21e7b0987f6dfb5edc3
 Description-en: Tighten web applications security for Apache
@@ -29342,6 +29357,112 @@ Description-en: Client library for Open Geospatial (OGC) web services (Python 3)
  .
  This package provides the Python 3 version of the library.
 
+Package: pagure
+Description-md5: 8a6e0923a185fa097780bc98198b13ee
+Description-en: git-centered forge using pygit2
+ Pagure is a git-centered forge, Python based using pygit2.
+ .
+ With pagure you can host your project with its documentation, let your
+ users report issues or request enhancements using the ticketing system
+ and build your community of contributors by allowing them to fork your
+ projects and contribute to it via the now-popular pull-request
+ mechanism.
+ .
+ You may be also interesed in other packages to enhance the
+ functionality of pagure:
+  * pagure-ev-server
+  * pagure-milters
+  * pagure-webhook
+  * pagure-ci
+  * pagure-loadjson
+  * pagure-logcom
+  * pagure-mirror
+
+Package: pagure-ci
+Description-md5: 710a329a132d829d7dab03412a728adc
+Description-en: git-centered forge using pygit2 - CI integration server
+ Pagure is a git-centered forge, Python based using pygit2.
+ .
+ pagure-ci is a service integrating the results of Continuous
+ Integration (CI) services, such as jenkins, into pull-requests opened
+ against your project on pagure.
+
+Package: pagure-doc
+Description-md5: 45002ee4d590a4f8112b79131b0d5f89
+Description-en: git-centered forge using pygit2 (documentation)
+ Pagure is a git-centered forge, Python based using pygit2.
+ .
+ With pagure you can host your project with its documentation, let your
+ users report issues or request enhancements using the ticketing system
+ and build your community of contributors by allowing them to fork your
+ projects and contribute to it via the now-popular pull-request
+ mechanism.
+ .
+ This is the common documentation package.
+
+Package: pagure-ev-server
+Description-md5: 4158a53411d1dbc3381239c01239b653
+Description-en: git-centered forge using pygit2 - EventSource server
+ Pagure is a git-centered forge, Python based using pygit2.
+ .
+ pagure-ev-server used to allow live-refreshing of a page when someone
+ is viewing it. For example, while you are reading a ticket if someone
+ comments on it, the comment will automatically show up on the page
+ without the need for you to reload the entire page.
+
+Package: pagure-loadjson
+Description-md5: 8347eddf3ef34d3ac2a84f9f31cd4184
+Description-en: git-centered forge using pygit2 - JSON load server
+ Pagure is a git-centered forge, Python based using pygit2.
+ .
+ This service loads into the database the JSON files representing
+ issues (and in the future also the pull-requests).
+ .
+ It is triggered by a git hook, which sends a notification that a push
+ happened.  This service receives the notification, finds the list
+ of files that changed and loads them into the database.
+
+Package: pagure-logcom
+Description-md5: b8a05ada8bee7a4c063dea30517d99aa
+Description-en: git-centered forge using pygit2 - commit log server
+ Pagure is a git-centered forge, Python based using pygit2.
+ .
+ This service logs in the user's commits to be displayed in the
+ database.
+ .
+ It is triggered by a git hook, which sends a notification that a push
+ happened.  This service receives the notification, goes over all of
+ the commits that got pushed and logs the activity corresponding to
+ that user.
+
+Package: pagure-milters
+Description-md5: a40dec39deb9d2d2a4290a8d108f7833
+Description-en: git-centered forge using pygit2 - milters (mail filters)
+ Pagure is a git-centered forge, Python based using pygit2.
+ .
+ pagure-milters is used to allow replying on a comment of a ticket or a
+ pull-request by directly replying to the notification sent.  No need
+ to go to the page anymore to reply to a comment someone made.
+ .
+ It integrates with an MTA such as postfix or sendmail that you will
+ have running and have access to in order to change its configuration.
+
+Package: pagure-mirror
+Description-md5: 9e26f8150a61c6aee7a5df670f06c2fe
+Description-en: git-centered forge using pygit2 - mirror
+ Pagure is a git-centered forge, Python based using pygit2.
+ .
+ pagure-mirror is the service mirroring projects that asked for it
+ outside of this pagure instance.
+
+Package: pagure-webhook
+Description-md5: 84d109186d4b643f978b8039839489ec
+Description-en: git-centered forge using pygit2 - web-hook server
+ Pagure is a git-centered forge, Python based using pygit2.
+ .
+ pagure-webhook sends notifications to third party services using POST
+ http requests.
+
 Package: libpam-cracklib
 Description-md5: 0f6f2fd98962cbee59aa831979aad971
 Description-en: PAM module to enable cracklib support
@@ -32228,6 +32349,23 @@ Description-en: Python3 implementation of JOSE Web standards
  .
  This package includes the python3 version.
 
+Package: python3-mistralclient
+Description-md5: ccdf981d2ebcddf3ef89873e451aca58
+Description-en: OpenStack Workflow as a Service client - Python 3.x
+ Mistral is a task management service. It is also known as Workflow as a
+ Service. Most business processes consist of multiple distinct interconnected
+ steps that need to be executed in a particular order in a distributed
+ environment. One can describe such process as a set of tasks and task
+ relations and upload such description to Mistral so that it takes care of
+ state management, correct execution order, task distribution and high
+ availability. Mistral also provides flexible task scheduling so that users can
+ run a process according to a specified schedule (i.e. every Sunday at 4.00pm)
+ instead of running it immediately. Such set of tasks and dependencies between
+ them is called a workflow. Independent routes in a workflow (which, in fact,
+ is a graph) are called flows and Mistral can execute them in parallel.
+ .
+ This package provides a cli and a Python 3.x client module.
+
 Package: python-nbxmpp-doc
 Description-md5: c3dc69bb385fb4990c317148b4ed845c
 Description-en: Non blocking Jabber/XMPP Python library, documentation
@@ -32575,6 +32713,58 @@ Description-en: Interactive high-level object-oriented language (pyvenv binary, 
  network programming, system administration, sounds and graphics.
  .
  This package contains the pyvenv-3.9 binary.
+
+Package: libtorch-dev
+Description-md5: 6a324696fa2c16a0beb140b32cd2f460
+Description-en: Tensors and Dynamic neural networks in Python with strong GPU acceleration
+ PyTorch is a Python package that provides two high-level features:
+ .
+ (1) Tensor computation (like NumPy) with strong GPU acceleration
+ (2) Deep neural networks built on a tape-based autograd system
+ .
+ You can reuse your favorite Python packages such as NumPy, SciPy and Cython
+ to extend PyTorch when needed.
+ .
+ This is the CPU-only version of PyTorch and Caffe2 (Development files).
+
+Package: libtorch-test
+Description-md5: 142d4e9830d1cc7cda41b6f662acdd55
+Description-en: Tensors and Dynamic neural networks in Python with strong GPU acceleration
+ PyTorch is a Python package that provides two high-level features:
+ .
+ (1) Tensor computation (like NumPy) with strong GPU acceleration
+ (2) Deep neural networks built on a tape-based autograd system
+ .
+ You can reuse your favorite Python packages such as NumPy, SciPy and Cython
+ to extend PyTorch when needed.
+ .
+ This is the CPU-only version of PyTorch and Caffe2 (Test Binaries).
+
+Package: libtorch1.7
+Description-md5: 5b212bf4a0f5215c03194034e1c8f7e7
+Description-en: Tensors and Dynamic neural networks in Python with strong GPU acceleration
+ PyTorch is a Python package that provides two high-level features:
+ .
+ (1) Tensor computation (like NumPy) with strong GPU acceleration
+ (2) Deep neural networks built on a tape-based autograd system
+ .
+ You can reuse your favorite Python packages such as NumPy, SciPy and Cython
+ to extend PyTorch when needed.
+ .
+ This is the CPU-only version of PyTorch and Caffe2 (Shared Objects).
+
+Package: python3-torch
+Description-md5: ff49415f4d020ed13f16fd627f3f22cf
+Description-en: Tensors and Dynamic neural networks in Python with strong GPU acceleration
+ PyTorch is a Python package that provides two high-level features:
+ .
+ (1) Tensor computation (like NumPy) with strong GPU acceleration
+ (2) Deep neural networks built on a tape-based autograd system
+ .
+ You can reuse your favorite Python packages such as NumPy, SciPy and Cython
+ to extend PyTorch when needed.
+ .
+ This is the CPU-only version of PyTorch and Caffe2 (Python interface).
 
 Package: qemu
 Description-md5: 44f7142780922102776874dd65554fb0
