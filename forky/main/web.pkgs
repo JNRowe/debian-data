@@ -1,6 +1,6 @@
 Package: acme.sh
-Version: 3.1.1+~cs0.0.20251023-1
-Installed-Size: 1751
+Version: 3.1.2+~cs0.0.20251126-1
+Installed-Size: 1849
 Maintainer: Debian Let's Encrypt <team+letsencrypt@tracker.debian.org>
 Architecture: all
 Depends: curl | wget
@@ -9,10 +9,10 @@ Homepage: https://github.com/acmesh-official/acme.sh
 Description-md5: a91ab167bf02d9b84ca9c91bd336c6bf
 web
 Priority: optional
-Filename: pool/main/a/acme.sh/acme.sh_3.1.1+~cs0.0.20251023-1_all.deb
-Size: 391416
-MD5sum: d36cb1a1b76d4a55c15e1263310b3350
-SHA256: 230dfbff4da3fa43b859f703ec1b65b4bc88932ea9a6def2a6f0915d4d01cfdf
+Filename: pool/main/a/acme.sh/acme.sh_3.1.2+~cs0.0.20251126-1_all.deb
+Size: 408604
+MD5sum: 1c1f4fe106cba0dbdf4bc9b5bde517e8
+SHA256: 5bea81d23c02e38bf6921b957f9f209e57f5edbc2027a55ca08aa754048e9d07
 
 Package: acmetool
 Source: acmetool (0.2.2-3)
@@ -1315,6 +1315,82 @@ Filename: pool/main/d/doc-central/doc-central_1.9.1_all.deb
 Size: 12276
 MD5sum: 51db8ac15ae080917a6e561463eef837
 SHA256: ad1d8d7c24adf09dc605eddbbf0cf1b7011c30c84244e7fd069220fd83feaca4
+
+Package: dokuwiki
+Version: 2025-05-14.b+dfsg-1
+Installed-Size: 12008
+Maintainer: Daniel Baumann <daniel@debian.org>
+Architecture: all
+Provides: dokuwiki-api-56 (= 2025-05-14.b+dfsg)
+Depends: javascript-common, libjs-jquery, libjs-jquery-cookie, libjs-jquery-ui, libphp-simplepie, php, php-constant-time, php-geshi, php-kissifrot-php-ixr (>= 1.8.4-4~), php-phpseclib3, php-random-compat, ucf, debconf (>= 0.5) | debconf-2.0
+Recommends: php-gd, php-intl, php-mbstring
+Suggests: dokuwiki-plugins-extra, dokuwiki-templates-extra, libapache2-mod-xsendfile, php-bcmath, php-cli, php-ldap | php-mysql | php-pgsql, wget
+Description: simple to use and versatile wiki
+Homepage: https://github.com/dokuwiki/dokuwiki
+Description-md5: 813998f75a1c296d8a0c800518dae306
+Tag: implemented-in::php, interface::web, protocol::http, role::program,
+ web::application, web::wiki, works-with-format::html,
+ works-with-format::plaintext, works-with::text
+web
+Priority: optional
+Filename: pool/main/d/dokuwiki/dokuwiki_2025-05-14.b+dfsg-1_all.deb
+Size: 1850992
+MD5sum: 168a7b59c511f76288e3da5bd919e2c7
+SHA256: 36413af8d716352a837a0a2d74ac9e287318e49dc09b10ac9476234d4beb045f
+
+Package: dokuwiki-farm
+Source: dokuwiki
+Version: 2025-05-14.b+dfsg-1
+Installed-Size: 97
+Maintainer: Daniel Baumann <daniel@debian.org>
+Architecture: all
+Replaces: dokuwiki (<< 2024-02-06b+dfsg-5~)
+Depends: dokuwiki (>= 2024-02-06b+dfsg-6~)
+Breaks: dokuwiki (<< 2024-02-06b+dfsg-5~)
+Description: simple to use and versatile wiki (farm)
+Homepage: https://github.com/dokuwiki/dokuwiki
+Description-md5: 6f69cbe97e7ba77ed0f41e46cd0bc8c3
+web
+Priority: optional
+Filename: pool/main/d/dokuwiki/dokuwiki-farm_2025-05-14.b+dfsg-1_all.deb
+Size: 29640
+MD5sum: 36ad5056691d29d17a789e08fd95eccb
+SHA256: ec8be56cae67c3aa7e3f97032453863485771c1a6696d9ce2059097aa0b1eb61
+
+Package: dokuwiki-plugins-extra
+Version: 20241201-6
+Installed-Size: 449
+Maintainer: Daniel Baumann <daniel@debian.org>
+Architecture: all
+Provides: dokuwiki-plugin-addnewpage (= 2024-11-16), dokuwiki-plugin-color (= 2022-10-19), dokuwiki-plugin-mathjax (= 20211120), dokuwiki-plugin-wrap (= 2023-08-13)
+Depends: dokuwiki (>= 2024-02-06~), dokuwiki (<< 2026~), debconf (>= 0.5) | debconf-2.0
+Recommends: php-mbstring
+Enhances: dokuwiki
+Description: Conglomeration package of DokuWiki plugins
+Description-md5: 83cc09a226faaa36b608eb19b56f8d4b
+web
+Priority: optional
+Filename: pool/main/d/dokuwiki-plugins-extra/dokuwiki-plugins-extra_20241201-6_all.deb
+Size: 91472
+MD5sum: 156f6e94b62021d3facc238119a15739
+SHA256: 903088e1dccc728aec396ce17cfc27c42bc7a6f0635fa7297f71998453756b2b
+
+Package: dokuwiki-templates-extra
+Version: 20241201-6
+Installed-Size: 412
+Maintainer: Daniel Baumann <daniel@debian.org>
+Architecture: all
+Provides: dokuwiki-template-ad-hominem (= 2024-10-07)
+Depends: dokuwiki (>= 2024-02-06~), dokuwiki (<< 2026~), debconf (>= 0.5) | debconf-2.0
+Enhances: dokuwiki
+Description: Conglomeration package of DokuWiki templates
+Description-md5: 72bad8e167d6ae6ac8655f9708c4478c
+web
+Priority: optional
+Filename: pool/main/d/dokuwiki-templates-extra/dokuwiki-templates-extra_20241201-6_all.deb
+Size: 120760
+MD5sum: b5342c958620f3fbcce8ccbc7bab8bb2
+SHA256: e915769b6db028779688c09a8701a413a31647afb6af361a0f8be1305b988126
 
 Package: drogon
 Version: 1.9.11+ds-1
@@ -4816,21 +4892,21 @@ MD5sum: 50cad0ffbc40f906ee2d2117400e7fde
 SHA256: 66f3b3034916569372c5bbe135f8ad9ba43da4f1ceef334a736f9945e3b32e55
 
 Package: pelican
-Version: 4.11.0+dfsg-1
+Version: 4.11.0+dfsg-2
 Installed-Size: 413
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
-Depends: python3, python3-markdown, python3-blinker, python3-dateutil, python3-docutils, python3-feedgenerator (>= 1.6), python3-jinja2 (>= 2.7), python3-ordered-set, python3-pygments, python3-rich, python3-unidecode, python3-watchfiles, python3:any
+Depends: python3, python3-markdown, python3-blinker, python3-dateutil, python3-docutils, python3-feedgenerator, python3-jinja2, python3-ordered-set, python3-pygments, python3-rich, python3-unidecode, python3-watchfiles, python3:any
 Suggests: pandoc, pelican-doc, python3-bs4
 Description: blog aware, static website generator
 Homepage: https://getpelican.com/
 Description-md5: dc0d61e22622de92c244a1cd4f14313c
 web
 Priority: optional
-Filename: pool/main/p/pelican/pelican_4.11.0+dfsg-1_all.deb
-Size: 99264
-MD5sum: 89aa5b7ca133fee8067355bfe757234d
-SHA256: 78a47959345dcf12f78a9c8c93aa92bf49b16eb3e91b01900f7064c0f0e95229
+Filename: pool/main/p/pelican/pelican_4.11.0+dfsg-2_all.deb
+Size: 99396
+MD5sum: c7c416a69f3c002b4ede093b2e1e94f3
+SHA256: fe0923dd7cf3db15bc5514356167ce52d99c266760bdf8b6d2664526adcbf2c7
 
 Package: phoenix
 Version: 2025.11.07.1+dfsg-1

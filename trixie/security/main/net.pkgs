@@ -658,3 +658,57 @@ Filename: pool/updates/main/s/swift/swift-proxy_2.35.1-0+deb13u1_all.deb
 Size: 114572
 SHA256: 3846ae517963ec2a70ad7660c8f1081a244a69e89a0e818d6875ae07cbe61afc
 
+Package: unbound
+Version: 1.22.0-2+deb13u1
+Installed-Size: 5208
+Maintainer: unbound packagers <unbound@packages.debian.org>
+Architecture: amd64
+Depends: adduser, libc6 (>= 2.38), libevent-2.1-7t64 (>= 2.1.8-stable), libhiredis1.1.0 (>= 1.2.0), libnghttp2-14 (>= 1.3.0), libprotobuf-c1 (>= 1.0.1), libpython3.13 (>= 3.13.0~rc3), libssl3t64 (>= 3.4.0), libsystemd0
+Suggests: apparmor, openssl
+Description: validating, recursive, caching DNS resolver
+Homepage: https://www.unbound.net/
+Description-md5: fbeecad8349f6b3042087b256bc69b68
+Enhances: munin-node
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: dns-root-data
+net
+Priority: optional
+Filename: pool/updates/main/u/unbound/unbound_1.22.0-2+deb13u1_amd64.deb
+Size: 1034604
+SHA256: 3b06ee96653f47e3eedb30a7d15a4ee4cb3c5d58745fae85540a3f42fce146f5
+
+Package: unbound-anchor
+Source: unbound
+Version: 1.22.0-2+deb13u1
+Installed-Size: 253
+Maintainer: unbound packagers <unbound@packages.debian.org>
+Architecture: amd64
+Replaces: unbound (<< 1.4.13-1)
+Depends: libc6 (>= 2.38), libexpat1 (>= 2.0.1), libssl3t64 (>= 3.0.0), libunbound8 (>= 1.8.0)
+Breaks: unbound (<< 1.4.13-1)
+Description: utility to securely fetch the root DNS trust anchor
+Homepage: https://www.unbound.net/
+Description-md5: f49fb3435120bde9cd4af959aeac719c
+net
+Priority: optional
+Filename: pool/updates/main/u/unbound/unbound-anchor_1.22.0-2+deb13u1_amd64.deb
+Size: 194760
+SHA256: 92ae9fd243ba1ab8aa2ed3194a56a2cea0500ef384f5eab6b5a08ba8f84ffa80
+
+Package: unbound-host
+Source: unbound
+Version: 1.22.0-2+deb13u1
+Installed-Size: 331
+Maintainer: unbound packagers <unbound@packages.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libssl3t64 (>= 3.0.0), libunbound8 (>= 1.8.0)
+Description: reimplementation of the 'host' command
+Homepage: https://www.unbound.net/
+Description-md5: 287e113772f55d3575bb8577560cb3eb
+Recommends: dns-root-data
+net
+Priority: optional
+Filename: pool/updates/main/u/unbound/unbound-host_1.22.0-2+deb13u1_amd64.deb
+Size: 217804
+SHA256: 4aadc09f511d56de2be1f8951f2ce939a43fd59176a8975f7457f36d0881617c
+
