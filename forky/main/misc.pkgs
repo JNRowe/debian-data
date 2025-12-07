@@ -590,8 +590,8 @@ MD5sum: 7df66ad055882ccba9cb6595eb3c3dbd
 SHA256: fda450aa99d72080222baa67996842f2a726c735430d369534e28a91afe3264e
 
 Package: archlinux-keyring
-Version: 0~20250716-1
-Installed-Size: 1739
+Version: 0~20251116-1
+Installed-Size: 1746
 Maintainer: Michel Lind <michel@michel-slm.name>
 Architecture: all
 Depends: gpg
@@ -601,10 +601,10 @@ Homepage: https://gitlab.archlinux.org/archlinux/archlinux-keyring
 Description-md5: 7a433ebc276cc08fd10d598aea411f94
 misc
 Priority: optional
-Filename: pool/main/a/archlinux-keyring/archlinux-keyring_0~20250716-1_all.deb
-Size: 1247900
-MD5sum: e0b84cc8ef396dd73c11dab2576ec4f3
-SHA256: 111dc93a6cc2fabc48b58cad98a744ef6991ed9bdc054c7800d38ea80e15f312
+Filename: pool/main/a/archlinux-keyring/archlinux-keyring_0~20251116-1_all.deb
+Size: 1252756
+MD5sum: d5389be0d696e6040b9305161d358f18
+SHA256: 1127a43dd809669e9956843b9ec12614ea3094ed05dcfa38b26f8c8cbd62bf02
 
 Package: arjun
 Version: 2.2.7-1
@@ -9991,24 +9991,96 @@ MD5sum: ed0022731bf65cceed51e7a57a671a3f
 SHA256: 7386ff84c37b03891bdfa47e75b62bfb797e37c0c70b8797e592437fa8d48bb7
 
 Package: maliit-framework
-Source: maliit-framework (2.3.0-6)
-Version: 2.3.0-6+b2
-Installed-Size: 532
+Version: 2.3.0-7
+Installed-Size: 37
 Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
-Architecture: amd64
-Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libmaliit-plugins2 (>= 2.3.0), libqt5core5t64 (>= 5.15.1), libqt5dbus5t64 (>= 5.2), libqt5gui5t64 (>= 5.6.0~beta) | libqt5gui5-gles (>= 5.6.0~beta), libqt5quick5 (>= 5.0.2) | libqt5quick5-gles (>= 5.0.2), libqt5waylandclient5 (>= 5.10.1), libstdc++6 (>= 14), libwayland-client0 (>= 1.20.0), qtbase-abi-5-15-17, qtwayland-client-abi-5-15-17, qml-module-qtquick-localstorage
-Recommends: maliit-inputmethod-plugin
-Breaks: gir1.2-maliit-1.0 (<< 2.3.0-6), libmaliit-glib0 (<< 2.3.0-6), libmaliit0 (<< 2.3.0-6), maliit-dbus-activation (<< 2.3.0-6), maliit-inputcontext-qt4 (<< 2.3.0-6)
+Architecture: all
+Depends: maliit-server-qt5 | maliit-server-qt6
+Recommends: maliit-inputcontext-gtk3, maliit-inputcontext-qt5, maliit-inputcontext-qt6
 Description: Maliit Input Method Framework
 Homepage: https://github.com/maliit/framework
-Description-md5: 9dded4821f0efcc99e26f74ca71599f2
+Description-md5: e0c28c1f0183a7c1a16451cfc5c27c5a
 Tag: role::shared-lib
 misc
 Priority: optional
-Filename: pool/main/m/maliit-framework/maliit-framework_2.3.0-6+b2_amd64.deb
-Size: 126188
-MD5sum: f4064ce2ba939c169bac133fc003cfbd
-SHA256: 72360b0f543083bca819dccb90e5952543b7f339646d2e54df144ebab4b36b33
+Filename: pool/main/m/maliit-framework/maliit-framework_2.3.0-7_all.deb
+Size: 9128
+MD5sum: 6c1be31f4d0b77b34971575bf3fb73fa
+SHA256: 3ce50d550b4411eff0f9dc69887341d9b049db739e8f160478de08d5409322ed
+
+Package: maliit-inputcontext-qt5
+Source: maliit-framework
+Version: 2.3.0-7
+Installed-Size: 461
+Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
+Architecture: amd64
+Replaces: maliit-framework (<< 2.3.0-7~)
+Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.3.1), libqt5core5t64 (>= 5.15.1), libqt5dbus5t64 (>= 5.2), libqt5gui5t64 (>= 5.6.0~beta) | libqt5gui5-gles (>= 5.6.0~beta), libqt5quick5 (>= 5.0.2) | libqt5quick5-gles (>= 5.0.2), libqt5waylandclient5 (>= 5.10.1), libstdc++6 (>= 14), libwayland-client0 (>= 1.20.0), qtbase-abi-5-15-17, qtwayland-client-abi-5-15-17
+Breaks: maliit-framework (<< 2.3.0-7~)
+Description: Maliit Inputcontext for Qt5 applications
+Homepage: https://github.com/maliit/framework
+Description-md5: 0aec9b9ca1d08a16d6933023681eaa43
+misc
+Priority: optional
+Filename: pool/main/m/maliit-framework/maliit-inputcontext-qt5_2.3.0-7_amd64.deb
+Size: 115268
+MD5sum: 8c2437ec16746445109322e79374f250
+SHA256: c012f483999214a1622f7faba4a2dd903423d9e604ad42b2d9a259ee646a01bd
+
+Package: maliit-inputcontext-qt6
+Source: maliit-framework
+Version: 2.3.0-7
+Installed-Size: 585
+Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.3.1), libqt6core6t64 (>= 6.9.1), libqt6dbus6 (>= 6.4.0), libqt6gui6 (>= 6.1.2), libqt6quick6 (>= 6.6.0), libqt6waylandclient6 (>= 6.6.0), libstdc++6 (>= 14), libwayland-client0 (>= 1.20.0), qt6-base-private-abi (= 6.9.2), qt6-waylandclient-private-abi (= 6.9.2)
+Description: Maliit Inputcontext for Qt6 applications
+Homepage: https://github.com/maliit/framework
+Description-md5: 13d59db6e4a087c17a5abbaec959d6ad
+misc
+Priority: optional
+Filename: pool/main/m/maliit-framework/maliit-inputcontext-qt6_2.3.0-7_amd64.deb
+Size: 145608
+MD5sum: 2a0231d04ad31ecf133f7a615d8c5d32
+SHA256: c184514cdbef263363102a94bbbcd81b11afd193ba9a009baba41645b3dfddec
+
+Package: maliit-server-qt5
+Source: maliit-framework
+Version: 2.3.0-7
+Installed-Size: 48
+Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
+Architecture: amd64
+Replaces: maliit-framework (<< 2.3.0-7~)
+Depends: libmaliit-plugins2 (= 2.3.0-7), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libqt5core5t64 (>= 5.15.1), libqt5gui5t64 (>= 5.2) | libqt5gui5-gles (>= 5.2), libstdc++6 (>= 4.1.1)
+Recommends: maliit-framework (>= 2.3.0-7)
+Breaks: gir1.2-maliit-1.0 (<< 2.3.0-7), libmaliit-glib0 (<< 2.3.0-7), libmaliit0 (<< 2.3.0-7), maliit-dbus-activation (<< 2.3.0-7), maliit-framework (<< 2.3.0-7~), maliit-inputcontext-qt4 (<< 2.3.0-7)
+Description: Maliit Input Method Framework Server (Qt5 version)
+Homepage: https://github.com/maliit/framework
+Description-md5: f926466e455967db2400dc5e933921ed
+misc
+Priority: optional
+Filename: pool/main/m/maliit-framework/maliit-server-qt5_2.3.0-7_amd64.deb
+Size: 12400
+MD5sum: ea43add5bf9a1436b024613a32381efb
+SHA256: ed8f570cb02d09870b2d4f6c02bb6ed7f8629614554202239952e1de73481635
+
+Package: maliit-server-qt6
+Source: maliit-framework
+Version: 2.3.0-7
+Installed-Size: 48
+Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
+Architecture: amd64
+Depends: libmaliit6-plugins2 (= 2.3.0-7), libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libqt6core6t64 (>= 6.9.1), libqt6gui6 (>= 6.1.2), libstdc++6 (>= 4.1.1)
+Recommends: maliit-framework (>= 2.3.0-7)
+Description: Maliit Input Method Framework Server (Qt6 version)
+Homepage: https://github.com/maliit/framework
+Description-md5: 405f711ec76a61c35ee24d3f4b4e171b
+misc
+Priority: optional
+Filename: pool/main/m/maliit-framework/maliit-server-qt6_2.3.0-7_amd64.deb
+Size: 12328
+MD5sum: c10cc07de420c8036d60434f05238bd2
+SHA256: b38b6354bf8d0da448560db8c76ce8c09b73358af50e9c9bc248881812a85b24
 
 Package: maliit-inputcontext-gtk3
 Source: maliit-inputcontext-gtk
@@ -12333,24 +12405,6 @@ Size: 7052
 MD5sum: a9b99d4a68005abe5e3cc0df5b76269e
 SHA256: 229e29d4eda0e52237ce22e8f405978ebf8c2da385650e45e1e8a5432d0f74ef
 
-Package: parcellite
-Version: 1.2.1-9.1
-Installed-Size: 562
-Maintainer: Dominik Szmek <minikdo@riseup.net>
-Architecture: amd64
-Depends: libc6 (>= 2.38), libglib2.0-0t64 (>= 2.36.0), libgtk-3-0t64 (>= 3.19.12), libpango-1.0-0 (>= 1.14.0), libx11-6
-Description: lightweight GTK+ clipboard manager
-Homepage: https://github.com/rickyrockrat/parcellite
-Description-md5: df6ebfddce8a12472826bff39f539d99
-Tag: implemented-in::c, interface::graphical, interface::x11, role::program,
- uitoolkit::gtk, works-with::text, x11::application
-misc
-Priority: optional
-Filename: pool/main/p/parcellite/parcellite_1.2.1-9.1_amd64.deb
-Size: 257328
-MD5sum: 1eea39a222c11c471ce9f9e89baf6477
-SHA256: 2cf6f912755d141e8ce0e57eaa19f63b98876119856f68b795b5ff36317d8dbf
-
 Package: pass-extension-audit
 Source: pass-audit
 Version: 1.2-2
@@ -14558,20 +14612,20 @@ SHA256: dd055cc00f9592718ace10b1b54b5c5caceabf7cc4039df7d781fb1978c7d83d
 
 Package: libsdl2-compat-tests
 Source: sdl2-compat
-Version: 2.32.58+ds-1
-Installed-Size: 5311
+Version: 2.32.60+ds-1
+Installed-Size: 5319
 Maintainer: Debian SDL packages maintainers <pkg-sdl-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libsdl2-compat (>= 2.32.58+ds-1), libc6 (>= 2.34), libsdl2-2.0-0 (>= 2.27.1), libx11-6
+Depends: libsdl2-compat (>= 2.32.60+ds-1), libc6 (>= 2.34), libsdl2-2.0-0 (>= 2.27.1), libx11-6
 Description: SDL 2 binary compatibility library - tests
 Homepage: https://github.com/libsdl-org/sdl2-compat
 Description-md5: 5802c56b26f3d4589bcf96c028a1e071
 misc
 Priority: optional
-Filename: pool/main/s/sdl2-compat/libsdl2-compat-tests_2.32.58+ds-1_amd64.deb
-Size: 830480
-MD5sum: 0822f2aad52afe15e24953aa88495907
-SHA256: b5320a563cd62a6c8b16bb5c5477496e515e97a7f67a22d46f700b2d3646a4f3
+Filename: pool/main/s/sdl2-compat/libsdl2-compat-tests_2.32.60+ds-1_amd64.deb
+Size: 831464
+MD5sum: 334977d29833bb3db8e3e05e259ffc41
+SHA256: 432e046b2d8f879e7af6246fe5140878a7a14f75475d6034e9287e06dd4061a5
 
 Package: sent
 Version: 1-4
@@ -15349,6 +15403,23 @@ Size: 380292
 MD5sum: 58a465b38ad45d0fbe15baf2db03e2f6
 SHA256: 288adc42fede583687850ea07ae45a249f3359427adb7c67a355b5be23fc0679
 
+Package: terminus
+Version: 3.6.0-1.1
+Installed-Size: 398
+Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34), libgee-0.8-2 (>= 0.8.3), libglib2.0-0t64 (>= 2.74.0), libgtk-4-1 (>= 4.13.8), libpango-1.0-0 (>= 1.14.0), libvte-2.91-gtk4-0 (>= 0.75.0), dconf-gsettings-backend | gsettings-backend, libglib2.0-bin
+Description: Drop-down or in-window terminal for X11 and Wayland
+Homepage: https://gitlab.com/rastersoft/terminus
+Description-md5: be795d059c82d0176cacc2e7bf6418d3
+Tag: uitoolkit::gtk
+misc
+Priority: optional
+Filename: pool/main/t/terminus/terminus_3.6.0-1.1_amd64.deb
+Size: 89576
+MD5sum: e5e992a72e547b48547e0a70ea4a90f5
+SHA256: 12c826c362c979bc573da5976b409f5ba7e2787d953c3516b33fa094a1c2f72f
+
 Package: termrec
 Version: 0.19-3
 Installed-Size: 97
@@ -15804,6 +15875,22 @@ Filename: pool/main/u/usbsdmux/usbsdmux_24.11.1-1_all.deb
 Size: 24556
 MD5sum: 1c1080978f4ff99c19f51da2630a7f1f
 SHA256: 5034ff8ddb3b16833415260169038782eb08746141ea6f58423ecc6a84332e69
+
+Package: usbtop
+Version: 1.0+dfsg-1.1
+Installed-Size: 50
+Maintainer: Dmitry Smirnov <onlyjob@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libpcap0.8t64 (>= 0.9.8), libstdc++6 (>= 13.1), ca-certificates
+Description: utility to show bandwidth on USB buses and devices
+Homepage: https://github.com/aguinet/usbtop
+Description-md5: ac986801dc96c62501b6af62b8c174ca
+misc
+Priority: optional
+Filename: pool/main/u/usbtop/usbtop_1.0+dfsg-1.1_amd64.deb
+Size: 14788
+MD5sum: 8bd7d9367bf1301e835ba0f405745716
+SHA256: 09c9db1ba50fb798c7b9249940ed79d665e5fefa265c2c441d22315fe8ed9178
 
 Package: dh-user-session-migration
 Source: user-session-migration
