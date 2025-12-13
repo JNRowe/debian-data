@@ -3394,13 +3394,14 @@ MD5sum: 7e672ef97870d5077f936fb4832671df
 SHA256: 2520b3d8eeebd09ad3e89df26cd67b9c038535f6c3ca86da206857bd21468ce6
 
 Package: graphviz
-Version: 2.42.4-3
-Installed-Size: 3128
+Version: 14.0.5-2
+Installed-Size: 175
 Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 Architecture: amd64
-Depends: libann0 (>= 1.1.2+doc), libc6 (>= 2.34), libcdt5 (>= 2.42.4), libcgraph6 (>= 2.42.4), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.0), libgd3 (>= 2.1.0~alpha~), libglib2.0-0t64 (>= 2.16.0), libgts-0.7-5t64 (>= 0.7.6), libgvc6 (>= 2.42.4), libgvpr2 (>= 2.42.4), liblab-gamut1 (>= 2.42.4), libstdc++6 (>= 13.1), libx11-6, libxaw7 (>= 2:1.0.16), libxmu6 (>= 2:1.1.3), libxt6t64
+Depends: libc6 (>= 2.34), libcgraph8 (>= 14.0.5), libgvc7 (>= 14.0.5), libgvpr2 (>= 14.0.5), libgvplugin-gd8
 Recommends: fonts-liberation
 Suggests: gsfonts, graphviz-doc
+Breaks: libgraphviz-dev (<< 8.1.0-1~)
 Description: rich set of graph drawing tools
 Multi-Arch: foreign
 Homepage: https://www.graphviz.org/
@@ -3412,10 +3413,30 @@ Tag: field::mathematics, implemented-in::c, interface::commandline,
  works-with::image:raster, works-with::image:vector, x11::application
 graphics
 Priority: optional
-Filename: pool/main/g/graphviz/graphviz_2.42.4-3_amd64.deb
-Size: 620808
-MD5sum: 061d137f40eeb49fe048b39732d4e55c
-SHA256: 21cb13d6e9b514edde8d8a8efee9e3b350bb1c9d9c87ab60b4592ff69f23e625
+Filename: pool/main/g/graphviz/graphviz_14.0.5-2_amd64.deb
+Size: 60436
+MD5sum: 7494ee97501e23a00fd3bd561f90579a
+SHA256: 123c75f2f2af32620b551aa840156bd329ecc8e0f73459ee34af2f5217c6525d
+
+Package: graphviz-tools
+Source: graphviz
+Version: 14.0.5-2
+Installed-Size: 2492
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Architecture: amd64
+Replaces: graphviz (<< 8.1.0-1~)
+Depends: libann0 (>= 1.1.2+doc), libc6 (>= 2.38), libcdt6 (>= 14.0.5), libcgraph8 (>= 14.0.5), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.16.0), libgts-0.7-5t64 (>= 0.7.6), libgvc7 (>= 14.0.5), libgvplugin-neato-layout8 (>= 14.0.5), libpathplan4 (>= 14.0.5), libqt6core6t64 (>= 6.9.1), libqt6gui6 (>= 6.1.2), libqt6widgets6 (>= 6.3.0), libstdc++6 (>= 13.1), libxdot4 (>= 14.0.5)
+Breaks: graphviz (<< 8.1.0-1~)
+Description: rich set of graph drawing extra tools
+Multi-Arch: foreign
+Homepage: https://www.graphviz.org/
+Description-md5: 264461dec36947f817f5e336d0bf9313
+graphics
+Priority: optional
+Filename: pool/main/g/graphviz/graphviz-tools_14.0.5-2_amd64.deb
+Size: 608104
+MD5sum: 5fcb43266516732d8e320029c9e6c331
+SHA256: 0fc24c37aab02f102ff70c9f305764b8bdb7bb0a0e393718612af870b2a6feaf
 
 Package: gstreamer1.0-espeak
 Source: gst-plugins-espeak
@@ -3902,12 +3923,11 @@ MD5sum: ea7d612e6a8a84fdf582ead64f1f21d0
 SHA256: 6bac0dfd7adfc1b3a7d7f87fbe616aad25479aa00a4e9b2fddbf814b3332f5ab
 
 Package: imv
-Source: imv (4.5.0-1)
-Version: 4.5.0-1+b4
-Installed-Size: 339
+Version: 5.0.1-2
+Installed-Size: 285
 Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@alioth-lists.debian.net>
 Architecture: amd64
-Depends: libc6 (>= 2.34), libcairo2 (>= 1.14.0), libegl1, libfreeimage3 (>= 3.18.0+ds2), libgl1, libglib2.0-0t64 (>= 2.12.0), libheif1 (>= 1.3.2), libicu76 (>= 76.1-1~), libinih1 (>= 40), libjxl0.11 (>= 0.7.0), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libpng16-16t64 (>= 1.6.46), librsvg2-2 (>= 2.14.4), libtiff6 (>= 4.0.3), libturbojpeg0 (>= 1.2.90), libwayland-client0 (>= 1.20.0), libwayland-egl1 (>= 1.15.0), libx11-6, libxcb1, libxkbcommon-x11-0 (>= 0.5.0), libxkbcommon0 (>= 0.5.0)
+Depends: libc6 (>= 2.34), libcairo2 (>= 1.2.4), libegl1, libgl1, libglib2.0-0t64 (>= 2.12.0), libheif1 (>= 1.13.0), libicu76 (>= 76.1-1~), libinih1 (>= 40), libjxl0.11 (>= 0.7.0), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libpng16-16t64 (>= 1.6.46), librsvg2-2 (>= 2.14.4), libtiff6 (>= 4.0.3), libturbojpeg0 (>= 1:2.0.2), libwayland-client0 (>= 1.20.0), libwayland-cursor0 (>= 1.0.2), libwayland-egl1 (>= 1.15.0), libwebpdecoder3 (>= 1.5.0), libx11-6, libxcb1, libxkbcommon-x11-0 (>= 0.5.0), libxkbcommon0 (>= 0.5.0)
 Description: X11/Wayland image viewer intended for use with tiling window managers
 Multi-Arch: foreign
 Homepage: https://sr.ht/~exec64/imv
@@ -3915,10 +3935,10 @@ Description-md5: 2aaf7de23dacbae6ed0381df71f2eba7
 Tag: uitoolkit::sdl
 graphics
 Priority: optional
-Filename: pool/main/i/imv/imv_4.5.0-1+b4_amd64.deb
-Size: 77272
-MD5sum: a471c03ae2274de262656065d4d476ee
-SHA256: 69c2cc094a89a3d9f2cd817b77d71a16a50fa88679f8d1a66be5d168bf1c098b
+Filename: pool/main/i/imv/imv_5.0.1-2_amd64.deb
+Size: 74608
+MD5sum: 5df4c31b86c42459d06a794d225a5219
+SHA256: 48191f74ce8f8a2a1f18f7fb8f4aadc7e9ca14c0970ea573bd55a90bb26d9bde
 
 Package: ink-generator
 Version: 0.4-4
@@ -5973,11 +5993,12 @@ MD5sum: 40f856ad21d384be1e2ad3589db448d7
 SHA256: f9008db8eb061eac6ec35db42932a378308e2e669dc31e2b79adcc98b9cd24dc
 
 Package: nip2
-Version: 8.9.1-2
-Installed-Size: 14671
+Source: nip2 (8.9.1-2)
+Version: 8.9.1-2+b1
+Installed-Size: 14532
 Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.34), libcgraph6 (>= 2.42.4), libfftw3-double3 (>= 3.3.10), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.36.0), libgsl28 (>= 2.8+dfsg), libgtk2.0-0t64 (>= 2.24.0), libgvc6 (>= 2.42.4), libpango-1.0-0 (>= 1.14.0), libvips42t64 (>> 8.0.2-1~), libxml2-16 (>= 2.14.1)
+Depends: libc6 (>= 2.38), libcgraph8 (>= 14.0.5), libfftw3-double3 (>= 3.3.10), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.36.0), libgsl28 (>= 2.8+dfsg), libgtk2.0-0t64 (>= 2.24.0), libgvc7 (>= 14.0.5), libpango-1.0-0 (>= 1.14.0), libvips42t64 (>> 8.0.2-1~), libxml2-16 (>= 2.14.1)
 Recommends: iceweasel | firefox | abrowser | www-browser
 Suggests: libvips-doc, libvips-tools
 Description: spreadsheet-like graphical image manipulation tool
@@ -5988,10 +6009,10 @@ Tag: interface::graphical, interface::x11, role::program, scope::utility,
  works-with::image:raster, x11::application
 graphics
 Priority: optional
-Filename: pool/main/n/nip2/nip2_8.9.1-2_amd64.deb
-Size: 4764768
-MD5sum: 3b22d2c4b1916c012b17566e570b57ee
-SHA256: 2b1324e86c6ab42b44b27895807dc22ab2ed3aa797039f616e95f6e34b352528
+Filename: pool/main/n/nip2/nip2_8.9.1-2+b1_amd64.deb
+Size: 4734072
+MD5sum: 6d96594ec7d5f11e984e8ca78b2a05c1
+SHA256: 95710ab72331e403b221d8c320569cb659935d9a9b0f31651e3898435eb69475
 
 Package: nomacs
 Version: 3.21.1+dfsg-1
