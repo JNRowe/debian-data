@@ -259,6 +259,67 @@ Size: 3615400
 MD5sum: 88fdd71118c6b3d6bc2c0809ea2caf0c
 SHA256: c74ffdc4a47dfe2edac8a2653937d192ad5841144ead1d033a14ce5d06fb73bb
 
+Package: alsa-tools
+Version: 1.2.15-1
+Installed-Size: 230
+Maintainer: Debian ALSA Maintainers <pkg-alsa-devel@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: as10k1
+Provides: as10k1
+Depends: libasound2t64 (>= 1.0.24.1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.12.0), libstdc++6 (>= 5)
+Conflicts: as10k1
+Description: Console based ALSA utilities for specific hardware
+Homepage: https://www.alsa-project.org/
+Description-md5: 4d64eace7e51fb1fc1a18ed780ee5e62
+Tag: field::arts, hardware::TODO, interface::commandline, role::program,
+ scope::utility, works-with::audio
+sound
+Priority: optional
+Filename: pool/main/a/alsa-tools/alsa-tools_1.2.15-1_amd64.deb
+Size: 60608
+MD5sum: 418e2ce68b6869987a387fbdf81fff27
+SHA256: 6dd47eb1ad624ddc98be555e3b3284a22e9a842388fb4fdd075edfc6fd776825
+
+Package: alsa-tools-gui
+Source: alsa-tools
+Version: 1.2.15-1
+Installed-Size: 858
+Maintainer: Debian ALSA Maintainers <pkg-alsa-devel@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libasound2t64 (>= 1.0.24.1), libc6 (>= 2.38), libfltk1.3t64 (>= 1.3.1), libglib2.0-0t64 (>= 2.80.0), libgtk-3-0t64 (>= 3.0.0), libgtk-4-1 (>= 4.12.0), libstdc++6 (>= 5.2), pkexec
+Description: GUI based ALSA utilities for specific hardware
+Homepage: https://www.alsa-project.org/
+Description-md5: 88a98c8055a4457ca0d7e1cc2d0d1887
+Tag: field::arts, hardware::TODO, interface::graphical, interface::x11,
+ role::program, scope::utility, uitoolkit::gtk, works-with::audio,
+ x11::application
+sound
+Priority: optional
+Filename: pool/main/a/alsa-tools/alsa-tools-gui_1.2.15-1_amd64.deb
+Size: 204056
+MD5sum: 5d379cac5089db5c3a822922f09c95ab
+SHA256: b71f7c751b95d654bd6658653f141ea3773acae982f4a47d1bb936d50eabeb43
+
+Package: ld10k1
+Source: alsa-tools
+Version: 1.2.15-1
+Installed-Size: 367
+Maintainer: Debian ALSA Maintainers <pkg-alsa-devel@lists.alioth.debian.org>
+Architecture: amd64
+Depends: lsb-base (>= 3.0-3), libasound2t64 (>= 1.0.24.1), libc6 (>= 2.38), liblo10k1-0
+Pre-Depends: init-system-helpers (>= 1.54~)
+Suggests: alsa-tools
+Description: ALSA emu10k1/2 patch loader
+Homepage: https://www.alsa-project.org/
+Description-md5: 710801fd69992f981169e47e6047ffe9
+Tag: implemented-in::c, role::program
+sound
+Priority: optional
+Filename: pool/main/a/alsa-tools/ld10k1_1.2.15-1_amd64.deb
+Size: 95164
+MD5sum: 0afe29fea2c0542c7107cbd02f40f445
+SHA256: 8367d55bf58e81ff13105c08b2413fd77d40ba6452acc342ef5d99d520356b14
+
 Package: alsa-utils
 Version: 1.2.14-1
 Installed-Size: 2677
@@ -7140,6 +7201,82 @@ Filename: pool/main/m/mixxx/mixxx-data_2.5.3+dfsg-5_all.deb
 Size: 10053120
 MD5sum: dc14f8fc9bca64a94f897f54b06a1a2e
 SHA256: 106251bfe3cafb55c79a9ed115da458b7e46021b9a6bb4c5864738ff483ca6f1
+
+Package: mkchromecast
+Version: 0.3.9~git20200902+db2964a-2.1
+Installed-Size: 4876
+Maintainer: Muammar El Khatib <muammar@debian.org>
+Architecture: all
+Depends: flac (>= 1.3.0), gir1.2-notify-0.7, lame (>= 3.99.0), mkchromecast-pulseaudio | mkchromecast-alsa | mkchromecast-gstreamer, nodejs, opus-tools, python3-flask, python3-gi, python3-netifaces, python3-psutil, python3-pychromecast (>= 7), python3-pyqt5, python3-requests, sox (>= 14.4.1), vorbis-tools (>= 1.4.0), yt-dlp, python3-mutagen, python3:any
+Suggests: ffmpeg
+Description: Cast your Linux audio or video to your Google Cast devices
+Homepage: https://mkchromecast.com
+Description-md5: 7ba2093c184c6e7f714052d223cd4303
+Tag: admin::hardware, hardware::detection, hardware::video,
+ interface::commandline, role::program, scope::utility, use::playing,
+ works-with::audio
+sound
+Priority: optional
+Filename: pool/main/m/mkchromecast/mkchromecast_0.3.9~git20200902+db2964a-2.1_all.deb
+Size: 1448020
+MD5sum: 502cb450fc0e3e33be2b87f1391e8f3a
+SHA256: ab787e9294e9ce589cc78d280ee1b53e181495f361916b61553383772127d7ec
+
+Package: mkchromecast-alsa
+Source: mkchromecast
+Version: 0.3.9~git20200902+db2964a-2.1
+Installed-Size: 16
+Maintainer: Muammar El Khatib <muammar@debian.org>
+Architecture: all
+Depends: alsa-tools, alsa-utils, ffmpeg, kmod
+Recommends: mkchromecast
+Description: ALSA dependencies to cast with mkchromecast
+Homepage: https://mkchromecast.com
+Description-md5: ecc966d1a45a068c4222911277c803fb
+Tag: admin::hardware, hardware::video, role::plugin, works-with::audio
+sound
+Priority: optional
+Filename: pool/main/m/mkchromecast/mkchromecast-alsa_0.3.9~git20200902+db2964a-2.1_all.deb
+Size: 8268
+MD5sum: 08ea9adb533f52420f4dba45b21a38f4
+SHA256: 5228259b2cd51b5716eafa2da0d06ee69cf9071693ad445332aabbe46ab92e8f
+
+Package: mkchromecast-gstreamer
+Source: mkchromecast
+Version: 0.3.9~git20200902+db2964a-2.1
+Installed-Size: 16
+Maintainer: Muammar El Khatib <muammar@debian.org>
+Architecture: all
+Depends: gstreamer1.0-tools
+Recommends: mkchromecast
+Description: GStreamer dependencies to cast with mkchromecast
+Homepage: https://mkchromecast.com
+Description-md5: cc9db69c779109cd5252e80bacf7ae10
+sound
+Priority: optional
+Filename: pool/main/m/mkchromecast/mkchromecast-gstreamer_0.3.9~git20200902+db2964a-2.1_all.deb
+Size: 8264
+MD5sum: be2337d34c9eeb2bb364ac704c481c06
+SHA256: 1fea3ed108ab29f53f3fa31152419f46fbfcdd15401bec500e7ad0f7828540e3
+
+Package: mkchromecast-pulseaudio
+Source: mkchromecast
+Version: 0.3.9~git20200902+db2964a-2.1
+Installed-Size: 16
+Maintainer: Muammar El Khatib <muammar@debian.org>
+Architecture: all
+Depends: pavucontrol, pulseaudio, pulseaudio-utils
+Recommends: mkchromecast
+Description: Pulseaudio dependencies to cast with mkchromecast
+Homepage: https://mkchromecast.com
+Description-md5: dbfbda7e41eb12c44bd44b441ae76073
+Tag: admin::hardware, role::plugin, works-with::audio
+sound
+Priority: optional
+Filename: pool/main/m/mkchromecast/mkchromecast-pulseaudio_0.3.9~git20200902+db2964a-2.1_all.deb
+Size: 8216
+MD5sum: 420703ee34a2e348eb8e31fc06cf6a40
+SHA256: 381932f4f5dcd69c0b9740acbd02cf482ad6c9349caeaf31c4714c3872f42142
 
 Package: mkcue
 Version: 1-8
