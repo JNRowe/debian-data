@@ -122,6 +122,145 @@ Filename: pool/updates/main/f/firefox-esr/firefox-esr_140.6.0esr-1~deb13u1_amd64
 Size: 71693740
 SHA256: deca8238b577e89627f65099fe1679b0640091d7d23f1fad45fc4db305953aae
 
+Package: mediawiki
+Version: 1:1.43.6+dfsg-1~deb13u1
+Installed-Size: 268519
+Maintainer: MediaWiki packaging team <mediawiki-debian@lists.wikimedia.org>
+Architecture: all
+Replaces: mediawiki-extensions-base, mediawiki-extensions-confirmedit, mediawiki-extensions-geshi, mediawiki-extensions-math (<= 2:1.0+git20120528-8)
+Provides: mediawiki-extensions-confirmedit, mediawiki-extensions-geshi
+Depends: apache2 | httpd, php (>= 2:8.1~), php-gmp, php-intl, php-json, php-mysql | php-pgsql | php-sqlite3 | php-mysqlnd, php-mbstring, php-xml, mediawiki-classes (= 1:1.43.6+dfsg-1~deb13u1)
+Suggests: memcached, clamav, firejail
+Breaks: fusionforge-plugin-mediawiki (<< 5.2~rc1+1~), mediawiki-extensions (<< 2.8~), mediawiki-extensions-base, mediawiki-extensions-collection (<< 2.8~), mediawiki-extensions-confirmedit, mediawiki-extensions-fckeditor, mediawiki-extensions-geshi, mediawiki-extensions-graphviz (<< 2.8~), mediawiki-extensions-ldapauth (<< 2.8~), mediawiki-extensions-math (<= 2:1.0+git20120528-8), mediawiki-extensions-openid (<< 2.8~), mediawiki-skin-greystuff (<< 1.2.5~)
+Description: website engine for collaborative work
+Homepage: https://www.mediawiki.org/
+Description-md5: 10b0384e0585cc1980b9b8f319e0b202
+Recommends: default-mysql-server | virtual-mysql-server | postgresql-contrib | php-sqlite3, php-cli, php-apcu, php-curl, imagemagick | php-gd, php-readline, php-yaml, php-wikidiff2, python3-pygments, php-luasandbox | lua5.1
+web
+Priority: optional
+Filename: pool/updates/main/m/mediawiki/mediawiki_1.43.6+dfsg-1~deb13u1_all.deb
+Size: 51330296
+SHA256: 55294320f9f9d9903c95f647eb40d50481df5546f44f11e0bca3047e57062816
+
+Package: mediawiki-classes
+Source: mediawiki
+Version: 1:1.43.6+dfsg-1~deb13u1
+Installed-Size: 3413
+Maintainer: MediaWiki packaging team <mediawiki-debian@lists.wikimedia.org>
+Architecture: all
+Description: website engine for collaborative work - standalone classes
+Homepage: https://www.mediawiki.org/
+Description-md5: d84c96920558c516ef67fe3af579ac8c
+web
+Priority: optional
+Filename: pool/updates/main/m/mediawiki/mediawiki-classes_1.43.6+dfsg-1~deb13u1_all.deb
+Size: 1022436
+SHA256: e670f217a04973a7470a6d9a4527f44813027af57e6ba1997e9b6c22b7259737
+
+Package: roundcube
+Version: 1.6.12+dfsg-0+deb13u1
+Installed-Size: 9
+Maintainer: Debian Roundcube Maintainers <pkg-roundcube-maintainers@alioth-lists.debian.net>
+Architecture: all
+Depends: roundcube-core (= 1.6.12+dfsg-0+deb13u1)
+Breaks: roundcube-core (<< 1.1.1+dfsg.1-1)
+Description: skinnable AJAX based webmail solution for IMAP servers - metapackage
+Homepage: https://www.roundcube.net/
+Description-md5: d6553eaac17c025256cb902a265e252d
+Pre-Depends: dpkg (>= 1.17.14)
+web
+Priority: optional
+Filename: pool/updates/main/r/roundcube/roundcube_1.6.12+dfsg-0+deb13u1_all.deb
+Size: 1296
+SHA256: f33ca6d1013453965b5433db309471c3de27cb31c82789474035f213e4ed2f30
+
+Package: roundcube-core
+Source: roundcube
+Version: 1.6.12+dfsg-0+deb13u1
+Installed-Size: 19930
+Maintainer: Debian Roundcube Maintainers <pkg-roundcube-maintainers@alioth-lists.debian.net>
+Architecture: all
+Depends: dbconfig-common, debconf, libjs-bootstrap4 (>= 4.5.2~), libjs-codemirror (>= 5.58.3~), libjs-jquery (>= 3.5.1~), libjs-jquery-minicolors (>= 2.2.6~), libjs-jquery-ui (>= 1.12.0~), libjs-jstimezonedetect (>= 1.0.6~), php, php-cli, php-intl, php-json, php-mbstring, php-pear (>= 1:1.10.1), roundcube-mysql (= 1.6.12+dfsg-0+deb13u1) | roundcube-sqlite3 (= 1.6.12+dfsg-0+deb13u1) | roundcube-pgsql (= 1.6.12+dfsg-0+deb13u1), ucf, debconf (>= 0.5) | debconf-2.0, php-common, php-auth-sasl (>= 1.1.0), php-mail-mime (>= 1.10.0), php-net-smtp (>= 1.10.0), php-net-sieve (>= 1.4.5), php-masterminds-html5 (>= 2.7.0), php-guzzlehttp-guzzle (>= 7.3.0)
+Suggests: roundcube-plugins, roundcube-plugin-authres-status, roundcube-plugin-contextmenu, roundcube-plugin-html5-notifier, roundcube-plugin-keyboard-shortcuts, roundcube-plugin-listcommands, roundcube-plugin-message-highlight, roundcube-plugin-sauserprefs, roundcube-plugin-thunderbird-labels, php-crypt-gpg (>= 1.6.3), php-bacon-qr-code (>= 2.0.0), php-roundcube-rtf-html-php (>= 2.1), php-net-ldap3 (>= 1.1.4), php-bjeavons-zxcvbn-php
+Description: skinnable AJAX based webmail solution for IMAP servers
+Homepage: https://www.roundcube.net/
+Description-md5: 070b49746ffa5175d706c57880b405e7
+Pre-Depends: dpkg (>= 1.17.14)
+Recommends: apache2 | lighttpd | spawn-fcgi | php-fpm | httpd-cgi, php-enchant, php-gd, roundcube-skin-classic, roundcube-skin-larry
+web
+Priority: optional
+Filename: pool/updates/main/r/roundcube/roundcube-core_1.6.12+dfsg-0+deb13u1_all.deb
+Size: 4488344
+SHA256: 3241263cd8980bd9f91259dd88b42ae9cbafcbc39fc439d20800b1f592cc1fca
+
+Package: roundcube-mysql
+Source: roundcube
+Version: 1.6.12+dfsg-0+deb13u1
+Installed-Size: 127
+Maintainer: Debian Roundcube Maintainers <pkg-roundcube-maintainers@alioth-lists.debian.net>
+Architecture: all
+Depends: mariadb-client | default-mysql-client | virtual-mysql-client, php-mysql | php-mysqlnd
+Suggests: mariadb-server | default-mysql-server
+Description: metapackage providing MySQL dependencies for RoundCube
+Homepage: https://www.roundcube.net/
+Description-md5: e3030807c558599393412b21babfca91
+web
+Priority: optional
+Filename: pool/updates/main/r/roundcube/roundcube-mysql_1.6.12+dfsg-0+deb13u1_all.deb
+Size: 98560
+SHA256: a4943cc219b6d2febc55dc8b9489319a8f1903785d0aa372b837a5b5572d67fd
+
+Package: roundcube-pgsql
+Source: roundcube
+Version: 1.6.12+dfsg-0+deb13u1
+Installed-Size: 127
+Maintainer: Debian Roundcube Maintainers <pkg-roundcube-maintainers@alioth-lists.debian.net>
+Architecture: all
+Depends: php-pgsql, postgresql-client
+Suggests: postgresql
+Description: metapackage providing PostgreSQL dependencies for RoundCube
+Homepage: https://www.roundcube.net/
+Description-md5: 7a8d9c1ae68fcd3b5176a88c3c7750d8
+web
+Priority: optional
+Filename: pool/updates/main/r/roundcube/roundcube-pgsql_1.6.12+dfsg-0+deb13u1_all.deb
+Size: 98536
+SHA256: f3c58ffec4319ff99d63c0858c65461ab1547887e6e2dbe9f51179e1d5cf6eee
+
+Package: roundcube-plugins
+Source: roundcube
+Version: 1.6.12+dfsg-0+deb13u1
+Installed-Size: 5024
+Maintainer: Debian Roundcube Maintainers <pkg-roundcube-maintainers@alioth-lists.debian.net>
+Architecture: all
+Depends: roundcube-core (= 1.6.12+dfsg-0+deb13u1)
+Suggests: php-cli, php-crypt-gpg, php-net-sieve, php-zip, python3
+Description: skinnable AJAX based webmail solution for IMAP servers - plugins
+Homepage: https://www.roundcube.net/
+Description-md5: 9d938733bb09501e1220d825f58b84a0
+Pre-Depends: dpkg (>= 1.17.14)
+web
+Priority: optional
+Filename: pool/updates/main/r/roundcube/roundcube-plugins_1.6.12+dfsg-0+deb13u1_all.deb
+Size: 780608
+SHA256: d746f4db035903eadfdcec9b8ced54c60c05841a992dd2efb307cd882d349e31
+
+Package: roundcube-sqlite3
+Source: roundcube
+Version: 1.6.12+dfsg-0+deb13u1
+Installed-Size: 127
+Maintainer: Debian Roundcube Maintainers <pkg-roundcube-maintainers@alioth-lists.debian.net>
+Architecture: all
+Depends: php-sqlite3, sqlite3
+Description: metapackage providing SQLite dependencies for RoundCube
+Homepage: https://www.roundcube.net/
+Description-md5: 57abc373e59353dec211093c19a195fe
+web
+Priority: optional
+Filename: pool/updates/main/r/roundcube/roundcube-sqlite3_1.6.12+dfsg-0+deb13u1_all.deb
+Size: 98508
+SHA256: 215c9f345f11545f2688ac4cd7bda8ea9ccfd4dd2d4dabb1d3f22b4f15ee5e2f
+
 Package: shibboleth-sp-utils
 Source: shibboleth-sp
 Version: 3.5.0+dfsg-2+deb13u1

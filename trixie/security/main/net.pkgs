@@ -225,6 +225,65 @@ Filename: pool/updates/main/c/cups/cups-server-common_2.4.10-3+deb13u1_all.deb
 Size: 414528
 SHA256: e752c0d3de98ba279e2da817a1b22dbf2a2da93df68c627a0d39073db4ee4ae9
 
+Package: dropbear
+Version: 2025.89-1~deb13u1
+Installed-Size: 79
+Maintainer: Guilhem Moulin <guilhem@debian.org>
+Architecture: all
+Depends: dropbear-bin (>= 2025.89-1~deb13u1)
+Suggests: dropbear-initramfs, runit, sysvinit-utils (>= 3.05-4~)
+Description: lightweight SSH2 server and client - startup scripts
+Homepage: https://matt.ucc.asn.au/dropbear/dropbear.html
+Description-md5: 6a91040e311efe0718dcff44139d8213
+Multi-Arch: foreign
+Pre-Depends: init-system-helpers (>= 1.54~)
+net
+Priority: optional
+Filename: pool/updates/main/d/dropbear/dropbear_2025.89-1~deb13u1_all.deb
+Size: 45316
+SHA256: b0cc12d4b93239dc0d41ca34b4a023c0ee3daf1f368b647e04815b36318b8c50
+
+Package: dropbear-bin
+Source: dropbear
+Version: 2025.89-1~deb13u1
+Installed-Size: 693
+Maintainer: Guilhem Moulin <guilhem@debian.org>
+Architecture: amd64
+Replaces: dropbear (<< 2015.68-1)
+Provides: ssh-server
+Depends: libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libtomcrypt1 (>= 1.18.2), libtommath1 (>= 1.2.0), zlib1g (>= 1:1.1.4)
+Suggests: openssh-client
+Breaks: dropbear (<< 2015.68-1)
+Description: lightweight SSH2 server and client - command line tools
+Homepage: https://matt.ucc.asn.au/dropbear/dropbear.html
+Description-md5: fd6d59a6fb8335f77ba5a60987d1c735
+Multi-Arch: foreign
+net
+Priority: optional
+Filename: pool/updates/main/d/dropbear/dropbear-bin_2025.89-1~deb13u1_amd64.deb
+Size: 188720
+SHA256: 1ddbd76749c7076097fb899eaf55f0a398d6f62799a6000501b32ed7b5d9257b
+
+Package: dropbear-initramfs
+Source: dropbear
+Version: 2025.89-1~deb13u1
+Installed-Size: 82
+Maintainer: Guilhem Moulin <guilhem@debian.org>
+Architecture: all
+Replaces: dropbear (<< 2015.68-1)
+Depends: busybox | busybox-static, dropbear-bin (>= 2025.89-1~deb13u1), initramfs-tools (>= 0.94), udev
+Breaks: dropbear (<< 2015.68-1)
+Description: lightweight SSH2 server and client - initramfs integration
+Homepage: https://matt.ucc.asn.au/dropbear/dropbear.html
+Description-md5: 5dd10490aa9e4ec06e1152daf8823742
+Multi-Arch: foreign
+Recommends: cryptsetup-initramfs
+net
+Priority: optional
+Filename: pool/updates/main/d/dropbear/dropbear-initramfs_2025.89-1~deb13u1_all.deb
+Size: 46768
+SHA256: e03e8e99021abfae29c550f7cdf0542b776fbb1c563f47b6411489a505167b93
+
 Package: haproxy
 Version: 3.0.11-1+deb13u1
 Installed-Size: 5661
