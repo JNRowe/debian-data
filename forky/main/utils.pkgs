@@ -2751,6 +2751,43 @@ Size: 14676
 MD5sum: 2c4506f922059a633b0afc5d1034c657
 SHA256: 5419a767c90f0b945a7a930c946d20abbf0400b2044d248cdb3da28d3276b4b7
 
+Package: buffyboard
+Source: buffybox
+Version: 3.2.0+dfsg-1
+Installed-Size: 813
+Maintainer: DebianOnMobile Maintainers <debian-on-mobile-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libinih1 (>= 40), libinput10 (>= 0.15.0), libudev1 (>= 183)
+Description: Touch-enabled framebuffer keyboard (not only) for vampire slayers
+Homepage: https://gitlab.com/postmarketOS/buffybox
+Description-md5: 0dfe106fda01b26febd152c61b2e3eaf
+utils
+Priority: optional
+Filename: pool/main/b/buffybox/buffyboard_3.2.0+dfsg-1_amd64.deb
+Size: 312412
+MD5sum: 4e0becbb50604b29b7c3a7090eec07f6
+SHA256: 839b5a5a842efcc875680ea72a1f6095b71a82113b83b4d7ff5f141fc21ed8d5
+
+Package: unl0kr
+Source: buffybox
+Version: 3.2.0+dfsg-1
+Installed-Size: 739
+Maintainer: DebianOnMobile Maintainers <debian-on-mobile-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Replaces: osk-sdl (<< 0.67.1-4)
+Provides: osk-sdl
+Depends: debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38), libdrm2 (>= 2.4.62), libinih1 (>= 40), libinput10 (>= 0.15.0), libudev1 (>= 183), libxkbcommon0 (>= 0.5.0), cryptsetup-initramfs
+Breaks: osk-sdl (<< 0.67.1-4)
+Description: Lightweight framebuffer On-Screen-Keyboard based on LVGL
+Homepage: https://gitlab.com/postmarketOS/buffybox
+Description-md5: 04958040862cce9b4166a43d0d51d37e
+utils
+Priority: optional
+Filename: pool/main/b/buffybox/unl0kr_3.2.0+dfsg-1_amd64.deb
+Size: 272268
+MD5sum: f97ed36d01be776bc50955023bd7be45
+SHA256: 011a1d233fb8bef5f4686ca580136f58066e116f9ef6ab2f72644b39cfa5e254
+
 Package: bugwarrior
 Version: 1.8.0-13
 Installed-Size: 961
@@ -3645,20 +3682,20 @@ MD5sum: 40207fab090bf5f032b55a957e2f1480
 SHA256: bb29692a3dca740f97a7cf1d1e1ff8fb48bf921146ed15d3457035ea76302889
 
 Package: check-manifest
-Version: 0.51-1
+Version: 0.51-2
 Installed-Size: 95
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
-Depends: python3-build (>= 0.1), python3-pkg-resources, python3-tomli | python3-supported-min (>= 3.11), python3:any
+Depends: python3-build (>= 0.1), python3-setuptools, python3:any
 Description: Tool to check the completeness of MANIFEST.in for Python packages (Python 3)
 Homepage: https://github.com/mgedmin/check-manifest
 Description-md5: c51d954135c8eb3c388f6e04868b97be
 utils
 Priority: optional
-Filename: pool/main/c/check-manifest/check-manifest_0.51-1_all.deb
-Size: 30008
-MD5sum: 85437d0b38835407c53c7b4d0dd94807
-SHA256: 107d3e42d784f9d402ebcee6c56325414e81c1cacc2fb6bd9db0ceac8309b548
+Filename: pool/main/c/check-manifest/check-manifest_0.51-2_all.deb
+Size: 30108
+MD5sum: 24ea7ced6ffd3a2ec89f99767d27b37f
+SHA256: f85086a3820b20180103e820ac581be5bf8a5be6c54d9b8408cabd8d3e353f9a
 
 Package: check-patroni
 Version: 2.2.0-2
@@ -7194,15 +7231,15 @@ SHA256: f8f1b53c22afbf3a3ac76dc6e0f4c675af741a31a963fee703c12d65903fd46a
 
 Package: dpkg-dev
 Source: dpkg
-Version: 1.22.21
-Installed-Size: 1726
+Version: 1.23.3
+Installed-Size: 1712
 Maintainer: Dpkg Developers <debian-dpkg@lists.debian.org>
 Architecture: all
 Provides: dpkg-build-api (= 0), dpkg-build-api (= 1)
-Depends: perl:any, libdpkg-perl (= 1.22.21), tar (>= 1.28-1), bzip2, xz-utils (>= 5.4.0), patch (>= 2.7), make, binutils
+Depends: perl:any, libdpkg-perl (= 1.23.3), tar (>= 1.28-1), bzip2, xz-utils (>= 5.4.0), patch (>= 2.7), make (>= 4.4), binutils
 Recommends: build-essential, gcc | c-compiler, fakeroot, sq | sqop | rsop | gosop | pgpainless-cli | gpg-sq | gnupg, sqv | sqopv | rsopv | sopv | gosop | pgpainless-cli | gpgv-sq | gpgv, libalgorithm-merge-perl
 Suggests: debian-keyring, debian-tag2upload-keyring
-Breaks: debhelper (<< 10.10.1~), gosop (<< 1.1.0~), libsop-java-java (<< 4.0.7~), pgpainless-cli (<< 1.3.13~), rsop (<< 0.4.0~), sq (<< 0.40.0~), sqop (<< 0.27.2~), sqv (<< 1.3.0~)
+Breaks: debhelper (<< 10.10.1~), debian-keyring (<< 2025.04.25~), devuan-keyring (<< 2025.07.30~), gosop (<< 1.1.0~), libsop-java-java (<< 4.0.7~), pgpainless-cli (<< 1.3.13~), rsop (<< 0.4.0~), sq (<< 0.40.0~), sqop (<< 0.27.2~), sqv (<< 1.3.0~)
 Description: Debian package development tools
 Multi-Arch: foreign
 Homepage: https://wiki.debian.org/Teams/Dpkg
@@ -7214,10 +7251,10 @@ Tag: admin::package-management, devel::debian, devel::packaging,
  works-with::software:package, works-with::software:source
 utils
 Priority: optional
-Filename: pool/main/d/dpkg/dpkg-dev_1.22.21_all.deb
-Size: 1337940
-MD5sum: 74bdb439350996ffdf1ab41b818214b7
-SHA256: e83567f7fe139a525b541601b4e044c903d9fcce8e995b9b73b2fd03f5e927a3
+Filename: pool/main/d/dpkg/dpkg-dev_1.23.3_all.deb
+Size: 1317752
+MD5sum: 30efcf5d016809bb86d1d6f00cd690e7
+SHA256: 6e55b7964bb43a057a51f7b36398862519e52103ef392c2b20d14ebccf9bd889
 
 Package: cross-config
 Source: dpkg-cross
@@ -11487,22 +11524,22 @@ SHA256: 98be9a8fe0a0cc69fa99499879990765ab1c363464932e4eb4fcd9915cbef4a9
 
 Package: fcitx5-frontend-tmux
 Source: fcitx5-tmux
-Version: 0.0~git20220221.35daf5d-3
-Installed-Size: 76
+Version: 0.0~git20251230.fe96f85-1
+Installed-Size: 77
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
 Provides: fcitx5-tmux
-Depends: dbus-bin, tmux, fcitx5, libc6 (>= 2.38), libfcitx5utils2 (>= 5.1.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
+Depends: dbus-bin, tmux, fcitx5, libc6 (>= 2.38), libfcitx5utils2 (>= 5.1.17), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
 Suggests: fcitx5-chinese-addons
 Description: Tmux fcitx5 client
 Homepage: https://github.com/wengxt/fcitx5-tmux
 Description-md5: e29d65bcdf0609243f1c29be90b84a4f
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5-tmux/fcitx5-frontend-tmux_0.0~git20220221.35daf5d-3_amd64.deb
-Size: 25708
-MD5sum: 395cc6e97df601a850625f3b89aa9bd0
-SHA256: 8317fbe84a325872ee59a46f92937f5ff62f90e9a7bfb30d5477c1aec33ff47b
+Filename: pool/main/f/fcitx5-tmux/fcitx5-frontend-tmux_0.0~git20251230.fe96f85-1_amd64.deb
+Size: 26028
+MD5sum: 536514a05feed0bf874920d1215a47fc
+SHA256: 457ddd49d140d3dd8c6392d7fcf8202bcf1af487795f92676eed2cdd6ae34391
 
 Package: fcitx5-unikey
 Version: 5.1.9-1
@@ -12001,7 +12038,7 @@ MD5sum: 1a43cdfaf4348d05c4c727a0f9fa7675
 SHA256: aee20d537c1e2e1284b2ee42e3294c19ac52753989b61d9f981f2a15e0a13710
 
 Package: flatlatex
-Version: 0.15-1
+Version: 0.15-2
 Installed-Size: 14
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
@@ -12011,10 +12048,10 @@ Homepage: https://github.com/jb-leger/flatlatex
 Description-md5: d8d9e623771e64f9079812601f597c9a
 utils
 Priority: optional
-Filename: pool/main/f/flatlatex/flatlatex_0.15-1_all.deb
-Size: 4152
-MD5sum: 3113eb71db5edbf4f5f6883c4d3827d6
-SHA256: 9755cb8fa78d6be976cd35a506969ed84a752c839a7fc90ed85ba274f49442a5
+Filename: pool/main/f/flatlatex/flatlatex_0.15-2_all.deb
+Size: 4172
+MD5sum: 095edc8ed5e39e592ef00a207a739f7a
+SHA256: 72bd60cf8dc10a45ed12431128358bf0cae45f6bc0d31c995aa6f2313e1fbd36
 
 Package: flatseal
 Version: 2.4.0-1
@@ -14735,22 +14772,22 @@ MD5sum: 348361cb7be96bce737a30455a3457c4
 SHA256: 4371160ab18753933c683e7f77005bfbfa2304698f00973d107d828e655643cd
 
 Package: gobuster
-Version: 3.8.0-2
-Installed-Size: 9385
+Version: 3.8.2-1
+Installed-Size: 9394
 Maintainer: Debian Security Tools <team+pkg-security@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34)
 Suggests: crunch, cupp, hashcat
-Description: Directory/file & DNS busting tool written in Go
+Description: high-performance discovery tool for directories, DNS and cloud storage
 Homepage: https://github.com/OJ/gobuster
-Description-md5: 3349e6496ac8c57def362fd25de9ed5f
-Static-Built-Using: go-md2man-v2 (= 2.0.4-1), golang-1.24 (= 1.24.4-1), golang-blackfriday-v2 (= 2.1.0-1), golang-github-fatih-color (= 1.17.0-1), golang-github-google-uuid (= 1.6.0-1), golang-github-mattn-go-colorable (= 0.1.13-1), golang-github-mattn-go-isatty (= 0.0.20-1), golang-github-pin-tftp (= 3.1.0-1), golang-github-urfave-cli-v2 (= 2.25.7-5), golang-github-xrash-smetrics (= 0.0~git20201216.039620a-1), golang-go.crypto (= 1:0.25.0-1), golang-golang-x-net (= 1:0.27.0-2), golang-golang-x-sys (= 0.22.0-2), golang-golang-x-term (= 0.22.0-1), golang-sslmate-src-go-pkcs12 (= 0.5.0-1), golang-uber-automaxprocs (= 1.5.3-1)
+Description-md5: bbaeb2d4d8d6c45bfa8dacf369e4f4ea
+Static-Built-Using: go-md2man-v2 (= 2.0.7-1), golang-1.24 (= 1.24.9-1), golang-blackfriday-v2 (= 2.1.0-1), golang-github-fatih-color (= 1.17.0-1), golang-github-google-uuid (= 1.6.0-1), golang-github-mattn-go-colorable (= 0.1.13-1), golang-github-mattn-go-isatty (= 0.0.20-1), golang-github-pin-tftp (= 3.1.0-1), golang-github-urfave-cli-v2 (= 2.25.7-5), golang-github-xrash-smetrics (= 0.0~git20201216.039620a-1), golang-go.crypto (= 1:0.45.0-1), golang-golang-x-net (= 1:0.27.0-2), golang-golang-x-sys (= 0.38.0-1), golang-golang-x-term (= 0.37.0-1), golang-sslmate-src-go-pkcs12 (= 0.7.0-1), golang-uber-automaxprocs (= 1.5.3-1)
 utils
 Priority: optional
-Filename: pool/main/g/gobuster/gobuster_3.8.0-2_amd64.deb
-Size: 2898364
-MD5sum: 9fdc1a3003c7e466eeb5be696826628c
-SHA256: 7e22deef8164e96d3c209752e546741fdf62d9b23d8529847524c4c89233050f
+Filename: pool/main/g/gobuster/gobuster_3.8.2-1_amd64.deb
+Size: 2903336
+MD5sum: c29963809c995b3b5a54efbbdbc95108
+SHA256: 1f30d0bca0ddb169da1fa077b654752ade202fcc6dca1740f42eb5e35ac13630
 
 Package: podman-toolbox
 Source: golang-github-containers-toolbox
@@ -20258,6 +20295,25 @@ Filename: pool/main/liba/libaacs/libaacs-bin_0.11.1-4+b1_amd64.deb
 Size: 8332
 MD5sum: 8b3dfe5b2d895073235bf60c197d533e
 SHA256: 1aff7f37ab4054e7675ffd1718ff341ac483265846b8ad00cd2e147d60f64c40
+
+Package: libam7xxx0.1-bin
+Source: libam7xxx
+Version: 0.1.7-7
+Installed-Size: 89
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Replaces: libam7xxx0.1 (<< 0.1.7-3)
+Depends: libam7xxx0.1 (>= 0.1.4), libavcodec62 (>= 7:8.0.1), libavdevice62 (>= 7:8.0.1), libavformat62 (>= 7:8.0.1), libavutil60 (>= 7:8.0.1), libc6 (>= 2.38), libswscale9 (>= 7:8.0.1), libusb-1.0-0 (>= 2:1.0.16), libxcb1
+Breaks: libam7xxx0.1 (<< 0.1.7-3)
+Description: library for accessing am7xxx devices - utilities
+Homepage: https://git.ao2.it/libam7xxx.git
+Description-md5: 81b17f58b188ac4460d550109784279a
+utils
+Priority: optional
+Filename: pool/main/liba/libam7xxx/libam7xxx0.1-bin_0.1.7-7_amd64.deb
+Size: 22748
+MD5sum: 4acdc68e252dd5abd1f2e37dcb1fcda1
+SHA256: 2845e3199625c8b364582272b9111f4a69c9d9c2d9b37403302ad48c6742ebc7
 
 Package: renderd
 Source: libapache2-mod-tile (0.8.1-1)
@@ -26803,6 +26859,22 @@ Size: 49108
 MD5sum: e9faf3e52872b0056e9ea2fdf8e6bb22
 SHA256: 3b3f246038e5ab402f86acca14631ee8e8706dbc9075773e03866f11fbd2e01f
 
+Package: organize
+Version: 3.3.0-1.1
+Installed-Size: 234
+Maintainer: Frédéric Bonnard <frediz@debian.org>
+Architecture: all
+Depends: python3-arrow (>= 1.3.0-~~), python3-docopt-ng (>= 0.9.0-~~), python3-exifread (>= 2.3.2-~~), python3-jinja2 (>= 3.1.2-~~), python3-natsort (>= 8.4.0-~~), python3-pdfminer, python3-platformdirs (>= 4.0.0), python3-platformdirs (<< 5.0.0), python3-pydantic (>= 2.3.0-~~), python3-rich (>= 13.4.2-~~), python3-send2trash (>= 1.8.2-~~), python3-simplematch (>= 1.3-~~), python3-yaml (>= 6.0.0-~~), python3:any
+Description: File management automation tool
+Homepage: https://github.com/tfeldmann/organize
+Description-md5: 85203a556817a9ef60bc3694be36c433
+utils
+Priority: optional
+Filename: pool/main/o/organize/organize_3.3.0-1.1_all.deb
+Size: 51312
+MD5sum: 0f9d60d91e1e7e9b7934f4c32aaa6beb
+SHA256: 7b627742b629bac5bf515da43371a337ce0bcfdb8b7809f6749e728904063082
+
 Package: origami-pdf
 Version: 2.1.0-2
 Installed-Size: 41
@@ -30533,8 +30605,8 @@ MD5sum: de96e1465f4ef6d539b0b278bf573f85
 SHA256: 66e982642df52d8bacd731fd1f2f7abc5fed6578ca92cbdad356ffac63e86ac9
 
 Package: qdl
-Version: 2.4-2
-Installed-Size: 155
+Version: 2.4-3
+Installed-Size: 156
 Maintainer: Christopher Obbard <obbardc@debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libusb-1.0-0 (>= 2:1.0.16), libxml2-16 (>= 2.14.1)
@@ -30543,10 +30615,10 @@ Homepage: https://github.com/linux-msm/qdl
 Description-md5: 50eeb8b08df6e92ca3b3bda71ea4c455
 utils
 Priority: optional
-Filename: pool/main/q/qdl/qdl_2.4-2_amd64.deb
-Size: 44740
-MD5sum: 9e2855e6f8c2d3db1cad8ab547e936dc
-SHA256: 1e0991f77dce47c9424987d587e5ff4166a75196d136656a3d126712ab3d5584
+Filename: pool/main/q/qdl/qdl_2.4-3_amd64.deb
+Size: 44640
+MD5sum: 0f5bed85163ace6564d9d3387de962bc
+SHA256: 9708e8fba49216807d293272e4a69cc733ef18eb3250cf01b37841f2beb1117f
 
 Package: qjoypad
 Version: 4.3.1-3.1
@@ -32802,7 +32874,7 @@ MD5sum: f42a82e2bd7c17c2aa532805c31c9356
 SHA256: e436de31da53baa51e67b0b15c23b4e65f4ad158b715214fb93b9b61ea7be1e6
 
 Package: rst2pdf
-Version: 0.103.1-2
+Version: 0.103.1-3
 Installed-Size: 1122
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
@@ -32813,10 +32885,10 @@ Homepage: https://rst2pdf.org/
 Description-md5: e64dd39906680e1c6b84b108d693c637
 utils
 Priority: optional
-Filename: pool/main/r/rst2pdf/rst2pdf_0.103.1-2_all.deb
-Size: 376692
-MD5sum: 21005e5e85b41f8e2095dcfee023fb8e
-SHA256: b5634724ecc3f4e1b0609711a7a190c1b45a648aa667f15bc2aba4445ad750e0
+Filename: pool/main/r/rst2pdf/rst2pdf_0.103.1-3_all.deb
+Size: 376812
+MD5sum: 1f77664330991e9d26da9fb5c3b05675
+SHA256: b645fc6c38afe4c53c0e21916d07afd64edadb6f73c0bd958003c15002dbefdc
 
 Package: rsyncrypto
 Source: rsyncrypto (1.14-1.2)
@@ -41250,22 +41322,6 @@ Size: 321700
 MD5sum: 04404555e0012f80622311dddae14242
 SHA256: fff2c90ef863ef66300b80cd0416f73b7e3ae39050011d8e8099e28787f8f347
 
-Package: unl0kr
-Version: 2.0.3+dfsg-3
-Installed-Size: 676
-Maintainer: DebianOnMobile Maintainers <debian-on-mobile-maintainers@alioth-lists.debian.net>
-Architecture: amd64
-Depends: debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38), libinih1 (>= 40), libinput10 (>= 0.15.0), libudev1 (>= 183), libxkbcommon0 (>= 0.5.0), cryptsetup-initramfs
-Description: Lightweight framebuffer On-Screen-Keyboard based on LVGL
-Homepage: https://gitlab.com/cherrypicker/unl0kr
-Description-md5: 04958040862cce9b4166a43d0d51d37e
-utils
-Priority: optional
-Filename: pool/main/u/unl0kr/unl0kr_2.0.3+dfsg-3_amd64.deb
-Size: 244852
-MD5sum: 7c49befeb05a49cf11ceff9d8ba68ab5
-SHA256: e215e686c649f2f91333f4a2838d629105b7e93ed78a5c2daf3219edb9ad04b7
-
 Package: unmass
 Version: 0.9-8
 Installed-Size: 108
@@ -41473,11 +41529,11 @@ MD5sum: 885594a34fbbfd0da6831237e85cc4e4
 SHA256: 641807eea135149f6ae062639b3e3f387eb2b467c2fe3f0cbac174e0e1e77281
 
 Package: usbmuxd
-Version: 1.1.1-6
-Installed-Size: 116
+Version: 1.1.1-7
+Installed-Size: 120
 Maintainer: gtkpod Maintainers <pkg-gtkpod-devel@alioth-lists.debian.net>
 Architecture: amd64
-Depends: libc6 (>= 2.34), libimobiledevice-1.0-6 (>= 1.3.0), libplist-2.0-4 (>= 2.3.0), libusb-1.0-0 (>= 2:1.0.22), adduser
+Depends: libc6 (>= 2.38), libimobiledevice-1.0-6 (>= 1.3.0+git20240701), libplist-2.0-4 (>= 2.6), libusb-1.0-0 (>= 2:1.0.22), adduser
 Description: USB multiplexor daemon for iPhone and iPod Touch devices
 Homepage: https://github.com/libimobiledevice/usbmuxd
 Description-md5: 4e458ee34e3d22d40bde533e8147603f
@@ -41485,10 +41541,10 @@ Tag: hardware::embedded, hardware::usb, implemented-in::c, interface::daemon,
  role::program, use::synchronizing
 utils
 Priority: optional
-Filename: pool/main/u/usbmuxd/usbmuxd_1.1.1-6_amd64.deb
-Size: 39848
-MD5sum: 65cf30ba9da22e992417f72e5911a693
-SHA256: a8324d4610ecc71c572838e03fc5369f9fb85d7deda696e26848ddf6fba82100
+Filename: pool/main/u/usbmuxd/usbmuxd_1.1.1-7_amd64.deb
+Size: 40204
+MD5sum: 1d8cc811ae96fcbb3fe8c43d4129eb05
+SHA256: f87524e0957c45eef72110ba6c6ad349f851057acc24ebba4ece3a11f4c06e95
 
 Package: usbrip
 Version: 2.2.2+git20221003.5093c84-3
