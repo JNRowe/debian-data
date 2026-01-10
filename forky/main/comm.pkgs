@@ -966,6 +966,124 @@ Size: 42648
 MD5sum: a974146c6454197966d466d9ecd9350a
 SHA256: 1dafcaa2e98242f3e4b0d49d2a0eeaccf5dfadcf35911b3871819f1128604e5b
 
+Package: gnokii
+Version: 0.6.31+dfsg-7
+Installed-Size: 6
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: all
+Depends: gnokii-cli (>= 0.6.31+dfsg-7), gnokii-common (= 0.6.31+dfsg-7)
+Description: Datasuite for mobile phone management (metapackage)
+Homepage: http://gnokii.org
+Description-md5: 0ef5a3a0def93933b34410ff7af16e9b
+Tag: admin::hardware, hardware::embedded, hardware::modem,
+ interface::graphical, interface::x11, role::program,
+ scope::application, uitoolkit::gtk, use::transmission, x11::application
+comm
+Priority: optional
+Filename: pool/main/g/gnokii/gnokii_0.6.31+dfsg-7_all.deb
+Size: 1004
+MD5sum: 6e6381dc1061f60448ae488ee90af79a
+SHA256: 134919d46e729b23a49508f5e9e9f06b86fabab15cccb96c0b7f3db464eb1473
+
+Package: gnokii-cli
+Source: gnokii
+Version: 0.6.31+dfsg-7
+Installed-Size: 812
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libgnokii7t64 (= 0.6.31+dfsg-7), libreadline8t64 (>= 6.0), gnokii-common (= 0.6.31+dfsg-7), dialog
+Pre-Depends: adduser
+Description: Datasuite for mobile phone management (console interface)
+Homepage: http://gnokii.org
+Description-md5: 49371a804e94482a554eaa4650cf852e
+Tag: implemented-in::c, interface::commandline, role::program,
+ uitoolkit::ncurses
+comm
+Priority: optional
+Filename: pool/main/g/gnokii/gnokii-cli_0.6.31+dfsg-7_amd64.deb
+Size: 189884
+MD5sum: 9c961d1ea632190d5b33b909829c3606
+SHA256: 89c58e1b969b58bba920dd29d32b6907984d2a8743e340c01dccb8ee3b31f2be
+
+Package: gnokii-common
+Source: gnokii
+Version: 0.6.31+dfsg-7
+Installed-Size: 254
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: all
+Suggests: gnokii-cli
+Description: Datasuite for mobile phone management (base files)
+Homepage: http://gnokii.org
+Description-md5: 0276f62abec71a26111a3c60130edbed
+Tag: role::app-data
+comm
+Priority: optional
+Filename: pool/main/g/gnokii/gnokii-common_0.6.31+dfsg-7_all.deb
+Size: 176448
+MD5sum: 39537028cd07cc4041369e2b0e73217b
+SHA256: 7a66b9245c7b4fc3c1f1b6f47796e4655b166d115585960f2fd2951ae4458ea6
+
+Package: gnokii-smsd
+Source: gnokii
+Version: 0.6.31+dfsg-7
+Installed-Size: 137
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libglib2.0-0t64 (>= 2.76.0), libgnokii7t64 (>= 0.6.31), gnokii-common (= 0.6.31+dfsg-7)
+Conflicts: smstools
+Description: SMS Daemon for mobile phones
+Homepage: http://gnokii.org
+Description-md5: 7d7bd25e773a264aafa51b0d73229fc8
+Tag: admin::hardware, hardware::embedded, interface::daemon,
+ interface::graphical, interface::x11, network::server, role::program,
+ uitoolkit::gtk, use::transmission, x11::application
+comm
+Priority: optional
+Filename: pool/main/g/gnokii/gnokii-smsd_0.6.31+dfsg-7_amd64.deb
+Size: 92284
+MD5sum: c70b0367a9665fd1880068f863aaecd4
+SHA256: 76011a60f74257ca5f562f07ceb3044b3e0d39373c0aecfc32edbbea0a394d39
+
+Package: gnokii-smsd-mysql
+Source: gnokii
+Version: 0.6.31+dfsg-7
+Installed-Size: 93
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libmariadb3 (>= 3.0.0), gnokii-smsd (= 0.6.31+dfsg-7)
+Description: SMSD plugin for MySQL storage backend
+Homepage: http://gnokii.org
+Description-md5: 4a69c14e1b95fe23f8d85a9d05aaad33
+Tag: admin::hardware, devel::lang:sql, hardware::embedded,
+ interface::graphical, interface::x11, role::plugin, role::program,
+ uitoolkit::gtk, use::transmission, works-with::db, x11::application
+comm
+Priority: optional
+Filename: pool/main/g/gnokii/gnokii-smsd-mysql_0.6.31+dfsg-7_amd64.deb
+Size: 70784
+MD5sum: 66c7a7222fae232b3c3fe1dc700a5b04
+SHA256: c0bceffcb24a42e187c22ff325b9d1e8255e9086198019bc8727a4ec07fe63f9
+
+Package: gnokii-smsd-pgsql
+Source: gnokii
+Version: 0.6.31+dfsg-7
+Installed-Size: 92
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libpq5, gnokii-smsd (= 0.6.31+dfsg-7)
+Description: SMSD plugin for PostgreSQL storage backend
+Homepage: http://gnokii.org
+Description-md5: 1babeda505e7fb6d0b6565b9b0b0d715
+Tag: admin::hardware, devel::lang:sql, hardware::embedded,
+ interface::graphical, interface::x11, role::plugin, role::program,
+ uitoolkit::gtk, use::transmission, works-with::db, x11::application
+comm
+Priority: optional
+Filename: pool/main/g/gnokii/gnokii-smsd-pgsql_0.6.31+dfsg-7_amd64.deb
+Size: 70916
+MD5sum: 7e9ff2a6d01c0d8b6a5db41874d33c4d
+SHA256: 335b5a6f4e8e5c8cc42cbf4bf77f850e2182ae9d34a0b142d7d5f65559ff92c7
+
 Package: gnome-calls
 Version: 49.1.1-1
 Installed-Size: 1899
