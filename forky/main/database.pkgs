@@ -2242,20 +2242,20 @@ SHA256: 915c42cb2aaa4fba63e1696af7f32a6bdae9809717b6927f138d01a80e3eaf37
 
 Package: ruby-pg-ldap-sync
 Source: pg-ldap-sync
-Version: 0.5.1-1
+Version: 0.5.3-1
 Installed-Size: 50
 Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
 Architecture: all
-Depends: ruby, ruby-net-ldap (>= 0.16), kwalify (>= 0.7), ruby-pg (>= 0.14), ruby-pg (<< 2.0), ruby-logger (>= 1.0), ruby-ostruct (>= 0.1), ruby-base64 (>= 0.1)
+Depends: ruby, ruby-erb (>= 1), ruby-net-ldap (>= 0.16), ruby-json-schema (>= 2), ruby-pg (>= 0.14), ruby-pg (<< 2.0), ruby-logger (>= 1.0)
 Description: Synchronize users and groups from LDAP/AD into PostgreSQL
 Homepage: https://github.com/larskanis/pg-ldap-sync
 Description-md5: d17c6e1d7c6f935115990e20f25a4ef7
 database
 Priority: optional
-Filename: pool/main/p/pg-ldap-sync/ruby-pg-ldap-sync_0.5.1-1_all.deb
-Size: 10644
-MD5sum: aeddfa4ca670d0b869dc45ab68112107
-SHA256: ab1e44b411adc229efdb1db3b06327874fd61eda23aad1290b212e2f476a182b
+Filename: pool/main/p/pg-ldap-sync/ruby-pg-ldap-sync_0.5.3-1_all.deb
+Size: 10932
+MD5sum: d0fa156db129304c51d2b9dfea6bbf6a
+SHA256: 69d138ad60d6386ba68ee1595bc1394586ddbb01f979f27fe84fe2dad1d0c5ae
 
 Package: postgresql-18-partman
 Source: pg-partman
@@ -2509,6 +2509,23 @@ Size: 37860
 MD5sum: 16faf32f9fe27e54b2487081610d1ed0
 SHA256: 22222e2fe6b67b34aa305128e8bba25175f2e5aaee3de903afb2f5045a30c61b
 
+Package: postgresql-18-pg-stat-plans
+Source: pg-stat-plans
+Version: 2.0.0-1
+Installed-Size: 248
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Architecture: amd64
+Depends: postgresql-18, libc6 (>= 2.14)
+Description: Track per-plan call counts, execution times and EXPLAIN texts in PostgreSQL
+Homepage: https://github.com/pganalyze/pg_stat_plans
+Description-md5: 3b56d64fcdb2656a2332e4d7860a820c
+database
+Priority: optional
+Filename: pool/main/p/pg-stat-plans/postgresql-18-pg-stat-plans_2.0.0-1_amd64.deb
+Size: 83132
+MD5sum: 74f7a4c30b40ec8619be23a4f18f59f8
+SHA256: 1dee5ec3e84d38a3b5d93b1e462a444a5e4b4a120526942d080a79e8a560e03a
+
 Package: pg-statviz
 Version: 0.8-1
 Installed-Size: 479
@@ -2561,6 +2578,23 @@ Filename: pool/main/p/pg-track-settings/postgresql-18-pg-track-settings_2.1.2-5_
 Size: 9900
 MD5sum: f41b61c63add4a8d77c63fcec4397dee
 SHA256: 4ddf9e872667565332fbea7cf0c5c399d919fbbc12e3a4e90e5c76c437e65018
+
+Package: postgresql-18-pg-uuidv7
+Source: pg-uuidv7
+Version: 1.7.0-1
+Installed-Size: 47
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Architecture: amd64
+Depends: postgresql-18, libc6 (>= 2.17)
+Description: Extension providing UUIDv7 data type
+Homepage: https://github.com/fboulnois/pg_uuidv7
+Description-md5: e6f0ac2383b3b1aeb599952956dc5db4
+database
+Priority: optional
+Filename: pool/main/p/pg-uuidv7/postgresql-18-pg-uuidv7_1.7.0-1_amd64.deb
+Size: 13480
+MD5sum: 4cc593b3ce371162fe384b485ced4836
+SHA256: 9e951b7fdc166baa43bc6524504bcb91310b8b7ed5b883ad2ff688ff85a19cce
 
 Package: postgresql-18-pg-wait-sampling
 Source: pg-wait-sampling
@@ -2758,6 +2792,24 @@ Filename: pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-5_all.deb
 Size: 9808
 MD5sum: d43f7b959624747883b2b4e813a83912
 SHA256: 10ec4abf2cc62b2def1a915f10c62a9468d9c10d3460914ba68cabe1d63bec49
+
+Package: postgresql-18-pgfincore
+Source: pgfincore
+Version: 1.3.1-3
+Installed-Size: 76
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Architecture: amd64
+Depends: postgresql-18, libc6 (>= 2.34)
+Breaks: postgresql-18-jit-llvm (<< 21)
+Description: set of PostgreSQL functions to manage blocks in memory
+Homepage: http://villemain.org/projects/pgfincore
+Description-md5: 9e733b7fc48b0a8554e4a84f87b0292c
+database
+Priority: optional
+Filename: pool/main/p/pgfincore/postgresql-18-pgfincore_1.3.1-3_amd64.deb
+Size: 28908
+MD5sum: 4f103dc8e81df3c8f069ae70c9a8e516
+SHA256: 36b6d203c53196c56d88a18b0579afdd2c193a94add2fcd413415eb52063c47b
 
 Package: pgformatter
 Version: 5.9-1
@@ -3445,6 +3497,23 @@ Filename: pool/main/p/postgresql-18/postgresql-pltcl-18_18.1-2_amd64.deb
 Size: 39856
 MD5sum: 7f17b16c2182ddcb396d0194fde3ba05
 SHA256: 981aed48a9bfda8062442dea2548ccb71cfb0d21c1cbdcbcd46007879566f714
+
+Package: postgresql-18-age
+Version: 1.6.0~rc0-5
+Installed-Size: 1846
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Architecture: amd64
+Depends: postgresql-18, libc6 (>= 2.38)
+Breaks: postgresql-18-jit-llvm (<< 21)
+Description: Graph database optimized for fast analysis and real-time data processing
+Homepage: https://github.com/apache/age
+Description-md5: 20bb0cd13e44ab4726a7edb2a0124ed1
+database
+Priority: optional
+Filename: pool/main/p/postgresql-18-age/postgresql-18-age_1.6.0~rc0-5_amd64.deb
+Size: 694588
+MD5sum: 33541be9c290a43ab75d86b0f07bd265
+SHA256: 58e94748ac21211add5a3e1d3ac9451de5593413da60820a40a901461f2496d4
 
 Package: postgresql-autodoc
 Version: 1.41+20200921-1.1
