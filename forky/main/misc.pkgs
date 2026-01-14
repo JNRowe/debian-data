@@ -1702,23 +1702,59 @@ MD5sum: 164be23beaa28ee11272704817634783
 SHA256: 7f42ae6b7eb109c41a458fa58c41ee4d8bcd0b6ce3778faec51b72d95ac32b9e
 
 Package: clapper
-Source: clapper (0.8.0-2)
-Version: 0.8.0-2+b1
-Installed-Size: 2015
-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Version: 0.8.0-3
+Installed-Size: 271
+Maintainer: Debian GNOME Extras Maintainers <pkg-gnome-extras-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: gir1.2-adw-1, gir1.2-gst-plugins-base-1.0, gir1.2-gstreamer-1.0, gir1.2-gtk-4.0, gir1.2-soup-3.0, gstreamer1.0-plugins-good, dconf-gsettings-backend | gsettings-backend, libadwaita-1-0 (>= 1.4~beta), libc6 (>= 2.38), libglib2.0-0t64 (>= 2.83.0), libgraphene-1.0-0 (>= 1.5.4), libgstreamer-gl1.0-0 (>= 1.14.0), libgstreamer-plugins-base1.0-0 (>= 1.20.0), libgstreamer1.0-0 (>= 1.18.0), libgtk-4-1 (>= 4.9.2), libjson-glib-1.0-0 (>= 1.5.2), libmicrodns1 (>= 0.2.0), libpango-1.0-0 (>= 1.14.0), libpeas-2-0 (>= 1.99.0), libsoup-3.0-0 (>= 3.0.3)
-Recommends: gstreamer1.0-libav, gstreamer1.0-plugins-bad
+Depends: gstreamer1.0-plugins-good, libadwaita-1-0 (>= 1.4~beta), libc6 (>= 2.38), libclapper-0.0-0 (>= 0.8.0), libclapper-gtk-0.0-0 (>= 0.8.0), libglib2.0-0t64 (>= 2.80.0), libgraphene-1.0-0 (>= 1.5.4), libgstreamer1.0-0 (>= 1.2.0), libgtk-4-1 (>= 4.9.2), libpango-1.0-0 (>= 1.14.0)
+Recommends: clapper-enhancers, gstreamer1.0-libav, gstreamer1.0-plugins-bad
 Description: Simple and modern GNOME media player
 Homepage: https://rafostar.github.io/clapper
 Description-md5: e46377a676c47f82e937be546f96cd1a
 Tag: uitoolkit::gtk
 misc
 Priority: optional
-Filename: pool/main/c/clapper/clapper_0.8.0-2+b1_amd64.deb
-Size: 337532
-MD5sum: e354590b82a7153c0c31808fdbf8536a
-SHA256: 3d2144d9ec247a7bd25c04605cdf9553e82b9e010fbee7d5f01c7bdb76d11cec
+Filename: pool/main/c/clapper/clapper_0.8.0-3_amd64.deb
+Size: 56616
+MD5sum: 826ef460754abed8906f2e2dc4c8405b
+SHA256: fec8aefa9502c052b613e610efbcc3b830c0d54e2e9b6b52216db17a44a03e72
+
+Package: clapper-common
+Source: clapper
+Version: 0.8.0-3
+Installed-Size: 312
+Maintainer: Debian GNOME Extras Maintainers <pkg-gnome-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Replaces: clapper (<< 0.8.0-3~)
+Depends: dconf-gsettings-backend | gsettings-backend
+Breaks: clapper (<< 0.8.0-3~)
+Description: Simple and modern GNOME media player - common files
+Multi-Arch: foreign
+Homepage: https://rafostar.github.io/clapper
+Description-md5: 7f07ce35c21a089eae87d818be6f84ee
+misc
+Priority: optional
+Filename: pool/main/c/clapper/clapper-common_0.8.0-3_all.deb
+Size: 44976
+MD5sum: 7cb92a161364fc61deb188280c0e508e
+SHA256: 51eae32a6e97a709c7efc4fa31a5e5071b8355072acee5f368a5850070acbfe6
+
+Package: clapper-enhancers
+Source: clapper
+Version: 0.8.0-3
+Installed-Size: 95
+Maintainer: Debian GNOME Extras Maintainers <pkg-gnome-extras-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.4), libclapper-0.0-0 (>= 0.8.0), libglib2.0-0t64 (>= 2.80.0), libgstreamer1.0-0 (>= 1.0.0), libjson-glib-1.0-0 (>= 1.5.2), libpeas-2-0 (>= 1.99.0), libsoup-3.0-0 (>= 3.0.3)
+Description: Simple and modern GNOME media player - plugins
+Homepage: https://rafostar.github.io/clapper
+Description-md5: 9e3034cb4d6dc78f6a36369e06a66c00
+misc
+Priority: optional
+Filename: pool/main/c/clapper/clapper-enhancers_0.8.0-3_amd64.deb
+Size: 19688
+MD5sum: e171b705d335d2d51a6ce44b06747c45
+SHA256: 64a2c26af308a45e1ac45eab7ed3415119bb1d0b6b34da231c537dafb7c24ec1
 
 Package: cldump
 Version: 0.11~dfsg-8
@@ -3276,11 +3312,11 @@ MD5sum: 3c340878397cf851c5edbc3d29a4b2bd
 SHA256: 15a7d0de79b108be6b2a8a414dd7fc6b6e79f305915f1ce0a83758bcaf194a55
 
 Package: dialog
-Version: 1.3-20250817-1
-Installed-Size: 493
+Version: 1.3-20260107-1
+Installed-Size: 520
 Maintainer: Santiago Vila <sanvila@debian.org>
 Architecture: amd64
-Depends: debianutils (>= 1.6), libc6 (>= 2.34), libdialog15 (>= 1.3-20250817), libncursesw6 (>= 6), libtinfo6 (>= 6)
+Depends: debianutils (>= 1.6), libc6 (>= 2.38), libdialog15 (>= 1.3-20260107), libncursesw6 (>= 6), libtinfo6 (>= 6)
 Description: Displays user-friendly dialog boxes from shell scripts
 Multi-Arch: foreign
 Homepage: https://invisible-island.net/dialog/dialog.html
@@ -3289,10 +3325,10 @@ Tag: interface::text-mode, role::program, scope::utility, uitoolkit::ncurses,
  works-with::text
 misc
 Priority: optional
-Filename: pool/main/d/dialog/dialog_1.3-20250817-1_amd64.deb
-Size: 125752
-MD5sum: be8cb00c6f78baf5a62914b1ae4b183c
-SHA256: c5392a9c5c6692d9ee55bf58c7f0244a370bb617280b46db5442d0b98409acec
+Filename: pool/main/d/dialog/dialog_1.3-20260107-1_amd64.deb
+Size: 131276
+MD5sum: 2b40f8d50950fed29fcb5e442b484947
+SHA256: 63099de62bb7f5424d4bbd1492a32f249d3d1d9e02b104d0ce8a7721d81f59c8
 
 Package: dirsearch
 Version: 0.4.3-1
@@ -14546,20 +14582,20 @@ SHA256: ef827457cacaca7ddf9a86b740c88aac47ffb1b1412d2fd7d63febd42228dd62
 
 Package: libsimdutf-tools
 Source: simdutf
-Version: 7.7.0-1
+Version: 7.7.1-1
 Installed-Size: 2858
 Maintainer: Mo Zhou <lumin@debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libgcc-s1 (>= 4.2), libsimdutf29 (>= 7.7.0)
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 4.2), libsimdutf29 (>= 7.7.1)
 Description: Fast Unicode validation and transcoding - utilities
-Homepage: https://github.com/simdutf/simdutf
+Homepage: https://simdutf.github.io/simdutf/
 Description-md5: e3d73367a2da6bb48013fd44e94304b0
 misc
 Priority: optional
-Filename: pool/main/s/simdutf/libsimdutf-tools_7.7.0-1_amd64.deb
-Size: 542856
-MD5sum: d672131e810cdd9794c945c02f978de4
-SHA256: 2e22f76ad64cbb952ce2d3584614a593ec700450e6dcb90366c0d29ab501a25f
+Filename: pool/main/s/simdutf/libsimdutf-tools_7.7.1-1_amd64.deb
+Size: 542992
+MD5sum: bba122c425560d3fed390d72d56f0487
+SHA256: f5b8011370ef9c30b8f398e8666f23fe05f469a071bf66a96e95d1a66a3760db
 
 Package: simple-cdd
 Version: 0.6.10
