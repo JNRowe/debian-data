@@ -836,23 +836,23 @@ MD5sum: 7952bb6e0ce0b029f82f808ef6873a8e
 SHA256: 51545d6f48a8132cb5f3828f578503266f77cdb19b4801c6d4f4e57e887b5829
 
 Package: atom4
-Source: atom4 (4.1-9)
-Version: 4.1-9+b1
-Installed-Size: 150
-Maintainer: Hwei Sheng Teoh <hsteoh@debian.org>
+Version: 4.1-10
+Installed-Size: 170
+Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.2.5), libgcc1 (>= 1:3.0), libncurses6 (>= 6), libstdc++6 (>= 5), libtinfo6 (>= 6), libx11-6, libxpm4
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libncurses6 (>= 6), libstdc++6 (>= 5), libtinfo6 (>= 6), libx11-6, libxpm4
 Description: Original two-player color puzzle game
+Homepage: https://packages.debian.org/atom4
 Description-md5: 533842e7cc3a334afcea5be72b906d9b
 Tag: game::puzzle, interface::graphical, interface::text-mode,
  interface::x11, role::program, uitoolkit::ncurses, use::gameplaying,
  x11::application
 games
 Priority: optional
-Filename: pool/main/a/atom4/atom4_4.1-9+b1_amd64.deb
-Size: 42880
-MD5sum: 04c1d3552652247b7f6adf51c453b080
-SHA256: 99c1e64299986fad950e68565c7be39fbda712e56ebad857b3ae1c7858c8ab7d
+Filename: pool/main/a/atom4/atom4_4.1-10_amd64.deb
+Size: 48328
+MD5sum: 2d8d3387e917cfdc18f09b88ab666302
+SHA256: bc9b643f993788561fcfde1b804706f48c428b61f9955b76644bb1b201ad7b13
 
 Package: atomix
 Version: 44.0-5
@@ -8446,24 +8446,42 @@ MD5sum: 665d814cd45063682c44e9caa4eeb500
 SHA256: 45e85b64c8a331ca6412002b02c838402373298830295a0e2e494e2ed67c5a11
 
 Package: kcheckers
-Version: 0.9.0-1
-Installed-Size: 641
+Version: 0.9.0-2
+Installed-Size: 11
 Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
-Architecture: amd64
-Provides: qcheckers
-Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libqt5core5t64 (>= 5.15.1), libqt5gui5t64 (>= 5.2.0) | libqt5gui5-gles (>= 5.2.0), libqt5svg5 (>= 5.6.0~beta), libqt5widgets5t64 (>= 5.0.2), libstdc++6 (>= 5)
-Description: Checkers boardgame
+Architecture: all
+Depends: qcheckers
+Description: Checkers boardgame - transitional dummy package
 Homepage: https://portnov.github.io/qcheckers/
-Description-md5: eb4dfd2593eb9676197656a5cf9d6e75
+Description-md5: f9e45c53e4dc51ac444bccfd25ad84ae
 Tag: culture::TODO, culture::french, culture::german, culture::russian,
  game::board, interface::graphical, interface::x11, role::program,
  uitoolkit::qt, use::gameplaying, x11::application
 games
 Priority: optional
-Filename: pool/main/k/kcheckers/kcheckers_0.9.0-1_amd64.deb
-Size: 152880
-MD5sum: ad812b148f16f445bf4c4a6032362367
-SHA256: 9b88c51b0576445edcf9763872625763b0bd4e4547659e51507d407135a7c630
+Filename: pool/main/k/kcheckers/kcheckers_0.9.0-2_all.deb
+Size: 3940
+MD5sum: ad3b77123a5a265fc98fd5ea844ca189
+SHA256: cd8aaa205b1355c7f57b3702a75f2a7686fa492737cdb508319bda7435d86470
+
+Package: qcheckers
+Source: kcheckers
+Version: 0.9.0-2
+Installed-Size: 640
+Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: kcheckers (<< 0.9.0-2~)
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libqt5core5t64 (>= 5.15.1), libqt5gui5t64 (>= 5.2.0) | libqt5gui5-gles (>= 5.2.0), libqt5svg5 (>= 5.6.0~beta), libqt5widgets5t64 (>= 5.0.2), libstdc++6 (>= 5)
+Breaks: kcheckers (<< 0.9.0-2~)
+Description: Checkers boardgame
+Homepage: https://portnov.github.io/qcheckers/
+Description-md5: eb4dfd2593eb9676197656a5cf9d6e75
+games
+Priority: optional
+Filename: pool/main/k/kcheckers/qcheckers_0.9.0-2_amd64.deb
+Size: 153136
+MD5sum: 9de950834f1094d2f3912f95373f380e
+SHA256: eb3327418f078ee18d6773f732c0d93e37a01a3451eb0d8ddaa2f82390c9bbf7
 
 Package: kdiamond
 Version: 4:25.04.0-1
@@ -9494,25 +9512,25 @@ SHA256: f64dd0277c6d7e9a0fddd93a4a0892a61632085d04423c54498ac2fa791c743a
 
 Package: libretro-beetle-psx
 Source: libretro-beetle-psx (0.9.38.6+git20151019-3)
-Version: 0.9.38.6+git20151019-3+b1
-Installed-Size: 1856
+Version: 0.9.38.6+git20151019-3+b2
+Installed-Size: 1892
 Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: retroarch | libretro-frontend, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 11), libtrio2 (>= 1.16)
+Depends: retroarch | libretro-frontend, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 14), libtrio2 (>= 1.16)
 Description: Libretro wrapper for the Beetle PSX core
 Multi-Arch: same
 Homepage: https://github.com/libretro/beetle-psx-libretro
 Description-md5: 01137698581fed55d1ac4d25a749aa3b
 games
 Priority: optional
-Filename: pool/main/libr/libretro-beetle-psx/libretro-beetle-psx_0.9.38.6+git20151019-3+b1_amd64.deb
-Size: 317556
-MD5sum: 60744bf4689574846c9636a155d1af69
-SHA256: 3c71c9c99b304794d29c977aad293addd99f301b92808fea3935040adc0f96fc
+Filename: pool/main/libr/libretro-beetle-psx/libretro-beetle-psx_0.9.38.6+git20151019-3+b2_amd64.deb
+Size: 326348
+MD5sum: e920acce9a6983edc696234a721471dc
+SHA256: 9c5a388daf76a6fd4ef4b2ce0d81f8dd9ababcb49650a11ff8cb0bba381618f5
 
 Package: libretro-beetle-vb
 Source: libretro-beetle-vb (0.9.36.1+git20160623-2)
-Version: 0.9.36.1+git20160623-2+b2
+Version: 0.9.36.1+git20160623-2+b3
 Installed-Size: 222
 Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
 Architecture: amd64
@@ -9523,10 +9541,10 @@ Homepage: https://github.com/libretro/beetle-vb-libretro
 Description-md5: 198f87db895526e4f95f389f95ce8ead
 games
 Priority: optional
-Filename: pool/main/libr/libretro-beetle-vb/libretro-beetle-vb_0.9.36.1+git20160623-2+b2_amd64.deb
-Size: 76392
-MD5sum: 7cd761e0d74bfd765fb84f6a7920d58d
-SHA256: 57ec11adc60878f24342e47e97c67a8ee50cc72643fb82be6cc54e6af9af59c6
+Filename: pool/main/libr/libretro-beetle-vb/libretro-beetle-vb_0.9.36.1+git20160623-2+b3_amd64.deb
+Size: 76464
+MD5sum: 4d37e50bac170363ff1e3f77215e005d
+SHA256: 073670ff5533516fd894732bb8b68b7bcbb63353d0bf64a96f3db6c9c5c0646a
 
 Package: libretro-beetle-wswan
 Source: libretro-beetle-wswan (0.9.35.1+git20160623-2)
@@ -9548,8 +9566,8 @@ SHA256: ef0e790b673bd278b03ecc3ce7ab77ae8f9500b25b1a4ce177695b8f07f47fa0
 
 Package: libretro-desmume
 Source: libretro-desmume (0.9.11+git20160819+dfsg1-2)
-Version: 0.9.11+git20160819+dfsg1-2+b2
-Installed-Size: 3915
+Version: 0.9.11+git20160819+dfsg1-2+b3
+Installed-Size: 3987
 Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
 Architecture: amd64
 Depends: retroarch | libretro-frontend, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1), libtinyxml2.6.2v5 (>= 2.6.2)
@@ -9559,10 +9577,10 @@ Homepage: http://desmume.org
 Description-md5: 4fe41c3e595aa23b7e15d56bd43fcdf1
 games
 Priority: optional
-Filename: pool/main/libr/libretro-desmume/libretro-desmume_0.9.11+git20160819+dfsg1-2+b2_amd64.deb
-Size: 729388
-MD5sum: e2107df5d30e150d0f8e564fe92475a1
-SHA256: 7b187ffbeefc93ff6408fc1a5963f298145f48f44cf94cee79057fe150e8615c
+Filename: pool/main/libr/libretro-desmume/libretro-desmume_0.9.11+git20160819+dfsg1-2+b3_amd64.deb
+Size: 764020
+MD5sum: 95f89184217c4faa1e0ac3b43220b961
+SHA256: 4bc05890169adbe52f265834984173b704a3e2f106dfc0c99affdf49652f76ac
 
 Package: libretro-gambatte
 Source: libretro-gambatte (0.5.0+git20160522+dfsg1-3)
@@ -14154,11 +14172,11 @@ MD5sum: d9735697496e5f961d96429802933cda
 SHA256: ca8a81e8226333e2430a95444abe0de496d52bf4a5da8ffb639ae6dcc9606d63
 
 Package: pingus
-Version: 0.7.6-7
-Installed-Size: 2703
+Version: 0.7.6-8
+Installed-Size: 2358
 Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: pingus-data (= 0.7.6-7), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libgl1, libpng16-16t64 (>= 1.6.46), libsdl-image1.2 (>= 1.2.10), libsdl-mixer1.2 (>= 1.2.12), libsdl1.2debian (>= 1.2.15), libstdc++6 (>= 14)
+Depends: pingus-data (= 0.7.6-8), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libgl1, libpng16-16t64 (>= 1.6.46), libsdl-image1.2 (>= 1.2.10), libsdl-mixer1.2 (>= 1.2.12), libsdl1.2debian (>= 1.2.15), libstdc++6 (>= 14)
 Description: Free Lemmings(TM) clone
 Homepage: https://pingus.github.io/
 Description-md5: 8f187cbdfe37306cb6fe8e7d8b3c02a6
@@ -14166,15 +14184,15 @@ Tag: game::strategy, interface::graphical, interface::x11, role::program,
  uitoolkit::sdl, use::gameplaying, x11::application
 games
 Priority: optional
-Filename: pool/main/p/pingus/pingus_0.7.6-7_amd64.deb
-Size: 736084
-MD5sum: fbae1f579dc8b25b655f74a3acfb5a83
-SHA256: d466c8d90841a219db7dc5afeba301d8b8e82db9a4ff0796abeff39f8e3ff377
+Filename: pool/main/p/pingus/pingus_0.7.6-8_amd64.deb
+Size: 677564
+MD5sum: b90860987e14881c41926992b3aef904
+SHA256: dbce2a23c9648429f098e04be7ac276b9cf2a4749218a6e03bce1789b858068d
 
 Package: pingus-data
 Source: pingus
-Version: 0.7.6-7
-Installed-Size: 22679
+Version: 0.7.6-8
+Installed-Size: 22674
 Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
 Architecture: all
 Suggests: pingus
@@ -14185,10 +14203,10 @@ Description-md5: f91ae05891fb77aaf8c6a1ce8ca5ea6a
 Tag: game::strategy, role::app-data, role::program, use::gameplaying
 games
 Priority: optional
-Filename: pool/main/p/pingus/pingus-data_0.7.6-7_all.deb
-Size: 11697180
-MD5sum: f135691d03afd9c89fbadae30b8cc017
-SHA256: e1c69591ad0246dee21897334c359c2a38ca1c376a32dbaa9aeb380e74b08990
+Filename: pool/main/p/pingus/pingus-data_0.7.6-8_all.deb
+Size: 11685876
+MD5sum: 9052dfaf2dc1ae958f3b62ee6a61b607
+SHA256: ce64982a7f69bf16b3177b70d03f77417e1b2bb2f642e08c1bd51affb4f9857d
 
 Package: pink-pony
 Version: 1.4.1-7
