@@ -145,12 +145,12 @@ Size: 26400
 SHA256: 39c25c110406e36bcb5f973a1eb91ef2498480bdf4f12ef24e3610bd1ef34218
 
 Package: clamav
-Version: 1.0.9+dfsg-1~deb11u1
-Installed-Size: 15794
+Version: 1.4.3+dfsg-1~deb11u1
+Installed-Size: 20846
 Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
 Architecture: i386
-Depends: clamav-freshclam (>= 1.0.9+dfsg) | clamav-data, libc6 (>= 2.29), libclamav11 (>= 1.0.9), libcurl4 (>= 7.16.2), libgcc-s1 (>= 4.2), libjson-c5 (>= 0.15), libssl1.1 (>= 1.1.0), zlib1g (>= 1:1.2.3.3)
-Suggests: libclamunrar, clamav-docs
+Depends: clamav-freshclam (>= 1.4.3+dfsg) | clamav-data, libc6 (>= 2.29), libclamav12 (>= 1.4.3), libcurl4 (>= 7.16.2), libgcc-s1 (>= 4.2), libjson-c5 (>= 0.15), libssl1.1 (>= 1.1.0), zlib1g (>= 1:1.2.3.3)
+Suggests: libclamunrar, clamav-doc
 Description: anti-virus utility for Unix - command-line interface
 Homepage: https://www.clamav.net/
 Description-md5: fb7be82d5591a0f3facf827f0a60c5d6
@@ -158,9 +158,9 @@ Multi-Arch: foreign
 Recommends: clamav-base
 utils
 Priority: optional
-Filename: pool/updates/main/c/clamav/clamav_1.0.9+dfsg-1~deb11u1_i386.deb
-Size: 2771084
-SHA256: 166e50b0dd1c845663cba1b3369419bd05398a22922d1f0de5956a34b95cdf68
+Filename: pool/updates/main/c/clamav/clamav_1.4.3+dfsg-1~deb11u1_i386.deb
+Size: 5000952
+SHA256: 8e76cc8a0089c0c60a40ce1ddafbb4ce558cd31c49ace31c1c7e14702a499374
 
 Package: clamav-base
 Source: clamav
@@ -179,14 +179,32 @@ Filename: pool/updates/main/c/clamav/clamav-base_1.0.9+dfsg-1~deb11u1_all.deb
 Size: 141696
 SHA256: 6714edaf055b3f923cc3f29d33a04b227001706f22dffce558f11197be479b95
 
+Package: clamav-base
+Source: clamav
+Version: 1.4.3+dfsg-1~deb11u1
+Installed-Size: 201
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Architecture: all
+Depends: adduser, logrotate, ucf, debconf (>= 0.5) | debconf-2.0
+Description: anti-virus utility for Unix - base package
+Homepage: https://www.clamav.net/
+Description-md5: 701912f0a2cc626b57570094858a5b1d
+Multi-Arch: foreign
+Recommends: clamav
+utils
+Priority: optional
+Filename: pool/updates/main/c/clamav/clamav-base_1.4.3+dfsg-1~deb11u1_all.deb
+Size: 148440
+SHA256: 80df722b80809b7d154e08595d85d39c34e6fa684889d6ddaae9f835d1f0da90
+
 Package: clamav-daemon
 Source: clamav
-Version: 1.0.9+dfsg-1~deb11u1
-Installed-Size: 972
+Version: 1.4.3+dfsg-1~deb11u1
+Installed-Size: 994
 Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
 Architecture: i386
-Depends: adduser, clamav-base (= 1.0.9+dfsg-1~deb11u1), clamav-freshclam (>= 1.0.9+dfsg) | clamav-data, dpkg (>= 1.16.1), procps (>= 1:3.3.2), ucf, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.28), libclamav11 (>= 1.0.9), libcurl4 (>= 7.18.2), libncurses6 (>= 6), libsystemd0, libtinfo6 (>= 6), zlib1g (>= 1:1.2.0.2)
-Suggests: libclamunrar, apparmor, clamav-docs, daemon
+Depends: adduser, clamav-base (= 1.4.3+dfsg-1~deb11u1), clamav-freshclam (>= 1.4.3+dfsg) | clamav-data, dpkg (>= 1.16.1), procps (>= 1:3.3.2), ucf, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.28), libclamav12 (>= 1.4.3), libcurl4 (>= 7.18.2), libncurses6 (>= 6), libsystemd0, libtinfo6 (>= 6), zlib1g (>= 1:1.2.0.2)
+Suggests: libclamunrar, apparmor, clamav-doc, daemon
 Description: anti-virus utility for Unix - scanner daemon
 Homepage: https://www.clamav.net/
 Description-md5: dc258511e9e1f62ef33172c190a0fad6
@@ -194,19 +212,19 @@ Pre-Depends: init-system-helpers (>= 1.54~)
 Recommends: clamdscan
 utils
 Priority: optional
-Filename: pool/updates/main/c/clamav/clamav-daemon_1.0.9+dfsg-1~deb11u1_i386.deb
-Size: 258156
-SHA256: 8f78cff53fe0945c9fcbef2539f7132f8befd7cc2bf9c813405f8d1edf3de664
+Filename: pool/updates/main/c/clamav/clamav-daemon_1.4.3+dfsg-1~deb11u1_i386.deb
+Size: 261584
+SHA256: a4f8f4aeae2f36f041dc66d0f54f56581e9ac8bead6fece223bd86c3de1a93dc
 
 Package: clamav-freshclam
 Source: clamav
-Version: 1.0.9+dfsg-1~deb11u1
-Installed-Size: 409
+Version: 1.4.3+dfsg-1~deb11u1
+Installed-Size: 419
 Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
 Architecture: i386
 Provides: clamav-data
-Depends: clamav-base (>= 1.0.9+dfsg-1~deb11u1), dpkg (>= 1.16.1), logrotate, procps (>= 1:3.3.2), ucf, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.4), libclamav11 (>= 1.0.9)
-Suggests: apparmor, clamav-docs
+Depends: clamav-base (>= 1.4.3+dfsg-1~deb11u1), dpkg (>= 1.16.1), logrotate, procps (>= 1:3.3.2), ucf, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.4), libclamav12 (>= 1.4.3)
+Suggests: apparmor, clamav-doc
 Conflicts: clamav-data, libclamav2, libclamav3
 Description: anti-virus utility for Unix - virus database update utility
 Homepage: https://www.clamav.net/
@@ -214,18 +232,18 @@ Description-md5: 82c68e4f7c984e3d6bdc720ae842fca8
 Recommends: ca-certificates
 utils
 Priority: optional
-Filename: pool/updates/main/c/clamav/clamav-freshclam_1.0.9+dfsg-1~deb11u1_i386.deb
-Size: 202296
-SHA256: 369d8f646963d9414b7c3bf1f6fbd1ed0ae9a3081ab4932d7d55dd13d1c56b5a
+Filename: pool/updates/main/c/clamav/clamav-freshclam_1.4.3+dfsg-1~deb11u1_i386.deb
+Size: 210348
+SHA256: 2150bdf79a4f939dafdf8f7a7ed8e6c649835744ca458a1d371d501e6eb76c77
 
 Package: clamav-milter
 Source: clamav
-Version: 1.0.9+dfsg-1~deb11u1
-Installed-Size: 542
+Version: 1.4.3+dfsg-1~deb11u1
+Installed-Size: 553
 Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
 Architecture: i386
-Depends: adduser, clamav-base (>= 1.0.9+dfsg-1~deb11u1), clamav-freshclam (>= 1.0.9+dfsg) | clamav-data, dpkg (>= 1.16.1), logrotate, procps (>= 1:3.3.2), ucf, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.28), libclamav11 (>= 1.0.9), libmilter1.0.1
-Suggests: clamav-docs, daemon
+Depends: adduser, clamav-base (>= 1.4.3+dfsg-1~deb11u1), clamav-freshclam (>= 1.4.3+dfsg) | clamav-data, dpkg (>= 1.16.1), logrotate, procps (>= 1:3.3.2), ucf, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.28), libclamav12 (>= 1.4.3), libmilter1.0.1
+Suggests: clamav-doc, daemon
 Description: anti-virus utility for Unix - sendmail integration
 Homepage: https://www.clamav.net/
 Description-md5: e47a1194215b5fbde13fb9217c44d83f
@@ -233,9 +251,9 @@ Pre-Depends: init-system-helpers (>= 1.54~)
 Recommends: clamav-daemon
 utils
 Priority: optional
-Filename: pool/updates/main/c/clamav/clamav-milter_1.0.9+dfsg-1~deb11u1_i386.deb
-Size: 245808
-SHA256: 5be7d55fe878e93fed92f1d6383cd8a7370f21541ddd65bea23fa3106cf1c3c0
+Filename: pool/updates/main/c/clamav/clamav-milter_1.4.3+dfsg-1~deb11u1_i386.deb
+Size: 252768
+SHA256: 77a67c7488d42651e7da12cba082026ee9c2d8bc6df24d2f92f1b83934c45ede
 
 Package: clamav-testfiles
 Source: clamav
@@ -253,22 +271,38 @@ Filename: pool/updates/main/c/clamav/clamav-testfiles_1.0.9+dfsg-1~deb11u1_all.d
 Size: 2885492
 SHA256: 9c25c28a6dcb85e1a8f976db52599f79cd410ef1a149d30bdc575ee80c5b2417
 
+Package: clamav-testfiles
+Source: clamav
+Version: 1.4.3+dfsg-1~deb11u1
+Installed-Size: 6547
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Architecture: all
+Description: anti-virus utility for Unix - test files
+Homepage: https://www.clamav.net/
+Description-md5: 29437a0b8c82cc8179b64405688f062e
+Multi-Arch: foreign
+utils
+Priority: optional
+Filename: pool/updates/main/c/clamav/clamav-testfiles_1.4.3+dfsg-1~deb11u1_all.deb
+Size: 2886012
+SHA256: 645a125eb1247bf752443721ca7dc95ddd5bb635c145e8daef952b3b46b4d818
+
 Package: clamdscan
 Source: clamav
-Version: 1.0.9+dfsg-1~deb11u1
-Installed-Size: 235
+Version: 1.4.3+dfsg-1~deb11u1
+Installed-Size: 240
 Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
 Architecture: i386
-Depends: clamav-base (= 1.0.9+dfsg-1~deb11u1), libc6 (>= 2.28), libclamav11 (>= 1.0.9)
-Suggests: clamav-daemon, clamav-docs
+Depends: clamav-base (= 1.4.3+dfsg-1~deb11u1), libc6 (>= 2.28), libclamav12 (>= 1.4.3)
+Suggests: clamav-daemon, clamav-doc
 Description: anti-virus utility for Unix - scanner client
 Homepage: https://www.clamav.net/
 Description-md5: ad077e4c74b9870b6e7bb55aef11c547
 utils
 Priority: optional
-Filename: pool/updates/main/c/clamav/clamdscan_1.0.9+dfsg-1~deb11u1_i386.deb
-Size: 105712
-SHA256: ea9c8260b429b2d3cfe87bfb263da5665b0139ddb4ba17e497f10b327c2945c8
+Filename: pool/updates/main/c/clamav/clamdscan_1.4.3+dfsg-1~deb11u1_i386.deb
+Size: 106804
+SHA256: 1c9310fa12b9e8408625ae76b739355a6221a7e1d4c9339c29650222a2abba11
 
 Package: cups-ppdc
 Source: cups

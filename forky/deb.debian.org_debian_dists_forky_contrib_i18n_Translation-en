@@ -3260,34 +3260,6 @@ Description-en: Serious Sam: The Second Encounter
  This package alone isn't of any use; it only contains the game engine,
  you will need a copy of the original game for this package to be useful.
 
-Package: simplesnap
-Description-md5: 33b75cd389d8b320694dd2271ffbae47
-Description-en: Simple and powerful network transmission of ZFS snapshots
- simplesnap is a simple way to send ZFS snapshots across a net‐
- work. Although it can serve many purposes, its primary goal is
- to manage backups from one ZFS filesystem to a backup filesystem
- also running ZFS, using incremental backups to minimize network
- traffic and disk usage.
- .
- simplesnap it is designed to perfectly compliment
- snapshotting tools, permitting rotating backups with arbitrary
- retention periods. It lets multiple machines back up a single
- target, lets one machine back up multiple targets, and keeps it
- all straight.
- .
- simplesnap is easy; there is no configuration file needed. One
- ZFS property is available to exclude datasets/filesystems. ZFS
- datasets are automatically discovered on machines being backed
- up.
- .
- simplesnap  is robust in the face of interrupted
- transfers, and needs little help to keep running.
- .
- Unlike many similar tools, simplesnap does not
- require full root access to the machines being backed up. It
- runs only a small wrapper as root, and the wrapper has only three
- commands it implements.
-
 Package: spectemu-common
 Description-md5: 26bc6bd9e66de9535a2d1d86848d0e2c
 Description-en: Fast 48k ZX Spectrum Emulator (common files)
@@ -4005,17 +3977,6 @@ Description-en: enhanced version of id Software's Quake II - non-GUI part
  dedicated server engine is intended to be used via the wrapper script
  and init scripts in the quake2-server package.
 
-Package: zfs-auto-snapshot
-Description-md5: 50b5e87f01f77e852b84260e57dc2473
-Description-en: ZFS automatic snapshot service
- Automatically create, rotate, and destroy periodic ZFS snapshots. This is
- the utility that creates the @zfs-auto-snap_frequent, @zfs-auto-snap_hourly,
- @zfs-auto-snap_daily, @zfs-auto-snap_weekly, and @zfs-auto-snap_monthly
- snapshots if it is installed.
- .
- This program is a posixly correct bourne shell script. It depends only on
- the zfs utilities and cron, and can run in the dash shell.
-
 Package: libnvpair3linux
 Description-md5: dff01db1623b4ac78db22bcc089d9e49
 Description-en: Solaris name-value library for Linux
@@ -4181,21 +4142,6 @@ Description-en: command-line tools to manage OpenZFS filesystems
  This package provides the zfs and zpool commands to create and administer
  OpenZFS filesystems.
 
-Package: zfsnap
-Description-md5: 43c80483bf622b9e3c64221fe60f1f09
-Description-en: Automatic snapshot creation and removal for ZFS
- zfSnap is a simple sh script to make rolling zfs snapshots with cron. The main
- advantage of zfSnap is it's written in 100% pure /bin/sh so it doesn't require
- any additional software to run.
- .
- zfSnap keeps all information about snapshot in snapshot name.
- .
- zfs snapshot names are in the format of Timestamp--TimeToLive.
- .
- Timestamp includes the date and time when the snapshot was created and
- TimeToLive (TTL) is the amount of time for the snapshot to stay alive before
- it's ready for deletion.
-
 Package: matlab-zmat
 Description-md5: d2c1037544212de68d4fca45fdc1f59b
 Description-en: in-memory data compression for MATLAB
@@ -4206,47 +4152,4 @@ Description-en: in-memory data compression for MATLAB
  This package builds MATLAB bindings for zmat at installation
  time. Note that this package depends on MATLAB -- a commercial
  software that needs to be obtain and installed separately.
-
-Package: zsnapd
-Description-md5: ee391bd9f9e2859dc7517830f10d9ac4
-Description-en: ZFS Snapshot Daemon written in python
- Python daemon that manages ZFS snapshots and send/receive backup.
- Based on zfs-snap-manager.
- .
-   * Remote ZFS snapshoting/aging wnd replication back to central ZFS
-     backup server. Only need to install zfs-utils, zsnapd-rcmd (for secure)
-     remote ssh key login and sshd on client, and use root ssh key based
-     log in.
-   * Has connectivity test to skip scheduled actions when the remote site
-     cannot be contacted.  Actually quite useful for ZFS backing up laptops.
-     Reachability failures are logged of course!
-   * Uses Python3
-   * Native systemd support.
-   * Configuration is stored in configuration files with the ini file
-     format. Configuration .d parts directories also present
-   * Triggers the configured actions based on time or a '.trigger' file
-     present in the dataset's mountpoint.
-   * Can take snapshots (with a yyyymmddhhmm timestamp format).
-   * Can replicate snapshots to/from other nodes.
-   * Push based when the replication source has access to the replication
-     target.
-   * Pull based when the replication source has no access to the replication
-     target. Typically when you don't want to give all nodes access to the
-     backup/replication target.
-   * Cleans all snapshots with the yyyymmddhh timestamp schmea format based
-     on a GFS schema (Grandfather, Father, Son).  Timestamp
-     evaluation based on actual ZFS snapshot creation metadata.
-   * Supports pre and post commands.
-
-Package: zsnapd-rcmd
-Description-md5: a0cf528cccd501b75b937038ea930c64
-Description-en: Remote sshd command checker for ZFS Snapshot Daemon
- ZFS Snapshot Daemon is written in python, and it can remotely manage ZFS
- snapshotting and backup from a central back up server.  This is the
- security plugin command for sshd that implements ForceCommand functionality,
- or the command functionality in the .ssh/authorized_keys file (See
- the sshd_config(8) and sshd(8) man pages respectively).
- .
- It executes commands from the SSH_ORIGINAL_COMMAND variable after checking
- them against a list of configured regular expressions.
 
