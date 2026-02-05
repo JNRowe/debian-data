@@ -1225,7 +1225,7 @@ SHA256: 02aab59cc5d815527a898703dcedd05bc846074aa4cca5c26090d337407a15b7
 
 Package: asl-tools
 Source: asl (0.1.7-5)
-Version: 0.1.7-5+b1
+Version: 0.1.7-5+b2
 Installed-Size: 82
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -1236,10 +1236,10 @@ Homepage: http://asl.org.il
 Description-md5: 16f6ee8e5a6339bc91835d5e2214979e
 utils
 Priority: optional
-Filename: pool/main/a/asl/asl-tools_0.1.7-5+b1_amd64.deb
-Size: 25140
-MD5sum: 6a9b1a80bc4c7bf8881162c330425565
-SHA256: 99f3ede661ff801b3fff0a149b3d848be5b060aff7741b3925a6d141bbc6de28
+Filename: pool/main/a/asl/asl-tools_0.1.7-5+b2_amd64.deb
+Size: 25160
+MD5sum: 4d39d3e96ec206c5dd24ad344e7e6242
+SHA256: fd64f74a2a7014254fc52a86ea3cd34d3f00b134343d42ca7edd21139d3e314d
 
 Package: assimp-utils
 Source: assimp
@@ -7267,12 +7267,12 @@ MD5sum: 2023644c91a1200f2f212d9df57d6916
 SHA256: 0a57e3446ab5c28ba382317515ec1b3ff748b6f723f2f733f88d09359fa46f19
 
 Package: dracut
-Version: 109-9
+Version: 109-11
 Installed-Size: 44
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
 Provides: linux-initramfs-tool
-Depends: dracut-core (<< 109-9+b+~), dracut-core (>= 109-9), linux-base
+Depends: dracut-core (<< 109-11+b+~), dracut-core (>= 109-11), linux-base
 Suggests: dracut-network
 Conflicts: initramfs-tools, live-tools
 Description: Initramfs generator using udev
@@ -7282,36 +7282,37 @@ Description-md5: ff5d73107edf988d1308accca8de03f4
 Tag: implemented-in::c
 utils
 Priority: optional
-Filename: pool/main/d/dracut/dracut_109-9_all.deb
-Size: 16432
-MD5sum: 6ab36180c31ff3f3f459cfd431f5da50
-SHA256: 51aa45b396d24ab1c98a0f60d667a597dfcb89664513e50fd4d7bb0512efc489
+Filename: pool/main/d/dracut/dracut_109-11_all.deb
+Size: 16632
+MD5sum: 363cd5abb3096ba6581f51f16f18802c
+SHA256: eb4ecb8c4e0f6e1c8b20a740af4c80238bdc8f756cbb499f42d19c5437e12e1c
 
 Package: dracut-core
 Source: dracut
-Version: 109-9
-Installed-Size: 1188
+Version: 109-11
+Installed-Size: 1249
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
-Replaces: dracut-live (<< 059-2), dracut-network (<< 057+157-2)
+Replaces: dracut-live (<< 109-10~), dracut-network (<< 057+157-2), dracut-squash
+Provides: dracut-live
 Depends: 3cpio | cpio, dracut-install, e2fsprogs, kmod, systemd-sysv | initscripts | sysvinit-core, udev, libc6 (>= 2.38)
 Recommends: binutils, console-setup, systemd, zstd
-Suggests: cryptsetup, dmsetup, kpartx, lvm2, mdadm, systemd-cryptsetup
-Breaks: dracut-live (<< 059-2), dracut-network (<< 057+157-2)
+Suggests: cryptsetup, dmsetup, isomd5sum, kpartx, lvm2, mdadm, parted, squashfs-tools, systemd-cryptsetup
+Breaks: dracut-live (<< 109-10~), dracut-network (<< 057+157-2), dracut-squash
 Description: dracut is an event driven initramfs infrastructure (core tools)
 Multi-Arch: foreign
 Homepage: https://github.com/dracut-ng/dracut-ng/wiki
-Description-md5: e406aeff68e5d5052162d2536e974a68
+Description-md5: 85208e115299ec0ab2b6173761a71ced
 utils
 Priority: optional
-Filename: pool/main/d/dracut/dracut-core_109-9_amd64.deb
-Size: 315312
-MD5sum: 79fdce1f4652b5a1861078ac38ea6886
-SHA256: ca83d32877e3cc145952bb86cd7c5d9aff185222eee8d314a9fe20ed8ae83946
+Filename: pool/main/d/dracut/dracut-core_109-11_amd64.deb
+Size: 324532
+MD5sum: 3164e14b57ee650931bf6ddb1304d8f2
+SHA256: 2cd976949e86a7e967a3aa4ea66589b090b357d63557e061afd7de5bef1f61a0
 
 Package: dracut-install
 Source: dracut
-Version: 109-9
+Version: 109-11
 Installed-Size: 115
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
@@ -7323,78 +7324,36 @@ Homepage: https://github.com/dracut-ng/dracut-ng/wiki
 Description-md5: bee7fbb3b186a4a78e8728d317c6259f
 utils
 Priority: optional
-Filename: pool/main/d/dracut/dracut-install_109-9_amd64.deb
-Size: 45984
-MD5sum: ac633db3a885594288bc9bcaf23ec277
-SHA256: 96cfb68615b92a7e7f58c1383bf3606992cfe20d7889c199ef15780675b48977
-
-Package: dracut-live
-Source: dracut
-Version: 109-9
-Installed-Size: 83
-Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
-Architecture: all
-Replaces: dracut-core (<< 050-1), dracut-network (<< 050-1)
-Depends: dmsetup, dracut-core, parted
-Recommends: dracut-network
-Suggests: isomd5sum
-Breaks: dracut-core (<< 050-1), dracut-network (<< 050-1)
-Description: dracut is an event driven initramfs infrastructure (live image modules)
-Multi-Arch: foreign
-Homepage: https://github.com/dracut-ng/dracut-ng/wiki
-Description-md5: 82eda9955b37992c0f2f77558a84b7d8
-utils
-Priority: optional
-Filename: pool/main/d/dracut/dracut-live_109-9_all.deb
-Size: 22916
-MD5sum: e5f258896774d7dc0c4205752529264c
-SHA256: 418c9ff9bd9dcdf3b400f0f4604a0c5a3344429911ca841b9597fb018c609d82
+Filename: pool/main/d/dracut/dracut-install_109-11_amd64.deb
+Size: 46200
+MD5sum: 9c512e96c52b42de0affd9796a5117e9
+SHA256: a820506b67eea50b2a0f8c84c75d85ca347a982e5f53aad23e8f2eb65ce5d21a
 
 Package: dracut-network
 Source: dracut
-Version: 109-9
-Installed-Size: 300
+Version: 109-11
+Installed-Size: 311
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Replaces: dracut-core (<< 105)
+Replaces: dracut-core (<< 105), dracut-live (<< 109-10~)
 Depends: dracut-core, iproute2, iputils-arping, network-manager | systemd | connman | isc-dhcp-client
 Recommends: curl, nbd-client, nfs-common, open-iscsi
 Suggests: iscsiuio
-Breaks: dracut-core (<< 105)
+Breaks: dracut-core (<< 105), dracut-live (<< 109-10~)
 Description: dracut is an event driven initramfs infrastructure (network modules)
 Multi-Arch: foreign
 Homepage: https://github.com/dracut-ng/dracut-ng/wiki
 Description-md5: 35b333bb5f6987592870eaf905d6c38d
 utils
 Priority: optional
-Filename: pool/main/d/dracut/dracut-network_109-9_all.deb
-Size: 60880
-MD5sum: a4368186af0c5c79796c34a946afafcb
-SHA256: 84135fd2b39f301cb59c9bbfec0cf80b531b22bfcfe4ce4a5d78e377c177fa79
-
-Package: dracut-squash
-Source: dracut
-Version: 109-9
-Installed-Size: 39
-Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
-Architecture: all
-Replaces: dracut-core (<< 050-1)
-Depends: dracut-core, squashfs-tools
-Breaks: dracut-core (<< 050-1)
-Description: dracut is an event driven initramfs infrastructure (squashfs modules)
-Multi-Arch: foreign
-Homepage: https://github.com/dracut-ng/dracut-ng/wiki
-Description-md5: 85a5b251b3f335a51a518f8d85951f68
-utils
-Priority: optional
-Filename: pool/main/d/dracut/dracut-squash_109-9_all.deb
-Size: 14164
-MD5sum: 633461d55ebec2537e2803f501f23117
-SHA256: a00f3ffcbd7638c63e8591ef025bf3cae2a37bb90509f3d25adaa48acf913cce
+Filename: pool/main/d/dracut/dracut-network_109-11_all.deb
+Size: 62924
+MD5sum: b7a937215184e4fe10d92b2517a6689e
+SHA256: 280cfc7d8601fb41a9fab4b4f9495115bc8037d7f3ce93a8dd59e4af8ca080ba
 
 Package: dracut-test
 Source: dracut
-Version: 109-9
+Version: 109-11
 Installed-Size: 41
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
@@ -7407,10 +7366,10 @@ Homepage: https://github.com/dracut-ng/dracut-ng/wiki
 Description-md5: 8d61cc1c22fa1423fe1de3ee6f21f018
 utils
 Priority: optional
-Filename: pool/main/d/dracut/dracut-test_109-9_amd64.deb
-Size: 13652
-MD5sum: 6fba6aaaa0edc0c96fa1b5f022f0bc8c
-SHA256: b0677a4dae78b2beeeb659703b803b25f930fcd029365004becdf82a4637b443
+Filename: pool/main/d/dracut/dracut-test_109-11_amd64.deb
+Size: 13832
+MD5sum: 95799ad65a6ac54c3b123859df76a7ac
+SHA256: a0053c2c2fc081d1d06c090646a902ba26874dca1fd45a281dda9f51bdc8e8c3
 
 Package: droidlysis
 Version: 3.4.7-1
@@ -12680,21 +12639,20 @@ MD5sum: 21151772ae93962cf7fa2cdffc64ef6c
 SHA256: 1d75638a3fba828095a6136769a71630522cfca5cb739740de6a4054c2f564ba
 
 Package: freedom-maker
-Version: 0.34
-Installed-Size: 228
+Version: 0.35
+Installed-Size: 223
 Maintainer: FreedomBox Packaging Team <team+freedombox@tracker.debian.org>
 Architecture: all
-Depends: python3:any, binfmt-support | systemd, btrfs-progs, debootstrap, dmsetup, dosfstools, fdisk, git, kpartx, parted, psmisc, qemu-user-static, qemu-utils, sshpass, sudo, systemd-resolved, u-boot-tools, xz-utils
-Suggests: virtualbox
+Depends: python3:any, btrfs-progs, debootstrap, dmsetup, dosfstools, fdisk, git, kpartx, parted, psmisc, qemu-user-binfmt, qemu-utils, sshpass, sudo, systemd, systemd-resolved, u-boot-tools, xz-utils
 Description: FreedomBox image builder
 Homepage: https://freedombox.org
 Description-md5: f50a45a80368bfd371fcf05cdf43742c
 utils
 Priority: extra
-Filename: pool/main/f/freedom-maker/freedom-maker_0.34_all.deb
-Size: 51348
-MD5sum: 89f2be5329203aab23d1f98a0261b503
-SHA256: f1111eaf40ad043e75ac635c357b808c28e4c9dc17ef1c0fd4048dfe5ca1a5ac
+Filename: pool/main/f/freedom-maker/freedom-maker_0.35_all.deb
+Size: 51272
+MD5sum: 5ef6c9dc7b460ebc14c36bdcda9893bc
+SHA256: 762456597077c3edddff965351b0a9337c9492432bc147118f45d4c60756e27a
 
 Package: freefilesync
 Version: 13.7-2
@@ -12945,6 +12903,22 @@ Filename: pool/main/f/fuse3/fuse3_3.18.1-1_amd64.deb
 Size: 42340
 MD5sum: 603a67c0a031c373c7a9c81820dd9d17
 SHA256: c0b9844ec4c201cfda6abc215dd92ce503ffdb03754b5a77e2f64515d3c78583
+
+Package: fvs
+Version: 0.3.4-1
+Installed-Size: 85
+Maintainer: Seyed Mohamad Amin Modaresi <modaresisofthard@proton.me>
+Architecture: all
+Depends: python3-orjson, python3:any
+Description: File Versioning System
+Homepage: https://github.com/mirkobrombin/FVS
+Description-md5: 3404ede576300d565e7e06e437ee23cd
+utils
+Priority: optional
+Filename: pool/main/f/fvs/fvs_0.3.4-1_all.deb
+Size: 14620
+MD5sum: 7cab0d6a8216a9f7b21c24c7d69f608f
+SHA256: 2f3965fbae48d55437b4c658ecdc3889f576ae3fbbc3d2e487d4006dc4f32ab2
 
 Package: fyi
 Version: 1.0.4-1
@@ -23168,9 +23142,9 @@ MD5sum: 22ae391ea22a55a11fb2ad6f29cf54f5
 SHA256: 3f93ce8118b171a72e42b2b5dd62aae5f6cf1f8a368685d305ec3c8a0717a1d9
 
 Package: lttng-tools
-Source: ltt-control (2.14.0-1)
-Version: 2.14.0-1+b2
-Installed-Size: 5959
+Source: ltt-control
+Version: 2.14.1-1
+Installed-Size: 6178
 Maintainer: Jon Bernard <jbernard@debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libkmod2 (>= 5~), liblttng-ctl0t64 (>= 2.14.0), liblttng-ust-common1t64 (>= 2.14.0~), liblttng-ust-ctl6 (>= 2.14.0), libpopt0 (>= 1.14), libstdc++6 (>= 14), liburcu8t64 (>= 0.13.0), libxml2-16 (>= 2.14.1)
@@ -23182,10 +23156,10 @@ Homepage: https://lttng.org/
 Description-md5: 7b1ddadc5c0e006d514c38704904991e
 utils
 Priority: optional
-Filename: pool/main/l/ltt-control/lttng-tools_2.14.0-1+b2_amd64.deb
-Size: 1557292
-MD5sum: 4660d654ef45f7df442cd8e9abe4a8cd
-SHA256: 6fa417cb4abcb772832fc19915d4ff6fd4b55aa0d1776eb1f832afd1273a451e
+Filename: pool/main/l/ltt-control/lttng-tools_2.14.1-1_amd64.deb
+Size: 1605024
+MD5sum: f3049d4067ba63f84f041b76ecf6e4e3
+SHA256: d4d1513c2d7ca8ac4cf11022083deaa662e70afba3aa04c88bfb94e250b6c6b2
 
 Package: ltunify
 Source: ltunify (0.3-1)
@@ -29777,20 +29751,20 @@ MD5sum: c8330311ac2b210309c7515b0306a7a8
 SHA256: b6ec7b1d5db84332f90b2cc746c426e2cd906c17e995c44615da4b506c2ba1d0
 
 Package: pyinstaller
-Version: 6.16.0+ds-1
-Installed-Size: 102
+Version: 6.18.0+ds-1
+Installed-Size: 104
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
-Depends: python3-pyinstaller (>= 6.16.0+ds-1), python3:any
+Depends: python3-pyinstaller (>= 6.18.0+ds-1), python3:any
 Description: Utility to bundle a Python application into a single package
 Homepage: https://pyinstaller.org/en/stable/
 Description-md5: 266658dadbe4b071c6cba25fa20564b2
 utils
 Priority: optional
-Filename: pool/main/p/pyinstaller/pyinstaller_6.16.0+ds-1_all.deb
-Size: 82904
-MD5sum: ad6bf740b35b8addd09cd147eef7e0a7
-SHA256: 2a59de50232595085dbd7b8cbd5a59c747f21076574fc32dcb412d836b241a42
+Filename: pool/main/p/pyinstaller/pyinstaller_6.18.0+ds-1_all.deb
+Size: 83940
+MD5sum: d5863b57077a191ac98eb3636c2e31e4
+SHA256: 1962d67675b850ca14e42794dae92f07df191aef769860e573b041fb03044395
 
 Package: pyinstaller-hooks-contrib
 Version: 2025.11-1
@@ -29875,21 +29849,21 @@ MD5sum: 6b8066ee0f5020d628bbf22b8bde49bc
 SHA256: 0b6f32dcc646474874c4794585a334ca3c77ed7a2fd5aa5757cf7d870f9ec83e
 
 Package: pyosmium
-Version: 4.2.0-2
-Installed-Size: 28
+Version: 4.3.0-1
+Installed-Size: 30
 Maintainer: Debian GIS Project <pkg-grass-devel@lists.alioth.debian.org>
 Architecture: all
-Depends: python3-pyosmium (>= 4.2.0-2)
+Depends: python3-pyosmium (>= 4.3.0-1)
 Description: Osmium library bindings for Python - utilities
 Homepage: https://osmcode.org/pyosmium/
 Description-md5: 44cc9411ac4846772df01ae6a7baa004
 Tag: implemented-in::python, role::program
 utils
 Priority: optional
-Filename: pool/main/p/pyosmium/pyosmium_4.2.0-2_all.deb
-Size: 13324
-MD5sum: bea63496c2157f9db3503dfbbf86e714
-SHA256: c129782f5d7c4bcc880b0a7144f0e0bb3bce1f610dd5d96a9fae433cc01ea677
+Filename: pool/main/p/pyosmium/pyosmium_4.3.0-1_all.deb
+Size: 13572
+MD5sum: 6530d08934493f13f03766c7d23fceae
+SHA256: 52c1aa419ceb1dfd3a6faa23c8e7d21611ff8c33b8fc2de7c7ec155799b34915
 
 Package: pyp
 Version: 3.0.9-1
@@ -32250,6 +32224,22 @@ Filename: pool/main/r/rnp/rnp_0.18.1-1+b1_amd64.deb
 Size: 173304
 MD5sum: 19aa162a8b4b92ddda046f8f5aef1c11
 SHA256: 6b94f12f37c59e13d3b775beb5ad2546a8fd47f286655d0aad40d80c8d71e3bb
+
+Package: rofimoji
+Version: 6.7.0+dfsg-1
+Installed-Size: 3330
+Maintainer: Johannes Schauer Marin Rodrigues <josch@debian.org>
+Architecture: all
+Depends: python3-configargparse, python3:any, rofi | wofi | fuzzel | suckless-tools | tofi | wmenu, wl-clipboard | xclip | xsel, wtype | xdotool
+Description: Emoji picker for rofi and other dmenu-derivatives
+Homepage: https://github.com/fdw/rofimoji
+Description-md5: 7da2938173ccf7156d6ef37f1dd2db4f
+utils
+Priority: optional
+Filename: pool/main/r/rofimoji/rofimoji_6.7.0+dfsg-1_all.deb
+Size: 746092
+MD5sum: 75883dd4e0538901543ec012bd5383c0
+SHA256: 32ef9325a6fb79c75166e3f387cca7a45160ad02365e8ac90e854314cdeb3e9d
 
 Package: tf-tools
 Source: ros-geometry (1.13.2-11)
@@ -36960,6 +36950,22 @@ Size: 53896
 MD5sum: f544f8166142e408e3e2af284ee5a02e
 SHA256: 0b0c16d91903ebb0cf4956e6b5d166f481c3540ae4055ce04757106d1f5b4650
 
+Package: solarpowerlog
+Version: 0.26-1
+Installed-Size: 1405
+Maintainer: Tobias Frost <tobi@debian.org>
+Architecture: amd64
+Depends: libboost-program-options1.83.0 (>= 1.83.0), libboost-thread1.83.0 (>= 1.83.0), libc6 (>= 2.42), libconfig++11 (>= 1.7.3), libcppdb0t64 (>= 0.3.1+dfsg), libgcc-s1 (>= 3.0), liblog4cxx15 (>= 1.5.0), libstdc++6 (>= 14)
+Description: photovoltaic data logging
+Homepage: https://github.com/coldtobi/solarpowerlog
+Description-md5: 248a9712a9c6622aaab8141c552cd1aa
+utils
+Priority: optional
+Filename: pool/main/s/solarpowerlog/solarpowerlog_0.26-1_amd64.deb
+Size: 403096
+MD5sum: 137f41c65b9152209d5d646ac0521dc3
+SHA256: 11f928eb5c790372cde61c0161e3b2ba7cf9a825022f4abac4bbabfef2c1fbde
+
 Package: solo-python
 Source: solo1-cli
 Version: 0.1.1-6
@@ -37363,21 +37369,21 @@ MD5sum: 05dba1f3cad47b1948d6c33ad7041079
 SHA256: 3d46bf43a1018fcd31ceff52dde4805e9e7fe0538d77a6008e75844d18cff9a3
 
 Package: sscg
-Version: 3.0.8-2
-Installed-Size: 79
+Version: 4.0.3-1
+Installed-Size: 83
 Maintainer: Stephen Gallagher <sgallagh@redhat.com>
 Architecture: amd64
-Depends: libc6 (>= 2.34), libpath-utils1t64 (>= 0.4.0), libpopt0 (>= 1.14), libssl3t64 (>= 3.0.0), libtalloc2 (>= 2.0.4~git20101213)
+Depends: libc6 (>= 2.34), libpopt0 (>= 1.14), libssl3t64 (>= 3.0.0), libtalloc2 (>= 2.0.4~git20101213)
 Recommends: python3, powertop
 Description: simple SSL certificate generator
 Homepage: https://github.com/sgallagher/sscg/
 Description-md5: ece20c21fab1fe7904042f7eb4af9417
 utils
 Priority: optional
-Filename: pool/main/s/sscg/sscg_3.0.8-2_amd64.deb
-Size: 25932
-MD5sum: 5c078b7de6b436ab0e44fdc177668687
-SHA256: 835458b6714c0aaeaa163b62087ba3c80e0b2b7d62439de4d3827fe8405ec979
+Filename: pool/main/s/sscg/sscg_4.0.3-1_amd64.deb
+Size: 26756
+MD5sum: 9b744286690deb1a4ee640f0c83032c3
+SHA256: 902570014a9a768129c7daeea206dfb030a50b9c9f95cb5a93d36110c04e6ddb
 
 Package: ssed
 Version: 3.62-8.1
@@ -39624,21 +39630,21 @@ SHA256: 9a97feb5e0fe5c25568d721e51ac78f0576b868972f7eb26f1b88b32ace88834
 
 Package: libtpm2-pkcs11-tools
 Source: tpm2-pkcs11
-Version: 1.9.1-0.1
+Version: 1.9.1-0.2
 Installed-Size: 20
 Maintainer: Alvin Chen <sonoma001@gmail.com>
 Architecture: all
-Depends: python3-tpm2-pkcs11-tools (>= 1.9.1-0.1), python3:any
+Depends: python3-tpm2-pkcs11-tools (>= 1.9.1-0.2), python3:any
 Description: pkcs11 library for tpm2 - command-line tools
 Multi-Arch: foreign
 Homepage: https://github.com/tpm2-software/tpm2-pkcs11
 Description-md5: f30368c63efd400e8c584a69c79bd156
 utils
 Priority: optional
-Filename: pool/main/t/tpm2-pkcs11/libtpm2-pkcs11-tools_1.9.1-0.1_all.deb
-Size: 6336
-MD5sum: 243fe1a583caa334db14909281315bbd
-SHA256: 06fa7c1733369bbf68ca8d6baa152a881e3aff4e29e5f201787c449c2141f2c3
+Filename: pool/main/t/tpm2-pkcs11/libtpm2-pkcs11-tools_1.9.1-0.2_all.deb
+Size: 6464
+MD5sum: 36c8c088cde58696930d78bc6db1d909
+SHA256: 063fb82ac532dd30b294354cf082012cf75004d4fe6f27d56885a5fb84876dfa
 
 Package: tpm2-tools
 Version: 5.7-1
@@ -40918,8 +40924,8 @@ MD5sum: f8e75d0a4ebcbeba5fdda8dd03b13439
 SHA256: 6d03ff7107f166841df70fa1b4fd19f13b574d25235c5a4e0efdb4abf51c0298
 
 Package: units
-Version: 2.24-2
-Installed-Size: 899
+Version: 2.25-1
+Installed-Size: 906
 Maintainer: Stephen Kitt <skitt@debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34), libreadline8t64 (>= 6.0)
@@ -40932,10 +40938,10 @@ Tag: implemented-in::c, interface::commandline, interface::text-mode,
  use::converting
 utils
 Priority: optional
-Filename: pool/main/u/units/units_2.24-2_amd64.deb
-Size: 321700
-MD5sum: 04404555e0012f80622311dddae14242
-SHA256: fff2c90ef863ef66300b80cd0416f73b7e3ae39050011d8e8099e28787f8f347
+Filename: pool/main/u/units/units_2.25-1_amd64.deb
+Size: 329132
+MD5sum: 6ef7c5ae68a6b4e7d1ca791397338281
+SHA256: 5d64de40a359d517143b6c85f9ccf63556fbdd2f8153ed10fcff6e7a1f84edd9
 
 Package: unmass
 Version: 0.9-8

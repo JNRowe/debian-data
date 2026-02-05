@@ -4517,6 +4517,25 @@ Size: 32188
 MD5sum: f35d66ddd3ca3afc15745f474f5b8951
 SHA256: 86c6da5dafdaefa103e1b46daa124cf229dbb3e6130f94e6f8073d643e4c88fc
 
+Package: gmediarender
+Source: gmrender-resurrect
+Version: 0.3-3
+Installed-Size: 175
+Maintainer: Tobias Frost <tobi@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libglib2.0-0t64 (>= 2.28.0), libgstreamer1.0-0 (>= 1.0.0), libixml11t64 (>= 1:1.14.0), libupnp17t64 (>= 1:1.14.0)
+Recommends: gstreamer1.0-plugins-good, gstreamer1.0-plugins-base, gstreamer1.0-alsa
+Suggests: gstreamer1.0-plugins-ugly, gstreamer1.0-plugins-bad
+Description: Small headless UPnP media renderer
+Homepage: https://github.com/hzeller/gmrender-resurrect
+Description-md5: 22bc7578d815e1e0f92e4c3af8a98477
+sound
+Priority: optional
+Filename: pool/main/g/gmrender-resurrect/gmediarender_0.3-3_amd64.deb
+Size: 73680
+MD5sum: 373e06933e129e44ac568c11be42e68f
+SHA256: 030947b6d86a946c70b78db2589bb1c0f4a4d330609a790b34b75cfd3faa06ea
+
 Package: gmtp
 Version: 1.3.11-4
 Installed-Size: 416
@@ -7176,22 +7195,38 @@ Size: 104128
 MD5sum: 07bfd6f0a023a3b1208f487917dd6fb3
 SHA256: d634c90b8612d5d8d8d2073cb73d93f295bb826319dea2b8bf42f0479756fcd9
 
-Package: mopidy-beets
-Version: 4.0.1-1
-Installed-Size: 64
-Maintainer: Stein Magnus Jodal <jodal@debian.org>
+Package: mopidy-alsamixer
+Version: 2.0.1-2
+Installed-Size: 38
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
-Depends: mopidy (>= 3.0.0), python3-pkg-resources, python3-pykka (>= 2.0.1), python3-requests, python3:any
+Depends: python3-alsaaudio, mopidy (>= 3.0.0), python3-pykka (>= 2.0.1), python3:any
+Description: Mopidy extension for volume control via ALSA
+Homepage: https://mopidy.com/
+Description-md5: 75201ed0448f572a3c295cedc0b10ef2
+sound
+Priority: optional
+Filename: pool/main/m/mopidy-alsamixer/mopidy-alsamixer_2.0.1-2_all.deb
+Size: 7300
+MD5sum: b8604ce563ab0329c6c282109010393e
+SHA256: 43a87f258f18cc4dbb4a0469d4d248c5d43f1dadcdd1799af7d2de65bd69073f
+
+Package: mopidy-beets
+Version: 4.0.1-2
+Installed-Size: 63
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: mopidy (>= 3.0.0), python3-pykka (>= 2.0.1), python3-requests, python3:any
 Suggests: beets
 Description: Mopidy extension for playing music from Beets' web plugin
 Homepage: https://github.com/mopidy/mopidy-beets
 Description-md5: ac1b5887a1899b8ed40181ee5e281a40
 sound
 Priority: optional
-Filename: pool/main/m/mopidy-beets/mopidy-beets_4.0.1-1_all.deb
-Size: 13896
-MD5sum: 9ad4cdf47cb5d934e88efa0abfb7db51
-SHA256: 4c6861d359eeaadb5c18c5cc4ad1070dd149aab8c4cd10573c11a174e93c0f7a
+Filename: pool/main/m/mopidy-beets/mopidy-beets_4.0.1-2_all.deb
+Size: 13340
+MD5sum: 2d2f352d9b385994b1e6ade51ed2b17c
+SHA256: c61467c20fdea9cc56041c4e3929a5893d747f83d446560c053b66a07b356763
 
 Package: mopidy-dleyna
 Version: 2.0.2-3
@@ -7210,6 +7245,22 @@ Size: 29792
 MD5sum: 04b99194d9e71176c718fa058d2146ca
 SHA256: b781c505189ede588e96677eebe12b0e6130d24abc89bf756be59733afd1f46e
 
+Package: mopidy-internetarchive
+Version: 3.0.1-3
+Installed-Size: 57
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: mopidy (>= 3.0.0), python3-cachetools, python3-pykka (>= 2.0.1), python3-requests, python3-uritools, python3:any
+Description: Mopidy extension for playing music from the Internet Archive
+Homepage: https://github.com/tkem/mopidy-internetarchive
+Description-md5: 2fa52e20fcd15b0504442a2ef7f61453
+sound
+Priority: optional
+Filename: pool/main/m/mopidy-internetarchive/mopidy-internetarchive_3.0.1-3_all.deb
+Size: 12144
+MD5sum: 5defbb8050180d6a60f62ef4299ab387
+SHA256: da7a4bd3e6f90c4026b0bd4f61e018db6a330daefef03b05df6aa8adbae40a4a
+
 Package: mopidy-local
 Version: 3.3.0-2
 Installed-Size: 131
@@ -7225,6 +7276,22 @@ Filename: pool/main/m/mopidy-local/mopidy-local_3.3.0-2_all.deb
 Size: 25384
 MD5sum: adc1ccc22c876c4c4131e756d62ffeba
 SHA256: c29309f5e31f376698eee9159978e10cb8e5940462dc20f299e4cbfe97bbd3da
+
+Package: mopidy-mpd
+Version: 3.3.0-2
+Installed-Size: 181
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: mopidy (>= 3.3.0), python3-pykka (>= 2.0.1), python3:any
+Description: Mopidy extension for controlling Mopidy from MPD clients
+Homepage: https://mopidy.com/
+Description-md5: 01a97d2ce8a536b86463ba8462de1bf6
+sound
+Priority: optional
+Filename: pool/main/m/mopidy-mpd/mopidy-mpd_3.3.0-2_all.deb
+Size: 38700
+MD5sum: b7fae1d477bab445777eda840367bdda
+SHA256: 437d89da527226fa8f82b163204ac188627f00f46782ba678b3cf59887b48d77
 
 Package: mopidy-mpris
 Version: 3.0.3-2
@@ -7260,6 +7327,22 @@ Size: 27456
 MD5sum: 3b2c436545491f2d230a02051779d5dc
 SHA256: 34b883fd4ba72cc70fac19a0dcd980eb2aae3adf1a466a3fde4d7b3a3ac5ebef
 
+Package: mopidy-podcast-itunes
+Version: 3.0.1-2
+Installed-Size: 51
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: mopidy (>= 3.0.0), mopidy-podcast (>= 3.0.0), python3-pykka (>= 2.0.1), python3-requests, python3:any
+Description: Mopidy extension for searching and browsing iTunes podcasts
+Homepage: https://github.com/tkem/mopidy-podcast-itunes
+Description-md5: 6a130c60a855e967fa13990db428febe
+sound
+Priority: optional
+Filename: pool/main/m/mopidy-podcast-itunes/mopidy-podcast-itunes_3.0.1-2_all.deb
+Size: 9984
+MD5sum: 7dd6e4833032a83b682e34b00b0d24a1
+SHA256: a86abcef64667c82fa16f9409102eac9f10786a1834f4faf46688ae4e36b47f3
+
 Package: mopidy-scrobbler
 Version: 2.0.1-2
 Installed-Size: 32
@@ -7277,36 +7360,52 @@ MD5sum: 60fb7788897773eb12ccbf7cd378b6bb
 SHA256: 3f0b11d8e6fb0aa74d8c73a83d95c16e5dff8ff9001185d21853441a087c3693
 
 Package: mopidy-somafm
-Version: 2.0.2-1
+Version: 2.0.2-2
 Installed-Size: 41
-Maintainer: Stein Magnus Jodal <jodal@debian.org>
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
-Depends: mopidy (>= 3.0), python3-pkg-resources, python3-pykka (>= 2.0.1), python3-requests, python3:any
+Depends: mopidy (>= 3.0), python3-pykka (>= 2.0.1), python3-requests, python3:any
 Description: Mopidy extension for playing music from SomaFM
 Homepage: https://github.com/AlexandrePTJ/mopidy-somafm
 Description-md5: b6bb55788a0fcbb4eaf1be138869126d
 sound
 Priority: optional
-Filename: pool/main/m/mopidy-somafm/mopidy-somafm_2.0.2-1_all.deb
+Filename: pool/main/m/mopidy-somafm/mopidy-somafm_2.0.2-2_all.deb
 Size: 8848
-MD5sum: 1bee19dd6e17d6d5c04d804eb41b7603
-SHA256: c997e1db0112cef8feb6d2476155ecb9be98e09a4bbcd2c9858e1148a6f4a45c
+MD5sum: eaeedf869d0d6fd7f856f14337edccfe
+SHA256: f14e3878a024bd632013f9c57152e1bf44d6f7b78eec44b17a1339e2d58007f0
+
+Package: mopidy-soundcloud
+Version: 3.0.2-2
+Installed-Size: 56
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: mopidy (>= 3.0.0), python3-bs4, python3-pykka (>= 2.0.1), python3-requests, python3:any
+Description: Mopidy extension for playing music from SoundCloud
+Homepage: https://github.com/mopidy/mopidy-soundcloud
+Description-md5: c0dd6d9f1286d0d61b8511ec7c74bb10
+sound
+Priority: optional
+Filename: pool/main/m/mopidy-soundcloud/mopidy-soundcloud_3.0.2-2_all.deb
+Size: 11232
+MD5sum: 2593d81215d305dcb96366e22bc0f15f
+SHA256: 81523e7ace91e0ad8d970eba875ac909f6ed86a3263775658f236911bdd5970c
 
 Package: mopidy-tunein
-Version: 1.1.0-1
+Version: 1.1.0-2
 Installed-Size: 57
-Maintainer: Stein Magnus Jodal <jodal@debian.org>
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
-Depends: mopidy (>= 3.0.0), python3-pkg-resources, python3-pykka (>= 2.0.1), python3-requests, python3:any
+Depends: mopidy (>= 3.0.0), python3-pykka (>= 2.0.1), python3-requests, python3:any
 Description: Mopidy extension for playing music from TuneIn
 Homepage: https://github.com/kingosticks/mopidy-tunein
 Description-md5: 0a0870d56ae1a5c11b66a02bf0047b02
 sound
 Priority: optional
-Filename: pool/main/m/mopidy-tunein/mopidy-tunein_1.1.0-1_all.deb
-Size: 11800
-MD5sum: 439f12c4c8d290555d9bcd103d0842b3
-SHA256: dc9c3011375c947f3e19c8a05be06c83ad690f534e50bb285581261ca7cb1290
+Filename: pool/main/m/mopidy-tunein/mopidy-tunein_1.1.0-2_all.deb
+Size: 11524
+MD5sum: 591fdebc1915b82fdd270a6cfc57fa15
+SHA256: d142a5c5ca9221cd3d155258c241d4cbbc0ebfd56fda9b676fd485c548553160
 
 Package: mp3blaster
 Version: 1:3.2.6-4
