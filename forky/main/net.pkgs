@@ -7306,6 +7306,79 @@ Size: 15012
 MD5sum: 389ba7a73a9e66c1bb60ec3ff648364a
 SHA256: 0cc1bd6d4e1c7b766e7e8ecaa07904b09b559eef98dbeaa9b49bd2b016831ab9
 
+Package: freeipa-client
+Source: freeipa (4.12.4-2)
+Version: 4.12.4-2+b1
+Installed-Size: 294
+Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
+Architecture: amd64
+Depends: bind9-utils, certmonger (>= 0.79.14), curl, bind9-dnsutils, freeipa-common (= 4.12.4-2), krb5-user, libnss3-tools, libnss-sss, libpam-sss, libsasl2-modules-gssapi-mit, libsss-sudo, oddjob-mkhomedir, python3-dnspython, python3-ipaclient (= 4.12.4-2), python3-gssapi, python3-ldap, python3-sss, sssd (>= 2.8.0), python3:any, libc6 (>= 2.34), libcom-err2 (>= 1.43.9), libcurl4t64 (>= 7.16.2), libini-config5t64 (>= 0.4.0), libjansson4 (>= 2.14), libk5crypto3 (>= 1.20), libkrb5-3 (>= 1.13~alpha1+dfsg), libldap2 (>= 2.6.2), libpopt0 (>= 1.14), libssl3t64 (>= 3.0.0)
+Recommends: chrony, sssd-passkey
+Suggests: libnss-myhostname, libpam-krb5
+Description: FreeIPA centralized identity framework -- client
+Homepage: http://www.freeipa.org
+Description-md5: 1aa0c0a3f974364e79585d72db619762
+net
+Priority: optional
+Filename: pool/main/f/freeipa/freeipa-client_4.12.4-2+b1_amd64.deb
+Size: 108268
+MD5sum: 160481ae02a1329d98a8e58a8ce63784
+SHA256: effe106dfde056658e4893f08959a31a4b245256912e3b2eb48e41a520682ce5
+
+Package: freeipa-client-epn
+Source: freeipa (4.12.4-2)
+Version: 4.12.4-2+b1
+Installed-Size: 55
+Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
+Architecture: amd64
+Replaces: freeipa-server (<< 4.8.10-2)
+Depends: freeipa-client (= 4.12.4-2+b1), python3:any
+Breaks: freeipa-server (<< 4.8.10-2)
+Description: FreeIPA centralized identity framework -- tools for configuring Expiring Password Notification
+Homepage: http://www.freeipa.org
+Description-md5: e86c1026ebb3af2bf07192883a773749
+net
+Priority: optional
+Filename: pool/main/f/freeipa/freeipa-client-epn_4.12.4-2+b1_amd64.deb
+Size: 17068
+MD5sum: 91b19619074392965a05e32787882070
+SHA256: 6329e35590e8be0db757757323e82b78178f030c2b97523a7c20060996cbbdca
+
+Package: freeipa-client-samba
+Source: freeipa (4.12.4-2)
+Version: 4.12.4-2+b1
+Installed-Size: 34
+Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
+Architecture: amd64
+Depends: cifs-utils, freeipa-client (= 4.12.4-2+b1), python3-samba, samba-common-bin, smbclient, tdb-tools, winbind, python3:any
+Description: FreeIPA centralized identity framework -- Samba client
+Multi-Arch: same
+Homepage: http://www.freeipa.org
+Description-md5: c96b7178885d6e724e0833a8eaf878ea
+net
+Priority: optional
+Filename: pool/main/f/freeipa/freeipa-client-samba_4.12.4-2+b1_amd64.deb
+Size: 13176
+MD5sum: 61171a9a47676ac5ed0f4e74fa76a074
+SHA256: b6a7cad63d2e3fe1e3a1a471c2a27a8a02dd9367958a500f4f4be20eb7e63b0a
+
+Package: freeipa-common
+Source: freeipa
+Version: 4.12.4-2
+Installed-Size: 4302
+Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
+Architecture: all
+Description: FreeIPA centralized identity framework -- common files
+Multi-Arch: foreign
+Homepage: http://www.freeipa.org
+Description-md5: 94d7150bfe2c2b72eb5182a3b5ebf3f8
+net
+Priority: optional
+Filename: pool/main/f/freeipa/freeipa-common_4.12.4-2_all.deb
+Size: 598000
+MD5sum: b931712632450025e4c6b20afeb265d5
+SHA256: 5d5ed329fb0e254a7be99b02610a48fcfb32ae0e440b63ffeb4b7aa338d8d656
+
 Package: freeipa-healthcheck
 Version: 0.16-2
 Installed-Size: 246
@@ -13284,61 +13357,6 @@ Size: 158256
 MD5sum: 9a379945fcde8b8f68a95aa2573f3eba
 SHA256: 5e1b3b70a10f8e14c371dfd60038616ddcc353819c2fe4d0576c56d4d3e841e0
 
-Package: knot-resolver6
-Source: knot-resolver
-Version: 6.0.17-1
-Installed-Size: 1793
-Maintainer: knot-resolver packagers <knot-resolver@packages.debian.org>
-Architecture: amd64
-Replaces: knot-resolver (<< 6)
-Depends: adduser, dns-root-data, python3-aiohttp, python3-jinja2, python3-yaml, supervisor, systemd, python3 (<< 3.14), python3 (>= 3.13~), python3-typing-extensions, python3:any, libc6 (>= 2.38), libcap-ng0 (>= 0.7.9), libdnssec10 (>= 3.5.0), libgcc-s1 (>= 3.0), libgnutls30t64 (>= 3.8.1), libjemalloc2 (>= 2.1.1), libknot16 (>= 3.5.0), liblmdb0 (>= 0.9.9), libluajit-5.1-2 (>= 2.0.4) | libluajit-5.1-2 (>= 2.1.0+openresty), libnghttp2-14 (>= 1.3.0), libstdc++6 (>= 5), libsystemd0 (>= 227), libuv1t64 (>= 1.30.1), libzscanner5 (>= 3.5.0)
-Recommends: lua-basexx, lua-cqueues, lua-http, lua-psl, python3-prometheus-client, python3-watchdog
-Suggests: knot-resolver6-module-http
-Breaks: knot-resolver (<< 6)
-Description: caching, DNSSEC-validating DNS resolver - binaries
-Homepage: https://www.knot-resolver.cz/
-Description-md5: 3c5571c7871769e23627f380b607b9f4
-net
-Priority: optional
-Filename: pool/main/k/knot-resolver/knot-resolver6_6.0.17-1_amd64.deb
-Size: 490156
-MD5sum: bd9e4fe94bf819eaa5cfeaec0a42af5d
-SHA256: bc313f5dd9a04fdc7f6882cdb5afc23bbd6aa6fdebec32952baaf102d13f6046
-
-Package: knot-resolver6-module-dnstap
-Source: knot-resolver
-Version: 6.0.17-1
-Installed-Size: 73
-Maintainer: knot-resolver packagers <knot-resolver@packages.debian.org>
-Architecture: amd64
-Depends: knot-resolver6 (= 6.0.17-1), libfstrm0 (>= 0.2.0), libprotobuf-c1 (>= 1.0.1), libc6 (>= 2.14), libuv1t64 (>= 1.4.2)
-Description: dnstap module for Knot Resolver
-Homepage: https://www.knot-resolver.cz/
-Description-md5: cd9f03fdbb9f1c760abbd6a02e4920f4
-net
-Priority: optional
-Filename: pool/main/k/knot-resolver/knot-resolver6-module-dnstap_6.0.17-1_amd64.deb
-Size: 22788
-MD5sum: b5d9b3be423d27802effa0541852ef51
-SHA256: 8e01660fd6ad5396c5fa8d4d38117cc6922af6445f158b6ffc67847077d63ef7
-
-Package: knot-resolver6-module-http
-Source: knot-resolver
-Version: 6.0.17-1
-Installed-Size: 517
-Maintainer: knot-resolver packagers <knot-resolver@packages.debian.org>
-Architecture: amd64
-Depends: knot-resolver6 (= 6.0.17-1), libjs-bootstrap, libjs-d3, libjs-jquery, lua-cqueues, lua-http, lua-mmdb, systemd
-Description: HTTP module for Knot Resolver
-Homepage: https://www.knot-resolver.cz/
-Description-md5: c5063c4cabf54c4f50fd8a912dfad050
-net
-Priority: optional
-Filename: pool/main/k/knot-resolver/knot-resolver6-module-http_6.0.17-1_amd64.deb
-Size: 140496
-MD5sum: c7d46d28fd3d6b29e91dabdd6a867fbc
-SHA256: 2f5fb135aac4a4808aefb461447f6dcec7596c2c20e8f35f054d412f06dfd8c6
-
 Package: knxd
 Version: 0.14.73-1
 Installed-Size: 1694
@@ -15993,6 +16011,26 @@ Filename: pool/main/m/migrationtools/migrationtools_48-1_all.deb
 Size: 26568
 MD5sum: bdb17088e643ba1d9408560f557d1764
 SHA256: 72a61f43e9264a806007938519c865c782368e6bfbe64cd493a0d08a9e4e8a5d
+
+Package: mikutter
+Version: 5.1.0+dfsg-1
+Installed-Size: 8343
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: ruby-addressable (<< 2.9), ruby-cairo, ruby-delayer (<< 2.0), ruby-delayer-deferred (<< 3.0), ruby-diva (<< 3.0), ruby-gettext, ruby-gtk3 (>= 3.4.3), ruby-httpclient, ruby-instance-storage, ruby-json, ruby-locale, ruby-memoist (<< 0.17), ruby-moneta, ruby-nokogiri, ruby-oauth, ruby-pluggaloid (<< 2.0), ruby-text, ruby-twitter-text (<< 2.1.0), ruby-typed-array (<< 0.2)
+Recommends: alsa-utils, libnotify-bin
+Description: plugin-extensible Twitter client
+Homepage: https://mikutter.hachune.net/
+Description-md5: 5ef5a928cb327f72bd994efcf22ca547
+Tag: implemented-in::ruby, interface::graphical, interface::x11,
+ network::client, role::program, uitoolkit::gtk, use::chatting,
+ web::microblog, works-with::im, x11::application
+net
+Priority: optional
+Filename: pool/main/m/mikutter/mikutter_5.1.0+dfsg-1_all.deb
+Size: 1584588
+MD5sum: c3eaa16e828bf3a283216b63f40c35b3
+SHA256: 99049adcdea740a3a6bf7fd2a86bdbf8321b91981c24abf7a978fbbbe229845d
 
 Package: mimic
 Version: 0.7.0+ds-2
@@ -21519,8 +21557,8 @@ MD5sum: 3d8e8e3a59825308ca09513b37fb7508
 SHA256: 16c5e6edc01fa237286597685907a2a8eba96696679543ce5851c4dbd02e5a45
 
 Package: onedrive
-Version: 2.5.9-1
-Installed-Size: 4673
+Version: 2.5.10-1
+Installed-Size: 4727
 Maintainer: Sebastien Badia <sbadia@debian.org>
 Architecture: amd64
 Depends: init-system-helpers (>= 1.52), libc6 (>= 2.34), libcurl4t64 (>= 7.18.2), libdbus-1-3 (>= 1.10), libgcc-s1 (>= 4.2), libglib2.0-0t64 (>= 2.12.0), libnotify4 (>= 0.7.3), libsqlite3-0 (>= 3.7.14), zlib1g (>= 1:1.1.4)
@@ -21529,10 +21567,10 @@ Homepage: https://github.com/abraunegg/onedrive
 Description-md5: 07bdb72dcd0366485618913dd6ae927b
 net
 Priority: optional
-Filename: pool/main/o/onedrive/onedrive_2.5.9-1_amd64.deb
-Size: 1107284
-MD5sum: c838074f27ca2b4e7c55af83f12c4635
-SHA256: d2e3139abc5067e3d6ffa5b4e0b09ee16e535dcadc7055f2f09da5547fffe9d3
+Filename: pool/main/o/onedrive/onedrive_2.5.10-1_amd64.deb
+Size: 1125300
+MD5sum: 99efc3804dd12ef14ac702dc87878b38
+SHA256: af6f3e32d89f55526c6434e64a67e5b53cbfabf57d4ab01c50756bce403eafb7
 
 Package: onedriver
 Version: 0.15.0-1
@@ -22416,44 +22454,44 @@ MD5sum: e0bc44300b04c5cf1b543a07f5366492
 SHA256: fd26b2e966fa9a1089e995f67e755e8259c35d31f75aedb354ee1f670a7e3ecb
 
 Package: openstack-cluster-installer
-Version: 43.0.19
-Installed-Size: 1742
+Version: 43.0.22
+Installed-Size: 1743
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: adduser, apache2, apache2-utils, bind9, bind9-host, bind9-utils, bridge-utils, ceph-common, curl, dbconfig-common, default-mysql-server | mariadb-server, ilorest, ipcalc, ipmitool, isc-dhcp-server | dnsmasq, jq, live-build, net-tools, openstack-cluster-installer-cli (= 43.0.19), openstack-cluster-installer-live-image-builder (= 43.0.19), openstack-debian-images, openstack-pkg-tools, openstack-puppet-modules, php, php-cli, php-dapphp-radius | php-radius, php-mysql, php-ssh2, php-yaml, puppet-module-camptocamp-systemd, puppet-module-heini-wait-for, puppet-module-icann-quagga, puppet-module-oci (= 43.0.19), puppet-module-puppet, puppet-module-puppetlabs-firewall, puppet-module-puppetlabs-sshkeys-core, puppetserver | puppet-master, qemu-utils, rsync, ssl-cert, sudo, swift, syslinux-common, tftpd-hpa, debconf (>= 0.5) | debconf-2.0
+Depends: adduser, apache2, apache2-utils, bind9, bind9-host, bind9-utils, bridge-utils, ceph-common, curl, dbconfig-common, default-mysql-server | mariadb-server, ilorest, ipcalc, ipmitool, isc-dhcp-server | dnsmasq, jq, live-build, net-tools, openstack-cluster-installer-cli (= 43.0.22), openstack-cluster-installer-live-image-builder (= 43.0.22), openstack-debian-images, openstack-pkg-tools, openstack-puppet-modules, php, php-cli, php-dapphp-radius | php-radius, php-mysql, php-ssh2, php-yaml, puppet-module-camptocamp-systemd, puppet-module-heini-wait-for, puppet-module-icann-quagga, puppet-module-oci (= 43.0.22), puppet-module-puppet, puppet-module-puppetlabs-firewall, puppet-module-puppetlabs-sshkeys-core, puppetserver | puppet-master, qemu-utils, rsync, ssl-cert, sudo, swift, syslinux-common, tftpd-hpa, debconf (>= 0.5) | debconf-2.0
 Suggests: grub-efi-amd64-signed, grub-efi-arm64-signed, shim-signed, syslinux-efi
 Description: automatic PXE and puppet-master installer for OpenStack
 Homepage: https://salsa.debian.org/openstack-team/debian/openstack-cluster-installer
 Description-md5: bc52e9a3452e5519be087da46545f46c
 net
 Priority: optional
-Filename: pool/main/o/openstack-cluster-installer/openstack-cluster-installer_43.0.19_all.deb
-Size: 291888
-MD5sum: 220f285742279832bec379bee7594919
-SHA256: 7db071b42a80bf8d30b28d1a4d8a53777b8445f0964c66d3c9db5cdaa637be45
+Filename: pool/main/o/openstack-cluster-installer/openstack-cluster-installer_43.0.22_all.deb
+Size: 292324
+MD5sum: f2ebef8a3a52bf68a7d271619c22539f
+SHA256: f7a9b06afc3e7c74a4c9924fcd5b70766589070be6d6ae3915f9b82594964c28
 
 Package: openstack-cluster-installer-agent
 Source: openstack-cluster-installer
-Version: 43.0.19
+Version: 43.0.22
 Installed-Size: 129
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
 Replaces: openstack-cluster-installer (<< 27~)
-Depends: openstack-cluster-installer-common (= 43.0.19)
+Depends: openstack-cluster-installer-common (= 43.0.22)
 Breaks: openstack-cluster-installer (<< 27~)
 Description: automatic PXE and puppet-master installer for OpenStack - agent
 Homepage: https://salsa.debian.org/openstack-team/debian/openstack-cluster-installer
 Description-md5: 3e669e6525f32364a2feb28aebd20284
 net
 Priority: optional
-Filename: pool/main/o/openstack-cluster-installer/openstack-cluster-installer-agent_43.0.19_all.deb
-Size: 60912
-MD5sum: 89d6b150ad83466adcd7b25886db3585
-SHA256: 1a24c0b83933cf39554037731fc941a567494010a764be61a20ab717eea77d45
+Filename: pool/main/o/openstack-cluster-installer/openstack-cluster-installer-agent_43.0.22_all.deb
+Size: 61320
+MD5sum: 51832261afdad6582e98690c700f6fd3
+SHA256: d202d7c7f4f41fee066b2f8a4d67eec4439f727eaffea822fc663b6ce3ebe76c
 
 Package: openstack-cluster-installer-cli
 Source: openstack-cluster-installer
-Version: 43.0.19
+Version: 43.0.22
 Installed-Size: 246
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
@@ -22463,15 +22501,15 @@ Homepage: https://salsa.debian.org/openstack-team/debian/openstack-cluster-insta
 Description-md5: e8360dfb0cec1d9a952e0a44beb56911
 net
 Priority: optional
-Filename: pool/main/o/openstack-cluster-installer/openstack-cluster-installer-cli_43.0.19_all.deb
-Size: 79040
-MD5sum: c054a8b430c7d62e417069ecc662c7e0
-SHA256: 6bdc3487dc85ecac778d07560505a0bd26569ce148031c99de4a3746357029ae
+Filename: pool/main/o/openstack-cluster-installer/openstack-cluster-installer-cli_43.0.22_all.deb
+Size: 79484
+MD5sum: fe7fa65485ec4924995327ddab8dde0f
+SHA256: 06d98ab5bec4755376c2bc9ad719d3253c7c5c7952d7d6c5e4f02e8cee4e1ea6
 
 Package: openstack-cluster-installer-common
 Source: openstack-cluster-installer
-Version: 43.0.19
-Installed-Size: 151
+Version: 43.0.22
+Installed-Size: 152
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
 Replaces: openstack-cluster-installer (<< 27~), openstack-cluster-installer-agent (<< 27~), openstack-cluster-installer-utils (<< 27~)
@@ -22482,14 +22520,14 @@ Homepage: https://salsa.debian.org/openstack-team/debian/openstack-cluster-insta
 Description-md5: 1ba59e1a79534b7740d53333dcbc4f13
 net
 Priority: optional
-Filename: pool/main/o/openstack-cluster-installer/openstack-cluster-installer-common_43.0.19_all.deb
-Size: 62028
-MD5sum: 93e7d0b7bfcc5c09cfd0a71677b6038b
-SHA256: 6cf077749bf778cf4f205551228978152f900c112326038cccdf2b59f90abead
+Filename: pool/main/o/openstack-cluster-installer/openstack-cluster-installer-common_43.0.22_all.deb
+Size: 62496
+MD5sum: 28528a8457739706d1fea0e3aa33bbbb
+SHA256: 90d141b5c62b980c1502afd9b1ac277a5d9c5ce1dc4a253ec3a5c4791e670eed
 
 Package: openstack-cluster-installer-live-image-builder
 Source: openstack-cluster-installer
-Version: 43.0.19
+Version: 43.0.22
 Installed-Size: 122
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
@@ -22502,14 +22540,14 @@ Homepage: https://salsa.debian.org/openstack-team/debian/openstack-cluster-insta
 Description-md5: 43c38432d047108e63bdfd036417917e
 net
 Priority: optional
-Filename: pool/main/o/openstack-cluster-installer/openstack-cluster-installer-live-image-builder_43.0.19_all.deb
-Size: 60356
-MD5sum: 1bc34c5c6d3479e70575bca90c84e72e
-SHA256: d3fa79acf9fb5a24cd6a5b9f461719b759883c839cf57e75bb068ed84be0bc09
+Filename: pool/main/o/openstack-cluster-installer/openstack-cluster-installer-live-image-builder_43.0.22_all.deb
+Size: 60756
+MD5sum: 9723ae58636a507fa5ebe8754d7c0be5
+SHA256: f0df99d01d58ba272d91b8334c7d84988e0172eb4b1dadff21a426c7e99855bc
 
 Package: openstack-cluster-installer-openstack-ci
 Source: openstack-cluster-installer
-Version: 43.0.19
+Version: 43.0.22
 Installed-Size: 111
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
@@ -22519,50 +22557,50 @@ Homepage: https://salsa.debian.org/openstack-team/debian/openstack-cluster-insta
 Description-md5: 7164a422d609d3939b2b11017e18977a
 net
 Priority: optional
-Filename: pool/main/o/openstack-cluster-installer/openstack-cluster-installer-openstack-ci_43.0.19_all.deb
-Size: 54448
-MD5sum: 03833dda4fa31e15eba70384c43ff64d
-SHA256: 3b517b8a055880c4c7d0f9d55ae6d9044c6f4b421453eefd5794c8356a837997
+Filename: pool/main/o/openstack-cluster-installer/openstack-cluster-installer-openstack-ci_43.0.22_all.deb
+Size: 54852
+MD5sum: 1cba6bb784a6d5b139c5526d6ea0c3c5
+SHA256: e66990c433773ee442b3fb9ed11ab0b33e635c0be7ba3c0f0f0e94638d2f2001
 
 Package: openstack-cluster-installer-poc
 Source: openstack-cluster-installer
-Version: 43.0.19
+Version: 43.0.22
 Installed-Size: 369
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: bridge-utils, curl, haproxy, ikvswitch, ipcalc, iptables, ipxe, jq, net-tools, openipmi (>= 2.0.25), openstack-cluster-installer-cli (= 43.0.19), openstack-debian-images, openstack-pkg-tools, ovmf, q-text-as-data, qemu-system, qemu-utils, shim-signed
+Depends: bridge-utils, curl, haproxy, ikvswitch, ipcalc, iptables, ipxe, jq, net-tools, openipmi (>= 2.0.25), openstack-cluster-installer-cli (= 43.0.22), openstack-debian-images, openstack-pkg-tools, ovmf, q-text-as-data, qemu-system, qemu-utils, shim-signed
 Suggests: grub-efi-amd64-signed, grub-efi-arm64-signed, qemu-kvm, syslinux-efi
 Description: automatic PXE and puppet-master installer for OpenStack - PoC
 Homepage: https://salsa.debian.org/openstack-team/debian/openstack-cluster-installer
 Description-md5: e15add677d160162fe73e4de868d0ec6
 net
 Priority: optional
-Filename: pool/main/o/openstack-cluster-installer/openstack-cluster-installer-poc_43.0.19_all.deb
-Size: 104944
-MD5sum: 95d56378d1279dacdc18e70f4335c04e
-SHA256: 5ea7655cbc3dad41bd9d94f92642436c59945340045ac1610211ab25ade97570
+Filename: pool/main/o/openstack-cluster-installer/openstack-cluster-installer-poc_43.0.22_all.deb
+Size: 105364
+MD5sum: 543661a4e74809ce26c9530a87bc8616
+SHA256: 2d34613cc172e32b54e57c65f104a44d3cf93defa75d3b8891ac7ae9b1cc454e
 
 Package: openstack-cluster-installer-utils
 Source: openstack-cluster-installer
-Version: 43.0.19
-Installed-Size: 230
+Version: 43.0.22
+Installed-Size: 232
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: csvkit, facter, gnupg, hdparm, iptables-persistent, openstack-cluster-installer-common (= 43.0.19), puppet | puppet-agent, q-text-as-data, ssl-cert
+Depends: csvkit, facter, gnupg, hdparm, iptables-persistent, openstack-cluster-installer-common (= 43.0.22), puppet | puppet-agent, q-text-as-data, ssl-cert
 Description: automatic PXE and puppet-master installer for OpenStack - utils
 Homepage: https://salsa.debian.org/openstack-team/debian/openstack-cluster-installer
 Description-md5: 2dbd5434ee35a2e283b96151b60fc8f7
 net
 Priority: optional
-Filename: pool/main/o/openstack-cluster-installer/openstack-cluster-installer-utils_43.0.19_all.deb
-Size: 73428
-MD5sum: c9c52f55df1d89e9d1ca22d504ff0c81
-SHA256: 9c278447720fc63c864f3aacd0c60bf2b80cfcd4f2ffdee2de6aa16f293cacd5
+Filename: pool/main/o/openstack-cluster-installer/openstack-cluster-installer-utils_43.0.22_all.deb
+Size: 74308
+MD5sum: e94db3127f62809df76d813fc5b1e843
+SHA256: ad730666821aa2e2fcd7d206c338ce25e0ba895a07c1745eb593e342c381d0a8
 
 Package: puppet-module-oci
 Source: openstack-cluster-installer
-Version: 43.0.19
-Installed-Size: 1114
+Version: 43.0.22
+Installed-Size: 1118
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
 Depends: openstack-puppet-modules, puppet-module-aboe-chrony, puppet-module-camptocamp-postfix, puppet-module-cristifalcas-etcd, puppet-module-deric-zookeeper, puppet-module-etcddiscovery, puppet-module-magnum, puppet-module-mistral, puppet-module-pcfens-filebeat, puppet-module-placement, puppet-module-puppetlabs-cron-core, puppet-module-puppetlabs-mount-core, puppet-module-puppetlabs-mysql (>= 8.1.0), puppet-module-rally, puppet-module-saz-ssh, puppet-module-tempest, puppet-module-vmms, puppet-module-voxpupuli-alternatives, puppet-module-voxpupuli-collectd, puppet-module-voxpupuli-elasticsearch
@@ -22571,10 +22609,10 @@ Homepage: https://salsa.debian.org/openstack-team/debian/openstack-cluster-insta
 Description-md5: a57908137d2648b7836fbc4646232dd0
 net
 Priority: optional
-Filename: pool/main/o/openstack-cluster-installer/puppet-module-oci_43.0.19_all.deb
-Size: 139216
-MD5sum: 8d0221b5a512bd1cc4c0c26eaa342c3d
-SHA256: 5ff4664bdae9d1f8cc864be43dedff1f9a92c6352db1a2a129cce9099480b943
+Filename: pool/main/o/openstack-cluster-installer/puppet-module-oci_43.0.22_all.deb
+Size: 139764
+MD5sum: 65d328fa88118938a90db2f44a3263be
+SHA256: deb5d5bf34e30ae3b12c1a06162aa748aec75becafc45256691ba96772027fd7
 
 Package: openstack-clients
 Source: openstack-meta-packages
@@ -24248,24 +24286,24 @@ MD5sum: b171e9a3099ff5531a4da39344c25eaf
 SHA256: e3869e367dc473bb33d882e5c27ca4e12c9ccf3ba79b239251940a571b2e9c81
 
 Package: pdns-recursor
-Version: 5.3.4-1
-Installed-Size: 22482
+Version: 5.3.4-2
+Installed-Size: 22470
 Maintainer: pdns-recursor packagers <pdns-recursor@packages.debian.org>
 Architecture: amd64
 Depends: adduser, dns-root-data, publicsuffix, libboost-context1.83.0 (>= 1.83.0), libboost-filesystem1.83.0 (>= 1.83.0), libc6 (>= 2.39), libcap2 (>= 1:2.10), libcurl4t64 (>= 7.16.2), libfstrm0 (>= 0.4.0), libgcc-s1 (>= 4.2), libluajit-5.1-2 (>= 2.1.0~beta3+dfsg-5.3) | libluajit-5.1-2 (>= 2.1.0+openresty), libsnmp45 (>= 5.9.5.2+dfsg), libsodium23 (>= 0.6.1), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libsystemd0
 Description: PowerDNS Recursor
 Homepage: https://www.powerdns.com/
-Built-Using: rust-hyper-rustls (= 0.27.7-2), rust-rustls (= 0.23.36+ds-1), rust-rustls-pki-types (= 1.13.2-1), rust-rustls-webpki (= 0.103.7-1), rustc (= 1.91.1+dfsg1-1)
+Built-Using: rust-hyper-rustls (= 0.27.7-2), rust-rustls (= 0.23.36+ds-1), rust-rustls-pki-types (= 1.14.0+ds-1), rust-rustls-webpki (= 0.103.9+ds-2), rustc (= 1.91.1+dfsg1-1)
 Description-md5: f3a31cef06b361a15135f2262ae08934
-Static-Built-Using: rust-atomic-waker (= 1.1.2-1), rust-base64 (= 0.22.1-1), rust-bytes (= 1.11.0-1), rust-cfg-if (= 1.0.4-1), rust-cxx (= 1.0.192-1), rust-equivalent (= 1.0.1-1), rust-fnv (= 1.0.7-1), rust-foldhash (= 0.2.0-2), rust-form-urlencoded (= 1.2.2-1), rust-futures-channel (= 0.3.31-1), rust-futures-core (= 0.3.31-1), rust-futures-task (= 0.3.31-3), rust-futures-util (= 0.3.31-1), rust-getrandom (= 0.2.15-4), rust-hashbrown (= 0.16.1-2), rust-http (= 1.3.1-1), rust-http-body (= 1.0.1-1), rust-http-body-util (= 0.1.3-1), rust-httparse (= 1.10.1-1), rust-httpdate (= 1.0.3-1), rust-hyper (= 1.8.1-1), rust-hyper-rustls (= 0.27.7-2), rust-hyper-util (= 0.1.19-1), rust-indexmap (= 2.12.1-3), rust-ipnet (= 2.11.0-2), rust-itoa (= 1.0.15-1), rust-libc (= 0.2.178-2), rust-link-cplusplus (= 1.0.10-1), rust-log (= 0.4.29-1), rust-mio (= 1.1.1-1), rust-once-cell (= 1.21.3-1), rust-percent-encoding (= 2.3.2-2), rust-pin-project-lite (= 0.2.16-1), rust-pin-utils (= 0.1.0-1), rust-ring (= 0.17.14-3), rust-rustls (= 0.23.36+ds-1), rust-rustls-pemfile (= 2.2.0-4), rust-rustls-pki-types (= 1.13.2-1), rust-rustls-webpki (= 0.103.7-1), rust-ryu (= 1.0.19-1), rust-serde (= 1.0.228-3), rust-serde-core (= 1.0.228-2), rust-serde-yaml (= 0.9.34-1), rust-smallvec (= 1.15.1-1), rust-socket2 (= 0.5.10-1), rust-subtle (= 2.6.1-1), rust-tokio (= 1.48.0-2), rust-tokio-rustls (= 0.26.4-1), rust-tower-service (= 0.3.3-1), rust-tracing (= 0.1.44-1), rust-tracing-core (= 0.1.36-1), rust-try-lock (= 0.2.5-1), rust-unsafe-libyaml (= 0.2.11-1), rust-untrusted (= 0.9.0-2), rust-want (= 0.3.0-1), rust-zeroize (= 1.8.2-1), rustc (= 1.91.1+dfsg1-1)
+Static-Built-Using: rust-atomic-waker (= 1.1.2-1), rust-base64 (= 0.22.1-1), rust-bytes (= 1.11.1-1), rust-cfg-if (= 1.0.4-1), rust-cxx (= 1.0.192-1), rust-equivalent (= 1.0.1-1), rust-fnv (= 1.0.7-1), rust-foldhash (= 0.2.0-2), rust-form-urlencoded (= 1.2.2-1), rust-futures-channel (= 0.3.31-1), rust-futures-core (= 0.3.31-1), rust-futures-task (= 0.3.31-3), rust-futures-util (= 0.3.31-1), rust-getrandom (= 0.2.15-4), rust-hashbrown (= 0.16.1-2), rust-http (= 1.3.1-1), rust-http-body (= 1.0.1-1), rust-http-body-util (= 0.1.3-1), rust-httparse (= 1.10.1-1), rust-httpdate (= 1.0.3-1), rust-hyper (= 1.8.1-1), rust-hyper-rustls (= 0.27.7-2), rust-hyper-util (= 0.1.19-1), rust-indexmap (= 2.12.1-3), rust-ipnet (= 2.11.0-2), rust-itoa (= 1.0.15-1), rust-libc (= 0.2.178-2), rust-link-cplusplus (= 1.0.10-1), rust-log (= 0.4.29-1), rust-mio (= 1.1.1-1), rust-once-cell (= 1.21.3-1), rust-percent-encoding (= 2.3.2-2), rust-pin-project-lite (= 0.2.16-1), rust-pin-utils (= 0.1.0-1), rust-ring (= 0.17.14-3), rust-rustls (= 0.23.36+ds-1), rust-rustls-pemfile (= 2.2.0-4), rust-rustls-pki-types (= 1.14.0+ds-1), rust-rustls-webpki (= 0.103.9+ds-2), rust-ryu (= 1.0.22-1), rust-serde (= 1.0.228-3), rust-serde-core (= 1.0.228-2), rust-serde-yaml (= 0.9.34-1), rust-smallvec (= 1.15.1-1), rust-socket2 (= 0.5.10-1), rust-subtle (= 2.6.1-1), rust-tokio (= 1.48.0-2), rust-tokio-rustls (= 0.26.4-1), rust-tower-service (= 0.3.3-1), rust-tracing (= 0.1.44-1), rust-tracing-core (= 0.1.36-1), rust-try-lock (= 0.2.5-1), rust-unsafe-libyaml (= 0.2.11-1), rust-untrusted (= 0.9.0-2), rust-want (= 0.3.0-1), rust-zeroize (= 1.8.2-1), rustc (= 1.91.1+dfsg1-1)
 Tag: interface::daemon, network::server, network::service, protocol::dns,
  role::program
 net
 Priority: optional
-Filename: pool/main/p/pdns-recursor/pdns-recursor_5.3.4-1_amd64.deb
-Size: 6626832
-MD5sum: 23a568d6419ef2e6461967eb1b968281
-SHA256: 56b09e59df0098d4f8bf51a25880853a16d4b1af533ece0c51ef3fcf6d15c829
+Filename: pool/main/p/pdns-recursor/pdns-recursor_5.3.4-2_amd64.deb
+Size: 6624068
+MD5sum: ceb9811ee701199e57f2ab4c44ea74a3
+SHA256: 2fd3ead67558cc0324bda60f1567ca2c09d4ff6d84af86dac863e9178f8cb396
 
 Package: pdsh
 Version: 2.35-3
@@ -24445,23 +24483,6 @@ Filename: pool/main/p/pidgin/pidgin-data_2.14.14-1_all.deb
 Size: 4159824
 MD5sum: 0429799fa8f91a3a7514f8e7caecfd33
 SHA256: a0b6103ef0fca4d68be439dcc6afb1cc2bb65acb75b806eb33195de4c8e495c6
-
-Package: pidgin-awayonlock
-Version: 0.6-1
-Installed-Size: 40
-Maintainer: Package Salvaging Team <team+salvage@tracker.debian.org>
-Architecture: amd64
-Depends: libc6 (>= 2.4), libdbus-glib-1-2 (>= 0.78), libglib2.0-0t64 (>= 2.16.0), libpurple0t64 (>= 2.2.0), pidgin, gnome-shell | kscreensaver (>= 4.2) | cinnamon-screensaver
-Description: pidgin plugin to set as away on screensaver activation
-Homepage: https://github.com/costela/awayonlock
-Description-md5: 96c28720226ceedada257473fc67bb2c
-Tag: implemented-in::c, role::plugin
-net
-Priority: optional
-Filename: pool/main/p/pidgin-awayonlock/pidgin-awayonlock_0.6-1_amd64.deb
-Size: 8892
-MD5sum: d30493a536807e43a6d0e94fefb662f6
-SHA256: ca4a2eeaf76110d8f1706b1d579c99b3c10f26ac004e8e0580aab63e4da0fbbf
 
 Package: pidgin-gnome-keyring
 Version: 2.0-3
