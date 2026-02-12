@@ -6144,6 +6144,61 @@ Size: 41108
 MD5sum: bedf485e1cc846d666740c5e5b04119b
 SHA256: b3d8b3cefa3255610ce858405c8f655a110628b7dae197959f85da1f95841821
 
+Package: debian-fastforward
+Version: 20250601-3
+Installed-Size: 27
+Maintainer: Daniel Baumann <daniel@debian.org>
+Architecture: all
+Depends: ca-certificates, debian-fastforward-pgp-keys, debian-fastforward-ssh-keys, debconf (>= 0.5) | debconf-2.0
+Enhances: apt, openssh-server
+Description: Fast Forward Packages for Debian - Setup
+Multi-Arch: foreign
+Homepage: https://fastforward.debian.net
+Description-md5: 85db75ce96bb2a5a8c4eb1b0ed7c7430
+admin
+Priority: optional
+Filename: pool/main/d/debian-fastforward/debian-fastforward_20250601-3_all.deb
+Size: 7100
+MD5sum: 947f8e8f5582d7f599e3cf186d0d584b
+SHA256: 00b6aeaa524b7ca347f2b570487eeee2d90f1b8ad6f1bf20e110866bad5ee3b0
+
+Package: debian-fastforward-pgp-keys
+Source: debian-fastforward
+Version: 20250601-3
+Installed-Size: 14
+Maintainer: Daniel Baumann <daniel@debian.org>
+Architecture: all
+Provides: debian-fastforward-gpg-keys
+Enhances: apt
+Description: Fast Forward Packages for Debian - PGP Keys
+Multi-Arch: foreign
+Homepage: https://fastforward.debian.net
+Description-md5: 1014354f99e1fefa957132d8bec792ca
+admin
+Priority: optional
+Filename: pool/main/d/debian-fastforward/debian-fastforward-pgp-keys_20250601-3_all.deb
+Size: 3904
+MD5sum: b1d59abb37c0e6ba5f1a801bf612c032
+SHA256: 45317b73c7b19fb9d75268ebeb11131a4d876a12e8c7c660756eb7de185e0208
+
+Package: debian-fastforward-ssh-keys
+Source: debian-fastforward
+Version: 20250601-3
+Installed-Size: 13
+Maintainer: Daniel Baumann <daniel@debian.org>
+Architecture: all
+Enhances: openssh-server
+Description: Fast Forward Packages for Debian - SSH Keys
+Multi-Arch: foreign
+Homepage: https://fastforward.debian.net
+Description-md5: e4b7e7ef9329c9b76ca65c25490352ae
+admin
+Priority: optional
+Filename: pool/main/d/debian-fastforward/debian-fastforward-ssh-keys_20250601-3_all.deb
+Size: 3020
+MD5sum: 1106305a18649753200bec5f5b0e346e
+SHA256: eec05ca91e8d8db40494d93a456149c55da64e995ac9740116162c1e91c461be
+
 Package: debian-security-support
 Version: 1:14+2026.02.05
 Installed-Size: 169
@@ -11113,23 +11168,23 @@ MD5sum: 9d82feb7c569f9e9b8736fc87e8f64a4
 SHA256: 77721c7528a62b34139a5005b1183365897366966b96bbd5f8658111acd6cc1d
 
 Package: go-landlock
-Source: golang-github-landlock-lsm-go-landlock (0.0~git20250303.1544bcc-3)
-Version: 0.0~git20250303.1544bcc-3+b7
-Installed-Size: 8636
+Source: golang-github-landlock-lsm-go-landlock
+Version: 0.6.0-1
+Installed-Size: 10275
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38)
 Description: Linux Landlock sandboxing feature (program)
 Homepage: https://github.com/landlock-lsm/go-landlock
-Built-Using: golang-1.24 (= 1.24.9-1), golang-golang-x-sys (= 0.38.0-1), libcap2 (= 1:2.75-10)
+Built-Using: golang-1.24 (= 1.24.12-1), golang-golang-x-sys (= 0.38.0-1), libcap2 (= 1:2.75-10)
 Description-md5: ec837b76e973df21d7d8ad080b96d21a
-Static-Built-Using: golang-1.24 (= 1.24.9-1), golang-golang-x-sys (= 0.38.0-1), libcap2 (= 1:2.75-10)
+Static-Built-Using: golang-1.24 (= 1.24.12-1), golang-golang-x-sys (= 0.38.0-1), libcap2 (= 1:2.75-10)
 admin
 Priority: optional
-Filename: pool/main/g/golang-github-landlock-lsm-go-landlock/go-landlock_0.0~git20250303.1544bcc-3+b7_amd64.deb
-Size: 1455036
-MD5sum: 95d140174b33429d567b1abfe941dcf1
-SHA256: 676e7b901465738d5be8c7a71c7be44b43f37059dc492079c9d0efa0af3e1d81
+Filename: pool/main/g/golang-github-landlock-lsm-go-landlock/go-landlock_0.6.0-1_amd64.deb
+Size: 1558592
+MD5sum: ccb159880dceb00272bd08bcc448b128
+SHA256: 809cc421fdbdc7a7c43d8f72a14ca0fea1b12c1b4e1a4aca8eb9ed599cd3066f
 
 Package: golang-github-libvirt-libvirt-go-xml-dev
 Source: golang-github-libvirt-libvirt-go-xml
@@ -27080,23 +27135,6 @@ Filename: pool/main/t/tailspin/tailspin_5.5.0+dfsg-3+b1_amd64.deb
 Size: 1466992
 MD5sum: de55f942f72ef6f3d1b699b1d3ddf6b0
 SHA256: 18b88b967c7a33b168a33a517c3a9f0690bd72897ec868ba6db2bc574f7d9e19
-
-Package: targetcli-fb
-Version: 1:3.0.1-0.1
-Installed-Size: 166
-Maintainer: Debian LIO Target Packagers <linux-target-packaging@lists.alioth.debian.org>
-Architecture: all
-Depends: python3-configshell-fb, python3-gi, python3-rtslib-fb, python3:any, python3-dbus
-Conflicts: lio-utils, targetcli
-Description: Command shell for managing the Linux LIO kernel target
-Homepage: https://github.com/open-iscsi/targetcli-fb
-Description-md5: c471aae6997abf9df437c395f32d2ed9
-admin
-Priority: optional
-Filename: pool/main/t/targetcli-fb/targetcli-fb_3.0.1-0.1_all.deb
-Size: 36348
-MD5sum: 38c2350348074413987d28cf8ebf165b
-SHA256: 66826bfe5740d8b3a1ccf0805da6f9a3cf9be428be1a419a9616ab15f70a9374
 
 Package: tasksel
 Version: 3.86
