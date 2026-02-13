@@ -15,6 +15,44 @@ Size: 10568
 MD5sum: af978e14a3a1e166fb52a71c49ad0305
 SHA256: 6555662377f1e39651affb22f5350b26845bd3f75a82956e670141e2f67d3311
 
+Package: libreoffice-rust-uno-example
+Source: libreoffice
+Version: 4:26.2.0-1
+Installed-Size: 480
+Maintainer: Debian LibreOffice Maintainers <debian-openoffice@lists.debian.org>
+Architecture: amd64
+Depends: libreoffice-writer (>= 4:26.2.0~alpha0~) | libreoffice-writer-nogui (>= 4:26.2.0~alpha0~), libc6 (>= 2.34), libgcc-s1 (>= 4.2), libstdc++6 (>= 4.1.1), libuno-cppu3t64 (>= 4.4.0~alpha), libuno-cppuhelpergcc3-3t64 (>= 4.0.0~alpha), libuno-sal3t64 (>= 1.4.0), uno-libs-private
+Suggests: librust-rust-uno-dev
+Description: Example extension for LibreOffices Rust-UNO binding
+Homepage: http://www.libreoffice.org
+Built-Using: rustc (= 1.91.1+dfsg1-1)
+Description-md5: 776156cb67bfc7419eb92bafc349ad39
+Static-Built-Using: rustc (= 1.91.1+dfsg1-1)
+rust
+Priority: optional
+Filename: pool/main/libr/libreoffice/libreoffice-rust-uno-example_26.2.0-1_amd64.deb
+Size: 196840
+MD5sum: 476e1ff4275c0690d38ab40a1182429d
+SHA256: eb195828236fd0cba6bbe446e921414dc329c45f95485b43348f9c9d06317db7
+
+Package: librust-rust-uno-dev
+Source: libreoffice (4:26.2.0-1)
+Version: 0.1.0+LibO26.2.0-1
+Installed-Size: 8233
+Maintainer: Debian LibreOffice Maintainers <debian-openoffice@lists.debian.org>
+Architecture: amd64
+Depends: libreoffice-core, libreoffice-dev
+Suggests: libreoffice-rust-uno-example
+Description: Rust FFI binding for LibreOffice UNO API - Rust source code
+Homepage: http://www.libreoffice.org
+Description-md5: 7a87d5325abfc3eb2cf0be23b586c810
+rust
+Priority: optional
+Filename: pool/main/libr/libreoffice/librust-rust-uno-dev_0.1.0+LibO26.2.0-1_amd64.deb
+Size: 602716
+MD5sum: d2e65cf6c7ff91853315c559e99c6471
+SHA256: 09f9554897304c2fcff48a300336015632cca2cbd7da1651e397ee2863e58461
+
 Package: librust-mdbook-dev
 Source: mdbook
 Version: 0.4.52+ds-5
@@ -3448,37 +3486,37 @@ SHA256: fec73b2305575656a51234276cdb3a1eb00257c11c37da47cc508d8eecd19db9
 
 Package: librust-auth-git2+log-dev
 Source: rust-auth-git2
-Version: 0.5.8-4
+Version: 0.5.8-5
 Installed-Size: 9
 Maintainer: Daniel Baumann <daniel@debian.org>
-Architecture: amd64
+Architecture: all
 Description: Authentication for git2 - feature "log"
-Multi-Arch: same
+Multi-Arch: foreign
 Homepage: https://github.com/de-vri-es/auth-git2-rs
 Description-md5: 82e8258f8daa717709efb691c194d3ab
 rust
 Priority: optional
-Filename: pool/main/r/rust-auth-git2/librust-auth-git2+log-dev_0.5.8-4_amd64.deb
+Filename: pool/main/r/rust-auth-git2/librust-auth-git2+log-dev_0.5.8-5_all.deb
 Size: 1208
-MD5sum: 4372906da46e4f43351ca0cfb4a11f59
-SHA256: 0b699886a687080898de39f57e8076b269e79268a3012a7a1cde7df9d10cbaea
+MD5sum: c8281a944bccdc8a8bf0a4a33f92b91c
+SHA256: 4ddd7b77587c00564df4a2493eb71e10702b2aaefc801ef07bb2bed17e906839
 
 Package: librust-auth-git2-dev
 Source: rust-auth-git2
-Version: 0.5.8-4
+Version: 0.5.8-5
 Installed-Size: 75
 Maintainer: Daniel Baumann <daniel@debian.org>
-Architecture: amd64
+Architecture: all
 Description: Authentication for git - Rust source code
-Multi-Arch: same
+Multi-Arch: foreign
 Homepage: https://github.com/de-vri-es/auth-git2-rs
 Description-md5: a94933d5d5e0fad413b9edaec2007973
 rust
 Priority: optional
-Filename: pool/main/r/rust-auth-git2/librust-auth-git2-dev_0.5.8-4_amd64.deb
-Size: 16796
-MD5sum: 6b16c32d5e550e0b5c426e019d1c8169
-SHA256: 0f6d5af03435a77821ba5cfe61783b4b656922fd460bf95e797fd5851060e073
+Filename: pool/main/r/rust-auth-git2/librust-auth-git2-dev_0.5.8-5_all.deb
+Size: 16880
+MD5sum: 0576dc8443c0ccf9d9daaeebb4926bfb
+SHA256: e52dbd461b6fb9d868faa4f81f295dcfa9f256869d7523ffd61317f33c2efd92
 
 Package: librust-auto-enums-dev
 Source: rust-auto-enums
@@ -21654,11 +21692,11 @@ SHA256: 6943cdf038b55cb8264eba10288fe1791591350568a0c052856fcc7aa88222a0
 
 Package: librust-glycin-dev
 Source: rust-glycin
-Version: 3.0.7-1
+Version: 3.0.8-1
 Installed-Size: 256
 Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
 Architecture: amd64
-Provides: librust-glycin+async-io-dev (= 3.0.7-1), librust-glycin+default-dev (= 3.0.7-1), librust-glycin+gdk4-dev (= 3.0.7-1), librust-glycin+gobject-dev (= 3.0.7-1), librust-glycin+tokio-dev (= 3.0.7-1), librust-glycin+unstable-config-dev (= 3.0.7-1), librust-glycin-3+async-io-dev (= 3.0.7-1), librust-glycin-3+default-dev (= 3.0.7-1), librust-glycin-3+gdk4-dev (= 3.0.7-1), librust-glycin-3+gobject-dev (= 3.0.7-1), librust-glycin-3+tokio-dev (= 3.0.7-1), librust-glycin-3+unstable-config-dev (= 3.0.7-1), librust-glycin-3-dev (= 3.0.7-1), librust-glycin-3.0+async-io-dev (= 3.0.7-1), librust-glycin-3.0+default-dev (= 3.0.7-1), librust-glycin-3.0+gdk4-dev (= 3.0.7-1), librust-glycin-3.0+gobject-dev (= 3.0.7-1), librust-glycin-3.0+tokio-dev (= 3.0.7-1), librust-glycin-3.0+unstable-config-dev (= 3.0.7-1), librust-glycin-3.0-dev (= 3.0.7-1), librust-glycin-3.0.7+async-io-dev (= 3.0.7-1), librust-glycin-3.0.7+default-dev (= 3.0.7-1), librust-glycin-3.0.7+gdk4-dev (= 3.0.7-1), librust-glycin-3.0.7+gobject-dev (= 3.0.7-1), librust-glycin-3.0.7+tokio-dev (= 3.0.7-1), librust-glycin-3.0.7+unstable-config-dev (= 3.0.7-1), librust-glycin-3.0.7-dev (= 3.0.7-1)
+Provides: librust-glycin+async-io-dev (= 3.0.8-1), librust-glycin+default-dev (= 3.0.8-1), librust-glycin+gdk4-dev (= 3.0.8-1), librust-glycin+gobject-dev (= 3.0.8-1), librust-glycin+tokio-dev (= 3.0.8-1), librust-glycin+unstable-config-dev (= 3.0.8-1), librust-glycin-3+async-io-dev (= 3.0.8-1), librust-glycin-3+default-dev (= 3.0.8-1), librust-glycin-3+gdk4-dev (= 3.0.8-1), librust-glycin-3+gobject-dev (= 3.0.8-1), librust-glycin-3+tokio-dev (= 3.0.8-1), librust-glycin-3+unstable-config-dev (= 3.0.8-1), librust-glycin-3-dev (= 3.0.8-1), librust-glycin-3.0+async-io-dev (= 3.0.8-1), librust-glycin-3.0+default-dev (= 3.0.8-1), librust-glycin-3.0+gdk4-dev (= 3.0.8-1), librust-glycin-3.0+gobject-dev (= 3.0.8-1), librust-glycin-3.0+tokio-dev (= 3.0.8-1), librust-glycin-3.0+unstable-config-dev (= 3.0.8-1), librust-glycin-3.0-dev (= 3.0.8-1), librust-glycin-3.0.8+async-io-dev (= 3.0.8-1), librust-glycin-3.0.8+default-dev (= 3.0.8-1), librust-glycin-3.0.8+gdk4-dev (= 3.0.8-1), librust-glycin-3.0.8+gobject-dev (= 3.0.8-1), librust-glycin-3.0.8+tokio-dev (= 3.0.8-1), librust-glycin-3.0.8+unstable-config-dev (= 3.0.8-1), librust-glycin-3.0.8-dev (= 3.0.8-1)
 Depends: librust-async-fs-2+default-dev (>= 2.1.0-~~), librust-async-global-executor+default-dev (<< 4-~~), librust-async-global-executor+default-dev (>= 2.4-~~), librust-async-io-2+default-dev (>= 2.3.2-~~), librust-async-lock-3+default-dev (>= 3.3.0-~~), librust-async-task-4+default-dev, librust-blocking-1+default-dev (>= 1.6.1-~~), librust-futures-channel-0.3+default-dev (>= 0.3.30-~~), librust-futures-lite-2+default-dev (>= 2.1.0-~~), librust-futures-timer-3+default-dev (>= 3.0.3-~~), librust-futures-util-0.3+default-dev (>= 0.3.30-~~), librust-gdk4-0.10+default-dev, librust-gdk4-0.10+v4-16-dev, librust-gio-0.21+default-dev, librust-gio-0.21+v2-62-dev, librust-glib-0.21+default-dev, librust-glib-0.21+v2-68-dev, librust-glycin-common-1+default-dev, librust-glycin-common-1+gobject-dev, librust-glycin-utils-4+async-io-dev (>= 4.0.3-~~), librust-glycin-utils-4+gobject-dev (>= 4.0.3-~~), librust-glycin-utils-4+tokio-dev (>= 4.0.3-~~), librust-glycin-utils-4-dev (>= 4.0.3-~~), librust-gufo-common-1+default-dev (>= 1.0.1-~~), librust-gufo-common-1+serde-dev (>= 1.0.1-~~), librust-gufo-exif-0.3+default-dev, librust-lcms2-6+default-dev (>= 6.0.3-~~), librust-lcms2-sys-4+default-dev (>= 4.0.4-~~), librust-libc-0.2+default-dev (>= 0.2.152-~~), librust-libseccomp-0.4+default-dev, librust-memfd-0.6+default-dev (>= 0.6.3-~~), librust-memmap2-0.9+default-dev, librust-nix-0.30+default-dev, librust-nix-0.30+fs-dev, librust-nix-0.30+resource-dev, librust-nix-0.30+signal-dev, librust-static-assertions-1+default-dev (>= 1.1.0-~~), librust-thiserror-2+default-dev (>= 2.0.3-~~), librust-tokio-1+default-dev (>= 1.35.1-~~), librust-tokio-1+fs-dev (>= 1.35.1-~~), librust-tokio-1+rt-dev (>= 1.35.1-~~), librust-tokio-1+rt-multi-thread-dev (>= 1.35.1-~~), librust-tokio-1+time-dev (>= 1.35.1-~~), librust-tokio-stream-0.1+default-dev (>= 0.1.15-~~), librust-tokio-stream-0.1+fs-dev (>= 0.1.15-~~), librust-tracing-0.1+default-dev (>= 0.1.40-~~), librust-tracing-subscriber-0.3+default-dev, librust-tracing-subscriber-0.3+env-filter-dev, librust-tracing-subscriber-0.3+fmt-dev, librust-yeslogic-fontconfig-sys-6+default-dev, librust-zbus-5+async-io-dev (>= 5.10.0-~~), librust-zbus-5+p2p-dev (>= 5.10.0-~~), librust-zbus-5+tokio-dev (>= 5.10.0-~~)
 Description: Sandboxed image decoding - Rust source code
 Multi-Arch: same
@@ -21666,10 +21704,10 @@ Homepage: https://gitlab.gnome.org/GNOME/glycin
 Description-md5: c977c8105e338304515c185662ee53a4
 rust
 Priority: optional
-Filename: pool/main/r/rust-glycin/librust-glycin-dev_3.0.7-1_amd64.deb
-Size: 54324
-MD5sum: e57d8c272468e43badc6b8a05f42131c
-SHA256: f58946af918bee645d9ed2ce99ffafcdb0b021329ad80ab8dfe946abf5594183
+Filename: pool/main/r/rust-glycin/librust-glycin-dev_3.0.8-1_amd64.deb
+Size: 54416
+MD5sum: 5387d96d59bf17c037790265e82c2469
+SHA256: 3e969dfeb592e0d2d7ddc3a82deeba96e41c1e195b045c8b08b675c0d6761086
 
 Package: librust-glycin-common-dev
 Source: rust-glycin-common
@@ -27121,21 +27159,22 @@ SHA256: d3fa47ee6d146da9862de2653110ec56057b9704a33e6b669baf73ac7410f53a
 
 Package: librust-itertools-dev
 Source: rust-itertools
-Version: 0.13.0-3
-Installed-Size: 754
+Version: 0.14.0-2
+Installed-Size: 793
 Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
 Architecture: amd64
-Provides: librust-itertools+default-dev (= 0.13.0-3), librust-itertools+use-alloc-dev (= 0.13.0-3), librust-itertools+use-std-dev (= 0.13.0-3), librust-itertools-0+default-dev (= 0.13.0-3), librust-itertools-0+use-alloc-dev (= 0.13.0-3), librust-itertools-0+use-std-dev (= 0.13.0-3), librust-itertools-0-dev (= 0.13.0-3), librust-itertools-0.13+default-dev (= 0.13.0-3), librust-itertools-0.13+use-alloc-dev (= 0.13.0-3), librust-itertools-0.13+use-std-dev (= 0.13.0-3), librust-itertools-0.13-dev (= 0.13.0-3), librust-itertools-0.13.0+default-dev (= 0.13.0-3), librust-itertools-0.13.0+use-alloc-dev (= 0.13.0-3), librust-itertools-0.13.0+use-std-dev (= 0.13.0-3), librust-itertools-0.13.0-dev (= 0.13.0-3)
+Provides: librust-itertools+default-dev (= 0.14.0-2), librust-itertools+use-alloc-dev (= 0.14.0-2), librust-itertools+use-std-dev (= 0.14.0-2), librust-itertools-0+default-dev (= 0.14.0-2), librust-itertools-0+use-alloc-dev (= 0.14.0-2), librust-itertools-0+use-std-dev (= 0.14.0-2), librust-itertools-0-dev (= 0.14.0-2), librust-itertools-0.14+default-dev (= 0.14.0-2), librust-itertools-0.14+use-alloc-dev (= 0.14.0-2), librust-itertools-0.14+use-std-dev (= 0.14.0-2), librust-itertools-0.14-dev (= 0.14.0-2), librust-itertools-0.14.0+default-dev (= 0.14.0-2), librust-itertools-0.14.0+use-alloc-dev (= 0.14.0-2), librust-itertools-0.14.0+use-std-dev (= 0.14.0-2), librust-itertools-0.14.0-dev (= 0.14.0-2)
 Depends: librust-either-1+use-std-dev, librust-either-1-dev
 Description: Extra iterator adaptors, iterator methods, free functions, and macros - Rust source code
 Multi-Arch: same
+Homepage: https://github.com/rust-itertools/itertools
 Description-md5: 6faedd6262a2375e7374f9b4e46ed81b
 rust
 Priority: optional
-Filename: pool/main/r/rust-itertools/librust-itertools-dev_0.13.0-3_amd64.deb
-Size: 129732
-MD5sum: 136f054ed7123063fa8a8e2019a057aa
-SHA256: a1542a7eea8dc6092bf05669ce2b44184e7313e0fde145cafbf7ac1f5dbff6f2
+Filename: pool/main/r/rust-itertools/librust-itertools-dev_0.14.0-2_amd64.deb
+Size: 135520
+MD5sum: 46a56e2e4b16635e8b3a1d07433590c4
+SHA256: 64669b16c57a10bec2e97720244b8d129f317ca87c8a89783d8688ad43725720
 
 Package: librust-itertools-num-dev
 Source: rust-itertools-num
@@ -38286,22 +38325,22 @@ SHA256: e979b5cc23d8c1fd44514d6c8a128365ba2d794809554013195d2f919966cbb2
 
 Package: librust-pep508-rs-dev
 Source: rust-pep508-rs
-Version: 0.9.2-2
-Installed-Size: 374
+Version: 0.9.2-3
+Installed-Size: 372
 Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
 Architecture: amd64
-Provides: librust-pep508-rs+default-dev (= 0.9.2-2), librust-pep508-rs+non-pep508-extensions-dev (= 0.9.2-2), librust-pep508-rs+schemars-dev (= 0.9.2-2), librust-pep508-rs+tracing-dev (= 0.9.2-2), librust-pep508-rs-0+default-dev (= 0.9.2-2), librust-pep508-rs-0+non-pep508-extensions-dev (= 0.9.2-2), librust-pep508-rs-0+schemars-dev (= 0.9.2-2), librust-pep508-rs-0+tracing-dev (= 0.9.2-2), librust-pep508-rs-0-dev (= 0.9.2-2), librust-pep508-rs-0.9+default-dev (= 0.9.2-2), librust-pep508-rs-0.9+non-pep508-extensions-dev (= 0.9.2-2), librust-pep508-rs-0.9+schemars-dev (= 0.9.2-2), librust-pep508-rs-0.9+tracing-dev (= 0.9.2-2), librust-pep508-rs-0.9-dev (= 0.9.2-2), librust-pep508-rs-0.9.2+default-dev (= 0.9.2-2), librust-pep508-rs-0.9.2+non-pep508-extensions-dev (= 0.9.2-2), librust-pep508-rs-0.9.2+schemars-dev (= 0.9.2-2), librust-pep508-rs-0.9.2+tracing-dev (= 0.9.2-2), librust-pep508-rs-0.9.2-dev (= 0.9.2-2)
-Depends: librust-boxcar-0.2+default-dev (>= 0.2.6-~~), librust-indexmap-2+default-dev (>= 2.2.0-~~), librust-itertools-0.13+default-dev, librust-once-cell-1+default-dev (>= 1.20.2-~~), librust-pep440-rs-0.7+default-dev (>= 0.7.2-~~), librust-pep440-rs-0.7+tracing-dev (>= 0.7.2-~~), librust-pep440-rs-0.7+version-ranges-dev (>= 0.7.2-~~), librust-regex-1+default-dev (>= 1.10.4-~~), librust-rustc-hash-2+default-dev, librust-schemars-0.8+default-dev (>= 0.8.21-~~), librust-serde-1+default-dev (>= 1.0.198-~~), librust-serde-1+derive-dev (>= 1.0.198-~~), librust-serde-1+rc-dev (>= 1.0.198-~~), librust-smallvec-1+default-dev (>= 1.13.2-~~), librust-thiserror-1+default-dev (>= 1.0.59-~~), librust-tracing-0.1+default-dev (>= 0.1.40-~~), librust-unicode-width-0.1+default-dev, librust-url-2+default-dev (>= 2.5.0-~~), librust-url-2+serde-dev (>= 2.5.0-~~), librust-urlencoding-2+default-dev (>= 2.1.3-~~), librust-version-ranges-0.1+default-dev
+Provides: librust-pep508-rs+default-dev (= 0.9.2-3), librust-pep508-rs+non-pep508-extensions-dev (= 0.9.2-3), librust-pep508-rs+schemars-dev (= 0.9.2-3), librust-pep508-rs+tracing-dev (= 0.9.2-3), librust-pep508-rs-0+default-dev (= 0.9.2-3), librust-pep508-rs-0+non-pep508-extensions-dev (= 0.9.2-3), librust-pep508-rs-0+schemars-dev (= 0.9.2-3), librust-pep508-rs-0+tracing-dev (= 0.9.2-3), librust-pep508-rs-0-dev (= 0.9.2-3), librust-pep508-rs-0.9+default-dev (= 0.9.2-3), librust-pep508-rs-0.9+non-pep508-extensions-dev (= 0.9.2-3), librust-pep508-rs-0.9+schemars-dev (= 0.9.2-3), librust-pep508-rs-0.9+tracing-dev (= 0.9.2-3), librust-pep508-rs-0.9-dev (= 0.9.2-3), librust-pep508-rs-0.9.2+default-dev (= 0.9.2-3), librust-pep508-rs-0.9.2+non-pep508-extensions-dev (= 0.9.2-3), librust-pep508-rs-0.9.2+schemars-dev (= 0.9.2-3), librust-pep508-rs-0.9.2+tracing-dev (= 0.9.2-3), librust-pep508-rs-0.9.2-dev (= 0.9.2-3)
+Depends: librust-boxcar-0.2+default-dev (>= 0.2.6-~~), librust-indexmap-2+default-dev (>= 2.6.0-~~), librust-itertools-0.14+default-dev, librust-once-cell-1+default-dev (>= 1.20.2-~~), librust-pep440-rs-0.7+default-dev (>= 0.7.2-~~), librust-pep440-rs-0.7+tracing-dev (>= 0.7.2-~~), librust-pep440-rs-0.7+version-ranges-dev (>= 0.7.2-~~), librust-regex-1+default-dev (>= 1.10.4-~~), librust-rustc-hash-2+default-dev, librust-schemars-0.8+default-dev (>= 0.8.21-~~), librust-serde-1+default-dev (>= 1.0.198-~~), librust-serde-1+derive-dev (>= 1.0.198-~~), librust-serde-1+rc-dev (>= 1.0.198-~~), librust-smallvec-1+default-dev (>= 1.13.2-~~), librust-thiserror-1+default-dev (>= 1.0.59-~~), librust-tracing-0.1+default-dev (>= 0.1.40-~~), librust-unicode-width-0.2+default-dev, librust-url-2+default-dev (>= 2.5.0-~~), librust-url-2+serde-dev (>= 2.5.0-~~), librust-urlencoding-2+default-dev (>= 2.1.3-~~), librust-version-ranges-0.1+default-dev
 Description: Python dependency specifiers, better known as PEP 508 - Rust source code
 Multi-Arch: same
 Homepage: https://github.com/konstin/pep508_rs
 Description-md5: 39e7030b4aec012b7598dc822f26563b
 rust
 Priority: optional
-Filename: pool/main/r/rust-pep508-rs/librust-pep508-rs-dev_0.9.2-2_amd64.deb
-Size: 61864
-MD5sum: ad52db7c1e0520b49cfe62f78ffc1bc5
-SHA256: 177a21b27d10b99607d10b0b90fa8da0890db11dd631858f01366e2e36075c9b
+Filename: pool/main/r/rust-pep508-rs/librust-pep508-rs-dev_0.9.2-3_amd64.deb
+Size: 61772
+MD5sum: 44ec862d363201e2edd8b552c5f5c6fc
+SHA256: 256994796a4447155a2139de3cde66086d8f424d174a4bcff81b09c52417bbd5
 
 Package: librust-percent-encoding-dev
 Source: rust-percent-encoding
@@ -58659,23 +58698,22 @@ SHA256: 59beec368cd080ae1cd1b4ef1ebd10e5ca0bbf61a3bea42c943ed7212b3bc7ef
 
 Package: librust-ureq-dev
 Source: rust-ureq
-Version: 3.1.4+~0.5.3-1
-Installed-Size: 902
+Version: 3.2.0+ds+~0.5.3+ds-2
+Installed-Size: 918
 Maintainer: Jonas Smedegaard <dr@jones.dk>
 Architecture: all
-Provides: librust-ureq-3+brotli-dev (= 3.1.4+~0.5.3-1), librust-ureq-3+charset-dev (= 3.1.4+~0.5.3-1), librust-ureq-3+cookies-dev (= 3.1.4+~0.5.3-1), librust-ureq-3+default-dev (= 3.1.4+~0.5.3-1), librust-ureq-3+gzip-dev (= 3.1.4+~0.5.3-1), librust-ureq-3+json-dev (= 3.1.4+~0.5.3-1), librust-ureq-3+multipart-dev (= 3.1.4+~0.5.3-1), librust-ureq-3+native-tls-dev (= 3.1.4+~0.5.3-1), librust-ureq-3+platform-verifier-dev (= 3.1.4+~0.5.3-1), librust-ureq-3+rustls-dev (= 3.1.4+~0.5.3-1), librust-ureq-3+rustls-no-provider-dev (= 3.1.4+~0.5.3-1), librust-ureq-3+socks-proxy-dev (= 3.1.4+~0.5.3-1), librust-ureq-3-dev (= 3.1.4+~0.5.3-1), librust-ureq-3.1-dev (= 3.1.4+~0.5.3-1), librust-ureq-3.1.4-dev (= 3.1.4+~0.5.3-1), librust-ureq-proto-0.5+client-dev (= 0.5.3+3.1.4+~0.5.3-1), librust-ureq-proto-0.5+default-dev (= 0.5.3+3.1.4+~0.5.3-1), librust-ureq-proto-0.5+server-dev (= 0.5.3+3.1.4+~0.5.3-1), librust-ureq-proto-0.5-dev (= 0.5.3+3.1.4+~0.5.3-1), librust-ureq-proto-0.5.3-dev (= 0.5.3+3.1.4+~0.5.3-1), librust-ureq-proto-dev (= 0.5.3+3.1.4+~0.5.3-1)
-Depends: librust-base64-0.22+default-dev, librust-base64-0.22+std-dev, librust-brotli-decompressor-5+default-dev, librust-cookie-store-0.22+preserve-order-dev, librust-cookie-store-0.22+serde-json-dev, librust-der-0.7+pem-dev, librust-der-0.7+std-dev, librust-encoding-rs-0.8+default-dev, librust-flate2-1+default-dev, librust-getrandom-0.2+default-dev, librust-http-1+std-dev, librust-httparse-1-dev, librust-log-0.4+default-dev, librust-mime-guess-2+default-dev, librust-native-tls-0.2-dev, librust-percent-encoding-2+default-dev, librust-rustls-0.23+logging-dev, librust-rustls-0.23+ring-dev, librust-rustls-0.23+std-dev, librust-rustls-0.23+tls12-dev, librust-rustls-pki-types-1+std-dev, librust-rustls-platform-verifier-0.6-dev, librust-serde-1+std-dev, librust-serde-json-1+std-dev, librust-socks-0.3+default-dev, librust-url-2-dev, librust-utf-8-0.7+default-dev
+Provides: librust-ureq-3+brotli-dev (= 3.2.0+ds+~0.5.3+ds-2), librust-ureq-3+charset-dev (= 3.2.0+ds+~0.5.3+ds-2), librust-ureq-3+cookies-dev (= 3.2.0+ds+~0.5.3+ds-2), librust-ureq-3+default-dev (= 3.2.0+ds+~0.5.3+ds-2), librust-ureq-3+gzip-dev (= 3.2.0+ds+~0.5.3+ds-2), librust-ureq-3+json-dev (= 3.2.0+ds+~0.5.3+ds-2), librust-ureq-3+multipart-dev (= 3.2.0+ds+~0.5.3+ds-2), librust-ureq-3+native-tls-dev (= 3.2.0+ds+~0.5.3+ds-2), librust-ureq-3+platform-verifier-dev (= 3.2.0+ds+~0.5.3+ds-2), librust-ureq-3+rustls-dev (= 3.2.0+ds+~0.5.3+ds-2), librust-ureq-3+rustls-no-provider-dev (= 3.2.0+ds+~0.5.3+ds-2), librust-ureq-3+socks-proxy-dev (= 3.2.0+ds+~0.5.3+ds-2), librust-ureq-3-dev (= 3.2.0+ds+~0.5.3+ds-2), librust-ureq-3.1-dev (= 3.2.0+ds+~0.5.3+ds-2), librust-ureq-3.2.0-dev (= 3.2.0+ds+~0.5.3+ds-2), librust-ureq-proto-0.5+client-dev (= 0.5.3+3.2.0+ds+~0.5.3+ds-2), librust-ureq-proto-0.5+default-dev (= 0.5.3+3.2.0+ds+~0.5.3+ds-2), librust-ureq-proto-0.5+server-dev (= 0.5.3+3.2.0+ds+~0.5.3+ds-2), librust-ureq-proto-0.5-dev (= 0.5.3+3.2.0+ds+~0.5.3+ds-2), librust-ureq-proto-0.5.3-dev (= 0.5.3+3.2.0+ds+~0.5.3+ds-2), librust-ureq-proto-dev (= 0.5.3+3.2.0+ds+~0.5.3+ds-2)
+Depends: librust-base64-dev, librust-brotli-decompressor-dev, librust-cookie-store-dev, librust-der-dev, librust-encoding-rs-dev, librust-flate2-dev, librust-getrandom-dev, librust-http-dev, librust-httparse-dev, librust-log-dev, librust-mime-guess-dev, librust-native-tls-dev, librust-percent-encoding-dev, librust-rustls-dev, librust-rustls-pki-types-dev, librust-rustls-platform-verifier-dev, librust-serde-dev, librust-serde-json-dev, librust-socks-dev, librust-url-dev, librust-utf-8-dev
 Recommends: ca-certificates
 Description: simple and safe HTTP client - Rust source code
-Multi-Arch: foreign
 Homepage: https://github.com/algesten/ureq
 Description-md5: 6406168ec82a4926fd2ab9fce7208d06
 rust
 Priority: optional
-Filename: pool/main/r/rust-ureq/librust-ureq-dev_3.1.4+~0.5.3-1_all.deb
-Size: 151688
-MD5sum: 66473657f7b1f568a14990781e765c00
-SHA256: 3dfaf50913d39090e9d7a74e675325bc217e02274e548a7fd44d7c055a2247fd
+Filename: pool/main/r/rust-ureq/librust-ureq-dev_3.2.0+ds+~0.5.3+ds-2_all.deb
+Size: 154776
+MD5sum: c75a602b20f609958cfd1325b7940085
+SHA256: 43ce91091f301115649bbeead1caeb8c063b69c5ba4817792395bf173b77132c
 
 Package: librust-urid-dev
 Source: rust-urid (0.1.0-1)
