@@ -943,13 +943,12 @@ MD5sum: 889069c585b30b283486ebbe66b824fa
 SHA256: d89bd85c8c9377e2413c488573fcff18e9551f241549f055aaf17d353425a3a1
 
 Package: hatari
-Version: 2.6.1+dfsg-1
-Installed-Size: 17188
+Version: 2.6.1+dfsg-2
+Installed-Size: 17184
 Maintainer: Teemu Hukkanen <tjhukkan@iki.fi>
 Architecture: amd64
-Depends: python3:any, libc6 (>= 2.34), libcapstone5 (>= 5), libpng16-16t64 (>= 1.6.46), libreadline8t64 (>= 6.0), libsdl2-2.0-0 (>= 2.0.12), libudev1 (>= 183), libx11-6, zlib1g (>= 1:1.2.3.4)
-Recommends: binfmt-support | systemd
-Suggests: dosfstools, mtools, unzip
+Depends: python3:any, libc6 (>= 2.42), libcapstone5 (>= 5), libpng16-16t64 (>= 1.6.46), libreadline8t64 (>= 6.0), libsdl2-2.0-0 (>= 2.0.12), libudev1 (>= 183), libx11-6, zlib1g (>= 1:1.2.3.4)
+Suggests: dosfstools, mtools, unzip, hatari-binfmt
 Description: Emulator for the Atari ST, STE, TT, and Falcon computers
 Homepage: http://www.hatari-emu.org/
 Description-md5: 0d4554dc3f1466ddaa3e899620f71348
@@ -957,10 +956,27 @@ Tag: hardware::emulation, implemented-in::c, interface::graphical,
  interface::x11, role::program, uitoolkit::sdl, x11::application
 otherosfs
 Priority: optional
-Filename: pool/main/h/hatari/hatari_2.6.1+dfsg-1_amd64.deb
-Size: 4176660
-MD5sum: c5b43a48e03fb6d901eeba09b5b5a8c5
-SHA256: bfc0625a60512018c3f47cfc78566d1eb6708e6a420d2bd35b706bebc3a66a78
+Filename: pool/main/h/hatari/hatari_2.6.1+dfsg-2_amd64.deb
+Size: 4176904
+MD5sum: cc5fe1a7ca6ac93cb2ce299a47c2d7c1
+SHA256: f320173f2bf58635c94acc18785e21aaf168c37a61fbc53993c23f5a5ede6a49
+
+Package: hatari-binfmt
+Source: hatari
+Version: 2.6.1+dfsg-2
+Installed-Size: 21
+Maintainer: Teemu Hukkanen <tjhukkan@iki.fi>
+Architecture: all
+Depends: hatari, systemd | binfmt-support
+Description: Register hatari as the interpreter for Atari TOS executables
+Homepage: http://www.hatari-emu.org/
+Description-md5: ac3ee6a90afe38671e4f8b9a92844c02
+otherosfs
+Priority: optional
+Filename: pool/main/h/hatari/hatari-binfmt_2.6.1+dfsg-2_all.deb
+Size: 5928
+MD5sum: 551e9e8fd3699e8ccc758061245fa4e4
+SHA256: cd85bb1f7a3339b1e588de0db937e75a92a81db62d188dfee2e4ec12b3174fd7
 
 Package: hercules
 Version: 3.13-9
