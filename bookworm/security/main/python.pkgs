@@ -564,8 +564,8 @@ SHA256: 8dc973ce894590ef438f28f85313e97ec367c9b44aea47b85723d3b0d00dcb59
 
 Package: python3-django
 Source: python-django
-Version: 3:3.2.19-1+deb12u1
-Installed-Size: 24106
+Version: 3:3.2.25-0+deb12u1
+Installed-Size: 24118
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
 Replaces: python-django-common
@@ -579,9 +579,107 @@ Description-md5: efe2f6ec2ae89851c710c280956fa785
 Recommends: libjs-jquery
 python
 Priority: optional
-Filename: pool/updates/main/p/python-django/python3-django_3.2.19-1+deb12u1_all.deb
-Size: 2824248
-SHA256: 6a16d41810c1efeb013f72275df9e88033461888c873e5470eb032fadf4d9078
+Filename: pool/updates/main/p/python-django/python3-django_3.2.25-0+deb12u1_all.deb
+Size: 2831648
+SHA256: d311d9749c06768b715215e38dfda3e2eb929d379db8037607b5770b60aac452
+
+Package: python3-django-storages
+Source: python-django-storages
+Version: 1.13.2-1+deb12u1
+Installed-Size: 108
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-django, python3:any
+Suggests: python-django-storages-doc
+Description: storage backends in Django (Python3 version)
+Homepage: https://github.com/jschneier/django-storages/
+Description-md5: 95598936a873b1c459d74de133b47226
+Recommends: python3-django-storages-boto3, python3-django-storages-dropbox, python3-django-storages-ftp, python3-django-storages-libcloud, python3-django-storages-sftp
+python
+Priority: optional
+Filename: pool/updates/main/p/python-django-storages/python3-django-storages_1.13.2-1+deb12u1_all.deb
+Size: 34896
+SHA256: 327f1996afb3747c3f501174a09a6f3f96a21cb0fbd0e99b3d9f717604c38eee
+
+Package: python3-django-storages-boto3
+Source: python-django-storages
+Version: 1.13.2-1+deb12u1
+Installed-Size: 57
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-boto3, python3-django-storages (= 1.13.2-1+deb12u1), python3:any
+Description: storage backends in Django (Boto3)
+Homepage: https://github.com/jschneier/django-storages/
+Description-md5: f482501f9f6c5ba4248af0cde3d1229b
+python
+Priority: optional
+Filename: pool/updates/main/p/python-django-storages/python3-django-storages-boto3_1.13.2-1+deb12u1_all.deb
+Size: 25156
+SHA256: 176c5a0dd2f6fa7c2a50576da56c7e4bdac6cb218fb41ed793dd631fddb160dd
+
+Package: python3-django-storages-dropbox
+Source: python-django-storages
+Version: 1.13.2-1+deb12u1
+Installed-Size: 40
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-django-storages (= 1.13.2-1+deb12u1), python3-dropbox, python3:any
+Description: storage backends in Django (Dropbox)
+Homepage: https://github.com/jschneier/django-storages/
+Description-md5: a47650ea4670a20920cc2c149c780b44
+python
+Priority: optional
+Filename: pool/updates/main/p/python-django-storages/python3-django-storages-dropbox_1.13.2-1+deb12u1_all.deb
+Size: 20460
+SHA256: cd0e7bedb838be7353b6bfd9f517860f9db10721d2202d6ae4c3cc3353611bc0
+
+Package: python3-django-storages-ftp
+Source: python-django-storages
+Version: 1.13.2-1+deb12u1
+Installed-Size: 43
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-django-storages (= 1.13.2-1+deb12u1), python3:any
+Description: storage backends in Django (FTP)
+Homepage: https://github.com/jschneier/django-storages/
+Description-md5: 3c1921c7bbfded368fe9a2db942a69a0
+python
+Priority: optional
+Filename: pool/updates/main/p/python-django-storages/python3-django-storages-ftp_1.13.2-1+deb12u1_all.deb
+Size: 20936
+SHA256: 16afe2c5cce62ad53f18bb6894a22b5d598d2dbcc557a78af27eb83f884f1bbb
+
+Package: python3-django-storages-libcloud
+Source: python-django-storages
+Version: 1.13.2-1+deb12u1
+Installed-Size: 40
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-django-storages (= 1.13.2-1+deb12u1), python3-libcloud, python3:any
+Description: storage backends in Django (Libcloud)
+Homepage: https://github.com/jschneier/django-storages/
+Description-md5: 48f52c5e02b5a95c1aa67f35c224ee9a
+python
+Priority: optional
+Filename: pool/updates/main/p/python-django-storages/python3-django-storages-libcloud_1.13.2-1+deb12u1_all.deb
+Size: 20576
+SHA256: 899acc89c93320d77826fe5214166a0c08dfc771c435c194860f29cb5bf63b3b
+
+Package: python3-django-storages-sftp
+Source: python-django-storages
+Version: 1.13.2-1+deb12u1
+Installed-Size: 41
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-django-storages (= 1.13.2-1+deb12u1), python3-paramiko, python3:any
+Description: storage backends in Django (SFTP)
+Homepage: https://github.com/jschneier/django-storages/
+Description-md5: 2a380792c318ee87e32246cefdcd432e
+python
+Priority: optional
+Filename: pool/updates/main/p/python-django-storages/python3-django-storages-sftp_1.13.2-1+deb12u1_all.deb
+Size: 20608
+SHA256: f399f3eea6b00602932464c6d50a6058e286d1b36e97d28cc45bb58e19345e39
 
 Package: python3-internetarchive
 Source: python-internetarchive
