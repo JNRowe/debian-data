@@ -64,6 +64,24 @@ Filename: pool/updates/main/libx/libxml2/python3-libxml2_2.12.7+dfsg+really2.9.1
 Size: 189728
 SHA256: 1dfb2a4bd1fd8c5c50b136cc36097ed32b43e942e8881b32cfa499f62346943f
 
+Package: python3-nova
+Source: nova
+Version: 2:31.0.0-6+deb13u2
+Installed-Size: 27221
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: alembic, e2fsprogs, genisoimage, openssh-client, openssl, python3-barbicanclient, python3-castellan, python3-ceph, python3-cinderclient, python3-cryptography (>= 2.7), python3-cursive, python3-dateutil, python3-decorator, python3-eventlet, python3-feedparser, python3-futurist, python3-glanceclient, python3-greenlet, python3-iso8601, python3-jinja2, python3-jsonschema (>= 4.0.0), python3-keystoneauth1, python3-keystonemiddleware, python3-lxml, python3-memcache, python3-microversion-parse, python3-mysqldb, python3-netaddr, python3-neutronclient, python3-novaclient, python3-openstacksdk (>= 4.4.0), python3-os-brick (>= 6.10.0), python3-os-resource-classes, python3-os-service-types, python3-os-traits (>= 3.3.0), python3-os-vif (>= 3.1.0), python3-oslo.cache, python3-oslo.concurrency, python3-oslo.config (>= 1:9.6.0), python3-oslo.context, python3-oslo.db, python3-oslo.i18n, python3-oslo.limit, python3-oslo.log, python3-oslo.messaging (>= 14.1.0), python3-oslo.middleware, python3-oslo.policy (>= 4.5.0), python3-oslo.privsep, python3-oslo.reports, python3-oslo.rootwrap, python3-oslo.serialization, python3-oslo.service, python3-oslo.upgradecheck, python3-oslo.utils (>= 8.0.0), python3-oslo.versionedobjects, python3-paramiko, python3-paste, python3-pastedeploy, python3-pbr, python3-prettytable, python3-psutil, python3-psycopg2, python3-pycurl, python3-pymysql, python3-pyparsing, python3-requests, python3-retrying, python3-rfc3986, python3-routes, python3-sqlalchemy (>= 1.4.13), python3-stevedore, python3-tempita, python3-tooz, python3-webob, python3-websockify, python3-yaml, sudo, python3-alembic, python3:any
+Suggests: python3-suds
+Conflicts: python3-cjson
+Description: OpenStack Compute - libraries
+Homepage: http://www.openstack.org/software/openstack-compute/
+Description-md5: 7a990c4e2b56a06dcde23fc927997719
+python
+Priority: optional
+Filename: pool/updates/main/n/nova/python3-nova_31.0.0-6+deb13u2_all.deb
+Size: 3092876
+SHA256: 62fb3114a8ddb25cc51ae6b9746ad0655b34d1378fe0142daea30d818af85cef
+
 Package: pdfminer-data
 Source: pdfminer
 Version: 20221105+dfsg-1.1~deb13u1
@@ -98,6 +116,49 @@ Priority: optional
 Filename: pool/updates/main/p/pdfminer/python3-pdfminer_20221105+dfsg-1.1~deb13u1_all.deb
 Size: 111808
 SHA256: c272d69ace993dbf88c2d53535e3213d35088a153302e647f6d42f776cbb1bfc
+
+Package: python3-pil
+Source: pillow
+Version: 11.1.0-5+deb13u1
+Installed-Size: 1879
+Maintainer: Matthias Klose <doko@debian.org>
+Architecture: amd64
+Replaces: python3-imaging (<< 1.1.7+2.0.0-1.1)
+Provides: python3-pillow
+Depends: python3 (<< 3.14), python3 (>= 3.13~), python3:any, media-types | python3-pil.imagetk, libc6 (>= 2.14), libfreetype6 (>= 2.10.1), libimagequant0 (>= 2.11.10), libjpeg62-turbo (>= 1.3.1), liblcms2-2 (>= 2.7), libopenjp2-7 (>= 2.4.0), libraqm0 (>= 0.7.0), libtiff6 (>= 4.0.3), libwebp7 (>= 1.5.0), libwebpdemux2 (>= 1.5.0), libwebpmux3 (>= 1.5.0), libxcb1, zlib1g (>= 1:1.1.4)
+Suggests: python-pil-doc
+Conflicts: python3-imaging (<< 1.1.7+2.0.0-1.1)
+Breaks: python3-imaging (<< 1.1.7+2.0.0-1.1)
+Description: Python Imaging Library (Python3)
+Homepage: http://python-pillow.github.io/
+Description-md5: 159039260b5a620ec3a8b13546dd140a
+Multi-Arch: same
+Recommends: python3-olefile
+python
+Priority: optional
+Filename: pool/updates/main/p/pillow/python3-pil_11.1.0-5+deb13u1_amd64.deb
+Size: 512244
+SHA256: 13faf19e7c8ddc8dcf0050e1dd2bc84b776504d91a1c11ec411d256f44d05e4b
+
+Package: python3-pil.imagetk
+Source: pillow
+Version: 11.1.0-5+deb13u1
+Installed-Size: 110
+Maintainer: Matthias Klose <doko@debian.org>
+Architecture: amd64
+Replaces: python3-imaging-tk (<< 1.1.7+2.0.0-1.1)
+Depends: python3-pil (= 11.1.0-5+deb13u1), python3-tk (>= 3.4.1-2), python3 (<< 3.14), python3 (>= 3.13~), python3:any, libc6 (>= 2.38)
+Suggests: python-pil-doc
+Breaks: python3-imaging-tk (<< 1.1.7+2.0.0-1.1)
+Description: Python Imaging Library - ImageTk Module (Python3)
+Homepage: http://python-pillow.github.io/
+Description-md5: ea3aa1a359c8f5a637ed1b909420a7d4
+Multi-Arch: same
+python
+Priority: optional
+Filename: pool/updates/main/p/pillow/python3-pil.imagetk_11.1.0-5+deb13u1_amd64.deb
+Size: 81404
+SHA256: 1fb3906ca1229ede3e8759944ed66869a87b9e51b5ff6582b6f54a257e970222
 
 Package: python3-pyasn1
 Source: pyasn1
