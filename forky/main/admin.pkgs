@@ -33,6 +33,39 @@ Size: 14936
 MD5sum: 888eb2c560dc2f379e9c79653734f224
 SHA256: 8a49ddeff14dcc9cf509b83a6b943ae462b6506a3157c6dd29d72c7939662f10
 
+Package: account-utils
+Version: 1.0.1-1
+Installed-Size: 246
+Maintainer: Luca Boccassi <bluca@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libcrypt1 (>= 1:4.3.0), libeconf0 (>= 0.7.5~), libpam0g (>= 1.1.0), libpwaccess0 (>= 0.4.0), libselinux1 (>= 3.1~), libsystemd0 (>= 257)
+Description: user management and authentication - system services and PAM
+Homepage: https://github.com/thkukuk/account-utils
+Description-md5: 351c13e2693dbb447f5606260b29cd76
+admin
+Priority: optional
+Filename: pool/main/a/account-utils/account-utils_1.0.1-1_amd64.deb
+Size: 54404
+MD5sum: fce01e410491eba88f921c9bc1fcca85
+SHA256: 7f1bf966fc68cbcaa6acb68cc44257d6783f453b279442c5f3b74609cba2557d
+
+Package: account-utils-passwd
+Source: account-utils
+Version: 1.0.1-1
+Installed-Size: 204
+Maintainer: Luca Boccassi <bluca@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libcap2 (>= 1:2.10), libeconf0 (>= 0.7.5~), libpam0g (>= 0.99.7.1), libpwaccess0 (>= 0.4.0), libselinux1 (>= 3.1~), libsystemd0 (>= 257~rc1), account-utils (= 1.0.1-1)
+Description: user management and authentication - utilities
+Homepage: https://github.com/thkukuk/account-utils
+Description-md5: 7bb3bafa9cbd0e42732ef5eb8cbbbced
+admin
+Priority: optional
+Filename: pool/main/a/account-utils/account-utils-passwd_1.0.1-1_amd64.deb
+Size: 33064
+MD5sum: 187b6bdb23b6ce0d8049aec02b42c256
+SHA256: 4e933ed2b7de5d53badbf622a985edfc8bf6234a374dfa01e90db6925a55d275
+
 Package: accountsservice
 Source: accountsservice (23.13.9-8)
 Version: 23.13.9-8+b1
@@ -10744,9 +10777,9 @@ MD5sum: 8f9ffa1ecde9e33251a11b77ff11686c
 SHA256: 0c4ebe371360fff257c31b9b1325d74b68527f35cc4eef3ad4879f4dca29411f
 
 Package: nscd
-Source: glibc (2.42-11)
-Version: 2.42-11+b1
-Installed-Size: 263
+Source: glibc
+Version: 2.42-13
+Installed-Size: 262
 Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
 Architecture: amd64
 Depends: libaudit1 (>= 1:2.2.1), libc6 (>> 2.42), libc6 (<< 2.43), libcap2 (>= 1:2.10), libselinux1 (>= 3.1~)
@@ -10760,10 +10793,10 @@ Tag: interface::daemon, network::server, protocol::dns, role::program,
  suite::gnu, use::proxying
 admin
 Priority: optional
-Filename: pool/main/g/glibc/nscd_2.42-11+b1_amd64.deb
-Size: 108420
-MD5sum: 9b0ba90105c1f2ce2cba18362c39363b
-SHA256: ee9cf0bbc5994f0d3be6af7641b4e4297c88b831d4266641bcfbfa62ee0ef650
+Filename: pool/main/g/glibc/nscd_2.42-13_amd64.deb
+Size: 108352
+MD5sum: 2be2adb174cf8b69e0abc9af11e4d982
+SHA256: d4c7e97b5a617d659fa1e29db7dd7a42ea0d59c8b6299ef9648521b7eaf1b78b
 
 Package: glome-cli
 Source: glome
@@ -28724,21 +28757,21 @@ MD5sum: d41ad9aca1a702bc61ca11dcf64394af
 SHA256: 9c92dd0695bf2a45cae091a042ef073bda86b9b80b4fddd715f54b10473c12cf
 
 Package: virt-v2v
-Version: 2.6.0-2.1
-Installed-Size: 17329
+Version: 2.8.1-1
+Installed-Size: 22162
 Maintainer: Hilko Bengen <bengen@debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.42), libcrypt1 (>= 1:4.1.0), libglib2.0-0t64 (>= 2.12.0), libguestfs0t64 (>= 1:1.56.0), libjansson4 (>= 2.14), libnbd0 (>= 1.24.0), libosinfo-1.0-0 (>= 1.7.1~), libpcre2-8-0 (>= 10.22), libvirt0 (>= 1.2.8~rc2), libxml2-16 (>= 2.14.1), libnbd-bin, nbdkit, nbdkit-plugin-python, qemu-utils
+Depends: libc6 (>= 2.42), libcrypt1 (>= 1:4.1.0), libglib2.0-0t64 (>= 2.12.0), libguestfs0t64 (>= 1:1.58.0), libjson-c5 (>= 0.15), libnbd0 (>= 1.24.0), libosinfo-1.0-0 (>= 0.2.6), libpcre2-8-0 (>= 10.22), libvirt0 (>= 1.2.8~rc2), libxml2-16 (>= 2.14.1), libnbd-bin, nbdkit, nbdkit-plugin-python, qemu-utils
 Suggests: rhsrvany, nbdkit-vddk-plugin
 Description: virtual-to-virtual machine converter
 Homepage: https://libguestfs.org/
 Description-md5: e4d40b3860ab18ac4304bed01765df49
 admin
 Priority: optional
-Filename: pool/main/v/virt-v2v/virt-v2v_2.6.0-2.1_amd64.deb
-Size: 2316304
-MD5sum: 61390738bdd59fe6ec83b3bfc8d9f9a6
-SHA256: 7554ddb3b60406b3be457c21c38cb37a74c23f4c9e650e0c94708ac736313b2f
+Filename: pool/main/v/virt-v2v/virt-v2v_2.8.1-1_amd64.deb
+Size: 2624044
+MD5sum: 52f4d1e116109d9d138bc37d337b4dcd
+SHA256: a180d52c77e990121e2eee512b818b18a31afb18b3c9735307175ac0cfb9462c
 
 Package: virt-viewer
 Version: 11.0-4
@@ -29004,6 +29037,23 @@ Filename: pool/main/w/wiredtiger/wiredtiger_3.2.1-1_amd64.deb
 Size: 33588
 MD5sum: e7ca1e39dce4f1d0cbb6cb044c5db9f7
 SHA256: 6457012e78ed9078b8bc9be94902186f9a009a9ae7e06c766ec60ede1a81fb74
+
+Package: witr
+Version: 0.2.4+ds-1
+Installed-Size: 4351
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34)
+Description: tool to determine why a program or service is running
+Homepage: https://github.com/pranshuparmar/witr
+Description-md5: 9bac756936678bf3c5d70a771beb1132
+Static-Built-Using: go-md2man-v2 (= 2.0.7-1), golang-1.24 (= 1.24.13-2), golang-blackfriday-v2 (= 2.1.0-1), golang-github-spf13-cobra (= 1.10.2-1), golang-github-spf13-pflag (= 1.0.10-1), golang-gopkg-yaml.v3 (= 3.0.4-2)
+admin
+Priority: optional
+Filename: pool/main/w/witr/witr_0.2.4+ds-1_amd64.deb
+Size: 1390856
+MD5sum: 2765ed787f3ba5c5213dae1c5a4c85cb
+SHA256: 533f2314b46cba5079f2201282861b5db4154a694f854449e0b339d7b78f240c
 
 Package: wsl
 Version: 0.2.1-6
