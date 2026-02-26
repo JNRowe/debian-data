@@ -134,8 +134,8 @@ SHA256: 5225585c5623607b89c0067fa77ee8e17f7ba98fff7ed2927d61da288b1cec5f
 
 Package: postgresql-18-credcheck
 Source: credcheck
-Version: 4.5-1
-Installed-Size: 178
+Version: 4.6-1
+Installed-Size: 180
 Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
 Architecture: amd64
 Depends: postgresql-18, libc6 (>= 2.4)
@@ -145,10 +145,10 @@ Homepage: https://github.com/MigOpsRepos/credcheck
 Description-md5: 18ad910b0dc537a23b8d6de8b771df2d
 database
 Priority: optional
-Filename: pool/main/c/credcheck/postgresql-18-credcheck_4.5-1_amd64.deb
-Size: 74988
-MD5sum: 6c36a0353986a076f9193cc1598e49e9
-SHA256: 791ef3e664de4411348a5ed9fe0fe1b00fa1f2b9b18ca5acbeecd331f9c2b28d
+Filename: pool/main/c/credcheck/postgresql-18-credcheck_4.6-1_amd64.deb
+Size: 75280
+MD5sum: d7fc681338ffa92a256d5354c4f9bb55
+SHA256: ff01d8ea0d2ba58dc1d7ee1f3f17cf70324ba0a0957c56af8c5da16f02e8915b
 
 Package: db5.3-util
 Source: db5.3
@@ -2507,21 +2507,20 @@ MD5sum: a0fda840530925cc60da249dfe1bd15c
 SHA256: a31ffcf0c03ae26e82b0a8d73a59a19c4617a2625ab2f8cfa545b06e4ea7d58a
 
 Package: pgagroal
-Source: pgagroal (1.6.0-1)
-Version: 1.6.0-1+b1
-Installed-Size: 592
+Version: 2.0.1-2
+Installed-Size: 808
 Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
 Architecture: amd64
-Depends: postgresql-common, libc6 (>= 2.34), libcjson1 (>= 1.7.13), libev4t64 (>= 1:4.04), libssl3t64 (>= 3.0.0), libsystemd0
+Depends: postgresql-common, libbz2-1.0, libc6 (>= 2.38), liblz4-1 (>= 0.0~r130), libssl3t64 (>= 3.0.0), liburing2 (>= 2.3), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
 Description: High-performance connection pool for PostgreSQL
 Homepage: https://github.com/agroal/pgagroal
 Description-md5: 0585566314e9fe350533442c26e886d9
 database
 Priority: optional
-Filename: pool/main/p/pgagroal/pgagroal_1.6.0-1+b1_amd64.deb
-Size: 264616
-MD5sum: 713565e3663adb5f2899811e13b2df19
-SHA256: 57b83cc35fc19f21dc41e246fd90ec3e8eb1292a98c6cdd168aa7049c4f5aeed
+Filename: pool/main/p/pgagroal/pgagroal_2.0.1-2_amd64.deb
+Size: 343828
+MD5sum: dcbc094965f292725fc6b61453ed11e8
+SHA256: ec626e8bf89595fe76bd0239d5560f700eae3fdce59c8509dab8b5f45790ff17
 
 Package: postgresql-18-pgaudit
 Source: pgaudit-18
@@ -4245,6 +4244,40 @@ Filename: pool/main/s/sqlitebrowser/sqlitebrowser_3.13.1-1_amd64.deb
 Size: 2319956
 MD5sum: 4ca0b80d7984b1405f1f0c227cd016bf
 SHA256: 08a5948a127c9ea4a6a6f626ec0a1b3c4db334a139ca6e4d0021938899a484f3
+
+Package: sqlitestudio
+Version: 3.4.21+ds-1
+Installed-Size: 12492
+Maintainer: Yangfl <mmyangfl@gmail.com>
+Architecture: amd64
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libqt5core5t64 (>= 5.15.1), libqt5gui5t64 (>= 5.14.1) | libqt5gui5-gles (>= 5.14.1), libqt5network5t64 (>= 5.0.2), libqt5qml5 (>= 5.14.1), libqt5widgets5t64 (>= 5.15.1), libreadline8t64 (>= 6.0), libsqlite3-0 (>= 3.42.0), libstdc++6 (>= 14)
+Recommends: sqlitestudio-plugins
+Description: free, open source, multi-platform SQLite database manager
+Homepage: https://sqlitestudio.pl/
+Description-md5: ccc21e8315e07d3afc20e015e550bffd
+database
+Priority: optional
+Filename: pool/main/s/sqlitestudio/sqlitestudio_3.4.21+ds-1_amd64.deb
+Size: 3971844
+MD5sum: f4e23a6afd1065519b0dd5621eb48fd1
+SHA256: dd15e3277e9ee94b296cbfdaba6ea77ba8684bc6017be420f412eedb920e8ab9
+
+Package: sqlitestudio-plugins
+Source: sqlitestudio
+Version: 3.4.21+ds-1
+Installed-Size: 8994
+Maintainer: Yangfl <mmyangfl@gmail.com>
+Architecture: amd64
+Depends: libc6 (>= 2.42), libgcc-s1 (>= 3.0), libpython3.13 (>= 3.13.0~rc3), libqt5core5t64 (>= 5.15.1), libqt5gui5t64 (>= 5.14.1) | libqt5gui5-gles (>= 5.14.1), libqt5printsupport5t64 (>= 5.6.0~beta), libqt5widgets5t64 (>= 5.15.1), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14)
+Description: free, open source, multi-platform SQLite database manager (plugins)
+Homepage: https://sqlitestudio.pl/
+Description-md5: 48145996f3b96c9da0cfdea81a32defa
+database
+Priority: optional
+Filename: pool/main/s/sqlitestudio/sqlitestudio-plugins_3.4.21+ds-1_amd64.deb
+Size: 2730496
+MD5sum: 6eaa297933a2bfe3e1008313371f1983
+SHA256: 02e3028dc99f5a76f61c6cf9248b3bad6313a370d0e2af9521171c2e604d701c
 
 Package: sqlsmith
 Source: sqlsmith (1.4-1)
