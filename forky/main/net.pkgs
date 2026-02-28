@@ -3544,42 +3544,6 @@ Size: 390844
 MD5sum: 9f549c0bbd5f6fe82becf6c419758ae5
 SHA256: 880d9c11a66772eabdb700a255393e4df4f97899048ad321c85878dbde846a96
 
-Package: davmail
-Version: 6.5.1.3873-1
-Installed-Size: 94
-Maintainer: Alexandre Rossi <niol@zincube.net>
-Architecture: all
-Depends: davmail-server (= 6.5.1.3873-1), default-jre, libswt-cairo-gtk-4-jni, libopenjfx-java
-Description: POP/IMAP/SMTP/CalDav/LDAP to Microsoft Exchange gateway - GUI
-Homepage: https://davmail.sourceforge.net/
-Description-md5: 5b4960bdb7f574d05105e8babd71cdf5
-net
-Priority: optional
-Filename: pool/main/d/davmail/davmail_6.5.1.3873-1_all.deb
-Size: 75204
-MD5sum: 1a41752a23a6e75d0812ff40e414ed9f
-SHA256: 8e695335e0f6883a96f5dcf6aa92b21f9b1b050fe2831b8fbfbca5598921e73d
-
-Package: davmail-server
-Source: davmail
-Version: 6.5.1.3873-1
-Installed-Size: 785
-Maintainer: Alexandre Rossi <niol@zincube.net>
-Architecture: all
-Replaces: davmail (<= 6.0.1.3390-1.1)
-Depends: logrotate, adduser, default-jre-headless, libcommons-codec-java, libcommons-logging-java, libhtmlcleaner-java, libhttpclient-java, libjackrabbit-java, libjcifs-java, libjettison-java, libjna-java, liblog4j1.2-java, libmail-java, libslf4j-java, libstax2-api-java, libwoodstox-java
-Pre-Depends: init-system-helpers (>= 1.54~)
-Breaks: davmail (<= 6.0.1.3390-1.1)
-Description: POP/IMAP/SMTP/CalDav/LDAP to Microsoft Exchange gateway - headless
-Homepage: https://davmail.sourceforge.net/
-Description-md5: cc360db0a8d2d7792d063d68e4fc5aa8
-net
-Priority: optional
-Filename: pool/main/d/davmail/davmail-server_6.5.1.3873-1_all.deb
-Size: 728620
-MD5sum: 5cd7f1670a62a6925a35d88abe1939bb
-SHA256: ad2e85db3928d10d72299382a14f7671a300a9a174be571b57d952be37e32b70
-
 Package: dbeacon
 Version: 0.4.0-3
 Installed-Size: 167
@@ -4732,14 +4696,14 @@ MD5sum: 27ef081e8c5092c28b6d556ea10cad6f
 SHA256: a24641c9c0df56e59e188d990d98f78b3d101857015c0f73c6afbc9cd0035841
 
 Package: dnsmasq
-Version: 2.92-1
+Version: 2.92-3
 Installed-Size: 156
 Maintainer: Simon Kelley <simon@thekelleys.org.uk>
 Architecture: all
-Depends: netbase, dnsmasq-base, runit-helper (>= 2.14.0~)
+Depends: dnsmasq-base, netbase, runit-helper (>= 2.14.0~)
 Pre-Depends: init-system-helpers (>= 1.54~)
 Suggests: resolvconf
-Conflicts: resolvconf (<< 1.15), runit (<< 2.1.2-51~)
+Conflicts: runit (<< 2.1.2-51~)
 Breaks: runit (<< 2.1.2-51~)
 Description: Small caching DNS proxy and DHCP/TFTP server - system daemon
 Multi-Arch: foreign
@@ -4751,23 +4715,21 @@ Tag: admin::boot, admin::file-distribution, implemented-in::c,
  use::proxying, works-with::file
 net
 Priority: optional
-Filename: pool/main/d/dnsmasq/dnsmasq_2.92-1_all.deb
-Size: 71220
-MD5sum: 017044bca57687f361f321dff564c868
-SHA256: 44a0b9c59be8bafdb7c7259e74025775f1561a804bc6e5f7e42aff5b7d603810
+Filename: pool/main/d/dnsmasq/dnsmasq_2.92-3_all.deb
+Size: 71644
+MD5sum: 56efbf803979dba44a050e19d19fec58
+SHA256: 01886e8d35089f3f92760a20eac1632dc7b83bc1e3130d80f62f4ee9a0a119b3
 
 Package: dnsmasq-base
 Source: dnsmasq
-Version: 2.92-1
-Installed-Size: 1254
+Version: 2.92-3
+Installed-Size: 1256
 Maintainer: Simon Kelley <simon@thekelleys.org.uk>
 Architecture: amd64
-Replaces: dnsmasq (<< 2.63-1~), dnsmasq-base
 Provides: dnsmasq-base
-Depends: passwd, libc6 (>= 2.38), libdbus-1-3 (>= 1.10), libgmp10 (>= 2:6.3.0+dfsg), libhogweed6t64 (>= 2.4-3), libidn2-0 (>= 2.0.0), libnetfilter-conntrack3 (>= 1.0.1), libnettle8t64 (>= 2.4-3), libnftables1 (>= 1.0.2)
+Depends: systemd | systemd-standalone-sysusers | systemd-sysusers, libc6 (>= 2.38), libdbus-1-3 (>= 1.10), libgmp10 (>= 2:6.3.0+dfsg), libhogweed6t64, libidn2-0 (>= 2.0.0), libnetfilter-conntrack3 (>= 1.0.1), libnettle8t64, libnftables1 (>= 1.0.2)
 Recommends: dns-root-data
 Conflicts: dnsmasq-base-lua
-Breaks: dnsmasq (<< 2.63-1~)
 Description: Small caching DNS proxy and DHCP/TFTP server - executable
 Multi-Arch: foreign
 Homepage: https://www.thekelleys.org.uk/dnsmasq/doc.html
@@ -4777,42 +4739,39 @@ Tag: admin::boot, admin::configuring, implemented-in::c, interface::daemon,
  role::program, scope::utility, use::proxying
 net
 Priority: optional
-Filename: pool/main/d/dnsmasq/dnsmasq-base_2.92-1_amd64.deb
-Size: 579888
-MD5sum: 6c31fbd4a806c326b536c2833655ee97
-SHA256: 97055dd34114e17de2cc11a1dc8ba16061d262465dc87c2a4399fa5f27176654
+Filename: pool/main/d/dnsmasq/dnsmasq-base_2.92-3_amd64.deb
+Size: 579652
+MD5sum: af3debb634e2c165749b3bef34436750
+SHA256: edb14d6fd254322f9b43101d653bee0ad233bfe0a1c92e53fab0e25b3ea367c7
 
 Package: dnsmasq-base-lua
 Source: dnsmasq
-Version: 2.92-1
-Installed-Size: 1260
+Version: 2.92-3
+Installed-Size: 1262
 Maintainer: Simon Kelley <simon@thekelleys.org.uk>
 Architecture: amd64
-Replaces: dnsmasq (<< 2.63-1~), dnsmasq-base
 Provides: dnsmasq-base
-Depends: passwd, libc6 (>= 2.38), libdbus-1-3 (>= 1.10), libgmp10 (>= 2:6.3.0+dfsg), libhogweed6t64 (>= 2.4-3), libidn2-0 (>= 2.0.0), liblua5.4-0 (>= 5.4.6), libnetfilter-conntrack3 (>= 1.0.1), libnettle8t64 (>= 2.4-3), libnftables1 (>= 1.0.2)
+Depends: systemd | systemd-standalone-sysusers | systemd-sysusers, libc6 (>= 2.38), libdbus-1-3 (>= 1.10), libgmp10 (>= 2:6.3.0+dfsg), libhogweed6t64, libidn2-0 (>= 2.0.0), liblua5.4-0 (>= 5.4.6), libnetfilter-conntrack3 (>= 1.0.1), libnettle8t64, libnftables1 (>= 1.0.2)
 Recommends: dns-root-data
 Conflicts: dnsmasq-base
-Breaks: dnsmasq (<< 2.63-1~)
 Description: Small caching DNS proxy and DHCP/TFTP server - executable, Lua-enabled
 Multi-Arch: foreign
 Homepage: https://www.thekelleys.org.uk/dnsmasq/doc.html
 Description-md5: 5caf1f894b363ec915dba1cc68921dc9
 net
 Priority: optional
-Filename: pool/main/d/dnsmasq/dnsmasq-base-lua_2.92-1_amd64.deb
-Size: 581648
-MD5sum: 6cd062c2df4d6dbc1126d5ceede372ba
-SHA256: 7e6c33b54be7f584f9565fd8ee937cb263eb8feb318e26f31a66f9105adc53cf
+Filename: pool/main/d/dnsmasq/dnsmasq-base-lua_2.92-3_amd64.deb
+Size: 581504
+MD5sum: 83834c6260b3f8fe17f0f122a83e1848
+SHA256: 2c25d5b12e0ee355ed0d55dfc4c63f0c0c516fe96854fda7572bd52e371502f6
 
 Package: dnsmasq-utils
 Source: dnsmasq
-Version: 2.92-1
+Version: 2.92-3
 Installed-Size: 115
 Maintainer: Simon Kelley <simon@thekelleys.org.uk>
 Architecture: amd64
 Depends: libc6 (>= 2.38)
-Conflicts: dnsmasq (<< 2.40)
 Description: Utilities for manipulating DHCP leases
 Multi-Arch: foreign
 Homepage: https://www.thekelleys.org.uk/dnsmasq/doc.html
@@ -4820,10 +4779,10 @@ Description-md5: c01626c0b1b5fea18d3a8d04fbe44ea7
 Tag: protocol::dhcp, role::program, scope::utility
 net
 Priority: optional
-Filename: pool/main/d/dnsmasq/dnsmasq-utils_2.92-1_amd64.deb
-Size: 64600
-MD5sum: 715c85408ea123422003f7b285ad7f2f
-SHA256: e3960aaf51d08614a8df1fc23826abc12ca47599e8787d47d5ad11ff49e7a2bd
+Filename: pool/main/d/dnsmasq/dnsmasq-utils_2.92-3_amd64.deb
+Size: 64884
+MD5sum: eeda1a2ba790ab918152d37dd8a88403
+SHA256: f0fb82f5ff0dbe3a6277966e62d481460f7705e853582f76d9b2e461aa57e408
 
 Package: dnsproxy
 Source: dnsproxy (1.17+git20211129.22329c4-6)
@@ -9337,8 +9296,8 @@ SHA256: a215f788ec92cb467ba3891e796d19ce1a102b75e6dc2b35738d8df5cb408e22
 
 Package: heimdal-clients
 Source: heimdal
-Version: 7.8.git20221117.28daf24+dfsg-10
-Installed-Size: 688
+Version: 7.8.git20221117.28daf24+dfsg-11
+Installed-Size: 686
 Maintainer: Brian May <bam@debian.org>
 Architecture: amd64
 Depends: krb5-config, libasn1-8t64-heimdal (>= 1.4.0+git20110226), libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libedit2 (>= 2.11-20080614-0), libgssapi3t64-heimdal (>= 1.4.0+git20110226), libhcrypto5t64-heimdal (>= 1.4.0+git20110226), libhdb9t64-heimdal (>= 1.4.0+git20110226), libheimntlm0t64-heimdal (>= 1.4.0+git20110226), libhx509-5t64-heimdal (>= 1.6~rc2), libkadm5clnt7t64-heimdal (>= 1.7~git20150920), libkadm5srv8t64-heimdal (>= 1.6~git20120311), libkafs0t64-heimdal (>= 1.4.0+git20110226), libkrb5-26t64-heimdal (>= 7.7.0+dfsg), libotp0t64-heimdal (>= 1.4.0+git20110226), libroken19t64-heimdal (>= 1.7~git20150920), libsl0t64-heimdal (>= 1.6~git20120311)
@@ -9353,15 +9312,15 @@ Tag: implemented-in::c, interface::commandline, interface::text-mode,
  use::login
 net
 Priority: optional
-Filename: pool/main/h/heimdal/heimdal-clients_7.8.git20221117.28daf24+dfsg-10_amd64.deb
-Size: 166744
-MD5sum: 0da7e76eff4fbd49397408888091989c
-SHA256: 3c3c90b866e0392586bccbab7dd0f05b7ac1fa4e85b2e092514781b4a2fcdd57
+Filename: pool/main/h/heimdal/heimdal-clients_7.8.git20221117.28daf24+dfsg-11_amd64.deb
+Size: 164708
+MD5sum: 28770977c05b1a90b51a5f6292e84868
+SHA256: da43461fdbb979dd2e36f0f5caefe7112a43f78cb2a30461c812b5069227f92f
 
 Package: heimdal-kcm
 Source: heimdal
-Version: 7.8.git20221117.28daf24+dfsg-10
-Installed-Size: 106
+Version: 7.8.git20221117.28daf24+dfsg-11
+Installed-Size: 105
 Maintainer: Brian May <bam@debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libhcrypto5t64-heimdal (>= 1.4.0+git20110226), libheimntlm0t64-heimdal (>= 1.4.0+git20110226), libkrb5-26t64-heimdal (>= 1.4.0+git20110226), libroken19t64-heimdal (>= 1.7~git20150920)
@@ -9372,15 +9331,15 @@ Tag: admin::user-management, implemented-in::c, network::client,
  protocol::kerberos, role::program, security::cryptography, use::login
 net
 Priority: optional
-Filename: pool/main/h/heimdal/heimdal-kcm_7.8.git20221117.28daf24+dfsg-10_amd64.deb
-Size: 37204
-MD5sum: a0913283ecee513e97f0719de9cd429b
-SHA256: 62a527e8d8312630580efdd9df20bc890b4408a492c0b329b372d063e1be57a6
+Filename: pool/main/h/heimdal/heimdal-kcm_7.8.git20221117.28daf24+dfsg-11_amd64.deb
+Size: 35720
+MD5sum: c1351183a38e6a598411bde57b5f2f49
+SHA256: 3483e31457eb1c3b82a4c1ef04d1b5b2bbce7435393e37c8e141000d43d3c038
 
 Package: heimdal-kdc
 Source: heimdal
-Version: 7.8.git20221117.28daf24+dfsg-10
-Installed-Size: 432
+Version: 7.8.git20221117.28daf24+dfsg-11
+Installed-Size: 426
 Maintainer: Brian May <bam@debian.org>
 Architecture: amd64
 Depends: debconf (>= 0.5.00) | debconf-2.0, heimdal-clients, krb5-config, openbsd-inetd | inet-superserver, libasn1-8t64-heimdal (>= 1.4.0+git20110226), libc6 (>= 2.38), libcap-ng0 (>= 0.7.9), libgssapi3t64-heimdal (>= 1.4.0+git20110226), libhcrypto5t64-heimdal (>= 1.4.0+git20110226), libhdb9t64-heimdal (>= 1.6~git20131117), libheimbase1t64-heimdal (>= 1.4.0+git20110226), libheimntlm0t64-heimdal (>= 1.4.0+git20110226), libkadm5srv8t64-heimdal (>= 7.8.git20221115.a6cf945+dfsg), libkdc2t64-heimdal (>= 1.4.0+git20110226), libkrb5-26t64-heimdal (>= 1.7~git20160418), libroken19t64-heimdal (>= 1.7~git20150920), libsl0t64-heimdal (>= 1.4.0+git20110226)
@@ -9395,15 +9354,15 @@ Tag: admin::file-distribution, admin::login, admin::user-management,
  security::authentication, security::cryptography
 net
 Priority: optional
-Filename: pool/main/h/heimdal/heimdal-kdc_7.8.git20221117.28daf24+dfsg-10_amd64.deb
-Size: 113188
-MD5sum: f84721d077df514bc3b56310f94ddae7
-SHA256: f037b984a5436098e3623bb7fccfc8a378dda48950517ee2974344c445240312
+Filename: pool/main/h/heimdal/heimdal-kdc_7.8.git20221117.28daf24+dfsg-11_amd64.deb
+Size: 111600
+MD5sum: 2663d2fe50d84d376a6d23da6bb7df9d
+SHA256: 59f84280a3eb2ca04a5ab8df317e2286fd221e2597721c8d96f75dacdcd6403c
 
 Package: heimdal-servers
 Source: heimdal
-Version: 7.8.git20221117.28daf24+dfsg-10
-Installed-Size: 47
+Version: 7.8.git20221117.28daf24+dfsg-11
+Installed-Size: 46
 Maintainer: Brian May <bam@debian.org>
 Architecture: amd64
 Depends: krb5-config, openbsd-inetd | inet-superserver, libc6 (>= 2.38), libkrb5-26t64-heimdal (>= 1.4.0+git20110226), libroken19t64-heimdal (>= 1.4.0+git20110226)
@@ -9415,10 +9374,10 @@ Tag: implemented-in::c, network::server, protocol::ftp, protocol::kerberos,
  protocol::ssl, role::program, security::cryptography, use::downloading
 net
 Priority: optional
-Filename: pool/main/h/heimdal/heimdal-servers_7.8.git20221117.28daf24+dfsg-10_amd64.deb
-Size: 16492
-MD5sum: 363c270417482956b502e94978d79c1a
-SHA256: c5282338c20e0f8c60c1faf71791ef515757797270e90aa6edbb6fde848f2789
+Filename: pool/main/h/heimdal/heimdal-servers_7.8.git20221117.28daf24+dfsg-11_amd64.deb
+Size: 14972
+MD5sum: d5fe94d06e0e4bc277dec7e182cb6bf0
+SHA256: 6e625926c69ed08319387d856d8a13798c7596ddbfbb68e91b26fb2661381bb5
 
 Package: hipercontracer
 Version: 1.6.10-1
@@ -10713,8 +10672,8 @@ MD5sum: e15772650963101461ef2f8d38dac394
 SHA256: 2f57d0f7575589c1a835d01a9b7d80255c8fe8b94233c7fb5b64667d7d211666
 
 Package: iproute2
-Version: 6.18.0-1
-Installed-Size: 3901
+Version: 6.19.0-1
+Installed-Size: 4122
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
 Replaces: iproute2-doc
@@ -10732,10 +10691,10 @@ Tag: admin::configuring, implemented-in::c, interface::commandline,
  works-with::network-traffic
 net
 Priority: important
-Filename: pool/main/i/iproute2/iproute2_6.18.0-1_amd64.deb
-Size: 1114456
-MD5sum: c13e3f211d5550a4a6b27376e009cffa
-SHA256: 48312ed45dee72081c71f73a35697c5451aceec3321c76536ede95fa0c9025db
+Filename: pool/main/i/iproute2/iproute2_6.19.0-1_amd64.deb
+Size: 1143456
+MD5sum: b310a5fc7cbc7a1c6115ad593a3b11cc
+SHA256: 04d96f237e54ac90010d502a1617529b50fc78052ebd0bef46ccb48a35b1c916
 
 Package: ipset
 Version: 7.24-1
@@ -11763,26 +11722,6 @@ Filename: pool/main/j/jets3t/jets3t_0.8.1+dfsg-5_all.deb
 Size: 1569668
 MD5sum: fad5ab1683e04d732af4adc6aae46f99
 SHA256: 6419ee532666688d848db44fcf2a5cdfe4f2d9d7c70cb2522ed4d4afd6986771
-
-Package: jftp
-Version: 1.60+dfsg-4
-Installed-Size: 4595
-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
-Architecture: all
-Depends: default-jre | java6-runtime, java-wrappers, kunststoff, libcommons-codec-java, libcommons-logging-java, libj2ssh-java, libjcifs-java, libjlayer-java, libjsch-java, liblog4j1.2-java, libmiglayout-java, libswt-gtk-4-java, libyanfs-java
-Description: Java GUI client for FTP, SMB, SFTP and NFS
-Homepage: http://j-ftp.sourceforge.net
-Description-md5: 3046c53d919f2fee80a417b9f41234f9
-Tag: implemented-in::java, interface::graphical, interface::x11,
- network::client, protocol::ftp, protocol::http, protocol::nfs,
- protocol::sftp, protocol::smb, role::program, uitoolkit::TODO,
- use::transmission, works-with::file, x11::application
-net
-Priority: optional
-Filename: pool/main/j/jftp/jftp_1.60+dfsg-4_all.deb
-Size: 601832
-MD5sum: 45d8028c0703fedbc1f3b466ac5f668a
-SHA256: e17124ed819fd5a13b5d331d9366c0a0403aa134a867e51553cf95b0ab7317de
 
 Package: jnettop
 Version: 0.13.0-5
@@ -13717,12 +13656,11 @@ MD5sum: b366968866e5eff4b17aaa228960089d
 SHA256: 8b2846afe228b7e8faeebaae27fd49be35ad9d2e97986b2248f7ea6d882242b7
 
 Package: lambdabot
-Version: 5.3.1.2-1
-Installed-Size: 37527
+Version: 5.3.1.2-2
+Installed-Size: 37172
 Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libffi8 (>= 3.4), libgmp10 (>= 2:6.3.0+dfsg), libnuma1 (>= 2.0.11), libtinfo6 (>= 6), zlib1g (>= 1:1.1.4)
-Recommends: djinn
+Depends: libc6 (>= 2.42), libffi8 (>= 3.4), libgmp10 (>= 2:6.3.0+dfsg), libnuma1 (>= 2.0.11), libtinfo6 (>= 6), zlib1g (>= 1:1.1.4)
 Suggests: aspell, hoogle (>= 4.2.23), hsbrainfuck, mueval, unlambda
 Description: Development tool and advanced IRC bot
 Homepage: https://wiki.haskell.org/Lambdabot
@@ -13730,10 +13668,10 @@ Description-md5: 7c5b1a45fe74af0f554a8cf9fdd1d157
 Tag: protocol::irc, role::program, uitoolkit::ncurses
 net
 Priority: optional
-Filename: pool/main/l/lambdabot/lambdabot_5.3.1.2-1_amd64.deb
-Size: 5392708
-MD5sum: ed40df6139f2d1ad7e5a3b0c07e2a965
-SHA256: 208c876a3d58775819343871461c3731301e90df6444facb9ae229e2cd7d2b25
+Filename: pool/main/l/lambdabot/lambdabot_5.3.1.2-2_amd64.deb
+Size: 5651768
+MD5sum: d89c25c4dfa1089834bb27fd436aa718
+SHA256: 02718d91ae7bf9488e0a67484fc686cf79228eb0d3ef2ef9888f155d5c428cb1
 
 Package: lbcd
 Version: 3.5.2-4
@@ -21090,12 +21028,11 @@ MD5sum: 0c23432c7c9142fdb7fea8b9730dcc08
 SHA256: 2792b32ac3f92e8c34a0aa12778cc0afb5a195cddaabf1ad87ddafddd304fe76
 
 Package: ocproxy
-Source: ocproxy (1.60-1)
-Version: 1.60-1+b3
-Installed-Size: 144
+Version: 1.60-1.1
+Installed-Size: 143
 Maintainer: Kevin Cernekee <cernekee@gmail.com>
 Architecture: amd64
-Depends: libc6 (>= 2.34), libevent-2.1-7t64 (>= 2.1.8-stable)
+Depends: libc6 (>= 2.38), libevent-2.1-7t64 (>= 2.1.8-stable)
 Recommends: openconnect
 Suggests: dante-client
 Description: SOCKS proxy for openconnect
@@ -21103,10 +21040,10 @@ Homepage: https://github.com/cernekee/ocproxy
 Description-md5: b045fcb3a9747aca5114dbad3e3bb2f5
 net
 Priority: optional
-Filename: pool/main/o/ocproxy/ocproxy_1.60-1+b3_amd64.deb
-Size: 56696
-MD5sum: 4cc86397d4299f3b085a4ea68733bb14
-SHA256: 49c577868ea3dd0ef0b164b93eb28956d8dae43fd78acab55e0143389a1b13ee
+Filename: pool/main/o/ocproxy/ocproxy_1.60-1.1_amd64.deb
+Size: 57508
+MD5sum: 67e7e9ba5cf9b9cb1c9d2ac323649c01
+SHA256: 8a40bf3b3d4c800527fe9756be168831a0ad81f97749976e0c2c6660b348b236
 
 Package: ocserv
 Version: 1.3.0-3
@@ -23272,25 +23209,25 @@ SHA256: b85cf6f8b366ff7f5aeb45ca8b4e84858f58276b456942d1d37dee0ab5c67927
 
 Package: ovn-central
 Source: ovn
-Version: 25.09.0-3
-Installed-Size: 4377
+Version: 26.03.0~git20260216.b543a88-3
+Installed-Size: 4783
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: amd64
-Depends: lsb-release, openvswitch-common (>= 2.17.0~), ovn-common (= 25.09.0-3), libc6 (>= 2.38), libcap-ng0 (>= 0.7.9), libssl3t64 (>= 3.0.0), libunbound8 (>= 1.8.0)
+Depends: lsb-release, openvswitch-common (>= 2.17.0~), ovn-common (= 26.03.0~git20260216.b543a88-3), libc6 (>= 2.38), libcap-ng0 (>= 0.7.9), libssl3t64 (>= 3.0.0), libunbound8 (>= 1.8.0)
 Description: OVN central components
 Homepage: http://openvswitch.org/
 Description-md5: 5cc48d8c2c2dca5663a2e42178ed14c4
 net
 Priority: optional
-Filename: pool/main/o/ovn/ovn-central_25.09.0-3_amd64.deb
-Size: 1129444
-MD5sum: 2bc61f01c2b1cac6f351ddd53744a05f
-SHA256: df5d45e473d4ac27fe3285454884e781ee7fd8a9ce30c582a9611d00e1eca1c9
+Filename: pool/main/o/ovn/ovn-central_26.03.0~git20260216.b543a88-3_amd64.deb
+Size: 1194384
+MD5sum: 16d21e923aa83675fdbbbee5cce991bf
+SHA256: b2588d050ec10c3f8437aa63e0546505e409bf05020e4a38d019c8469368bd0a
 
 Package: ovn-common
 Source: ovn
-Version: 25.09.0-3
-Installed-Size: 16864
+Version: 26.03.0~git20260216.b543a88-3
+Installed-Size: 20541
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: amd64
 Replaces: ovn-ic-db (<< 22.03~)
@@ -23301,69 +23238,69 @@ Homepage: http://openvswitch.org/
 Description-md5: 84b8e78bdbcd7c9e230195cff8664ecf
 net
 Priority: optional
-Filename: pool/main/o/ovn/ovn-common_25.09.0-3_amd64.deb
-Size: 2518524
-MD5sum: ff57cb1063b66f2f7ff4633d30de4488
-SHA256: cdd48b7627530aecf0960bb4878e4af9d589b49a24e1db8612f207b46511b336
+Filename: pool/main/o/ovn/ovn-common_26.03.0~git20260216.b543a88-3_amd64.deb
+Size: 2873868
+MD5sum: 7a4aff332806c78c6ecadd51e098a26a
+SHA256: b5f4613a89287fc6cf932c6e52fc23f33959cd9c6c531b25ce6b98240ad158f0
 
 Package: ovn-controller-vtep
 Source: ovn
-Version: 25.09.0-3
-Installed-Size: 3130
+Version: 26.03.0~git20260216.b543a88-3
+Installed-Size: 3221
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: amd64
-Depends: ovn-common (= 25.09.0-3), libc6 (>= 2.38), libcap-ng0 (>= 0.7.9), libssl3t64 (>= 3.0.0), libunbound8 (>= 1.8.0)
+Depends: ovn-common (= 26.03.0~git20260216.b543a88-3), libc6 (>= 2.38), libcap-ng0 (>= 0.7.9), libssl3t64 (>= 3.0.0), libunbound8 (>= 1.8.0)
 Description: OVN vtep controller
 Homepage: http://openvswitch.org/
 Description-md5: 321675504e13731af66880fe7e902ead
 net
 Priority: optional
-Filename: pool/main/o/ovn/ovn-controller-vtep_25.09.0-3_amd64.deb
-Size: 895700
-MD5sum: be8ab237bd2c11af6ea35a08f290ed7b
-SHA256: e89f1b5061134f58e24d7b6f460c0c8ed40825ede4720f6571299894a846b050
+Filename: pool/main/o/ovn/ovn-controller-vtep_26.03.0~git20260216.b543a88-3_amd64.deb
+Size: 922892
+MD5sum: 7fe19f355804a2f40b6ab5497da304aa
+SHA256: 132ae409424a2d1414ad893fe6e29fb2b4f307a872117cb60b5005e3920667e0
 
 Package: ovn-docker
 Source: ovn
-Version: 25.09.0-3
-Installed-Size: 51
+Version: 26.03.0~git20260216.b543a88-3
+Installed-Size: 52
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: amd64
-Depends: openvswitch-common (>= 2.17.0~), ovn-common (= 25.09.0-3), python3-openvswitch (>= 2.17.0~), python3:any
+Depends: openvswitch-common (>= 2.17.0~), ovn-common (= 26.03.0~git20260216.b543a88-3), python3-openvswitch (>= 2.17.0~), python3:any
 Description: OVN Docker drivers
 Homepage: http://openvswitch.org/
 Description-md5: 79920f3b11526b699266eb2c6f47af5f
 net
 Priority: optional
-Filename: pool/main/o/ovn/ovn-docker_25.09.0-3_amd64.deb
-Size: 11980
-MD5sum: e8de4a7d4e15a0ec0cc612f0aefcabf9
-SHA256: 12929a96fb604bcf9776ec4efd08aaa465b72024146771ee82085f358a268695
+Filename: pool/main/o/ovn/ovn-docker_26.03.0~git20260216.b543a88-3_amd64.deb
+Size: 12236
+MD5sum: 0909b318a4e80e5c0f92bb5a05ef0de0
+SHA256: a625bfebf7d82c033336fe768205634d15e1ff4ac5d2ef8f686adab4365de1b3
 
 Package: ovn-host
 Source: ovn
-Version: 25.09.0-3
-Installed-Size: 3700
+Version: 26.03.0~git20260216.b543a88-3
+Installed-Size: 7525
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: amd64
-Depends: lsb-release, openvswitch-switch (>= 2.17.0~), ovn-common (= 25.09.0-3), libc6 (>= 2.38), libcap-ng0 (>= 0.7.9), libssl3t64 (>= 3.0.0), libudev1 (>= 183), libunbound8 (>= 1.8.0)
+Depends: lsb-release, openvswitch-switch (>= 2.17.0~), ovn-common (= 26.03.0~git20260216.b543a88-3), libc6 (>= 2.38), libcap-ng0 (>= 0.7.9), libssl3t64 (>= 3.0.0), libudev1 (>= 183), libunbound8 (>= 1.8.0)
 Description: OVN host components
 Homepage: http://openvswitch.org/
 Description-md5: dec3348dabde40372a2d4189bfddad30
 net
 Priority: optional
-Filename: pool/main/o/ovn/ovn-host_25.09.0-3_amd64.deb
-Size: 1140180
-MD5sum: e36d323cec6e11724a81eed8080ff18e
-SHA256: 68168cf322d2325f63655f3f0af45b056b873cc0cfbcad8f0ed0255d32a71e60
+Filename: pool/main/o/ovn/ovn-host_26.03.0~git20260216.b543a88-3_amd64.deb
+Size: 1495188
+MD5sum: 7ecc68741781c91ffac856b061d86fb7
+SHA256: 322cc7a77ef4b97b02d97b8f3ab9b5493b4cb2e738d0f9e1537232af19ec13d0
 
 Package: ovn-ic
 Source: ovn
-Version: 25.09.0-3
-Installed-Size: 3570
+Version: 26.03.0~git20260216.b543a88-3
+Installed-Size: 3949
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: amd64
-Depends: lsb-release, ovn-common (= 25.09.0-3), libc6 (>= 2.38), libcap-ng0 (>= 0.7.9), libssl3t64 (>= 3.0.0), libunbound8 (>= 1.8.0)
+Depends: lsb-release, ovn-common (= 26.03.0~git20260216.b543a88-3), libc6 (>= 2.38), libcap-ng0 (>= 0.7.9), libssl3t64 (>= 3.0.0), libunbound8 (>= 1.8.0)
 Suggests: ovn-ic-db
 Enhances: ovn-central
 Description: Open Virtual Network interconnection controller
@@ -23371,27 +23308,27 @@ Homepage: http://openvswitch.org/
 Description-md5: 23bb002db1c80d152aa81ff8db12e7bf
 net
 Priority: optional
-Filename: pool/main/o/ovn/ovn-ic_25.09.0-3_amd64.deb
-Size: 958788
-MD5sum: 994a1e034fc3a0311bbe8d5c5468a875
-SHA256: 69f4b41e0c43d349c411454a5ceb9705b8a70f9dbeb3e542a43c8c51646744ac
+Filename: pool/main/o/ovn/ovn-ic_26.03.0~git20260216.b543a88-3_amd64.deb
+Size: 1008704
+MD5sum: 09e5aa47d613d8e777a17c4ad0eeed76
+SHA256: 26468d2e5b2ab6257067a881e7459261e8484bbbf0dc18b8e8b4197a3666aeb7
 
 Package: ovn-ic-db
 Source: ovn
-Version: 25.09.0-3
-Installed-Size: 41
+Version: 26.03.0~git20260216.b543a88-3
+Installed-Size: 44
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: amd64
-Depends: lsb-release, openvswitch-common (>= 2.17.0~), ovn-common (= 25.09.0-3)
+Depends: lsb-release, openvswitch-common (>= 2.17.0~), ovn-common (= 26.03.0~git20260216.b543a88-3)
 Description: Open Virtual Network interconnection controller databases
 Homepage: http://openvswitch.org/
 Description-md5: e1756c7a1817eee8f875d6750f9b4a45
 net
 Priority: optional
-Filename: pool/main/o/ovn/ovn-ic-db_25.09.0-3_amd64.deb
-Size: 9748
-MD5sum: 0680af8d37bddc481e4280ed198c1ca7
-SHA256: 41bf9756ccf9f3cb7e20e813ebac18bb230b4be8f933f3d10636cca18d250a64
+Filename: pool/main/o/ovn/ovn-ic-db_26.03.0~git20260216.b543a88-3_amd64.deb
+Size: 10172
+MD5sum: 56c11129f4934b5f33489b4c8573adf9
+SHA256: 6119690e422fe1dfc3ca8c9c921bf166752097ddfbcc7b13bdb5a5a96b34fe82
 
 Package: owncloud-client
 Source: owncloud-client (5.3.2.15463+dfsg-1)
@@ -26933,8 +26870,8 @@ MD5sum: d9f60f1192150a66bd6a8a6cb325d425
 SHA256: 49fd40f6c1e9c3e7799a6177b5ef581609251f3065c59e15116b8a351089140d
 
 Package: rabbitmq-server
-Version: 4.0.5-11
-Installed-Size: 25041
+Version: 4.0.5-12
+Installed-Size: 25039
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
 Depends: adduser, erlang-base | erlang-base-hipe, erlang-crypto (>= 1:27.0), erlang-eldap (>= 1:27.0), erlang-inets (>= 1:27.0), erlang-mnesia (>= 1:27.0), erlang-os-mon (>= 1:27.0), erlang-parsetools (>= 1:27.0), erlang-public-key (>= 1:27.0), erlang-runtime-tools (>= 1:27.0), erlang-ssl (>= 1:27.0), erlang-syntax-tools (>= 1:27.0), erlang-tools (>= 1:27.0), erlang-xmerl (>= 1:27.0), openssl, socat, python3:any
@@ -26945,10 +26882,10 @@ Description-md5: 78e91bfb996ee4ae5d16c93298f5f6e8
 Tag: implemented-in::TODO, network::server, role::program
 net
 Priority: optional
-Filename: pool/main/r/rabbitmq-server/rabbitmq-server_4.0.5-11_all.deb
-Size: 16445828
-MD5sum: 9b4f64cb4b147c846bbd8c2f937655f0
-SHA256: 04807352500b2c508f29987fac066115db589ad6ed83f33bb79d3cc23ed42d2a
+Filename: pool/main/r/rabbitmq-server/rabbitmq-server_4.0.5-12_all.deb
+Size: 16441252
+MD5sum: b4c410c6e5f5fcf0626fdddaef4bf44e
+SHA256: 17d66892f2dfbb7658ff4376187f4a7da62b1b8f6895e3e72d85f60af3243599
 
 Package: radioclk
 Version: 1.0.pristine-4
@@ -29542,14 +29479,14 @@ MD5sum: 6ab3ff0f97994f64980c92cd9267c618
 SHA256: 53d4a6fff8a4407bef6130a7aec90e9f885099bd67e66d1c4f54d413122a06d6
 
 Package: smokeping
-Version: 2.8.2+ds-1
-Installed-Size: 1118
+Version: 2.8.2+ds-2
+Installed-Size: 1119
 Maintainer: Gabriel Filion <gabster@lelutin.ca>
 Architecture: all
-Depends: perl:any, libwww-perl, libsnmp-session-perl, librrds-perl (>= 1.2), liburi-perl, fping, libcgi-fast-perl, adduser, libdigest-hmac-perl, ucf, libconfig-grammar-perl, libjs-cropper, libjs-scriptaculous, libjs-prototype, default-mta | mail-transport-agent
+Depends: perl:any, libwww-perl, libsnmp-session-perl, librrds-perl, liburi-perl, fping, libcgi-fast-perl, adduser, libdigest-hmac-perl, ucf, libconfig-grammar-perl, libjs-cropper, libjs-scriptaculous, libjs-prototype, default-mta | mail-transport-agent
 Pre-Depends: init-system-helpers (>= 1.54~)
-Recommends: apache2 | httpd-cgi, libsocket6-perl, dnsutils, echoping, apache2 (>= 2.4.6-4~) | apache2 | httpd
-Suggests: curl, libauthen-radius-perl, libnet-ldap-perl, libnet-dns-perl, openssh-client, libio-socket-ssl-perl, libnet-telnet-perl, libnet-openssh-perl, libio-pty-perl, libpath-tiny-perl, libinfluxdb-lineprotocol-perl, libobject-result-perl
+Recommends: apache2 (>= 2.4.6-4~) | apache2 | httpd, libapache2-mod-fcgid | httpd-cgi, libsocket6-perl, dnsutils
+Suggests: curl, libauthen-radius-perl, libnet-ldap-perl, libnet-dns-perl, openssh-client, libio-socket-ssl-perl, libnet-telnet-perl, libnet-openssh-perl, libio-pty-perl, libpath-tiny-perl, libinfluxdb-http-perl, libinfluxdb-lineprotocol-perl, libobject-result-perl
 Description: latency logging and graphing system
 Homepage: https://smokeping.org/
 Description-md5: 80bc07eda8a87e163f2ece5eb196d505
@@ -29560,10 +29497,10 @@ Tag: admin::logging, admin::monitoring, implemented-in::perl,
  works-with::image, works-with::image:vector, works-with::logfile
 net
 Priority: optional
-Filename: pool/main/s/smokeping/smokeping_2.8.2+ds-1_all.deb
-Size: 434916
-MD5sum: 1a7eb06c667352cccf75aeda9aac9a54
-SHA256: 8caa745d8dfd72d6cecf115b3cd48491393aa2a135a14e016ad573c21bf79618
+Filename: pool/main/s/smokeping/smokeping_2.8.2+ds-2_all.deb
+Size: 435776
+MD5sum: 1f79d47a0456c46c51198bb7cebbb495
+SHA256: 2df6d813bb77f8e86e40bde8d3ec8002caeb5138a23c81c14e680f35b8f45667
 
 Package: snid
 Version: 0.4.0-1
@@ -29673,7 +29610,7 @@ MD5sum: 33c91b1ebd03bafb071a311e9880a64b
 SHA256: 51373e06028b7af6dba2daae224d7616ad53af5e722b47aab86a9b8da00c6309
 
 Package: socat
-Version: 1.8.1.0-2
+Version: 1.8.1.1-1
 Installed-Size: 1866
 Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 Architecture: amd64
@@ -29688,10 +29625,10 @@ Tag: implemented-in::c, interface::commandline, network::client,
  works-with::network-traffic
 net
 Priority: optional
-Filename: pool/main/s/socat/socat_1.8.1.0-2_amd64.deb
-Size: 437548
-MD5sum: f638c7b29818345f734f4ebaa77aca5d
-SHA256: 14a4329c1031bfa45604201d0e87b62c8ffadd2ad84a38aae99d2639d1fe6bbc
+Filename: pool/main/s/socat/socat_1.8.1.1-1_amd64.deb
+Size: 438168
+MD5sum: 3a4353256c26d5f46b0c2cf63b37d415
+SHA256: b12235c0dabce1cf65c1d11c8e85c11444254958eaa579726604530d26c3c627
 
 Package: socket
 Version: 1.1-10.1
@@ -30570,6 +30507,25 @@ Size: 49240
 MD5sum: 027016bcca9f1b0354d12e39dd0c6f15
 SHA256: 64da86d05d78f33df81ae8e88fd3fb100b07bf471f34ac493e002c75c3f774f9
 
+Package: subtile-ocr
+Version: 0.2.6+ds-2
+Installed-Size: 3562
+Maintainer: Jonas Smedegaard <dr@jones.dk>
+Architecture: amd64
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 4.2), libleptonica6, libtesseract5 (>= 5.5.0)
+Recommends: tesseract-ocr-eng | tesseract-ocr-lang
+Description: subtitle converter from DVD VOB to SRT
+Homepage: https://github.com/gwen-lg/subtile-ocr
+Built-Using: rust-colored (= 3.1.1-1), rust-iter-fixed (= 0.4.0-6), rust-leptess (= 0.14.0-9), rust-leptonica-plumbing (= 1.4.0-3), rust-leptonica-sys (= 0.4.9-6), rust-scoped-tls-hkt (= 0.1.5+ds-2), rust-subtile (= 0.4.1-1), rust-tesseract-plumbing (= 0.11.1-1), rust-tesseract-sys (= 0.6.3-1), rustc (= 1.91.1+dfsg1-1)
+Description-md5: 135e06b483d98fce87d2aa8bf2b1fe9a
+Static-Built-Using: rust-adler (= 1.0.2-3), rust-aho-corasick (= 1.1.4-1), rust-anstream (= 0.6.21-1), rust-anstyle (= 1.0.13-1), rust-anstyle-parse (= 0.2.7-1), rust-anstyle-query (= 1.1.4-1), rust-anyhow (= 1.0.101-1), rust-bitflags-1 (= 1.3.2-8), rust-bytemuck (= 1.24.0-1), rust-byteorder (= 1.5.0-1), rust-cast (= 0.3.0-1), rust-castaway (= 0.2.4-1), rust-cfg-if (= 1.0.4-1), rust-chrono (= 0.4.42-1), rust-clap (= 4.5.53-1), rust-clap-builder (= 4.5.53-1), rust-clap-lex (= 0.7.4-1), rust-colorchoice (= 1.0.0-1), rust-colored (= 3.1.1-1), rust-compact-str (= 0.9.0-3), rust-crc32fast (= 1.5.0-2), rust-crossbeam-deque (= 0.8.6-1), rust-crossbeam-epoch (= 0.9.18-1), rust-crossbeam-utils (= 0.8.21-1), rust-deranged (= 0.3.11-1), rust-either (= 1.15.0-1), rust-fdeflate (= 0.3.7-1), rust-flate2 (= 1.1.4-1), rust-iana-time-zone (= 0.1.64-1), rust-image (= 0.25.8-2), rust-is-terminal-polyfill (= 1.70.1-1), rust-iter-fixed (= 0.4.0-6), rust-itoa (= 1.0.15-1), rust-leptess (= 0.14.0-9), rust-leptonica-plumbing (= 1.4.0-3), rust-leptonica-sys (= 0.4.9-6), rust-libc (= 0.2.178-2), rust-log (= 0.4.29-1), rust-memchr (= 2.7.6-1), rust-minimal-lexical (= 0.2.1-2), rust-miniz-oxide (= 0.7.1-2), rust-moxcms (= 0.7.11-1), rust-nom (= 7.1.3-1), rust-num-conv (= 0.2.0-1), rust-num-threads (= 0.1.7-1), rust-num-traits (= 0.2.19-2), rust-png (= 0.17.16-1), rust-powerfmt (= 0.2.0-1), rust-pxfm (= 0.1.23-1), rust-rayon (= 1.11.0-1), rust-rayon-core (= 1.13.0-1), rust-regex (= 1.12.2-1), rust-regex-automata (= 0.4.13-1), rust-regex-syntax (= 0.8.6-1), rust-ryu (= 1.0.22-1), rust-scoped-tls-hkt (= 0.1.5+ds-2), rust-simd-adler32 (= 0.3.7-1), rust-simple-logger (= 5.0.0-2), rust-static-assertions (= 1.1.0-1), rust-strsim (= 0.11.1-1), rust-subtile (= 0.4.1-1), rust-tesseract-plumbing (= 0.11.1-1), rust-tesseract-sys (= 0.6.3-1), rust-thiserror (= 2.0.17-1), rust-thiserror-1 (= 1.0.69-1), rust-time (= 0.3.47-1), rust-time-core (= 0.1.8-1), rust-utf8parse (= 0.2.2-1), rustc (= 1.91.1+dfsg1-1)
+net
+Priority: optional
+Filename: pool/main/s/subtile-ocr/subtile-ocr_0.2.6+ds-2_amd64.deb
+Size: 990396
+MD5sum: c6fc9e3e9ebc9ee2af9b9bb136990005
+SHA256: 11096602f08946dbee34c7edf56333e450a486382a6ac63854f4bc46eb0b8d60
+
 Package: suricata
 Version: 1:8.0.3-1
 Installed-Size: 16059
@@ -30789,11 +30745,11 @@ MD5sum: f4b3f1b4c0e582e6331d186f7bc2933a
 SHA256: baf8eda9339b42dc214ad0b5b61766c0a330ebeae7c01a13d81f91a73ad806be
 
 Package: swirc
-Version: 3.5.8-1
-Installed-Size: 987
+Version: 3.5.9-1
+Installed-Size: 992
 Maintainer: Markus Uhlin <markus@nifty-networks.net>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.12.0), libhunspell-1.7-0, libidn12 (>= 1.13), libncursesw6 (>= 6), libnotify4 (>= 0.7.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 13.1), libtinfo6 (>= 6)
+Depends: libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.12.0), libhunspell-1.7-0, libidn12 (>= 1.13), libncursesw6 (>= 6), libnotify4 (>= 0.7.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libtinfo6 (>= 6)
 Recommends: dunst | notification-daemon | notify-osd
 Description: Curses ICB and IRC client
 Homepage: https://www.nifty-networks.net/swirc/
@@ -30801,10 +30757,10 @@ Description-md5: a60169d7976fc43ee4af3bf0feaa523a
 Tag: uitoolkit::ncurses
 net
 Priority: optional
-Filename: pool/main/s/swirc/swirc_3.5.8-1_amd64.deb
-Size: 347964
-MD5sum: 64dfea87659396db45ed9e19c9eaade6
-SHA256: c1e5951556fee8681ed27a89339cf88142e61cb1217dc82dacf0ea04a333c4b5
+Filename: pool/main/s/swirc/swirc_3.5.9-1_amd64.deb
+Size: 349844
+MD5sum: 5ec902e7bebb382c3fe9dabc7607bd46
+SHA256: 44bc69e4faf8b78c989067c0b7d8d4a3d231bc0857f59e4610591e86a03ab409
 
 Package: syncplay
 Version: 1.7.4+repack1-2
