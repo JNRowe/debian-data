@@ -11445,11 +11445,11 @@ MD5sum: 71fa118b428449e1fa019754f90791b3
 SHA256: 3a085c49d8309c6de54a61a9f961397fc5f097abd8f1d0202353ea0a545c5ccb
 
 Package: iwd
-Version: 3.11-1
-Installed-Size: 2083
+Version: 3.11-2
+Installed-Size: 2080
 Maintainer: Jonas Smedegaard <dr@jones.dk>
 Architecture: amd64
-Depends: init-system-helpers (>= 1.51), libc6 (>= 2.38), libell0 (>= 0.77~), libreadline8t64 (>= 6.0)
+Depends: libc6 (>= 2.38), libell0 (>= 0.77~), libreadline8t64 (>= 6.0)
 Recommends: dbus | dbus-system-bus, wireless-regdb
 Suggests: network-manager-iwd
 Breaks: orphan-sysvinit-scripts (<< 0.11)
@@ -11458,15 +11458,15 @@ Homepage: https://iwd.wiki.kernel.org/
 Description-md5: a38d828be9cfba0c12dd17c9690833ce
 net
 Priority: optional
-Filename: pool/main/i/iwd/iwd_3.11-1_amd64.deb
-Size: 547768
-MD5sum: d3d5ac27bb2826440da519cca2872ba5
-SHA256: 3d7e926f74bd276ddcd4ad535496973234dac6bd37fc92bea43f72baef4e7073
+Filename: pool/main/i/iwd/iwd_3.11-2_amd64.deb
+Size: 544288
+MD5sum: afc090f6cfd76d26668897892f7aaf2a
+SHA256: c68a692e866309a9209a782271e2b75044b8d7dc6cdea37e7f3a02e536c5d4f8
 
 Package: network-manager-iwd
 Source: iwd
-Version: 3.11-1
-Installed-Size: 34
+Version: 3.11-2
+Installed-Size: 31
 Maintainer: Jonas Smedegaard <dr@jones.dk>
 Architecture: all
 Depends: iwd
@@ -11477,10 +11477,10 @@ Homepage: https://iwd.wiki.kernel.org/
 Description-md5: f57864617f81ef93398c3d7acbe48556
 net
 Priority: optional
-Filename: pool/main/i/iwd/network-manager-iwd_3.11-1_all.deb
-Size: 15360
-MD5sum: a47b89e52f0c49f12c149d840d672813
-SHA256: a1b8a275701cf06b8d0f9e5ec2a1f4f915301a0f9228f3ced890fbc759b17f1e
+Filename: pool/main/i/iwd/network-manager-iwd_3.11-2_all.deb
+Size: 12248
+MD5sum: f37d74b2d002584f9bfa2d21a477cfbf
+SHA256: 3f58024f6f293dc70eec4f5d6332ce8121dcfe3bde10ebfa25167b2b1c49761b
 
 Package: iwgtk
 Source: iwgtk (0.9-1)
@@ -16235,11 +16235,12 @@ MD5sum: d19e4c69f802a7c1008fdfb20975b108
 SHA256: 65626810cf1f9bee557cde09f4df9dca77a0e6c4e1846c83ee9c8c9b7e517795
 
 Package: mosquitto
-Version: 2.0.22-5
-Installed-Size: 723
+Source: mosquitto (2.0.22-5)
+Version: 2.0.22-5+b1
+Installed-Size: 720
 Maintainer: Debian IoT Maintainers <debian-iot-maintainers@alioth-lists.debian.net>
 Architecture: amd64
-Depends: adduser (>= 3.10), libcjson1 (>= 1.7.13), libmosquitto1 (= 2.0.22-5), sysvinit-utils (>= 3.06), libc6 (>= 2.38), libdlt2 (>= 2.18.10), libssl3t64 (>= 3.0.0), libsystemd0, libwebsockets19t64 (>= 1.6.0), libwrap0 (>= 7.6-4~)
+Depends: adduser (>= 3.10), libcjson1 (>= 1.7.13), libmosquitto1 (= 2.0.22-5+b1), sysvinit-utils (>= 3.06), libc6 (>= 2.38), libdlt3 (>= 3.0.0), libssl3t64 (>= 3.0.0), libsystemd0, libwebsockets19t64 (>= 1.6.0), libwrap0 (>= 7.6-4~)
 Pre-Depends: init-system-helpers (>= 1.54~)
 Suggests: apparmor
 Description: MQTT version 5.0/3.1.1/3.1 compatible message broker
@@ -16248,18 +16249,18 @@ Description-md5: f8c193c62c4a30a9acfb862fd9561343
 Tag: role::program
 net
 Priority: optional
-Filename: pool/main/m/mosquitto/mosquitto_2.0.22-5_amd64.deb
-Size: 278684
-MD5sum: 8fe1b46ef2623d6f0a4648cbba95992e
-SHA256: c28595474279cd00dc4f5fd5fce2659620f576cc941f0496c8f16f0f1f4c8a0e
+Filename: pool/main/m/mosquitto/mosquitto_2.0.22-5+b1_amd64.deb
+Size: 279068
+MD5sum: 709e59445f286a3ac36d9a672e4c795a
+SHA256: 5d9b4b23b20cbdb587326ce0f316e348ce7ffe9a4ee295ccf0ab9774e5515586
 
 Package: mosquitto-clients
-Source: mosquitto
-Version: 2.0.22-5
-Installed-Size: 288
+Source: mosquitto (2.0.22-5)
+Version: 2.0.22-5+b1
+Installed-Size: 289
 Maintainer: Debian IoT Maintainers <debian-iot-maintainers@alioth-lists.debian.net>
 Architecture: amd64
-Depends: libmosquitto1 (= 2.0.22-5), libc6 (>= 2.38), libcjson1 (>= 1.7.5)
+Depends: libmosquitto1 (= 2.0.22-5+b1), libc6 (>= 2.38), libcjson1 (>= 1.7.5)
 Description: Mosquitto command line MQTT clients
 Multi-Arch: foreign
 Homepage: https://mosquitto.org/
@@ -16267,10 +16268,10 @@ Description-md5: 985d19effedae01383cfa3eaa155e7ec
 Tag: role::program
 net
 Priority: optional
-Filename: pool/main/m/mosquitto/mosquitto-clients_2.0.22-5_amd64.deb
-Size: 117556
-MD5sum: 43e7d153d7925530ce8e36b95f27c7c7
-SHA256: 8a1056efe281e3d551d31bb1ae6a4f0c7e6f4a72c4fe3146eb386ee4807c3217
+Filename: pool/main/m/mosquitto/mosquitto-clients_2.0.22-5+b1_amd64.deb
+Size: 117504
+MD5sum: b979c9daed0dcf4b4569eb72bbd7944b
+SHA256: 153f9829d03c69bf4a274e46b16790d2d8a697364800642e8acf1fa81a17896c
 
 Package: mpdas
 Source: mpdas (0.4.5-1)
@@ -34216,31 +34217,30 @@ MD5sum: 76cb78c38eabd19cad8b2e48e0fd218f
 SHA256: 5b1cfdb76708ff0814c3eb4396d516e17644863dd26a018310dbc70e95685df1
 
 Package: stratoshark
-Source: wireshark (4.6.3-1)
-Version: 0.9.3.0.unofficial-1
-Installed-Size: 8933
+Source: wireshark (4.6.4-1)
+Version: 0.9.4-1
+Installed-Size: 8929
 Maintainer: Debian Security Tools <team+pkg-security@tracker.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libfalcosecurity0t64 (>= 0.20.0), libgcc-s1 (>= 3.0), libgcrypt20 (>= 1.11.0), libglib2.0-0t64 (>= 2.76.0), libminizip1t64, libnl-3-200 (>= 3.11.0), libnl-route-3-200 (>= 3.11.0), libpcap0.8t64 (>= 1.5.1), libqt6core5compat6 (>= 6.6.0), libqt6core6t64 (>= 6.9.1), libqt6dbus6 (>= 6.3.0), libqt6gui6 (>= 6.9.1), libqt6printsupport6 (>= 6.1.2), libqt6widgets6 (>= 6.8.2), libstdc++6 (>= 14), libwireshark19 (>= 4.6.0~rc1), libwiretap16 (>= 4.6.0), libwsutil17 (>= 4.6.0~rc1), wireshark-common (>= 4.6.3-1), libqt6svg6, qt6-qpa-plugins
-Recommends: libqt6multimedia6
+Depends: libc6 (>= 2.38), libfalcosecurity0t64 (>= 0.20.0), libgcc-s1 (>= 3.0), libgcrypt20 (>= 1.11.0), libglib2.0-0t64 (>= 2.76.0), libminizip1t64, libnl-3-200 (>= 3.11.0), libnl-route-3-200 (>= 3.11.0), libpcap0.8t64 (>= 1.5.1), libqt6core5compat6 (>= 6.6.0), libqt6core6t64 (>= 6.9.1), libqt6dbus6 (>= 6.3.0), libqt6gui6 (>= 6.9.1), libqt6printsupport6 (>= 6.1.2), libqt6widgets6 (>= 6.8.2), libstdc++6 (>= 14), libwireshark19 (>= 4.6.0~rc1), libwiretap16 (>= 4.6.0), libwsutil17 (>= 4.6.0~rc1), wireshark-common (>= 4.6.4-1), libqt6svg6, qt6-qpa-plugins
 Suggests: falcosecurity-scap-dkms
 Description: system call and log analyzer - graphical and console interfaces
 Homepage: https://www.wireshark.org/
 Description-md5: ba27e1de101084f35137945feefe69ca
 net
 Priority: optional
-Filename: pool/main/w/wireshark/stratoshark_0.9.3.0.unofficial-1_amd64.deb
-Size: 3313552
-MD5sum: d36d867eb2ce233318a43f408e1feb38
-SHA256: 882ab79648930474efa3a473abbfec45352d7bf64c77fa1157f5b3a0ee0f870a
+Filename: pool/main/w/wireshark/stratoshark_0.9.4-1_amd64.deb
+Size: 3309984
+MD5sum: 81ffe8b4d297604ca4fcbe486b883e03
+SHA256: e256394e221ac2a0de2824ac2ead9a585f3ea945bef12cdbb8f9e53e04a93576
 
 Package: tshark
 Source: wireshark
-Version: 4.6.3-1
-Installed-Size: 438
+Version: 4.6.4-1
+Installed-Size: 434
 Maintainer: Debian Security Tools <team+pkg-security@tracker.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.34), libglib2.0-0t64 (>= 2.76.0), libnl-3-200 (>= 3.11.0), libnl-route-3-200 (>= 3.11.0), libpcap0.8t64 (>= 1.5.1), libwireshark19 (>= 4.6.0~rc1), libwiretap16 (>= 4.6.0), libwsutil17 (>= 4.6.0~rc1), wireshark-common (= 4.6.3-1)
+Depends: libc6 (>= 2.34), libglib2.0-0t64 (>= 2.76.0), libnl-3-200 (>= 3.11.0), libnl-route-3-200 (>= 3.11.0), libpcap0.8t64 (>= 1.5.1), libwireshark19 (>= 4.6.0~rc1), libwiretap16 (>= 4.6.0), libwsutil17 (>= 4.6.0~rc1), wireshark-common (= 4.6.4-1)
 Description: network traffic analyzer - console version
 Homepage: https://www.wireshark.org/
 Description-md5: 17aa46d351c7c1a5aa0e49637765c939
@@ -34249,18 +34249,18 @@ Tag: admin::monitoring, implemented-in::c, interface::commandline,
  works-with::network-traffic
 net
 Priority: optional
-Filename: pool/main/w/wireshark/tshark_4.6.3-1_amd64.deb
-Size: 187460
-MD5sum: fa6eeaf58bf56576ccb1c55660a59e47
-SHA256: ed83c00d4adea578df5b1279b150392b28a5fc341adee42cc6478ddf4db374af
+Filename: pool/main/w/wireshark/tshark_4.6.4-1_amd64.deb
+Size: 184260
+MD5sum: 0226e7478b4b5577817db2568fd952d9
+SHA256: 3ab3f5e651a9966678bbc39f87143bac956c41db64d2c969d6f79c0f1f943f46
 
 Package: wireshark
-Version: 4.6.3-1
-Installed-Size: 11267
+Version: 4.6.4-1
+Installed-Size: 11263
 Maintainer: Debian Security Tools <team+pkg-security@tracker.debian.org>
 Architecture: amd64
 Replaces: libwireshark-data (<< 4.4.3-2~), wireshark-gtk (<< 3.0.0~), wireshark-qt (<< 4.4~)
-Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libgcrypt20 (>= 1.11.0), libglib2.0-0t64 (>= 2.76.0), libminizip1t64, libnl-3-200 (>= 3.11.0), libnl-genl-3-200 (>= 3.11.0), libnl-route-3-200 (>= 3.11.0), libpcap0.8t64 (>= 1.5.1), libqt6core5compat6 (>= 6.6.0), libqt6core6t64 (>= 6.9.1), libqt6dbus6 (>= 6.3.0), libqt6gui6 (>= 6.9.1), libqt6multimedia6 (>= 6.6.1), libqt6printsupport6 (>= 6.1.2), libqt6widgets6 (>= 6.8.2), libspeexdsp1 (>= 1.2.1), libstdc++6 (>= 14), libwireshark19 (>= 4.6.0~rc1), libwiretap16 (>= 4.6.0), libwsutil17 (>= 4.6.0~rc1), wireshark-common (= 4.6.3-1), libqt6svg6, qt6-qpa-plugins
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libgcrypt20 (>= 1.11.0), libglib2.0-0t64 (>= 2.76.0), libminizip1t64, libnl-3-200 (>= 3.11.0), libnl-genl-3-200 (>= 3.11.0), libnl-route-3-200 (>= 3.11.0), libpcap0.8t64 (>= 1.5.1), libqt6core5compat6 (>= 6.6.0), libqt6core6t64 (>= 6.9.1), libqt6dbus6 (>= 6.3.0), libqt6gui6 (>= 6.9.1), libqt6multimedia6 (>= 6.6.1), libqt6printsupport6 (>= 6.1.2), libqt6widgets6 (>= 6.8.2), libspeexdsp1 (>= 1.2.1), libstdc++6 (>= 14), libwireshark19 (>= 4.6.0~rc1), libwiretap16 (>= 4.6.0), libwsutil17 (>= 4.6.0~rc1), wireshark-common (= 4.6.4-1), libqt6svg6, qt6-qpa-plugins
 Conflicts: wireshark-gtk (<< 3.0.0~), wireshark-qt (<< 4.4~)
 Breaks: libwireshark-data (<< 4.4.3-2~)
 Description: network traffic analyzer - graphical interface
@@ -34272,20 +34272,20 @@ Tag: admin::monitoring, implemented-in::c, interface::graphical,
  works-with::network-traffic, x11::application
 net
 Priority: optional
-Filename: pool/main/w/wireshark/wireshark_4.6.3-1_amd64.deb
-Size: 4434060
-MD5sum: cab7d1dc3719cd05b704055cad92b2e1
-SHA256: 355c584c4cb66e380b6a5aa0d29c268f8e0058cce8a4516d39fa4c7f518c43df
+Filename: pool/main/w/wireshark/wireshark_4.6.4-1_amd64.deb
+Size: 4432148
+MD5sum: 43577dbed8c544e9a5886cdadc814e3a
+SHA256: 9aabc9d5be5159305aae771d72ea10999e4a4a610cfed313faf991b85e8238ca
 
 Package: wireshark-common
 Source: wireshark
-Version: 4.6.3-1
-Installed-Size: 1928
+Version: 4.6.4-1
+Installed-Size: 1920
 Maintainer: Debian Security Tools <team+pkg-security@tracker.debian.org>
 Architecture: amd64
 Replaces: wireshark (<< 2.0.0~), wireshark-qt (<< 2.0.0~rc3+g841d5e1)
-Depends: libc6 (>= 2.34), libcap2 (>= 1:2.10), libgcrypt20 (>= 1.11.0), libglib2.0-0t64 (>= 2.76.0), liblz4-1 (>= 1.9.3), libmaxminddb0 (>= 1.0.2), libnl-3-200 (>= 3.11.0), libnl-genl-3-200 (>= 3.11.0), libnl-route-3-200 (>= 3.11.0), libpcap0.8t64 (>= 1.5.1), libpcre2-8-0 (>= 10.22), libspeexdsp1 (>= 1.2.1), libssh-4 (>= 0.8.0), libsystemd0 (>= 246), libwireshark19 (>= 4.6.3-1), libwiretap16 (>= 4.6.3-1), libwsutil17 (>= 4.6.0~rc1), libxxhash0 (>= 0.7.0), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.2.2.4), debconf (>= 0.5) | debconf-2.0, debconf, libcap2-bin
-Recommends: wireshark (>= 4.6.3-1) | tshark (>= 4.6.3-1)
+Depends: libc6 (>= 2.34), libcap2 (>= 1:2.10), libgcrypt20 (>= 1.11.0), libglib2.0-0t64 (>= 2.76.0), liblz4-1 (>= 1.9.3), libmaxminddb0 (>= 1.0.2), libnl-3-200 (>= 3.11.0), libnl-genl-3-200 (>= 3.11.0), libnl-route-3-200 (>= 3.11.0), libpcap0.8t64 (>= 1.5.1), libpcre2-8-0 (>= 10.22), libspeexdsp1 (>= 1.2.1), libssh-4 (>= 0.8.0), libsystemd0 (>= 246), libwireshark19 (>= 4.6.4-1), libwiretap16 (>= 4.6.4-1), libwsutil17 (>= 4.6.0~rc1), libxxhash0 (>= 0.7.0), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.2.2.4), debconf (>= 0.5) | debconf-2.0, debconf, libcap2-bin
+Recommends: wireshark (>= 4.6.4-1) | tshark (>= 4.6.4-1)
 Breaks: wireshark (<< 2.0.0~), wireshark-gtk (<< 3.0.0), wireshark-qt (<< 2.0.0~rc3+g841d5e1)
 Description: network traffic analyzer - common files
 Homepage: https://www.wireshark.org/
@@ -34294,10 +34294,10 @@ Tag: admin::monitoring, network::scanner, role::app-data, role::program,
  scope::utility, use::monitor
 net
 Priority: optional
-Filename: pool/main/w/wireshark/wireshark-common_4.6.3-1_amd64.deb
-Size: 649924
-MD5sum: 68676c55542e4d0641da0c19d8612d5e
-SHA256: 1ce02ef8d86d100e4968d6f4684cd2d1d6b91af1af61e0012e518dc9335e3daa
+Filename: pool/main/w/wireshark/wireshark-common_4.6.4-1_amd64.deb
+Size: 649704
+MD5sum: e19fc46aa18369ce5af02ad9022aab92
+SHA256: 5fa812a0be567a4586f94b3c0e99bb225623cd38988a81a7046ab17cabebdb0a
 
 Package: wmnd
 Source: wmnd (0.4.18-2)
