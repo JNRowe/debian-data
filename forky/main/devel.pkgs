@@ -6180,6 +6180,46 @@ Size: 932332
 MD5sum: f8bbc5aa727fff4c13c039f84129ac0b
 SHA256: d048cf07e3866403afe46ac97df5c53d37d2c231b44688ed898281549b958e6f
 
+Package: debian-codemods
+Version: 0.171
+Installed-Size: 42104
+Maintainer: Jelmer Vernooĳ <jelmer@debian.org>
+Architecture: amd64
+Replaces: lintian-brush (<< 0.170~)
+Depends: devscripts, python3-breezy (>= 3.3.1~), libc6 (>= 2.39), libgcc-s1 (>= 4.2), libgmp10 (>= 2:6.3.0+dfsg), libhogweed6t64, liblzma5 (>= 5.1.1alpha+20120614), libnettle8t64 (>= 3.9~), libpython3.13 (>= 3.13.0~rc3), libssl3t64 (>= 3.0.0)
+Recommends: debhelper (>= 13.5), decopy, dos2unix, gpg, lintian (>= 2.105.0)
+Suggests: brz-debian (>= 2.8.66), git-buildpackage, po-debconf, postgresql-common
+Breaks: lintian-brush (<< 0.170~)
+Description: codemods for automatically fixing problems in Debian packages
+Homepage: https://salsa.debian.org/jelmer/debian-codemods
+Description-md5: 37093f8193c7edc1e705c772aefe20fd
+devel
+Priority: optional
+Filename: pool/main/d/debian-codemods/debian-codemods_0.171_amd64.deb
+Size: 11206672
+MD5sum: 12ae93450756c1262cce228f96bb6b1e
+SHA256: 2c2b543ac28f5c7acd6d52d4c36e31289aab882a7ac8ec1c65499b9725ea6c67
+
+Package: lintian-brush
+Source: debian-codemods
+Version: 0.171
+Installed-Size: 21436
+Maintainer: Jelmer Vernooĳ <jelmer@debian.org>
+Architecture: amd64
+Depends: devscripts, python3-breezy (>= 3.3.1~), libc6 (>= 2.39), libgcc-s1 (>= 4.2), libgmp10 (>= 2:6.3.0+dfsg), libhogweed6t64, libnettle8t64 (>= 3.9~), libpython3.13 (>= 3.13.0~rc3), libssl3t64 (>= 3.0.0)
+Recommends: debhelper (>= 13.5), decopy, dos2unix, gpg, lintian (>= 2.105.0)
+Suggests: brz-debian (>= 2.8.66), git-buildpackage, po-debconf, postgresql-common, debian-codemods
+Description: automatically fix lintian problems
+Homepage: https://salsa.debian.org/jelmer/debian-codemods
+Description-md5: 702d37c69cd2067b837ea7650ab558ea
+Tag: devel::debian, implemented-in::python, role::program, works-with::vcs
+devel
+Priority: optional
+Filename: pool/main/d/debian-codemods/lintian-brush_0.171_amd64.deb
+Size: 6379716
+MD5sum: de6686b93e5538b4c629a8b0220bde74
+SHA256: 71e0142714ec5160de826a0c28f97cbccaee091222128f420dbfb0ce26c02fb0
+
 Package: debian-codesearch-cli
 Version: 1.0.0+nmu3
 Installed-Size: 122
@@ -6668,43 +6708,43 @@ MD5sum: 9ee05897ab5f2841c71204a12fd23803
 SHA256: 80793769f3b295cf6e739f3b88b69cc5e6d7c52f3d619d94a12a415130fd11ad
 
 Package: dgit
-Version: 14.9
-Installed-Size: 724
+Version: 14.10
+Installed-Size: 718
 Maintainer: Debian tag2upload Delegates <dgit-owner@debian.org>
 Architecture: all
-Depends: perl, libdpkg-perl, git-core, devscripts, dpkg-dev, git-buildpackage, liblist-moreutils-perl, liblocale-gettext-perl, coreutils (>= 8.23-1~), libdigest-sha-perl, dput, curl, apt, libjson-perl, ca-certificates, libtext-iconv-perl, libtext-glob-perl, libwww-curl-perl, libtext-csv-perl, python3
+Depends: perl, libdpkg-perl, git, devscripts, dpkg-dev, git-buildpackage, liblist-moreutils-perl, liblocale-gettext-perl, coreutils (>= 8.23-1~), libdigest-sha-perl, dput, curl, apt, libjson-perl, ca-certificates, libtext-iconv-perl, libtext-glob-perl, libwww-curl-perl, libtext-csv-perl, python3
 Recommends: ssh-client, distro-info-data, liburi-perl
 Suggests: sbuild | pbuilder | cowbuilder
 Description: git interoperability with the Debian archive
 Description-md5: 559081434127c75cd5fadde790e2eb02
 devel
 Priority: optional
-Filename: pool/main/d/dgit/dgit_14.9_all.deb
-Size: 313916
-MD5sum: 14444df44ac39aafce4200c9ac7af1e6
-SHA256: 0b54c2075bb431dca286629817338148cb2ad53908d3f63fab61967c8581d6ea
+Filename: pool/main/d/dgit/dgit_14.10_all.deb
+Size: 307208
+MD5sum: d1d29621c0f0a03e4be2906beefc94e3
+SHA256: 5a43d639e6b8fcfb53a39ed510624fc0c9ab950b531e1a97b79fdb1f4c3f2607
 
 Package: dgit-infrastructure
 Source: dgit
-Version: 14.9
-Installed-Size: 268
+Version: 14.10
+Installed-Size: 262
 Maintainer: Debian tag2upload Delegates <dgit-owner@debian.org>
 Architecture: all
-Depends: init-system-helpers (>= 1.66~), perl, git-core, gpgv, chiark-utils-bin, libjson-perl, libdigest-sha-perl, libdbd-sqlite3-perl, sqlite3, libdpkg-perl, liburi-perl, libmime-tools-perl, liblocale-gettext-perl
+Depends: init-system-helpers (>= 1.66~), perl, git, gpgv, chiark-utils-bin, libjson-perl, libdigest-sha-perl, libdbd-sqlite3-perl, sqlite3, libdpkg-perl, liburi-perl, libmime-tools-perl, liblocale-gettext-perl
 Recommends: dgit (>= 11.7~)
 Description: dgit server backend infrastructure
 Description-md5: e26f759f3f9dc231ac6857a5dac9eef6
 devel
 Priority: optional
-Filename: pool/main/d/dgit/dgit-infrastructure_14.9_all.deb
-Size: 90360
-MD5sum: d80ba5a783a51a0ccae2535f75fd610d
-SHA256: f3b2a9d069ac41b06a3ef33bb74bea1fa62f110678a86bac8f46f43ac896ad20
+Filename: pool/main/d/dgit/dgit-infrastructure_14.10_all.deb
+Size: 83500
+MD5sum: e05ef9b1c8029c748608b4fc2c7da6bb
+SHA256: 5f1a237814b9539a6bb3c6858808058ecf9918f9e6609cb6479bee9208c6302c
 
 Package: git-debpush
 Source: dgit
-Version: 14.9
-Installed-Size: 143
+Version: 14.10
+Installed-Size: 137
 Maintainer: Debian tag2upload Delegates <dgit-owner@debian.org>
 Architecture: all
 Replaces: devscripts (<< 2.25.18)
@@ -6713,27 +6753,27 @@ Description: client script for git pushing to Debian-style archives
 Description-md5: 105ec8f4a6cd42b7b9240815a87a8f8d
 devel
 Priority: optional
-Filename: pool/main/d/dgit/git-debpush_14.9_all.deb
-Size: 79060
-MD5sum: 824970b78afb4fdd8f0d51b95d394321
-SHA256: 6c3def5200becad6bd633a9facd69db80c9e2ffb697b1469dd27f3eaa65377d3
+Filename: pool/main/d/dgit/git-debpush_14.10_all.deb
+Size: 72152
+MD5sum: 22546e12838d6a1b72daa1d95949ee72
+SHA256: 31d7fcd9fde8dd36b8e9730a9140728adacf1c6c0583ac75e090496fb549f3de
 
 Package: git-debrebase
 Source: dgit
-Version: 14.9
-Installed-Size: 278
+Version: 14.10
+Installed-Size: 272
 Maintainer: Debian tag2upload Delegates <dgit-owner@debian.org>
 Architecture: all
-Depends: perl, git-core, libdpkg-perl, libfile-fnmatch-perl, devscripts, liblocale-gettext-perl
+Depends: perl, git, libdpkg-perl, libfile-fnmatch-perl, devscripts, liblocale-gettext-perl
 Recommends: dgit, git-buildpackage
 Description: rebasing git workflow tool for Debian packaging
 Description-md5: e4745a1c73d8cbbfb3a0f6cbfa82eeaf
 devel
 Priority: optional
-Filename: pool/main/d/dgit/git-debrebase_14.9_all.deb
-Size: 112676
-MD5sum: 1ac346c2986058d12f1f9de2bf34c02b
-SHA256: 06d87d76b8c89fbae1882b634230ac1244417ee8f2867b0795af756a5f287215
+Filename: pool/main/d/dgit/git-debrebase_14.10_all.deb
+Size: 105688
+MD5sum: 70d07b31b2dc7454c488a2f0d7e6e58e
+SHA256: f985b8c64ce22b8c26d5166acf35d50d0b0b9c9486898479fd33629d0ff7a287
 
 Package: dh-ada-library
 Version: 9.9
@@ -9378,8 +9418,8 @@ SHA256: 31237ab018d5bbb7b0151d177256fbb15a1ff58b77a1944bebf50d7a0da1558e
 
 Package: fluid
 Source: fltk1.4
-Version: 1.4.4-3
-Installed-Size: 1057
+Version: 1.4.4-4
+Installed-Size: 1055
 Maintainer: Debian FLTK Ecosystem Team <team+fltk@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libfltk-images1.4, libfltk1.4, libgcc-s1 (>= 3.0), libstdc++6 (>= 5), zlib1g (>= 1:1.2.0)
@@ -9395,10 +9435,10 @@ Tag: devel::ui-builder, implemented-in::c++, interface::commandline,
  works-with::software:source, x11::application
 devel
 Priority: optional
-Filename: pool/main/f/fltk1.4/fluid_1.4.4-3_amd64.deb
-Size: 337244
-MD5sum: d93e644dfb529470de3cf4415a2b941e
-SHA256: 12fece07769911a355b5a71280840048e1fe8483d97757db0c61364c2a7df1c2
+Filename: pool/main/f/fltk1.4/fluid_1.4.4-4_amd64.deb
+Size: 334672
+MD5sum: 8c4d3178643d1c5f732ce0277e6acaca
+SHA256: 01f7cbfd83e21bb2f490266f3a35a139667e3b38a717a56b41d24d6a900ff17c
 
 Package: fontmake
 Version: 3.11.1-1
@@ -11158,6 +11198,23 @@ Filename: pool/main/g/garagemq/garagemq_0.0~git20200204.15e6a9d+ds-5+b10_amd64.d
 Size: 4400456
 MD5sum: ecfbe6199bdbb6e29285f573fd43ea2d
 SHA256: b9b43901688285c8a7b23f5c684cc2d8b00de0aeed0117c481fefe193c5506f4
+
+Package: gasnet
+Version: 2025.8.0-2
+Installed-Size: 485
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: perl:any, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 5)
+Description: Global-Address Space Networking - binary tools
+Multi-Arch: foreign
+Homepage: https://www.mpich.org/
+Description-md5: 17266b384098307988227072ffe2c425
+devel
+Priority: optional
+Filename: pool/main/g/gasnet/gasnet_2025.8.0-2_amd64.deb
+Size: 150296
+MD5sum: 928e063943c762bb1e9a61ebdcb0dc4d
+SHA256: ee2de20f8b84cbd42b7860ebb1441fcc9286eca834e5a4a09b6d64736836b3dc
 
 Package: g++-12
 Source: gcc-12
@@ -59007,8 +59064,8 @@ SHA256: 8f26a1d66701bd2e8a68e72fa971a2829985a17f257eb392c97e7544cb89ba90
 
 Package: haskell-debian-utils
 Source: haskell-debian
-Version: 4.1.2-1
-Installed-Size: 11471
+Version: 4.1.2-2
+Installed-Size: 11547
 Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libbz2-1.0, libc6 (>= 2.38), libffi8 (>= 3.4), libgmp10 (>= 2:6.3.0+dfsg), libnuma1 (>= 2.0.11), zlib1g (>= 1:1.1.4)
@@ -59018,10 +59075,10 @@ Homepage: https://github.com/clinty/debian-haskell
 Description-md5: a3d1346732d013adf53617ab02c4fd9b
 devel
 Priority: optional
-Filename: pool/main/h/haskell-debian/haskell-debian-utils_4.1.2-1_amd64.deb
-Size: 1493492
-MD5sum: 6864cb5f333d9555babe59bf05de6721
-SHA256: 014fe76f3d688f74348102be8cf0f27eaf18fd2c1f3970a1be10f0f0a97ad0f7
+Filename: pool/main/h/haskell-debian/haskell-debian-utils_4.1.2-2_amd64.deb
+Size: 1445656
+MD5sum: f08067b0922fccf1af5b9d3ce3bf6115
+SHA256: 985989dcdecef5c96e4131525806166df194d81b7964208166ceb4f3475971b7
 
 Package: doctest
 Source: haskell-doctest (0.24.2-1)
@@ -61397,11 +61454,11 @@ MD5sum: 2a4a33a91a00b2584abc3e892ad30d87
 SHA256: ab7a2081ed58decb06169a6f5a4065f2f6a4a1c57457af4ffddc406adf8aa5ea
 
 Package: lazarus
-Version: 4.4+dfsg-4
-Installed-Size: 123
+Version: 4.6+dfsg-2
+Installed-Size: 120
 Maintainer: Pascal Packaging Team <pkg-pascal-devel@lists.alioth.debian.org>
 Architecture: all
-Depends: lazarus-4.4
+Depends: lazarus-4.6
 Description: IDE for Free Pascal - SDK dependency package
 Homepage: https://www.lazarus-ide.org/
 Description-md5: 63a9081bae2cfd279084d3e379894588
@@ -61410,38 +61467,38 @@ Tag: devel::ide, devel::lang:pascal, implemented-in::TODO,
  works-with::software:source, x11::application
 devel
 Priority: optional
-Filename: pool/main/l/lazarus/lazarus_4.4+dfsg-4_all.deb
-Size: 36064
-MD5sum: 83c32cdb01a37457e3615b68142e1ea4
-SHA256: c9b61c9e7af741bdbe7164cda0284b8bd2c5948e07a5212ef0e70a99c560bde9
+Filename: pool/main/l/lazarus/lazarus_4.6+dfsg-2_all.deb
+Size: 33384
+MD5sum: c131fa64a6aae33b1b5cae0ddcf2eb9a
+SHA256: 43587096734424e9ee5a500b8c0548ee8d24147f247bb0c267f461e213e6c322
 
-Package: lazarus-4.4
+Package: lazarus-4.6
 Source: lazarus
-Version: 4.4+dfsg-4
-Installed-Size: 125
+Version: 4.6+dfsg-2
+Installed-Size: 122
 Maintainer: Pascal Packaging Team <pkg-pascal-devel@lists.alioth.debian.org>
 Architecture: all
 Provides: lazarus
-Depends: lazarus-ide (>= 4.4+dfsg-4), lazarus-src-4.4 (>= 4.4+dfsg-4), lcl-4.4 (>= 4.4+dfsg-4)
-Recommends: fpc, fpc-source, lazarus-doc-4.4
+Depends: lazarus-ide (>= 4.6+dfsg-2), lazarus-src-4.6 (>= 4.6+dfsg-2), lcl-4.6 (>= 4.6+dfsg-2)
+Recommends: fpc, fpc-source, lazarus-doc-4.6
 Suggests: fp-docs, fp-utils
 Description: IDE for Free Pascal - suite
 Homepage: https://www.lazarus-ide.org/
 Description-md5: eab70494f2b90d8292f6320dd8ffe05b
 devel
 Priority: optional
-Filename: pool/main/l/lazarus/lazarus-4.4_4.4+dfsg-4_all.deb
-Size: 36688
-MD5sum: db6ea0bbe56493f742be28d1c877f458
-SHA256: 4de87266454e6e3ace61bea38efc6e57b10644e14dc751c8c32fc3cd15f4cb82
+Filename: pool/main/l/lazarus/lazarus-4.6_4.6+dfsg-2_all.deb
+Size: 34012
+MD5sum: 2bb721a5da0861ded03d76b3e3e1c072
+SHA256: 78e2f5aad215d275a9a7466f110caa9f2795b962136ce9ba2940fc2604cadc86
 
 Package: lazarus-ide
 Source: lazarus
-Version: 4.4+dfsg-4
-Installed-Size: 123
+Version: 4.6+dfsg-2
+Installed-Size: 120
 Maintainer: Pascal Packaging Team <pkg-pascal-devel@lists.alioth.debian.org>
 Architecture: all
-Depends: lazarus-ide-qt5-4.4 | lazarus-ide-gtk2-4.4
+Depends: lazarus-ide-qt5-4.6 | lazarus-ide-gtk2-4.6
 Description: IDE for Free Pascal - dependency package
 Homepage: https://www.lazarus-ide.org/
 Description-md5: 4fc61ba1769b870f20efeaf94b44d59a
@@ -61449,39 +61506,39 @@ Tag: devel::ide, devel::lang:pascal, implemented-in::TODO, role::metapackage,
  role::program, works-with::software:source
 devel
 Priority: optional
-Filename: pool/main/l/lazarus/lazarus-ide_4.4+dfsg-4_all.deb
-Size: 36088
-MD5sum: 9abbd89458123e3c300deb1ec2229844
-SHA256: cae4e4b124a6220bcd726a5f48e418df8c9a6130e3b4e2d00db4b34f5de1e2f0
+Filename: pool/main/l/lazarus/lazarus-ide_4.6+dfsg-2_all.deb
+Size: 33384
+MD5sum: 8435186c1f8f366ab00343301d51d5ad
+SHA256: e93020301971a18da4a8a1e6b70752a7460aa712564162d11f730f1f93be6bda
 
-Package: lazarus-ide-4.4
+Package: lazarus-ide-4.6
 Source: lazarus
-Version: 4.4+dfsg-4
-Installed-Size: 44057
+Version: 4.6+dfsg-2
+Installed-Size: 44062
 Maintainer: Pascal Packaging Team <pkg-pascal-devel@lists.alioth.debian.org>
 Architecture: amd64
 Provides: lazarus-ide
 Depends: fp-compiler (>= 3.2.2+dfsg-45), libatk1.0-0t64 (>= 1.12.4), libc6 (>= 2.34), libcairo2 (>= 1.2.4), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.12.0), libgtk2.0-0t64 (>= 2.24.0), libpango-1.0-0 (>= 1.18.0), libx11-6
-Recommends: fpc, gdb, lazarus-4.4
+Recommends: fpc, gdb, lazarus-4.6
 Suggests: fp-utils
 Description: IDE for Free Pascal - common IDE files
 Homepage: https://www.lazarus-ide.org/
 Description-md5: 04866f25221b59cf05889cb6ac0bee5f
-Static-Built-Using: fpc (= 3.2.2+dfsg-46)
+Static-Built-Using: fpc (= 3.2.2+dfsg-49)
 devel
 Priority: optional
-Filename: pool/main/l/lazarus/lazarus-ide-4.4_4.4+dfsg-4_amd64.deb
-Size: 7375136
-MD5sum: e48bf2eaf4b3f978165881459f80040d
-SHA256: dce65a41e39efc28836a14cf99ae5ca7e56fdefaca1c7caba77ba1a5c7c48e56
+Filename: pool/main/l/lazarus/lazarus-ide-4.6_4.6+dfsg-2_amd64.deb
+Size: 7372856
+MD5sum: c68a7b4eb22db4b410d64373e6301dbe
+SHA256: cc792e9185c9a3e3e64ac7d9a4b39f3a950b7b76b31b2f0a11c43d59ef41740e
 
 Package: lazarus-ide-gtk2
 Source: lazarus
-Version: 4.4+dfsg-4
-Installed-Size: 123
+Version: 4.6+dfsg-2
+Installed-Size: 120
 Maintainer: Pascal Packaging Team <pkg-pascal-devel@lists.alioth.debian.org>
 Architecture: all
-Depends: lazarus-ide-gtk2-4.4, lcl-gtk2
+Depends: lazarus-ide-gtk2-4.6, lcl-gtk2
 Description: IDE for Free Pascal - GTK+ version dependency package
 Homepage: https://www.lazarus-ide.org/
 Description-md5: 8297f6307e70a8267ef8271cb75a0397
@@ -61490,77 +61547,77 @@ Tag: devel::ide, devel::lang:pascal, implemented-in::TODO,
  x11::application
 devel
 Priority: optional
-Filename: pool/main/l/lazarus/lazarus-ide-gtk2_4.4+dfsg-4_all.deb
-Size: 36084
-MD5sum: 322ae576f15a6eddac79635b0abfad28
-SHA256: 01cbc76ee2707b5498758cc9b1897584aab7541cfd4cb0efbd3892a185f8ebd8
+Filename: pool/main/l/lazarus/lazarus-ide-gtk2_4.6+dfsg-2_all.deb
+Size: 33412
+MD5sum: e812e21b254bc62f2d9571de240b634d
+SHA256: e423e2ad0d2a5b72bec77ec497c7f89ac412e7fa88ab2a7dbb1f67571f013b76
 
-Package: lazarus-ide-gtk2-4.4
+Package: lazarus-ide-gtk2-4.6
 Source: lazarus
-Version: 4.4+dfsg-4
-Installed-Size: 54886
+Version: 4.6+dfsg-2
+Installed-Size: 54888
 Maintainer: Pascal Packaging Team <pkg-pascal-devel@lists.alioth.debian.org>
 Architecture: amd64
-Provides: lazarus-ide, lazarus-ide-gtk-4.4, lazarus-ide-gtk2
-Depends: lazarus-ide-4.4, libatk1.0-0t64 (>= 1.12.4), libc6 (>= 2.34), libcairo2 (>= 1.4.10), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.12.0), libgtk2.0-0t64 (>= 2.24.0), libpango-1.0-0 (>= 1.18.0), libpangocairo-1.0-0 (>= 1.14.0), libx11-6
-Recommends: gdb, lcl-4.4
+Provides: lazarus-ide, lazarus-ide-gtk-4.6, lazarus-ide-gtk2
+Depends: lazarus-ide-4.6, libatk1.0-0t64 (>= 1.12.4), libc6 (>= 2.34), libcairo2 (>= 1.4.10), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.12.0), libgtk2.0-0t64 (>= 2.24.0), libpango-1.0-0 (>= 1.18.0), libpangocairo-1.0-0 (>= 1.14.0), libx11-6
+Recommends: gdb, lcl-4.6
 Suggests: fp-utils
 Description: IDE for Free Pascal - GTK+ version
 Homepage: https://www.lazarus-ide.org/
 Description-md5: bd11236c0f0ee57747407838e1a041be
-Static-Built-Using: fpc (= 3.2.2+dfsg-46)
+Static-Built-Using: fpc (= 3.2.2+dfsg-49)
 devel
 Priority: optional
-Filename: pool/main/l/lazarus/lazarus-ide-gtk2-4.4_4.4+dfsg-4_amd64.deb
-Size: 11745816
-MD5sum: 2fe8dec1b44e864d4d8d20fd566778a2
-SHA256: 788e4db10643ee5adb67897e76b46c9c6633e2f6ddada0f8bde096b33440d144
+Filename: pool/main/l/lazarus/lazarus-ide-gtk2-4.6_4.6+dfsg-2_amd64.deb
+Size: 11748488
+MD5sum: a60ffc0c9733b1e34d738fc8f918cf19
+SHA256: e7e9d85428841138287e83b56840ecd21be0ff717b5fd00a87e23c59a317269e
 
 Package: lazarus-ide-qt5
 Source: lazarus
-Version: 4.4+dfsg-4
-Installed-Size: 123
+Version: 4.6+dfsg-2
+Installed-Size: 120
 Maintainer: Pascal Packaging Team <pkg-pascal-devel@lists.alioth.debian.org>
 Architecture: all
-Depends: lazarus-ide-qt5-4.4, lcl-qt5
+Depends: lazarus-ide-qt5-4.6, lcl-qt5
 Description: IDE for Free Pascal - Qt5 version dependency package
 Homepage: https://www.lazarus-ide.org/
 Description-md5: ebf52ab8587609674eb9c3bf13d2030d
 devel
 Priority: optional
-Filename: pool/main/l/lazarus/lazarus-ide-qt5_4.4+dfsg-4_all.deb
-Size: 36088
-MD5sum: 7d9052012ba53e2d82f699f5df76fb45
-SHA256: b110c2fd12c22bef8d174f9a399cb4c3fd085d99dc6d9ea5aba5f2138426357d
+Filename: pool/main/l/lazarus/lazarus-ide-qt5_4.6+dfsg-2_all.deb
+Size: 33424
+MD5sum: eacfdaf5382dd228366fb0860781c199
+SHA256: 522a1bf0bff061f5832e42f46860b3b1599f11d2158bc276fa69985d8ffd35dd
 
-Package: lazarus-ide-qt5-4.4
+Package: lazarus-ide-qt5-4.6
 Source: lazarus
-Version: 4.4+dfsg-4
-Installed-Size: 54568
+Version: 4.6+dfsg-2
+Installed-Size: 54570
 Maintainer: Pascal Packaging Team <pkg-pascal-devel@lists.alioth.debian.org>
 Architecture: amd64
-Provides: lazarus-ide, lazarus-ide-qt-4.4, lazarus-ide-qt5
-Depends: lazarus-ide-4.4, libc6 (>= 2.34), libqt5pas1 (>= 2.6~beta-1), libx11-6
-Recommends: gdb, lcl-4.4
+Provides: lazarus-ide, lazarus-ide-qt-4.6, lazarus-ide-qt5
+Depends: lazarus-ide-4.6, libc6 (>= 2.34), libqt5pas1 (>= 2.6~beta-1), libx11-6
+Recommends: gdb, lcl-4.6
 Suggests: fp-utils
 Description: IDE for Free Pascal - Qt5 version
 Homepage: https://www.lazarus-ide.org/
 Description-md5: 8f89e661520ce39f3cbc5f47134d885a
-Static-Built-Using: fpc (= 3.2.2+dfsg-46)
+Static-Built-Using: fpc (= 3.2.2+dfsg-49)
 devel
 Priority: optional
-Filename: pool/main/l/lazarus/lazarus-ide-qt5-4.4_4.4+dfsg-4_amd64.deb
-Size: 11619736
-MD5sum: a830113a9dd044ca7b56ebf7a030586c
-SHA256: 0d7674a6db8136d0593548f7afbab4d247c94b4863cff73c0b217fed6277b33a
+Filename: pool/main/l/lazarus/lazarus-ide-qt5-4.6_4.6+dfsg-2_amd64.deb
+Size: 11589632
+MD5sum: 3f432d8cde5b6dba5b3616c56a5cb6b8
+SHA256: 10b813e65d4fe8431f19db67888d5b7987ba5a0a2cab4315e1256b89e19f026e
 
 Package: lazarus-src
 Source: lazarus
-Version: 4.4+dfsg-4
-Installed-Size: 123
+Version: 4.6+dfsg-2
+Installed-Size: 120
 Maintainer: Pascal Packaging Team <pkg-pascal-devel@lists.alioth.debian.org>
 Architecture: all
-Depends: lazarus-src-4.4
+Depends: lazarus-src-4.6
 Suggests: fonts-freefont-ttf
 Description: IDE for Free Pascal - LCL source code dependency package
 Multi-Arch: foreign
@@ -61570,37 +61627,37 @@ Tag: devel::lang:pascal, implemented-in::TODO, role::metapackage,
  role::source
 devel
 Priority: optional
-Filename: pool/main/l/lazarus/lazarus-src_4.4+dfsg-4_all.deb
-Size: 36164
-MD5sum: 24e59db40a0dabe61c570064cd37a677
-SHA256: 44c5eab6b603e667ebb3d1fc87bb80445315a8fc8b5765222b2e934b940aecb6
+Filename: pool/main/l/lazarus/lazarus-src_4.6+dfsg-2_all.deb
+Size: 33476
+MD5sum: 85dcf77e3941e5299d153e9cc1b26c5c
+SHA256: 0d8aea2ce54daf24581beac0382dbaf607460c9eb4d9698dc317ed4fe37944a8
 
-Package: lazarus-src-4.4
+Package: lazarus-src-4.6
 Source: lazarus
-Version: 4.4+dfsg-4
-Installed-Size: 175590
+Version: 4.6+dfsg-2
+Installed-Size: 175404
 Maintainer: Pascal Packaging Team <pkg-pascal-devel@lists.alioth.debian.org>
 Architecture: all
 Provides: lazarus-src
-Suggests: lazarus-ide-4.4
+Suggests: lazarus-ide-4.6
 Description: IDE for Free Pascal - LCL source code
 Multi-Arch: foreign
 Homepage: https://www.lazarus-ide.org/
 Description-md5: 3c60b74bcc494e73a73fe341396d14c5
 devel
 Priority: optional
-Filename: pool/main/l/lazarus/lazarus-src-4.4_4.4+dfsg-4_all.deb
-Size: 22628076
-MD5sum: 83c96ab6facd02ae7bc685929afbd6df
-SHA256: d5436fac6e50556e140e6d290ec1475ccd073ae57e8f433623e7cba26d7e4350
+Filename: pool/main/l/lazarus/lazarus-src-4.6_4.6+dfsg-2_all.deb
+Size: 22611656
+MD5sum: 062db018ffb0aae68226e87fd0543cce
+SHA256: a84b094589690211db14ab4d5c11371ed14f24f56bedcdb6f7fc62591cc68d73
 
 Package: lcl
 Source: lazarus
-Version: 4.4+dfsg-4
-Installed-Size: 123
+Version: 4.6+dfsg-2
+Installed-Size: 120
 Maintainer: Pascal Packaging Team <pkg-pascal-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: lcl-4.4
+Depends: lcl-4.6
 Description: Lazarus Components Library - LCL dependency package
 Multi-Arch: same
 Homepage: https://www.lazarus-ide.org/
@@ -61609,40 +61666,40 @@ Tag: devel::lang:pascal, devel::library, implemented-in::TODO,
  role::devel-lib, role::metapackage
 devel
 Priority: optional
-Filename: pool/main/l/lazarus/lcl_4.4+dfsg-4_amd64.deb
-Size: 36088
-MD5sum: 8f096dae9cb10279e66a8051c04c694f
-SHA256: 4cd7872b6650dc9b757b4cd11e65f82cad6d76a2dff37262fb7c002182963ddb
+Filename: pool/main/l/lazarus/lcl_4.6+dfsg-2_amd64.deb
+Size: 33392
+MD5sum: 63000599c9901da89d8d7dee89791b53
+SHA256: 87d5d89a1c8878ce73a77f5acf953b19b7209be268aa6d566dd657eb96c33d1d
 
-Package: lcl-4.4
+Package: lcl-4.6
 Source: lazarus
-Version: 4.4+dfsg-4
-Installed-Size: 123
+Version: 4.6+dfsg-2
+Installed-Size: 120
 Maintainer: Pascal Packaging Team <pkg-pascal-devel@lists.alioth.debian.org>
 Architecture: amd64
 Provides: lcl
-Depends: lcl-units-4.4, lcl-utils-4.4
-Recommends: fpc, lazarus-src-4.4
+Depends: lcl-units-4.6, lcl-utils-4.6
+Recommends: fpc, lazarus-src-4.6
 Suggests: gdb
 Description: Lazarus Components Library - LCL suite
 Multi-Arch: same
 Homepage: https://www.lazarus-ide.org/
 Description-md5: ed553dce946b2c8cea18660e7a5a026b
-Static-Built-Using: fpc (= 3.2.2+dfsg-46)
+Static-Built-Using: fpc (= 3.2.2+dfsg-49)
 devel
 Priority: optional
-Filename: pool/main/l/lazarus/lcl-4.4_4.4+dfsg-4_amd64.deb
-Size: 36124
-MD5sum: 3975f62da863b9bd404106e664e68990
-SHA256: d11c93d5af914f357394b5a0cea35818978704e24cf7a484043240050c6f781d
+Filename: pool/main/l/lazarus/lcl-4.6_4.6+dfsg-2_amd64.deb
+Size: 33460
+MD5sum: 8df4dc457df1edf815a3d8ab0a67bc61
+SHA256: 4f772227cfd1dae004c549289a1e1f495ddedd56e15bcb18e64476d843a032e0
 
 Package: lcl-gtk2
 Source: lazarus
-Version: 4.4+dfsg-4
-Installed-Size: 123
+Version: 4.6+dfsg-2
+Installed-Size: 120
 Maintainer: Pascal Packaging Team <pkg-pascal-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: lcl-gtk2-4.4
+Depends: lcl-gtk2-4.6
 Description: Lazarus Components Library - GTK+ backend dependency package
 Multi-Arch: same
 Homepage: https://www.lazarus-ide.org/
@@ -61652,40 +61709,40 @@ Tag: devel::lang:pascal, devel::library, implemented-in::TODO,
  role::metapackage, role::program, uitoolkit::gtk, x11::application
 devel
 Priority: optional
-Filename: pool/main/l/lazarus/lcl-gtk2_4.4+dfsg-4_amd64.deb
-Size: 36112
-MD5sum: 7ab590ffe41de22be1ac80c003dfabd9
-SHA256: 69f9359f975395d73e82e26aa04d1457ddd396f34259bee041bc27751533f0c3
+Filename: pool/main/l/lazarus/lcl-gtk2_4.6+dfsg-2_amd64.deb
+Size: 33432
+MD5sum: 94987a17941d4c4f9df1051be0515842
+SHA256: 744cf866c6d0e919b23df40cff2a8d3b5f651bbb6ba07ccbd206cba0b66c53a5
 
-Package: lcl-gtk2-4.4
+Package: lcl-gtk2-4.6
 Source: lazarus
-Version: 4.4+dfsg-4
-Installed-Size: 150096
+Version: 4.6+dfsg-2
+Installed-Size: 150095
 Maintainer: Pascal Packaging Team <pkg-pascal-devel@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: lcl-units-1.2 (<= 1.2~rc+dfsg-1)
 Provides: lcl-gtk, lcl-gtk2
-Depends: fp-units-base (>= 3.2.2+dfsg-45), fp-units-fcl (>= 3.2.2+dfsg-45), fp-units-gtk2 (>= 3.2.2+dfsg-45), fp-units-rtl (>= 3.2.2+dfsg-45), lcl-nogui-4.4, fpc-abi-3.2.2
+Depends: fp-units-base (>= 3.2.2+dfsg-45), fp-units-fcl (>= 3.2.2+dfsg-45), fp-units-gtk2 (>= 3.2.2+dfsg-45), fp-units-rtl (>= 3.2.2+dfsg-45), lcl-nogui-4.6, fpc-abi-3.2.2
 Suggests: gdb
 Breaks: lcl-units-1.2 (<= 1.2~rc+dfsg-1)
 Description: Lazarus Components Library - GTK+ backend
 Homepage: https://www.lazarus-ide.org/
 Description-md5: b31cd4edb187bdbfa0a8bd82bb8cf39b
-Static-Built-Using: fpc (= 3.2.2+dfsg-46)
+Static-Built-Using: fpc (= 3.2.2+dfsg-49)
 devel
 Priority: optional
-Filename: pool/main/l/lazarus/lcl-gtk2-4.4_4.4+dfsg-4_amd64.deb
-Size: 16691320
-MD5sum: a01298a920c167f2b372f5748f44f1c2
-SHA256: 319f5dde16e583c3a29e4536fb96cdd0e70d7660da31afee23cce907c274f45f
+Filename: pool/main/l/lazarus/lcl-gtk2-4.6_4.6+dfsg-2_amd64.deb
+Size: 16678196
+MD5sum: 5991bf5b69b0604022da769fb699bcc4
+SHA256: 7c484ffbffc25504e6087c7d3e308d87266957d3fded42e0f82c327b3ac51574
 
 Package: lcl-nogui
 Source: lazarus
-Version: 4.4+dfsg-4
-Installed-Size: 123
+Version: 4.6+dfsg-2
+Installed-Size: 120
 Maintainer: Pascal Packaging Team <pkg-pascal-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: lcl-nogui-4.4
+Depends: lcl-nogui-4.6
 Description: Lazarus Components Library - no GUI backend dependency package
 Homepage: https://www.lazarus-ide.org/
 Description-md5: 802731e5bbe0fabc4c235a52c0557361
@@ -61694,79 +61751,79 @@ Tag: devel::lang:pascal, devel::library, implemented-in::TODO,
  works-with::software:source
 devel
 Priority: optional
-Filename: pool/main/l/lazarus/lcl-nogui_4.4+dfsg-4_amd64.deb
-Size: 36096
-MD5sum: d6be502fc0652e8493742e3eec47a577
-SHA256: 4ae6ad532d6d5f9871fbefb0e49877236f43a8ddd10aba409f940603561fa211
+Filename: pool/main/l/lazarus/lcl-nogui_4.6+dfsg-2_amd64.deb
+Size: 33420
+MD5sum: 5786e562472462938aca5dd2fd5f9a51
+SHA256: 4f033b6f0e6dc426838765a01332e955a81b698b5f111c074f9ff5e635db4883
 
-Package: lcl-nogui-4.4
+Package: lcl-nogui-4.6
 Source: lazarus
-Version: 4.4+dfsg-4
-Installed-Size: 89264
+Version: 4.6+dfsg-2
+Installed-Size: 89261
 Maintainer: Pascal Packaging Team <pkg-pascal-devel@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: lcl-units-1.2 (<= 1.2~rc+dfsg-1)
 Provides: lcl-nogui
 Depends: fp-units-base (>= 3.2.2+dfsg-45), fp-units-fcl (>= 3.2.2+dfsg-45), fp-units-rtl (>= 3.2.2+dfsg-45), fpc-abi-3.2.2
-Recommends: fpc, lazarus-ide-4.4
+Recommends: fpc, lazarus-ide-4.6
 Suggests: gdb
 Breaks: lcl-units-1.2 (<= 1.2~rc+dfsg-1)
 Description: Lazarus Components Library - no GUI backend
 Homepage: https://www.lazarus-ide.org/
 Description-md5: 136aef8bf11add299dc57b015daa3159
-Static-Built-Using: fpc (= 3.2.2+dfsg-46)
+Static-Built-Using: fpc (= 3.2.2+dfsg-49)
 devel
 Priority: optional
-Filename: pool/main/l/lazarus/lcl-nogui-4.4_4.4+dfsg-4_amd64.deb
-Size: 9342488
-MD5sum: 1737b014bc9e3c68a657aa70ba9b7858
-SHA256: a2f231dffad8eb4c3b1625596eff8f611b8891363218f7cd98daed4203572b38
+Filename: pool/main/l/lazarus/lcl-nogui-4.6_4.6+dfsg-2_amd64.deb
+Size: 9332608
+MD5sum: e51632f7f496c93ac94798d1f35991c8
+SHA256: c46352380e26921a656d001cb7496f1e4d14894f760f823c139ceaf9241e4ffd
 
 Package: lcl-qt5
 Source: lazarus
-Version: 4.4+dfsg-4
-Installed-Size: 123
+Version: 4.6+dfsg-2
+Installed-Size: 120
 Maintainer: Pascal Packaging Team <pkg-pascal-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: lcl-qt5-4.4
+Depends: lcl-qt5-4.6
 Description: Lazarus Components Library - Qt5 backend dependency package
 Multi-Arch: same
 Homepage: https://www.lazarus-ide.org/
 Description-md5: 4d53ff2392fd9f210f0609c65ccc68c7
 devel
 Priority: optional
-Filename: pool/main/l/lazarus/lcl-qt5_4.4+dfsg-4_amd64.deb
-Size: 36112
-MD5sum: de28ee869e6bb80c83d3bcdf40b6bbf2
-SHA256: 43248f8ffd247e26ab4e10773b96b37f0b65e057f62e8e3613eb26c687b57500
+Filename: pool/main/l/lazarus/lcl-qt5_4.6+dfsg-2_amd64.deb
+Size: 33428
+MD5sum: dc8aed943311d75927656c10463fbe5b
+SHA256: 06d2a79efa3d0616f81f2a0bc07399facd5c96063bb94fdd035dc9e3afd0f142
 
-Package: lcl-qt5-4.4
+Package: lcl-qt5-4.6
 Source: lazarus
-Version: 4.4+dfsg-4
-Installed-Size: 87447
+Version: 4.6+dfsg-2
+Installed-Size: 87449
 Maintainer: Pascal Packaging Team <pkg-pascal-devel@lists.alioth.debian.org>
 Architecture: amd64
 Provides: lcl-qt, lcl-qt5
-Depends: fp-units-base (>= 3.2.2+dfsg-45), fp-units-fcl (>= 3.2.2+dfsg-45), fp-units-rtl (>= 3.2.2+dfsg-45), libqt5pas-dev, lcl-gtk2-4.4, lcl-nogui-4.4, fpc-abi-3.2.2
+Depends: fp-units-base (>= 3.2.2+dfsg-45), fp-units-fcl (>= 3.2.2+dfsg-45), fp-units-rtl (>= 3.2.2+dfsg-45), libqt5pas-dev, lcl-nogui-4.6, fpc-abi-3.2.2
 Suggests: gdb
 Description: Lazarus Components Library - Qt5 backend
 Homepage: https://www.lazarus-ide.org/
 Description-md5: 30c18fce89877c83c806ed3b298d541e
-Static-Built-Using: fpc (= 3.2.2+dfsg-46)
+Static-Built-Using: fpc (= 3.2.2+dfsg-49)
 devel
 Priority: optional
-Filename: pool/main/l/lazarus/lcl-qt5-4.4_4.4+dfsg-4_amd64.deb
-Size: 9136556
-MD5sum: 011713a44ffb67e47343a02929b2c528
-SHA256: a2551d6f175bfb422d1e43a217806240f10340ef2b1797cdffde80fee4f43095
+Filename: pool/main/l/lazarus/lcl-qt5-4.6_4.6+dfsg-2_amd64.deb
+Size: 9137600
+MD5sum: 099a1a645b57e9630cde7cd29152eff3
+SHA256: 30743c1b6b84eb8ba5d9dbc842a92a1e3526cd221428b12c393c7bce42f2f83c
 
 Package: lcl-units
 Source: lazarus
-Version: 4.4+dfsg-4
-Installed-Size: 123
+Version: 4.6+dfsg-2
+Installed-Size: 120
 Maintainer: Pascal Packaging Team <pkg-pascal-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: lcl-units-4.4
+Depends: lcl-units-4.6
 Description: Lazarus Components Library - backend independent components dependency package
 Multi-Arch: same
 Homepage: https://www.lazarus-ide.org/
@@ -61774,41 +61831,41 @@ Description-md5: fdd6c1796157b68ff72aa661f317c613
 Tag: devel::lang:pascal, implemented-in::TODO, role::metapackage
 devel
 Priority: optional
-Filename: pool/main/l/lazarus/lcl-units_4.4+dfsg-4_amd64.deb
-Size: 36104
-MD5sum: 9fb738da26497b01ae5d56f2afd5234e
-SHA256: 1b3ce3aeffb27c18ad36e7d4bda8d9a64f35f80c0d513d954c34375e6eb5ce5a
+Filename: pool/main/l/lazarus/lcl-units_4.6+dfsg-2_amd64.deb
+Size: 33420
+MD5sum: 9153756965223049f02d756edbc3bebc
+SHA256: 2c10138fd549e684dbebc612506ea497488dbd189dd2666aa30dcf7e805a7e74
 
-Package: lcl-units-4.4
+Package: lcl-units-4.6
 Source: lazarus
-Version: 4.4+dfsg-4
-Installed-Size: 197653
+Version: 4.6+dfsg-2
+Installed-Size: 197678
 Maintainer: Pascal Packaging Team <pkg-pascal-devel@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: lazarus-src-2.0 (<< 2.0.10+dfsg-3)
 Provides: lcl-units
-Depends: lcl-qt5-4.4 (= 4.4+dfsg-4) | lcl-gtk2-4.4 (= 4.4+dfsg-4), fpc-abi-3.2.2, fp-units-gfx (>= 3.2.2+dfsg-45), fp-units-multimedia (>= 3.2.2+dfsg-45)
+Depends: lcl-qt5-4.6 (= 4.6+dfsg-2) | lcl-gtk2-4.6 (= 4.6+dfsg-2), fpc-abi-3.2.2, fp-units-gfx (>= 3.2.2+dfsg-45), fp-units-multimedia (>= 3.2.2+dfsg-45)
 Recommends: fpc
 Suggests: gdb
 Breaks: lazarus-src-2.0 (<< 2.0.10+dfsg-3)
 Description: Lazarus Components Library - backend independent components
 Homepage: https://www.lazarus-ide.org/
 Description-md5: d36c62f9221b269486b6fe951606d11f
-Static-Built-Using: fpc (= 3.2.2+dfsg-46)
+Static-Built-Using: fpc (= 3.2.2+dfsg-49)
 devel
 Priority: optional
-Filename: pool/main/l/lazarus/lcl-units-4.4_4.4+dfsg-4_amd64.deb
-Size: 21523868
-MD5sum: bff291d9c21d8ae48c18edc50f7f2f18
-SHA256: a192848591683887c6493c47a12f0cf5d1eba018503c0457c30e59248162fee2
+Filename: pool/main/l/lazarus/lcl-units-4.6_4.6+dfsg-2_amd64.deb
+Size: 21530728
+MD5sum: 16169d933b89bd4fa724e33f051055c5
+SHA256: f35f36fbe9cb49c7a14ad84db43686a55e89bd1d03235e52554f7cec04d6d366
 
 Package: lcl-utils
 Source: lazarus
-Version: 4.4+dfsg-4
-Installed-Size: 123
+Version: 4.6+dfsg-2
+Installed-Size: 120
 Maintainer: Pascal Packaging Team <pkg-pascal-devel@lists.alioth.debian.org>
 Architecture: all
-Depends: lcl-utils-4.4
+Depends: lcl-utils-4.6
 Description: Lazarus Components Library - command line build tools dependency package
 Homepage: https://www.lazarus-ide.org/
 Description-md5: 3fb88ca72fab0f5a98d9da0d5b30ca66
@@ -61816,30 +61873,30 @@ Tag: devel::lang:pascal, implemented-in::TODO, role::metapackage,
  role::program
 devel
 Priority: optional
-Filename: pool/main/l/lazarus/lcl-utils_4.4+dfsg-4_all.deb
-Size: 36100
-MD5sum: 7c4c9e9b841344658a3b77ae0959af24
-SHA256: 909e5f304bcc3603c908edca1cd34ac4d90106b1bc497078731680b7af3617ae
+Filename: pool/main/l/lazarus/lcl-utils_4.6+dfsg-2_all.deb
+Size: 33432
+MD5sum: 48f6aab7acf85ca4249f47d7789aa2a3
+SHA256: b6ea12f866b4866990c776aa7e94b317c755900b0cb97a390d679446bcfcfcdc
 
-Package: lcl-utils-4.4
+Package: lcl-utils-4.6
 Source: lazarus
-Version: 4.4+dfsg-4
-Installed-Size: 28424
+Version: 4.6+dfsg-2
+Installed-Size: 28427
 Maintainer: Pascal Packaging Team <pkg-pascal-devel@lists.alioth.debian.org>
 Architecture: amd64
 Provides: lcl-utils
 Depends: fp-compiler (>= 3.2.2+dfsg-45), debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.34)
-Recommends: lazarus-ide-4.4, lcl-4.4
+Recommends: lazarus-ide-4.6, lcl-4.6
 Description: Lazarus Components Library - command line build tools
 Homepage: https://www.lazarus-ide.org/
 Description-md5: c9b936c149c8b0d15267201698364a3c
-Static-Built-Using: fpc (= 3.2.2+dfsg-46)
+Static-Built-Using: fpc (= 3.2.2+dfsg-49)
 devel
 Priority: optional
-Filename: pool/main/l/lazarus/lcl-utils-4.4_4.4+dfsg-4_amd64.deb
-Size: 4868052
-MD5sum: aaf6feb8f1ffefac60f9b331820029ab
-SHA256: e8cdd8ff1bbf793309fca33a9ca1ae43c06a8a5391732a5c0daf8c255db50781
+Filename: pool/main/l/lazarus/lcl-utils-4.6_4.6+dfsg-2_amd64.deb
+Size: 4855176
+MD5sum: 3c192b0fb08f6c176c0b5c7a9a6e149a
+SHA256: 1adff3e8c9aecc5375eec83bd870b9c8dcc4572cca0a5b2f8ad34fc45af17db7
 
 Package: lcov
 Version: 2.4-3
@@ -62374,13 +62431,13 @@ MD5sum: 5b9225711e2740c72e878b379c9fffa6
 SHA256: 1bfcfbfcc7ab8169bea868b93e1b8935fa44ce85ef9d6dfeda63cdb076a40a93
 
 Package: libreoffice-dev
-Source: libreoffice
-Version: 4:26.2.1-1
-Installed-Size: 1341
+Source: libreoffice (4:26.2.1-1)
+Version: 4:26.2.1-1+b1
+Installed-Size: 1342
 Maintainer: Debian LibreOffice Maintainers <debian-openoffice@lists.debian.org>
 Architecture: amd64
 Replaces: libreoffice-dev-common (<< 1:5.4.1~)
-Depends: libreoffice-core-nogui (= 4:26.2.1-1) | libreoffice-core (= 4:26.2.1-1), libreoffice-dev-common (= 4:26.2.1-1), libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libreoffice-sal-private-abi (= 26.2.1), libstdc++6 (>= 13.1), libuno-sal3t64 (>= 4.1.0~alpha), libuno-salhelpergcc3-3t64 (>= 3.6.0~beta)
+Depends: libreoffice-core-nogui (= 4:26.2.1-1+b1) | libreoffice-core (= 4:26.2.1-1+b1), libreoffice-dev-common (= 4:26.2.1-1), libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libreoffice-sal-private-abi (= 26.2.1), libstdc++6 (>= 13.1), libuno-sal3t64 (>= 4.1.0~alpha), libuno-salhelpergcc3-3t64 (>= 3.6.0~beta)
 Recommends: g++, libreofficekit-dev, libreoffice-java-common (>= 4:26.2.1~), default-jre (>= 2:1.8) | java-runtime (>= 8) | java8-runtime | jre
 Suggests: libmythes-dev, libreoffice-dev-doc, libreofficekit-dev-gtk
 Conflicts: libreoffice (<< 1:5.2.5-2~), libreoffice-dev-doc (<< 1:5.2.5-2~)
@@ -62391,10 +62448,10 @@ Description-md5: fa13d1087845b42e8db65349b0428d09
 Tag: devel::library, role::devel-lib, suite::TODO
 devel
 Priority: optional
-Filename: pool/main/libr/libreoffice/libreoffice-dev_26.2.1-1_amd64.deb
-Size: 414432
-MD5sum: 4553e21ecbf5684346a6d28d722bfd50
-SHA256: 47ec738f2dc037224e8ee1d445588382d95a8d0993cd949ee6a64de7044ec13e
+Filename: pool/main/libr/libreoffice/libreoffice-dev_26.2.1-1+b1_amd64.deb
+Size: 414880
+MD5sum: 1374e1185c5acce70dfb0822a513e974
+SHA256: f3a7814cb50c3128c46818cc453d11ec624d9669bbf7ceec24c1611e34ea3007
 
 Package: libreoffice-dev-common
 Source: libreoffice
@@ -62417,23 +62474,23 @@ MD5sum: 352d3d88752a5e8bf3957123ea432de3
 SHA256: 50bd0ab25cd2adf50e16469280554e6b85756035c3302763798d9f2fa3ca19d5
 
 Package: libreoffice-dev-gui
-Source: libreoffice
-Version: 4:26.2.1-1
-Installed-Size: 98
+Source: libreoffice (4:26.2.1-1)
+Version: 4:26.2.1-1+b1
+Installed-Size: 99
 Maintainer: Debian LibreOffice Maintainers <debian-openoffice@lists.debian.org>
 Architecture: amd64
 Replaces: libreoffice-dev (<< 1:7.0.0~)
-Depends: libreoffice-core (= 4:26.2.1-1), libreoffice-dev (= 4:26.2.1-1), libreoffice-dev-common (= 4:26.2.1-1), libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libreoffice-sal-private-abi (= 26.2.1), libstdc++6 (>= 5), libuno-cppu3t64 (>= 4.4.0~alpha), libuno-cppuhelpergcc3-3t64 (>= 1.4.0), libuno-sal3t64 (>= 4.1.0~alpha), uno-libs-private
+Depends: libreoffice-core (= 4:26.2.1-1+b1), libreoffice-dev (= 4:26.2.1-1+b1), libreoffice-dev-common (= 4:26.2.1-1), libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libreoffice-sal-private-abi (= 26.2.1), libstdc++6 (>= 5), libuno-cppu3t64 (>= 4.4.0~alpha), libuno-cppuhelpergcc3-3t64 (>= 1.4.0), libuno-sal3t64 (>= 4.1.0~alpha), uno-libs-private
 Breaks: libreoffice-dev (<< 1:7.0.0~)
 Description: office productivity suite -- "GUI" development stuff
 Homepage: http://www.libreoffice.org
 Description-md5: c7381cdfc5446c44dd4085615626c61e
 devel
 Priority: optional
-Filename: pool/main/libr/libreoffice/libreoffice-dev-gui_26.2.1-1_amd64.deb
-Size: 39904
-MD5sum: 6dcb4113d4bbe01369110a24d0d301e5
-SHA256: 2fad7315d8612858986fe356d8a760b9c7a9e122cf7e56684e3a0ca8a6858f8c
+Filename: pool/main/libr/libreoffice/libreoffice-dev-gui_26.2.1-1+b1_amd64.deb
+Size: 40180
+MD5sum: b4a6d1ca90528172f0a180e337e44847
+SHA256: d1ea2469d5523a1cd2f2bf1a6225ec9fbd68e9379749f823f645c6f41b12a205
 
 Package: libsixel-examples
 Source: libsixel
@@ -62781,8 +62838,8 @@ MD5sum: 2d63c43c90842b8b38785d8fb16ba3b0
 SHA256: 0b58e13752291529a9ebcdefe389fa03908e56f3b7f94b9c1ada14ed752c86ac
 
 Package: lintian
-Version: 2.129.0
-Installed-Size: 7046
+Version: 2.130.1
+Installed-Size: 7012
 Maintainer: Debian Lintian Maintainers <lintian-maint@debian.org>
 Architecture: all
 Depends: appstream, binutils, bzip2, diffstat, dpkg (>= 1.23.4), dpkg-dev, file, gettext, gpg, intltool-debian, iso-codes, libapt-pkg-perl, libarchive-zip-perl, libberkeleydb-perl, libcapture-tiny-perl, libclone-perl, libconfig-tiny-perl, libconst-fast-perl, libcpanel-json-xs-perl, libdata-dpath-perl, libdata-validate-domain-perl, libdata-validate-uri-perl, libdevel-size-perl, libdigest-sha-perl, libdpkg-perl, libencode-perl, libemail-address-xs-perl, libfile-basedir-perl, libfile-find-rule-perl, libfile-libmagic-perl, libfont-ttf-perl, libhtml-html5-entities-perl, libhtml-tokeparser-simple-perl, libio-interactive-perl, libipc-run3-perl, libjson-maybexs-perl, liblist-compare-perl, liblist-someutils-perl, liblist-utilsby-perl, libmldbm-perl, libmoo-perl, libmoox-aliases-perl, libnamespace-clean-perl, libpath-tiny-perl, libperlio-gzip-perl, libperlio-utf8-strict-perl, libproc-processtable-perl, libregexp-wildcards-perl, libsereal-decoder-perl, libsereal-encoder-perl, libsort-versions-perl, libsyntax-keyword-try-perl, libterm-readkey-perl, libtext-levenshteinxs-perl, libtext-markdown-discount-perl, libtext-xslate-perl, libtime-duration-perl, libtime-moment-perl, libtimedate-perl, libunicode-utf8-perl, liburi-perl, libversion-perl, libwww-mechanize-perl, libxml-libxml-perl, libyaml-libyaml-perl, plzip | lzip-decompressor, lzop, man-db, patchutils, perl, t1utils, unzip, xz-utils, perl:any
@@ -62797,10 +62854,10 @@ Tag: devel::debian, devel::packaging, devel::testing-qa,
  works-with::software:package
 devel
 Priority: optional
-Filename: pool/main/l/lintian/lintian_2.129.0_all.deb
-Size: 1067568
-MD5sum: debdbcebc4ec4ac34fc17ab96381a381
-SHA256: 72faaf1d88da2ef9b6b0990195d747bf0affa02c194e774318f1f517a4c4717c
+Filename: pool/main/l/lintian/lintian_2.130.1_all.deb
+Size: 1026944
+MD5sum: 2ad67ba2ecb55fc484e235bacfa666f7
+SHA256: 65e952d4a69ea73de73ae28f1aa58801da52e6b8237ca8027f8386b89d136397
 
 Package: bpftool
 Source: linux (6.18.12-1)
@@ -69094,7 +69151,7 @@ SHA256: e5653f2dac2d8c632ff6938e965c8aba184c706c8a1aa2e3cb6b953ca65e298e
 
 Package: datamodel-codegen
 Source: python-datamodel-code-generator
-Version: 0.45.0-1
+Version: 0.45.0-2
 Installed-Size: 19
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
@@ -69105,10 +69162,10 @@ Homepage: https://github.com/koxudaxi/datamodel-code-generator
 Description-md5: b1b3a2283bc4d54df386a72375b96fff
 devel
 Priority: optional
-Filename: pool/main/p/python-datamodel-code-generator/datamodel-codegen_0.45.0-1_all.deb
-Size: 8528
-MD5sum: c060a28bfd66d5e8765f44f19d45f0cb
-SHA256: 03843f2d5c5e3b416382f3ba7d222650377abf19b3271e7fd8e0f9abd67fffa5
+Filename: pool/main/p/python-datamodel-code-generator/datamodel-codegen_0.45.0-2_all.deb
+Size: 8572
+MD5sum: d81ce79085c2764501879da99800cdb6
+SHA256: cd072f3abfda763da74937e079bef6543c414d1a8ae63a86f53492af94e106d9
 
 Package: python3-genson
 Source: python-genson
@@ -69995,11 +70052,11 @@ SHA256: 8c59ae57ded95b82020d6a01e7958d4387258c0c686cafe1be71e8f904df5fe9
 
 Package: qtwebengine5-dev-tools
 Source: qtwebengine-opensource-src (5.15.19+dfsg2-2)
-Version: 5.15.19+dfsg2-2+b1
-Installed-Size: 765
+Version: 5.15.19+dfsg2-2+b2
+Installed-Size: 759
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
-Depends: qtchooser, libc6 (>= 2.38), libevent-2.1-7t64 (>= 2.1.8-stable), libgcc-s1 (>= 3.0), libicu76 (>= 76.1-1~), libqt5core5t64 (>= 5.15.17+dfsg~), libstdc++6 (>= 11), zlib1g (>= 1:1.1.4)
+Depends: qtchooser, libc6 (>= 2.38), libevent-2.1-7t64 (>= 2.1.8-stable), libgcc-s1 (>= 3.0), libicu78 (>= 78.1-1~), libqt5core5t64 (>= 5.15.17+dfsg~), libstdc++6 (>= 11), zlib1g (>= 1:1.1.4)
 Description: Qt WebEngine tools
 Multi-Arch: foreign
 Homepage: https://doc.qt.io/qt-5/qtwebengine-index.html
@@ -70007,10 +70064,10 @@ Description-md5: aec58b81e1ee18d26952b894f61836f5
 Tag: uitoolkit::qt
 devel
 Priority: optional
-Filename: pool/main/q/qtwebengine-opensource-src/qtwebengine5-dev-tools_5.15.19+dfsg2-2+b1_amd64.deb
-Size: 255136
-MD5sum: 7c521253a21808753bf55158d2cca5d4
-SHA256: eaf77dd7268eee1d7d0842200bc073dcf66533a529c4ca6fc4e97f080b677a69
+Filename: pool/main/q/qtwebengine-opensource-src/qtwebengine5-dev-tools_5.15.19+dfsg2-2+b2_amd64.deb
+Size: 248492
+MD5sum: bcf8c13865055e7ef1812fd4e740411e
+SHA256: d86d85df309e99f659cef43f310a24d390ba73267c88bdc4da9eccd1ae18e909
 
 Package: qtxmlpatterns5-dev-tools
 Source: qtxmlpatterns-opensource-src (5.15.17-2)
@@ -71726,6 +71783,25 @@ Size: 6246320
 MD5sum: 959b6d48aea2dbe1aa108fbc9ffb84a2
 SHA256: 1dd84d4106cd495bd2230082a9ce85d6515bd2d341358d3acf36bcefaac31d3a
 
+Package: debian-lsp
+Source: rust-debian-lsp (0.1.3-1)
+Version: 0.1.3-1+b1
+Installed-Size: 3223
+Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 4.2)
+Description: LSP server for Debian package control files
+Homepage: https://github.com/jelmer/debian-lsp
+Built-Using: rust-ahash (= 0.8.12-3), rust-lazy-regex (= 3.4.2+20251114-1), rustc (= 1.91.1+dfsg1-1)
+Description-md5: b7d64c67ad22168f2bfd721de9e125ff
+Static-Built-Using: rust-ahash (= 0.8.12-3), rust-aho-corasick (= 1.1.4-1), rust-allocator-api2 (= 0.2.21-1), rust-bitflags-1 (= 1.3.2-8), rust-borrow-or-share (= 0.2.4-1), rust-boxcar (= 0.2.14-3), rust-bytes (= 1.11.1-1), rust-cfg-if (= 1.0.4-1), rust-chrono (= 0.4.42-1), rust-countme (= 3.0.1-3), rust-crossbeam-deque (= 0.8.6-1), rust-crossbeam-epoch (= 0.9.18-1), rust-crossbeam-queue (= 0.3.11-1), rust-crossbeam-utils (= 0.8.21-1), rust-dashmap (= 6.1.0-1), rust-deb822-fast (= 0.2.3-1), rust-deb822-lossless (= 0.5.7-1), rust-debian-control (= 0.2.16-1), rust-debversion (= 0.5.1-1), rust-either (= 1.15.0-1), rust-equivalent (= 1.0.1-1), rust-fluent-uri (= 0.4.1-1), rust-foldhash (= 0.2.0-2), rust-form-urlencoded (= 1.2.2-1), rust-futures (= 0.3.31-2), rust-futures-channel (= 0.3.31-1), rust-futures-core (= 0.3.31-1), rust-futures-io (= 0.3.31-1), rust-futures-sink (= 0.3.31-1), rust-futures-task (= 0.3.31-3), rust-futures-util (= 0.3.31-1), rust-hashbrown (= 0.16.1-2), rust-hashbrown-0.14 (= 0.14.5-2), rust-hashlink (= 0.10.0-2), rust-httparse (= 1.10.1-1), rust-iana-time-zone (= 0.1.64-1), rust-idna (= 1.1.0-1), rust-idna-adapter (= 1.1.0-1), rust-idna-mapping (= 1.0.0-1), rust-indexmap (= 2.13.0-1), rust-intrusive-collections (= 0.9.7-1), rust-itoa (= 1.0.15-1), rust-lazy-regex (= 3.4.2+20251114-1), rust-libc (= 0.2.178-2), rust-lock-api (= 0.4.14-1), rust-lsp-types (= 0.97.0-4), rust-memchr (= 2.7.6-1), rust-memoffset (= 0.8.0-1), rust-mio (= 1.1.1-1), rust-num-bigint (= 0.4.6-1), rust-num-integer (= 0.1.46-2), rust-num-traits (= 0.2.19-2), rust-once-cell (= 1.21.3-1), rust-papaya (= 0.2.3-1), rust-parking-lot (= 0.12.5-1), rust-parking-lot-core (= 0.9.12-1), rust-percent-encoding (= 2.3.2-2), rust-pin-project-lite (= 0.2.16-1), rust-pin-utils (= 0.1.0-1), rust-portable-atomic (= 1.10.0-3), rust-rayon (= 1.11.0-1), rust-rayon-core (= 1.13.0-1), rust-ref-cast (= 1.0.25-1), rust-regex (= 1.12.2-1), rust-regex-automata (= 0.4.13-1), rust-regex-syntax (= 0.8.6-1), rust-rowan (= 0.16.1-2), rust-rustc-hash-2 (= 2.0.0-1), rust-ryu (= 1.0.22-1), rust-salsa (= 0.23.0-3), rust-salsa-macro-rules (= 0.23.0-1), rust-scopeguard (= 1.2.0-1), rust-seize (= 0.5.0-1), rust-serde (= 1.0.228-3), rust-serde-core (= 1.0.228-2), rust-serde-json (= 1.0.145-2), rust-signal-hook-registry (= 1.4.0-1), rust-slab (= 0.4.9-1), rust-smallvec (= 1.15.1-1), rust-socket2 (= 0.5.10-1), rust-sync-wrapper (= 1.0.2-1), rust-text-size (= 1.1.1-1), rust-thin-vec (= 0.2.13-2), rust-tinyvec (= 1.10.0-1), rust-tinyvec-macros (= 0.1.0-1), rust-tokio (= 1.48.0-2), rust-tokio-util (= 0.7.17-1), rust-tower (= 0.5.2-2), rust-tower-layer (= 0.3.3-1), rust-tower-lsp-server (= 0.22.1-2), rust-tower-service (= 0.3.3-1), rust-tracing (= 0.1.44-1), rust-tracing-core (= 0.1.36-1), rust-unicode-bidi (= 0.3.17-1), rust-unicode-joining-type (= 1.0.0-1), rust-unicode-normalization (= 0.1.25-1), rust-url (= 2.5.8-1), rust-utf8-iter (= 1.0.4-1), rust-zerocopy (= 0.8.26-4), rustc (= 1.91.1+dfsg1-1)
+devel
+Priority: optional
+Filename: pool/main/r/rust-debian-lsp/debian-lsp_0.1.3-1+b1_amd64.deb
+Size: 892732
+MD5sum: cff4b6988140e146c0616520d6546ec0
+SHA256: 8c0e53d453e80e748784a801a569ca7ebc678f1b97f8fc205b719e5b50d70cac
+
 Package: diffr
 Source: rust-diffr (0.1.5-2)
 Version: 0.1.5-2+b8
@@ -73195,9 +73271,9 @@ MD5sum: 45a3f090c7a2390b158b9b76539bc003
 SHA256: 12672956d884ae9839a3fdb6123a38c0683e3ad8b621015d0f4136ea24268c3b
 
 Package: lemon
-Source: sqlite3
-Version: 3.46.1-9
-Installed-Size: 424
+Source: sqlite3 (3.46.1-9)
+Version: 3.46.1-9+b1
+Installed-Size: 422
 Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38)
@@ -73210,10 +73286,10 @@ Tag: devel::code-generator, devel::lang:c, devel::lang:c++, devel::library,
  role::program, scope::utility
 devel
 Priority: optional
-Filename: pool/main/s/sqlite3/lemon_3.46.1-9_amd64.deb
-Size: 304148
-MD5sum: 4f5bcfcfaaeff31d0332d5653a79e298
-SHA256: 49b8eb4fdba140bd86d12fcba35b57536a81403d4bd82df6143086339da46b68
+Filename: pool/main/s/sqlite3/lemon_3.46.1-9+b1_amd64.deb
+Size: 301464
+MD5sum: 67a6580f0c9790fc85bcacb10f45dc15
+SHA256: 44b8a515f8ada9e2aec48f68aa95bcb48ebaa81499f62c2a4145d7a24a012425
 
 Package: sshesame
 Source: sshesame (0.0~git20210926.d7fdb81-1)
@@ -74265,11 +74341,11 @@ MD5sum: 49b431b3f56e8bc10f2dafa62dbcefec
 SHA256: 8e5c74326e8a15085f3bae55bd1661101e99496974e23aca1d7af74b3e1682e1
 
 Package: translate-toolkit
-Version: 3.18.1-1
-Installed-Size: 229
+Version: 3.19.2-1
+Installed-Size: 235
 Maintainer: Debian l10n developers <debian-l10n-devel@lists.alioth.debian.org>
 Architecture: all
-Depends: python3, python3-translate (= 3.18.1-1), python3:any
+Depends: python3, python3-translate (= 3.19.2-1), python3:any
 Recommends: translate-toolkit-doc
 Description: Toolkit assisting in the localization of software
 Homepage: https://toolkit.translatehouse.org/
@@ -74280,10 +74356,10 @@ Tag: devel::i18n, implemented-in::python, interface::commandline,
  works-with::dictionary, works-with::text
 devel
 Priority: optional
-Filename: pool/main/t/translate-toolkit/translate-toolkit_3.18.1-1_all.deb
-Size: 88524
-MD5sum: 6b93a28bb3db8ac6bb95a8cb43041db5
-SHA256: 85b214546834b356a4b593d60f571b640227fc94a1b7a87ad03d5c13cc0fb7bb
+Filename: pool/main/t/translate-toolkit/translate-toolkit_3.19.2-1_all.deb
+Size: 90380
+MD5sum: feffcb27a368f69545a7ae1a743bb1ba
+SHA256: 1a06d06f68236977e134d753b4aeb742a5f3bc5d895b4424a2767dbd010541c3
 
 Package: tree-sitter-cli
 Source: tree-sitter
