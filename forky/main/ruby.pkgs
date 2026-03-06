@@ -1844,6 +1844,22 @@ Size: 35028
 MD5sum: 9eac3bd9dd071aa481ac9e89f955ed69
 SHA256: 517f27a126eb93c7aaf67d0b5089ecf7ba11bc89c8f687e1ae20605f265699bd
 
+Package: ruby-arbre
+Version: 2.2.1-1
+Installed-Size: 58
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: ruby-activesupport (>= 2:7.0)
+Description: Object Oriented DOM Tree in Ruby
+Homepage: https://github.com/activeadmin/arbre
+Description-md5: eb29cc0cf0639e35ca887d53986e72c1
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-arbre/ruby-arbre_2.2.1-1_all.deb
+Size: 13552
+MD5sum: 2689271802304cb5bfe698c55b6c1554
+SHA256: 378f6ed7b16d2af2b006a626ccae57a3cdc0121533baa6af6024ce6b486b974a
+
 Package: ruby-arr-pm
 Version: 0.0.12-1.1
 Installed-Size: 65
@@ -3262,9 +3278,8 @@ MD5sum: 2b54e3ef666a6a44f9306d92b24e30a8
 SHA256: ee518547df8a2bf4aecea3cd258f4173529756e165f2239996c6553589295842
 
 Package: ruby-cbor
-Source: ruby-cbor (0.5.9.8-1)
-Version: 0.5.9.8-1+b3
-Installed-Size: 132
+Version: 0.5.10.1-1
+Installed-Size: 131
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.14), libruby3.3 (>= 3.3.1), libruby (>= 1:3.3~0), libruby (<< 1:3.4~)
@@ -3274,10 +3289,10 @@ Homepage: https://cbor.io/
 Description-md5: 257b5ade380e3168d22ff0c7951bbd4d
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-cbor/ruby-cbor_0.5.9.8-1+b3_amd64.deb
-Size: 37820
-MD5sum: a5539419c2dbd765aa22641853051d75
-SHA256: cfd0b611a83b7da9eee894a0303f6fca2ce1a6ff576fb6472448ff8f82761b2c
+Filename: pool/main/r/ruby-cbor/ruby-cbor_0.5.10.1-1_amd64.deb
+Size: 37928
+MD5sum: 38783b1eba74034422656d59ac545c82
+SHA256: 987da8672200a1e65be3669c63a1eb07ef0200df44c0da02942de5dca7809567
 
 Package: ruby-celluloid
 Version: 0.18.0-2
@@ -3992,21 +4007,20 @@ MD5sum: 3e9311f80aea7e2e7362943074580c73
 SHA256: fb159a6538204e6d51bdc104dd15b0dadc4ac2a1a92ea9c3d38eccf528abb539
 
 Package: ruby-console
-Version: 1.15.3-1
-Installed-Size: 108
+Version: 1.34.3-1
+Installed-Size: 123
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: ruby-fiber-local
+Depends: ruby-fiber-annotation, ruby-fiber-local (>= 1.1), ruby-json
 Description: Beautiful logging for Ruby
 Homepage: https://github.com/socketry/console
 Description-md5: dafbb526fb40b9236db0390589a3d2c8
-Ruby-Versions: all
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-console/ruby-console_1.15.3-1_all.deb
-Size: 13264
-MD5sum: e3f794e65865c2e63e75497521e4caba
-SHA256: d80a8801cd209c19c67c71b712b8d4de1222aa4afa5cc04b13d0fb8fef1086f6
+Filename: pool/main/r/ruby-console/ruby-console_1.34.3-1_all.deb
+Size: 24352
+MD5sum: 8ab0e4961b964748f96e8c89ef1806b7
+SHA256: a30611e22197dd8fbc1ea5967d56a0dc9ea385e15f327e161e9edda65c0bb963
 
 Package: ruby-contest
 Version: 0.1.3-4
@@ -5078,6 +5092,22 @@ Filename: pool/main/r/ruby-dirty-memoize/ruby-dirty-memoize_0.0.4-2_all.deb
 Size: 6412
 MD5sum: e9f3b783016eb52019fe8bffaa6f84a2
 SHA256: fc53a16c891611167ae8438177ff0fa7a5c3155351c94fcfd27dc9ec5b9da542
+
+Package: ruby-discard
+Version: 1.4.0-2
+Installed-Size: 33
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: ruby-activerecord (>= 2:4.2), ruby-activerecord (<< 2:9.0)
+Description: ActiveRecord soft-deletes done right
+Homepage: https://github.com/jhawthorn/discard
+Description-md5: c3a6427434e38fbcbf831a6c8700a014
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-discard/ruby-discard_1.4.0-2_all.deb
+Size: 8832
+MD5sum: 295323b3f9685f8024f86475e8ad3df1
+SHA256: ea2c5995b83edc50c68fe37e329328621da200b66e65f3f8c952a6e2453f4eb9
 
 Package: ruby-discordrb-webhooks
 Version: 3.7.2-1
@@ -6604,20 +6634,36 @@ MD5sum: 2342d3ad89b36c142917cabe718717ca
 SHA256: 3a398951e9993831687b32bedac29322878dec916b1f59dd6577022415bd8b15
 
 Package: ruby-fiber-local
-Version: 1.0.0-2
-Installed-Size: 25
+Version: 1.1.0-1
+Installed-Size: 21
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
+Depends: ruby-fiber-storage
 Description: Provides a class-level mixin to make fiber local state easy
+Multi-Arch: foreign
 Homepage: https://github.com/socketry/fiber-local
 Description-md5: f25fc088b30455aa9fb89d7be8f34965
-Ruby-Versions: all
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-fiber-local/ruby-fiber-local_1.0.0-2_all.deb
-Size: 3384
-MD5sum: 8601f2ed4492400958d00192277731c5
-SHA256: bd21298cbf6a581f46e75f1a75bb94418154a160f2ee4ce90a857556d4fd6262
+Filename: pool/main/r/ruby-fiber-local/ruby-fiber-local_1.1.0-1_all.deb
+Size: 3968
+MD5sum: 6de6369679d567c8ff324c07e33c14e6
+SHA256: 4b53ce8181672c4eeaf889368219728685193e20832ff8a43257998842d0353b
+
+Package: ruby-fiber-storage
+Version: 1.0.1-2
+Installed-Size: 24
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Description: Provides a compatibility shim for fiber storage
+Homepage: https://github.com/ioquatix/fiber-storage
+Description-md5: 5aa183e0db1e6b4fbcc96ccf06a62381
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-fiber-storage/ruby-fiber-storage_1.0.1-2_all.deb
+Size: 4960
+MD5sum: 6d31a8dcb712799753eb6914ed68b339
+SHA256: c0bd49336dbcf0e6e4bb08c30b7aa9c5b54d488992e2a760c13d98f6e9b7ceec
 
 Package: ruby-file-tail
 Version: 1.4.0-1
@@ -8407,6 +8453,22 @@ Size: 9252
 MD5sum: afa931aff66c0a7a37e9e789d21d469f
 SHA256: fbfe513e48b0306307cc52dd86b128863a8e9c6a282dfc0acea58de7716681ed
 
+Package: ruby-gretel
+Version: 5.1.0-2
+Installed-Size: 58
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: ruby-railties (>= 2:6.1), ruby-actionview (>= 2:6.1)
+Description: Flexible Ruby on Rails breadcrumbs plugin
+Homepage: https://github.com/kzkn/gretel
+Description-md5: f7d35ff6bff185fd88eef033eb85f640
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-gretel/ruby-gretel_5.1.0-2_all.deb
+Size: 17012
+MD5sum: b6df97a0da7ca022bf2880e6bf9d7aeb
+SHA256: 22d1b3016f19493508abdd493bb0c10ba0b46468928bc7f68d0ed024b3da8d7a
+
 Package: ruby-grib
 Source: ruby-grib (0.4.0-7)
 Version: 0.4.0-7+b2
@@ -8455,6 +8517,22 @@ Filename: pool/main/r/ruby-grit-ext/ruby-grit-ext_0.8.1-3_all.deb
 Size: 4604
 MD5sum: 3ab2a6a24b7f59889bdcf74608245875
 SHA256: 88c40fdfdedf862f6f23aeafe63c3aee0085dfa1b6a17b3c91154bc175e29cdf
+
+Package: ruby-groupdate
+Version: 6.7.0-2
+Installed-Size: 61
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: ruby-activesupport (>= 2:7.1)
+Description: simplest way to group temporal data
+Homepage: https://github.com/ankane/groupdate
+Description-md5: 2a136406b8d73de69c6ca361a0f725f2
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-groupdate/ruby-groupdate_6.7.0-2_all.deb
+Size: 15388
+MD5sum: 9ae76dd145ca5b06e932f538316d9c75
+SHA256: 62f1566c44210c4b7a228ca12ea5ccae09d4fc7fac18a60cc813e19f42565217
 
 Package: ruby-growl
 Version: 4.1+dfsg-2
@@ -8923,8 +9001,8 @@ MD5sum: fcc9352d14a571e5577c904ac9b9c6cc
 SHA256: 5e5783429ae06e0d3686b705c6af29677740ec2448a008f797dee239137fcd1c
 
 Package: ruby-hoe
-Version: 4.6.0+dfsg1-1
-Installed-Size: 142
+Version: 4.6.1+dfsg-1
+Installed-Size: 141
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
 Depends: rake (>= 13.0), ruby
@@ -8933,10 +9011,10 @@ Homepage: https://www.zenspider.com/projects/hoe.html
 Description-md5: 52d812f3d38073d9bb5fc156bc48cbfd
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-hoe/ruby-hoe_4.6.0+dfsg1-1_all.deb
-Size: 49000
-MD5sum: 0b3f1524e33bf04dcbfc41dbd25f0c25
-SHA256: c6a0aa677cd591b8ea59045b27e9c638da6f63909625673aaaa5b240bde632f1
+Filename: pool/main/r/ruby-hoe/ruby-hoe_4.6.1+dfsg-1_all.deb
+Size: 48704
+MD5sum: b841a8ebb628ea9ee75f8e1c9b194d70
+SHA256: 05e9520a22cec49f7ea686869bdae77e7ec081c397cced62e8daefa2b4324577
 
 Package: ruby-hrx
 Version: 1.0.0-2
@@ -9337,8 +9415,8 @@ MD5sum: 42071bd2e2d116591bf5c3cb95bd645c
 SHA256: 0c8809d5352ca0713db18b84ad9be3a95a2c3b9b13ddc272162e082e9c92f423
 
 Package: ruby-immutable-ruby
-Version: 0.1.0-2
-Installed-Size: 256
+Version: 0.2.0-1
+Installed-Size: 257
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
 Depends: ruby-concurrent (>= 1.1), ruby-sorted-set (>= 1.0)
@@ -9347,10 +9425,26 @@ Homepage: https://github.com/immutable-ruby/immutable-ruby
 Description-md5: bbad13d251e093f676eedd1c29b88d22
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-immutable-ruby/ruby-immutable-ruby_0.1.0-2_all.deb
-Size: 46296
-MD5sum: 08c0215d083c23d345f877807b486fc5
-SHA256: 39d3107a1784b76f71a83d313ca37aa6a8540fa6ab5bc5ee3d2def5b10571b94
+Filename: pool/main/r/ruby-immutable-ruby/ruby-immutable-ruby_0.2.0-1_all.deb
+Size: 46516
+MD5sum: eded321e25bc52fb7172d7e5c240f523
+SHA256: df74652d576e0c8eb8de183980bcfa3b58f0608c79364a305218212f25e7523e
+
+Package: ruby-importmap-rails
+Version: 2.2.3-2
+Installed-Size: 79
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: ruby, ruby-actionpack (>= 2:6.0.0), ruby-activesupport (>= 2:6.0.0), ruby-railties (>= 2:6.0.0)
+Description: manage modern JavaScript in Rails without transpiling or bundling
+Homepage: https://github.com/rails/importmap-rails
+Description-md5: 790bd6df6b33f93c7b4d775fba0e381c
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-importmap-rails/ruby-importmap-rails_2.2.3-2_all.deb
+Size: 19296
+MD5sum: 7f854e3747577cb7dfc11280e12d9228
+SHA256: b05e0e380f32595bd1a44a21156f547845f369c59543b508e812f45bf8925f4d
 
 Package: ruby-in-parallel
 Version: 1.0.1-2
@@ -12230,21 +12324,20 @@ MD5sum: 3489757a27e14c3e5058f0a2e364001f
 SHA256: 4857d704840f363d49a0cde9438350734c6acc4e70d6f4f4c244b68bbd0fc80c
 
 Package: ruby-morpher
-Version: 0.2.6-2
-Installed-Size: 140
+Version: 0.4.2-1
+Installed-Size: 36
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: ruby-abstract-type (>= 0.0.7), ruby-adamantium (>= 0.2.0), ruby-anima (>= 0.3.0), ruby-ast (>= 2.2), ruby-concord (>= 0.1.5), ruby-equalizer (>= 0.0.9), ruby-ice-nine (>= 0.11.0), ruby-procto (>= 0.0.2)
+Depends: ruby-abstract-type (>= 0.0.7), ruby-adamantium (>= 0.2.0), ruby-anima (>= 0.3.0), ruby-concord (>= 0.1.5), ruby-equalizer (>= 0.0.9), ruby-mprelude (>= 0.1.0), ruby-procto (>= 0.0.2)
 Description: Data transformation algebra with optional tracked evaluation.
 Homepage: https://github.com/mbj/morpher
 Description-md5: de2917c29f5aebbb924e8bc5fee7c844
-Ruby-Versions: all
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-morpher/ruby-morpher_0.2.6-2_all.deb
-Size: 19008
-MD5sum: e55ff1659966974d9df636f69c889db5
-SHA256: 8fa7a20b1ec6a0296c9ccc9c646c34bf61be5e426d82cae5f32d77602592bcde
+Filename: pool/main/r/ruby-morpher/ruby-morpher_0.4.2-1_all.deb
+Size: 7876
+MD5sum: ef18e29f7404cd8674c557bd67bc59e0
+SHA256: f6f67488998ebe85524d478bc1bfbbb553f7370267c24b6ee6b4525b2eacd92f
 
 Package: ruby-motion-require
 Version: 0.2.0-2
@@ -13081,6 +13174,22 @@ Filename: pool/main/r/ruby-nori/ruby-nori_2.7.1-1_all.deb
 Size: 13448
 MD5sum: a2c06dcadea33b8f6e9355944d60f694
 SHA256: 1c60008d3fbb7ca150584dc59cda7dc36815dd7c02f7a83dea7aec9cc1f2ca79
+
+Package: ruby-noticed
+Version: 3.0.0-2
+Installed-Size: 116
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: ruby-rails (>= 2:6.1.0)
+Description: Notifications for Ruby on Rails applications
+Homepage: https://github.com/excid3/noticed
+Description-md5: 4d3b1bf476700c34b761b412e31f51d1
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-noticed/ruby-noticed_3.0.0-2_all.deb
+Size: 25772
+MD5sum: fb4a96fa1d49bc8e588f6f8ac84581b8
+SHA256: c016957e5146a8c9aaa60552301acffdb193a9eabb3c122573cc6ae9fd396fe7
 
 Package: ruby-notiffany
 Version: 0.1.3-5
@@ -14936,21 +15045,21 @@ MD5sum: 136b83245f7b55b5dd3b4872bc4e6550
 SHA256: 8e917e30fe1b3203f909b846ea891ab7aee8b17ac1b6a38026d58578dbcad56c
 
 Package: ruby-rabl
-Version: 0.16.1-1
-Installed-Size: 104
+Version: 0.17.0-1
+Installed-Size: 102
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: ruby-activesupport (>= 2:2.3.14), ruby-bson, ruby-json, ruby-msgpack
+Depends: ruby-bson, ruby-json, ruby-msgpack, ruby-activesupport (>= 2:2.3.14)
 Suggests: ruby-hashie
 Description: Ruby templating library with JSON, BSON, XML and MessagePack support
 Homepage: https://github.com/nesquena/rabl
 Description-md5: 26896b3862f7ea4d5c981eaabc04db29
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-rabl/ruby-rabl_0.16.1-1_all.deb
-Size: 32340
-MD5sum: 36fbc1eba82f111c2582001ae766eac4
-SHA256: 9838b8874b4fa4996edefd87c24f4c40e1c9584ad238a06677873a2842d8a138
+Filename: pool/main/r/ruby-rabl/ruby-rabl_0.17.0-1_all.deb
+Size: 32116
+MD5sum: 67b23f30d1ad03f85c793c22e1ce3adb
+SHA256: a7244358c692bd787c30d3f1e3ddc90cbb496824ffe4f0c9525cdf9971f1b632
 
 Package: ruby-rack
 Version: 3.1.18-1
@@ -16213,6 +16322,38 @@ Size: 14288
 MD5sum: 5dbf01a161d95dad6ed6ff618ee74bc4
 SHA256: db946b5e6cf2b084c52e22ac5485bde0b1454390d3fdd91d94461e07ade7120d
 
+Package: ruby-roda
+Version: 3.101.0-2
+Installed-Size: 824
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: ruby-rack
+Description: Routing tree web toolkit
+Homepage: https://roda.jeremyevans.net
+Description-md5: 25ded839b59939782a14862bfea642b5
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-roda/ruby-roda_3.101.0-2_all.deb
+Size: 155016
+MD5sum: b76f220204283545e234474346175a2b
+SHA256: 83b61c341b26785a3c78bbc27796d5632d69038eb41d685da1dcebf24c377942
+
+Package: ruby-rodauth
+Version: 2.42.0-2
+Installed-Size: 478
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: ruby-roda (>= 2.6.0), ruby-sequel (>= 4)
+Description: Authentication and Account Management Framework for Rack Applications
+Homepage: https://rodauth.jeremyevans.net
+Description-md5: 84b1846365821eefc54e5fb05d68218e
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-rodauth/ruby-rodauth_2.42.0-2_all.deb
+Size: 91372
+MD5sum: 9ed5d4021bf5ee32708b92cb66cd7a3d
+SHA256: 59c93450d61b0c98d0560e136096bbea52f515a9922c2ae18e2c203c76cc63b0
+
 Package: ruby-romkan
 Version: 0.4.0-3
 Installed-Size: 34
@@ -17432,7 +17573,7 @@ MD5sum: 0c42ee5f541605f19bce02430b2b1fc8
 SHA256: 349d513c43f54d2dacee716e112ff52fe7f456b4cf5a950c4c1dbe2e109708b4
 
 Package: ruby-semantic-range
-Version: 3.1.0-1
+Version: 3.1.1-1
 Installed-Size: 48
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
@@ -17442,10 +17583,10 @@ Homepage: https://libraries.io/github/librariesio/semantic_range
 Description-md5: 70fe2373230c61a2767162457a2fb3ba
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-semantic-range/ruby-semantic-range_3.1.0-1_all.deb
-Size: 9192
-MD5sum: dd5bfdd6f5580801faa88deca53f2d13
-SHA256: a97edc8354d06070a499dee30c8acba029672bf863f188509a9a425acdd1c947
+Filename: pool/main/r/ruby-semantic-range/ruby-semantic-range_3.1.1-1_all.deb
+Size: 9312
+MD5sum: 9b21c0c2877692dafe9ff11c54b740f5
+SHA256: 6989e1c42ab0a0e9fc2675e52ab6f2bbb76dd03c7ee5ef31f9ffd45d3556ea56
 
 Package: ruby-semver-dialects
 Version: 3.7.0-1
@@ -17644,21 +17785,21 @@ MD5sum: 3536a5bd1fcad0416afcaab992e42386
 SHA256: 41c687c07425beeccceffa55b4b481deeb7c8f3cd5ebea365cb1297b6485c895
 
 Package: ruby-serverspec
-Version: 2.42.3-2
+Version: 2.43.0-1
 Installed-Size: 130
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: ruby:any, ruby-multi-json, ruby-rspec (>= 3.0), ruby-rspec-its, ruby-specinfra (>= 2.72), ruby
+Depends: ruby:any, ruby, ruby-rspec (>= 3.0), ruby-rspec-its, ruby-multi-json, ruby-specinfra (>= 2.72)
 Suggests: net-tools
 Description: RSpec tests for your servers configured by Puppet, Chef or anything else
 Homepage: https://serverspec.org/
 Description-md5: 3c1f93153b81b33d9c65bf0d71a4a5f9
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-serverspec/ruby-serverspec_2.42.3-2_all.deb
-Size: 19920
-MD5sum: e47720b0bc639192b011f0bedbe41278
-SHA256: 5be8eee57bea37e455511117a0a577dc7ede55bb9a6a9ba3752f4854ddf4350f
+Filename: pool/main/r/ruby-serverspec/ruby-serverspec_2.43.0-1_all.deb
+Size: 19736
+MD5sum: 1108d0d0f4e9e54e440a3f549ba894bc
+SHA256: 4ebc877f0aa29d3a7d018521e06bc74d79b4d0bfd0ed951570c0546d1904bbd4
 
 Package: ruby-settingslogic
 Version: 2.0.9-4
@@ -18289,8 +18430,8 @@ MD5sum: f694bd95960e58d442514a008aaab62c
 SHA256: d5d7daf2314f3cbd0bfb6231c54d361add5ecf29aafabed38b4b575fc89d62fc
 
 Package: ruby-specinfra
-Version: 2.94.1-1
-Installed-Size: 627
+Version: 2.94.1-3
+Installed-Size: 625
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
 Depends: ruby:any, ruby-net-scp, ruby-net-ssh (>= 2.7), ruby-net-telnet, ruby-base64
@@ -18300,10 +18441,10 @@ Homepage: https://github.com/mizzy/specinfra
 Description-md5: 04f958117d7467bd27a64c2a2f96edef
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-specinfra/ruby-specinfra_2.94.1-1_all.deb
-Size: 62488
-MD5sum: 24ae0dae01c16b786370589540c02517
-SHA256: 640518429668a30044c56f5bf4906f126a8a36552e8e9609d9ebee34e8cab213
+Filename: pool/main/r/ruby-specinfra/ruby-specinfra_2.94.1-3_all.deb
+Size: 61380
+MD5sum: 6c7ad799cfbc9b2744deac84435d300e
+SHA256: 73c489e36b4522b7fe63f39783f3bae647c18cd6c422c50e6f2a5249f4563681
 
 Package: ruby-spider
 Version: 0.5.0-6
@@ -19586,6 +19727,38 @@ Size: 4488
 MD5sum: 7495aa0b4d785ea580fcf061e9751f5e
 SHA256: 47acd2f2b08d05b768bd528f3408b1cfa6f289d8e7558481dec61826c9ff443f
 
+Package: ruby-toys
+Version: 0.19.1-2
+Installed-Size: 830
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: ruby, ruby-toys-core (>= 0.19.1)
+Description: Configurable command line tool
+Homepage: https://github.com/dazuma/toys
+Description-md5: 9351ce5fc64b62dc8b657f0d28457ce4
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-toys/ruby-toys_0.19.1-2_all.deb
+Size: 145968
+MD5sum: 704bfe4c3065348413827cb38982f74b
+SHA256: ab62176831a895e656ddd63b91306aaf35b28f137990de28806e5dfebad7cea5
+
+Package: ruby-toys-core
+Version: 0.19.1-2
+Installed-Size: 785
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: ruby-logger
+Description: Framework for creating command line executables
+Homepage: https://github.com/dazuma/toys
+Description-md5: 00339a34ae971194e2940a83750b227e
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-toys-core/ruby-toys-core_0.19.1-2_all.deb
+Size: 138536
+MD5sum: 840faedbe963ec0a6b1af5af5e483140
+SHA256: 0cb606a479d0ab8418fcd200636bf93edc5d0d0c24fd6bd7e12b7e9153a0f52f
+
 Package: ruby-tpm-key-attestation
 Version: 0.14.1-1
 Installed-Size: 98
@@ -20143,6 +20316,21 @@ Filename: pool/main/r/ruby-unicode-display-width/ruby-unicode-display-width_1.6.
 Size: 10284
 MD5sum: b080fa525bf6c93b7a9c303d76f66a2c
 SHA256: 27a620ba9dd72c240a8210ca3429b948bc23629594b3e687c62f9933afcf2d8d
+
+Package: ruby-unicode-emoji
+Version: 4.2.0-2
+Installed-Size: 712
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Description: Emoji data and regex
+Homepage: https://github.com/janlelis/unicode-emoji
+Description-md5: fa221ba33fbf1bfe116dd4fc2dcc0b4e
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-unicode-emoji/ruby-unicode-emoji_4.2.0-2_all.deb
+Size: 64908
+MD5sum: 4f7823a63472e07602c97a14f8c6d0fa
+SHA256: e249d57deb27666ffdc7fa269e0cf751863afa5ffe8dc082ea2472062a6ba3a4
 
 Package: ruby-unicode-plot
 Version: 0.0.5-1
@@ -20746,8 +20934,8 @@ MD5sum: bdbc2e16850aa1526041b2f8b412a8d9
 SHA256: 15a0c5fa13d86e166d497ae2e02eba97f1149dd57bdfbfe771cd4f8ea750fdb4
 
 Package: ruby-whitequark-parser
-Version: 3.3.10.1-1
-Installed-Size: 10235
+Version: 3.3.10.2-1
+Installed-Size: 10234
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
 Depends: ruby, ruby-ast (>= 2.4.1), racc
@@ -20757,10 +20945,10 @@ Homepage: https://github.com/whitequark/parser
 Description-md5: fc1eb313999127cd526a6326fa932b77
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-whitequark-parser/ruby-whitequark-parser_3.3.10.1-1_all.deb
-Size: 508220
-MD5sum: 5b42a160ca5d5365cbb604e7881ec601
-SHA256: 8703a5a0439d9e5ae451fb2d69686bc7eac35e4ab03a95dd78777edd6d225f47
+Filename: pool/main/r/ruby-whitequark-parser/ruby-whitequark-parser_3.3.10.2-1_all.deb
+Size: 507316
+MD5sum: b86c07a952123ad1fdf40d633b5f7fd7
+SHA256: 72ea0db7a969dae9d2545bd63977c6e32907c24cc4a6614913bc6ba16ab28ead
 
 Package: ruby-whitewash
 Version: 2.1-3
