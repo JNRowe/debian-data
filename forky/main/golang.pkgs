@@ -18,20 +18,21 @@ SHA256: a6a55e45c80759133f232288b8005116953fda05537101f927f6a4c3a5ac68e9
 
 Package: golang-filippo-age-dev
 Source: age
-Version: 1.2.1-1
-Installed-Size: 244
+Version: 1.3.1-2
+Installed-Size: 410
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
+Depends: golang-filippo-edwards25519-dev, golang-filippo-hpke-dev, golang-filippo-nistec-dev, golang-golang-x-crypto-dev
 Description: simple, modern and secure encryption tool (Go library)
 Multi-Arch: foreign
 Homepage: https://github.com/FiloSottile/age
 Description-md5: 8b90588a7b37f5c17ff387c184285947
 golang
 Priority: optional
-Filename: pool/main/a/age/golang-filippo-age-dev_1.2.1-1_all.deb
-Size: 53092
-MD5sum: 006e9ee88354e20a697fe4c6bae51dd5
-SHA256: d457d161b684fd4db66cb430a7ddf8e29ffe17c87b6ffccf99ce46088055f350
+Filename: pool/main/a/age/golang-filippo-age-dev_1.3.1-2_all.deb
+Size: 79136
+MD5sum: 3b300fff321b8ff647b0023934796490
+SHA256: b4f4311fe19659d91f18956c64594b49c3f96f5b01d7a6b79feecaa973187177
 
 Package: golang-github-awslabs-amazon-ecr-credential-helper-dev
 Source: amazon-ecr-credential-helper
@@ -729,6 +730,24 @@ Filename: pool/main/g/git-lfs/golang-github-git-lfs-git-lfs-dev_3.7.1-1_all.deb
 Size: 312176
 MD5sum: 67fcea3fa264746cec2f160c912f4055
 SHA256: b5c0d807a45944acbb0a3ba6d94d499d5098054b58f002a4eaa5ddc71118e230
+
+Package: golang-github-gitleaks-gitleaks-dev
+Source: gitleaks
+Version: 8.26.0-1
+Installed-Size: 701
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: all
+Depends: golang-github-bobusumisu-aho-corasick-dev, golang-github-charmbracelet-lipgloss-dev (>= 0.5.0), golang-github-fatih-semgroup-dev (>= 1.2.0), golang-github-gitleaks-go-gitdiff-dev (>= 0.9.1~), golang-github-google-go-cmp-dev, golang-github-masterminds-sprig-dev, golang-github-rs-zerolog-dev (>= 1.26.1), golang-github-spf13-cobra-dev (>= 1.2.1), golang-github-spf13-viper-dev (>= 1.8.1), golang-github-stretchr-testify-dev (>= 1.7.0), golang-golang-x-exp-dev, golang-gopkg-h2non-filetype.v1-dev (>= 1.1.3)
+Description: protect and discover secrets using Gitleaks 🔑 (Go library)
+Multi-Arch: foreign
+Homepage: https://github.com/gitleaks/gitleaks
+Description-md5: 6a2987f2e5f5833789675262b38581f6
+golang
+Priority: optional
+Filename: pool/main/g/gitleaks/golang-github-gitleaks-gitleaks-dev_8.26.0-1_all.deb
+Size: 98680
+MD5sum: 2f001e40c7e975fe9ca099267eb0cf8b
+SHA256: 24a4d3a12170287f8e9fc38282c396a6c2cbf118557f5cca3bcb8d096948c27e
 
 Package: golang-github-sigstore-gitsign-dev
 Source: gitsign
@@ -6088,6 +6107,23 @@ Filename: pool/main/g/golang-github-bndr-gotabulate/golang-github-bndr-gotabulat
 Size: 8832
 MD5sum: 1bd3883f35b722116f05d979824dc1bb
 SHA256: 717d6d8c584b8b210a7ced86268c42b9a861c4a19a4ef99a5a6bf5ce03de14d1
+
+Package: golang-github-bobusumisu-aho-corasick-dev
+Source: golang-github-bobusumisu-aho-corasick
+Version: 1.0.3+dfsg-2
+Installed-Size: 42
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: all
+Description: Aho-Corasick string-searching algorithm in Go (library)
+Multi-Arch: foreign
+Homepage: https://github.com/BobuSumisu/aho-corasick
+Description-md5: 18a61bbf2cf10d763890b4d2724f893f
+golang
+Priority: optional
+Filename: pool/main/g/golang-github-bobusumisu-aho-corasick/golang-github-bobusumisu-aho-corasick-dev_1.0.3+dfsg-2_all.deb
+Size: 7152
+MD5sum: c5adbe385b5fad739b304f41df379a16
+SHA256: b6569d468399482d88fcc33099e62628579fc3561248dd8e5b3d6ef384f9b848
 
 Package: golang-github-bodgit-plumbing-dev
 Source: golang-github-bodgit-plumbing
@@ -14309,20 +14345,21 @@ SHA256: 82b5c3be959e7df6fef087f074f71287db9e6f66928a90b7e560774b67d5784c
 
 Package: golang-github-gitleaks-go-gitdiff-dev
 Source: golang-github-gitleaks-go-gitdiff
-Version: 0.8.0-2
-Installed-Size: 520
+Version: 0.9.1-1
+Installed-Size: 521
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
+Breaks: gitleaks (<< 8.26.0~)
 Description: Go library for parsing and applying patches created by Git
 Multi-Arch: foreign
 Homepage: https://github.com/gitleaks/go-gitdiff
 Description-md5: 82c0d944d027991b9d26e86f930e5067
 golang
 Priority: optional
-Filename: pool/main/g/golang-github-gitleaks-go-gitdiff/golang-github-gitleaks-go-gitdiff-dev_0.8.0-2_all.deb
-Size: 184916
-MD5sum: 40887e3f036465fa4977b7eb773b33ba
-SHA256: 32a96fcd8cf1042357859072f8484500404d76cc328b7f1260dc79f7d1875672
+Filename: pool/main/g/golang-github-gitleaks-go-gitdiff/golang-github-gitleaks-go-gitdiff-dev_0.9.1-1_all.deb
+Size: 185500
+MD5sum: 42b0e816a2425b2ccfbf3d59f2346498
+SHA256: 9df24d9164a465fd59659a67fa1420fb07f5244ec6540ea1ebf37c831064331e
 
 Package: golang-github-gizak-termui-dev
 Source: golang-github-gizak-termui
@@ -14802,8 +14839,8 @@ SHA256: ae092c12c5703aecd74301d6f0b61fe5f374fe9c938fbbc5abe9f1548aae48d8
 
 Package: golang-github-go-git-go-billy-dev
 Source: golang-github-go-git-go-billy
-Version: 5.5.0-2
-Installed-Size: 218
+Version: 5.8.0-1
+Installed-Size: 244
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
 Depends: golang-github-cyphar-filepath-securejoin-dev, golang-golang-x-sys-dev
@@ -14813,10 +14850,10 @@ Homepage: https://github.com/go-git/go-billy
 Description-md5: 9850298b5c64f4527c35feef8f524344
 golang
 Priority: optional
-Filename: pool/main/g/golang-github-go-git-go-billy/golang-github-go-git-go-billy-dev_5.5.0-2_all.deb
-Size: 32400
-MD5sum: 722bd2ab91af2a2d57163e8e473b0c38
-SHA256: 3df142ef68af7af797ad0885b9698e443da57dc794f3d3167ca5612b96ff3e5d
+Filename: pool/main/g/golang-github-go-git-go-billy/golang-github-go-git-go-billy-dev_5.8.0-1_all.deb
+Size: 36984
+MD5sum: c6ea903c612a95b6aa1b0163a259ee81
+SHA256: aee4cc59105253bcec3aebb43b3711b6cd6a38c7911e47501fd66b485c224715
 
 Package: go-git
 Source: golang-github-go-git-go-git (5.16.2-1)
@@ -15895,6 +15932,23 @@ Filename: pool/main/g/golang-github-gobwas-pool/golang-github-gobwas-pool-dev_0.
 Size: 8392
 MD5sum: 41cf3848822227851917f60227671360
 SHA256: 1976225bc3d8ea89de32d28622c7b6469edf3371aa4ba7a6226d7702fcdd00d8
+
+Package: golang-github-gobwas-ws-dev
+Source: golang-github-gobwas-ws
+Version: 1.4.0-3
+Installed-Size: 350
+Maintainer: Daniel Baumann <daniel@debian.org>
+Architecture: all
+Description: Tiny WebSocket library for Go (library)
+Multi-Arch: foreign
+Homepage: https://github.com/gobwas/ws
+Description-md5: ad2d90d5260bf7d2d44c0e4734994f03
+golang
+Priority: optional
+Filename: pool/main/g/golang-github-gobwas-ws/golang-github-gobwas-ws-dev_1.4.0-3_all.deb
+Size: 67960
+MD5sum: bb222315fba2e907b8198098092f415f
+SHA256: da6cae70fd1cf2680f49b9c98f30eb75ebd3c4da7b4933e1f8255549f0159ff7
 
 Package: golang-github-gocarina-gocsv-dev
 Source: golang-github-gocarina-gocsv
@@ -18699,8 +18753,8 @@ SHA256: 38b2ce01504860253b622ca64390e80e5ad933a07f40fde24044719edd9d4a6d
 
 Package: golang-github-hashicorp-go-version-dev
 Source: golang-github-hashicorp-go-version
-Version: 1.6.0-1
-Installed-Size: 76
+Version: 1.8.0-1
+Installed-Size: 77
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
 Description: library for parsing and verifying versions and version constraints
@@ -18709,10 +18763,10 @@ Homepage: https://github.com/hashicorp/go-version
 Description-md5: 67c03e52a43fa936032e23aca81aea64
 golang
 Priority: optional
-Filename: pool/main/g/golang-github-hashicorp-go-version/golang-github-hashicorp-go-version-dev_1.6.0-1_all.deb
-Size: 16020
-MD5sum: 1140cadf6616fd7fb01481c1b89c0ca9
-SHA256: 14061ec02e1044f66f38aac1033e6dcb23ead85b6de006f77556a77e6f6cbe0f
+Filename: pool/main/g/golang-github-hashicorp-go-version/golang-github-hashicorp-go-version-dev_1.8.0-1_all.deb
+Size: 16660
+MD5sum: f9f6082a890858c7f159a73b68462dba
+SHA256: 3c43c967950361be484a83b06781190c8ca8efa7d4dd8cca7fc04c54d87217f7
 
 Package: golang-github-hashicorp-golang-lru-dev
 Source: golang-github-hashicorp-golang-lru
@@ -22739,8 +22793,8 @@ SHA256: 75a6a42e4fa3fc8e1b19801220bf29d1c14b5d2f50d185484bc3bb2f45794c99
 
 Package: golang-github-karlseguin-ccache-dev
 Source: golang-github-karlseguin-ccache
-Version: 2.0.3-1
-Installed-Size: 62
+Version: 3.0.8-1
+Installed-Size: 103
 Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
 Architecture: all
 Depends: golang-github-karlseguin-expect-dev
@@ -22749,10 +22803,10 @@ Homepage: https://github.com/karlseguin/ccache
 Description-md5: 40671c1b0d66a6d80ee0a31cd24bf8fc
 golang
 Priority: optional
-Filename: pool/main/g/golang-github-karlseguin-ccache/golang-github-karlseguin-ccache-dev_2.0.3-1_all.deb
-Size: 10436
-MD5sum: 253915fdea2bbe93deea453176d652c1
-SHA256: 836f6692d54c35b1d98c8332f8a53e2c75c44662b8165f9aef92ded23311475f
+Filename: pool/main/g/golang-github-karlseguin-ccache/golang-github-karlseguin-ccache-dev_3.0.8-1_all.deb
+Size: 16972
+MD5sum: deb68a6167ee0779ac79641d2a9f8970
+SHA256: d788ad3a22e2d36215f1be0f02fca734ffa77a93fb1b3d718424fdf1eafaac85
 
 Package: golang-github-karlseguin-expect-dev
 Source: golang-github-karlseguin-expect
@@ -29356,6 +29410,24 @@ Filename: pool/main/g/golang-github-op-go-logging/golang-github-op-go-logging-de
 Size: 17492
 MD5sum: 9c12ae1ff2378a6866ed63d83b4bef7a
 SHA256: c8d9dad58122f86f59270e90f771e4125afbdb34d0c5cbbb22143a603d2c9e53
+
+Package: golang-github-open-policy-agent-opa-dev
+Source: golang-github-open-policy-agent-opa
+Version: 1.4.2+ds1-2
+Installed-Size: 18370
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: all
+Depends: golang-github-agnivade-levenshtein-dev, golang-github-cespare-xxhash-dev, golang-github-go-ini-ini-dev, golang-github-gobwas-glob-dev, golang-github-google-uuid-dev, golang-github-gorilla-mux-dev, golang-github-prometheus-client-golang-dev, golang-github-rcrowley-go-metrics-dev, golang-github-sirupsen-logrus-dev, golang-github-tchap-go-patricia-dev, golang-github-xeipuuv-gojsonreference-dev, golang-github-yashtewari-glob-intersection-dev, golang-gopkg-yaml.v3-dev, golang-k8s-sigs-yaml-dev, golang-opentelemetry-otel-dev
+Description: Open Policy Agent (OPA) general-purpose policy engine (library)
+Multi-Arch: foreign
+Homepage: https://github.com/open-policy-agent/opa
+Description-md5: 1315490e3a483763733597bf681bf5aa
+golang
+Priority: optional
+Filename: pool/main/g/golang-github-open-policy-agent-opa/golang-github-open-policy-agent-opa-dev_1.4.2+ds1-2_all.deb
+Size: 1502980
+MD5sum: dc37a03a38b9b90154a14415ea1f0c29
+SHA256: 684ca3097b522a54298902bef7400b5914a36b06c9b3ffdd331b9066a9d0d3e1
 
 Package: golang-github-opencoff-go-sieve-dev
 Source: golang-github-opencoff-go-sieve
