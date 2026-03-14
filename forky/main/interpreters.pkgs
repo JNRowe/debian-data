@@ -1684,6 +1684,81 @@ Size: 11176168
 MD5sum: 937e31c4485bd940ee79cf289be9853d
 SHA256: cb0edff6c4b53aa8c7217be0e1e84f19bc642303f434ff2b1598611f9125dd34
 
+Package: cpp-16
+Source: gcc-16
+Version: 16-20260308-1
+Installed-Size: 11
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: amd64
+Depends: gcc-16-base (= 16-20260308-1), cpp-16-x86-64-linux-gnu (= 16-20260308-1)
+Suggests: gcc-16-locales (>= 16)
+Breaks: hardening-wrapper (<< 2.8+nmu3), libmagics++-dev (<< 2.28.0-4)
+Description: GNU C preprocessor
+Homepage: http://gcc.gnu.org/
+Description-md5: 93a75b5e1f4b43c36eba0239b6fab6a3
+interpreters
+Priority: optional
+Filename: pool/main/g/gcc-16/cpp-16_16-20260308-1_amd64.deb
+Size: 1280
+MD5sum: 7a48900c8af7ead0172f813619bc1a7d
+SHA256: 23ae459b9e2332f31c0ee5cd146cf4883c4f3b627abfae6d2dff51aa6e4fd7e6
+
+Package: cpp-16-for-build
+Source: gcc-16
+Version: 16-20260308-1
+Installed-Size: 98
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: all
+Depends: gcc-16-base (>= 16), cpp-16 (>= 16-20260308-1)
+Description: GNU C preprocessor for the build architecture
+Multi-Arch: foreign
+Homepage: http://gcc.gnu.org/
+Description-md5: 4d867f66a5170c25af70c1bda2672d33
+interpreters
+Priority: optional
+Filename: pool/main/g/gcc-16/cpp-16-for-build_16-20260308-1_all.deb
+Size: 31856
+MD5sum: ee0eb9a8dc694eba949d0dfc22bd293f
+SHA256: f603d4fe732253a8dae0eb5bc5004fedb148df025112348f165c5be5147fa334
+
+Package: cpp-16-for-host
+Source: gcc-16
+Version: 16-20260308-1
+Installed-Size: 6
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: amd64
+Depends: gcc-16-base (= 16-20260308-1), cpp-16-x86-64-linux-gnu (>= 16)
+Description: GNU C preprocessor for the host architecture
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: bdce3f8f67a0382ae150b074db5ebb6f
+interpreters
+Priority: optional
+Filename: pool/main/g/gcc-16/cpp-16-for-host_16-20260308-1_amd64.deb
+Size: 1140
+MD5sum: 0d23b442a94c568ec56fc411464702a1
+SHA256: ecf9f4cc4ebbf122863e2dd497a68f3610c410f406322c6c418e23aee5f9a117
+
+Package: cpp-16-x86-64-linux-gnu
+Source: gcc-16
+Version: 16-20260308-1
+Installed-Size: 412576
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: amd64
+Depends: gcc-16-base (= 16-20260308-1), libc6 (>= 2.38), libgmp10 (>= 2:6.3.0+dfsg), libisl23 (>= 0.15), libmpc3 (>= 1.1.0), libmpfr6 (>= 4.2.0), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
+Suggests: gcc-16-locales (>= 16), cpp-16-doc (>= 16)
+Breaks: hardening-wrapper (<< 2.8+nmu3), libmagics++-dev (<< 2.28.0-4)
+Description: GNU C preprocessor for x86_64-linux-gnu
+Multi-Arch: foreign
+Homepage: http://gcc.gnu.org/
+Description-md5: 89e23d924704b3363e8aa7d815b044c4
+interpreters
+Priority: optional
+Filename: pool/main/g/gcc-16/cpp-16-x86-64-linux-gnu_16-20260308-1_amd64.deb
+Size: 108318960
+MD5sum: 89b27b00a38d76b09d988731aed425d3
+SHA256: 6389b195feb9f531b4f6fae926a57e22e5fa7336d69eae4b4f3253439d778f1b
+
 Package: cpp
 Source: gcc-defaults (1.230)
 Version: 4:15.2.0-5
@@ -2305,25 +2380,25 @@ MD5sum: ce3f673a1503f8219d4e07bdd1705ce2
 SHA256: c7a34c8117e7fc7941c4c97c07030b4c6c5a6e77068f0f44d761cfbe2adab446
 
 Package: lua-bitop
-Version: 1.0.3-2
-Installed-Size: 68
+Version: 1.0.3-3
+Installed-Size: 86
 Maintainer: Debian Lua Team <pkg-lua-devel@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: liblua5.1-bitop0 (<< 1.0.1-6~)
-Provides: liblua5.1-bitop0, lua5.1-bitop, lua5.3-bitop, lua5.4-bitop
+Provides: liblua5.1-bitop0, lua5.1-bitop, lua5.3-bitop, lua5.4-bitop, lua5.5-bitop
 Depends: libc6 (>= 2.4)
 Breaks: liblua5.1-bitop0 (<< 1.0.1-6~)
 Description: fast bit manipulation library for the Lua language
 Multi-Arch: same
 Homepage: http://bitop.luajit.org
 Description-md5: f334595b41b0fe5141a0457c868d6671
-Lua-Versions: 5.1 5.3 5.4
+Lua-Versions: 5.1 5.3 5.4 5.5
 interpreters
 Priority: optional
-Filename: pool/main/l/lua-bitop/lua-bitop_1.0.3-2_amd64.deb
-Size: 7068
-MD5sum: c00735e91c92d60c83f9d91e916e1277
-SHA256: 4ebb9d8bf899b4a76b3d821db87c15a030c47ff95096cf22864f0fc885d18276
+Filename: pool/main/l/lua-bitop/lua-bitop_1.0.3-3_amd64.deb
+Size: 7216
+MD5sum: 192c5dfe491d0d6c97a6f3c7fef911f4
+SHA256: ce741d195f6f00d330bc3368fa36a0bc47e71e7afde43bf024f0fd120a4bb3fb
 
 Package: lua-busted
 Version: 2.3.0-1
