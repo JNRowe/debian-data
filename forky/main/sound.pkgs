@@ -6175,57 +6175,76 @@ SHA256: d53f8d36f2ee25d31b2c15e19a8a63e636aff4734b9d1f8e7885b5304125b1cf
 
 Package: ffado-dbus-server
 Source: libffado
-Version: 2.5.0-1
+Version: 2.5.0-4
 Installed-Size: 279
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
-Depends: default-dbus-session-bus | dbus-session-bus, libffado2 (= 2.5.0-1), libc6 (>= 2.38), libdbus-c++-1-0v5 (>= 0.9.0), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
+Depends: default-dbus-session-bus | dbus-session-bus, libffado2 (= 2.5.0-4), libc6 (>= 2.38), libdbus-c++-1-0v5 (>= 0.9.0), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
 Description: FFADO D-Bus server
 Homepage: http://www.ffado.org/
 Description-md5: c97651a8d42693959e021d8283d395a2
 Tag: role::program
 sound
 Priority: optional
-Filename: pool/main/libf/libffado/ffado-dbus-server_2.5.0-1_amd64.deb
-Size: 58240
-MD5sum: 6f0ba1b269de6380d8092255515104dd
-SHA256: bdf43aaef8df07675d88cf55859ad2295ad5ccdc00716c21d40d2d9f1e3b2539
+Filename: pool/main/libf/libffado/ffado-dbus-server_2.5.0-4_amd64.deb
+Size: 58156
+MD5sum: 6ee2a57a0e4d51b94c251da30458bcfa
+SHA256: 50c1236ae15c0008ba27538628ac134a2e39041af4d10d5f27167c63c115d2ae
+
+Package: ffado-mixer
+Source: libffado
+Version: 2.5.0-4
+Installed-Size: 2140
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Architecture: all
+Replaces: ffado-mixer-qt4 (<< 2.5.0-3)
+Depends: ffado-dbus-server (>= 2.5.0-4), ffado-tools (>= 2.5.0-4), pyqt6-dev-tools, python3-dbus, python3-dbus.mainloop.pyqt6, python3-pyqt6, python3:any
+Breaks: ffado-mixer-qt4 (<< 2.5.0-3)
+Description: FFADO D-Bus mixer applets
+Homepage: http://www.ffado.org/
+Description-md5: 58d76ec5bb4c06c65163511937a89d2e
+sound
+Priority: optional
+Filename: pool/main/libf/libffado/ffado-mixer_2.5.0-4_all.deb
+Size: 99188
+MD5sum: be51a832010fae25a3f1a72e3efa8bbe
+SHA256: ca9fe4be3313d55cf3da14cb392d5280d708bf8862bb9a90d5a79f7d6e94575b
 
 Package: ffado-mixer-qt4
 Source: libffado
-Version: 2.5.0-1
-Installed-Size: 2134
+Version: 2.5.0-4
+Installed-Size: 21
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: all
-Depends: ffado-dbus-server (>= 2.5.0-1), ffado-tools (>= 2.5.0-1), python3-dbus, python3-dbus.mainloop.pyqt5, python3-pyqt5, python3:any
-Description: FFADO D-Bus mixer applets
+Depends: ffado-mixer
+Description: FFADO D-Bus mixer applets (transitional package)
 Homepage: http://www.ffado.org/
-Description-md5: 32d310679d7f527b93f10bfd27693795
+Description-md5: 4fb0c529dff00ce8292c8abe06765e8e
 Tag: role::program
 sound
 Priority: optional
-Filename: pool/main/libf/libffado/ffado-mixer-qt4_2.5.0-1_all.deb
-Size: 97680
-MD5sum: 3f2f7b9c7291400941dcfbf4182c4741
-SHA256: 0839f9f50dd9820146ad5f51a8530efd465f40dbaff2a43e345c222ed29ecd8d
+Filename: pool/main/libf/libffado/ffado-mixer-qt4_2.5.0-4_all.deb
+Size: 6644
+MD5sum: 139073f2e807ada3dc52624fb7bf8d5c
+SHA256: 2f1d381928eca7f2b8b1488062e0dd382ca5b39541daa6691285363159592085
 
 Package: ffado-tools
 Source: libffado
-Version: 2.5.0-1
-Installed-Size: 290
+Version: 2.5.0-4
+Installed-Size: 289
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
-Depends: default-dbus-session-bus | dbus-session-bus, libffado2 (= 2.5.0-1), python3:any, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libraw1394-11 (>= 2.1.2), libstdc++6 (>= 13.1)
+Depends: default-dbus-session-bus | dbus-session-bus, libffado2 (= 2.5.0-4), python3:any, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libraw1394-11 (>= 2.1.2), libstdc++6 (>= 13.1)
 Description: FFADO debugging and firmware tools
 Homepage: http://www.ffado.org/
 Description-md5: ec6e443b88eac8af1b723cc745035716
 Tag: role::program
 sound
 Priority: optional
-Filename: pool/main/libf/libffado/ffado-tools_2.5.0-1_amd64.deb
-Size: 57604
-MD5sum: 5889e357f2302f1d70be37fff94f3dbf
-SHA256: f9afb8a96f5b6b1b1e1ae273251efb9d7e3faa1da4b2e039d7df49585c05ead4
+Filename: pool/main/libf/libffado/ffado-tools_2.5.0-4_amd64.deb
+Size: 57180
+MD5sum: 2ac5de8b48501da9124b1ec7e01477cc
+SHA256: 2395edae5bd495663d95119fbb0712f9952eeb47d4f68433c29508db83909e07
 
 Package: libgsm-tools
 Source: libgsm
