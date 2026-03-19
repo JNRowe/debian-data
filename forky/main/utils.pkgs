@@ -919,6 +919,42 @@ Size: 854500
 MD5sum: f0fe0b1610313ed36ecc10579c91001d
 SHA256: fb0dde6bec8e2814a6e648f82378c3d752d4dd12ffedc4bb3658472a8458b4b7
 
+Package: arrow-tools
+Source: apache-arrow
+Version: 23.0.1-8
+Installed-Size: 19768
+Maintainer: Debian Science Maintainers <debian-science-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: libbrotli1 (>= 0.6.0), libbz2-1.0, libc6 (>= 2.38), libgcc-s1 (>= 3.4), liblz4-1 (>= 1.8.0), libmimalloc3 (>= 3.2.8+ds), libsnappy1v5 (>= 1.2.2), libstdc++6 (>= 14), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.2.0), libarrow2300 (= 23.0.1-8)
+Description: Apache Arrow IPC format conversion utilities
+Multi-Arch: foreign
+Homepage: https://arrow.apache.org/
+Description-md5: 2fd289b17f3207b776eb7dea7a716c0d
+utils
+Priority: optional
+Filename: pool/main/a/apache-arrow/arrow-tools_23.0.1-8_amd64.deb
+Size: 4869180
+MD5sum: 62c50ef3cd3c90e1058ecfc83fd3006b
+SHA256: 10e39ede3bca30f903608114176dd8e469adf74ba4d98369701a86b7ce9bf66c
+
+Package: parquet-tools
+Source: apache-arrow
+Version: 23.0.1-8
+Installed-Size: 453
+Maintainer: Debian Science Maintainers <debian-science-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: libarrow2300 (>= 23.0.1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libparquet2300 (= 23.0.1-8), libstdc++6 (>= 13.1)
+Description: Apache Parquet file inspection utilities
+Multi-Arch: foreign
+Homepage: https://arrow.apache.org/
+Description-md5: 0052a9a018958b62fd7129c7eb5ae389
+utils
+Priority: optional
+Filename: pool/main/a/apache-arrow/parquet-tools_23.0.1-8_amd64.deb
+Size: 356332
+MD5sum: 19fc634eedea34e2feeca1ccfb2d9564
+SHA256: e03a0ed8aa61188b6fb18a3a00bba2e0befd438cef9b6cd230550ee9ab32a81a
+
 Package: apparix
 Version: 11-062-4
 Installed-Size: 220
@@ -5501,11 +5537,11 @@ MD5sum: 803ef2da348f29b0dc0f028cedc79549
 SHA256: 13aab2db9e1550a358283b4edc6473abaee45fa6793c926745e7b30f911dd302
 
 Package: cryfs
-Version: 1.0.1-1
-Installed-Size: 42233
+Version: 1.0.3-1
+Installed-Size: 42069
 Maintainer: Syed Shahrukh Hussain <syed.shahrukh@ossrevival.org>
 Architecture: amd64
-Depends: fuse3, libboost-chrono1.88.0 (>= 1.88.0), libboost-filesystem1.88.0 (>= 1.88.0), libboost-program-options1.88.0 (>= 1.88.0), libboost-thread1.88.0 (>= 1.88.0), libc6 (>= 2.38), libcrypto++8t64 (>= 8.9.0), libfmt10 (>= 10.1.1+ds1), libfuse3-4 (>= 3.17.2), libgcc-s1 (>= 3.3), libspdlog1.15-fmt10, libstdc++6 (>= 14)
+Depends: fuse3, libboost-chrono1.90.0 (>= 1.90.0), libboost-filesystem1.90.0 (>= 1.90.0), libboost-program-options1.90.0 (>= 1.90.0), libboost-thread1.90.0 (>= 1.90.0), libc6 (>= 2.38), libcrypto++8t64 (>= 8.9.0), libfmt10 (>= 10.1.1+ds1), libfuse3-4 (>= 3.17.2), libgcc-s1 (>= 3.3), libspdlog1.15-fmt10, libstdc++6 (>= 14)
 Description: encrypt your files and store them in the cloud
 Homepage: https://www.cryfs.org/
 Description-md5: 6a193616bfd007a57999d6d65d2c809f
@@ -5513,10 +5549,10 @@ Tag: implemented-in::c++, role::program, security::cryptography,
  works-with::file
 utils
 Priority: optional
-Filename: pool/main/c/cryfs/cryfs_1.0.1-1_amd64.deb
-Size: 7164820
-MD5sum: b6dcad219d22baff77ca8f72f7344e65
-SHA256: 6cd5b7b1abd2aeb48a05d8997ab24df0d71384ba97549484f8f40e2c416ee57c
+Filename: pool/main/c/cryfs/cryfs_1.0.3-1_amd64.deb
+Size: 7164020
+MD5sum: 2f026837d49eb96a123ae8da18d65ccc
+SHA256: 33c07833e29e9474045caace700bdc53c734708edfd764e9201a46d48082e8d5
 
 Package: cryptopant
 Version: 1.3.2-2
@@ -7413,12 +7449,12 @@ MD5sum: 2023644c91a1200f2f212d9df57d6916
 SHA256: 0a57e3446ab5c28ba382317515ec1b3ff748b6f723f2f733f88d09359fa46f19
 
 Package: dracut
-Version: 110-4
+Version: 110-5
 Installed-Size: 44
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
 Provides: linux-initramfs-tool
-Depends: dracut-core (<< 110-4+b+~), dracut-core (>= 110-4), linux-base
+Depends: dracut-core (<< 110-5+b+~), dracut-core (>= 110-5), linux-base
 Suggests: dracut-network
 Conflicts: initramfs-tools, live-tools
 Description: Initramfs generator using udev
@@ -7428,14 +7464,14 @@ Description-md5: ff5d73107edf988d1308accca8de03f4
 Tag: implemented-in::c
 utils
 Priority: optional
-Filename: pool/main/d/dracut/dracut_110-4_all.deb
-Size: 15740
-MD5sum: 13c259f2d51b6b0a8e807cc58c952dd5
-SHA256: 00275b413f00effc4e4a9afdbc188d6f540b7950902dbf8779551e576653533f
+Filename: pool/main/d/dracut/dracut_110-5_all.deb
+Size: 15876
+MD5sum: 0e8a25cee373dae375610ac56aa69111
+SHA256: 1ab267d0d3ef797a3f5f3f589495b5f4956fdab1ea7c7486ac069d3ffc479c24
 
 Package: dracut-core
 Source: dracut
-Version: 110-4
+Version: 110-5
 Installed-Size: 1258
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
@@ -7444,21 +7480,21 @@ Provides: dracut-live
 Depends: 3cpio | cpio, dracut-install, e2fsprogs, kmod, systemd-sysv | initscripts | sysvinit-core, udev, libc6 (>= 2.38)
 Recommends: binutils, console-setup, systemd, zstd
 Suggests: cryptsetup, dmsetup, isomd5sum, kpartx, lvm2, mdadm, parted, squashfs-tools, systemd-cryptsetup
-Breaks: dracut-live (<< 109-10~), dracut-network (<< 057+157-2), dracut-squash
+Breaks: dracut-live (<< 109-10~), dracut-network (<< 057+157-2), dracut-squash, rust-coreutils (<< 0.5.0)
 Description: dracut is an event driven initramfs infrastructure (core tools)
 Multi-Arch: foreign
 Homepage: https://github.com/dracut-ng/dracut-ng/wiki
 Description-md5: 85208e115299ec0ab2b6173761a71ced
 utils
 Priority: optional
-Filename: pool/main/d/dracut/dracut-core_110-4_amd64.deb
-Size: 331720
-MD5sum: 0e1c55e4ed5c90ef65765c8046b9adca
-SHA256: 9d6357e558150451394d183285678cf3c932d43fc4368347c1f872529422a531
+Filename: pool/main/d/dracut/dracut-core_110-5_amd64.deb
+Size: 331848
+MD5sum: 28f19fbcde3ecf4bb458516ccc2cf85a
+SHA256: c4a1824d42bbc276a89ab26f1f5416ff21adde1821a817f2796595816fedcd1c
 
 Package: dracut-install
 Source: dracut
-Version: 110-4
+Version: 110-5
 Installed-Size: 119
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
@@ -7470,36 +7506,36 @@ Homepage: https://github.com/dracut-ng/dracut-ng/wiki
 Description-md5: bee7fbb3b186a4a78e8728d317c6259f
 utils
 Priority: optional
-Filename: pool/main/d/dracut/dracut-install_110-4_amd64.deb
-Size: 47508
-MD5sum: df181c262acc6f8a4fee8e481a45940b
-SHA256: 76507c48840f21f3098a31ae66d213b046edd8af9216326e6ccadb086663fc70
+Filename: pool/main/d/dracut/dracut-install_110-5_amd64.deb
+Size: 47504
+MD5sum: d67ac34848788b5d0972416d99b8e5f4
+SHA256: 02fc621dc272bb5e89f8b506249bf18ebed2532acf079c65b7d8247099152bf0
 
 Package: dracut-network
 Source: dracut
-Version: 110-4
+Version: 110-5
 Installed-Size: 257
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
 Replaces: dracut-core (<< 105), dracut-live (<< 109-10~)
 Depends: dracut-core, iproute2, network-manager | systemd | connman
-Recommends: curl, nbd-client, nfs-common, open-iscsi
-Suggests: iscsiuio, systemd-container
+Recommends: curl
+Suggests: iscsiuio, nbd-client, nfs-common, open-iscsi, systemd-container
 Breaks: dracut-core (<< 105), dracut-live (<< 109-10~)
 Description: dracut is an event driven initramfs infrastructure (network modules)
 Multi-Arch: foreign
 Homepage: https://github.com/dracut-ng/dracut-ng/wiki
-Description-md5: c09b83ff6e1955bb91504f6ae1ab656c
+Description-md5: 95de04973ab1eae9322ef43d08e596cd
 utils
 Priority: optional
-Filename: pool/main/d/dracut/dracut-network_110-4_all.deb
-Size: 52468
-MD5sum: c265eae885e738de2eff1fb3815d6b64
-SHA256: c3c5ba2f93c83f6c5bc9a120fdffd6777f29761d50b0fd8d144c0ec1c16c4603
+Filename: pool/main/d/dracut/dracut-network_110-5_all.deb
+Size: 52632
+MD5sum: b04bb0a26e8289e3d129831da6b1e900
+SHA256: 05706eb5c2d00faa38f0acfb2ff6784851c362e148e76c12caf39d1be0a0951b
 
 Package: dracut-test
 Source: dracut
-Version: 110-4
+Version: 110-5
 Installed-Size: 65
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
@@ -7512,10 +7548,10 @@ Homepage: https://github.com/dracut-ng/dracut-ng/wiki
 Description-md5: 84601c141e733c787d0063f83168b1df
 utils
 Priority: optional
-Filename: pool/main/d/dracut/dracut-test_110-4_amd64.deb
-Size: 18924
-MD5sum: 198b148cdd4fdca96b876b78590e6d37
-SHA256: e532f97ef7adb440bbcb871ab142c8dcaa3020d0d922390201ca2a28ee4cbb57
+Filename: pool/main/d/dracut/dracut-test_110-5_amd64.deb
+Size: 19056
+MD5sum: b9d3f07c7a0a92817298e0257acc1058
+SHA256: a27f8b9b92c220cb0966b356505fa0ad5f5fb3d2df3c156cc454e5cc47d9f833
 
 Package: droidlysis
 Version: 3.4.7-1
@@ -7635,8 +7671,8 @@ MD5sum: e96825d752700623abb389648b80c706
 SHA256: 43f355b83c580b0e2be7cb5b5a09655a5e75963ca507a18228e619d70e67f8da
 
 Package: dtrx
-Version: 8.5.3-3
-Installed-Size: 97
+Version: 8.7.1-1
+Installed-Size: 94
 Maintainer: Andres Salomon <dilinger@debian.org>
 Architecture: all
 Depends: binutils, bzip2, cabextract, cpio, lzma, 7zip, rpm, unshield, unzip, xz-utils, python3:any
@@ -7649,10 +7685,10 @@ Tag: implemented-in::python, interface::commandline, interface::text-mode,
  works-with-format::zip, works-with::archive
 utils
 Priority: optional
-Filename: pool/main/d/dtrx/dtrx_8.5.3-3_all.deb
-Size: 25220
-MD5sum: e4f05372682b2401e4fba670be70eeed
-SHA256: bcfc81e20afe9b1f843a7fff7e5097f347e27eae836fd1371b2d4456ff1e554a
+Filename: pool/main/d/dtrx/dtrx_8.7.1-1_all.deb
+Size: 22876
+MD5sum: b37761a592117b14ea31daaca0ffebd4
+SHA256: d7384003ead1449f726b1c2e08b92f853dc1921138ac0c4edaf490ef3e6ed57c
 
 Package: dualsensectl
 Version: 0.7+git20250823-1
@@ -19357,6 +19393,68 @@ Size: 171796
 MD5sum: 1d74b1a989661ba1d07f250b8f7e3212
 SHA256: 4b6420009e8fb6a851de17550f78b5d4daacd4ef57cd417673f7220b671a18ec
 
+Package: keepassxc
+Version: 2.7.10+dfsg1-2.1
+Installed-Size: 80
+Maintainer: Julian Andres Klode <jak@debian.org>
+Architecture: all
+Depends: keepassxc-full | keepassxc-minimal
+Description: Cross Platform Password Manager (transitional package)
+Homepage: https://keepassxc.org/
+Description-md5: 488233e519217e34f1bda89fe55058de
+Tag: uitoolkit::qt
+utils
+Priority: optional
+Filename: pool/main/k/keepassxc/keepassxc_2.7.10+dfsg1-2.1_all.deb
+Size: 38136
+MD5sum: d7bf09556acafcdb830c0e98def2dc19
+SHA256: 0956a69738aa0c37349ee680a51f3f5a73969f0a64d507c1bdd2e16d3517bc8f
+
+Package: keepassxc-full
+Source: keepassxc
+Version: 2.7.10+dfsg1-2.1
+Installed-Size: 32529
+Maintainer: Julian Andres Klode <jak@debian.org>
+Architecture: amd64
+Replaces: keepassxc
+Provides: keepassxc (= 2.7.10+dfsg1-2.1)
+Depends: libargon2-1 (>= 0~20171227), libbotan-3-10 (>= 3.10.0+dfsg), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libminizip1t64, libpcsclite1 (>= 1.3.3), libqrencode4 (>= 3.2.0), libqt5concurrent5t64 (>= 5.6.0~rc), libqt5core5t64 (>= 5.15.1), libqt5dbus5t64 (>= 5.0.2), libqt5gui5t64 (>= 5.15.1) | libqt5gui5-gles (>= 5.15.1), libqt5network5t64 (>= 5.6.0~beta), libqt5svg5 (>= 5.6.0~beta), libqt5widgets5t64 (>= 5.15.1), libqt5x11extras5 (>= 5.6.1), libreadline8t64 (>= 6.0), libstdc++6 (>= 14), libusb-1.0-0 (>= 2:1.0.16), libx11-6, libxtst6 (>= 2:1.2.5), libzxcvbn0 (>= 0.20150103), zlib1g (>= 1:1.1.4)
+Recommends: fonts-font-awesome
+Suggests: webext-keepassxc-browser, xclip
+Conflicts: keepassxc-minimal
+Breaks: keepassxc (<< 2.7.7+dfsg.1-3~)
+Description: Cross Platform Password Manager
+Homepage: https://keepassxc.org/
+Description-md5: d4ebdfc85a533dc513ff4ee182cc5206
+utils
+Priority: optional
+Filename: pool/main/k/keepassxc/keepassxc-full_2.7.10+dfsg1-2.1_amd64.deb
+Size: 8373844
+MD5sum: b0cb7021380365594564d01676253bc5
+SHA256: 598c20e31a838eeeb3c0335151cba9e98423e7f144f69d9164a9ef2cda62bb7c
+
+Package: keepassxc-minimal
+Source: keepassxc
+Version: 2.7.10+dfsg1-2.1
+Installed-Size: 29490
+Maintainer: Julian Andres Klode <jak@debian.org>
+Architecture: amd64
+Replaces: keepassxc
+Provides: keepassxc (= 2.7.10+dfsg1-2.1)
+Depends: libargon2-1 (>= 0~20171227), libbotan-3-10 (>= 3.10.0+dfsg), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libminizip1t64, libpcsclite1 (>= 1.3.3), libqrencode4 (>= 3.2.0), libqt5concurrent5t64 (>= 5.6.0~rc), libqt5core5t64 (>= 5.15.1), libqt5dbus5t64 (>= 5.0.2), libqt5gui5t64 (>= 5.15.1) | libqt5gui5-gles (>= 5.15.1), libqt5network5t64 (>= 5.0.2), libqt5svg5 (>= 5.6.0~beta), libqt5widgets5t64 (>= 5.11.0~rc1), libqt5x11extras5 (>= 5.6.1), libreadline8t64 (>= 6.0), libstdc++6 (>= 14), libusb-1.0-0 (>= 2:1.0.16), libx11-6, libxtst6 (>= 2:1.2.5), libzxcvbn0 (>= 0.20150103), zlib1g (>= 1:1.1.4)
+Recommends: fonts-font-awesome
+Conflicts: keepassxc-full
+Breaks: keepassxc (<< 2.7.7+dfsg.1-3~)
+Description: Cross Platform Password Manager
+Homepage: https://keepassxc.org/
+Description-md5: cc45983b70d0515a9287f8098694a4a6
+utils
+Priority: optional
+Filename: pool/main/k/keepassxc/keepassxc-minimal_2.7.10+dfsg1-2.1_amd64.deb
+Size: 7788096
+MD5sum: 672273005e3e7d186348e2c118ca933a
+SHA256: 21806d8bd059f967a67a19b603db4941866a9eb6bd7b5cd07d5623b8849c7b36
+
 Package: kernel-wedge
 Version: 2.106
 Installed-Size: 70
@@ -21891,21 +21989,21 @@ MD5sum: a8e6250de3543b964781a3b256c87867
 SHA256: eaabc427d83666a9da30c6591f4db907a5a49745c100e0c27b92416ec45410fe
 
 Package: libmwaw-tools
-Source: libmwaw (0.3.22-1)
-Version: 0.3.22-1+b3
-Installed-Size: 167
+Source: libmwaw
+Version: 0.3.22-2
+Installed-Size: 249
 Maintainer: Debian LibreOffice Maintainers <debian-openoffice@lists.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libmwaw-0.3-3, librevenge-0.0-0, libstdc++6 (>= 13.1)
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libmwaw-0.3-3 (>= 0.3.22), librevenge-0.0-0, libstdc++6 (>= 13.1)
 Description: import library for some old Mac text documents -- tools
-Homepage: http://sourceforge.net/projects/libmwaw
+Homepage: https://sourceforge.net/projects/libmwaw
 Description-md5: 13e3b33c80702e5ba597ca5e98cb7040
 utils
 Priority: optional
-Filename: pool/main/libm/libmwaw/libmwaw-tools_0.3.22-1+b3_amd64.deb
-Size: 35612
-MD5sum: 0b2a4c401cb39ce266f6ce185cc005e8
-SHA256: 0a6539d871f141cc1c23718ace41f6e644b69a1b971f8c03313d2d718e95e83c
+Filename: pool/main/libm/libmwaw/libmwaw-tools_0.3.22-2_amd64.deb
+Size: 43892
+MD5sum: f7de690a7e580b365a4a27d3df281b40
+SHA256: 80fe5df6b65eede9c38875f8c9e29b39f4994c0ca8b9e01c2db4a33bc2458453
 
 Package: libmysofa-utils
 Source: libmysofa (1.3.3+dfsg-1)
@@ -30609,8 +30707,8 @@ SHA256: afd14f6b52868708d858ad4723567c6cfea38ba04d2b880eb9bc63565b542e6a
 
 Package: miio-tools
 Source: python-miio
-Version: 0.5.12-4
-Installed-Size: 19
+Version: 0.5.12-5
+Installed-Size: 18
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
 Depends: python3-miio, python3:any
@@ -30619,10 +30717,10 @@ Homepage: https://python-miio.readthedocs.io
 Description-md5: 27d1e21753a078edf2bdbbaae1777c0b
 utils
 Priority: optional
-Filename: pool/main/p/python-miio/miio-tools_0.5.12-4_all.deb
-Size: 5868
-MD5sum: be3e4504ec4f48294cb1ae80b3e0e452
-SHA256: 22bb0dbfff6c77ecbde02eacffd2d85d699df8b267a2a5fd8d9fc9094ebe7230
+Filename: pool/main/p/python-miio/miio-tools_0.5.12-5_all.deb
+Size: 5460
+MD5sum: 6e3c2ca81fe85e9bfea140a84a222a1f
+SHA256: e3f2e6b63648137d9f8c80585c1cbc86685a41c93a4fe9bc1887de80d4616e7d
 
 Package: python3-serverfiles
 Source: python-serverfiles
@@ -30850,42 +30948,6 @@ Filename: pool/main/q/qad/qad_0.0~git20240206.43adc42+dfsg-1_amd64.deb
 Size: 17964
 MD5sum: f8688ef2749172ecfc6accfe8f3f300c
 SHA256: ea498d9e4c534302a5a52b6d4203ca68594ae1c4bde06ca6000b16c277e9a140
-
-Package: openssl-provider-qat
-Source: qatengine
-Version: 2.0.0-8
-Installed-Size: 557
-Maintainer: Daniel Baumann <daniel@debian.org>
-Architecture: amd64
-Depends: libc6 (>= 2.38), libcrypto-mb12 (>= 1.2.0), libipsec-mb2 (>= 2.0), libqat4 (>= 24.02.0), libusdm0 (>= 24.02.0)
-Recommends: qatlib-service
-Description: Intel Quickassist Technology (QAT): OpenSSL provider
-Multi-Arch: foreign
-Homepage: https://github.com/intel/QAT_Engine
-Description-md5: 29886001d52a698b1158d1fcc87d32d4
-utils
-Priority: optional
-Filename: pool/main/q/qatengine/openssl-provider-qat_2.0.0-8_amd64.deb
-Size: 153388
-MD5sum: e46e2e850639f5039f9b48afbbe9f6ec
-SHA256: 6a02cbdc53edcaef5453df464f0e3b1a908048c4f3cb707497c5e858a8645da7
-
-Package: qatengine
-Version: 2.0.0-8
-Installed-Size: 12
-Maintainer: Daniel Baumann <daniel@debian.org>
-Architecture: amd64
-Depends: openssl-provider-qat
-Description: Intel Quickassist Technology (QAT): OpenSSL provider (transitional package)
-Multi-Arch: foreign
-Homepage: https://github.com/intel/QAT_Engine
-Description-md5: 821273596cb093a51a955f08d8de237d
-utils
-Priority: optional
-Filename: pool/main/q/qatengine/qatengine_2.0.0-8_amd64.deb
-Size: 4100
-MD5sum: ff70f4d71ba5c8c48d1828ecdca62697
-SHA256: 767fd8b18382b63edb070d30932c75720badbaf73529ff140fcb31586a9e0021
 
 Package: qatzip
 Version: 1.3.2-1
@@ -32921,8 +32983,8 @@ SHA256: 689590abc1d61b4964cd6d683af3bd8e619bdbc163c1b7e602449ce446a3b8bc
 
 Package: ros-image-proc
 Source: ros-image-pipeline (1.17.0-2)
-Version: 1.17.0-2+b3
-Installed-Size: 52
+Version: 1.17.0-2+b5
+Installed-Size: 51
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libimage-proc-dev (<< 1.16.0-3)
@@ -32933,15 +32995,15 @@ Homepage: https://wiki.ros.org/image_pipeline
 Description-md5: e5dda32a265c707eefaf9fd4b6bdec79
 utils
 Priority: optional
-Filename: pool/main/r/ros-image-pipeline/ros-image-proc_1.17.0-2+b3_amd64.deb
-Size: 15788
-MD5sum: 0db07b6230053f058e011d18776746ad
-SHA256: 521b4af70349b0874afeb77ec34c63676e158afd8432a118bb912b4a449c3ffd
+Filename: pool/main/r/ros-image-pipeline/ros-image-proc_1.17.0-2+b5_amd64.deb
+Size: 14720
+MD5sum: fcefbdbe09dcda1fba089044716e6971
+SHA256: 006beaff7a46dfd1cd969db56d1e0c4cebdd3cc2439b95bc768c39f452b66644
 
 Package: ros-image-publisher
 Source: ros-image-pipeline (1.17.0-2)
-Version: 1.17.0-2+b3
-Installed-Size: 41
+Version: 1.17.0-2+b5
+Installed-Size: 40
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libimage-publisher0d, libc6 (>= 2.34), libgcc-s1 (>= 3.0), liblog4cxx15 (>= 1.5.0), libnodeletlib1d (>= 1.11.1), librosconsole3d (>= 1.14.4), libroscpp4t64 (>= 1.17.4+ds), libstdc++6 (>= 13.1)
@@ -32950,15 +33012,15 @@ Homepage: https://wiki.ros.org/image_pipeline
 Description-md5: 67f825a24292b6afff744d91c6deeea9
 utils
 Priority: optional
-Filename: pool/main/r/ros-image-pipeline/ros-image-publisher_1.17.0-2+b3_amd64.deb
-Size: 11008
-MD5sum: 66a154581fc445a183de91bf909c8065
-SHA256: a62c00c7be2dd3d2782e75f55afc71964e797c25fbddaa181aaebb5c7945f45c
+Filename: pool/main/r/ros-image-pipeline/ros-image-publisher_1.17.0-2+b5_amd64.deb
+Size: 9924
+MD5sum: 0a78c71440525890ed8a630a0fa9c03c
+SHA256: b982bb94b902b45122ed2268b6066d792a44f33fbf55e47268922cb319402a24
 
 Package: ros-image-rotate
 Source: ros-image-pipeline (1.17.0-2)
-Version: 1.17.0-2+b3
-Installed-Size: 41
+Version: 1.17.0-2+b5
+Installed-Size: 40
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libimage-rotate0d, libc6 (>= 2.34), libgcc-s1 (>= 3.0), liblog4cxx15 (>= 1.5.0), libnodeletlib1d (>= 1.11.1), librosconsole3d (>= 1.14.4), libroscpp4t64 (>= 1.17.4+ds), libstdc++6 (>= 13.1)
@@ -32967,15 +33029,15 @@ Homepage: https://wiki.ros.org/image_pipeline
 Description-md5: 0e30a8fcc2c4b5b5a3455e200668670e
 utils
 Priority: optional
-Filename: pool/main/r/ros-image-pipeline/ros-image-rotate_1.17.0-2+b3_amd64.deb
-Size: 11072
-MD5sum: ca0846fd4a62a6fdb2b30a37e597a65d
-SHA256: 392f7958b20bae9ee3d4f5219eb69e7e9a28c7bd8136d2be0e8bdc14f1243094
+Filename: pool/main/r/ros-image-pipeline/ros-image-rotate_1.17.0-2+b5_amd64.deb
+Size: 9992
+MD5sum: b179a45475903564468e14bf829058ba
+SHA256: 46860a0d19adb03604e2b77697f41b24be8996c98c97d34f9d3a6fb646445474
 
 Package: ros-image-view
 Source: ros-image-pipeline (1.17.0-2)
-Version: 1.17.0-2+b3
-Installed-Size: 870
+Version: 1.17.0-2+b5
+Installed-Size: 857
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libimage-view0d, python3, python3-image-view, libc6 (>= 2.34), libcamera-calibration-parsers0t64 (>= 1.12.1), libcv-bridge2d (>= 1.16.2+ds), libgcc-s1 (>= 3.0), libimage-transport0t64 (>= 1.12.1), liblog4cxx15 (>= 1.5.0), libmessage-filters1t64 (>= 1.17.4+ds), libnodeletlib1d (>= 1.11.1), libopencv-core410 (>= 4.10.0+dfsg), libopencv-highgui410 (>= 4.10.0+dfsg), libopencv-imgcodecs410 (>= 4.10.0+dfsg), libopencv-videoio410 (>= 4.10.0+dfsg), librosconsole3d (>= 1.14.4), libroscpp-serialization0d (>= 0.7.3), libroscpp4t64 (>= 1.17.4+ds), librostime1d (>= 0.7.3), libstdc++6 (>= 13.1)
@@ -32984,15 +33046,15 @@ Homepage: https://wiki.ros.org/image_pipeline
 Description-md5: 7d3a0ed4f4fa03c1e90e851095860dbd
 utils
 Priority: optional
-Filename: pool/main/r/ros-image-pipeline/ros-image-view_1.17.0-2+b3_amd64.deb
-Size: 182468
-MD5sum: dd8b0798525e9f320261caa8676f4863
-SHA256: fbed75029f26ce5391c63e7fbe2a3325fbe45a35414e866559b227f5ebc60be5
+Filename: pool/main/r/ros-image-pipeline/ros-image-view_1.17.0-2+b5_amd64.deb
+Size: 179688
+MD5sum: 3548d6517b0384065f9978aa02f1ada6
+SHA256: c576742eb3bbd2cfb23aa6a386120a79e4e023de4eed19f7745bc99ba573cbd8
 
 Package: ros-stereo-image-proc
 Source: ros-image-pipeline (1.17.0-2)
-Version: 1.17.0-2+b3
-Installed-Size: 57
+Version: 1.17.0-2+b5
+Installed-Size: 56
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libstereo-image-proc0d, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libimage-proc0d (>= 1.17.0), liblog4cxx15 (>= 1.5.0), libnodeletlib1d (>= 1.11.1), librosconsole3d (>= 1.14.4), libroscpp4t64 (>= 1.17.4+ds), libstdc++6 (>= 13.1), libxmlrpcpp3t64 (>= 1.17.4+ds)
@@ -33001,10 +33063,10 @@ Homepage: https://wiki.ros.org/image_pipeline
 Description-md5: 2f6ef9bac8d6130ffd91dc27cd234ee0
 utils
 Priority: optional
-Filename: pool/main/r/ros-image-pipeline/ros-stereo-image-proc_1.17.0-2+b3_amd64.deb
-Size: 17844
-MD5sum: 1a745d2bf070b84ce7ce8effdc3af742
-SHA256: 57979531bbbcad70f997be0c1b49c2f24199b7b8f98d3504ef31d95e35ee2169
+Filename: pool/main/r/ros-image-pipeline/ros-stereo-image-proc_1.17.0-2+b5_amd64.deb
+Size: 16768
+MD5sum: 89ea9a8fb8d44eb138ab58dab98ff043
+SHA256: 145dfe9afb3779e37fb16d811e8888679b40ddea6f4a289be51ca98c6a74d465
 
 Package: joint-state-publisher
 Source: ros-joint-state-publisher
@@ -33113,9 +33175,9 @@ MD5sum: 1569a7bfd1a306f1e6919f3dc9f1ee5c
 SHA256: 3a12f0119a4fbb259b282e89174ad97a1ef6554db9421f0d1124ec75c21bea5f
 
 Package: rviz
-Source: ros-rviz (1.14.26+dfsg-1)
-Version: 1.14.26+dfsg-1+b1
-Installed-Size: 832
+Source: ros-rviz
+Version: 1.14.26+dfsg-2
+Installed-Size: 829
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: fonts-liberation, libqt6svg6, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libqt6core6t64 (>= 6.9.1), libqt6widgets6 (>= 6.1.2), librviz8d (>= 1.14.26+dfsg), libstdc++6 (>= 13.1)
@@ -33125,10 +33187,10 @@ Description-md5: 495c6c5fba95f3b60881a088ef665328
 Tag: uitoolkit::qt
 utils
 Priority: optional
-Filename: pool/main/r/ros-rviz/rviz_1.14.26+dfsg-1+b1_amd64.deb
-Size: 185268
-MD5sum: b6c87bfa1d19fc79dcee528366b02c21
-SHA256: 62d1184d42c8bfe48bba07c69fdd4be47e616caa6df7fc72a944538fb7e93b3c
+Filename: pool/main/r/ros-rviz/rviz_1.14.26+dfsg-2_amd64.deb
+Size: 183796
+MD5sum: a8bbb466f07f1b1e3c0cafbaa9f04f76
+SHA256: 4ad5b693f054f26d61c27be3c0c079298d1591b3168bfe29b5610e207d834d9f
 
 Package: rows
 Version: 0.5.0~dev0~1~1d5a326-1.1
@@ -38309,8 +38371,8 @@ SHA256: d854a713a6c9ebb0c9240531a5e86168e9831fba2c222190e7ea83129c9387fc
 
 Package: libnss-sss
 Source: sssd
-Version: 2.12.0-2
-Installed-Size: 85
+Version: 2.12.0-4
+Installed-Size: 82
 Maintainer: Debian SSSD Team <pkg-sssd-devel@alioth-lists.debian.net>
 Architecture: amd64
 Depends: libc6 (>= 2.34)
@@ -38322,15 +38384,15 @@ Description-md5: 74bc44873ed990a3f08b6c810bd12c1e
 Tag: role::shared-lib
 utils
 Priority: optional
-Filename: pool/main/s/sssd/libnss-sss_2.12.0-2_amd64.deb
-Size: 28272
-MD5sum: c1c6f2220a0327d9f22f9ad2cf0ceda6
-SHA256: e679392809bb92b32ba71a4a12b6a024a1c5d62f4c002de6172f59d543c95b7d
+Filename: pool/main/s/sssd/libnss-sss_2.12.0-4_amd64.deb
+Size: 25276
+MD5sum: d73e4f71b1be09e152fb84eecb04dd12
+SHA256: e911abc1a1e1b92ead2f50ebb6a8de6f85415b85c8131e95776355fbf1bdf4ba
 
 Package: libpam-sss
 Source: sssd
-Version: 2.12.0-2
-Installed-Size: 141
+Version: 2.12.0-4
+Installed-Size: 138
 Maintainer: Debian SSSD Team <pkg-sssd-devel@alioth-lists.debian.net>
 Architecture: amd64
 Depends: libpam-pwquality (>= 1.2.2-1), libpam-runtime (>= 1.0.1-6), libc6 (>= 2.38), libgssapi-krb5-2 (>= 1.17), libpam0g (>= 0.99.7.1)
@@ -38342,70 +38404,70 @@ Description-md5: 917151896ca3a8e201cc53bf9cde21fc
 Tag: role::shared-lib
 utils
 Priority: optional
-Filename: pool/main/s/sssd/libpam-sss_2.12.0-2_amd64.deb
-Size: 47572
-MD5sum: 258bd7f0d3c070bacff89623e3047f60
-SHA256: 7e30d564d12c10a6059373803436206ff00c9b35626bd18ef0ca5e842d6db5b5
+Filename: pool/main/s/sssd/libpam-sss_2.12.0-4_amd64.deb
+Size: 44560
+MD5sum: 84339496f012bf87a7ce46345fd3b3b6
+SHA256: 53164feefe39ff0f1f8a2bb77dc84018e3c06d8f17ab0d5290ea2d7740e76c19
 
 Package: sssd
-Version: 2.12.0-2
-Installed-Size: 21
+Version: 2.12.0-4
+Installed-Size: 18
 Maintainer: Debian SSSD Team <pkg-sssd-devel@alioth-lists.debian.net>
 Architecture: amd64
-Depends: python3-sss (= 2.12.0-2), sssd-ad (= 2.12.0-2), sssd-common (= 2.12.0-2), sssd-ipa (= 2.12.0-2), sssd-krb5 (= 2.12.0-2), sssd-ldap (= 2.12.0-2), sssd-proxy (= 2.12.0-2)
+Depends: python3-sss (= 2.12.0-4), sssd-ad (= 2.12.0-4), sssd-common (= 2.12.0-4), sssd-ipa (= 2.12.0-4), sssd-krb5 (= 2.12.0-4), sssd-ldap (= 2.12.0-4), sssd-proxy (= 2.12.0-4)
 Description: System Security Services Daemon -- metapackage
 Multi-Arch: foreign
 Homepage: https://github.com/SSSD/sssd
 Description-md5: fbc7eaa314ae2423fee9d2943b3f4223
 utils
 Priority: optional
-Filename: pool/main/s/sssd/sssd_2.12.0-2_amd64.deb
-Size: 10120
-MD5sum: 92fe2670cb3d8ef3f4aa056bbd806e7a
-SHA256: 4ccdf3842c4f0b021dfda803053a310fb6bacf85db203a3a2df9401c8aeddd2f
+Filename: pool/main/s/sssd/sssd_2.12.0-4_amd64.deb
+Size: 7152
+MD5sum: 292dcc0b529fa2be2b0a46f925894583
+SHA256: c066f1a615c1a449923d1a23b7d132bf93848e20fd93c688fa122cc32b9b1e81
 
 Package: sssd-ad
 Source: sssd
-Version: 2.12.0-2
-Installed-Size: 394
+Version: 2.12.0-4
+Installed-Size: 391
 Maintainer: Debian SSSD Team <pkg-sssd-devel@alioth-lists.debian.net>
 Architecture: amd64
-Depends: libcap2-bin, libsss-idmap0 (= 2.12.0-2), sssd-ad-common (= 2.12.0-2), sssd-common (= 2.12.0-2), sssd-krb5-common (= 2.12.0-2), libc6 (>= 2.34), libdhash1t64 (>= 0.4.0), libini-config5t64 (>= 0.4.0), libldap2 (>= 2.6.2), libldb2 (>= 0.9.21), libndr6 (>= 2:4.20.0~rc1), libpopt0 (>= 1.14), libsasl2-2 (>= 2.1.28+dfsg1), libsmbclient0 (>= 2:4.0.3+dfsg1), libtalloc2 (>= 2.0.4~git20101213), libtevent0t64 (>= 0.15.0), samba-libs (>> 2:4.23.5+dfsg-1~)
+Depends: libcap2-bin, libsss-idmap0 (= 2.12.0-4), sssd-ad-common (= 2.12.0-4), sssd-common (= 2.12.0-4), sssd-krb5-common (= 2.12.0-4), libc6 (>= 2.34), libdhash1t64 (>= 0.4.0), libini-config8 (>= 0.7.0), libldap2 (>= 2.6.2), libldb2 (>= 0.9.21), libndr6 (>= 2:4.20.0~rc1), libpopt0 (>= 1.14), libsasl2-2 (>= 2.1.28+dfsg1), libsmbclient0 (>= 2:4.0.3+dfsg1), libtalloc2 (>= 2.0.4~git20101213), libtevent0t64 (>= 0.15.0), samba-libs (>> 2:4.23.6+dfsg-2~)
 Suggests: adcli
 Description: System Security Services Daemon -- Active Directory back end
 Homepage: https://github.com/SSSD/sssd
 Description-md5: 4273ee06e2ffa001b1fbe0a4de26f278
 utils
 Priority: optional
-Filename: pool/main/s/sssd/sssd-ad_2.12.0-2_amd64.deb
-Size: 135648
-MD5sum: b7f4b6b2404774f1278dd904b2bc29b1
-SHA256: 29c6b84e320fab0a3e56337271f9806fa502ff7a41195db60956982c3619cdf9
+Filename: pool/main/s/sssd/sssd-ad_2.12.0-4_amd64.deb
+Size: 132820
+MD5sum: fc4aa1b4a35eeff35d8740c63e4cae5b
+SHA256: f67cf4eecd551068e6b782862a4e4aa324fc048eb138233f23deb0d7f9697523
 
 Package: sssd-ad-common
 Source: sssd
-Version: 2.12.0-2
-Installed-Size: 250
+Version: 2.12.0-4
+Installed-Size: 247
 Maintainer: Debian SSSD Team <pkg-sssd-devel@alioth-lists.debian.net>
 Architecture: amd64
-Depends: sssd-common (= 2.12.0-2), libc6 (>= 2.38), libldb2 (>= 0.9.21), libndr6 (>= 2:4.20.0~rc1), libpopt0 (>= 1.14), libselinux1 (>= 3.1~), libsss-idmap0 (>= 2.12.0), libsystemd0, libtalloc2 (>= 2.0.4~git20101213), libtdb1 (>= 1.2.7+git20101215), libtevent0t64 (>= 0.15.0), samba-libs (>> 2:4.23.5+dfsg-1~)
+Depends: sssd-common (= 2.12.0-4), libc6 (>= 2.38), libldb2 (>= 0.9.21), libndr6 (>= 2:4.20.0~rc1), libpopt0 (>= 1.14), libselinux1 (>= 3.1~), libsss-idmap0 (>= 2.12.0), libsystemd0, libtalloc2 (>= 2.0.4~git20101213), libtdb1 (>= 1.2.7+git20101215), libtevent0t64 (>= 0.15.0), samba-libs (>> 2:4.23.6+dfsg-2~)
 Description: System Security Services Daemon -- PAC responder
 Homepage: https://github.com/SSSD/sssd
 Description-md5: dbd13e6ad445d781c84f0033e8c07ed7
 utils
 Priority: optional
-Filename: pool/main/s/sssd/sssd-ad-common_2.12.0-2_amd64.deb
-Size: 76140
-MD5sum: acb8d62563b725fedcb76a5def64d3ba
-SHA256: e908a0b6545f1f10137af514da54163de26d746dcd9e4112937a8565ee8de313
+Filename: pool/main/s/sssd/sssd-ad-common_2.12.0-4_amd64.deb
+Size: 73100
+MD5sum: 7ac96e000c44c731665ea4b168c290e3
+SHA256: 9ef16531798863e251d07dd8099eb8e2a2749c0049172e607f04e7b0334a79c0
 
 Package: sssd-common
 Source: sssd
-Version: 2.12.0-2
-Installed-Size: 6050
+Version: 2.12.0-4
+Installed-Size: 6047
 Maintainer: Debian SSSD Team <pkg-sssd-devel@alioth-lists.debian.net>
 Architecture: amd64
-Depends: libcap2-bin, libnss-sss (= 2.12.0-2), libpam-sss (= 2.12.0-2), python3, python3-sss, libc6 (>= 2.38), libcap2 (>= 1:2.10), libcares2 (>= 1.7.0), libdbus-1-3 (>= 1.10), libdhash1t64 (>= 0.4.0), libgssapi-krb5-2 (>= 1.17), libini-config5t64 (>= 0.6.0), libjansson4 (>= 2.14), libkeyutils1 (>= 1.4), libkrb5-3 (>= 1.11+dfsg), libldap2 (>= 2.6.2), libldb2 (>= 0.9.21), libnfsidmap1 (>= 1:2.8.4), libnl-3-200 (>= 3.11.0), libnl-route-3-200 (>= 3.11.0), libp11-kit0 (>= 0.25.0), libpam0g (>= 0.99.7.1), libpcre2-8-0 (>= 10.22), libpopt0 (>= 1.14), libref-array1t64 (>= 0.4.0), libselinux1 (>= 3.1~), libssl3t64 (>= 3.0.0), libsss-certmap0 (>= 2.12.0), libsss-idmap0 (>= 2.12.0), libsss-nss-idmap0 (>= 2.12.0), libsystemd0, libtalloc2 (>= 2.0.4~git20101213), libtdb1 (>= 1.2.7+git20101215), libtevent0t64 (>= 0.15.0), libunistring5 (>= 1.1), adduser
+Depends: libcap2-bin, libnss-sss (= 2.12.0-4), libpam-sss (= 2.12.0-4), python3, python3-sss, libc6 (>= 2.38), libcap2 (>= 1:2.10), libcares2 (>= 1.7.0), libdbus-1-3 (>= 1.10), libdhash1t64 (>= 0.4.0), libgssapi-krb5-2 (>= 1.17), libini-config8 (>= 0.7.0), libjansson4 (>= 2.14), libkeyutils1 (>= 1.4), libkrb5-3 (>= 1.11+dfsg), libldap2 (>= 2.6.2), libldb2 (>= 0.9.21), libnfsidmap1 (>= 1:2.8.7), libnl-3-200 (>= 3.11.0), libnl-route-3-200 (>= 3.11.0), libp11-kit0 (>= 0.25.0), libpam0g (>= 0.99.7.1), libpcre2-8-0 (>= 10.22), libpopt0 (>= 1.14), libselinux1 (>= 3.1~), libssl3t64 (>= 3.0.0), libsss-certmap0 (>= 2.12.0), libsss-idmap0 (>= 2.12.0), libsss-nss-idmap0 (>= 2.12.0), libsystemd0, libtalloc2 (>= 2.0.4~git20101213), libtdb1 (>= 1.2.7+git20101215), libtevent0t64 (>= 0.15.0), libunistring5 (>= 1.1), adduser
 Recommends: bind9-dnsutils, bind9-host
 Suggests: apparmor, libsss-sudo, sssd-tools
 Description: System Security Services Daemon -- common files
@@ -38413,123 +38475,123 @@ Homepage: https://github.com/SSSD/sssd
 Description-md5: a5ba2c9d00035681fc2f51380e1cdc52
 utils
 Priority: optional
-Filename: pool/main/s/sssd/sssd-common_2.12.0-2_amd64.deb
-Size: 1291776
-MD5sum: ad4b4064b0ded525b41828b095aea355
-SHA256: 75804108064a7be6e7802202f5faf0ccfff3c40902dfa5315ea0169fcf055b93
+Filename: pool/main/s/sssd/sssd-common_2.12.0-4_amd64.deb
+Size: 1289020
+MD5sum: bf819900062fc93ff142ca10d5304cdd
+SHA256: 3c0a5343fe1437b7ba74d4fc2cd14d558724ebbb4167b852b46fccb3be1c0333
 
 Package: sssd-dbus
 Source: sssd
-Version: 2.12.0-2
-Installed-Size: 343
+Version: 2.12.0-4
+Installed-Size: 340
 Maintainer: Debian SSSD Team <pkg-sssd-devel@alioth-lists.debian.net>
 Architecture: amd64
-Depends: sssd-common (= 2.12.0-2), libc6 (>= 2.34), libdbus-1-3 (>= 1.10), libdhash1t64 (>= 0.4.0), libldb2 (>= 0.9.21), libpopt0 (>= 1.14), libselinux1 (>= 3.1~), libsystemd0, libtalloc2 (>= 2.0.4~git20101213), libtdb1 (>= 1.2.7+git20101215), libtevent0t64 (>= 0.15.0)
+Depends: sssd-common (= 2.12.0-4), libc6 (>= 2.34), libdbus-1-3 (>= 1.10), libdhash1t64 (>= 0.4.0), libldb2 (>= 0.9.21), libpopt0 (>= 1.14), libselinux1 (>= 3.1~), libsystemd0, libtalloc2 (>= 2.0.4~git20101213), libtdb1 (>= 1.2.7+git20101215), libtevent0t64 (>= 0.15.0)
 Description: System Security Services Daemon -- D-Bus responder
 Homepage: https://github.com/SSSD/sssd
 Description-md5: 1e4f376d8fca353724788d2d7f76c0d4
 utils
 Priority: optional
-Filename: pool/main/s/sssd/sssd-dbus_2.12.0-2_amd64.deb
-Size: 101192
-MD5sum: accb8e8def36c5b5d7e1209be15a99f6
-SHA256: f07720c501e8a7dcf639cc90dc5a95501f864d7a1931d0c5b37648631cc87bb3
+Filename: pool/main/s/sssd/sssd-dbus_2.12.0-4_amd64.deb
+Size: 98108
+MD5sum: 70fa509570a5f903446095cba9f12c4a
+SHA256: 2150efa5996508b8a50f47d169d308e53f40a91fa02d27eb372d77544fe01f92
 
 Package: sssd-idp
 Source: sssd
-Version: 2.12.0-2
-Installed-Size: 129
+Version: 2.12.0-4
+Installed-Size: 126
 Maintainer: Debian SSSD Team <pkg-sssd-devel@alioth-lists.debian.net>
 Architecture: amd64
-Depends: sssd-common (= 2.12.0-2), libc6 (>= 2.34), libcom-err2 (>= 1.43.9), libcurl4t64 (>= 7.16.2), libjansson4 (>= 2.14), libjose0 (>= 10), libkrad0 (>= 1.12~alpha1+dfsg), libkrb5-3 (>= 1.7dfsg), libpopt0 (>= 1.14), libtalloc2 (>= 2.0.4~git20101213)
+Depends: sssd-common (= 2.12.0-4), libc6 (>= 2.34), libcom-err2 (>= 1.43.9), libcurl4t64 (>= 7.16.2), libjansson4 (>= 2.14), libjose0 (>= 10), libkrad0 (>= 1.12~alpha1+dfsg), libkrb5-3 (>= 1.7dfsg), libpopt0 (>= 1.14), libtalloc2 (>= 2.0.4~git20101213)
 Description: System Security Services Daemon -- Kerberos plugins for external id providers
 Homepage: https://github.com/SSSD/sssd
 Description-md5: 85e1e169064e36070dddc5507d091974
 utils
 Priority: optional
-Filename: pool/main/s/sssd/sssd-idp_2.12.0-2_amd64.deb
-Size: 39104
-MD5sum: 4f46fe18468f59a9c59c0259546e0316
-SHA256: 002328488e3b57887d4fca7add71134668ddd4911446c351122a1e9401573ca9
+Filename: pool/main/s/sssd/sssd-idp_2.12.0-4_amd64.deb
+Size: 36088
+MD5sum: baacd1240d961303f4133045b0fbf961
+SHA256: 6ee590fc3e7a3a484e7c17662ec7f1f4f98b9b8638cf99593a23241db3f06c9d
 
 Package: sssd-ipa
 Source: sssd
-Version: 2.12.0-2
-Installed-Size: 718
+Version: 2.12.0-4
+Installed-Size: 715
 Maintainer: Debian SSSD Team <pkg-sssd-devel@alioth-lists.debian.net>
 Architecture: amd64
-Depends: libcap2-bin, libipa-hbac0t64 (= 2.12.0-2), libsss-idmap0 (= 2.12.0-2), sssd-ad-common (= 2.12.0-2), sssd-common (= 2.12.0-2), sssd-krb5-common (= 2.12.0-2), libc6 (>= 2.34), libcap2 (>= 1:2.10), libdhash1t64 (>= 0.4.0), libldap2 (>= 2.6.2), libldb2 (>= 0.9.21), libndr6 (>= 2:4.20.0~rc1), libpopt0 (>= 1.14), libselinux1 (>= 3.1~), libsemanage2 (>= 2.0.3), libtalloc2 (>= 2.0.4~git20101213), libtevent0t64 (>= 0.15.0), samba-libs (>> 2:4.23.5+dfsg-1~)
+Depends: libcap2-bin, libipa-hbac0t64 (= 2.12.0-4), libsss-idmap0 (= 2.12.0-4), sssd-ad-common (= 2.12.0-4), sssd-common (= 2.12.0-4), sssd-krb5-common (= 2.12.0-4), libc6 (>= 2.34), libcap2 (>= 1:2.10), libdhash1t64 (>= 0.4.0), libldap2 (>= 2.6.2), libldb2 (>= 0.9.21), libndr6 (>= 2:4.20.0~rc1), libpopt0 (>= 1.14), libselinux1 (>= 3.1~), libsemanage2 (>= 2.0.3), libtalloc2 (>= 2.0.4~git20101213), libtevent0t64 (>= 0.15.0), samba-libs (>> 2:4.23.6+dfsg-2~)
 Description: System Security Services Daemon -- IPA back end
 Homepage: https://github.com/SSSD/sssd
 Description-md5: 2038cf62aa379855c7c1db16c87a719d
 utils
 Priority: optional
-Filename: pool/main/s/sssd/sssd-ipa_2.12.0-2_amd64.deb
-Size: 222412
-MD5sum: e914b7559e85d1e47919c5df9ed74218
-SHA256: 7a0ecdce1e1d909aff100b88ad65a71b465d9ccdf89864451ec37bfdc42c0a17
+Filename: pool/main/s/sssd/sssd-ipa_2.12.0-4_amd64.deb
+Size: 219976
+MD5sum: 2f15aec059ab11ba5176edeeb561410a
+SHA256: 1f39e18eeef2a5dbc4506f6f225071bb88e7336f883b372ef4bb0551c28828eb
 
 Package: sssd-kcm
 Source: sssd
-Version: 2.12.0-2
-Installed-Size: 454
+Version: 2.12.0-4
+Installed-Size: 451
 Maintainer: Debian SSSD Team <pkg-sssd-devel@alioth-lists.debian.net>
 Architecture: amd64
-Depends: sssd-common (= 2.12.0-2), libc6 (>= 2.34), libdhash1t64 (>= 0.4.0), libkrb5-3 (>= 1.20~beta1), libldb2 (>= 0.9.21), libpopt0 (>= 1.14), libselinux1 (>= 3.1~), libsystemd0, libtalloc2 (>= 2.0.4~git20101213), libtdb1 (>= 1.2.7+git20101215), libtevent0t64 (>= 0.15.0), libuuid1 (>= 2.16)
+Depends: sssd-common (= 2.12.0-4), libc6 (>= 2.34), libdhash1t64 (>= 0.4.0), libkrb5-3 (>= 1.20~beta1), libldb2 (>= 0.9.21), libpopt0 (>= 1.14), libselinux1 (>= 3.1~), libsystemd0, libtalloc2 (>= 2.0.4~git20101213), libtdb1 (>= 1.2.7+git20101215), libtevent0t64 (>= 0.15.0), libuuid1 (>= 2.16)
 Description: System Security Services Daemon -- Kerberos KCM server implementation
 Homepage: https://github.com/SSSD/sssd
 Description-md5: 33bacd6e1ef4d2c4e5af5b7e63fc778f
 utils
 Priority: extra
-Filename: pool/main/s/sssd/sssd-kcm_2.12.0-2_amd64.deb
-Size: 136836
-MD5sum: a6b091447255ad6151237f6d4c57390b
-SHA256: faf9d04e3783e459612982fd3b7998e627b6f200bb9e0cb1befb73d32822721c
+Filename: pool/main/s/sssd/sssd-kcm_2.12.0-4_amd64.deb
+Size: 133576
+MD5sum: a4ec0837dc24c39a2a71f0f5d0b411fb
+SHA256: 600133a9ee62b073a99749935aa276a085e13c0e8479dcdb097ed0223da60e41
 
 Package: sssd-krb5
 Source: sssd
-Version: 2.12.0-2
-Installed-Size: 55
+Version: 2.12.0-4
+Installed-Size: 52
 Maintainer: Debian SSSD Team <pkg-sssd-devel@alioth-lists.debian.net>
 Architecture: amd64
 Replaces: sssd-common (<< 2.7.0-1)
-Depends: sssd-common (= 2.12.0-2), sssd-krb5-common (= 2.12.0-2), libc6 (>= 2.4), libtalloc2 (>= 2.0.4~git20101213)
+Depends: sssd-common (= 2.12.0-4), sssd-krb5-common (= 2.12.0-4), libc6 (>= 2.4), libtalloc2 (>= 2.0.4~git20101213)
 Breaks: sssd-common (<< 2.7.0-1)
 Description: System Security Services Daemon -- Kerberos back end
 Homepage: https://github.com/SSSD/sssd
 Description-md5: d0051aea66e9cb824fd5a62c13ec59f8
 utils
 Priority: optional
-Filename: pool/main/s/sssd/sssd-krb5_2.12.0-2_amd64.deb
-Size: 19976
-MD5sum: 4cf763aa0e654ef39ed847f2be2d9db6
-SHA256: b4092b9572a4e27d45fa950fb854c8f49b1d073f0f4bf8e103dae27392c34eaf
+Filename: pool/main/s/sssd/sssd-krb5_2.12.0-4_amd64.deb
+Size: 16996
+MD5sum: aab1e699c375d7ed8a0f69729f7675c3
+SHA256: 64343947aa2eb2c5cf83bdfee4809f1758d3e0d7cb19f6325c1215408f5b085f
 
 Package: sssd-krb5-common
 Source: sssd
-Version: 2.12.0-2
-Installed-Size: 324
+Version: 2.12.0-4
+Installed-Size: 321
 Maintainer: Debian SSSD Team <pkg-sssd-devel@alioth-lists.debian.net>
 Architecture: amd64
-Depends: sssd-common (= 2.12.0-2), libcap2-bin, libc6 (>= 2.34), libcap2 (>= 1:2.10), libdhash1t64 (>= 0.4.0), libjansson4 (>= 2.14), libkrb5-3 (>= 1.12~alpha1+dfsg), libpopt0 (>= 1.14), libsystemd0, libtalloc2 (>= 2.0.4~git20101213)
+Depends: sssd-common (= 2.12.0-4), libcap2-bin, libc6 (>= 2.34), libcap2 (>= 1:2.10), libdhash1t64 (>= 0.4.0), libjansson4 (>= 2.14), libkrb5-3 (>= 1.12~alpha1+dfsg), libpopt0 (>= 1.14), libsystemd0, libtalloc2 (>= 2.0.4~git20101213)
 Recommends: libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal
 Description: System Security Services Daemon -- Kerberos helpers
 Homepage: https://github.com/SSSD/sssd
 Description-md5: 0db76966892b1b9d99a4e13589fa35db
 utils
 Priority: optional
-Filename: pool/main/s/sssd/sssd-krb5-common_2.12.0-2_amd64.deb
-Size: 94208
-MD5sum: c94d46f83f9692bfd4c86356bdccb12f
-SHA256: 7bb013e10238558f19a10c29929653f82581eb4ed59b9f4c4e27c5fdbb578340
+Filename: pool/main/s/sssd/sssd-krb5-common_2.12.0-4_amd64.deb
+Size: 91200
+MD5sum: 1e47db5e11473a6950278045c64d6328
+SHA256: e0d392790ab8c856cbe59033de566047c70f6c03e9e626cf5bf3751cd0a918c9
 
 Package: sssd-ldap
 Source: sssd
-Version: 2.12.0-2
-Installed-Size: 75
+Version: 2.12.0-4
+Installed-Size: 72
 Maintainer: Debian SSSD Team <pkg-sssd-devel@alioth-lists.debian.net>
 Architecture: amd64
-Depends: libsss-idmap0 (= 2.12.0-2), sssd-common (= 2.12.0-2), sssd-krb5-common (= 2.12.0-2), libc6 (>= 2.4), libtalloc2 (>= 2.0.4~git20101213), libtevent0t64 (>= 0.15.0)
+Depends: libsss-idmap0 (= 2.12.0-4), sssd-common (= 2.12.0-4), sssd-krb5-common (= 2.12.0-4), libc6 (>= 2.4), libtalloc2 (>= 2.0.4~git20101213), libtevent0t64 (>= 0.15.0)
 Recommends: ldap-utils
 Suggests: libsasl2-modules-ldap
 Description: System Security Services Daemon -- LDAP back end
@@ -38537,62 +38599,62 @@ Homepage: https://github.com/SSSD/sssd
 Description-md5: 0d4cb3d2fe39a40d7b6d878a4103345c
 utils
 Priority: optional
-Filename: pool/main/s/sssd/sssd-ldap_2.12.0-2_amd64.deb
-Size: 37752
-MD5sum: 7198b42b0fd00a60807973610ca358b8
-SHA256: 66136b8995c3bc474cfa1a6c86bf61e4c2490caa5d27c2378af31d0436bfc0d3
+Filename: pool/main/s/sssd/sssd-ldap_2.12.0-4_amd64.deb
+Size: 34764
+MD5sum: b71815a8045ccb5b35b619acd4496908
+SHA256: ee92e9653333e217a4021b0ed02148e808bc64ee9208be60b566dd33e852e50f
 
 Package: sssd-passkey
 Source: sssd
-Version: 2.12.0-2
-Installed-Size: 125
+Version: 2.12.0-4
+Installed-Size: 122
 Maintainer: Debian SSSD Team <pkg-sssd-devel@alioth-lists.debian.net>
 Architecture: amd64
-Depends: sssd-common (= 2.12.0-2), libc6 (>= 2.34), libcom-err2 (>= 1.43.9), libfido2-1 (>= 1.9.0), libjansson4 (>= 2.14), libkrad0 (>= 1.12~alpha1+dfsg), libkrb5-3 (>= 1.7dfsg), libpopt0 (>= 1.14), libssl3t64 (>= 3.0.0), libtalloc2 (>= 2.0.4~git20101213)
+Depends: sssd-common (= 2.12.0-4), libc6 (>= 2.34), libcom-err2 (>= 1.43.9), libfido2-1 (>= 1.9.0), libjansson4 (>= 2.14), libkrad0 (>= 1.12~alpha1+dfsg), libkrb5-3 (>= 1.7dfsg), libpopt0 (>= 1.14), libssl3t64 (>= 3.0.0), libtalloc2 (>= 2.0.4~git20101213)
 Description: System Security Services Daemon -- passkey helpers and plugins
 Homepage: https://github.com/SSSD/sssd
 Description-md5: e74d74f3e771b76f41f636748a8f6eaf
 utils
 Priority: optional
-Filename: pool/main/s/sssd/sssd-passkey_2.12.0-2_amd64.deb
-Size: 36960
-MD5sum: cc692931d12de41e30745757be6b25e8
-SHA256: d60b2670237300c09fc789976709f6c4968c94066571d16a46af139f36a41467
+Filename: pool/main/s/sssd/sssd-passkey_2.12.0-4_amd64.deb
+Size: 34000
+MD5sum: 11843e25d54b6614d17baab071c2e589
+SHA256: 67a1d731212c397a94bed9f697126455d7d951b62a8c8db55d66cb2ecb75c518
 
 Package: sssd-proxy
 Source: sssd
-Version: 2.12.0-2
-Installed-Size: 154
+Version: 2.12.0-4
+Installed-Size: 151
 Maintainer: Debian SSSD Team <pkg-sssd-devel@alioth-lists.debian.net>
 Architecture: amd64
-Depends: sssd-common (= 2.12.0-2), libc6 (>= 2.34), libdhash1t64 (>= 0.4.0), libldb2 (>= 0.9.21), libpam0g (>= 0.99.7.1), libpopt0 (>= 1.14), libsss-certmap0 (>= 2.12.0), libtalloc2 (>= 2.0.4~git20101213), libtevent0t64 (>= 0.15.0)
+Depends: sssd-common (= 2.12.0-4), libc6 (>= 2.34), libdhash1t64 (>= 0.4.0), libldb2 (>= 0.9.21), libpam0g (>= 0.99.7.1), libpopt0 (>= 1.14), libsss-certmap0 (>= 2.12.0), libtalloc2 (>= 2.0.4~git20101213), libtevent0t64 (>= 0.15.0)
 Description: System Security Services Daemon -- proxy back end
 Homepage: https://github.com/SSSD/sssd
 Description-md5: db53c238b765b652c290236bc0c64fc2
 utils
 Priority: optional
-Filename: pool/main/s/sssd/sssd-proxy_2.12.0-2_amd64.deb
-Size: 49392
-MD5sum: fc80b3534e15c7c8eac587960eed75b6
-SHA256: d51e4436613a155ccc1de750b234e585ea7801aa7baa9fe5367de1d2986f31ca
+Filename: pool/main/s/sssd/sssd-proxy_2.12.0-4_amd64.deb
+Size: 46432
+MD5sum: 0600f8b94f46c96c8dfd5c9fe92e6e91
+SHA256: d3a0bda64d80a8f670468b2033c6c3e0413251f75e36b6758afca8bfb335f69b
 
 Package: sssd-tools
 Source: sssd
-Version: 2.12.0-2
-Installed-Size: 346
+Version: 2.12.0-4
+Installed-Size: 343
 Maintainer: Debian SSSD Team <pkg-sssd-devel@alioth-lists.debian.net>
 Architecture: amd64
-Depends: python3, python3-sss, python3-systemd, sssd-common (= 2.12.0-2), libc6 (>= 2.38), libdhash1t64 (>= 0.4.0), libldb2 (>= 0.9.21), libpam0g (>= 0.99.7.1), libpopt0 (>= 1.14), libref-array1t64 (>= 0.4.0), libsss-certmap0 (>= 2.12.0), libtalloc2 (>= 2.0.4~git20101213)
+Depends: python3, python3-sss, python3-systemd, sssd-common (= 2.12.0-4), libc6 (>= 2.38), libdhash1t64 (>= 0.4.0), libini-config8 (>= 0.7.0), libldb2 (>= 0.9.21), libpam0g (>= 0.99.7.1), libpopt0 (>= 1.14), libsss-certmap0 (>= 2.12.0), libtalloc2 (>= 2.0.4~git20101213)
 Recommends: sssd-dbus
 Description: System Security Services Daemon -- tools
 Homepage: https://github.com/SSSD/sssd
 Description-md5: 66903119785d144d9d3cb3400805d908
 utils
 Priority: optional
-Filename: pool/main/s/sssd/sssd-tools_2.12.0-2_amd64.deb
-Size: 95508
-MD5sum: f0ffea529396f847caa86d7eea3ae075
-SHA256: e630095ae00e2e2dd022e0027ae1412e64ea4c26498c5b7666090de3a5cd734b
+Filename: pool/main/s/sssd/sssd-tools_2.12.0-4_amd64.deb
+Size: 92164
+MD5sum: 1c4e50c0f8ed73db5f5ff9d5b321934b
+SHA256: 7727de2c7e5344db80f712699c24276f79065c35331b98528ea32293d5c31de0
 
 Package: ssss
 Version: 0.5-5
@@ -40347,9 +40409,8 @@ MD5sum: a61a4707d73d153e30073b8fb77d8159
 SHA256: 3333c1d8667bfcc5f064d433c74097bb46530fe1076eba92ebf0137ca2f5338e
 
 Package: tinysparql
-Source: tinysparql (3.11~beta-1)
-Version: 3.11~beta-1+b1
-Installed-Size: 2190
+Version: 3.11.0-1
+Installed-Size: 2192
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: tracker (<< 3.8)
@@ -40361,15 +40422,15 @@ Homepage: https://tracker.gnome.org/
 Description-md5: 87313afa17960507074864725e7b27e5
 utils
 Priority: optional
-Filename: pool/main/t/tinysparql/tinysparql_3.11~beta-1+b1_amd64.deb
-Size: 584300
-MD5sum: 1b9ee04d953b106cd42262b47a02299b
-SHA256: 6b7f7127fd159d6641f942ed0a40af7bbd87e9e3a36782b3bb34b3a5de51d8c4
+Filename: pool/main/t/tinysparql/tinysparql_3.11.0-1_amd64.deb
+Size: 584628
+MD5sum: 271da44747443d7c998ceeaa60c05ae0
+SHA256: b8b187c72f43c718350ca9d86d9a78486223c7fbcd8af9e9100223c79b21da11
 
 Package: tracker
 Source: tinysparql
-Version: 3.11~beta-1
-Installed-Size: 18
+Version: 3.11.0-1
+Installed-Size: 14
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: all
 Depends: tinysparql
@@ -40382,10 +40443,10 @@ Tag: implemented-in::c, interface::commandline, interface::daemon,
  works-with::pim
 utils
 Priority: optional
-Filename: pool/main/t/tinysparql/tracker_3.11~beta-1_all.deb
-Size: 8628
-MD5sum: 5079d49b86815abb319ed05a9a989946
-SHA256: 5898f158a2360940946b0a161cb679ffdd9ca36c866a3567bd44aa055dbe88cd
+Filename: pool/main/t/tinysparql/tracker_3.11.0-1_all.deb
+Size: 5016
+MD5sum: 2ee36b735d217b75c333f857cff9ebad
+SHA256: 3e4ce599220196daeb7de7100476f7cd33850af0e405f62563288f399ba4d004
 
 Package: tiptop
 Version: 2.3.2-1
@@ -41371,24 +41432,23 @@ MD5sum: eeb9be65349be20e7b2754b1761a856d
 SHA256: 752709130d5f925830ab696a33f6e63105fd3744ab4aa631f9cda254ac32614f
 
 Package: udpcast
-Source: udpcast (20120424-2)
-Version: 20120424-2+b1
-Installed-Size: 185
+Version: 20250223-0.1
+Installed-Size: 162
 Maintainer: Michael Schutte <michi@debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.15)
+Depends: libc6 (>= 2.38)
 Description: multicast file transfer tool
-Homepage: http://udpcast.linux.lu/
+Homepage: https://udpcast.linux.lu/
 Description-md5: 0141336c5d8c233c6cad0e01092559f0
 Tag: admin::cluster, admin::file-distribution, implemented-in::c,
  interface::commandline, protocol::ethernet, role::program,
  scope::utility, use::synchronizing, use::transmission, works-with::file
 utils
 Priority: optional
-Filename: pool/main/u/udpcast/udpcast_20120424-2+b1_amd64.deb
-Size: 67156
-MD5sum: 862a5a1e69a29259ef17801d8931829c
-SHA256: 73d10f65f0583582262adaacc2fdcff93bca6b359ca2f0ae4dbaa70ce262c51b
+Filename: pool/main/u/udpcast/udpcast_20250223-0.1_amd64.deb
+Size: 54992
+MD5sum: b640f7ec1dc8f9e2f76f98f9b69010ef
+SHA256: 07991b4b77ec237aec08510a97309b237c159a40df8822c4606a812860459ad6
 
 Package: libudunits2-data
 Source: udunits

@@ -1482,6 +1482,44 @@ Size: 98600
 MD5sum: 91900cf82661193a88da54a1d88887b8
 SHA256: 20c8f1e1aeef18349d389d150c98b9dd4be0d5c81e87b2412c64b2e51f4396f7
 
+Package: pyarrow-dev
+Source: apache-arrow
+Version: 23.0.1-8
+Installed-Size: 5235
+Maintainer: Debian Science Maintainers <debian-science-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Replaces: python3-pyarrow (<< 23.0.1-2)
+Depends: python3, libarrow-dev (= 23.0.1-8), python3-pyarrow (= 23.0.1-8)
+Breaks: python3-pyarrow (<< 23.0.1-2)
+Description: Python interface to the Apache Arrow C++ libraries
+Homepage: https://arrow.apache.org/
+Description-md5: b3134ed3c28c8fd653f421eaf462be58
+python
+Priority: optional
+Filename: pool/main/a/apache-arrow/pyarrow-dev_23.0.1-8_amd64.deb
+Size: 987492
+MD5sum: f023239626895fb3eb6201e7ff9193d7
+SHA256: 44e5bb96457b404493717e784a1c49a2eb00e4203b2b23e1900a1403b4350ff8
+
+Package: python3-pyarrow
+Source: apache-arrow
+Version: 23.0.1-8
+Installed-Size: 22130
+Maintainer: Debian Science Maintainers <debian-science-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Replaces: libarrow-python-flight2300 (<< 23.0.1-2), libarrow-python2300 (<< 23.0.1-2)
+Depends: libarrow-acero2300 (>= 23.0.1), libarrow-dataset2300 (>= 23.0.1), libarrow-flight2300 (>= 23.0.1), libarrow2300 (= 23.0.1-8), libc6 (>= 2.32), libgandiva2300 (>= 23.0.1), libgcc-s1 (>= 3.0), libparquet2300 (>= 23.0.1), libstdc++6 (>= 14), python3 (<< 3.14), python3 (>= 3.13~), python3-numpy2-abi0 | python3-numpy-abi9, python3:any
+Breaks: libarrow-python-flight2300 (<< 23.0.1-2), libarrow-python2300 (<< 23.0.1-2)
+Description: Python interface to the Arrow C++ libraries
+Homepage: https://arrow.apache.org/
+Description-md5: e4063ed5e886338a14dc494313ccd08b
+python
+Priority: optional
+Filename: pool/main/a/apache-arrow/python3-pyarrow_23.0.1-8_amd64.deb
+Size: 3758552
+MD5sum: 7da38e2b27b0fb3a428190af2ecc33d2
+SHA256: 5565182e5e832d2b1e681d37de215694f2810b39759f5a3f976879383c92ca75
+
 Package: python3-apbslib
 Source: apbs
 Version: 3.4.1-7
@@ -2689,6 +2727,91 @@ Size: 21588
 MD5sum: 5be09ae54ca3f3471f97ea15221d5197
 SHA256: b840a459c18de6269034a725b47bd3780de4eedb51506fc81b9aa8ca6e2c82b3
 
+Package: azure-cli
+Version: 2.84.0-1
+Installed-Size: 17
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3:any, python3-azure-cli (>= 2.84.0-1)
+Description: Azure Command-Line Interface (CLI)
+Homepage: https://github.com/Azure/azure-cli
+Description-md5: e70242073dc6488304f7552a259e60a3
+python
+Priority: optional
+Filename: pool/main/a/azure-cli/azure-cli_2.84.0-1_all.deb
+Size: 4652
+MD5sum: e5c466adc4e5485698f90a3e4a71e464
+SHA256: 9906680532dd4ab49b74da42a2c585aba7e61b609533d1c66a5825321dcddb41
+
+Package: python3-azure-cli
+Source: azure-cli
+Version: 2.84.0-1
+Installed-Size: 93111
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-antlr4, python3-azure (>= 20260303+git-1~), python3-azure-cli-core (>= 2.84.0-1), python3-azure-datalake-store (>= 0.0.49-1~), python3-azure-storage, python3-chardet, python3-colorama, python3-distro, python3-fabric, python3-github, python3-javaproperties, python3-jsondiff, python3-nacl, python3-packaging, python3-paramiko, python3-scp, python3-semver, python3-setuptools, python3-six (>= 1.10.0), python3-sshtunnel, python3-tabulate, python3-urllib3, python3-websocket, python3-xmltodict, python3:any
+Recommends: python3-azext-devops
+Description: Azure Command-Line Interface (CLI) - commands modules
+Homepage: https://github.com/Azure/azure-cli
+Description-md5: 9e5e43f9ab281c3575ea7a5383b4ede3
+python
+Priority: optional
+Filename: pool/main/a/azure-cli/python3-azure-cli_2.84.0-1_all.deb
+Size: 2856616
+MD5sum: 417d8383d13a2ea8f0239658d726e2d4
+SHA256: 8859f06413a4df970428dfb7aa64133becdb3b50fc1642d87238bd15bb09441c
+
+Package: python3-azure-cli-core
+Source: azure-cli
+Version: 2.84.0-1
+Installed-Size: 1053
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-argcomplete, python3-azure (>= 20260303+git-1~), python3-azure-cli-telemetry (>= 2.84.0-1), python3-cryptography (>= 3.3.0~), python3-distro, python3-humanfriendly, python3-jmespath, python3-jwt (>= 2.1.0~), python3-knack (>= 0.10.0~), python3-msal (>= 1.20.0~), python3-msal-extensions (>= 1.0.0~), python3-openssl, python3-packaging, python3-pkginfo, python3-psutil, python3-requests, python3:any, python3-decorator
+Description: Azure Command-Line Interface (CLI) - core modules
+Homepage: https://github.com/Azure/azure-cli
+Description-md5: 4c752a0ee07c2d8a597303dda63b924f
+python
+Priority: optional
+Filename: pool/main/a/azure-cli/python3-azure-cli-core_2.84.0-1_all.deb
+Size: 179688
+MD5sum: 4b4c7864fc3bcb146c0fa4cd461de072
+SHA256: ca8a28a446551d8c6b94f8b47ba7db14f4b8da320af95618f27c3e415d15eb34
+
+Package: python3-azure-cli-telemetry
+Source: azure-cli
+Version: 2.84.0-1
+Installed-Size: 48
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-applicationinsights, python3-portalocker, python3:any
+Description: Azure Command-Line Interface (CLI) - telemetry modules
+Homepage: https://github.com/Azure/azure-cli
+Description-md5: 371520231b4676f9c3a4c35ae5c5c286
+python
+Priority: optional
+Filename: pool/main/a/azure-cli/python3-azure-cli-telemetry_2.84.0-1_all.deb
+Size: 10080
+MD5sum: 7007674b3fbc2015082d696d42d121b8
+SHA256: f8d167f1560f4b0aa1a00b24890f4dd1f0263dbb146917b536061b1625e3f530
+
+Package: python3-azure-cli-testsdk
+Source: azure-cli
+Version: 2.84.0-1
+Installed-Size: 133
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-configargparse, python3-jmespath, python3-pytest, python3-vcr, python3:any
+Description: Azure Command-Line Interface (CLI) - testsdk modules
+Homepage: https://github.com/Azure/azure-cli
+Description-md5: e05e4cd0509154afea99832efaa4d941
+python
+Priority: optional
+Filename: pool/main/a/azure-cli/python3-azure-cli-testsdk_2.84.0-1_all.deb
+Size: 22908
+MD5sum: f5ca443fb58406bdcda1e2cc51ca769d
+SHA256: c51b21da04f72113550ff178a60c242d40371fe18b7183a4157bc2d034e1281f
+
 Package: python3-azure-datalake-store
 Source: azure-data-lake-store-python
 Version: 1.0.1-1
@@ -2705,6 +2828,40 @@ Filename: pool/main/a/azure-data-lake-store-python/python3-azure-datalake-store_
 Size: 43572
 MD5sum: 062c226a4ad9722eee12ecbdc77cbe5b
 SHA256: 33f40f8705c082ff49ab8182e4c8540b3c4038ff47ef5432f8e2b0be51d2908b
+
+Package: python3-azext-devops
+Source: azure-devops-cli-extension
+Version: 1.0.2-1
+Installed-Size: 12861
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-distro, python3:any, python3-azure-cli, python3-keyring
+Description: Azure DevOps Extension for Azure CLI
+Homepage: https://github.com/Azure/azure-devops-cli-extension
+Description-md5: 76b08942c2c0507662e4ec25c5a91489
+python
+Priority: optional
+Filename: pool/main/a/azure-devops-cli-extension/python3-azext-devops_1.0.2-1_all.deb
+Size: 522948
+MD5sum: 71ae4376fbbc9358fc1e687ecf44f2cf
+SHA256: 9dc8a8350ced717e2f75dd98733495745063ee14c95157efe2cbab37b4055c24
+
+Package: python3-azure-functions-devops-build
+Source: azure-functions-devops-build
+Version: 0.0.22-6
+Installed-Size: 181
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-jinja2, python3-msrest, python3:any
+Description: Azure Devops Build Manager For Azure Functions
+Homepage: https://github.com/Azure/azure-functions-devops-build
+Description-md5: 58095e9523b36e9b3af797f32fe210f6
+python
+Priority: optional
+Filename: pool/main/a/azure-functions-devops-build/python3-azure-functions-devops-build_0.0.22-6_all.deb
+Size: 22640
+MD5sum: de3afe83e5b349ca52d4afd37c375ac4
+SHA256: 95628256eac9e82c47d1e2bedbe9fcee4917c976cdb7bd7de8a6b8f6b3dc6008
 
 Package: python3-azure-kusto-data
 Source: azure-kusto-python
@@ -3490,8 +3647,8 @@ SHA256: 6a213f9282ca07ceb52914fea053b6889818886e1c762532589c42dda41d52bd
 
 Package: python3-blake3
 Source: blake3-py
-Version: 1.0.8-3
-Installed-Size: 1317
+Version: 1.0.8-4
+Installed-Size: 1301
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
 Depends: python3 (<< 3.15), python3 (>= 3.13~), python3-supported-min (>= 3.12.0) | python3-typing-extensions, python3:any, libc6 (>= 2.34), libgcc-s1 (>= 4.2)
@@ -3500,10 +3657,10 @@ Homepage: https://github.com/oconnor663/blake3-py
 Description-md5: 1c5b4470f94f29e8c1586663e56cf401
 python
 Priority: optional
-Filename: pool/main/b/blake3-py/python3-blake3_1.0.8-3_amd64.deb
-Size: 277940
-MD5sum: f2b08e34d8475fb35369bd5239943702
-SHA256: 0ae0f1de6003eeffb00cc915b9977f62a3d2d074f74a5824dbb264102635d9cb
+Filename: pool/main/b/blake3-py/python3-blake3_1.0.8-4_amd64.deb
+Size: 277252
+MD5sum: 1d1532bc8d8fb16ea1d56daa3f7d9223
+SHA256: 62ad9d121bfcfb79de1f29fe64512db21e3ed350ed9f2a2c6a3f749c8d899a90
 
 Package: python3-blazar
 Source: blazar
@@ -3893,20 +4050,20 @@ SHA256: 90015e2f956281d266aa02138d5813e06f583177b991babd206904516bd43989
 
 Package: python3-borgstore
 Source: borgstore
-Version: 0.3.1-2
-Installed-Size: 116
+Version: 0.4.0-1
+Installed-Size: 147
 Maintainer: Gianfranco Costamagna <locutusofborg@debian.org>
 Architecture: all
-Depends: python3-requests, python3:any
+Depends: python3:any
 Description: Simple key/value store implementation in Python
 Homepage: https://github.com/borgbackup/borgstore
-Description-md5: 0e0e2a75484513e75576167005d3a61a
+Description-md5: 619e4f9418681c82b84528381386ad91
 python
 Priority: optional
-Filename: pool/main/b/borgstore/python3-borgstore_0.3.1-2_all.deb
-Size: 33928
-MD5sum: 313442b2fd38982a6445ff2cac698eea
-SHA256: 69871e1dad338c7c004ec632b9acb04f9d34dfb0b05fca1d26f788e34ba25ebb
+Filename: pool/main/b/borgstore/python3-borgstore_0.4.0-1_all.deb
+Size: 41088
+MD5sum: 15c6e3b871b920c9d192d781bae01c62
+SHA256: ec76b57198ae12cb893cb285f9f36db250320f7a28030aa498fdd08d0868819b
 
 Package: python3-botan
 Source: botan3
@@ -7299,8 +7456,8 @@ SHA256: e0b1b31eaceeba68e372170571706d9df22d9e8257c5a19d2bcfa369e3787eb5
 
 Package: python3-dfdatetime
 Source: dfdatetime
-Version: 20240504-1
-Installed-Size: 245
+Version: 20251018-1
+Installed-Size: 242
 Maintainer: Debian Security Tools <team+pkg-security@tracker.debian.org>
 Architecture: all
 Depends: python3:any
@@ -7309,27 +7466,27 @@ Homepage: https://github.com/log2timeline/dfdatetime
 Description-md5: 39c13f575d9c04bbf54263f7edf4be3f
 python
 Priority: optional
-Filename: pool/main/d/dfdatetime/python3-dfdatetime_20240504-1_all.deb
-Size: 24148
-MD5sum: 0b341bd6f080ea3bb070dae696c25ad2
-SHA256: 90668b6bc5b685c65d3bedba749882dcaad325e3f4bcc14b643032be15bf05ff
+Filename: pool/main/d/dfdatetime/python3-dfdatetime_20251018-1_all.deb
+Size: 23312
+MD5sum: d19dc050df9c7e4bc0cfe67c4c475848
+SHA256: f2bd97a792708ea1b7aede8d98f0052c56804340927aeda38c896a06fee646ba
 
 Package: python3-dfvfs
 Source: dfvfs
-Version: 20240505-2
+Version: 20251019-1
 Installed-Size: 1186
 Maintainer: Debian Security Tools <team+pkg-security@tracker.debian.org>
 Architecture: all
-Depends: python3-dfdatetime (>= 20181025), python3-dtfabric (>= 20170524), python3-tsk (>= 20200117-3), python3-xattr, python3-yaml, python3:any, python3-caes (>= 0~20240114), python3-cffi-backend (>= 1.9.1), python3-cryptography (>= 2.0.2), python3-fcrypto (>= 0~20240114), python3-fsapfs (>= 20220709), python3-fsfat (>= 0~20220925), python3-idna (>= 2.5), python3-libbde (>= 20220121), python3-libewf (>= 20131210), python3-libfsext (>= 20200819), python3-libfshfs (>= 20201103), python3-libfsntfs (>= 20151130), python3-libfsxfs (>= 20201114), python3-libfvde (>= 20160719), python3-libfwnt (>= 20160418), python3-libluksde (>= 20200101), python3-libqcow (>= 20201213), python3-libsigscan (>= 20150627), python3-libsmdev (>= 20140529), python3-libsmraw (>= 20140612), python3-libvhdi (>= 20131210), python3-libvmdk (>= 20140421), python3-libvshadow (>= 20160109), python3-libvslvm (>= 20160109), python3-modi (>= 0~20210405), python3-phdi (>= 0~20220228), python3-protobuf, python3-vsapm (>= 0~20230506), python3-vsgpt (>= 0~20211115)
+Depends: python3-dfdatetime (>= 20181025), python3-dtfabric (>= 20170524), python3-libvmdk (>= 20140421), python3-tsk (>= 20200117-3), python3-xattr, python3-yaml, python3:any, python3-caes (>= 0~20240114), python3-cffi-backend (>= 1.9.1), python3-cryptography (>= 2.0.2), python3-fcrypto (>= 0~20240114), python3-fsapfs (>= 20220709), python3-fsfat (>= 0~20220925), python3-idna (>= 2.5), python3-libbde (>= 20220121), python3-libewf (>= 20131210), python3-libfsext (>= 20200819), python3-libfshfs (>= 20201103), python3-libfsntfs (>= 20151130), python3-libfsxfs (>= 20201114), python3-libfvde (>= 20160719), python3-libfwnt (>= 20160418), python3-libluksde (>= 20200101), python3-libqcow (>= 20201213), python3-libsigscan (>= 20150627), python3-libsmdev (>= 20140529), python3-libsmraw (>= 20140612), python3-libvhdi (>= 20131210), python3-libvshadow (>= 20160109), python3-libvslvm (>= 20160109), python3-modi (>= 0~20210405), python3-phdi (>= 0~20220228), python3-protobuf, python3-vsapm (>= 0~20230506), python3-vsgpt (>= 0~20211115)
 Description: Digital Forensics Virtual File System
 Homepage: https://github.com/log2timeline/dfvfs
 Description-md5: 9cea8998efa06c2279bd12e538b85ce4
 python
 Priority: optional
-Filename: pool/main/d/dfvfs/python3-dfvfs_20240505-2_all.deb
-Size: 112008
-MD5sum: cf224bc39b47a7c3f5a45fad7018651f
-SHA256: 8cb89eea3721577c10110be3ba6b5e6f70cfe924556d567f3ea4cf6835eb1bf5
+Filename: pool/main/d/dfvfs/python3-dfvfs_20251019-1_all.deb
+Size: 111804
+MD5sum: 2cceb6ccd04de30d6a872ce5bbc39fe2
+SHA256: 64504d26e47617cbf0105165ffc822a676d6287909afc0c02272e37d20e1ec57
 
 Package: python3-dfwinreg
 Source: dfwinreg
@@ -15268,8 +15425,8 @@ SHA256: 967925252d47cf4b4bb8f40bc6f7c96ede1ae709ed57a934144aae51db806dbb
 
 Package: hdf5-plugin-lzf
 Source: h5py
-Version: 3.15.1-4
-Installed-Size: 56
+Version: 3.16.0-2
+Installed-Size: 52
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Provides: hdf5-filter-plugin-lzf-openmpi, hdf5-filter-plugin-lzf-serial
@@ -15281,15 +15438,15 @@ Homepage: https://www.h5py.org/
 Description-md5: e97187efff273df88e1d567ee845aba6
 python
 Priority: optional
-Filename: pool/main/h/h5py/hdf5-plugin-lzf_3.15.1-4_amd64.deb
-Size: 13756
-MD5sum: af5b16ab3547cb45400f1340706223c3
-SHA256: faa5bb3f546c76f0fe61058bece0b2f4224f44a03a1f5f40a527e758eadae69c
+Filename: pool/main/h/h5py/hdf5-plugin-lzf_3.16.0-2_amd64.deb
+Size: 9400
+MD5sum: 3562e5890ab3a1c0addeba4d875f3c69
+SHA256: fda853b7be3097e7021ef9b87fd262219e77a01dfac79652abf0c9a29ea3427a
 
 Package: python3-h5py
 Source: h5py
-Version: 3.15.1-4
-Installed-Size: 57
+Version: 3.16.0-2
+Installed-Size: 53
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: all
 Replaces: python3-h5py-serial (<< 3.10.0-1~)
@@ -15301,18 +15458,18 @@ Homepage: https://www.h5py.org/
 Description-md5: babe5999c3c9449de8bcbd876b20685d
 python
 Priority: optional
-Filename: pool/main/h/h5py/python3-h5py_3.15.1-4_all.deb
-Size: 18960
-MD5sum: 55038b15994ebef51369e706095d93e6
-SHA256: b772814ebf3acaeedea6b31ae8da2d6e3eca74dba247cda21ca872dd73186225
+Filename: pool/main/h/h5py/python3-h5py_3.16.0-2_all.deb
+Size: 14572
+MD5sum: 221b6a947b5b07cae6c6773527864189
+SHA256: b0617a9240dbcaf098ff64ede986ae7a08f2feeaf6dea174708da49295e800ff
 
 Package: python3-h5py-mpi
 Source: h5py
-Version: 3.15.1-4
-Installed-Size: 8967
+Version: 3.16.0-2
+Installed-Size: 9146
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: python3 (<< 3.15), python3 (>= 3.13~), python3-mpi4py (>= 3.1.4), python3-numpy (>= 2.0.0~), python3-numpy2-abi0 | python3-numpy-abi9, python3:any, libc6 (>= 2.14), libhdf5-openmpi-310 (>= 1.14.4.3), libhdf5-openmpi-hl-310 (>= 1.8.13), liblzf1 (>= 1.5), libopenmpi40 (>= 5.0.9)
+Depends: python3 (<< 3.15), python3 (>= 3.13~), python3-mpi4py (>= 3.1.4), python3-numpy (>= 2.0.0~), python3-numpy2-abi0 | python3-numpy-abi9, python3:any, libc6 (>= 2.14), libhdf5-openmpi-310 (>= 1.14.4.3), libhdf5-openmpi-hl-310 (>= 1.8.13), liblzf1 (>= 1.5), libopenmpi40 (>= 5.0.10)
 Recommends: python3-h5py
 Suggests: python-h5py-doc
 Description: general-purpose Python interface to hdf5 (Python 3 MPI)
@@ -15320,15 +15477,15 @@ Homepage: https://www.h5py.org/
 Description-md5: 584c350250e98bc9ad355fb3a21312a9
 python
 Priority: optional
-Filename: pool/main/h/h5py/python3-h5py-mpi_3.15.1-4_amd64.deb
-Size: 1487296
-MD5sum: 5f7815095c0570086879f7ecd1715bd9
-SHA256: ff627804d0a9d77e4c869c86a4ec2fcc67c497586cbc44da5146ad5175b37956
+Filename: pool/main/h/h5py/python3-h5py-mpi_3.16.0-2_amd64.deb
+Size: 1530492
+MD5sum: 767fee354152739d0ea4a4a4bfb67c51
+SHA256: 95ad833c23a15bc30b1c2ad78bc609c184ffe91bfe828756d8c39fd7e69a9a50
 
 Package: python3-h5py-serial
 Source: h5py
-Version: 3.15.1-4
-Installed-Size: 8935
+Version: 3.16.0-2
+Installed-Size: 9114
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: python3 (<< 3.15), python3 (>= 3.13~), python3-numpy (>= 2.0.0~), python3-numpy2-abi0 | python3-numpy-abi9, python3:any, libc6 (>= 2.14), libhdf5-310 (>= 1.14.4.3), libhdf5-hl-310 (>= 1.8.13), liblzf1 (>= 1.5)
@@ -15340,10 +15497,10 @@ Homepage: https://www.h5py.org/
 Description-md5: 6a6d79c4682ca50ade0b56b9a907dcc7
 python
 Priority: optional
-Filename: pool/main/h/h5py/python3-h5py-serial_3.15.1-4_amd64.deb
-Size: 1474864
-MD5sum: aa5989454b243724b280138f4ae3aa33
-SHA256: aebdb125982272a2d8fa79ac82b79693ed5df61d9c82117e3889737e5a6841d6
+Filename: pool/main/h/h5py/python3-h5py-serial_3.16.0-2_amd64.deb
+Size: 1520792
+MD5sum: 7bc1a4bed90f4321cea00efbcae4fe62
+SHA256: 6ef14c8c337fa4624c00fdc0a6c323d4e30a713ed5824754d8e392186ff7ca60
 
 Package: python3-h5sparse
 Source: h5sparse
@@ -18308,20 +18465,20 @@ MD5sum: f86806243eba5fc17df623604151df32
 SHA256: 4839bf2f09c6077ed762b8f26409a44cc37be95c0a46edb9d69019b4194ae4f0
 
 Package: jupyterhub
-Version: 5.2.1+ds1-4
+Version: 5.2.1+ds1-5
 Installed-Size: 21751
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
-Depends: alembic, fonts-font-awesome, libjs-bootstrap5, libjs-jquery, libjs-prototype, libjs-requirejs, node-configurable-http-proxy, python3-bcrypt, python3-notebook, python3-pamela, ucf, python3-alembic, python3-async-generator | python3-supported-min (>= 3.10), python3-certipy, python3-dateutil, python3-idna, python3-importlib-metadata | python3-supported-min (>= 3.10), python3-jinja2, python3-jupyter-events, python3-oauthlib, python3-packaging, python3-prometheus-client, python3-pydantic (>= 2), python3-requests, python3-sqlalchemy (>= 1.4.1), python3-tornado, python3-traitlets, python3:any
+Depends: alembic, fonts-font-awesome, libjs-bootstrap5, libjs-jquery, libjs-prototype, libjs-requirejs, node-configurable-http-proxy, python3-bcrypt, python3-notebook, python3-pamela, ucf, python3-alembic, python3-certipy, python3-dateutil, python3-idna, python3-jinja2, python3-jupyter-events, python3-oauthlib, python3-packaging, python3-prometheus-client, python3-pydantic (>= 2), python3-requests, python3-sqlalchemy (>= 1.4.1), python3-tornado, python3-traitlets, python3:any
 Description: Multi-user server for Jupyter notebooks
 Homepage: https://jupyter.org
 Description-md5: 7fc96dda32fc7099d482510443b7e092
 python
 Priority: optional
-Filename: pool/main/j/jupyterhub/jupyterhub_5.2.1+ds1-4_all.deb
-Size: 2022440
-MD5sum: 0c945d7efe0a7b029da3aacc35233c3e
-SHA256: bff67c514107641520a20044d5c55d3f704aedc1bc04c5a4dc35a3924d41c7d9
+Filename: pool/main/j/jupyterhub/jupyterhub_5.2.1+ds1-5_all.deb
+Size: 2022032
+MD5sum: 6d4d792d1107bcbc785629264371d36b
+SHA256: bc95a1d5fd7a8b84692f4f02732da870bf2837f547fc028e4d7f7f35841a5c29
 
 Package: python3-jupyterlab-pygments
 Source: jupyterlab-pygments
@@ -18959,8 +19116,8 @@ SHA256: 0d3e07f0f4fa9d099cc556eb9c3ce20afed978095da414fb0adf4e6458857e96
 
 Package: python3-lammps
 Source: lammps
-Version: 20251210+dfsg-1
-Installed-Size: 431
+Version: 20260211+dfsg1-1
+Installed-Size: 429
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: liblammps-dev, python3:any, mpi-default-bin
@@ -18970,10 +19127,10 @@ Homepage: https://lammps.sandia.gov/
 Description-md5: 04b4494aeaa9c04a128e31482705755c
 python
 Priority: optional
-Filename: pool/main/l/lammps/python3-lammps_20251210+dfsg-1_amd64.deb
-Size: 72436
-MD5sum: 19eaf61ff072d0f4b22e3787e5111a2a
-SHA256: a09acfde50965a9ef9a1ce4b32e57fe31f5788fa495ec65bdda6c16949a852d3
+Filename: pool/main/l/lammps/python3-lammps_20260211+dfsg1-1_amd64.deb
+Size: 70900
+MD5sum: 4616690706229eb310db615d025dda20
+SHA256: 01b76939b255595ccb19cdd73b8d79cf4562fd6f9ae1b4636bd33e7271eb2aba
 
 Package: python-landslide
 Source: landslide
@@ -19306,8 +19463,8 @@ SHA256: 490c3cf9639c85941707cd2e7730d7a656966ea9b2299895962be564b01da3a5
 
 Package: python3-lerc
 Source: lerc
-Version: 4.0.0+ds-5
-Installed-Size: 67
+Version: 4.1.0+ds-1~exp2
+Installed-Size: 71
 Maintainer: Debian GIS Project <pkg-grass-devel@lists.alioth.debian.org>
 Architecture: all
 Depends: liblerc4, python3-numpy, python3:any
@@ -19316,10 +19473,10 @@ Homepage: https://github.com/Esri/lerc
 Description-md5: c174266dbbbfda4421af295bc30e9ac2
 python
 Priority: optional
-Filename: pool/main/l/lerc/python3-lerc_4.0.0+ds-5_all.deb
-Size: 15192
-MD5sum: ef7d321c11ae98ab753b20538eede401
-SHA256: 4503b076e7533f8be668759bb08b63340ba34bc23828d7024a9ad53d5e644602
+Filename: pool/main/l/lerc/python3-lerc_4.1.0+ds-1~exp2_all.deb
+Size: 15768
+MD5sum: 54af8d469223159cc3c1ccf4cb0af86a
+SHA256: 768eb5895ab6af318a974b98f96b697c87f51441d1433931b94ccdf2d82d8127
 
 Package: lexicon
 Version: 3.21.1-2
@@ -20391,9 +20548,9 @@ MD5sum: 1e9b53319e1317e6d063bc32206010e3
 SHA256: 0c33ac9e0560c9c4a9b66c6bc453bacadc541d426f5e8171faeb5527ded5188f
 
 Package: python3-orcus
-Source: liborcus (0.21.0-4)
-Version: 0.21.0-4+b1
-Installed-Size: 155
+Source: liborcus
+Version: 0.21.0-9
+Installed-Size: 158
 Maintainer: Debian LibreOffice Maintainers <debian-openoffice@lists.debian.org>
 Architecture: amd64
 Depends: python3 (<< 3.14), python3 (>= 3.13~), python3:any, libc6 (>= 2.14), libgcc-s1 (>= 3.0), libixion-0.20-0 (>= 0.20.0), liborcus-0.21-0 (>= 0.21.0), liborcus-parser-0.21-0 (>= 0.21.0), liborcus-spreadsheet-model-0.21-0 (>= 0.21.0), libstdc++6 (>= 13.1)
@@ -20402,10 +20559,10 @@ Homepage: https://gitlab.com/orcus/orcus
 Description-md5: 5ac877554a2345ef8d4a7bfc469cbeed
 python
 Priority: optional
-Filename: pool/main/libo/liborcus/python3-orcus_0.21.0-4+b1_amd64.deb
-Size: 46972
-MD5sum: d425c738999b13db84db9f0659b316dc
-SHA256: b514af770cb87286efa629d1872c90f37e08f8be674c9f3f07e7cfe570cee13b
+Filename: pool/main/libo/liborcus/python3-orcus_0.21.0-9_amd64.deb
+Size: 47184
+MD5sum: ba547e48185fc5aa2adea15523f05ac9
+SHA256: 28a325e5d2c49d8503f069f5be56e79c84f0cf8eab65662c58243cf17716bc3d
 
 Package: python3-pypff
 Source: libpff (20231205-1)
@@ -20944,21 +21101,21 @@ MD5sum: e132cf5dc4acaa230e196cc49296ef42
 SHA256: 567df2b271d3f5596de34427efa40843efbd085282732f7735028095be74ea0f
 
 Package: python3-libtorrent
-Source: libtorrent-rasterbar (2.0.11-3)
-Version: 2.0.11-3+b1
-Installed-Size: 5189
+Source: libtorrent-rasterbar
+Version: 2.0.12-1
+Installed-Size: 5190
 Maintainer: Christian Marillat <marillat@debian.org>
 Architecture: amd64
-Depends: libboost-python1.90.0 (>= 1.90.0), libboost-python1.90.0-py313, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libtorrent-rasterbar2.0t64 (>= 2.0.11), python3 (<< 3.14), python3 (>= 3.13~)
+Depends: libboost-python1.90.0 (>= 1.90.0), libboost-python1.90.0-py313, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libtorrent-rasterbar2.0t64 (>= 2.0.12), python3 (<< 3.14), python3 (>= 3.13~)
 Description: Python bindings for libtorrent-rasterbar (Python 3)
 Homepage: https://libtorrent.org/
 Description-md5: 1ae4d06eab5e84835d075e1f7376d626
 python
 Priority: optional
-Filename: pool/main/libt/libtorrent-rasterbar/python3-libtorrent_2.0.11-3+b1_amd64.deb
-Size: 721968
-MD5sum: 3c4daf5e25cca9537f16d3880b822c54
-SHA256: 37999a204ca773afa4d2aca00945fed423baf20fff9e4f1583a5617d67028ce0
+Filename: pool/main/libt/libtorrent-rasterbar/python3-libtorrent_2.0.12-1_amd64.deb
+Size: 720492
+MD5sum: 86936fae8603170a41c3a54335858b27
+SHA256: 10cc5907e38afd05160ab9d76848d0ccc810a47fdba9a3bbc7496156b331097c
 
 Package: python3-libuser
 Source: libuser
@@ -24966,22 +25123,22 @@ SHA256: 88c32f33b005d7ca17e5b52a45ccbd3d54dec95cdef07010a5a9933dca50ec01
 
 Package: python3-neo
 Source: neo
-Version: 0.14.3-1
-Installed-Size: 3012
+Version: 0.14.4-1
+Installed-Size: 3053
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
 Architecture: all
-Depends: python3-numpy, python3-packaging, python3-quantities (>= 0.16.1~), python3:any, python3-nixio, python3-pil
-Recommends: python3-scipy, python3-tables, libjs-jquery, libjs-underscore
+Depends: python3-nixio, python3-numpy, python3-pil, python3-quantities (>= 0.16.1~), python3-packaging, python3:any
+Recommends: libjs-jquery, libjs-underscore, python3-scipy, python3-tables
 Suggests: python3-pytest
 Description: Python IO library for electrophysiological data formats
 Homepage: http://neuralensemble.org/trac/neo
 Description-md5: fa239962d364563d533b8061aede44cb
 python
 Priority: optional
-Filename: pool/main/n/neo/python3-neo_0.14.3-1_all.deb
-Size: 436788
-MD5sum: 3dc9f771c11cdeec9510c2d564eee541
-SHA256: 49271b1b78d49d75c8e49ebcc8a0b95eccfcd2c1e1fd4b16a797475930f70a9d
+Filename: pool/main/n/neo/python3-neo_0.14.4-1_all.deb
+Size: 442988
+MD5sum: 8b2fce296695e165811cf60347da0b8f
+SHA256: 9cd6d70e348e94d6d81155bd7b017d8ed9b685da53e8132c32065ffc87826207
 
 Package: python3-netcdf4
 Source: netcdf4-python
@@ -28732,8 +28889,8 @@ SHA256: 2c569935ccfdc2e582974882762f7268fe4c6f89493f9f3e751dc3aa86e8e44f
 
 Package: python3-platformdirs
 Source: platformdirs
-Version: 4.9.2-1
-Installed-Size: 127
+Version: 4.9.4-1
+Installed-Size: 125
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
 Depends: python3:any
@@ -28742,10 +28899,10 @@ Homepage: https://github.com/platformdirs/platformdirs
 Description-md5: 00c9a9e4559c1453ba2cc9a086e09f46
 python
 Priority: optional
-Filename: pool/main/p/platformdirs/python3-platformdirs_4.9.2-1_all.deb
-Size: 18388
-MD5sum: 89b5fa7414045b12c061eebcd72e7be7
-SHA256: c551b1761b4b36f658dd3b69fe4a753c243cff10e3590567e227d5d99f099eb7
+Filename: pool/main/p/platformdirs/python3-platformdirs_4.9.4-1_all.deb
+Size: 17096
+MD5sum: 8d30a0cf927c026a99be0f30e270b23f
+SHA256: d1e394c3282ec1fa11c45673b8bf647185e3e92620bb4c009297192dff136fdf
 
 Package: python3-plfit
 Source: plfit (0.9.6+ds-2)
@@ -29895,8 +30052,8 @@ SHA256: f6d6e7786e1711897b70299bbf33d83b540226e9e9d3ff7a9d2f5e067d61fbf1
 
 Package: python3-puremagic
 Source: puremagic
-Version: 2.0.0-2
-Installed-Size: 304
+Version: 2.1.0-1
+Installed-Size: 312
 Maintainer: Jeroen Ploemen <jcfp@debian.org>
 Architecture: all
 Depends: python3:any
@@ -29905,10 +30062,10 @@ Homepage: https://github.com/cdgriffith/puremagic
 Description-md5: 4592190869e088307cbd66794c5db4d1
 python
 Priority: optional
-Filename: pool/main/p/puremagic/python3-puremagic_2.0.0-2_all.deb
-Size: 57756
-MD5sum: 94b2f3d565ece25d6058d3c65a096c00
-SHA256: 65ccb93d1ac97d5898052dbdc4f2c2f313e8560c65b75cc2d85afbbe3810cca8
+Filename: pool/main/p/puremagic/python3-puremagic_2.1.0-1_all.deb
+Size: 59568
+MD5sum: 6616a8d1123ef715671f2a75a709181c
+SHA256: 4c5911c766d77d7d41691f2d499d2a147a8363de8fc7c60df6c4186cfc40ea03
 
 Package: python3-purl
 Source: purl
@@ -44732,8 +44889,8 @@ SHA256: b285b2e7faee7dac142431385b64682ba75f31abc2895ece16efdbf0f785153a
 
 Package: python3-bcrypt
 Source: python-bcrypt
-Version: 5.0.0-3
-Installed-Size: 1056
+Version: 5.0.0-4
+Installed-Size: 1027
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
 Depends: python3 (<< 3.15), python3 (>= 3.13~), python3:any, libc6 (>= 2.34), libgcc-s1 (>= 4.2)
@@ -44744,10 +44901,10 @@ Description-md5: a1c3c221ea864d0dbfa35b95fba66342
 Static-Built-Using: rust-base64 (= 0.22.1-1), rust-bcrypt (= 0.15.1-3), rust-bcrypt-pbkdf (= 0.10.0-1), rust-getrandom (= 0.2.15-4), rust-subtle (= 2.6.1-1)
 python
 Priority: optional
-Filename: pool/main/p/python-bcrypt/python3-bcrypt_5.0.0-3_amd64.deb
-Size: 242680
-MD5sum: 3b0d2200cdcbdcd60c25fa232f1b9609
-SHA256: cac3535b97ef1bdf58f785765e28a41805aaffc262c3943d7014ba75c1d371c4
+Filename: pool/main/p/python-bcrypt/python3-bcrypt_5.0.0-4_amd64.deb
+Size: 237372
+MD5sum: 50ea28c488f24912546a71fb4fe7e38d
+SHA256: d5e9f27494d588882b8d0cb6eda39856d7d92010f7d748b6d3c3aa0982c9c6c6
 
 Package: python3-beanie
 Source: python-beanie
@@ -51916,7 +52073,7 @@ SHA256: 6450ed6a476134c5c3128b1b98d57e19b63dccda6848d141eaeb178fa5de5d79
 
 Package: python3-docs-theme
 Source: python-docs-theme
-Version: 2026.2-1
+Version: 2026.3-1
 Installed-Size: 175
 Maintainer: Matthias Klose <doko@debian.org>
 Architecture: all
@@ -51926,10 +52083,10 @@ Homepage: https://github.com/python/python-docs-theme
 Description-md5: 685fd90e24495823cbec4451a47d3537
 python
 Priority: optional
-Filename: pool/main/p/python-docs-theme/python3-docs-theme_2026.2-1_all.deb
-Size: 27064
-MD5sum: e39bdd71cb796926245e1ddb68f5bef7
-SHA256: 9a089ca03a74a8dd3a39eb86cbbae45ef0c5656afde892178c5aed0ab0502e0c
+Filename: pool/main/p/python-docs-theme/python3-docs-theme_2026.3-1_all.deb
+Size: 27144
+MD5sum: 44bfb50b078195d31eb3c162d03ca005
+SHA256: 09b50ae4b0b1f03ed6dade27314c3272741d3fbf2f83e91f63dbbf7cbbbaf403
 
 Package: python3-docstring-to-markdown
 Source: python-docstring-to-markdown
@@ -55641,8 +55798,8 @@ SHA256: 18194989f84e842c6b3eac67a28d1064cd5ddcd741c50bb3e51b47436adc0cee
 
 Package: python3-googleapi
 Source: python-googleapi
-Version: 2.190.0-1
-Installed-Size: 94080
+Version: 2.192.0-1
+Installed-Size: 94658
 Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 Architecture: all
 Provides: python3-google-api-python-client
@@ -55652,15 +55809,15 @@ Homepage: https://github.com/google/google-api-python-client
 Description-md5: 7b258060ff264931cebd68c92a3a2a56
 python
 Priority: optional
-Filename: pool/main/p/python-googleapi/python3-googleapi_2.190.0-1_all.deb
-Size: 5512988
-MD5sum: 3a360a12df7538cb1bb167234531b070
-SHA256: 4f7f713961295c63ecd428c443e5f82be6b0eacfe36e0b5244659ce920ec274e
+Filename: pool/main/p/python-googleapi/python3-googleapi_2.192.0-1_all.deb
+Size: 5553068
+MD5sum: dcceb1d3160362de3c834cce5c53478d
+SHA256: 91ce5462a8de3968c86907717aa326bbac3a06ff9e0af1a8ccd340d77c997559
 
 Package: python3-googleapi-samples
 Source: python-googleapi
-Version: 2.190.0-1
-Installed-Size: 647
+Version: 2.192.0-1
+Installed-Size: 649
 Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 Architecture: all
 Replaces: python-googleapi-samples
@@ -55671,10 +55828,10 @@ Homepage: https://github.com/google/google-api-python-client
 Description-md5: d8ce597ba0e33cd434123ead43ecce4d
 python
 Priority: optional
-Filename: pool/main/p/python-googleapi/python3-googleapi-samples_2.190.0-1_all.deb
-Size: 319844
-MD5sum: 4bb74bccdd5f902df11cbb47eaeffa13
-SHA256: af38cc3e083a7988f577079af0ff323421d5af000577726acedb4f14202e7415
+Filename: pool/main/p/python-googleapi/python3-googleapi-samples_2.192.0-1_all.deb
+Size: 322596
+MD5sum: c479dee0105d7785ea962c761dd9cb45
+SHA256: 403bddf6d6a2bf52434689a0db21270f3a8f579c883838308b1f43a51689f5f3
 
 Package: python3-googleapis-common-protos
 Source: python-googleapis-common-protos
@@ -57022,7 +57179,7 @@ SHA256: 0dd4206a8cd6efd31c9ed6cd3efc349a4264a4e78298acef87a5aabe731c52c4
 
 Package: python3-hyperion-py
 Source: python-hyperion-py
-Version: 0.7.5-4
+Version: 0.7.5-5
 Installed-Size: 107
 Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
 Architecture: all
@@ -57033,10 +57190,10 @@ Homepage: https://github.com/dermotduffy/hyperion-py
 Description-md5: 49e98a1a162ff0db0f40cb9eafa1b08e
 python
 Priority: optional
-Filename: pool/main/p/python-hyperion-py/python3-hyperion-py_0.7.5-4_all.deb
-Size: 19784
-MD5sum: 113ea27294d3576ffe73387f6bd519a5
-SHA256: 84a70130c712ce0c2855215387a7e323a156c280b36a2ab75cae122ddde00273
+Filename: pool/main/p/python-hyperion-py/python3-hyperion-py_0.7.5-5_all.deb
+Size: 19920
+MD5sum: 3783d73e3b79b746849e64a7b9987046
+SHA256: 217dbde7429fb6cfc20cbc378aa622e9516039af3351db0de0c3d434aae0c93c
 
 Package: python3-hypothesis
 Source: python-hypothesis
@@ -57405,20 +57562,20 @@ SHA256: 1f2a1c023b6012e84c11e4f6c8e5bb57b876d0ffe7fb9fde12c6e81f967773eb
 
 Package: python3-imagesize
 Source: python-imagesize
-Version: 1.4.1-1
-Installed-Size: 35
+Version: 2.0.0-1
+Installed-Size: 54
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
 Depends: python3:any
 Description: Python module for getting image size or DPI
 Homepage: https://github.com/shibukawa/imagesize_py
-Description-md5: cab117deae0cbf2f9c392f397b8e07dc
+Description-md5: 2b9ea2b947c1a5ca45ca0d8fe9f44cbc
 python
 Priority: optional
-Filename: pool/main/p/python-imagesize/python3-imagesize_1.4.1-1_all.deb
-Size: 6688
-MD5sum: 38b0f3799b0e0bfc4424590ea5456400
-SHA256: 2399d7ef9fc3db7562459c221e39962f3652953577742a926b0c91e13744b3f5
+Filename: pool/main/p/python-imagesize/python3-imagesize_2.0.0-1_all.deb
+Size: 10060
+MD5sum: ec7b71effee4918584465a62d9dde2f3
+SHA256: e2548be39553059c3ff4df22670152b71d39d0a4e30c3bc2644f2927430fc429
 
 Package: python3-imapclient
 Source: python-imapclient
@@ -58762,23 +58919,6 @@ Filename: pool/main/p/python-jsondiff/python3-jsondiff_2.1.2-1_all.deb
 Size: 14984
 MD5sum: b9cfa5298834b15254e0fa3508fb43db
 SHA256: ad5ce2263a668142cc39ce7f7502b99109eb14d42ffd74c66a975086eb4be544
-
-Package: python3-jsonext
-Source: python-jsonext
-Version: 0.4.2-3
-Installed-Size: 26
-Maintainer: Ben Finney <bignose@debian.org>
-Architecture: all
-Depends: python3-arrow, python3-six, python3:any
-Description: serialisation to/from JSON for extra types — Python 3
-Homepage: https://github.com/mbr/jsonext
-Description-md5: f09c779f2a7a7b9fa7ebeed1d7d4802d
-python
-Priority: optional
-Filename: pool/main/p/python-jsonext/python3-jsonext_0.4.2-3_all.deb
-Size: 6388
-MD5sum: 04397d61e744dead775debb035cf97fe
-SHA256: 6de105c69e54b330e7869f35466d4e5e3b5100ca232eef1b07c3e8896032384a
 
 Package: python3-jsonfield
 Source: python-jsonfield
@@ -61685,20 +61825,20 @@ SHA256: aa5464ce8fcdaa319fa95144174e8c9e25bd5a6b688a184abcf158a4ad00c826
 
 Package: python3-miio
 Source: python-miio
-Version: 0.5.12-4
-Installed-Size: 1318
+Version: 0.5.12-5
+Installed-Size: 1317
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
-Depends: python3-attr, python3-click, python3-construct, python3-croniter, python3-cryptography (>= 35), python3-defusedxml, python3-importlib-metadata | python3-supported-min (>> 3.7), python3-platformdirs, python3-pytz, python3-tqdm, python3-yaml, python3-zeroconf, python3:any
+Depends: python3-attr, python3-click, python3-construct, python3-croniter, python3-cryptography (>= 35), python3-defusedxml, python3-platformdirs, python3-pytz, python3-supported-min (>> 3.7) | python3-importlib-metadata, python3-tqdm, python3-yaml, python3-zeroconf, python3:any
 Description: Python module for interfacing with Xiaomi appliances
 Homepage: https://python-miio.readthedocs.io
 Description-md5: 89d9f8fa41e45c31c80404e2232ee724
 python
 Priority: optional
-Filename: pool/main/p/python-miio/python3-miio_0.5.12-4_all.deb
-Size: 167704
-MD5sum: 8f7ebc50c7ca0745c10b212014f15961
-SHA256: 1ba25ab0cfce23455ec1162933c246e0b698fc709816f9d59bf2832b594cff93
+Filename: pool/main/p/python-miio/python3-miio_0.5.12-5_all.deb
+Size: 167316
+MD5sum: 1a94600f7b3bf5243d2f035544d9ecae
+SHA256: 2b7aeec96e002749c57b6f0504d95e3f2f79893e5ac43d37d8207122ac1f0f04
 
 Package: python3-milc
 Source: python-milc
@@ -62460,8 +62600,8 @@ SHA256: f16d7ec0548b875befd8b79ebf655e48740d98ae612ef3ca88fa0dacc22b9f68
 
 Package: python3-mrcz
 Source: python-mrcz
-Version: 0.5.7-5
-Installed-Size: 169
+Version: 0.5.9-1
+Installed-Size: 170
 Maintainer: Debian PaN Maintainers <debian-pan-maintainers@alioth-lists.debian.net>
 Architecture: all
 Depends: python3-numpy (>= 1:2.2), python3-setuptools, python3:any
@@ -62470,10 +62610,10 @@ Homepage: https://github.com/em-MRCZ/python-mrcz
 Description-md5: 5309ed4fcc0333012859c396dc8f92ad
 python
 Priority: optional
-Filename: pool/main/p/python-mrcz/python3-mrcz_0.5.7-5_all.deb
-Size: 36008
-MD5sum: 9214357035e035b9614d5d49e9f1572c
-SHA256: 0c7eac2b1670b440566e086e75f47325ebcddb0793357f5ca2948fa619110e70
+Filename: pool/main/p/python-mrcz/python3-mrcz_0.5.9-1_all.deb
+Size: 36756
+MD5sum: 3a670ab889f7dfdaf08ee06c8ce0c9ee
+SHA256: 4ee7ec8c71b0b4cf8de689aae4e19f3a558494f0c9409110846c204998ed1459
 
 Package: python3-ms-cv
 Source: python-ms-cv
@@ -65861,7 +66001,7 @@ SHA256: 4585783c388f770bb217500b771770429071fb12e6cb462b6f8a5ef23e598ad7
 
 Package: python3-outcome
 Source: python-outcome
-Version: 1.3.0.post0-1
+Version: 1.3.0.post0-2
 Installed-Size: 31
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
@@ -65871,10 +66011,10 @@ Homepage: https://github.com/python-trio/outcome
 Description-md5: 4dc4e972df05c44051a5832fe513af6b
 python
 Priority: optional
-Filename: pool/main/p/python-outcome/python3-outcome_1.3.0.post0-1_all.deb
-Size: 6876
-MD5sum: b095b8f2f2037bd0f1e750aa0b8fd36b
-SHA256: f85a40a9e316de27e330cf7111fb720544bc3de789c35d7c6fd26e557ba0b954
+Filename: pool/main/p/python-outcome/python3-outcome_1.3.0.post0-2_all.deb
+Size: 6916
+MD5sum: f30b8f95eebfd815d26ef0069259edaf
+SHA256: 9c7bdce5e16baeed9f258a542bbedc01411a38543eaa0d76f8c267d30aba2dfe
 
 Package: python3-overpy
 Source: python-overpy
@@ -75301,20 +75441,20 @@ SHA256: 25e3eb665b88c0015aa640b4fc95208a0fa025d82b77f92da8bcca356ff8fbce
 
 Package: python3-srptools
 Source: python-srptools
-Version: 1.0.1-2
+Version: 1.0.1-3
 Installed-Size: 63
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
-Depends: python3-six, python3:any
+Depends: python3:any
 Description: Tools to implement Secure Remote Password (SRP) authentication
 Homepage: https://github.com/idlesign/srptools
 Description-md5: 120c7ba27c5aa0a3f7e3be067d0abdc3
 python
 Priority: optional
-Filename: pool/main/p/python-srptools/python3-srptools_1.0.1-2_all.deb
-Size: 13288
-MD5sum: 3b8ef0ba924dc29358037901cf5fb855
-SHA256: 31fe766e4acf5950e06be3cd3a62231e2455d5cfbac3612652c3543ea3e386e5
+Filename: pool/main/p/python-srptools/python3-srptools_1.0.1-3_all.deb
+Size: 13600
+MD5sum: ad1c08504a3058af48279904e97267ae
+SHA256: 72fd83bb2b93dca3ae074fd93071cb8e3f8b2e841e348fa1d6a0958834d6be3e
 
 Package: python3-srsly
 Source: python-srsly
@@ -79091,9 +79231,9 @@ MD5sum: 6402450a3ba2459aaad2bde8ed9b7a3b
 SHA256: 54f6819a6b303572eb92f19ac824d24b6df9144033b15db68a3a24b48493e653
 
 Package: python3-watchfiles
-Source: python-watchfiles (1.1.1-2)
-Version: 1.1.1-2+b1
-Installed-Size: 1816
+Source: python-watchfiles
+Version: 1.1.1-3
+Installed-Size: 1767
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
 Depends: python3 (<< 3.15), python3 (>= 3.13~), python3-anyio, python3:any, libc6 (>= 2.34), libgcc-s1 (>= 4.2)
@@ -79102,10 +79242,10 @@ Homepage: https://github.com/samuelcolvin/watchfiles
 Description-md5: 4b2fde8f84c9c3e3bbc86f960617d1ec
 python
 Priority: optional
-Filename: pool/main/p/python-watchfiles/python3-watchfiles_1.1.1-2+b1_amd64.deb
-Size: 380872
-MD5sum: d5880e5199ee5d9547ba6d2e6b8146b8
-SHA256: dd1623790be735d7b571c604353b65d77aeaa1c5d5d3c266f925f226139ca1c2
+Filename: pool/main/p/python-watchfiles/python3-watchfiles_1.1.1-3_amd64.deb
+Size: 378500
+MD5sum: 5520065c257dc2ef10b41fe7573937d3
+SHA256: 631802bc8d90f40421708ef16493f137cdd974b09824c98c7c1ec5ba2e366fb6
 
 Package: python3-ibm-watson
 Source: python-watson-developer-cloud
@@ -81464,21 +81604,21 @@ SHA256: ce10911b17d1e92ca08c2102c68c51c753578636187dba162185af43be63f2e9
 
 Package: python3-python-zxcvbn-rs-py
 Source: python-zxcvbn-rs-py
-Version: 0.2.0-4
-Installed-Size: 6906
+Version: 0.3.0-1
+Installed-Size: 6816
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
 Depends: python3 (<< 3.15), python3 (>= 3.13~), python3:any, libc6 (>= 2.34), libgcc-s1 (>= 4.2)
 Description: Password strength checker library (Python 3)
 Homepage: https://github.com/fief-dev/zxcvbn-rs-py
 Description-md5: 7c24ea04ad110fb0346338c0ee91c2ab
-Static-Built-Using: rust-zxcvbn (= 3.1.0-1)
+Static-Built-Using: rust-zxcvbn (= 3.1.0-3)
 python
 Priority: optional
-Filename: pool/main/p/python-zxcvbn-rs-py/python3-python-zxcvbn-rs-py_0.2.0-4_amd64.deb
-Size: 1223700
-MD5sum: 19eac2fdb07a90bb82ba68aec81dd231
-SHA256: 58ccc65564cb7ee1003a20bfe1427ce3f494bec5bf9ebe042f75597fac6279d8
+Filename: pool/main/p/python-zxcvbn-rs-py/python3-python-zxcvbn-rs-py_0.3.0-1_amd64.deb
+Size: 1196192
+MD5sum: af54897f62027895f9d60967bb29f268
+SHA256: 92579ca9eea05abb8ad3cec574cecc06388804f515f6fc8a81019d98443786c0
 
 Package: python3-antlr4
 Version: 4.9.2-1
@@ -83700,39 +83840,41 @@ SHA256: db4f4db730e4012b435f80e268b94844bef1c22c72b6e4fbca3ec74b6b79ca04
 
 Package: python-qutip-doc
 Source: qutip
-Version: 5.2.1-4
-Installed-Size: 13951
+Version: 5.2.3-2
+Installed-Size: 14066
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: libjs-mathjax, libjs-jquery (>= 3.6.0), libjs-sphinxdoc (>= 8.2), sphinx-rtd-theme-common (>= 3.0.2+dfsg)
+Depends: libjs-mathjax, libjs-jquery (>= 3.6.0), libjs-sphinxdoc (>= 8.2), sphinx-rtd-theme-common (>= 3.1.0+dfsg)
 Recommends: python3-qutip
 Description: python package for simulating open quantum systems (docs)
+Multi-Arch: foreign
 Homepage: http://qutip.org/
 Description-md5: 6fcbe1139ca5772e9a7d54b78c54f46d
 python
 Priority: optional
-Filename: pool/main/q/qutip/python-qutip-doc_5.2.1-4_all.deb
-Size: 3619996
-MD5sum: e9aa39f9e294d594d62999642ac34593
-SHA256: c5d57355bb6e7a5002a3e4b72b9f234af3758d29454c77568bbc17ccc4f3073c
+Filename: pool/main/q/qutip/python-qutip-doc_5.2.3-2_all.deb
+Size: 3621704
+MD5sum: b73311f8752acc2374f43661d2b7a88f
+SHA256: 3e56ba0f188924388163f913f1cbde8c6327b89ba54eb18a5119d77a40c851fb
 
 Package: python3-qutip
-Source: qutip (5.2.1-4)
-Version: 5.2.1-4+b1
-Installed-Size: 78381
+Source: qutip
+Version: 5.2.3-2
+Installed-Size: 63366
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: g++, python3-dev, python3-matplotlib, python3 (<< 3.15), python3 (>= 3.13~), python3-numpy (>= 1.22~), python3-numpy2-abi0 | python3-numpy-abi9, python3-packaging, python3-scipy (>= 1.9~), python3:any, libc6 (>= 2.29), libgcc-s1 (>= 4.0), libstdc++6 (>= 5.2)
+Recommends: ipython3, python3-filelock, python3-mpi4py, python3-mpmath, python3-setuptools, python3-tqdm
 Suggests: python-qutip-doc
 Description: python package for simulating the dynamics of open quantum systems
 Homepage: http://qutip.org/
 Description-md5: dc272564df32ae0dd9c8677615f57bc5
 python
 Priority: optional
-Filename: pool/main/q/qutip/python3-qutip_5.2.1-4+b1_amd64.deb
-Size: 6026896
-MD5sum: 02aaa3400ab1740876e49340f0db6df3
-SHA256: 3cd1b8cd75a81bc0f146393667e07c42cdab1f316e4e8b250b564c6037fcfff7
+Filename: pool/main/q/qutip/python3-qutip_5.2.3-2_amd64.deb
+Size: 5491244
+MD5sum: f08f68606bee2fd394a8d239d34f4861
+SHA256: 0bc29bbebd9f151e9b4af25e47ad730224a6fad6f82b78db54c9092a80f8b3c6
 
 Package: python3-fastcluster
 Source: r-cran-fastcluster (1.3.0-1)
@@ -86351,9 +86493,9 @@ MD5sum: 45a9d6a861eb7ef6822cff048b73f8e2
 SHA256: 680276aa1f7b4b447c7b050456ed324413b67115d0b1a778b53177c9182c2ae1
 
 Package: python3-rviz
-Source: ros-rviz (1.14.26+dfsg-1)
-Version: 1.14.26+dfsg-1+b1
-Installed-Size: 550
+Source: ros-rviz
+Version: 1.14.26+dfsg-2
+Installed-Size: 547
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: python3 (<< 3.15), python3 (>= 3.13~), python3-pyqt6, python3-roslib, python3-rospkg, python3:any, libc6 (>= 2.14), libqt6core6t64 (>= 6.9.1), libqt6gui6 (>= 6.1.2), libqt6widgets6 (>= 6.1.2), librviz8d (>= 1.14.26+dfsg), libstdc++6 (>= 13.1)
@@ -86363,10 +86505,10 @@ Description-md5: d05ad92442bd22189af70a84750b7c29
 Tag: uitoolkit::qt
 python
 Priority: optional
-Filename: pool/main/r/ros-rviz/python3-rviz_1.14.26+dfsg-1+b1_amd64.deb
-Size: 89836
-MD5sum: 816d67c28a6029d55329e5026f7e29d0
-SHA256: 519dc42b8ae2f3673fa98b323d47190e9d3dcde2b5391aaf6c504d53233be2a9
+Filename: pool/main/r/ros-rviz/python3-rviz_1.14.26+dfsg-2_amd64.deb
+Size: 88008
+MD5sum: 89d6d886628fc98f40b74a4c799bcff9
+SHA256: e37d01adee686b6b91a8abaf883372960c63ac25d59e0b3b79804dddd77117d1
 
 Package: python3-std-msgs
 Source: ros-std-msgs
@@ -86404,21 +86546,21 @@ MD5sum: 8f01ffbfa7c57a27edbc9451a9524b3d
 SHA256: e5c9ebad4c864cec6cc48b2303472fed005fce08c264b6f8406a8a4267f7fdff
 
 Package: python3-cv-bridge
-Source: ros-vision-opencv
-Version: 1.16.2+ds-5
+Source: ros-vision-opencv (1.16.2+ds-5)
+Version: 1.16.2+ds-5+b1
 Installed-Size: 229
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: python3-genpy, python3-opencv, python3-sensor-msgs, python3-std-msgs, python3 (<< 3.15), python3 (>= 3.13~), python3-numpy2-abi0 | python3-numpy-abi9, python3:any, libboost-python1.83.0 (>= 1.83.0), libboost-python1.83.0-py313, libboost-python1.83.0-py314, libc6 (>= 2.14), libcv-bridge2d (>= 1.16.2+ds), libgcc-s1 (>= 3.0), liblog4cxx15 (>= 1.5.0), libopencv-core410 (>= 4.10.0+dfsg), libpython3.13 (>= 3.13.0~rc3), libpython3.14 (>= 3.14.1), libstdc++6 (>= 13.1)
+Depends: python3-genpy, python3-opencv, python3-sensor-msgs, python3-std-msgs, python3 (<< 3.15), python3 (>= 3.13~), python3-numpy2-abi0 | python3-numpy-abi9, python3:any, libboost-python1.90.0 (>= 1.90.0), libboost-python1.90.0-py313, libboost-python1.90.0-py314, libc6 (>= 2.14), libcv-bridge2d (>= 1.16.2+ds), libgcc-s1 (>= 3.0), liblog4cxx15 (>= 1.5.0), libopencv-core410 (>= 4.10.0+dfsg), libpython3.13 (>= 3.13.0~rc3), libpython3.14 (>= 3.14.1), libstdc++6 (>= 13.1)
 Description: cv_bridge ROS package - Python 3 bindings
 Homepage: https://wiki.ros.org/vision_opencv
 Description-md5: ebab9b16328c84738737beb80aa50be6
 python
 Priority: optional
-Filename: pool/main/r/ros-vision-opencv/python3-cv-bridge_1.16.2+ds-5_amd64.deb
-Size: 37356
-MD5sum: 19a1799573025670aa49e66154bfaa51
-SHA256: c4749fb2307d78486cad4f76dedc062df80f3bbf25b36eb37bb8daeb498a3833
+Filename: pool/main/r/ros-vision-opencv/python3-cv-bridge_1.16.2+ds-5+b1_amd64.deb
+Size: 36468
+MD5sum: eb7f6b74cefacf147f61a63b0d4bd391
+SHA256: 07d9f7ce707dbe95d567e61a7ae72707044d6510122d1ab962794cccb56c4652
 
 Package: python3-image-geometry
 Source: ros-vision-opencv
@@ -92037,42 +92179,42 @@ SHA256: 1d7ebd056ec0fdf72cbc021dcf9e4ed0032164da26d416d1627158f095652271
 
 Package: python3-libipa-hbac
 Source: sssd
-Version: 2.12.0-2
-Installed-Size: 66
+Version: 2.12.0-4
+Installed-Size: 63
 Maintainer: Debian SSSD Team <pkg-sssd-devel@alioth-lists.debian.net>
 Architecture: amd64
-Depends: libipa-hbac0t64 (= 2.12.0-2), python3 (<< 3.14), python3 (>= 3.13~), libc6 (>= 2.4)
+Depends: libipa-hbac0t64 (= 2.12.0-4), python3 (<< 3.14), python3 (>= 3.13~), libc6 (>= 2.4)
 Description: Python3 bindings for the FreeIPA HBAC Evaluator library
 Homepage: https://github.com/SSSD/sssd
 Description-md5: 212cdd41ce04657029030f82f6a07c23
 python
 Priority: optional
-Filename: pool/main/s/sssd/python3-libipa-hbac_2.12.0-2_amd64.deb
-Size: 21768
-MD5sum: e9512eefc62a9d5d0b301a8fc5d32153
-SHA256: ee3ef5ae7a517a6b6a2f12abf4497f1a895a84bed90afdc46dc9e2bd271e33e3
+Filename: pool/main/s/sssd/python3-libipa-hbac_2.12.0-4_amd64.deb
+Size: 18764
+MD5sum: 00cfdfd6a7d86dd37e13de3f7c69c99a
+SHA256: 20edac1b46180a68378fbe6cd4ab54a763c87de9ed81434bbdc4e06411a5486c
 
 Package: python3-libsss-nss-idmap
 Source: sssd
-Version: 2.12.0-2
-Installed-Size: 47
+Version: 2.12.0-4
+Installed-Size: 44
 Maintainer: Debian SSSD Team <pkg-sssd-devel@alioth-lists.debian.net>
 Architecture: amd64
-Depends: libsss-nss-idmap0 (= 2.12.0-2), python3 (<< 3.14), python3 (>= 3.13~), libc6 (>= 2.38)
+Depends: libsss-nss-idmap0 (= 2.12.0-4), python3 (<< 3.14), python3 (>= 3.13~), libc6 (>= 2.38)
 Description: Python3 bindings for the SID lookups library
 Homepage: https://github.com/SSSD/sssd
 Description-md5: 9dc7d17bee37f7358268401ea7fe5b96
 python
 Priority: optional
-Filename: pool/main/s/sssd/python3-libsss-nss-idmap_2.12.0-2_amd64.deb
-Size: 14672
-MD5sum: 1d3be286ed15b76ab8a4017535135401
-SHA256: 181005c78cf7dee37b2b94a9e36e83453dfb1ae896e3f26bb0dbdb9cd74c9a78
+Filename: pool/main/s/sssd/python3-libsss-nss-idmap_2.12.0-4_amd64.deb
+Size: 11696
+MD5sum: 4e4b9802522159ebced0f45479060bc4
+SHA256: b1a6d32daa7130d9bcdeb0f542170bc05d7352b863013cfcd1807e959b5b4e53
 
 Package: python3-sss
 Source: sssd
-Version: 2.12.0-2
-Installed-Size: 193
+Version: 2.12.0-4
+Installed-Size: 190
 Maintainer: Debian SSSD Team <pkg-sssd-devel@alioth-lists.debian.net>
 Architecture: amd64
 Depends: python3 (<< 3.14), python3 (>= 3.13~), python3:any, libc6 (>= 2.33), libldb2 (>= 0.9.21), libpopt0 (>= 1.14), libtalloc2 (>= 2.0.4~git20101213)
@@ -92082,10 +92224,10 @@ Homepage: https://github.com/SSSD/sssd
 Description-md5: 3040a9db41e78d2fed41f8d9e97229da
 python
 Priority: optional
-Filename: pool/main/s/sssd/python3-sss_2.12.0-2_amd64.deb
-Size: 42736
-MD5sum: cddcac6b73c7b68c2faaa9dac0a407be
-SHA256: 283288713481a40447c7e097b8e3562acfeef1fb0d393b9a0292c84b9413995b
+Filename: pool/main/s/sssd/python3-sss_2.12.0-4_amd64.deb
+Size: 39736
+MD5sum: 60dff69d602852a7e5a75ab4e900f73e
+SHA256: efbc4d36688d58b87fd32775c0ffe9178843fd5a6af68e22d583e6ccec1ce5c3
 
 Package: python3-stac-check
 Source: stac-check
@@ -93834,8 +93976,8 @@ SHA256: ad85c44d5cc9ded9d2a219766ed258dc9de8015445ee7a7124e414e0aa881ce5
 
 Package: python3-tldextract
 Source: tldextract
-Version: 5.1.2-2
-Installed-Size: 79
+Version: 5.3.1-1
+Installed-Size: 85
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
 Depends: python3-filelock, python3-idna, python3-requests, python3-requests-file, python3:any, publicsuffix
@@ -93844,26 +93986,26 @@ Homepage: https://github.com/john-kurkowski/tldextract
 Description-md5: f6a64fe701870062d94041416937dcf8
 python
 Priority: optional
-Filename: pool/main/t/tldextract/python3-tldextract_5.1.2-2_all.deb
-Size: 22876
-MD5sum: 2a11f3b601b4cc824e3e7d352fe30290
-SHA256: fbb45167c51d53cbbda7608552e13ce7e03caf778f8ca71452342917ad9e602d
+Filename: pool/main/t/tldextract/python3-tldextract_5.3.1-1_all.deb
+Size: 24492
+MD5sum: 28e3f3a33ba5c64b6762d1d53d2043bb
+SHA256: b85a3758db8612ccaf40f6cebd7d0461d7ffb1e91d23eb8f2dfeb5abcbf1980c
 
 Package: tldextract
-Version: 5.1.2-2
+Version: 5.3.1-1
 Installed-Size: 21
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
-Depends: python3-tldextract (= 5.1.2-2), python3:any
+Depends: python3-tldextract (= 5.3.1-1), python3:any
 Description: Python tool for separating TLDs
 Homepage: https://github.com/john-kurkowski/tldextract
 Description-md5: 390ac2cc4b5b7b8ea730bd728684bfb2
 python
 Priority: optional
-Filename: pool/main/t/tldextract/tldextract_5.1.2-2_all.deb
-Size: 9968
-MD5sum: 6c583857a97994277ae4644a48e35e8c
-SHA256: 2d8f8b5f39aa5ca3fce502bcf9f22f4daef4ec40fe52ad2cb1b4638663454c47
+Filename: pool/main/t/tldextract/tldextract_5.3.1-1_all.deb
+Size: 11032
+MD5sum: c8decedfa8e9e0f96fe8b5bc5985211d
+SHA256: 979022249c3345b7c90972ce426cfbc756db0906dc3b26d885da7cf82397edb4
 
 Package: python3-tlsh
 Source: tlsh
