@@ -3441,21 +3441,20 @@ MD5sum: b5ec4658e0479f42bbde905d92df6df3
 SHA256: c778e240690157019ee2ef15c93ae6edfeff182c0ae01c0b24ec7169f146e971
 
 Package: gnome-ponytail-daemon
-Source: gnome-ponytail-daemon (0.0.11-1)
-Version: 0.0.11-1+b1
-Installed-Size: 194
+Version: 0.0.11-2
+Installed-Size: 192
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: python3-dbus, python3-gi, python3:any, libc6 (>= 2.34), libei1 (>= 1.0.0), libglib2.0-0t64 (>= 2.80.0), libxkbcommon0 (>= 0.5.0)
+Depends: python3-dbus, python3-gi, python3:any, libc6 (>= 2.34), libei1 (>= 1.0.0), libglib2.0-0t64 (>= 2.83.0), libxkbcommon0 (>= 0.5.0)
 Description: Helper daemon for dogtail on Wayland
 Homepage: https://gitlab.gnome.org/ofourdan/gnome-ponytail-daemon
 Description-md5: 9ea0936cf7863d0712989070e60a3618
 gnome
 Priority: optional
-Filename: pool/main/g/gnome-ponytail-daemon/gnome-ponytail-daemon_0.0.11-1+b1_amd64.deb
-Size: 40428
-MD5sum: 46ea7d0c1e9e2f400c896634587d2d16
-SHA256: 50ec564d51d345b24404119921bd440dde477b3fd82b18dae316acc275bf51e0
+Filename: pool/main/g/gnome-ponytail-daemon/gnome-ponytail-daemon_0.0.11-2_amd64.deb
+Size: 40556
+MD5sum: e2dbe4e8d3023f09200ecbbea7b5cb11
+SHA256: 9231c330cff8556aeef06fffc2c79b56c12991101979129e7f71308995d4c074
 
 Package: gnome-power-manager
 Version: 43.0-5
@@ -4507,6 +4506,40 @@ Filename: pool/main/g/gnome-shell-frippery/gnome-shell-extension-panel-favorites
 Size: 10016
 MD5sum: 505f699e4c196f5c23904000c9ba40c0
 SHA256: 759913d4d546296882727705165074e74dc5edbe4d324d9aaa96d44e9bdae9e5
+
+Package: gnome-shell-pomodoro
+Version: 0.28.0-3
+Installed-Size: 725
+Maintainer: Tobias Frost <tobi@debian.org>
+Architecture: amd64
+Depends: gnome-shell (>= 46~), gnome-shell (<< 50~), gnome-shell-pomodoro-data (= 0.28.0-3), libc6 (>= 2.38), libcairo2 (>= 1.10.0), libcanberra0 (>= 0.2), libglib2.0-0t64 (>= 2.80.0), libgom-1.0-0t64 (>= 0.3.2), libgstreamer1.0-0 (>= 1.0.0), libgtk-3-0t64 (>= 3.19.12), libpeas-1.0-1 (>= 1.0.0), libsqlite3-0 (>= 3.5.9)
+Description: GNOME Shell time-management app
+Homepage: https://gnomepomodoro.org/
+Description-md5: dbe404f20395592657db310e1046a670
+Tag: uitoolkit::gtk
+gnome
+Priority: optional
+Filename: pool/main/g/gnome-shell-pomodoro/gnome-shell-pomodoro_0.28.0-3_amd64.deb
+Size: 190320
+MD5sum: cfd0783c0e69fa90cd44bb0e7027be1f
+SHA256: 7c811924696297b54d46d8031539e42c336314b48115bdd5a0c395b0ccbdeba3
+
+Package: gnome-shell-pomodoro-data
+Source: gnome-shell-pomodoro
+Version: 0.28.0-3
+Installed-Size: 6342
+Maintainer: Tobias Frost <tobi@debian.org>
+Architecture: all
+Depends: dconf-gsettings-backend | gsettings-backend
+Description: Data for GNOME Shell time-management app
+Homepage: https://gnomepomodoro.org/
+Description-md5: 31fefb2e9849a33865fe62b4720819df
+gnome
+Priority: optional
+Filename: pool/main/g/gnome-shell-pomodoro/gnome-shell-pomodoro-data_0.28.0-3_all.deb
+Size: 6058812
+MD5sum: 76205334e5ddc82b2e5b5484895816d0
+SHA256: c01e9f5935962ff93571ff87f341cbe7f00886ff745415f4ceb682f844d84ba3
 
 Package: gnome-snapshot
 Version: 49.1-1
@@ -6450,11 +6483,11 @@ SHA256: 9d8c0cabbc38aa7d9cfed38aff6374e4f153a6ccbf004afff323eb899408fc16
 
 Package: nautilus-owncloud
 Source: owncloud-client-desktop-shell-integration-nautilus
-Version: 5.0.0-2
+Version: 6.1.1-1
 Installed-Size: 35
 Maintainer: ownCloud for Debian maintainers <pkg-owncloud-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: nautilus, owncloud-client, owncloud-client-data, python3-nautilus, python3:any
+Depends: nautilus, owncloud-client, owncloud-client-data, owncloud-client-desktop-shell-integration-resources, python3-nautilus, python3:any
 Suggests: nautilus-script-manager
 Enhances: nautilus
 Description: ownCloud integration for Nautilus
@@ -6462,10 +6495,10 @@ Homepage: https://github.com/owncloud/client-desktop-shell-integration-nautilus
 Description-md5: fe3ee3195ab14afb3e26757f19436c3c
 gnome
 Priority: optional
-Filename: pool/main/o/owncloud-client-desktop-shell-integration-nautilus/nautilus-owncloud_5.0.0-2_all.deb
-Size: 7568
-MD5sum: 12891a4ac59fa7d2b07aa51bc4805e40
-SHA256: b3e9aa36476661039b16aad9fd26f5d339fe9ccb497ca1d03901aaff97acc7ae
+Filename: pool/main/o/owncloud-client-desktop-shell-integration-nautilus/nautilus-owncloud_6.1.1-1_all.deb
+Size: 7740
+MD5sum: 500e44c30fd1468c505dda820cf8ebc9
+SHA256: 307b47051ec49bd197f57e1d7e9e10c8320b6f766ae30e43234d60d5862a3bdd
 
 Package: package-update-indicator
 Version: 9-3
