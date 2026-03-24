@@ -72,20 +72,73 @@ SHA256: f330fe2a434ace9846293eeef5a65332bbefe4218595a15d374060a61b167339
 
 Package: apache2-ai-bots
 Source: ai.robots.txt
-Version: 1.44+dfsg-2
-Installed-Size: 28
+Version: 1.45+20260307+dfsg-3
+Installed-Size: 10
 Maintainer: Daniel Baumann <daniel@debian.org>
 Architecture: all
-Depends: apache2
-Description: list of AI agents and robots to block (apache2)
+Depends: apache2-block-ai-bots
+Description: list of AI agents and robots to block (transitional package)
 Homepage: https://github.com/ai-robots-txt/ai.robots.txt
-Description-md5: 8a113f541a06eb659c03a72be88ff16f
+Description-md5: 8a16fd89d0314e16a9ab487c8173862d
 web
 Priority: optional
-Filename: pool/main/a/ai.robots.txt/apache2-ai-bots_1.44+dfsg-2_all.deb
-Size: 5904
-MD5sum: 3f04d57126d5c0e8b6b838ff03760307
-SHA256: c25de868f2540261db15492548ce55fb3a8e5e0995cc132778b1ee21dde58268
+Filename: pool/main/a/ai.robots.txt/apache2-ai-bots_1.45+20260307+dfsg-3_all.deb
+Size: 3024
+MD5sum: c48c96d9c37ce4d0938a0a3e5f52c06e
+SHA256: 05ffbf110e9964d5e8dddeb2cd3d6c22367ce2c50e39a238f609f8aa7947c25d
+
+Package: apache2-block-ai-bots
+Source: ai.robots.txt
+Version: 1.45+20260307+dfsg-3
+Installed-Size: 31
+Maintainer: Daniel Baumann <daniel@debian.org>
+Architecture: all
+Replaces: apache2-ai-bots (<< 1.45+20260307+dfsg-2~)
+Depends: apache2
+Conflicts: apache2-ai-bots (<< 1.45+20260307+dfsg-2~)
+Description: list of AI agents and robots to block (apache2)
+Homepage: https://github.com/ai-robots-txt/ai.robots.txt
+Description-md5: 89723de26734f0ea528e80d4cd4b86d2
+web
+Priority: optional
+Filename: pool/main/a/ai.robots.txt/apache2-block-ai-bots_1.45+20260307+dfsg-3_all.deb
+Size: 6648
+MD5sum: 143ed1adb942fda579eabe2df3287531
+SHA256: 868ecfe278a92747b842793a1cf59e26a5bac9416170975af3451faf6e7497fb
+
+Package: haproxy-block-ai-bots
+Source: ai.robots.txt
+Version: 1.45+20260307+dfsg-3
+Installed-Size: 18
+Maintainer: Daniel Baumann <daniel@debian.org>
+Architecture: all
+Depends: haproxy
+Description: list of AI agents and robots to block (haproxy)
+Homepage: https://github.com/ai-robots-txt/ai.robots.txt
+Description-md5: eefdcfd022a10f0c152055baff38d4b6
+web
+Priority: optional
+Filename: pool/main/a/ai.robots.txt/haproxy-block-ai-bots_1.45+20260307+dfsg-3_all.deb
+Size: 4892
+MD5sum: ae474e15c20f434390ea5bf0cc019e3f
+SHA256: 9def7a265fb9139c316d4f9f173bff1c5bf2f867d40e0218178a9a9faffb61eb
+
+Package: nginx-block-ai-bots
+Source: ai.robots.txt
+Version: 1.45+20260307+dfsg-3
+Installed-Size: 26
+Maintainer: Daniel Baumann <daniel@debian.org>
+Architecture: all
+Depends: nginx
+Description: list of AI agents and robots to block (nginx)
+Homepage: https://github.com/ai-robots-txt/ai.robots.txt
+Description-md5: d8e4f57f59604e479c434ebba4ee272a
+web
+Priority: optional
+Filename: pool/main/a/ai.robots.txt/nginx-block-ai-bots_1.45+20260307+dfsg-3_all.deb
+Size: 5848
+MD5sum: c140dd4b418f93ffe32f9dd3cb4113bb
+SHA256: f0aac541673cc31ffc4fa2c9e20c03fd757333ecb8f84ef522492791b7a91385
 
 Package: akregator
 Version: 4:25.12.3-1
@@ -258,6 +311,26 @@ Filename: pool/main/a/aodh/aodh-notifier_21.0.0-4_all.deb
 Size: 7916
 MD5sum: d03a2746bd72f425b6e54c9a666b8b24
 SHA256: 004bf8343945c5d406386ef4511f7995767ccd0b3225de0b6f25862f055670bd
+
+Package: apcupsd-cgi
+Source: apcupsd
+Version: 3.14.14-7
+Installed-Size: 221
+Maintainer: Thorsten Alteholz <debian@alteholz.de>
+Architecture: amd64
+Depends: apcupsd (= 3.14.14-7), libc6 (>= 2.38), libgd3 (>= 2.1.0~alpha~)
+Suggests: apache2 | httpd
+Description: APC UPS Power Management (web interface)
+Homepage: http://www.apcupsd.org/
+Description-md5: 0288cffcc7dcb455848bf077dd6b3995
+Tag: admin::power-management, hardware::power, hardware::power:ups,
+ interface::web, network::server, role::program, use::monitor, web::cgi
+web
+Priority: optional
+Filename: pool/main/a/apcupsd/apcupsd-cgi_3.14.14-7_amd64.deb
+Size: 85968
+MD5sum: 8cb1d0931cfcc6526c45e586f988e193
+SHA256: 58b639d095ab21e4a8c2d5c077dd76ae3d24575b14f2d6b65fc548d76b0ff733
 
 Package: awffull
 Version: 3.10.2-11
@@ -1662,12 +1735,12 @@ MD5sum: 7eee84f6094cec2165703f6f56dff746
 SHA256: a2f8d1730e0ca00ad57eca2cb439c1d1dd672d808ed5b90e7497a3fdeb71e5de
 
 Package: elinks
-Version: 0.19.1-1
-Installed-Size: 1791
+Version: 0.19.1-2
+Installed-Size: 1789
 Maintainer: أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>
 Architecture: amd64
 Provides: www-browser
-Depends: libbrotli1 (>= 0.6.0), libbz2-1.0, libc6 (>= 2.38), libcurl3t64-gnutls (>= 7.16.3), libev4t64 (>= 1:4.04), libexpat1 (>= 2.0.1), libfsplib0t64 (>= 0.9), libgcc-s1 (>= 3.0), libgcrypt20 (>= 1.11.0), libgnutls30t64 (>= 3.8.6), libgpm2 (>= 1.20.7), libgssapi-krb5-2 (>= 1.17), libidn2-0 (>= 2.0.0), liblua5.3-0, liblzma5 (>= 5.1.1alpha+20120614), libperl5.40 (>= 5.40.0), libpython3.13 (>= 3.13.0~rc3), libstdc++6 (>= 12), libtinfo6 (>= 6), libtre5 (>= 0.9.0), zlib1g (>= 1:1.1.4), elinks-data (= 0.19.1-1)
+Depends: libbrotli1 (>= 0.6.0), libbz2-1.0, libc6 (>= 2.38), libcurl3t64-gnutls (>= 7.16.3), libev4t64 (>= 1:4.04), libexpat1 (>= 2.0.1), libfsplib0t64 (>= 0.9), libgcc-s1 (>= 3.0), libgcrypt20 (>= 1.12.0), libgnutls30t64 (>= 3.8.6), libgpm2 (>= 1.20.7), libgssapi-krb5-2 (>= 1.17), libidn2-0 (>= 2.0.0), liblua5.3-0, liblzma5 (>= 5.1.1alpha+20120614), libperl5.40 (>= 5.40.0), libpython3.13 (>= 3.13.0~rc3), libstdc++6 (>= 12), libtinfo6 (>= 6), libtre5 (>= 0.9.0), zlib1g (>= 1:1.1.4), elinks-data (= 0.19.1-2)
 Suggests: elinks-doc
 Description: advanced text-mode WWW browser
 Homepage: https://github.com/rkd77/elinks/
@@ -1680,15 +1753,15 @@ Tag: devel::lang:lua, devel::lang:perl, devel::library, implemented-in::c,
  works-with-format::plaintext, works-with::text
 web
 Priority: optional
-Filename: pool/main/e/elinks/elinks_0.19.1-1_amd64.deb
-Size: 594876
-MD5sum: 6db66f45520bb22c1dc3744fd5bad2a8
-SHA256: 5bdea45dbb2c277c072ba624ad1cd6c75577059fcdd8910a0287ae3cbf2d2e22
+Filename: pool/main/e/elinks/elinks_0.19.1-2_amd64.deb
+Size: 593140
+MD5sum: dda3235310ad25596c1855e8bbe988a2
+SHA256: d2db6aeffd31a6dab758ec834d56e30ad28087c740157d3978dff901c1281ca7
 
 Package: elinks-data
 Source: elinks
-Version: 0.19.1-1
-Installed-Size: 1857
+Version: 0.19.1-2
+Installed-Size: 1855
 Maintainer: أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>
 Architecture: all
 Replaces: elinks (<< 0.11.3-1), elinks-lite (<< 0.12~pre6-3)
@@ -1700,10 +1773,10 @@ Description-md5: b12fd0ea4ccdeeebd88e81a5321ce4cc
 Tag: role::app-data
 web
 Priority: optional
-Filename: pool/main/e/elinks/elinks-data_0.19.1-1_all.deb
-Size: 398640
-MD5sum: ee676093cc1dfc94b69c9c5e7203da0a
-SHA256: 9bbee0359d40fcbc075f94f7575f5e19e65cf3fcbb03caaab424640405b028ea
+Filename: pool/main/e/elinks/elinks-data_0.19.1-2_all.deb
+Size: 397200
+MD5sum: 463be950ef47ba4efb1a2c294870b0f6
+SHA256: 76ca95c373b715890887baefd5dc6af28e8dde056e363d2da508724a8fe89f80
 
 Package: eot-utils
 Version: 1.1-2
@@ -1954,8 +2027,8 @@ MD5sum: f13ee12f2b97e9435560e11b2284b370
 SHA256: 2a1df0a9d23e7d1444ff58a317b2cb04b0f24dcc11667b75851dd395d2da20df
 
 Package: gallery-dl
-Version: 1.31.9-1
-Installed-Size: 2722
+Version: 1.31.10-1
+Installed-Size: 2735
 Maintainer: Unit 193 <unit193@debian.org>
 Architecture: all
 Depends: python3-requests, python3:any
@@ -1965,10 +2038,10 @@ Homepage: https://github.com/mikf/gallery-dl
 Description-md5: 0510bb32672915f74b92695fc9fb569d
 web
 Priority: optional
-Filename: pool/main/g/gallery-dl/gallery-dl_1.31.9-1_all.deb
-Size: 478104
-MD5sum: 5b3b97deef120b51395efe2947004725
-SHA256: 400384c0f45b36ab1e4f197f9bfa2422c2e8299a0ec318f88ff1891d479b827a
+Filename: pool/main/g/gallery-dl/gallery-dl_1.31.10-1_all.deb
+Size: 480192
+MD5sum: e8ced0bfa0966f5618aeccadbd904261
+SHA256: 525baff7f83fcbea5e2ddae99ead6aaea8388998e7c2311cfdded8e23097fa71
 
 Package: glowing-bear
 Version: 0.9.0+ds-6
@@ -2328,8 +2401,8 @@ MD5sum: da5ef4155c70c67b91cda75c807691f3
 SHA256: 34e0ea85e2215fa691b91f09567a1a26698c098e7d77a4b338895d5ef30c6f82
 
 Package: graphite-web
-Version: 1.1.10-10
-Installed-Size: 4581
+Version: 1.2.1~pre2-1
+Installed-Size: 4587
 Maintainer: Debian Graphite Group <team+debian-graphite-team@tracker.debian.org>
 Architecture: all
 Depends: adduser, python3-cairo, python3-django, python3-django-tagging, python3-pyparsing, python3-pytz, python3-urllib3, python3-whisper, python3-cairocffi, python3-six, python3:any
@@ -2339,10 +2412,10 @@ Homepage: https://github.com/graphite-project/graphite-web/
 Description-md5: d194dc951df04c82ac612f6b137edef8
 web
 Priority: optional
-Filename: pool/main/g/graphite-web/graphite-web_1.1.10-10_all.deb
-Size: 957900
-MD5sum: f7e14ebcd493a36e9aeeff10b4c81a98
-SHA256: e6013b8d7f7b0573df50bf77e103b35aa85fb627b652a25320b3922572a49c20
+Filename: pool/main/g/graphite-web/graphite-web_1.2.1~pre2-1_all.deb
+Size: 962360
+MD5sum: f21e2b5bb5a0082eb1c6f55d8aaf80a7
+SHA256: 18474293c6347c4a97d3f7bbb338ab1b84c1c8706b0c4319915744e4f4517637
 
 Package: grunt
 Version: 1.6.1-2
@@ -4553,12 +4626,12 @@ SHA256: 6472e6a99a56809ea14e71f9366a4f2683381fc01bdad4f263ce2de618f44ffd
 
 Package: mocha
 Source: node-mocha
-Version: 11.7.2+ds1+~cs36.3.14-2
-Installed-Size: 1133
+Version: 11.7.5+ds1+~cs36.3.14-2
+Installed-Size: 1135
 Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
 Architecture: all
-Provides: node-flat (= 6.0.1), node-log-symbols (= 7.0.1), node-mocha (= 11.7.2), node-mocha (= 11.7.2+ds1+~cs36.3.14-2), node-types-mocha (= 10.0.10), node-workerpool (= 9.2.0), node-yargs-unparser (= 2.0.0), node-yoctocolors (= 2.1.2)
-Depends: node-ansi-colors, node-browser-stdout, node-camelcase, node-chokidar, node-debug, node-decamelize, node-diff, node-escape-string-regexp, node-find-up, node-glob (>= 10~), node-growl, node-he (>= 1.2.0), node-is-plain-obj, node-is-unicode-supported, node-js-yaml (>= 3.13.1), node-minimatch, node-ms, node-nanoid, node-serialize-javascript, node-strip-json-comments, node-supports-color, node-which, node-wide-align (>= 1.1.3), node-yargs (>= 13.2.2), node-yargs-parser (>= 13.0.0), nodejs:any (>= 14)
+Provides: node-flat (= 6.0.1), node-log-symbols (= 7.0.1), node-mocha (= 11.7.5), node-mocha (= 11.7.5+ds1+~cs36.3.14-2), node-types-mocha (= 10.0.10), node-workerpool (= 9.2.0), node-yargs-unparser (= 2.0.0), node-yoctocolors (= 2.1.2)
+Depends: nodejs:any (>= 14), node-ansi-colors, node-browser-stdout, node-camelcase, node-chokidar, node-debug, node-decamelize, node-diff, node-escape-string-regexp, node-find-up, node-glob (>= 10~), node-growl, node-he (>= 1.2.0), node-is-path-inside, node-is-plain-obj, node-is-unicode-supported, node-js-yaml (>= 3.13.1), node-minimatch, node-ms, node-nanoid, node-serialize-javascript, node-strip-json-comments, node-supports-color, node-which, node-wide-align (>= 1.1.3), node-yargs (>= 13.2.2), node-yargs-parser (>= 13.0.0)
 Suggests: chai
 Breaks: node-typescript-types (<< 20201003-1~)
 Description: simple, flexible, fun test framework - Node.js module
@@ -4566,10 +4639,10 @@ Homepage: https://mochajs.org
 Description-md5: 70d1e5130e31bf8c972ec24635fac387
 web
 Priority: optional
-Filename: pool/main/n/node-mocha/mocha_11.7.2+ds1+~cs36.3.14-2_all.deb
-Size: 200416
-MD5sum: 455422cd0906212a9cc42695e85964e7
-SHA256: 41cb3edfaec3c001105a176a776b4a2dc9c6c02b7b138f06f4d5e25e7738c0a0
+Filename: pool/main/n/node-mocha/mocha_11.7.5+ds1+~cs36.3.14-2_all.deb
+Size: 200836
+MD5sum: 30aa7ba7cc038a7abb85f59237a63c07
+SHA256: 51abd779e8c92fb268b463161757ec8961d2e898a2b5706b42e6d018d707b5a0
 
 Package: nodeunit
 Source: node-nodeunit
@@ -4706,11 +4779,11 @@ SHA256: f14c2f1cc944cccac7cfb2a8ee1d03bf6775832ef91dd9d56b32597528725e85
 
 Package: nurpawiki
 Source: nurpawiki (1.2.4-4)
-Version: 1.2.4-4+b36
-Installed-Size: 1179
+Version: 1.2.4-4+b37
+Installed-Size: 1180
 Maintainer: Debian OCaml Maintainers <debian-ocaml-maint@lists.debian.org>
 Architecture: amd64
-Depends: ocsigenserver, libeliom-ocaml-dev, libangstrom-ocaml-8let3, libbigstringaf-ocaml-ua232, libcalendar-ocaml-9evu1, libcohttp-lwt-ocaml-3vcg2, libcohttp-ocaml-89gl7, libdomain-name-ocaml-xahh7, libextlib-ocaml-wnfd4, libipaddr-ocaml-z1r04, libjs-of-ocaml-c9fc9, liblwt-log-ocaml-bb8k8, liblwt-ocaml-51x61, libocamlnet-ocaml-w49c4, libocsigenserver-ocaml-saor4, libocsipersist-lib-ocaml-vn9s3, libocsipersist-ocaml-g8wr2, libpostgresql-ocaml-9zue7, libreact-ocaml-c70n0, libsexplib0-ocaml-brq84, libstdlib-ocaml-kjuo1, libtyxml-ocaml-ms1f2, liburi-ocaml-s8bp2, libxml-light-ocaml-jojr4
+Depends: ocsigenserver, libeliom-ocaml-dev, libangstrom-ocaml-8let3, libbigstringaf-ocaml-ua232, libcalendar-ocaml-9evu1, libcohttp-lwt-ocaml-gkdd8, libcohttp-ocaml-sgcd2, libdomain-name-ocaml-xahh7, libextlib-ocaml-wnfd4, libipaddr-ocaml-m1x67, libjs-of-ocaml-a1v27, liblogs-ocaml-8r765, liblwt-ocaml-51x61, libocamlnet-ocaml-w49c4, libocsigenserver-ocaml-agpd8, libocsipersist-lib-ocaml-vn9s3, libocsipersist-ocaml-g8wr2, libpostgresql-ocaml-9zue7, libptime-ocaml-po9x1, libreact-ocaml-c70n0, libsexplib0-ocaml-brq84, libstdlib-ocaml-kjuo1, libsyslog-message-ocaml-qwkv8, libtyxml-ocaml-ms1f2, liburi-ocaml-s8bp2, libxml-light-ocaml-jojr4
 Suggests: postgresql
 Description: Wiki with integrated to-do list and scheduler
 Homepage: https://github.com/glondu/nurpawiki
@@ -4719,10 +4792,10 @@ Tag: implemented-in::ocaml, interface::web, role::plugin, role::program,
  web::application, web::wiki, works-with::db
 web
 Priority: optional
-Filename: pool/main/n/nurpawiki/nurpawiki_1.2.4-4+b36_amd64.deb
-Size: 190784
-MD5sum: 9a45f76a8259a67d1be89e0f7b9fc392
-SHA256: db1cd075ea67c62d58192b7943bd5a46fe4ec5381977ff82fd7317ecb035c133
+Filename: pool/main/n/nurpawiki/nurpawiki_1.2.4-4+b37_amd64.deb
+Size: 191256
+MD5sum: 3a50ef74dc32c0a0b35cd83f30ee7497
+SHA256: cec4b76d62fb81a9a006f52d1b0e94bd818a268821fcdd3ab1802a4cd04ab4db
 
 Package: openapi-specification
 Version: 3.2.0-1
@@ -4741,8 +4814,8 @@ MD5sum: 4e96b3a4b2bead8df5d2c40a1fea9283
 SHA256: a658d69251d1700395cb0c110e07915a7a2b03dce17db6027c2c0133b7dc922f
 
 Package: openstack-debian-images
-Version: 1.88
-Installed-Size: 135
+Version: 1.89
+Installed-Size: 132
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: amd64
 Depends: debian-archive-keyring, debootstrap, dosfstools, e2fsprogs, extlinux, initramfs-tools, ipcalc, kpartx, lsb-release, mbr, parted, qemu-utils, wget
@@ -4750,31 +4823,31 @@ Description: script to build a Debian image for OpenStack
 Description-md5: ba943a6e7beffd0623b19dd6171655e8
 web
 Priority: optional
-Filename: pool/main/o/openstack-debian-images/openstack-debian-images_1.88_amd64.deb
-Size: 35276
-MD5sum: 71e7c2337c7041229e273bd7e3268616
-SHA256: 2ec6e63a3763ad9781407e762ec07d8941c23a2c5c03fa8ef6316fc9c5246045
+Filename: pool/main/o/openstack-debian-images/openstack-debian-images_1.89_amd64.deb
+Size: 32224
+MD5sum: c8470490ad1e9c8ef77e664ac3c3b35a
+SHA256: cd95c067ec8c80aea3ed5ef635c75ec16264fd721e91fa6fbc92be20df68298a
 
 Package: openstack-debian-images-build-farm
 Source: openstack-debian-images
-Version: 1.88
-Installed-Size: 41
+Version: 1.89
+Installed-Size: 38
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: amd64
-Depends: apache2, gnupg (>= 2.2.12-1+deb10u2), openstack-debian-images (= 1.88)
+Depends: apache2, gnupg (>= 2.2.12-1+deb10u2), openstack-debian-images (= 1.89)
 Description: script to build a Debian image for OpenStack
 Description-md5: 851f46989cc94bfd782fea1e6915b77d
 web
 Priority: optional
-Filename: pool/main/o/openstack-debian-images/openstack-debian-images-build-farm_1.88_amd64.deb
-Size: 11352
-MD5sum: 6052bb08631d0e8d952dbf71b897d943
-SHA256: be08589e16486add13348fcafbb9acc60b067b3a013ff4edcd253f1548504302
+Filename: pool/main/o/openstack-debian-images/openstack-debian-images-build-farm_1.89_amd64.deb
+Size: 8328
+MD5sum: bcdf6f5873980bbd589f0f2c1779de4a
+SHA256: 77c1a1c398949c23d47a385c211aa1697be6b88d8bed1e8c573950653a18d187
 
 Package: openstack-debian-images-updater
 Source: openstack-debian-images
-Version: 1.88
-Installed-Size: 33
+Version: 1.89
+Installed-Size: 30
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
 Depends: curl, jq, python3-glanceclient, python3-openstackclient, wget
@@ -4782,10 +4855,10 @@ Description: script to build a Debian image for OpenStack
 Description-md5: 2381e75b80149b896f6c7dc99cb4043c
 web
 Priority: optional
-Filename: pool/main/o/openstack-debian-images/openstack-debian-images-updater_1.88_all.deb
-Size: 10020
-MD5sum: 25272fa3f4bf30b275f880e00f1bb348
-SHA256: 91b405d5c27e03b1455cad1fedf914b53765e63316801c5f3e7f49db7461d30f
+Filename: pool/main/o/openstack-debian-images/openstack-debian-images-updater_1.89_all.deb
+Size: 7008
+MD5sum: 734441b1d79b230ee0debf803d0d2b07
+SHA256: 2fab3a4cb071d6168998f7edf675d7be7c2adccfbec83240cc24a283a835f8e1
 
 Package: libjs-oxigraph
 Source: oxigraph
@@ -7361,11 +7434,11 @@ MD5sum: 4c4393f3c468cf2ff504761ac6356e91
 SHA256: fe613f681d25dddb5684f7e53e25616cf28fff539c34d23a6bc84220d7de544e
 
 Package: trojan
-Version: 1.16.0-1.1
-Installed-Size: 1107
+Version: 1.16.0-1.2
+Installed-Size: 1160
 Maintainer: GreaterFire <GreaterFire@protonmail.com>
 Architecture: amd64
-Depends: libboost-program-options1.83.0 (>= 1.83.0), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libmariadb3 (>= 3.0.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 13.1)
+Depends: libboost-program-options1.90.0 (>= 1.90.0), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libmariadb3 (>= 3.0.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14)
 Recommends: ca-certificates
 Suggests: default-mysql-server
 Description: fast and lightweight proxy that helps you bypass firewalls
@@ -7373,10 +7446,10 @@ Homepage: https://github.com/trojan-gfw/trojan
 Description-md5: 8bf6d98eca244bb1e6856be2a61e8277
 web
 Priority: optional
-Filename: pool/main/t/trojan/trojan_1.16.0-1.1_amd64.deb
-Size: 285600
-MD5sum: 19507fd2d2abb7c8591dcf22d99dc297
-SHA256: 015c4232ee206948a36afc5e6a0f744ad789f25e07f2105e900d4118cc8ba333
+Filename: pool/main/t/trojan/trojan_1.16.0-1.2_amd64.deb
+Size: 303052
+MD5sum: 67c4bf4f7afcf9242604ceb4ea8ede78
+SHA256: f540264f78b62ae514091f91fd9dc5b73dec242e865af2d2087bdba9f14d57a9
 
 Package: tryton-sao
 Version: 7.0.42+ds1-1
@@ -8676,8 +8749,8 @@ MD5sum: f10278fdd2bc5d74b0279cfc064c64d7
 SHA256: f11b1ffcf4ae10aa3693ac0c6590d8daa02cfe189852251c41c31edcfb0e5ea9
 
 Package: yt-dlp
-Version: 2026.03.13-1
-Installed-Size: 11272
+Version: 2026.03.17-1
+Installed-Size: 11274
 Maintainer: Unit 193 <unit193@debian.org>
 Architecture: all
 Depends: python3-certifi, python3-mutagen, python3-pycryptodome, python3-requests, python3-urllib3, python3-websockets, python3:any
@@ -8688,10 +8761,10 @@ Homepage: https://github.com/yt-dlp/yt-dlp
 Description-md5: 06d020b4862afc8c686a1d2587b1b8eb
 web
 Priority: optional
-Filename: pool/main/y/yt-dlp/yt-dlp_2026.03.13-1_all.deb
-Size: 2142688
-MD5sum: 0bc9b0f80acd0e3d0be3a8a890e1c5c9
-SHA256: 7367b3415688a15b0cdb9c2ff17d3eb7910467269e064491385d3fdac1b16e48
+Filename: pool/main/y/yt-dlp/yt-dlp_2026.03.17-1_all.deb
+Size: 2143332
+MD5sum: 8fd9758c30180c92dd9340bef8376813
+SHA256: 28cdf7e58d25143437b0b084f48f5f0cba511ab0066d0e58d0d15b50ab781ef4
 
 Package: ytcc
 Version: 2.6.1-1.1
