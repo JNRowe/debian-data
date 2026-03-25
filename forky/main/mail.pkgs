@@ -3572,6 +3572,50 @@ Size: 116108
 MD5sum: 819b2d06e74d79a80cbefe63e55ab9bf
 SHA256: a1e463f7c9494a1c21172df15ba8a4c08fd27ba712b18c11e1a028eb1ccf9a7c
 
+Package: mailman3
+Version: 3.3.10-2
+Installed-Size: 9091
+Maintainer: Debian Mailman Team <pkg-mailman-hackers@lists.alioth.debian.org>
+Architecture: all
+Replaces: mailman3-core
+Provides: mailman3-core (= 3.1.1-5)
+Depends: dbconfig-sqlite3 | dbconfig-pgsql | dbconfig-mysql | dbconfig-no-thanks, logrotate, cron | cron-daemon, python3-falcon (>> 1.0.0), python3-flufl.i18n, python3-flufl.lock, python3-psycopg2 | python3-pymysql, python3-standard-nntplib, ucf, debconf (>= 0.5) | debconf-2.0, python3-aiosmtpd, python3-alembic, python3-authheaders, python3-authres, python3-click, python3-dateutil, python3-dnspython, python3-flufl.bounce, python3-gunicorn, python3-lazr.config, python3-passlib, python3-public, python3-requests, python3-sqlalchemy (>= 1.4.0), python3-zope.component, python3-zope.configuration, python3-zope.event, python3-zope.interface (>= 5.0), python3:any
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: default-mta | mail-transport-agent
+Suggests: lynx | www-browser, mailman3-doc, anacron, postgresql | default-mysql-server | virtual-mysql-server
+Breaks: mailman3-core
+Description: Mailing list management system
+Homepage: https://www.list.org/
+Description-md5: 95b97bca3cff0fc59636c61614f81160
+Tag: implemented-in::python, mail::list, protocol::db:psql, role::program,
+ suite::gnu, works-with::mail, works-with::people
+mail
+Priority: optional
+Filename: pool/main/m/mailman3/mailman3_3.3.10-2_all.deb
+Size: 926700
+MD5sum: 8e0f2799e444a2109b7239d9f18e2750
+SHA256: 7bc94f0eefc5b565d86d8582eb2be6e6a51d34fbb34cea47bc41fc8fb3f46260
+
+Package: mailman3-full
+Source: mailman3
+Version: 3.3.10-2
+Installed-Size: 51
+Maintainer: Debian Mailman Team <pkg-mailman-hackers@lists.alioth.debian.org>
+Architecture: all
+Depends: mailman3, mailman3-web, python3-mailman-hyperkitty
+Description: Full Mailman3 mailing list management suite (metapackage)
+Homepage: https://www.list.org/
+Description-md5: 4c90c102a604fba2df5ac95f91111a69
+Tag: mail::list, role::metapackage, role::program, works-with::mail,
+ works-with::people, works-with::software:package,
+ works-with::software:running
+mail
+Priority: optional
+Filename: pool/main/m/mailman3/mailman3-full_3.3.10-2_all.deb
+Size: 44132
+MD5sum: 1ca021bb747036ff8329eae61dcf3a3b
+SHA256: aa92329ab8b43328a69ed0198b3e47aaaf29097b9e7636d8c07ca7172360d60b
+
 Package: webext-mailmindr
 Source: mailmindr
 Version: 1.7.1-2
