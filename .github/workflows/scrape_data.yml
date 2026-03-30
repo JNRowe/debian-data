@@ -19,7 +19,7 @@ jobs:
       - name: Check out this repo
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
-          persist-credentials: false
+          persist-credentials: true
 
       - name: Cache ETag data for fetcher
         uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
@@ -60,10 +60,8 @@ jobs:
 
       - name: Push on main
         if: github.ref_name == 'main' && steps.commit.outputs.changed == 'true'
-        env:
-          GH_PUSH_TOKEN: ${{ secrets.GH_PUSH_TOKEN }}
         run: |-
-          git push https://x-access-token:$GH_PUSH_TOKEN@github.com/${{ github.repository }}
+          git push
 
       - name: Upload logs on failure
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
