@@ -4676,13 +4676,16 @@ MD5sum: 6e689f86d793eb79d4e62227cc1ebb74
 SHA256: aa98c94736d9f5347ed39a752cdfdc1de72ea6ea567b0dc79347f0f2c2615c97
 
 Package: cmake
-Version: 4.2.3-2
-Installed-Size: 44267
+Version: 4.3.1-1
+Installed-Size: 59690
 Maintainer: Debian CMake Team <pkg-cmake-team@lists.alioth.debian.org>
 Architecture: amd64
-Depends: cmake-data (= 4.2.3-2), procps, libarchive13t64 (>= 3.3.3), libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.0), libjsoncpp26 (>= 1.9.6), librhash1 (>= 1.2.6), libstdc++6 (>= 14), libuv1t64 (>= 1.38.0), zlib1g (>= 1:1.1.4)
+Replaces: cmake-data (<< 4.3)
+Provides: cmake-data (= 4.3.1-1)
+Depends: procps, libarchive13t64 (>= 3.8.2), libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.0), libjsoncpp26 (>= 1.9.6), librhash1 (>= 1.4.5), libstdc++6 (>= 14), libuv1t64 (>= 1.38.0), zlib1g (>= 1:1.1.4)
 Recommends: gcc, make
 Suggests: cmake-doc, cmake-format, elpa-cmake-mode, ninja-build
+Breaks: cmake-data (<< 4.3)
 Description: cross-platform, open-source make system
 Multi-Arch: foreign
 Homepage: https://cmake.org/
@@ -4692,18 +4695,18 @@ Tag: devel::buildtools, implemented-in::c++, interface::commandline,
  uitoolkit::ncurses, works-with::software:source
 devel
 Priority: optional
-Filename: pool/main/c/cmake/cmake_4.2.3-2_amd64.deb
-Size: 13015476
-MD5sum: 9fac7ea0f98a60a55e79a9c1e5afa729
-SHA256: 046b72b51e99262536f15a2e485d418660072ba69d2422dd7133a47b60a0ff21
+Filename: pool/main/c/cmake/cmake_4.3.1-1_amd64.deb
+Size: 16186212
+MD5sum: d3ad5fdcacdcec9fd6f937692d06d3da
+SHA256: 31833943fd78458bc7f704fddb0eee8b8bacd5a11422a547dc5b78873bfe0dfb
 
 Package: cmake-curses-gui
 Source: cmake
-Version: 4.2.3-2
-Installed-Size: 13656
+Version: 4.3.1-1
+Installed-Size: 14351
 Maintainer: Debian CMake Team <pkg-cmake-team@lists.alioth.debian.org>
 Architecture: amd64
-Depends: cmake (= 4.2.3-2), libarchive13t64 (>= 3.3.3), libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libgcc-s1 (>= 3.0), libjsoncpp26 (>= 1.9.6), libncurses6 (>= 6), librhash1 (>= 1.2.6), libstdc++6 (>= 14), libtinfo6 (>= 6), libuv1t64 (>= 1.38.0), zlib1g (>= 1:1.1.4)
+Depends: cmake (= 4.3.1-1), libarchive13t64 (>= 3.8.2), libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.0), libjsoncpp26 (>= 1.9.6), libncurses6 (>= 6), librhash1 (>= 1.4.5), libstdc++6 (>= 14), libtinfo6 (>= 6), libuv1t64 (>= 1.38.0), zlib1g (>= 1:1.1.4)
 Description: curses based user interface for CMake (ccmake)
 Homepage: https://cmake.org/
 Description-md5: ad28c67dee764cb32d73040783a280db
@@ -4711,38 +4714,37 @@ Tag: devel::buildtools, implemented-in::c++, interface::commandline,
  interface::text-mode, role::program, scope::utility, uitoolkit::ncurses
 devel
 Priority: optional
-Filename: pool/main/c/cmake/cmake-curses-gui_4.2.3-2_amd64.deb
-Size: 4021768
-MD5sum: 28c388adaf25c178d1e972d9b02d7ab7
-SHA256: cd6e9fb222dcb5df65c2f7bfb0be3721b974d288cf52c9f4420f6f591c9dd59d
+Filename: pool/main/c/cmake/cmake-curses-gui_4.3.1-1_amd64.deb
+Size: 4190652
+MD5sum: c48a9a80ca51204bddb353c87f84b744
+SHA256: 898814e14ea91880b5fd96540e7c0c7582eeec007d2049c93b93657aaaf2c59b
 
 Package: cmake-data
 Source: cmake
-Version: 4.2.3-2
-Installed-Size: 13184
+Version: 4.3.1-1
+Installed-Size: 39
 Maintainer: Debian CMake Team <pkg-cmake-team@lists.alioth.debian.org>
 Architecture: all
-Description: CMake data files (modules, templates and documentation)
-Multi-Arch: foreign
+Description: CMake data files (transitional dummy package)
 Homepage: https://cmake.org/
-Description-md5: 7f6054b05ba6a3b1c50fe9a6d4da8a8c
+Description-md5: 7d4dcd43707f457ab830d27fafd501ce
 Tag: devel::buildtools, made-of::html, made-of::man, role::app-data,
  role::documentation, role::program
 devel
 Priority: optional
-Filename: pool/main/c/cmake/cmake-data_4.2.3-2_all.deb
-Size: 2556024
-MD5sum: 3e9191da0eff68f98ffe54a3988b71d2
-SHA256: 82cd4f1d4902c9227b7faebbfb546a89d145e3e2b0ddd958122d9e6f5d5879c9
+Filename: pool/main/c/cmake/cmake-data_4.3.1-1_all.deb
+Size: 13004
+MD5sum: ed586e38c9fcb5e833d4b0eb6df340ac
+SHA256: 24e967d953eef8eb99567a682caa016305c62933e1c1010aecf9a164c5bb615c
 
 Package: cmake-qt-gui
 Source: cmake
-Version: 4.2.3-2
-Installed-Size: 14166
+Version: 4.3.1-1
+Installed-Size: 14861
 Maintainer: Debian CMake Team <pkg-cmake-team@lists.alioth.debian.org>
 Architecture: amd64
 Provides: cmake-gui
-Depends: cmake (= 4.2.3-2), libarchive13t64 (>= 3.3.3), libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libgcc-s1 (>= 3.0), libjsoncpp26 (>= 1.9.6), libqt6core6t64 (>= 6.9.1), libqt6gui6 (>= 6.1.2), libqt6widgets6 (>= 6.7.2), librhash1 (>= 1.2.6), libstdc++6 (>= 14), libuv1t64 (>= 1.38.0), zlib1g (>= 1:1.1.4)
+Depends: cmake (= 4.3.1-1), libarchive13t64 (>= 3.8.2), libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.0), libjsoncpp26 (>= 1.9.6), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.1.2), libqt6widgets6 (>= 6.7.2), librhash1 (>= 1.4.5), libstdc++6 (>= 14), libuv1t64 (>= 1.38.0), zlib1g (>= 1:1.1.4)
 Description: Qt based user interface for CMake (cmake-gui)
 Homepage: https://cmake.org/
 Description-md5: 1385c1223e89dd992bad5dcde2206383
@@ -4751,10 +4753,10 @@ Tag: devel::buildtools, implemented-in::c++, interface::commandline,
  uitoolkit::qt, works-with::software:source, x11::application
 devel
 Priority: optional
-Filename: pool/main/c/cmake/cmake-qt-gui_4.2.3-2_amd64.deb
-Size: 4154832
-MD5sum: 983ea9f4f81e25383e30e5c39e8033be
-SHA256: d0f2c58a394540871ceaecbaa3d76c23b138284f89d6b005d0e308429638cf46
+Filename: pool/main/c/cmake/cmake-qt-gui_4.3.1-1_amd64.deb
+Size: 4326352
+MD5sum: 5f5eaf2c68894e32a55ac68df9995601
+SHA256: 5d73f662c2de5be56552690bb5086cef6ed8483f6de08c9f7b75657bb3311822
 
 Package: cmake-format
 Version: 0.6.13-7
@@ -6098,11 +6100,11 @@ SHA256: 50ca51c76f6f2e79cb46e81ec083a2989d8a9b0dcd2c329ed6ecd65c25f5eb03
 
 Package: dh-debputy
 Source: debputy
-Version: 0.1.84
-Installed-Size: 2700
+Version: 0.1.85
+Installed-Size: 2692
 Maintainer: Debputy Maintainers <debputy@packages.debian.org>
 Architecture: all
-Provides: debputy (= 0.1.84), debputy-plugin-gnome, debputy-plugin-grantlee, debputy-plugin-numpy3, debputy-plugin-perl-openssl, dh-sequence-debputy (= 0.1.84), dh-sequence-installdebputy (= 0.1.84), dh-sequence-zz-debputy (= 0.1.84), dh-sequence-zz-debputy-rrr (= 0.1.84)
+Provides: debputy (= 0.1.85), debputy-plugin-gnome, debputy-plugin-grantlee, debputy-plugin-numpy3, debputy-plugin-perl-openssl, dh-sequence-debputy (= 0.1.85), dh-sequence-installdebputy (= 0.1.85), dh-sequence-zz-debputy (= 0.1.85), dh-sequence-zz-debputy-rrr (= 0.1.85)
 Depends: debhelper, dwz, man-db, python3-colored, python3-colorlog, python3-debian (>= 1.1.0~), python3-ruyaml | python3-ruamel.yaml, python3:any (>= 3.11~), strip-nondeterminism, perl:any
 Recommends: python3-argcomplete
 Suggests: debputy-lsp, hunspell-en-us, python3-hunspell, python3-junit.xml, python3-levenshtein, python3-lsprotocol, python3-pygls
@@ -6114,10 +6116,10 @@ Commands: debputy, dh_debputy, dh_installdebputy
 Description-md5: 0a43251d363265f0459e396fcab3fea3
 devel
 Priority: optional
-Filename: pool/main/d/debputy/dh-debputy_0.1.84_all.deb
-Size: 518352
-MD5sum: 1908ff6faf67b6a56aabf9c16ce53801
-SHA256: 020cb5e41de5a273b4c52f79516126bf7b832fc23e4b38fff948dd96e6c50917
+Filename: pool/main/d/debputy/dh-debputy_0.1.85_all.deb
+Size: 518084
+MD5sum: 83d56454f3eff3b3d5dc93f1012c9ef0
+SHA256: a853cefc549334203a4bad777de664ac77ca20f3fe676c877e7968e8831c0aa1
 
 Package: debputy-lsp
 Version: 0.2.2
@@ -9292,7 +9294,7 @@ MD5sum: 1164b6c64d5668e930202def67b3e935
 SHA256: d3b29192879328a31111334e720ff161102f0cc01f4b948f8a44a99648b833fb
 
 Package: foundry
-Version: 1.1~rc-1
+Version: 1.1.1-1
 Installed-Size: 49
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -9302,10 +9304,10 @@ Homepage: https://gitlab.gnome.org/GNOME/foundry
 Description-md5: e4494741b52579342b8d121cda6f91e0
 devel
 Priority: optional
-Filename: pool/main/f/foundry/foundry_1.1~rc-1_amd64.deb
-Size: 18356
-MD5sum: a4873045df0bbe476688669b9c307e55
-SHA256: 1d9208e8d8d71da3b17782fa4a391de93c7f201a28d8b1b6e0f1af9be60fc182
+Filename: pool/main/f/foundry/foundry_1.1.1-1_amd64.deb
+Size: 18916
+MD5sum: 4b4825b4402db2eb8ac9b84e363049d1
+SHA256: 9d9483a4aebd712e31dc93abd922903e0822e691fde1d2d781730367214d605e
 
 Package: fp-units-win-base
 Source: fp-units-win
@@ -73631,8 +73633,8 @@ MD5sum: 003e01f637f0fd5a8d422cfd6213a426
 SHA256: 34da9ce86332ffc3ae0273b3a4d26b51f750807083f4cf5711b53a984429d388
 
 Package: devhelp
-Source: manuals (50~rc-1)
-Version: 43.0+50~rc-1
+Source: manuals (50.1-1)
+Version: 43.0+50.1-1
 Installed-Size: 29
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: all
@@ -73647,10 +73649,10 @@ Tag: devel::doc, devel::lang:c, devel::library, implemented-in::c,
  works-with-format::html, works-with::text, x11::application
 devel
 Priority: optional
-Filename: pool/main/m/manuals/devhelp_43.0+50~rc-1_all.deb
-Size: 8028
-MD5sum: 4b7cf765375ef3d02ad79e6e6f64b217
-SHA256: c1815ab7fd5ea187cee9da4a47b97072cd4e9e1c112a9a5d29a63799ba304056
+Filename: pool/main/m/manuals/devhelp_43.0+50.1-1_all.deb
+Size: 8172
+MD5sum: 0e1079b4c1306af419a34a076d1cd25e
+SHA256: f9ee6e6514889d74ffa233bd5bbe52d3f17ba5526096ea3c5e8eb22ad2b0dd10
 
 Package: massif-visualizer
 Version: 25.04.0-2
@@ -75315,9 +75317,9 @@ MD5sum: ec417c599bd29bf217ba1faf6e0f2a18
 SHA256: 858ae30a20af2dc1712733f1ff8d8b1ebfa0569d054d42fc091957594042a624
 
 Package: libnng1
-Source: nng (1.11-1)
-Version: 1.11-1+b1
-Installed-Size: 526
+Source: nng
+Version: 1.11-4
+Installed-Size: 524
 Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libmbedcrypto16 (>= 3.6.0), libmbedtls21 (>= 3.6.0), libmbedx509-7 (>= 3.6.0)
@@ -75327,15 +75329,15 @@ Homepage: https://nng.nanomsg.org/
 Description-md5: f2e865e7a6e1d42209aa49e7e0aecb36
 devel
 Priority: optional
-Filename: pool/main/n/nng/libnng1_1.11-1+b1_amd64.deb
-Size: 161180
-MD5sum: c7fbbe21e5a09c4ebe79769849bacfc4
-SHA256: d9d6f57dd81b7f9bbfdfadd026f85109e6ea67cea666a55f491d197e0e5d7695
+Filename: pool/main/n/nng/libnng1_1.11-4_amd64.deb
+Size: 160592
+MD5sum: abeaca44b0a1d0262a1715e06468ae73
+SHA256: 92ece8778aae2d3abc6db00ec365764f2261ccda868b98540e49f93ecd6aa914
 
 Package: nng-utils
-Source: nng (1.11-1)
-Version: 1.11-1+b1
-Installed-Size: 100
+Source: nng
+Version: 1.11-4
+Installed-Size: 98
 Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34), libnng1 (>= 1.11)
@@ -75345,10 +75347,10 @@ Homepage: https://nng.nanomsg.org/
 Description-md5: 389a9c0a61a307cbd40b43ffa0f88b46
 devel
 Priority: optional
-Filename: pool/main/n/nng/nng-utils_1.11-1+b1_amd64.deb
-Size: 27296
-MD5sum: cad267e56e55b1fa5703b25de56e79fd
-SHA256: fdaf715079b1f65cc47702f860ccfce3bc6b6715b25ab5fcd3912b58443794c9
+Filename: pool/main/n/nng/nng-utils_1.11-4_amd64.deb
+Size: 26828
+MD5sum: 29698120809896e4b0241cb0988dd5d6
+SHA256: 58d6aa78b78782bf477d38c17f8bc0b23af0e683b59cb1980ae4e425ba409f98
 
 Package: notion-dev
 Source: notion
@@ -81880,7 +81882,7 @@ MD5sum: 21847a7618f998c4eb07f62c50c9f48b
 SHA256: 6af70a1124b4638b08d8fce199373df481714d7919ccb73916cf1ecf8e0f2f15
 
 Package: storm-lang
-Version: 0.7.5-2
+Version: 0.7.5-3
 Installed-Size: 6569
 Maintainer: Filip Strömbäck <filip@fprg.se>
 Architecture: amd64
@@ -81892,31 +81894,31 @@ Homepage: https://storm-lang.org/
 Description-md5: 7fb8a8b7f171fe912eeb672a31359bf0
 devel
 Priority: optional
-Filename: pool/main/s/storm-lang/storm-lang_0.7.5-2_amd64.deb
-Size: 1556724
-MD5sum: e217d38c3032a090ee703e6da6843903
-SHA256: 483be7d868c040c653b312f27b6ffa5bb0e2e3e0d199d024cf8d2573599b7e62
+Filename: pool/main/s/storm-lang/storm-lang_0.7.5-3_amd64.deb
+Size: 1557240
+MD5sum: d39600433048827f5cd2c4b9b7a1eac8
+SHA256: f5d6f63da5565c0da8b140fe384f97a50e89cf9a6bf57c581b223c416e43bd16
 
 Package: storm-lang-crypto
 Source: storm-lang
-Version: 0.7.5-2
+Version: 0.7.5-3
 Installed-Size: 834
 Maintainer: Filip Strömbäck <filip@fprg.se>
 Architecture: amd64
-Depends: storm-lang (>= 0.7.5-2), libc6 (>= 2.42), libgcc-s1 (>= 3.3), libssl3t64 (>= 3.0.0), libstdc++6 (>= 13.1)
+Depends: storm-lang (>= 0.7.5-3), libc6 (>= 2.42), libgcc-s1 (>= 3.3), libssl3t64 (>= 3.0.0), libstdc++6 (>= 13.1)
 Description: Cryptographic library for Storm
 Homepage: https://storm-lang.org/
 Description-md5: 70352272f01d323419dfb2dae5b7de84
 devel
 Priority: optional
-Filename: pool/main/s/storm-lang/storm-lang-crypto_0.7.5-2_amd64.deb
-Size: 251312
-MD5sum: 26b7795ea55df1f917198fbcdbfa0f7a
-SHA256: 641cd5feef42e1897d8e83b8904fbc3cfd1b65a1ba891f1cbd2af3edc2d8f26f
+Filename: pool/main/s/storm-lang/storm-lang-crypto_0.7.5-3_amd64.deb
+Size: 251472
+MD5sum: 9073c516c14215c746a2d3e6ae3dd199
+SHA256: b7a5ab9dd5d90bc2eaa39fee50cbf269d1a1c0ed2832ec064ea8d77bf79f5cab
 
 Package: storm-lang-doc
 Source: storm-lang
-Version: 0.7.5-2
+Version: 0.7.5-3
 Installed-Size: 6428
 Maintainer: Filip Strömbäck <filip@fprg.se>
 Architecture: all
@@ -81926,148 +81928,148 @@ Homepage: https://storm-lang.org/
 Description-md5: bb8c34fed822fb98b6a0e669094fd65d
 devel
 Priority: optional
-Filename: pool/main/s/storm-lang/storm-lang-doc_0.7.5-2_all.deb
-Size: 406720
-MD5sum: ae59a10c98c04b17332793e63b793c7d
-SHA256: be68e12d26ae5894b06c886cf21e5354adeba1333155b276d7780f9719429aac
+Filename: pool/main/s/storm-lang/storm-lang-doc_0.7.5-3_all.deb
+Size: 406840
+MD5sum: 6fb311479330124afbdd5e8672bb7f0a
+SHA256: fe7109b6444d34f97823b00b2bbd88b67a14b3124c4bda5ec2c5a8753a6d049d
 
 Package: storm-lang-graphics
 Source: storm-lang
-Version: 0.7.5-2
+Version: 0.7.5-3
 Installed-Size: 884
 Maintainer: Filip Strömbäck <filip@fprg.se>
 Architecture: amd64
-Depends: storm-lang (>= 0.7.5-2), libc6 (>= 2.42), libgcc-s1 (>= 3.3), libjpeg62-turbo (>= 1.3.1), libpng16-16t64 (>= 1.6.46), libstdc++6 (>= 13.1)
+Depends: storm-lang (>= 0.7.5-3), libc6 (>= 2.42), libgcc-s1 (>= 3.3), libjpeg62-turbo (>= 1.3.1), libpng16-16t64 (>= 1.6.46), libstdc++6 (>= 13.1)
 Description: Graphics library for Storm
 Homepage: https://storm-lang.org/
 Description-md5: faeaf3ca8e00b46107c15189fc967003
 devel
 Priority: optional
-Filename: pool/main/s/storm-lang/storm-lang-graphics_0.7.5-2_amd64.deb
-Size: 269212
-MD5sum: 2f6b97e7f585a9192a8e25a35b0440f4
-SHA256: 6e81b0983703d87134878e83061c7309d0951c3fd8316d73ef48c606aa73bf5c
+Filename: pool/main/s/storm-lang/storm-lang-graphics_0.7.5-3_amd64.deb
+Size: 269408
+MD5sum: e70c3ae5e3296d581d39f8d5b901269e
+SHA256: d4ecc24be9c4399c49088fb29f94254bd96923d01e99749db85bfc5dc1cd0c0f
 
 Package: storm-lang-layout
 Source: storm-lang
-Version: 0.7.5-2
+Version: 0.7.5-3
 Installed-Size: 94
 Maintainer: Filip Strömbäck <filip@fprg.se>
 Architecture: all
-Depends: storm-lang (>= 0.7.5-2)
+Depends: storm-lang (>= 0.7.5-3)
 Description: Layout library for Storm
 Homepage: https://storm-lang.org/
 Description-md5: 73f45175af8f8309da25728b9a3615bd
 devel
 Priority: optional
-Filename: pool/main/s/storm-lang/storm-lang-layout_0.7.5-2_all.deb
-Size: 23936
-MD5sum: 78be719c932b41d5193b59c50888059d
-SHA256: f0aeeeb7c5dbe0dfb065f25b2ead30bc0ecd667571be163fa9a416b7cf89de08
+Filename: pool/main/s/storm-lang/storm-lang-layout_0.7.5-3_all.deb
+Size: 23984
+MD5sum: 539dff6c58972a799b28c9dc06a83156
+SHA256: 1f2377e9064c7ec1d5862d071378725761998c65e8e6378ec518865e11dba0fa
 
 Package: storm-lang-markdown
 Source: storm-lang
-Version: 0.7.5-2
+Version: 0.7.5-3
 Installed-Size: 221
 Maintainer: Filip Strömbäck <filip@fprg.se>
 Architecture: all
-Depends: storm-lang (>= 0.7.5-2)
+Depends: storm-lang (>= 0.7.5-3)
 Description: Markdown library for Storm
 Homepage: https://storm-lang.org/
 Description-md5: dd710fd57d92af3314a54be5f89c2049
 devel
 Priority: optional
-Filename: pool/main/s/storm-lang/storm-lang-markdown_0.7.5-2_all.deb
-Size: 87488
-MD5sum: 9eee65c275c347d7cf101c8be6556a08
-SHA256: 75d7f006f204cf0e3f1bc55d2082b4fe29a77700c5d339d1788a118a9c82c7d3
+Filename: pool/main/s/storm-lang/storm-lang-markdown_0.7.5-3_all.deb
+Size: 87540
+MD5sum: ab2c66d24b16d7eb3acedb0d29e5ea51
+SHA256: 4c464fb817c92bffc11ea69c24d69596ce04f999043e18da2ba69fe9df0f8ea7
 
 Package: storm-lang-presentation
 Source: storm-lang
-Version: 0.7.5-2
+Version: 0.7.5-3
 Installed-Size: 199
 Maintainer: Filip Strömbäck <filip@fprg.se>
 Architecture: all
-Depends: storm-lang (>= 0.7.5-2), storm-lang-ui (>= 0.7.5-2), storm-lang-layout (>= 0.7.5-2)
+Depends: storm-lang (>= 0.7.5-3), storm-lang-ui (>= 0.7.5-3), storm-lang-layout (>= 0.7.5-3)
 Description: Presentation library for Storm
 Homepage: https://storm-lang.org/
 Description-md5: 52bc6180c71a6e4a7119a335568c2a2e
 devel
 Priority: optional
-Filename: pool/main/s/storm-lang/storm-lang-presentation_0.7.5-2_all.deb
-Size: 44904
-MD5sum: 6bf439699f0dfdb0bf341a303714b138
-SHA256: 97569616f8f5294a96dcf7be1804ec41016c7aa2ce45a2010172b7ec7937668c
+Filename: pool/main/s/storm-lang/storm-lang-presentation_0.7.5-3_all.deb
+Size: 44980
+MD5sum: d995d81d357b759c2809621c0f1142b5
+SHA256: 99dc0ac5e7a2783fd6705d4230b117a17f90df1960d17d1c0c05b242f399f844
 
 Package: storm-lang-sound
 Source: storm-lang
-Version: 0.7.5-2
+Version: 0.7.5-3
 Installed-Size: 913
 Maintainer: Filip Strömbäck <filip@fprg.se>
 Architecture: amd64
-Depends: storm-lang (>= 0.7.5-2), libc6 (>= 2.42), libflac14 (>= 1.5.0), libgcc-s1 (>= 3.3), libmpg123-0t64 (>= 1.28.0), libopenal1 (>= 1.14), libstdc++6 (>= 13.1), libvorbisfile3 (>= 1.1.2)
+Depends: storm-lang (>= 0.7.5-3), libc6 (>= 2.42), libflac14 (>= 1.5.0), libgcc-s1 (>= 3.3), libmpg123-0t64 (>= 1.28.0), libopenal1 (>= 1.14), libstdc++6 (>= 13.1), libvorbisfile3 (>= 1.1.2)
 Description: Sound playback library for Storm
 Homepage: https://storm-lang.org/
 Description-md5: c9b73bd970e4f5a71e8dd0e3a8bedec7
 devel
 Priority: optional
-Filename: pool/main/s/storm-lang/storm-lang-sound_0.7.5-2_amd64.deb
-Size: 265608
-MD5sum: 8dd7e7ca1beff29ed2e5d1d5c00cc665
-SHA256: 478f825410a6744b756c0709d65b7849d57b17c1d0e2c2d20b94e838ce36cb00
+Filename: pool/main/s/storm-lang/storm-lang-sound_0.7.5-3_amd64.deb
+Size: 265880
+MD5sum: 13ba95c591709bd6fbb63399c76178c3
+SHA256: de574d46bf4fcf832b09b37f0744e2e7b2c4dc8246602d960fccab81ec43b8a9
 
 Package: storm-lang-sql
 Source: storm-lang
-Version: 0.7.5-2
+Version: 0.7.5-3
 Installed-Size: 2262
 Maintainer: Filip Strömbäck <filip@fprg.se>
 Architecture: amd64
-Depends: storm-lang (>= 0.7.5-2), libc6 (>= 2.42), libgcc-s1 (>= 3.3), libstdc++6 (>= 13.1)
+Depends: storm-lang (>= 0.7.5-3), libc6 (>= 2.42), libgcc-s1 (>= 3.3), libstdc++6 (>= 13.1)
 Recommends: libmariadb3, libpq5
 Description: SQL library for Storm
 Homepage: https://storm-lang.org/
 Description-md5: 84eb4604a24d96b8bf760ae83aca14e2
 devel
 Priority: optional
-Filename: pool/main/s/storm-lang/storm-lang-sql_0.7.5-2_amd64.deb
-Size: 802460
-MD5sum: 99a7564a4fb49679e09e477ad6e6efbe
-SHA256: 0c7bbedd0a22debbc483d41fbb356f97ef79cf593e3675b4b245355376d5b0aa
+Filename: pool/main/s/storm-lang/storm-lang-sql_0.7.5-3_amd64.deb
+Size: 802332
+MD5sum: ea25be9b897c013063516264f8c968c2
+SHA256: db6b42bc0e798ec2b541a72803ca4b4941c52cd1917c8db99f69bd872928afb4
 
 Package: storm-lang-tutorials
 Source: storm-lang
-Version: 0.7.5-2
+Version: 0.7.5-3
 Installed-Size: 203
 Maintainer: Filip Strömbäck <filip@fprg.se>
 Architecture: all
-Depends: storm-lang (>= 0.7.5-2)
+Depends: storm-lang (>= 0.7.5-3)
 Description: Source code for the tutorials in the Storm manual
 Homepage: https://storm-lang.org/
 Description-md5: 4b046faeced6cec9d15f01cc8b695ccf
 devel
 Priority: optional
-Filename: pool/main/s/storm-lang/storm-lang-tutorials_0.7.5-2_all.deb
-Size: 46008
-MD5sum: 03606af267333d55fe806372d96328cb
-SHA256: bc34faf074bcd9a3d90333180804adb2fbe958e817ea974b6b91bed9da1619f2
+Filename: pool/main/s/storm-lang/storm-lang-tutorials_0.7.5-3_all.deb
+Size: 46056
+MD5sum: 7d3b4e5abefce89690b108d3358cfda2
+SHA256: 51f38434b850a5c8ebce39475ea9314302add4e311631d13be9f97c8cd14aef1
 
 Package: storm-lang-ui
 Source: storm-lang
-Version: 0.7.5-2
-Installed-Size: 1670
+Version: 0.7.5-3
+Installed-Size: 1762
 Maintainer: Filip Strömbäck <filip@fprg.se>
 Architecture: amd64
-Depends: storm-lang (>= 0.7.5-2), storm-lang-layout (>= 0.7.5-2), libc6 (>= 2.42), libcairo2 (>= 1.12.0), libgcc-s1 (>= 3.3), libgdk-pixbuf-2.0-0 (>= 2.22.0), libgl1, libglib2.0-0t64 (>= 2.80.0), libgtk-3-0t64 (>= 3.21.5), libpango-1.0-0 (>= 1.37.5), libpangocairo-1.0-0 (>= 1.14.0), libstdc++6 (>= 13.1), libx11-6
+Depends: storm-lang (>= 0.7.5-3), storm-lang-layout (>= 0.7.5-3), libc6 (>= 2.42), libcairo2 (>= 1.12.0), libegl1, libfontconfig1 (>= 2.12.6), libgcc-s1 (>= 3.3), libgdk-pixbuf-2.0-0 (>= 2.22.0), libgl1, libglib2.0-0t64 (>= 2.80.0), libgtk-3-0t64 (>= 3.21.5), libharfbuzz0b (>= 0.9.4), libpango-1.0-0 (>= 1.37.5), libpangocairo-1.0-0 (>= 1.14.0), libpangoft2-1.0-0 (>= 1.14.0), libskia146 (>= 146.20260311+dfsg), libstdc++6 (>= 13.1), libx11-6
 Description: UI library for Storm (using Gtk3)
 Homepage: https://storm-lang.org/
 Description-md5: e623eb96dd416ebecfecac7a3387d920
 Tag: uitoolkit::gtk
 devel
 Priority: optional
-Filename: pool/main/s/storm-lang/storm-lang-ui_0.7.5-2_amd64.deb
-Size: 409596
-MD5sum: 2655c2efc74359898fa8c3d62786e50a
-SHA256: 586fe7d322a1412cd6f14e6b30e173ab304dd58883c41d45a4c73b3a0898c4aa
+Filename: pool/main/s/storm-lang/storm-lang-ui_0.7.5-3_amd64.deb
+Size: 439596
+MD5sum: 7b1c7dd113004c23c7e91eb3741931db
+SHA256: dfee03c4d8f0c0fff85f0eccfd12b45a8c7ba6e0e956a949da6dd88fe5467826
 
 Package: stress
 Version: 1.0.7-2

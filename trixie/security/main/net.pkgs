@@ -1208,6 +1208,43 @@ Filename: pool/updates/main/s/swift/swift-proxy_2.35.1-0+deb13u1_all.deb
 Size: 114572
 SHA256: 3846ae517963ec2a70ad7660c8f1081a244a69e89a0e818d6875ae07cbe61afc
 
+Package: tor
+Version: 0.4.9.6-0+deb13u1
+Installed-Size: 5875
+Maintainer: Peter Palfrader <weasel@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libcap2 (>= 1:2.10), libevent-2.1-7t64 (>= 2.1.8-stable), liblzma5 (>= 5.1.1alpha+20120614), libseccomp2 (>= 0.0.0~20120605), libssl3t64 (>= 3.0.0), libsystemd0, libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4), adduser, runit-helper (>= 2.14.0~), lsb-base
+Suggests: mixmaster, torbrowser-launcher, socat, apparmor-utils, nyx, obfs4proxy
+Conflicts: libssl0.9.8 (<< 0.9.8g-9)
+Breaks: runit (<< 2.1.2-51~)
+Description: anonymizing overlay network for TCP
+Homepage: https://www.torproject.org/
+Description-md5: 9106e8e4b3843ebd532ba2b89615a92e
+Recommends: logrotate, tor-geoipdb, torsocks
+net
+Priority: optional
+Filename: pool/updates/main/t/tor/tor_0.4.9.6-0+deb13u1_amd64.deb
+Size: 2081728
+SHA256: ba6daec354799196df225f3cb54e9595da845f947b078ae1f5a1a2cd023117de
+
+Package: tor-geoipdb
+Source: tor
+Version: 0.4.9.6-0+deb13u1
+Installed-Size: 25124
+Maintainer: Peter Palfrader <weasel@debian.org>
+Architecture: all
+Replaces: tor (<< 0.2.4.8)
+Depends: tor (>= 0.4.9.6-0+deb13u1)
+Breaks: tor (<< 0.2.4.8)
+Description: GeoIP database for Tor
+Homepage: https://www.torproject.org/
+Description-md5: d0b50c9cd91157b8c85856fd55e26d14
+net
+Priority: optional
+Filename: pool/updates/main/t/tor/tor-geoipdb_0.4.9.6-0+deb13u1_all.deb
+Size: 2710500
+SHA256: eacc483754f77cad744ef99565021075e6bf10cae15184312782e45f0b3cab37
+
 Package: unbound
 Version: 1.22.0-2+deb13u1
 Installed-Size: 5208
