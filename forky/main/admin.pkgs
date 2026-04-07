@@ -13818,6 +13818,44 @@ Size: 20500
 MD5sum: 8cb28b865f19d520855e4a942532deac
 SHA256: 3511b13a79bc4d89f06b59308322e6eae4d602e670ad501f4c228c99a13a854a
 
+Package: jenkins-debian-glue
+Version: 0.23.6
+Installed-Size: 182
+Maintainer: Michael Prokop <mika@debian.org>
+Architecture: all
+Depends: sudo | sudo-ldap
+Recommends: jenkins-debian-glue-buildenv
+Conflicts: jenkins-debian-glue-buildenv-git, jenkins-debian-glue-buildenv-lintian, jenkins-debian-glue-buildenv-piuparts, jenkins-debian-glue-buildenv-slave, jenkins-debian-glue-buildenv-svn, jenkins-debian-glue-buildenv-taptools
+Description: Jenkins Debian glue scripts
+Homepage: https://github.com/mika/jenkins-debian-glue
+Description-md5: 7b51a8e326a1db99808ce80d3c2b6fb0
+admin
+Priority: optional
+Filename: pool/main/j/jenkins-debian-glue/jenkins-debian-glue_0.23.6_all.deb
+Size: 37152
+MD5sum: d05c74d3d32f5be8aae25df3901603b1
+SHA256: 0d16100b4e7d56aac3556f23ba47a26dafe43b6836c7d7143d7733cfe82a5700
+
+Package: jenkins-debian-glue-buildenv
+Source: jenkins-debian-glue
+Version: 0.23.6
+Installed-Size: 12
+Maintainer: Michael Prokop <mika@debian.org>
+Architecture: all
+Replaces: jenkins-debian-glue-buildenv-git, jenkins-debian-glue-buildenv-lintian, jenkins-debian-glue-buildenv-piuparts, jenkins-debian-glue-buildenv-slave, jenkins-debian-glue-buildenv-svn, jenkins-debian-glue-buildenv-taptools
+Depends: build-essential, cowbuilder, devscripts, dpkg-dev, eatmydata, fakeroot, file, git-buildpackage, gnupg, jenkins-debian-glue, lintian, parallel | moreutils, piuparts, pristine-tar, quilt, reprepro | freight, rsync, ruby, subversion-tools (<= 1.6.18dfsg-1) | svn2cl
+Recommends: curl, libperl-critic-perl, pycodestyle, qemu-user-static, shellcheck
+Conflicts: jenkins-debian-glue-buildenv-git, jenkins-debian-glue-buildenv-lintian, jenkins-debian-glue-buildenv-piuparts, jenkins-debian-glue-buildenv-slave, jenkins-debian-glue-buildenv-svn, jenkins-debian-glue-buildenv-taptools
+Description: Jenkins Debian glue scripts - dependency package
+Homepage: https://github.com/mika/jenkins-debian-glue
+Description-md5: 52268246a2cf4404e99f0227a4db77d1
+admin
+Priority: optional
+Filename: pool/main/j/jenkins-debian-glue/jenkins-debian-glue-buildenv_0.23.6_all.deb
+Size: 5692
+MD5sum: 911f66828748b705e92df46b18eda268
+SHA256: 6cd113920c6e3875128a5e927d1b9587569bc5c8effd8048568c871b44ac3481
+
 Package: jfsutils
 Version: 1.1.15-7
 Installed-Size: 1104
@@ -16422,8 +16460,8 @@ MD5sum: c828b42e81b3dd05ff01af1b0280534b
 SHA256: ec70387e60f0ab9c46b1dc1f5f86be5fd2c35b833831b36c4de268098f9437f2
 
 Package: mdadm
-Version: 4.6-1
-Installed-Size: 1305
+Version: 4.6-2
+Installed-Size: 1306
 Maintainer: Daniel Baumann <daniel@debian.org>
 Architecture: amd64
 Depends: udev, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38), libudev1 (>= 183)
@@ -16437,10 +16475,10 @@ Tag: admin::boot, admin::configuring, hardware::storage, implemented-in::c,
  role::program, scope::utility, use::configuring, use::monitor
 admin
 Priority: optional
-Filename: pool/main/m/mdadm/mdadm_4.6-1_amd64.deb
-Size: 450584
-MD5sum: cac184c3fecd89d2b88a6a170eaa7ebc
-SHA256: 7fc52253091d91cc225b230a68df47331a669614695cdc9a42c37e7e823705d2
+Filename: pool/main/m/mdadm/mdadm_4.6-2_amd64.deb
+Size: 450768
+MD5sum: beecc2b80212aef352d2139b58e11d66
+SHA256: 182a9725536f801bf8abc787122c422cf0761388ce0eadd3f0e2ef7ef7dff75a
 
 Package: mdevctl
 Source: mdevctl (1.4.0-2)
@@ -22592,6 +22630,25 @@ Filename: pool/main/r/ree/ree_1.4.1-3_amd64.deb
 Size: 7948
 MD5sum: 2736536b5abf719629797891d83304cf
 SHA256: efc662521598ee4e689f20463fd823a8dc8ec7265bcab322e9eb8081cc6a9bb0
+
+Package: reform-tools
+Version: 1.86-1
+Installed-Size: 4064
+Maintainer: Debian Reform Team <team+reform@tracker.debian.org>
+Architecture: all
+Depends: alsa-utils, console-setup, debconf, debianutils (>= 5.21), gpiod, jq, keyboard-configuration, libglib2.0-bin, mount, parted, procps, reform2-lpc-dkms, rsync, systemd, tzdata, xdg-terminal-exec, dconf-gsettings-backend | gsettings-backend
+Recommends: bmaptool, brightnessctl, debian-keyring, fonts-font-awesome, fonts-jetbrains-mono, gir1.2-ayatanaappindicator3-0.1, gir1.2-gdesktopenums-3.0, gir1.2-gdkpixbuf-2.0, gir1.2-glib-2.0, gir1.2-gtk-3.0, gir1.2-gtklayershell-0.1, gir1.2-notify-0.7, gnome-system-monitor, ircii, pavucontrol, pulseaudio-utils, python3, python3-gi, python3-usb1, thunar
+Suggests: reform-branding
+Description: MNT System Tools for MNT Reform and MNT Pocket Reform
+Homepage: https://source.mnt.re/reform/reform-tools/
+Description-md5: a753980269e0b522dfedf3b67f516966
+Protected: yes
+admin
+Priority: optional
+Filename: pool/main/r/reform-tools/reform-tools_1.86-1_all.deb
+Size: 3808876
+MD5sum: 86e49792511194c8927b956d5c048631
+SHA256: 7047f7e2986d7d4448a671a65927d44d46de29ba346cf9c53ca0f53d34cd95d2
 
 Package: selinux-policy-default
 Source: refpolicy
@@ -28838,8 +28895,8 @@ MD5sum: d41ad9aca1a702bc61ca11dcf64394af
 SHA256: 9c92dd0695bf2a45cae091a042ef073bda86b9b80b4fddd715f54b10473c12cf
 
 Package: virt-v2v
-Version: 2.8.1-1
-Installed-Size: 22162
+Version: 2.10.0-5
+Installed-Size: 22208
 Maintainer: Hilko Bengen <bengen@debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.42), libcrypt1 (>= 1:4.1.0), libglib2.0-0t64 (>= 2.12.0), libguestfs0t64 (>= 1:1.58.0), libjson-c5 (>= 0.15), libnbd0 (>= 1.24.0), libosinfo-1.0-0 (>= 0.2.6), libpcre2-8-0 (>= 10.22), libvirt0 (>= 1.2.8~rc2), libxml2-16 (>= 2.14.1), libnbd-bin, nbdkit, nbdkit-plugin-python, qemu-utils
@@ -28849,10 +28906,10 @@ Homepage: https://libguestfs.org/
 Description-md5: e4d40b3860ab18ac4304bed01765df49
 admin
 Priority: optional
-Filename: pool/main/v/virt-v2v/virt-v2v_2.8.1-1_amd64.deb
-Size: 2624044
-MD5sum: 52f4d1e116109d9d138bc37d337b4dcd
-SHA256: a180d52c77e990121e2eee512b818b18a31afb18b3c9735307175ac0cfb9462c
+Filename: pool/main/v/virt-v2v/virt-v2v_2.10.0-5_amd64.deb
+Size: 2672152
+MD5sum: bcd14a16e14b1de130b790aee61cc1e8
+SHA256: 4edd9fc0db697d1b5e7474c0ac9c999d46f1d1275da47518b7d7bb50afcb8477
 
 Package: virt-viewer
 Version: 11.0-4
