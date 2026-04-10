@@ -808,6 +808,142 @@ Filename: pool/updates/main/n/nova/nova-scheduler_31.0.0-6+deb13u2_all.deb
 Size: 16780
 SHA256: cf4ee017412a5d4d590c8ea03ec972c284f26c97f5acada44ea421efc5eb6261
 
+Package: openssh-client
+Source: openssh
+Version: 1:10.0p1-7+deb13u2
+Installed-Size: 4998
+Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
+Architecture: amd64
+Replaces: openssh-sk-helper, ssh, ssh-krb5
+Provides: ssh-client
+Depends: adduser, init-system-helpers (>= 1.66~), passwd, libc6 (>= 2.38), libedit2 (>= 2.11-20080614-0), libfido2-1 (>= 1.8.0), libgssapi-krb5-2 (>= 1.17), libselinux1 (>= 3.1~), libssl3t64 (>= 3.0.0), zlib1g (>= 1:1.1.4)
+Suggests: keychain, libpam-ssh, monkeysphere, ssh-askpass
+Conflicts: sftp
+Breaks: openssh-sk-helper
+Description: secure shell (SSH) client, for secure access to remote machines
+Homepage: https://www.openssh.com/
+Description-md5: 8cde3280ebad71c16b3e8c661dae6c6d
+Multi-Arch: foreign
+Recommends: xauth
+net
+Priority: standard
+Filename: pool/updates/main/o/openssh/openssh-client_10.0p1-7+deb13u2_amd64.deb
+Size: 985740
+SHA256: e6bbb079e06539ecebd598b74f7725299ba61cebd64a2cfb09f2bab8fbe25d18
+
+Package: openssh-client-gssapi
+Source: openssh
+Version: 1:10.0p1-7+deb13u2
+Installed-Size: 153
+Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
+Architecture: all
+Depends: openssh-client (>= 1:10.0p1-7+deb13u2)
+Description: secure shell (SSH) client, with GSS-API support
+Homepage: https://www.openssh.com/
+Description-md5: 1032b939c358dc15573b09b448ce55b6
+Multi-Arch: foreign
+net
+Priority: optional
+Filename: pool/updates/main/o/openssh/openssh-client-gssapi_10.0p1-7+deb13u2_all.deb
+Size: 143608
+SHA256: 30f930c4e75b01199c4f21886d82be0254c91b50cd3b21fa0fb45087c3d26b33
+
+Package: openssh-server
+Source: openssh
+Version: 1:10.0p1-7+deb13u2
+Installed-Size: 3429
+Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
+Architecture: amd64
+Replaces: openssh-client (<< 1:7.9p1-8), ssh, ssh-krb5
+Provides: ssh-server
+Depends: libpam-modules, libpam-runtime, lsb-base, openssh-client (= 1:10.0p1-7+deb13u2), openssh-sftp-server, procps, ucf, debconf (>= 0.5) | debconf-2.0, runit-helper (>= 2.14.0~), systemd | systemd-standalone-sysusers | systemd-sysusers, libaudit1 (>= 1:2.2.1), libc6 (>= 2.38), libcom-err2 (>= 1.43.9), libcrypt1 (>= 1:4.1.0), libgssapi-krb5-2 (>= 1.17), libkrb5-3 (>= 1.13~alpha1+dfsg), libpam0g (>= 0.99.7.1), libselinux1 (>= 3.1~), libssl3t64 (>= 3.0.0), libwrap0 (>= 7.6-4~), libwtmpdb0 (>= 0.13.0), zlib1g (>= 1:1.1.4)
+Suggests: molly-guard, monkeysphere, ssh-askpass, ufw
+Conflicts: sftp, ssh-socks, ssh2
+Breaks: runit (<< 2.1.2-51~)
+Description: secure shell (SSH) server, for secure access from remote machines
+Homepage: https://www.openssh.com/
+Description-md5: 842cc998cae371b9d8106c1696373919
+Multi-Arch: foreign
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: default-logind | logind | libpam-systemd, ncurses-term, xauth
+net
+Priority: optional
+Filename: pool/updates/main/o/openssh/openssh-server_10.0p1-7+deb13u2_amd64.deb
+Size: 601604
+SHA256: 46e9d73149ba34744d17f5859e8e7f0277f3f7f2daf078dd4f477dd1798f7b78
+
+Package: openssh-server-gssapi
+Source: openssh
+Version: 1:10.0p1-7+deb13u2
+Installed-Size: 153
+Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
+Architecture: all
+Depends: openssh-client-gssapi (>= 1:10.0p1-7+deb13u2), openssh-server (>= 1:10.0p1-7+deb13u2)
+Description: secure shell (SSH) server, with GSS-API key exchange
+Homepage: https://www.openssh.com/
+Description-md5: e0464de7c75a87f097d73cf92e00b779
+Multi-Arch: foreign
+net
+Priority: optional
+Filename: pool/updates/main/o/openssh/openssh-server-gssapi_10.0p1-7+deb13u2_all.deb
+Size: 143604
+SHA256: 5a82a95f0909840534b5a63a5aac05367f4a27bbefbd27eddbd33a6aa8c1e911
+
+Package: openssh-sftp-server
+Source: openssh
+Version: 1:10.0p1-7+deb13u2
+Installed-Size: 173
+Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
+Architecture: amd64
+Replaces: openssh-server (<< 1:6.5p1-5)
+Depends: openssh-client (= 1:10.0p1-7+deb13u2), libc6 (>= 2.38)
+Breaks: openssh-server (<< 1:6.5p1-5)
+Description: secure shell (SSH) sftp server module, for SFTP access from remote machines
+Homepage: https://www.openssh.com/
+Description-md5: b9a6d4f71758c154615deaec42e8415d
+Enhances: openssh-server, ssh-server
+Multi-Arch: foreign
+Recommends: openssh-server | ssh-server
+net
+Priority: optional
+Filename: pool/updates/main/o/openssh/openssh-sftp-server_10.0p1-7+deb13u2_amd64.deb
+Size: 65320
+SHA256: ceafc87f74e71d2b8346f7715064bfee197bdf2848e0a425e370e5cc4317d1f4
+
+Package: openssh-tests
+Source: openssh
+Version: 1:10.0p1-7+deb13u2
+Installed-Size: 6790
+Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
+Architecture: amd64
+Depends: openssh-client (= 1:10.0p1-7+deb13u2), openssh-server (= 1:10.0p1-7+deb13u2), openssh-sftp-server (= 1:10.0p1-7+deb13u2), openssl, putty-tools (>= 0.67-2), python3-twisted, libc6 (>= 2.38), libselinux1 (>= 3.1~), libssl3t64 (>= 3.0.0), zlib1g (>= 1:1.1.4)
+Description: OpenSSH regression tests
+Homepage: https://www.openssh.com/
+Description-md5: bb7db5bf0b75d064182f67ac05d849c9
+Multi-Arch: foreign
+net
+Priority: optional
+Filename: pool/updates/main/o/openssh/openssh-tests_10.0p1-7+deb13u2_amd64.deb
+Size: 1034224
+SHA256: 583b212e73e14b52327edd28289c567b6a1a6b59851123f56d32e84741935b68
+
+Package: ssh
+Source: openssh
+Version: 1:10.0p1-7+deb13u2
+Installed-Size: 153
+Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
+Architecture: all
+Depends: openssh-client (>= 1:10.0p1-7+deb13u2), openssh-server (>= 1:10.0p1-7+deb13u2)
+Description: secure shell client and server (metapackage)
+Homepage: https://www.openssh.com/
+Description-md5: b00e309365895c14a10af55945efb136
+Multi-Arch: foreign
+net
+Priority: optional
+Filename: pool/updates/main/o/openssh/ssh_10.0p1-7+deb13u2_all.deb
+Size: 143220
+SHA256: 64a9bea361077ba92c150e5887030c2fa0413b937fb198ee2302d8eeec42169f
+
 Package: openvpn
 Version: 2.6.14-1+deb13u1
 Installed-Size: 1777

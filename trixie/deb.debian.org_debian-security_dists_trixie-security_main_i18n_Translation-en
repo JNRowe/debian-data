@@ -5792,6 +5792,148 @@ Description-en: Java runtime based on OpenJDK (regression test support)
  This package contains all the binary files needed to run the
  OpenJDK autopkg tests.
 
+Package: openssh-client
+Description-md5: 8cde3280ebad71c16b3e8c661dae6c6d
+Description-en: secure shell (SSH) client, for secure access to remote machines
+ This is the portable version of OpenSSH, a free implementation of
+ the Secure Shell protocol as specified by the IETF secsh working
+ group.
+ .
+ Ssh (Secure Shell) is a program for logging into a remote machine
+ and for executing commands on a remote machine.
+ It provides secure encrypted communications between two untrusted
+ hosts over an insecure network. X11 connections and arbitrary TCP/IP
+ ports can also be forwarded over the secure channel.
+ It can be used to provide applications with a secure communication
+ channel.
+ .
+ This package provides the ssh, scp and sftp clients, the ssh-agent
+ and ssh-add programs to make public key authentication more convenient,
+ and the ssh-keygen, ssh-keyscan, ssh-copy-id and ssh-argv0 utilities.
+ .
+ In some countries it may be illegal to use any encryption at all
+ without a special permit.
+ .
+ ssh replaces the insecure rsh, rcp and rlogin programs, which are
+ obsolete for most purposes.
+
+Package: openssh-client-gssapi
+Description-md5: 1032b939c358dc15573b09b448ce55b6
+Description-en: secure shell (SSH) client, with GSS-API support
+ This is the portable version of OpenSSH, a free implementation of
+ the Secure Shell protocol as specified by the IETF secsh working
+ group.
+ .
+ Ssh (Secure Shell) is a program for logging into a remote machine
+ and for executing commands on a remote machine.
+ It provides secure encrypted communications between two untrusted
+ hosts over an insecure network. X11 connections and arbitrary TCP/IP
+ ports can also be forwarded over the secure channel.
+ It can be used to provide applications with a secure communication
+ channel.
+ .
+ This package provides versions of the ssh client and related programs
+ built with support for GSS-API authentication and key exchange, which
+ can be used with systems such as Kerberos.
+ It is currently an empty package depending on openssh-client, but
+ future releases will remove GSS-API support from openssh-client, so
+ users who need it should install this package.
+
+Package: openssh-server
+Description-md5: 842cc998cae371b9d8106c1696373919
+Description-en: secure shell (SSH) server, for secure access from remote machines
+ This is the portable version of OpenSSH, a free implementation of
+ the Secure Shell protocol as specified by the IETF secsh working
+ group.
+ .
+ Ssh (Secure Shell) is a program for logging into a remote machine
+ and for executing commands on a remote machine.
+ It provides secure encrypted communications between two untrusted
+ hosts over an insecure network. X11 connections and arbitrary TCP/IP
+ ports can also be forwarded over the secure channel.
+ It can be used to provide applications with a secure communication
+ channel.
+ .
+ This package provides the sshd server.
+ .
+ In some countries it may be illegal to use any encryption at all
+ without a special permit.
+ .
+ sshd replaces the insecure rshd program, which is obsolete for most
+ purposes.
+
+Package: openssh-server-gssapi
+Description-md5: e0464de7c75a87f097d73cf92e00b779
+Description-en: secure shell (SSH) server, with GSS-API key exchange
+ This is the portable version of OpenSSH, a free implementation of
+ the Secure Shell protocol as specified by the IETF secsh working
+ group.
+ .
+ Ssh (Secure Shell) is a program for logging into a remote machine
+ and for executing commands on a remote machine.
+ It provides secure encrypted communications between two untrusted
+ hosts over an insecure network. X11 connections and arbitrary TCP/IP
+ ports can also be forwarded over the secure channel.
+ It can be used to provide applications with a secure communication
+ channel.
+ .
+ This package provides a version of the sshd server built with support
+ for GSS-API authentication and key exchange, which can be used with
+ systems such as Kerberos.
+ It is currently an empty package depending on openssh-server, but
+ future releases will remove GSS-API support from openssh-server, so
+ users who need it should install this package.
+
+Package: openssh-sftp-server
+Description-md5: b9a6d4f71758c154615deaec42e8415d
+Description-en: secure shell (SSH) sftp server module, for SFTP access from remote machines
+ This is the portable version of OpenSSH, a free implementation of
+ the Secure Shell protocol as specified by the IETF secsh working
+ group.
+ .
+ Ssh (Secure Shell) is a program for logging into a remote machine
+ and for executing commands on a remote machine.
+ It provides secure encrypted communications between two untrusted
+ hosts over an insecure network. X11 connections and arbitrary TCP/IP
+ ports can also be forwarded over the secure channel.
+ It can be used to provide applications with a secure communication
+ channel.
+ .
+ This package provides the SFTP server module for the SSH server. It
+ is needed if you want to access your SSH server with SFTP. The SFTP
+ server module also works with other SSH daemons like dropbear.
+ .
+ OpenSSH's sftp and sftp-server implement revision 3 of the SSH filexfer
+ protocol described in:
+ .
+  http://www.openssh.com/txt/draft-ietf-secsh-filexfer-02.txt
+ .
+ Newer versions of the draft will not be supported, though some features
+ are individually implemented as extensions.
+
+Package: openssh-tests
+Description-md5: bb7db5bf0b75d064182f67ac05d849c9
+Description-en: OpenSSH regression tests
+ This package provides OpenSSH's regression test suite.  It is mainly
+ intended for use with the autopkgtest system, though can also be run
+ directly using /usr/lib/openssh/regress/run-tests.
+
+Package: ssh
+Description-md5: b00e309365895c14a10af55945efb136
+Description-en: secure shell client and server (metapackage)
+ This metapackage is a convenient way to install both the OpenSSH client
+ and the OpenSSH server. It provides nothing in and of itself, so you
+ may remove it if nothing depends on it.
+
+Package: ssh-askpass-gnome
+Description-md5: e888e7e8e5a6ee7b30f000dc22ed083f
+Description-en: interactive X program to prompt users for a passphrase for ssh-add
+ This has been split out of the main openssh-client package so that
+ openssh-client does not need to depend on GTK+.
+ .
+ You probably want the ssh-askpass package instead, but this is
+ provided to add to your choice and/or confusion.
+
 Package: libssl-dev
 Description-md5: 27044468897c45b271f879c7c6e135fe
 Description-en: Secure Sockets Layer toolkit - development files
