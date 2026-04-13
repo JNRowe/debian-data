@@ -3978,21 +3978,21 @@ SHA256: 39477b1d00b3f351263956b8a066a443ca3934dec0994ee000a199b7c36ca19c
 
 Package: ciborium
 Source: ciborium (1.0.2-2)
-Version: 1.0.2-2+b2
-Installed-Size: 8448
+Version: 1.0.2-2+b3
+Installed-Size: 8638
 Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
 Architecture: amd64
-Depends: dosfstools, udisks2, init-system-helpers (>= 1.52), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libqt5core5t64 (>= 5.15.15), libqt5gui5t64 (>= 5.3.0) | libqt5gui5-gles (>= 5.3.0), libqt5qml5 (>= 5.1.0), libqt5quick5 (>= 5.6.1) | libqt5quick5-gles (>= 5.6.1), libqt5widgets5t64 (>= 5.0.2), libstdc++6 (>= 4.1.1), qtbase-abi-5-15-17
+Depends: dosfstools, udisks2, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libqt5core5t64 (>= 5.15.15), libqt5gui5t64 (>= 5.3.0) | libqt5gui5-gles (>= 5.3.0), libqt5qml5 (>= 5.1.0), libqt5quick5 (>= 5.6.1) | libqt5quick5-gles (>= 5.6.1), libqt5widgets5t64 (>= 5.6.0~beta), libstdc++6 (>= 4.1.1), qtbase-abi-5-15-17
 Description: Lomiri external storage devices manager
 Homepage: https://gitlab.com/ubports/development/core/ciborium
-Built-Using: golang-1.24 (= 1.24.9-1), golang-dbus (= 5.1.0-1)
+Built-Using: golang-1.26 (= 1.26.2-1), golang-dbus (= 5.1.0-1)
 Description-md5: f04c81636fa154494414ad128f9cd39f
 utils
 Priority: optional
-Filename: pool/main/c/ciborium/ciborium_1.0.2-2+b2_amd64.deb
-Size: 1767752
-MD5sum: bdbb5ee6b5ba198d5ba6debbfca18851
-SHA256: b1449d402a38472435710e67f88ad73e1deaa90a0c0814121628f703bb9d4ea0
+Filename: pool/main/c/ciborium/ciborium_1.0.2-2+b3_amd64.deb
+Size: 1834864
+MD5sum: 2a8b026187757a5d84663ebe8b0aa0d4
+SHA256: a0cdef96f5c75d566504bc02f9a4070b1cc7ea754cf8bc9df0f0559c22f3c0f6
 
 Package: ciso
 Version: 1.0.2-3
@@ -4214,6 +4214,47 @@ Size: 88140
 MD5sum: daf85424923a46247e9978fb4be04869
 SHA256: 9353f111d401677070a269c034489530e73a58730720da20326eb47c793ea9ac
 
+Package: clamtk
+Version: 6.07-2
+Installed-Size: 1018
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Architecture: all
+Replaces: clamtk-kde, nemo-sendto-clamtk, thunar-sendto-clamtk
+Depends: perl:any, clamav (>= 0.95), clamav-freshclam (>= 0.95) | clamav-data, libgtk3-perl, libwww-perl, liblocale-gettext-perl, libtext-csv-perl, libjson-perl, liblwp-protocol-https-perl, cron | cron-daemon | anacron
+Suggests: cabextract, clamtk-gnome
+Enhances: dolphin, konqueror, nemo, thunar
+Breaks: clamtk-kde, nemo-sendto-clamtk, thunar-sendto-clamtk
+Description: graphical front-end for ClamAV
+Homepage: https://gitlab.com/dave_m/clamtk
+Description-md5: 8942c2da6c02354b285054fb8219c530
+Tag: implemented-in::perl, interface::graphical, interface::x11,
+ role::program, scope::utility, security::antivirus, uitoolkit::gtk,
+ use::checking, x11::application
+utils
+Priority: optional
+Filename: pool/main/c/clamtk/clamtk_6.07-2_all.deb
+Size: 200304
+MD5sum: 69c187eae22154f7276cd07cd553a326
+SHA256: 9cb49490e288139088443c0549e8bd05367c4c693f0bc683504cbd5a152e7937
+
+Package: clamtk-gnome
+Source: clamtk
+Version: 6.07-2
+Installed-Size: 25
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Architecture: all
+Depends: clamtk, python3-nautilus, python3-gi, python3
+Enhances: nautilus
+Description: GNOME (Nautilus) MenuProvider extension for ClamTk
+Homepage: https://gitlab.com/dave_m/clamtk
+Description-md5: fda80a0170042c568962b1893e1d98d4
+utils
+Priority: optional
+Filename: pool/main/c/clamtk/clamtk-gnome_6.07-2_all.deb
+Size: 7988
+MD5sum: cb0649adba20d6a6f52956364bdc1078
+SHA256: 247b5576e2d2c83f71b2402020eb3ee9f853bacde33643534cfb81e39cfaa008
+
 Package: clfft-client
 Source: clfft (2.12.2-7)
 Version: 2.12.2-7+b1
@@ -4434,20 +4475,20 @@ SHA256: 282d971829fbb9b2eb69e450089a911bc59c123f0b0b789ce2c54e022dd6ed2e
 
 Package: codesearch
 Source: codesearch (1.2.0-1)
-Version: 1.2.0-1+b9
-Installed-Size: 5952
+Version: 1.2.0-1+b10
+Installed-Size: 6426
 Maintainer: Michael Stapelberg <stapelberg@debian.org>
 Architecture: amd64
 Description: regular expression search over large bodies of source code
 Homepage: https://github.com/google/codesearch
-Built-Using: golang-1.24 (= 1.24.9-1)
+Built-Using: golang-1.26 (= 1.26.2-1)
 Description-md5: b2cb491f3b15b88c57c51f839ece279e
 utils
 Priority: optional
-Filename: pool/main/c/codesearch/codesearch_1.2.0-1+b9_amd64.deb
-Size: 1071308
-MD5sum: 2e6c9c7fca8c78fb1aa350c4fc49ba07
-SHA256: f3b452b400ca18eac35d855af8bff110ef8c5a930828992ee527bf561cfe9fe4
+Filename: pool/main/c/codesearch/codesearch_1.2.0-1+b10_amd64.deb
+Size: 1149192
+MD5sum: 4c53e035646c27f766b2701edff027bf
+SHA256: 844c59bc8d08aebdd5bffa2652b12b1824828a5ea87e6c16e8cc9dc603d5617b
 
 Package: golang-codesearch-dev
 Source: codesearch
@@ -8034,8 +8075,8 @@ MD5sum: 702becda337bf58a4701ff05c1128759
 SHA256: 479ffcf3e099d21a3929bd49688871dc0369261e03da2e313bc93ccfd7c1665d
 
 Package: dynamite
-Version: 0.1.1-5
-Installed-Size: 49
+Version: 0.1.1-6
+Installed-Size: 48
 Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libdynamite0 (>= 0.1.1)
@@ -8047,10 +8088,10 @@ Tag: implemented-in::c, interface::commandline, role::program,
  works-with::archive
 utils
 Priority: optional
-Filename: pool/main/d/dynamite/dynamite_0.1.1-5_amd64.deb
-Size: 8848
-MD5sum: bab940661ee436c057a36b1e3c05867d
-SHA256: 1859819b62eec8039d45769122a74102bf8f01f5e0e4b5171a4810b247ac7ce6
+Filename: pool/main/d/dynamite/dynamite_0.1.1-6_amd64.deb
+Size: 8696
+MD5sum: 08b3a75fc9c9ca94c26ccca2feddbe99
+SHA256: c3584b586ca9c7a7badd030d38328011b7c00f70be61e3fbcb893c338a9680b4
 
 Package: easy-rsa
 Version: 3.2.6-1
@@ -8340,20 +8381,20 @@ MD5sum: ac69b0d17ab25ae365169662df59da5d
 SHA256: 629bbb9e917f0f029b141814ecbf3de3f84f136b217195ef697a2f7360362af6
 
 Package: eodag
-Version: 4.0.2+ds-2
-Installed-Size: 50
+Version: 4.1.0+ds-1
+Installed-Size: 52
 Maintainer: Debian GIS Project <pkg-grass-devel@lists.alioth.debian.org>
 Architecture: all
-Depends: python3-eodag (= 4.0.2+ds-2), python3:any
+Depends: python3-eodag (= 4.1.0+ds-1), python3:any
 Description: Earth Observation Data Access Gateway - CLI
 Homepage: https://github.com/CS-SI/eodag
 Description-md5: 7c37d13e8b59d0a2c7a83c6186fbe540
 utils
 Priority: optional
-Filename: pool/main/e/eodag/eodag_4.0.2+ds-2_all.deb
-Size: 39056
-MD5sum: b3f3c7323e4dc933ef868feb48777bca
-SHA256: 0cb0e7867da5ce6c9afb13b8e5d3fc1154db58fe595804d231bc0f38d4c779ae
+Filename: pool/main/e/eodag/eodag_4.1.0+ds-1_all.deb
+Size: 40524
+MD5sum: 461d6c7927f125158c961c44457d9b9e
+SHA256: 8c37517012ddbbfe0ecfe7e5f73225595b2c9e4b3622a21f205969b536ad5324
 
 Package: etm
 Version: 3.2.39-2
@@ -11942,20 +11983,20 @@ SHA256: 5e11183c9479706379a2fe62b369f91b3fb52ee7f49a9535d2b65f849065a48b
 
 Package: ffcvt
 Source: ffcvt (1.7.6-2)
-Version: 1.7.6-2+b8
-Installed-Size: 2184
+Version: 1.7.6-2+b9
+Installed-Size: 2361
 Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Description: ffmpeg convert wrapper tool
 Homepage: https://github.com/suntong/ffcvt
-Built-Using: golang-1.24 (= 1.24.9-1)
+Built-Using: golang-1.26 (= 1.26.2-1)
 Description-md5: cb2a58ea73690234ddad703c47db8366
 utils
 Priority: optional
-Filename: pool/main/f/ffcvt/ffcvt_1.7.6-2+b8_amd64.deb
-Size: 803296
-MD5sum: c4ee3f62f21f60f94a07d876979c1d82
-SHA256: 731cd0f8bb254a32fa565783b64f84014e89498f61cc8da01d53c852ed88bf8b
+Filename: pool/main/f/ffcvt/ffcvt_1.7.6-2+b9_amd64.deb
+Size: 865240
+MD5sum: b281679450c7a2ebac3c205a8a3c4e11
+SHA256: f9686fff4ec9efb72308a3e4dea772a586aa75d182fc8c443c84a871c195bd6d
 
 Package: ffmpegfs
 Version: 2.17-1.1
@@ -13212,22 +13253,23 @@ MD5sum: 8d3471dcfc8a63fd56f702741ad90d6f
 SHA256: 83aeaa6e357c5b0e8a13396eb45f7c0ebe3ea8d2e567693d722a701f32f80cb8
 
 Package: fzf
-Version: 0.70.0-1
-Installed-Size: 4902
+Source: fzf (0.70.0-1)
+Version: 0.70.0-1+b1
+Installed-Size: 4903
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34)
 Description: general-purpose command-line fuzzy finder
 Homepage: https://github.com/junegunn/fzf
-Built-Using: golang-1.26 (= 1.26.0-1), golang-github-charlievieth-fastwalk (= 1.0.14-1), golang-github-junegunn-go-shellwords (= 0.0~git20240813.a62c48c-2), golang-github-mattn-go-isatty (= 0.0.20-1), golang-github-rivo-uniseg (= 0.4.7-1), golang-golang-x-sys (= 0.38.0-1), golang-golang-x-term (= 0.37.0-1)
+Built-Using: golang-1.26 (= 1.26.2-1), golang-github-charlievieth-fastwalk (= 1.0.14-1), golang-github-junegunn-go-shellwords (= 0.0~git20240813.a62c48c-2), golang-github-mattn-go-isatty (= 0.0.20-1), golang-github-rivo-uniseg (= 0.4.7-1), golang-golang-x-sys (= 0.42.0-1), golang-golang-x-term (= 0.41.0-1)
 Description-md5: a0bfeecf96a19354d63fcb504b7530c9
-Static-Built-Using: golang-1.26 (= 1.26.0-1), golang-github-charlievieth-fastwalk (= 1.0.14-1), golang-github-junegunn-go-shellwords (= 0.0~git20240813.a62c48c-2), golang-github-mattn-go-isatty (= 0.0.20-1), golang-github-rivo-uniseg (= 0.4.7-1), golang-golang-x-sys (= 0.38.0-1), golang-golang-x-term (= 0.37.0-1)
+Static-Built-Using: golang-1.26 (= 1.26.2-1), golang-github-charlievieth-fastwalk (= 1.0.14-1), golang-github-junegunn-go-shellwords (= 0.0~git20240813.a62c48c-2), golang-github-mattn-go-isatty (= 0.0.20-1), golang-github-rivo-uniseg (= 0.4.7-1), golang-golang-x-sys (= 0.42.0-1), golang-golang-x-term (= 0.41.0-1)
 utils
 Priority: optional
-Filename: pool/main/f/fzf/fzf_0.70.0-1_amd64.deb
-Size: 1611520
-MD5sum: 765da39ee604bd81f34e209d74ce254e
-SHA256: c461011ffb74e55ccaea61dd2f6014e429c89e93302c8e72c8f2033ffb90b41a
+Filename: pool/main/f/fzf/fzf_0.70.0-1+b1_amd64.deb
+Size: 1613056
+MD5sum: c75cf36f5cc018d444a1529c866f02cd
+SHA256: 702a281df61512b6ca2c7a150639de31fd5ebf2efc92bb35e3ac9dea1e91d4ee
 
 Package: fzy
 Version: 1.1-1
@@ -14869,22 +14911,23 @@ MD5sum: c29963809c995b3b5a54efbbdbc95108
 SHA256: 1f30d0bca0ddb169da1fa077b654752ade202fcc6dca1740f42eb5e35ac13630
 
 Package: gokey
-Version: 0.2.0-1
-Installed-Size: 2944
+Source: gokey (0.2.0-1)
+Version: 0.2.0-1+b1
+Installed-Size: 3125
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34)
 Description: simple vaultless password manager in Go
 Homepage: https://github.com/cloudflare/gokey
-Built-Using: golang-1.24 (= 1.24.9-1), golang-go.crypto (= 1:0.45.0-1), golang-golang-x-sys (= 0.38.0-1), golang-golang-x-term (= 0.37.0-1)
+Built-Using: golang-1.26 (= 1.26.2-1), golang-go.crypto (= 1:0.47.0-1), golang-golang-x-sys (= 0.42.0-1), golang-golang-x-term (= 0.41.0-1)
 Description-md5: bedf85edf3924465070d3847bd99e987
-Static-Built-Using: golang-1.24 (= 1.24.9-1), golang-go.crypto (= 1:0.45.0-1), golang-golang-x-sys (= 0.38.0-1), golang-golang-x-term (= 0.37.0-1)
+Static-Built-Using: golang-1.26 (= 1.26.2-1), golang-go.crypto (= 1:0.47.0-1), golang-golang-x-sys (= 0.42.0-1), golang-golang-x-term (= 0.41.0-1)
 utils
 Priority: optional
-Filename: pool/main/g/gokey/gokey_0.2.0-1_amd64.deb
-Size: 1061048
-MD5sum: 3be22929a54bea3ba37c172713a41eda
-SHA256: 0f781c2a45ff7f210e5f598a9437ffdfd24dea9f65b12d4777f298f0e5f5efda
+Filename: pool/main/g/gokey/gokey_0.2.0-1+b1_amd64.deb
+Size: 1132488
+MD5sum: d23cdf23129d35b134792deb20e4fef4
+SHA256: 6300fc6162fb5f423542fdb8b54d9bfc22f8647de5ac2b7a16ca9ee66960fe84
 
 Package: podman-toolbox
 Source: golang-github-containers-toolbox
@@ -14926,58 +14969,58 @@ SHA256: dd39d47b0bc51447faae1898280f30945f05884ed06cc062ac2d79c8cef1d3d9
 
 Package: ksuid
 Source: golang-github-segmentio-ksuid (1.0.4-2)
-Version: 1.0.4-2+b18
-Installed-Size: 3000
+Version: 1.0.4-2+b19
+Installed-Size: 3079
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
 Description: K-Sortable Globally Unique IDs (program)
 Homepage: https://github.com/segmentio/ksuid
-Built-Using: golang-1.24 (= 1.24.9-1)
+Built-Using: golang-1.26 (= 1.26.2-1)
 Description-md5: efb053d9087345d1a529fe6ec7af613f
 utils
 Priority: optional
-Filename: pool/main/g/golang-github-segmentio-ksuid/ksuid_1.0.4-2+b18_amd64.deb
-Size: 985588
-MD5sum: def76cc2d7f024053314c314238f952f
-SHA256: 36fa543a7bf97dc6cfd362b3aede083075c3a4eadb3846e9bb33861a16629885
+Filename: pool/main/g/golang-github-segmentio-ksuid/ksuid_1.0.4-2+b19_amd64.deb
+Size: 1043808
+MD5sum: 5f0d642c6011015bedbc40e4f2083151
+SHA256: 08fd28794a081db0dfa17489e8285c2b2866e2e4240bd8afe550552d720f1055
 
 Package: golang-github-xordataexchange-crypt
 Source: golang-github-xordataexchange-crypt (0.0.2+git20170626.21.b2862e3-4)
-Version: 0.0.2+git20170626.21.b2862e3-4+b9
-Installed-Size: 7143
+Version: 0.0.2+git20170626.21.b2862e3-4+b10
+Installed-Size: 7441
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34)
 Suggests: golang-github-xordataexchange-crypt-dev
 Description: Store/retrieve encrypted configs from etcd or Consul (CLI tool)
 Homepage: https://github.com/xordataexchange/crypt
-Built-Using: etcd (= 3.5.16-8), golang-1.24 (= 1.24.9-1), golang-github-armon-consul-api (= 0.0~git20180202.0.eb2c6b5-1), golang-github-coreos-semver (= 0.3.0-1), golang-github-json-iterator-go (= 1.1.12-2), golang-github-modern-go-concurrent (= 1.0.3-1.1), golang-github-modern-go-reflect2 (= 1.0.2-2), golang-go.crypto (= 1:0.43.0-2)
+Built-Using: etcd (= 3.5.16-10), golang-1.26 (= 1.26.2-1), golang-github-armon-consul-api (= 0.0~git20180202.0.eb2c6b5-1), golang-github-coreos-semver (= 0.3.1-1), golang-github-json-iterator-go (= 1.1.12-2), golang-github-modern-go-concurrent (= 1.0.3-1.1), golang-github-modern-go-reflect2 (= 1.0.2-2), golang-go.crypto (= 1:0.47.0-1)
 Description-md5: 562343d343b0b787f380ecfef64218eb
 utils
 Priority: optional
-Filename: pool/main/g/golang-github-xordataexchange-crypt/golang-github-xordataexchange-crypt_0.0.2+git20170626.21.b2862e3-4+b9_amd64.deb
-Size: 2348816
-MD5sum: 9168a76b11fd19b2bf4c2479ea05f316
-SHA256: c6dd49d88081e80733a89e4042950a8cebf0387987fdb573dfad4296105209d9
+Filename: pool/main/g/golang-github-xordataexchange-crypt/golang-github-xordataexchange-crypt_0.0.2+git20170626.21.b2862e3-4+b10_amd64.deb
+Size: 2448612
+MD5sum: 47edbe659549be6b262741d1be323e31
+SHA256: bc79e8cd945a45dafeda0080ac9a1e5a3137a4235a327dbb095c2a39f509de32
 
 Package: shfmt
 Source: golang-mvdan-sh (3.12.0-1)
-Version: 3.12.0-1+b1
-Installed-Size: 2877
+Version: 3.12.0-1+b2
+Installed-Size: 3035
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
 Enhances: bash, dash, mksh
 Description: format shell programs
 Homepage: https://github.com/mvdan/sh
-Built-Using: golang-1.24 (= 1.24.9-1), golang-github-google-renameio (= 2.0.0-2), golang-github-rogpeppe-go-internal (= 1.14.1-1), golang-golang-x-sys (= 0.38.0-1), golang-golang-x-term (= 0.37.0-1), golang-mvdan-editorconfig (= 0.2.0+git20240816.eab549b-2)
+Built-Using: golang-1.26 (= 1.26.2-1), golang-github-google-renameio (= 2.0.0-2), golang-github-rogpeppe-go-internal (= 1.14.1-2), golang-golang-x-sys (= 0.42.0-1), golang-golang-x-term (= 0.41.0-1), golang-mvdan-editorconfig (= 0.2.0+git20240816.eab549b-2)
 Description-md5: c837009d07c29d753e21e40b3c31b95e
-Static-Built-Using: golang-1.24 (= 1.24.9-1), golang-github-google-renameio (= 2.0.0-2), golang-github-rogpeppe-go-internal (= 1.14.1-1), golang-golang-x-sys (= 0.38.0-1), golang-golang-x-term (= 0.37.0-1), golang-mvdan-editorconfig (= 0.2.0+git20240816.eab549b-2)
+Static-Built-Using: golang-1.26 (= 1.26.2-1), golang-github-google-renameio (= 2.0.0-2), golang-github-rogpeppe-go-internal (= 1.14.1-2), golang-golang-x-sys (= 0.42.0-1), golang-golang-x-term (= 0.41.0-1), golang-mvdan-editorconfig (= 0.2.0+git20240816.eab549b-2)
 utils
 Priority: optional
-Filename: pool/main/g/golang-mvdan-sh/shfmt_3.12.0-1+b1_amd64.deb
-Size: 1033664
-MD5sum: b0500caf2ed845d926097d56980bf6d3
-SHA256: 0bd3cf3c10be532961ca8ab3bd1beebc0923d2214923ddbd5f6423cbfd79b799
+Filename: pool/main/g/golang-mvdan-sh/shfmt_3.12.0-1+b2_amd64.deb
+Size: 1092236
+MD5sum: c30180c6af81f4a56fe4ed6416e71156
+SHA256: 287b7f1fe2890fe549d44622ec2912f28d2241ea427864f750d267f4ed4dad0e
 
 Package: goldendict
 Source: goldendict-ng (26.3.0-1)
@@ -15036,8 +15079,8 @@ SHA256: 4be7179f16c1fe7e6d9aa135771a322f68d76b235d1f1e9ad7f42392c9bde9c7
 
 Package: gosop
 Source: gosop (1.1.0-3)
-Version: 1.1.0-3+b2
-Installed-Size: 7790
+Version: 1.1.0-3+b3
+Installed-Size: 7994
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
 Provides: sopv (= 1.0)
@@ -15045,14 +15088,14 @@ Depends: libc6 (>= 2.34)
 Recommends: sopv-doc
 Description: Stateless CLI for GopenPGP
 Homepage: https://github.com/ProtonMail/gosop
-Built-Using: go-md2man-v2 (= 2.0.7-1), golang-1.24 (= 1.24.9-1), golang-blackfriday-v2 (= 2.1.0-1), golang-github-cloudflare-circl (= 1.6.1-1), golang-github-protonmail-go-crypto (= 1.3.0-1), golang-github-protonmail-gopenpgp-v3 (= 3.3.0-1), golang-github-urfave-cli-v2 (= 2.25.7-5), golang-github-xrash-smetrics (= 0.0~git20201216.039620a-1), golang-go.crypto (= 1:0.43.0-2), golang-golang-x-sys (= 0.38.0-1)
+Built-Using: go-md2man-v2 (= 2.0.7-1), golang-1.26 (= 1.26.2-1), golang-blackfriday-v2 (= 2.1.0-1), golang-github-cloudflare-circl (= 1.6.3-1), golang-github-protonmail-go-crypto (= 1.4.1-1), golang-github-protonmail-gopenpgp-v3 (= 3.4.0-1), golang-github-urfave-cli-v2 (= 2.25.7-5), golang-github-xrash-smetrics (= 0.0~git20201216.039620a-1), golang-go.crypto (= 1:0.47.0-1), golang-golang-x-sys (= 0.42.0-1)
 Description-md5: b9ec37d12a484aec3a6da0549c3af240
 utils
 Priority: optional
-Filename: pool/main/g/gosop/gosop_1.1.0-3+b2_amd64.deb
-Size: 2365092
-MD5sum: 0723f77cb4e52aa39d1699e975415c35
-SHA256: d7b2e2960505a46da290abb4dd5cebff7372a46f02f57e5247269a9cf6b6a3f8
+Filename: pool/main/g/gosop/gosop_1.1.0-3+b3_amd64.deb
+Size: 2456268
+MD5sum: c6ccc328f5610dede45a2a3939d5af91
+SHA256: 725440b0112eb2c2736e1f27c9ad0b10b5a4cdd47c896d04877f5b974a6574de
 
 Package: gpgme-json
 Source: gpgme1.0
@@ -15404,21 +15447,21 @@ SHA256: fb56e8a0964ba20f23950c5cd12e7bfa495603b5aaff18e1278927c32ebafb80
 
 Package: gron
 Source: gron (0.7.1-2)
-Version: 0.7.1-2+b9
-Installed-Size: 6187
+Version: 0.7.1-2+b10
+Installed-Size: 6464
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34)
 Description: tool to transform JSON into discrete, greppable assignments
 Homepage: https://github.com/tomnomnom/gron
-Built-Using: golang-1.24 (= 1.24.9-1), golang-github-fatih-color (= 1.17.0-1), golang-github-mattn-go-colorable (= 0.1.13-1), golang-github-mattn-go-isatty (= 0.0.20-1), golang-github-nwidger-jsoncolor (= 20161209-3), golang-github-pkg-errors (= 0.9.1-3), golang-golang-x-sys (= 0.38.0-1)
+Built-Using: golang-1.26 (= 1.26.2-1), golang-github-fatih-color (= 1.19.0-1), golang-github-mattn-go-colorable (= 0.1.13-1), golang-github-mattn-go-isatty (= 0.0.20-1), golang-github-nwidger-jsoncolor (= 20161209-3), golang-github-pkg-errors (= 0.9.1-3), golang-golang-x-sys (= 0.42.0-1)
 Description-md5: 09d21f7c176f95d58f58caaf783743f0
 utils
 Priority: optional
-Filename: pool/main/g/gron/gron_0.7.1-2+b9_amd64.deb
-Size: 2093744
-MD5sum: 4c8ff37ca1fc981fb1e7cb390839278f
-SHA256: ce8a3f9a7a09b0dac0b13b8b347693e50fe7c2e9f618f181cf1373a185e27e42
+Filename: pool/main/g/gron/gron_0.7.1-2+b10_amd64.deb
+Size: 2184348
+MD5sum: e6967934bc0ac0565e2ef65995dbbdef
+SHA256: d0ecd7af2cfa8e45ca6de90df0af329a27c27bc646f13ce2d895d0fffaf6fa7f
 
 Package: group-service
 Version: 1.4.0-4
@@ -15515,22 +15558,22 @@ MD5sum: 46cb28a58e4521095ae43036067b2833
 SHA256: a1c83d46b26316efba601ad31f8a8b4be85824d81c10f57c406f42fcc610ef0a
 
 Package: gstreamer1.0-plugins-bad-apps
-Source: gst-plugins-bad1.0 (1.28.1-2)
-Version: 1.28.1-2+b2
-Installed-Size: 220
+Source: gst-plugins-bad1.0
+Version: 1.28.2-1
+Installed-Size: 227
 Maintainer: Maintainers of GStreamer packages <gst-plugins-bad1.0@packages.debian.org>
 Architecture: amd64
-Depends: gstreamer1.0-plugins-bad (= 1.28.1-2+b2), libc6 (>= 2.34), libglib2.0-0t64 (>= 2.68), libgstreamer-plugins-bad1.0-0 (>= 1.28.1), libgstreamer-plugins-base1.0-0 (>= 1.28.0), libgstreamer1.0-0 (>= 1.28.0)
+Depends: gstreamer1.0-plugins-bad (= 1.28.2-1), libc6 (>= 2.34), libglib2.0-0t64 (>= 2.68), libgstreamer-plugins-bad1.0-0 (>= 1.28.2), libgstreamer-plugins-base1.0-0 (>= 1.28.0), libgstreamer1.0-0 (>= 1.28.0)
 Conflicts: pitivi (<< 0.9999)
 Description: GStreamer helper programs from the "bad" set
 Homepage: https://gstreamer.freedesktop.org
 Description-md5: 516bac0b97ebdd36b52398c50e974c16
 utils
 Priority: optional
-Filename: pool/main/g/gst-plugins-bad1.0/gstreamer1.0-plugins-bad-apps_1.28.1-2+b2_amd64.deb
-Size: 139640
-MD5sum: 57510cc7b96a9e088e8dcb0307671461
-SHA256: d30f6e64bd1eaec8958f1ad6685193f5a1b040474498c93b33a07d94bcdcbba8
+Filename: pool/main/g/gst-plugins-bad1.0/gstreamer1.0-plugins-bad-apps_1.28.2-1_amd64.deb
+Size: 147220
+MD5sum: d2ac5ed0849ecd2d00aba2c6e22921a4
+SHA256: 1fc3bb07e34d9cd8e4dad0880958503033a62e822e4d2d644d4b1619e1dbccf9
 
 Package: gstreamer1.0-plugins-base-apps
 Source: gst-plugins-base1.0
@@ -15551,8 +15594,8 @@ SHA256: f54002ed617003a5648bf898f62f2d71760ed10062846ff971e5d3117abcb1b3
 
 Package: ges1.0-tools
 Source: gstreamer-editing-services1.0
-Version: 1.28.1-1
-Installed-Size: 102
+Version: 1.28.2-1
+Installed-Size: 103
 Maintainer: Maintainers of GStreamer packages <gstreamer-editing-services1.0@packages.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34), libges-1.0-0 (>= 1.20.0), libglib2.0-0t64 (>= 2.80.0), libgstreamer-plugins-base1.0-0 (>= 1.28.0), libgstreamer1.0-0 (>= 1.28.0)
@@ -15561,15 +15604,15 @@ Homepage: https://gstreamer.freedesktop.org
 Description-md5: c59e8d2cae5d7d4114d74760a82cde3f
 utils
 Priority: optional
-Filename: pool/main/g/gstreamer-editing-services1.0/ges1.0-tools_1.28.1-1_amd64.deb
-Size: 33712
-MD5sum: 588d8db8d902943218d858a70f82ab82
-SHA256: e156b7dfb6f8bd94860727d2217437ac4fdc1131a3db7fdaa6f11e161ddc9d41
+Filename: pool/main/g/gstreamer-editing-services1.0/ges1.0-tools_1.28.2-1_amd64.deb
+Size: 34368
+MD5sum: 10c649563b8f7237c63a565c04ae8b4b
+SHA256: 8f6950c45f2047b243c7df3ba8cb88423b79ae510037811894374121299d3d57
 
 Package: gstreamer1.0-tools
 Source: gstreamer1.0
-Version: 1.28.1-1
-Installed-Size: 309
+Version: 1.28.2-1
+Installed-Size: 311
 Maintainer: Maintainers of GStreamer packages <gstreamer1.0@packages.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libglib2.0-0t64 (>= 2.81.1), libgstreamer1.0-0 (>= 1.27.90)
@@ -15579,10 +15622,10 @@ Homepage: https://gstreamer.freedesktop.org
 Description-md5: 909df9df4ba32a53040e4e54751c1cfa
 utils
 Priority: optional
-Filename: pool/main/g/gstreamer1.0/gstreamer1.0-tools_1.28.1-1_amd64.deb
-Size: 101096
-MD5sum: 4cde5eb0175578bff91a2851f04807c6
-SHA256: d013ce84b329c0ff7e662ddf1d96a66bad6fb47c07dfb66d0be46df8e500880e
+Filename: pool/main/g/gstreamer1.0/gstreamer1.0-tools_1.28.2-1_amd64.deb
+Size: 102248
+MD5sum: 202148d424e1e5f2d41796849cae3bb3
+SHA256: aced1ddb111cef51cc2b3be4278ff43d0ba699d438e8cd25a8704ccb9394830b
 
 Package: gt5
 Version: 1.5.0~20111220+bzr29-4
@@ -16574,21 +16617,21 @@ SHA256: f003cbd5ab2de317780cd75dd195c9325d27475ada1c64556ea8e6f5b130067a
 
 Package: hut
 Source: hut (0.7.0-2)
-Version: 0.7.0-2+b1
-Installed-Size: 7869
+Version: 0.7.0-2+b2
+Installed-Size: 8247
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34)
 Description: CLI tool for sr.ht
 Homepage: https://sr.ht/~xenrox/hut/
-Built-Using: golang-1.24 (= 1.24.9-1), golang-codeberg-emersion-go-scfg (= 0.1.0-2), golang-github-dustin-go-humanize (= 1.0.1-1), golang-github-google-shlex (= 0.0~git20191202.e7afc7f-1), golang-github-juju-ansiterm (= 1.0.0-1), golang-github-lunixbochs-vtclean (= 1.0.0-1), golang-github-spf13-cobra (= 1.10.1-1), golang-github-spf13-pflag (= 1.0.10-1), golang-golang-x-sys (= 0.38.0-1), golang-golang-x-term (= 0.37.0-1), golang-sourcehut-emersion-gqlclient (= 0.0~git20230820.8873fe0-1)
+Built-Using: golang-1.26 (= 1.26.2-1), golang-codeberg-emersion-go-scfg (= 0.1.0-2), golang-github-dustin-go-humanize (= 1.0.1-1), golang-github-google-shlex (= 0.0~git20191202.e7afc7f-1), golang-github-juju-ansiterm (= 1.0.0-1), golang-github-lunixbochs-vtclean (= 1.0.0-1), golang-github-spf13-cobra (= 1.10.2-1), golang-github-spf13-pflag (= 1.0.10-1), golang-golang-x-sys (= 0.42.0-1), golang-golang-x-term (= 0.41.0-1), golang-sourcehut-emersion-gqlclient (= 0.0~git20230820.8873fe0-1)
 Description-md5: 05c2b61ec710d6b590f7fd94a5217f35
 utils
 Priority: optional
-Filename: pool/main/h/hut/hut_0.7.0-2+b1_amd64.deb
-Size: 2533504
-MD5sum: 16973f3dacd3969cc2cb1642d8ecf5ae
-SHA256: 947cbcaec980b41593ebd6a67a4911ffbe366e11b3680961609968fe817b8db2
+Filename: pool/main/h/hut/hut_0.7.0-2+b2_amd64.deb
+Size: 2658584
+MD5sum: 4afe2cb6096e296921abb568f7418b38
+SHA256: 39b07f78c66572a6e4b2dcc6c579c56eee2b8f97aa5b98317347b5d461baa918
 
 Package: hw-probe
 Version: 1.6.5-1
@@ -18908,22 +18951,22 @@ SHA256: 603bbbe4ada776cc133a5e25bd830984bffadd5948d37246bc8acce5b3ef6e83
 
 Package: jp
 Source: jp (0.2.1+ds1-1)
-Version: 0.2.1+ds1-1+b17
-Installed-Size: 4019
+Version: 0.2.1+ds1-1+b18
+Installed-Size: 4158
 Maintainer: Clint Adams <clint@debian.org>
 Architecture: amd64
 Replaces: sat-xmpp-jp (<< 0.8.0-1)
 Breaks: sat-xmpp-jp (<< 0.8.0-1)
 Description: command-line interface to JMESPath
 Homepage: https://github.com/jmespath/jp
-Built-Using: go-md2man-v2 (= 2.0.7-1), golang-1.24 (= 1.24.9-1), golang-blackfriday-v2 (= 2.1.0-1), golang-github-jmespath-go-jmespath (= 0.4.0-2), golang-github-urfave-cli (= 1.22.14-1)
+Built-Using: go-md2man-v2 (= 2.0.7-1), golang-1.26 (= 1.26.2-1), golang-blackfriday-v2 (= 2.1.0-1), golang-github-jmespath-go-jmespath (= 0.4.0-2), golang-github-urfave-cli (= 1.22.14-1)
 Description-md5: 5b576a2f55e124fa43415ce5cb65d7df
 utils
 Priority: optional
-Filename: pool/main/j/jp/jp_0.2.1+ds1-1+b17_amd64.deb
-Size: 1312244
-MD5sum: 63ecf5558b231f11b48ec81a7df7744d
-SHA256: 21e1f17086265fee01dc53d2ef1f0f4ca726b82c24eaef63822bceb01407701d
+Filename: pool/main/j/jp/jp_0.2.1+ds1-1+b18_amd64.deb
+Size: 1370512
+MD5sum: 8bb3051d9ad38b16381163ad6a60416f
+SHA256: 953510a8626e08e9e449f4be0eaa97daa148c69d16016ddf9a358795b7b50c72
 
 Package: libjxl-devtools
 Source: jpeg-xl
@@ -19277,12 +19320,11 @@ MD5sum: 929df634c928fa4d940c7ad52f86cf32
 SHA256: b040a1cd585722aadd366b15dad8be9650e58ecb24b5fdeca4db5a8f24ebb8fb
 
 Package: kde-cli-tools
-Source: kde-cli-tools (4:6.5.4-1)
-Version: 4:6.5.4-1+b1
-Installed-Size: 1019
+Version: 4:6.6.3-2
+Installed-Size: 1018
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
-Depends: kde-cli-tools-data (= 4:6.5.4-1), kio6, libkf6su-bin, libc6 (>= 2.38), libkf6completion6 (>= 6.0.0), libkf6configcore6 (>= 6.18.0~), libkf6coreaddons6 (>= 6.18.0~), libkf6i18n6 (>= 6.18.0~), libkf6iconwidgets6 (>= 6.18.0~), libkf6kcmutils6 (>= 6.18.0~), libkf6kcmutilscore6 (>= 6.18.0~), libkf6kiocore6 (>= 6.18.0~), libkf6kiogui6 (>= 6.18.0~), libkf6kiowidgets6 (>= 6.18.0~), libkf6parts6 (>= 6.18.0~), libkf6service-bin, libkf6service6 (>= 6.18.0~), libkf6su6 (>= 6.18.0~), libkf6widgetsaddons6 (>= 6.18.0~), libkf6windowsystem6 (>= 6.18.0~), libqt6core6t64 (>= 6.10.2), libqt6dbus6 (>= 6.9.0~), libqt6gui6 (>= 6.9.0~), libqt6svg6 (>= 6.9.0~), libqt6widgets6 (>= 6.9.0~), libstdc++6 (>= 13.1), qt6-base-private-abi (= 6.10.2)
+Depends: kde-cli-tools-data (= 4:6.6.3-2), kio6, libkf6su-bin, plasma-version-base-6.6, libc6 (>= 2.38), libkf6completion6 (>= 6.0.0), libkf6configcore6 (>= 6.22.0~), libkf6coreaddons6 (>= 6.22.0~), libkf6i18n6 (>= 6.22.0~), libkf6iconwidgets6 (>= 6.22.0~), libkf6kcmutils6 (>= 6.22.0~), libkf6kcmutilscore6 (>= 6.22.0~), libkf6kiocore6 (>= 6.22.0~), libkf6kiogui6 (>= 6.22.0~), libkf6kiowidgets6 (>= 6.22.0~), libkf6parts6 (>= 6.22.0~), libkf6service-bin, libkf6service6 (>= 6.22.0~), libkf6su6 (>= 6.22.0~), libkf6widgetsaddons6 (>= 6.22.0~), libkf6windowsystem6 (>= 6.22.0~), libqt6core6t64 (>= 6.10.2), libqt6dbus6 (>= 6.10.0~), libqt6gui6 (>= 6.10.0~), libqt6svg6 (>= 6.10.0~), libqt6widgets6 (>= 6.10.0~), libstdc++6 (>= 13.1), qt6-base-private-abi (= 6.10.2)
 Recommends: systemsettings
 Description: tools to use KDE services from the command line
 Homepage: https://invent.kde.org/plasma/kde-cli-tools
@@ -19290,26 +19332,27 @@ Description-md5: ec416f18a4737b8b6cc6e006a745596f
 Tag: uitoolkit::qt
 utils
 Priority: optional
-Filename: pool/main/k/kde-cli-tools/kde-cli-tools_6.5.4-1+b1_amd64.deb
-Size: 168324
-MD5sum: 115739860896b65e0b2e07be9d04da2e
-SHA256: 7d0b09097baf5f8c02f13569485d413eba69fd54ee18e59cff81229612afcd3b
+Filename: pool/main/k/kde-cli-tools/kde-cli-tools_6.6.3-2_amd64.deb
+Size: 168008
+MD5sum: 1edb860a085594531fe5c5399c5913e9
+SHA256: 395bd48544143f64cd1618e81b9cc5b298dd2f486d99f4f762505174c45fa368
 
 Package: kde-cli-tools-data
 Source: kde-cli-tools
-Version: 4:6.5.4-1
-Installed-Size: 3725
+Version: 4:6.6.3-2
+Installed-Size: 3730
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: all
+Depends: plasma-version-base-6.6
 Description: tools to use kioslaves from the command line
 Homepage: https://invent.kde.org/plasma/kde-cli-tools
 Description-md5: f4fd4613a60dec4dc609bfe3c66e0aca
 utils
 Priority: optional
-Filename: pool/main/k/kde-cli-tools/kde-cli-tools-data_6.5.4-1_all.deb
-Size: 671180
-MD5sum: a1edc2c4d982d11352883ca16171d159
-SHA256: e9a5ef974388f82c19781389cb9a35bdc1abb0f19b8fa273eeeed6c05b244f40
+Filename: pool/main/k/kde-cli-tools/kde-cli-tools-data_6.6.3-2_all.deb
+Size: 669228
+MD5sum: e19703e51918015c79a79972070ae38c
+SHA256: b2675e3ab059aa32f9b4614669c5ad1de8ee581ff5d372de16be76e35ca5c893
 
 Package: kdf
 Version: 4:25.12.1-1
@@ -19736,12 +19779,11 @@ MD5sum: bd818d77df094bf1d6f6eba2378d55b0
 SHA256: b8669014edab571b1beede9e5e1ca807c394059afd6f979d1881696c306a643c
 
 Package: kinfocenter
-Source: kinfocenter (4:6.5.4-1)
-Version: 4:6.5.4-1+b1
-Installed-Size: 3702
+Version: 4:6.6.3-2
+Installed-Size: 3791
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
-Depends: libkf6kcmutils-bin, qml6-module-org-kde-kirigami, systemsettings, usb.ids, kio6, libc6 (>= 2.34), libdrm2 (>= 2.4.75), libkf6authcore6 (>= 6.18.0~), libkf6configcore6 (>= 6.18.0~), libkf6coreaddons6 (>= 6.18.0~), libkf6i18n6 (>= 6.18.0~), libkf6kcmutils6 (>= 6.18.0~), libkf6kcmutilscore6 (>= 6.18.0~), libkf6kcmutilsquick6 (>= 6.18.0~), libkf6kiocore6 (>= 6.18.0~), libkf6kiogui6 (>= 6.18.0~), libkf6kiowidgets6 (>= 6.18.0~), libkf6service-bin, libkf6service6 (>= 6.18.0~), libkf6solid6 (>= 6.18.0~), libqt6core6t64 (>= 6.10.2), libqt6dbus6 (>= 6.9.0~), libqt6gui6 (>= 6.9.0~), libqt6qml6 (>= 6.10.2), libqt6widgets6 (>= 6.9.0~), libstdc++6 (>= 13.1), libudev1 (>= 183), libusb-1.0-0 (>= 2:1.0.16), qt6-base-private-abi (= 6.10.2), qt6-declarative-private-abi (= 6.10.2)
+Depends: libkf6kcmutils-bin, qml6-module-org-kde-kirigami, systemsettings, usb.ids, plasma-version-base-6.6, kio6, libc6 (>= 2.34), libdrm2 (>= 2.4.75), libkf6authcore6 (>= 6.22.0~), libkf6configcore6 (>= 6.22.0~), libkf6coreaddons6 (>= 6.22.0~), libkf6i18n6 (>= 6.22.0~), libkf6kcmutils6 (>= 6.22.0~), libkf6kcmutilscore6 (>= 6.22.0~), libkf6kcmutilsquick6 (>= 6.22.0~), libkf6kiocore6 (>= 6.22.0~), libkf6kiogui6 (>= 6.22.0~), libkf6kiowidgets6 (>= 6.22.0~), libkf6service-bin, libkf6service6 (>= 6.22.0~), libkf6solid6 (>= 6.22.0~), libqt6core6t64 (>= 6.10.2), libqt6dbus6 (>= 6.10.0~), libqt6gui6 (>= 6.10.0~), libqt6qml6 (>= 6.10.2), libqt6widgets6 (>= 6.10.0~), libstdc++6 (>= 13.1), libudev1 (>= 183), libusb-1.0-0 (>= 2:1.0.16), qt6-base-private-abi (= 6.10.2), qt6-declarative-private-abi (= 6.10.2)
 Recommends: aha, clinfo, dmidecode, iproute2, libdisplay-info-bin, mesa-utils, pciutils, pulseaudio-utils, vulkan-tools, wayland-utils
 Suggests: samba
 Description: system information viewer
@@ -19751,10 +19793,10 @@ Tag: implemented-in::c++, interface::graphical, interface::x11,
  role::program, suite::kde, uitoolkit::qt, x11::application
 utils
 Priority: optional
-Filename: pool/main/k/kinfocenter/kinfocenter_6.5.4-1+b1_amd64.deb
-Size: 926396
-MD5sum: 8e3be3ccd07114629c4857cc70ecbb45
-SHA256: 05ad8aeac0b3df509833914bc769d43795629bd05949ee7bdf4f51274b916b45
+Filename: pool/main/k/kinfocenter/kinfocenter_6.6.3-2_amd64.deb
+Size: 939068
+MD5sum: 81c197052b10f3a942999c5f82570d68
+SHA256: e84503034e0db3505d3fb09465fda6d38c3f891c490c8dc1090f857cfbbf7cee
 
 Package: kiwix-tools
 Version: 3.7.0-1.1
@@ -20030,12 +20072,12 @@ MD5sum: 2363df7dd7834450cbb3bc0a8ce5520b
 SHA256: 2a9cd71d9115db7a6ea169ce193490dc812e099d9979e684a48158ffe870f818
 
 Package: ksshaskpass
-Version: 4:6.5.4-1
-Installed-Size: 272
+Version: 4:6.6.3-2
+Installed-Size: 280
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Provides: ssh-askpass
-Depends: openssh-client, kwallet6, libc6 (>= 2.34), libkf6coreaddons6 (>= 6.18.0~), libkf6i18n6 (>= 6.18.0~), libkf6wallet6 (>= 6.18.0~), libkf6widgetsaddons6 (>= 6.18.0~), libqt6core6t64 (>= 6.9.1), libqt6widgets6 (>= 6.9.0~), libstdc++6 (>= 4.1.1)
+Depends: openssh-client, plasma-version-base-6.6, libc6 (>= 2.34), libkf6coreaddons6 (>= 6.22.0~), libkf6i18n6 (>= 6.22.0~), libkf6widgetsaddons6 (>= 6.22.0~), libqt6core6t64 (>= 6.10.2), libqt6keychain1 (>= 0.15.0~), libqt6widgets6 (>= 6.10.0~), libstdc++6 (>= 5)
 Recommends: kwalletmanager
 Description: interactively prompt users for a passphrase for ssh-add
 Homepage: https://invent.kde.org/plasma/ksshaskpass
@@ -20045,10 +20087,10 @@ Tag: implemented-in::c++, interface::commandline, interface::graphical,
  security::authentication, suite::kde, uitoolkit::qt, x11::application
 utils
 Priority: optional
-Filename: pool/main/k/ksshaskpass/ksshaskpass_6.5.4-1_amd64.deb
-Size: 33420
-MD5sum: 48ebe053ba917a1dca7e91f0879be356
-SHA256: fd356dbe871e660029f6dfd1abe68f92472ea2cd150bfffaca6b4c1aa919d305
+Filename: pool/main/k/ksshaskpass/ksshaskpass_6.6.3-2_amd64.deb
+Size: 34472
+MD5sum: a826cfa9e11e28f41265dcc5a8a3f441
+SHA256: 2974d5eda32305b26fd5d93b02df308e3cb560566022ca6871cb9f20457d85cb
 
 Package: ktimer
 Version: 4:25.04.0-1
@@ -20285,6 +20327,109 @@ Filename: pool/main/l/lam/lam-runtime_7.1.4-8+b1_amd64.deb
 Size: 1031416
 MD5sum: 3f17a94a65c936fe4aa0003f4ab7473e
 SHA256: 8e2cb4feadea2f5f5cc78774d1709a1a51bc632d6b0b1e32175097873ef5bda5
+
+Package: laniakea-mailgun
+Source: laniakea
+Version: 0.1.1-5
+Installed-Size: 55
+Maintainer: Matthias Klumpp <mak@debian.org>
+Architecture: all
+Depends: default-mta | mail-transport-agent | postfix, python3-jinja2, python3-laniakea, python3:any
+Description: Management suite for Debian-based OSes - E-Mail Sender
+Homepage: https://github.com/lkhq/laniakea
+Description-md5: 73ca45a30bdb1223e9641970dd3cf363
+utils
+Priority: optional
+Filename: pool/main/l/laniakea/laniakea-mailgun_0.1.1-5_all.deb
+Size: 12176
+MD5sum: 4183876c1df36faddf42a3361527e4f8
+SHA256: 455b2112fc45907c78936f8abe322e938067e1b392421d99bc0922d1ca058117
+
+Package: laniakea-mirk
+Source: laniakea
+Version: 0.1.1-5
+Installed-Size: 67
+Maintainer: Matthias Klumpp <mak@debian.org>
+Architecture: all
+Depends: python3-jinja2, python3-laniakea, python3-mautrix, python3:any
+Description: Management suite for Debian-based OSes - Matrix Bot
+Homepage: https://github.com/lkhq/laniakea
+Description-md5: f40ad6e36ddc7c0c883f06e02885777d
+utils
+Priority: optional
+Filename: pool/main/l/laniakea/laniakea-mirk_0.1.1-5_all.deb
+Size: 14552
+MD5sum: ab227e55cbcb24c1ec6b6a52548490c0
+SHA256: 3c61ed6857c69b902bb60a50f17fcea8675abf755014f993dc15864bc35c5c9a
+
+Package: laniakea-server
+Source: laniakea
+Version: 0.1.1-5
+Installed-Size: 485
+Maintainer: Matthias Klumpp <mak@debian.org>
+Architecture: all
+Depends: adduser, apt-utils, dose-builddebcheck, dose-distcheck, postgresql, python3-laniakea, python3:any
+Recommends: lintian, postgresql-18-debversion
+Description: Management suite for Debian-based OSes - Privileged Server
+Homepage: https://github.com/lkhq/laniakea
+Description-md5: e10a8e497164a9d8cb7f160221c06553
+utils
+Priority: optional
+Filename: pool/main/l/laniakea/laniakea-server_0.1.1-5_all.deb
+Size: 80976
+MD5sum: c14024af645876f2b81135e8dd4405c5
+SHA256: e557abb9c8a6d52e9d4639d02fd6c0c5378efe7bef1e83a2ee0bc5317acfaf1d
+
+Package: laniakea-webdash
+Source: laniakea
+Version: 0.1.1-5
+Installed-Size: 3363
+Maintainer: Matthias Klumpp <mak@debian.org>
+Architecture: all
+Depends: postgresql-client, python3-laniakea, python3-flask (>= 3.1.2), python3-flask (<< 3.2), python3-flask-caching, python3-flask-login, python3-flask-rebar
+Description: Management suite for Debian-based OSes - Web Dashboard
+Homepage: https://github.com/lkhq/laniakea
+Description-md5: 64b02ba9ded57b3168ab658449fd2a5f
+utils
+Priority: optional
+Filename: pool/main/l/laniakea/laniakea-webdash_0.1.1-5_all.deb
+Size: 1792556
+MD5sum: 19746f32b4f40021a2985ac8072d167a
+SHA256: 622fc4f079ff27b59ddede67992ceb5ea3fb5b090d4de9c62af50d16f083e629
+
+Package: laniakea-webswview
+Source: laniakea
+Version: 0.1.1-5
+Installed-Size: 7468
+Maintainer: Matthias Klumpp <mak@debian.org>
+Architecture: all
+Depends: postgresql-client, python3-laniakea, python3-flask (>= 3.1.2), python3-flask (<< 3.2), python3-flask-caching, python3-flask-login, python3-flask-rebar
+Description: Management suite for Debian-based OSes - Web Software Index
+Homepage: https://github.com/lkhq/laniakea
+Description-md5: fab3fd30a1855deeaa9d9af679697570
+utils
+Priority: optional
+Filename: pool/main/l/laniakea/laniakea-webswview_0.1.1-5_all.deb
+Size: 2609988
+MD5sum: a6bb989a4ad1db81c2197eef8afba3b2
+SHA256: 64c45f343598ad44253658aa23998a09c8da4880d506677e4bc3ecc4bb095221
+
+Package: laniakea-webupload
+Source: laniakea
+Version: 0.1.1-5
+Installed-Size: 45
+Maintainer: Matthias Klumpp <mak@debian.org>
+Architecture: all
+Depends: python3-flask, python3-laniakea
+Description: Management suite for Debian-based OSes - HTTP Upload Receiver
+Homepage: https://github.com/lkhq/laniakea
+Description-md5: 9b33de5db751e8c5350cb7a6e099661e
+utils
+Priority: optional
+Filename: pool/main/l/laniakea/laniakea-webupload_0.1.1-5_all.deb
+Size: 10056
+MD5sum: 71fb327e2d649fb5558aef9e724054c5
+SHA256: 376e568ac965664afc230b24a89560c4a4dbd391555153c4b611dd325f2d0553
 
 Package: laptop-detect
 Version: 0.16+nmu1
@@ -26689,40 +26834,40 @@ SHA256: d2b0257f1c9f4b83d8c1b3aab5a27187d9d8440293e1a73a6c9079bfbd176777
 
 Package: nuntium
 Source: nuntium (2.2~git20250410.5332b482-2)
-Version: 2.2~git20250410.5332b482-2+b3
-Installed-Size: 4823
+Version: 2.2~git20250410.5332b482-2+b4
+Installed-Size: 4735
 Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
 Architecture: amd64
-Depends: ofono, lomiri-download-manager, lomiri-upload-manager, init-system-helpers (>= 1.52), libc6 (>= 2.34)
+Depends: ofono, lomiri-download-manager, lomiri-upload-manager, libc6 (>= 2.34)
 Recommends: telepathy-ofono
 Description: Bridges push notifications from ofono to telepathy-ofono
 Homepage: https://gitlab.com/ubports/development/core/nuntium
-Built-Using: golang-1.24 (= 1.24.9-1), golang-dbus (= 5.1.0-1), golang-github-adrg-xdg (= 0.5.3-1), golang-gitlab-ubports-development-core-go-ldm (= 0.3-2), golang-go-flags (= 1.4.0-6)
+Built-Using: golang-1.26 (= 1.26.2-1), golang-dbus (= 5.1.0-1), golang-github-adrg-xdg (= 0.5.3-1), golang-gitlab-ubports-development-core-go-ldm (= 0.3-3), golang-go-flags (= 1.4.0-6)
 Description-md5: 10d74e4cc5696e66be939a798828000c
 utils
 Priority: optional
-Filename: pool/main/n/nuntium/nuntium_2.2~git20250410.5332b482-2+b3_amd64.deb
-Size: 1571916
-MD5sum: ecc2cea2479d810aef7577eebaa55002
-SHA256: d8c3489d9cf2fcd04dcee611bec5b623db3c4174d4aaa760eefe4b809c7d8e3f
+Filename: pool/main/n/nuntium/nuntium_2.2~git20250410.5332b482-2+b4_amd64.deb
+Size: 1569568
+MD5sum: 3f27f044f612293ae0a222d036d5e173
+SHA256: 711353784ab6ff527eb1de026e6e9f81e63f3cc723e0b6eac8ec4f271cbe9850
 
 Package: nuntium-tools
 Source: nuntium (2.2~git20250410.5332b482-2)
-Version: 2.2~git20250410.5332b482-2+b3
-Installed-Size: 8645
+Version: 2.2~git20250410.5332b482-2+b4
+Installed-Size: 8993
 Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34)
 Description: Useful tools for working with MMS and nuntium
 Homepage: https://gitlab.com/ubports/development/core/nuntium
-Built-Using: golang-1.24 (= 1.24.9-1), golang-dbus (= 5.1.0-1), golang-github-adrg-xdg (= 0.5.3-1), golang-gitlab-ubports-development-core-go-ldm (= 0.3-2), golang-go-flags (= 1.4.0-6)
+Built-Using: golang-1.26 (= 1.26.2-1), golang-dbus (= 5.1.0-1), golang-github-adrg-xdg (= 0.5.3-1), golang-gitlab-ubports-development-core-go-ldm (= 0.3-3), golang-go-flags (= 1.4.0-6)
 Description-md5: 5492257b5bcb6058de0a59c658cd5aef
 utils
 Priority: optional
-Filename: pool/main/n/nuntium/nuntium-tools_2.2~git20250410.5332b482-2+b3_amd64.deb
-Size: 2335948
-MD5sum: 4f7778e96c62cc4a3312cbc3ea3f2989
-SHA256: 14ef7b97ec241b5bc1a7300fbd7cb48711bde52706bb18c4f160defbe6b4e082
+Filename: pool/main/n/nuntium/nuntium-tools_2.2~git20250410.5332b482-2+b4_amd64.deb
+Size: 2428132
+MD5sum: a2d0c28ddb54866bff7fd54e1080846d
+SHA256: 6889685e307be2cbd865f6b38edc98d433cf32cb3bd34d281d4352ba3ed47c75
 
 Package: nvpy
 Version: 2.3.1-1
@@ -29400,21 +29545,21 @@ SHA256: 980e43742f25e63b9c0b06a260aa07464b1ade2ea165a620a4a494261ac56f0a
 
 Package: pk4
 Source: pk4 (5+nmu1)
-Version: 5+nmu1+b9
-Installed-Size: 18910
+Version: 5+nmu1+b10
+Installed-Size: 19742
 Maintainer: Michael Stapelberg <stapelberg@debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34), debian-keyring, devscripts, dpkg-dev, systemd-sysv
 Recommends: sbuild
 Description: make available the Debian source package producing the specified package
-Built-Using: golang-1.24 (= 1.24.9-1), golang-go.crypto (= 1:0.43.0-2), golang-golang-x-sync (= 0.7.0-1), golang-pault-go-debian (= 0.16.0-1), golang-pault-go-topsort (= 0.1.1-1)
+Built-Using: golang-1.26 (= 1.26.2-1), golang-go.crypto (= 1:0.47.0-1), golang-golang-x-sync (= 0.19.0-1), golang-pault-go-debian (= 0.16.0-1), golang-pault-go-topsort (= 0.1.1-1)
 Description-md5: 12a79bced01106d10b2470230cf64166
 utils
 Priority: optional
-Filename: pool/main/p/pk4/pk4_5+nmu1+b9_amd64.deb
-Size: 3472200
-MD5sum: 5d8ce6c77c0de8e6b9e5a182e7127348
-SHA256: c61800fbdffdc2e58ef43885f48600a6203c6f7a6fe2e86576d260cac940efae
+Filename: pool/main/p/pk4/pk4_5+nmu1+b10_amd64.deb
+Size: 3629120
+MD5sum: 2bae09ec14b76de5598254269f14d6c9
+SHA256: cb4440c0bfc94dc05b34da3ef41b6ecbdcff5eae5f21bc35b68b0c86a0f05218
 
 Package: pkb-client
 Version: 2.3.1-1
@@ -29519,21 +29664,21 @@ MD5sum: 290a5c9707b0169c2028d0c38e32a7e6
 SHA256: cb1b5dbd4c067ce214f1a9bafaa20640fa9cbb6f6fc66ca32eec3faae41df62a
 
 Package: plasma-systemmonitor
-Version: 6.5.4-1
-Installed-Size: 2599
+Version: 6.6.3-2
+Installed-Size: 3013
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
-Depends: ksystemstats (>= 6.2.90~), libksysguard-bin (>= 6.2.90~), python3:any, qml6-module-org-kde-iconthemes, qml6-module-org-kde-kirigami, qml6-module-org-kde-kitemmodels, qml6-module-org-kde-kquickcontrolsaddons, qml6-module-org-kde-ksysguard, qml6-module-org-kde-newstuff, qml6-module-org-kde-quickcharts, qml6-module-qt-labs-platform, qml6-module-qt-labs-qmlmodels, qml6-module-qtcore, qml6-module-qtqml, qml6-module-qtqml-models, qml6-module-qtqml-workerscript, qml6-module-qtquick, qml6-module-qtquick-controls, qml6-module-qtquick-dialogs, qml6-module-qtquick-layouts, qml6-module-qtquick-window, libc6 (>= 2.34), libkf6configcore6 (>= 6.18.0~), libkf6configgui6 (>= 6.18.0~), libkf6coreaddons6 (>= 6.0.0), libkf6crash6 (>= 6.18.0~), libkf6dbusaddons6 (>= 6.18.0~), libkf6globalaccel6 (>= 6.18.0~), libkf6i18n6 (>= 6.18.0~), libkf6i18nqml6 (>= 6.18.0~), libkf6itemmodels6 (>= 6.18.0~), libkf6kiogui6 (>= 6.18.0~), libkf6newstuffcore6 (>= 6.18.0~), libkf6service-bin, libkf6service6 (>= 6.18.0~), libkf6windowsystem6 (>= 6.18.0~), libksysguardsensorfaces2 (>= 4:6.5.4~), libqt6core6t64 (>= 6.9.1), libqt6dbus6 (>= 6.9.0~), libqt6gui6 (>= 6.9.0~), libqt6qml6 (>= 6.9.1), libqt6quick6 (>= 6.9.0~), libqt6widgets6 (>= 6.9.0~), libstdc++6 (>= 9)
+Depends: ksystemstats (>= 6.2.90~), libksysguard-bin (>= 6.2.90~), python3:any, qml6-module-org-kde-iconthemes, qml6-module-org-kde-kirigami, qml6-module-org-kde-kitemmodels, qml6-module-org-kde-kquickcontrolsaddons, qml6-module-org-kde-ksysguard, qml6-module-org-kde-newstuff, qml6-module-org-kde-quickcharts, qml6-module-qt-labs-platform, qml6-module-qt-labs-qmlmodels, qml6-module-qtcore, qml6-module-qtqml, qml6-module-qtqml-models, qml6-module-qtqml-workerscript, qml6-module-qtquick, qml6-module-qtquick-controls, qml6-module-qtquick-dialogs, qml6-module-qtquick-layouts, qml6-module-qtquick-window, plasma-version-base-6.6, libc6 (>= 2.34), libkf6configcore6 (>= 6.22.0~), libkf6configgui6 (>= 6.22.0~), libkf6coreaddons6 (>= 6.0.0), libkf6crash6 (>= 6.22.0~), libkf6dbusaddons6 (>= 6.22.0~), libkf6globalaccel6 (>= 6.22.0~), libkf6i18n6 (>= 6.22.0~), libkf6i18nqml6 (>= 6.22.0~), libkf6itemmodels6 (>= 6.23.0), libkf6kiogui6 (>= 6.22.0~), libkf6newstuffcore6 (>= 6.22.0~), libkf6service-bin, libkf6service6 (>= 6.22.0~), libkf6windowsystem6 (>= 6.22.0~), libksysguardsensorfaces2 (>= 4:6.6.3~), libqt6core6t64 (>= 6.10.2), libqt6dbus6 (>= 6.10.0~), libqt6gui6 (>= 6.10.0~), libqt6qml6 (>= 6.10.2), libqt6quick6 (>= 6.10.0~), libqt6widgets6 (>= 6.10.0~), libstdc++6 (>= 9), qt6-base-private-abi (= 6.10.2), qt6-declarative-private-abi (= 6.10.2)
 Description: System monitor for the Plasma desktop
 Homepage: https://apps.kde.org/en/plasma-systemmonitor
 Description-md5: 1b72d6233a49c7dc69ba7fcd6903e3da
 Tag: uitoolkit::qt
 utils
 Priority: optional
-Filename: pool/main/p/plasma-systemmonitor/plasma-systemmonitor_6.5.4-1_amd64.deb
-Size: 433044
-MD5sum: 24ab433d281bdf640f8a65c32e385b1a
-SHA256: d06d606f324cd506875449a5edc019255b2f7198e609c8493eac72828b7e287a
+Filename: pool/main/p/plasma-systemmonitor/plasma-systemmonitor_6.6.3-2_amd64.deb
+Size: 490904
+MD5sum: fe66f25ebad2d5025fc8c05d9b849d82
+SHA256: f852689cfedb738bf9ce1f22e1e1aac7903e625e6d9f4659fcc979256aa129a1
 
 Package: plocate
 Version: 1.1.24-1
@@ -38497,8 +38642,8 @@ SHA256: 6e7ecfa0acd093cfb5ceda9c39f0898f164e7dc8514080c437794f79068a0397
 
 Package: ssh-tools
 Source: ssh-tools (1.9-1)
-Version: 1.9-1+b7
-Installed-Size: 5968
+Version: 1.9-1+b8
+Installed-Size: 6292
 Maintainer: Sven Wick <sven.wick@gmx.de>
 Architecture: amd64
 Depends: libc6 (>= 2.34), perl:any, openssh-client
@@ -38507,16 +38652,16 @@ Suggests: perl-doc
 Description: collection of various tools using ssh
 Multi-Arch: foreign
 Homepage: https://codeberg.org/vaporup/ssh-tools
-Built-Using: golang-1.24 (= 1.24.9-1), golang-go.crypto (= 1:0.43.0-2), golang-k8s-sigs-yaml (= 1.4.0-2)
+Built-Using: golang-1.26 (= 1.26.2-1), golang-go.crypto (= 1:0.47.0-1), golang-k8s-sigs-yaml (= 1.4.0-2)
 Description-md5: cf6289569531a03eac1d86aed98b2798
-Static-Built-Using: golang-1.24 (= 1.24.9-1), golang-go.crypto (= 1:0.43.0-2), golang-k8s-sigs-yaml (= 1.4.0-2)
+Static-Built-Using: golang-1.26 (= 1.26.2-1), golang-go.crypto (= 1:0.47.0-1), golang-k8s-sigs-yaml (= 1.4.0-2)
 Tag: implemented-in::shell, protocol::ssh, role::program, use::checking
 utils
 Priority: optional
-Filename: pool/main/s/ssh-tools/ssh-tools_1.9-1+b7_amd64.deb
-Size: 1628432
-MD5sum: 90607e53995d3d3727dd33cdf1eb8465
-SHA256: 40b26fe0e167b1839617124ffa0cc272428e63b89ceaf49ec5f463f9942d8738
+Filename: pool/main/s/ssh-tools/ssh-tools_1.9-1+b8_amd64.deb
+Size: 1703732
+MD5sum: aad04ce6ad0c0b06f67d998f755f112e
+SHA256: 07b6769ade3dd38144d624bdb0e1e3f0a1838a7586c952489c071109f42bab5c
 
 Package: sshfs
 Source: sshfs-fuse (3.7.3-1.1)
@@ -41305,20 +41450,20 @@ SHA256: a04fdc38aabfaffe972b61e78b19079eb95585ac167241d9d0d7efd2ce693961
 
 Package: tty-record
 Source: tty-record (0.1.0+git20240821.2a020f5+ds-1)
-Version: 0.1.0+git20240821.2a020f5+ds-1+b9
-Installed-Size: 3127
+Version: 0.1.0+git20240821.2a020f5+ds-1+b10
+Installed-Size: 3245
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
 Description: Simple tool to record a terminal session
 Homepage: https://github.com/elisescu/tty-record
-Built-Using: golang-1.24 (= 1.24.9-1), golang-github-creack-pty (= 1.1.21-1), golang-golang-x-sys (= 0.38.0-1), golang-golang-x-term (= 0.37.0-1)
+Built-Using: golang-1.26 (= 1.26.2-1), golang-github-creack-pty (= 1.1.21-1), golang-golang-x-sys (= 0.42.0-1), golang-golang-x-term (= 0.41.0-1)
 Description-md5: a0129b7e7b5fbcb6e96b6faf8a6c7619
 utils
 Priority: optional
-Filename: pool/main/t/tty-record/tty-record_0.1.0+git20240821.2a020f5+ds-1+b9_amd64.deb
-Size: 1096752
-MD5sum: fec4161e754ac5dfbb4dd746e901be55
-SHA256: 546ff62dd597f56803ae1b94fd2f2d3c6e3b4235ea6575e7f5251b61fa0f6435
+Filename: pool/main/t/tty-record/tty-record_0.1.0+git20240821.2a020f5+ds-1+b10_amd64.deb
+Size: 1154800
+MD5sum: 1de2aeb10dc1176ed5139dd69176c467
+SHA256: 44c86c66495eccb61c5cc060aca6e4e27f7bef347a42705d782a153eb2eab82b
 
 Package: ttygif
 Version: 1.5.0-1
@@ -45802,21 +45947,21 @@ SHA256: fdf44b6eebab176d05b65a5fc91a1a82a06d61630860b2a4bd8f74b455fe8fd8
 
 Package: yubikey-touch-detector
 Source: yubikey-touch-detector (1.12.5-1)
-Version: 1.12.5-1+b7
-Installed-Size: 3981
+Version: 1.12.5-1+b8
+Installed-Size: 4238
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
-Depends: init-system-helpers (>= 1.52), libc6 (>= 2.34), libgpgme45 (>= 1.23.2)
+Depends: libc6 (>= 2.34), libgpgme45 (>= 1.23.2)
 Description: tool to notify you when your YubiKey is waiting for a touch
 Homepage: https://github.com/maximbaz/yubikey-touch-detector
-Built-Using: golang-1.24 (= 1.24.9-1), golang-dbus (= 5.1.0-1), golang-github-coreos-go-systemd (= 22.6.0-1), golang-github-deckarep-golang-set (= 2.8.0-1), golang-github-esiqveland-notify (= 0.13.3-2), golang-github-proglottis-gpgme (= 0.1.5-1), golang-github-rjeczalik-notify (= 0.9.3-3), golang-github-vtolstov-go-ioctl (= 0.0~git20151206.6be9cce-2), golang-golang-x-sys (= 0.38.0-1), golang-logrus (= 1.9.3-1)
+Built-Using: golang-1.26 (= 1.26.2-1), golang-dbus (= 5.1.0-1), golang-github-coreos-go-systemd (= 22.6.0-1), golang-github-deckarep-golang-set (= 2.8.0-1), golang-github-esiqveland-notify (= 0.13.3-2), golang-github-proglottis-gpgme (= 0.1.5-1), golang-github-rjeczalik-notify (= 0.9.3-3), golang-github-vtolstov-go-ioctl (= 0.0~git20151206.6be9cce-2), golang-golang-x-sys (= 0.42.0-1), golang-logrus (= 1.9.3-1)
 Description-md5: 171ecee3605cfcdd78dae71973bd015f
 utils
 Priority: optional
-Filename: pool/main/y/yubikey-touch-detector/yubikey-touch-detector_1.12.5-1+b7_amd64.deb
-Size: 1392464
-MD5sum: 6a2e49eac76a971a5699507d6f760012
-SHA256: 11245d9c04dfc8186eb410176d26a08c85ba8c24864c2e70c43a8a4768cf920a
+Filename: pool/main/y/yubikey-touch-detector/yubikey-touch-detector_1.12.5-1+b8_amd64.deb
+Size: 1484344
+MD5sum: 5c2ba8719f8feb2326db87eb5f487e70
+SHA256: 7e1903fd534967bd414080d136394b0493648c8044216a5807530a95cf54d505
 
 Package: yubioath-desktop
 Version: 5.1.0-5

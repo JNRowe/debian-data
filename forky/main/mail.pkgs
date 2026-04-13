@@ -554,6 +554,44 @@ Size: 91660
 MD5sum: b23c11e8adf5bcc45940a69d9d523858
 SHA256: b408be049dbe31a2a6950e34bfd6e1feacc63af574c89c58aea59c0007d772a6
 
+Package: clamassassin
+Version: 1.2.4-2
+Installed-Size: 33
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: all
+Depends: clamav, procmail
+Description: email virus filter wrapper for ClamAV
+Description-md5: b12e365364402b946b1ca5b4910b7896
+Tag: implemented-in::shell, interface::commandline, mail::filters,
+ role::program, scope::utility, security::antivirus, use::filtering,
+ works-with::mail
+mail
+Priority: optional
+Filename: pool/main/c/clamassassin/clamassassin_1.2.4-2_all.deb
+Size: 14488
+MD5sum: 252ac70442a898a278f474fe9a9c2683
+SHA256: 37ff7d8ac35e7ab245caea390a65b23a218065246cd4426a84756e01fe05421b
+
+Package: clamsmtp
+Version: 1.10-18.2
+Installed-Size: 143
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Architecture: amd64
+Depends: dpkg (>= 1.10.11), clamav-daemon (>= 0.75.1), adduser, lsb-base (>= 3.0-6), libc6 (>= 2.38), debconf (>= 0.5) | debconf-2.0
+Recommends: postfix | mail-transport-agent
+Description: virus-scanning SMTP proxy
+Homepage: http://thewalter.net/stef/software/clamsmtp/
+Description-md5: cdf08a4ae6d4e7583dc83022589ace70
+Tag: implemented-in::c, interface::daemon, mail::smtp, network::server,
+ network::service, protocol::smtp, role::program, security::antivirus,
+ use::proxying, use::scanning, works-with::mail
+mail
+Priority: optional
+Filename: pool/main/c/clamsmtp/clamsmtp_1.10-18.2_amd64.deb
+Size: 50028
+MD5sum: ac46454286070bc9a18fc33f60687050
+SHA256: f20e653c3fec3c539cd4c60e92f57d6a5920047165bb884f040ecc08041ae461
+
 Package: claws-mail
 Version: 4.4.0-1
 Installed-Size: 4411
@@ -2358,26 +2396,27 @@ MD5sum: 895e7fed74f036cd45456c9c1c8bd1ba
 SHA256: 8095fd308dc5ed48082165457e301b78fa8cb4d047197352d906081b702cba4d
 
 Package: email-reminder
-Version: 1.1.0-2
-Installed-Size: 8886
+Source: email-reminder (1.1.0-2)
+Version: 1.1.0-2+b1
+Installed-Size: 8891
 Maintainer: Francois Marier <francois@debian.org>
 Architecture: amd64
 Depends: adduser, debconf, python3-defusedxml, python3-pyside6.qtcore, python3-pyside6.qtgui, python3-pyside6.qtwidgets, systemd, debconf (>= 0.5) | debconf-2.0, python3:any, libc6 (>= 2.34)
 Recommends: default-mta | mail-transport-agent
 Description: Send event reminders by email
 Homepage: https://launchpad.net/email-reminder
-Built-Using: golang-1.26 (= 1.26.1-1)
+Built-Using: golang-1.26 (= 1.26.2-1)
 Description-md5: a819b0c9f80cffeffe9a22d352bcf5a8
-Static-Built-Using: golang-1.26 (= 1.26.1-1)
+Static-Built-Using: golang-1.26 (= 1.26.2-1)
 Tag: implemented-in::perl, interface::graphical, interface::x11, mail::smtp,
  protocol::smtp, role::program, scope::application, uitoolkit::gtk,
  use::timekeeping, works-with::mail, x11::application
 mail
 Priority: optional
-Filename: pool/main/e/email-reminder/email-reminder_1.1.0-2_amd64.deb
-Size: 2203020
-MD5sum: 6a9ecb566fd86ca129dc50c3f4499f99
-SHA256: 8cc5a60c9ad7f6e5ded438458449274c43ae161b1c931f224e528c510af55638
+Filename: pool/main/e/email-reminder/email-reminder_1.1.0-2+b1_amd64.deb
+Size: 2203776
+MD5sum: 6bc30a91e237113b8ddade5ca6d78f3b
+SHA256: 9ebb034e032e38fec6d67e2a4a83d8b7263d5661e1ae4db104cc65898af48a5a
 
 Package: esmtp
 Version: 1.2-19
@@ -4303,12 +4342,12 @@ MD5sum: a6033ef03f05f62389a5a740bb09b037
 SHA256: 5cea75f8d158239ccd1fd63cf75aea871e009aaebe0b470ea320ebff45023a7e
 
 Package: neomutt
-Version: 20260105+dfsg-1
-Installed-Size: 9235
+Version: 20260406+dfsg-1
+Installed-Size: 9228
 Maintainer: Mutt maintainers <mutt@packages.debian.org>
 Architecture: amd64
 Provides: imap-client, mail-reader
-Depends: sensible-utils, libc6 (>= 2.38), libgnutls30t64 (>= 3.8.6), libgpgme45 (>= 1.23.2), libgsasl18 (>= 1.1), libgssapi-krb5-2 (>= 1.17), libidn2-0 (>= 2.0.0), liblmdb0 (>= 0.9.7), liblua5.4-0 (>= 5.4.6), liblz4-1 (>= 0.0~r130), libncursesw6 (>= 6.1), libnotmuch5t64 (>= 0.32~rc0), libpcre2-8-0 (>= 10.22), libsqlite3-0 (>= 3.20.0), libtinfo6 (>= 6), libtokyocabinet9t64 (>= 1.4.47), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.2.0)
+Depends: sensible-utils, libc6 (>= 2.38), libgnutls30t64 (>= 3.8.6), libgpgme45 (>= 1.23.2), libgsasl18 (>= 1.1), libgssapi-krb5-2 (>= 1.17), libidn2-0 (>= 2.0.0), liblmdb0 (>= 0.9.7), liblua5.4-0 (>= 5.4.6), liblz4-1 (>= 0.0~r130), libncursesw6 (>= 6.1), libnotmuch5t64 (>= 0.32~rc0), libpcre2-8-0 (>= 10.22), libsqlite3-0 (>= 3.20.0), libtinfo6 (>= 6), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.2.0)
 Recommends: locales, mailcap
 Suggests: aspell | ispell, ca-certificates, default-mta | mail-transport-agent, gnupg, openssl, python3, urlview
 Description: command line mail reader based on Mutt, with added features
@@ -4317,10 +4356,10 @@ Description-md5: 2fee387c74fbe17cdbd6f4882a280942
 Tag: uitoolkit::ncurses
 mail
 Priority: optional
-Filename: pool/main/n/neomutt/neomutt_20260105+dfsg-1_amd64.deb
-Size: 1952968
-MD5sum: 117ba35b1238a5aba0c8319753678449
-SHA256: 978ee6bf33a0059cb86c9eee7cffcd6d6362a1957d6d5e38445d87590720e8a4
+Filename: pool/main/n/neomutt/neomutt_20260406+dfsg-1_amd64.deb
+Size: 1952784
+MD5sum: 73242276ff6a93c698b9259b31089151
+SHA256: d84dcc7e86d072686d1030e4c77a7f6111840d739b5fbd91195a8767f846fba3
 
 Package: newmail
 Version: 0.5-5
