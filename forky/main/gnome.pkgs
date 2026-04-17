@@ -3082,6 +3082,57 @@ Size: 706064
 MD5sum: ea90d3566da94e9bbd0f03ddae8f85e6
 SHA256: cbf64e610fcabdab9dd0f341a35c7853f372e17ba9c1b9f9af7c35d008d8e1d2
 
+Package: gnome-kiosk
+Version: 49.0-3
+Installed-Size: 383
+Maintainer: Debian GNOME Extras Maintainers <pkg-gnome-extras-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: gnome-settings-daemon, gsettings-desktop-schemas, libc6 (>= 2.34), libcairo2 (>= 1.14.0), libgdk-pixbuf-2.0-0 (>= 2.22.0), libgles2, libglib2.0-0t64 (>= 2.83.0), libgnome-desktop-4-2t64 (>= 3.17.92), libibus-1.0-5 (>= 1.5.2), libmutter-17-0 (>= 49.0), libsystemd0
+Recommends: gnome-kiosk-search-appliance (= 49.0-3), gnome-kiosk-script-session (= 49.0-3)
+Description: mutter based compositor for kiosks
+Homepage: https://gitlab.gnome.org/GNOME/gnome-kiosk
+Description-md5: 51ef43472e2f64a72611af0788332a4f
+gnome
+Priority: optional
+Filename: pool/main/g/gnome-kiosk/gnome-kiosk_49.0-3_amd64.deb
+Size: 90260
+MD5sum: efa2e70ad6c4a2525cb2b38f62630d0a
+SHA256: a80f627f6414c3a9b5220eceb41c893a61e74e5f2f85c8bb882d9161d4b56ce7
+
+Package: gnome-kiosk-script-session
+Source: gnome-kiosk
+Version: 49.0-3
+Installed-Size: 27
+Maintainer: Debian GNOME Extras Maintainers <pkg-gnome-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: gnome-kiosk, gnome-text-editor
+Description: Basic session used for running kiosk application from shell script
+Homepage: https://gitlab.gnome.org/GNOME/gnome-kiosk
+Description-md5: 75d4c6565313ebf8c090820020296ac7
+gnome
+Priority: optional
+Filename: pool/main/g/gnome-kiosk/gnome-kiosk-script-session_49.0-3_all.deb
+Size: 4252
+MD5sum: 1aa0b26d2e184d06c7aa32112755df2a
+SHA256: 7426fa309f843af6b41cd130edb70d0d55ed494b2850cca3c8ce27ce30b1ce85
+
+Package: gnome-kiosk-search-appliance
+Source: gnome-kiosk
+Version: 49.0-3
+Installed-Size: 25
+Maintainer: Debian GNOME Extras Maintainers <pkg-gnome-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: gnome-kiosk, firefox-esr | firefox
+Description: Example search application that uses GNOME Kiosk
+Homepage: https://gitlab.gnome.org/GNOME/gnome-kiosk
+Description-md5: 395d3494d5cb8864b0a15b569c2b78b3
+gnome
+Priority: optional
+Filename: pool/main/g/gnome-kiosk/gnome-kiosk-search-appliance_49.0-3_all.deb
+Size: 3892
+MD5sum: 2501236eb31ad08749bdce9167036b9c
+SHA256: d36fab94f0e710c3654ad9d286d25273ca5d0c1d48fa887d542c962d238de29e
+
 Package: gnome-logs
 Version: 49.0-1
 Installed-Size: 1858
@@ -4503,25 +4554,26 @@ MD5sum: 76205334e5ddc82b2e5b5484895816d0
 SHA256: c01e9f5935962ff93571ff87f341cbe7f00886ff745415f4ceb682f844d84ba3
 
 Package: gnome-snapshot
-Version: 49.1-1
-Installed-Size: 5926
+Source: gnome-snapshot (49.1-1)
+Version: 49.1-1+b1
+Installed-Size: 5763
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Provides: snapshot (= 49.1-1)
+Provides: snapshot (= 49.1-1+b1)
 Depends: gstreamer1.0-gl, gstreamer1.0-gtk4 (>= 0.14), gstreamer1.0-libcamera, gstreamer1.0-pipewire, gstreamer1.0-plugins-bad, pipewire, xdg-desktop-portal-gnome | xdg-desktop-portal-backend, dconf-gsettings-backend | gsettings-backend, libadwaita-1-0 (>= 1.8~alpha), libc6 (>= 2.39), libfontconfig1 (>= 2.12.6), libgcc-s1 (>= 4.2), libglib2.0-0t64 (>= 2.75), libgraphene-1.0-0 (>= 1.5.4), libgstreamer-plugins-base1.0-0 (>= 1.6.0), libgstreamer1.0-0 (>= 1.20.0), libgtk-4-1 (>= 4.18), liblcms2-2 (>= 2.2+git20110628), libpango-1.0-0 (>= 1.14.0), libseccomp2 (>= 2.1.0)
 Recommends: libcamera-ipa, libspa-0.2-libcamera
 Description: Take pictures and videos from your webcam
 Multi-Arch: foreign
 Homepage: https://gitlab.gnome.org/GNOME/snapshot
-Built-Using: rust-ahash (= 0.8.12-2), rust-async-channel (= 2.5.0-2), rust-async-executor (= 1.13.3-1), rust-async-fs (= 2.2.0-1), rust-async-lock (= 3.4.2-1), rust-async-net (= 2.0.0-5), rust-async-process (= 2.5.0-1), rust-async-task (= 4.7.1-4), rust-blocking (= 1.6.2-1), rust-event-listener (= 5.4.1-3), rust-futures-timer (= 3.0.3-4), rust-glycin (= 3.0.7-1), rust-glycin-common (= 1.0.3-1), rust-glycin-utils (= 4.0.4-2), rust-gufo-common (= 1.0.1-2), rust-gufo-exif (= 0.3.1-1), rust-nix (= 0.30.1-3), rustc (= 1.90.0+dfsg1-1)
+Built-Using: rust-ahash (= 0.8.12-4.1), rust-async-channel (= 2.5.0-2), rust-async-executor (= 1.14.0+ds-1), rust-async-fs (= 2.2.0-1), rust-async-lock (= 3.4.2-1), rust-async-net (= 2.0.0-5), rust-async-process (= 2.5.0-1), rust-async-task (= 4.7.1-4), rust-blocking (= 1.6.2-1), rust-event-listener (= 5.4.1-3), rust-futures-timer (= 3.0.3-4), rust-glycin (= 3.0.8-1), rust-glycin-common (= 1.0.3-1), rust-glycin-utils (= 4.0.4-2), rust-gufo-common (= 1.0.1-2), rust-gufo-exif (= 0.3.1-1), rust-nix (= 0.30.1-3), rustc (= 1.93.1+dfsg1-2)
 Description-md5: 25378d6d9ad71cca05571624f2a053bf
-Static-Built-Using: rust-ahash (= 0.8.12-2), rust-aho-corasick (= 1.1.4-1), rust-allocator-api2 (= 0.2.21-1), rust-anyhow (= 1.0.100-1), rust-ashpd (= 0.12.0-4), rust-async-broadcast (= 0.7.2-1), rust-async-channel (= 2.5.0-2), rust-async-executor (= 1.13.3-1), rust-async-fs (= 2.2.0-1), rust-async-global-executor (= 3.1.0-2), rust-async-io (= 2.5.0-2), rust-async-lock (= 3.4.2-1), rust-async-net (= 2.0.0-5), rust-async-process (= 2.5.0-1), rust-async-signal (= 0.2.13-1), rust-async-task (= 4.7.1-4), rust-atomic-refcell (= 0.1.13-1), rust-atomic-waker (= 1.1.2-1), rust-bitflags (= 2.9.4-3), rust-blocking (= 1.6.2-1), rust-bytemuck (= 1.24.0-1), rust-byteorder (= 1.5.0-1), rust-cairo-rs (= 0.21.5-1), rust-cairo-sys-rs (= 0.21.5-1), rust-cfg-if (= 1.0.3-2), rust-concurrent-queue (= 2.5.0-4), rust-crossbeam-deque (= 0.8.6-1), rust-crossbeam-epoch (= 0.9.18-1), rust-crossbeam-utils (= 0.8.21-1), rust-dlib (= 0.5.2-2), rust-either (= 1.15.0-1), rust-endi (= 1.1.0-2), rust-enumflags2 (= 0.7.10-1), rust-env-filter (= 0.1.4-1), rust-env-logger (= 0.11.8-1), rust-event-listener (= 5.4.1-3), rust-event-listener-strategy (= 0.5.4-2), rust-fastrand (= 2.3.0-1), rust-field-offset (= 0.3.6-1), rust-foreign-types (= 0.5.0-1), rust-foreign-types-shared (= 0.3.0-1), rust-form-urlencoded (= 1.2.2-1), rust-futures-channel (= 0.3.31-1), rust-futures-core (= 0.3.31-1), rust-futures-executor (= 0.3.31-1), rust-futures-io (= 0.3.31-1), rust-futures-lite (= 2.6.1-1), rust-futures-task (= 0.3.31-3), rust-futures-timer (= 3.0.3-4), rust-futures-util (= 0.3.31-1), rust-g2p (= 1.1.0-1), rust-g2poly (= 1.1.0-1), rust-gdk-pixbuf (= 0.21.5-1), rust-gdk-pixbuf-sys (= 0.21.5-1), rust-gdk4 (= 0.10.3-1), rust-gdk4-sys (= 0.10.3-1), rust-gdk4-wayland (= 0.10.3-1), rust-gdk4-wayland-sys (= 0.10.3-1), rust-gdk4-x11 (= 0.10.3-1), rust-gdk4-x11-sys (= 0.10.3-1), rust-getrandom (= 0.2.15-4), rust-gettext-rs (= 0.7.7-1), rust-gettext-sys (= 0.21.3-3), rust-gio (= 0.21.5-2), rust-gio-sys (= 0.21.5-1), rust-glib (= 0.21.5-1), rust-glib-sys (= 0.21.5-1), rust-glycin (= 3.0.7-1), rust-glycin-common (= 1.0.3-1), rust-glycin-utils (= 4.0.4-2), rust-gobject-sys (= 0.21.5-1), rust-graphene-rs (= 0.21.5-1), rust-graphene-sys (= 0.21.5-1), rust-gsk4 (= 0.10.3-1), rust-gsk4-sys (= 0.10.3-1), rust-gstreamer (= 0.24.4-1), rust-gstreamer-audio (= 0.24.2-1), rust-gstreamer-audio-sys (= 0.24.0-5), rust-gstreamer-base (= 0.24.4-1), rust-gstreamer-base-sys (= 0.24.4-1), rust-gstreamer-pbutils (= 0.24.2-1), rust-gstreamer-pbutils-sys (= 0.24.0-2), rust-gstreamer-sys (= 0.24.4-1), rust-gstreamer-video (= 0.24.4-1), rust-gstreamer-video-sys (= 0.24.4-1), rust-gtk4 (= 0.10.3-2), rust-gtk4-sys (= 0.10.3-1), rust-gufo-common (= 1.0.1-2), rust-gufo-exif (= 0.3.1-1), rust-half (= 2.6.0-2), rust-hashbrown-0.14 (= 0.14.5-2), rust-hex (= 0.4.3-3), rust-idna (= 1.1.0-1), rust-idna-adapter (= 1.1.0-1), rust-idna-mapping (= 1.0.0-1), rust-itertools (= 0.13.0-3), rust-jiff (= 0.2.15-2), rust-kstring (= 2.0.0-1), rust-lazy-static (= 1.5.0-1), rust-lcms2 (= 6.1.1-1), rust-lcms2-sys (= 4.0.6-1), rust-libadwaita (= 0.8.1-1), rust-libadwaita-sys (= 0.8.1-2), rust-libc (= 0.2.175-2), rust-libloading (= 0.8.5-1), rust-libseccomp (= 0.4.0-3), rust-libseccomp-sys (= 0.3.0-2), rust-linux-raw-sys (= 0.11.0-1), rust-locale-config (= 0.3.0-1), rust-log (= 0.4.28-1), rust-lru (= 0.12.3-2), rust-memchr (= 2.7.6-1), rust-memfd (= 0.6.4-2), rust-memmap2 (= 0.9.8-1), rust-memoffset (= 0.8.0-1), rust-muldiv (= 1.0.1-2), rust-nix (= 0.30.1-3), rust-nu-ansi-term (= 0.50.1-1), rust-num-integer (= 0.1.46-2), rust-num-rational (= 0.4.2-1), rust-num-traits (= 0.2.19-2), rust-once-cell (= 1.21.3-1), rust-option-operations (= 0.5.0-2), rust-ordered-stream (= 0.2.0-2), rust-pango (= 0.21.5-1), rust-pango-sys (= 0.21.5-1), rust-parking (= 2.2.0-1), rust-percent-encoding (= 2.3.2-2), rust-pin-project-lite (= 0.2.16-1), rust-pin-utils (= 0.1.0-1), rust-polling (= 3.10.0-1), rust-ppv-lite86 (= 0.2.21-2), rust-proc-macro2 (= 1.0.101-1), rust-quote (= 1.0.40-1), rust-rand (= 0.8.5-1), rust-rand-chacha (= 0.3.1-2), rust-rand-core (= 0.6.4-2), rust-rayon (= 1.11.0-1), rust-rayon-core (= 1.13.0-1), rust-regex (= 1.12.2-1), rust-regex-automata (= 0.4.13-1), rust-regex-syntax (= 0.8.6-1), rust-rmp (= 0.8.14-1), rust-rmp-serde (= 1.3.0-1), rust-rqrr (= 0.10.0-2), rust-rustix (= 1.1.2-2), rust-serde (= 1.0.228-3), rust-serde-core (= 1.0.228-2), rust-sharded-slab (= 0.1.4-2), rust-signal-hook-registry (= 1.4.0-1), rust-slab (= 0.4.9-1), rust-smallvec (= 1.15.1-1), rust-static-assertions (= 1.1.0-1), rust-syn (= 2.0.105-1), rust-thiserror (= 2.0.17-1), rust-thread-local (= 1.1.4-1), rust-tinyvec (= 1.6.0-2), rust-tinyvec-macros (= 0.1.0-1), rust-tracing (= 0.1.41-1), rust-tracing-core (= 0.1.34-1), rust-tracing-log (= 0.2.0-3), rust-tracing-subscriber (= 0.3.20-1), rust-unicode-bidi (= 0.3.17-1), rust-unicode-ident (= 1.0.13-1), rust-unicode-joining-type (= 1.0.0-1), rust-unicode-normalization (= 0.1.24-1), rust-url (= 2.5.7-1), rust-utf8-iter (= 1.0.4-1), rust-uuid (= 1.18.1-3), rust-winnow (= 0.7.13-1), rust-x11 (= 2.21.0-1), rust-yeslogic-fontconfig-sys (= 6.0.0-1), rust-zbus (= 5.12.0-1), rust-zbus-names (= 4.2.0-1), rust-zerocopy (= 0.8.26-4), rust-zvariant (= 5.8.0-1), rust-zvariant-utils (= 3.2.1-1), rustc (= 1.90.0+dfsg1-1)
+Static-Built-Using: rust-ahash (= 0.8.12-4.1), rust-aho-corasick (= 1.1.4-1), rust-allocator-api2 (= 0.2.21-1), rust-anyhow (= 1.0.102-1), rust-ashpd (= 0.12.0-4), rust-async-broadcast (= 0.7.2-1), rust-async-channel (= 2.5.0-2), rust-async-executor (= 1.14.0+ds-1), rust-async-fs (= 2.2.0-1), rust-async-global-executor (= 3.1.0-2), rust-async-io (= 2.5.0-2), rust-async-lock (= 3.4.2-1), rust-async-net (= 2.0.0-5), rust-async-process (= 2.5.0-1), rust-async-signal (= 0.2.13-1), rust-async-task (= 4.7.1-4), rust-atomic-refcell (= 0.1.13-1), rust-atomic-waker (= 1.1.2-1), rust-bitflags (= 2.11.0-1), rust-blocking (= 1.6.2-1), rust-bytemuck (= 1.24.0-1), rust-byteorder (= 1.5.0-1), rust-cairo-rs (= 0.21.5-1), rust-cairo-sys-rs (= 0.21.5-1), rust-cfg-if (= 1.0.4-1), rust-concurrent-queue (= 2.5.0-4), rust-crossbeam-deque (= 0.8.6-1), rust-crossbeam-epoch (= 0.9.18-1), rust-crossbeam-utils (= 0.8.21-1), rust-dlib (= 0.5.2-2), rust-either (= 1.15.0-1), rust-endi (= 1.1.1-1), rust-enumflags2 (= 0.7.12-1), rust-env-filter (= 0.1.4-1), rust-env-logger (= 0.11.8-1), rust-event-listener (= 5.4.1-3), rust-event-listener-strategy (= 0.5.4-2), rust-fastrand (= 2.3.0-2), rust-field-offset (= 0.3.6-1), rust-foreign-types (= 0.5.0-1), rust-foreign-types-shared (= 0.3.0-1), rust-form-urlencoded (= 1.2.2-1), rust-futures-channel (= 0.3.32-1), rust-futures-core (= 0.3.32-1), rust-futures-executor (= 0.3.32-1), rust-futures-io (= 0.3.32-1), rust-futures-lite (= 2.6.1-1), rust-futures-task (= 0.3.32-1), rust-futures-timer (= 3.0.3-4), rust-futures-util (= 0.3.32-1), rust-g2p (= 1.1.0-1), rust-g2poly (= 1.1.0-1), rust-gdk-pixbuf (= 0.21.5-1), rust-gdk-pixbuf-sys (= 0.21.5-1), rust-gdk4 (= 0.10.3-2), rust-gdk4-sys (= 0.10.3-1), rust-gdk4-wayland (= 0.10.3-1), rust-gdk4-wayland-sys (= 0.10.3-1), rust-gdk4-x11 (= 0.10.3-1), rust-gdk4-x11-sys (= 0.10.3-1), rust-getrandom (= 0.4.2-3), rust-gettext-rs (= 0.7.7-1), rust-gettext-sys (= 0.21.3-3), rust-gio (= 0.21.5-2), rust-gio-sys (= 0.21.5-1), rust-glib (= 0.21.5-2), rust-glib-sys (= 0.21.5-3), rust-glycin (= 3.0.8-1), rust-glycin-common (= 1.0.3-1), rust-glycin-utils (= 4.0.4-2), rust-gobject-sys (= 0.22.0+really0.21.5-1), rust-graphene-rs (= 0.21.5-1), rust-graphene-sys (= 0.21.5-1), rust-gsk4 (= 0.10.3-1), rust-gsk4-sys (= 0.10.3-1), rust-gstreamer (= 0.24.4-3), rust-gstreamer-audio (= 0.24.4-1), rust-gstreamer-audio-sys (= 0.24.4-4), rust-gstreamer-base (= 0.24.4-2), rust-gstreamer-base-sys (= 0.24.4-2), rust-gstreamer-pbutils (= 0.24.4-1), rust-gstreamer-pbutils-sys (= 0.24.4-2), rust-gstreamer-sys (= 0.24.4-3), rust-gstreamer-video (= 0.24.4-2), rust-gstreamer-video-sys (= 0.24.4-2), rust-gtk4 (= 0.10.3-2), rust-gtk4-sys (= 0.10.3-3), rust-gufo-common (= 1.0.1-2), rust-gufo-exif (= 0.3.1-1), rust-half (= 2.7.1-2), rust-hashbrown-0.14 (= 0.14.5-2), rust-hex (= 0.4.3-3), rust-idna (= 1.1.0-1), rust-idna-adapter (= 1.1.0-1), rust-idna-mapping (= 1.0.0-1), rust-itertools (= 0.14.0-2), rust-jiff (= 0.2.15-2), rust-kstring (= 2.0.0-1), rust-lazy-static (= 1.5.0-1), rust-lcms2 (= 6.1.1-1), rust-lcms2-sys (= 4.0.6-1), rust-libadwaita (= 0.8.1-1), rust-libadwaita-sys (= 0.8.1-2), rust-libc (= 0.2.178-2), rust-libloading (= 0.8.5-1), rust-libseccomp (= 0.4.0-3), rust-libseccomp-sys (= 0.3.0-2), rust-linux-raw-sys (= 0.11.0-1), rust-locale-config (= 0.3.0-1), rust-log (= 0.4.29-1), rust-lru (= 0.12.3-2), rust-memchr (= 2.8.0-1), rust-memfd (= 0.6.4-2), rust-memmap2 (= 0.9.8-1), rust-memoffset (= 0.8.0-1), rust-muldiv (= 1.0.1-2), rust-nix (= 0.30.1-3), rust-nu-ansi-term (= 0.50.1-1), rust-num-integer (= 0.1.46-2), rust-num-rational (= 0.4.2-1), rust-num-traits (= 0.2.19-2), rust-once-cell (= 1.21.4-1), rust-option-operations (= 0.5.0-2), rust-ordered-stream (= 0.2.0-2), rust-pango (= 0.21.5-1), rust-pango-sys (= 0.21.5-1), rust-parking (= 2.2.0-1), rust-percent-encoding (= 2.3.2-2), rust-pin-project-lite (= 0.2.16-1), rust-polling (= 3.10.0-1), rust-ppv-lite86 (= 0.2.21-2), rust-proc-macro2 (= 1.0.101-1), rust-quote (= 1.0.40-1), rust-rand-0.8 (= 0.8.5+dfsg-3), rust-rand-chacha-0.3 (= 0.3.1-4), rust-rand-core-0.6 (= 0.6.4-5), rust-rayon (= 1.11.0-1), rust-rayon-core (= 1.13.0-1), rust-regex (= 1.12.3-1), rust-regex-automata (= 0.4.13-1), rust-regex-syntax (= 0.8.10+dfsg-1), rust-rmp (= 0.8.14-1), rust-rmp-serde (= 1.3.0-1), rust-rqrr (= 0.10.0-2), rust-rustix (= 1.1.3-1), rust-serde (= 1.0.228-3), rust-serde-core (= 1.0.228-2), rust-sharded-slab (= 0.1.4-2), rust-signal-hook-registry (= 1.4.0-1), rust-slab (= 0.4.9-1), rust-smallvec (= 1.15.1-1), rust-static-assertions (= 1.1.0-1), rust-syn (= 2.0.105-1), rust-thiserror (= 2.0.18-1), rust-thread-local (= 1.1.4-1), rust-tinyvec (= 1.10.0-1), rust-tinyvec-macros (= 0.1.0-1), rust-tracing (= 0.1.44-1), rust-tracing-core (= 0.1.36-1), rust-tracing-log (= 0.2.0-3), rust-tracing-subscriber (= 0.3.22-3), rust-unicode-bidi (= 0.3.17-1), rust-unicode-ident (= 1.0.13-1), rust-unicode-joining-type (= 1.0.0-1), rust-unicode-normalization (= 0.1.25-1), rust-url (= 2.5.8-1), rust-utf8-iter (= 1.0.4-1), rust-uuid (= 1.21.0-6), rust-winnow (= 0.7.13-1), rust-x11 (= 2.21.0-1), rust-yeslogic-fontconfig-sys (= 6.0.0-1), rust-zbus (= 5.13.2-1), rust-zbus-names (= 4.3.1-1), rust-zerocopy (= 0.8.26-4), rust-zvariant (= 5.9.2-1), rust-zvariant-utils (= 3.3.0-1), rustc (= 1.93.1+dfsg1-2)
 gnome
 Priority: optional
-Filename: pool/main/g/gnome-snapshot/gnome-snapshot_49.1-1_amd64.deb
-Size: 1755600
-MD5sum: 9b19fdf884da8d828f850b655855d120
-SHA256: 1dc263a25d77b99e37954cf1edd171b5673c6503fa1b0cbfacb24607266a220b
+Filename: pool/main/g/gnome-snapshot/gnome-snapshot_49.1-1+b1_amd64.deb
+Size: 1731656
+MD5sum: 610fc1e63eb6feeeb7e76ccf7e42aca1
+SHA256: 977b953ea4b695f81f254486bb14e12bd7625b577d2cb14db6a58a8f1ff48dad
 
 Package: gnome-software
 Version: 50.0-1
@@ -4926,22 +4978,22 @@ SHA256: 8a5308a542af0560eb09265895b0466f2f9a4b3870190d208f2834e8e0df1d1e
 
 Package: gnome-video-trimmer
 Source: gnome-video-trimmer (25.03-6)
-Version: 25.03-6+b1
-Installed-Size: 1679
+Version: 25.03-6+b2
+Installed-Size: 1627
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: dconf-gsettings-backend | gsettings-backend, libadwaita-1-0 (>= 1.7.0), libc6 (>= 2.34), libcairo2 (>= 1.2.4), libgcc-s1 (>= 4.2), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.54.0), libgraphene-1.0-0 (>= 1.5.4), libgtk-4-1 (>= 4.16.0), libpango-1.0-0 (>= 1.14.0), ffmpeg
 Description: Simple GUI application for lossless cutting of video files
 Homepage: https://apps.gnome.org/VideoTrimmer/
-Built-Using: rustc (= 1.90.0+dfsg1-1)
+Built-Using: rustc (= 1.93.1+dfsg1-2)
 Description-md5: 0be32fcc486d3f53bec93adba0576a05
-Static-Built-Using: rustc (= 1.90.0+dfsg1-1)
+Static-Built-Using: rustc (= 1.93.1+dfsg1-2)
 gnome
 Priority: optional
-Filename: pool/main/g/gnome-video-trimmer/gnome-video-trimmer_25.03-6+b1_amd64.deb
-Size: 441084
-MD5sum: 27c610da37a82073803b101356c50770
-SHA256: 77c2099d1b9a09bbcae27e57959a4f3cf7d1a7e6e02c61041918771e88996242
+Filename: pool/main/g/gnome-video-trimmer/gnome-video-trimmer_25.03-6+b2_amd64.deb
+Size: 436488
+MD5sum: fd1b9de5d582ea16c7f1bf4a62690313
+SHA256: d736a066fce49f41152c54692ac9cc41517880d6393fe0595d2dc3d59cffdbfe
 
 Package: gnome-weather
 Version: 50.0-1
@@ -6007,22 +6059,23 @@ MD5sum: d6cacc6f0d68f0e9d326fea6358cc745
 SHA256: 72a694edbb9a410df76d102ba28d581af7e7ef3a436ab7502469c4fad0174dc0
 
 Package: loupe
-Version: 49.2-1
-Installed-Size: 8605
+Source: loupe (49.2-1)
+Version: 49.2-1+b1
+Installed-Size: 8358
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libadwaita-1-0 (>= 1.7.0-~~), libc6 (>= 2.39), libcairo2 (>= 1.2.4), libfontconfig1 (>= 2.12.6), libgcc-s1 (>= 4.2), libglib2.0-0t64 (>= 2.74.0), libgraphene-1.0-0 (>= 1.9.4), libgtk-4-1 (>= 4.16), libgweather-4-0t64 (>= 4.0.0), liblcms2-2 (>= 2.12.0), libseccomp2 (>= 2.5.0), dconf-gsettings-backend | gsettings-backend, glycin-loaders (>= 2.0~rc+ds-~~)
 Description: Image viewer for GNOME
 Homepage: https://apps.gnome.org/Loupe/
-Built-Using: rust-async-channel (= 2.5.0-2), rust-async-executor (= 1.13.3-1), rust-async-fs (= 2.2.0-1), rust-async-lock (= 3.4.2-1), rust-async-net (= 2.0.0-5), rust-async-process (= 2.5.0-1), rust-async-task (= 4.7.1-4), rust-blocking (= 1.6.2-1), rust-event-listener (= 5.4.1-3), rust-futures-timer (= 3.0.3-4), rust-glycin (= 3.0.7-1), rust-glycin-common (= 1.0.3-1), rust-glycin-utils (= 4.0.4-2), rust-gufo (= 0.3.0-2), rust-gufo-common (= 1.0.1-2), rust-gufo-exif (= 0.3.1-1), rust-gufo-jpeg (= 0.3.0-3), rust-gufo-png (= 0.3.0-2), rust-gufo-tiff (= 0.3.0-2), rust-gufo-webp (= 0.3.0-2), rust-gufo-xmp (= 0.3.0-2), rust-nix (= 0.30.1-3), rustc (= 1.91.1+dfsg1-1)
+Built-Using: rust-async-channel (= 2.5.0-2), rust-async-executor (= 1.14.0+ds-1), rust-async-fs (= 2.2.0-1), rust-async-lock (= 3.4.2-1), rust-async-net (= 2.0.0-5), rust-async-process (= 2.5.0-1), rust-async-task (= 4.7.1-4), rust-blocking (= 1.6.2-1), rust-event-listener (= 5.4.1-3), rust-futures-timer (= 3.0.3-4), rust-glycin (= 3.0.8-1), rust-glycin-common (= 1.0.3-1), rust-glycin-utils (= 4.0.4-2), rust-gufo (= 0.3.0-2), rust-gufo-common (= 1.0.1-2), rust-gufo-exif (= 0.3.1-1), rust-gufo-jpeg (= 0.3.0-3), rust-gufo-png (= 0.3.0-2), rust-gufo-tiff (= 0.3.0-2), rust-gufo-webp (= 0.3.0-2), rust-gufo-xmp (= 0.3.0-2), rust-nix (= 0.30.1-3), rustc (= 1.93.1+dfsg1-2)
 Description-md5: 1ec1e354b2b28df4edfb551f3037b6ee
-Static-Built-Using: rust-adler (= 1.0.2-3), rust-aho-corasick (= 1.1.4-1), rust-anyhow (= 1.0.100-1), rust-arc-swap (= 1.8.0-1), rust-ashpd (= 0.12.0-4), rust-async-broadcast (= 0.7.2-1), rust-async-channel (= 2.5.0-2), rust-async-executor (= 1.13.3-1), rust-async-fs (= 2.2.0-1), rust-async-global-executor (= 3.1.0-2), rust-async-io (= 2.5.0-2), rust-async-lock (= 3.4.2-1), rust-async-net (= 2.0.0-5), rust-async-process (= 2.5.0-1), rust-async-signal (= 0.2.13-1), rust-async-task (= 4.7.1-4), rust-atomic-waker (= 1.1.2-1), rust-bitflags (= 2.9.4-3), rust-blocking (= 1.6.2-1), rust-bytemuck (= 1.24.0-1), rust-byteorder (= 1.5.0-1), rust-cairo-rs (= 0.21.5-1), rust-cairo-sys-rs (= 0.21.5-1), rust-cfg-if (= 1.0.4-1), rust-chrono (= 0.4.42-1), rust-concurrent-queue (= 2.5.0-4), rust-crc32fast (= 1.5.0-2), rust-crossbeam-deque (= 0.8.6-1), rust-crossbeam-epoch (= 0.9.18-1), rust-crossbeam-utils (= 0.8.21-1), rust-dlib (= 0.5.2-2), rust-either (= 1.15.0-1), rust-encoding-rs (= 0.8.35-1), rust-endi (= 1.1.1-1), rust-enumflags2 (= 0.7.10-1), rust-env-filter (= 0.1.4-1), rust-env-logger (= 0.11.8-1), rust-equivalent (= 1.0.1-1), rust-event-listener (= 5.4.1-3), rust-event-listener-strategy (= 0.5.4-2), rust-fastrand (= 2.3.0-1), rust-field-offset (= 0.3.6-1), rust-foreign-types (= 0.5.0-1), rust-foreign-types-shared (= 0.3.0-1), rust-form-urlencoded (= 1.2.2-1), rust-futures-channel (= 0.3.31-1), rust-futures-core (= 0.3.31-1), rust-futures-executor (= 0.3.31-1), rust-futures-io (= 0.3.31-1), rust-futures-lite (= 2.6.1-1), rust-futures-task (= 0.3.31-3), rust-futures-timer (= 3.0.3-4), rust-futures-util (= 0.3.31-1), rust-gdk-pixbuf (= 0.21.5-1), rust-gdk-pixbuf-sys (= 0.21.5-1), rust-gdk4 (= 0.10.3-1), rust-gdk4-sys (= 0.10.3-1), rust-gdk4-wayland (= 0.10.3-1), rust-gdk4-wayland-sys (= 0.10.3-1), rust-gdk4-x11 (= 0.10.3-1), rust-gdk4-x11-sys (= 0.10.3-1), rust-getrandom (= 0.2.15-4), rust-gettext-rs (= 0.7.7-1), rust-gettext-sys (= 0.21.3-3), rust-gio (= 0.21.5-2), rust-gio-sys (= 0.21.5-1), rust-glib (= 0.21.5-1), rust-glib-sys (= 0.21.5-1), rust-glycin (= 3.0.7-1), rust-glycin-common (= 1.0.3-1), rust-glycin-utils (= 4.0.4-2), rust-gobject-sys (= 0.21.5-1), rust-graphene-rs (= 0.21.5-1), rust-graphene-sys (= 0.21.5-1), rust-gsk4 (= 0.10.3-1), rust-gsk4-sys (= 0.10.3-1), rust-gtk4 (= 0.10.3-2), rust-gtk4-sys (= 0.10.3-1), rust-gufo (= 0.3.0-2), rust-gufo-common (= 1.0.1-2), rust-gufo-exif (= 0.3.1-1), rust-gufo-jpeg (= 0.3.0-3), rust-gufo-png (= 0.3.0-2), rust-gufo-tiff (= 0.3.0-2), rust-gufo-webp (= 0.3.0-2), rust-gufo-xmp (= 0.3.0-2), rust-gweather-sys (= 4.6.0-3), rust-half (= 2.6.0-2), rust-hashbrown (= 0.16.1-2), rust-hex (= 0.4.3-3), rust-idna (= 1.1.0-1), rust-idna-adapter (= 1.1.0-1), rust-idna-mapping (= 1.0.0-1), rust-indexmap (= 2.12.1-3), rust-jiff (= 0.2.15-2), rust-lazy-static (= 1.5.0-1), rust-lcms2 (= 6.1.1-1), rust-lcms2-sys (= 4.0.6-1), rust-libadwaita (= 0.8.1-1), rust-libadwaita-sys (= 0.8.1-2), rust-libc (= 0.2.178-2), rust-libgweather (= 4.6.0-3), rust-libloading (= 0.8.5-1), rust-libseccomp (= 0.4.0-3), rust-libseccomp-sys (= 0.3.0-2), rust-linux-raw-sys (= 0.11.0-1), rust-locale-config (= 0.3.0-1), rust-log (= 0.4.29-1), rust-matchers (= 0.2.0-1), rust-memchr (= 2.7.6-1), rust-memfd (= 0.6.4-2), rust-memmap2 (= 0.9.8-1), rust-memoffset (= 0.8.0-1), rust-miniz-oxide (= 0.7.1-2), rust-nix (= 0.30.1-3), rust-nu-ansi-term (= 0.50.1-1), rust-num-traits (= 0.2.19-2), rust-once-cell (= 1.21.3-1), rust-ordered-stream (= 0.2.0-2), rust-pango (= 0.21.5-1), rust-pango-sys (= 0.21.5-1), rust-parking (= 2.2.0-1), rust-percent-encoding (= 2.3.2-2), rust-pin-project-lite (= 0.2.16-1), rust-pin-utils (= 0.1.0-1), rust-polling (= 3.10.0-1), rust-ppv-lite86 (= 0.2.21-2), rust-proc-macro2 (= 1.0.101-1), rust-quote (= 1.0.40-1), rust-rand (= 0.8.5-1), rust-rand-chacha (= 0.3.1-2), rust-rand-core (= 0.6.4-2), rust-rayon (= 1.11.0-1), rust-rayon-core (= 1.13.0-1), rust-regex (= 1.12.2-1), rust-regex-automata (= 0.4.13-1), rust-regex-syntax (= 0.8.6-1), rust-rmp (= 0.8.14-1), rust-rmp-serde (= 1.3.0-1), rust-rustix (= 1.1.3-1), rust-serde (= 1.0.228-3), rust-serde-core (= 1.0.228-2), rust-sharded-slab (= 0.1.4-2), rust-signal-hook-registry (= 1.4.0-1), rust-slab (= 0.4.9-1), rust-smallvec (= 1.15.1-1), rust-static-assertions (= 1.1.0-1), rust-strum (= 0.26.3-2), rust-syn (= 2.0.105-1), rust-thiserror (= 2.0.17-1), rust-thread-local (= 1.1.4-1), rust-tinyvec (= 1.6.0-2), rust-tinyvec-macros (= 0.1.0-1), rust-tracing (= 0.1.44-1), rust-tracing-core (= 0.1.36-1), rust-tracing-log (= 0.2.0-3), rust-tracing-subscriber (= 0.3.22-2), rust-unicode-bidi (= 0.3.17-1), rust-unicode-ident (= 1.0.13-1), rust-unicode-joining-type (= 1.0.0-1), rust-unicode-normalization (= 0.1.24-1), rust-url (= 2.5.7-1), rust-utf8-iter (= 1.0.4-1), rust-uuid (= 1.18.1-3), rust-winnow (= 0.7.13-1), rust-x11 (= 2.21.0-1), rust-xml-rs (= 0.8.19-1), rust-yeslogic-fontconfig-sys (= 6.0.0-1), rust-zbus (= 5.12.0-1), rust-zbus-names (= 4.2.0-1), rust-zerocopy (= 0.8.26-4), rust-zvariant (= 5.8.0-1), rust-zvariant-utils (= 3.2.1-1), rustc (= 1.91.1+dfsg1-1)
+Static-Built-Using: rust-adler (= 1.0.2-3), rust-aho-corasick (= 1.1.4-1), rust-anyhow (= 1.0.102-1), rust-arc-swap (= 1.9.1-1), rust-ashpd (= 0.12.0-4), rust-async-broadcast (= 0.7.2-1), rust-async-channel (= 2.5.0-2), rust-async-executor (= 1.14.0+ds-1), rust-async-fs (= 2.2.0-1), rust-async-global-executor (= 3.1.0-2), rust-async-io (= 2.5.0-2), rust-async-lock (= 3.4.2-1), rust-async-net (= 2.0.0-5), rust-async-process (= 2.5.0-1), rust-async-signal (= 0.2.13-1), rust-async-task (= 4.7.1-4), rust-atomic-waker (= 1.1.2-1), rust-bitflags (= 2.11.0-1), rust-blocking (= 1.6.2-1), rust-bytemuck (= 1.24.0-1), rust-byteorder (= 1.5.0-1), rust-cairo-rs (= 0.21.5-1), rust-cairo-sys-rs (= 0.21.5-1), rust-cfg-if (= 1.0.4-1), rust-chrono (= 0.4.44-1), rust-concurrent-queue (= 2.5.0-4), rust-crc32fast (= 1.5.0-2), rust-crossbeam-deque (= 0.8.6-1), rust-crossbeam-epoch (= 0.9.18-1), rust-crossbeam-utils (= 0.8.21-1), rust-dlib (= 0.5.2-2), rust-either (= 1.15.0-1), rust-encoding-rs (= 0.8.35-1), rust-endi (= 1.1.1-1), rust-enumflags2 (= 0.7.12-1), rust-env-filter (= 0.1.4-1), rust-env-logger (= 0.11.8-1), rust-equivalent (= 1.0.1-1), rust-event-listener (= 5.4.1-3), rust-event-listener-strategy (= 0.5.4-2), rust-fastrand (= 2.3.0-2), rust-field-offset (= 0.3.6-1), rust-foreign-types (= 0.5.0-1), rust-foreign-types-shared (= 0.3.0-1), rust-form-urlencoded (= 1.2.2-1), rust-futures-channel (= 0.3.32-1), rust-futures-core (= 0.3.32-1), rust-futures-executor (= 0.3.32-1), rust-futures-io (= 0.3.32-1), rust-futures-lite (= 2.6.1-1), rust-futures-task (= 0.3.32-1), rust-futures-timer (= 3.0.3-4), rust-futures-util (= 0.3.32-1), rust-gdk-pixbuf (= 0.21.5-1), rust-gdk-pixbuf-sys (= 0.21.5-1), rust-gdk4 (= 0.10.3-2), rust-gdk4-sys (= 0.10.3-1), rust-gdk4-wayland (= 0.10.3-1), rust-gdk4-wayland-sys (= 0.10.3-1), rust-gdk4-x11 (= 0.10.3-1), rust-gdk4-x11-sys (= 0.10.3-1), rust-getrandom (= 0.4.2-3), rust-gettext-rs (= 0.7.7-1), rust-gettext-sys (= 0.21.3-3), rust-gio (= 0.21.5-2), rust-gio-sys (= 0.21.5-1), rust-glib (= 0.21.5-2), rust-glib-sys (= 0.21.5-3), rust-glycin (= 3.0.8-1), rust-glycin-common (= 1.0.3-1), rust-glycin-utils (= 4.0.4-2), rust-gobject-sys (= 0.22.0+really0.21.5-1), rust-graphene-rs (= 0.21.5-1), rust-graphene-sys (= 0.21.5-1), rust-gsk4 (= 0.10.3-1), rust-gsk4-sys (= 0.10.3-1), rust-gtk4 (= 0.10.3-2), rust-gtk4-sys (= 0.10.3-3), rust-gufo (= 0.3.0-2), rust-gufo-common (= 1.0.1-2), rust-gufo-exif (= 0.3.1-1), rust-gufo-jpeg (= 0.3.0-3), rust-gufo-png (= 0.3.0-2), rust-gufo-tiff (= 0.3.0-2), rust-gufo-webp (= 0.3.0-2), rust-gufo-xmp (= 0.3.0-2), rust-gweather-sys (= 4.6.0-3), rust-half (= 2.7.1-2), rust-hashbrown (= 0.16.1-2), rust-hex (= 0.4.3-3), rust-idna (= 1.1.0-1), rust-idna-adapter (= 1.1.0-1), rust-idna-mapping (= 1.0.0-1), rust-indexmap (= 2.13.0-1), rust-jiff (= 0.2.15-2), rust-lazy-static (= 1.5.0-1), rust-lcms2 (= 6.1.1-1), rust-lcms2-sys (= 4.0.6-1), rust-libadwaita (= 0.8.1-1), rust-libadwaita-sys (= 0.8.1-2), rust-libc (= 0.2.178-2), rust-libgweather (= 4.6.0-3), rust-libloading (= 0.8.5-1), rust-libseccomp (= 0.4.0-3), rust-libseccomp-sys (= 0.3.0-2), rust-linux-raw-sys (= 0.11.0-1), rust-locale-config (= 0.3.0-1), rust-log (= 0.4.29-1), rust-matchers (= 0.2.0-1), rust-memchr (= 2.8.0-1), rust-memfd (= 0.6.4-2), rust-memmap2 (= 0.9.8-1), rust-memoffset (= 0.8.0-1), rust-miniz-oxide (= 0.7.1-2), rust-nix (= 0.30.1-3), rust-nu-ansi-term (= 0.50.1-1), rust-num-traits (= 0.2.19-2), rust-once-cell (= 1.21.4-1), rust-ordered-stream (= 0.2.0-2), rust-pango (= 0.21.5-1), rust-pango-sys (= 0.21.5-1), rust-parking (= 2.2.0-1), rust-percent-encoding (= 2.3.2-2), rust-pin-project-lite (= 0.2.16-1), rust-polling (= 3.10.0-1), rust-ppv-lite86 (= 0.2.21-2), rust-proc-macro2 (= 1.0.101-1), rust-quote (= 1.0.40-1), rust-rand-0.8 (= 0.8.5+dfsg-3), rust-rand-chacha-0.3 (= 0.3.1-4), rust-rand-core-0.6 (= 0.6.4-5), rust-rayon (= 1.11.0-1), rust-rayon-core (= 1.13.0-1), rust-regex (= 1.12.3-1), rust-regex-automata (= 0.4.13-1), rust-regex-syntax (= 0.8.10+dfsg-1), rust-rmp (= 0.8.14-1), rust-rmp-serde (= 1.3.0-1), rust-rustix (= 1.1.3-1), rust-serde (= 1.0.228-3), rust-serde-core (= 1.0.228-2), rust-sharded-slab (= 0.1.4-2), rust-signal-hook-registry (= 1.4.0-1), rust-slab (= 0.4.9-1), rust-smallvec (= 1.15.1-1), rust-static-assertions (= 1.1.0-1), rust-strum (= 0.26.3-2), rust-syn (= 2.0.105-1), rust-thiserror (= 2.0.18-1), rust-thread-local (= 1.1.4-1), rust-tinyvec (= 1.10.0-1), rust-tinyvec-macros (= 0.1.0-1), rust-tracing (= 0.1.44-1), rust-tracing-core (= 0.1.36-1), rust-tracing-log (= 0.2.0-3), rust-tracing-subscriber (= 0.3.22-3), rust-unicode-bidi (= 0.3.17-1), rust-unicode-ident (= 1.0.13-1), rust-unicode-joining-type (= 1.0.0-1), rust-unicode-normalization (= 0.1.25-1), rust-url (= 2.5.8-1), rust-utf8-iter (= 1.0.4-1), rust-uuid (= 1.21.0-6), rust-winnow (= 0.7.13-1), rust-x11 (= 2.21.0-1), rust-xml-rs (= 0.8.19-1), rust-yeslogic-fontconfig-sys (= 6.0.0-1), rust-zbus (= 5.13.2-1), rust-zbus-names (= 4.3.1-1), rust-zerocopy (= 0.8.26-4), rust-zvariant (= 5.9.2-1), rust-zvariant-utils (= 3.3.0-1), rustc (= 1.93.1+dfsg1-2)
 gnome
 Priority: optional
-Filename: pool/main/l/loupe/loupe_49.2-1_amd64.deb
-Size: 2258236
-MD5sum: 1206b87e0c63b0ef6cfee0836e491f83
-SHA256: 98a9561e671fce243aaa410074f1eb18de2e354914461ae3661b6c68f2adb2d5
+Filename: pool/main/l/loupe/loupe_49.2-1+b1_amd64.deb
+Size: 2213976
+MD5sum: d671e947e27e347b5f6ea7273edbf659
+SHA256: 7ca4b26a1a93c30684d2fad25c80d77c705316a6b260613678c0950b7d997ac8
 
 Package: mallard-rng
 Version: 1.1.0-3
@@ -6307,13 +6360,13 @@ MD5sum: 71a2010cdfae1270930da8453b32392d
 SHA256: c4cd6fbe76e1cdcd14f0300808cb8db343efbb10611b3a4e52fb08e89985f59d
 
 Package: onboard
-Version: 1.4.3+git20260213+ds-2
-Installed-Size: 2124
+Version: 1.4.4.1+ds-1
+Installed-Size: 2129
 Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
 Architecture: amd64
 Replaces: gnome-shell-extension-onboard
-Depends: gir1.2-gdkpixbuf-2.0, gir1.2-glib-2.0, gir1.2-gtk-3.0, gir1.2-pango-1.0 (>= 1.29.3), iso-codes, librsvg2-common, onboard-common (<< 1.4.3+git20260213+ds-2.1), onboard-common (>= 1.4.3+git20260213+ds-2), python3-cairo, python3-dbus, python3-gi-cairo, dconf-gsettings-backend | gsettings-backend, python3 (<< 3.14), python3 (>= 3.13~), python3:any, libc6 (>= 2.38), libcairo2 (>= 1.10.0), libcanberra0 (>= 0.2), libdconf1 (>= 0.14.0), libgcc-s1 (>= 3.3.1), libglib2.0-0t64 (>= 2.32.0), libgtk-3-0t64 (>= 3.9.10), libhunspell-1.7-0, libstdc++6 (>= 13.1), libudev1 (>= 183), libx11-6, libxi6 (>= 2:1.2.99.4), libxkbfile1 (>= 1:1.1.0), libxtst6 (>= 2:1.2.5)
-Recommends: gir1.2-ayatanaappindicator3-0.1, gir1.2-atspi-2.0, onboard-data (>= 1.4.3+git20260213+ds-2), xdg-utils
+Depends: gir1.2-gdkpixbuf-2.0, gir1.2-glib-2.0, gir1.2-gtk-3.0, gir1.2-pango-1.0 (>= 1.29.3), iso-codes, librsvg2-common, onboard-common (<< 1.4.4.1+ds-1.1), onboard-common (>= 1.4.4.1+ds-1), python3-cairo, python3-dbus, python3-gi-cairo, dconf-gsettings-backend | gsettings-backend, python3 (<< 3.14), python3 (>= 3.13~), python3:any, libc6 (>= 2.38), libcairo2 (>= 1.10.0), libcanberra0 (>= 0.2), libdconf1 (>= 0.14.0), libgcc-s1 (>= 3.3.1), libglib2.0-0t64 (>= 2.32.0), libgtk-3-0t64 (>= 3.9.10), libhunspell-1.7-0, libstdc++6 (>= 13.1), libudev1 (>= 183), libx11-6, libxi6 (>= 2:1.2.99.4), libxkbfile1 (>= 1:1.1.0), libxtst6 (>= 2:1.2.5)
+Recommends: gir1.2-ayatanaappindicator3-0.1, gir1.2-atspi-2.0, onboard-data (>= 1.4.4.1+ds-1), xdg-utils
 Breaks: gnome-shell-extension-onboard
 Description: Simple On-screen Keyboard
 Homepage: https://github.com/onboard-osk/onboard
@@ -6321,15 +6374,15 @@ Description-md5: 9f50885a8ac80103dfe94731ab8eb79b
 Tag: uitoolkit::gtk
 gnome
 Priority: optional
-Filename: pool/main/o/onboard/onboard_1.4.3+git20260213+ds-2_amd64.deb
-Size: 401568
-MD5sum: c53eaecce7d88e813f5514516f5a7f51
-SHA256: 7a201fd15335ce55c553a35fe73f712e491b1bd375ba5b5a7ad109c94f27c43c
+Filename: pool/main/o/onboard/onboard_1.4.4.1+ds-1_amd64.deb
+Size: 402372
+MD5sum: 2524f8166b013beeba1f98bb51b67658
+SHA256: d2d1476c381ae21022a6d27ad8f59ab29bcefb8dab756e20779f636308809c6c
 
 Package: onboard-common
 Source: onboard
-Version: 1.4.3+git20260213+ds-2
-Installed-Size: 3421
+Version: 1.4.4.1+ds-1
+Installed-Size: 3444
 Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
 Architecture: all
 Replaces: onboard (<< 1.3.0-1~)
@@ -6340,29 +6393,29 @@ Homepage: https://github.com/onboard-osk/onboard
 Description-md5: 4d5af29476f55342a60355d54c0b5470
 gnome
 Priority: optional
-Filename: pool/main/o/onboard/onboard-common_1.4.3+git20260213+ds-2_all.deb
-Size: 552792
-MD5sum: 5ea67feb5462e97f6b8b0758918f7a15
-SHA256: 0dc5362c4f1eccf0f9d61ae9c011cff805f598494e054c79e74216867130e83e
+Filename: pool/main/o/onboard/onboard-common_1.4.4.1+ds-1_all.deb
+Size: 554304
+MD5sum: 13759a59b0ac97b966c8411b708fd224
+SHA256: 604d5f1f954a71a01484e26940bb8592c7596f2afc4b9b1e1b3f37e82a91d982
 
 Package: onboard-data
 Source: onboard
-Version: 1.4.3+git20260213+ds-2
-Installed-Size: 25533
+Version: 1.4.4.1+ds-1
+Installed-Size: 25532
 Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
 Architecture: all
 Replaces: onboard-prediction-data (<< 0.99.0~alpha1~tr1531)
-Depends: onboard (<< 1.4.3+git20260213+ds-2.1), onboard (>= 1.4.3+git20260213+ds-2)
+Depends: onboard (<< 1.4.4.1+ds-1.1), onboard (>= 1.4.4.1+ds-1)
 Breaks: onboard-prediction-data (<< 0.99.0~alpha1~tr1531)
 Description: Language model files for the word suggestion feature of Onboard
 Homepage: https://github.com/onboard-osk/onboard
 Description-md5: 2a7ae8c5c5ae9bf9fb8b1820face7633
 gnome
 Priority: optional
-Filename: pool/main/o/onboard/onboard-data_1.4.3+git20260213+ds-2_all.deb
-Size: 4821056
-MD5sum: f12d4fe8d217325db31f337dab337315
-SHA256: f61c74512a5316d7328d3701eac831b000d6b92fcc57a91b6df43e16b66b02f1
+Filename: pool/main/o/onboard/onboard-data_1.4.4.1+ds-1_all.deb
+Size: 4821780
+MD5sum: de9638fdaab6b5aaaa06bb3c1432d01d
+SHA256: 3f95b8bcb7a250b59cbf2e4e3cf5c78e3537b3510e1983ef84f05a35aac22fad
 
 Package: ooo-thumbnailer
 Version: 0.2-6
