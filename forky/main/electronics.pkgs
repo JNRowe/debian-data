@@ -510,22 +510,21 @@ MD5sum: 9886d1fa5e271914693fecf93ba38485
 SHA256: 0c5bca16bec91b1429eccd668f73a25e3318faa578f593e40865c8617dc6815c
 
 Package: ckb-next
-Version: 0.6.2+dfsg-0.3
-Installed-Size: 3427
-Maintainer: Stewart Ferguson <stew@ferg.aero>
+Version: 0.6.2+dfsg-1
+Installed-Size: 3659
+Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libdbusmenu-qt5-2 (>= 0.3.2), libgcc-s1 (>= 3.0), libpulse0 (>= 0.99.1), libqt5core5t64 (>= 5.15.1), libqt5dbus5t64 (>= 5.6.0~beta), libqt5gui5t64 (>= 5.14.1) | libqt5gui5-gles (>= 5.14.1), libqt5network5t64 (>= 5.5.1), libqt5widgets5t64 (>= 5.15.1), libqt5x11extras5 (>= 5.6.0), libquazip5-1t64 (>= 0.9.1), libstdc++6 (>= 14), libudev1 (>= 183), libxcb-ewmh2 (>= 0.4.2), libxcb-screensaver0, libxcb1, gpg-from-sq | gpg
-Pre-Depends: init-system-helpers (>= 1.54~)
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libpulse0 (>= 0.99.1), libqt6core6t64 (>= 6.10.2), libqt6dbus6 (>= 6.8.2), libqt6gui6 (>= 6.9.1), libqt6network6 (>= 6.7.2), libqt6openglwidgets6 (>= 6.1.2), libqt6widgets6 (>= 6.8.2), libquazip1-qt6-1t64 (>= 1.5), libstdc++6 (>= 14), libudev1 (>= 183), libxcb-ewmh2 (>= 0.4.2), libxcb-screensaver0, libxcb1, gpg-from-sq | gpg
 Description: driver for Corsair keyboards and mice
 Homepage: https://github.com/ckb-next/ckb-next
 Description-md5: 3ae573810d61a5eebaaa863a2be5f572
 Tag: uitoolkit::qt
 electronics
 Priority: optional
-Filename: pool/main/c/ckb-next/ckb-next_0.6.2+dfsg-0.3_amd64.deb
-Size: 1333880
-MD5sum: dc1d2598b91975c1fe91a635d5b00ecf
-SHA256: 689a07acaf3123cebf2e1c34e9c78cd1cf7a587cff74eb6e0d695695cfb1debc
+Filename: pool/main/c/ckb-next/ckb-next_0.6.2+dfsg-1_amd64.deb
+Size: 1431016
+MD5sum: 288f553a152842f855640f57d10e90e0
+SHA256: 08825b364abed3c0b460c775c2b7589e943e12a2b157b4f27a760eb9c039b106
 
 Package: cleware-traffic-light
 Version: 1.0.8~git20240522.f5e418d-2
@@ -3812,4 +3811,57 @@ Filename: pool/main/x/xschem/xschem_3.4.4-1_amd64.deb
 Size: 11445828
 MD5sum: bd4767fed6ed19fdcd858f50abcbc5ed
 SHA256: 1a3062eed32c671525fdb5f546dd5067b7f4fe4ac69463ec1dd89fc277e97d9a
+
+Package: yosys
+Version: 0.52-4
+Installed-Size: 25700
+Maintainer: Debian Electronics Team <pkg-electronics-devel@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libffi8 (>= 3.4), libgcc-s1 (>= 3.3.1), libreadline8t64 (>= 6.0), libstdc++6 (>= 14), libtcl8.6 (>= 8.6.0), zlib1g (>= 1:1.2.0), python3:any, python3-click, yosys-abc (>= 0.32-1)
+Recommends: xdot
+Description: Framework for Verilog RTL synthesis
+Homepage: https://github.com/YosysHQ/yosys
+Description-md5: b4a38d1bfabb13bedbd16816bf4105ab
+electronics
+Priority: optional
+Filename: pool/main/y/yosys/yosys_0.52-4_amd64.deb
+Size: 6231976
+MD5sum: 5cc44b1f42d5b0d35dd399e4d2603f88
+SHA256: 1f115255adea317e40c54b307681aab09cec696bce80d3e4749ec3f2de954019
+
+Package: yosys-abc
+Source: yosys
+Version: 0.52-4
+Installed-Size: 13084
+Maintainer: Debian Electronics Team <pkg-electronics-devel@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: yosys (<< 0.32-1)
+Depends: libbz2-1.0, libc6 (>= 2.38), libgcc-s1 (>= 3.4), libreadline8t64 (>= 6.0), libstdc++6 (>= 13.1), zlib1g (>= 1:1.1.4)
+Breaks: yosys (<< 0.32-1)
+Description: Sequential Logic Synthesis and Verification Algorithms
+Homepage: https://github.com/YosysHQ/yosys
+Description-md5: 78d3a02b9e594b464ee6a916e86b3b3e
+electronics
+Priority: optional
+Filename: pool/main/y/yosys/yosys-abc_0.52-4_amd64.deb
+Size: 4972320
+MD5sum: 9dc152d0e807c2c8b7b8901bec494dd6
+SHA256: ab038d4964692546445b7e0af5a5aaced774e2569cf38601f6b94bde60d70f20
+
+Package: yosys-dev
+Source: yosys
+Version: 0.52-4
+Installed-Size: 678
+Maintainer: Debian Electronics Team <pkg-electronics-devel@lists.alioth.debian.org>
+Architecture: amd64
+Depends: tcl-dev, libffi-dev, libreadline-dev
+Description: Framework for Verilog RTL synthesis (development files)
+Homepage: https://github.com/YosysHQ/yosys
+Description-md5: 1046b72bf5b8ccf517ca1661cff5d331
+electronics
+Priority: optional
+Filename: pool/main/y/yosys/yosys-dev_0.52-4_amd64.deb
+Size: 135372
+MD5sum: 58f8d5197704d13c583affd717a855a7
+SHA256: 84086e525983d93803adf67f66699aa600e7d11a9840d895052ab2f4caa5d05a
 
