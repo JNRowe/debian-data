@@ -17,6 +17,64 @@ Size: 154724
 MD5sum: a7405348ed7fbb1aa90d87d716f88b1e
 SHA256: f5fd3ff032866006556f5603103596e1fd9ab5cbc366ec187fc7f28bcfccbdca
 
+Package: barman
+Version: 3.18.0-2
+Installed-Size: 168
+Maintainer: Marco Nenciarini <mnencia@debian.org>
+Architecture: all
+Replaces: barman-cli (<< 3.18~)
+Depends: python3-barman (= 3.18.0-2), adduser, file, rsync, python3:any
+Recommends: openssh-server, openssh-client, postgresql-client, python3-argcomplete
+Suggests: barman-cli, repmgr
+Breaks: barman-cli (<< 3.18~)
+Description: Backup and Recovery Manager for PostgreSQL
+Homepage: https://pgbarman.org
+Description-md5: c01daa785e513f09a6935c6fe6b4365b
+database
+Priority: optional
+Filename: pool/main/b/barman/barman_3.18.0-2_all.deb
+Size: 119024
+MD5sum: 0fc3285775d1323d68954a2dd21a793d
+SHA256: 34ce389ff4881f29ee8ed37877cc5bfd84d154edbbe9021bb99c8d1be45192c3
+
+Package: barman-cli
+Source: barman
+Version: 3.18.0-2
+Installed-Size: 21
+Maintainer: Marco Nenciarini <mnencia@debian.org>
+Architecture: all
+Depends: python3-barman (= 3.18.0-2), rsync, python3:any
+Recommends: openssh-client
+Suggests: barman-cli-cloud
+Description: Client utilities for the integration of Barman in PostgreSQL clusters
+Homepage: https://pgbarman.org
+Description-md5: ecc6d72b61d496bc456c157361167032
+database
+Priority: optional
+Filename: pool/main/b/barman/barman-cli_3.18.0-2_all.deb
+Size: 8868
+MD5sum: 73549a252d799194729b5bc7064b1660
+SHA256: ad98456739a7c5f932dd7718ca3625919c10a803744c8bd6d8e1e4155b9a03f7
+
+Package: barman-cli-cloud
+Source: barman
+Version: 3.18.0-2
+Installed-Size: 52
+Maintainer: Marco Nenciarini <mnencia@debian.org>
+Architecture: all
+Replaces: barman-cli (<< 2.10-3~~)
+Depends: python3-barman (= 3.18.0-2), rsync, python3:any, python3-boto3
+Breaks: barman-cli (<< 2.10-3~~)
+Description: Cloud client utilities for the integration of Barman in PostgreSQL clusters
+Homepage: https://pgbarman.org
+Description-md5: f53a41a5e1b849dd3c87b8bf761b0a11
+database
+Priority: optional
+Filename: pool/main/b/barman/barman-cli-cloud_3.18.0-2_all.deb
+Size: 29432
+MD5sum: ad23935d3bfa65f1ba90e673c45861dd
+SHA256: 93e7d1c57799acdc13ed6725e3d1711e1460f0b1ccde328d84a1d5d8264d260d
+
 Package: basex
 Version: 10.5-2
 Installed-Size: 4814
@@ -238,30 +296,30 @@ SHA256: 8888954c581a867a1e2cef1cb253d62a4062d58474a366f231d70fd490872a73
 
 Package: firebird3.0-common
 Source: firebird3.0
-Version: 3.0.13.ds7-2
+Version: 3.0.14.ds7-1
 Installed-Size: 69
 Maintainer: Damyan Ivanov <dmn@debian.org>
 Architecture: all
-Depends: firebird3.0-common-doc (= 3.0.13.ds7-2), perl
+Depends: firebird3.0-common-doc (= 3.0.14.ds7-1), perl
 Description: common files for firebird 3.0 server, client and utilities
 Multi-Arch: foreign
 Homepage: https://firebirdsql.org/
 Description-md5: 99ad5b92b46b59007406fee88239a7c4
 database
 Priority: optional
-Filename: pool/main/f/firebird3.0/firebird3.0-common_3.0.13.ds7-2_all.deb
+Filename: pool/main/f/firebird3.0/firebird3.0-common_3.0.14.ds7-1_all.deb
 Size: 16960
-MD5sum: f05686524f6b521a8edb8b148a975306
-SHA256: 657875499eb3db7eede57e28aba28e238596fcd3eead7827841c10c9270539d8
+MD5sum: c53a1fb273960bb5fd7a95575cc92bae
+SHA256: 835c76b3b60ef31d6488fa3ff79491d8a3dd2ce569c202cf0bb9760a0809f912
 
 Package: firebird3.0-server
-Source: firebird3.0 (3.0.13.ds7-2)
-Version: 3.0.13.ds7-2+b2
+Source: firebird3.0
+Version: 3.0.14.ds7-1
 Installed-Size: 1499
 Maintainer: Damyan Ivanov <dmn@debian.org>
 Architecture: amd64
 Replaces: firebird3.0-server-core (<< 3.0.9.33560.ds4-3~)
-Depends: adduser, libc6 (>= 2.38), libfbclient2 (>= 4.0.1.2692.ds1-1~), libgcc-s1 (>= 3.0), libstdc++6 (>= 14), libtommath1 (>= 1.1.0), firebird3.0-common (= 3.0.13.ds7-2), firebird3.0-server-core (= 3.0.13.ds7-2+b2), firebird3.0-utils (= 3.0.13.ds7-2+b2) | firebird4.0-utils, firebird-utils, debconf (>= 0.5) | debconf-2.0, firebird3.0-common-doc (= 3.0.13.ds7-2)
+Depends: adduser, libc6 (>= 2.38), libfbclient2 (>= 4.0.1.2692.ds1-1~), libgcc-s1 (>= 3.0), libstdc++6 (>= 14), libtommath1 (>= 1.1.0), firebird3.0-common (= 3.0.14.ds7-1), firebird3.0-server-core (= 3.0.14.ds7-1), firebird3.0-utils (= 3.0.14.ds7-1) | firebird4.0-utils, firebird-utils, debconf (>= 0.5) | debconf-2.0, firebird3.0-common-doc (= 3.0.14.ds7-1)
 Recommends: libib-util
 Suggests: firebird3.0-doc
 Description: Firebird Server - an RDBMS based on InterBase 6.0 code
@@ -270,19 +328,19 @@ Description-md5: 2134827313e90e2003de2a24bcb319ef
 Tag: uitoolkit::ncurses
 database
 Priority: optional
-Filename: pool/main/f/firebird3.0/firebird3.0-server_3.0.13.ds7-2+b2_amd64.deb
-Size: 424008
-MD5sum: e74ce376a5863681805f8278252e0629
-SHA256: 05ae45ffcb87931e845c06fd5aadb2e5459163d83635596179dfa80f310c24cb
+Filename: pool/main/f/firebird3.0/firebird3.0-server_3.0.14.ds7-1_amd64.deb
+Size: 424344
+MD5sum: 6f240f2bf703f1c872e6c9912becb208
+SHA256: c49bda7a86681ebcdf22a2e241aebf0c6f88057ef2ca7bef4d839e3db69ccb54
 
 Package: firebird3.0-server-core
-Source: firebird3.0 (3.0.13.ds7-2)
-Version: 3.0.13.ds7-2+b2
-Installed-Size: 11347
+Source: firebird3.0
+Version: 3.0.14.ds7-1
+Installed-Size: 11339
 Maintainer: Damyan Ivanov <dmn@debian.org>
 Architecture: amd64
 Replaces: firebird3.0-server (<< 3.0.9.33560.ds4-3~)
-Depends: libc6 (>= 2.34), libfbclient2 (>= 4.0.1.2692.ds1-1~), libgcc-s1 (>= 3.0), libib-util (>= 2.5.0.23247~Beta1.ds2), libstdc++6 (>= 14), libicu78, firebird3.0-common (= 3.0.13.ds7-2), firebird3.0-common-doc (= 3.0.13.ds7-2)
+Depends: libc6 (>= 2.34), libfbclient2 (>= 4.0.1.2692.ds1-1~), libgcc-s1 (>= 3.0), libib-util (>= 2.5.0.23247~Beta1.ds2), libstdc++6 (>= 14), libicu78, firebird3.0-common (= 3.0.14.ds7-1), firebird3.0-common-doc (= 3.0.14.ds7-1)
 Recommends: firebird3.0-utils | firebird4.0-utils
 Suggests: firebird3.0-server
 Enhances: libfbclient2
@@ -294,18 +352,18 @@ Description-md5: f540578275d4feacf219d86a12101dd7
 Tag: uitoolkit::ncurses
 database
 Priority: optional
-Filename: pool/main/f/firebird3.0/firebird3.0-server-core_3.0.13.ds7-2+b2_amd64.deb
-Size: 2968332
-MD5sum: c2a2c5e0788d065ff5aeab5da82a0049
-SHA256: 57e2df22c6b5d92d67d21abd60a85cbe227310cd457a9e150a428fdf1917ced7
+Filename: pool/main/f/firebird3.0/firebird3.0-server-core_3.0.14.ds7-1_amd64.deb
+Size: 2969572
+MD5sum: 66af28957c953b9a94be30b84e619e09
+SHA256: 89f44b416ec5ec4720cddca16f7a6f04eedfd89691ce975e22e76fe4a4fd84bf
 
 Package: firebird3.0-utils
-Source: firebird3.0 (3.0.13.ds7-2)
-Version: 3.0.13.ds7-2+b2
+Source: firebird3.0
+Version: 3.0.14.ds7-1
 Installed-Size: 3889
 Maintainer: Damyan Ivanov <dmn@debian.org>
 Architecture: amd64
-Depends: firebird-utils, firebird3.0-common (= 3.0.13.ds7-2), firebird3.0-common-doc (= 3.0.13.ds7-2), libfbclient2 (>= 4.0.1.2692.ds1-1~), libc6 (>= 2.38), libedit2 (>= 2.11-20080614-0), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
+Depends: firebird-utils, firebird3.0-common (= 3.0.14.ds7-1), firebird3.0-common-doc (= 3.0.14.ds7-1), libfbclient2 (>= 4.0.1.2692.ds1-1~), libc6 (>= 2.38), libedit2 (>= 2.11-20080614-0), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
 Recommends: firebird3.0-server-core
 Suggests: firebird3.0-doc, firebird3.0-server
 Conflicts: firebird2.1-classic, firebird2.1-common, firebird2.1-super, firebird2.5-classic-common, firebird2.5-common, firebird2.5-server-common, firebird2.5-super
@@ -315,10 +373,10 @@ Description-md5: abf897f55faee3358d9fb9b9a2d2b7b9
 Tag: uitoolkit::ncurses
 database
 Priority: optional
-Filename: pool/main/f/firebird3.0/firebird3.0-utils_3.0.13.ds7-2+b2_amd64.deb
-Size: 976552
-MD5sum: 90737fdac6ca0a2a95aa794875e7bbd5
-SHA256: 3e4344d425795a0b7878be58916413e933736038a50a46ed2cdd57da3e9952b1
+Filename: pool/main/f/firebird3.0/firebird3.0-utils_3.0.14.ds7-1_amd64.deb
+Size: 977348
+MD5sum: c3001f242c99f58f2a46ebdf20fb14f0
+SHA256: 932be0b8233cd4aa8c2cdf80f50316d4f1bd0e647b621d46aa56e0d266886dc0
 
 Package: firebird-utils
 Source: firebird4.0
@@ -495,8 +553,8 @@ SHA256: 77edfdc1749dd132d897b027e7fa39eae08b014b85d6bcebe7e525527e0b8f6b
 
 Package: freetds-bin
 Source: freetds (1.5.5+ds-1)
-Version: 1.5.5+ds-1+b1
-Installed-Size: 870
+Version: 1.5.5+ds-1+b2
+Installed-Size: 865
 Maintainer: Joseph Nahmias <jello@debian.org>
 Architecture: amd64
 Depends: freetds-common, libc6 (>= 2.38), libgmp10 (>= 2:6.3.0+dfsg), libgnutls30t64 (>= 3.8.1), libgssapi-krb5-2 (>= 1.17), libhogweed6t64, libnettle8t64, libodbc2 (>= 2.3.1), libreadline8t64 (>= 6.0), libsybdb5 (>= 1.00.82)
@@ -507,10 +565,10 @@ Description-md5: ecc81bdba70ea8f8a0ff19107655f93a
 Tag: interface::commandline, role::program, uitoolkit::ncurses
 database
 Priority: optional
-Filename: pool/main/f/freetds/freetds-bin_1.5.5+ds-1+b1_amd64.deb
-Size: 227640
-MD5sum: 383a18170e66cd641b5aea12ca9fd92a
-SHA256: e6c141ec4c7d3e0071b552f3470cd7ec57653bcf1bf42fad62c071867c22f25f
+Filename: pool/main/f/freetds/freetds-bin_1.5.5+ds-1+b2_amd64.deb
+Size: 225980
+MD5sum: 7947a706c84dce53243c0362f7da6329
+SHA256: 994bafaee12325b2bfe125636d55c5b6347ee1c8a32ec30c9e897dbb72bdb8fc
 
 Package: galera-arbitrator-4
 Source: galera-4
@@ -1854,7 +1912,7 @@ SHA256: d6a0b59369622b305e211b85f665861ac69155aff6019423ae53837458cb305a
 
 Package: mysqltcl
 Source: mysqltcl (3.052-5)
-Version: 3.052-5+b1
+Version: 3.052-5+b2
 Installed-Size: 84
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: amd64
@@ -1867,10 +1925,10 @@ Tag: devel::lang:sql, devel::lang:tcl, devel::library, role::devel-lib,
  works-with::db
 database
 Priority: optional
-Filename: pool/main/m/mysqltcl/mysqltcl_3.052-5+b1_amd64.deb
-Size: 35820
-MD5sum: 79b91b12fcad7b28282d010100fa44d8
-SHA256: cdb1340b7ff698b24b5cbcbe30a6981dcfc0d826e6376f7db0b05914383b7c23
+Filename: pool/main/m/mysqltcl/mysqltcl_3.052-5+b2_amd64.deb
+Size: 35804
+MD5sum: 49981a10ccc7698c3867033203ad2e88
+SHA256: 2ae4ddc99a558be663b157609d8653f7a84060b016848fbe11c27993332020b2
 
 Package: mysqltuner
 Version: 2.8.29-1
@@ -2036,7 +2094,7 @@ SHA256: 47f9e9380033ca73b555e0df403d7eb909b71f1211422a9ae84330e8c2af7a0a
 
 Package: postgresql-18-pg-background
 Source: pg-background
-Version: 1.9.1-1
+Version: 1.9.2-1
 Installed-Size: 308
 Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
 Architecture: amd64
@@ -2046,10 +2104,10 @@ Homepage: https://github.com/vibhorkum/pg_background
 Description-md5: 191c30e05e2b0dbb5525d0125ca46ccc
 database
 Priority: optional
-Filename: pool/main/p/pg-background/postgresql-18-pg-background_1.9.1-1_amd64.deb
-Size: 84752
-MD5sum: 07b2f548c87eee62d6b724688c8e81b1
-SHA256: 746d1e658a124a0195f858e320d20c6f692398ded1eadd94a6b18cfdd110bf2f
+Filename: pool/main/p/pg-background/postgresql-18-pg-background_1.9.2-1_amd64.deb
+Size: 84940
+MD5sum: a5cec1079efe69387dc61ebda59f18a3
+SHA256: 2ccbe529decab2141de33772b4be80364dfa68702b1330a11c6780ac6f176860
 
 Package: postgresql-18-pg-catcheck
 Source: pg-catcheck
