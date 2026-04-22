@@ -4097,8 +4097,8 @@ SHA256: 065a6a42e3f4d0b570e69207ba34e601c2ec2c53ac52b2bb8bded9b47694f472
 
 Package: libflatpak0
 Source: flatpak
-Version: 1.14.10-1~deb12u1
-Installed-Size: 1029
+Version: 1.14.10-1~deb12u2
+Installed-Size: 1041
 Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: bubblewrap (>= 0.8.0-2+deb12u1~), bubblewrap (<< 0.8.1~) | bubblewrap (>= 0.10.0~), libarchive13 (>= 3.0.4), libc6 (>= 2.34), libcurl3-gnutls (>= 7.16.2), libdconf1 (>= 0.26.0), libglib2.0-0 (>= 2.67.3+git20210214), libgpgme11 (>= 1.1.8), libjson-glib-1.0-0 (>= 1.5.2), libmalcontent-0-0 (>= 0.6.0), libostree-1-1 (>= 2020.8), libpolkit-gobject-1-0 (>= 0.101), libseccomp2 (>= 2.5.2), libsystemd0, libxau6 (>= 1:1.0.9), libxml2 (>= 2.7.4), libzstd1 (>= 1.5.2)
@@ -4108,9 +4108,9 @@ Description-md5: 0e4073ffd5dff85f7c3cfe70f89906ed
 Multi-Arch: same
 libs
 Priority: optional
-Filename: pool/updates/main/f/flatpak/libflatpak0_1.14.10-1~deb12u1_amd64.deb
-Size: 363328
-SHA256: 8966195b1d43609d81354ab7fdcfdaf7c8a8c8a2348a3d8627dc9b5fbf67df7e
+Filename: pool/updates/main/f/flatpak/libflatpak0_1.14.10-1~deb12u2_amd64.deb
+Size: 369492
+SHA256: 9717960c34a6b359b6dc0890346523b14ff6bc77b0e808f9a67dd32031afe854
 
 Package: libfontforge4
 Source: fontforge
@@ -6714,6 +6714,77 @@ Priority: optional
 Filename: pool/updates/main/o/orthanc/liborthancframework1_1.10.1+dfsg-2+deb12u1_amd64.deb
 Size: 1760916
 SHA256: 34c5f0f32d0c2b6f082c6f4039f4fe0ee14a1dd67ab12e63603092f9c0cfd053
+
+Package: gstreamer1.0-packagekit
+Source: packagekit
+Version: 1.2.6-5+deb12u1
+Installed-Size: 43
+Maintainer: Matthias Klumpp <mak@debian.org>
+Architecture: amd64
+Replaces: gstreamer0.10-packagekit
+Depends: packagekit (= 1.2.6-5+deb12u1), libc6 (>= 2.34), libglib2.0-0 (>= 2.54), libgstreamer1.0-0 (>= 1.0.0), libpackagekit-glib2-18 (>= 0.9.4)
+Conflicts: gstreamer0.10-packagekit
+Description: GStreamer plugin to install codecs using PackageKit
+Homepage: https://www.freedesktop.org/software/PackageKit/
+Description-md5: d4c358565f52f6ba77fa2cb00080142c
+Recommends: gnome-software | apper | packagekit-installer
+libs
+Priority: optional
+Filename: pool/updates/main/p/packagekit/gstreamer1.0-packagekit_1.2.6-5+deb12u1_amd64.deb
+Size: 12352
+SHA256: 67bcd310e7282cc441d7672c2c64df45549df1cf767f8791186524379a1ac290
+
+Package: libpackagekit-glib2-18
+Source: packagekit
+Version: 1.2.6-5+deb12u1
+Installed-Size: 448
+Maintainer: Matthias Klumpp <mak@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.7), libglib2.0-0 (>= 2.54)
+Description: Library for accessing PackageKit using GLib
+Homepage: https://www.freedesktop.org/software/PackageKit/
+Description-md5: 2f6bf343292f3cd8ceccbf83d3b1645c
+Multi-Arch: same
+libs
+Priority: optional
+Filename: pool/updates/main/p/packagekit/libpackagekit-glib2-18_1.2.6-5+deb12u1_amd64.deb
+Size: 112892
+SHA256: 0add6c4370cffeda889445656446574c85c71b83df29993f166b0a8ee544964b
+
+Package: packagekit-gtk3-module
+Source: packagekit
+Version: 1.2.6-5+deb12u1
+Installed-Size: 42
+Maintainer: Matthias Klumpp <mak@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.4), libfontconfig1 (>= 2.12.6), libglib2.0-0 (>= 2.54), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.22.0), libpangoft2-1.0-0 (>= 1.14.0)
+Description: Install fonts automatically using PackageKit
+Homepage: https://www.freedesktop.org/software/PackageKit/
+Description-md5: b4094b413124ff3eeddd6dcdb91ab037
+Multi-Arch: same
+Recommends: gnome-software | apper | packagekit-installer
+libs
+Priority: optional
+Filename: pool/updates/main/p/packagekit/packagekit-gtk3-module_1.2.6-5+deb12u1_amd64.deb
+Size: 11236
+SHA256: 1d3f3d97249047a6d292e422cb58039d66d32851f980011adef2f62f171fef43
+
+Package: packagekit-tools
+Source: packagekit
+Version: 1.2.6-5+deb12u1
+Installed-Size: 107
+Maintainer: Matthias Klumpp <mak@debian.org>
+Architecture: amd64
+Depends: packagekit (= 1.2.6-5+deb12u1), libc6 (>= 2.34), libglib2.0-0 (>= 2.54), libpackagekit-glib2-18 (>= 1.2.5)
+Description: Provides PackageKit command-line tools
+Homepage: https://www.freedesktop.org/software/PackageKit/
+Description-md5: 8ba205caa823fb175b63d5c17f441a15
+Multi-Arch: foreign
+libs
+Priority: optional
+Filename: pool/updates/main/p/packagekit/packagekit-tools_1.2.6-5+deb12u1_amd64.deb
+Size: 31040
+SHA256: 35e8cab9463f31d6a1d5f19764a4103ce9681de82a3cfb1c13ef853c2c861fe3
 
 Package: libperl5.36
 Source: perl

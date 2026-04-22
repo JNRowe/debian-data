@@ -26020,6 +26020,62 @@ Size: 21770608
 MD5sum: 44c3f3188f2c5efd5e7d968e21033026
 SHA256: f945af9843236c186eb00c7f3adf93e43ce9c223f331058eb375e762949bc552
 
+Package: ubertooth
+Version: 2018.12.R1-5.6
+Installed-Size: 329
+Maintainer: Ruben Undheim <ruben.undheim@gmail.com>
+Architecture: amd64
+Depends: libubertooth1 (= 2018.12.R1-5.6), libbluetooth3 (>= 4.91), libbtbb1 (>= 2015.10.R1+20161027git1eecca5), libc6 (>= 2.38), libusb-1.0-0 (>= 2:1.0.8), python3, python3-numpy
+Recommends: ubertooth-firmware, python3-pyside2.qtgui, python3-pyside2.qtwidgets, python3-pyside2.qtcore
+Suggests: ubertooth-firmware-source
+Description: 2.4 GHz wireless development platform for Bluetooth experimentation
+Homepage: http://ubertooth.sourceforge.net/
+Description-md5: e9d23bf7e51113be21211ef84d38ce22
+science
+Priority: optional
+Filename: pool/main/u/ubertooth/ubertooth_2018.12.R1-5.6_amd64.deb
+Size: 68628
+MD5sum: ee6129ee092f21872c0967f41eb0d239
+SHA256: e34592136c4b88d6d295f41c13189ded67e67cd3ef866245f8be87f41d2016b8
+
+Package: ubertooth-firmware
+Source: ubertooth
+Version: 2018.12.R1-5.6
+Installed-Size: 77
+Maintainer: Ruben Undheim <ruben.undheim@gmail.com>
+Architecture: all
+Recommends: ubertooth
+Suggests: ubertooth-firmware-source
+Description: Firmware for Ubertooth
+Multi-Arch: foreign
+Homepage: http://ubertooth.sourceforge.net/
+Description-md5: 1d015076c18f704562ef7aab0e22d054
+science
+Priority: optional
+Filename: pool/main/u/ubertooth/ubertooth-firmware_2018.12.R1-5.6_all.deb
+Size: 30228
+MD5sum: 59e9006d12b1c2add44d11ecadb5641b
+SHA256: 676d7c89cbaeb9240fc005dafe23d11a5382c7bc98bad762a3627eeddb696e2b
+
+Package: ubertooth-firmware-source
+Source: ubertooth
+Version: 2018.12.R1-5.6
+Installed-Size: 179
+Maintainer: Ruben Undheim <ruben.undheim@gmail.com>
+Architecture: all
+Depends: ubertooth, libubertooth-dev
+Recommends: gcc-arm-none-eabi, libstdc++-arm-none-eabi
+Suggests: ubertooth-firmware
+Description: Source code for the Ubertooth firmware
+Homepage: http://ubertooth.sourceforge.net/
+Description-md5: 5c0d7d506120a2780c7ab413f99c985f
+science
+Priority: optional
+Filename: pool/main/u/ubertooth/ubertooth-firmware-source_2018.12.R1-5.6_all.deb
+Size: 167268
+MD5sum: ead22cc8b35e9115b7332d74407e3095
+SHA256: 352a8a20a055eddc8f8544121b5a9c79702717c2df71aac2371e2a63c320f470
+
 Package: uc-echo
 Version: 1.12-19
 Installed-Size: 361
@@ -27429,11 +27485,13 @@ SHA256: ea3ebe0f17f4392c326e44f34349f4b3f98b389f6226a02c4235d30d6a099efb
 
 Package: python3-xrt
 Source: xrt
-Version: 1:2.21.75+dfsg-4
+Version: 1:2.21.75+dfsg-6
 Installed-Size: 729
 Maintainer: Debian Xilinx Package Maintainers <team+pkg-xilinx@tracker.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 14), libuuid1 (>= 2.16), libxrt2 (= 1:2.21.75+dfsg-4), python3 (<< 3.14), python3 (>= 3.13~), python3:any
+Replaces: libxrt-utils (<< 1:2.21.75+dfsg-6)
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 14), libuuid1 (>= 2.16), libxrt2 (= 1:2.21.75+dfsg-6), python3 (<< 3.14), python3 (>= 3.13~), python3:any
+Breaks: libxrt-utils (<< 1:2.21.75+dfsg-6)
 Description: Xilinx Runtime (XRT) - Python bindings
 Homepage: https://www.xilinx.com/products/design-tools/vitis/xrt.html
 Description-md5: c60680271716ae88b80d2c4d1178539e
@@ -27442,10 +27500,10 @@ Tag: field::physics, implemented-in::python, interface::graphical,
  use::viewing, x11::application
 science
 Priority: optional
-Filename: pool/main/x/xrt/python3-xrt_2.21.75+dfsg-4_amd64.deb
-Size: 195480
-MD5sum: 8a88a5d8992da978d7665957c3c4ff8a
-SHA256: 2c8d74c776dff8374491e0e38c9f39000963e513ccc7140f4d155bfb45efd2e7
+Filename: pool/main/x/xrt/python3-xrt_2.21.75+dfsg-6_amd64.deb
+Size: 195484
+MD5sum: 0c471eabfeba0fee7f8e9c7a8f3203e9
+SHA256: dadc75f63ca4528726bfd33ba2da4eac1a4433033c6b7f0298857044a20c9c3d
 
 Package: xtb
 Version: 6.7.1-3
@@ -28142,21 +28200,21 @@ SHA256: 20d30a5ea4b8193cfb4f7aa25288dd04aaf3b96dd486c9af3309fe18c6944e7b
 
 Package: octave-zmat
 Source: zmat
-Version: 0.9.9+ds.1-8
-Installed-Size: 127
+Version: 1.0.0+ds-1
+Installed-Size: 285
 Maintainer: Debian Octave Group <team+pkg-octave-team@tracker.debian.org>
 Architecture: amd64
-Depends: libblosc2-7 (>= 2.9.2), libc6 (>= 2.14), libgcc-s1 (>= 3.0), liblz4-1 (>= 0.0~r130), libstdc++6 (>= 4.1.1), libzstd1 (>= 1.5.5), octave (>= 11.1.0), zlib1g (>= 1:1.2.0)
+Depends: libblosc2-7 (>= 2.9.2), libc6 (>= 2.38), liblz4-1 (>= 0.0~r130), libzstd1 (>= 1.5.5), octave (>= 11.1.0), zlib1g (>= 1:1.2.0)
 Description: in-memory data compression for Octave
 Multi-Arch: same
 Homepage: https://github.com/NeuroJSON/zmat
 Description-md5: a24afcdfb8bded3902cbaf82d5074578
 science
 Priority: optional
-Filename: pool/main/z/zmat/octave-zmat_0.9.9+ds.1-8_amd64.deb
-Size: 48184
-MD5sum: cc7889980d80b093097ae71105e754b7
-SHA256: 503b6060380c1a349b43542785f1b8229f9342e99e1c2c624dc95f8993d332f7
+Filename: pool/main/z/zmat/octave-zmat_1.0.0+ds-1_amd64.deb
+Size: 98648
+MD5sum: a720aff94708b49bec6abdd9e38a546e
+SHA256: 9a1e561fedf4b4e63a654398c40899849ceaa7ae56a11fc818481894a8d536f8
 
 Package: ztex-bmp
 Version: 20120314-3
