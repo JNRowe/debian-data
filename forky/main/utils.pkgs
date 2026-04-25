@@ -2464,13 +2464,13 @@ MD5sum: 93fa9cfdd5556b0e959ee887bb1362c8
 SHA256: f08e63bf57d8d5aa5b928d017a1619860b937eb5bc00aeae0acc08908a5c2bd8
 
 Package: bootcd
-Version: 6.9.1
-Installed-Size: 425
+Version: 6.10
+Installed-Size: 430
 Maintainer: Bernd Schumacher <bernd@bschu.de>
 Architecture: all
-Depends: busybox | busybox-static | busybox-cvs | busybox-cvs-static, cpio, dosfstools, e2fsprogs, fdisk | util-linux (<< 2.29.2-3~), file, genisoimage, initramfs-tools, grub-efi-amd64-bin, isolinux, lsb-base (>= 3.0-6), rsync, shellia (>= 5.9), syslinux, syslinux-common, xorriso, uuid-runtime
+Depends: busybox | busybox-static | busybox-cvs | busybox-cvs-static, cpio, dosfstools, e2fsprogs, fdisk | util-linux (<< 2.29.2-3~), file, genisoimage, initramfs-tools, grub-efi-amd64-bin | grub-efi-arm64-bin, isolinux, lsb-base (>= 3.0-6), mtools, rsync, shellia (>= 5.9), syslinux-common, xorriso, uuid-runtime
 Recommends: wodim
-Suggests: ssh, discover, aufs-tools
+Suggests: ssh, discover
 Conflicts: bootcd-backup, bootcd-i386, bootcd-ia64, bootcd-mkinitramfs
 Description: bootcd tools can copy a running or mounted Debian system.
 Description-md5: c11b117611c2ea47e742119e6f9df8d2
@@ -2478,10 +2478,10 @@ Tag: admin::boot, admin::filesystem, hardware::storage:cd,
  hardware::storage:floppy, role::app-data, role::program, scope::utility
 utils
 Priority: optional
-Filename: pool/main/b/bootcd/bootcd_6.9.1_all.deb
-Size: 86084
-MD5sum: 8786e08dd6f32f24d14edb57ad4b5cb1
-SHA256: 23d894f9a55cff9ad8ed2433f95141a79806d5e1c51c487eccfe0f799900fcc3
+Filename: pool/main/b/bootcd/bootcd_6.10_all.deb
+Size: 84032
+MD5sum: 0501acbfee64f4783e347828d4ea25e6
+SHA256: 4362209093a31eed45d19a153da0aaf92492230aa9d96834d6d0d884ccbc1037
 
 Package: borgmatic
 Version: 2.0.11-2
@@ -3039,12 +3039,12 @@ SHA256: 5ef9d35da6de1e53e918bcb955d7596bf5b31ca12d9c866ea85f65a92ea778ac
 
 Package: bzip2
 Source: bzip2 (1.0.8-6)
-Version: 1.0.8-6+b1
-Installed-Size: 114
+Version: 1.0.8-6+b2
+Installed-Size: 113
 Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
 Architecture: amd64
 Replaces: libbz2 (<< 0.9.5d-3)
-Depends: libbz2-1.0 (= 1.0.8-6+b1), libc6 (>= 2.34)
+Depends: libbz2-1.0 (= 1.0.8-6+b2), libc6 (>= 2.34)
 Suggests: bzip2-doc
 Description: high-quality block-sorting file compressor - utilities
 Multi-Arch: foreign
@@ -3055,10 +3055,10 @@ Tag: implemented-in::c, interface::commandline, role::program,
  works-with::archive, works-with::file
 utils
 Priority: standard
-Filename: pool/main/b/bzip2/bzip2_1.0.8-6+b1_amd64.deb
-Size: 40988
-MD5sum: 1e3ad557aab1d0feca7de953a5d1e1cb
-SHA256: 9e6c95cc79487eff513585ebec226264a7898de9d4e4a79d4931c2abede92995
+Filename: pool/main/b/bzip2/bzip2_1.0.8-6+b2_amd64.deb
+Size: 40392
+MD5sum: fcfc553b185269f580938767250770b2
+SHA256: c1d311c1842471c1ac9b7707584fc67c418f87c442f2aab1e68e58e3fc01b0a7
 
 Package: cabal-debian
 Version: 5.5-1
@@ -3613,22 +3613,22 @@ SHA256: 634863b04ae2bd8e655a7eb51c459b7a2ed1e55413c8feac134a05248dc52f62
 
 Package: cdebconf
 Source: cdebconf (0.282)
-Version: 0.282+b2
-Installed-Size: 540
+Version: 0.282+b3
+Installed-Size: 536
 Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
 Architecture: amd64
 Provides: debconf-2.0
-Depends: libc6 (>= 2.38), libdebian-installer4 (>= 0.125), libnewt0.52 (>= 0.52.25), libreadline8t64 (>= 6.0), libselinux1 (>= 3.1~), libslang2 (>= 2.2.4), libtextwrap1 (>= 0.1), debconf
+Depends: libc6 (>= 2.38), libdebian-installer4 (>= 0.127), libnewt0.52 (>= 0.52.25), libreadline8t64 (>= 6.0), libselinux1 (>= 3.1~), libslang2 (>= 2.2.4), libtextwrap1 (>= 0.1), debconf
 Suggests: cdebconf-gtk
 Description: Debian Configuration Management System (C-implementation)
 Description-md5: 19ca11018968935708d0ed3262e5aa67
 Tag: devel::packaging, implemented-in::c, role::program, suite::debian
 utils
 Priority: optional
-Filename: pool/main/c/cdebconf/cdebconf_0.282+b2_amd64.deb
-Size: 136400
-MD5sum: 3ae23ee491dd13debc7454fcf9ea7df3
-SHA256: 281e591fc19934a7e1714a9b8519176a94e228d6321f3f63d125d520ec871301
+Filename: pool/main/c/cdebconf/cdebconf_0.282+b3_amd64.deb
+Size: 132684
+MD5sum: 6f99e16d5503fa67b69a090afa58eedf
+SHA256: 7431a43fa78636b4f427a8548f5c7ca2e774a2eba2f957e345765ae1bd98a92a
 
 Package: cdemu-client
 Version: 3.2.5-2
@@ -4313,11 +4313,12 @@ MD5sum: f750f3ca7dc43a566274b521ee25e7d9
 SHA256: 6004e03335502838ccabfeda13d774b3bf4c1cc02087bea6df39a686ad7c9d4a
 
 Package: cmigemo
-Version: 1:1.2+gh0.20220623-3
-Installed-Size: 33
+Source: cmigemo (1:1.2+gh0.20220623-3)
+Version: 1:1.2+gh0.20220623-3+b1
+Installed-Size: 34
 Maintainer: Youhei SASAKI <uwabami@gfd-dennou.org>
 Architecture: amd64
-Depends: libc6 (>= 2.34), libmigemo1 (= 1:1.2+gh0.20220623-3), cmigemo-common
+Depends: libc6 (>= 2.34), libmigemo1 (= 1:1.2+gh0.20220623-3+b1), cmigemo-common
 Suggests: vim-migemo
 Description: Japanese incremental search tool written in C - binary
 Homepage: http://www.kaoriya.net/software/cmigemo/
@@ -4325,10 +4326,10 @@ Description-md5: 6da276b2c63b47e28ae6040261e2ae56
 Tag: culture::japanese, role::program, use::searching
 utils
 Priority: optional
-Filename: pool/main/c/cmigemo/cmigemo_1.2+gh0.20220623-3_amd64.deb
-Size: 8548
-MD5sum: f6ebb6129ca6bf92e3c493952f7860ae
-SHA256: 9fa682c08b9b329908568a571372ae9491a39c2fd695ebf20f75beac8f247ee1
+Filename: pool/main/c/cmigemo/cmigemo_1.2+gh0.20220623-3+b1_amd64.deb
+Size: 8876
+MD5sum: a296b1d3422f6a1af044361b365bb088
+SHA256: b017e602712b47f7c04bc8cd7a5678d0e75b0ab0a63479aac0b93ef2d9d48577
 
 Package: cmigemo-common
 Source: cmigemo
@@ -4385,13 +4386,13 @@ MD5sum: 5d30144a3b8e7ea610f762299975807d
 SHA256: 518e4889c61873c58341bd03bd7862e907b6273a44b617fc0258ac5d4e08dc35
 
 Package: libcmph-tools
-Source: cmph
-Version: 2.0.2-4
-Installed-Size: 70
+Source: cmph (2.0.2-4)
+Version: 2.0.2-4+b1
+Installed-Size: 71
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: amd64
 Replaces: libcmph-bin
-Depends: libcmph0t64 (= 2.0.2-4), libc6 (>= 2.38)
+Depends: libcmph0t64 (= 2.0.2-4+b1), libc6 (>= 2.38)
 Conflicts: libcmph-bin
 Description: C Minimal Perfect Hashing Library command line utilities
 Homepage: http://cmph.sourceforge.net
@@ -4399,10 +4400,10 @@ Description-md5: 01d8963db8891e236b4e86532cdbf662
 Tag: implemented-in::c, interface::commandline, role::program
 utils
 Priority: optional
-Filename: pool/main/c/cmph/libcmph-tools_2.0.2-4_amd64.deb
-Size: 20396
-MD5sum: d7cecb9d47c2c27e4e515e54b0169a08
-SHA256: 972d16590c3987154b75c37fc8a2968472cfb03d2566fbdc9e3cb388014c64cf
+Filename: pool/main/c/cmph/libcmph-tools_2.0.2-4+b1_amd64.deb
+Size: 20588
+MD5sum: e0bcacde8f1272e1ac8a5d6a52961473
+SHA256: 74b16d98f81449688dcdab6365dba0fe472e6ecb9704a438763a289a0861fe43
 
 Package: coda
 Source: coda (2.25.6-2)
@@ -4507,13 +4508,12 @@ MD5sum: f080bdf53cc82714d543df5e6c887ad3
 SHA256: 1bb5104a7a1278951dd1c2ee5f91eb87abc7b1cb66b9ed8ef3727188d189dedc
 
 Package: collectd
-Source: collectd (5.12.0-27)
-Version: 5.12.0-27+b1
-Installed-Size: 159
+Version: 5.12.0-28
+Installed-Size: 153
 Maintainer: Collectd Packaging Team <team+collectd@tracker.debian.org>
 Architecture: amd64
-Depends: collectd-core (>= 5.12.0-27), collectd-core (<< 5.12.0-27.1~), libc6 (>= 2.38), librrd8t64 (>= 1.3.0)
-Recommends: intel-cmt-cat (>= 25.04), libabsl20240722 (>= 20240722.0-1), libatasmart4 (>= 0.13), libbson2-2 (>= 2.2.1), libcurl4t64 (>= 7.16.2), libdbi1t64 (>= 0.9.0), libesmtp6 (>= 1.1.0), libgcc-s1 (>= 3.0), libgcrypt20 (>= 1.11.1), libglib2.0-0t64 (>= 2.12.0), libgps32 (>= 3.3), libgrpc++1.51t64 (>= 1.51.1), libgrpc29t64 (>= 1.51.1), libhiredis1.1.0 (>= 1.2.0), libi2c0 (>= 4.0), libip4tc2 (>= 1.8.3), libip6tc2 (>= 1.8.3), libjansson4 (>= 2.14), libldap2 (>= 2.6.2), liblua5.3-0, libmariadb3 (>= 3.0.0), libmemcached11t64 (>= 1.1.4), libmicrohttpd12t64 (>= 0.9.50), libmnl0 (>= 1.0.3-4~), libmodbus5 (>= 3.0.2), libmongoc2-2 (>= 2.2.1), libmosquitto1 (>= 1.2), libnotify4 (>= 0.7.0), libopenipmi0t64 (>= 2.0.37), liboping0 (>= 0.3.2), libowcapi-3.2-4t64 (>= 3.2p4+dfsg1), libpcap0.8t64 (>= 1.0.0), libperl5.40 (>= 5.40.0), libpq5, libprotobuf-c1 (>= 1.0.1), libprotobuf32t64 (>= 3.21.12), libpython3.13 (>= 3.13.0~rc3), libqpid-proton11, librabbitmq4 (>= 0.8.0), librdkafka1 (>= 0.9.1), libriemann-client0 (>= 1.10.0), librrd8t64 (>= 1.4~rc2), librte-eal26 (>= 23.11), librte-ethdev26 (>= 25.11~rc1), libsensors5 (>= 1:3.5.0), libsnmp40t64 (>= 5.9.4+dfsg), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libudev1 (>= 183), libupsclient7 (>= 2.8.0), libvirt0 (>= 1.2.11~rc1), libxenmisc4.20 (>= 4.20.2+7-g1badcf5035), libxml2-16 (>= 2.14.1), libyajl2 (>= 2.0.4), default-jre-headless
+Depends: collectd-core (>= 5.12.0-28), collectd-core (<< 5.12.0-28.1~), libc6 (>= 2.38), librrd8t64 (>= 1.3.0)
+Recommends: intel-cmt-cat (>= 26.03), libabsl20260107 (>= 20260107.0-0~), libatasmart4 (>= 0.13), libbson2-2 (>= 2.2.4), libcurl4t64 (>= 7.16.2), libdbi1t64 (>= 0.9.0), libesmtp6 (>= 1.1.0), libgcc-s1 (>= 3.0), libgcrypt20 (>= 1.12.0), libglib2.0-0t64 (>= 2.12.0), libgps32 (>= 3.3), libgrpc++1.51t64 (>= 1.51.1), libgrpc29t64 (>= 1.51.1), libhiredis1.1.0 (>= 1.2.0), libi2c0 (>= 4.0), libip4tc2 (>= 1.8.3), libip6tc2 (>= 1.8.3), libjansson4 (>= 2.14), libldap2 (>= 2.6.2), liblua5.3-0, libmariadb3 (>= 3.0.0), libmemcached11t64 (>= 1.1.4), libmicrohttpd12t64 (>= 0.9.50), libmnl0 (>= 1.0.3-4~), libmodbus5 (>= 3.0.2), libmongoc2-2 (>= 2.2.4), libmosquitto1 (>= 1.2), libnotify4 (>= 0.7.0), libopenipmi0t64 (>= 2.0.37), liboping0 (>= 0.3.2), libowcapi-3.2-4t64 (>= 3.2p4+dfsg1), libpcap0.8t64 (>= 1.0.0), libperl5.40 (>= 5.40.0), libpq5, libprotobuf-c1 (>= 1.0.1), libprotobuf32t64 (>= 3.21.12), libpython3.13 (>= 3.13.0~rc3), libqpid-proton11, librabbitmq4 (>= 0.8.0), librdkafka1 (>= 0.9.1), libriemann-client0 (>= 1.10.0), librrd8t64 (>= 1.4~rc2), librte-eal26 (>= 23.11), librte-ethdev26 (>= 25.11~rc1), libsensors5 (>= 1:3.5.0), libsnmp45 (>= 5.9.5.2+dfsg), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libudev1 (>= 183), libupsclient7 (>= 2.8.0), libvirt0 (>= 1.2.11~rc1), libxenmisc4.20 (>= 4.20.2+37-g61ff35323e), libxml2-16 (>= 2.14.1), libyajl2 (>= 2.0.4), default-jre-headless
 Description: statistics collection and monitoring daemon
 Homepage: https://collectd.org/
 Description-md5: 4cab05e1aaeb16dba768fed7b2d14922
@@ -4524,20 +4524,20 @@ Tag: admin::hardware, admin::monitoring, admin::power-management,
  works-with::network-traffic
 utils
 Priority: optional
-Filename: pool/main/c/collectd/collectd_5.12.0-27+b1_amd64.deb
-Size: 91724
-MD5sum: 3fa8b4a870c19cd481ade5f9d73f848b
-SHA256: efa40b81b0d0b9449bca67f2c4eca0a1bfe4cb6c37427ec5e5958f1c9191fe73
+Filename: pool/main/c/collectd/collectd_5.12.0-28_amd64.deb
+Size: 87000
+MD5sum: 77e717376999fe0d597ba8c5fc8e9f6b
+SHA256: 83bbd8c816e62a54c76816da0f2912d021aeed53bf4af7c4cc955e8f591984e5
 
 Package: collectd-core
-Source: collectd (5.12.0-27)
-Version: 5.12.0-27+b1
-Installed-Size: 5619
+Source: collectd
+Version: 5.12.0-28
+Installed-Size: 5613
 Maintainer: Collectd Packaging Team <team+collectd@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libcap2 (>= 1:2.10), debconf (>= 0.5) | debconf-2.0
 Recommends: perl, rrdtool
-Suggests: collectd-dev, librrds-perl, liburi-perl, libhtml-parser-perl, libregexp-common-perl, libconfig-general-perl, httpd-cgi, apache2, apcupsd, bind9, ceph, chrony, default-mysql-server, gpsd, iptables, ipvsadm, lm-sensors, mbmon, memcached, nginx, notification-daemon, nut, openvpn, olsrd, pdns-server, postgresql, redis-server, slapd, time-daemon, zookeeper, intel-cmt-cat (>= 25.04), libabsl20240722 (>= 20240722.0-1), libatasmart4 (>= 0.13), libbson2-2 (>= 2.2.1), libcurl4t64 (>= 7.16.2), libdbi1t64 (>= 0.9.0), libesmtp6 (>= 1.1.0), libgcc-s1 (>= 3.0), libgcrypt20 (>= 1.11.1), libglib2.0-0t64 (>= 2.12.0), libgps32 (>= 3.3), libgrpc++1.51t64 (>= 1.51.1), libgrpc29t64 (>= 1.51.1), libhiredis1.1.0 (>= 1.2.0), libi2c0 (>= 4.0), libip4tc2 (>= 1.8.3), libip6tc2 (>= 1.8.3), libjansson4 (>= 2.14), libldap2 (>= 2.6.2), liblua5.3-0, libmariadb3 (>= 3.0.0), libmemcached11t64 (>= 1.1.4), libmicrohttpd12t64 (>= 0.9.50), libmnl0 (>= 1.0.3-4~), libmodbus5 (>= 3.0.2), libmongoc2-2 (>= 2.2.1), libmosquitto1 (>= 1.2), libnotify4 (>= 0.7.0), libopenipmi0t64 (>= 2.0.37), liboping0 (>= 0.3.2), libowcapi-3.2-4t64 (>= 3.2p4+dfsg1), libpcap0.8t64 (>= 1.0.0), libperl5.40 (>= 5.40.0), libpq5, libprotobuf-c1 (>= 1.0.1), libprotobuf32t64 (>= 3.21.12), libpython3.13 (>= 3.13.0~rc3), libqpid-proton11, librabbitmq4 (>= 0.8.0), librdkafka1 (>= 0.9.1), libriemann-client0 (>= 1.10.0), librrd8t64 (>= 1.4~rc2), librte-eal26 (>= 23.11), librte-ethdev26 (>= 25.11~rc1), libsensors5 (>= 1:3.5.0), libsnmp40t64 (>= 5.9.4+dfsg), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libudev1 (>= 183), libupsclient7 (>= 2.8.0), libvirt0 (>= 1.2.11~rc1), libxenmisc4.20 (>= 4.20.2+7-g1badcf5035), libxml2-16 (>= 2.14.1), libyajl2 (>= 2.0.4), default-jre-headless
+Suggests: collectd-dev, librrds-perl, liburi-perl, libhtml-parser-perl, libregexp-common-perl, libconfig-general-perl, httpd-cgi, apache2, apcupsd, bind9, ceph, chrony, default-mysql-server, gpsd, iptables, ipvsadm, lm-sensors, mbmon, memcached, nginx, notification-daemon, nut, openvpn, olsrd, pdns-server, postgresql, redis-server, slapd, time-daemon, zookeeper, intel-cmt-cat (>= 26.03), libabsl20260107 (>= 20260107.0-0~), libatasmart4 (>= 0.13), libbson2-2 (>= 2.2.4), libcurl4t64 (>= 7.16.2), libdbi1t64 (>= 0.9.0), libesmtp6 (>= 1.1.0), libgcc-s1 (>= 3.0), libgcrypt20 (>= 1.12.0), libglib2.0-0t64 (>= 2.12.0), libgps32 (>= 3.3), libgrpc++1.51t64 (>= 1.51.1), libgrpc29t64 (>= 1.51.1), libhiredis1.1.0 (>= 1.2.0), libi2c0 (>= 4.0), libip4tc2 (>= 1.8.3), libip6tc2 (>= 1.8.3), libjansson4 (>= 2.14), libldap2 (>= 2.6.2), liblua5.3-0, libmariadb3 (>= 3.0.0), libmemcached11t64 (>= 1.1.4), libmicrohttpd12t64 (>= 0.9.50), libmnl0 (>= 1.0.3-4~), libmodbus5 (>= 3.0.2), libmongoc2-2 (>= 2.2.4), libmosquitto1 (>= 1.2), libnotify4 (>= 0.7.0), libopenipmi0t64 (>= 2.0.37), liboping0 (>= 0.3.2), libowcapi-3.2-4t64 (>= 3.2p4+dfsg1), libpcap0.8t64 (>= 1.0.0), libperl5.40 (>= 5.40.0), libpq5, libprotobuf-c1 (>= 1.0.1), libprotobuf32t64 (>= 3.21.12), libpython3.13 (>= 3.13.0~rc3), libqpid-proton11, librabbitmq4 (>= 0.8.0), librdkafka1 (>= 0.9.1), libriemann-client0 (>= 1.10.0), librrd8t64 (>= 1.4~rc2), librte-eal26 (>= 23.11), librte-ethdev26 (>= 25.11~rc1), libsensors5 (>= 1:3.5.0), libsnmp45 (>= 5.9.5.2+dfsg), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libudev1 (>= 183), libupsclient7 (>= 2.8.0), libvirt0 (>= 1.2.11~rc1), libxenmisc4.20 (>= 4.20.2+37-g61ff35323e), libxml2-16 (>= 2.14.1), libyajl2 (>= 2.0.4), default-jre-headless
 Description: statistics collection and monitoring daemon (core system)
 Homepage: https://collectd.org/
 Description-md5: 20e62bdb1c1a5e1e76aefab4cbea7f2d
@@ -4545,18 +4545,18 @@ Tag: admin::logging, admin::monitoring, interface::daemon, role::program,
  use::monitor
 utils
 Priority: optional
-Filename: pool/main/c/collectd/collectd-core_5.12.0-27+b1_amd64.deb
-Size: 1280476
-MD5sum: 5a96352e0085ebc288ab32fcbb3c56e4
-SHA256: 777d31c71e3d31e575d4a31c201ebcdfa507470fba13efa6919eeca46f54e523
+Filename: pool/main/c/collectd/collectd-core_5.12.0-28_amd64.deb
+Size: 1275600
+MD5sum: 312dedfbd47a71f70ce84d07e037f21a
+SHA256: c7c5cd31d01508bfa0f7e509c48be52bed43bf1f1685d18b6f7ff859d4e32f69
 
 Package: collectd-dev
 Source: collectd
-Version: 5.12.0-27
-Installed-Size: 496
+Version: 5.12.0-28
+Installed-Size: 491
 Maintainer: Collectd Packaging Team <team+collectd@tracker.debian.org>
 Architecture: all
-Depends: collectd-core (>= 5.12.0-27), collectd-core (<< 5.12.0-27.1~)
+Depends: collectd-core (>= 5.12.0-28), collectd-core (<< 5.12.0-28.1~)
 Description: statistics collection and monitoring daemon (development files)
 Homepage: https://collectd.org/
 Description-md5: f3446ffaf6495cfe6eeded886300ad69
@@ -4564,15 +4564,15 @@ Tag: admin::monitoring, devel::lang:c, devel::library, implemented-in::c,
  role::devel-lib, role::program
 utils
 Priority: optional
-Filename: pool/main/c/collectd/collectd-dev_5.12.0-27_all.deb
-Size: 134772
-MD5sum: 6a5e6596d4d28478515851dd8590da4a
-SHA256: a1af580671addfa821ec3b88b84e58512a0664878746d1efc5f126950c70bb98
+Filename: pool/main/c/collectd/collectd-dev_5.12.0-28_all.deb
+Size: 130384
+MD5sum: 346c7d390741375245f41b2859dde211
+SHA256: 592da115c8a6a4266e06b30d0eaaeb724246b1f07d6ad3a2f20d0fb237219435
 
 Package: collectd-utils
-Source: collectd (5.12.0-27)
-Version: 5.12.0-27+b1
-Installed-Size: 187
+Source: collectd
+Version: 5.12.0-28
+Installed-Size: 177
 Maintainer: Collectd Packaging Team <team+collectd@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libcollectdclient1t64 (>= 5.2.0)
@@ -4583,10 +4583,10 @@ Description-md5: 9e642f2a954c69592f11d4db8ecd29e0
 Tag: implemented-in::c, role::program
 utils
 Priority: optional
-Filename: pool/main/c/collectd/collectd-utils_5.12.0-27+b1_amd64.deb
-Size: 100776
-MD5sum: 63d6a78479116f384009a8f1cf7bc622
-SHA256: 26eb98369eaf77e072b868e7dded9d77c8752b7aa228a3b4383c15a39ef33a6e
+Filename: pool/main/c/collectd/collectd-utils_5.12.0-28_amd64.deb
+Size: 95992
+MD5sum: c415f6a4af1fe89d13b78dcb4f5bea59
+SHA256: 7e0c284554aded42b1a498c1df5eff9434709285629883e3ffd5700b05a97929
 
 Package: colorize
 Version: 0.67-1
@@ -6126,12 +6126,12 @@ MD5sum: 2995783c1867b587f09df5db29bfa8eb
 SHA256: e3228606e370d3931335af78d3980ad4566bd2e2aa614b530b1a022a8a9e1cf0
 
 Package: dconf-cli
-Source: dconf
-Version: 0.49.0-4
-Installed-Size: 88
+Source: dconf (0.49.0-4)
+Version: 0.49.0-4+b1
+Installed-Size: 83
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libdconf1 (= 0.49.0-4), libc6 (>= 2.34), libglib2.0-0t64 (>= 2.76.0)
+Depends: libdconf1 (= 0.49.0-4+b1), libc6 (>= 2.34), libglib2.0-0t64 (>= 2.76.0)
 Conflicts: dconf
 Description: simple configuration storage system - utilities
 Multi-Arch: foreign
@@ -6139,10 +6139,10 @@ Homepage: https://wiki.gnome.org/Projects/dconf
 Description-md5: 1d5ca74b35414d275ff0579f00176c88
 utils
 Priority: optional
-Filename: pool/main/d/dconf/dconf-cli_0.49.0-4_amd64.deb
-Size: 30000
-MD5sum: d60802d81b72e4ac742e5b9384af81cd
-SHA256: 93bbfab7dd37fc292e015b77301004e632884a76c183af7f24bd04ab1f4fd1a5
+Filename: pool/main/d/dconf/dconf-cli_0.49.0-4+b1_amd64.deb
+Size: 28556
+MD5sum: e63d5a65344cd96846ed834a00046e98
+SHA256: 32f0eb5a84b4678b7d47c10cf6809a01a90be616f990f227b879b79fef879d7a
 
 Package: dconf-editor
 Version: 49.0-1
@@ -6704,11 +6704,11 @@ MD5sum: 022aed26dfadad9315c33a2da916f9d6
 SHA256: 9ec8dff98e99f38d2e8dc04bc5404605b465ff0fb8e1c32f30bc41b14331f863
 
 Package: devtodo
-Version: 0.1.20+git20200830.0ad52b0-3
-Installed-Size: 364
+Version: 0.1.20+git20200830.0ad52b0-5
+Installed-Size: 403
 Maintainer: Carlos Henrique Lima Melara <charlesmelara@riseup.net>
 Architecture: amd64
-Depends: libc6 (>= 2.34), libedit2 (>= 3.1-20130611-0), libgcc-s1 (>= 3.0), libstdc++6 (>= 11), libtinfo6 (>= 6)
+Depends: libc6 (>= 2.34), libedit2 (>= 3.1-20130611-0), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1), libtinfo6 (>= 6)
 Suggests: xsltproc
 Description: hierarchical, prioritised todo list manager
 Homepage: https://swapoff.org/devtodo1
@@ -6716,10 +6716,10 @@ Description-md5: 709b1a954b46713b1394587be88d9dec
 Tag: uitoolkit::ncurses
 utils
 Priority: optional
-Filename: pool/main/d/devtodo/devtodo_0.1.20+git20200830.0ad52b0-3_amd64.deb
-Size: 128024
-MD5sum: 29a0b26e5a8f1657f6cf55d6b89ecc0a
-SHA256: 8408548809b710c813cde93eab287b128838c498af6ea826220fef2aa8a5b952
+Filename: pool/main/d/devtodo/devtodo_0.1.20+git20200830.0ad52b0-5_amd64.deb
+Size: 139016
+MD5sum: 3c96bc1fe4dc86adf63c5a0892704ef0
+SHA256: bec517b624fd3356347745bb3ea599cd69f32a7d9fc1434c4659dc490a8e227b
 
 Package: dfc
 Version: 3.1.1-5
@@ -8007,8 +8007,8 @@ SHA256: e177b030d5b27e00a8332d24acc0d3b184769d50fc6505a0473184b907661c91
 
 Package: dwarfdump
 Source: dwarfutils (1:0.11.1-1)
-Version: 1:0.11.1-1+b1
-Installed-Size: 739
+Version: 1:0.11.1-1+b2
+Installed-Size: 738
 Maintainer: Fabian Wolff <fabi.wolff@arcor.de>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libdwarf1 (>= 1:0.11.1)
@@ -8018,10 +8018,10 @@ Description-md5: a4f78a6974965942c7992279042bc94b
 Tag: devel::debugger, implemented-in::c, role::program
 utils
 Priority: optional
-Filename: pool/main/d/dwarfutils/dwarfdump_0.11.1-1+b1_amd64.deb
-Size: 421956
-MD5sum: d8519c84c558ce6d1eb981b118958605
-SHA256: f1906c1af9badf4280accaefe36f209aad7cf0c383c2b3163c0b1029ac7b99e0
+Filename: pool/main/d/dwarfutils/dwarfdump_0.11.1-1+b2_amd64.deb
+Size: 421524
+MD5sum: b1f4f1347870f1d39e048eacd63b3bba
+SHA256: d1d3bea92045d7fc645add338d3e7100bff29d984d06049be66f1ea1716f0d38
 
 Package: dwarves
 Version: 1.31-2
@@ -8186,8 +8186,8 @@ MD5sum: 41d0ec234f9788b5ffb89c6153cefef1
 SHA256: 7b420560809019204c7b0f12ecce81a261c5aebf91c6e49a96908e7e87030577
 
 Package: editorconfig
-Source: editorconfig-core
-Version: 0.12.10+~0.17.1-3
+Source: editorconfig-core (0.12.10+~0.17.1-3)
+Version: 0.12.10+~0.17.1-3+b1
 Installed-Size: 43
 Maintainer: Jeremy Bícha <jbicha@ubuntu.com>
 Architecture: amd64
@@ -8197,10 +8197,10 @@ Homepage: https://editorconfig.org/
 Description-md5: 0d50ee79aa8693c5ca7ae95dd1a121bf
 utils
 Priority: optional
-Filename: pool/main/e/editorconfig-core/editorconfig_0.12.10+~0.17.1-3_amd64.deb
-Size: 13084
-MD5sum: 9be13f210949416a45c61075cd99ff67
-SHA256: 2a71b22d3e31748f6b82aa4d3fc7885594d92df02e1d270055508ab242515fc0
+Filename: pool/main/e/editorconfig-core/editorconfig_0.12.10+~0.17.1-3+b1_amd64.deb
+Size: 12184
+MD5sum: 6bc3504568a3c53ef63e8dac547b7b46
+SHA256: deeb4b618de7d02221fe933a9af8e77a8df12bd6447d8dff893c2a55c172ed8d
 
 Package: electrum
 Version: 4.7.2+dfsg-1
@@ -8576,11 +8576,12 @@ MD5sum: 655909c40724910fefa3f82eb85269e1
 SHA256: 11f3c21fcc67cc96e16a12477a2cbc0c3b5a430882d24b3b90a98ff1e5a4f347
 
 Package: fakeroot
-Version: 1.37.2-1
+Source: fakeroot (1.37.2-1)
+Version: 1.37.2-1+b1
 Installed-Size: 225
 Maintainer: Clint Adams <clint@debian.org>
 Architecture: amd64
-Depends: libfakeroot (>= 1.37.2-1), libc6 (>= 2.38)
+Depends: libfakeroot (>= 1.37.2-1+b1), libc6 (>= 2.38)
 Description: tool for simulating superuser privileges
 Multi-Arch: foreign
 Description-md5: db2730aa4872dbe27ff20c4aad3c5429
@@ -8590,10 +8591,10 @@ Tag: devel::lang:perl, devel::library, devel::packaging, implemented-in::c,
  suite::debian
 utils
 Priority: optional
-Filename: pool/main/f/fakeroot/fakeroot_1.37.2-1_amd64.deb
-Size: 76164
-MD5sum: b1822f083c4f12ea1d45bcb6e58b07a9
-SHA256: fc651525f3d56319bd0fb02d8af467f02cad844efc2c595cf4da67f695412ca5
+Filename: pool/main/f/fakeroot/fakeroot_1.37.2-1+b1_amd64.deb
+Size: 75056
+MD5sum: 83be8e104fef783438ee8aed5ad899eb
+SHA256: f283241b99448f419c9ff2745b0c6e9ec5898bc6f5740c59b11813ba1814df17
 
 Package: faketime
 Version: 0.9.12-0.2
@@ -12036,11 +12037,11 @@ SHA256: 25193d1434ba85aabfe83e7c4c0a1ced9e4706cc7102accfa073e11032f07971
 
 Package: file
 Source: file (1:5.46-5)
-Version: 1:5.46-5+b1
-Installed-Size: 80
+Version: 1:5.46-5+b2
+Installed-Size: 79
 Maintainer: Christoph Biedl <debian.axhn@manchmal.in-ulm.de>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libmagic1t64 (= 1:5.46-5+b1)
+Depends: libc6 (>= 2.38), libmagic1t64 (= 1:5.46-5+b2)
 Breaks: debhelper (<< 12.2~)
 Description: Recognize the type of data in a file using "magic" numbers
 Multi-Arch: foreign
@@ -12051,10 +12052,10 @@ Tag: admin::forensics, implemented-in::c, interface::commandline,
  works-with::file
 utils
 Priority: standard
-Filename: pool/main/f/file/file_5.46-5+b1_amd64.deb
-Size: 43832
-MD5sum: 3ae065083b3495c9c764daa32b269ca5
-SHA256: d397f436a785451b9acbef1bd1b51ad93c36214c70ad71126c20781498ba98ee
+Filename: pool/main/f/file/file_5.46-5+b2_amd64.deb
+Size: 42612
+MD5sum: 515a1d29d7bc1d6542276d93d01c80bb
+SHA256: 3f8fa4fb0b97fda97467f16059fe714f6e0d4a8cce8edac625bdb13993b5fdfd
 
 Package: findutils
 Version: 4.10.0-3
@@ -12354,12 +12355,12 @@ MD5sum: e78e61cf0cfdd95e4fb446aa1362ec05
 SHA256: 4b41bc9d04dc83dba85b5f608800870fa7cc733e1609f9c2eaa82694be3e118b
 
 Package: folks-tools
-Source: folks
-Version: 0.15.12-1
-Installed-Size: 187
+Source: folks (0.15.12-1)
+Version: 0.15.12-1+b1
+Installed-Size: 186
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.34), libfolks26 (>= 0.11.1), libgee-0.8-2 (>= 0.8.4), libglib2.0-0t64 (>= 2.58), libreadline8t64 (>= 6.0), libxml2-16 (>= 2.14.1)
+Depends: libc6 (>= 2.34), libfolks26 (>= 0.11.1), libgee-0.8-2 (>= 0.8.4), libglib2.0-0t64 (>= 2.80.0), libreadline8t64 (>= 6.0), libxml2-16 (>= 2.14.1)
 Recommends: folks-common (>= 0.15.12-1)
 Description: Telepathy backend for libfolks - database and import tools
 Homepage: https://wiki.gnome.org/Projects/Folks
@@ -12367,10 +12368,10 @@ Description-md5: f42543e1b08499d5d82b2dabdf9f54b0
 Tag: implemented-in::c, role::program
 utils
 Priority: optional
-Filename: pool/main/f/folks/folks-tools_0.15.12-1_amd64.deb
-Size: 53072
-MD5sum: 37ac19903412b842c9313e30970af5e2
-SHA256: 6ff24a3fb4ee8d9e00b87b5ed1a3d05c4b200037ae54161ae68ed07132d039de
+Filename: pool/main/f/folks/folks-tools_0.15.12-1+b1_amd64.deb
+Size: 51840
+MD5sum: ff194264a506c4ef49e99ba3f7a11498
+SHA256: ca64edcecc9662e0d04423249d121298f7e8938416e6a08c9256c5e08205f751
 
 Package: fondu
 Version: 0.0.20060102-8
@@ -12919,21 +12920,21 @@ MD5sum: 4941bfdc8e5e4d7921bcd3b663a4f680
 SHA256: 0b2ceab31f5c2963bc6fe5f84d653b3f09ff50eb4ad1d93c155455a98f6226e4
 
 Package: freediameterd
-Source: freediameter
-Version: 1.6.0-1
-Installed-Size: 59
+Source: freediameter (1.6.0-1)
+Version: 1.6.0-1+b1
+Installed-Size: 60
 Maintainer: Debian Mobcom Maintainers <Debian-mobcom-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libfdcore7 (= 1.6.0-1), libfdproto7 (= 1.6.0-1), libc6 (>= 2.38), libgnutls30t64 (>= 3.7.0)
+Depends: libfdcore7 (= 1.6.0-1+b1), libfdproto7 (= 1.6.0-1+b1), libc6 (>= 2.38), libgnutls30t64 (>= 3.7.0)
 Description: Daemon for the Diameter protocol
 Homepage: https://www.freediameter.net/trac/
 Description-md5: 05f932bf8d26130521e3288df48e30ab
 utils
 Priority: optional
-Filename: pool/main/f/freediameter/freediameterd_1.6.0-1_amd64.deb
-Size: 18900
-MD5sum: 21151772ae93962cf7fa2cdffc64ef6c
-SHA256: 1d75638a3fba828095a6136769a71630522cfca5cb739740de6a4054c2f564ba
+Filename: pool/main/f/freediameter/freediameterd_1.6.0-1+b1_amd64.deb
+Size: 19184
+MD5sum: 58d2d52d700b0b92c8e5e2096d1695df
+SHA256: 14bfe6581db3852c9f667a64a78afb89e4425727147c53294f938d35a64cef2e
 
 Package: freedom-maker
 Version: 0.35
@@ -13043,9 +13044,9 @@ MD5sum: 9571a303c44a00425570d20f4d401672
 SHA256: d4c7b11dfb736905d34fe9b55feef109ad854baa4abc5eb33522e74f128fa77b
 
 Package: libfribidi-bin
-Source: fribidi
-Version: 1.0.16-5
-Installed-Size: 41
+Source: fribidi (1.0.16-5)
+Version: 1.0.16-5+b1
+Installed-Size: 40
 Maintainer: Debian Hebrew Packaging Team <team+hebrew@tracker.debian.org>
 Architecture: amd64
 Replaces: libfribidi0 (<< 0.19.2-3)
@@ -13056,26 +13057,27 @@ Homepage: http://www.fribidi.org/
 Description-md5: 5bd2ed1fd36acd62b51191a5c088558f
 utils
 Priority: optional
-Filename: pool/main/f/fribidi/libfribidi-bin_1.0.16-5_amd64.deb
-Size: 12284
-MD5sum: 2034710352af993b24dfa67e811b0a60
-SHA256: 999961e294957020c353d1e5f7e7e276f6f53a29ab794211ba4b7b5a5308277a
+Filename: pool/main/f/fribidi/libfribidi-bin_1.0.16-5+b1_amd64.deb
+Size: 11600
+MD5sum: cb1bb1dad4c58c57f27f08ab8e0b86c1
+SHA256: 44b426e688397184c181c1c71a329a2f88ad23784d31f04e4bfff89ce8f1bbd3
 
 Package: frugen
-Version: 3.0+git20251027.6643c5c-1
-Installed-Size: 86
+Source: frugen (3.0+git20251027.6643c5c-1)
+Version: 3.0+git20251027.6643c5c-1+b1
+Installed-Size: 87
 Maintainer: Shengqi Chen <harry@debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libfru3 (= 3.0+git20251027.6643c5c-1), libjson-c5 (>= 0.15)
+Depends: libc6 (>= 2.38), libfru3 (= 3.0+git20251027.6643c5c-1+b1), libjson-c5 (>= 0.15)
 Description: Universal IPMI FRU Information generator / editor
 Homepage: https://codeberg.org/IPMITool/frugen
 Description-md5: 0aadf405ff8a7140a79428465e43304d
 utils
 Priority: optional
-Filename: pool/main/f/frugen/frugen_3.0+git20251027.6643c5c-1_amd64.deb
-Size: 24980
-MD5sum: 72a70a9b6c2e9c8db042bdcd570ab392
-SHA256: d6b805785017c8ba5134f6215753cd6cc02fa8ae93ccbe6e0051724c8404c7c5
+Filename: pool/main/f/frugen/frugen_3.0+git20251027.6643c5c-1+b1_amd64.deb
+Size: 25264
+MD5sum: ca61815181a75f06965f3b0f45c6bd8f
+SHA256: 4aa449db33f663b00544d9c302f58969c457bcffd1cb25ee9dc3bf5d1679ee26
 
 Package: fsearch
 Version: 0.2.3-8
@@ -13622,6 +13624,23 @@ Size: 1315684
 MD5sum: 600eb83c43b9ae7bd6bc5afc6a8ace55
 SHA256: ff5d12b304abee2a2c79f13bc715ffcf4c89388618fccf098cc70679647a4891
 
+Package: genimage
+Version: 19-1
+Installed-Size: 173
+Maintainer: Sudip Mukherjee <sudipm.mukherjee@gmail.com>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libconfuse2 (>= 3.3~)
+Suggests: genisoimage, android-sdk-libsparse-utils, device-tree-compiler, u-boot-tools, mtools, dosfstools, mtd-utils, squashfs-tools, qemu-utils, genext2fs, cpio
+Description: Image Creation Tool
+Homepage: https://github.com/pengutronix/genimage
+Description-md5: 3c894cc946714cd91d1a57a1bd2001e3
+utils
+Priority: optional
+Filename: pool/main/g/genimage/genimage_19-1_amd64.deb
+Size: 57032
+MD5sum: 1c878546727e6c7c75176c8abbf1a895
+SHA256: 79fabc393f5afc5675c4e29fb9d792a358bc5ba793b53cf639eb12f09fc507da
+
 Package: genwqe-tools
 Source: genwqe-user
 Version: 4.0.20-3
@@ -14047,8 +14066,8 @@ MD5sum: 7e7c3943e13e05ad0bf218b7abe590ae
 SHA256: ba71305211d59c04df45eba4e8f2ca3d8fe38e0fb9e59b2bfdfedb3ad3c7e808
 
 Package: glances
-Version: 4.5.3.2+dfsg-1
-Installed-Size: 1894
+Version: 4.5.4+dfsg-1
+Installed-Size: 1915
 Maintainer: Daniel Echeverri <epsilon@debian.org>
 Architecture: all
 Depends: adduser, sysvinit-utils (>= 3.05-4~), python3-orjson, python3-fastapi, python3-defusedxml, python3-jinja2, python3-packaging, python3-psutil (>= 2.0.0), python3-pyinstrument, python3-shtab, python3:any
@@ -14061,10 +14080,10 @@ Tag: admin::monitoring, implemented-in::python, interface::text-mode,
  protocol::xmlrpc, role::program, uitoolkit::ncurses, use::monitor
 utils
 Priority: optional
-Filename: pool/main/g/glances/glances_4.5.3.2+dfsg-1_all.deb
-Size: 398448
-MD5sum: 7cda86e26d06306958da2feb462810c2
-SHA256: 16081e0866bafa2e30569007a6900e767138f1a074cdfa5378c9f3d9cdc5c9b5
+Filename: pool/main/g/glances/glances_4.5.4+dfsg-1_all.deb
+Size: 402100
+MD5sum: b067bd8dd98ba6c801992ad1dd2a98e5
+SHA256: 1efab58baa1c2cd9129c9b9d7f2c22a3b92a708b505c5712910150ad7f862129
 
 Package: glbinding-tools
 Source: glbinding
