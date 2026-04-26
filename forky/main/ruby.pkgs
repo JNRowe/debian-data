@@ -547,9 +547,9 @@ MD5sum: ba9fdd98592cec269065f9273d952032
 SHA256: 061c753560f4d5f8add58f32bb7b796e51d28193c4acbc8d065816175e897601
 
 Package: ruby-mecab
-Source: mecab (0.996-15.1)
-Version: 0.996-15.1+b7
-Installed-Size: 125
+Source: mecab
+Version: 0.996-16
+Installed-Size: 122
 Maintainer: Natural Language Processing (Japanese) <team+pkg-nlp-ja@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.0), libmecab2 (>= 0.996), libstdc++6 (>= 5), libruby3.3 (>= 3.3.0~preview1), libruby (>= 1:3.3~0), libruby (<< 1:3.4~)
@@ -559,10 +559,10 @@ Homepage: https://taku910.github.io/mecab/
 Description-md5: aa45d8c9aa8f702eeb47a8a5f98a786e
 ruby
 Priority: optional
-Filename: pool/main/m/mecab/ruby-mecab_0.996-15.1+b7_amd64.deb
-Size: 30200
-MD5sum: 66dc00d3da746486f11a80da6db6b46a
-SHA256: ccda00d6c7acbf60d6aa98827fead60073fa5de34b2d1f9bfc65863635a453e4
+Filename: pool/main/m/mecab/ruby-mecab_0.996-16_amd64.deb
+Size: 28992
+MD5sum: dea71473b97f5a2bb2233f78d45bb6ae
+SHA256: f96ec2008e46b4abde59a2628bd8285bb5f8da6678b83638bf81bdd45bbd65f2
 
 Package: metadata-json-lint
 Version: 5.0.0-1
@@ -2024,25 +2024,40 @@ MD5sum: 445e552b4e66ade91af4563b8ab02d69
 SHA256: e1c1a2f346ba1f7fabfef73e03ee0aed64371e47a48662faeea964baa7bbd86a
 
 Package: ruby-async
-Version: 1.30.3-1
-Installed-Size: 93
+Version: 2.36.0-1
+Installed-Size: 215
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: ruby-console (>= 1.10), ruby-nio4r (>= 2.3), ruby-timers (>= 4.1), ruby, ruby-nio4r (<< 3.0), ruby-timers (<< 5.0), ruby-console (<< 2.0)
+Depends: ruby-console (>= 1.29), ruby-fiber-annotation, ruby-io-event (>= 1.11), ruby-metrics (>= 0.12), ruby-traces (>= 0.18)
 Description: concurrency framework for Ruby.
 Homepage: https://github.com/socketry/async
 Description-md5: 2bbccbb64cb000f3ecd68c4a9353677c
-Ruby-Versions: all
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-async/ruby-async_1.30.3-1_all.deb
-Size: 15720
-MD5sum: 62ef4cb00eb5f6549df0a755984ab2bc
-SHA256: d395955cb6eb91060c5a6a38c337342ed42102554252cbfdd6117ccde58a3b63
+Filename: pool/main/r/ruby-async/ruby-async_2.36.0-1_all.deb
+Size: 49192
+MD5sum: 366fc70525e3444ae9369562e41b584f
+SHA256: 6b335cd9bd859964de160d11044d9ac26c323dfc746f188d8fa1b51feb1aca07
+
+Package: ruby-async-http
+Version: 0.94.2-1
+Installed-Size: 421
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: ruby-async (>= 2.10.2), ruby-async-pool (>= 0.11), ruby-io-endpoint (>= 0.14), ruby-io-stream (>= 0.6), ruby-metrics (>= 0.12), ruby-protocol-http (>= 0.58), ruby-protocol-http1 (>= 0.36), ruby-protocol-http2 (>= 0.22), ruby-protocol-url (>= 0.2), ruby-traces (>= 0.10)
+Description: HTTP client and server library
+Homepage: https://github.com/socketry/async-http
+Description-md5: 191e83c18d4300ad77a2f0f768f2083c
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-async-http/ruby-async-http_0.94.2-1_all.deb
+Size: 82988
+MD5sum: 0ef4d199c10436cb74bbd22419e3f338
+SHA256: 5920537e0eac5ad1df4580b2e619c2f97e4d7a5c5bb96d280dfdddff6a3ecab9
 
 Package: ruby-async-io
-Version: 1.34.1-1
-Installed-Size: 119
+Version: 1.43.2-1
+Installed-Size: 89
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
 Depends: ruby-async
@@ -2051,61 +2066,58 @@ Homepage: https://github.com/socketry/async-io
 Description-md5: 08a48f6f1c18b50091bf2bac7d2701a4
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-async-io/ruby-async-io_1.34.1-1_all.deb
-Size: 16632
-MD5sum: 07dabbd17be93bdb6b72dd999d7899e6
-SHA256: 56396dc29d739252f52f6f8d7ca1ada37c8dc14d5b8bb5b1fe8189fb56f88391
+Filename: pool/main/r/ruby-async-io/ruby-async-io_1.43.2-1_all.deb
+Size: 16980
+MD5sum: af75764dd002581c41ccaa86ccac44f7
+SHA256: c4cb8dadfdccf978349945a3eab53ac9c623e441a6f7977c87c3bb963bb43ed7
 
 Package: ruby-async-pool
-Version: 0.3.12-1
-Installed-Size: 30
+Version: 0.11.1-2
+Installed-Size: 39
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: ruby-async (>= 1.25)
+Depends: ruby-async (>= 2.0)
 Description: singleplex and multiplex resource pool for implementing robust clients
 Homepage: https://github.com/socketry/async-pool
 Description-md5: 61d7be72f6a5040259941156310c9048
-Ruby-Versions: all
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-async-pool/ruby-async-pool_0.3.12-1_all.deb
-Size: 5828
-MD5sum: 9d290e7d9e28aea70217c6a613e9ffd4
-SHA256: 2a10e4264c69861fcf13cc8bd7de02299bd2dcdb7a6b302e5d7c43a9356c5436
+Filename: pool/main/r/ruby-async-pool/ruby-async-pool_0.11.1-2_all.deb
+Size: 7136
+MD5sum: 0fcff186ab39003c237199b0a5f68f98
+SHA256: cf8b160bc93b9369f25da10df59c7c8ecaafd98d6c11777f982da0fb27dfda40
 
 Package: ruby-async-process
-Version: 1.3.1-2
-Installed-Size: 26
+Version: 1.4.0-2
+Installed-Size: 22
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: ruby-async, ruby-async-io
+Depends: ruby-async (>= 2.0)
 Description: asynchronous process spawning
 Homepage: https://github.com/socketry/async-process
 Description-md5: 8c2f8498b61012a72ef3f0744177f0ac
-Ruby-Versions: all
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-async-process/ruby-async-process_1.3.1-2_all.deb
-Size: 3540
-MD5sum: 18eb0437aaacd778e4d98dbd1d28ad0f
-SHA256: 07b421a0fbb7c217fcf9f8987e322c7b51d43f818537f7bef20cbf3c766f3edc
+Filename: pool/main/r/ruby-async-process/ruby-async-process_1.4.0-2_all.deb
+Size: 3892
+MD5sum: 6d8cea9b32edeea2c7c653b552cd3756
+SHA256: f0f5462b5b99370d553fe96da12f887cefc8e697b7fb48d276c75ddc0d7aba8b
 
 Package: ruby-async-rspec
-Version: 1.16.1-3
-Installed-Size: 46
+Version: 1.17.1-1
+Installed-Size: 37
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: ruby-rspec-memory (>= 1.0.2-3~), ruby-rspec (>= 3.0), ruby-rspec-files (>= 1.0)
+Depends: ruby-rspec (>= 3.0), ruby-rspec-files (>= 1.0), ruby-rspec-memory (>= 1.0)
 Description: helpers for writing specs against the async gem
 Homepage: https://github.com/socketry/async-rspec
 Description-md5: dbd584171c378f801e383e9dc5392db1
-Ruby-Versions: all
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-async-rspec/ruby-async-rspec_1.16.1-3_all.deb
-Size: 6956
-MD5sum: 5f3728a46aafcf7958e1208e16f5f417
-SHA256: 94a49fac7281af4d49432728a17dc9f8870d607a89eceac6257070fa3944c55d
+Filename: pool/main/r/ruby-async-rspec/ruby-async-rspec_1.17.1-1_all.deb
+Size: 7124
+MD5sum: 7d67bde2db85bd194abad31959455f66
+SHA256: 46587b96a865554e42c6f7a122fed6ed08cfe9efc0358c325e1937386de027a9
 
 Package: ruby-atomic
 Source: ruby-atomic (1.1.101-1)
@@ -6076,8 +6088,8 @@ MD5sum: f897358b3370849f86fb12d99bc999ff
 SHA256: 98dc2bb949c53563d2393f81edbca150fcafc7d5bf2c01b3550c282c9af0b1ce
 
 Package: ruby-excon
-Version: 1.4.0-2
-Installed-Size: 396
+Version: 1.4.2-1
+Installed-Size: 398
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
 Depends: ruby-logger
@@ -6087,10 +6099,10 @@ Homepage: https://github.com/excon/excon
 Description-md5: 667bd3b41e57f05e38601d9fe98c4da7
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-excon/ruby-excon_1.4.0-2_all.deb
-Size: 174364
-MD5sum: 3d70106c680a7fe39fe59ba10ce09904
-SHA256: 60c0d8c1baddfe9b10d08643f42b7baeb6d18ed7a9da5e10f73fc7a437821ea9
+Filename: pool/main/r/ruby-excon/ruby-excon_1.4.2-1_all.deb
+Size: 174876
+MD5sum: d100a1006e24c3d99252556905df0f19
+SHA256: 2e8276176081702a07845a96dec6be99fcb2b8126c086c45ec8c894672657706
 
 Package: ruby-execjs
 Version: 2.10.1-1
@@ -9728,8 +9740,8 @@ MD5sum: bf3b430e5500f42fff50e2701116462a
 SHA256: b2c547e59be0038bc1df67fea8d47499071b43f471b20e3e744c8d20e294a821
 
 Package: ruby-io-event
-Version: 1.14.2-2
-Installed-Size: 103
+Version: 1.15.1-1
+Installed-Size: 101
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.35), libruby3.3 (>= 3.3.1), libruby (>= 1:3.3~0), libruby (<< 1:3.4~)
@@ -9738,10 +9750,10 @@ Homepage: https://github.com/socketry/io-event
 Description-md5: 629debd82567625bd784c0590fde7ce1
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-io-event/ruby-io-event_1.14.2-2_amd64.deb
-Size: 23276
-MD5sum: e2d7bbc39665c032e651b16d6f8a70ab
-SHA256: ccad5cff5483574114575ddfcdfca4386f9579bea84c1cd002ebaa6d554ffef4
+Filename: pool/main/r/ruby-io-event/ruby-io-event_1.15.1-1_amd64.deb
+Size: 22056
+MD5sum: 3d0f93b52d8fae133526618f68dbc10a
+SHA256: 87884438d23693559ac5f52d91efb7614faaeb9c60029cce59f77ddfb5e75fcb
 
 Package: ruby-io-stream
 Version: 0.11.1-2
@@ -10518,8 +10530,8 @@ MD5sum: 78ec0b611541fec90c89320a1d070428
 SHA256: 40f88b1ae8df4bf53c12c5ed27569d468c39fa52d6c95a1db3e2041d3143b774
 
 Package: ruby-json
-Version: 2.19.2+dfsg-1
-Installed-Size: 384
+Version: 2.19.4+dfsg-1
+Installed-Size: 383
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.14), libruby3.3 (>= 3.3.1), libruby (>= 1:3.3~0), libruby (<< 1:3.4~)
@@ -10531,10 +10543,10 @@ Description-md5: 580962466871607374425ac53965b45b
 Tag: role::shared-lib
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-json/ruby-json_2.19.2+dfsg-1_amd64.deb
-Size: 112956
-MD5sum: da3bd258f0650a9d777fa8fd7089d948
-SHA256: a5a9577773cf94b610123469258f1e1a50b376ec04844c3fabbf4462e6fd865a
+Filename: pool/main/r/ruby-json/ruby-json_2.19.4+dfsg-1_amd64.deb
+Size: 112820
+MD5sum: 4df89af220eb4256556b4f8b2b86aaa4
+SHA256: e8f396472168a03680322fdf5c9dd08edd2d8c9ef57444de3fbde88980c34f4d
 
 Package: ruby-json-jwt
 Version: 1.17.0-1
@@ -16123,8 +16135,8 @@ MD5sum: e135ca7ddd055725207b645a55fefdc2
 SHA256: a0cb331127c97b2f795b3cd4ac92135e4a4a87a847f1845a714495e127ad4c56
 
 Package: ruby-recursive-open-struct
-Version: 2.1.0-1
-Installed-Size: 39
+Version: 2.1.1-1
+Installed-Size: 41
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
 Depends: ruby-ostruct
@@ -16134,10 +16146,10 @@ Homepage: https://github.com/aetherknight/recursive-open-struct
 Description-md5: b842e974d11d67900349eeee409c511b
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-recursive-open-struct/ruby-recursive-open-struct_2.1.0-1_all.deb
-Size: 12176
-MD5sum: 6f098e6b0063b781b1fb10477ee2754b
-SHA256: 3d92e4658a7cf4d4463db58219aaffc96f3c8f89be6629a061a1c79bd1ab306e
+Filename: pool/main/r/ruby-recursive-open-struct/ruby-recursive-open-struct_2.1.1-1_all.deb
+Size: 12528
+MD5sum: f9bfbdb942a832a4c52acfcd96a5074a
+SHA256: ba97b48e9b7de76e278df49f56bbefd67e070160c55283f189a94c9f6554de55
 
 Package: ruby-redcarpet
 Version: 3.6.1-1
@@ -16580,20 +16592,20 @@ MD5sum: 5d138ee098b4d5add8a4f908d5adc644
 SHA256: 5b211d98b68796b80effba9da8b06c1dd7f09c0078614e52a595c831463a6013
 
 Package: ruby-roadie
-Version: 5.2.1-3
-Installed-Size: 107
+Version: 5.3.0-1
+Installed-Size: 104
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: ruby-nokogiri, ruby-css-parser (>= 1.4)
+Depends: ruby-nokogiri, ruby-css-parser (>= 1.4), ruby-css-parser (<< 3.0)
 Description: library for composing HTML email
 Homepage: https://github.com/Mange/roadie
 Description-md5: ff0c77c2f62fecd275067454d0fc4bb1
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-roadie/ruby-roadie_5.2.1-3_all.deb
-Size: 35404
-MD5sum: cd6793427ecf4b5c639101279f3e4cf1
-SHA256: 1bc8b3a0c4374bee00f43d06e613dfaba59120c322f2135266eae63efd9ca8df
+Filename: pool/main/r/ruby-roadie/ruby-roadie_5.3.0-1_all.deb
+Size: 35144
+MD5sum: 82731ce8326ad3eaa6b02f470220dbba
+SHA256: f60ba6a9ca61d0bc845034615e4d19c7f20e992d041e68dc6f500b8416a07e66
 
 Package: ruby-roadie-rails
 Version: 3.4.0-1
@@ -19314,6 +19326,22 @@ Filename: pool/main/r/ruby-sus-fixtures-async/ruby-sus-fixtures-async_0.2.0-2_al
 Size: 5120
 MD5sum: e5b58bb53021baeb610c21ed79cf26c5
 SHA256: 557d7ddd4ac50a8e35e535347fcdb452faafba9d569ca0741883f3248c6f2422
+
+Package: ruby-sus-fixtures-async-http
+Version: 0.12.1-2
+Installed-Size: 38
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: ruby-async (>= 2.36), ruby-async-http (>= 0.54), ruby-sus (>= 0.31), ruby-sus-fixtures-async (>= 0.1)
+Description: Provides a convenient fixture for running a web server
+Homepage: https://github.com/socketry/sus-fixtures-async-http
+Description-md5: 4a4ae10c584e4c1d3eba5db2c792aa65
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-sus-fixtures-async-http/ruby-sus-fixtures-async-http_0.12.1-2_all.deb
+Size: 7420
+MD5sum: dd334bb360e6c1f2ac7b4d48f6f94462
+SHA256: fc94246bde2a1ad8cffb245f576772a090aaf023012e7b050b402003f5712156
 
 Package: ruby-sus-fixtures-benchmark
 Version: 0.2.1-2
