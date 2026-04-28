@@ -2293,12 +2293,12 @@ MD5sum: 1e4c855d349cd956bee0a3db4d037ea6
 SHA256: d329e27ec69fc1189a2ecceca44c81f4b54f99b19979f6e5db1d57832b72b97a
 
 Package: cfingerd
-Version: 1.4.3-10
-Installed-Size: 177
+Version: 1.4.3-11
+Installed-Size: 172
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: amd64
 Provides: finger-server
-Depends: libc6 (>= 2.38), update-inetd, netbase
+Depends: netbase, update-inetd, libc6 (>= 2.38)
 Conflicts: finger-server
 Description: configurable finger daemon
 Homepage: https://www.infodrom.org/projects/cfingerd/
@@ -2307,10 +2307,10 @@ Tag: interface::daemon, network::server, network::service, protocol::finger,
  role::program, use::scanning, works-with::people
 net
 Priority: optional
-Filename: pool/main/c/cfingerd/cfingerd_1.4.3-10_amd64.deb
-Size: 76140
-MD5sum: d64da59d48803a3609651ddeb635f22c
-SHA256: 5d58de7a0eaabcb5910257edfe4d23c15e88c776f2ed21726ff233ebbcbc33a7
+Filename: pool/main/c/cfingerd/cfingerd_1.4.3-11_amd64.deb
+Size: 69092
+MD5sum: 4ac29fdce77b3c1e83b69d686f9e87cb
+SHA256: c296c47c57178c6a9679d1d4e49f98fffdd61b5a098b45cec5cfafa63269a858
 
 Package: cgit
 Version: 1.2.3+git20250818.80.3346409+git2.51.0-1
@@ -4296,47 +4296,47 @@ MD5sum: 48263a3f72e53e33d159fbc97c43f306
 SHA256: 733c86c647ad67954ca016c5ea88b781a2965f1538479d7658f4286cc1df6676
 
 Package: dhcpcd
-Version: 1:10.3.1-4
+Version: 1:10.3.1-5
 Installed-Size: 38
 Maintainer: Martin-Éric Racine <martin-eric.racine@iki.fi>
 Architecture: all
-Replaces: dhcpcd5 (<< 1:10.3.1-4~)
+Replaces: dhcpcd5 (<< 1:10.3.1-5~)
 Provides: dhcpcd
-Depends: dhcpcd-base (>= 1:10.3.1-4~)
+Depends: dhcpcd-base (>= 1:10.3.1-5~)
 Recommends: wpasupplicant
 Suggests: dhcpcd-gtk
 Conflicts: network-manager
-Breaks: dhcpcd5 (<< 1:10.3.1-4~)
+Breaks: dhcpcd5 (<< 1:10.3.1-5~)
 Description: DHCPv4 and DHCPv6 dual-stack client (init.d script & systemd unit)
 Homepage: https://github.com/NetworkConfiguration/dhcpcd
 Description-md5: aef54e3d11aad3c8b3ab6770ffc3919a
 net
 Priority: optional
-Filename: pool/main/d/dhcpcd/dhcpcd_10.3.1-4_all.deb
-Size: 12504
-MD5sum: dc4076a9732410013e7836dd9fb8ba2c
-SHA256: 1a2cf92e9e5ee9d0313def28524cd7a84e1fa9d9d3c41681d989d97f9ef513fe
+Filename: pool/main/d/dhcpcd/dhcpcd_10.3.1-5_all.deb
+Size: 12540
+MD5sum: 1000128ea2325225769ed07b8e2482ff
+SHA256: 5c3d795f1eb6b35ba47113489f4f0cc26b97572eb30a00730911db264108718d
 
 Package: dhcpcd-base
 Source: dhcpcd
-Version: 1:10.3.1-4
-Installed-Size: 506
+Version: 1:10.3.1-5
+Installed-Size: 509
 Maintainer: Martin-Éric Racine <martin-eric.racine@iki.fi>
 Architecture: amd64
-Replaces: dhcpcd5 (<< 1:10.3.1-4~)
+Replaces: dhcpcd5 (<< 1:10.3.1-5~)
 Provides: dhcp-client
 Depends: systemd | systemd-standalone-sysusers | systemd-sysusers, libc6 (>= 2.38), libssl3t64 (>= 3.0.0), libudev1 (>= 183)
 Suggests: openresolv | resolvconf | systemd-resolved
-Breaks: dhcpcd5 (<< 1:10.3.1-4~)
+Breaks: dhcpcd5 (<< 1:10.3.1-5~)
 Description: DHCPv4 and DHCPv6 dual-stack client (binaries and exit hooks)
 Homepage: https://github.com/NetworkConfiguration/dhcpcd
 Description-md5: 9fabc12c92ee2a93e5fbc5a0e6dcd21c
 net
 Priority: important
-Filename: pool/main/d/dhcpcd/dhcpcd-base_10.3.1-4_amd64.deb
-Size: 205324
-MD5sum: bd4fa1f201001979de4dac6ad59afc63
-SHA256: 9513fd62fb1d483ee2ea95858d84c8fda11dd093ec09fde530f71f5b2b1f0dab
+Filename: pool/main/d/dhcpcd/dhcpcd-base_10.3.1-5_amd64.deb
+Size: 205468
+MD5sum: d26a67f62cdfbf1de603db70ad034c1a
+SHA256: a7117cedd8ee49b468c6b16ea9aea93216c9d5e3356c77663f62881ef39710a1
 
 Package: dhcpcd-gtk
 Source: dhcpcd-ui (0.7.9-5)
@@ -4798,25 +4798,24 @@ MD5sum: d2422966f553815675aac285c3913abb
 SHA256: 420e0dedec8a66aff7a867cbf4efead091cab9e49e65c7f31c5a5c9ccc851f7b
 
 Package: dnsdist
-Source: dnsdist (2.0.3-1)
-Version: 2.0.3-1+b1
-Installed-Size: 14318
+Version: 2.0.5-1
+Installed-Size: 14321
 Maintainer: dnsdist packagers <dnsdist@packages.debian.org>
 Architecture: amd64
-Depends: adduser, libbpf1 (>= 1:0.7.0), libc6 (>= 2.39), libcap2 (>= 1:2.10), libcdb1 (>= 0.76), libedit2 (>= 2.11-20080614-0), libfstrm0 (>= 0.4.0), libgcc-s1 (>= 4.2), libgnutls30t64 (>= 3.8.1), liblmdb0 (>= 0.9.7), libluajit-5.1-2 (>= 2.0.4) | libluajit-5.1-2 (>= 2.1.0+openresty), libnghttp2-14 (>= 1.49.0), libre2-11-absl20240722, libsnmp45 (>= 5.9.5.2+dfsg), libsodium23 (>= 1.0.12), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libsystemd0, libxdp1 (>= 1.2.0)
+Depends: adduser, libbpf1 (>= 1:0.7.0), libc6 (>= 2.39), libcap2 (>= 1:2.10), libcdb1 (>= 0.76), libedit2 (>= 2.11-20080614-0), libfstrm0 (>= 0.4.0), libgcc-s1 (>= 4.2), libgnutls30t64 (>= 3.8.1), liblmdb0 (>= 0.9.7), libluajit-5.1-2 (>= 2.0.4) | libluajit-5.1-2 (>= 2.1.0+openresty), libnghttp2-14 (>= 1.49.0), libre2-11-absl20260107, libsnmp45 (>= 5.9.5.2+dfsg), libsodium23 (>= 1.0.12), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libsystemd0, libxdp1 (>= 1.2.0)
 Recommends: ca-certificates
 Description: DNS loadbalancer
 Homepage: https://dnsdist.org
-Built-Using: rustc (= 1.93.1+dfsg1-2)
+Built-Using: rustc (= 1.94.1+dfsg1-1)
 Description-md5: a513b049e15ad7501b5fce6d42694c08
-Static-Built-Using: rust-cxx (= 1.0.192-1), rust-equivalent (= 1.0.1-1), rust-foldhash (= 0.2.0-2), rust-hashbrown (= 0.16.1-2), rust-indexmap (= 2.13.0-1), rust-itoa (= 1.0.15-1), rust-link-cplusplus (= 1.0.10-1), rust-ryu (= 1.0.22-1), rust-serde (= 1.0.228-3), rust-serde-core (= 1.0.228-2), rust-serde-yaml (= 0.9.34-1), rust-unsafe-libyaml (= 0.2.11-1), rustc (= 1.93.1+dfsg1-2)
+Static-Built-Using: rust-cxx (= 1.0.192-1), rust-equivalent (= 1.0.1-1), rust-foldhash (= 0.2.0-2), rust-hashbrown (= 0.16.1-2), rust-indexmap (= 2.13.0-1), rust-itoa (= 1.0.15-1), rust-link-cplusplus (= 1.0.10-1), rust-ryu (= 1.0.22-1), rust-serde (= 1.0.228-3), rust-serde-core (= 1.0.228-2), rust-serde-yaml (= 0.9.34-1), rust-unsafe-libyaml (= 0.2.11-1), rustc (= 1.94.1+dfsg1-1)
 Tag: uitoolkit::ncurses
 net
 Priority: optional
-Filename: pool/main/d/dnsdist/dnsdist_2.0.3-1+b1_amd64.deb
-Size: 3704128
-MD5sum: 8a4718c4070b2774b1c2fa1c5f9145f1
-SHA256: 6e86eb155f558fdda27ad527bcdde99d19e70569cbe4975b19f1e831afa7f5ef
+Filename: pool/main/d/dnsdist/dnsdist_2.0.5-1_amd64.deb
+Size: 3712812
+MD5sum: 19a539e047139d0d5d52ebadd2802813
+SHA256: 73f9ddeaae4b1b6a8f38e100fe456e8789e00f48fed61c2d788b6d4722bf8177
 
 Package: dnsenum
 Version: 1.3.2-1
@@ -12277,8 +12276,8 @@ MD5sum: ba63705bcd908ada4a689748cd75d700
 SHA256: 0d0294bfb2f2e4455ceb97ba2d3fce18dd7ee2ddbe0fb2d860714d761582e4fc
 
 Package: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 29100
+Version: 6.1.2-1
+Installed-Size: 29111
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: kamailio-carrierroute-modules
@@ -12292,613 +12291,613 @@ Description-md5: 552e5cc2b6068908fa4d5a47f64b90b9
 Tag: implemented-in::c, protocol::voip, role::program, uitoolkit::ncurses
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio_6.1.1-2.1_amd64.deb
-Size: 10425220
-MD5sum: 9027f256991dd0d1178df381032cca1b
-SHA256: 0d616e14ec217a870883da76db377cce7975e826bf03493122011bfe5f954970
+Filename: pool/main/k/kamailio/kamailio_6.1.2-1_amd64.deb
+Size: 10435152
+MD5sum: 4a605c56a8d2de8f3c2e1f1fb18e8d24
+SHA256: defece1d5dbd414cc9e868ad80848c5448959de98474255c32c56672bbe51a87
 
 Package: kamailio-authblockchain-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 422
+Version: 6.1.2-1
+Installed-Size: 433
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.7), libcurl4t64 (>= 7.16.2), libsecp256k1-6 (>= 0.6.0~)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.7), libcurl4t64 (>= 7.16.2), libsecp256k1-6 (>= 0.6.0~)
 Description: Blockchain related modules for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 88021bffd161251a2df992fd88a73f3b
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-authblockchain-modules_6.1.1-2.1_amd64.deb
-Size: 231264
-MD5sum: 599e31147e90763be300286c21019044
-SHA256: e87d7a4fb4a113dae1e7d5316ef903b840c6cfba106d2e8b8360bd363d255caf
+Filename: pool/main/k/kamailio/kamailio-authblockchain-modules_6.1.2-1_amd64.deb
+Size: 242860
+MD5sum: f9eb759d0f21982b30929af348368590
+SHA256: e76d67620ee22da85376dbb12dde16ec79fe9099fc00a4afcd87be27c93480e1
 
 Package: kamailio-autheph-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 244
+Version: 6.1.2-1
+Installed-Size: 255
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.4), libssl3t64 (>= 3.0.0)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.4), libssl3t64 (>= 3.0.0)
 Description: authentication using ephemeral credentials for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: e80feac6503dfc23b0b8833138f225df
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-autheph-modules_6.1.1-2.1_amd64.deb
-Size: 158164
-MD5sum: e52b820168600851d1ece7fd55f48628
-SHA256: a26c9354c0ef74b67c91de7aaece79973635e65793fe22187057636767e72913
+Filename: pool/main/k/kamailio/kamailio-autheph-modules_6.1.2-1_amd64.deb
+Size: 169756
+MD5sum: 7d4a8eabad45bdda1fc0d193fd44daed
+SHA256: 503afca87a027826d4135ff776abce40435e036791a34a43fdd140a1ac640a17
 
 Package: kamailio-cnxcc-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 417
+Version: 6.1.2-1
+Installed-Size: 428
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.7), libevent-2.1-7t64 (>= 2.1.8-stable), libhiredis1.1.0 (>= 1.2.0)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.7), libevent-2.1-7t64 (>= 2.1.8-stable), libhiredis1.1.0 (>= 1.2.0)
 Description: cnxcc modules for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 3d59c0d88b6e3024f973200765504fc0
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-cnxcc-modules_6.1.1-2.1_amd64.deb
-Size: 229048
-MD5sum: e45ca487ab163958197c4942af21a8ab
-SHA256: d768e03ce9360572a5cf923c50889d54496c5fe4cbcbe2640a48df7afe1899a6
+Filename: pool/main/k/kamailio/kamailio-cnxcc-modules_6.1.2-1_amd64.deb
+Size: 240760
+MD5sum: 4e45c1d9748f80bbb46d3dbdcff0a3e6
+SHA256: b82146d540eac43963c3106fd5b1180e0c245f5fcb72ba028a3fd1be5ce4e212
 
 Package: kamailio-cpl-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 655
+Version: 6.1.2-1
+Installed-Size: 666
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.33), libxml2-16 (>= 2.14.1)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.33), libxml2-16 (>= 2.14.1)
 Description: CPL module (CPL interpreter engine) for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: acc08d42c21651499c8ae0c0e2615207
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-cpl-modules_6.1.1-2.1_amd64.deb
-Size: 337452
-MD5sum: 42d60b2fd91c78f9fb169f7c61ecc7b7
-SHA256: 81acfcd34f9c2d642d5d8f2ce6fdfa12d7f5c13d0023db7f9dbb0af27f4abaa6
+Filename: pool/main/k/kamailio/kamailio-cpl-modules_6.1.2-1_amd64.deb
+Size: 349256
+MD5sum: 4ef681f775073b9678de8a971b5a809d
+SHA256: b2bda8c909427a147f6ada9c57f90efead544c69258895770771c5c32d0bd9be
 
 Package: kamailio-erlang-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 724
+Version: 6.1.2-1
+Installed-Size: 735
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.38)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.38)
 Description: Erlang modules for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 81dd7fccd6b7b252e7247bc36e64f9ee
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-erlang-modules_6.1.1-2.1_amd64.deb
-Size: 352208
-MD5sum: 68c9212620b98511189e7fb3b5bd8b5f
-SHA256: f00a61a3bdeb77932c38f8fae2f36d7d1179d609587b3d0f9ebf0923f84b0583
+Filename: pool/main/k/kamailio/kamailio-erlang-modules_6.1.2-1_amd64.deb
+Size: 363936
+MD5sum: 4d1d6e126fec8244b110b4690c3bdfbe
+SHA256: ef5bf43ff7d1f304de5fd49e853798c0b7bdb0ba8105a545e8bf53c82f936d9c
 
 Package: kamailio-extra-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 1051
+Version: 6.1.2-1
+Installed-Size: 1143
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.8), libcurl4t64 (>= 7.16.3), libev4t64 (>= 1:4.04), libevent-2.1-7t64 (>= 2.1.8-stable), libjansson4 (>= 2.14), libjwt2 (>= 1.16.0), libuuid1 (>= 2.20.1), zlib1g (>= 1:1.1.4)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.8), libcurl4t64 (>= 7.16.3), libev4t64 (>= 1:4.04), libevent-2.1-7t64 (>= 2.1.8-stable), libevent-openssl-2.1-7t64 (>= 2.1.8-stable), libjansson4 (>= 2.14), libjwt2 (>= 1.16.0), libnghttp2-14 (>= 1.3.0), libssl3t64 (>= 3.0.0), libuuid1 (>= 2.20.1), zlib1g (>= 1:1.1.4)
 Description: Extra modules for the Kamailio SIP Server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
-Description-md5: 77feb52aabd1f1593c71577ed6d2a647
+Description-md5: c7ee54b7b1b07069b42bf5197a49e898
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-extra-modules_6.1.1-2.1_amd64.deb
-Size: 442700
-MD5sum: 9f40ef3a0a5f0dbde03ed8825fbeb263
-SHA256: f3569128588035f8ac25349dd760b510fc52532f000965635b9c8559b6950dbb
+Filename: pool/main/k/kamailio/kamailio-extra-modules_6.1.2-1_amd64.deb
+Size: 479832
+MD5sum: b8b9789a133774b8035aaf69810d45a2
+SHA256: 9099da24693a1672409ea2669bec51ced2174e27bbad386b69d97c8f19633f3f
 
 Package: kamailio-geoip2-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 203
+Version: 6.1.2-1
+Installed-Size: 214
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.4), libmaxminddb0 (>= 1.0.2)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.4), libmaxminddb0 (>= 1.0.2)
 Description: geoip2 module for the Kamailio SIP Server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: bb2968f9479079a613c83dc80911f1d5
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-geoip2-modules_6.1.1-2.1_amd64.deb
-Size: 143804
-MD5sum: 6a7fba1132647045bda6e2462f33e877
-SHA256: 83e2fbed65e5a1a998a04cf702e962a6c6852e491509c4c9de32722bf401acbf
+Filename: pool/main/k/kamailio/kamailio-geoip2-modules_6.1.2-1_amd64.deb
+Size: 155320
+MD5sum: 5995bbe8a2b9134ce284fe3f128bb1d9
+SHA256: f8489109f2a3337806668f98a412580d9bc449f40978d4b3c9da5859c489149c
 
 Package: kamailio-ims-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 5864
+Version: 6.1.2-1
+Installed-Size: 5875
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.34), libmnl0 (>= 1.0.3-4~), libssl3t64 (>= 3.0.0), libxml2-16 (>= 2.14.1)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.34), libmnl0 (>= 1.0.3-4~), libssl3t64 (>= 3.0.0), libxml2-16 (>= 2.14.1)
 Description: IMS module for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 9f40af666cd6a9dd0fe3d4272bd00ce0
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-ims-modules_6.1.1-2.1_amd64.deb
-Size: 2109800
-MD5sum: 8734dee3cb7303c060f07735b07cd4aa
-SHA256: 268b1816b0d5fe8873c13a552f4d201abde385a54d29fffb9029723dbc784961
+Filename: pool/main/k/kamailio/kamailio-ims-modules_6.1.2-1_amd64.deb
+Size: 2121984
+MD5sum: b250046d6466896df033feb9e23508dc
+SHA256: 4d068cca3fdf97a43b850af3283cfafa3a8824ca2ce9999b61f8693905a52e9c
 
 Package: kamailio-json-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 339
+Version: 6.1.2-1
+Installed-Size: 350
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.8), libevent-2.1-7t64 (>= 2.1.8-stable), libjson-c5 (>= 0.15)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.8), libevent-2.1-7t64 (>= 2.1.8-stable), libjson-c5 (>= 0.15)
 Description: Json parser and Json-RPC modules for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 096739f186c290e3b7f40d8d29087d16
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-json-modules_6.1.1-2.1_amd64.deb
-Size: 189128
-MD5sum: 18fd010fb6d5237db0d07b87a0d2a8bf
-SHA256: bbb712865d21bf2624844ef1b023e525d48d14e1056eaa7efa7dcda7e5483a90
+Filename: pool/main/k/kamailio/kamailio-json-modules_6.1.2-1_amd64.deb
+Size: 200876
+MD5sum: e293292a75b339c82ea432315e98c3c6
+SHA256: a99b3df2ce07fb8f804409d1c726422143dd94b73c4ee912d8501bc455bd3cf7
 
 Package: kamailio-kafka-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 263
+Version: 6.1.2-1
+Installed-Size: 274
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.4), librdkafka1 (>= 2.0.0)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.4), librdkafka1 (>= 2.0.0)
 Description: Kafka module for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 6f44290ff565783723f0191e7cb54dd4
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-kafka-modules_6.1.1-2.1_amd64.deb
-Size: 170128
-MD5sum: 6d869029d2628144bb9a7760911572d9
-SHA256: 7648ce2ee90859cee4fa6166e669f5c2476992373bd860a1693558bc8979f717
+Filename: pool/main/k/kamailio/kamailio-kafka-modules_6.1.2-1_amd64.deb
+Size: 181752
+MD5sum: db00ab16b61d1c3914363b4e85c8cc25
+SHA256: fb0c61d68ec7bbb52c74cfbfff856b11d0e05db73b06f04e8c27e9ffbfdeaaf1
 
 Package: kamailio-kazoo-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 605
+Version: 6.1.2-1
+Installed-Size: 616
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.8), libevent-2.1-7t64 (>= 2.1.8-stable), libjson-c5 (>= 0.15), librabbitmq4 (>= 0.8.0), libuuid1 (>= 2.16)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.8), libevent-2.1-7t64 (>= 2.1.8-stable), libjson-c5 (>= 0.15), librabbitmq4 (>= 0.8.0), libuuid1 (>= 2.16)
 Description: kazoo modules for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 8d9132d1dc3d008b539e3a8adf13ed13
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-kazoo-modules_6.1.1-2.1_amd64.deb
-Size: 305660
-MD5sum: 0cc371c8ea9d724ed4b3103bdf49fb90
-SHA256: d6474dfa08cc116c7566f2db9b49a7f45b8c01d01f8ec5a2b50b0b216ad702d2
+Filename: pool/main/k/kamailio/kamailio-kazoo-modules_6.1.2-1_amd64.deb
+Size: 316260
+MD5sum: ef8b42fbffa98879e551ed24a1c85abc
+SHA256: a616b58313aea84dfc457c636f7afdf3dc45b7aed6e25f2270e42803b7186cac
 
 Package: kamailio-ldap-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 459
+Version: 6.1.2-1
+Installed-Size: 470
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.7), libldap2 (>= 2.6.2)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.7), libldap2 (>= 2.6.2)
 Description: LDAP modules for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: a1f37e4d883caccb2b182a8e04087683
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-ldap-modules_6.1.1-2.1_amd64.deb
-Size: 250188
-MD5sum: 2d16aaa38a42a12631d854ef80c10554
-SHA256: f30daa0cc17fa3ccfa265d9a89f82a5ae24be2abb5f45ebb5fbf945b5e84d829
+Filename: pool/main/k/kamailio/kamailio-ldap-modules_6.1.2-1_amd64.deb
+Size: 261224
+MD5sum: 5df25ddae72a58c80610275bd2cb1c82
+SHA256: 8f8b4fc71f8c6dd2f2aba373fc7f68427f0f315171fae85533c685ad756aa71e
 
 Package: kamailio-lua-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 432
+Version: 6.1.2-1
+Installed-Size: 443
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.33), liblua5.4-0 (>= 5.4.6)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.33), liblua5.4-0 (>= 5.4.6)
 Description: app_lua module for Kamailio Lua support
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: e78678d1eea14c5a28d0b5756a863786
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-lua-modules_6.1.1-2.1_amd64.deb
-Size: 192096
-MD5sum: 1eba0278e56f384326c6fde746ae160f
-SHA256: 2caf7b39b2873c137f4c8f225629106577447727edd4b988c411237407bd97bc
+Filename: pool/main/k/kamailio/kamailio-lua-modules_6.1.2-1_amd64.deb
+Size: 203160
+MD5sum: f5c7562c2be772bbf4cd78f5d409f650
+SHA256: 270eeb026394cb2ee57c3ead66fc0a301b307ff12e4f14b0ffcc8ef828d88996
 
 Package: kamailio-lwsc-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 207
+Version: 6.1.2-1
+Installed-Size: 218
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.34), libwebsockets19t64 (>= 2.4.1)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.34), libwebsockets19t64 (>= 2.4.1)
 Description: Libwebsockets module for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 651a0529537101bebec504571b00408a
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-lwsc-modules_6.1.1-2.1_amd64.deb
-Size: 144296
-MD5sum: cd0a9fa774ab8a3401626255c3cd3e7b
-SHA256: cf123d751862c48e743c3dfc90278f1840dbad2df72a3e267319b0d867d52bbf
+Filename: pool/main/k/kamailio/kamailio-lwsc-modules_6.1.2-1_amd64.deb
+Size: 155888
+MD5sum: 9b31e90150fe03aa596de40341768ad9
+SHA256: 8b40cd389c34007f6f542018c41e69fad80bed356fc56fc3ca65606058d188ab
 
 Package: kamailio-memcached-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 191
+Version: 6.1.2-1
+Installed-Size: 202
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: kamailio-memcached-module
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.4), libmemcached11t64 (>= 1.1.4)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.4), libmemcached11t64 (>= 1.1.4)
 Description: interface to the memcached server, for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 8a1b5b6a49b64c3f266fd53f56497b9b
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-memcached-modules_6.1.1-2.1_amd64.deb
-Size: 139880
-MD5sum: 0d33fa93ea2e7b24387c0e287b7850a8
-SHA256: f9e114b41f2de0c03240727a10a5317ea0478d9bf55d7f56447f153ad8851420
+Filename: pool/main/k/kamailio/kamailio-memcached-modules_6.1.2-1_amd64.deb
+Size: 151428
+MD5sum: 56514c38f2834c1745f79f55b8cce8b0
+SHA256: dabf597d5526ea27dfdd6b5e81dbdcfa42fe54f54a53ae3e33e04a15cd18c473
 
 Package: kamailio-microhttpd-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 180
+Version: 6.1.2-1
+Installed-Size: 191
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.4), libmicrohttpd12t64 (>= 0.9.50)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.4), libmicrohttpd12t64 (>= 0.9.50)
 Description: Microhttpd module for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: f414917140b7589791acfc739ce72745
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-microhttpd-modules_6.1.1-2.1_amd64.deb
-Size: 132976
-MD5sum: 500b6d18bed430cdcdec4324915748cf
-SHA256: 670b49d3ed685692ae6de4768b862ce5f5071ac8d6f51d5f32a9086e229942d8
+Filename: pool/main/k/kamailio/kamailio-microhttpd-modules_6.1.2-1_amd64.deb
+Size: 144536
+MD5sum: fe3cf627cc2212e5193302f0bf99e142
+SHA256: 14b15dea2ec54774ace59dd409b27b938833d6488316b876533accb4702cfb1b
 
 Package: kamailio-mongodb-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 451
+Version: 6.1.2-1
+Installed-Size: 462
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libbson2-2 (>= 2.2.4), libc6 (>= 2.4), libmongoc2-2 (>= 2.2.4)
+Depends: kamailio (= 6.1.2-1), libbson2-2 (>= 2.2.4), libc6 (>= 2.4), libmongoc2-2 (>= 2.2.4)
 Description: mongodb modules for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 58f5fcbe5e3436900cb006c7801b2a3b
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-mongodb-modules_6.1.1-2.1_amd64.deb
-Size: 196488
-MD5sum: 808dfca85ecafd9e9847583eaab0d857
-SHA256: f491de252e10837d5774df31dc123ee7a8add53972d3598b0cfc78b8b335412d
+Filename: pool/main/k/kamailio/kamailio-mongodb-modules_6.1.2-1_amd64.deb
+Size: 207352
+MD5sum: 1a20fd6ad683c2fc3dd8462c758be5e4
+SHA256: 64020e8e0679b3b1a4f655c77365299bddcad3a01e83a2999c15580362dda95a
 
 Package: kamailio-mqtt-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 233
+Version: 6.1.2-1
+Installed-Size: 244
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.4), libev4t64 (>= 1:4.04), libmosquitto1 (>= 1.6)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.4), libev4t64 (>= 1:4.04), libmosquitto1 (>= 1.6)
 Description: MQTT modules for the Kamailio SIP Server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 54a4a3f05924c755b672e6ab7fb71880
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-mqtt-modules_6.1.1-2.1_amd64.deb
-Size: 154668
-MD5sum: 23af2473da868217f899bdc1961378b7
-SHA256: 6f0035f1376b8cfce372fcbb31b1536d36d97864b16f78f526747c241221abbb
+Filename: pool/main/k/kamailio/kamailio-mqtt-modules_6.1.2-1_amd64.deb
+Size: 166212
+MD5sum: 5bb240fa7001c22e298b62d64502bcb0
+SHA256: 4043a988c0198535b22a6c60edd3c6ead7cd6ca430ca7737add6dee9a5710510
 
 Package: kamailio-mysql-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 419
+Version: 6.1.2-1
+Installed-Size: 430
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: default-mysql-client | virtual-mysql-client, kamailio (= 6.1.1-2.1), libc6 (>= 2.4), libmariadb3 (>= 3.0.0)
+Depends: default-mysql-client | virtual-mysql-client, kamailio (= 6.1.2-1), libc6 (>= 2.4), libmariadb3 (>= 3.0.0)
 Description: MySQL database connectivity module for Kamailio
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: e5dd14628ca6789f21ca41a164f8564a
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-mysql-modules_6.1.1-2.1_amd64.deb
-Size: 208224
-MD5sum: 38bd418df27f47362d2af2bb85ae1f4d
-SHA256: df950017b75142bc0b5048751f7bc6fed7e65bfd5e3e6e93f77d24f9e03f96c3
+Filename: pool/main/k/kamailio/kamailio-mysql-modules_6.1.2-1_amd64.deb
+Size: 219460
+MD5sum: f98641a3dd84a0049e83efad43d0eedf
+SHA256: 9db5fce61829e3127018f604749265d4d315d2a124ec7d19899536f38f85f426
 
 Package: kamailio-nats-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 226
+Version: 6.1.2-1
+Installed-Size: 237
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.4), libnats3.12 (>= 3.11.0), libuv1t64 (>= 1.20.2)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.4), libnats3.12 (>= 3.11.0), libuv1t64 (>= 1.20.2)
 Description: Nats module for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 98fadf1e6efe7d33f5087da03212f3e6
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-nats-modules_6.1.1-2.1_amd64.deb
-Size: 150572
-MD5sum: a743ab9f663edeebf9cf72dbef88af2b
-SHA256: 6a8f02a69f2ccdf3961267f67a371edf5e39dfd1946f549792148cb50ba68ce3
+Filename: pool/main/k/kamailio/kamailio-nats-modules_6.1.2-1_amd64.deb
+Size: 162172
+MD5sum: 2ba2a76794057e1f5ad8b0d62c5790d3
+SHA256: 51f7f5e85f7e09d4ec7438cce92e649e6c37a0cdf496dee4962371900dcc79cf
 
 Package: kamailio-outbound-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 203
+Version: 6.1.2-1
+Installed-Size: 214
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.4), libssl3t64 (>= 3.0.0)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.4), libssl3t64 (>= 3.0.0)
 Description: SIP Outbound module for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 6a892d18e646b713f338695829b44b4e
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-outbound-modules_6.1.1-2.1_amd64.deb
-Size: 144200
-MD5sum: 4f4226782f9345ae8e45a27fe60bf82c
-SHA256: e59d66dc94e1a884d3c4958fdc8351a8622b40632e250d4bff4b47b4ffc75efe
+Filename: pool/main/k/kamailio/kamailio-outbound-modules_6.1.2-1_amd64.deb
+Size: 155756
+MD5sum: 2583f2a262b327c6dd2f0e8ed715d63a
+SHA256: 2d790c66afe7da551e5076b53f50c1c623e854cae30584263347eb575d4e579a
 
 Package: kamailio-perl-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 353
+Version: 6.1.2-1
+Installed-Size: 364
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.4), libperl5.40 (>= 5.40.0)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.4), libperl5.40 (>= 5.40.0)
 Description: Perl extensions and database driver for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: cfe9d19e4e30f4e71986827ded62b2ab
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-perl-modules_6.1.1-2.1_amd64.deb
-Size: 189192
-MD5sum: 2cf377d0c1bc459a3a20cc2dd603e29b
-SHA256: 45f00cc40d1ba76daa15392b1f34e2656b74452f7186621f384010f501a02504
+Filename: pool/main/k/kamailio/kamailio-perl-modules_6.1.2-1_amd64.deb
+Size: 200768
+MD5sum: 685a07edbb5259289486f0cb0f89d52d
+SHA256: f2af60e36d6e94bab7cc219cdfb43221e862d41517c516d586515083bd872ec4
 
 Package: kamailio-phonenum-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 186
+Version: 6.1.2-1
+Installed-Size: 197
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.4), libgcc-s1 (>= 3.0), libgeocoding8 (>= 8.13.51+ds), libphonenumber8t64-protobuf32, libstdc++6 (>= 13.1)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.4), libgcc-s1 (>= 3.0), libgeocoding8 (>= 8.13.51+ds), libphonenumber8t64-protobuf32, libstdc++6 (>= 13.1)
 Description: phonenum modules for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 28e6546f656f4fa8735fbba63db8bf4a
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-phonenum-modules_6.1.1-2.1_amd64.deb
-Size: 135660
-MD5sum: d8e41ea4fc33400fd4bcfbe403d4426d
-SHA256: 8aa76e16d1e5b0a2247c8b08a93d9d18a0d9f92ff3f4175ae7bfe25eead90c99
+Filename: pool/main/k/kamailio/kamailio-phonenum-modules_6.1.2-1_amd64.deb
+Size: 147292
+MD5sum: 73f61dc8531b6ff1bc57fb41682342ea
+SHA256: ebd5fac5a54d4980ec97db11fc05466a84c729a7f0e50c6ae9fa2f5a40299c06
 
 Package: kamailio-postgres-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 517
+Version: 6.1.2-1
+Installed-Size: 528
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), postgresql-client, libc6 (>= 2.15), libpq5 (>= 9.0~)
+Depends: kamailio (= 6.1.2-1), postgresql-client, libc6 (>= 2.15), libpq5 (>= 9.0~)
 Description: PostgreSQL database connectivity module for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 8352e89f5d321aac333965c2b466bead
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-postgres-modules_6.1.1-2.1_amd64.deb
-Size: 251124
-MD5sum: cf60e7d1e29d38fe4253c96b4915892b
-SHA256: 6474a3b833d15bcb23dd14c82d33d012b56af1c576df72327ced322a5cd0340f
+Filename: pool/main/k/kamailio/kamailio-postgres-modules_6.1.2-1_amd64.deb
+Size: 262144
+MD5sum: 6cd9dc80796d25ddec1767da24769331
+SHA256: e08c8507861aa9a9a9c5280e02b9a07cc5944ae6725a1485ad700f0e930ef87e
 
 Package: kamailio-presence-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 3143
+Version: 6.1.2-1
+Installed-Size: 3154
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.7), libcurl4t64 (>= 7.16.2), libxml2-16 (>= 2.14.1)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.7), libcurl4t64 (>= 7.16.2), libxml2-16 (>= 2.14.1)
 Description: SIP presence modules for Kamailio
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: c1834ec77d4cce2de4cb832201049c17
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-presence-modules_6.1.1-2.1_amd64.deb
-Size: 1188024
-MD5sum: 265a02512520215d9b46e2986a6700cf
-SHA256: 4497812523579d496d42b0906e2a5b8c13bac5d31905c66822aeed7643ffdb4b
+Filename: pool/main/k/kamailio/kamailio-presence-modules_6.1.2-1_amd64.deb
+Size: 1199796
+MD5sum: 2c1255d60c8e6b507d95b92c304acf8f
+SHA256: 6a903436d8214d200096c71bf0f3c5a1bf4ac2c013c90b15edaa938d7cc42ba1
 
 Package: kamailio-python3-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 588
+Version: 6.1.2-1
+Installed-Size: 599
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.4), libpython3.13 (>= 3.13.0~rc3)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.4), libpython3.13 (>= 3.13.0~rc3)
 Description: app_python3 module for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 5bd97b896aa3add6a41b618dc7ba976b
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-python3-modules_6.1.1-2.1_amd64.deb
-Size: 210648
-MD5sum: e1b847af56d003a1607243a02a8281a2
-SHA256: b004bad187935dcf5604485f38ffe2663f9d5b5748bf14e3bfe1ab736cfb98a5
+Filename: pool/main/k/kamailio/kamailio-python3-modules_6.1.2-1_amd64.deb
+Size: 222224
+MD5sum: b9937d88c7a664b39f1b84ba5e3e763a
+SHA256: 0ace357592853fe5434a5a6f62377104a33cd3ae44347f8f29c680edd3426f37
 
 Package: kamailio-rabbitmq-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 206
+Version: 6.1.2-1
+Installed-Size: 217
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.4), librabbitmq4 (>= 0.8.0), libuuid1 (>= 2.16)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.4), librabbitmq4 (>= 0.8.0), libuuid1 (>= 2.16)
 Description: RabbitMQ and AMQP integration modules for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 291676c921cf99398a1ab3d788565fb9
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-rabbitmq-modules_6.1.1-2.1_amd64.deb
-Size: 144144
-MD5sum: 64aeedd80a409db224503161f27d5556
-SHA256: c94b7cdcfa689f2da541ef718b274d81de4d300574e4ca94b6a3e66e0d01ecab
+Filename: pool/main/k/kamailio/kamailio-rabbitmq-modules_6.1.2-1_amd64.deb
+Size: 155704
+MD5sum: c4da34ada1fcadb47f96e7f09c3ff196
+SHA256: 1c43df01d2221ae75c4f0024e992dc5602deb1e7898c7994efa2d63cfa577d74
 
 Package: kamailio-radius-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 441
+Version: 6.1.2-1
+Installed-Size: 452
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.4), libradcli4 (>= 1.2.11)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.4), libradcli4 (>= 1.2.11)
 Description: RADIUS modules for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 5aa030dd29538d295aa0cf0940e5b5d0
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-radius-modules_6.1.1-2.1_amd64.deb
-Size: 220964
-MD5sum: 6812086f8c22daf769a2cd965c2b637a
-SHA256: c69e0f21a96288f0246338235e0958a5d386074e151eab465053857fc632dc6f
+Filename: pool/main/k/kamailio/kamailio-radius-modules_6.1.2-1_amd64.deb
+Size: 232576
+MD5sum: c676334dd3581b363ee3e844653bd990
+SHA256: 4431e1bc5f087130d010fbf78bf7503aeb4894f9d2c25710055998f90601fe8a
 
 Package: kamailio-redis-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 1150
+Version: 6.1.2-1
+Installed-Size: 1161
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.33), libhiredis1.1.0 (>= 1.2.0)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.33), libhiredis1.1.0 (>= 1.2.0)
 Description: Redis database connectivity module for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 2a2e0163eb31c5413dfc1f2ff9e82735
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-redis-modules_6.1.1-2.1_amd64.deb
-Size: 482904
-MD5sum: 09b9ce534bf401514d713d39c40a31e3
-SHA256: 2d8b23e3a9e064d91f1448be2dd47d1889e4ad2b05830e10571da6791a0db07b
+Filename: pool/main/k/kamailio/kamailio-redis-modules_6.1.2-1_amd64.deb
+Size: 494452
+MD5sum: 50dc01c189a38345eea0d094fe4e4db4
+SHA256: ae46d357200f88c1bcf8937538e85589054f17431723bcba8ede6c845f6e5094
 
 Package: kamailio-ruby-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 460
+Version: 6.1.2-1
+Installed-Size: 471
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.34), libruby3.3 (>= 3.3.0~preview1)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.34), libruby3.3 (>= 3.3.0~preview1)
 Description: app_ruby module for Kamailio Ruby support
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 9950deeb75bcae73dad9ccfb78da8bc5
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-ruby-modules_6.1.1-2.1_amd64.deb
-Size: 190116
-MD5sum: 521ac848b9dd3d3d2ad010f01c22c731
-SHA256: 08274bcf052e33a2820f2e0e254d99610e5403a3d8bcac8604e15093118dd9f0
+Filename: pool/main/k/kamailio/kamailio-ruby-modules_6.1.2-1_amd64.deb
+Size: 202344
+MD5sum: e4d38e40209d1c3bc84905da61ca2ab9
+SHA256: 4051ca2d4e3b5a68c295c41cb29bd63fac6dc405c10463bd27a2c8594c3611d1
 
 Package: kamailio-sctp-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 282
+Version: 6.1.2-1
+Installed-Size: 293
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.4), libsctp1 (>= 1.0.10+dfsg)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.4), libsctp1 (>= 1.0.10+dfsg)
 Description: SCTP SIP transport module for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 23c1bcafb8b49b3df80140f632fd9d8d
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-sctp-modules_6.1.1-2.1_amd64.deb
-Size: 172904
-MD5sum: 96f84b3c8d29e1471e0ee80da4178449
-SHA256: 4a256fb5e59f3b36ea39eae078ade2a4eb16d98302f51c254d31b30987741023
+Filename: pool/main/k/kamailio/kamailio-sctp-modules_6.1.2-1_amd64.deb
+Size: 184740
+MD5sum: 78e8ca41ffb2c42a2dec0920a6a56508
+SHA256: 0ff163cd0404711b2056fcd9ee2507841f286960d9e6bba7c1bcdfd1007fac80
 
 Package: kamailio-secsipid-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 225
+Version: 6.1.2-1
+Installed-Size: 236
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.34), libsecsipid1t64 (>= 1.3.1)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.34), libsecsipid1t64 (>= 1.3.1)
 Description: secsipid module for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 22714923bc20b2934a0ebc9c7f654a58
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-secsipid-modules_6.1.1-2.1_amd64.deb
-Size: 143440
-MD5sum: 7db08c72f45886708e43b8d417bc02f5
-SHA256: e96152b4ea4aa167313622e4fa356ccc836b05f155fba13296b50ff61ca7a9ca
+Filename: pool/main/k/kamailio/kamailio-secsipid-modules_6.1.2-1_amd64.deb
+Size: 154984
+MD5sum: c7566430b2857624fc01aee841264d1c
+SHA256: 433404491c03ca99bb4ae73cc3a596e46856cdcf138f15b4dd6ce9d23663dd62
 
 Package: kamailio-snmpstats-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 463
+Version: 6.1.2-1
+Installed-Size: 474
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), snmpd, libc6 (>= 2.4), libsnmp45 (>= 5.9.5.2+dfsg)
+Depends: kamailio (= 6.1.2-1), snmpd, libc6 (>= 2.4), libsnmp45 (>= 5.9.5.2+dfsg)
 Description: SNMP AgentX subagent module for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 3f19e2de7dc27a4ef75f936a91e17402
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-snmpstats-modules_6.1.1-2.1_amd64.deb
-Size: 205232
-MD5sum: 34c5d967cf2e46241ff847ca34df7921
-SHA256: 975d5c98a22abb75c9a219b86ea786112045855e5d3fad95c4b6b74d653800d2
+Filename: pool/main/k/kamailio/kamailio-snmpstats-modules_6.1.2-1_amd64.deb
+Size: 216232
+MD5sum: 38656c67cc47c8f0743b965ae1dc7f51
+SHA256: d92d1fb31c1049d02e1f41be1d77a09fec762e1d22669d49c6f739fd9718c46c
 
 Package: kamailio-sqlite-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 268
+Version: 6.1.2-1
+Installed-Size: 279
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.4), libsqlite3-0 (>= 3.6.0)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.4), libsqlite3-0 (>= 3.6.0)
 Recommends: sqlite3
 Description: SQLite database connectivity module for the Kamailio SIP server
 Multi-Arch: same
@@ -12906,156 +12905,156 @@ Homepage: https://www.kamailio.org/
 Description-md5: b4f67430b14343d98efac6caaf86fe43
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-sqlite-modules_6.1.1-2.1_amd64.deb
-Size: 148832
-MD5sum: a7113cefad6a64adf99e7f888540d0e7
-SHA256: adc6e86e0a745ae28ca645ecb265200566a1ffdb451c9d15201924a8af4eda53
+Filename: pool/main/k/kamailio/kamailio-sqlite-modules_6.1.2-1_amd64.deb
+Size: 160424
+MD5sum: e4440a2e372c48821b6f278147f7b8e1
+SHA256: 75fc258feccef267c2df453afc0c5e05e69ff13a1733ee7274b86b2fd229aa83
 
 Package: kamailio-systemd-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 185
+Version: 6.1.2-1
+Installed-Size: 196
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.4), libsystemd0
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.4), libsystemd0
 Description: systemd logging modules for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: b03a3ec6dcec09ef8291bc5e46f57fcf
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-systemd-modules_6.1.1-2.1_amd64.deb
-Size: 126952
-MD5sum: 8f2c3a38f3d298f080f9544b7567c750
-SHA256: b775088b11153fd9fd27d76fd0d2236c74f3a3a106fcb0820f1edb81f40a69a6
+Filename: pool/main/k/kamailio/kamailio-systemd-modules_6.1.2-1_amd64.deb
+Size: 138508
+MD5sum: a43e4e2b4023bb54887814768bcc577a
+SHA256: ab1b646ef399c966064f6a299af546b0088f9fed7fdb44aa9a54fc076cf9ffd6
 
 Package: kamailio-tls-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 8505
+Version: 6.1.2-1
+Installed-Size: 8520
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.38), libssl3t64 (>= 3.2.0), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.38), libssl3t64 (>= 3.2.0), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
 Description: TLS support for the Kamailio SIP server (authentication, transport)
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 36c06a49af2355c47ed5760d80991cd8
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-tls-modules_6.1.1-2.1_amd64.deb
-Size: 2472668
-MD5sum: ee7802030561f78cacfed4c259ecf994
-SHA256: 7b34f112f72f638e458808668657302d7026c47b0e22dc7ccf9928f831dfc398
+Filename: pool/main/k/kamailio/kamailio-tls-modules_6.1.2-1_amd64.deb
+Size: 2486828
+MD5sum: 123e1cc69a386ede87e754ed7dc04c59
+SHA256: bd97df0c89655277dcffe4d59806a2a506388eacb6824a5369d6d5e1403e50cb
 
 Package: kamailio-tls-wolfssl-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 505
+Version: 6.1.2-1
+Installed-Size: 512
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.33), libwolfssl44 (>= 5.2.0)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.33), libwolfssl44 (>= 5.2.0)
 Description: TLS support for the Kamailio SIP server (authentication, transport)
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: dcf9a62b41e7ba20efa7042fd946d09d
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-tls-wolfssl-modules_6.1.1-2.1_amd64.deb
-Size: 250404
-MD5sum: f54e044260f50294bef5ee3797fe95da
-SHA256: d7c9ea870215f135f5cb35866af82b37fe9d9c947becb2cd28d68ca5ebc963a6
+Filename: pool/main/k/kamailio/kamailio-tls-wolfssl-modules_6.1.2-1_amd64.deb
+Size: 262376
+MD5sum: 6237df4f44a696da1299971324d59e21
+SHA256: 4c29caa7567dfd8818f555c158d45fdd6f197a8521b106fbe360c47f4829b299
 
 Package: kamailio-unixodbc-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 254
+Version: 6.1.2-1
+Installed-Size: 265
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.4), libodbc2 (>= 2.3.1)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.4), libodbc2 (>= 2.3.1)
 Description: unixODBC database connectivity module for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 1f7c22f422b0111b09d4f9a872f73763
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-unixodbc-modules_6.1.1-2.1_amd64.deb
-Size: 163444
-MD5sum: 58338081bed9762f326531f0fdc5afae
-SHA256: bf699198673fd5d1b679200ef6511be77750ea1c3277ebde2a994aa24034fc45
+Filename: pool/main/k/kamailio/kamailio-unixodbc-modules_6.1.2-1_amd64.deb
+Size: 175012
+MD5sum: 95aaac2a3a9169dc22a08a896543a310
+SHA256: b56d5c6a88a827d3f89f9bb5058626e369df909da75cb2b1f1b240802019070c
 
 Package: kamailio-utils-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 853
+Version: 6.1.2-1
+Installed-Size: 864
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.7), libcurl4t64 (>= 7.16.2), libxml2-16 (>= 2.14.1)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.7), libcurl4t64 (>= 7.16.2), libxml2-16 (>= 2.14.1)
 Description: Utility functions for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 10e039d68b43f9d332fe6e38049edc47
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-utils-modules_6.1.1-2.1_amd64.deb
-Size: 386832
-MD5sum: 30227e26cabab5b69be5877b06b598f3
-SHA256: 400ecf6b0aa4c7fbe07ad1a3fc2227511d6c67aa381e60137c30b63432141427
+Filename: pool/main/k/kamailio/kamailio-utils-modules_6.1.2-1_amd64.deb
+Size: 398404
+MD5sum: 7f1367110f85a1c7d06a470be4a494d5
+SHA256: d5b7fb5862a2a3344fd7411fef0d08459eca801adb221e96a81b783e5dbc8968
 
 Package: kamailio-websocket-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 319
+Version: 6.1.2-1
+Installed-Size: 330
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.4), libunistring5 (>= 1.1)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.4), libunistring5 (>= 1.1)
 Description: WebSocket module for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 14a90490fa55b64ad6cd540ad4dd34b8
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-websocket-modules_6.1.1-2.1_amd64.deb
-Size: 190264
-MD5sum: b1e1c836833151e404f3f135725a68e8
-SHA256: 81851e1ccc09b39671fab58ff9074b5995492495905acce1cab1e0fcafa21e22
+Filename: pool/main/k/kamailio/kamailio-websocket-modules_6.1.2-1_amd64.deb
+Size: 201784
+MD5sum: 214bc2b5cbe2b0f8e62e8274a9b3b561
+SHA256: 988082aae5401bfc99e7d314194257f90f46c957be90f3e903b0086b85bca1e8
 
 Package: kamailio-xml-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 1047
+Version: 6.1.2-1
+Installed-Size: 1058
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: kamailio-xml-module, kamailio-xmlrpc-module
 Provides: kamailio-xmlrpc-modules
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.4), libxml2-16 (>= 2.14.1)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.4), libxml2-16 (>= 2.14.1)
 Description: XML based extensions for Kamailio's Management Interface
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: c27d5c0af319dff182dc09dd0da739cb
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-xml-modules_6.1.1-2.1_amd64.deb
-Size: 303788
-MD5sum: c8f5e5fb7ff2b63ff2f7ee871e7f628c
-SHA256: a34a07cdfde66066d2757c17358488052e5e4f8807f36fd20804d12526fcbf49
+Filename: pool/main/k/kamailio/kamailio-xml-modules_6.1.2-1_amd64.deb
+Size: 315040
+MD5sum: b265b92576596a89be3f6b9de4ade41b
+SHA256: ca9690b2a08c9ef981940c298edf57e739fe1caef19852383c2937b495d030ea
 
 Package: kamailio-xmpp-modules
 Source: kamailio
-Version: 6.1.1-2.1
-Installed-Size: 289
+Version: 6.1.2-1
+Installed-Size: 300
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kamailio (= 6.1.1-2.1), libc6 (>= 2.15), libexpat1 (>= 2.0.1)
+Depends: kamailio (= 6.1.2-1), libc6 (>= 2.15), libexpat1 (>= 2.0.1)
 Description: XMPP gateway module for the Kamailio SIP server
 Multi-Arch: same
 Homepage: https://www.kamailio.org/
 Description-md5: 5ef95e7d723676af349f49fed944b7b3
 net
 Priority: optional
-Filename: pool/main/k/kamailio/kamailio-xmpp-modules_6.1.1-2.1_amd64.deb
-Size: 183024
-MD5sum: 722c0258f9c952d86da51983df9f788a
-SHA256: 70cecaa882014f933f587449858aa5140ba60ffa90555a5042a4c8ba15101973
+Filename: pool/main/k/kamailio/kamailio-xmpp-modules_6.1.2-1_amd64.deb
+Size: 193808
+MD5sum: be4dd3106c01ffa1f1d18966edb3553c
+SHA256: a90b5403056f32a7502582b62937eb93f71b978a5931cab51e71cd35ad75533c
 
 Package: kanif
 Version: 1.2.2-4
@@ -14580,8 +14579,8 @@ SHA256: 2f9ee2ae1bf72e1f27d6fc60bb2f8cae5cfd7b0c9d49ff68dd39e8ee9d28c54b
 
 Package: libiscsi-bin
 Source: libiscsi (1.20.0-4)
-Version: 1.20.0-4+b1
-Installed-Size: 886
+Version: 1.20.0-4+b2
+Installed-Size: 873
 Maintainer: Michael Tokarev <mjt@tls.msk.ru>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libcunit1, libibverbs1 (>= 1.1.6), libiscsi7 (>= 1.18.0), librdmacm1t64 (>= 1.0.15)
@@ -14590,10 +14589,10 @@ Homepage: https://github.com/sahlberg/libiscsi
 Description-md5: b694252febaa2b756d9cbc15ff8654a1
 net
 Priority: optional
-Filename: pool/main/libi/libiscsi/libiscsi-bin_1.20.0-4+b1_amd64.deb
-Size: 236776
-MD5sum: 79dfb2c45d34e2a7be2f48a90e228a75
-SHA256: 5717a98a006ba6f55679c617843565e9ac89e5d2fa0fe2941cb54172f930ebd7
+Filename: pool/main/libi/libiscsi/libiscsi-bin_1.20.0-4+b2_amd64.deb
+Size: 235424
+MD5sum: 9de59ec1d8f69253adb521e6b283e89b
+SHA256: 2938261062ef285609f1381caddca2d17d6ff2564e33696ffbd790f3a71c4624
 
 Package: location
 Source: libloc
@@ -14722,8 +14721,8 @@ MD5sum: 6e005451dba64747948008dbe27ef9a5
 SHA256: 8b7705cf007b5c57eec26972fa620ceb5697646eef93a753f3f0205757381786
 
 Package: gstreamer1.0-nice
-Source: libnice
-Version: 0.1.23-2
+Source: libnice (0.1.23-2)
+Version: 0.1.23-2+b1
 Installed-Size: 79
 Maintainer: Debian Telepathy maintainers <pkg-telepathy-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -14734,10 +14733,10 @@ Homepage: https://libnice.freedesktop.org/
 Description-md5: e6a5fecf0861bb3b1b3bda258d7f2552
 net
 Priority: optional
-Filename: pool/main/libn/libnice/gstreamer1.0-nice_0.1.23-2_amd64.deb
-Size: 25632
-MD5sum: 8fea4d4d930e6c1cd823c48c7ec25d72
-SHA256: e399fb3728cbd662208aff66a969a1186db929eb360380226e0d734fe1e53de4
+Filename: pool/main/libn/libnice/gstreamer1.0-nice_0.1.23-2+b1_amd64.deb
+Size: 25312
+MD5sum: 2dcc7f268bceecb23b8000136d583e64
+SHA256: e74ef9e16ff4e3f8534013705d8604c6e1559574c9f3b9887f6187830bd96c82
 
 Package: oping
 Source: liboping (1.10.0-5)
@@ -14813,12 +14812,12 @@ MD5sum: c9bc8a1d84e8bce68478d687a68ead0e
 SHA256: 719066bd75351996f81f09c80c92880a17672466ecf22fa560a3530718eb011e
 
 Package: libqmi-proxy
-Source: libqmi
-Version: 1.38.0-1
-Installed-Size: 35
+Source: libqmi (1.38.0-1)
+Version: 1.38.0-1+b1
+Installed-Size: 33
 Maintainer: DebianOnMobile Maintainers <debian-on-mobile-maintainers@alioth-lists.debian.net>
 Architecture: amd64
-Depends: libqmi-glib5 (= 1.38.0-1), libc6 (>= 2.34), libglib2.0-0t64 (>= 2.30.0)
+Depends: libqmi-glib5 (= 1.38.0-1+b1), libc6 (>= 2.34), libglib2.0-0t64 (>= 2.30.0)
 Description: Proxy to communicate with QMI ports
 Multi-Arch: foreign
 Homepage: https://www.freedesktop.org/wiki/Software/libqmi
@@ -14826,15 +14825,15 @@ Description-md5: 415b7b5c1f0133619dedb566502ee36d
 Tag: implemented-in::TODO, role::program, use::proxying
 net
 Priority: optional
-Filename: pool/main/libq/libqmi/libqmi-proxy_1.38.0-1_amd64.deb
-Size: 10304
-MD5sum: f11af16df534188940b589bbe72f9ef5
-SHA256: f5556c68aecd9004a05201a99e573d364e04ef2311fc46bb718d798bb293c9a5
+Filename: pool/main/libq/libqmi/libqmi-proxy_1.38.0-1+b1_amd64.deb
+Size: 7596
+MD5sum: feb64a0e35aeab3ecf29bee53b4e4737
+SHA256: 4a12e9d88096b268c8ba269b2f82d39511f389be60b06c3f04ec2dcd586b68db
 
 Package: libqmi-utils
-Source: libqmi
-Version: 1.38.0-1
-Installed-Size: 855
+Source: libqmi (1.38.0-1)
+Version: 1.38.0-1+b1
+Installed-Size: 853
 Maintainer: DebianOnMobile Maintainers <debian-on-mobile-maintainers@alioth-lists.debian.net>
 Architecture: amd64
 Depends: libc6 (>= 2.42), libglib2.0-0t64 (>= 2.62.0), libgudev-1.0-0 (>= 146), libmbim-glib4 (>= 1.28.0), libmbim-proxy, libqmi-glib5 (>= 1.38.0), libqmi-proxy, libqrtr-glib0 (>= 1.0.0)
@@ -14843,28 +14842,28 @@ Homepage: https://www.freedesktop.org/wiki/Software/libqmi
 Description-md5: 76e1eda70baf3a1a86ec637dca8a1dd9
 net
 Priority: optional
-Filename: pool/main/libq/libqmi/libqmi-utils_1.38.0-1_amd64.deb
-Size: 206704
-MD5sum: 29143ce6b6f2b08af04148828a33c3e6
-SHA256: 29c110a4c06c83572de424513168b5e448de684e74942284a86b0391f5503a56
+Filename: pool/main/libq/libqmi/libqmi-utils_1.38.0-1+b1_amd64.deb
+Size: 204200
+MD5sum: 7aa1834f6bf668052db57381f028e8ba
+SHA256: 4385f134a79884f0e6ec43a5d673e7dfe42dfbb88938ea0a64b825db4333b6fa
 
 Package: amqp-tools
 Source: librabbitmq (0.15.0-1)
-Version: 0.15.0-1+b1
-Installed-Size: 178
+Version: 0.15.0-1+b2
+Installed-Size: 173
 Maintainer: Florian Ernst <florian@debian.org>
 Architecture: amd64
-Depends: librabbitmq4 (= 0.15.0-1+b1), libc6 (>= 2.34), libpopt0 (>= 1.14)
+Depends: librabbitmq4 (= 0.15.0-1+b2), libc6 (>= 2.34), libpopt0 (>= 1.14)
 Description: Command-line utilities for interacting with AMQP servers
 Homepage: https://github.com/alanxz/rabbitmq-c
 Description-md5: 8059068d01bfb939336097d2add7f12f
 Tag: interface::commandline, role::program
 net
 Priority: optional
-Filename: pool/main/libr/librabbitmq/amqp-tools_0.15.0-1+b1_amd64.deb
-Size: 38400
-MD5sum: 346b78a964ef12d209313c1f503a4633
-SHA256: 557aec4aad8f1efe999adf782940eca9e3ab3a3b53c6131db942ec91f9f0251f
+Filename: pool/main/libr/librabbitmq/amqp-tools_0.15.0-1+b2_amd64.deb
+Size: 37948
+MD5sum: 7b679eebea32f4156ea60eadab65510e
+SHA256: 500901fb5e3630c3e9a6148202b86995e7c70ee2610137c019b0417c912f4656
 
 Package: libre-graph-api-cpp-qt-client
 Version: 1.0.4-2.1
@@ -14920,9 +14919,9 @@ MD5sum: be6343bd0d615f7169b8cbdeb771c74f
 SHA256: 953f1b0976b7b59e04335e64c306b67ba33ebe6fb55f8bb56346bcb814aa7421
 
 Package: smitools
-Source: libsmi
-Version: 0.4.8+dfsg2-18
-Installed-Size: 631
+Source: libsmi (0.4.8+dfsg2-18)
+Version: 0.4.8+dfsg2-18+b1
+Installed-Size: 632
 Maintainer: Vincent Bernat <bernat@debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34), libsmi2t64 (>= 0.4.7)
@@ -14932,10 +14931,10 @@ Description-md5: 5614c44e511affa0271218f6e95cba3e
 Tag: role::shared-lib
 net
 Priority: optional
-Filename: pool/main/libs/libsmi/smitools_0.4.8+dfsg2-18_amd64.deb
-Size: 215716
-MD5sum: e5d170ce880583aafe9b787aad586b9f
-SHA256: 70f1ddb06d10b7d3629df1764761434db08baad7e3323734066b2e23c6705423
+Filename: pool/main/libs/libsmi/smitools_0.4.8+dfsg2-18+b1_amd64.deb
+Size: 216384
+MD5sum: d36acd52dd526d58b7045ae450ae9dff
+SHA256: 19161d4dd836ed24594f58f4c137fc4e9c14c3c614855922941f9a459bc4cc30
 
 Package: storj
 Source: libstorj (1.0.3-1.4)
@@ -15219,7 +15218,7 @@ SHA256: 60ad80884a843efef0c87dbb7710b8076ef40ad6c7a2881ca0015e2d44905f71
 
 Package: lksctp-tools
 Source: lksctp-tools (1.0.21+dfsg-1)
-Version: 1.0.21+dfsg-1+b1
+Version: 1.0.21+dfsg-1+b2
 Installed-Size: 198
 Maintainer: Michael Biebl <biebl@debian.org>
 Architecture: amd64
@@ -15232,10 +15231,10 @@ Tag: admin::kernel, devel::lang:c, devel::library, implemented-in::c,
  role::program, scope::utility, use::checking
 net
 Priority: optional
-Filename: pool/main/l/lksctp-tools/lksctp-tools_1.0.21+dfsg-1+b1_amd64.deb
-Size: 62792
-MD5sum: 3f1fb1362d6bad99e56f47202dbc69b9
-SHA256: b449dd2f2903f52b6ffd8bbfb4ed45549ea720bc85950b5f6c21109c6a598707
+Filename: pool/main/l/lksctp-tools/lksctp-tools_1.0.21+dfsg-1+b2_amd64.deb
+Size: 62684
+MD5sum: bde62ce78500b6021eb298d797947f8b
+SHA256: 7486c4146714a31917593d9ee26367d79cf683f6b8339f17d0ad5c7e29e65896
 
 Package: lldpad
 Source: lldpad (1.1.1-1)
@@ -15553,20 +15552,21 @@ MD5sum: 4c6135abfed3649adccd365b30a9f00f
 SHA256: 9cfc76872c77deb48760589204c92594a09113b69b9f227362a8b9b8bef8b891
 
 Package: luksmeta
-Version: 10-1
-Installed-Size: 42
+Source: luksmeta (10-1)
+Version: 10-1+b1
+Installed-Size: 43
 Maintainer: Christoph Biedl <debian.axhn@manchmal.in-ulm.de>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libcryptsetup12 (>= 2:1.5.1), libluksmeta0 (>= 8)
+Depends: libc6 (>= 2.38), libcryptsetup12 (>= 2:2.0), libluksmeta0 (>= 8)
 Description: Utility to access metadata in a LUKSv1 header
 Homepage: https://github.com/latchset/luksmeta
 Description-md5: 9bb691d13ba587b4056b70a3f68b1040
 net
 Priority: optional
-Filename: pool/main/l/luksmeta/luksmeta_10-1_amd64.deb
-Size: 12700
-MD5sum: f78fcaac59e475c41208f2926efb8ba8
-SHA256: e95e8e470242f52612f3ccb18b57265a25641e631002c92bdf299faee7f31043
+Filename: pool/main/l/luksmeta/luksmeta_10-1+b1_amd64.deb
+Size: 12972
+MD5sum: 4d6797bf8fbd00c555d520f4ca82de2a
+SHA256: 743177f1fe3bf996542685345a476663277a0f6920a39983a60ed18371f2e95b
 
 Package: lyrebird
 Source: lyrebird (0.8.1-1)
@@ -18390,7 +18390,7 @@ SHA256: d6253ff0d8aef82ea7bf7eb53ad7fbd3764f6df4b14192bb0fb43c9b1f869954
 
 Package: rusers
 Source: netkit-rusers
-Version: 0.17-13
+Version: 0.17-14
 Installed-Size: 36
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: amd64
@@ -18401,14 +18401,14 @@ Tag: interface::commandline, network::client, role::program, use::monitor,
  works-with::people
 net
 Priority: optional
-Filename: pool/main/n/netkit-rusers/rusers_0.17-13_amd64.deb
-Size: 12592
-MD5sum: 3e6a5435be7c000e189f4550ad70ba04
-SHA256: ddb574d6598ddfee93849a187d39c80763ba700ba965e174a157cfb34531ab7f
+Filename: pool/main/n/netkit-rusers/rusers_0.17-14_amd64.deb
+Size: 12544
+MD5sum: e09309502a435b1911990e23a4401cd3
+SHA256: 93e8672e719e44d8338136a167ead3eb3014d54418e7973c12d34749f2dd3bb3
 
 Package: rusersd
 Source: netkit-rusers
-Version: 0.17-13
+Version: 0.17-14
 Installed-Size: 42
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: amd64
@@ -18419,14 +18419,14 @@ Tag: interface::daemon, network::server, role::program, use::monitor,
  works-with::people
 net
 Priority: optional
-Filename: pool/main/n/netkit-rusers/rusersd_0.17-13_amd64.deb
-Size: 11032
-MD5sum: ee22df3dfcf13962676ac43a231f5146
-SHA256: 75275a1bfdfc6df8839db3141b8557ef9803386225719aa54bb0691c6cafa5b1
+Filename: pool/main/n/netkit-rusers/rusersd_0.17-14_amd64.deb
+Size: 10980
+MD5sum: 115371fa5ec20f7b752113adb34617f4
+SHA256: 4220338279a2ca461bd281eee7264eb7eb03dfbb7f17b5ee525224c463d55585
 
 Package: rwall
 Source: netkit-rwall
-Version: 0.17-11
+Version: 0.17-12
 Installed-Size: 37
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: amd64
@@ -18437,14 +18437,14 @@ Tag: interface::commandline, network::client, role::program,
  use::transmission
 net
 Priority: optional
-Filename: pool/main/n/netkit-rwall/rwall_0.17-11_amd64.deb
-Size: 10464
-MD5sum: 415336a313c397414627ab0a6b14daa6
-SHA256: 58ad1608840218b1b2388dcccf1659b60ddc8a7f489a7a768cda23a47e70e264
+Filename: pool/main/n/netkit-rwall/rwall_0.17-12_amd64.deb
+Size: 10408
+MD5sum: afff66b879ae56b05053bd22539887ae
+SHA256: 196590f7d6cd2340d768fff49cefd22964daf72c5cd811802b3e8e680707e1a2
 
 Package: rwalld
 Source: netkit-rwall
-Version: 0.17-11
+Version: 0.17-12
 Installed-Size: 35
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: amd64
@@ -18454,10 +18454,10 @@ Description-md5: 63dfc399f6fd87d26d689a76bdb5040f
 Tag: interface::daemon, network::server, role::program, use::transmission
 net
 Priority: optional
-Filename: pool/main/n/netkit-rwall/rwalld_0.17-11_amd64.deb
-Size: 9584
-MD5sum: b1bb52f30f02e1b283da5737b4994c5d
-SHA256: b350d0c7200d603f203ed47aa792a5a230302a2b45c2f928b6d0bf2a34ea1761
+Filename: pool/main/n/netkit-rwall/rwalld_0.17-12_amd64.deb
+Size: 9524
+MD5sum: 56ee83dd2e776582f6972438a128013f
+SHA256: c21085b10c59e31893f5fb7ab8f5568a78ff4e16ce375c6685c99a20e9e15577
 
 Package: telnet-ssl
 Source: netkit-telnet-ssl
@@ -19900,8 +19900,8 @@ MD5sum: b507b2a73485cd7c8ca6dcb215f300d8
 SHA256: 6fbe032baafa594c88e6ef5b571b960a455ac647d6a6bf1dfc487a451a98f482
 
 Package: newsraft
-Version: 0.34-1
-Installed-Size: 392
+Version: 0.36-1
+Installed-Size: 397
 Maintainer: Maytham Alsudany <maytham@debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libcurl4t64 (>= 7.68.0), libexpat1 (>= 2.0.1), libgumbo3 (>= 0.13.0), libsqlite3-0 (>= 3.7.15)
@@ -19910,10 +19910,10 @@ Homepage: https://codeberg.org/newsraft/newsraft
 Description-md5: b12c5292ddf46b9e598c38f0a8f5fb79
 net
 Priority: optional
-Filename: pool/main/n/newsraft/newsraft_0.34-1_amd64.deb
-Size: 134400
-MD5sum: d5a47e1894e17be277ea2128b8c9f815
-SHA256: 70980aa684e1dfea9751ebde6433fc633b754f9e876915679a7a77d4f8e9f04c
+Filename: pool/main/n/newsraft/newsraft_0.36-1_amd64.deb
+Size: 136924
+MD5sum: b1e574fd8fb55dd89b1442737fc1fb46
+SHA256: 9e7efc63f11feff36ee9b24d25857114d834cc4aac4e380186bfd25a730cb9ee
 
 Package: caja-nextcloud
 Source: nextcloud-desktop
@@ -20381,11 +20381,11 @@ SHA256: 5334b07bdecc6734e11a4fc335af3c60cc286cb41586e5698929fd602f6362c4
 
 Package: nheko
 Source: nheko (0.12.1-1+ds+~0.10.1+ds+~1.0.0+ds+~0.3.2+ds-1)
-Version: 0.12.1-1+ds+~0.10.1+ds+~1.0.0+ds+~0.3.2+ds-1+b2
+Version: 0.12.1-1+ds+~0.10.1+ds+~1.0.0+ds+~0.3.2+ds-1+b3
 Installed-Size: 24536
 Maintainer: Matrix Packaging Team <pkg-matrix-maintainers@alioth-lists.debian.net>
 Architecture: amd64
-Depends: qt6-svg-plugins, qml6-module-qt-labs-platform, qml6-module-qtmultimedia, qml6-module-qtqml, qml6-module-qtqml-models, qml6-module-qtquick, qml6-module-qtquick-controls, qml6-module-qtquick-dialogs, qml6-module-qtquick-effects, qml6-module-qtquick-layouts, qml6-module-qtquick-particles, qml6-module-qtquick-window, libc6 (>= 2.38), libcmark0.30.2 (>= 0.30.2), libcpp-httplib0.41 (>= 0.41.0+ds), libcurl4t64 (>= 7.16.3), libevent-core-2.1-7t64 (>= 2.1.8-stable), libevent-pthreads-2.1-7t64 (>= 2.1.8-stable), libfmt10 (>= 10.1.1+ds1), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.22.0), libgstreamer-gl1.0-0 (>= 1.14.0), libgstreamer-plugins-bad1.0-0 (>= 1.28.2), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.20.0), libkdsingleapplication-qt6-1.0 (>= 1.2.0), liblmdb0 (>= 0.9.7), libolm3 (>= 3.2.7~dfsg), libqt6core6t64 (>= 6.10.2), libqt6dbus6 (>= 6.8.2), libqt6gui6 (>= 6.9.1), libqt6keychain1 (>= 0.13.2), libqt6multimedia6 (>= 6.9.2), libqt6qml6 (>= 6.10.2), libqt6quick6 (>= 6.6.0), libqt6svg6 (>= 6.6.0), libqt6widgets6 (>= 6.2.0), libre2-11-absl20240722, libspdlog1.15-fmt10, libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), qt6-base-private-abi (= 6.10.2), qt6-declarative-private-abi (= 6.10.2)
+Depends: qt6-svg-plugins, qml6-module-qt-labs-platform, qml6-module-qtmultimedia, qml6-module-qtqml, qml6-module-qtqml-models, qml6-module-qtquick, qml6-module-qtquick-controls, qml6-module-qtquick-dialogs, qml6-module-qtquick-effects, qml6-module-qtquick-layouts, qml6-module-qtquick-particles, qml6-module-qtquick-window, libc6 (>= 2.38), libcmark0.30.2 (>= 0.30.2), libcpp-httplib0.41 (>= 0.41.0+ds), libcurl4t64 (>= 7.16.3), libevent-core-2.1-7t64 (>= 2.1.8-stable), libevent-pthreads-2.1-7t64 (>= 2.1.8-stable), libfmt10 (>= 10.1.1+ds1), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.22.0), libgstreamer-gl1.0-0 (>= 1.14.0), libgstreamer-plugins-bad1.0-0 (>= 1.28.2), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.20.0), libkdsingleapplication-qt6-1.0 (>= 1.2.0), liblmdb0 (>= 0.9.7), libolm3 (>= 3.2.7~dfsg), libqt6core6t64 (>= 6.10.2), libqt6dbus6 (>= 6.8.2), libqt6gui6 (>= 6.9.1), libqt6keychain1 (>= 0.13.2), libqt6multimedia6 (>= 6.9.2), libqt6qml6 (>= 6.10.2), libqt6quick6 (>= 6.6.0), libqt6svg6 (>= 6.6.0), libqt6widgets6 (>= 6.2.0), libre2-11-absl20260107, libspdlog1.15-fmt10, libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), qt6-base-private-abi (= 6.10.2), qt6-declarative-private-abi (= 6.10.2)
 Recommends: ca-certificates, fonts-noto-color-emoji, gnome-keyring | kwalletmanager, gstreamer1.0-libcamera, gstreamer1.0-nice, gstreamer1.0-pipewire, gstreamer1.0-plugins-bad, gstreamer1.0-qt6, qt6-image-formats-plugins
 Suggests: gstreamer1.0-vaapi, kimageformat6-plugins
 Description: desktop IM client for the Matrix protocol
@@ -20394,10 +20394,10 @@ Description-md5: 27a7f4016f070f76ef397d80dd289422
 Tag: uitoolkit::qt
 net
 Priority: optional
-Filename: pool/main/n/nheko/nheko_0.12.1-1+ds+~0.10.1+ds+~1.0.0+ds+~0.3.2+ds-1+b2_amd64.deb
-Size: 5002324
-MD5sum: e53492a65d4245eba7b25263b0174ee3
-SHA256: 4180790177b1b842867192af1b4b1c1519a4b10508eb11c9500dcf77bd4ce74c
+Filename: pool/main/n/nheko/nheko_0.12.1-1+ds+~0.10.1+ds+~1.0.0+ds+~0.3.2+ds-1+b3_amd64.deb
+Size: 5001200
+MD5sum: 7c089b329b2d3cf63f81e446ac2167cf
+SHA256: d3533fd132181be4c02024e95b0e8ec1751e55b0dcfcb8b68207134f7068038f
 
 Package: nicotine
 Version: 3.3.10-1
@@ -28938,6 +28938,25 @@ Size: 332904
 MD5sum: 1f5ec5e23094532f420fef8fe294a7c4
 SHA256: daedd6570f80569d468285f8a5ca8b466045eb2cb09183b38eca491f9cd88ca2
 
+Package: signal-tlsd
+Source: rust-signal-tlsd
+Version: 0.1.1-1
+Installed-Size: 2763
+Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: systemd | systemd-standalone-sysusers | systemd-sysusers, libc6 (>= 2.34), libgcc-s1 (>= 4.2)
+Description: Standalone Rust implementation of Signal's domain fronting TLS proxy
+Homepage: https://github.com/kpcyrd/signal-tlsd
+Built-Using: rust-rustls (= 0.23.38+ds-1), rust-rustls-pki-types (= 1.14.0+ds-1), rust-rustls-webpki (= 0.103.10+ds-1), rustc (= 1.94.1+dfsg1-1)
+Description-md5: b8e4932bf19567ce32b7a8153b233a36
+Static-Built-Using: rust-anstyle (= 1.0.14-1), rust-anyhow (= 1.0.102-1), rust-arc-swap (= 1.9.1-1), rust-bytes (= 1.11.1-1), rust-cfg-if (= 1.0.4-1), rust-clap (= 4.5.53-1), rust-clap-builder (= 4.5.53-1), rust-clap-lex (= 0.7.4-1), rust-env-filter (= 0.1.4-1), rust-env-logger (= 0.11.8-1), rust-getrandom (= 0.4.2-3), rust-libc (= 0.2.178-2), rust-log (= 0.4.29-1), rust-mio (= 1.1.1-1), rust-once-cell (= 1.21.4-1), rust-pin-project-lite (= 0.2.16-1), rust-ring (= 0.17.14-5), rust-rustls (= 0.23.38+ds-1), rust-rustls-pki-types (= 1.14.0+ds-1), rust-rustls-webpki (= 0.103.10+ds-1), rust-signal-hook-registry (= 1.4.0-1), rust-socket2 (= 0.5.10-1), rust-subtle (= 2.6.1-1), rust-tokio (= 1.50.0-1), rust-tokio-rustls (= 0.26.4-1), rust-untrusted (= 0.9.0-2), rust-zeroize (= 1.8.2-1), rustc (= 1.94.1+dfsg1-1)
+net
+Priority: optional
+Filename: pool/main/r/rust-signal-tlsd/signal-tlsd_0.1.1-1_amd64.deb
+Size: 1012300
+MD5sum: c46db96d9c20f026f42644dd70cd9ea6
+SHA256: f64726b07943fe0c74f28c2b5d520431d8536977f172cf9554260494266e6655
+
 Package: librust-sniffglue-dev
 Source: rust-sniffglue
 Version: 0.16.2+dfsg-1
@@ -30968,79 +30987,79 @@ SHA256: c73eaa65610b41cbae78a5dc87f9b4707d7fc3f02d993bc82d0b305d234c3f4c
 
 Package: charon-cmd
 Source: strongswan
-Version: 6.0.5-1
-Installed-Size: 267
+Version: 6.0.6-1
+Installed-Size: 268
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libstrongswan (= 6.0.5-1), libc6 (>= 2.38), strongswan-libcharon (>= 6.0.5)
+Depends: libstrongswan (= 6.0.6-1), libc6 (>= 2.38), strongswan-libcharon (>= 6.0.6)
 Description: standalone IPsec client
 Homepage: http://www.strongswan.org
 Description-md5: 80fd42eb6fb38dab592c2f0b87243623
 net
 Priority: optional
-Filename: pool/main/s/strongswan/charon-cmd_6.0.5-1_amd64.deb
-Size: 98248
-MD5sum: e3c86873612f82f9c2d5338217a3ed5f
-SHA256: 0b77b17d944740da4384b4cc2b09ba71800038460d943995749105666346bada
+Filename: pool/main/s/strongswan/charon-cmd_6.0.6-1_amd64.deb
+Size: 98852
+MD5sum: d26415ea83f451299d8038ff028eea7b
+SHA256: eb599dc1c255658104818384f3c78f83e1d59ddefad826e012ab7dca24e1ec2e
 
 Package: charon-systemd
 Source: strongswan
-Version: 6.0.5-1
-Installed-Size: 262
+Version: 6.0.6-1
+Installed-Size: 263
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libstrongswan (= 6.0.5-1), strongswan-swanctl, libc6 (>= 2.34), libsystemd0, strongswan-libcharon (>= 6.0.5)
+Depends: libstrongswan (= 6.0.6-1), strongswan-swanctl, libc6 (>= 2.34), libsystemd0, strongswan-libcharon (>= 6.0.6)
 Conflicts: strongswan-charon
 Description: strongSwan IPsec client, systemd support
 Homepage: http://www.strongswan.org
 Description-md5: aa65f07fc27272b7f25aed8a94e96770
 net
 Priority: optional
-Filename: pool/main/s/strongswan/charon-systemd_6.0.5-1_amd64.deb
-Size: 93976
-MD5sum: 72400e0100ac18e6de216e177dc2c9f6
-SHA256: 3021479d278f7fcfcf72fb9205279cea3e4faa4e32df6cb7d2e0c52e9066728c
+Filename: pool/main/s/strongswan/charon-systemd_6.0.6-1_amd64.deb
+Size: 94592
+MD5sum: c588a549310c886b7ad57d3f294d287e
+SHA256: faee52109b3c9aadbafe1b28f22c200b5f8a2f014421560d3d1d7a2bdad223a8
 
 Package: libcharon-extauth-plugins
 Source: strongswan
-Version: 6.0.5-1
-Installed-Size: 287
+Version: 6.0.6-1
+Installed-Size: 288
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libcharon-extra-plugins (<< 5.8.0-2~)
-Depends: libstrongswan (= 6.0.5-1), libc6 (>= 2.38)
+Depends: libstrongswan (= 6.0.6-1), libc6 (>= 2.38)
 Breaks: libcharon-extra-plugins (<< 5.8.0-2~)
 Description: strongSwan charon library (extended authentication plugins)
 Homepage: http://www.strongswan.org
 Description-md5: fc3eaf87c658452c4f81b8064e552e6c
 net
 Priority: optional
-Filename: pool/main/s/strongswan/libcharon-extauth-plugins_6.0.5-1_amd64.deb
-Size: 98756
-MD5sum: 549eceeb4ba44da3749088ab43b333ae
-SHA256: 1a49dd5c0b0550e05950fd08696ec69f66c472259e59bfcea43d45e5a3f5ffa4
+Filename: pool/main/s/strongswan/libcharon-extauth-plugins_6.0.6-1_amd64.deb
+Size: 99420
+MD5sum: 38b59f60d8b9a01edd3c321625324413
+SHA256: 60a7d1b535d9e0192d11ccaae5ca79b4d3d3b4a5672a11b90299543e70a39660
 
 Package: libcharon-extra-plugins
 Source: strongswan
-Version: 6.0.5-1
-Installed-Size: 1177
+Version: 6.0.6-1
+Installed-Size: 1178
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libstrongswan (= 6.0.5-1), libc6 (>= 2.38), libip4tc2 (>= 1.8.3), libpam0g (>= 0.99.7.1)
+Depends: libstrongswan (= 6.0.6-1), libc6 (>= 2.38), libip4tc2 (>= 1.8.3), libpam0g (>= 0.99.7.1)
 Description: strongSwan charon library (extra plugins)
 Homepage: http://www.strongswan.org
 Description-md5: 1348dd26c09674033d8341f1e89baf78
 net
 Priority: optional
-Filename: pool/main/s/strongswan/libcharon-extra-plugins_6.0.5-1_amd64.deb
-Size: 292300
-MD5sum: b0a692cb68dcda6dc08ba7c5bd337a4c
-SHA256: f90939f18fb0e8322263c8839a74dff33adc4876226f5c4ed5431beb01df415d
+Filename: pool/main/s/strongswan/libcharon-extra-plugins_6.0.6-1_amd64.deb
+Size: 292532
+MD5sum: 7a421a7fa4c7009a024fe9fab8775a4b
+SHA256: 381b47c11a3bdbcd03e25946eb616dbcc38d4715c03d133e1e50add2f6bc20b3
 
 Package: libstrongswan
 Source: strongswan
-Version: 6.0.5-1
-Installed-Size: 1453
+Version: 6.0.6-1
+Installed-Size: 1454
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libstrongswan-standard-plugins (<< 6.0.0-1~)
@@ -31054,52 +31073,52 @@ Description-md5: 008d72bea35ef3db9bc3ab579f48d1d0
 Tag: network::vpn, role::program, role::shared-lib, security::cryptography
 net
 Priority: optional
-Filename: pool/main/s/strongswan/libstrongswan_6.0.5-1_amd64.deb
-Size: 452740
-MD5sum: 032c75ffc7821c6960bc807fe57e07f9
-SHA256: b9e8695bdd5066676d3d1e046864573b259465838a975f341ad7acf9255f2d51
+Filename: pool/main/s/strongswan/libstrongswan_6.0.6-1_amd64.deb
+Size: 453608
+MD5sum: 152335b8bdc7b0d9e7d3b440cf6751e4
+SHA256: 9b7a0d6b6b49c7b24bf3a06e2c1ba36be3a37a9c3fb8f9edc601d848ed855c81
 
 Package: libstrongswan-extra-plugins
 Source: strongswan
-Version: 6.0.5-1
-Installed-Size: 1235
+Version: 6.0.6-1
+Installed-Size: 1236
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libstrongswan (<< 6.0.0-1~), libstrongswan-standard-plugins (<< 6.0.0-1~)
-Depends: libstrongswan (= 6.0.5-1), libc6 (>= 2.38), libcurl4t64 (>= 7.56.1), libgcrypt20 (>= 1.12.0), libgmp10 (>= 2:6.3.0+dfsg), libgpg-error0 (>= 1.14), libldap2 (>= 2.6.2), libtss2-sys1t64 (>= 3.0.1)
+Depends: libstrongswan (= 6.0.6-1), libc6 (>= 2.38), libcurl4t64 (>= 7.56.1), libgcrypt20 (>= 1.12.0), libgmp10 (>= 2:6.3.0+dfsg), libgpg-error0 (>= 1.14), libldap2 (>= 2.6.2), libtss2-sys1t64 (>= 3.0.1)
 Breaks: libstrongswan (<< 6.0.0-1~), libstrongswan-standard-plugins (<< 6.0.0-1~)
 Description: strongSwan utility and crypto library (extra plugins)
 Homepage: http://www.strongswan.org
 Description-md5: c9182e91351884037e224a8c964a4ff4
 net
 Priority: optional
-Filename: pool/main/s/strongswan/libstrongswan-extra-plugins_6.0.5-1_amd64.deb
-Size: 366280
-MD5sum: e0364f02d9b2143b76c24ff5fa3bf572
-SHA256: 4068edbaa9d1ca32c3189be3e7d81d8b98ceb671e42eb7019a4f280ac7f432dc
+Filename: pool/main/s/strongswan/libstrongswan-extra-plugins_6.0.6-1_amd64.deb
+Size: 366944
+MD5sum: 7df0273b3a75b09a862bdfab7bc411f3
+SHA256: f6d402352b7ea9e68b2cbd624956407b7d16bfe7466f34e223d4ede736321eb1
 
 Package: libstrongswan-standard-plugins
 Source: strongswan
-Version: 6.0.5-1
-Installed-Size: 380
+Version: 6.0.6-1
+Installed-Size: 381
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libstrongswan (<< 6.0.0-1~)
-Depends: libstrongswan (= 6.0.5-1), libc6 (>= 2.25), libip4tc2 (>= 1.8.3)
+Depends: libstrongswan (= 6.0.6-1), libc6 (>= 2.25), libip4tc2 (>= 1.8.3)
 Breaks: libstrongswan (<< 6.0.0-1~)
 Description: strongSwan utility and crypto library (standard plugins)
 Homepage: http://www.strongswan.org
 Description-md5: 2061c8d543949e2d7c50012e27340e5e
 net
 Priority: optional
-Filename: pool/main/s/strongswan/libstrongswan-standard-plugins_6.0.5-1_amd64.deb
-Size: 116440
-MD5sum: 4dba9f1c331992573e39dee108388abe
-SHA256: 885ab81115a53749b6fcc80fc77234723dcb6eccce3603a362319859197e9e60
+Filename: pool/main/s/strongswan/libstrongswan-standard-plugins_6.0.6-1_amd64.deb
+Size: 117080
+MD5sum: 8542a90754fdd94eebc8022e8765251d
+SHA256: 97277505b0b9db99502f971ae953d01dce23b4a6481b2c5e7a1dbbb0bdf485df
 
 Package: strongswan
-Version: 6.0.5-1
-Installed-Size: 224
+Version: 6.0.6-1
+Installed-Size: 225
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: all
 Depends: charon-systemd | strongswan-charon, strongswan-swanctl | strongswan-starter
@@ -31109,19 +31128,19 @@ Description-md5: 484469a900df5382b98aad9113f58783
 Tag: network::vpn, role::metapackage, role::program, security::cryptography
 net
 Priority: optional
-Filename: pool/main/s/strongswan/strongswan_6.0.5-1_all.deb
-Size: 93512
-MD5sum: d86d0bd11664f76cf567cd27c9252795
-SHA256: dcbaabfdaef6ac8711710a3eb776346fdff35cd6f2d328ce9a06492aaaee22c7
+Filename: pool/main/s/strongswan/strongswan_6.0.6-1_all.deb
+Size: 94144
+MD5sum: 9d386679352b7671d7bf620dc692fae3
+SHA256: 149e282907f4bbca21950f83306e8edbdbf62188a3215341c1df7eca8705c7c6
 
 Package: strongswan-charon
 Source: strongswan
-Version: 6.0.5-1
-Installed-Size: 292
+Version: 6.0.6-1
+Installed-Size: 293
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: amd64
 Provides: ike-server
-Depends: iproute2 | iproute, libstrongswan (= 6.0.5-1), strongswan-starter, libc6 (>= 2.38), strongswan-libcharon (>= 6.0.5)
+Depends: iproute2 | iproute, libstrongswan (= 6.0.6-1), strongswan-starter, libc6 (>= 2.38), strongswan-libcharon (>= 6.0.6)
 Pre-Depends: debconf | debconf-2.0
 Conflicts: charon-systemd
 Description: strongSwan Internet Key Exchange daemon
@@ -31129,18 +31148,18 @@ Homepage: http://www.strongswan.org
 Description-md5: 3f55915d17f7e36d9b31e2c4da5c11d2
 net
 Priority: optional
-Filename: pool/main/s/strongswan/strongswan-charon_6.0.5-1_amd64.deb
-Size: 98560
-MD5sum: 62257c059044c9c9f873de6492d17c98
-SHA256: d845440ee08080112a8028b22db3ec5913fd3ba695b8e4edb6d7c13c21c8a31a
+Filename: pool/main/s/strongswan/strongswan-charon_6.0.6-1_amd64.deb
+Size: 99188
+MD5sum: 93a60a60abacbd349ce8cc86d335e9ee
+SHA256: 0fc6f4908f8630c733ff2b4b07a378299dcc89c3e4cb2ad0bd58b0188861c7b0
 
 Package: strongswan-libcharon
 Source: strongswan
-Version: 6.0.5-1
-Installed-Size: 1073
+Version: 6.0.6-1
+Installed-Size: 1074
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libstrongswan (= 6.0.5-1), libc6 (>= 2.38)
+Depends: libstrongswan (= 6.0.6-1), libc6 (>= 2.38)
 Recommends: libcharon-extauth-plugins
 Suggests: libcharon-extra-plugins
 Description: strongSwan charon library
@@ -31148,19 +31167,19 @@ Homepage: http://www.strongswan.org
 Description-md5: 7ee8a1dbaf495a152a7f4be5e054abca
 net
 Priority: optional
-Filename: pool/main/s/strongswan/strongswan-libcharon_6.0.5-1_amd64.deb
-Size: 345852
-MD5sum: be4da48e57501b4fdf5375786c16ef86
-SHA256: 702d253af9be52286b90d3b4e633da6d5c5df9a785567bf8130f82d56634215a
+Filename: pool/main/s/strongswan/strongswan-libcharon_6.0.6-1_amd64.deb
+Size: 346252
+MD5sum: 5dc39af9865a1c7dc977bb54c5abea04
+SHA256: 1e0fb607535571f34b52c5bb35d57026b3214913d643a3bcc562fed38b334cb7
 
 Package: strongswan-nm
 Source: strongswan
-Version: 6.0.5-1
-Installed-Size: 281
+Version: 6.0.6-1
+Installed-Size: 282
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: network-manager-strongswan (<= 1.4.1-1~)
-Depends: libc6 (>= 2.34), libglib2.0-0t64 (>= 2.80.0), libnm0 (>= 1.54.3), libstrongswan (>= 6.0.5), strongswan-libcharon (>= 6.0.5)
+Depends: libc6 (>= 2.34), libglib2.0-0t64 (>= 2.80.0), libnm0 (>= 1.56.0), libstrongswan (>= 6.0.6), strongswan-libcharon (>= 6.0.6)
 Recommends: network-manager-strongswan
 Description: strongSwan plugin to interact with NetworkManager
 Homepage: http://www.strongswan.org
@@ -31168,35 +31187,35 @@ Description-md5: fe4e82468fec86f66c41601086865ec7
 Tag: network::vpn, role::plugin, role::program, role::shared-lib
 net
 Priority: optional
-Filename: pool/main/s/strongswan/strongswan-nm_6.0.5-1_amd64.deb
-Size: 103412
-MD5sum: 9f97d2efea54842f82e1e100e3473fea
-SHA256: 1486ec13c03900deb03bc1ce390fccc193ffc0ba54f8d64a18fca368dfcbdfad
+Filename: pool/main/s/strongswan/strongswan-nm_6.0.6-1_amd64.deb
+Size: 104072
+MD5sum: 5fb93f7f8846b0263292bd635fba7a70
+SHA256: 5087991e7595265f4316a39128e666e646d822a86ffb2e2687175735d506d3e5
 
 Package: strongswan-pki
 Source: strongswan
-Version: 6.0.5-1
-Installed-Size: 411
+Version: 6.0.6-1
+Installed-Size: 412
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libstrongswan (= 6.0.5-1), libc6 (>= 2.38), libcharon-extra-plugins (>= 6.0.5)
+Depends: libstrongswan (= 6.0.6-1), libc6 (>= 2.38), libcharon-extra-plugins (>= 6.0.6)
 Description: strongSwan IPsec client, pki command
 Homepage: http://www.strongswan.org
 Description-md5: e39ead8c35dce81cd768bc453bc29db7
 net
 Priority: optional
-Filename: pool/main/s/strongswan/strongswan-pki_6.0.5-1_amd64.deb
-Size: 163724
-MD5sum: cf6640ac6c77916a49c23744e03ab594
-SHA256: 6e8fd79db2d8eb4f20b7bfdfd66ca6d1effe5343bb050e0207201a16fe8cbfa5
+Filename: pool/main/s/strongswan/strongswan-pki_6.0.6-1_amd64.deb
+Size: 164308
+MD5sum: 0a89caa54aa9922efe3961df752cc243
+SHA256: 89252c9bb8811002fbaa3db92b764936a51bef14d8276883c3f900ed8176080e
 
 Package: strongswan-starter
 Source: strongswan
-Version: 6.0.5-1
-Installed-Size: 660
+Version: 6.0.6-1
+Installed-Size: 661
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: adduser, libstrongswan (= 6.0.5-1), sysvinit-utils (>= 3.05-3), debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38)
+Depends: adduser, libstrongswan (= 6.0.6-1), sysvinit-utils (>= 3.05-3), debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38)
 Recommends: strongswan-charon
 Conflicts: libreswan
 Description: strongSwan daemon starter and configuration file parser
@@ -31204,29 +31223,29 @@ Homepage: http://www.strongswan.org
 Description-md5: b25b8defb52457fc021a93ec427b9da8
 net
 Priority: optional
-Filename: pool/main/s/strongswan/strongswan-starter_6.0.5-1_amd64.deb
-Size: 224584
-MD5sum: 418da55ccef7f3b2751cc495240470bb
-SHA256: 91afd637558a227cd5635714952e1c380a6a22f81efce54cf96d2fea7a56dea4
+Filename: pool/main/s/strongswan/strongswan-starter_6.0.6-1_amd64.deb
+Size: 225280
+MD5sum: 85360f79aab37aaed4282438d7b310b5
+SHA256: dc8fd99c1d9464261d679fd7407e7278a6ae0c3edf397654a44a8cb17f9236d5
 
 Package: strongswan-swanctl
 Source: strongswan
-Version: 6.0.5-1
-Installed-Size: 583
+Version: 6.0.6-1
+Installed-Size: 584
 Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: strongswan-starter (<< 5.8.0-1)
-Depends: libstrongswan (= 6.0.5-1), libc6 (>= 2.38)
+Depends: libstrongswan (= 6.0.6-1), libc6 (>= 2.38)
 Breaks: strongswan-starter (<< 5.8.0-1)
 Description: strongSwan IPsec client, swanctl command
 Homepage: http://www.strongswan.org
 Description-md5: 0da8661efd13d913c22e863856990337
 net
 Priority: optional
-Filename: pool/main/s/strongswan/strongswan-swanctl_6.0.5-1_amd64.deb
-Size: 196552
-MD5sum: c19bae273c99ac9ab5c5e0a88f3a9e22
-SHA256: a051a1b5c26149cc67255fb63b291955db94912746c6eef3ee30d98d0cc0c181
+Filename: pool/main/s/strongswan/strongswan-swanctl_6.0.6-1_amd64.deb
+Size: 197336
+MD5sum: c991b8019054ad9dfbea65223a150db6
+SHA256: 176d84e864274f4ad20f6ea42c0385bba6f1dc7c2b34b75421190d2c6ca43e9f
 
 Package: stun-client
 Source: stun

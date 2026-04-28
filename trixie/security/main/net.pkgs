@@ -225,6 +225,22 @@ Filename: pool/updates/main/c/cups/cups-server-common_2.4.10-3+deb13u1_all.deb
 Size: 414528
 SHA256: e752c0d3de98ba279e2da817a1b22dbf2a2da93df68c627a0d39073db4ee4ae9
 
+Package: dnsdist
+Version: 1.9.14-0+deb13u1
+Installed-Size: 10459
+Maintainer: dnsdist packagers <dnsdist@packages.debian.org>
+Architecture: amd64
+Depends: adduser, libbpf1 (>= 1:0.7.0), libc6 (>= 2.38), libcap2 (>= 1:2.10), libcdb1 (>= 0.76), libedit2 (>= 2.11-20080614-0), libfstrm0 (>= 0.4.0), libgcc-s1 (>= 3.0), liblmdb0 (>= 0.9.7), libluajit-5.1-2 (>= 2.1.0~beta3+dfsg-5.3) | libluajit-5.1-2 (>= 2.1.0+openresty), libnghttp2-14 (>= 1.49.0), libre2-11-absl20240722, libsnmp40t64 (>= 5.9.4+dfsg), libsodium23 (>= 1.0.12), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libsystemd0, libxdp1 (>= 1.2.0)
+Description: DNS loadbalancer
+Homepage: https://dnsdist.org
+Description-md5: a513b049e15ad7501b5fce6d42694c08
+Pre-Depends: init-system-helpers (>= 1.54~)
+net
+Priority: optional
+Filename: pool/updates/main/d/dnsdist/dnsdist_1.9.14-0+deb13u1_amd64.deb
+Size: 2632132
+SHA256: 33254c6352aca985982b6e7e9276994037d2e5c95af303853fbd6d129fbba358
+
 Package: dropbear
 Version: 2025.89-1~deb13u1
 Installed-Size: 79
@@ -961,8 +977,264 @@ Filename: pool/updates/main/o/openvpn/openvpn_2.6.14-1+deb13u1_amd64.deb
 Size: 662520
 SHA256: de7f803dd358752e79855c7fa77a147fd15cf5837bee4b1fdd867a28d1ffd975
 
+Package: pdns-backend-bind
+Source: pdns
+Version: 4.9.14-0+deb13u1
+Installed-Size: 329
+Maintainer: pdns packagers <pdns@packages.debian.org>
+Architecture: amd64
+Provides: pdns-backend
+Depends: pdns-server (= 4.9.14-0+deb13u1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
+Description: BIND backend for PowerDNS
+Homepage: https://www.powerdns.com/
+Description-md5: 102c9606b65f82d362adffd1fbf33801
+net
+Priority: optional
+Filename: pool/updates/main/p/pdns/pdns-backend-bind_4.9.14-0+deb13u1_amd64.deb
+Size: 110060
+SHA256: 15d69aea1530413916b3f3aa2a8c394b9bfc2e9a4b8e307591f6945d0a3cc3b7
+
+Package: pdns-backend-geoip
+Source: pdns
+Version: 4.9.14-0+deb13u1
+Installed-Size: 407
+Maintainer: pdns packagers <pdns@packages.debian.org>
+Architecture: amd64
+Provides: pdns-backend
+Depends: pdns-server (= 4.9.14-0+deb13u1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libgeoip1t64 (>= 1.6.12), libmaxminddb0 (>= 1.0.2), libstdc++6 (>= 13.1), libyaml-cpp0.8 (>= 0.8.0+dfsg-7)
+Description: GeoIP backend for PowerDNS
+Homepage: https://www.powerdns.com/
+Description-md5: e7179ddae048f01d1db157ce7ddd97ea
+net
+Priority: optional
+Filename: pool/updates/main/p/pdns/pdns-backend-geoip_4.9.14-0+deb13u1_amd64.deb
+Size: 129884
+SHA256: 92f2267d2d7d1a01324db0cd3a20c15d16de548c4db1eaf74526eb303aa96724
+
+Package: pdns-backend-ldap
+Source: pdns
+Version: 4.9.14-0+deb13u1
+Installed-Size: 1393
+Maintainer: pdns packagers <pdns@packages.debian.org>
+Architecture: amd64
+Provides: pdns-backend
+Depends: pdns-server (= 4.9.14-0+deb13u1), libc6 (>= 2.38), libgcc-s1 (>= 3.4), libkrb5-3 (>= 1.11+dfsg), libldap2 (>= 2.6.2), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14)
+Description: LDAP backend for PowerDNS
+Homepage: https://www.powerdns.com/
+Description-md5: 4377905e3dbcdb557368f97cf2ebd506
+net
+Priority: optional
+Filename: pool/updates/main/p/pdns/pdns-backend-ldap_4.9.14-0+deb13u1_amd64.deb
+Size: 431248
+SHA256: 7d80e34b6fd0d99ed53405e350d786d6e3e95bc5ea324d491348fe345f48f227
+
+Package: pdns-backend-lmdb
+Source: pdns
+Version: 4.9.14-0+deb13u1
+Installed-Size: 597
+Maintainer: pdns packagers <pdns@packages.debian.org>
+Architecture: amd64
+Provides: pdns-backend
+Depends: pdns-server (= 4.9.14-0+deb13u1), libboost-serialization1.83.0 (>= 1.83.0), libc6 (>= 2.38), libgcc-s1 (>= 3.0), liblmdb0 (>= 0.9.17), libstdc++6 (>= 13.1), libsystemd0
+Description: LMDB backend for PowerDNS
+Homepage: https://www.powerdns.com/
+Description-md5: b0f7cd9abdd3211559ee3cbffc9c4808
+net
+Priority: optional
+Filename: pool/updates/main/p/pdns/pdns-backend-lmdb_4.9.14-0+deb13u1_amd64.deb
+Size: 158476
+SHA256: 815bfeab5665d62885bd549306facf45495b2c6247877182b4cacbad9a390e4f
+
+Package: pdns-backend-lua2
+Source: pdns
+Version: 4.9.14-0+deb13u1
+Installed-Size: 371
+Maintainer: pdns packagers <pdns@packages.debian.org>
+Architecture: amd64
+Provides: pdns-backend
+Depends: pdns-server (= 4.9.14-0+deb13u1), libc6 (>= 2.32), libgcc-s1 (>= 3.0), libluajit-5.1-2 (>= 2.1.0~beta3+dfsg-5.3) | libluajit-5.1-2 (>= 2.1.0+openresty), libstdc++6 (>= 13.1)
+Description: Lua2 backend for PowerDNS
+Homepage: https://www.powerdns.com/
+Description-md5: 6da4513d40ed667b370664baccc9b3bf
+net
+Priority: optional
+Filename: pool/updates/main/p/pdns/pdns-backend-lua2_4.9.14-0+deb13u1_amd64.deb
+Size: 104128
+SHA256: b1b5a8e0a6a863888e20777d666d232c71b3b92aaf39b5d565a5e1443ee7bc0a
+
+Package: pdns-backend-mysql
+Source: pdns
+Version: 4.9.14-0+deb13u1
+Installed-Size: 198
+Maintainer: pdns packagers <pdns@packages.debian.org>
+Architecture: amd64
+Provides: pdns-backend
+Depends: pdns-server (= 4.9.14-0+deb13u1), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libmariadb3 (>= 3.0.0), libstdc++6 (>= 13.1)
+Suggests: default-mysql-server
+Description: MySQL backend for PowerDNS
+Homepage: https://www.powerdns.com/
+Description-md5: 2408f9d9ae1d9b880b7db925e7e4e956
+net
+Priority: optional
+Filename: pool/updates/main/p/pdns/pdns-backend-mysql_4.9.14-0+deb13u1_amd64.deb
+Size: 50908
+SHA256: 8d92461fcd17aa4ced463605539680fe816c02f32fa0ec40cf537b3e6905da2a
+
+Package: pdns-backend-odbc
+Source: pdns
+Version: 4.9.14-0+deb13u1
+Installed-Size: 164
+Maintainer: pdns packagers <pdns@packages.debian.org>
+Architecture: amd64
+Provides: pdns-backend
+Depends: pdns-server (>= 4.9.14-0+deb13u1), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libodbc2 (>= 2.3.1), libstdc++6 (>= 13.1)
+Description: UnixODBC backend for PowerDNS
+Homepage: https://www.powerdns.com/
+Description-md5: aea35375028432f8d6de498767d272e0
+net
+Priority: optional
+Filename: pool/updates/main/p/pdns/pdns-backend-odbc_4.9.14-0+deb13u1_amd64.deb
+Size: 42532
+SHA256: 312066b82c66ab602affdce94e8f09a5542e950752fbb9dbe0179661f41e0051
+
+Package: pdns-backend-pgsql
+Source: pdns
+Version: 4.9.14-0+deb13u1
+Installed-Size: 201
+Maintainer: pdns packagers <pdns@packages.debian.org>
+Architecture: amd64
+Provides: pdns-backend
+Depends: pdns-server (= 4.9.14-0+deb13u1), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libpq5, libstdc++6 (>= 14)
+Suggests: postgresql
+Description: PostgreSQL backend for PowerDNS
+Homepage: https://www.powerdns.com/
+Description-md5: 501ecb3681ef432ff021a62b9e943751
+net
+Priority: optional
+Filename: pool/updates/main/p/pdns/pdns-backend-pgsql_4.9.14-0+deb13u1_amd64.deb
+Size: 54248
+SHA256: 9e9652dac3b1f2c90f3a2fecc49030eb24eb25b6b5905a77af46aa4d42306084
+
+Package: pdns-backend-pipe
+Source: pdns
+Version: 4.9.14-0+deb13u1
+Installed-Size: 167
+Maintainer: pdns packagers <pdns@packages.debian.org>
+Architecture: amd64
+Provides: pdns-backend
+Depends: pdns-server (= 4.9.14-0+deb13u1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
+Description: pipe/coprocess backend for PowerDNS
+Homepage: https://www.powerdns.com/
+Description-md5: 96ac7ab1bf36aade3437bee6809e2d08
+net
+Priority: optional
+Filename: pool/updates/main/p/pdns/pdns-backend-pipe_4.9.14-0+deb13u1_amd64.deb
+Size: 54232
+SHA256: 7ff292c8e33ef15a6f5a7f13b573c32d3eb4e53e2a0899190d9c007273f4a399
+
+Package: pdns-backend-remote
+Source: pdns
+Version: 4.9.14-0+deb13u1
+Installed-Size: 541
+Maintainer: pdns packagers <pdns@packages.debian.org>
+Architecture: amd64
+Provides: pdns-backend
+Depends: pdns-server (= 4.9.14-0+deb13u1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
+Description: remote backend for PowerDNS
+Homepage: https://www.powerdns.com/
+Description-md5: 2f76a0e5c0b0f37a802e55878594d3af
+net
+Priority: optional
+Filename: pool/updates/main/p/pdns/pdns-backend-remote_4.9.14-0+deb13u1_amd64.deb
+Size: 173676
+SHA256: 854f76b679cd76591fb3cc188a27fa35f29f5b3be71e2d21f5e198ccf5b072d3
+
+Package: pdns-backend-sqlite3
+Source: pdns
+Version: 4.9.14-0+deb13u1
+Installed-Size: 157
+Maintainer: pdns packagers <pdns@packages.debian.org>
+Architecture: amd64
+Provides: pdns-backend
+Depends: pdns-server (= 4.9.14-0+deb13u1), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
+Description: sqlite 3 backend for PowerDNS
+Homepage: https://www.powerdns.com/
+Description-md5: 06163408d209318afb0bd43ef103bd2f
+net
+Priority: optional
+Filename: pool/updates/main/p/pdns/pdns-backend-sqlite3_4.9.14-0+deb13u1_amd64.deb
+Size: 33600
+SHA256: 73eddc11e7406f857f469337c6799210e5212dbfc023ebc7e4006b939927862b
+
+Package: pdns-backend-tinydns
+Source: pdns
+Version: 4.9.14-0+deb13u1
+Installed-Size: 160
+Maintainer: pdns packagers <pdns@packages.debian.org>
+Architecture: amd64
+Provides: pdns-backend
+Depends: pdns-server (= 4.9.14-0+deb13u1), libc6 (>= 2.32), libcdb1 (>= 0.76), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
+Description: tinydns compatibility backend for PowerDNS
+Homepage: https://www.powerdns.com/
+Description-md5: 30cea6209a213c57e7a1c02415b6f86b
+net
+Priority: optional
+Filename: pool/updates/main/p/pdns/pdns-backend-tinydns_4.9.14-0+deb13u1_amd64.deb
+Size: 52420
+SHA256: 65e1b6c97e5876bab3c4d52305e43dc4350f2e3d3aa74894de684593998e2308
+
+Package: pdns-ixfrdist
+Source: pdns
+Version: 4.9.14-0+deb13u1
+Installed-Size: 2273
+Maintainer: pdns packagers <pdns@packages.debian.org>
+Architecture: amd64
+Depends: adduser, libboost-program-options1.83.0 (>= 1.83.0), libc6 (>= 2.38), libgcc-s1 (>= 3.4), libp11-kit0 (>= 0.25.0), libsodium23 (>= 0.6.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libyaml-cpp0.8 (>= 0.8.0+dfsg-7)
+Description: Redistribute DNS zones over AXFR/IXFR
+Homepage: https://www.powerdns.com/
+Description-md5: 21f89928b6b404f67525436bd19ef002
+net
+Priority: optional
+Filename: pool/updates/main/p/pdns/pdns-ixfrdist_4.9.14-0+deb13u1_amd64.deb
+Size: 735160
+SHA256: e4f29ddf1954abf42624768aefe3a1960ac9ad4858bd777553eb88fe4092c14d
+
+Package: pdns-server
+Source: pdns
+Version: 4.9.14-0+deb13u1
+Installed-Size: 13157
+Maintainer: pdns packagers <pdns@packages.debian.org>
+Architecture: amd64
+Depends: adduser, libboost-program-options1.83.0 (>= 1.83.0), libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libgcc-s1 (>= 3.4), libluajit-5.1-2 (>= 2.1.0~beta3+dfsg-5.3) | libluajit-5.1-2 (>= 2.1.0+openresty), libp11-kit0 (>= 0.25.0), libsodium23 (>= 0.6.1), libsqlite3-0 (>= 3.6.5), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libsystemd0
+Suggests: pdns-backend
+Description: extremely powerful and versatile nameserver
+Homepage: https://www.powerdns.com/
+Description-md5: 706123beff0f5ffe2c854a5c12af298e
+Recommends: pdns-backend-bind
+net
+Priority: optional
+Filename: pool/updates/main/p/pdns/pdns-server_4.9.14-0+deb13u1_amd64.deb
+Size: 2588388
+SHA256: 498d4b7e93e0f502cdc3276ab7c0d3bb2bb8a673b121f8b4ac9ce661426aa3d5
+
+Package: pdns-tools
+Source: pdns
+Version: 4.9.14-0+deb13u1
+Installed-Size: 17554
+Maintainer: pdns packagers <pdns@packages.debian.org>
+Architecture: amd64
+Depends: libboost-program-options1.83.0 (>= 1.83.0), libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libgcc-s1 (>= 3.4), libp11-kit0 (>= 0.25.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14)
+Description: Tools for DNS debugging by PowerDNS
+Homepage: https://www.powerdns.com/
+Description-md5: cb59277fc23b41d8219c2a6896a51033
+net
+Priority: optional
+Filename: pool/updates/main/p/pdns/pdns-tools_4.9.14-0+deb13u1_amd64.deb
+Size: 2167048
+SHA256: 4745ccdaf53d204f4a4dbef7b7ee24e10b294f3dfb8f234b4944c6f66769fba5
+
 Package: pdns-recursor
-Version: 5.2.8-0+deb13u1
+Version: 5.2.9-0+deb13u1
 Installed-Size: 17010
 Maintainer: pdns-recursor packagers <pdns-recursor@packages.debian.org>
 Architecture: amd64
@@ -974,9 +1246,9 @@ Description-md5: f3a31cef06b361a15135f2262ae08934
 Static-Built-Using: rust-base64 (= 0.22.1-1), rust-cxx (= 1.0.141-1), rust-equivalent (= 1.0.1-1), rust-foldhash (= 0.1.4-1), rust-hashbrown (= 0.14.5-5), rust-indexmap (= 2.7.0-1), rust-ipnet (= 2.11.0-1), rust-itoa (= 1.0.14-1), rust-link-cplusplus (= 1.0.10-1), rust-once-cell (= 1.20.2-1), rust-ryu (= 1.0.19-1), rust-serde (= 1.0.217-1), rust-serde-yaml (= 0.9.34-1), rust-unsafe-libyaml (= 0.2.11-1), rustc (= 1.85.0+dfsg3-1)
 net
 Priority: optional
-Filename: pool/updates/main/p/pdns-recursor/pdns-recursor_5.2.8-0+deb13u1_amd64.deb
-Size: 4400152
-SHA256: 782b135e54bc8290955ebd974896c3f06c838b277db1f775a9e9e88a1d9d73e7
+Filename: pool/updates/main/p/pdns-recursor/pdns-recursor_5.2.9-0+deb13u1_amd64.deb
+Size: 4394548
+SHA256: 8e714564a24a092fb7b00292778e561b543867a0bc3a750c921257b03ca6ae76
 
 Package: charon-cmd
 Source: strongswan
