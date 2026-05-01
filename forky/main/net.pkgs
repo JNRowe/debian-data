@@ -17875,6 +17875,56 @@ Size: 58248
 MD5sum: ea86c6c6624aa3b73c33ca7e266e8be3
 SHA256: 46765605cda22590c1092397780fa846eafdb85009e0a974f19ad4077e5d137d
 
+Package: neard
+Version: 0.20-1
+Installed-Size: 486
+Maintainer: DebianOnMobile Maintainers <debian-on-mobile-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libdbus-1-3 (>= 1.10), libglib2.0-0t64 (>= 2.76.0), libnl-3-200 (>= 3.11.0), libnl-genl-3-200 (>= 3.11.0)
+Recommends: bluez, neard-tools
+Description: NFC - Near Field Communication management daemon
+Homepage: https://git.kernel.org/pub/scm/network/nfc/neard
+Description-md5: 13767c6ffbb1688526421ad75b00697d
+net
+Priority: optional
+Filename: pool/main/n/neard/neard_0.20-1_amd64.deb
+Size: 143732
+MD5sum: bc48ba31e26755895c95cba1cff27249
+SHA256: fc4d400e83732f06d6a55c81a8b146e63d47c7a8d52c6a9e314dfea99a5e8f20
+
+Package: neard-dev
+Source: neard
+Version: 0.20-1
+Installed-Size: 144
+Maintainer: DebianOnMobile Maintainers <debian-on-mobile-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Description: NFC - Near Field Communication manager development files
+Homepage: https://git.kernel.org/pub/scm/network/nfc/neard
+Description-md5: 0ac035302de97d8ea503f46588c226de
+net
+Priority: optional
+Filename: pool/main/n/neard/neard-dev_0.20-1_amd64.deb
+Size: 32096
+MD5sum: eb902ee7fff631cfda4199554d707927
+SHA256: 7efc2676c426a8c720db57976a679781029dcd503a5231ac3d83810ce7dbee58
+
+Package: neard-tools
+Source: neard
+Version: 0.20-1
+Installed-Size: 95
+Maintainer: DebianOnMobile Maintainers <debian-on-mobile-maintainers@alioth-lists.debian.net>
+Architecture: amd64
+Depends: libc6 (>= 2.42), libglib2.0-0t64 (>= 2.28.0), libnl-3-200 (>= 3.11.0), libnl-genl-3-200 (>= 3.11.0), neard
+Description: NFC - Near Field Communication manager test tools
+Homepage: https://git.kernel.org/pub/scm/network/nfc/neard
+Description-md5: 460ec830669d0feb599bb08a73609b6e
+net
+Priority: optional
+Filename: pool/main/n/neard/neard-tools_0.20-1_amd64.deb
+Size: 31076
+MD5sum: fe60167220eb025cbf149d2e2a1e012b
+SHA256: cefcb7d92b29ef91a774442864f0f76c76cf04d3a229f93d35fd777cd4a28ed6
+
 Package: nebula
 Source: nebula (1.10.3+dfsg-2)
 Version: 1.10.3+dfsg-2+b1
@@ -18438,6 +18488,44 @@ Filename: pool/main/n/netkit-rwall/rwalld_0.17-12_amd64.deb
 Size: 9524
 MD5sum: 56ee83dd2e776582f6972438a128013f
 SHA256: c21085b10c59e31893f5fb7ab8f5568a78ff4e16ce375c6685c99a20e9e15577
+
+Package: rwho
+Source: netkit-rwho
+Version: 0.17-17
+Installed-Size: 49
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Replaces: netstd, ruptime
+Depends: rwhod, libc6 (>= 2.34)
+Conflicts: ruptime
+Description: Clients to query the rwho server
+Description-md5: 42b7a3086700d4863106da7b0a9dba2c
+Tag: interface::commandline, network::client, role::program, use::monitor
+net
+Priority: optional
+Filename: pool/main/n/netkit-rwho/rwho_0.17-17_amd64.deb
+Size: 12764
+MD5sum: 4a89baab3a860fe65e85e5d05c5b550e
+SHA256: b249095c1cd971d0d1657b73fc9fead240822f38e0dd494a2bae948545d34ae5
+
+Package: rwhod
+Source: netkit-rwho
+Version: 0.17-17
+Installed-Size: 68
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Replaces: netstd
+Depends: adduser, passwd, libc6 (>= 2.38)
+Description: System status server
+Description-md5: bbd85ec40111b12fc3615b107b219c70
+Tag: interface::daemon, network::server, network::service, role::program,
+ use::monitor
+net
+Priority: optional
+Filename: pool/main/n/netkit-rwho/rwhod_0.17-17_amd64.deb
+Size: 18260
+MD5sum: 7fe88ed566372a237d60a5c2392a4167
+SHA256: 5122aeb986de0ad2c6c60ffc456f09caf6c67a4a1fd3c20bded3747de939201b
 
 Package: telnet-ssl
 Source: netkit-telnet-ssl
@@ -23187,7 +23275,7 @@ MD5sum: 2c824676df61452dcfd6f5507580e871
 SHA256: 24045a082e2ef52665ae8e2d9b86959fd7010c728e526b12696fa8c3f47880a6
 
 Package: openvpn
-Version: 2.7.2-1
+Version: 2.7.3-1
 Installed-Size: 1846
 Maintainer: OpenVPN Maintainers <openvpn@packages.debian.org>
 Architecture: amd64
@@ -23201,10 +23289,10 @@ Tag: interface::commandline, interface::daemon, network::server,
  network::vpn, role::program, security::cryptography, use::routing
 net
 Priority: optional
-Filename: pool/main/o/openvpn/openvpn_2.7.2-1_amd64.deb
-Size: 685952
-MD5sum: b73c93eff3f7db078f359248fe8b3710
-SHA256: 56e2913f42cadc963c69431324172b3dc476bffa38fa44de2b7e0deb438eed55
+Filename: pool/main/o/openvpn/openvpn_2.7.3-1_amd64.deb
+Size: 686452
+MD5sum: f55ca897f4a17df97e61108045834a48
+SHA256: 4e1a6828e4edb71cfbb9511085448963ce5bdbe0024dc77be17fff01040cc826
 
 Package: openvpn-auth-ldap
 Version: 2.0.4-5
@@ -28239,21 +28327,22 @@ MD5sum: f344ae3c31b2e21a1353b34c989aaed0
 SHA256: 0d19dec62803c056c4c5b2cef34c8b0304e0db0c9ddad2ed058540c40d409137
 
 Package: riemann-c-client
-Version: 1.10.4-5
+Source: riemann-c-client (1.10.4-5)
+Version: 1.10.4-5+b1
 Installed-Size: 38
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: amd64
-Depends: libriemann-client0 (= 1.10.4-5), libc6 (>= 2.38), libjson-c5 (>= 0.15)
+Depends: libriemann-client0 (= 1.10.4-5+b1), libc6 (>= 2.38), libjson-c5 (>= 0.15)
 Description: Client utility for the Riemann event stream processor
 Multi-Arch: foreign
 Homepage: https://git.madhouse-project.org/algernon/riemann-c-client
 Description-md5: 99c45b4e5cc55374417ffefd0d6d7c97
 net
 Priority: optional
-Filename: pool/main/r/riemann-c-client/riemann-c-client_1.10.4-5_amd64.deb
-Size: 10104
-MD5sum: aa3ef613500abb34836467b3b0272313
-SHA256: 2789ffa59b55f76c4c5fa6b7dbc81d207e1e27ecae6d169aeea2226791ca8bc9
+Filename: pool/main/r/riemann-c-client/riemann-c-client_1.10.4-5+b1_amd64.deb
+Size: 10128
+MD5sum: ae2ae40419f868741dff1775c01c89c4
+SHA256: 4738a3d984728c189746f35953bf3eca033423bd9b3038de1c8ec6e3a22c0821
 
 Package: rinetd
 Version: 0.73-2
@@ -31770,7 +31859,7 @@ SHA256: 0bdf7b471b68aebab067d0608157280962cf8c67b2e17297f8c1cd55c0ca20ba
 
 Package: libtango-tools
 Source: tango
-Version: 10.1.2+dfsg1-2
+Version: 10.1.2+dfsg1-3
 Installed-Size: 121
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -31780,14 +31869,14 @@ Homepage: https://www.tango-controls.org
 Description-md5: 544e0fea418eb6b7c4e205af672d77a2
 net
 Priority: optional
-Filename: pool/main/t/tango/libtango-tools_10.1.2+dfsg1-2_amd64.deb
-Size: 39912
-MD5sum: ddf9dfbcb325135203b07d6c9fbff514
-SHA256: d7416028d5381c8fc54420a0db03402584cda35e22fbece2569e15101810217b
+Filename: pool/main/t/tango/libtango-tools_10.1.2+dfsg1-3_amd64.deb
+Size: 40052
+MD5sum: 12640b753d7d0ab9f9848b87fe63fe3f
+SHA256: de3d888cbbb1d2fc91482fa56d47a65996af2463324a43e3cf2c5e40b29e54cf
 
 Package: tango-accesscontrol
 Source: tango
-Version: 10.1.2+dfsg1-2
+Version: 10.1.2+dfsg1-3
 Installed-Size: 426
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -31798,15 +31887,15 @@ Description-md5: 03721f413a8fb2f906b89e11ef7b6c90
 Tag: network::server, role::program
 net
 Priority: optional
-Filename: pool/main/t/tango/tango-accesscontrol_10.1.2+dfsg1-2_amd64.deb
-Size: 70140
-MD5sum: c2f3c825a747883f91726d35e59614c7
-SHA256: e189b98d2e85dffde15ba07a9c9032e175571e44f9936035b1ae647d90cbbafd
+Filename: pool/main/t/tango/tango-accesscontrol_10.1.2+dfsg1-3_amd64.deb
+Size: 70184
+MD5sum: ee9175f31e2b7aadef88a96b68b9fbbe
+SHA256: f6f6af81b82e927ca67ee55a328ab67f8e13b9abf290197fdb90dcc21ddbc574
 
 Package: tango-common
 Source: tango
-Version: 10.1.2+dfsg1-2
-Installed-Size: 25
+Version: 10.1.2+dfsg1-3
+Installed-Size: 28
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: all
 Depends: adduser, opentelemetry-cpp, debconf (>= 0.5) | debconf-2.0
@@ -31816,14 +31905,14 @@ Homepage: https://www.tango-controls.org
 Description-md5: abe68002b5c0074a5b3403547a332b83
 net
 Priority: optional
-Filename: pool/main/t/tango/tango-common_10.1.2+dfsg1-2_all.deb
-Size: 7548
-MD5sum: 03ab3b0786e9081c22f8067c9842b822
-SHA256: 44a8d7cdd80b886c880812ac620a16faebe18f71d2c53e55ecb374f320415954
+Filename: pool/main/t/tango/tango-common_10.1.2+dfsg1-3_all.deb
+Size: 7812
+MD5sum: e1d1303952330b508196ac0bf5c1f541
+SHA256: 90a6f926d5a657fc26d298bafa1e6599cb63fbf7a29d3c4f3752002960d8e00c
 
 Package: tango-db
 Source: tango
-Version: 10.1.2+dfsg1-2
+Version: 10.1.2+dfsg1-3
 Installed-Size: 1242
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -31835,14 +31924,14 @@ Description-md5: 61ba4846bb4d6244151ee89c4256100e
 Tag: network::server, role::program
 net
 Priority: optional
-Filename: pool/main/t/tango/tango-db_10.1.2+dfsg1-2_amd64.deb
-Size: 210120
-MD5sum: 852b54737bda0c38d6e7db54145ea6be
-SHA256: 3a29bb0d2a8712342fe3dc47a67e163bfe9c98c564b8659191daac4d6f1813e4
+Filename: pool/main/t/tango/tango-db_10.1.2+dfsg1-3_amd64.deb
+Size: 208952
+MD5sum: 501174998614a6145ab26dac3b31e8d3
+SHA256: 4c0fd31da49c134f7e0b86aa7511827460cea40bff6b122a18bcdd24178cffc9
 
 Package: tango-starter
 Source: tango
-Version: 10.1.2+dfsg1-2
+Version: 10.1.2+dfsg1-3
 Installed-Size: 380
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -31853,14 +31942,14 @@ Description-md5: 159372bf8ae1578a656674dbc00c0ee9
 Tag: network::server, role::program
 net
 Priority: optional
-Filename: pool/main/t/tango/tango-starter_10.1.2+dfsg1-2_amd64.deb
-Size: 90344
-MD5sum: 3c3d13b7a4ef7e3e5a234a75d8b32c27
-SHA256: b959b442b0d046d1c04d4d25bbeced7b8b376c72298661fbcd94909d99335cce
+Filename: pool/main/t/tango/tango-starter_10.1.2+dfsg1-3_amd64.deb
+Size: 90544
+MD5sum: 1f06181b01671bdc58c12d1e1bf98a24
+SHA256: d9ec25f0c9e3795e6c4a8ddca60e8097de2f0f1f40d1e1522cbf312cc9be3c52
 
 Package: tango-test
 Source: tango
-Version: 10.1.2+dfsg1-2
+Version: 10.1.2+dfsg1-3
 Installed-Size: 558
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -31870,14 +31959,14 @@ Homepage: https://www.tango-controls.org
 Description-md5: a8db909e0c0a83825ac21590f90a4df5
 net
 Priority: optional
-Filename: pool/main/t/tango/tango-test_10.1.2+dfsg1-2_amd64.deb
-Size: 98636
-MD5sum: 46e2e7ab0cfef66f2c3452cbee0e368b
-SHA256: abed8078a6d252902e79ae8ec63fa9c7eaef2bfb1c356ac29da33595fd5042c4
+Filename: pool/main/t/tango/tango-test_10.1.2+dfsg1-3_amd64.deb
+Size: 98700
+MD5sum: f3a621b59a6e26e81aad45b3bccd54fb
+SHA256: 0ccfcdf1090c0d4c96b62d7e9c1b0632ec6496571840c745a2f4b3721c239b7d
 
 Package: tango-universaltest
 Source: tango
-Version: 10.1.2+dfsg1-2
+Version: 10.1.2+dfsg1-3
 Installed-Size: 690
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -31887,10 +31976,10 @@ Homepage: https://www.tango-controls.org
 Description-md5: deef69d710d89d22501abf215770f0c6
 net
 Priority: optional
-Filename: pool/main/t/tango/tango-universaltest_10.1.2+dfsg1-2_amd64.deb
-Size: 111972
-MD5sum: 78a72d67cb869cb1815a0799bd6a7909
-SHA256: eb2adb1af09b37f46972d327d5c05c8c914e7ca053ba5c722938b16b5aa7bfd8
+Filename: pool/main/t/tango/tango-universaltest_10.1.2+dfsg1-3_amd64.deb
+Size: 112372
+MD5sum: fa19d9d5570ec6f854d0d1b9433c7ddf
+SHA256: 3bf55197309f419a95537574e7fd3881e9d35a45dbfd528b53c3d80b81486eef
 
 Package: tayga
 Version: 0.9.2-12
@@ -32738,21 +32827,20 @@ SHA256: 19c4f95a1a1613e5411a80ed268eb51b75d32da745f2860601f85d7232a00978
 
 Package: tpm2-abrmd
 Source: tpm2-abrmd (3.0.0-1.2)
-Version: 3.0.0-1.2+b1
-Installed-Size: 178
+Version: 3.0.0-1.2+b2
+Installed-Size: 177
 Maintainer: SZ Lin (林上智) <szlin@debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34), libglib2.0-0t64 (>= 2.83.0), libtss2-mu-4.0.1-0t64 (>= 3.0.1), libtss2-rc0t64 (>= 3.0.1), libtss2-sys1t64 (>= 3.0.1), libtss2-tctildr0t64 (>= 3.0.1)
-Pre-Depends: init-system-helpers (>= 1.54~)
 Description: TPM2 Access Broker & Resource Management Daemon
 Homepage: https://github.com/intel/tpm2-abrmd
 Description-md5: 146bea5c07f40adfd28b52b77579bea3
 net
 Priority: optional
-Filename: pool/main/t/tpm2-abrmd/tpm2-abrmd_3.0.0-1.2+b1_amd64.deb
-Size: 54952
-MD5sum: 0cf7e391c0020bbc45fbd89aadb4c647
-SHA256: 4d2a222809603c1f78b0ad3600e2ed61bb65120e65b144639714d6e90da0aaaa
+Filename: pool/main/t/tpm2-abrmd/tpm2-abrmd_3.0.0-1.2+b2_amd64.deb
+Size: 54216
+MD5sum: 9626b874220923f2833e00af1b233006
+SHA256: e1ec0c2a713cdc76686783f36caba9042f0f7970a8542b4ec0045539b2cecc31
 
 Package: tqftpserv
 Version: 1.1.1-1
@@ -33277,7 +33365,7 @@ SHA256: bc12fac458b139201cb64571eb8aa0af0f6dce92cba560ac1776ba258e926127
 
 Package: udns-utils
 Source: udns (0.6-1)
-Version: 0.6-1+b1
+Version: 0.6-1+b2
 Installed-Size: 75
 Maintainer: Michael Tokarev <mjt@tls.msk.ru>
 Architecture: amd64
@@ -33290,10 +33378,10 @@ Tag: implemented-in::c, network::client, protocol::dns, role::program,
  use::checking
 net
 Priority: optional
-Filename: pool/main/u/udns/udns-utils_0.6-1+b1_amd64.deb
-Size: 23244
-MD5sum: 3be6f878aea28e466b4a5f3af19a1eb8
-SHA256: e3823e786736ff57682d3251aff0c16f067bf3b4a20f839fb65789fe0bf6ee18
+Filename: pool/main/u/udns/udns-utils_0.6-1+b2_amd64.deb
+Size: 23132
+MD5sum: 5dc1d0e3e699659f7c2c66bbbf2313ad
+SHA256: adcfd7fb213a1e49e901767f6f25625d3190968208ae392f6205cdcbdc34699a
 
 Package: udptunnel
 Version: 1.1-12
@@ -35025,8 +35113,8 @@ SHA256: 13ffc4b014bc5a5fb7f0b4358e8cbbae815665a7ae7d7b7373f593789faa6a7f
 
 Package: eapoltest
 Source: wpa (2:2.10-25)
-Version: 2:2.10-25+b1
-Installed-Size: 3129
+Version: 2:2.10-25+b2
+Installed-Size: 3124
 Maintainer: Debian Networking Team <team+networking@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libdbus-1-3 (>= 1.10), libpcsclite1 (>= 1.0.0), libssl3t64 (>= 3.0.0)
@@ -35035,19 +35123,18 @@ Homepage: https://w1.fi/wpa_supplicant/
 Description-md5: 2e45ef20c444e95df4ab4996a8713775
 net
 Priority: optional
-Filename: pool/main/w/wpa/eapoltest_2.10-25+b1_amd64.deb
-Size: 1168348
-MD5sum: 7e73bfa5110ac637f5a3d556e236e8ac
-SHA256: d586b13c8f95c02eecafe56294504b42162764ca8609bd334d297db9769b38c0
+Filename: pool/main/w/wpa/eapoltest_2.10-25+b2_amd64.deb
+Size: 1163440
+MD5sum: 0e868b5fc547d831552f1593c181a57c
+SHA256: 412ee1450e5616c5133614c57ffc20006156c14df8d1b8a3d2f5fa4868e7869b
 
 Package: hostapd
 Source: wpa (2:2.10-25)
-Version: 2:2.10-25+b1
-Installed-Size: 2339
+Version: 2:2.10-25+b2
+Installed-Size: 2334
 Maintainer: Debian Networking Team <team+networking@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libnl-3-200 (>= 3.11.0), libnl-genl-3-200 (>= 3.11.0), libnl-route-3-200 (>= 3.11.0), libssl3t64 (>= 3.0.0)
-Pre-Depends: init-system-helpers (>= 1.54~)
 Description: access point and authentication server for Wi-Fi and Ethernet
 Multi-Arch: foreign
 Homepage: https://w1.fi/wpa_supplicant/
@@ -35057,15 +35144,15 @@ Tag: implemented-in::c, interface::daemon, network::configuration,
  security::authentication
 net
 Priority: optional
-Filename: pool/main/w/wpa/hostapd_2.10-25+b1_amd64.deb
-Size: 877464
-MD5sum: fb33633d1e841ec29e256aafd4a3b9f1
-SHA256: 5912445269c0c061e224deb519be9bbf4b10e1768c8451e1cf25f1eb0334dbf7
+Filename: pool/main/w/wpa/hostapd_2.10-25+b2_amd64.deb
+Size: 872980
+MD5sum: f361d7aad6a87073b32f8658e3170e98
+SHA256: 0b78dd71701e42f9e691f872aa48224a89ddc5fe707ca5c08ddc1acda682ae99
 
 Package: libwpa-client-dev
 Source: wpa (2:2.10-25)
-Version: 2:2.10-25+b1
-Installed-Size: 123
+Version: 2:2.10-25+b2
+Installed-Size: 118
 Maintainer: Debian Networking Team <team+networking@tracker.debian.org>
 Architecture: amd64
 Replaces: libwpa-dev
@@ -35076,15 +35163,15 @@ Homepage: https://w1.fi/wpa_supplicant/
 Description-md5: 9fff365dc69c40b64342a0831b78af8f
 net
 Priority: optional
-Filename: pool/main/w/wpa/libwpa-client-dev_2.10-25+b1_amd64.deb
-Size: 34668
-MD5sum: 600169d3d7933ca76e45747a3096351d
-SHA256: 1d1c1913c3ea589b57c84fa34d754c5833ccc583f7a28242d72f28293aca2f33
+Filename: pool/main/w/wpa/libwpa-client-dev_2.10-25+b2_amd64.deb
+Size: 30432
+MD5sum: a0989710da86de045abed6892ae8a1c8
+SHA256: 542ce286e077a5b699491e090c80ac4fb07d5423f5d997a810a56eebe0436455
 
 Package: wpagui
 Source: wpa (2:2.10-25)
-Version: 2:2.10-25+b1
-Installed-Size: 784
+Version: 2:2.10-25+b2
+Installed-Size: 779
 Maintainer: Debian Networking Team <team+networking@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libqt5core5t64 (>= 5.15.1), libqt5gui5t64 (>= 5.7.0) | libqt5gui5-gles (>= 5.7.0), libqt5widgets5t64 (>= 5.6.0~beta), libstdc++6 (>= 5), wpasupplicant, libqt5svg5
@@ -35099,15 +35186,15 @@ Tag: admin::configuring, implemented-in::c, implemented-in::c++,
  use::scanning, x11::application
 net
 Priority: optional
-Filename: pool/main/w/wpa/wpagui_2.10-25+b1_amd64.deb
-Size: 322092
-MD5sum: e441d66fef58ae30c06d5d4751e9d72c
-SHA256: 0521037b2d3f386091ad21bb93078a93162f387b8e4faa1c5dcd42b34f6c78d8
+Filename: pool/main/w/wpa/wpagui_2.10-25+b2_amd64.deb
+Size: 317680
+MD5sum: 66fe69c9f4187c34555db3c1b9e46e6b
+SHA256: 2bab3faec9f2c8c796a4160c6e12798f7a7fdb22f45506051122a42e0ad4952d
 
 Package: wpasupplicant
 Source: wpa (2:2.10-25)
-Version: 2:2.10-25+b1
-Installed-Size: 3901
+Version: 2:2.10-25+b2
+Installed-Size: 3896
 Maintainer: Debian Networking Team <team+networking@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libdbus-1-3 (>= 1.10), libnl-3-200 (>= 3.11.0), libnl-genl-3-200 (>= 3.11.0), libnl-route-3-200 (>= 3.11.0), libpcsclite1 (>= 1.0.0), libreadline8t64 (>= 6.0), libssl3t64 (>= 3.0.0), systemd | systemd-standalone-sysusers | systemd-sysusers
@@ -35123,10 +35210,10 @@ Tag: admin::configuring, implemented-in::c, interface::commandline,
  security::cryptography, uitoolkit::ncurses, use::configuring
 net
 Priority: optional
-Filename: pool/main/w/wpa/wpasupplicant_2.10-25+b1_amd64.deb
-Size: 1437388
-MD5sum: 2726e81d3155e7b9bde1e7c4a9d78457
-SHA256: 1444ff29386f717b712478582e29a9357694bf1a60992099ae760efd16d10e0b
+Filename: pool/main/w/wpa/wpasupplicant_2.10-25+b2_amd64.deb
+Size: 1432544
+MD5sum: abd49e527c71cff93d2c88d527ff9030
+SHA256: f9fefdef9511977b15374dffc9f6c6ddc489e877a4a399370e1d8ca0a6794852
 
 Package: wrapsrv
 Version: 1.0.0-4
@@ -35179,8 +35266,8 @@ SHA256: bd1d10a731fdcc1fd11322fdcabfa9acef62c8f88198e97b28139e76c68ac70a
 
 Package: alevtd
 Source: xawtv (3.107-4)
-Version: 3.107-4+b1
-Installed-Size: 106
+Version: 3.107-4+b2
+Installed-Size: 105
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libzvbi0t64 (>= 0.2.35)
@@ -35192,18 +35279,18 @@ Tag: hardware::video, interface::web, network::server, protocol::http,
  works-with::audio, works-with::text
 net
 Priority: optional
-Filename: pool/main/x/xawtv/alevtd_3.107-4+b1_amd64.deb
-Size: 51220
-MD5sum: b0258b588f9acb64761b6e7d64be0773
-SHA256: 6397c29ead7f20d815065ea49ecf589808435753a47c416f0f5b26bf1e3e9df4
+Filename: pool/main/x/xawtv/alevtd_3.107-4+b2_amd64.deb
+Size: 50168
+MD5sum: da6fc0673d772774415f61fc02eb24d9
+SHA256: 39717e7e068f3ca010e1ece2fdc9b04e716093e349d62c9538a5235eaf52ff82
 
 Package: webcam
 Source: xawtv (3.107-4)
-Version: 3.107-4+b1
-Installed-Size: 137
+Version: 3.107-4+b2
+Installed-Size: 136
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
-Depends: xawtv-plugins (= 3.107-4+b1), libc6 (>= 2.38), libjpeg62-turbo (>= 1.3.1)
+Depends: xawtv-plugins (= 3.107-4+b2), libc6 (>= 2.38), libjpeg62-turbo (>= 1.3.1)
 Recommends: ftp, ssh-client
 Description: image grabber and uploader
 Homepage: https://www.linuxtv.org/wiki/index.php/Xawtv
@@ -35213,10 +35300,10 @@ Tag: hardware::camera, protocol::ftp, protocol::ssh, role::program,
  works-with::image:raster
 net
 Priority: optional
-Filename: pool/main/x/xawtv/webcam_3.107-4+b1_amd64.deb
-Size: 63888
-MD5sum: cfbde2d2b4e75f5c3e822b8913d509f0
-SHA256: 8a0d044c6ca9cda9859b2a9ccd862bb2b24e3cf93dfb0e4e531e703fdfc778f3
+Filename: pool/main/x/xawtv/webcam_3.107-4+b2_amd64.deb
+Size: 62820
+MD5sum: 9736d72933783fe0c02dc822ca4dcaea
+SHA256: f12aacf8ac57e1ff135de26495da53e29855167ede405d416fe0ddb8372783bf
 
 Package: xinetd
 Version: 1:2.3.15.4-6
@@ -35922,13 +36009,13 @@ MD5sum: 550eddc75db8cf3cf904271fb37f4de4
 SHA256: ad459e19c67f6bcfbaf763b9ce0f9103a6156f2938ac480b4ac8dfd9772dd83a
 
 Package: zephyr-clients
-Source: zephyr
-Version: 3.1.2-4
-Installed-Size: 410
+Source: zephyr (3.1.2-4)
+Version: 3.1.2-4+b1
+Installed-Size: 403
 Maintainer: Zephyr IM Team <team+zephyr-im@tracker.debian.org>
 Architecture: amd64
 Replaces: zephyr-client
-Depends: libc6 (>= 2.38), libcares2 (>= 1.7.0), libcom-err2 (>= 1.43.9), libhesiod0, libss2 (>= 1.01), libtinfo6 (>= 6), libx11-6, libzephyr4 (>= 3.1.2), debconf (>= 0.5) | debconf-2.0
+Depends: libc6 (>= 2.42), libcares2 (>= 1.7.0), libcom-err2 (>= 1.43.9), libhesiod0, libss2 (>= 1.01), libtinfo6 (>= 6), libx11-6, libzephyr4 (>= 3.1.2), debconf (>= 0.5) | debconf-2.0
 Description: Project Athena's notification service - client programs
 Homepage: https://github.com/zephyr-im/zephyr
 Description-md5: 33218b0e8cd9adfbbe13e52bb1dfdc40
@@ -35937,19 +36024,18 @@ Tag: implemented-in::c, interface::commandline, interface::graphical,
  use::chatting, x11::application
 net
 Priority: optional
-Filename: pool/main/z/zephyr/zephyr-clients_3.1.2-4_amd64.deb
-Size: 123932
-MD5sum: 32434f0d2b1418ed6983106522f9598e
-SHA256: 8478dbaa9187be8824dcd692c7634028dd174d3103686fb52d71901ebd3c9680
+Filename: pool/main/z/zephyr/zephyr-clients_3.1.2-4+b1_amd64.deb
+Size: 124260
+MD5sum: aac05a8afd44da5054193de0bcd4f1d8
+SHA256: 45b06891b311a891991afd4cad423610db2745807f3a152d3d332e68b698ebc2
 
 Package: zephyr-server
-Source: zephyr
-Version: 3.1.2-4
-Installed-Size: 818
+Source: zephyr (3.1.2-4)
+Version: 3.1.2-4+b1
+Installed-Size: 819
 Maintainer: Zephyr IM Team <team+zephyr-im@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libcares2 (>= 1.7.0), libcom-err2 (>= 1.43.9), libhesiod0, libzephyr4 (>= 3.1.2), debconf (>= 0.5) | debconf-2.0
-Pre-Depends: init-system-helpers (>= 1.54~)
 Conflicts: zephyr-server-krb5
 Description: Project Athena's notification service - non-Kerberos server
 Homepage: https://github.com/zephyr-im/zephyr
@@ -35958,21 +36044,20 @@ Tag: implemented-in::c, interface::daemon, network::server, role::program,
  use::chatting
 net
 Priority: optional
-Filename: pool/main/z/zephyr/zephyr-server_3.1.2-4_amd64.deb
-Size: 102916
-MD5sum: 3dee5076072d522ce2d3269ac103b536
-SHA256: c5097229f27824e55b26e015ad995cbd12ed1e9d481507bfff0b6495803674f8
+Filename: pool/main/z/zephyr/zephyr-server_3.1.2-4+b1_amd64.deb
+Size: 103228
+MD5sum: 6642a39ff3535bb0f9bdb89a5bb81b00
+SHA256: ae68dfab6e692730e4cb74d5a833c3aa0fb38468703aad0c32eca0416ff2d1d6
 
 Package: zephyr-server-krb5
-Source: zephyr
-Version: 3.1.2-4
-Installed-Size: 843
+Source: zephyr (3.1.2-4)
+Version: 3.1.2-4+b1
+Installed-Size: 844
 Maintainer: Zephyr IM Team <team+zephyr-im@tracker.debian.org>
 Architecture: amd64
 Replaces: zephyr-server
 Provides: zephyr-server
 Depends: libc6 (>= 2.38), libcares2 (>= 1.7.0), libcom-err2 (>= 1.43.9), libhesiod0, libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.10+dfsg~), libzephyr4-krb5 (>= 3.1.2), debconf (>= 0.5) | debconf-2.0
-Pre-Depends: init-system-helpers (>= 1.54~)
 Conflicts: zephyr-server
 Description: The original "Instant Message" system-server with Kerberos 5
 Homepage: https://github.com/zephyr-im/zephyr
@@ -35980,20 +36065,20 @@ Description-md5: f6107ed4c08f843aa021baaf4cf80b12
 Tag: interface::daemon, role::program
 net
 Priority: optional
-Filename: pool/main/z/zephyr/zephyr-server-krb5_3.1.2-4_amd64.deb
-Size: 111616
-MD5sum: 12ef5b813bfb8de4cbcb02b225355b84
-SHA256: 6efb5d4d8026f35ab925a2294a0312f1cc6008aabd42415489ca906406f761c9
+Filename: pool/main/z/zephyr/zephyr-server-krb5_3.1.2-4+b1_amd64.deb
+Size: 111828
+MD5sum: d4f041c60b944280a3c86b2c67bf223a
+SHA256: 82253d4060ffc9d1d97066f54a34a5d5c9bc8d7d60e88b3c975ea46e2859c978
 
 Package: libzeroc-icestorm3.7t64
-Source: zeroc-ice
-Version: 3.7.10-4
-Installed-Size: 971
+Source: zeroc-ice (3.7.10-4)
+Version: 3.7.10-4+b1
+Installed-Size: 972
 Maintainer: José Gutiérrez de la Concha <jose@zeroc.com>
 Architecture: amd64
 Replaces: libzeroc-icestorm3.7
-Provides: libzeroc-icestorm3.7 (= 3.7.10-4)
-Depends: libzeroc-ice3.7t64 (= 3.7.10-4), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
+Provides: libzeroc-icestorm3.7 (= 3.7.10-4+b1)
+Depends: libzeroc-ice3.7t64 (= 3.7.10-4+b1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
 Breaks: libzeroc-icestorm3.7 (<< 3.7.10-4)
 Description: IceStorm publish-subscribe event distribution service
 Multi-Arch: same
@@ -36001,29 +36086,29 @@ Homepage: https://zeroc.com
 Description-md5: 679e72fd55d26f5e4819c159ad20ef97
 net
 Priority: optional
-Filename: pool/main/z/zeroc-ice/libzeroc-icestorm3.7t64_3.7.10-4_amd64.deb
-Size: 268692
-MD5sum: dd5fec9de703431fb048028c29392974
-SHA256: d32fe73903f782db146f7bb6b937fc229cd6e097f3c06b06725fe16001a37bf7
+Filename: pool/main/z/zeroc-ice/libzeroc-icestorm3.7t64_3.7.10-4+b1_amd64.deb
+Size: 268160
+MD5sum: e65f56847ebc9a597660853eb907bc4a
+SHA256: 42461a101ef132e6c1abcadaee1421995807c7babf964de2a3e78819053eb8ff
 
 Package: zeroc-glacier2
-Source: zeroc-ice
-Version: 3.7.10-4
-Installed-Size: 700
+Source: zeroc-ice (3.7.10-4)
+Version: 3.7.10-4+b1
+Installed-Size: 704
 Maintainer: José Gutiérrez de la Concha <jose@zeroc.com>
 Architecture: amd64
 Replaces: glacier2, ice35-services
-Depends: libzeroc-ice3.7t64 (= 3.7.10-4), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
+Depends: libzeroc-ice3.7t64 (= 3.7.10-4+b1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
 Description: Glacier2 router
 Multi-Arch: foreign
 Homepage: https://zeroc.com
 Description-md5: 6d5c13f0fb248d9bc5b65bf71d1589f7
 net
 Priority: optional
-Filename: pool/main/z/zeroc-ice/zeroc-glacier2_3.7.10-4_amd64.deb
-Size: 199496
-MD5sum: 4b4547f52000fefe54bc3d6feb23a8ae
-SHA256: 7a44bf4dc7723ba56e2e8c1743bb9219e1a8fa29301a65030ceba340d3cbb3c3
+Filename: pool/main/z/zeroc-ice/zeroc-glacier2_3.7.10-4+b1_amd64.deb
+Size: 199024
+MD5sum: e7af3eff80f386d5d3499abf4cefa9c0
+SHA256: 8a80e62e67882ae998fefc6525493071aa291d3e3e4496123ae514c4b6631f62
 
 Package: zeroc-ice-all-runtime
 Source: zeroc-ice
@@ -36043,78 +36128,78 @@ MD5sum: 5cbdff8dde4799360dbd05730455d810
 SHA256: acc1c9c2bd03601b730f83c13aeba2af1ae6a2c191be9d81ae66e503ae26e66f
 
 Package: zeroc-icebox
-Source: zeroc-ice
-Version: 3.7.10-4
+Source: zeroc-ice (3.7.10-4)
+Version: 3.7.10-4+b1
 Installed-Size: 298
 Maintainer: José Gutiérrez de la Concha <jose@zeroc.com>
 Architecture: amd64
-Depends: libzeroc-ice3.7t64 (= 3.7.10-4), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
+Depends: libzeroc-ice3.7t64 (= 3.7.10-4+b1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
 Description: IceBox server, a framework for Ice application services
 Multi-Arch: foreign
 Homepage: https://zeroc.com
 Description-md5: 0410968de5906debc8787220af9b56ba
 net
 Priority: optional
-Filename: pool/main/z/zeroc-ice/zeroc-icebox_3.7.10-4_amd64.deb
-Size: 85676
-MD5sum: 826eb97a6da50831a99b0885013fa633
-SHA256: d3e363dc97aba3fb4a73631f189d0626d634773b0a784774a3de784ad49f2c9d
+Filename: pool/main/z/zeroc-ice/zeroc-icebox_3.7.10-4+b1_amd64.deb
+Size: 85508
+MD5sum: f9fef91ac73c4ac1ac4a21b3c939a912
+SHA256: a92c2a1702f35da1aa1f11e17e3256dbd8d1b14ef68ddd56926a665a4fbbd2c1
 
 Package: zeroc-icebridge
-Source: zeroc-ice
-Version: 3.7.10-4
+Source: zeroc-ice (3.7.10-4)
+Version: 3.7.10-4+b1
 Installed-Size: 153
 Maintainer: José Gutiérrez de la Concha <jose@zeroc.com>
 Architecture: amd64
-Depends: libzeroc-ice3.7t64 (= 3.7.10-4), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
+Depends: libzeroc-ice3.7t64 (= 3.7.10-4+b1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
 Description: Bridge service
 Multi-Arch: foreign
 Homepage: https://zeroc.com
 Description-md5: 3b1da3c995bbec01ac10dc2a134a001c
 net
 Priority: optional
-Filename: pool/main/z/zeroc-ice/zeroc-icebridge_3.7.10-4_amd64.deb
-Size: 42872
-MD5sum: c04e01c6716e0545bcfc14ef6f4357e6
-SHA256: 06bea948fd1d161910b79a16de613a2046a10d0915e586377ab5e88a084bd918
+Filename: pool/main/z/zeroc-ice/zeroc-icebridge_3.7.10-4+b1_amd64.deb
+Size: 42628
+MD5sum: 4745cd89f469a055ee69d33f8a13e353
+SHA256: e9855b4095ba9e1b4f0fb841662d04037d3b3a7af83e9c1099e2c121d5807081
 
 Package: zeroc-icegrid
-Source: zeroc-ice
-Version: 3.7.10-4
+Source: zeroc-ice (3.7.10-4)
+Version: 3.7.10-4+b1
 Installed-Size: 6446
 Maintainer: José Gutiérrez de la Concha <jose@zeroc.com>
 Architecture: amd64
 Replaces: ice35-services, icegrid
-Depends: libzeroc-ice3.7t64 (= 3.7.10-4), libzeroc-icestorm3.7t64 (= 3.7.10-4), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
+Depends: libzeroc-ice3.7t64 (= 3.7.10-4+b1), libzeroc-icestorm3.7t64 (= 3.7.10-4+b1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
 Description: Locate, deploy, and manage Ice servers
 Multi-Arch: foreign
 Homepage: https://zeroc.com
 Description-md5: 5fc2244b227d7027d35c3a26860d28c6
 net
 Priority: optional
-Filename: pool/main/z/zeroc-ice/zeroc-icegrid_3.7.10-4_amd64.deb
-Size: 1285968
-MD5sum: cd13e4813158bf2e0d9108fc4be9694c
-SHA256: 314b107f2dc40163e229969ea2a8d851ffcb65ae5076217d004395e8344bb2c3
+Filename: pool/main/z/zeroc-ice/zeroc-icegrid_3.7.10-4+b1_amd64.deb
+Size: 1286272
+MD5sum: f486f8095be5af6decfadbc9af654980
+SHA256: dd8f41a3c2fdd56dd3955508bf2491acec73da0409b9177adc1277fd230b8f1c
 
 Package: zeroc-icepatch2
-Source: zeroc-ice
-Version: 3.7.10-4
+Source: zeroc-ice (3.7.10-4)
+Version: 3.7.10-4+b1
 Installed-Size: 113
 Maintainer: José Gutiérrez de la Concha <jose@zeroc.com>
 Architecture: amd64
 Replaces: ice35-services, icepatch2
-Depends: libzeroc-ice3.7t64 (= 3.7.10-4), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
+Depends: libzeroc-ice3.7t64 (= 3.7.10-4+b1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
 Description: File distribution and patching
 Multi-Arch: foreign
 Homepage: https://zeroc.com
 Description-md5: 30f07973b8ebdac37edac86c2be16911
 net
 Priority: optional
-Filename: pool/main/z/zeroc-ice/zeroc-icepatch2_3.7.10-4_amd64.deb
-Size: 33856
-MD5sum: 0c6812ee63d324df61a685e45159ed3c
-SHA256: e19cbc7d453ad5f8a9f5fe644ae003fbae9e0c223d06ded0782a0fee39453de8
+Filename: pool/main/z/zeroc-ice/zeroc-icepatch2_3.7.10-4+b1_amd64.deb
+Size: 33552
+MD5sum: 5ec5dc3fe5166957f04ed3c539c76ecb
+SHA256: 0c978265f274e540457d74a6d99980f22ceeee1ebbd05ff832220592f3db0085
 
 Package: ziproxy
 Version: 3.3.2-8
