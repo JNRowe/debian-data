@@ -18214,8 +18214,8 @@ MD5sum: 132714691cd6d98730007c2e82e13be8
 SHA256: 2da49dbf1b459cb911bd6f1f2a2a89b588df67fbf2102845db1236427d7ecfba
 
 Package: netavark
-Version: 1.16.1-3.1
-Installed-Size: 18061
+Version: 1.16.1-4
+Installed-Size: 17244
 Maintainer: Reinhard Tartler <siretart@tauware.de>
 Architecture: amd64
 Provides: container-network-stack (= 2)
@@ -18228,10 +18228,10 @@ Homepage: https://github.com/containers/netavark
 Description-md5: 9393583336ecf7956758210e746672de
 net
 Priority: optional
-Filename: pool/main/n/netavark/netavark_1.16.1-3.1_amd64.deb
-Size: 4058428
-MD5sum: a3ef31e3bb362ad7fc3ab7df580509be
-SHA256: 009061888008e7c26e0bcc184aba55377b272c3e1868b2a2e37d324dc65c505e
+Filename: pool/main/n/netavark/netavark_1.16.1-4_amd64.deb
+Size: 3956740
+MD5sum: f5026cfa4d2faaff8b6634ab40943026
+SHA256: eecf5806bb1a6343dc01298ef6e2c8911f96d827425dc6c726ca3242e27d2c1c
 
 Package: netcat-traditional
 Source: netcat
@@ -22939,6 +22939,167 @@ Size: 485864
 MD5sum: e0bc44300b04c5cf1b543a07f5366492
 SHA256: fd26b2e966fa9a1089e995f67e755e8259c35d31f75aedb354ee1f670a7e3ecb
 
+Package: openstack-cluster-installer
+Version: 43.0.29
+Installed-Size: 1766
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: adduser, apache2, apache2-utils, bind9, bind9-host, bind9-utils, bridge-utils, ceph-common, curl, dbconfig-common, default-mysql-server | mariadb-server, ilorest, ipcalc, ipmitool, isc-dhcp-server | dnsmasq, jq, live-build, net-tools, openstack-cluster-installer-cli (= 43.0.29), openstack-cluster-installer-live-image-builder (= 43.0.29), openstack-debian-images, openstack-pkg-tools, openstack-puppet-modules, php, php-cli, php-dapphp-radius | php-radius, php-mysql, php-ssh2, php-yaml, puppet-module-camptocamp-systemd, puppet-module-heini-wait-for, puppet-module-icann-quagga, puppet-module-oci (= 43.0.29), puppet-module-puppet, puppet-module-puppetlabs-firewall, puppet-module-puppetlabs-sshkeys-core, puppetserver | puppet-master, qemu-utils, rsync, ssl-cert, sudo, swift, syslinux-common, tftpd-hpa, debconf (>= 0.5) | debconf-2.0
+Suggests: grub-efi-amd64-signed, grub-efi-arm64-signed, shim-signed, syslinux-efi
+Description: automatic PXE and puppet-master installer for OpenStack
+Homepage: https://salsa.debian.org/openstack-team/debian/openstack-cluster-installer
+Description-md5: bc52e9a3452e5519be087da46545f46c
+net
+Priority: optional
+Filename: pool/main/o/openstack-cluster-installer/openstack-cluster-installer_43.0.29_all.deb
+Size: 286564
+MD5sum: 9f4fabe4aa98245dabb78d181527fa75
+SHA256: 84e1e7c87b95dfdacc9ad33a611fbf5f20c0a4feb6dcc041f536a118b2adac54
+
+Package: openstack-cluster-installer-agent
+Source: openstack-cluster-installer
+Version: 43.0.29
+Installed-Size: 105
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Replaces: openstack-cluster-installer (<< 27~)
+Depends: openstack-cluster-installer-common (= 43.0.29)
+Breaks: openstack-cluster-installer (<< 27~)
+Description: automatic PXE and puppet-master installer for OpenStack - agent
+Homepage: https://salsa.debian.org/openstack-team/debian/openstack-cluster-installer
+Description-md5: 3e669e6525f32364a2feb28aebd20284
+net
+Priority: optional
+Filename: pool/main/o/openstack-cluster-installer/openstack-cluster-installer-agent_43.0.29_all.deb
+Size: 44616
+MD5sum: 1bd39ee16a0fc7eb623036749e7cea97
+SHA256: 97d496941050d29273b926f8e83b50de709f1b4e5a96ca86683cbefc52fb320c
+
+Package: openstack-cluster-installer-cli
+Source: openstack-cluster-installer
+Version: 43.0.29
+Installed-Size: 237
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: csvkit, curl, gridsite-clients, q-text-as-data
+Description: automatic PXE and puppet-master installer for OpenStack - API client
+Homepage: https://salsa.debian.org/openstack-team/debian/openstack-cluster-installer
+Description-md5: e8360dfb0cec1d9a952e0a44beb56911
+net
+Priority: optional
+Filename: pool/main/o/openstack-cluster-installer/openstack-cluster-installer-cli_43.0.29_all.deb
+Size: 70284
+MD5sum: 69ae3d0c7be08acaf52091d65877b195
+SHA256: 01f4489243361d26e8624a614d6cf0dd02efb8df85efd0718bf552d4afa775b2
+
+Package: openstack-cluster-installer-common
+Source: openstack-cluster-installer
+Version: 43.0.29
+Installed-Size: 143
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Replaces: openstack-cluster-installer (<< 27~), openstack-cluster-installer-agent (<< 27~), openstack-cluster-installer-utils (<< 27~)
+Depends: curl, dmidecode, ethtool, ipmitool, iproute2, jq, libxml-xpath-perl, lldpd, lshw, lsscsi, mokutil, netcat-traditional, nmap, pciutils, smartmontools
+Breaks: openstack-cluster-installer (<< 27~), openstack-cluster-installer-agent (<< 27~), openstack-cluster-installer-utils (<< 27~)
+Description: automatic PXE and puppet-master installer for OpenStack - agent
+Homepage: https://salsa.debian.org/openstack-team/debian/openstack-cluster-installer
+Description-md5: 1ba59e1a79534b7740d53333dcbc4f13
+net
+Priority: optional
+Filename: pool/main/o/openstack-cluster-installer/openstack-cluster-installer-common_43.0.29_all.deb
+Size: 53260
+MD5sum: 5bca5ce220d15e36c9c0bd38d3eb1cc9
+SHA256: a8537a097d3c22e852a8455e08933f0ec252fc283ec88b500ff30d3307980177
+
+Package: openstack-cluster-installer-live-image-builder
+Source: openstack-cluster-installer
+Version: 43.0.29
+Installed-Size: 106
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Replaces: openstack-cluster-installer (<< 42.3.4)
+Depends: ipxe, live-build, openstack-pkg-tools, pxelinux, shim-signed
+Suggests: grub-efi-amd64-signed, grub-efi-arm64-signed, syslinux-efi
+Breaks: openstack-cluster-installer (<< 42.3.4)
+Description: automatic PXE and puppet-master installer for OpenStack - live images
+Homepage: https://salsa.debian.org/openstack-team/debian/openstack-cluster-installer
+Description-md5: 43c38432d047108e63bdfd036417917e
+net
+Priority: optional
+Filename: pool/main/o/openstack-cluster-installer/openstack-cluster-installer-live-image-builder_43.0.29_all.deb
+Size: 50300
+MD5sum: ba0939010f0a5c89e40e350abf230c40
+SHA256: a03378bb6b5279168fb6b118c860277bb14991e31032fd825fa1622923efbaa8
+
+Package: openstack-cluster-installer-openstack-ci
+Source: openstack-cluster-installer
+Version: 43.0.29
+Installed-Size: 102
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: ipxe, jq, openssh-client, python3-openstackclient, q-text-as-data, wget
+Description: automatic PXE and puppet-master installer for OpenStack - PoC
+Homepage: https://salsa.debian.org/openstack-team/debian/openstack-cluster-installer
+Description-md5: 7164a422d609d3939b2b11017e18977a
+net
+Priority: optional
+Filename: pool/main/o/openstack-cluster-installer/openstack-cluster-installer-openstack-ci_43.0.29_all.deb
+Size: 45620
+MD5sum: 8cc26306b159b38def7142d4ae5fed2e
+SHA256: 522891a11caae720a18ba864f5b0229878bcd56bfefa0f8f7c56268f020be5c3
+
+Package: openstack-cluster-installer-poc
+Source: openstack-cluster-installer
+Version: 43.0.29
+Installed-Size: 360
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: bridge-utils, curl, haproxy, ikvswitch, ipcalc, iptables, ipxe, jq, net-tools, openipmi (>= 2.0.25), openstack-cluster-installer-cli (= 43.0.29), openstack-debian-images, openstack-pkg-tools, ovmf, q-text-as-data, qemu-system, qemu-utils, shim-signed
+Suggests: grub-efi-amd64-signed, grub-efi-arm64-signed, qemu-kvm, syslinux-efi
+Description: automatic PXE and puppet-master installer for OpenStack - PoC
+Homepage: https://salsa.debian.org/openstack-team/debian/openstack-cluster-installer
+Description-md5: e15add677d160162fe73e4de868d0ec6
+net
+Priority: optional
+Filename: pool/main/o/openstack-cluster-installer/openstack-cluster-installer-poc_43.0.29_all.deb
+Size: 96172
+MD5sum: 1ce034e0af0b9bd03270607283c57d25
+SHA256: 5a2188b49afd04acdf2489d05a9b63bb18471f5a9cb853b76c9daf04dbedac59
+
+Package: openstack-cluster-installer-utils
+Source: openstack-cluster-installer
+Version: 43.0.29
+Installed-Size: 223
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: csvkit, facter, gnupg, hdparm, iptables-persistent, openstack-cluster-installer-common (= 43.0.29), puppet | puppet-agent, q-text-as-data, ssl-cert
+Description: automatic PXE and puppet-master installer for OpenStack - utils
+Homepage: https://salsa.debian.org/openstack-team/debian/openstack-cluster-installer
+Description-md5: 2dbd5434ee35a2e283b96151b60fc8f7
+net
+Priority: optional
+Filename: pool/main/o/openstack-cluster-installer/openstack-cluster-installer-utils_43.0.29_all.deb
+Size: 65080
+MD5sum: 4ac173a868d3e729f00cf63dcc0f3f64
+SHA256: 01b111251d817313d688b42f8fe43785e71283f6ebc7686a76dec659f8873d48
+
+Package: puppet-module-oci
+Source: openstack-cluster-installer
+Version: 43.0.29
+Installed-Size: 1119
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: openstack-puppet-modules, puppet-module-aboe-chrony, puppet-module-camptocamp-postfix, puppet-module-cristifalcas-etcd, puppet-module-deric-zookeeper, puppet-module-etcddiscovery, puppet-module-magnum, puppet-module-mistral, puppet-module-pcfens-filebeat, puppet-module-placement, puppet-module-puppetlabs-cron-core, puppet-module-puppetlabs-mount-core, puppet-module-puppetlabs-mysql (>= 8.1.0), puppet-module-rally, puppet-module-saz-ssh, puppet-module-tempest, puppet-module-vmms, puppet-module-voxpupuli-alternatives, puppet-module-voxpupuli-collectd, puppet-module-voxpupuli-elasticsearch
+Description: automatic PXE and puppet-master installer for OpenStack - puppet module
+Homepage: https://salsa.debian.org/openstack-team/debian/openstack-cluster-installer
+Description-md5: a57908137d2648b7836fbc4646232dd0
+net
+Priority: optional
+Filename: pool/main/o/openstack-cluster-installer/puppet-module-oci_43.0.29_all.deb
+Size: 132156
+MD5sum: 2e0d6851bc5032c4a388e91dd33b5e4d
+SHA256: 2c5a6c3127a3a9bb3a1978124635ce084455643a493a5d307edb0946a692062f
+
 Package: openstack-clients
 Source: openstack-meta-packages
 Version: 0.41
@@ -25332,8 +25493,8 @@ MD5sum: 44e32b42f7d01f74cb57b1b542db1e18
 SHA256: 369e44bd897e2fbd4c64f5968e89791f17c058139a13111b7c24d8f2c0c3c8ed
 
 Package: pppoeconf
-Version: 1.22
-Installed-Size: 174
+Version: 1.23
+Installed-Size: 176
 Maintainer: Gregory Colpart <reg@debian.org>
 Architecture: all
 Depends: whiptail-provider | whiptail, ppp, gettext-base, ifupdown, iproute2
@@ -25347,10 +25508,10 @@ Tag: admin::configuring, hardware::modem, hardware::modem:dsl,
  use::dialing
 net
 Priority: optional
-Filename: pool/main/p/pppoeconf/pppoeconf_1.22_all.deb
-Size: 33208
-MD5sum: 97b5ae6c1dc21f4afdd166a7c910e311
-SHA256: 26f407e80b567f09e7df90337b3062ff5e281c279cbca7c8e1eff6cedc6768e5
+Filename: pool/main/p/pppoeconf/pppoeconf_1.23_all.deb
+Size: 33752
+MD5sum: 748624064f6a6adf77ce4d0829a1aa7f
+SHA256: 2992a5d2c5461acb53c57dcd088e7c546304985026bae5f103ed31b877a2f60e
 
 Package: pptp-linux
 Version: 1.10.0-2
@@ -28713,11 +28874,11 @@ MD5sum: 73d2dc1d3dab64d2835173813b932da9
 SHA256: 72f22dd20cb363975e1894c9def9420873ed4d6c1f6df17d5c0725dde2c1d2f0
 
 Package: rtpengine
-Version: 13.5.1.9-1
+Version: 13.5.1.10-1
 Installed-Size: 34
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: rtpengine-daemon (>= 13.5.1.9-1), rtpengine-kernel-dkms (>= 13.5.1.9-1), rtpengine-perftest (>= 13.5.1.9-1), rtpengine-recording-daemon (>= 13.5.1.9-1), rtpengine-utils (>= 13.5.1.9-1)
+Depends: rtpengine-daemon (>= 13.5.1.10-1), rtpengine-kernel-dkms (>= 13.5.1.10-1), rtpengine-perftest (>= 13.5.1.10-1), rtpengine-recording-daemon (>= 13.5.1.10-1), rtpengine-utils (>= 13.5.1.10-1)
 Conflicts: ngcp-rtpengine
 Description: NGCP RTP/media proxy - metapackage
 Multi-Arch: foreign
@@ -28725,15 +28886,15 @@ Homepage: https://github.com/sipwise/rtpengine/
 Description-md5: ff2ff6afc221559454e6cb2d402d73da
 net
 Priority: optional
-Filename: pool/main/r/rtpengine/rtpengine_13.5.1.9-1_all.deb
-Size: 14124
-MD5sum: c2305fecece0e8b8acadcdd32eb870e7
-SHA256: 0611d6d6ec3c2ed8378f267b49f80a0fdb7ca47df7bd56c7acb5ca25cbf92f59
+Filename: pool/main/r/rtpengine/rtpengine_13.5.1.10-1_all.deb
+Size: 14168
+MD5sum: 64afac44470e6468e05fea782a47b0a4
+SHA256: f1205e519fc1e5e8bf6e0d29d2eccea4a3f9e1b406ead589d30f9c14c3139e02
 
 Package: rtpengine-daemon
 Source: rtpengine
-Version: 13.5.1.9-1
-Installed-Size: 1784
+Version: 13.5.1.10-1
+Installed-Size: 1788
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: rtpengine-iptables
@@ -28748,32 +28909,32 @@ Homepage: https://github.com/sipwise/rtpengine/
 Description-md5: 385824689e327542f7397f02667ac52d
 net
 Priority: optional
-Filename: pool/main/r/rtpengine/rtpengine-daemon_13.5.1.9-1_amd64.deb
-Size: 608604
-MD5sum: b2ca12904f05faca429638e8b892876c
-SHA256: d4279f2d742ef6923bd82ff6248a202230447ce7ec9332bfd0242ea9ff281633
+Filename: pool/main/r/rtpengine/rtpengine-daemon_13.5.1.10-1_amd64.deb
+Size: 608436
+MD5sum: f7c2e8b80d9755d4f66ccbd781e0d987
+SHA256: c2f6275e9cf3bd9c847f6e5888a2e1c195cc64215154c74a1078a49264bde2ec
 
 Package: rtpengine-perftest
 Source: rtpengine
-Version: 13.5.1.9-1
+Version: 13.5.1.10-1
 Installed-Size: 259
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: rtpengine-perftest-data (= 13.5.1.9-1), libavcodec62 (>= 7:8.1), libavformat62 (>= 7:8.1), libavutil60 (>= 7:8.1), libbcg729-0 (>= 1.0.0), libc6 (>= 2.38), libglib2.0-0t64 (>= 2.68.0), libncursesw6 (>= 6), libopus0 (>= 1.1), libssl3t64 (>= 3.0.0), libswresample6 (>= 7:8.1), libsystemd0, libtinfo6 (>= 6), liburing2 (>= 2.3)
+Depends: rtpengine-perftest-data (= 13.5.1.10-1), libavcodec62 (>= 7:8.1), libavformat62 (>= 7:8.1), libavutil60 (>= 7:8.1), libbcg729-0 (>= 1.0.0), libc6 (>= 2.38), libglib2.0-0t64 (>= 2.68.0), libncursesw6 (>= 6), libopus0 (>= 1.1), libssl3t64 (>= 3.0.0), libswresample6 (>= 7:8.1), libsystemd0, libtinfo6 (>= 6), liburing2 (>= 2.3)
 Description: helper tool to test rtpengine transcoding performance
 Multi-Arch: foreign
 Homepage: https://github.com/sipwise/rtpengine/
 Description-md5: 2a27d60aa4b2c3dad3628fe9143de3f2
 net
 Priority: optional
-Filename: pool/main/r/rtpengine/rtpengine-perftest_13.5.1.9-1_amd64.deb
-Size: 90284
-MD5sum: a3920ea8517c59d63afa719f781bcc8b
-SHA256: ddd844d16879b5dbfaf619551c5b2d7fc2c9fdaa6d4f827864a0d8e9aeb69da0
+Filename: pool/main/r/rtpengine/rtpengine-perftest_13.5.1.10-1_amd64.deb
+Size: 90052
+MD5sum: 64793ee8264858f36e5ced7071bb14b8
+SHA256: b9c26f0458875f0f30ac0c4e5d2313ac899a562564bbe3dbc1fd928c4db27637
 
 Package: rtpengine-perftest-data
 Source: rtpengine
-Version: 13.5.1.9-1
+Version: 13.5.1.10-1
 Installed-Size: 5286
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: all
@@ -28783,14 +28944,14 @@ Homepage: https://github.com/sipwise/rtpengine/
 Description-md5: 6bf9bb14465c279228be78b00cae9a76
 net
 Priority: optional
-Filename: pool/main/r/rtpengine/rtpengine-perftest-data_13.5.1.9-1_all.deb
+Filename: pool/main/r/rtpengine/rtpengine-perftest-data_13.5.1.10-1_all.deb
 Size: 4952700
-MD5sum: 78b630329f4b38b6c8dab6f45d4ad2ed
-SHA256: 862f0c282cf30ea4864381896253b2fd8533d83744aaefcb5bdc71acd0e0ee1a
+MD5sum: 285d3d627c7076cb10b147a92f9f5ec2
+SHA256: d873349fbcb3d1726f37bf7725a5f15999e4b250f2866380a239d081dcc710ac
 
 Package: rtpengine-recording-daemon
 Source: rtpengine
-Version: 13.5.1.9-1
+Version: 13.5.1.10-1
 Installed-Size: 401
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -28803,14 +28964,14 @@ Homepage: https://github.com/sipwise/rtpengine/
 Description-md5: 0eb56e8f03cb21f79e12372990b4be8e
 net
 Priority: optional
-Filename: pool/main/r/rtpengine/rtpengine-recording-daemon_13.5.1.9-1_amd64.deb
-Size: 135368
-MD5sum: 21bd1cf20549e7e9ef02da091cbeee3c
-SHA256: 4a602c3080f741028391ff0fb599d0832bf6b78c82fc879d750fddbc9bd0852b
+Filename: pool/main/r/rtpengine/rtpengine-recording-daemon_13.5.1.10-1_amd64.deb
+Size: 135532
+MD5sum: 8a72510b5d280d91ba394fff1fe967b6
+SHA256: 0fd096b1a409421cc38b2196b99460f81b8b7b2ab46f998a6f1d461ba8a9f986
 
 Package: rtpengine-utils
 Source: rtpengine
-Version: 13.5.1.9-1
+Version: 13.5.1.10-1
 Installed-Size: 139
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: all
@@ -28822,10 +28983,10 @@ Homepage: https://github.com/sipwise/rtpengine/
 Description-md5: b1c7c4d801ccd26dc6ee9025d31f5a9a
 net
 Priority: optional
-Filename: pool/main/r/rtpengine/rtpengine-utils_13.5.1.9-1_all.deb
-Size: 33760
-MD5sum: b577a143d9148fa8549ae65046cffd88
-SHA256: 55b00fb8808fea6edd0b802e18005333e339f0ac5229804d665284e177fed9d3
+Filename: pool/main/r/rtpengine/rtpengine-utils_13.5.1.10-1_all.deb
+Size: 33800
+MD5sum: 2ac272863962e8fdf9d58bb1ee6eb681
+SHA256: b77e75a66689331b78f42baca8c9f7bd1cad01893c97b2b54c712661d95ecc16
 
 Package: ruptime
 Version: 1.8-9

@@ -754,11 +754,11 @@ SHA256: 327e3d4e5d20793825849a270e2b46a90720e7eca98a45935e1763d92a10c4c5
 
 Package: elpa-elenv
 Source: elenv
-Version: 0.1.0+git20231211.94cf71e-3
-Installed-Size: 39
+Version: 0.2.0-1
+Installed-Size: 50
 Maintainer: Debian Emacsen team <debian-emacsen@lists.debian.org>
 Architecture: all
-Depends: dh-elpa-helper, emacsen-common
+Depends: elpa-msgu (>= 0.1.0), elpa-s (>= 1.12.0), elpa-list-utils (>= 0.4.6), dh-elpa-helper, emacsen-common
 Recommends: emacs
 Enhances: emacs
 Description: Emacs Lisp Environment Detection Library
@@ -766,10 +766,10 @@ Homepage: https://github.com/jcs-elpa/elenv
 Description-md5: 81bd9d860428668190f1de3cef575a75
 editors
 Priority: optional
-Filename: pool/main/e/elenv/elpa-elenv_0.1.0+git20231211.94cf71e-3_all.deb
-Size: 7736
-MD5sum: 621b2e8beeed2a93651ae5c69a95818c
-SHA256: 88189fd720a555777e97ea4fb24c7b4e8fe03da1bf679fdfecebabaad8cc500b
+Filename: pool/main/e/elenv/elpa-elenv_0.2.0-1_all.deb
+Size: 10868
+MD5sum: 3e91898835b7a04f344913e2c1a690bc
+SHA256: 4db6064712d1182e4e2b77cb0bf93336642f7f821dcabe644e5d308994f809eb
 
 Package: elpa-elm-mode
 Source: elm-mode
@@ -1976,6 +1976,25 @@ Filename: pool/main/e/emacs-wgrep/elpa-wgrep-helm_3.0.0+20.g208b9d0-2_all.deb
 Size: 5512
 MD5sum: 19bcae33e2f83a10c2eaf6dc2bf55816
 SHA256: 21b164aeeefa10c56503c5ab2cba2764c83319610398eaafe7b2d5e25ea2039c
+
+Package: elpa-xclip
+Source: emacs-xclip
+Version: 1.11.1-2
+Installed-Size: 43
+Maintainer: Debian Emacsen team <debian-emacsen@lists.debian.org>
+Architecture: all
+Depends: dh-elpa-helper, emacsen-common
+Recommends: emacs, xclip
+Enhances: emacs
+Description: Copy&paste GUI clipboard from text terminal
+Homepage: https://elpa.gnu.org/packages/xclip.html
+Description-md5: 0abdd82d1b6d50bc692c5867bde5e2a3
+editors
+Priority: optional
+Filename: pool/main/e/emacs-xclip/elpa-xclip_1.11.1-2_all.deb
+Size: 8304
+MD5sum: 80f61a7ac0e3d9aba3c6eef5716bc40d
+SHA256: a708edbf282c266f5b4069d2ac752b8cdbfaff3b7c867ad04426f5f1f916fcb7
 
 Package: elpa-xdg-appmenu
 Source: emacs-xdg-appmenu
@@ -6832,6 +6851,22 @@ Size: 11784
 MD5sum: 6f11ffad8545f853143e8b1ecf374459
 SHA256: 0705d575e021e26e7c239e65c4af10525d68c33985310fb0c48a626c960572f6
 
+Package: vim-repeat
+Version: 1.2.15.g6584602-2
+Installed-Size: 36
+Maintainer: Debian Vim Maintainers <team+vim@tracker.debian.org>
+Architecture: all
+Depends: vim (>= 2:8.1.0693-2~) | neovim (>= 0.2.2-1~)
+Description: vim plugin to enable repeating supported plugin maps
+Homepage: https://github.com/tpope/vim-repeat
+Description-md5: 94ec54af1648b73815fe1bb55ba0c73c
+editors
+Priority: optional
+Filename: pool/main/v/vim-repeat/vim-repeat_1.2.15.g6584602-2_all.deb
+Size: 6804
+MD5sum: 82219d8607682da68d11c6f7172149da
+SHA256: 5312ceaed41b4b7f9822fae5e33a345e971f0a4911e2c8abbb8e39a5749e7d3d
+
 Package: vim-scripts
 Version: 20210124.5+nmu1
 Installed-Size: 3813
@@ -7207,60 +7242,6 @@ Filename: pool/main/w/wily/wily_0.13.42-4_amd64.deb
 Size: 191444
 MD5sum: 432dd40f99643d72f00ee80701091280
 SHA256: 9690b83873c0414725419bce59fba047ca4d3cb33b62b8c569b223bb224e9cd5
-
-Package: wordgrinder
-Version: 0.8-1
-Installed-Size: 9
-Maintainer: David Given <dg@cowlark.com>
-Architecture: all
-Depends: wordgrinder-ncurses
-Description: simple word processor for writing first drafts
-Homepage: http://cowlark.com/wordgrinder
-Description-md5: 0890a4c3d6a31dedb27b953483e59ae8
-Tag: role::program, uitoolkit::ncurses, works-with::text
-editors
-Priority: optional
-Filename: pool/main/w/wordgrinder/wordgrinder_0.8-1_all.deb
-Size: 2588
-MD5sum: e0fe091fbcc864e14304cb8b72f5853e
-SHA256: 4301bbe6c18ea4a83972a38da587793cc1ef15027b3cb7e3ef0ff9aeed2c5bbb
-
-Package: wordgrinder-ncurses
-Source: wordgrinder (0.8-1)
-Version: 0.8-1+b1
-Installed-Size: 430
-Maintainer: David Given <dg@cowlark.com>
-Architecture: amd64
-Replaces: wordgrinder (<< 0.6-1)
-Depends: libc6 (>= 2.34), liblua5.3-0, libminizip1t64, libncursesw6 (>= 6), libtinfo6 (>= 6), lua-lpeg (>= 1.0.2), zlib1g (>= 1:1.1.4), wordgrinder-doc, lua-filesystem
-Breaks: wordgrinder (<< 0.6-1)
-Description: simple word processor for writing first drafts (terminal version)
-Homepage: http://cowlark.com/wordgrinder
-Description-md5: 7539472cf1c623ee27467793367d0755
-Tag: uitoolkit::ncurses
-editors
-Priority: optional
-Filename: pool/main/w/wordgrinder/wordgrinder-ncurses_0.8-1+b1_amd64.deb
-Size: 87216
-MD5sum: 647896f1a7c44926c2a00280fbe1b625
-SHA256: 7f813ef510cf2ad6addefcc95e55906a33fef96f3f8ea27545f4abeeaff17aed
-
-Package: wordgrinder-x11
-Source: wordgrinder (0.8-1)
-Version: 0.8-1+b1
-Installed-Size: 536
-Maintainer: David Given <dg@cowlark.com>
-Architecture: amd64
-Depends: libc6 (>= 2.34), liblua5.3-0, libminizip1t64, libx11-6, libxft2 (>> 2.1.1), lua-lpeg (>= 1.0.2), zlib1g (>= 1:1.1.4), wordgrinder-doc, lua-filesystem
-Description: simple word processor for writing first drafts (X11 version)
-Homepage: http://cowlark.com/wordgrinder
-Description-md5: 6d1d953d3e1e24e8c1d303dfb6aa13f7
-editors
-Priority: optional
-Filename: pool/main/w/wordgrinder/wordgrinder-x11_0.8-1+b1_amd64.deb
-Size: 189548
-MD5sum: a230fc0831bcd70002593feb616f7c99
-SHA256: ec1682f59a4959d3fd40e5bf3ddcf2a6f9aebf00dcfd6a230d0c50194b9a8490
 
 Package: elpa-writeroom-mode
 Source: writeroom-mode
