@@ -1100,14 +1100,13 @@ MD5sum: 3f473e3b6e05ae935022e1122f8dea4c
 SHA256: ac56ca2c651dfa5efe4d3f0cd8b0eddadd5fe48bc5a2acd073e51112961612e7
 
 Package: expect
-Source: expect (5.45.4-4)
-Version: 5.45.4-4+b2
-Installed-Size: 307
+Version: 5.45.4-7
+Installed-Size: 324
 Maintainer: Sergei Golovan <sgolovan@debian.org>
 Architecture: amd64
 Replaces: expect-dev
 Provides: expect-dev
-Depends: tcl8.6, libc6 (>= 2.34), libtcl8.6 (>= 8.6.0), tcl-expect (>= 5.45.4)
+Depends: tcl8.6, tcl9.0, libc6 (>= 2.34), libtcl8.6 (>= 8.6.0), libtcl9.0 (>= 9.0.0~a1), tcl-expect (>= 5.45.4)
 Suggests: tk8.6
 Conflicts: expect-dev
 Description: Automates interactive applications
@@ -1118,18 +1117,19 @@ Tag: devel::interpreter, interface::commandline, interface::shell,
  role::program, scope::utility, works-with::software:running
 interpreters
 Priority: optional
-Filename: pool/main/e/expect/expect_5.45.4-4+b2_amd64.deb
-Size: 158212
-MD5sum: 4dfafaa295a4fe522a69c6c2965004ad
-SHA256: 4e769b677b6bc4d17858c24f2d8793582adf4303fae843f03759cffbe8b0f9a1
+Filename: pool/main/e/expect/expect_5.45.4-7_amd64.deb
+Size: 158608
+MD5sum: b826f3a1b73092de9e095465866975cc
+SHA256: e0bba6f2bbc3e6737361fd3ba123a7eb5ae7258a7c634979315dcc31e8fc9457
 
 Package: tcl-expect
-Source: expect (5.45.4-4)
-Version: 5.45.4-4+b2
-Installed-Size: 267
+Source: expect
+Version: 5.45.4-7
+Installed-Size: 467
 Maintainer: Sergei Golovan <sgolovan@debian.org>
 Architecture: amd64
-Depends: libtcl8.6, libc6 (>= 2.34)
+Provides: tcl8.6-expect (= 5.45.4-7), tcl9.0-expect (= 5.45.4-7)
+Depends: libtcl8.6 | libtcl9.0, libc6 (>= 2.38)
 Suggests: expect
 Conflicts: expectk (<< 5.45)
 Description: Automates interactive applications (Tcl package)
@@ -1138,10 +1138,10 @@ Homepage: https://core.tcl.tk/expect/
 Description-md5: b1756b2ba47afc10b021d4bcbb58a6ac
 interpreters
 Priority: optional
-Filename: pool/main/e/expect/tcl-expect_5.45.4-4+b2_amd64.deb
-Size: 128232
-MD5sum: e774fdc173e59612a8718aeaa87504c2
-SHA256: 591efd331bd1fcb10fcdf0fc7e0b79ab535ba6831561b6200be3914e2301afc6
+Filename: pool/main/e/expect/tcl-expect_5.45.4-7_amd64.deb
+Size: 159056
+MD5sum: 25989b64cee8b44a6f72982cb49adcb2
+SHA256: a5361194f1c5fb8df502a1ff395ffdf5e19f7e974d191585b9189de2b8f1ecf5
 
 Package: tcl-funtools
 Source: funtools (1.4.8-2)

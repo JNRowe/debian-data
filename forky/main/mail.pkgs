@@ -2460,11 +2460,11 @@ MD5sum: 2ee2c153a705748a5e133d3336f8c2d0
 SHA256: 5a2e6ec289a20eec7b3e0fc213abdbec4933caa40d8fe28386638e44d160ce7c
 
 Package: exim4
-Version: 4.99.1-1
+Version: 4.99.2-1
 Installed-Size: 27
 Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: debconf (>= 1.4.69) | cdebconf (>= 0.39), exim4-base (<< 4.99.1-1.1), exim4-base (>= 4.99.1-1), exim4-daemon-light (>= 4.99.1-1) | exim4-daemon-heavy (>= 4.99.1-1) | exim4-daemon-custom (>= 4.99.1-1), debconf (>= 0.5) | debconf-2.0
+Depends: debconf (>= 1.4.69) | cdebconf (>= 0.39), exim4-base (<< 4.99.2-1.1), exim4-base (>= 4.99.2-1), exim4-daemon-light (>= 4.99.2-1) | exim4-daemon-heavy (>= 4.99.2-1) | exim4-daemon-mod (>= 4.99.2-1) | exim4-daemon-custom (>= 4.99.2-1), debconf (>= 0.5) | debconf-2.0
 Description: metapackage to ease Exim MTA (v4) installation
 Homepage: https://www.exim.org/
 Description-md5: 458592f74d76e446735736c1d55ce615
@@ -2474,48 +2474,48 @@ Tag: implemented-in::c, interface::daemon, mail::delivery-agent, mail::smtp,
  role::program, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/e/exim4/exim4_4.99.1-1_all.deb
-Size: 7176
-MD5sum: d7f066482d296657589bdaa623b08d8d
-SHA256: 4706ee15e85871785fa7e787a1e7289d8fb5aa7ca04efa51972acc0ed1fc813d
+Filename: pool/main/e/exim4/exim4_4.99.2-1_all.deb
+Size: 7192
+MD5sum: 4fcaab248398e1e33f5ff3ceda5a05df
+SHA256: 17214bd3ab53fb731c5c4935db24c1156c7924a14bf9f54f8e34cff4d59dedf4
 
 Package: exim4-base
 Source: exim4
-Version: 4.99.1-1
-Installed-Size: 1646
+Version: 4.99.2-1
+Installed-Size: 1637
 Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Replaces: exim, exim-tls, exim4-daemon-custom, exim4-daemon-heavy, exim4-daemon-light
-Depends: adduser, cron | cron-daemon | anacron | systemd-sysv, exim4-config (>= 4.94) | exim4-config-2, libfile-fcntllock-perl, netbase, debconf (>= 0.5) | debconf-2.0, perl:any, libc6 (>= 2.38), libsqlite3-0 (>= 3.5.9)
+Replaces: exim, exim-tls, exim4-daemon-custom, exim4-daemon-heavy, exim4-daemon-light, exim4-daemon-mod
+Depends: cron | cron-daemon | anacron | systemd-sysv, exim4-config (>= 4.94) | exim4-config-2, libfile-fcntllock-perl, netbase, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, debconf (>= 0.5) | debconf-2.0, perl:any, libc6 (>= 2.38), libsqlite3-0 (>= 3.5.9)
 Recommends: bsd-mailx | mailx, psmisc
-Suggests: exim4-doc-html | exim4-doc-info, eximon4, file, gnutls-bin | openssl, mail-reader, spf-tools-perl, swaks
+Suggests: exim4-doc-html | exim4-doc-info, eximon4, file, gnutls-bin | openssl, mail-reader, swaks
 Conflicts: exim, exim-tls
-Breaks: exim4-daemon-custom (<< 4.99.1), exim4-daemon-heavy (<< 4.99.1), exim4-daemon-light (<< 4.99.1)
+Breaks: exim4-daemon-custom (<< 4.99.2), exim4-daemon-heavy (<< 4.99.2), exim4-daemon-light (<< 4.99.2), exim4-daemon-mod (<< 4.99.2)
 Description: support files for all Exim MTA (v4) packages
 Homepage: https://www.exim.org/
-Description-md5: ab23a802a5e7dee33641329abf2b6565
+Description-md5: 2126f768eceb27ad2d1038e6ba790076
 Tag: implemented-in::c, interface::daemon, mail::delivery-agent, mail::smtp,
  mail::transport-agent, network::server, network::service,
  protocol::ipv6, protocol::smtp, protocol::ssl, role::program,
  works-with::mail
 mail
 Priority: optional
-Filename: pool/main/e/exim4/exim4-base_4.99.1-1_amd64.deb
-Size: 1104072
-MD5sum: 5a16feef592b4b4680386d7292d32b75
-SHA256: 3a8b916e2c4a658d37492d3e41904bacd322177da58aaa31e283ea43ab9105ee
+Filename: pool/main/e/exim4/exim4-base_4.99.2-1_amd64.deb
+Size: 1093992
+MD5sum: 07f3b63a6377a25af59f14b01a33f987
+SHA256: d980260c0dc61b570c8742afa2201c9fad914a02d429c058bae964ec151ee1d5
 
 Package: exim4-config
 Source: exim4
-Version: 4.99.1-1
-Installed-Size: 908
+Version: 4.99.2-1
+Installed-Size: 898
 Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
 Architecture: all
 Provides: exim4-config-2
-Depends: adduser, debconf (>= 0.5) | debconf-2.0
+Depends: debconf (>= 0.5) | debconf-2.0, systemd | systemd-standalone-sysusers | systemd-sysusers
 Recommends: ca-certificates
 Conflicts: citadel-server, courier-mta, dma, esmtp-run, exim, exim-tls, exim4-config, exim4-config-2, hula-mta, masqmail, msmtp-mta, mta-dummy, nullmailer, opensmtpd, postfix, qmail-run, sendmail-bin, smail, ssmtp, xmail, zmailer
-Breaks: exim4-daemon-heavy (<< 4.94), exim4-daemon-light (<< 4.94)
+Breaks: exim4-daemon-heavy (<< 4.94), exim4-daemon-light (<< 4.94), exim4-daemon-mod (<< 4.94)
 Description: configuration for the Exim MTA (v4)
 Homepage: https://www.exim.org/
 Description-md5: 32395c972fcf7f5014c06bce8ee1c59a
@@ -2524,21 +2524,21 @@ Tag: admin::configuring, mail::delivery-agent, mail::smtp,
  works-with::mail
 mail
 Priority: optional
-Filename: pool/main/e/exim4/exim4-config_4.99.1-1_all.deb
-Size: 250092
-MD5sum: bcb23862ff3d41dd6a54a779b82f7d16
-SHA256: 0b3efc6100e28dbba80a0a157a01020070395e549970a2226ef67ff6419e02ef
+Filename: pool/main/e/exim4/exim4-config_4.99.2-1_all.deb
+Size: 237760
+MD5sum: 847e441b79baddd21c4b6634f7c7df5b
+SHA256: 893dead8642b3e6c128ed91ae2f77a86737a009f9dd774c1eb355fcb90dacd68
 
 Package: exim4-daemon-heavy
 Source: exim4
-Version: 4.99.1-1
-Installed-Size: 1814
+Version: 4.99.2-1
+Installed-Size: 1802
 Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: exim4-base (<= 4.61-1), mail-transport-agent
 Provides: exim4-localscanapi-7.0, mail-transport-agent
-Depends: exim4-base (>= 4.99.1), debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libgnutls-dane0t64 (>= 3.7.0), libgnutls30t64 (>= 3.8.6), libidn12 (>= 1.13), libidn2-0 (>= 0.6), libldap2 (>= 2.6.2), libmariadb3 (>= 3.0.0), libnsl2 (>= 1.0), libpam0g (>= 0.99.7.1), libpcre2-8-0 (>= 10.22), libperl5.40 (>= 5.40.0), libpq5, libsasl2-2 (>= 2.1.28+dfsg1), libspf2-2t64 (>= 1.2.8~), libsqlite3-0 (>= 3.5.9)
-Conflicts: mail-transport-agent
+Depends: exim4-base (>= 4.99.2), debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libgnutls-dane0t64 (>= 3.7.0), libgnutls30t64 (>= 3.8.6), libidn12 (>= 1.13), libidn2-0 (>= 0.6), libldap2 (>= 2.6.2), libmariadb3 (>= 3.0.0), libpam0g (>= 0.99.7.1), libpcre2-8-0 (>= 10.22), libperl5.40 (>= 5.40.0), libpq5, libsasl2-2 (>= 2.1.28+dfsg1), libspf2-2t64 (>= 1.2.8~), libsqlite3-0 (>= 3.5.9)
+Conflicts: mail-transport-agent, rmail
 Breaks: clamav-daemon (<< 0.95)
 Description: Exim MTA (v4) daemon with extended features, including exiscan-acl
 Homepage: https://www.exim.org/
@@ -2549,21 +2549,21 @@ Tag: implemented-in::c, interface::daemon, mail::delivery-agent, mail::smtp,
  works-with::mail
 mail
 Priority: optional
-Filename: pool/main/e/exim4/exim4-daemon-heavy_4.99.1-1_amd64.deb
-Size: 706344
-MD5sum: 28b5361488fae75a645876767c9db957
-SHA256: 621615f8e3414c5a166e9f70fbe8f2bfc9fc8e4958260c34e4606a6bc5429b0f
+Filename: pool/main/e/exim4/exim4-daemon-heavy_4.99.2-1_amd64.deb
+Size: 693888
+MD5sum: 898e2595b47227b694a9069048579cd4
+SHA256: 82f94b7cd9fd30594c4fa475bb771772391b1624fc98ee042ecf4a94c00599f1
 
 Package: exim4-daemon-light
 Source: exim4
-Version: 4.99.1-1
-Installed-Size: 1649
+Version: 4.99.2-1
+Installed-Size: 1637
 Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: exim4-base (<= 4.61-1), mail-transport-agent
 Provides: default-mta, exim4-localscanapi-7.0, mail-transport-agent
-Depends: exim4-base (>= 4.99.1), debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libgnutls-dane0t64 (>= 3.7.0), libgnutls30t64 (>= 3.8.6), libidn12 (>= 1.13), libidn2-0 (>= 0.6), libnsl2 (>= 1.0), libpcre2-8-0 (>= 10.22), libsqlite3-0 (>= 3.5.9)
-Conflicts: mail-transport-agent
+Depends: exim4-base (>= 4.99.2), debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libgnutls-dane0t64 (>= 3.7.0), libgnutls30t64 (>= 3.8.6), libidn12 (>= 1.13), libidn2-0 (>= 0.6), libpcre2-8-0 (>= 10.22), libsqlite3-0 (>= 3.5.9)
+Conflicts: mail-transport-agent, rmail
 Description: lightweight Exim MTA (v4) daemon
 Homepage: https://www.exim.org/
 Description-md5: 3f5190a801cb3e11718c951f768c4d54
@@ -2573,15 +2573,36 @@ Tag: implemented-in::c, interface::daemon, mail::delivery-agent, mail::smtp,
  works-with::mail
 mail
 Priority: optional
-Filename: pool/main/e/exim4/exim4-daemon-light_4.99.1-1_amd64.deb
-Size: 646984
-MD5sum: a8d3a1c54fc3ac48936a0bd3abb3e6c0
-SHA256: ef3281fb7cbbdf325437fdd695b654b13ad6b1cf3ad49d44cc6c927805c582ad
+Filename: pool/main/e/exim4/exim4-daemon-light_4.99.2-1_amd64.deb
+Size: 633800
+MD5sum: 08ffc4a2ebb1e79136f8880d72f17215
+SHA256: 7f8a11762f2bc8a058ee01c8f090ace7817394086048301564448a181e69da6d
+
+Package: exim4-daemon-mod
+Source: exim4
+Version: 4.99.2-1
+Installed-Size: 1824
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: exim4-base (<= 4.61-1), mail-transport-agent
+Provides: mail-transport-agent
+Depends: exim4-base (>= 4.99.2), debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libgnutls-dane0t64 (>= 3.7.0), libgnutls30t64 (>= 3.8.6), libidn12 (>= 1.13), libidn2-0 (>= 0.6), libpcre2-8-0 (>= 10.22), libsqlite3-0 (>= 3.5.9)
+Conflicts: mail-transport-agent, rmail
+Breaks: clamav-daemon (<< 0.95)
+Description: Exim MTA (v4) daemon with minimal hard dependencies
+Homepage: https://www.exim.org/
+Description-md5: 9125292daac8011919781fe82f52b02a
+mail
+Priority: optional
+Filename: pool/main/e/exim4/exim4-daemon-mod_4.99.2-1_amd64.deb
+Size: 700544
+MD5sum: 9a2c931a8162cf0785cbe55439617247
+SHA256: a0ef2cd91eb71be8d8a8d9f89fff27d71d90c8233f1c50f8e4df27ab89f0fc0a
 
 Package: exim4-dev
 Source: exim4
-Version: 4.99.1-1
-Installed-Size: 81
+Version: 4.99.2-1
+Installed-Size: 69
 Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Description: header files for the Exim MTA (v4) packages
@@ -2590,15 +2611,134 @@ Description-md5: d5a123381ab67fa02f35533169e299d5
 Tag: devel::library, role::devel-lib
 mail
 Priority: optional
-Filename: pool/main/e/exim4/exim4-dev_4.99.1-1_amd64.deb
-Size: 37112
-MD5sum: e98966d0d66ca2baa5f87e5f2caef0bd
-SHA256: b46c4dd8a79fe1083c4d54fe6ba8e2318f11bfd63be1a0120962813b98f82cb1
+Filename: pool/main/e/exim4/exim4-dev_4.99.2-1_amd64.deb
+Size: 24640
+MD5sum: e66195a504f0d3d3a12d0e3135671beb
+SHA256: 776e321e50c75dfc1b5651d52911f956af3f28357ea637d5c70f3df6685fdb0c
+
+Package: exim4-mod-cyrus-sasl
+Source: exim4
+Version: 4.99.2-1
+Installed-Size: 32
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: exim4-daemon-mod (= 4.99.2-1), libc6 (>= 2.14), libsasl2-2 (>= 2.1.28+dfsg1)
+Description: exim4 Cyrus SASL authenticator module
+Homepage: https://www.exim.org/
+Description-md5: 0eb46560548ed738a8d45d505088d2ab
+mail
+Priority: optional
+Filename: pool/main/e/exim4/exim4-mod-cyrus-sasl_4.99.2-1_amd64.deb
+Size: 6444
+MD5sum: d0d2423069e71b055644f0a8868ead14
+SHA256: bd6dc4434bcdf7752d49ef8956af410b3a8abb8a764b1997508f34e5afbb63c6
+
+Package: exim4-mod-ldap
+Source: exim4
+Version: 4.99.2-1
+Installed-Size: 40
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: exim4-daemon-mod (= 4.99.2-1), libc6 (>= 2.38), libldap2 (>= 2.6.2)
+Description: exim4 LDAP lookup module
+Homepage: https://www.exim.org/
+Description-md5: 34e5cea61ec5e1e579ca16011983b0f8
+mail
+Priority: optional
+Filename: pool/main/e/exim4/exim4-mod-ldap_4.99.2-1_amd64.deb
+Size: 10580
+MD5sum: 87e31e596f131c751eb6af2ab7909e7f
+SHA256: e79a3ffa340af51f1a056f67268691e64029aff66ebdb5a24cefdac458e0d031
+
+Package: exim4-mod-mysql
+Source: exim4
+Version: 4.99.2-1
+Installed-Size: 23
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: exim4-daemon-mod (= 4.99.2-1), libc6 (>= 2.38), libmariadb3 (>= 3.0.0)
+Description: exim4 MySQL lookup module
+Homepage: https://www.exim.org/
+Description-md5: f965ba4b3e27dfbbf7130b571f36a16a
+mail
+Priority: optional
+Filename: pool/main/e/exim4/exim4-mod-mysql_4.99.2-1_amd64.deb
+Size: 5444
+MD5sum: 54bd73fa9870ceb85993c4424563e291
+SHA256: 5145dfb05cc2dbe91bb08e699e5d71108c6ee4452718fda2b55ff486dfe48791
+
+Package: exim4-mod-pam
+Source: exim4
+Version: 4.99.2-1
+Installed-Size: 23
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: exim4-daemon-mod (= 4.99.2-1), libc6 (>= 2.4), libpam0g (>= 0.99.7.1)
+Description: exim4 pam supprt module
+Homepage: https://www.exim.org/
+Description-md5: 8f314b2728bf76e4f6d84b9f9a66ac8e
+mail
+Priority: optional
+Filename: pool/main/e/exim4/exim4-mod-pam_4.99.2-1_amd64.deb
+Size: 3392
+MD5sum: efe0c62f5d47b14ebbf1073df85d306e
+SHA256: fe78915d44e94cd15912c6415c55a969f13fa18d0cd3bdbc473f9105657dfe3c
+
+Package: exim4-mod-perl
+Source: exim4
+Version: 4.99.2-1
+Installed-Size: 32
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: exim4-daemon-mod (= 4.99.2-1), libc6 (>= 2.14), libperl5.40 (>= 5.40.0)
+Description: exim4 embedded perl module
+Homepage: https://www.exim.org/
+Description-md5: 56a991c8339714b1ac9e80b3b2ac59ea
+mail
+Priority: optional
+Filename: pool/main/e/exim4/exim4-mod-perl_4.99.2-1_amd64.deb
+Size: 5848
+MD5sum: c46ddf5e18b20dd655208ddd79ab2fc8
+SHA256: 14e0329f6301fb4f41dfb1f2eb70fb0a367accf888f041383f650791b2d57e6c
+
+Package: exim4-mod-postgresql
+Source: exim4
+Version: 4.99.2-1
+Installed-Size: 23
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: exim4-daemon-mod (= 4.99.2-1), libc6 (>= 2.14), libpq5
+Description: exim4 PostgreSQL lookup module
+Homepage: https://www.exim.org/
+Description-md5: 36aea03b44e87ddf894f96dd0a4bf691
+mail
+Priority: optional
+Filename: pool/main/e/exim4/exim4-mod-postgresql_4.99.2-1_amd64.deb
+Size: 5356
+MD5sum: 9cd0932711a9586bb328fb4e898d8ec9
+SHA256: 8bd3bd67d843ea1c0c258330a62264ce7846ec1943a620928d015cf4598c43cc
+
+Package: exim4-mod-spf
+Source: exim4
+Version: 4.99.2-1
+Installed-Size: 32
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: exim4-daemon-mod (= 4.99.2-1), libc6 (>= 2.34), libspf2-2t64 (>= 1.2.8~)
+Description: exim4 SPF ACL module
+Homepage: https://www.exim.org/
+Description-md5: 794825f663af51434c4e8667c6740e4f
+mail
+Priority: optional
+Filename: pool/main/e/exim4/exim4-mod-spf_4.99.2-1_amd64.deb
+Size: 7572
+MD5sum: 88d54a761785f705e14b7475cb447667
+SHA256: 8aefd6527a48ac4dd62c901171cf15ecbf60c2a9c0685eca867f909e5b1ffd14
 
 Package: eximon4
 Source: exim4
-Version: 4.99.1-1
-Installed-Size: 168
+Version: 4.99.2-1
+Installed-Size: 152
 Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: eximon
@@ -2612,10 +2752,10 @@ Tag: implemented-in::c, interface::graphical, interface::x11, protocol::smtp,
  works-with::mail, x11::application
 mail
 Priority: optional
-Filename: pool/main/e/exim4/eximon4_4.99.1-1_amd64.deb
-Size: 73176
-MD5sum: 5c921413f2e119e43c4d686d8251f33c
-SHA256: 96a978d43ce24b78b6ca70d3c9f2e3132e019686163ada5d5363ae1483b37768
+Filename: pool/main/e/exim4/eximon4_4.99.2-1_amd64.deb
+Size: 60488
+MD5sum: b5de3a986c11094e2ae4c3813caf906d
+SHA256: ec1fdf9cb9880293e8b23e76edb2e24430f15caf95d9c788d1bc3e8de5f2bc3b
 
 Package: exmh
 Version: 1:2.9.0-9
@@ -6337,8 +6477,8 @@ MD5sum: 735735f332a4d9138261d3232fa5512f
 SHA256: 43c03f59b83b6b580061d7c07267911ad648b1a06e9a646b79bfb6d32a29ae74
 
 Package: thunderbird
-Version: 1:140.10.0esr-1
-Installed-Size: 274344
+Version: 1:140.10.1esr-1
+Installed-Size: 274481
 Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
 Architecture: amd64
 Provides: mail-reader
@@ -6353,10 +6493,10 @@ Tag: interface::graphical, interface::x11, mail::user-agent, role::dummy,
  role::program, suite::mozilla, uitoolkit::gtk, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/t/thunderbird/thunderbird_140.10.0esr-1_amd64.deb
-Size: 69481704
-MD5sum: 1a5296de34df078a2ad3e42dd5d75230
-SHA256: 633c798eac5dfdc63a1e9880279ac1dc37e06f3022fa2dfa9dc9eda975451974
+Filename: pool/main/t/thunderbird/thunderbird_140.10.1esr-1_amd64.deb
+Size: 69503992
+MD5sum: 47cb0d7bb79e5362f8a206b7a4acbb87
+SHA256: dca7cf8d25fa65114de4df10981014bcc50d38d1d7f197f5d63d1e2f5a65aa08
 
 Package: topal
 Source: topal (84-1)
