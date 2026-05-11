@@ -398,6 +398,84 @@ Filename: pool/updates/main/c/cups-filters/cups-filters-core-drivers_1.28.17-3+d
 Size: 204244
 SHA256: 0b8c8222da4331747c4f4ddd57be0f3e98dbfc1e4a4e182140359a6b62bf11c4
 
+Package: dnsmasq
+Version: 2.90-4~deb12u2
+Installed-Size: 152
+Maintainer: Simon Kelley <simon@thekelleys.org.uk>
+Architecture: all
+Depends: netbase, dnsmasq-base, runit-helper (>= 2.14.0~)
+Suggests: resolvconf
+Conflicts: resolvconf (<< 1.15), runit (<< 2.1.2-51~)
+Breaks: runit (<< 2.1.2-51~)
+Description: Small caching DNS proxy and DHCP/TFTP server - system daemon
+Homepage: https://www.thekelleys.org.uk/dnsmasq/doc.html
+Description-md5: 7b36911676b04203658c6857a166934f
+Pre-Depends: init-system-helpers (>= 1.54~)
+net
+Priority: optional
+Filename: pool/updates/main/d/dnsmasq/dnsmasq_2.90-4~deb12u2_all.deb
+Size: 66320
+SHA256: a523f34bca8dc758e7c5cbef96b7fa47a6423e49ceb4b68d7cdccd533c847945
+
+Package: dnsmasq-base
+Source: dnsmasq
+Version: 2.90-4~deb12u2
+Installed-Size: 1095
+Maintainer: Simon Kelley <simon@thekelleys.org.uk>
+Architecture: amd64
+Replaces: dnsmasq (<< 2.63-1~), dnsmasq-base
+Provides: dnsmasq-base
+Depends: passwd, libc6 (>= 2.34), libdbus-1-3 (>= 1.9.14), libgmp10 (>= 2:6.2.1+dfsg1), libhogweed6 (>= 2.4-3), libidn2-0 (>= 2.0.0), libnetfilter-conntrack3 (>= 1.0.1), libnettle8 (>= 2.4-3), libnftables1 (>= 1.0.2)
+Conflicts: dnsmasq-base-lua
+Breaks: dnsmasq (<< 2.63-1~)
+Description: Small caching DNS proxy and DHCP/TFTP server - executable
+Homepage: https://www.thekelleys.org.uk/dnsmasq/doc.html
+Description-md5: ddc8fa1338def4dac026d945c9533b88
+Recommends: dns-root-data
+net
+Priority: optional
+Filename: pool/updates/main/d/dnsmasq/dnsmasq-base_2.90-4~deb12u2_amd64.deb
+Size: 498052
+SHA256: 77f56034a23b200c9787d3d9b423030a1e95618f476e011d988daacc19919bc1
+
+Package: dnsmasq-base-lua
+Source: dnsmasq
+Version: 2.90-4~deb12u2
+Installed-Size: 1097
+Maintainer: Simon Kelley <simon@thekelleys.org.uk>
+Architecture: amd64
+Replaces: dnsmasq (<< 2.63-1~), dnsmasq-base
+Provides: dnsmasq-base
+Depends: passwd, libc6 (>= 2.34), libdbus-1-3 (>= 1.9.14), libgmp10 (>= 2:6.2.1+dfsg1), libhogweed6 (>= 2.4-3), libidn2-0 (>= 2.0.0), liblua5.4-0 (>= 5.4.4), libnetfilter-conntrack3 (>= 1.0.1), libnettle8 (>= 2.4-3), libnftables1 (>= 1.0.2)
+Conflicts: dnsmasq-base
+Breaks: dnsmasq (<< 2.63-1~)
+Description: Small caching DNS proxy and DHCP/TFTP server - executable, Lua-enabled
+Homepage: https://www.thekelleys.org.uk/dnsmasq/doc.html
+Description-md5: 5caf1f894b363ec915dba1cc68921dc9
+Recommends: dns-root-data
+net
+Priority: optional
+Filename: pool/updates/main/d/dnsmasq/dnsmasq-base-lua_2.90-4~deb12u2_amd64.deb
+Size: 499732
+SHA256: 73fa9e75715d4dbf558efadfa510ec590eb57dafafecb8e4ef6270e121141933
+
+Package: dnsmasq-utils
+Source: dnsmasq
+Version: 2.90-4~deb12u2
+Installed-Size: 111
+Maintainer: Simon Kelley <simon@thekelleys.org.uk>
+Architecture: amd64
+Depends: libc6 (>= 2.34)
+Conflicts: dnsmasq (<< 2.40)
+Description: Utilities for manipulating DHCP leases
+Homepage: https://www.thekelleys.org.uk/dnsmasq/doc.html
+Description-md5: c01626c0b1b5fea18d3a8d04fbe44ea7
+net
+Priority: optional
+Filename: pool/updates/main/d/dnsmasq/dnsmasq-utils_2.90-4~deb12u2_amd64.deb
+Size: 59528
+SHA256: 52de8a259324c6d6117c1ff16159ff98c618b1cb47b622502da47743a89ad334
+
 Package: fastdds-tools
 Source: fastdds
 Version: 2.9.1+ds-1+deb12u2
