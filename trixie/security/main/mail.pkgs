@@ -276,6 +276,134 @@ Filename: pool/updates/main/d/dovecot/dovecot-submissiond_2.4.1+dfsg1-6+deb13u4_
 Size: 61416
 SHA256: 2607ff3211c2f68b0d3d1ee0b3d04fb3eef7a4ec48dd805018516fd70610cba6
 
+Package: exim4
+Version: 4.98.2-1+deb13u2
+Installed-Size: 27
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: debconf (>= 1.4.69) | cdebconf (>= 0.39), exim4-base (<< 4.98.2-1+deb13u2.1), exim4-base (>= 4.98.2-1+deb13u2), exim4-daemon-light (>= 4.98.2-1+deb13u2) | exim4-daemon-heavy (>= 4.98.2-1+deb13u2) | exim4-daemon-custom (>= 4.98.2-1+deb13u2), debconf (>= 0.5) | debconf-2.0
+Description: metapackage to ease Exim MTA (v4) installation
+Homepage: https://www.exim.org/
+Description-md5: 458592f74d76e446735736c1d55ce615
+mail
+Priority: optional
+Filename: pool/updates/main/e/exim4/exim4_4.98.2-1+deb13u2_all.deb
+Size: 7196
+SHA256: 4d95fbbecd72ce15f901bfc3839b68ea3edc50c6d90b7e8c867d22993a057334
+
+Package: exim4-base
+Source: exim4
+Version: 4.98.2-1+deb13u2
+Installed-Size: 1730
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: exim, exim-tls, exim4-daemon-custom, exim4-daemon-heavy, exim4-daemon-light
+Depends: adduser, cron | cron-daemon | anacron | systemd-sysv, exim4-config (>= 4.94) | exim4-config-2, libfile-fcntllock-perl, netbase, debconf (>= 0.5) | debconf-2.0, perl:any, libc6 (>= 2.38), libdb5.3t64
+Suggests: exim4-doc-html | exim4-doc-info, eximon4, file, gnutls-bin | openssl, mail-reader, spf-tools-perl, swaks
+Conflicts: exim, exim-tls
+Breaks: exim4-daemon-custom (<< 4.98.2), exim4-daemon-heavy (<< 4.98.2), exim4-daemon-light (<< 4.98.2)
+Description: support files for all Exim MTA (v4) packages
+Homepage: https://www.exim.org/
+Description-md5: ab23a802a5e7dee33641329abf2b6565
+Recommends: bsd-mailx | mailx, psmisc
+mail
+Priority: optional
+Filename: pool/updates/main/e/exim4/exim4-base_4.98.2-1+deb13u2_amd64.deb
+Size: 1142168
+SHA256: d9abc0fa9cab283083604c8bd500aef43cdbc11164b57572172aeb345ea4880f
+
+Package: exim4-config
+Source: exim4
+Version: 4.98.2-1+deb13u2
+Installed-Size: 907
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Architecture: all
+Provides: exim4-config-2
+Depends: adduser, debconf (>= 0.5) | debconf-2.0
+Conflicts: citadel-server, courier-mta, dma, esmtp-run, exim, exim-tls, exim4-config, exim4-config-2, hula-mta, masqmail, msmtp-mta, mta-dummy, nullmailer, opensmtpd, postfix, qmail-run, sendmail-bin, smail, ssmtp, xmail, zmailer
+Breaks: exim4-daemon-heavy (<< 4.94), exim4-daemon-light (<< 4.94)
+Description: configuration for the Exim MTA (v4)
+Homepage: https://www.exim.org/
+Description-md5: 32395c972fcf7f5014c06bce8ee1c59a
+Recommends: ca-certificates
+mail
+Priority: optional
+Filename: pool/updates/main/e/exim4/exim4-config_4.98.2-1+deb13u2_all.deb
+Size: 249624
+SHA256: 5b888a99fab58eaed5459f91783de1ee29c4b4ce5b8e3316c1ae8f0136e5d379
+
+Package: exim4-daemon-heavy
+Source: exim4
+Version: 4.98.2-1+deb13u2
+Installed-Size: 1781
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: exim4-base (<= 4.61-1), mail-transport-agent
+Provides: exim4-localscanapi-6.0, mail-transport-agent
+Depends: exim4-base (>= 4.98.2), debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libdb5.3t64, libgnutls-dane0t64 (>= 3.7.0), libgnutls30t64 (>= 3.8.6), libidn12 (>= 1.13), libidn2-0 (>= 0.6), libldap2 (>= 2.6.2), libmariadb3 (>= 3.0.0), libnsl2 (>= 1.0), libpam0g (>= 0.99.7.1), libpcre2-8-0 (>= 10.22), libperl5.40 (>= 5.40.0), libpq5, libsasl2-2 (>= 2.1.28+dfsg1), libspf2-2t64 (>= 1.2.8~), libsqlite3-0 (>= 3.5.9)
+Conflicts: mail-transport-agent
+Breaks: clamav-daemon (<< 0.95)
+Description: Exim MTA (v4) daemon with extended features, including exiscan-acl
+Homepage: https://www.exim.org/
+Description-md5: 29c4b395a92bdc12932f151c3643a602
+mail
+Priority: optional
+Filename: pool/updates/main/e/exim4/exim4-daemon-heavy_4.98.2-1+deb13u2_amd64.deb
+Size: 689964
+SHA256: f33f3a2dee68fbb47c7d93a5c87b626a0eb70d560780b3e4c54f3414a6bd3473
+
+Package: exim4-daemon-light
+Source: exim4
+Version: 4.98.2-1+deb13u2
+Installed-Size: 1613
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: exim4-base (<= 4.61-1), mail-transport-agent
+Provides: default-mta, exim4-localscanapi-6.0, mail-transport-agent
+Depends: exim4-base (>= 4.98.2), debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libdb5.3t64, libgnutls-dane0t64 (>= 3.7.0), libgnutls30t64 (>= 3.8.6), libidn12 (>= 1.13), libidn2-0 (>= 0.6), libnsl2 (>= 1.0), libpcre2-8-0 (>= 10.22)
+Conflicts: mail-transport-agent
+Description: lightweight Exim MTA (v4) daemon
+Homepage: https://www.exim.org/
+Description-md5: 3f5190a801cb3e11718c951f768c4d54
+mail
+Priority: optional
+Filename: pool/updates/main/e/exim4/exim4-daemon-light_4.98.2-1+deb13u2_amd64.deb
+Size: 630880
+SHA256: ce0107539536c339f6139e69a359c10747ae2319ff98bfc9aad594ddd3f6acc0
+
+Package: exim4-dev
+Source: exim4
+Version: 4.98.2-1+deb13u2
+Installed-Size: 79
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Description: header files for the Exim MTA (v4) packages
+Homepage: https://www.exim.org/
+Description-md5: d5a123381ab67fa02f35533169e299d5
+mail
+Priority: optional
+Filename: pool/updates/main/e/exim4/exim4-dev_4.98.2-1+deb13u2_amd64.deb
+Size: 36132
+SHA256: 92f3e9a8d378409c90f61ce208fe72c23af3967c8189610895de71c7dcfd4882
+
+Package: eximon4
+Source: exim4
+Version: 4.98.2-1+deb13u2
+Installed-Size: 168
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: eximon
+Depends: exim4-base (>= 4.10), libc6 (>= 2.38), libpcre2-8-0 (>= 10.22), libx11-6, libxaw7 (>= 2:1.0.16), libxmu6 (>= 2:1.1.3), libxt6t64
+Conflicts: eximon
+Description: monitor application for the Exim MTA (v4) (X11 interface)
+Homepage: https://www.exim.org/
+Description-md5: 9d049018af5088cbceaa2af23692d02a
+mail
+Priority: optional
+Filename: pool/updates/main/e/exim4/eximon4_4.98.2-1+deb13u2_amd64.deb
+Size: 71632
+SHA256: b27332963af221336560cd6f0d3f4258430d0fa25341edaa5650749692b2c09c
+
 Package: thunderbird
 Version: 1:140.10.1esr-1~deb13u1
 Installed-Size: 274623

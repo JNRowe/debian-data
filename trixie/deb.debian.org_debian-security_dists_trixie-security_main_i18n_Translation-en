@@ -1251,6 +1251,170 @@ Description-md5: dddb88bf2627f20726827c1d29351350
 Description-en: evolution libraries
  This package contains libraries used by Evolution.
 
+Package: exim4
+Description-md5: 458592f74d76e446735736c1d55ce615
+Description-en: metapackage to ease Exim MTA (v4) installation
+ Exim (v4) is a mail transport agent. exim4 is the metapackage depending
+ on the essential components for a basic exim4 installation.
+ .
+ The Debian exim4 packages have their own web page,
+ http://wiki.debian.org/PkgExim4. There is also a Debian-specific
+ FAQ list. Information about the way the Debian packages are
+ configured can be found in
+ /usr/share/doc/exim4-base/README.Debian.gz, which additionally contains
+ information about the way the Debian binary packages are built. The
+ very extensive upstream documentation is shipped in
+ /usr/share/doc/exim4-base/spec.txt.gz. To repeat the debconf-driven
+ configuration process in a standard setup, invoke dpkg-reconfigure
+ exim4-config. There is a Debian-centered mailing list,
+ pkg-exim4-users@lists.alioth.debian.org. Please ask Debian-specific
+ questions there, and only write to the upstream exim-users mailing
+ list if you are sure that your question is not Debian-specific. You
+ can find the subscription web page on
+ http://lists.alioth.debian.org/mailman/listinfo/pkg-exim4-users
+
+Package: exim4-base
+Description-md5: ab23a802a5e7dee33641329abf2b6565
+Description-en: support files for all Exim MTA (v4) packages
+ Exim (v4) is a mail transport agent. exim4-base provides the support
+ files needed by all exim4 daemon packages. You need an additional package
+ containing the main executable. The available packages are:
+ .
+  exim4-daemon-light
+  exim4-daemon-heavy
+ .
+ If you build exim4 from the source package locally, you can also
+ build an exim4-daemon-custom package tailored to your own feature set.
+ .
+ The Debian exim4 packages have their own web page,
+ http://wiki.debian.org/PkgExim4. There is also a Debian-specific
+ FAQ list. Information about the way the Debian packages are
+ configured can be found in
+ /usr/share/doc/exim4-base/README.Debian.gz, which additionally contains
+ information about the way the Debian binary packages are built. The
+ very extensive upstream documentation is shipped in
+ /usr/share/doc/exim4-base/spec.txt.gz. To repeat the debconf-driven
+ configuration process in a standard setup, invoke dpkg-reconfigure
+ exim4-config. There is a Debian-centered mailing list,
+ pkg-exim4-users@lists.alioth.debian.org. Please ask Debian-specific
+ questions there, and only write to the upstream exim-users mailing
+ list if you are sure that your question is not Debian-specific. You
+ can find the subscription web page on
+ http://lists.alioth.debian.org/mailman/listinfo/pkg-exim4-users
+
+Package: exim4-config
+Description-md5: 32395c972fcf7f5014c06bce8ee1c59a
+Description-en: configuration for the Exim MTA (v4)
+ Exim (v4) is a mail transport agent. exim4-config provides the configuration
+ for the exim4 daemon packages. The configuration framework has been split
+ off the main package to allow sites to replace the configuration scheme
+ with their own without having to change the actual exim4 packages.
+ .
+ Sites with special configuration needs (having a lot of identically
+ configured machines for example) can use this to distribute their own
+ custom configuration via the packaging system, using the magic
+ available with dpkg's conffile handling, without having to do local
+ changes on all of these machines.
+ .
+ The Debian exim4 packages have their own web page,
+ http://wiki.debian.org/PkgExim4. There is also a Debian-specific
+ FAQ list. Information about the way the Debian packages are
+ configured can be found in
+ /usr/share/doc/exim4-base/README.Debian.gz, which additionally contains
+ information about the way the Debian binary packages are built. The
+ very extensive upstream documentation is shipped in
+ /usr/share/doc/exim4-base/spec.txt.gz. To repeat the debconf-driven
+ configuration process in a standard setup, invoke dpkg-reconfigure
+ exim4-config. There is a Debian-centered mailing list,
+ pkg-exim4-users@lists.alioth.debian.org. Please ask Debian-specific
+ questions there, and only write to the upstream exim-users mailing
+ list if you are sure that your question is not Debian-specific. You
+ can find the subscription web page on
+ http://lists.alioth.debian.org/mailman/listinfo/pkg-exim4-users
+
+Package: exim4-daemon-heavy
+Description-md5: 29c4b395a92bdc12932f151c3643a602
+Description-en: Exim MTA (v4) daemon with extended features, including exiscan-acl
+ Exim (v4) is a mail transport agent. This package contains the exim4
+ daemon with extended features. In addition to the features already
+ supported by exim4-daemon-light, exim4-daemon-heavy includes LDAP,
+ sqlite, PostgreSQL and MySQL data lookups, SASL and SPA SMTP authentication,
+ embedded Perl interpreter, and the content scanning extension
+ (formerly known as "exiscan-acl") for integration of virus scanners
+ and spamassassin.
+ .
+ The Debian exim4 packages have their own web page,
+ http://wiki.debian.org/PkgExim4. There is also a Debian-specific
+ FAQ list. Information about the way the Debian packages are
+ configured can be found in
+ /usr/share/doc/exim4-base/README.Debian.gz, which additionally contains
+ information about the way the Debian binary packages are built. The
+ very extensive upstream documentation is shipped in
+ /usr/share/doc/exim4-base/spec.txt.gz. To repeat the debconf-driven
+ configuration process in a standard setup, invoke dpkg-reconfigure
+ exim4-config. There is a Debian-centered mailing list,
+ pkg-exim4-users@lists.alioth.debian.org. Please ask Debian-specific
+ questions there, and only write to the upstream exim-users mailing
+ list if you are sure that your question is not Debian-specific. You
+ can find the subscription web page on
+ http://lists.alioth.debian.org/mailman/listinfo/pkg-exim4-users
+
+Package: exim4-daemon-light
+Description-md5: 3f5190a801cb3e11718c951f768c4d54
+Description-en: lightweight Exim MTA (v4) daemon
+ Exim (v4) is a mail transport agent. This package contains the exim4
+ daemon with only basic features enabled. It works well with the
+ standard setups that are provided by Debian and includes support for
+ TLS encryption and the dlopen patch to allow dynamic loading of a
+ local_scan function.
+ .
+ The Debian exim4 packages have their own web page,
+ http://wiki.debian.org/PkgExim4. There is also a Debian-specific
+ FAQ list. Information about the way the Debian packages are
+ configured can be found in
+ /usr/share/doc/exim4-base/README.Debian.gz, which additionally contains
+ information about the way the Debian binary packages are built. The
+ very extensive upstream documentation is shipped in
+ /usr/share/doc/exim4-base/spec.txt.gz. To repeat the debconf-driven
+ configuration process in a standard setup, invoke dpkg-reconfigure
+ exim4-config. There is a Debian-centered mailing list,
+ pkg-exim4-users@lists.alioth.debian.org. Please ask Debian-specific
+ questions there, and only write to the upstream exim-users mailing
+ list if you are sure that your question is not Debian-specific. You
+ can find the subscription web page on
+ http://lists.alioth.debian.org/mailman/listinfo/pkg-exim4-users
+
+Package: exim4-dev
+Description-md5: d5a123381ab67fa02f35533169e299d5
+Description-en: header files for the Exim MTA (v4) packages
+ Exim (v4) is a mail transport agent. This package contains header
+ files that can be used to compile code that is then dynamically linked
+ to exim's local_scan interface.
+ .
+ The Debian exim4 packages have their own web page,
+ http://wiki.debian.org/PkgExim4. There is also a Debian-specific
+ FAQ list. Information about the way the Debian packages are
+ configured can be found in
+ /usr/share/doc/exim4-base/README.Debian.gz, which additionally contains
+ information about the way the Debian binary packages are built. The
+ very extensive upstream documentation is shipped in
+ /usr/share/doc/exim4-base/spec.txt.gz. To repeat the debconf-driven
+ configuration process in a standard setup, invoke dpkg-reconfigure
+ exim4-config. There is a Debian-centered mailing list,
+ pkg-exim4-users@lists.alioth.debian.org. Please ask Debian-specific
+ questions there, and only write to the upstream exim-users mailing
+ list if you are sure that your question is not Debian-specific. You
+ can find the subscription web page on
+ http://lists.alioth.debian.org/mailman/listinfo/pkg-exim4-users
+
+Package: eximon4
+Description-md5: 9d049018af5088cbceaa2af23692d02a
+Description-en: monitor application for the Exim MTA (v4) (X11 interface)
+ Eximon is a helper program for the Exim MTA (v4). It allows
+ administrators to view the mail queue and logs, and perform a variety
+ of actions on queued messages, such as freezing, bouncing and thawing
+ messages.
+
 Package: ffmpeg
 Description-md5: 65e8a3535a2f8cd488043b49edb871b2
 Description-en: Tools for transcoding, streaming and playing of multimedia files
