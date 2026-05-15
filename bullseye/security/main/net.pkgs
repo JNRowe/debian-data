@@ -982,6 +982,54 @@ Filename: pool/updates/main/f/fastdds/fastdds-tools_2.1.0+ds-9+deb11u1_i386.deb
 Size: 67080
 SHA256: e5f30b4f05f6f8f0df139965c1c04943d362daa4ac3eefe483ee7ea6152e49f8
 
+Package: firewall-applet
+Source: firewalld
+Version: 0.9.3-2+deb11u1
+Installed-Size: 274
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: firewall-config (= 0.9.3-2+deb11u1), firewalld (= 0.9.3-2+deb11u1), gir1.2-nm-1.0, gir1.2-notify-0.7, python3-dbus, python3-gi, python3-pyqt5, python3-dbus.mainloop.pyqt5, python3-slip-dbus, python3-firewall (= 0.9.3-2+deb11u1), python3:any
+Description: panel applet providing status information of firewalld
+Homepage: https://www.firewalld.org/
+Description-md5: cbc76c1b787fecaeeb7bb32c89df7f64
+net
+Priority: optional
+Filename: pool/updates/main/f/firewalld/firewall-applet_0.9.3-2+deb11u1_all.deb
+Size: 53888
+SHA256: d26d2d03970ce5f2c083860c6e3bd4a1cce3c98abfb38968c0196db98c35b1de
+
+Package: firewall-config
+Source: firewalld
+Version: 0.9.3-2+deb11u1
+Installed-Size: 1167
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: firewalld (= 0.9.3-2+deb11u1), gir1.2-glib-2.0, gir1.2-gtk-3.0, gir1.2-nm-1.0, gir1.2-pango-1.0, python3-dbus, python3-gi, python3-firewall (= 0.9.3-2+deb11u1), dconf-gsettings-backend | gsettings-backend, python3:any
+Description: graphical configuration tool to change the firewall settings
+Homepage: https://www.firewalld.org/
+Description-md5: fdfc2fe07040bda2da06003e744fea18
+net
+Priority: optional
+Filename: pool/updates/main/f/firewalld/firewall-config_0.9.3-2+deb11u1_all.deb
+Size: 81548
+SHA256: 653c98359c3ce1b4801c0d6bfd2eb66a8ab08bddec7562bbbb757be614637b72
+
+Package: firewalld
+Version: 0.9.3-2+deb11u1
+Installed-Size: 2363
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: dbus, gir1.2-glib-2.0, gir1.2-nm-1.0, iptables (>= 1.8.1-1), policykit-1, python3-dbus, python3-gi, python3-nftables (>= 0.9.3-2~), python3-firewall (= 0.9.3-2+deb11u1), python3:any
+Description: dynamically managed firewall with support for network zones
+Homepage: https://www.firewalld.org/
+Description-md5: bd73acf3f58810f5cb9e1c4a80431afd
+Recommends: ipset
+net
+Priority: optional
+Filename: pool/updates/main/f/firewalld/firewalld_0.9.3-2+deb11u1_all.deb
+Size: 358264
+SHA256: 6a4929c2279c3f9bd8a900b5eaf67fdaa79d22fd34fb935647c27ed5a0ea1270
+
 Package: fort-validator
 Version: 1.5.3-1~deb11u2
 Installed-Size: 621
@@ -3087,8 +3135,8 @@ SHA256: bec0ee81a3749ecdea0e6a1747c0a47e01a5caed09584127185da68ac05d5549
 
 Package: openssh-client
 Source: openssh
-Version: 1:8.4p1-5+deb11u6
-Installed-Size: 4789
+Version: 1:8.4p1-5+deb11u7
+Installed-Size: 4790
 Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
 Architecture: i386
 Replaces: openssh-sk-helper, ssh, ssh-krb5
@@ -3104,19 +3152,19 @@ Multi-Arch: foreign
 Recommends: xauth
 net
 Priority: standard
-Filename: pool/updates/main/o/openssh/openssh-client_8.4p1-5+deb11u6_i386.deb
-Size: 994496
-SHA256: f872252b80270497ce032f9b7bef093add01e584defaabb7e96524179bdc0b15
+Filename: pool/updates/main/o/openssh/openssh-client_8.4p1-5+deb11u7_i386.deb
+Size: 996524
+SHA256: 9e4a1a8d9abc1c7c8abaf12cc677feef0483d33934b1a991406582f348154b38
 
 Package: openssh-server
 Source: openssh
-Version: 1:8.4p1-5+deb11u6
+Version: 1:8.4p1-5+deb11u7
 Installed-Size: 1722
 Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
 Architecture: i386
 Replaces: openssh-client (<< 1:7.9p1-8), ssh, ssh-krb5
 Provides: ssh-server
-Depends: adduser (>= 3.9), dpkg (>= 1.9.0), libpam-modules (>= 0.72-9), libpam-runtime (>= 0.76-14), lsb-base (>= 4.1+Debian3), openssh-client (= 1:8.4p1-5+deb11u6), openssh-sftp-server, procps, ucf (>= 0.28), debconf (>= 0.5) | debconf-2.0, runit-helper (>= 2.10.0~), libaudit1 (>= 1:2.2.1), libc6 (>= 2.28), libcom-err2 (>= 1.43.9), libcrypt1 (>= 1:4.1.0), libgssapi-krb5-2 (>= 1.17), libkrb5-3 (>= 1.13~alpha1+dfsg), libpam0g (>= 0.99.7.1), libselinux1 (>= 3.1~), libssl1.1 (>= 1.1.1), libsystemd0, libwrap0 (>= 7.6-4~), zlib1g (>= 1:1.1.4)
+Depends: adduser (>= 3.9), dpkg (>= 1.9.0), libpam-modules (>= 0.72-9), libpam-runtime (>= 0.76-14), lsb-base (>= 4.1+Debian3), openssh-client (= 1:8.4p1-5+deb11u7), openssh-sftp-server, procps, ucf (>= 0.28), debconf (>= 0.5) | debconf-2.0, runit-helper (>= 2.10.0~), libaudit1 (>= 1:2.2.1), libc6 (>= 2.28), libcom-err2 (>= 1.43.9), libcrypt1 (>= 1:4.1.0), libgssapi-krb5-2 (>= 1.17), libkrb5-3 (>= 1.13~alpha1+dfsg), libpam0g (>= 0.99.7.1), libselinux1 (>= 3.1~), libssl1.1 (>= 1.1.1), libsystemd0, libwrap0 (>= 7.6-4~), zlib1g (>= 1:1.1.4)
 Suggests: molly-guard, monkeysphere, ssh-askpass, ufw
 Conflicts: sftp, ssh-socks, ssh2
 Breaks: runit (<< 2.1.2-36~)
@@ -3127,18 +3175,18 @@ Multi-Arch: foreign
 Recommends: default-logind | logind | libpam-systemd, ncurses-term, xauth
 net
 Priority: optional
-Filename: pool/updates/main/o/openssh/openssh-server_8.4p1-5+deb11u6_i386.deb
-Size: 423408
-SHA256: 77f27053eda2710bcf6dca63fdf7baa0450a504f6320ace56d5dae0ed63d6002
+Filename: pool/updates/main/o/openssh/openssh-server_8.4p1-5+deb11u7_i386.deb
+Size: 423592
+SHA256: b20619d34402e5b2473835693afc70d2d618dc40a1a6a44d8073dcadf93b6353
 
 Package: openssh-sftp-server
 Source: openssh
-Version: 1:8.4p1-5+deb11u6
+Version: 1:8.4p1-5+deb11u7
 Installed-Size: 156
 Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
 Architecture: i386
 Replaces: openssh-server (<< 1:6.5p1-5)
-Depends: openssh-client (= 1:8.4p1-5+deb11u6), libc6 (>= 2.28), libssl1.1 (>= 1.1.0)
+Depends: openssh-client (= 1:8.4p1-5+deb11u7), libc6 (>= 2.28), libssl1.1 (>= 1.1.0)
 Breaks: openssh-server (<< 1:6.5p1-5)
 Description: secure shell (SSH) sftp server module, for SFTP access from remote machines
 Homepage: http://www.openssh.com/
@@ -3148,34 +3196,34 @@ Multi-Arch: foreign
 Recommends: openssh-server | ssh-server
 net
 Priority: optional
-Filename: pool/updates/main/o/openssh/openssh-sftp-server_8.4p1-5+deb11u6_i386.deb
-Size: 59212
-SHA256: c776c5606b60dfd1966587a6071a5ad05fe417e9d7711a02081180ade9b2b750
+Filename: pool/updates/main/o/openssh/openssh-sftp-server_8.4p1-5+deb11u7_i386.deb
+Size: 59156
+SHA256: a43f3f5b9a73f3207e925ff119a60d8ada23ded205c46bfd9e4643fbc4c04ccc
 
 Package: openssh-tests
 Source: openssh
-Version: 1:8.4p1-5+deb11u6
-Installed-Size: 5097
+Version: 1:8.4p1-5+deb11u7
+Installed-Size: 5099
 Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
 Architecture: i386
-Depends: openssh-client (= 1:8.4p1-5+deb11u6), openssh-server (= 1:8.4p1-5+deb11u6), openssh-sftp-server (= 1:8.4p1-5+deb11u6), openssl, putty-tools (>= 0.67-2), python3-twisted, libc6 (>= 2.28), libselinux1 (>= 3.1~), libssl1.1 (>= 1.1.0), zlib1g (>= 1:1.1.4)
+Depends: openssh-client (= 1:8.4p1-5+deb11u7), openssh-server (= 1:8.4p1-5+deb11u7), openssh-sftp-server (= 1:8.4p1-5+deb11u7), openssl, putty-tools (>= 0.67-2), python3-twisted, libc6 (>= 2.28), libselinux1 (>= 3.1~), libssl1.1 (>= 1.1.0), zlib1g (>= 1:1.1.4)
 Description: OpenSSH regression tests
 Homepage: http://www.openssh.com/
 Description-md5: bb7db5bf0b75d064182f67ac05d849c9
 Multi-Arch: foreign
 net
 Priority: optional
-Filename: pool/updates/main/o/openssh/openssh-tests_8.4p1-5+deb11u6_i386.deb
-Size: 956184
-SHA256: e7c6ce05d2a2f35a53a5665b5ab993ea214f57f67cecf3b64dd22b52f8a80ee1
+Filename: pool/updates/main/o/openssh/openssh-tests_8.4p1-5+deb11u7_i386.deb
+Size: 957336
+SHA256: 896c64a02b5c40724b1e60173ff8f1c78dae3e8b9f64ce528e7bc8bca7a1fbd1
 
 Package: ssh
 Source: openssh
-Version: 1:8.4p1-5+deb11u6
-Installed-Size: 263
+Version: 1:8.4p1-5+deb11u7
+Installed-Size: 264
 Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
 Architecture: all
-Depends: openssh-client (>= 1:8.4p1-5+deb11u6), openssh-server (>= 1:8.4p1-5+deb11u6)
+Depends: openssh-client (>= 1:8.4p1-5+deb11u7), openssh-server (>= 1:8.4p1-5+deb11u7)
 Description: secure shell client and server (metapackage)
 Homepage: http://www.openssh.com/
 Description-md5: b00e309365895c14a10af55945efb136
@@ -3183,9 +3231,9 @@ Multi-Arch: foreign
 Pre-Depends: dpkg (>= 1.17.5)
 net
 Priority: optional
-Filename: pool/updates/main/o/openssh/ssh_8.4p1-5+deb11u6_all.deb
-Size: 252712
-SHA256: 0a31d361e16e5581bb226fd02cbc61f5a160f192164a710bbd7ad7fd1edc1e7c
+Filename: pool/updates/main/o/openssh/ssh_8.4p1-5+deb11u7_all.deb
+Size: 253876
+SHA256: 7f44431ecf7fa542394714c79799a7c7cd9150f18713bf8bc1c57316d9f1dec4
 
 Package: openvpn
 Version: 2.5.1-3+deb11u2
