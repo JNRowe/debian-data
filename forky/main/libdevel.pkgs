@@ -1468,6 +1468,22 @@ Size: 46780
 MD5sum: 38d1a0c7b7bb61455a186048022cd9f1
 SHA256: 927196a99887eafbc2079177880d43c7e55a7e6975d51d240082d8c0d17cf2bf
 
+Package: libamgcl-dev
+Source: amgcl
+Version: 1.4.4-3
+Installed-Size: 4529
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: all
+Description: Solves large sparse linear systems with algebraic multigrid method
+Homepage: https://github.com/ddemidov/amgcl
+Description-md5: ec65c5ece2e2ac48e9fba2a354789071
+libdevel
+Priority: optional
+Filename: pool/main/a/amgcl/libamgcl-dev_1.4.4-3_all.deb
+Size: 2924012
+MD5sum: e15e0d9dd2f22c0baed7869b63e9f02b
+SHA256: a77ab3815e29e81eebb49ecad33ceddf3f7be64d6de32eef728814266ad1e79d
+
 Package: libaml-dev
 Source: aml (0.3.0-3)
 Version: 0.3.0-3+b2
@@ -2920,24 +2936,43 @@ MD5sum: 286ab768e6f5c1498aa27914bc080b35
 SHA256: 0625e3faba457417ec9f37b9bc591017d271bd2f3756da7fe5428a2aa8da2c0d
 
 Package: libatkmm-1.6-dev
-Source: atkmm1.6 (2.28.4-2)
-Version: 2.28.4-2+b1
-Installed-Size: 291
+Source: atkmm
+Version: 2.28.4-4
+Installed-Size: 20
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: libatkmm-dev
+Description: C++ wrappers for ATK transitional package
+Homepage: https://www.gtkmm.org/
+Description-md5: c6ca8fb974523d1fa72f4a29fc3be987
+Tag: devel::library, role::devel-lib
+libdevel
+Priority: optional
+Filename: pool/main/a/atkmm/libatkmm-1.6-dev_2.28.4-4_all.deb
+Size: 13832
+MD5sum: c266becf7d72c6a55e611f41f2f8281e
+SHA256: 9c33159509be7522ca1a6a64a22a3e93498de3e60f102b01dcfca207fce1a8e8
+
+Package: libatkmm-dev
+Source: atkmm
+Version: 2.28.4-4
+Installed-Size: 290
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libatkmm-1.6-1v5 (= 2.28.4-2+b1), libglibmm-2.4-dev (>= 2.46.2), libatk1.0-dev (>= 2.12)
-Suggests: libatkmm-1.6-doc
+Replaces: libatkmm-1.6-dev (<< 2.28.4-3~)
+Depends: libatk1.0-dev, libatkmm-1.6-1v5 (= 2.28.4-4), libglibmm-2.4-dev
+Suggests: libatkmm-doc
+Breaks: libatkmm-1.6-dev (<< 2.28.4-3~)
 Description: C++ wrappers for ATK accessibility toolkit (development files)
 Multi-Arch: same
 Homepage: https://www.gtkmm.org/
 Description-md5: 2f43001f33ccae4bec69147e61af7d18
-Tag: devel::library, role::devel-lib
 libdevel
 Priority: optional
-Filename: pool/main/a/atkmm1.6/libatkmm-1.6-dev_2.28.4-2+b1_amd64.deb
-Size: 45992
-MD5sum: 6f92058c48cc8a024dea640cb0a71704
-SHA256: c978d87f049a80f85aa645bec0ef41d84a1966ec631ccad22829e3a1318f59ef
+Filename: pool/main/a/atkmm/libatkmm-dev_2.28.4-4_amd64.deb
+Size: 45504
+MD5sum: 2a29e752dc85cf04f2b9e7ba63cf232f
+SHA256: 4d6c7fe95e4d1eca1c9564de47156d4fe064129f9e5b55f5630745e4fe43cb17
 
 Package: libatlas-ecmwf-dev
 Source: atlas-ecmwf
@@ -15573,8 +15608,8 @@ SHA256: a0d19021eb5dbcefa7e5b3115ee4a775b71611f063c8642f5c3a1ceea784565c
 
 Package: libetlcpp-dev
 Source: etlcpp
-Version: 20.44.2+dfsg-2
-Installed-Size: 6659
+Version: 20.47.1+dfsg-1
+Installed-Size: 7297
 Maintainer: Dima Kogan <dkogan@debian.org>
 Architecture: all
 Recommends: libetlcpp-doc
@@ -15584,10 +15619,10 @@ Homepage: http://www.etlcpp.org
 Description-md5: cff7f316c25c8d0e6293eddcb7b5a4e1
 libdevel
 Priority: optional
-Filename: pool/main/e/etlcpp/libetlcpp-dev_20.44.2+dfsg-2_all.deb
-Size: 372388
-MD5sum: 8bf831ef5e7b74e8702e75aaaf311a5a
-SHA256: ad573b598bb3db6156db786a407f2e84fd60afb30146a9de07ff5cc35f5fa138
+Filename: pool/main/e/etlcpp/libetlcpp-dev_20.47.1+dfsg-1_all.deb
+Size: 435508
+MD5sum: fe9c5020587dc97a2a5fa806122c256b
+SHA256: 2ce591e573673557030b19dc0d0738edb03f4b83dbb74f7bdb613adae4e6c03a
 
 Package: libetsf-io-dev
 Source: etsf-io
@@ -36481,11 +36516,11 @@ SHA256: c4568554ffaddc25844e74bee9354fe35879245a1bb48a6e406cbd91f4bcf710
 
 Package: libgtkhex-4-dev
 Source: ghex
-Version: 50.0-1
+Version: 50.1-1
 Installed-Size: 57
 Maintainer: Debian GNOME Extras Maintainers <pkg-gnome-extras-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libgtk-4-dev, libgtkhex-4-1 (= 50.0-1)
+Depends: libgtk-4-dev, libgtkhex-4-1 (= 50.1-1)
 Description: GNOME Hex editor for files (development headers)
 Multi-Arch: same
 Homepage: https://wiki.gnome.org/Apps/Ghex
@@ -36493,10 +36528,10 @@ Description-md5: c5000b405b171c424c6a09b37604a269
 Tag: devel::library, role::devel-lib
 libdevel
 Priority: optional
-Filename: pool/main/g/ghex/libgtkhex-4-dev_50.0-1_amd64.deb
-Size: 13104
-MD5sum: 6e3402f0905c938068ddde2c89fac92b
-SHA256: 5a4d4366b843874aa219e1b9f6fc675ffb62ae4f447c8d6f7b3b17e29669d8a3
+Filename: pool/main/g/ghex/libgtkhex-4-dev_50.1-1_amd64.deb
+Size: 13120
+MD5sum: 91016122808868e921608458c71b3221
+SHA256: 4842f33c86726096d7d996151fe863ba96153034ce1b41900b61c549ea0c4888
 
 Package: libghmm-dev
 Source: ghmm
@@ -42694,7 +42729,7 @@ SHA256: 066b5f0c7fdbd2ba87b23bef8bb40f35d02b9d5e2b04f7e66e3ee92c3bfbc0ba
 
 Package: libhnswlib-dev
 Source: hnswlib
-Version: 0.9.0-1
+Version: 0.9.0-2
 Installed-Size: 130
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
 Architecture: all
@@ -42705,10 +42740,10 @@ Description-md5: c6ef7f656c66b99b44c182c1675b4c13
 Tag: devel::library, role::devel-lib
 libdevel
 Priority: optional
-Filename: pool/main/h/hnswlib/libhnswlib-dev_0.9.0-1_all.deb
-Size: 23784
-MD5sum: c5bb098354590fd8d817b511a0315ea1
-SHA256: e791d8cab496d20a2d5fe47c70b2b36be257ffce110b679cb84f1b69aba10645
+Filename: pool/main/h/hnswlib/libhnswlib-dev_0.9.0-2_all.deb
+Size: 23892
+MD5sum: 40b0d0b8abf5ce6d329bd75976fcb90f
+SHA256: e55ddc1dc9aaa694e5a12b5cfa2ba33787f997404b4468fd359a1159760d8fea
 
 Package: libhoel-dev
 Source: hoel
@@ -44274,12 +44309,12 @@ SHA256: fe649b9d000356e8e5ece57e527f518378299392590d6f041a520bfe3d8ce50d
 
 Package: libinsighttoolkit5-dev
 Source: insighttoolkit5
-Version: 5.4.5-2
-Installed-Size: 30851
+Version: 5.4.6-1
+Installed-Size: 30854
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libinsighttoolkit-dev, libinsighttoolkit3-dev, libinsighttoolkit4-dev
-Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libinsighttoolkit5.4 (= 5.4.5-2), libstdc++6 (>= 13.1), libvtk9-dev, libvtk9-qt-dev, libgdcm-dev, libdcmtk-dev, libhdf5-dev, libdouble-conversion-dev, libexpat-dev, libnifti-dev, libminc-dev
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libinsighttoolkit5.4 (= 5.4.6-1), libstdc++6 (>= 13.1), libvtk9-dev, libvtk9-qt-dev, libgdcm-dev, libdcmtk-dev, libhdf5-dev, libdouble-conversion-dev, libexpat-dev, libnifti-dev, libminc-dev
 Recommends: libfftw3-dev, uuid-dev
 Suggests: insighttoolkit5-examples
 Conflicts: libinsighttoolkit-dev, libinsighttoolkit3-dev, libinsighttoolkit4-dev
@@ -44289,10 +44324,10 @@ Description-md5: 7c77a9e39520070c554c11fd98779e8a
 Tag: devel::library, role::devel-lib
 libdevel
 Priority: optional
-Filename: pool/main/i/insighttoolkit5/libinsighttoolkit5-dev_5.4.5-2_amd64.deb
-Size: 3316948
-MD5sum: 3e6334a6af2d54331428d7becc2536ca
-SHA256: d50bcc4e18530be000bd106a6708662ee922776760251da636297554d18e3669
+Filename: pool/main/i/insighttoolkit5/libinsighttoolkit5-dev_5.4.6-1_amd64.deb
+Size: 3318244
+MD5sum: c3859be00d5053e6bf7c551b74c31fc1
+SHA256: 9cba5ecf891460a26c1d86afe7af5e9a5146f6fe935d1a98e319db3143388e6a
 
 Package: libigdgmm-dev
 Source: intel-gmmlib
@@ -47001,21 +47036,21 @@ SHA256: 665ccc8a3d13e84d3cc9de80f022a578e2ff132755f41053ad0cd6c090b85125
 
 Package: libkf6runner-dev
 Source: kf6-krunner
-Version: 6.23.0-3
+Version: 6.23.0-4
 Installed-Size: 202
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
-Depends: extra-cmake-modules (>= 6.23.0~), libkf6config-dev (>= 6.23.0~), libkf6coreaddons-dev (>= 6.23.0~), libkf6runner6 (= 6.23.0-3), qt6-base-dev (>= 6.8.0~)
-Recommends: libkf6runner-doc (= 6.23.0-3)
+Depends: extra-cmake-modules (>= 6.23.0~), libkf6config-dev (>= 6.23.0~), libkf6coreaddons-dev (>= 6.23.0~), libkf6runner6 (= 6.23.0-4), qt6-base-dev (>= 6.8.0~)
+Recommends: libkf6runner-doc (= 6.23.0-4)
 Description: development files for krunner
 Homepage: https://invent.kde.org/frameworks/krunner
 Description-md5: 44a53d2e0feb02ee69a4c1e96da5d2d4
 libdevel
 Priority: optional
-Filename: pool/main/k/kf6-krunner/libkf6runner-dev_6.23.0-3_amd64.deb
-Size: 107236
-MD5sum: b9cec3cda22c160198a276bf6fcf1b21
-SHA256: 6ead588b8733914179e784e9005e4c2e32ce14b3578f45d61e0653dd81ac1092
+Filename: pool/main/k/kf6-krunner/libkf6runner-dev_6.23.0-4_amd64.deb
+Size: 107328
+MD5sum: 4b78b7c8af9dfd8780f04fe486235f3d
+SHA256: 8865bf0658d23cf47fa18b1fb34417219b12b641206b48021b3bfd32b8c7e269
 
 Package: libkf6service-dev
 Source: kf6-kservice
@@ -48938,21 +48973,21 @@ SHA256: 7db123403cd3620aaa6948bbdb01727b3fa9b9fddb2b28becc27afe847a2f7cf
 
 Package: kwayland-dev
 Source: kwayland
-Version: 4:6.6.4-1
+Version: 4:6.6.5-2
 Installed-Size: 427
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
-Depends: libkwaylandclient6 (= 4:6.6.4-1), libwayland-dev (>= 1.13~), qt6-base-dev (>= 6.10.0~), plasma-version-base-6.6
-Recommends: kwayland-doc (= 4:6.6.4-1)
+Depends: libkwaylandclient6 (= 4:6.6.5-2), libwayland-dev (>= 1.13~), qt6-base-dev (>= 6.10.0~), plasma-version-base-6.6
+Recommends: kwayland-doc (= 4:6.6.5-2)
 Description: development files for kwayland
 Homepage: https://invent.kde.org/frameworks/kwayland
 Description-md5: 5403bb8fd5aaf91cd4ffdf3a0b63220e
 libdevel
 Priority: optional
-Filename: pool/main/k/kwayland/kwayland-dev_6.6.4-1_amd64.deb
-Size: 54600
-MD5sum: 0d88a0a9a92cc0bfb9277dbef06915ae
-SHA256: be0c187504bf1d18904673fb614ca8572433547a6fe94e9f941aac4244381ea7
+Filename: pool/main/k/kwayland/kwayland-dev_6.6.5-2_amd64.deb
+Size: 54624
+MD5sum: 5f0cc4e148c05751ea9062ff5ddbbd1d
+SHA256: 0544650f532901968166879b6ffce8824afd7052619aaa13b05323cdc32510fc
 
 Package: libkf5wayland-dev
 Source: kwayland-kf5 (4:5.116.0-1)
@@ -52775,22 +52810,22 @@ MD5sum: e44843094b849aa3a13b1d58c249d1fa
 SHA256: c297fb210f87ba5e64a56af63b4f593a2d62aab6afd41fb181feea03ef23ba09
 
 Package: libcmis-dev
-Source: libcmis (0.6.2-3)
-Version: 0.6.2-3+b2
-Installed-Size: 81537
+Source: libcmis
+Version: 0.6.2-4
+Installed-Size: 4951
 Maintainer: Debian LibreOffice Maintainers <debian-openoffice@lists.debian.org>
 Architecture: amd64
-Depends: libcmis-0.6-6t64 (= 0.6.2-3+b2), libcurl4-openssl-dev, libxml2-dev
+Depends: libcmis-0.6-6t64 (= 0.6.2-4), libcurl4-openssl-dev, libxml2-dev
 Description: CMIS protocol client library -- development
 Homepage: https://github.com/tdf/libcmis
 Description-md5: 6950c33ce47f4e641b33c5f6333e7174
 Tag: devel::library, role::devel-lib
 libdevel
 Priority: optional
-Filename: pool/main/libc/libcmis/libcmis-dev_0.6.2-3+b2_amd64.deb
-Size: 10059960
-MD5sum: 08d0a1992e756847df4142e699eabcb4
-SHA256: a836550a3ccb82eedc4735d6884e55c3badc61eac7445ce77c23e32bdb283d00
+Filename: pool/main/libc/libcmis/libcmis-dev_0.6.2-4_amd64.deb
+Size: 630616
+MD5sum: 0939006dc2eabc17b476bfe90f54407c
+SHA256: dea42942d0238556e50115e504d5abb779385879db4adfbaaf27ee78ad67e932
 
 Package: libcmtspeechdata-dev
 Source: libcmtspeechdata (2.1.1+git20160721~8efc468-3)
@@ -59839,24 +59874,24 @@ MD5sum: 82729d764b568a2a1f156823942f72f3
 SHA256: cb1b87bb3769d05017677daefbe1d9c1bdf68e4c43892072b85ebcebdc60c3c4
 
 Package: liblangtag-dev
-Source: liblangtag (0.6.8-2)
-Version: 0.6.8-2+b1
-Installed-Size: 696
+Source: liblangtag
+Version: 0.6.8-4
+Installed-Size: 695
 Maintainer: Debian LibreOffice Maintainers <debian-openoffice@lists.debian.org>
 Architecture: amd64
-Depends: liblangtag1 (= 0.6.8-2+b1), liblangtag-gobject0 (= 0.6.8-2+b1), libglib2.0-dev, libxml2-dev, gir1.2-glib-2.0-dev, gir1.2-gobject-2.0-dev, gir1.2-langtag-0.6 (= 0.6.8-2+b1)
+Depends: liblangtag1 (= 0.6.8-4), liblangtag-gobject0 (= 0.6.8-4), libglib2.0-dev, libxml2-dev, gir1.2-glib-2.0-dev, gir1.2-gobject-2.0-dev, gir1.2-langtag-0.6 (= 0.6.8-4)
 Suggests: liblangtag-doc
 Description: library to access tags for identifying languages -- development
 Multi-Arch: same
-Homepage: http://tagoh.bitbucket.org/liblangtag/
+Homepage: https://gitlab.com/tagoh/liblangtag
 Description-md5: 6ea154d96dc7457b0cd467f2e46a6a1e
 Tag: devel::library, role::devel-lib
 libdevel
 Priority: optional
-Filename: pool/main/libl/liblangtag/liblangtag-dev_0.6.8-2+b1_amd64.deb
-Size: 87652
-MD5sum: 16695241c738407a7852906125a1ebf0
-SHA256: e6ea4253d091cf6902cbf848a6a4614eff6a0511c637b23e0bdbc9a815e0d3a0
+Filename: pool/main/libl/liblangtag/liblangtag-dev_0.6.8-4_amd64.deb
+Size: 87820
+MD5sum: ac8136d86f50c60444c0d3cb84ec11da
+SHA256: 089d60fef85ae632dac6a6e1373445aadcfdf0006e737431921611ab6e89c7bd
 
 Package: liblastfm5-dev
 Source: liblastfm
@@ -61148,13 +61183,13 @@ MD5sum: a37be3673e23f40c00eda5f10ce0e3a7
 SHA256: 807b845ad1696a62dd9bf13b0bf3aa30b358b827f4c08b3faf51e4e91a58bbb7
 
 Package: libminc-dev
-Source: libminc (2.4.07-2)
-Version: 2.4.07-2+b1
-Installed-Size: 393
+Source: libminc
+Version: 2.5.0-2
+Installed-Size: 406
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libminc0-dev
-Depends: libminc2-5.3.0t64 (= 2.4.07-2+b1), libnetcdf-dev, libhdf5-dev
+Depends: libminc2-5.3.0t64 (= 2.5.0-2), libnetcdf-dev, libhdf5-dev
 Conflicts: libminc0-dev
 Description: MNI medical image format development environment
 Multi-Arch: same
@@ -61164,10 +61199,10 @@ Tag: devel::library, field::medicine, field::medicine:imaging,
  implemented-in::c, role::devel-lib
 libdevel
 Priority: optional
-Filename: pool/main/libm/libminc/libminc-dev_2.4.07-2+b1_amd64.deb
-Size: 69716
-MD5sum: 382496fd82daab37766e48c5a794a177
-SHA256: 7f69e1cb6d47879f36cecf66de1634aba35587743c6806223a308fcb008a6981
+Filename: pool/main/libm/libminc/libminc-dev_2.5.0-2_amd64.deb
+Size: 71928
+MD5sum: 272f8a71f1a55ca3256293631cc97a68
+SHA256: 064ee5a2557aed659dcf01cb0f2d8142a3e2ba3df8a1e40bbd5a2aeec9a4c0bf
 
 Package: libminini-dev
 Source: libminini (1.5+ds-1)
@@ -67625,22 +67660,22 @@ SHA256: 010a63982d773b1bf3afe444f61f52b370545fde3d1646b4f5d090bb32c2ea46
 
 Package: libsixel-dev
 Source: libsixel
-Version: 1:1.8.7-5
-Installed-Size: 719
+Version: 1:1.8.7-r2-1
+Installed-Size: 728
 Maintainer: NOKUBI Takatsugu <knok@daionet.gr.jp>
 Architecture: amd64
-Depends: libsixel1 (= 1:1.8.7-5)
+Depends: libsixel1 (= 1:1.8.7-r2-1)
 Description: DEC SIXEL graphics codec implementation (develop)
 Multi-Arch: same
-Homepage: hhttps://github.com/saitoha/libsixel
+Homepage: https://github.com/saitoha/libsixel
 Description-md5: 278bce3f9091a46eaf8edbdd9335f422
 Tag: devel::library, role::devel-lib
 libdevel
 Priority: optional
-Filename: pool/main/libs/libsixel/libsixel-dev_1.8.7-5_amd64.deb
-Size: 216004
-MD5sum: e2702c5a577bbcdf5412c0f787c5a4ba
-SHA256: 6051d20baec0c1b4f96c6a3fad846f1720f573c76b7bf055edba721af0ccc571
+Filename: pool/main/libs/libsixel/libsixel-dev_1.8.7-r2-1_amd64.deb
+Size: 220120
+MD5sum: 166ac62c53623f012347326afac3efbf
+SHA256: c0ee55d45843f880dd97cc31a22b1e9725e4ff9604e994a853f26d956055cd90
 
 Package: libskia-dev
 Source: libskia
@@ -78611,21 +78646,21 @@ SHA256: aa2525f80f3b94a4252fcf6e34513fe258659a0c6a953ada781749ffaed9a4d7
 
 Package: libmartchus-c++utilities-dev
 Source: martchus-cpp-utilities
-Version: 5.33.0-1
-Installed-Size: 574
+Version: 5.34.0-1
+Installed-Size: 575
 Maintainer: Nicholas D Steeves <sten@debian.org>
 Architecture: amd64
-Depends: libmartchus-c++utilities5t64 (= 5.33.0-1)
+Depends: libmartchus-c++utilities5t64 (= 5.34.0-1)
 Description: useful C++ classes and routines used by Martchus' applications (headers)
 Homepage: https://github.com/Martchus/cpp-utilities
 Description-md5: 8ac7c8c1fc60ebe99b2658681329001e
 Tag: devel::library, role::devel-lib
 libdevel
 Priority: optional
-Filename: pool/main/m/martchus-cpp-utilities/libmartchus-c++utilities-dev_5.33.0-1_amd64.deb
-Size: 104280
-MD5sum: a046e352fad9728a14027de26313233a
-SHA256: 1b4df571216c4b9aeb81eb27a8e338e760a44b751dda1ee6b15a058d33f338ae
+Filename: pool/main/m/martchus-cpp-utilities/libmartchus-c++utilities-dev_5.34.0-1_amd64.deb
+Size: 104964
+MD5sum: 2d098fd42117bcce03e96d641bd28129
+SHA256: 20b0af32411dcb1006aeb43ca140859682deae0679a54a589702685315745544
 
 Package: libmartchus-qtforkawesome-dev
 Source: martchus-qtforkawesome
@@ -78647,21 +78682,21 @@ SHA256: 44f27131ee60215ed3a0544bb8241fb3e10abc668b3080d4359246aa245a3931
 
 Package: libmartchus-qtutilities-dev
 Source: martchus-qtutilities
-Version: 6.20.0-1
-Installed-Size: 297
+Version: 6.21.0-1
+Installed-Size: 299
 Maintainer: Nicholas D Steeves <sten@debian.org>
 Architecture: amd64
-Depends: libmartchus-qtutilities6 (= 6.20.0-1), libmartchus-c++utilities-dev, qtbase5-dev
+Depends: libmartchus-qtutilities6 (= 6.21.0-1), libmartchus-c++utilities-dev, qtbase5-dev
 Description: common Qt related functionality used by Martchus' applications (headers)
 Homepage: https://github.com/Martchus/qtutilities
 Description-md5: 15174bc4e8913c29b63fa08b1412da20
 Tag: devel::library, role::devel-lib
 libdevel
 Priority: optional
-Filename: pool/main/m/martchus-qtutilities/libmartchus-qtutilities-dev_6.20.0-1_amd64.deb
-Size: 49492
-MD5sum: 28255a6c0ab027c5af23cf95aa86274d
-SHA256: 5a55fc96879137b513eab2edcd67d89c98281b5862366a631ae84afad443a681
+Filename: pool/main/m/martchus-qtutilities/libmartchus-qtutilities-dev_6.21.0-1_amd64.deb
+Size: 49832
+MD5sum: 9ab5c94a5a376e8a8a6b71baa7ad7dda
+SHA256: d7b79ef730911a9c0df65ddab60abd31ed380c58af99e1ee99a74871bc0e295a
 
 Package: libmash-dev
 Source: mash (2.3+dfsg-6)
@@ -79665,12 +79700,12 @@ MD5sum: 4ce1ab4f1e97484a06f0f67775e32d26
 SHA256: c337c8766b3e749852f19071b879ea9402639c074db713af02cc2dd38eb350fc
 
 Package: libmimetic-dev
-Source: mimetic (0.9.8-12)
-Version: 0.9.8-12+b2
-Installed-Size: 955
+Source: mimetic
+Version: 0.9.8-13
+Installed-Size: 953
 Maintainer: gregor herrmann <gregoa@debian.org>
 Architecture: amd64
-Depends: libmimetic0t64 (= 0.9.8-12+b2)
+Depends: libmimetic0t64 (= 0.9.8-13)
 Suggests: libmimetic-doc
 Description: C++ MIME library (development)
 Multi-Arch: same
@@ -79680,10 +79715,10 @@ Tag: devel::lang:c++, devel::library, implemented-in::c++, role::devel-lib,
  role::program, works-with::mail
 libdevel
 Priority: optional
-Filename: pool/main/m/mimetic/libmimetic-dev_0.9.8-12+b2_amd64.deb
-Size: 142484
-MD5sum: e3c30a432b052009ff7a317d115f90a9
-SHA256: 36661c931dd4870bc799bf6ae7fa6c753c76e25decbbf4fcd1734618aaf3cae2
+Filename: pool/main/m/mimetic/libmimetic-dev_0.9.8-13_amd64.deb
+Size: 141972
+MD5sum: 86c3a67e1751db327f5287393b3d7188
+SHA256: 8df84897d79e521dea8749b1749866b35651fcba3af25869883169bc627d7729
 
 Package: libmimetreeparser-dev
 Source: mimetreeparser
@@ -82596,9 +82631,9 @@ MD5sum: 81002c13efbd5506808a18397b378aab
 SHA256: e055638c37c4d8938466596315fd90f29d86c36c9aa0a50c61eddaf8288249f5
 
 Package: libnanopb-dev
-Source: nanopb (0.4.9.1-1)
-Version: 0.4.9.1-1+b1
-Installed-Size: 233
+Source: nanopb
+Version: 0.4.9.1-2
+Installed-Size: 231
 Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 Architecture: amd64
 Description: Protocol Buffers with small code size, development files
@@ -82608,10 +82643,10 @@ Description-md5: d9470ed3f10fa53f7e0649bf817d4bcd
 Tag: devel::library, role::devel-lib
 libdevel
 Priority: optional
-Filename: pool/main/n/nanopb/libnanopb-dev_0.4.9.1-1+b1_amd64.deb
-Size: 55308
-MD5sum: 4922c4cc88c671bc5ebd88039e4a0da6
-SHA256: 897e10fb0eaee7ebc0feeccbfd866d8106edbb8caa277772ead6d9d173c2c31c
+Filename: pool/main/n/nanopb/libnanopb-dev_0.4.9.1-2_amd64.deb
+Size: 55112
+MD5sum: fd7b86798075d34fab57396070b02590
+SHA256: d45e3206fc8bf817d07b23afcbecb71a7a0993fcf00a8d9c2c5b4e3e5dccfa2f
 
 Package: libnanosvg-dev
 Source: nanosvg

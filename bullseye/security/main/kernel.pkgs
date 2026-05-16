@@ -1735,56 +1735,56 @@ Size: 52079908
 SHA256: 2f2f77148fd2c86a8288f8e1fc944f17a3ab24d481f77bd05be347e38bca71a1
 
 Package: linux-headers-686
-Source: linux-signed-i386 (5.10.251+4)
-Version: 5.10.251-4
+Source: linux-signed-i386 (5.10.251+5)
+Version: 5.10.251-5
 Installed-Size: 13
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: i386
-Depends: linux-headers-5.10.0-42-686 (= 5.10.251-4)
+Depends: linux-headers-5.10.0-43-686 (= 5.10.251-5)
 Description: Header files for Linux 686 configuration (meta-package)
 Homepage: https://www.kernel.org/
-Built-Using: linux (= 5.10.251-4)
+Built-Using: linux (= 5.10.251-5)
 Description-md5: 7e9179376e4ff0a7897224fdbf105031
 kernel
 Priority: optional
-Filename: pool/updates/main/l/linux-signed-i386/linux-headers-686_5.10.251-4_i386.deb
+Filename: pool/updates/main/l/linux-signed-i386/linux-headers-686_5.10.251-5_i386.deb
 Size: 1408
-SHA256: 562b81c2971a46b6eb6c36a1e4533f735a56adafcb51918a39b26f103e019c07
+SHA256: 21624c497c1c25dbffbbcc49e1434981355f614e74b3267f51f86c0c34a84111
 
 Package: linux-headers-686-pae
-Source: linux-signed-i386 (5.10.251+4)
-Version: 5.10.251-4
+Source: linux-signed-i386 (5.10.251+5)
+Version: 5.10.251-5
 Installed-Size: 13
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: i386
 Provides: linux-headers-generic
-Depends: linux-headers-5.10.0-42-686-pae (= 5.10.251-4)
+Depends: linux-headers-5.10.0-43-686-pae (= 5.10.251-5)
 Description: Header files for Linux 686-pae configuration (meta-package)
 Homepage: https://www.kernel.org/
-Built-Using: linux (= 5.10.251-4)
+Built-Using: linux (= 5.10.251-5)
 Description-md5: e83b899dce9073ec36aa649f62f40b84
 kernel
 Priority: optional
-Filename: pool/updates/main/l/linux-signed-i386/linux-headers-686-pae_5.10.251-4_i386.deb
+Filename: pool/updates/main/l/linux-signed-i386/linux-headers-686-pae_5.10.251-5_i386.deb
 Size: 1424
-SHA256: 20b569dea1dba7281f7e64e8a7c61fd2cca655da993dd6c6eee8a784917da22a
+SHA256: 1ae32db3b29efdf81be77d41f80a103d05f576ec21536b9677cd2a1f03855785
 
 Package: linux-headers-rt-686-pae
-Source: linux-signed-i386 (5.10.251+4)
-Version: 5.10.251-4
+Source: linux-signed-i386 (5.10.251+5)
+Version: 5.10.251-5
 Installed-Size: 13
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: i386
-Depends: linux-headers-5.10.0-42-rt-686-pae (= 5.10.251-4)
+Depends: linux-headers-5.10.0-43-rt-686-pae (= 5.10.251-5)
 Description: Header files for Linux rt-686-pae configuration (meta-package)
 Homepage: https://www.kernel.org/
-Built-Using: linux (= 5.10.251-4)
+Built-Using: linux (= 5.10.251-5)
 Description-md5: 0500d2ab27f04a63f7bfb24b8c40d713
 kernel
 Priority: optional
-Filename: pool/updates/main/l/linux-signed-i386/linux-headers-rt-686-pae_5.10.251-4_i386.deb
-Size: 1420
-SHA256: d458a7034a68aca44d960a0cf4803b5596ffc455cfc31722a3422bec57320156
+Filename: pool/updates/main/l/linux-signed-i386/linux-headers-rt-686-pae_5.10.251-5_i386.deb
+Size: 1412
+SHA256: 5f1f2b54e10d0e9776821688e7d40413da5ec6fd088423bfd4973409c27bd1af
 
 Package: linux-image-5.10.0-39-686
 Source: linux-signed-i386 (5.10.251+1)
@@ -1984,59 +1984,125 @@ Filename: pool/updates/main/l/linux-signed-i386/linux-image-5.10.0-42-rt-686-pae
 Size: 48209936
 SHA256: 6b2034be4f7f52470e9b2ab46f43a8a064cb19377b8ee1c8c735510cc5e46ab5
 
+Package: linux-image-5.10.0-43-686
+Source: linux-signed-i386 (5.10.251+5)
+Version: 5.10.251-5
+Installed-Size: 166131
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: i386
+Replaces: linux-image-5.10.0-43-686-unsigned
+Depends: kmod, linux-base (>= 4.3~), initramfs-tools (>= 0.120+deb8u2) | linux-initramfs-tool
+Suggests: linux-doc-5.10, debian-kernel-handbook, grub-pc | grub-efi-ia32 | extlinux
+Conflicts: linux-image-5.10.0-43-686-unsigned
+Breaks: fwupdate (<< 12-7), initramfs-tools (<< 0.120+deb8u2), wireless-regdb (<< 2019.06.03-1~), xserver-xorg-input-vmmouse (<< 1:13.0.99)
+Description: Linux 5.10 for older PCs (signed)
+Homepage: https://www.kernel.org/
+Built-Using: linux (= 5.10.251-5)
+Description-md5: c0a99bdd0bb05467cc0d956f215e3e32
+Recommends: firmware-linux-free, apparmor
+kernel
+Priority: optional
+Filename: pool/updates/main/l/linux-signed-i386/linux-image-5.10.0-43-686_5.10.251-5_i386.deb
+Size: 47626384
+SHA256: 666e10f05b3a6b7423a9a9206db119d05beedf51bcbd6d18120e9d47c66c3add
+
+Package: linux-image-5.10.0-43-686-pae
+Source: linux-signed-i386 (5.10.251+5)
+Version: 5.10.251-5
+Installed-Size: 166657
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: i386
+Replaces: linux-image-5.10.0-43-686-pae-unsigned
+Depends: kmod, linux-base (>= 4.3~), initramfs-tools (>= 0.120+deb8u2) | linux-initramfs-tool
+Suggests: linux-doc-5.10, debian-kernel-handbook, grub-pc | grub-efi-ia32 | extlinux
+Conflicts: linux-image-5.10.0-43-686-pae-unsigned
+Breaks: fwupdate (<< 12-7), initramfs-tools (<< 0.120+deb8u2), wireless-regdb (<< 2019.06.03-1~), xserver-xorg-input-vmmouse (<< 1:13.0.99)
+Description: Linux 5.10 for modern PCs (signed)
+Homepage: https://www.kernel.org/
+Built-Using: linux (= 5.10.251-5)
+Description-md5: 81cefbc23e6fe132e12052103bfd030b
+Recommends: firmware-linux-free, apparmor
+kernel
+Priority: optional
+Filename: pool/updates/main/l/linux-signed-i386/linux-image-5.10.0-43-686-pae_5.10.251-5_i386.deb
+Size: 47862680
+SHA256: 1da36a30c5eee51245cedf5a1e443746109e476ec9eb1f7bef84c77bcc333695
+
+Package: linux-image-5.10.0-43-rt-686-pae
+Source: linux-signed-i386 (5.10.251+5)
+Version: 5.10.251-5
+Installed-Size: 168408
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: i386
+Replaces: linux-image-5.10.0-43-rt-686-pae-unsigned
+Depends: kmod, linux-base (>= 4.3~), initramfs-tools (>= 0.120+deb8u2) | linux-initramfs-tool
+Suggests: linux-doc-5.10, debian-kernel-handbook, grub-pc | grub-efi-ia32 | extlinux
+Conflicts: linux-image-5.10.0-43-rt-686-pae-unsigned
+Breaks: fwupdate (<< 12-7), initramfs-tools (<< 0.120+deb8u2), wireless-regdb (<< 2019.06.03-1~), xserver-xorg-input-vmmouse (<< 1:13.0.99)
+Description: Linux 5.10 for modern PCs, PREEMPT_RT (signed)
+Homepage: https://www.kernel.org/
+Built-Using: linux (= 5.10.251-5)
+Description-md5: cad3283806b4c7b6f074d759ee508628
+Recommends: firmware-linux-free, apparmor
+kernel
+Priority: optional
+Filename: pool/updates/main/l/linux-signed-i386/linux-image-5.10.0-43-rt-686-pae_5.10.251-5_i386.deb
+Size: 48193456
+SHA256: 5e3af5912b0bafd22f877266aa0cd27adc8063945d1482cf3372da6d866eb84c
+
 Package: linux-image-686
-Source: linux-signed-i386 (5.10.251+4)
-Version: 5.10.251-4
+Source: linux-signed-i386 (5.10.251+5)
+Version: 5.10.251-5
 Installed-Size: 13
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: i386
-Provides: linux-latest-modules-5.10.0-42-686, virtualbox-guest-modules, wireguard-modules (= 1.0.0)
-Depends: linux-image-5.10.0-42-686 (= 5.10.251-4)
+Provides: linux-latest-modules-5.10.0-43-686, virtualbox-guest-modules, wireguard-modules (= 1.0.0)
+Depends: linux-image-5.10.0-43-686 (= 5.10.251-5)
 Description: Linux for older PCs (meta-package)
 Homepage: https://www.kernel.org/
-Built-Using: linux (= 5.10.251-4)
+Built-Using: linux (= 5.10.251-5)
 Description-md5: 03f0cc206377b99f080d50c99049c16c
 kernel
 Priority: optional
-Filename: pool/updates/main/l/linux-signed-i386/linux-image-686_5.10.251-4_i386.deb
-Size: 1476
-SHA256: 4950cdcc3c7eec28cd5413f57e139685f99bd707f4358c5f45405fe9db105545
+Filename: pool/updates/main/l/linux-signed-i386/linux-image-686_5.10.251-5_i386.deb
+Size: 1480
+SHA256: 733d27e7e5a940228b25f1e3cde66c6dbb1b4f653e3fd885cee9006a525197ed
 
 Package: linux-image-686-pae
-Source: linux-signed-i386 (5.10.251+4)
-Version: 5.10.251-4
+Source: linux-signed-i386 (5.10.251+5)
+Version: 5.10.251-5
 Installed-Size: 13
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: i386
-Provides: linux-image-generic, linux-latest-modules-5.10.0-42-686-pae, virtualbox-guest-modules, wireguard-modules (= 1.0.0)
-Depends: linux-image-5.10.0-42-686-pae (= 5.10.251-4)
+Provides: linux-image-generic, linux-latest-modules-5.10.0-43-686-pae, virtualbox-guest-modules, wireguard-modules (= 1.0.0)
+Depends: linux-image-5.10.0-43-686-pae (= 5.10.251-5)
 Description: Linux for modern PCs (meta-package)
 Homepage: https://www.kernel.org/
-Built-Using: linux (= 5.10.251-4)
+Built-Using: linux (= 5.10.251-5)
 Description-md5: 2cb65e17d5d21e7479414c86a7a79c22
 kernel
 Priority: optional
-Filename: pool/updates/main/l/linux-signed-i386/linux-image-686-pae_5.10.251-4_i386.deb
-Size: 1484
-SHA256: e0ff445bb8b464fe71749a1a5e1d9f9d83e14c7556e43144f67871f84c615e87
+Filename: pool/updates/main/l/linux-signed-i386/linux-image-686-pae_5.10.251-5_i386.deb
+Size: 1492
+SHA256: 3fb7aa15d2b64f5234a7252a94285c8441104e69d6f362584cd90960eb21479c
 
 Package: linux-image-rt-686-pae
-Source: linux-signed-i386 (5.10.251+4)
-Version: 5.10.251-4
+Source: linux-signed-i386 (5.10.251+5)
+Version: 5.10.251-5
 Installed-Size: 13
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: i386
-Provides: linux-latest-modules-5.10.0-42-rt-686-pae, virtualbox-guest-modules, wireguard-modules (= 1.0.0)
-Depends: linux-image-5.10.0-42-rt-686-pae (= 5.10.251-4)
+Provides: linux-latest-modules-5.10.0-43-rt-686-pae, virtualbox-guest-modules, wireguard-modules (= 1.0.0)
+Depends: linux-image-5.10.0-43-rt-686-pae (= 5.10.251-5)
 Description: Linux for modern PCs (meta-package)
 Homepage: https://www.kernel.org/
-Built-Using: linux (= 5.10.251-4)
+Built-Using: linux (= 5.10.251-5)
 Description-md5: 2cb65e17d5d21e7479414c86a7a79c22
 kernel
 Priority: optional
-Filename: pool/updates/main/l/linux-signed-i386/linux-image-rt-686-pae_5.10.251-4_i386.deb
+Filename: pool/updates/main/l/linux-signed-i386/linux-image-rt-686-pae_5.10.251-5_i386.deb
 Size: 1480
-SHA256: 97f92198244713b13a0180b826a58ab52c1037687600b9542a51e8b08dee76d6
+SHA256: 55c3b0464de6161cd8e5bef025ccaa65f70dda8406621af53c4faa34ac4ce347
 
 Package: openafs-modules-dkms
 Source: openafs
