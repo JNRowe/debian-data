@@ -5364,11 +5364,11 @@ MD5sum: 1207bcbed57dde342984f74917447959
 SHA256: f4d2aea90eb519bed74c00ebc91a69a76129e0a5e4594c8f22ffdd315138e30d
 
 Package: cproto
-Version: 4.7y-1
-Installed-Size: 126
+Version: 4.8-1
+Installed-Size: 125
 Maintainer: Kenneth J. Pronovici <pronovic@debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.34), gcc
+Depends: libc6 (>= 2.38), gcc
 Description: utilities to generate C function prototypes from C source code
 Homepage: https://invisible-island.net/cproto/cproto.html
 Description-md5: fe74472d82a7bc4da41968b3563d1a85
@@ -5377,10 +5377,10 @@ Tag: devel::code-generator, devel::lang:c, devel::library, implemented-in::c,
  works-with::software:source
 devel
 Priority: optional
-Filename: pool/main/c/cproto/cproto_4.7y-1_amd64.deb
-Size: 56156
-MD5sum: 18de892aac114b123984a4f719c09352
-SHA256: ad7ac711b32156d2735fe1af809a27c06cd3b497b724d026adbaaa2330960f99
+Filename: pool/main/c/cproto/cproto_4.8-1_amd64.deb
+Size: 55632
+MD5sum: 0c9cc8fa6470be9ec32ea4cf7c74f844
+SHA256: 3948caae607a68949022ac74079979396aa49a4c221232badae9506b45323aa8
 
 Package: crashme
 Version: 2.8.5-4
@@ -5960,31 +5960,31 @@ MD5sum: 54c0794c755acf04e8db06d900f14534
 SHA256: 9c179d771a8dabad923a353e5536fe004b484cbbb8c2f15c8b9ab2e8ded273a3
 
 Package: debci
-Version: 4.0.1
-Installed-Size: 2600
+Version: 4.1
+Installed-Size: 1596
 Maintainer: Debian CI team <team+ci@tracker.debian.org>
 Architecture: all
-Depends: adduser, debootstrap, ruby-pg, sudo, amqp-tools, curl, dctrl-tools, debian-archive-keyring, distro-info, fonts-font-awesome (>= 4.0.3~), inotify-tools, jq, libjs-bootstrap5, libjs-jquery, libjs-jquery-flot, moreutils, patchutils, retry, rsync, ruby, ruby-activerecord (>= 2:5.2), ruby-ansi, ruby-bunny, ruby-erubi, ruby-omniauth-gitlab, ruby-sinatra, ruby-sinatra-contrib, ruby-kaminari-activerecord, ruby-sqlite3, ruby-table-print, ruby-thor
-Recommends: ntp | time-daemon
+Depends: adduser, debootstrap, ruby-pg, sudo, amqp-tools, curl, dctrl-tools, debian-archive-keyring, distro-info, fonts-fork-awesome (>= 1.2.0), inotify-tools, jq, libjs-bootstrap5, libjs-jquery, libjs-jquery-flot, moreutils, patchutils, retry, rsync, ruby, ruby-activerecord (>= 2:7.2.2.2), ruby-ansi, ruby-bunny, ruby-erubi, ruby-omniauth-gitlab, ruby-sinatra, ruby-sinatra-contrib, ruby-kaminari-activerecord, ruby-sqlite3, ruby-table-print, ruby-thor
+Recommends: systemd-timesyncd | time-daemon
 Suggests: apt-cacher-ng, auto-apt-proxy
 Description: continuous integration system for Debian
 Homepage: http://ci.debian.net/
 Description-md5: 8a0d373a3345132e5d56ea807bd19f4d
 devel
 Priority: optional
-Filename: pool/main/d/debci/debci_4.0.1_all.deb
-Size: 188528
-MD5sum: ed99513a0e3b9113c8f9b562ce4e4a8b
-SHA256: e74bb046c27bb67b2365bcd3898e44e9a2a3b83add720d1c3705bcafe55ac128
+Filename: pool/main/d/debci/debci_4.1_all.deb
+Size: 149220
+MD5sum: cfe737de1294db5381a80ee249af58ff
+SHA256: 6124bbce7abd349b1afe73f71b470749419f6bfacb0973d450af323988cd3003
 
 Package: debci-collector
 Source: debci
-Version: 4.0.1
-Installed-Size: 68
+Version: 4.1
+Installed-Size: 69
 Maintainer: Debian CI team <team+ci@tracker.debian.org>
 Architecture: all
 Replaces: debci (<< 2.6~)
-Depends: debci (= 4.0.1)
+Depends: debci (= 4.1)
 Recommends: rabbitmq-server
 Breaks: debci (<< 2.6~)
 Description: continuous integration system for Debian (collector daemon)
@@ -5992,28 +5992,28 @@ Homepage: http://ci.debian.net/
 Description-md5: 8c3977a7b69680497852f25220104f1f
 devel
 Priority: optional
-Filename: pool/main/d/debci/debci-collector_4.0.1_all.deb
-Size: 16400
-MD5sum: 7333afb4c1a11e29a7019e2db68b3388
-SHA256: 59372452f60dda695a3e238c9a19da9f35f7abd1aaef4f63e90f507594f16f5b
+Filename: pool/main/d/debci/debci-collector_4.1_all.deb
+Size: 16544
+MD5sum: 137a00317655899231d50f7d560c8918
+SHA256: 7d17d9c91e2f2ae9b08fa8ca79af4190dcda4e5070c2673d5e5943a7ee3f1db4
 
 Package: debci-worker
 Source: debci
-Version: 4.0.1
-Installed-Size: 30
+Version: 4.1
+Installed-Size: 31
 Maintainer: Debian CI team <team+ci@tracker.debian.org>
 Architecture: all
-Depends: debci (= 4.0.1), inotify-tools, autodep8 (>= 0.2~), autopkgtest (>= 5.29~), time-daemon
+Depends: debci (= 4.1), inotify-tools, autodep8 (>= 0.2~), autopkgtest (>= 5.29~), time-daemon
 Recommends: lxc | incus | lxd, distro-info
 Description: continuous integration system for Debian (worker daemon)
 Homepage: http://ci.debian.net/
 Description-md5: 6ea2307dc1e2980b7e8904c22f5f015d
 devel
 Priority: optional
-Filename: pool/main/d/debci/debci-worker_4.0.1_all.deb
-Size: 9764
-MD5sum: 62c39ad312ad573fdc738fd519476de4
-SHA256: 43046f4226037244611c5c186bf30642374c26d9bb77b1126539bb5e5d19c164
+Filename: pool/main/d/debci/debci-worker_4.1_all.deb
+Size: 10456
+MD5sum: c0e4c876b137166d96b2fff99587eba3
+SHA256: e3c4a12f80df281ab4aaf5f71603168a7faeccf44c817fbacb6e8a615f21e2ba
 
 Package: debconf-utils
 Source: debconf
@@ -6608,8 +6608,8 @@ MD5sum: 6843520170317c5780ba8b0564c85f8e
 SHA256: e7e8faa6392c4fb8b67ceb3b35ec7ad9f5193af014cc0178f0c46ec30d9df7ae
 
 Package: dgit
-Version: 15.8
-Installed-Size: 730
+Version: 15.9
+Installed-Size: 737
 Maintainer: Debian tag2upload Delegates <dgit-owner@debian.org>
 Architecture: all
 Depends: perl, libdpkg-perl, git, devscripts, dpkg-dev, git-buildpackage, liblist-moreutils-perl, liblocale-gettext-perl, coreutils (>= 8.23-1~), libdigest-sha-perl, dput, curl, apt, libjson-perl, ca-certificates, libtext-iconv-perl, libtext-glob-perl, libwww-curl-perl, libtext-csv-perl, python3
@@ -6619,15 +6619,15 @@ Description: git interoperability with the Debian archive
 Description-md5: 559081434127c75cd5fadde790e2eb02
 devel
 Priority: optional
-Filename: pool/main/d/dgit/dgit_15.8_all.deb
-Size: 318724
-MD5sum: 94f50e8923c28b45e7860c923614e70a
-SHA256: e099dc5dead0427424658fbc59521fb3c206fa31626a793d3068fc2853a19d51
+Filename: pool/main/d/dgit/dgit_15.9_all.deb
+Size: 318840
+MD5sum: e4b706b106e93a2383c008a6e8d244b7
+SHA256: d3f1fca10d9b248acde0f8176ca201ff9a831d0c968bde81ad2f089b6612d2e1
 
 Package: dgit-infrastructure
 Source: dgit
-Version: 15.8
-Installed-Size: 271
+Version: 15.9
+Installed-Size: 272
 Maintainer: Debian tag2upload Delegates <dgit-owner@debian.org>
 Architecture: all
 Depends: init-system-helpers (>= 1.66~), perl, git, gpgv, chiark-utils-bin, libjson-perl, libdigest-sha-perl, libdbd-sqlite3-perl, sqlite3, libdpkg-perl, liburi-perl, libemail-messageid-perl, libmime-tools-perl, liblocale-gettext-perl
@@ -6636,15 +6636,15 @@ Description: dgit server backend infrastructure
 Description-md5: e26f759f3f9dc231ac6857a5dac9eef6
 devel
 Priority: optional
-Filename: pool/main/d/dgit/dgit-infrastructure_15.8_all.deb
-Size: 87464
-MD5sum: 2d4f4770a4af8109cd1698eeab53404f
-SHA256: e1ff70ac16b6a236b2cead80a6d50d69b0df4a898e83cea26a0ab590dbb7a218
+Filename: pool/main/d/dgit/dgit-infrastructure_15.9_all.deb
+Size: 87724
+MD5sum: 9410123826ed5858254310cebba1f836
+SHA256: 9dc3d8b976ce152039eb733fd9540f2686c74654277704c7d81df63cb8408b77
 
 Package: git-debpush
 Source: dgit
-Version: 15.8
-Installed-Size: 145
+Version: 15.9
+Installed-Size: 146
 Maintainer: Debian tag2upload Delegates <dgit-owner@debian.org>
 Architecture: all
 Replaces: devscripts (<< 2.25.18)
@@ -6653,15 +6653,15 @@ Description: client script for git pushing to Debian-style archives
 Description-md5: 105ec8f4a6cd42b7b9240815a87a8f8d
 devel
 Priority: optional
-Filename: pool/main/d/dgit/git-debpush_15.8_all.deb
-Size: 77188
-MD5sum: 54bd10a73fa84522f9b36a279549cc0c
-SHA256: e0584ed80f27adf2dec191b8675b845a3d3ee4aaf146589eee97b4c876da3c81
+Filename: pool/main/d/dgit/git-debpush_15.9_all.deb
+Size: 77228
+MD5sum: 1062bc545faa7d0c2b4a124c9c6be30e
+SHA256: dc77925035e9f5991fc5f1a8c4201837f1feb3c2025aa6fdb0c581a9b6890d62
 
 Package: git-debrebase
 Source: dgit
-Version: 15.8
-Installed-Size: 275
+Version: 15.9
+Installed-Size: 276
 Maintainer: Debian tag2upload Delegates <dgit-owner@debian.org>
 Architecture: all
 Depends: perl, git, libdpkg-perl, libfile-fnmatch-perl, devscripts, liblocale-gettext-perl
@@ -6670,10 +6670,10 @@ Description: rebasing git workflow tool for Debian packaging
 Description-md5: e4745a1c73d8cbbfb3a0f6cbfa82eeaf
 devel
 Priority: optional
-Filename: pool/main/d/dgit/git-debrebase_15.8_all.deb
-Size: 108096
-MD5sum: ee31d13af4096a786777b8530fab94cf
-SHA256: cd61b128845899fe550639896a394eadd17b5dcf87cab7279d1acbc172b58b1c
+Filename: pool/main/d/dgit/git-debrebase_15.9_all.deb
+Size: 108320
+MD5sum: 6a385dbf55eb4ff9e3894d359b177afd
+SHA256: 423d23c28d82f46c2b59d6b0ee6033299ea20a50e278ff1b33afe960e8b02a4b
 
 Package: dh-ada-library
 Version: 9.9
@@ -7089,8 +7089,8 @@ MD5sum: 00dd610bf07b58742ab82eb5beffbb43
 SHA256: dda8d5a843fba496630ea9275de9ed9790da79f7c19f07191ab538fdbae39574
 
 Package: dh-puredata
-Version: 3.2.1
-Installed-Size: 36
+Version: 3.3.0
+Installed-Size: 39
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: all
 Provides: dh-sequence-pd-lib-builder, dh-sequence-puredata
@@ -7102,10 +7102,10 @@ Homepage: https://salsa.debian.org/multimedia-team/pd/dh-puredata
 Description-md5: c546f62b55ba299d98f76f78bdfc2aea
 devel
 Priority: optional
-Filename: pool/main/d/dh-puredata/dh-puredata_3.2.1_all.deb
-Size: 8536
-MD5sum: 49bae5a5c1693ef36b6ff07162eec481
-SHA256: 0f9cf487636f015e7cb26b4a063fe66d3d1303c14ec4af6cd58bbb2b8223659f
+Filename: pool/main/d/dh-puredata/dh-puredata_3.3.0_all.deb
+Size: 9760
+MD5sum: 0fb8c46e6828676820ac8453f2ed5522
+SHA256: 5db133ef84d8c2645b9b87718d5ecde369250d3beb3e1d5a165ac9e786481b8d
 
 Package: dh-rebar
 Version: 0.0.6
@@ -7140,7 +7140,7 @@ MD5sum: 038140b221a7f60b6687660359ae1fc8
 SHA256: 27d0b237861cfca3d1d7e0a7b1a3bba49aedd1e9cdb6991184fb4587fd3e39a9
 
 Package: dh-rust
-Version: 0.1.0
+Version: 0.1.1
 Installed-Size: 61
 Maintainer: build-common team <team+build-common@tracker.debian.org>
 Architecture: all
@@ -7152,10 +7152,10 @@ Homepage: https://salsa.debian.org/build-common-team/dh-rust
 Description-md5: 94601fba5ce21fa555d2a40cb0602c36
 devel
 Priority: optional
-Filename: pool/main/d/dh-rust/dh-rust_0.1.0_all.deb
-Size: 16996
-MD5sum: b9df6b18eb12c9576f3b6a6c7e0797e5
-SHA256: 463cbf93931630410804b4231881efba9d0d714ced2729b66c4f7dad91f11c71
+Filename: pool/main/d/dh-rust/dh-rust_0.1.1_all.deb
+Size: 17100
+MD5sum: 1b4497d26c0a38de2889fae0e96bcdc8
+SHA256: 59484e69094cfdc9856907c49b422b41a9d56fd48f20e27e77022c967971be9a
 
 Package: dh-shell-completions
 Version: 0.1.0
@@ -66600,8 +66600,8 @@ SHA256: 6baddaa0633b2ff93273ee693fae1f36131f755d1a277a31d460e5a14d5125a6
 
 Package: golang-github-mdlayher-netlink-dev
 Source: golang-github-mdlayher-netlink
-Version: 1.10.0-3
-Installed-Size: 249
+Version: 1.11.2-1
+Installed-Size: 261
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
 Depends: golang-github-google-go-cmp-dev, golang-github-mdlayher-socket-dev (>= 0.4.0), golang-golang-x-net-dev, golang-golang-x-sys-dev
@@ -66611,10 +66611,10 @@ Homepage: https://github.com/mdlayher/netlink
 Description-md5: 57d9f3567f6a9bd4b429cbe20817807b
 devel
 Priority: optional
-Filename: pool/main/g/golang-github-mdlayher-netlink/golang-github-mdlayher-netlink-dev_1.10.0-3_all.deb
-Size: 46152
-MD5sum: f1bc5d0b849c96fe0ccfaca1f970c68f
-SHA256: 6e16b60c18eb6b8700705b423111a3a108dc41c24f17c6c3013c11942b6c6653
+Filename: pool/main/g/golang-github-mdlayher-netlink/golang-github-mdlayher-netlink-dev_1.11.2-1_all.deb
+Size: 48836
+MD5sum: fe9f3a5d77703cacb9bc444c389ac087
+SHA256: 463a0c76a897530fc3993d3f6989efcb34c53c87ce3e0674411a4415ab21ed39
 
 Package: mender-artifact
 Source: golang-github-mendersoftware-mender-artifact
@@ -71013,12 +71013,12 @@ SHA256: 8ceb33e59a1d349d07055dc9f85843240246d626446e8e146af3b5554abc89f1
 
 Package: abigail-tools
 Source: libabigail
-Version: 2.9-3
-Installed-Size: 1003
+Version: 2.10-2
+Installed-Size: 1004
 Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
 Architecture: amd64
 Replaces: libabigail-tools
-Depends: libabigail8 (= 2.9-3), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1), python3, python3-git, python3-libarchive-c
+Depends: libabigail9 (= 2.10-2), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1), python3, python3-git, python3-libarchive-c
 Suggests: cpio, rpm2cpio, abigail-doc
 Description: ABI Generic Analysis and Instrumentation Library (tools)
 Multi-Arch: foreign
@@ -71026,10 +71026,10 @@ Homepage: https://sourceware.org/libabigail/
 Description-md5: e6981e21cd3ee6bb6496739dae7c4e3b
 devel
 Priority: optional
-Filename: pool/main/liba/libabigail/abigail-tools_2.9-3_amd64.deb
-Size: 656212
-MD5sum: d9024ec1681b93c4107c79dd88ac4fce
-SHA256: cac4e66e81fe372d1df7974e12eb68ff68070c5d402e1c3236d2a521edc19c65
+Filename: pool/main/liba/libabigail/abigail-tools_2.10-2_amd64.deb
+Size: 657692
+MD5sum: fda5995d52b25299d33fc3b21e3b4763
+SHA256: d1e06de5fe3bc0ca49728451a46a1be4b521006b9ea2e1afd23f397c8fc7f510
 
 Package: libayatana-indicator3-tools
 Source: libayatana-indicator (0.9.4-2)
@@ -74811,11 +74811,11 @@ MD5sum: 75b24d20b18c8cb2ce6391affbd4bbbc
 SHA256: a5efdbe6ea232ceb828f578a6718ccc4959e23d628923d7bbd5dd9f1244a6ec0
 
 Package: mklibs
-Version: 0.1.45
-Installed-Size: 42
+Version: 0.1.46
+Installed-Size: 37
 Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
 Architecture: all
-Depends: python3, binutils, gcc, dpkg-dev, mklibs-copy (>= 0.1.45)
+Depends: python3, binutils, gcc, dpkg-dev, mklibs-copy (>= 0.1.46)
 Recommends: libc6-pic | libc6.1-pic | libc0.1-pic | libc0.3-pic
 Description: Shared library reduction script
 Description-md5: 566a24327f5b3aff340afc352308942e
@@ -74823,28 +74823,28 @@ Tag: devel::buildtools, implemented-in::python, interface::commandline,
  role::program, scope::utility
 devel
 Priority: optional
-Filename: pool/main/m/mklibs/mklibs_0.1.45_all.deb
-Size: 15012
-MD5sum: d5f74732166a9ff8eb813d1c2a95fac9
-SHA256: 2923c49e9fb5fcc70e06b6c8a7c1ae22b0436392e666f58eeccc698fe5c597e5
+Filename: pool/main/m/mklibs/mklibs_0.1.46_all.deb
+Size: 10040
+MD5sum: 3fc1589fe3cee4957623c73f3b8937df
+SHA256: db1ef009502c114142d24479e3b3c0b676cbc2a952a8e71aaa63ef63d303d25b
 
 Package: mklibs-copy
 Source: mklibs
-Version: 0.1.45
+Version: 0.1.46
 Installed-Size: 191
 Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
 Architecture: amd64
-Depends: python3, dpkg-dev, libc6 (>= 2.33), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2)
+Depends: dpkg-dev, python3:any, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
 Description: Shared library reduction script
 Description-md5: 27bc2ab99a6d95d524085d903621e749
 Tag: devel::buildtools, implemented-in::python, interface::commandline,
  role::program, scope::utility
 devel
 Priority: optional
-Filename: pool/main/m/mklibs/mklibs-copy_0.1.45_amd64.deb
-Size: 41876
-MD5sum: 127bfa6d5c7801a5e4ee3500db56c01b
-SHA256: 63987f0ea1a5f3173e709e14b41ca3a968e058008ee08d9fe3e461a142b02b42
+Filename: pool/main/m/mklibs/mklibs-copy_0.1.46_amd64.deb
+Size: 38608
+MD5sum: ff6ba739583a9236cb8c78f3c8176a2b
+SHA256: e00689b6fc28322c463cc37579a0f128af277ffe09e4d48616af2fe58f820eb5
 
 Package: mlton
 Version: 20241230+git20251029+dfsg-5
@@ -77818,22 +77818,21 @@ MD5sum: 7b13d0027bc0086f6ec66938fda2e2a7
 SHA256: 778f8981d733d32754458395310ce9b501c086432c873f050e37c1847291114d
 
 Package: prometheus-haproxy-exporter
-Version: 0.15.0-3
-Installed-Size: 12673
+Version: 0.15.0-4
+Installed-Size: 12976
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
 Depends: adduser, libc6 (>= 2.34)
-Pre-Depends: init-system-helpers (>= 1.54~)
 Description: HAProxy exporter for Prometheus
 Homepage: https://github.com/prometheus/haproxy_exporter
 Description-md5: 5b311ab5288c3a7b335fe41fc1d8d119
-Static-Built-Using: golang-1.24 (= 1.24.0-2), golang-github-alecthomas-units (= 0.0~git20240626.61d1e34-1), golang-github-beorn7-perks (= 1.0.1-1), golang-github-cespare-xxhash (= 2.3.0-1), golang-github-coreos-go-systemd (= 22.5.0-1), golang-github-go-kit-log (= 0.2.1-1), golang-github-go-logfmt-logfmt (= 0.5.0-2), golang-github-jpillora-backoff (= 1.0.0-1.1), golang-github-klauspost-compress (= 1.17.11+ds1-1), golang-github-mdlayher-socket (= 0.5.1-1), golang-github-mdlayher-vsock (= 1.2.1-2), golang-github-munnerz-goautoneg (= 0.0~git20191010.a7dc8b6-2), golang-github-mwitkow-go-conntrack (= 0.0~git20190716.2f06839-3), golang-github-prometheus-client-golang (= 1.21.0-1), golang-github-prometheus-client-model (= 0.6.0-1), golang-github-prometheus-common (= 0.62.0-3), golang-github-prometheus-exporter-toolkit (= 0.14.0-1), golang-github-prometheus-procfs (= 0.15.1-1), golang-go.crypto (= 1:0.25.0-1), golang-golang-x-net (= 1:0.27.0-1), golang-golang-x-oauth2 (= 0.26.0-1), golang-golang-x-sync (= 0.7.0-1), golang-golang-x-sys (= 0.22.0-1), golang-golang-x-text (= 0.22.0-1), golang-google-protobuf (= 1.33.0-1), golang-gopkg-alecthomas-kingpin.v2 (= 2.2.6-4), golang-yaml.v2 (= 2.4.0-4)
+Static-Built-Using: golang-1.26 (= 1.26.3-1), golang-github-alecthomas-units (= 0.0~git20240927.0f3dac3-2), golang-github-beorn7-perks (= 1.0.1-3), golang-github-cespare-xxhash (= 2.3.0-1), golang-github-coreos-go-systemd (= 22.6.0-1), golang-github-go-kit-log (= 0.2.1-2), golang-github-go-logfmt-logfmt (= 0.5.0-2), golang-github-golang-jwt-jwt-v5 (= 5.3.1-1), golang-github-google-uuid (= 1.6.0-1), golang-github-jpillora-backoff (= 1.0.0-1.1), golang-github-mdlayher-socket (= 0.6.0-2), golang-github-mdlayher-vsock (= 1.2.1-2), golang-github-munnerz-goautoneg (= 0.0~git20191010.a7dc8b6-2), golang-github-mwitkow-go-conntrack (= 0.0~git20190716.2f06839-4), golang-github-prometheus-client-golang (= 1.23.2-3), golang-github-prometheus-client-model (= 0.6.2-2), golang-github-prometheus-common (= 0.67.5-1), golang-github-prometheus-exporter-toolkit (= 0.16.0-1), golang-github-prometheus-procfs (= 0.20.1-2), golang-go.crypto (= 1:0.50.0-1), golang-golang-x-net (= 1:0.53.0-2), golang-golang-x-oauth2 (= 0.27.0-1), golang-golang-x-sync (= 0.19.0-1), golang-golang-x-sys (= 0.42.0-1), golang-golang-x-text (= 0.36.0-1), golang-golang-x-time (= 0.14.0-1), golang-google-protobuf (= 1.36.7-1), golang-gopkg-alecthomas-kingpin.v2 (= 2.2.6-4), golang-yaml.v2 (= 2.4.3-1)
 devel
 Priority: optional
-Filename: pool/main/p/prometheus-haproxy-exporter/prometheus-haproxy-exporter_0.15.0-3_amd64.deb
-Size: 3827476
-MD5sum: 6c86c9ea41a7d44fd65c229c8d52a436
-SHA256: 991965c9981894480c81bf7c3fda7d1f3f06be86a9ae19fb004fa901125a3cd1
+Filename: pool/main/p/prometheus-haproxy-exporter/prometheus-haproxy-exporter_0.15.0-4_amd64.deb
+Size: 3916380
+MD5sum: ddf40ff57d959dd9bf8148c5d7f6c76e
+SHA256: 3de68dda3bd6753930654f3668f8e4c90d5ecb402d278a92a89df060263bdf9f
 
 Package: prometheus-libvirt-exporter
 Source: prometheus-libvirt-exporter (0.2.0-1)
