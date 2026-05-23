@@ -1069,6 +1069,23 @@ Filename: pool/updates/main/g/gst-plugins-ugly1.0/gstreamer1.0-plugins-ugly_1.26
 Size: 188536
 SHA256: 75f0af6c684e37fa145a81b2ffc864d59b4f537aba6e2ebb8d18377567eccd93
 
+Package: libhavege2
+Source: haveged
+Version: 1.9.19-12+deb13u1
+Installed-Size: 117
+Maintainer: Daniel Baumann <daniel@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38)
+Description: entropy source using the HAVEGE algorithm - shared library
+Homepage: https://issihosts.com/haveged/
+Description-md5: 791597097dfee31e0e57febdd3a0f02e
+Multi-Arch: same
+libs
+Priority: optional
+Filename: pool/updates/main/h/haveged/libhavege2_1.9.19-12+deb13u1_amd64.deb
+Size: 26004
+SHA256: eb02e37e7e54a033dc2c35be330a8396788c8d936ed0f795354f59f298733014
+
 Package: libmagick++-7.q16-5
 Source: imagemagick
 Version: 8:7.1.1.43+dfsg1-1+deb13u8
@@ -1221,6 +1238,179 @@ Filename: pool/updates/main/i/imagemagick/libmagickwand-7.q16hdri-10_7.1.1.43+df
 Size: 348396
 SHA256: 83b3c3dc18d6b7fc58f4902dca21d9ee9a51a78108ca81e14a9922d902b995b0
 
+Package: libgssapi-krb5-2
+Source: krb5
+Version: 1.21.3-5+deb13u1
+Installed-Size: 434
+Maintainer: Sam Hartman <hartmans@debian.org>
+Architecture: amd64
+Depends: libkrb5-3 (= 1.21.3-5+deb13u1), libc6 (>= 2.38), libcom-err2 (>= 1.43.9), libk5crypto3 (>= 1.20), libkrb5support0 (= 1.21.3-5+deb13u1)
+Suggests: krb5-doc, krb5-user
+Description: MIT Kerberos runtime libraries - krb5 GSS-API Mechanism
+Homepage: https://web.mit.edu/kerberos/
+Description-md5: 2dd7fe357b29d0ba6727171c01f0301c
+Multi-Arch: same
+libs
+Priority: optional
+Filename: pool/updates/main/k/krb5/libgssapi-krb5-2_1.21.3-5+deb13u1_amd64.deb
+Size: 138356
+SHA256: 30847c1fde4240567d7ed3aeab4f655dd591203758b857e85e824045aae70299
+
+Package: libgssrpc4t64
+Source: krb5
+Version: 1.21.3-5+deb13u1
+Installed-Size: 213
+Maintainer: Sam Hartman <hartmans@debian.org>
+Architecture: amd64
+Replaces: libgssrpc4
+Provides: libgssrpc4 (= 1.21.3-5+deb13u1)
+Depends: libc6 (>= 2.34), libgssapi-krb5-2 (>= 1.17)
+Suggests: krb5-doc, krb5-user
+Breaks: libgssrpc4 (<< 1.21.3-5+deb13u1)
+Description: MIT Kerberos runtime libraries - GSS enabled ONCRPC
+Homepage: https://web.mit.edu/kerberos/
+Description-md5: f18b3ce27893cc2b96de6c617dc25d94
+Multi-Arch: same
+libs
+Priority: optional
+Filename: pool/updates/main/k/krb5/libgssrpc4t64_1.21.3-5+deb13u1_amd64.deb
+Size: 60132
+SHA256: ff88e52a6b6599851f3d44f7223f15123d9e5a0b02ed9a308c05c31fa88f7d73
+
+Package: libk5crypto3
+Source: krb5
+Version: 1.21.3-5+deb13u1
+Installed-Size: 266
+Maintainer: Sam Hartman <hartmans@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libkrb5support0 (= 1.21.3-5+deb13u1)
+Suggests: krb5-doc, krb5-user
+Breaks: libgssapi-krb5-2 (<= 1.18~), libkrb5-3 (<= 1.18~)
+Description: MIT Kerberos runtime libraries - Crypto Library
+Homepage: https://web.mit.edu/kerberos/
+Description-md5: 4b107bcb8481fee0b8b11744a386a6b0
+Multi-Arch: same
+libs
+Priority: optional
+Filename: pool/updates/main/k/krb5/libk5crypto3_1.21.3-5+deb13u1_amd64.deb
+Size: 81152
+SHA256: 7da07ee674b47f1f0be7cc89317c25310086a1f1761217d0f72e6ae2c5a69b84
+
+Package: libkadm5clnt-mit12
+Source: krb5
+Version: 1.21.3-5+deb13u1
+Installed-Size: 176
+Maintainer: Sam Hartman <hartmans@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libcom-err2 (>= 1.43.9), libgssapi-krb5-2 (>= 1.17), libgssrpc4t64 (>= 1.6.dfsg.2), libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.15~beta1), libkrb5support0 (= 1.21.3-5+deb13u1)
+Suggests: krb5-doc, krb5-user
+Conflicts: libkdb5-8
+Breaks: krb5-user (<< 1.21)
+Description: MIT Kerberos runtime libraries - Administration Clients
+Homepage: https://web.mit.edu/kerberos/
+Description-md5: 8b2bac04328bfaffc8a1b6b57144cc9b
+Multi-Arch: same
+libs
+Priority: optional
+Filename: pool/updates/main/k/krb5/libkadm5clnt-mit12_1.21.3-5+deb13u1_amd64.deb
+Size: 42648
+SHA256: 9d1271f9ef8d3d308e1d9373cccc59de0e2b2b62b0ddd39cffd76cb18af24bb2
+
+Package: libkadm5srv-mit12
+Source: krb5
+Version: 1.21.3-5+deb13u1
+Installed-Size: 201
+Maintainer: Sam Hartman <hartmans@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libcom-err2 (>= 1.43.9), libgssapi-krb5-2 (>= 1.6.dfsg.2), libgssrpc4t64 (>= 1.6.dfsg.2), libk5crypto3 (>= 1.6.dfsg.2), libkdb5-10t64 (>= 1.21.3), libkrb5-3 (>= 1.15~beta1), libkrb5support0 (= 1.21.3-5+deb13u1)
+Suggests: krb5-doc, krb5-user
+Conflicts: libkdb5-8
+Breaks: krb5-admin-server (<< 1.21), krb5-kdc (<< 1.21)
+Description: MIT Kerberos runtime libraries - KDC and Admin Server
+Homepage: https://web.mit.edu/kerberos/
+Description-md5: 34bc9a3bc5f24d8493ce16a753dc317d
+Multi-Arch: same
+libs
+Priority: optional
+Filename: pool/updates/main/k/krb5/libkadm5srv-mit12_1.21.3-5+deb13u1_amd64.deb
+Size: 54440
+SHA256: ab608b7692bcb980957c2dc83da291fa58e065955fdc6c0882c66d26502693ca
+
+Package: libkdb5-10t64
+Source: krb5
+Version: 1.21.3-5+deb13u1
+Installed-Size: 161
+Maintainer: Sam Hartman <hartmans@debian.org>
+Architecture: amd64
+Replaces: libkdb5-10
+Provides: libkdb5-10 (= 1.21.3-5+deb13u1)
+Depends: libc6 (>= 2.38), libcom-err2 (>= 1.43.9), libgssrpc4t64 (>= 1.7dfsg~alpha1), libk5crypto3 (>= 1.20), libkrb5-3 (>= 1.14+dfsg), libkrb5support0 (= 1.21.3-5+deb13u1)
+Suggests: krb5-doc, krb5-user
+Description: MIT Kerberos runtime libraries - Kerberos database
+Homepage: https://web.mit.edu/kerberos/
+Description-md5: 339dba7d5a44f05699e73cc493c3def3
+Multi-Arch: same
+libs
+Priority: optional
+Filename: pool/updates/main/k/krb5/libkdb5-10t64_1.21.3-5+deb13u1_amd64.deb
+Size: 42788
+SHA256: d6d4ec516fe87c545862b117bc5cec294cabf06319c400720ec6c01bc215b79f
+
+Package: libkrad0
+Source: krb5
+Version: 1.21.3-5+deb13u1
+Installed-Size: 123
+Maintainer: Sam Hartman <hartmans@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.25), libk5crypto3 (>= 1.20), libkrb5-3 (>= 1.6.dfsg.2), libverto1t64 (>= 0.2.4)
+Description: MIT Kerberos runtime libraries - RADIUS library
+Homepage: https://web.mit.edu/kerberos/
+Description-md5: 2d2f7517dcfd02118262a7f5e45301dd
+Multi-Arch: same
+libs
+Priority: optional
+Filename: pool/updates/main/k/krb5/libkrad0_1.21.3-5+deb13u1_amd64.deb
+Size: 25712
+SHA256: 8a4c24c38131723819bbf9d075e3d119bb8b96aef832e6eaa16a39d643b13201
+
+Package: libkrb5-3
+Source: krb5
+Version: 1.21.3-5+deb13u1
+Installed-Size: 1074
+Maintainer: Sam Hartman <hartmans@debian.org>
+Architecture: amd64
+Depends: libkrb5support0 (= 1.21.3-5+deb13u1), libc6 (>= 2.38), libcom-err2 (>= 1.43.9), libk5crypto3 (>= 1.20), libkeyutils1 (>= 1.5.9), libssl3t64 (>= 3.0.0)
+Suggests: krb5-doc, krb5-user
+Breaks: libapache2-mod-auth-kerb (<= 5.4-2.4)
+Description: MIT Kerberos runtime libraries
+Homepage: https://web.mit.edu/kerberos/
+Description-md5: 07bb931a85fb24c6a0ef0f62a94bb26c
+Multi-Arch: same
+Recommends: krb5-locales
+libs
+Priority: optional
+Filename: pool/updates/main/k/krb5/libkrb5-3_1.21.3-5+deb13u1_amd64.deb
+Size: 326056
+SHA256: 47d71d6a7f2e59b9bae5f89602397594805113b95889ad18fa703cd53abafc97
+
+Package: libkrb5support0
+Source: krb5
+Version: 1.21.3-5+deb13u1
+Installed-Size: 137
+Maintainer: Sam Hartman <hartmans@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38)
+Breaks: krb5-admin-server (<< 1.20.1-4~), krb5-kdc (<< 1.20.1-4~), krb5-pkinit (<< 1.20.1-4~), krb5-user (<< 1.20.1-4~), libgssapi-krb5-2 (<< 1.20), libk5crypto3 (<< 1.20.1-4~), libkadm5clnt-mit9 (<< 1.13~alpha1-1), libkadm5srv-mit12 (<< 1.20.1-4~), libkadm5srv-mit9 (<< 1.13~alpha1-1), libkdb5-10t64 (<< 1.20.1-4~), libkdb5-8 (<< 1.16), libkrb5-3 (<< 1.20.1-4~)
+Description: MIT Kerberos runtime libraries - Support library
+Homepage: https://web.mit.edu/kerberos/
+Description-md5: 4f3abf66dd7bfd20406fc400a05b0693
+Multi-Arch: same
+libs
+Priority: optional
+Filename: pool/updates/main/k/krb5/libkrb5support0_1.21.3-5+deb13u1_amd64.deb
+Size: 33124
+SHA256: 3a0acd8b37955c0e102c756b52c97df2a31f67b96453c35dab70df218d309117
+
 Package: liblasso3t64
 Source: lasso
 Version: 2.8.2-9+deb13u1
@@ -1257,6 +1447,23 @@ Priority: optional
 Filename: pool/updates/main/l/lcms2/liblcms2-2_2.16-2+deb13u2_amd64.deb
 Size: 160264
 SHA256: 32e53c2002ccea8c60c02779bea0ba49ac132fef702988a30d64af79b6617806
+
+Package: libgcrypt20
+Version: 1.11.0-7+deb13u1
+Installed-Size: 1999
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libgpg-error0 (>= 1.50)
+Suggests: rng-tools
+Description: LGPL Crypto library - runtime library
+Homepage: https://gnupg.org/software/libgcrypt/
+Description-md5: 98bb5dd0ae9e4cb030e532a58cd590be
+Multi-Arch: same
+libs
+Priority: optional
+Filename: pool/updates/main/libg/libgcrypt20/libgcrypt20_1.11.0-7+deb13u1_amd64.deb
+Size: 843104
+SHA256: f0eb41f8cb40896e0822e9ab65611e8383c12b721c76c54764f744abb4a8c247
 
 Package: libpng16-16t64
 Source: libpng1.6
@@ -1495,8 +1702,8 @@ SHA256: 9bc71cdba622881dc1ad97a9854309025623ad10e9b545adeb7587cb26ecafe5
 
 Package: libcpupower1
 Source: linux
-Version: 6.12.88-1
-Installed-Size: 1281
+Version: 6.12.90-1
+Installed-Size: 1282
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38)
@@ -1505,9 +1712,9 @@ Homepage: https://www.kernel.org/
 Description-md5: 651921d653a527bee29dc6a45156f066
 libs
 Priority: optional
-Filename: pool/updates/main/l/linux/libcpupower1_6.12.88-1_amd64.deb
-Size: 1265664
-SHA256: aed0414fb25a3abf8b22af50abcf9677537fa10852e0a48d001bbc03abab5470
+Filename: pool/updates/main/l/linux/libcpupower1_6.12.90-1_amd64.deb
+Size: 1267480
+SHA256: 3931a77604024d3537f854eb00322747339a66452a6408de4d1bf6bbef5917e4
 
 Package: libmunge2
 Source: munge

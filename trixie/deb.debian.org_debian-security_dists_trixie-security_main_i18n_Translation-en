@@ -3822,6 +3822,46 @@ Description-en: syntax highlighting for HAProxy configuration files
  As per the Debian vim policy, installed addons are not activated
  automatically, but the "vim-addon-manager" tool can be used for this purpose.
 
+Package: haveged
+Description-md5: e29e090ec35dfe759c8580ce04904d0c
+Description-en: Linux entropy source using the HAVEGE algorithm
+ haveged is a userspace entropy daemon which is not dependent upon the
+ standard mechanisms for harvesting randomness for the system entropy
+ pool. This is important in systems with high entropy needs or limited
+ user interaction (e.g. headless servers).
+ .
+ haveged uses HAVEGE (HArdware Volatile Entropy Gathering and Expansion)
+ to maintain a 1M pool of random bytes used to fill /dev/random
+ whenever the supply of random bits in dev/random falls below the low
+ water mark of the device.
+ .
+ More information about HAVEGE is available at
+ http://www.irisa.fr/caps/projects/hipsor/
+
+Package: libhavege-dev
+Description-md5: c49a598f854a87b074e2d7bc5a4f89dd
+Description-en: entropy source using the HAVEGE algorithm - development files
+ libhavege is a library that implements the HAVEGE (HArdware Volatile Entropy
+ Gathering and Expansion). It provides a random number generator and it's
+ associated tuning and testing factilities.
+ .
+ More information about HAVEGE is available at
+ http://www.irisa.fr/caps/projects/hipsor/
+ .
+ This package contains the development files.
+
+Package: libhavege2
+Description-md5: 791597097dfee31e0e57febdd3a0f02e
+Description-en: entropy source using the HAVEGE algorithm - shared library
+ libhavege is a library that implements the HAVEGE (HArdware Volatile Entropy
+ Gathering and Expansion). It provides a random number generator and it's
+ associated tuning and testing factilities.
+ .
+ More information about HAVEGE is available at
+ http://www.irisa.fr/caps/projects/hipsor/
+ .
+ This package contains the shared library.
+
 Package: libhsqldb1.8.0-java
 Description-md5: 214a2c1ad31e54bb2dc0632a9a88f65a
 Description-en: Java SQL database engine
@@ -4552,6 +4592,334 @@ Description-en: OpenStack identity service - library
  .
  This package contains the Python libraries.
 
+Package: krb5-admin-server
+Description-md5: 768e84fbe9ad60b9ec2130a96ea21ea4
+Description-en: MIT Kerberos master server (kadmind)
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the Kerberos master server (kadmind), which handles
+ account creations and deletions, password changes, and other
+ administrative commands via the Kerberos admin protocol.  It also
+ contains the command used by the master KDC to propagate its database to
+ slave KDCs.  This package is generally only used on the master KDC for a
+ Kerberos realm.
+
+Package: krb5-doc
+Description-md5: 019f063fa3a2221f5019a253e0acb9bc
+Description-en: documentation for MIT Kerberos
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the installation, administrator, and user reference
+ manuals for MIT Kerberos and the man pages for the MIT Kerberos
+ configuration files.
+
+Package: krb5-gss-samples
+Description-md5: 6e4720c194d0de7a31bbd570993cac24
+Description-en: MIT Kerberos GSS Sample applications
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains bgss-sample and gss-server, programs used to
+ test GSS-API mechanisms. These programs are most commonly used in
+ testing newly developed GSS-API mechanisms or in testing events
+ between Kerberos or GSS implementations.
+
+Package: krb5-k5tls
+Description-md5: 5699670af87b8b1548415421a790b2b8
+Description-en: TLS plugin for MIT Kerberos
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains a plugin for the TLS functionality used by optional
+ functionality in MIT Kerberos.  The only current consumer is client support
+ for the MS-KKDCP protocol, which tunnels Kerberos protocol traffic through
+ an HTTPS proxy.
+
+Package: krb5-kdc
+Description-md5: 0a143660c97d96b64a9766db9ef769fb
+Description-en: MIT Kerberos key server (KDC)
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the Kerberos key server (KDC).  The KDC manages all
+ authentication credentials for a Kerberos realm, holds the master keys
+ for the realm, and responds to authentication requests.  This package
+ should be installed on both master and slave KDCs.
+
+Package: krb5-kdc-ldap
+Description-md5: cf27e9acb56671eabef7c903664b1b10
+Description-en: MIT Kerberos key server (KDC) LDAP plugin
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the LDAP plugin for the Kerberos key server (KDC)
+ and supporting utilities.  This plugin allows the KDC data to be stored
+ in an LDAP server rather than the default local database.  It should be
+ installed on both master and slave KDCs that use LDAP as a storage
+ backend.
+
+Package: krb5-kpropd
+Description-md5: 2ba7e7dc26d29ffeba6f320923811e2b
+Description-en: MIT Kerberos key server (Slave KDC Support)
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the Kerberos slave KDC update server (kpropd). The
+ kpropd command runs on the slave KDC server. It listens for update requests
+ made by the kprop program, and periodically requests incremental updates from
+ the master KDC. This package should be installed on slave KDCs.
+
+Package: krb5-locales
+Description-md5: 21d19741f2f6e9424950c8f1a6d5cab0
+Description-en: internationalization support for MIT Kerberos
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains internationalized messages for MIT Kerberos.
+
+Package: krb5-multidev
+Description-md5: f39b0ef69fd49cdc81c78fd16595779e
+Description-en: development files for MIT Kerberos without Heimdal conflict
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ Most users wishing to build applications against MIT Kerberos should
+ install libkrb5-dev.  However, that package conflicts with heimdal-dev.
+ This package installs libraries and headers in /usr/include/mit-krb5 and
+ /usr/lib/mit-krb5 and can be installed along side heimdal-multidev, which
+ provides the same facilities for Heimdal.
+
+Package: krb5-otp
+Description-md5: 2f5dd566c16f346d882c733b4d7b1206
+Description-en: OTP plugin for MIT Kerberos
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains a plugin for the OTP preauthentication method
+ (RFC 6560), which allows Kerberos tickets to be obtained using
+ One-Time Password authentication.  This plugin is for use on the KDC; the
+ client support is built in to libkrb5.
+
+Package: krb5-pkinit
+Description-md5: 5b95da6e663d16f53b0cdeb2712ed0f3
+Description-en: PKINIT plugin for MIT Kerberos
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains a plugin for the PKINIT protocol, which allows
+ Kerberos tickets to be obtained using public-key credentials such as
+ X.509 certificates or a smart card.  This plugin can be used by the
+ client libraries and the KDC.
+
+Package: krb5-user
+Description-md5: b10599fa748131166d0b1a01617ee6ce
+Description-en: basic programs to authenticate using MIT Kerberos
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the basic programs to authenticate to MIT Kerberos,
+ change passwords, and talk to the admin server (to create and delete
+ principals, list principals, etc.).
+
+Package: libgssapi-krb5-2
+Description-md5: 2dd7fe357b29d0ba6727171c01f0301c
+Description-en: MIT Kerberos runtime libraries - krb5 GSS-API Mechanism
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the runtime library for the MIT Kerberos
+ implementation of GSS-API used by applications and Kerberos clients.
+
+Package: libgssrpc4t64
+Description-md5: f18b3ce27893cc2b96de6c617dc25d94
+Description-en: MIT Kerberos runtime libraries - GSS enabled ONCRPC
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains an RPC library used by the Kerberos administrative
+ programs and potentially other applications.
+
+Package: libk5crypto3
+Description-md5: 4b107bcb8481fee0b8b11744a386a6b0
+Description-en: MIT Kerberos runtime libraries - Crypto Library
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the runtime cryptography libraries used by
+ applications and Kerberos clients.
+
+Package: libkadm5clnt-mit12
+Description-md5: 8b2bac04328bfaffc8a1b6b57144cc9b
+Description-en: MIT Kerberos runtime libraries - Administration Clients
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the runtime library used by clients of the Kerberos
+ administration protocol.
+
+Package: libkadm5srv-mit12
+Description-md5: 34bc9a3bc5f24d8493ce16a753dc317d
+Description-en: MIT Kerberos runtime libraries - KDC and Admin Server
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the runtime library used by Kerberos administrative
+ servers.
+
+Package: libkdb5-10t64
+Description-md5: 339dba7d5a44f05699e73cc493c3def3
+Description-en: MIT Kerberos runtime libraries - Kerberos database
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the internal Kerberos database libraries.
+
+Package: libkrad-dev
+Description-md5: f22135e65145d2c1d4adf7a6dc4266ad
+Description-en: MIT Kerberos RADIUS Library Development
+ This package includes development headers for libkrad0, the MIT
+ Kerberos RADIUS library.  You should not use this RADIUS library in
+ packages unrelated to MIT Kerberos.
+
+Package: libkrad0
+Description-md5: 2d2f7517dcfd02118262a7f5e45301dd
+Description-en: MIT Kerberos runtime libraries - RADIUS library
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the internal support library for RADIUS functionality.
+
+Package: libkrb5-3
+Description-md5: 07bb931a85fb24c6a0ef0f62a94bb26c
+Description-en: MIT Kerberos runtime libraries
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the runtime library for the main Kerberos v5 API
+ used by applications and Kerberos clients.
+
+Package: libkrb5-dbg
+Description-md5: 943dd1af23ccc316b4f620ded24f9212
+Description-en: debugging files for MIT Kerberos
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the debugging information for the MIT Kerberos
+ libraries.  Install this package if you need to trace problems inside the
+ MIT Kerberos libraries with a debugger.
+
+Package: libkrb5-dev
+Description-md5: 2f88a00ff06db459d4a3aee80c1e2778
+Description-en: headers and development libraries for MIT Kerberos
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains the symlinks, headers, and development libraries
+ needed to compile and link programs that use the Kerberos libraries.
+
+Package: libkrb5support0
+Description-md5: 4f3abf66dd7bfd20406fc400a05b0693
+Description-en: MIT Kerberos runtime libraries - Support library
+ Kerberos is a system for authenticating users and services on a network.
+ Kerberos is a trusted third-party service.  That means that there is a
+ third party (the Kerberos server) that is trusted by all the entities on
+ the network (users and services, usually called "principals").
+ .
+ This is the MIT reference implementation of Kerberos V5.
+ .
+ This package contains an internal runtime support library used by other
+ Kerberos libraries.
+
 Package: krita
 Description-md5: cad766809ad07bc61817bcf9d8a74ddb
 Description-en: pixel-based image manipulation program
@@ -4673,6 +5041,82 @@ Description-en: module for fast and correct serialising to JSON
  none of them correctly handle all corner cases, and in most cases their
  maintainers are unresponsive, gone missing, or not listening to bug reports
  for other reasons.
+
+Package: libgcrypt-bin
+Description-md5: 45f1a67bfb4f2de08ba12f98d85c408f
+Description-en: LGPL Crypto library - utility binaries
+ libgcrypt contains cryptographic functions.  Many important free
+ ciphers, hash algorithms and public key signing algorithms have been
+ implemented:
+ .
+ Arcfour, Blowfish, CAST5, DES, AES, Twofish, Serpent, rfc2268 (rc2), SEED,
+ Poly1305, Camellia, ChaCha20, IDEA, Salsa, SM4, Blake-2, CRC, MD2, MD4, MD5,
+ RIPE-MD160, SM3, SHA-1, SHA-256, SHA-512, SHA3-224, SHA3-256, SHA3-384,
+ SHA3-512, SHAKE128, SHAKE256, Tiger, Whirlpool, DSA, DSA2, ElGamal, RSA, ECC
+ (Curve25519, sec256k1, GOST R 34.10-2001 and GOST R 34.10-2012, etc.)
+ .
+ This package contains some utilities which are mainly useful when
+ developing programs using libgcrypt.
+
+Package: libgcrypt-mingw-w64-dev
+Description-md5: 82173c27ff91c9fa5388f0440c275afb
+Description-en: LGPL Crypto library - Windows development
+ libgcrypt contains cryptographic functions.  Many important free
+ ciphers, hash algorithms and public key signing algorithms have been
+ implemented:
+ .
+ Arcfour, Blowfish, CAST5, DES, AES, Twofish, Serpent, rfc2268 (rc2), SEED,
+ Poly1305, Camellia, ChaCha20, IDEA, Salsa, SM4, Blake-2, CRC, MD2, MD4, MD5,
+ RIPE-MD160, SM3, SHA-1, SHA-256, SHA-512, SHA3-224, SHA3-256, SHA3-384,
+ SHA3-512, SHAKE128, SHAKE256, Tiger, Whirlpool, DSA, DSA2, ElGamal, RSA, ECC
+ (Curve25519, sec256k1, GOST R 34.10-2001 and GOST R 34.10-2012, etc.)
+ .
+ This is a Windows version of libgcrypt.  It's meant to be used when
+ cross-building software that targets the Windows platform, e.g. the
+ win32-loader component of Debian-Installer.
+
+Package: libgcrypt20
+Description-md5: 98bb5dd0ae9e4cb030e532a58cd590be
+Description-en: LGPL Crypto library - runtime library
+ libgcrypt contains cryptographic functions.  Many important free
+ ciphers, hash algorithms and public key signing algorithms have been
+ implemented:
+ .
+ Arcfour, Blowfish, CAST5, DES, AES, Twofish, Serpent, rfc2268 (rc2), SEED,
+ Poly1305, Camellia, ChaCha20, IDEA, Salsa, SM4, Blake-2, CRC, MD2, MD4, MD5,
+ RIPE-MD160, SM3, SHA-1, SHA-256, SHA-512, SHA3-224, SHA3-256, SHA3-384,
+ SHA3-512, SHAKE128, SHAKE256, Tiger, Whirlpool, DSA, DSA2, ElGamal, RSA, ECC
+ (Curve25519, sec256k1, GOST R 34.10-2001 and GOST R 34.10-2012, etc.)
+
+Package: libgcrypt20-dev
+Description-md5: 0d74680c9807811396a5a59f02910c8c
+Description-en: LGPL Crypto library - development files
+ libgcrypt contains cryptographic functions.  Many important free
+ ciphers, hash algorithms and public key signing algorithms have been
+ implemented:
+ .
+ Arcfour, Blowfish, CAST5, DES, AES, Twofish, Serpent, rfc2268 (rc2), SEED,
+ Poly1305, Camellia, ChaCha20, IDEA, Salsa, SM4, Blake-2, CRC, MD2, MD4, MD5,
+ RIPE-MD160, SM3, SHA-1, SHA-256, SHA-512, SHA3-224, SHA3-256, SHA3-384,
+ SHA3-512, SHAKE128, SHAKE256, Tiger, Whirlpool, DSA, DSA2, ElGamal, RSA, ECC
+ (Curve25519, sec256k1, GOST R 34.10-2001 and GOST R 34.10-2012, etc.)
+ .
+ This package contains header files and libraries for static linking.
+
+Package: libgcrypt20-doc
+Description-md5: 6ab36cc5f314b7a1d355713a95d031f7
+Description-en: LGPL Crypto library - documentation
+ libgcrypt contains cryptographic functions.  Many important free
+ ciphers, hash algorithms and public key signing algorithms have been
+ implemented:
+ .
+ Arcfour, Blowfish, CAST5, DES, AES, Twofish, Serpent, rfc2268 (rc2), SEED,
+ Poly1305, Camellia, ChaCha20, IDEA, Salsa, SM4, Blake-2, CRC, MD2, MD4, MD5,
+ RIPE-MD160, SM3, SHA-1, SHA-256, SHA-512, SHA3-224, SHA3-256, SHA3-384,
+ SHA3-512, SHAKE128, SHAKE256, Tiger, Whirlpool, DSA, DSA2, ElGamal, RSA, ECC
+ (Curve25519, sec256k1, GOST R 34.10-2001 and GOST R 34.10-2012, etc.)
+ .
+ This package contains developer documentation.
 
 Package: libjson-xs-perl
 Description-md5: 86340713c4cc9ee648f8b8cd4a20ab7f
@@ -8786,6 +9230,180 @@ Description-en: Header files for Linux 6.12.88+deb13-s390x
  modules that load into the kernel provided by the
  linux-image-6.12.88+deb13-s390x package.
 
+Package: linux-headers-6.12.90+deb13-amd64
+Description-md5: 44551420d8181130c3c3939b2b37f419
+Description-en: Header files for Linux 6.12.90+deb13-amd64
+ This package provides the architecture-specific kernel header files for
+ Linux kernel 6.12.90+deb13-amd64, generally used for building out-of-tree
+ kernel modules.  These files are going to be installed into
+ /usr/src/linux-headers-6.12.90+deb13-amd64, and can be used for building
+ modules that load into the kernel provided by the
+ linux-image-6.12.90+deb13-amd64 package.
+
+Package: linux-headers-6.12.90+deb13-arm64
+Description-md5: 1cbb996c153990ed459ae63ec8b3f4b5
+Description-en: Header files for Linux 6.12.90+deb13-arm64
+ This package provides the architecture-specific kernel header files for
+ Linux kernel 6.12.90+deb13-arm64, generally used for building out-of-tree
+ kernel modules.  These files are going to be installed into
+ /usr/src/linux-headers-6.12.90+deb13-arm64, and can be used for building
+ modules that load into the kernel provided by the
+ linux-image-6.12.90+deb13-arm64 package.
+
+Package: linux-headers-6.12.90+deb13-arm64-16k
+Description-md5: b840816f3a798d5284a28eccd5c45935
+Description-en: Header files for Linux 6.12.90+deb13-arm64-16k
+ This package provides the architecture-specific kernel header files for
+ Linux kernel 6.12.90+deb13-arm64-16k, generally used for building
+ out-of-tree kernel modules.  These files are going to be installed into
+ /usr/src/linux-headers-6.12.90+deb13-arm64-16k, and can be used for
+ building modules that load into the kernel provided by the
+ linux-image-6.12.90+deb13-arm64-16k package.
+
+Package: linux-headers-6.12.90+deb13-armmp
+Description-md5: 3772f4e749816b2c8bef0257f779a24e
+Description-en: Header files for Linux 6.12.90+deb13-armmp
+ This package provides the architecture-specific kernel header files for
+ Linux kernel 6.12.90+deb13-armmp, generally used for building out-of-tree
+ kernel modules.  These files are going to be installed into
+ /usr/src/linux-headers-6.12.90+deb13-armmp, and can be used for building
+ modules that load into the kernel provided by the
+ linux-image-6.12.90+deb13-armmp package.
+
+Package: linux-headers-6.12.90+deb13-armmp-lpae
+Description-md5: c9fc79b1d241b98624e8a451bac4655c
+Description-en: Header files for Linux 6.12.90+deb13-armmp-lpae
+ This package provides the architecture-specific kernel header files for
+ Linux kernel 6.12.90+deb13-armmp-lpae, generally used for building
+ out-of-tree kernel modules.  These files are going to be installed into
+ /usr/src/linux-headers-6.12.90+deb13-armmp-lpae, and can be used for
+ building modules that load into the kernel provided by the
+ linux-image-6.12.90+deb13-armmp-lpae package.
+
+Package: linux-headers-6.12.90+deb13-cloud-amd64
+Description-md5: 2e812d384f33ec45d121a3355cd84bf5
+Description-en: Header files for Linux 6.12.90+deb13-cloud-amd64
+ This package provides the architecture-specific kernel header files for
+ Linux kernel 6.12.90+deb13-cloud-amd64, generally used for building
+ out-of-tree kernel modules.  These files are going to be installed into
+ /usr/src/linux-headers-6.12.90+deb13-cloud-amd64, and can be used for
+ building modules that load into the kernel provided by the
+ linux-image-6.12.90+deb13-cloud-amd64 package.
+
+Package: linux-headers-6.12.90+deb13-cloud-arm64
+Description-md5: 503b69eb73eff5aaa8b51788ea296f39
+Description-en: Header files for Linux 6.12.90+deb13-cloud-arm64
+ This package provides the architecture-specific kernel header files for
+ Linux kernel 6.12.90+deb13-cloud-arm64, generally used for building
+ out-of-tree kernel modules.  These files are going to be installed into
+ /usr/src/linux-headers-6.12.90+deb13-cloud-arm64, and can be used for
+ building modules that load into the kernel provided by the
+ linux-image-6.12.90+deb13-cloud-arm64 package.
+
+Package: linux-headers-6.12.90+deb13-common
+Description-md5: d2f2c8046ea6bd1d19a0b1e4f578116f
+Description-en: Common header files for Linux 6.12.90+deb13
+ This package provides the common kernel header files for Linux kernel
+ version 6.12.90+deb13, generally used for building out-of-tree kernel
+ modules.  These files are going to be installed into
+ /usr/src/linux-headers-6.12.90+deb13-common.
+ .
+ To obtain a complete set of headers you also need to install the
+ linux-headers-6.12.90+deb13-(flavour) package, matching the flavour of the
+ kernel you intend the build for.
+
+Package: linux-headers-6.12.90+deb13-common-rt
+Description-md5: adece073568de686a01370a1dc404beb
+Description-en: Common header files for Linux 6.12.90+deb13-rt
+ This package provides the common kernel header files for Linux kernel
+ version 6.12.90+deb13 with the PREEMPT_RT featureset, generally used for
+ building out-of-tree kernel modules.  These files are going to be
+ installed into /usr/src/linux-headers-6.12.90+deb13-common-rt.
+ .
+ To obtain a complete set of headers you also need to install the
+ linux-headers-6.12.90+deb13-(flavour) package, matching the flavour of the
+ kernel you intend the build for.
+
+Package: linux-headers-6.12.90+deb13-powerpc64le
+Description-md5: efd2316c0a387646a1d8484e51e3d8d0
+Description-en: Header files for Linux 6.12.90+deb13-powerpc64le
+ This package provides the architecture-specific kernel header files for
+ Linux kernel 6.12.90+deb13-powerpc64le, generally used for building
+ out-of-tree kernel modules.  These files are going to be installed into
+ /usr/src/linux-headers-6.12.90+deb13-powerpc64le, and can be used for
+ building modules that load into the kernel provided by the
+ linux-image-6.12.90+deb13-powerpc64le package.
+
+Package: linux-headers-6.12.90+deb13-powerpc64le-64k
+Description-md5: c9ee2d34f9d69b136e753730cc61b0bd
+Description-en: Header files for Linux 6.12.90+deb13-powerpc64le-64k
+ This package provides the architecture-specific kernel header files for
+ Linux kernel 6.12.90+deb13-powerpc64le-64k, generally used for building
+ out-of-tree kernel modules.  These files are going to be installed into
+ /usr/src/linux-headers-6.12.90+deb13-powerpc64le-64k, and can be used for
+ building modules that load into the kernel provided by the
+ linux-image-6.12.90+deb13-powerpc64le-64k package.
+
+Package: linux-headers-6.12.90+deb13-riscv64
+Description-md5: 34f4c5e947c6985dbf3de6e6b2882181
+Description-en: Header files for Linux 6.12.90+deb13-riscv64
+ This package provides the architecture-specific kernel header files for
+ Linux kernel 6.12.90+deb13-riscv64, generally used for building
+ out-of-tree kernel modules.  These files are going to be installed into
+ /usr/src/linux-headers-6.12.90+deb13-riscv64, and can be used for building
+ modules that load into the kernel provided by the
+ linux-image-6.12.90+deb13-riscv64 package.
+
+Package: linux-headers-6.12.90+deb13-rpi
+Description-md5: 51f13d29a977e58592c42a966e477934
+Description-en: Header files for Linux 6.12.90+deb13-rpi
+ This package provides the architecture-specific kernel header files for
+ Linux kernel 6.12.90+deb13-rpi, generally used for building out-of-tree
+ kernel modules.  These files are going to be installed into
+ /usr/src/linux-headers-6.12.90+deb13-rpi, and can be used for building
+ modules that load into the kernel provided by the
+ linux-image-6.12.90+deb13-rpi package.
+
+Package: linux-headers-6.12.90+deb13-rt-amd64
+Description-md5: 3c69a26d58621c948b351237d7c996ae
+Description-en: Header files for Linux 6.12.90+deb13-rt-amd64
+ This package provides the architecture-specific kernel header files for
+ Linux kernel 6.12.90+deb13-rt-amd64, generally used for building
+ out-of-tree kernel modules.  These files are going to be installed into
+ /usr/src/linux-headers-6.12.90+deb13-rt-amd64, and can be used for
+ building modules that load into the kernel provided by the
+ linux-image-6.12.90+deb13-rt-amd64 package.
+
+Package: linux-headers-6.12.90+deb13-rt-arm64
+Description-md5: 0fe398eb09def583aae426d3bf2b5f4d
+Description-en: Header files for Linux 6.12.90+deb13-rt-arm64
+ This package provides the architecture-specific kernel header files for
+ Linux kernel 6.12.90+deb13-rt-arm64, generally used for building
+ out-of-tree kernel modules.  These files are going to be installed into
+ /usr/src/linux-headers-6.12.90+deb13-rt-arm64, and can be used for
+ building modules that load into the kernel provided by the
+ linux-image-6.12.90+deb13-rt-arm64 package.
+
+Package: linux-headers-6.12.90+deb13-rt-armmp
+Description-md5: 8fb644aee903e1e087f317b3bb754dd3
+Description-en: Header files for Linux 6.12.90+deb13-rt-armmp
+ This package provides the architecture-specific kernel header files for
+ Linux kernel 6.12.90+deb13-rt-armmp, generally used for building
+ out-of-tree kernel modules.  These files are going to be installed into
+ /usr/src/linux-headers-6.12.90+deb13-rt-armmp, and can be used for
+ building modules that load into the kernel provided by the
+ linux-image-6.12.90+deb13-rt-armmp package.
+
+Package: linux-headers-6.12.90+deb13-s390x
+Description-md5: 9aabdb0fae23936a3cca1627515b5d41
+Description-en: Header files for Linux 6.12.90+deb13-s390x
+ This package provides the architecture-specific kernel header files for
+ Linux kernel 6.12.90+deb13-s390x, generally used for building out-of-tree
+ kernel modules.  These files are going to be installed into
+ /usr/src/linux-headers-6.12.90+deb13-s390x, and can be used for building
+ modules that load into the kernel provided by the
+ linux-image-6.12.90+deb13-s390x package.
+
 Package: linux-headers-armmp
 Description-md5: 259e27743bc84596a626e7a27da2136a
 Description-en: Header files for Linux armmp configuration (meta-package)
@@ -9574,6 +10192,191 @@ Description-en: Debug symbols for linux-image-6.12.88+deb13-s390x
  This package provides the detached debug symbols for the Linux kernel and
  modules in linux-image-6.12.88+deb13-s390x.
 
+Package: linux-image-6.12.90+deb13-amd64-dbg
+Description-md5: 9dc05a4623a4f0c449411087319c984a
+Description-en: Debug symbols for linux-image-6.12.90+deb13-amd64
+ This package provides the detached debug symbols for the Linux kernel and
+ modules in linux-image-6.12.90+deb13-amd64.
+
+Package: linux-image-6.12.90+deb13-amd64-unsigned
+Description-md5: faccb96a3fff2d1523870e550e879d00
+Description-en: Linux 6.12 for 64-bit PCs
+ The Linux kernel 6.12 and modules for use on PCs with AMD64, Intel 64 or
+ VIA Nano processors.
+
+Package: linux-image-6.12.90+deb13-arm64-16k-dbg
+Description-md5: 91fe561d066d5f83f939125b46229365
+Description-en: Debug symbols for linux-image-6.12.90+deb13-arm64-16k
+ This package provides the detached debug symbols for the Linux kernel and
+ modules in linux-image-6.12.90+deb13-arm64-16k.
+
+Package: linux-image-6.12.90+deb13-arm64-16k-unsigned
+Description-md5: 7927fa535e3a026187ea6cc06c0ae4b6
+Description-en: Linux 6.12 for 64-bit ARMv8 machines with 16k pages
+ The Linux kernel 6.12 and modules for use on 64-bit ARMv8 machines with
+ 16k pages.
+
+Package: linux-image-6.12.90+deb13-arm64-dbg
+Description-md5: 11c3754d57f2307f664941708993eb94
+Description-en: Debug symbols for linux-image-6.12.90+deb13-arm64
+ This package provides the detached debug symbols for the Linux kernel and
+ modules in linux-image-6.12.90+deb13-arm64.
+
+Package: linux-image-6.12.90+deb13-arm64-unsigned
+Description-md5: eabd816427c9158fb15b9a9ba0fb3488
+Description-en: Linux 6.12 for 64-bit ARMv8 machines
+ The Linux kernel 6.12 and modules for use on 64-bit ARMv8 machines.
+
+Package: linux-image-6.12.90+deb13-armmp
+Description-md5: b36d32815710cee543d07c052b892ee6
+Description-en: Linux 6.12 for ARMv7 multiplatform compatible SoCs
+ The Linux kernel 6.12 and modules for use on ARMv7 multiplatform kernel.
+ See https://wiki.debian.org/DebianKernel/ARMMP for details of supported
+ platforms.
+
+Package: linux-image-6.12.90+deb13-armmp-dbg
+Description-md5: 8e98588340377eabbddb68325db25737
+Description-en: Debug symbols for linux-image-6.12.90+deb13-armmp
+ This package provides the detached debug symbols for the Linux kernel and
+ modules in linux-image-6.12.90+deb13-armmp.
+
+Package: linux-image-6.12.90+deb13-armmp-lpae
+Description-md5: 76df1072ffcdf840af46ba84940c1c05
+Description-en: Linux 6.12 for ARMv7 multiplatform compatible SoCs supporting LPAE
+ The Linux kernel 6.12 and modules for use on ARMv7 multiplatform kernel
+ supporting LPAE. See https://wiki.debian.org/DebianKernel/ARMMP for
+ details of supported platforms..
+
+Package: linux-image-6.12.90+deb13-armmp-lpae-dbg
+Description-md5: 2a66d320064984de3c1154dd39bdce0d
+Description-en: Debug symbols for linux-image-6.12.90+deb13-armmp-lpae
+ This package provides the detached debug symbols for the Linux kernel and
+ modules in linux-image-6.12.90+deb13-armmp-lpae.
+
+Package: linux-image-6.12.90+deb13-cloud-amd64-dbg
+Description-md5: cc87b085d75ecc40da6441d0cdbc3830
+Description-en: Debug symbols for linux-image-6.12.90+deb13-cloud-amd64
+ This package provides the detached debug symbols for the Linux kernel and
+ modules in linux-image-6.12.90+deb13-cloud-amd64.
+
+Package: linux-image-6.12.90+deb13-cloud-amd64-unsigned
+Description-md5: 07b366522b969b1514d747d01da43283
+Description-en: Linux 6.12 for x86-64 cloud
+ The Linux kernel 6.12 and modules for use on cloud platforms including
+ Amazon EC2, Microsoft Azure, and Google Compute Engine.
+
+Package: linux-image-6.12.90+deb13-cloud-arm64-dbg
+Description-md5: 41181ab4bb208e0983c556740f44a034
+Description-en: Debug symbols for linux-image-6.12.90+deb13-cloud-arm64
+ This package provides the detached debug symbols for the Linux kernel and
+ modules in linux-image-6.12.90+deb13-cloud-arm64.
+
+Package: linux-image-6.12.90+deb13-cloud-arm64-unsigned
+Description-md5: be04680bcca431b9c49d62e08f5f5f36
+Description-en: Linux 6.12 for arm64 cloud
+ The Linux kernel 6.12 and modules for use on cloud platforms supporting
+ arm64 virtual machines.
+
+Package: linux-image-6.12.90+deb13-powerpc64le
+Description-md5: f3c2cb8627932ce53630c6d8489fa519
+Description-en: Linux 6.12 for Little-endian 64-bit PowerPC with 4k pages
+ The Linux kernel 6.12 and modules for use on Little-endian 64-bit PowerPC
+ with 4k pages.
+
+Package: linux-image-6.12.90+deb13-powerpc64le-64k
+Description-md5: b11b648663c50ad993bde2ad2fde4b6e
+Description-en: Linux 6.12 for Little-endian 64-bit PowerPC with 64k pages
+ The Linux kernel 6.12 and modules for use on Little-endian 64-bit PowerPC
+ with 64k pages.
+
+Package: linux-image-6.12.90+deb13-powerpc64le-64k-dbg
+Description-md5: 1cc5c24d08eb8a2c423eecb777cfa987
+Description-en: Debug symbols for linux-image-6.12.90+deb13-powerpc64le-64k
+ This package provides the detached debug symbols for the Linux kernel and
+ modules in linux-image-6.12.90+deb13-powerpc64le-64k.
+
+Package: linux-image-6.12.90+deb13-powerpc64le-dbg
+Description-md5: d1f577099cf6d527b52ac2957fc7d587
+Description-en: Debug symbols for linux-image-6.12.90+deb13-powerpc64le
+ This package provides the detached debug symbols for the Linux kernel and
+ modules in linux-image-6.12.90+deb13-powerpc64le.
+
+Package: linux-image-6.12.90+deb13-riscv64
+Description-md5: 9ebdff199dd346eab4bb71654c5d58d7
+Description-en: Linux 6.12 for 64-bit RISC-V platforms
+ The Linux kernel 6.12 and modules for use on 64-bit RISC-V platforms.
+
+Package: linux-image-6.12.90+deb13-riscv64-dbg
+Description-md5: 5968c8d53faf1269e628b416677f6299
+Description-en: Debug symbols for linux-image-6.12.90+deb13-riscv64
+ This package provides the detached debug symbols for the Linux kernel and
+ modules in linux-image-6.12.90+deb13-riscv64.
+
+Package: linux-image-6.12.90+deb13-rpi
+Description-md5: 6195447e6ce0c3ad715c214a7b7845ff
+Description-en: Linux 6.12 for Raspberry Pi Zero, Zero W and 1
+ The Linux kernel 6.12 and modules for use on Raspberry Pi Zero, Zero W and
+ 1 based systems.
+
+Package: linux-image-6.12.90+deb13-rpi-dbg
+Description-md5: 8e1f3c993328f86fb54def077d72c80e
+Description-en: Debug symbols for linux-image-6.12.90+deb13-rpi
+ This package provides the detached debug symbols for the Linux kernel and
+ modules in linux-image-6.12.90+deb13-rpi.
+
+Package: linux-image-6.12.90+deb13-rt-amd64-dbg
+Description-md5: da224ca01752cdd12e991d88c2ab924d
+Description-en: Debug symbols for linux-image-6.12.90+deb13-rt-amd64
+ This package provides the detached debug symbols for the Linux kernel and
+ modules in linux-image-6.12.90+deb13-rt-amd64.
+
+Package: linux-image-6.12.90+deb13-rt-amd64-unsigned
+Description-md5: d07a6b410c7bedbda06e165ddf1cc9ff
+Description-en: Linux 6.12 for 64-bit PCs, PREEMPT_RT
+ The Linux kernel 6.12 and modules for use on PCs with AMD64, Intel 64 or
+ VIA Nano processors.
+ .
+ This kernel includes the PREEMPT_RT realtime patch set.
+
+Package: linux-image-6.12.90+deb13-rt-arm64-dbg
+Description-md5: d6c0410395c93341b4828ed0497dba8a
+Description-en: Debug symbols for linux-image-6.12.90+deb13-rt-arm64
+ This package provides the detached debug symbols for the Linux kernel and
+ modules in linux-image-6.12.90+deb13-rt-arm64.
+
+Package: linux-image-6.12.90+deb13-rt-arm64-unsigned
+Description-md5: eb818cfeb661df68e87b91f0d76dcb4c
+Description-en: Linux 6.12 for 64-bit ARMv8 machines, PREEMPT_RT
+ The Linux kernel 6.12 and modules for use on 64-bit ARMv8 machines.
+ .
+ This kernel includes the PREEMPT_RT realtime patch set.
+
+Package: linux-image-6.12.90+deb13-rt-armmp
+Description-md5: eaea0180d367652d3bc3bb68eccbe33f
+Description-en: Linux 6.12 for ARMv7 multiplatform compatible SoCs, PREEMPT_RT
+ The Linux kernel 6.12 and modules for use on ARMv7 multiplatform kernel.
+ See https://wiki.debian.org/DebianKernel/ARMMP for details of supported
+ platforms.
+ .
+ This kernel includes the PREEMPT_RT realtime patch set.
+
+Package: linux-image-6.12.90+deb13-rt-armmp-dbg
+Description-md5: fbc9aa531292fea3b373eb7fd9d086b0
+Description-en: Debug symbols for linux-image-6.12.90+deb13-rt-armmp
+ This package provides the detached debug symbols for the Linux kernel and
+ modules in linux-image-6.12.90+deb13-rt-armmp.
+
+Package: linux-image-6.12.90+deb13-s390x
+Description-md5: 6524c3ddc9b7ad56449bc825043b18a7
+Description-en: Linux 6.12 for IBM zSeries
+ The Linux kernel 6.12 and modules for use on IBM zSeries.
+
+Package: linux-image-6.12.90+deb13-s390x-dbg
+Description-md5: 7a8e344c6a74e8160cc215f0f94d94c1
+Description-en: Debug symbols for linux-image-6.12.90+deb13-s390x
+ This package provides the detached debug symbols for the Linux kernel and
+ modules in linux-image-6.12.90+deb13-s390x.
+
 Package: linux-image-amd64-dbg
 Description-md5: cef66019bff5137491f4d86a25f6417d
 Description-en: Debugging symbols for Linux amd64 configuration (meta-package)
@@ -9754,6 +10557,12 @@ Description-en: Kbuild infrastructure for Linux 6.12.88+deb13
  This package provides the kbuild infrastructure for the headers packages
  for Linux kernel version 6.12.
 
+Package: linux-kbuild-6.12.90+deb13
+Description-md5: 297575d0f1d2b802d28f37fd38a8209f
+Description-en: Kbuild infrastructure for Linux 6.12.90+deb13
+ This package provides the kbuild infrastructure for the headers packages
+ for Linux kernel version 6.12.
+
 Package: linux-libc-dev
 Description-md5: b95630af34c5b0ac63c5a6f7cf44ced6
 Description-en: Linux support headers for userspace development
@@ -9803,6 +10612,13 @@ Description-en: Support files for Linux 6.12
  data.
 
 Package: linux-support-6.12.88+deb13
+Description-md5: b3e344f15558de27b06d03e297ce081f
+Description-en: Support files for Linux 6.12
+ This package provides support files for the Linux kernel build, e.g.
+ scripts to handle ABI information and for generation of build system meta
+ data.
+
+Package: linux-support-6.12.90+deb13
 Description-md5: b3e344f15558de27b06d03e297ce081f
 Description-en: Support files for Linux 6.12
  This package provides support files for the Linux kernel build, e.g.
@@ -9948,6 +10764,32 @@ Description-en: Linux 6.12 for x86-64 cloud (signed)
  The kernel image is signed for use with Secure Boot.
 
 Package: linux-image-6.12.88+deb13-rt-amd64
+Description-md5: a2405402bd0433fbd9f3a302f609a2bb
+Description-en: Linux 6.12 for 64-bit PCs (signed), PREEMPT_RT
+ The Linux kernel 6.12 and modules for use on PCs with AMD64, Intel 64 or
+ VIA Nano processors.
+ .
+ The kernel image is signed for use with Secure Boot.
+ .
+ This kernel includes the PREEMPT_RT realtime patch set.
+
+Package: linux-image-6.12.90+deb13-amd64
+Description-md5: 224c8e7ad16235c8d318cebf70217775
+Description-en: Linux 6.12 for 64-bit PCs (signed)
+ The Linux kernel 6.12 and modules for use on PCs with AMD64, Intel 64 or
+ VIA Nano processors.
+ .
+ The kernel image is signed for use with Secure Boot.
+
+Package: linux-image-6.12.90+deb13-cloud-amd64
+Description-md5: ff364982b40ab71bfeff1949c4cf6595
+Description-en: Linux 6.12 for x86-64 cloud (signed)
+ The Linux kernel 6.12 and modules for use on cloud platforms including
+ Amazon EC2, Microsoft Azure, and Google Compute Engine.
+ .
+ The kernel image is signed for use with Secure Boot.
+
+Package: linux-image-6.12.90+deb13-rt-amd64
 Description-md5: a2405402bd0433fbd9f3a302f609a2bb
 Description-en: Linux 6.12 for 64-bit PCs (signed), PREEMPT_RT
  The Linux kernel 6.12 and modules for use on PCs with AMD64, Intel 64 or
@@ -10120,6 +10962,38 @@ Description-en: Linux 6.12 for arm64 cloud (signed)
  The kernel image is signed for use with Secure Boot.
 
 Package: linux-image-6.12.88+deb13-rt-arm64
+Description-md5: c2a92ca81fbab3004d3fc5c8d0a3410e
+Description-en: Linux 6.12 for 64-bit ARMv8 machines (signed), PREEMPT_RT
+ The Linux kernel 6.12 and modules for use on 64-bit ARMv8 machines.
+ .
+ The kernel image is signed for use with Secure Boot.
+ .
+ This kernel includes the PREEMPT_RT realtime patch set.
+
+Package: linux-image-6.12.90+deb13-arm64
+Description-md5: ddba8770dc594bcc7ea516ef747f5a3b
+Description-en: Linux 6.12 for 64-bit ARMv8 machines (signed)
+ The Linux kernel 6.12 and modules for use on 64-bit ARMv8 machines.
+ .
+ The kernel image is signed for use with Secure Boot.
+
+Package: linux-image-6.12.90+deb13-arm64-16k
+Description-md5: 8041e1236dab4a5a4f31ddb8d6685203
+Description-en: Linux 6.12 for 64-bit ARMv8 machines with 16k pages (signed)
+ The Linux kernel 6.12 and modules for use on 64-bit ARMv8 machines with
+ 16k pages.
+ .
+ The kernel image is signed for use with Secure Boot.
+
+Package: linux-image-6.12.90+deb13-cloud-arm64
+Description-md5: b5a20ac7e447f7eeac6c73590cfe73a9
+Description-en: Linux 6.12 for arm64 cloud (signed)
+ The Linux kernel 6.12 and modules for use on cloud platforms supporting
+ arm64 virtual machines.
+ .
+ The kernel image is signed for use with Secure Boot.
+
+Package: linux-image-6.12.90+deb13-rt-arm64
 Description-md5: c2a92ca81fbab3004d3fc5c8d0a3410e
 Description-en: Linux 6.12 for 64-bit ARMv8 machines (signed), PREEMPT_RT
  The Linux kernel 6.12 and modules for use on 64-bit ARMv8 machines.
