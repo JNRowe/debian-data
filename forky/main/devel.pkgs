@@ -3857,6 +3857,44 @@ Size: 3548
 MD5sum: ed37e5b5b0d955e4c592d05eb7ab3a20
 SHA256: 637388f1bdd2eb080ccee8b6dca9ca86e1ff88b52c8c672ab897ba7bbe46234d
 
+Package: buildbot
+Version: 4.3.0-2
+Installed-Size: 3203
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: debconf (>= 0.5) | debconf-2.0, python3-alembic (>= 1.6.0), python3-autobahn (>= 0.16.0), python3-croniter, python3-dateutil (>= 1.5), python3-jinja2 (>= 2.1), python3-jwt, python3-msgpack, python3-packaging, python3-sqlalchemy (>= 1.4.0), python3-treq (>= 20.9), python3-twisted (>= 22.1.0), python3-txaio (>= 2.2.2), python3-unidiff (>= 0.6.0), python3-yaml, python3-zope.interface (>= 4.1.1), python3:any, python3-idna, python3-openssl, python3-service-identity, python3-txrequests, passwd
+Recommends: buildbot-worker, bash-completion
+Suggests: buildbot-doc, python3-evalidate, python3-lz4, python3-psycopg2 | python3-mysqldb
+Description: System to automate the compile/test cycle (server)
+Homepage: https://buildbot.net
+Description-md5: 7d59332abb3e99bb1839e03affc77755
+Tag: devel::buildtools, devel::lang:python, devel::testing-qa,
+ implemented-in::python, role::program
+devel
+Priority: optional
+Filename: pool/main/b/buildbot/buildbot_4.3.0-2_all.deb
+Size: 495032
+MD5sum: ba3b72975693a022b2ac98064f64e1b2
+SHA256: ec1d750b28eab67271378df2da91d20b1cc0c8c025408369a734322e823db9f2
+
+Package: buildbot-worker
+Source: buildbot
+Version: 4.3.0-2
+Installed-Size: 328
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-autobahn (>= 0.16.0), python3-msgpack, python3-twisted (>= 22.1.0), python3:any, passwd
+Recommends: brz | subversion | cvs | mercurial | darcs | git
+Description: System to automate the compile/test cycle (worker agent)
+Homepage: https://buildbot.net
+Description-md5: b6738df3137c94f3611025766ef92ec5
+devel
+Priority: optional
+Filename: pool/main/b/buildbot/buildbot-worker_4.3.0-2_all.deb
+Size: 65736
+MD5sum: 94d4f116799d913d7eed1201d0435516
+SHA256: 30307031c66e9b64b305ea58fe28d819ca7265001be28235707bc0f39316acc1
+
 Package: buildbox
 Version: 1.4.5-1
 Installed-Size: 46445
@@ -4822,12 +4860,12 @@ MD5sum: 6e689f86d793eb79d4e62227cc1ebb74
 SHA256: aa98c94736d9f5347ed39a752cdfdc1de72ea6ea567b0dc79347f0f2c2615c97
 
 Package: cmake
-Version: 4.3.1-1
+Version: 4.3.2-1
 Installed-Size: 59690
 Maintainer: Debian CMake Team <pkg-cmake-team@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: cmake-data (<< 4.3)
-Provides: cmake-data (= 4.3.1-1)
+Provides: cmake-data (= 4.3.2-1)
 Depends: procps, libarchive13t64 (>= 3.8.2), libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.0), libjsoncpp26 (>= 1.9.6), librhash1 (>= 1.4.5), libstdc++6 (>= 14), libuv1t64 (>= 1.38.0), zlib1g (>= 1:1.1.4)
 Recommends: gcc, make
 Suggests: cmake-doc, cmake-format, elpa-cmake-mode, ninja-build
@@ -4841,18 +4879,18 @@ Tag: devel::buildtools, implemented-in::c++, interface::commandline,
  uitoolkit::ncurses, works-with::software:source
 devel
 Priority: optional
-Filename: pool/main/c/cmake/cmake_4.3.1-1_amd64.deb
-Size: 16186212
-MD5sum: d3ad5fdcacdcec9fd6f937692d06d3da
-SHA256: 31833943fd78458bc7f704fddb0eee8b8bacd5a11422a547dc5b78873bfe0dfb
+Filename: pool/main/c/cmake/cmake_4.3.2-1_amd64.deb
+Size: 16182716
+MD5sum: 030f4cac2df50f82ca0835a7f683b56b
+SHA256: 2a11f1c8a83fc738536aa5b2704c4ccee649536dc1c7ca8de18d4b771993d706
 
 Package: cmake-curses-gui
 Source: cmake
-Version: 4.3.1-1
+Version: 4.3.2-1
 Installed-Size: 14351
 Maintainer: Debian CMake Team <pkg-cmake-team@lists.alioth.debian.org>
 Architecture: amd64
-Depends: cmake (= 4.3.1-1), libarchive13t64 (>= 3.8.2), libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.0), libjsoncpp26 (>= 1.9.6), libncurses6 (>= 6), librhash1 (>= 1.4.5), libstdc++6 (>= 14), libtinfo6 (>= 6), libuv1t64 (>= 1.38.0), zlib1g (>= 1:1.1.4)
+Depends: cmake (= 4.3.2-1), libarchive13t64 (>= 3.8.2), libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.0), libjsoncpp26 (>= 1.9.6), libncurses6 (>= 6), librhash1 (>= 1.4.5), libstdc++6 (>= 14), libtinfo6 (>= 6), libuv1t64 (>= 1.38.0), zlib1g (>= 1:1.1.4)
 Description: curses based user interface for CMake (ccmake)
 Homepage: https://cmake.org/
 Description-md5: ad28c67dee764cb32d73040783a280db
@@ -4860,37 +4898,38 @@ Tag: devel::buildtools, implemented-in::c++, interface::commandline,
  interface::text-mode, role::program, scope::utility, uitoolkit::ncurses
 devel
 Priority: optional
-Filename: pool/main/c/cmake/cmake-curses-gui_4.3.1-1_amd64.deb
-Size: 4190652
-MD5sum: c48a9a80ca51204bddb353c87f84b744
-SHA256: 898814e14ea91880b5fd96540e7c0c7582eeec007d2049c93b93657aaaf2c59b
+Filename: pool/main/c/cmake/cmake-curses-gui_4.3.2-1_amd64.deb
+Size: 4189208
+MD5sum: 71568596ca0deef09860743c654be1d5
+SHA256: 4318b29b5cfca48ab4723efeaea3aaf3ea538cd7b60b0542c52a66bd700fe2eb
 
 Package: cmake-data
 Source: cmake
-Version: 4.3.1-1
+Version: 4.3.2-1
 Installed-Size: 39
 Maintainer: Debian CMake Team <pkg-cmake-team@lists.alioth.debian.org>
 Architecture: all
 Description: CMake data files (transitional dummy package)
+Multi-Arch: foreign
 Homepage: https://cmake.org/
-Description-md5: 7d4dcd43707f457ab830d27fafd501ce
+Description-md5: 53fb996c076f33427135517db5bb02af
 Tag: devel::buildtools, made-of::html, made-of::man, role::app-data,
  role::documentation, role::program
 devel
 Priority: optional
-Filename: pool/main/c/cmake/cmake-data_4.3.1-1_all.deb
-Size: 13004
-MD5sum: ed586e38c9fcb5e833d4b0eb6df340ac
-SHA256: 24e967d953eef8eb99567a682caa016305c62933e1c1010aecf9a164c5bb615c
+Filename: pool/main/c/cmake/cmake-data_4.3.2-1_all.deb
+Size: 13076
+MD5sum: f05f89a4837bd3e471a9a867263cfcab
+SHA256: 01f2720e0636db8bd4d79f7002880bba807211b6fa704f13537cf9bdf43b49b0
 
 Package: cmake-qt-gui
 Source: cmake
-Version: 4.3.1-1
-Installed-Size: 14861
+Version: 4.3.2-1
+Installed-Size: 14857
 Maintainer: Debian CMake Team <pkg-cmake-team@lists.alioth.debian.org>
 Architecture: amd64
 Provides: cmake-gui
-Depends: cmake (= 4.3.1-1), libarchive13t64 (>= 3.8.2), libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.0), libjsoncpp26 (>= 1.9.6), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.1.2), libqt6widgets6 (>= 6.7.2), librhash1 (>= 1.4.5), libstdc++6 (>= 14), libuv1t64 (>= 1.38.0), zlib1g (>= 1:1.1.4)
+Depends: cmake (= 4.3.2-1), libarchive13t64 (>= 3.8.2), libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.0), libjsoncpp26 (>= 1.9.6), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.1.2), libqt6widgets6 (>= 6.7.2), librhash1 (>= 1.4.5), libstdc++6 (>= 14), libuv1t64 (>= 1.38.0), zlib1g (>= 1:1.1.4)
 Description: Qt based user interface for CMake (cmake-gui)
 Homepage: https://cmake.org/
 Description-md5: 1385c1223e89dd992bad5dcde2206383
@@ -4899,10 +4938,10 @@ Tag: devel::buildtools, implemented-in::c++, interface::commandline,
  uitoolkit::qt, works-with::software:source, x11::application
 devel
 Priority: optional
-Filename: pool/main/c/cmake/cmake-qt-gui_4.3.1-1_amd64.deb
-Size: 4326352
-MD5sum: 5f5eaf2c68894e32a55ac68df9995601
-SHA256: 5d73f662c2de5be56552690bb5086cef6ed8483f6de08c9f7b75657bb3311822
+Filename: pool/main/c/cmake/cmake-qt-gui_4.3.2-1_amd64.deb
+Size: 4325848
+MD5sum: c02c3396823f89ddda3a47569f071914
+SHA256: ebd6cab0198a753c18ab005264a693be35dbb7e2c4b6b4265f89725de9c84f31
 
 Package: cmake-format
 Version: 0.6.13-7
@@ -5753,7 +5792,7 @@ MD5sum: ef3d1070b6947f111a9755749811ac00
 SHA256: 9505691018d546e9445aa89d82ea7d2ec5d6b967e66b13e9cfd48bccca37a824
 
 Package: damo
-Version: 3.2.3-1
+Version: 3.2.4-1
 Installed-Size: 745
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
@@ -5763,10 +5802,10 @@ Homepage: https://damonitor.github.io/
 Description-md5: 29c8e6bda2b255abe221853863fc2c80
 devel
 Priority: optional
-Filename: pool/main/d/damo/damo_3.2.3-1_all.deb
-Size: 146836
-MD5sum: 2e0d197788035dff3514e43a716f4709
-SHA256: 9ad7b1230b0b786509c2ba62af8a66976c4e2deff9b1665bcbc33529a81ffe0c
+Filename: pool/main/d/damo/damo_3.2.4-1_all.deb
+Size: 146840
+MD5sum: 1891557eeab7a983453b6b12149ddf30
+SHA256: 8002d4d6807c768e81132869cb652d9f65858554286273e089ff9117dcf7cfb6
 
 Package: darts
 Version: 0.32-20
@@ -6080,8 +6119,8 @@ MD5sum: f8bbc5aa727fff4c13c039f84129ac0b
 SHA256: d048cf07e3866403afe46ac97df5c53d37d2c231b44688ed898281549b958e6f
 
 Package: debian-codemods
-Version: 0.175
-Installed-Size: 43062
+Version: 0.179
+Installed-Size: 45775
 Maintainer: Jelmer Vernooĳ <jelmer@debian.org>
 Architecture: amd64
 Replaces: lintian-brush (<< 0.170~)
@@ -6094,15 +6133,72 @@ Homepage: https://salsa.debian.org/jelmer/debian-codemods
 Description-md5: 7b502237285f92aeb570b7041c6a11e9
 devel
 Priority: optional
-Filename: pool/main/d/debian-codemods/debian-codemods_0.175_amd64.deb
-Size: 11456684
-MD5sum: 2573601a60410033355ffa8a307b5511
-SHA256: 67d406eb86079c007bbb39c407fc53459d9d46dbefbae6be7f16d8d2968c1ce8
+Filename: pool/main/d/debian-codemods/debian-codemods_0.179_amd64.deb
+Size: 13707944
+MD5sum: 94977aea722b17131898850beba63722
+SHA256: ee8160f580c9c4ff096dffb1d64ca946b804881de00dd6437d816d81894fe334
+
+Package: librust-debian-workspace-dev
+Source: debian-codemods
+Version: 0.179
+Installed-Size: 255
+Maintainer: Jelmer Vernooĳ <jelmer@debian.org>
+Architecture: amd64
+Provides: librust-debian-workspace+default-dev (= 0.179), librust-debian-workspace-0+default-dev (= 0.179), librust-debian-workspace-0-dev (= 0.179), librust-debian-workspace-0.176+default-dev (= 0.179), librust-debian-workspace-0.176-dev (= 0.179), librust-debian-workspace-0.176.0+default-dev (= 0.179), librust-debian-workspace-0.176.0-dev (= 0.179)
+Depends: librust-chrono+default-dev (>= 0.4), librust-deb822-lossless-0.5+default-dev (>= 0.5.15), librust-debian-analyzer-0.160+default-dev (>= 0.160.16), librust-debian-changelog-0.2+default-dev (>= 0.2.13), librust-debian-control-0.3+default-dev (>= 0.3.9), librust-debian-control-0.3+serde-dev (>= 0.3.9), librust-debian-copyright-0.1+default-dev (>= 0.1.48), librust-debian-watch-0.4+default-dev (>= 0.4.8), librust-debversion-0.5+default-dev, librust-debversion-0.5+serde-dev, librust-dep3-0.2+default-dev, librust-desktop-edit-0.1+default-dev, librust-inventory-0.3+default-dev, librust-lintian-overrides-0.1+default-dev (>= 0.1.3), librust-makefile-lossless-0.3+default-dev (>= 0.3.34), librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-systemd-unit-edit-0.1+default-dev (>= 0.1.1), librust-tempfile-3+default-dev, librust-toml-edit-0.22+default-dev, librust-tracing-0.1+default-dev, librust-url-2+default-dev, librust-yaml-edit-0.2+default-dev, libstd-rust-dev
+Description: Debian package manipulation workspace - Rust source code
+Multi-Arch: same
+Homepage: https://salsa.debian.org/jelmer/debian-codemods
+Description-md5: 6705fe5b67a5e91cfafa708971da3806
+devel
+Priority: optional
+Filename: pool/main/d/debian-codemods/librust-debian-workspace-dev_0.179_amd64.deb
+Size: 43100
+MD5sum: f6c560f82c3026b6e5cf9282c5bed917
+SHA256: e2444dbb8e7079543fd3546799eaa38b8c4169d45af3de2d922012b7c5381367
+
+Package: librust-lintian-brush-dev
+Source: debian-codemods
+Version: 0.179
+Installed-Size: 1985
+Maintainer: Jelmer Vernooĳ <jelmer@debian.org>
+Architecture: amd64
+Provides: librust-lintian-brush+cli-dev (= 0.179), librust-lintian-brush+default-dev (= 0.179), librust-lintian-brush+svp-dev (= 0.179), librust-lintian-brush+udd-dev (= 0.179), librust-lintian-brush-0+cli-dev (= 0.179), librust-lintian-brush-0+default-dev (= 0.179), librust-lintian-brush-0+svp-dev (= 0.179), librust-lintian-brush-0+udd-dev (= 0.179), librust-lintian-brush-0-dev (= 0.179), librust-lintian-brush-0.176+cli-dev (= 0.179), librust-lintian-brush-0.176+default-dev (= 0.179), librust-lintian-brush-0.176+svp-dev (= 0.179), librust-lintian-brush-0.176+udd-dev (= 0.179), librust-lintian-brush-0.176-dev (= 0.179), librust-lintian-brush-0.176.0+cli-dev (= 0.179), librust-lintian-brush-0.176.0+default-dev (= 0.179), librust-lintian-brush-0.176.0+svp-dev (= 0.179), librust-lintian-brush-0.176.0+udd-dev (= 0.179), librust-lintian-brush-0.176.0-dev (= 0.179)
+Depends: librust-async-trait-0.1+default-dev, librust-breezyshim-0.7+debian-dev (>= 0.7.8), librust-breezyshim-0.7+default-dev (>= 0.7.8), librust-breezyshim-0.7+dirty-tracker-dev (>= 0.7.8), librust-breezyshim-0.7+sqlx-dev (>= 0.7.8), librust-chrono+default-dev (>= 0.4), librust-chrono-0.4+default-dev, librust-clap-4+cargo-dev, librust-clap-4+default-dev, librust-clap-4+derive-dev, librust-clap-4+env-dev, librust-clap-4+string-dev, librust-clap-4+suggestions-dev, librust-configparser-3+default-dev, librust-deb822-lossless-0.5+default-dev (>= 0.5.15), librust-debbugs-0.1+blocking-dev (>= 0.1.8), librust-debbugs-0.1+default-dev (>= 0.1.8), librust-debian-analyzer-0.160+default-dev (>= 0.160.16), librust-debian-analyzer-0.160+python-dev (>= 0.160.11), librust-debian-analyzer-0.160+svp-dev (>= 0.160.16), librust-debian-analyzer-0.160+udd-dev (>= 0.160.16), librust-debian-changelog-0.2+default-dev (>= 0.2.13), librust-debian-control+default-dev (<< 0.4), librust-debian-control+default-dev (>= 0.2.15), librust-debian-control-0.3+default-dev (>= 0.3.6), librust-debian-copyright-0.1+default-dev (>= 0.1.48), librust-debian-watch-0.4+blocking-dev (>= 0.4.8), librust-debian-watch-0.4+default-dev (>= 0.4.8), librust-debian-watch-0.4+discover-dev (>= 0.4.8), librust-debian-watch-0.4+pgp-dev (>= 0.4.8), librust-debversion+default-dev (>= 0.4.0), librust-debversion-0.5+default-dev, librust-debversion-0.5+python-debian-dev, librust-debversion-0.5+serde-dev, librust-debversion-0.5+sqlx-dev, librust-dep3-0.2+default-dev, librust-desktop-edit-0.1+default-dev, librust-distro-info-0.4+default-dev, librust-futures-0.3+default-dev, librust-indexmap-2+default-dev (>= 2.7), librust-indicatif+default-dev (<< 0.19-~~), librust-indicatif+default-dev (>= 0.17), librust-inventory-0.3+default-dev, librust-lazy-regex-3+default-dev, librust-lazy-static-1+default-dev, librust-lintian-overrides-0.1+default-dev (>= 0.1.1), librust-log-0.4+default-dev, librust-makefile-lossless+default-dev (>= 0.3), librust-makefile-lossless-0.3+default-dev (>= 0.3.34), librust-nu-ansi-term-0.50+default-dev, librust-patchkit-0.2+default-dev (>= 0.2.2), librust-pyo3+chrono-dev (<< 0.29), librust-pyo3+chrono-dev (>= 0.27), librust-pyo3+default-dev (<< 0.29), librust-pyo3+default-dev (>= 0.27), librust-pyo3+serde-dev (<< 0.29), librust-pyo3+serde-dev (>= 0.27), librust-regex-1+default-dev (>= 1.10.6-~~), librust-reqwest+blocking-dev (>= 0.12), librust-reqwest+default-dev (>= 0.12), librust-reqwest+json-dev (>= 0.12), librust-rowan-0.16+default-dev, librust-semver-1+default-dev, librust-sequoia-openpgp-2+default-dev (>= 2-~~), librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-json-1+default-dev, librust-serde-yaml+default-dev (>= 0.9), librust-sha1-0.10+default-dev, librust-shell-words-1+default-dev, librust-sqlx-0.8+default-dev, librust-sqlx-0.8+postgres-dev, librust-sqlx-0.8+runtime-tokio-dev, librust-sqlx-0.8+runtime-tokio-rustls-dev, librust-strsim-0.11+default-dev, librust-svp-client+default-dev (>= 0.1.0), librust-svp-client-0.2+default-dev, librust-systemd-unit-edit-0.1+default-dev (>= 0.1.1), librust-tempfile-3+default-dev, librust-textwrap-0.16+default-dev, librust-tokio-1+default-dev (>= 1.39), librust-tokio-1+rt-dev (>= 1.39), librust-tokio-1+rt-multi-thread-dev (>= 1.39), librust-toml-edit+default-dev (<< 0.29), librust-toml-edit+default-dev (>= 0.22), librust-toml-edit-0.22+default-dev, librust-tracing-0.1+default-dev, librust-tracing-log-0.2+default-dev, librust-tracing-subscriber-0.3+ansi-dev, librust-tracing-subscriber-0.3+default-dev, librust-tracing-subscriber-0.3+env-filter-dev, librust-tracing-subscriber-0.3+fmt-dev, librust-upstream-ontologist-0.3+default-dev (>= 0.3.13), librust-url-2+default-dev, librust-url-2+serde-dev, librust-wait-timeout-0.2+default-dev, librust-yaml-edit-0.2+default-dev, libstd-rust-dev
+Description: lintian issue fixer - Rust source code
+Multi-Arch: same
+Homepage: https://salsa.debian.org/jelmer/debian-codemods
+Description-md5: 0760cc853ddf9206e3cb5a0c6b0dcd16
+devel
+Priority: optional
+Filename: pool/main/d/debian-codemods/librust-lintian-brush-dev_0.179_amd64.deb
+Size: 233696
+MD5sum: bf5c27a65e41d1054985d4a9a022f2ae
+SHA256: f9941517b0a808ce1f3d5b0f3297cd771a4cbd1b89f765fd5352b21b1d653cc9
+
+Package: librust-multiarch-hints-dev
+Source: debian-codemods
+Version: 0.179
+Installed-Size: 73
+Maintainer: Jelmer Vernooĳ <jelmer@debian.org>
+Architecture: amd64
+Provides: librust-multiarch-hints+async-dev (= 0.179), librust-multiarch-hints+cli-dev (= 0.179), librust-multiarch-hints+default-dev (= 0.179), librust-multiarch-hints-0+async-dev (= 0.179), librust-multiarch-hints-0+cli-dev (= 0.179), librust-multiarch-hints-0+default-dev (= 0.179), librust-multiarch-hints-0-dev (= 0.179), librust-multiarch-hints-0.176+async-dev (= 0.179), librust-multiarch-hints-0.176+cli-dev (= 0.179), librust-multiarch-hints-0.176+default-dev (= 0.179), librust-multiarch-hints-0.176-dev (= 0.179), librust-multiarch-hints-0.176.0+async-dev (= 0.179), librust-multiarch-hints-0.176.0+cli-dev (= 0.179), librust-multiarch-hints-0.176.0+default-dev (= 0.179), librust-multiarch-hints-0.176.0-dev (= 0.179)
+Depends: librust-breezyshim-0.7+default-dev (>= 0.7.8), librust-breezyshim-0.7+dirty-tracker-dev (>= 0.7.8), librust-chrono+default-dev (>= 0.4), librust-clap-4+cargo-dev, librust-clap-4+default-dev, librust-clap-4+derive-dev, librust-clap-4+env-dev, librust-clap-4+string-dev, librust-clap-4+suggestions-dev, librust-configparser-3+default-dev, librust-deb822-lossless-0.5+default-dev (>= 0.5.15), librust-debian-analyzer-0.160+default-dev (>= 0.160.16), librust-debian-analyzer-0.160+svp-dev (>= 0.160.16), librust-debian-changelog-0.2+default-dev (>= 0.2.13), librust-debian-control-0.3+default-dev (>= 0.3.9), librust-debian-workspace-0.176+default-dev, librust-debversion-0.5+default-dev, librust-debversion-0.5+serde-dev, librust-env-logger-0.11+default-dev, librust-lazy-regex-3+default-dev, librust-lazy-static-1+default-dev, librust-log-0.4+default-dev, librust-reqwest+blocking-dev (>= 0.12), librust-reqwest+default-dev (>= 0.12), librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-json-1+default-dev, librust-serde-yaml+default-dev (>= 0.9), librust-svp-client-0.2+default-dev, librust-tempfile-3+default-dev, librust-tokio-1+default-dev (>= 1.39), librust-url-2+default-dev, librust-xz2-0.1+default-dev, libstd-rust-dev
+Description: apply multiarch hints to Debian packages - Rust source code
+Multi-Arch: same
+Homepage: https://salsa.debian.org/jelmer/debian-codemods
+Description-md5: 2dca2f345b25dd8610b63829c0311f0b
+devel
+Priority: optional
+Filename: pool/main/d/debian-codemods/librust-multiarch-hints-dev_0.179_amd64.deb
+Size: 17760
+MD5sum: c5e70ebadb4688e984d39d1f2a4ae1f6
+SHA256: 75bc06aad1c5ed28779a122902554faf616497cac66fe45fbde69098452f430a
 
 Package: lintian-brush
 Source: debian-codemods
-Version: 0.175
-Installed-Size: 21733
+Version: 0.179
+Installed-Size: 22060
 Maintainer: Jelmer Vernooĳ <jelmer@debian.org>
 Architecture: amd64
 Depends: devscripts, python3-breezy (>= 3.3.1~), libc6 (>= 2.39), libgcc-s1 (>= 4.2), libgmp10 (>= 2:6.3.0+dfsg), libhogweed6t64, libnettle8t64 (>= 3.9~), libpython3.13 (>= 3.13.0~rc3)
@@ -6114,10 +6210,10 @@ Description-md5: 702d37c69cd2067b837ea7650ab558ea
 Tag: devel::debian, implemented-in::python, role::program, works-with::vcs
 devel
 Priority: optional
-Filename: pool/main/d/debian-codemods/lintian-brush_0.175_amd64.deb
-Size: 6536264
-MD5sum: cb03e15e9d2be700a772dfcb672a3401
-SHA256: b53563be4e2007f3b5aeda0e36eb77ad4196d769b66f998c7f3eb52f2f5fbdcc
+Filename: pool/main/d/debian-codemods/lintian-brush_0.179_amd64.deb
+Size: 6650492
+MD5sum: d2b1815bccb00f393cd271b764d834c5
+SHA256: e927afed1a6184c50c45fc499700cbe2d9500f4c9a89f7e8a147121bc68d9173
 
 Package: debian-codesearch-cli
 Version: 1.0.0+nmu4
@@ -8234,7 +8330,7 @@ MD5sum: 85ff6ab31a439c6e669fef5d029e7f0c
 SHA256: a85b04b6e2c556d666fb3e7487029eeeed5b31ad66029e05688995ee68facea9
 
 Package: elixir-ex-doc
-Version: 0.35.1+dfsg-5
+Version: 0.35.1+dfsg-6
 Installed-Size: 981
 Maintainer: Debian Erlang Packagers <pkg-erlang-devel@lists.alioth.debian.org>
 Architecture: amd64
@@ -8244,10 +8340,10 @@ Homepage: https://github.com/elixir-lang/ex_doc
 Description-md5: 7ed53495aa230683d5757e2cb3c4b028
 devel
 Priority: optional
-Filename: pool/main/e/elixir-ex-doc/elixir-ex-doc_0.35.1+dfsg-5_amd64.deb
-Size: 804120
-MD5sum: 1702e934753b894033f6b7d5da36c410
-SHA256: 648f0495e4b6296822121d222067b2d7c16c5017c1979ca6b863a8ab499c6cdb
+Filename: pool/main/e/elixir-ex-doc/elixir-ex-doc_0.35.1+dfsg-6_amd64.deb
+Size: 804244
+MD5sum: 2a6cfcdc6f3da86aa4b433017d0a1867
+SHA256: 7805bf49d1efcaf3343261d54cf5ee283ee173910b33fdc6875068a5271b6d96
 
 Package: elixir-makeup
 Version: 1.2.1-3
@@ -63379,24 +63475,24 @@ MD5sum: d90229e9ad38dcac331565804951b658
 SHA256: e0ec5bf79a22206985f3db4dac3463c398858b1cbfd9123e403e054fbec50338
 
 Package: gdb-bpf
-Source: gdb-bpf (12)
-Version: 17.1-4+2
-Installed-Size: 10875
+Source: gdb-bpf (13)
+Version: 17.2-1+1
+Installed-Size: 10855
 Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
 Architecture: amd64
-Depends: gdb (>= 17.1), libbabeltrace1 (>= 1.5.4), libc6 (>= 2.42), libexpat1 (>= 2.0.1), libgcc-s1 (>= 4.2), libgmp10 (>= 2:6.3.0+dfsg), libipt2 (>= 2.0), liblzma5 (>= 5.1.1alpha+20110809), libmpfr6 (>= 3.1.3), libncursesw6 (>= 6), libpython3.13 (>= 3.13.0~rc3), libreadline8t64 (>= 8.2~beta), libstdc++6 (>= 14), libtinfo6 (>= 6), zlib1g (>= 1:1.2.11.dfsg)
+Depends: gdb (>= 17.2), libc6 (>= 2.42), libexpat1 (>= 2.0.1), libgcc-s1 (>= 4.2), libgmp10 (>= 2:6.3.0+dfsg), libipt2 (>= 2.0), liblzma5 (>= 5.1.1alpha+20110809), libmpfr6 (>= 3.1.3), libncursesw6 (>= 6), libpython3.13 (>= 3.13.0~rc3), libreadline8t64 (>= 8.2~beta), libstdc++6 (>= 14), libtinfo6 (>= 6), zlib1g (>= 1:1.2.11.dfsg)
 Suggests: gdb-doc
 Description: Cross-debugger for the bpf target
 Homepage: https://www.gnu.org/software/gdb/
-Built-Using: gdb (= 17.1-4)
+Built-Using: gdb (= 17.2-1)
 Description-md5: 9edc251a09769a0c772fe24a73a16570
 Tag: uitoolkit::ncurses
 devel
 Priority: optional
-Filename: pool/main/g/gdb-bpf/gdb-bpf_17.1-4+2_amd64.deb
-Size: 3500924
-MD5sum: eb16797661cc351d896053553ee4de60
-SHA256: 26a30345ae12421d5d68913c74ada1400105e311ace98dfa4e6b73bb7f724308
+Filename: pool/main/g/gdb-bpf/gdb-bpf_17.2-1+1_amd64.deb
+Size: 3496320
+MD5sum: 73a67711bb55a17d4891fdd53f9df89b
+SHA256: 64c297051232b2d97c357c49b7fba8cf41cf21221338c657b0315b621813d801
 
 Package: gdb-mingw-w64
 Source: gdb-mingw-w64 (13.4)
@@ -64379,13 +64475,13 @@ SHA256: 03f78e0355ba3ea691bdea699f4b3a4f3613e4df8b171c842cf368d84602523e
 
 Package: gecode-flatzinc
 Source: gecode-snapshot
-Version: 6.2.0+git20260120-1
-Installed-Size: 15219
+Version: 6.2.0+git20260120-2
+Installed-Size: 15223
 Maintainer: Kari Pahula <kaol@debian.org>
 Architecture: amd64
 Replaces: flatzinc (<< 6.2.0+git20240207)
 Provides: flatzinc
-Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libmpfr6 (>= 3.1.3), libqt6core6t64 (>= 6.9.1), libqt6gui6 (>= 6.9.1), libqt6printsupport6 (>= 6.1.2), libqt6widgets6 (>= 6.3.0), libstdc++6 (>= 14)
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libmpfr6 (>= 3.1.3), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.9.1), libqt6printsupport6 (>= 6.1.2), libqt6widgets6 (>= 6.3.0), libstdc++6 (>= 14)
 Recommends: minizinc
 Breaks: flatzinc (<< 6.2.0+git20240207)
 Description: constraint problem modelling language
@@ -64393,10 +64489,10 @@ Homepage: https://www.gecode.org/flatzinc.html
 Description-md5: 486b334408c9bd535763a3ec21daec84
 devel
 Priority: optional
-Filename: pool/main/g/gecode-snapshot/gecode-flatzinc_6.2.0+git20260120-1_amd64.deb
-Size: 3013988
-MD5sum: a36db24c00934c502ae686735f662a06
-SHA256: 7cb6ee9504c7757ed73e75d8338a66c8482b99aa2e02a453f3d4645429b5d729
+Filename: pool/main/g/gecode-snapshot/gecode-flatzinc_6.2.0+git20260120-2_amd64.deb
+Size: 3014152
+MD5sum: 42acec50b98ebe67f98142473502b698
+SHA256: d70cb667d560db8f9df30190b62ff0076cf730c15a6f0bb39bf203281a2ff766
 
 Package: gedit-dev
 Source: gedit (48.1-9)
@@ -66687,8 +66783,8 @@ SHA256: 4ab56d2745d35f4b4fccc59340ce505fef04852089525a5f894a801571f5939a
 
 Package: golang-github-mna-redisc-dev
 Source: golang-github-mna-redisc
-Version: 1.1.7-4
-Installed-Size: 149
+Version: 1.4.0-1
+Installed-Size: 165
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
 Depends: golang-github-gomodule-redigo-dev, golang-github-stretchr-testify-dev
@@ -66697,10 +66793,10 @@ Homepage: https://github.com/mna/redisc
 Description-md5: 59919b312c8ab20dec5e9973a442a11d
 devel
 Priority: optional
-Filename: pool/main/g/golang-github-mna-redisc/golang-github-mna-redisc-dev_1.1.7-4_all.deb
-Size: 31412
-MD5sum: 815f0f63a13d505d38931158c893098f
-SHA256: 56a882d28a30f2d2440f920031663756934c3275e8e0b55745f16ccd22f920bc
+Filename: pool/main/g/golang-github-mna-redisc/golang-github-mna-redisc-dev_1.4.0-1_all.deb
+Size: 36492
+MD5sum: 0eb199f1f5d92103d5838d2d1db9ed79
+SHA256: 8baea7a53872eec7a9a4f0f6518efde163324e75c754e65146d9d60edfe36d81
 
 Package: go-proto-validators
 Source: golang-github-mwitkow-go-proto-validators
@@ -71848,9 +71944,9 @@ MD5sum: c044e5d96771f4e6fb024506e2ef21f3
 SHA256: ea04cc85d39d33b358a2cea062b4675a32c15d2a3c164bbe2afa689bc0aae504
 
 Package: bpftool
-Source: linux (7.0.7-1)
-Version: 7.7.0+7.0.7-1
-Installed-Size: 1075
+Source: linux (7.0.9-1)
+Version: 7.7.0+7.0.9-1
+Installed-Size: 1077
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libcap2 (>= 1:2.10), libelf1t64 (>= 0.144), libssl3t64 (>= 3.0.0), zlib1g (>= 1:1.2.3.4)
@@ -71859,15 +71955,15 @@ Homepage: https://www.kernel.org/
 Description-md5: d7d2729d5d8a42208f787da6b434cef6
 devel
 Priority: optional
-Filename: pool/main/l/linux/bpftool_7.7.0+7.0.7-1_amd64.deb
-Size: 611740
-MD5sum: 04770595688c7b08b7e7433eb5791e7e
-SHA256: 66fce212f9e9d8e929f17693f72accc7e490444f66d648912e2a8f4badf5c241
+Filename: pool/main/l/linux/bpftool_7.7.0+7.0.9-1_amd64.deb
+Size: 614444
+MD5sum: 7f8de6eca9e73995850daa4f6af4b1a6
+SHA256: 50f658887c3003252db58c5936af69237838c1b4ab492b83b406988fb7ea6529
 
 Package: linux-bpf-dev
 Source: linux
-Version: 7.0.7-1
-Installed-Size: 3138
+Version: 7.0.9-1
+Installed-Size: 3140
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
 Description: Headers for BPF development
@@ -71876,15 +71972,15 @@ Homepage: https://www.kernel.org/
 Description-md5: ef487f2f846252f409f3ebb8ece1c714
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-bpf-dev_7.0.7-1_amd64.deb
-Size: 814212
-MD5sum: f1a1b73573e53e43b02ac75a62e63e41
-SHA256: d0d4e8c04bf0475cb3f9d35c9023c28fc7917406d7708abc5fcf3970760279a5
+Filename: pool/main/l/linux/linux-bpf-dev_7.0.9-1_amd64.deb
+Size: 816856
+MD5sum: 025b5baadd8cf7d6413d955053435807
+SHA256: 51cdfd13b3399253367e962884a020f59139e9960c4636262563561c65a89f8d
 
 Package: linux-libc-dev
 Source: linux
-Version: 7.0.7-1
-Installed-Size: 10521
+Version: 7.0.9-1
+Installed-Size: 10523
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
 Description: Linux support headers for userspace development
@@ -71894,555 +71990,555 @@ Description-md5: b95630af34c5b0ac63c5a6f7cf44ced6
 Tag: devel::lang:c, devel::library, implemented-in::c, role::devel-lib
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev_7.0.7-1_all.deb
-Size: 1965740
-MD5sum: 7b9d24acab293fc8feb8315e5674b8e5
-SHA256: 04672211a0669bd4da3fe9b191e13df963cfa45b06b92a37fa1052ca95098599
+Filename: pool/main/l/linux/linux-libc-dev_7.0.9-1_all.deb
+Size: 1968252
+MD5sum: 18cdb17f0a84f333f9260e95c3f26dd7
+SHA256: fac31ab61c69b561418486294a880df46aaca6ce4519dc13d1df70420fb3d142
 
 Package: linux-libc-dev-alpha-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1082
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-alpha-cross_7.0.7-1_all.deb
-Size: 12192
-MD5sum: 85d29b26050c7a4cef6da9989e5f8603
-SHA256: c284e00d9c9b9719549c32137ae943e5344585aaed2eb06a7c587665d36e3f23
+Filename: pool/main/l/linux/linux-libc-dev-alpha-cross_7.0.9-1_all.deb
+Size: 12216
+MD5sum: 2cee9f52fac179d6ab44213e493997e9
+SHA256: 9c91171c4cf4a1481a4fb18d3e40806bb2953b7f666e206926d1f243595f219f
 
 Package: linux-libc-dev-amd64-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1107
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-amd64-cross_7.0.7-1_all.deb
-Size: 12544
-MD5sum: 03263e0a36e7c4bdafb52360c6972764
-SHA256: 3f792efce330ea5ecfa37b12cbe749a9a13c916d4c9698af2063e888295fbab8
+Filename: pool/main/l/linux/linux-libc-dev-amd64-cross_7.0.9-1_all.deb
+Size: 12552
+MD5sum: 53eb5130a043286b3ba075abf23bcf6f
+SHA256: e9c7bff34fb2659646af9c227dcde715325895942a894426e4b0dc04978bb1cb
 
 Package: linux-libc-dev-arc-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1077
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-arc-cross_7.0.7-1_all.deb
-Size: 12540
-MD5sum: d5a63d94de32da99982b70eec935f972
-SHA256: 24a08dd28e818a3aecd7d2aaf7d4da046f1a50c4c39d192579d3e6443b1fe73e
+Filename: pool/main/l/linux/linux-libc-dev-arc-cross_7.0.9-1_all.deb
+Size: 12532
+MD5sum: b6a8307d6fffc880cfff7c5850923105
+SHA256: 852ae5fab68bff4368c30c30a44a09ecc8f2eb15e6990c1c1b65be9a9b9bce46
 
 Package: linux-libc-dev-arm64-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1079
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-arm64-cross_7.0.7-1_all.deb
-Size: 12116
-MD5sum: 4cf56a385c58be1c4e67f64932e40eea
-SHA256: b787cb5910e4bd1b0818f2d00c1d1d7074ab61e75d158c4243bc63c03af711cc
+Filename: pool/main/l/linux/linux-libc-dev-arm64-cross_7.0.9-1_all.deb
+Size: 12076
+MD5sum: bad4138d17d2af0fdbaf356cadbc4b17
+SHA256: 268af7273a3286b856f4d7ea7bdb3b5d26d1369f1da1030153f1ee8b4f0e3862
 
 Package: linux-libc-dev-armel-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1077
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-armel-cross_7.0.7-1_all.deb
-Size: 12096
-MD5sum: 6049bdc7e19ff9cb24ac4c0de75e43e3
-SHA256: 8e21f2909294e745ba31fa64bf177dbf8f445ccd5393f31bfce50309ec0e8ff4
+Filename: pool/main/l/linux/linux-libc-dev-armel-cross_7.0.9-1_all.deb
+Size: 12080
+MD5sum: cafb1981d01696a08e2924cb6dcc0179
+SHA256: 2535b92b8430169f85b23758889380020d20a0ebfa84d0e9ce4b3b9609398422
 
 Package: linux-libc-dev-armhf-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1077
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-armhf-cross_7.0.7-1_all.deb
-Size: 12232
-MD5sum: dbefd6febc8097faaf06ecb138b6b577
-SHA256: 72e7f2652c8dfebb01985bbb46237a050199c6b9fc3288666460c604260edc20
+Filename: pool/main/l/linux/linux-libc-dev-armhf-cross_7.0.9-1_all.deb
+Size: 12104
+MD5sum: 7f6595e4f6afd6a1e7a3c4dfc02bde7b
+SHA256: a3fd1fba3b9895ef46669f2c68fde775f2b5cc3c0437634d3ed26ab740fc5d14
 
 Package: linux-libc-dev-hppa-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1077
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-hppa-cross_7.0.7-1_all.deb
-Size: 12352
-MD5sum: 34245639d659d75d16320ad8f5376d9e
-SHA256: c96cb4e7c255dc8da057f74a2e7bd596b0d068f8b508a30827b15f6f92c64ce8
+Filename: pool/main/l/linux/linux-libc-dev-hppa-cross_7.0.9-1_all.deb
+Size: 12356
+MD5sum: 8b424f2ad1d94bf77ae147dcc36c2fdf
+SHA256: 367fafdd72a57dd8de50319ba857f5d853cd21ad455c845bf50a90643550e3e7
 
 Package: linux-libc-dev-i386-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1107
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-i386-cross_7.0.7-1_all.deb
-Size: 12684
-MD5sum: af2bc251ba7a1e55e194e8cac6ff84d3
-SHA256: d610e1fe913aaedbe4be2b0ed52ab0d081c6b4014d2b8ce9ce8f8f3968b18222
+Filename: pool/main/l/linux/linux-libc-dev-i386-cross_7.0.9-1_all.deb
+Size: 12692
+MD5sum: cb783065571ecfeae89a0329331cc0d0
+SHA256: 3ed1f9f9d8e6b90a4dea917997e86b7398ec26112208941fcdb62b011af1c389
 
 Package: linux-libc-dev-loong64-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1081
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-loong64-cross_7.0.7-1_all.deb
-Size: 12116
-MD5sum: 2b6ba64bffb13b8584dbad3cc8a312f1
-SHA256: f4a46ca8aee66a406f2da3dfd5e6065cb81374e9a1c46558bcfb37c8737fd721
+Filename: pool/main/l/linux/linux-libc-dev-loong64-cross_7.0.9-1_all.deb
+Size: 12120
+MD5sum: 65e8ee626ff4e223be23b8031f1fc8c3
+SHA256: 853b442e8579e3b2aab58db86394850d0b827418778d95925b2fd53928a659be
 
 Package: linux-libc-dev-m68k-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1084
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-m68k-cross_7.0.7-1_all.deb
-Size: 12452
-MD5sum: 6e225942961bf2c2151b08534f8586d1
-SHA256: 6565001a6de284ddfe71f0542a133e1dc264b7760e848bdcb6a707b091ef6eb1
+Filename: pool/main/l/linux/linux-libc-dev-m68k-cross_7.0.9-1_all.deb
+Size: 12456
+MD5sum: 93f5f8d25504368ac09dd5e59d4def7d
+SHA256: 9c10c74c3eb5e1a39ad984cf3a2b828cd8585412494ce322ac933ead64c3f041
 
 Package: linux-libc-dev-mips-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1087
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-mips-cross_7.0.7-1_all.deb
-Size: 12532
-MD5sum: cee4f2c2ea0ca8dbc920b48718b1de2d
-SHA256: d06c4270a601810003d38c690f135a0e2c3716d07e775bc57a3b56ba1f7751b9
+Filename: pool/main/l/linux/linux-libc-dev-mips-cross_7.0.9-1_all.deb
+Size: 12520
+MD5sum: d0e0adbd64ecfab19ac07c22cf98292d
+SHA256: e130d9307cb7fd22b68b104b64343b72c59d0d1318a56385e952f960a46d90b5
 
 Package: linux-libc-dev-mips64-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1087
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-mips64-cross_7.0.7-1_all.deb
-Size: 12164
-MD5sum: 72fe667b200414675ed4658280d832d7
-SHA256: 6cbc05cc235ee0b764170524f6b3b797c958bccdcedb15791abff6ff892021b1
+Filename: pool/main/l/linux/linux-libc-dev-mips64-cross_7.0.9-1_all.deb
+Size: 12160
+MD5sum: f86ac28038f67b17a6ed8c7a23e9ae19
+SHA256: f60c05dbefea18ff7fadb0c0ed071b48a7530cdc401fc8798492e1ec1aae739c
 
 Package: linux-libc-dev-mips64el-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1087
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-mips64el-cross_7.0.7-1_all.deb
-Size: 12272
-MD5sum: 8e99549b0c71dab2b76e54115a2a5d08
-SHA256: fc48a97f1b78fa56685d53dc04d977089f33b969ac3ca069b9d92847569b32cc
+Filename: pool/main/l/linux/linux-libc-dev-mips64el-cross_7.0.9-1_all.deb
+Size: 12284
+MD5sum: c5d727deaeba79eeb0b0461ff94525ea
+SHA256: 5ef6029b336e6e6a1bbca2467923274f745a957546fb9bbf808209c61670af4b
 
 Package: linux-libc-dev-mips64r6-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1087
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-mips64r6-cross_7.0.7-1_all.deb
-Size: 12252
-MD5sum: 60abae2e57feed08d00502bd88fb6ef6
-SHA256: 65f373fe71602618f3e64d7f2f819568aff22b51679cf1580a249ead273eb8ef
+Filename: pool/main/l/linux/linux-libc-dev-mips64r6-cross_7.0.9-1_all.deb
+Size: 12216
+MD5sum: 64a8f235f337b2c1fc33e2ed0f5f1175
+SHA256: 463a5eb071c68e45dd4c6181ca47b14f3ba70b82311c94e34707382c57976621
 
 Package: linux-libc-dev-mips64r6el-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1087
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-mips64r6el-cross_7.0.7-1_all.deb
-Size: 12280
-MD5sum: 5477ff7feb5a425434a33dddbe0c8cd1
-SHA256: 0b00c4e60a9d778a80f9badc8d8bca7b56f6dedb99c0facc209cabf0c96e7687
+Filename: pool/main/l/linux/linux-libc-dev-mips64r6el-cross_7.0.9-1_all.deb
+Size: 12260
+MD5sum: a81b9e87af37fc3f22f9f3488beffc0f
+SHA256: a5060bee9b878f81332e76ca07ac67792606749cd6285a7374b924cddbd4d713
 
 Package: linux-libc-dev-mipsel-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1087
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-mipsel-cross_7.0.7-1_all.deb
-Size: 12436
-MD5sum: 155da2692f80bf494803bfdef8a5ac3c
-SHA256: 3567b87fa2fecde570ae2a9590b6d109d8ebb7741bda8d061903f7fa6c94505a
+Filename: pool/main/l/linux/linux-libc-dev-mipsel-cross_7.0.9-1_all.deb
+Size: 12392
+MD5sum: e2509b63ca2949bc8097013f554e22a0
+SHA256: ade393a19e16c5de9578b9a1099571796ba922a1f252942ab0cb976a17c01be3
 
 Package: linux-libc-dev-mipsn32-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1087
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-mipsn32-cross_7.0.7-1_all.deb
-Size: 12160
-MD5sum: f4654cd969b041b0f4a320b29179f5ea
-SHA256: 41cb9cf9d10ebeb0074a413023f7b74db587edb3a3dbfaa782d72635e35cc3c7
+Filename: pool/main/l/linux/linux-libc-dev-mipsn32-cross_7.0.9-1_all.deb
+Size: 12216
+MD5sum: 1b78f39ac07887240699decfd2f48e8a
+SHA256: 47647704bf9e76879f691cbea97d1768ada18d9d9181dff67de0f496fd8f9043
 
 Package: linux-libc-dev-mipsn32el-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1087
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-mipsn32el-cross_7.0.7-1_all.deb
-Size: 12280
-MD5sum: 7c994a5c0164a1d24abe54a1c8df05e0
-SHA256: 93f0817e594a394cb5d29e40464c1b786a2ded6932b5abd1dfc3bfcd0f4a580f
+Filename: pool/main/l/linux/linux-libc-dev-mipsn32el-cross_7.0.9-1_all.deb
+Size: 12292
+MD5sum: f4892d9d1928a0f5f272f1bc78022422
+SHA256: 863087c895d372f209dca71060a01b14c5e373342baa54eabb923fc5f6de02d8
 
 Package: linux-libc-dev-mipsn32r6-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1087
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-mipsn32r6-cross_7.0.7-1_all.deb
-Size: 12244
-MD5sum: 28e5e221a083677dfd5740f4af721b5b
-SHA256: 1956ea80dd0bf936fa52cdc06a56d2ff2304f1126351bbe79bf7a7e909e77f3e
+Filename: pool/main/l/linux/linux-libc-dev-mipsn32r6-cross_7.0.9-1_all.deb
+Size: 12240
+MD5sum: 420cabe80cab93c2a4d1db5496f09077
+SHA256: f2580b92c4d477b09240f4ba0c75cd736b5c57ebdcac2e5f13d9c33d2e3d7c3a
 
 Package: linux-libc-dev-mipsn32r6el-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1087
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-mipsn32r6el-cross_7.0.7-1_all.deb
-Size: 12216
-MD5sum: 5269c53430113ec8753c964b71c6089a
-SHA256: ed5e9e4aa765db083b6c1ae686733cd96f8a151cab03921fb60050c6ddfadc3d
+Filename: pool/main/l/linux/linux-libc-dev-mipsn32r6el-cross_7.0.9-1_all.deb
+Size: 12204
+MD5sum: 9f8fb6727c7fb398824ed3d24b663168
+SHA256: 6fa572e1441344cc8abd3d637ac50f8b2a47b967c321e66513fa9081bebfaeaf
 
 Package: linux-libc-dev-mipsr6-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1087
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-mipsr6-cross_7.0.7-1_all.deb
-Size: 12192
-MD5sum: 0bbf7df089557059468cc492087c6752
-SHA256: ae9840b64ff602d2de3481a10bd52b6c07703e8cec6d0e1d7759aacafd09918c
+Filename: pool/main/l/linux/linux-libc-dev-mipsr6-cross_7.0.9-1_all.deb
+Size: 12188
+MD5sum: d6a888bae049698cba7b41576902a2b7
+SHA256: 300f43d3281161eff9a934251e7462ef3e5531fbfc6350651bda8db6d08af59b
 
 Package: linux-libc-dev-mipsr6el-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1087
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-mipsr6el-cross_7.0.7-1_all.deb
-Size: 12256
-MD5sum: 88c753d953129125bfbd179cf7e6023d
-SHA256: ac32bae6bb73782632147a7902211d7b49b7ac71c3fb0711d3eff820df993275
+Filename: pool/main/l/linux/linux-libc-dev-mipsr6el-cross_7.0.9-1_all.deb
+Size: 12260
+MD5sum: d9a21b38878dda86a7a3ac981a12b7c8
+SHA256: df776ade323628120ee2acc8ce10bb86e68df0f5b971e6757d729bdbaa754253
 
 Package: linux-libc-dev-powerpc-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1097
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-powerpc-cross_7.0.7-1_all.deb
-Size: 12344
-MD5sum: 7787b843fee4721d0be0b5f9474428d5
-SHA256: 04f7852691ecf7966ba66756b68be133910837e6d26af245b17f3597dc554258
+Filename: pool/main/l/linux/linux-libc-dev-powerpc-cross_7.0.9-1_all.deb
+Size: 12340
+MD5sum: c20f5d21a2d471fe27e06aef605529f6
+SHA256: f10eb7e332e1032b3ebaea3f36341da13a8e79c8c484d03479eb434d0fe45cd6
 
 Package: linux-libc-dev-ppc64-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1097
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-ppc64-cross_7.0.7-1_all.deb
-Size: 12340
-MD5sum: b64c9b84bfd08116135c38deb0cd8183
-SHA256: cd7b174d0020f8f6fdf73fdecc483384005a4122273a4fac5783aef68e0e2ecb
+Filename: pool/main/l/linux/linux-libc-dev-ppc64-cross_7.0.9-1_all.deb
+Size: 12316
+MD5sum: bd91d61615c6a37d194716d2815b35b7
+SHA256: 36129e408cff18a2b206e35f707dca7e1c3707b002a8664f073959513bf6a5c7
 
 Package: linux-libc-dev-ppc64el-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1097
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-ppc64el-cross_7.0.7-1_all.deb
-Size: 12312
-MD5sum: 5a6e651c2c17a96ebc7e25e08152c9a8
-SHA256: 1a902656fe7e3673e3bbf4517153eb2ec0dd42034e12f562f4806fa347d5d764
+Filename: pool/main/l/linux/linux-libc-dev-ppc64el-cross_7.0.9-1_all.deb
+Size: 12304
+MD5sum: 5ad5cb35c76aeaeab7f176c59e31835e
+SHA256: 21b390328c4a436e945e8805ff8e6b1102f0d1bcdb8917d22fd0496108a6634a
 
 Package: linux-libc-dev-riscv64-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1084
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-riscv64-cross_7.0.7-1_all.deb
-Size: 12124
-MD5sum: 6695fb6d84fb04d0b1ca57e6162a91d5
-SHA256: 7d52f8bc96a9ac6015e708209d189f74f08c78e0e4d980fe04aafd7a3e710186
+Filename: pool/main/l/linux/linux-libc-dev-riscv64-cross_7.0.9-1_all.deb
+Size: 12116
+MD5sum: 6c8bbe1cfbd2cd861efbd662bcf6d177
+SHA256: 92259751fb7f6ba2fad43e796e317bf6bcf6b55cbacc33320ed23de56d8633af
 
 Package: linux-libc-dev-s390x-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1103
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-s390x-cross_7.0.7-1_all.deb
-Size: 12456
-MD5sum: 900c190716d6ccb6e36c9062bb6dbe30
-SHA256: 9c60ec7b6f9a7964d68a1bc5500f9c7eef059c0129834ac5d888c17c4846b0ac
+Filename: pool/main/l/linux/linux-libc-dev-s390x-cross_7.0.9-1_all.deb
+Size: 12436
+MD5sum: cb25e35fa0634098b159a2d4345c61fc
+SHA256: 4bae4f9b8910ae979a1d17e6345870da071b1d9234f80dc2ef83f215bc2b4d22
 
 Package: linux-libc-dev-sh4-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1079
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-sh4-cross_7.0.7-1_all.deb
-Size: 12612
-MD5sum: a3ec07e0c32e1595b9786a90e9141863
-SHA256: 267fd4ee4564a840a47fe09731b1533abc722a893eb2a792445c7f0e50293b07
+Filename: pool/main/l/linux/linux-libc-dev-sh4-cross_7.0.9-1_all.deb
+Size: 12608
+MD5sum: 009ccb9736cac56b078c0919dd39eec3
+SHA256: 139114cc5da238af223aced65357eea37570f5c992ee041b7501679cfb6ecdbe
 
 Package: linux-libc-dev-sparc64-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1089
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-sparc64-cross_7.0.7-1_all.deb
-Size: 12248
-MD5sum: cd1baa8608559cc9e25d8b991e757bed
-SHA256: 09cd95cfa9d1a7b8f33f83a23a2a5ff3728f80319660828640943fcf8c645f4b
+Filename: pool/main/l/linux/linux-libc-dev-sparc64-cross_7.0.9-1_all.deb
+Size: 12224
+MD5sum: 6aa61279c0128a710dc6f57b4a650700
+SHA256: aa70e2577fa6a88c8e2759448fdc8bad398ea955102a96758e0026a00e21e799
 
 Package: linux-libc-dev-x32-cross
 Source: linux
-Version: 7.0.7-1
+Version: 7.0.9-1
 Installed-Size: 1107
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: all
-Depends: linux-libc-dev (= 7.0.7-1)
+Depends: linux-libc-dev (= 7.0.9-1)
 Description: Linux support headers for userspace development (for cross-compiling)
 Multi-Arch: foreign
 Homepage: https://www.kernel.org/
 Description-md5: 47611235aa48c1c9a05b5de93862bde7
 devel
 Priority: optional
-Filename: pool/main/l/linux/linux-libc-dev-x32-cross_7.0.7-1_all.deb
-Size: 12368
-MD5sum: 0f8f82ee832465783317334cab17bbaa
-SHA256: e41a13ce32e914cede20cff544245fbd909ad80836e3896139d35162ffec3172
+Filename: pool/main/l/linux/linux-libc-dev-x32-cross_7.0.9-1_all.deb
+Size: 12348
+MD5sum: fc150ba37c728f71d2d1646be626814c
+SHA256: 3f557749e0f3c41290a4ac8eb467f4f6b4a94710ae5bfd09474907224ce1201d
 
 Package: rtla
 Source: linux
-Version: 7.0.7-1
-Installed-Size: 468
+Version: 7.0.9-1
+Installed-Size: 470
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libcpupower1 (>= 4.7~rc2-1~exp1), libtraceevent1 (>= 5.4), libtracefs1 (>= 1.6.3)
@@ -72451,20 +72547,20 @@ Homepage: https://www.kernel.org/
 Description-md5: 0532a5d5da80c52d43a84152f54bd400
 devel
 Priority: optional
-Filename: pool/main/l/linux/rtla_7.0.7-1_amd64.deb
-Size: 370220
-MD5sum: fe60e816f01e5a0925c867219c27cbcf
-SHA256: 2c6cb7311c8e9d864481df6f19ab275561a88228f3a25410ce26dc69abe8ede6
+Filename: pool/main/l/linux/rtla_7.0.9-1_amd64.deb
+Size: 373016
+MD5sum: 35c863ddcfa9a1e2eaa95869897e5c27
+SHA256: 6de5a776ad18d690011b3759a61e642ebfaa81818eb2e524112db5224563bf9d
 
 Package: bcc
 Source: linux86
-Version: 1.0.1+git20250212.0332db1-2
+Version: 1.0.1+git20260515.8cf785f-1
 Installed-Size: 301
 Maintainer: Stephen Kitt <skitt@debian.org>
 Architecture: amd64
 Replaces: linux86
-Depends: libc6 (>= 2.38), bin86 (= 1.0.1+git20250212.0332db1-2)
-Recommends: elks-libc (= 1.0.1+git20250212.0332db1-2)
+Depends: libc6 (>= 2.38), bin86 (= 1.0.1+git20260515.8cf785f-1)
+Recommends: elks-libc (= 1.0.1+git20260515.8cf785f-1)
 Conflicts: linux86
 Description: 16-bit x86 C compiler
 Multi-Arch: foreign
@@ -72475,14 +72571,14 @@ Tag: admin::boot, devel::compiler, devel::lang:c, devel::library,
  role::program, scope::utility, works-with::software:source
 devel
 Priority: optional
-Filename: pool/main/l/linux86/bcc_1.0.1+git20250212.0332db1-2_amd64.deb
-Size: 122872
-MD5sum: d4a51b67912290dccdb4c6e48120523c
-SHA256: f2cc1f7c6485670837049600c4ce00d0c10588b641db49035b09c39e2973a06d
+Filename: pool/main/l/linux86/bcc_1.0.1+git20260515.8cf785f-1_amd64.deb
+Size: 123100
+MD5sum: f4f4dc2de83bfd2a0cacef378da43e60
+SHA256: 9211f74abd79b2f4e04399a3195dbf410fda71e665ed0c1df8f8c949a1d40314
 
 Package: bin86
 Source: linux86
-Version: 1.0.1+git20250212.0332db1-2
+Version: 1.0.1+git20260515.8cf785f-1
 Installed-Size: 305
 Maintainer: Stephen Kitt <skitt@debian.org>
 Architecture: amd64
@@ -72496,19 +72592,19 @@ Tag: devel::machinecode, interface::commandline, role::program,
  scope::utility
 devel
 Priority: optional
-Filename: pool/main/l/linux86/bin86_1.0.1+git20250212.0332db1-2_amd64.deb
-Size: 105732
-MD5sum: b18707105494dbb6cb03aaa2b710dea6
-SHA256: e9e8c76d882043ec782b3eb465e29486d5cd16e2b478036ad9683b0f455f5499
+Filename: pool/main/l/linux86/bin86_1.0.1+git20260515.8cf785f-1_amd64.deb
+Size: 106020
+MD5sum: 9bee876c4a3c47ad0d3d7dc80495ab4e
+SHA256: 9287575b000cda8fa619218efd20e701931879490615664ec639582ba02ec89f
 
 Package: elks-libc
 Source: linux86
-Version: 1.0.1+git20250212.0332db1-2
-Installed-Size: 689
+Version: 1.0.1+git20260515.8cf785f-1
+Installed-Size: 688
 Maintainer: Stephen Kitt <skitt@debian.org>
 Architecture: all
 Replaces: bcc (<< 0.14.9), linux86
-Recommends: bcc (>= 1.0.1+git20250212.0332db1-2)
+Recommends: bcc (>= 1.0.1+git20260515.8cf785f-1)
 Conflicts: linux86
 Description: 16-bit x86 C library and include files
 Multi-Arch: foreign
@@ -72518,10 +72614,10 @@ Tag: devel::lang:c, devel::lang:scheme, devel::library, devel::machinecode,
  implemented-in::c, role::devel-lib, role::program
 devel
 Priority: optional
-Filename: pool/main/l/linux86/elks-libc_1.0.1+git20250212.0332db1-2_all.deb
-Size: 137648
-MD5sum: f16bb14f88de404a80992bec7d7344d1
-SHA256: b7ae8644eb7bb84a1fb0524134ce757d71d76140803ffed05e1f2a571156b4da
+Filename: pool/main/l/linux86/elks-libc_1.0.1+git20260515.8cf785f-1_all.deb
+Size: 136140
+MD5sum: 87672ba206d45c1f33274bc73671ac00
+SHA256: 34051bbea8123c9361a8117b055a2a5dad5bb30741a03c1a120ed137cfd49b21
 
 Package: liwc
 Version: 1.21-2
@@ -78846,27 +78942,27 @@ MD5sum: 6f7b8a425d83f04cfce26fac3d375448
 SHA256: 467693a5954e35b87b655207f1c1d3111b4b630499553f85b8140007d9144b1d
 
 Package: qt5-qmake
-Source: qtbase-opensource-src (5.15.17+dfsg-7)
-Version: 5.15.17+dfsg-7+b1
-Installed-Size: 1603
+Source: qtbase-opensource-src
+Version: 5.15.17+dfsg-8
+Installed-Size: 1602
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
-Depends: qt5-qmake-bin (= 5.15.17+dfsg-7+b1), qtchooser (>= 55-gc9562a1-1~)
+Depends: qt5-qmake-bin (= 5.15.17+dfsg-8), qtchooser (>= 55-gc9562a1-1~)
 Description: Qt 5 qmake Makefile generator tool
 Multi-Arch: same
 Homepage: https://www.qt.io/developers/
 Description-md5: d22e820ccda7e109fc6cf2c171df093e
 devel
 Priority: optional
-Filename: pool/main/q/qtbase-opensource-src/qt5-qmake_5.15.17+dfsg-7+b1_amd64.deb
-Size: 217176
-MD5sum: bd20d6dc617bb885d72e3f3e0b859f3f
-SHA256: 18e4097fe70602c44c5ed32eb5f126528dad4e0661901d910330b37511b1d83d
+Filename: pool/main/q/qtbase-opensource-src/qt5-qmake_5.15.17+dfsg-8_amd64.deb
+Size: 216952
+MD5sum: f9f6481c1e94c46c68fca543b139a8bc
+SHA256: 4d150ce4b96efec2abe8cd3e1eca0d93d8997405fcd800f84420d87fa65f4e89
 
 Package: qt5-qmake-bin
-Source: qtbase-opensource-src (5.15.17+dfsg-7)
-Version: 5.15.17+dfsg-7+b1
-Installed-Size: 3202
+Source: qtbase-opensource-src
+Version: 5.15.17+dfsg-8
+Installed-Size: 3201
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
@@ -78876,15 +78972,15 @@ Homepage: https://www.qt.io/developers/
 Description-md5: 86cdde8a3c4de9597f2460df4811e75d
 devel
 Priority: optional
-Filename: pool/main/q/qtbase-opensource-src/qt5-qmake-bin_5.15.17+dfsg-7+b1_amd64.deb
-Size: 1066204
-MD5sum: 15fd127f11bd05479d8ce3755804d76d
-SHA256: e9470f51da3f04cefd791cbbaa5eba3234af5510398ffb436c84707326314149
+Filename: pool/main/q/qtbase-opensource-src/qt5-qmake-bin_5.15.17+dfsg-8_amd64.deb
+Size: 1066152
+MD5sum: 207067847ebf6c877a5ee9cd6e2d3622
+SHA256: 4462df2484db9405ed3b5b101f5440e1bb9daa5af0ce3cf6612514a6a4394092
 
 Package: qtbase5-dev-tools
-Source: qtbase-opensource-src (5.15.17+dfsg-7)
-Version: 5.15.17+dfsg-7+b1
-Installed-Size: 3731
+Source: qtbase-opensource-src
+Version: 5.15.17+dfsg-8
+Installed-Size: 3730
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Depends: qtchooser (>= 55-gc9562a1-1~), perl:any, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libqt5core5t64 (>= 5.15.1), libqt5dbus5t64 (>= 5.6.0~beta), libstdc++6 (>= 13.1), libzstd1 (>= 1.5.5), qtbase-abi-5-15-17, zlib1g (>= 1:1.1.4)
@@ -78895,10 +78991,10 @@ Description-md5: 389ab33cc35e6afecee8a8240f83313f
 Tag: uitoolkit::qt
 devel
 Priority: optional
-Filename: pool/main/q/qtbase-opensource-src/qtbase5-dev-tools_5.15.17+dfsg-7+b1_amd64.deb
-Size: 770104
-MD5sum: 701e4c5796ef6a9a9e6575e5cc308868
-SHA256: bee6bde658a1301b4b4879b05968e457869e01a3aa204938cded3d82f6a29aee
+Filename: pool/main/q/qtbase-opensource-src/qtbase5-dev-tools_5.15.17+dfsg-8_amd64.deb
+Size: 769372
+MD5sum: 76be0d040b3663b82750bec7968f9bd3
+SHA256: c8fb33aa3fd9435a09d8d7b9abd9827a9b31daa698ac5ea6ae1420b96919f353
 
 Package: qtcreator
 Version: 19.0.2-1
@@ -83840,12 +83936,12 @@ MD5sum: fee532d7e3425b322c3af8674e456272
 SHA256: 0996bcae28b17755f451499c9d33a889cb1def61193bbf0e09af8479e8dec7ce
 
 Package: unixodbc-dev
-Source: unixodbc (2.3.14-1)
-Version: 2.3.14-1+b1
-Installed-Size: 1796
+Source: unixodbc
+Version: 2.3.14-2
+Installed-Size: 1797
 Maintainer: Hugh McMaster <hmc@debian.org>
 Architecture: amd64
-Depends: libodbc2 (= 2.3.14-1+b1), libodbccr2 (= 2.3.14-1+b1), libodbcinst2 (= 2.3.14-1+b1)
+Depends: libodbc2 (= 2.3.14-2), libodbccr2 (= 2.3.14-2), libodbcinst2 (= 2.3.14-2)
 Conflicts: libiodbc2-dev
 Breaks: libdbd-odbc-perl (<< 1.61-2)
 Description: ODBC libraries for Unix (development files)
@@ -83856,10 +83952,10 @@ Tag: devel::lang:c, devel::library, implemented-in::c, role::devel-lib,
  works-with::db
 devel
 Priority: optional
-Filename: pool/main/u/unixodbc/unixodbc-dev_2.3.14-1+b1_amd64.deb
-Size: 233164
-MD5sum: 04d522f9b70fcb5c0697409e8ab7cbd6
-SHA256: fcab5bcaf5a3111e56662dcbe5718583a309202529860e2de881208c87ac4250
+Filename: pool/main/u/unixodbc/unixodbc-dev_2.3.14-2_amd64.deb
+Size: 233420
+MD5sum: 5a54e3e36f44a55cb697cb5af050085d
+SHA256: 9e2f0f5dedaa60057075a9ada11abc5bd789acf5d0ecf7e14fafe81048a564f1
 
 Package: unyaffs
 Version: 0.9.7-2
