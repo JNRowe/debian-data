@@ -14717,6 +14717,416 @@ Description-en: Rust-based sudo and su implementations
  there are differences in functionality and design. Users should be aware
  of these differences and consult the project's documentation for specifics.
 
+Package: ctdb
+Description-md5: 83dff66615250b53a0cd3df6fb3b9ea7
+Description-en: clustered database to store temporary data
+ CTDB is a cluster implementation of the TDB database used by Samba and other
+ projects to store temporary data. If an application is already using TDB for
+ temporary data it is very easy to convert that application to be cluster aware
+ and use CTDB instead.
+ .
+ CTDB provides the same types of functions as TDB but in a clustered fashion,
+ providing a TDB-style database that spans multiple physical hosts in a cluster.
+ .
+ Features include:
+  * CTDB provides a TDB that has consistent data and consistent locking across
+    all nodes in a cluster.
+  * CTDB is very fast.
+  * In case of node failures, CTDB will automatically recover and repair all TDB
+    databases that it manages.
+  * CTDB is the core component that provides pCIFS ("parallel CIFS") with
+    Samba3/4.
+  * CTDB provides HA features such as node monitoring, node failover, and IP
+    takeover.
+  * CTDB provides a reliable messaging transport to allow applications linked
+    with CTDB to communicate to other instances of the application running on
+    different nodes in the cluster.
+  * CTDB has pluggable transport backends. Currently implemented backends are
+    TCP and Infiniband.
+  * CTDB supports a system of application specific management scripts, allowing
+    applications that depend on network or filesystem resources to be managed in
+    a highly available manner on a cluster.
+
+Package: ldb-tools
+Description-md5: 27e8c15a8859e3368f9f6a0853f05226
+Description-en: LDAP-like embedded database - tools
+ ldb is a LDAP-like embedded database built on top of TDB.
+ .
+ What ldb does is provide a fast database with an LDAP-like API designed
+ to be used within an application. In some ways it can be seen as a
+ intermediate solution between key-value pair databases and a real LDAP
+ database.
+ .
+ This package contains bundled test and utility binaries
+
+Package: libldb-dev
+Description-md5: 0f2998af1c1336788fd3d4e9eca9fd09
+Description-en: LDAP-like embedded database - development files
+ ldb is a LDAP-like embedded database built on top of TDB.
+ .
+ What ldb does is provide a fast database with an LDAP-like API designed
+ to be used within an application. In some ways it can be seen as a
+ intermediate solution between key-value pair databases and a real LDAP
+ database.
+ .
+ This package contains the development files.
+
+Package: libldb2
+Description-md5: afbf2b86552adbf8b69bb702e5773247
+Description-en: LDAP-like embedded database - shared library
+ ldb is a LDAP-like embedded database built on top of TDB.
+ .
+ It provides a fast database with an LDAP-like API designed
+ to be used within an application. In some ways it can be seen as a
+ intermediate solution between key-value pair databases and a real LDAP
+ database.
+ .
+ This package contains the shared library file.
+
+Package: libnss-winbind
+Description-md5: 223d38d764a9bb35ad3be4c8d048957d
+Description-en: Samba nameservice integration plugins
+ Samba is an implementation of the SMB/CIFS protocol for Unix systems,
+ providing support for cross-platform file and printer sharing with
+ Microsoft Windows, OS X, and other Unix systems.  Samba can also function
+ as an NT4-style domain controller, and can integrate with both NT4 domains
+ and Active Directory realms as a member server.
+ .
+ This package provides nss_winbind, a plugin that integrates
+ with a local winbindd server to provide user/group name lookups to the
+ system; and nss_wins, which provides hostname lookups via both the NBNS and
+ NetBIOS broadcast protocols.
+
+Package: libpam-winbind
+Description-md5: fba9076429d270720a91324cff071fed
+Description-en: Windows domain authentication integration plugin
+ Samba is an implementation of the SMB/CIFS protocol for Unix systems,
+ providing support for cross-platform file and printer sharing with
+ Microsoft Windows, OS X, and other Unix systems.  Samba can also function
+ as an NT4-style domain controller, and can integrate with both NT4 domains
+ and Active Directory realms as a member server.
+ .
+ This package provides pam_winbind, a plugin that integrates with a local
+ winbindd server to provide Windows domain authentication to the system.
+
+Package: libsmbclient-dev
+Description-md5: d6338d0aed68408023b999dd547aaecf
+Description-en: development files for libsmbclient
+ This package provides the development files (static library and headers)
+ required for building applications against libsmbclient, a library that
+ enables client applications to talk to Microsoft Windows and Samba servers
+ using the SMB/CIFS protocol.
+
+Package: libsmbclient0
+Description-md5: 483547748179a567c24665e99ab5439e
+Description-en: shared library for communication with SMB/CIFS servers
+ This package provides a shared library that enables client applications
+ to talk to Microsoft Windows and Samba servers using the SMB/CIFS
+ protocol.
+
+Package: libtalloc-dev
+Description-md5: 41677e6816a10958e5b86e549c6ecf01
+Description-en: hierarchical pool based memory allocator - development files
+ A hierarchical pool based memory allocator with destructors. It uses
+ reference counting to determine when memory should be freed.
+ .
+ This package contains the development files.
+
+Package: libtalloc2
+Description-md5: 23f3872767580f46840e3abd41107394
+Description-en: hierarchical pool based memory allocator
+ A hierarchical pool based memory allocator with destructors. It uses
+ reference counting to determine when memory should be freed.
+
+Package: libtdb-dev
+Description-md5: 2db2deda00827a5a869d0647c19be720
+Description-en: Trivial Database - development files
+ This is a simple database API. It is modelled after the structure
+ of GDBM. TDB features, unlike GDBM, multiple writers support with
+ appropriate locking and transactions.
+ .
+ This package contains the development files.
+
+Package: libtdb1
+Description-md5: 0f3fcc8a1c8e6b3b4c956fdf394636a6
+Description-en: Trivial Database - shared library
+ This is a simple database API. It is modelled after the structure
+ of GDBM. TDB features, unlike GDBM, multiple writers support with
+ appropriate locking and transactions.
+ .
+ This package contains the shared library file.
+
+Package: libtevent-dev
+Description-md5: f6d45fd59d78e80f8d7aebde68faf048
+Description-en: talloc-based event loop library - development files
+ tevent is a simple library that can handle the main event loop for an
+ application. It supports three kinds of events: timed events, file
+ descriptors becoming readable or writable and signals.
+ .
+ Talloc is used for memory management, both internally and for private
+ data provided by users of the library.
+ .
+ This package provides the development files.
+
+Package: libtevent0t64
+Description-md5: 3fbaa50e60efe0bf58f77af5c4759188
+Description-en: talloc-based event loop library - shared library
+ tevent is a simple library that can handle the main event loop for an
+ application. It supports three kinds of events: timed events, file
+ descriptors becoming readable or writable and signals.
+ .
+ Talloc is used for memory management, both internally and for private
+ data provided by users of the library.
+ .
+ This package provides the shared library file.
+
+Package: libwbclient-dev
+Description-md5: 2fd42f0ef62fe1cc8cfee6fb03d4b884
+Description-en: Samba winbind client library - development files
+ Samba is an implementation of the SMB/CIFS protocol for Unix systems,
+ providing support for cross-platform file and printer sharing with
+ Microsoft Windows, OS X, and other Unix systems.
+ .
+ This package provides the development files (static library and headers)
+ required for building applications against libwbclient, a library for client
+ applications that interact via the winbind pipe protocol with a Samba
+ winbind server.
+
+Package: libwbclient0
+Description-md5: 16c935b1d482f634b3879c2495e04db8
+Description-en: Samba winbind client library
+ Samba is an implementation of the SMB/CIFS protocol for Unix systems,
+ providing support for cross-platform file and printer sharing with
+ Microsoft Windows, OS X, and other Unix systems.
+ .
+ This package provides a library for client applications that interact
+ via the winbind pipe protocol with a Samba winbind server.
+
+Package: python3-ldb
+Description-md5: 27d17d077a8174ae6fbe9499e8df3eca
+Description-en: Python 3 bindings for LDB
+ ldb is a LDAP-like embedded database built on top of TDB.
+ .
+ This package contains the Python 3 bindings for ldb.
+
+Package: python3-samba
+Description-md5: 7593355c9f194d3f84df6ce15717d93f
+Description-en: Python 3 bindings for Samba
+ Samba is an implementation of the SMB/CIFS protocol for Unix systems,
+ providing support for cross-platform file sharing with Microsoft Windows, OS X,
+ and other Unix systems.  Samba can also function as a domain controller
+ or member server in Active Directory or NT4-style domains.
+ .
+ This package contains Python 3 bindings for most Samba libraries.
+
+Package: python3-talloc
+Description-md5: 1f69e5a938571daf4dc63c092547c640
+Description-en: hierarchical pool based memory allocator - Python3 bindings
+ A hierarchical pool based memory allocator with destructors. It uses
+ reference counting to determine when memory should be freed.
+ .
+ This package contains the Python 3 bindings.
+
+Package: python3-tdb
+Description-md5: a9dcb8b66184a80f72eb8f5ea0006309
+Description-en: Python3 bindings for TDB
+ This is a simple database API. It is modelled after the structure
+ of GDBM. TDB features, unlike GDBM, multiple writers support with
+ appropriate locking and transactions.
+ .
+ This package contains the Python3 bindings.
+
+Package: registry-tools
+Description-md5: 31c581321b3c287173613845af74fcdb
+Description-en: tools for viewing and manipulating the Windows registry
+ Samba is an implementation of the SMB/CIFS protocol for Unix systems,
+ providing support for cross-platform file sharing with Microsoft Windows, OS X,
+ and other Unix systems.  Samba can also function as a domain controller
+ or member server in Active Directory or NT4-style domains.
+ .
+ This package contains tools for viewing and manipulating the binary
+ "registry" found on Windows machines, both locally and remote.
+
+Package: samba
+Description-md5: c9d307ae5cf3b46be12b53a9f95862f0
+Description-en: SMB/CIFS file, print, and login server for Unix
+ Samba is an implementation of the SMB/CIFS protocol for Unix systems,
+ providing support for cross-platform file and printer sharing with
+ Microsoft Windows, OS X, and other Unix systems.  Samba can also function
+ as an Active Directory or NT4-style domain controller, and can integrate
+ with Active Directory realms or NT4 domains as a member server.
+ .
+ This package provides the components necessary to use Samba as a stand-alone
+ file and print server or as an NT4 domain controller.  For use in an NT4
+ domain or Active Directory realm, you will also need the winbind package.
+ To use samba as an Active Directory domain controller (AD DC), please install
+ samba-ad-dc package.
+ .
+ This package is not required for connecting to existing SMB/CIFS servers
+ (see smbclient) or for mounting remote filesystems (see cifs-utils).
+
+Package: samba-ad-dc
+Description-md5: eba517f15cc7dff6d61d4bf8f68630b3
+Description-en: Samba control files to run AD Domain Controller
+ Samba is an implementation of the SMB/CIFS protocol for Unix systems,
+ providing support for cross-platform file and printer sharing with
+ Microsoft Windows, OS X, and other Unix systems.
+ .
+ This package contains control files to run an Active Directory Domain
+ Controller (AD DC).  For now, this is just a metapackage pulling in
+ all the required dependencies.
+
+Package: samba-ad-provision
+Description-md5: 85c78259045a6d75c0722ff117cca50f
+Description-en: Samba files needed for AD domain provision
+ Samba is an implementation of the SMB/CIFS protocol for Unix systems,
+ providing support for cross-platform file and printer sharing with
+ Microsoft Windows, OS X, and other Unix systems.
+ .
+ This package contains files to setup an Active Directory Domain
+ Controller (AD DC).
+
+Package: samba-common
+Description-md5: a4083020b891e75d279ca48e7fd18d7b
+Description-en: common files used by both the Samba server and client
+ Samba is an implementation of the SMB/CIFS protocol for Unix systems,
+ providing support for cross-platform file and printer sharing with
+ Microsoft Windows, OS X, and other Unix systems.
+ .
+ This package contains common files used by all parts of Samba.
+
+Package: samba-common-bin
+Description-md5: ed41b644031f2092e31e4cc4802a5fe3
+Description-en: Samba common files used by both the server and the client
+ Samba is an implementation of the SMB/CIFS protocol for Unix systems,
+ providing support for cross-platform file sharing with Microsoft Windows, OS X,
+ and other Unix systems.  Samba can also function as a domain controller
+ or member server in Active Directory or NT4-style domains.
+ .
+ This package contains the common files that are used by both the server
+ (provided in the samba package) and the client (provided in the smbclient
+ package).
+
+Package: samba-dev
+Description-md5: c8352d732d47c05669c4910ec031f562
+Description-en: tools for extending Samba
+ Samba is an implementation of the SMB/CIFS protocol for Unix systems,
+ providing support for cross-platform file sharing with Microsoft Windows, OS X,
+ and other Unix systems.  Samba can also function as a domain controller
+ or member server in Active Directory or NT4-style domains.
+ .
+ This package contains include files shared by the various Samba-based
+ libraries.
+
+Package: samba-dsdb-modules
+Description-md5: ed8b020cf571b2c155dd3360d7f05bb3
+Description-en: Samba Directory Services Database
+ Samba is an implementation of the SMB/CIFS protocol for Unix systems,
+ providing support for cross-platform file sharing with Microsoft Windows, OS X,
+ and other Unix systems.  Samba can also function as a domain controller
+ or member server in Active Directory or NT4-style domains.
+ .
+ This package contains LDB plugins which add support for various Active
+ Directory features to the LDB library.
+
+Package: samba-libs
+Description-md5: 306caa16a8faeb0f0052382f8854cd17
+Description-en: Samba core libraries
+ Samba is an implementation of the SMB/CIFS protocol for Unix systems,
+ providing support for cross-platform file sharing with Microsoft Windows, OS X,
+ and other Unix systems.  Samba can also function as a domain controller
+ or member server in Active Directory or NT4-style domains.
+ .
+ This package contains the shared libraries.
+
+Package: samba-testsuite
+Description-md5: b3a06da306c4ba5739938a7fa8d2fe31
+Description-en: test suite from Samba
+ Samba is an implementation of the SMB/CIFS protocol for Unix systems,
+ providing support for cross-platform file sharing with Microsoft Windows, OS X,
+ and other Unix systems.  Samba can also function as a domain controller
+ or member server in Active Directory or NT4-style domains.
+ .
+ This package contains programs for testing the reliability and speed
+ of SMB servers, Samba in particular.
+
+Package: samba-vfs-ceph
+Description-md5: 81c41d008c09fa58505d8e0a34d4e1fd
+Description-en: Samba Virtual FileSystem ceph modules
+ Samba is an implementation of the SMB/CIFS protocol for Unix systems,
+ providing support for cross-platform file sharing with Microsoft Windows, OS X,
+ and other Unix systems.  Samba can also function as a domain controller
+ or member server in Active Directory or NT4-style domains.
+ .
+ Virtual FileSystem modules are stacked shared libraries extending the
+ functionality of Samba. This package provides vfs_ceph and vfs_ceph_snapshots
+ modules.
+
+Package: samba-vfs-glusterfs
+Description-md5: e3b0be6d797b0246246b2e9ce209335e
+Description-en: Samba Virtual FileSystem glusterfs modules
+ Samba is an implementation of the SMB/CIFS protocol for Unix systems,
+ providing support for cross-platform file sharing with Microsoft Windows, OS X,
+ and other Unix systems.  Samba can also function as a domain controller
+ or member server in Active Directory or NT4-style domains.
+ .
+ Virtual FileSystem modules are stacked shared libraries extending the
+ functionality of Samba. This package provides vfs_glusterfs and
+ vfs_glusterfs_fuse modules.
+
+Package: samba-vfs-modules
+Description-md5: 168d3f468e8cbb1620c054fea162f778
+Description-en: Samba Virtual FileSystem plugins (transitional package)
+ Samba is an implementation of the SMB/CIFS protocol for Unix systems,
+ providing support for cross-platform file sharing with Microsoft Windows, OS X,
+ and other Unix systems.  Samba can also function as a domain controller
+ or member server in Active Directory or NT4-style domains.
+ .
+ Virtual FileSystem modules are stacked shared libraries extending the
+ functionality of Samba.  This package used to provide VFS modules for
+ samba, but since version 4.20.2+dfsg-3, most of the modules were merged
+ into main samba package, or into their own separate packages -
+ samba-vfs-ceph and samba-vfs-glusterfs.
+ .
+ This package can safely be removed.
+
+Package: smbclient
+Description-md5: 476018eed30b7f1e76b02afe22aaf008
+Description-en: command-line SMB/CIFS clients for Unix
+ Samba is an implementation of the SMB/CIFS protocol for Unix systems,
+ providing support for cross-platform file and printer sharing with
+ Microsoft Windows, OS X, and other Unix systems.
+ .
+ This package contains command-line utilities for accessing Microsoft
+ Windows and Samba servers, including smbclient, smbtar, and smbspool.
+ Utilities for mounting shares locally are found in the package
+ cifs-utils.
+
+Package: tdb-tools
+Description-md5: 4c671417a2674117648ec2fcd5245c12
+Description-en: Trivial Database - bundled binaries
+ This is a simple database API. It is modelled after the structure
+ of GDBM. TDB features, unlike GDBM, multiple writers support with
+ appropriate locking and transactions.
+ .
+ This package contains bundled test and utility binaries
+
+Package: winbind
+Description-md5: 760987c6cfd5ae0abd5c47c9758b31b0
+Description-en: service to resolve user and group information from Windows NT servers
+ Samba is an implementation of the SMB/CIFS protocol for Unix systems,
+ providing support for cross-platform file sharing with Microsoft Windows, OS X,
+ and other Unix systems.  Samba can also function as a domain controller
+ or member server in Active Directory or NT4-style domains.
+ .
+ This package provides winbindd, a daemon which integrates authentication
+ and directory service (user/group lookup) mechanisms from a Windows
+ domain on a Linux system.
+ .
+ Winbind based user/group lookups via /etc/nsswitch.conf can be enabled via
+ the libnss-winbind package. Winbind based Windows domain authentication can
+ be enabled via the libpam-winbind package.
+
 Package: shaarli
 Description-md5: 0f385026924dcd41d8917bad1c567842
 Description-en: Personal, minimalist, super-fast and no-database bookmarking service
