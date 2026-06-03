@@ -51,6 +51,472 @@ Filename: pool/updates/main/a/aide/aide-dynamic_0.19.1-2+deb13u1_all.deb
 Size: 35280
 SHA256: 57e5dd21068cf7daabc425a8cd937584c8fb7e3ec1ba378c8da5947bf923d4f6
 
+Package: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 85
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: amd64
+Depends: ceph-mgr (= 18.2.7+ds-1+deb13u1), ceph-mon (= 18.2.7+ds-1+deb13u1), ceph-osd (= 18.2.7+ds-1+deb13u1)
+Suggests: ceph-mds (= 18.2.7+ds-1+deb13u1)
+Description: distributed storage and file system
+Homepage: http://ceph.com/
+Description-md5: 744df4d020b57452ac4638e56eff9c7b
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/ceph_18.2.7+ds-1+deb13u1_amd64.deb
+Size: 34044
+SHA256: b06584718805636bbdaf335ccfb962493034d7cfbe81f6b61a2bc15499a51f5a
+
+Package: ceph-base
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 25974
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: amd64
+Depends: binutils, ceph-common (= 18.2.7+ds-1+deb13u1), cryptsetup-bin | cryptsetup, e2fsprogs, gdisk, hdparm | sdparm, logrotate, nvme-cli, parted, psmisc, smartmontools, uuid-runtime, xfsprogs, python3:any, libaio1t64 (>= 0.3.93), libc6 (>= 2.38), libcap2 (>= 1:2.10), libfmt10 (>= 10.1.1+ds1), libgcc-s1 (>= 3.4), libgoogle-perftools4t64 (>= 2.16), liblz4-1 (>= 0.0~r130), libpmem1 (>= 1.4), librados2 (>= 18.2.7+ds), libsnappy1v5 (>= 1.2.2), libstdc++6 (>= 14), liburing2 (>= 2.3), zlib1g (>= 1:1.2.0)
+Description: common ceph daemon libraries and management tools
+Homepage: http://ceph.com/
+Description-md5: 38862c56180e1d3d93a838a6386f82bc
+Recommends: btrfs-tools, ceph-mds (= 18.2.7+ds-1+deb13u1), chrony | time-daemon | ntp, librados2 (= 18.2.7+ds-1+deb13u1), libradosstriper1 (= 18.2.7+ds-1+deb13u1), librbd1 (= 18.2.7+ds-1+deb13u1)
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/ceph-base_18.2.7+ds-1+deb13u1_amd64.deb
+Size: 5395460
+SHA256: ea8401386a4410310414b8b9ac2d1bd6b053b712afc83ff38d842af9b2058233
+
+Package: ceph-common
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 53504
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: amd64
+Replaces: radosgw (<< 18)
+Depends: adduser, librbd1 (= 18.2.7+ds-1+deb13u1), python3-ceph-argparse (= 18.2.7+ds-1+deb13u1), python3-ceph-common (<< 18.2.7+ds-1+deb13u1.1~), python3-ceph-common (>= 18.2.7+ds-1+deb13u1), python3-cephfs (= 18.2.7+ds-1+deb13u1), python3-prettytable, python3-rados (= 18.2.7+ds-1+deb13u1), python3-rbd (= 18.2.7+ds-1+deb13u1), python3-requests, python3:any, libbabeltrace1 (>= 1.5.4), libblkid1 (>= 2.17.2), libboost-context1.83.0 (>= 1.83.0), libboost-filesystem1.83.0 (>= 1.83.0), libboost-program-options1.83.0 (>= 1.83.0), libboost-thread1.83.0 (>= 1.83.0), libc6 (>= 2.38), libcap-ng0 (>= 0.7.9), libcephfs2 (>= 12.0.3), libcurl3t64-gnutls (>= 7.28.0), libexpat1 (>= 2.0.1), libfmt10 (>= 10.1.1+ds1), libgcc-s1 (>= 3.0), libgoogle-perftools4t64 (>= 2.16), libicu76 (>= 76.1-1~), libkeyutils1 (>= 1.4), libldap2 (>= 2.6.2), liblua5.3-0, libncurses6 (>= 6), liboath0t64 (>= 1.10.0), librabbitmq4 (>= 0.10.0), librados2 (>= 18.2.7+ds), libradosstriper1 (>= 0.87), libsqlite3-0 (>= 3.14.0), libssl3t64 (>= 3.4.0), libstdc++6 (>= 14), libtinfo6 (>= 6), libudev1 (>= 183)
+Suggests: ceph, ceph-mds
+Conflicts: ceph-client-tools
+Breaks: radosgw (<< 18)
+Description: common utilities to mount and interact with a ceph storage cluster
+Homepage: http://ceph.com/
+Description-md5: 90f488e054c1b3b23b645137c2977504
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/ceph-common_18.2.7+ds-1+deb13u1_amd64.deb
+Size: 13651968
+SHA256: 12f7d110f504fe464f14483758f568cccb1e87cccd6e07c9a33775da56299333
+
+Package: ceph-fuse
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 2838
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: amd64
+Depends: python3, libc6 (>= 2.38), libfmt10 (>= 10.1.1+ds1), libfuse3-4 (>= 3.17.2), libgcc-s1 (>= 3.0), librados2 (>= 18.2.7+ds), libstdc++6 (>= 14)
+Description: FUSE-based client for the Ceph distributed file system
+Homepage: http://ceph.com/
+Description-md5: 2e66da405a3a0048edd7d65c675526ff
+Recommends: fuse3
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/ceph-fuse_18.2.7+ds-1+deb13u1_amd64.deb
+Size: 893216
+SHA256: 0343fabff704f205b68129856cbfdeec831410477d408bdacec73f423eaf07b7
+
+Package: ceph-fuse-dbg
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 22648
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: amd64
+Depends: python3
+Description: FUSE-based client for the Ceph distributed file system - debug
+Homepage: http://ceph.com/
+Build-Ids: c7108ceb3cefa01cc1f8226edf0e50af983b3ac2
+Description-md5: 9a82ee5bfdf8088b5961ad597bf77b1a
+Recommends: fuse3
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/ceph-fuse-dbg_18.2.7+ds-1+deb13u1_amd64.deb
+Size: 22120244
+SHA256: 25899760d5c2102bddd3ac590302a40e109895737c50b3d4fc96c25ae72b21fc
+
+Package: ceph-grafana-dashboards
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 446
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: all
+Description: grafana dashboards for the ceph dashboard
+Homepage: http://ceph.com/
+Description-md5: 572ead2beed8c309540d500ef8c53174
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/ceph-grafana-dashboards_18.2.7+ds-1+deb13u1_all.deb
+Size: 48504
+SHA256: 1fcb839a9e7290ebb4e2b3e2581e4b5f44d592b35e3f93596a2f416159867209
+
+Package: ceph-immutable-object-cache
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 579
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: amd64
+Depends: ceph-common (= 18.2.7+ds-1+deb13u1), librados2 (= 18.2.7+ds-1+deb13u1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
+Description: Ceph daemon for immutable object cache
+Homepage: http://ceph.com/
+Description-md5: c76c82274d014d060096f8293a6f711f
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/ceph-immutable-object-cache_18.2.7+ds-1+deb13u1_amd64.deb
+Size: 190412
+SHA256: a856ba72c2026de51dfa2e606b311f88233c562a0149a1221218329b84291fd4
+
+Package: ceph-mds
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 7877
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: amd64
+Depends: ceph-common (= 18.2.7+ds-1+deb13u1), libc6 (>= 2.38), libfmt10 (>= 10.1.1+ds1), libgcc-s1 (>= 3.0), libgoogle-perftools4t64 (>= 2.16), liblua5.3-0, librados2 (>= 18.2.7+ds), libstdc++6 (>= 14)
+Description: metadata server for the ceph distributed file system
+Homepage: http://ceph.com/
+Description-md5: d37d51a4735a093f21799c80f707168f
+Recommends: ceph-fuse, libcephfs2
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/ceph-mds_18.2.7+ds-1+deb13u1_amd64.deb
+Size: 2412732
+SHA256: faae6888c3731a5acd9d1e59a77a1160ac3933710a428fce01f61ca7a7bd964d
+
+Package: ceph-mgr
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 5377
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: amd64
+Depends: ceph-common (= 18.2.7+ds-1+deb13u1), ceph-mgr-modules-core (<< 18.2.7+ds-1+deb13u1.1~), ceph-mgr-modules-core (>= 18.2.7+ds-1+deb13u1), libsqlite3-mod-ceph (<< 18.2.7+ds-1+deb13u1.1~), libsqlite3-mod-ceph (>= 18.2.7+ds-1+deb13u1), python3-bcrypt, python3-ceph-argparse (= 18.2.7+ds-1+deb13u1), python3-cephfs (= 18.2.7+ds-1+deb13u1), python3-cherrypy3, python3-jwt, python3-openssl, python3-pecan, python3-requests, python3-werkzeug, python3-yaml, libboost-python1.83.0 (>= 1.83.0), libboost-python1.83.0-py313, libc6 (>= 2.38), libfmt10 (>= 10.1.1+ds1), libgcc-s1 (>= 3.0), libgoogle-perftools4t64 (>= 2.16), libpython3.13 (>= 3.13.0~rc3), librados2 (>= 18.2.7+ds), libsqlite3-0 (>= 3.5.9), libstdc++6 (>= 14)
+Suggests: ceph-mgr-dashboard, ceph-mgr-diskprediction-local, ceph-mgr-rook
+Description: manager for the ceph distributed file system
+Homepage: http://ceph.com/
+Description-md5: 749cc8e373d9ddb619b2b98fce8761a4
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/ceph-mgr_18.2.7+ds-1+deb13u1_amd64.deb
+Size: 1610448
+SHA256: 444508743f513565ea0583dcc36cdce8d18ed15dd352082c0f0e4e2542002e9f
+
+Package: ceph-mgr-cephadm
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 858
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: all
+Depends: ceph-mgr (<< 18.2.7+ds-1+deb13u1.1~), ceph-mgr (>= 18.2.7+ds-1+deb13u1), cephadm, openssh-client, python3-asyncssh, python3-cherrypy3, python3-cryptography, python3-jinja2
+Description: cephadm orchestrator module for ceph-mgr
+Homepage: http://ceph.com/
+Description-md5: 0da38d6bcb55495002fa13c0136a25ef
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/ceph-mgr-cephadm_18.2.7+ds-1+deb13u1_all.deb
+Size: 162052
+SHA256: 661da0b62cb216de3c54b010a91ef2a28912f8936685a2ee0e57151d2821486b
+
+Package: ceph-mgr-dashboard
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 89798
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: all
+Depends: ceph-common (<< 18.2.7+ds-1+deb13u1.1~), ceph-common (>= 18.2.7+ds-1+deb13u1), ceph-mgr (<< 18.2.7+ds-1+deb13u1.1~), ceph-mgr (>= 18.2.7+ds-1+deb13u1), python3-bcrypt, python3-cherrypy3, python3-jwt, python3-more-itertools, python3-openssl, python3-prettytable, python3-requests, python3-routes, python3-werkzeug, python3-yaml
+Description: dashboard plugin for ceph-mgr
+Homepage: http://ceph.com/
+Description-md5: c5eb3c42fa1ecd862891daab20a65250
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/ceph-mgr-dashboard_18.2.7+ds-1+deb13u1_all.deb
+Size: 7109400
+SHA256: e80d0e510e3891acf2fbc9794bfed7f6c860e82ae800a0041e3d2decbfe58d94
+
+Package: ceph-mgr-k8sevents
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 144
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: all
+Depends: ceph-mgr (>= 18.2.7+ds-1+deb13u1), python3-kubernetes, python3-yaml
+Description: kubernetes events plugin for ceph-mgr
+Homepage: http://ceph.com/
+Description-md5: 8a84a34d91285d5fc50b60bde0babf8f
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/ceph-mgr-k8sevents_18.2.7+ds-1+deb13u1_all.deb
+Size: 47832
+SHA256: de2898bda12a1190e4fa40e3ad58afc95a5c053b134bd60c50d40b196a630a6d
+
+Package: ceph-mgr-modules-core
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 1676
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: all
+Replaces: ceph-mgr (<< 15.1.0)
+Depends: python3-cherrypy3, python3-dateutil, python3-natsort, python3-openssl, python3-packaging, python3-pecan, python3-requests, python3-werkzeug
+Breaks: ceph-mgr (<< 15.1.0)
+Description: ceph manager modules which are always enabled
+Homepage: http://ceph.com/
+Description-md5: 76ec9efc7e6e0d4aa49f8158d74a7c3b
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/ceph-mgr-modules-core_18.2.7+ds-1+deb13u1_all.deb
+Size: 256948
+SHA256: 6e47ae514539151071c2468b38875361849cd8ec2c0c1f045e84f1a2ae31a19c
+
+Package: ceph-mgr-rook
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 669
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: all
+Depends: ceph-mgr (>= 18.2.7+ds-1+deb13u1), python3-jsonpatch, python3-kubernetes
+Description: rook plugin for ceph-mgr
+Homepage: http://ceph.com/
+Description-md5: 541bdb021651d6794fb016e449ed9d43
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/ceph-mgr-rook_18.2.7+ds-1+deb13u1_all.deb
+Size: 72584
+SHA256: 09eceec4ace426407020ab9752601de6cf477158d5c50aa9478505701445e03d
+
+Package: ceph-mon
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 22512
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: amd64
+Depends: ceph-common (= 18.2.7+ds-1+deb13u1), libboost-program-options1.83.0 (>= 1.83.0), libc6 (>= 2.38), libfmt10 (>= 10.1.1+ds1), libgcc-s1 (>= 3.4), libgoogle-perftools4t64 (>= 2.16), liblz4-1 (>= 0.0~r130), librados2 (>= 18.2.7+ds), libsnappy1v5 (>= 1.2.2), libstdc++6 (>= 14), zlib1g (>= 1:1.2.0)
+Description: monitor server for the ceph storage system
+Homepage: http://ceph.com/
+Description-md5: aa343322863ec9d4c967e6b512da062d
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/ceph-mon_18.2.7+ds-1+deb13u1_amd64.deb
+Size: 6506932
+SHA256: b1d4e48d67bf0ebec27a9798546ebfedabc0d63ab6a6fc6170dc6bf7decc0068
+
+Package: ceph-osd
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 71491
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: amd64
+Depends: ceph-base (= 18.2.7+ds-1+deb13u1), ceph-volume (= 18.2.7+ds-1+deb13u1), lvm2, sudo, libaio1t64 (>= 0.3.93), libblkid1 (>= 2.17.2), libboost-iostreams1.83.0 (>= 1.83.0), libboost-program-options1.83.0 (>= 1.83.0), libboost-thread1.83.0 (>= 1.83.0), libc6 (>= 2.38), libcap2 (>= 1:2.10), libfmt10 (>= 10.1.1+ds1), libfuse3-4 (>= 3.17.2), libgcc-s1 (>= 3.4), libgoogle-perftools4t64 (>= 2.16), libibverbs1 (>= 1.1.6), liblz4-1 (>= 0.0~r130), libpmem1 (>= 1.4), librados2 (>= 18.2.7+ds), librdmacm1t64 (>= 1.0.15), libsnappy1v5 (>= 1.2.2), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libudev1 (>= 183), liburing2 (>= 2.3), zlib1g (>= 1:1.2.0)
+Suggests: nvme-cli
+Description: OSD server for the ceph storage system
+Homepage: http://ceph.com/
+Description-md5: fb08b00d788b505eb4bb23072221ce43
+Pre-Depends: ceph-common (= 18.2.7+ds-1+deb13u1)
+Recommends: smartmontools
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/ceph-osd_18.2.7+ds-1+deb13u1_amd64.deb
+Size: 20550576
+SHA256: 58d3a3a48eb4a49b3ff98ccc75efca260eedf9f67045fdd7a4cf7377014a9e75
+
+Package: ceph-prometheus-alerts
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 133
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: all
+Description: prometheus alerts for the ceph dashboard
+Homepage: http://ceph.com/
+Description-md5: 401c37fc3e9eb666884d3eaf34d65dce
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/ceph-prometheus-alerts_18.2.7+ds-1+deb13u1_all.deb
+Size: 42012
+SHA256: 899e9827b27f9e2e3a716fc7d62bcc793f9e12ed52d2e59ef996901edf47056a
+
+Package: ceph-resource-agents
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 92
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: all
+Depends: ceph (>= 18.2.7+ds-1+deb13u1), resource-agents
+Description: OCF-compliant resource agents for Ceph
+Homepage: http://ceph.com/
+Description-md5: f350d6a1d9754497356ffd017b1cd63e
+Recommends: pacemaker
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/ceph-resource-agents_18.2.7+ds-1+deb13u1_all.deb
+Size: 35256
+SHA256: 394a6e74172bcade796c3dd725f00c4336eed0def65d7df72f6ec941c2693a7d
+
+Package: ceph-test
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 171587
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: amd64
+Depends: ceph-common (= 18.2.7+ds-1+deb13u1), curl, jq, socat, xmlstarlet, libaio1t64 (>= 0.3.93), libblkid1 (>= 2.17.2), libboost-context1.83.0 (>= 1.83.0), libboost-filesystem1.83.0 (>= 1.83.0), libboost-program-options1.83.0 (>= 1.83.0), libboost-thread1.83.0 (>= 1.83.0), libc6 (>= 2.38), libcap2 (>= 1:2.10), libcephfs2 (>= 18.2.4+ds-4), libcryptsetup12 (>= 2:2.4), libcurl3t64-gnutls (>= 7.28.0), libexpat1 (>= 2.0.1), libfmt10 (>= 10.1.1+ds1), libgcc-s1 (>= 3.4), libgoogle-perftools4t64 (>= 2.16), libicu76 (>= 76.1-1~), libkeyutils1 (>= 1.4), libldap2 (>= 2.6.2), liblua5.3-0, liblz4-1 (>= 0.0~r130), libpmem1 (>= 1.4), librabbitmq4 (>= 0.10.0), librados2 (>= 18.2.7+ds), libradosstriper1 (>= 18.2.0+ds), librbd1 (>= 14.2.0), librgw2 (>= 18.2.7+ds), libsnappy1v5 (>= 1.2.2), libsqlite3-0 (>= 3.14.0), libssl3t64 (>= 3.4.0), libstdc++6 (>= 14), libudev1 (>= 183), liburing2 (>= 2.3), zlib1g (>= 1:1.2.0)
+Description: Ceph test and benchmarking tools
+Homepage: http://ceph.com/
+Description-md5: 753990ea3e585674a20cae3849addf9b
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/ceph-test_18.2.7+ds-1+deb13u1_amd64.deb
+Size: 37686492
+SHA256: a6c13f0cf570dc4d03304f213045cf3e8f541c05411e865c47ee666626a6c2ab
+
+Package: ceph-test-dbg
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 1338885
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: amd64
+Depends: ceph-common (= 18.2.7+ds-1+deb13u1)
+Description: Ceph test and benchmarking tools - ceph-test debug
+Homepage: http://ceph.com/
+Build-Ids: 00236216ca21713b4a9063afec3a5c3e39f1a010 011d4f6c2ae68eaca9e4a64cac365ab8c9b63546 06fb395219ea044cd05e712fa45d4d3166989cbf 099598492b3e01ccd4aafe7539cf0881f0078049 0b142108464b033a0c752a78a25a485d6531c44f 0b8a0aa424e7ffbe0f86fd6479af972e6f2f4767 0c424ec6741b22455f6a43fca896006cadd0bfc8 0d92b03fc0934161f7287a99ffc71503ffd26348 0f24d82439e8ec40195ce1f33733f3ce21f4f911 109ffe588c59cf722ad4e8bef2d441f4969ff554 11208324f03ff3bd1f51a68f4226024d26525c4c 126d4863c5fc4e19087455302e5164940a264fbd 147573f77ceec5a940904122fd8c513eda455437 1c61c2c50f2cedabdcf68571b639590f4f92222a 1cb5b80bf07b06c7dfeb5ee5ba952c83c32f7151 1eb4b66fbf1f0ba6c06b0e379ec6603f9ca6f167 212e41a518d2c159d9bfea3dce4af765be4ca3d8 216228f22d306656bae9fba27633a0a5518ba560 219d9d7614f2f956d6a325d7fd634b8f60870ce6 22e40589a92e386f24c513fd951dcd3191effd05 22f63c3aba2ae58fde0c9c502321c2e367a57715 26e32e9ed1d2c560f75f4842b0a281251ddc3228 2d6a8916a2e377c280a47a74e0526cb8a2b20ed7 2e3df0a7adc5bcf7624bace1ccefa721d562a450 3816f53688903730cffff404a849348f93f2f0d5 3a5bba59a4560ac92cabe702876ff91fcd3e98b0 3c64995c358402f96050afcb0edb24c7cfd6d348 43985d6d65efee6a096a398b058442ed24b8b98b 4409bcfe4f096faedf3ca5bf6ff31fae953b28bc 463e630003e717e766f3af5f4e3dcbe1ccd3ae0c 4925bc8ddda515c63bc391259d3ed00927c409a7 4c24bfbc0cccbdc7b40aa7b6883d73359655946d 4cbc6c9a3d2e6fd17ad926c35b3fa120a7dcf86f 4db84bb5c994649525391d8ab280ebe79891d847 503c46b1917f6ee2f1a96d0299e5674a53ae0746 50cad4aa5cf8fc8108baac1c4ec1cd10a8c894f3 51c4d3b5eda26b5b050e2a7d2d10df6e87c06cfa 58f25621238f8fbcb963b552680b79c4e388d0ec 5c6209cb82fa3454e1f9e017bce0b1140d8f7fe3 5c7d752d844af65d41c30a2b2ce21bfdd670a388 5f9ca3aaf5152647418981f81e781422d6f9bbe7 5ff03fc668e8f852af484e9b29e65d8bc6d6397e 6036f149e9148b6303d3b8865c3f75657e6aa2b7 61721e56d13da3debb2dc3c107ddb120d3ef99b0 62be1943d6e3d369889a212652e2147eaa3d3018 62cd4388d734cfd32a065206c2c2b3d2293617ee 668be59103a68424a19f2ff6c8ddfd82256b899b 6895cbeb3a8da0d51aeefbad5708fd0405c6dfa3 6a6649201ca8d32bd7ec4b96f0984db1ea626800 6a79295b7199ebbf50e038ed7adcf773594a1b5f 6b996d3235a0ddbe33df53124118dbc188f714d0 6eb9e37840139dee8c33ebe4721e185da9a634cb 741c67f7cacad7059031c00f4a4733120e4351f8 7542f891d58db51d42e873f3ec3c58d11cfb0659 7543d109ca9b90b0a6d3000eeea588303247bc2e 7d3f84281a98b02c56c7df1ab3b36a4f04e0cd49 7d956a2068d589838c89579514c110f1a692477c 7e993d716c51ea965f6758533587092a750f5005 7f85880df87f3b6751b120f424838c6a81ae6ec8 81762c4b40b77a08adfc634b8f6a15cad60f4786 83115325c76377fbb39d20985c312c98f1d2e3bc 8450460b8ad865b97a5fde2f35e69a574a78b67f 8701db2ab3463861f1bc2dd2594129960385b67a 87071475f8640295c0f35615627f0b81dcafb164 8942623e73a2c69ffbb159e86438f1dcc54c6262 8a3f9d9ded089f4dedb5767446c0729d9c2bba32 8bbef2c14f6182779e206d43609b578ef08215b0 8cc112d16a22c15930b5dd72ea4ae319f2d3285e 92745bd654dd543e6a4103a40c230909955f01a0 92fecf0b30bc0f4d33035444e0d00ae2eaf47e81 9bededdbe21821d578e76fd7c7fe739e7feb87df a39d1d2e8889fcfcc1dcf13f16368727182fdd99 a6af6b7c360108a37f2995531fd7884f5f1788c2 a6d5f8f4ce9c8e897a32836f03ee3c047434839a a7bef4e9b6ba85932fbb4175da20cb630149f104 a7ffb9e9631b3c1b1fccdc710cbcd725949fe9a2 b53eaea285d79c72f9544a12877c09ab90d3ba2e b76907fceaee742ef9334190986b29666c30c238 b9045aae06484ee9398dfbfd4ed47e2c7b54d66c c6a5717cd461098c651bfdce4c800cb956b506ed c7e47bfbc2586d9032018c25c83d434fc44ae146 c9c33687cc1f10f911697f643b746e9ab071c176 cad667ce239405d770612da2ee21ab1d51f8ec4a ccb0709339badcaab11dc90371b607de15274b2b cdc779dceadf4dd5d445fc006735532121e7a36a ce10eb9949c8acefc73d860abd2af78b5b1a1617 cf0424d320bfa41e0b3f13d1ea53ec7089a274b8 d1c338b6fd7d3435be0d39b64c8e9ae31e0e07d2 d75b54f329af117173a6da0455e3c855a03c0988 d99a5112a948a0bb68636ab0e2063b0581714736 db20ecc5d545c2ae3d661f423a1c756cdf901a43 db8c1f84c3a07d574874c545bebe18fb31daab95 dcd1b4befb0f5254713830ded173c39208f9f63b dce8104584740a59c5b93903f05d3e29d784ab41 dd901ae670e4d6fbcc80e3011536ea60daa9deff deb6913e7c2decf56420ec411808ad9690484303 e50412b36c183130ba6c7580904b420ebe0ec3bc e7d72efa25c597b55891358b7f0acd9be5703899 ea4207194790772b6a08b12b7e96e46fb166bdbf eb28e22c8fb020fe6fe4b406b5ed9b075691bc69 ed0b37c155dd53ea4af7dd4de3a9b29206419f51 f09c3de565db57df8ac34742e02c62763850fdf7 f2896e4ac7422015a4a8ecbe37d6fc39f3ebee0d fc884479e1c81c3dd8d2c6f4918c83d6717417cf ff476dad8da368b4b69d2c8c6ff2ee90426fc3a6
+Description-md5: 124859ee520844546ccfa9e1fd6c8f2e
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/ceph-test-dbg_18.2.7+ds-1+deb13u1_amd64.deb
+Size: 1296512180
+SHA256: f12f9ded73373fc8a2c70dcd83cbb2dc0f1bcca7ccff03bd676e7914cb26238b
+
+Package: cephadm
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 385
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: amd64
+Depends: adduser, lvm2
+Description: utility to bootstrap ceph daemons with systemd and containers
+Homepage: http://ceph.com/
+Description-md5: bcb0bc17aafe2a9393d85f7ff98d4413
+Recommends: podman (>= 2.0.2) | docker.io
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/cephadm_18.2.7+ds-1+deb13u1_amd64.deb
+Size: 342468
+SHA256: 5ff1d7bea3ce7a860eb3d2a847f666004f747b7f792084935a3347ca972c7d60
+
+Package: cephfs-mirror
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 909
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: amd64
+Depends: ceph-common (= 18.2.7+ds-1+deb13u1), libcephfs2 (= 18.2.7+ds-1+deb13u1), librados2 (= 18.2.7+ds-1+deb13u1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libgoogle-perftools4t64 (>= 2.16), libstdc++6 (>= 14)
+Description: Ceph is a massively scalable, open-source, distributed
+Homepage: http://ceph.com/
+Description-md5: 615bdcdbdb0d3d359c007edb2aa3e765
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/cephfs-mirror_18.2.7+ds-1+deb13u1_amd64.deb
+Size: 291468
+SHA256: dbf7bceb1d9b315091815a1d9880a0299b3847ef69aa4227f9b96ad35c8c2ebd
+
+Package: cephfs-shell
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 164
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: all
+Depends: python3-cephfs, python3-cmd2, python3-colorama, python3:any
+Description: interactive shell for the Ceph distributed file system
+Homepage: http://ceph.com/
+Description-md5: 0270e88f7113c49abc31ad8ecd0f5323
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/cephfs-shell_18.2.7+ds-1+deb13u1_all.deb
+Size: 51968
+SHA256: 34ace0279ced3999e3f014c455408a4293a199d1a1942090857ba7b9e3a870a3
+
+Package: cephfs-top
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 140
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: all
+Depends: python3-rados, python3:any
+Description: top like utility for Ceph filesystem
+Homepage: http://ceph.com/
+Description-md5: b2cf5069c1684e1dd5584008f7b86f44
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/cephfs-top_18.2.7+ds-1+deb13u1_all.deb
+Size: 41812
+SHA256: eb72c17c6b7a87f00616f41ddfff55bf8059069ad8dded39ed9bc169fd90f212
+
+Package: radosgw
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 39408
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: amd64
+Depends: ceph-common (= 18.2.7+ds-1+deb13u1), librgw2 (= 18.2.7+ds-1+deb13u1), media-types, libboost-context1.83.0 (>= 1.83.0), libboost-filesystem1.83.0 (>= 1.83.0), libboost-thread1.83.0 (>= 1.83.0), libc6 (>= 2.38), libcurl3t64-gnutls (>= 7.28.0), libexpat1 (>= 2.0.1), libfmt10 (>= 10.1.1+ds1), libgcc-s1 (>= 3.0), libgoogle-perftools4t64 (>= 2.16), libicu76 (>= 76.1-1~), libldap2 (>= 2.6.2), liblua5.3-0, librabbitmq4 (>= 0.10.0), librados2 (>= 18.2.7+ds), libsqlite3-0 (>= 3.14.0), libssl3t64 (>= 3.4.0), libstdc++6 (>= 14)
+Suggests: logrotate
+Description: REST gateway for RADOS distributed object store
+Homepage: http://ceph.com/
+Description-md5: b4529fcdad48f423601d2e19b1260783
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/radosgw_18.2.7+ds-1+deb13u1_amd64.deb
+Size: 10742868
+SHA256: 8d17b68bec981bab55244dedf43d85e5bd05ffea582605d9774cb8dcbddc7031
+
+Package: rbd-fuse
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 343
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libfuse3-4 (>= 3.17.2), libgcc-s1 (>= 3.0), librados2 (>= 18.2.7+ds), librbd1 (>= 14.2.0), libstdc++6 (>= 14)
+Description: FUSE-based rbd client for the Ceph distributed file system
+Homepage: http://ceph.com/
+Description-md5: 15cf24eaec74387c1ae6ddef87cdb866
+Recommends: fuse3
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/rbd-fuse_18.2.7+ds-1+deb13u1_amd64.deb
+Size: 118504
+SHA256: 4dea7bdb3de8a65f3ee058678155698b8fe8e3a16eb5431a1325b3bad682c61a
+
+Package: rbd-mirror
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 17575
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: amd64
+Depends: ceph-common (= 18.2.7+ds-1+deb13u1), librados2 (= 18.2.7+ds-1+deb13u1), libc6 (>= 2.38), libcryptsetup12 (>= 2:2.4), libfmt10 (>= 10.1.1+ds1), libgcc-s1 (>= 3.0), libgoogle-perftools4t64 (>= 2.16), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14)
+Description: Ceph daemon for mirroring RBD images
+Homepage: http://ceph.com/
+Description-md5: 1d710ddd4d105de6cfd76d4ca18a79b3
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/rbd-mirror_18.2.7+ds-1+deb13u1_amd64.deb
+Size: 3577284
+SHA256: 639a6b8511d2ff86238c04e593c12f7c8c9916438968cdc21482961601eceafa
+
+Package: rbd-nbd
+Source: ceph
+Version: 18.2.7+ds-1+deb13u1
+Installed-Size: 613
+Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libnl-3-200 (>= 3.2.7), libnl-genl-3-200 (>= 3.2.21), librados2 (>= 18.2.7+ds), librbd1 (>= 0.87), libstdc++6 (>= 14)
+Description: NBD-based rbd client for the Ceph distributed file system
+Homepage: http://ceph.com/
+Description-md5: 7780c9ecf943aeed38e3b3d394062e74
+admin
+Priority: optional
+Filename: pool/updates/main/c/ceph/rbd-nbd_18.2.7+ds-1+deb13u1_amd64.deb
+Size: 203412
+SHA256: b252c691fcdad63f35ae056a17ac817ad5148ed13143630b8ffa9c44908cf947
+
 Package: containerd
 Version: 1.7.24~ds1-6+deb13u1
 Installed-Size: 118977
