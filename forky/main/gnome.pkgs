@@ -4644,39 +4644,78 @@ Size: 10016
 MD5sum: 505f699e4c196f5c23904000c9ba40c0
 SHA256: 759913d4d546296882727705165074e74dc5edbe4d324d9aaa96d44e9bdae9e5
 
-Package: gnome-shell-pomodoro
-Version: 0.28.0-3
-Installed-Size: 725
+Package: focus-timer
+Source: gnome-shell-pomodoro
+Version: 1.1.2-1
+Installed-Size: 2134
 Maintainer: Tobias Frost <tobi@debian.org>
 Architecture: amd64
-Depends: gnome-shell (>= 46~), gnome-shell (<< 50~), gnome-shell-pomodoro-data (= 0.28.0-3), libc6 (>= 2.38), libcairo2 (>= 1.10.0), libcanberra0 (>= 0.2), libglib2.0-0t64 (>= 2.80.0), libgom-1.0-0t64 (>= 0.3.2), libgstreamer1.0-0 (>= 1.0.0), libgtk-3-0t64 (>= 3.19.12), libpeas-1.0-1 (>= 1.0.0), libsqlite3-0 (>= 3.5.9)
-Description: GNOME Shell time-management app
+Replaces: gnome-shell-pomodoro (<< 1.0~)
+Depends: focus-timer-data (= 1.1.2-1), libadwaita-1-0 (>= 1.7~alpha), libc6 (>= 2.38), libglib2.0-0t64 (>= 2.70.0), libgom-1.0-0t64 (>= 0.3.2), libgraphene-1.0-0 (>= 1.5.4), libgstreamer1.0-0 (>= 1.6.0), libgtk-4-1 (>= 4.13.5), libjson-glib-1.0-0 (>= 1.5.2), libpango-1.0-0 (>= 1.37.2), libpeas-2-0 (>= 1.99.0), libsqlite3-0 (>= 3.6.11), libwayland-client0 (>= 1.20.0)
+Recommends: gnome-shell
+Breaks: gnome-shell (<< 46~), gnome-shell-pomodoro (<< 1.0~)
+Description: time-management app
 Homepage: https://gnomepomodoro.org/
-Description-md5: dbe404f20395592657db310e1046a670
+Description-md5: 11b3651acb0494b71506ed6fc150edf8
+gnome
+Priority: optional
+Filename: pool/main/g/gnome-shell-pomodoro/focus-timer_1.1.2-1_amd64.deb
+Size: 681984
+MD5sum: 111f30e6800a79fa41478f07640e24e9
+SHA256: ea5382fc44fb5e2c3f946bfeb2f79b2981c7f59e8293ecbfc90c473f6e6885a1
+
+Package: focus-timer-data
+Source: gnome-shell-pomodoro
+Version: 1.1.2-1
+Installed-Size: 980
+Maintainer: Tobias Frost <tobi@debian.org>
+Architecture: all
+Replaces: gnome-shell-pomodoro-data (<< 1.0~)
+Depends: dconf-gsettings-backend | gsettings-backend
+Breaks: gnome-shell-pomodoro-data (<< 1.0~)
+Description: Data for the time-management app
+Homepage: https://gnomepomodoro.org/
+Description-md5: 26789fa29a3f569b50e2f59d7e35f4d5
+gnome
+Priority: optional
+Filename: pool/main/g/gnome-shell-pomodoro/focus-timer-data_1.1.2-1_all.deb
+Size: 781524
+MD5sum: 6bbeb485104d617a4da096d790a1d8ba
+SHA256: 6c144ba9e3a7c84747943a8db4609a7db0b6a3842ae06f029023361237af62e3
+
+Package: gnome-shell-pomodoro
+Version: 1.1.2-1
+Installed-Size: 11
+Maintainer: Tobias Frost <tobi@debian.org>
+Architecture: all
+Depends: focus-timer
+Description: transitional package for focus-timer
+Homepage: https://gnomepomodoro.org/
+Description-md5: 765fe0f489398a60ed7ca6710e602541
 Tag: uitoolkit::gtk
 gnome
 Priority: optional
-Filename: pool/main/g/gnome-shell-pomodoro/gnome-shell-pomodoro_0.28.0-3_amd64.deb
-Size: 190320
-MD5sum: cfd0783c0e69fa90cd44bb0e7027be1f
-SHA256: 7c811924696297b54d46d8031539e42c336314b48115bdd5a0c395b0ccbdeba3
+Filename: pool/main/g/gnome-shell-pomodoro/gnome-shell-pomodoro_1.1.2-1_all.deb
+Size: 3536
+MD5sum: 6bc3e3b305d80d2e00b1c7540ae7ee38
+SHA256: bdffabb08a633a2c9177674e44da75ec57b0f6cfd400935746ec3b5dd9dc5a8a
 
 Package: gnome-shell-pomodoro-data
 Source: gnome-shell-pomodoro
-Version: 0.28.0-3
-Installed-Size: 6342
+Version: 1.1.2-1
+Installed-Size: 11
 Maintainer: Tobias Frost <tobi@debian.org>
 Architecture: all
-Depends: dconf-gsettings-backend | gsettings-backend
-Description: Data for GNOME Shell time-management app
+Depends: focus-timer-data
+Description: transitional package for focus-timer-data
 Homepage: https://gnomepomodoro.org/
-Description-md5: 31fefb2e9849a33865fe62b4720819df
+Description-md5: 11d66888025e2d786d3aba7bbff126eb
 gnome
 Priority: optional
-Filename: pool/main/g/gnome-shell-pomodoro/gnome-shell-pomodoro-data_0.28.0-3_all.deb
-Size: 6058812
-MD5sum: 76205334e5ddc82b2e5b5484895816d0
-SHA256: c01e9f5935962ff93571ff87f341cbe7f00886ff745415f4ceb682f844d84ba3
+Filename: pool/main/g/gnome-shell-pomodoro/gnome-shell-pomodoro-data_1.1.2-1_all.deb
+Size: 3548
+MD5sum: 403d20330553b46053b8d0a948ebdcbe
+SHA256: 6eef90307a62ce55f18af257b01aee0d8d1c107f42e3d815fedbeb49b8f49ef2
 
 Package: gnome-snapshot
 Source: gnome-snapshot (49.1-1)
@@ -6580,7 +6619,7 @@ SHA256: 09edc07305d4ce98b17965ecf8d7285875ceb5a160b11dd84ac5650c06910ac1
 
 Package: ssh-askpass-gnome
 Source: openssh
-Version: 1:10.3p1-2
+Version: 1:10.3p1-4
 Installed-Size: 207
 Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
 Architecture: amd64
@@ -6596,10 +6635,10 @@ Tag: implemented-in::c, interface::graphical, interface::x11, protocol::ssh,
  uitoolkit::gtk, use::login, x11::application
 gnome
 Priority: optional
-Filename: pool/main/o/openssh/ssh-askpass-gnome_10.3p1-2_amd64.deb
-Size: 173644
-MD5sum: 536ae2bfa2d3743613fb3fc1526c4ac4
-SHA256: 666c764d8b1a59f25f38e4a6a553e5611cb11e837fe6f9f9bb4c570a347edb71
+Filename: pool/main/o/openssh/ssh-askpass-gnome_10.3p1-4_amd64.deb
+Size: 173800
+MD5sum: 27b58ab67bc0554e83c62eb863960a08
+SHA256: e15ee5a49751ef755d5da591c83b36f20cae2b8ee24523ce7f6f5f89cfbdb1b5
 
 Package: openvpn3-indicator
 Version: 0.0~git20260107.d464ef5-2
