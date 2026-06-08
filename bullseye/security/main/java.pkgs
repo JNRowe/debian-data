@@ -201,22 +201,105 @@ Filename: pool/updates/main/h/hsqldb/libhsqldb-java_2.5.1-1+deb11u2_all.deb
 Size: 1556212
 SHA256: 86a5e306bda6f670dea01c90aec2e79f72d4e385d7f885b13c38849503420877
 
-Package: libjackson2-databind-java
-Source: jackson-databind
-Version: 2.12.1-1+deb11u1
-Installed-Size: 1531
+Package: libjackson2-core-java
+Source: jackson-core
+Version: 2.14.1-2~deb11u1
+Installed-Size: 560
 Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: libjackson2-annotations-java (>= 2.12.1), libjackson2-core-java (>= 2.12.1)
+Description: fast and powerful JSON library for Java -- core library
+Homepage: http://wiki.fasterxml.com/JacksonHome
+Description-md5: 9ea23f5bd36f3deba4c38b5d5c1cda7e
+java
+Priority: optional
+Filename: pool/updates/main/j/jackson-core/libjackson2-core-java_2.14.1-2~deb11u1_all.deb
+Size: 449012
+SHA256: 429eacdc575c15611f5a341c7ea4024285ce4e08fd4c62c0a7b6010276cb1b39
+
+Package: libjackson2-databind-java
+Source: jackson-databind
+Version: 2.12.1-1+deb11u2
+Installed-Size: 1535
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: libjackson2-annotations-java (>= 2.12.1), libjackson2-core-java (>= 2.14.1)
 Suggests: libjackson2-databind-java-doc
 Description: fast and powerful JSON library for Java -- data binding
 Homepage: http://wiki.fasterxml.com/JacksonHome
 Description-md5: 22a13b0792c5df40b06299919d32df47
 java
 Priority: optional
-Filename: pool/updates/main/j/jackson-databind/libjackson2-databind-java_2.12.1-1+deb11u1_all.deb
-Size: 1413576
-SHA256: e54410d5b9d8da7fe5a6cccf953d21fdd7f029a69cd27700ccaf814e9be0f681
+Filename: pool/updates/main/j/jackson-databind/libjackson2-databind-java_2.12.1-1+deb11u2_all.deb
+Size: 1417680
+SHA256: cac85a3af2d6e95964ce68d360aae7523a2ece41c3e0bef3a6505243102d379c
+
+Package: libjackson2-dataformat-cbor
+Source: jackson-dataformat-cbor
+Version: 2.7.8-3+deb11u1
+Installed-Size: 76
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: libjackson2-core-java (>= 2.14.1)
+Suggests: libjackson2-dataformat-cbor-doc
+Description: Jackson data format module for RfC7049 Concise Binary Object Representation
+Homepage: https://github.com/FasterXML/jackson-dataformat-cbor
+Description-md5: e1cf52097f09b59e62028ccbcf1b5bb7
+java
+Priority: optional
+Filename: pool/updates/main/j/jackson-dataformat-cbor/libjackson2-dataformat-cbor_2.7.8-3+deb11u1_all.deb
+Size: 50496
+SHA256: 4ada890e80113d4c2334d31350f08a5149dbd109731684af2cd667cb94b71d2b
+
+Package: libjackson2-dataformat-smile
+Source: jackson-dataformat-smile
+Version: 2.7.8-3+deb11u1
+Installed-Size: 104
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: libjackson2-core-java (>= 2.14.1)
+Suggests: libjackson2-dataformat-smile-doc
+Description: fast and powerful JSON library for Java -- Smile dataformat
+Homepage: http://wiki.fasterxml.com/JacksonHome
+Description-md5: d27cf20ff7a4d4e075708261e8ec619e
+java
+Priority: optional
+Filename: pool/updates/main/j/jackson-dataformat-smile/libjackson2-dataformat-smile_2.7.8-3+deb11u1_all.deb
+Size: 77656
+SHA256: 86e2b555babac57274483514720856355b9b6e77cc88515ccc7fba5a3aaae51b
+
+Package: libjackson2-dataformat-xml-java
+Source: jackson-dataformat-xml
+Version: 2.12.1-1+deb11u1
+Installed-Size: 153
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: libjackson2-annotations-java (>= 2.12.1), libjackson2-core-java (>= 2.14.1), libjackson2-databind-java, libjackson2-module-jaxb-annotations-java (>= 2.8.10), libstax2-api-java
+Suggests: libjackson2-dataformat-xml-java-doc
+Description: fast and powerful JSON library for Java -- XML dataformat
+Homepage: https://github.com/FasterXML/jackson-dataformat-xml
+Description-md5: 26393674e098295fd68e9dcf2319f596
+java
+Priority: optional
+Filename: pool/updates/main/j/jackson-dataformat-xml/libjackson2-dataformat-xml-java_2.12.1-1+deb11u1_all.deb
+Size: 118412
+SHA256: a361ba9f06c8659d07f5762282ce4262f11226775dbf1935b6264af5a0156157
+
+Package: libjackson2-dataformat-yaml
+Source: jackson-dataformat-yaml
+Version: 2.8.11-1+deb11u1
+Installed-Size: 71
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: libjackson2-core-java (>= 2.14.1), libyaml-snake-java (>= 1.28)
+Suggests: libjackson2-dataformat-yaml-doc
+Description: fast and powerful JSON library for Java -- YAML dataformat
+Homepage: https://github.com/FasterXML/jackson-dataformat-yaml
+Description-md5: f70a95d3b18c98f7cd962f4509ad31a5
+java
+Priority: optional
+Filename: pool/updates/main/j/jackson-dataformat-yaml/libjackson2-dataformat-yaml_2.8.11-1+deb11u1_all.deb
+Size: 42832
+SHA256: af30ec392ed53fe974637bc1d97b81b4dc3a96bb75a073237895840ce79aa510
 
 Package: jetty9
 Version: 9.4.57-0+deb11u3

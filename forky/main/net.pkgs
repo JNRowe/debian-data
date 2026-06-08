@@ -6968,8 +6968,8 @@ MD5sum: 98a00354973be8d02313298540b3cca3
 SHA256: 970e703547d4e7e701afa886db56e8136896f1c617de03bc74cbc22ee8016d97
 
 Package: foomuuri
-Version: 0.32-1
-Installed-Size: 241
+Version: 0.33-1
+Installed-Size: 261
 Maintainer: Kim B. Heino <b@bbbs.net>
 Architecture: all
 Depends: nftables, python3-dbus, python3-gi, python3-systemd, python3:any
@@ -6980,15 +6980,15 @@ Homepage: https://github.com/FoobarOy/foomuuri
 Description-md5: c8bb894cf6e2a8cbc9b18dffba5ebe7f
 net
 Priority: optional
-Filename: pool/main/f/foomuuri/foomuuri_0.32-1_all.deb
-Size: 55112
-MD5sum: fe6d90b4525cbf43157b673019d36c11
-SHA256: 8e5d2fba46dfe1dd1e75718c4027839a2b132867ddd52feece9e0ad02c3f3346
+Filename: pool/main/f/foomuuri/foomuuri_0.33-1_all.deb
+Size: 59868
+MD5sum: 4a4f21a18b73dcf471623979943be218
+SHA256: 366cc6bc03bff33160956b9e8b1e569c5174cde7bf574c3a6b3040ad528c234c
 
 Package: foomuuri-firewalld
 Source: foomuuri
-Version: 0.32-1
-Installed-Size: 22
+Version: 0.33-1
+Installed-Size: 23
 Maintainer: Kim B. Heino <b@bbbs.net>
 Architecture: all
 Depends: foomuuri
@@ -6997,15 +6997,15 @@ Homepage: https://github.com/FoobarOy/foomuuri
 Description-md5: b45cbe10e9ccc750e1a17ef7273b92e4
 net
 Priority: optional
-Filename: pool/main/f/foomuuri/foomuuri-firewalld_0.32-1_all.deb
-Size: 9952
-MD5sum: 5dba7cfecacd675cdb74983fe586832b
-SHA256: 633843a926e731fd4e0b9ec351cc90b29adb4d5dd4e5861f1a240b37af96c1d7
+Filename: pool/main/f/foomuuri/foomuuri-firewalld_0.33-1_all.deb
+Size: 10652
+MD5sum: 56491e46bde612f77123fafd4368c7bc
+SHA256: e03558c324056045d05cf754894a305fb89d7befedb16427adccfe5985404cdf
 
 Package: prometheus-foomuuri-exporter
 Source: foomuuri
-Version: 0.32-1
-Installed-Size: 35
+Version: 0.33-1
+Installed-Size: 39
 Maintainer: Kim B. Heino <b@bbbs.net>
 Architecture: all
 Depends: foomuuri, python3-prometheus-client, python3:any
@@ -7014,10 +7014,10 @@ Homepage: https://github.com/FoobarOy/foomuuri
 Description-md5: af986918d6bf00d5676bb1defef92a47
 net
 Priority: optional
-Filename: pool/main/f/foomuuri/prometheus-foomuuri-exporter_0.32-1_all.deb
-Size: 11896
-MD5sum: cb4ad43b36037dc6e72b2b25300f957a
-SHA256: 463ccc805b8849cc52e9bd4465873f189478a47b3328219d471dedac417a1b8f
+Filename: pool/main/f/foomuuri/prometheus-foomuuri-exporter_0.33-1_all.deb
+Size: 13376
+MD5sum: ab64968cb12d01a1281c29e93df7deca
+SHA256: 2d5172bcb37d80f05e80aa0b45fb72254a3a1c85ba641bcb13c2b3cdaab39525
 
 Package: force-ip-protocol
 Version: 0.2.0-5
@@ -7456,75 +7456,76 @@ MD5sum: 07eda42f850c15d968df4106c9fc56c2
 SHA256: 98a949fd7b94f6f076fed4606c129fe7641f77191eb8919124224c6a759bfe71
 
 Package: frr
-Version: 10.6.1-1
-Installed-Size: 38926
+Version: 10.6.1-2
+Installed-Size: 38928
 Maintainer: Daniel Baumann <daniel@debian.org>
 Architecture: amd64
-Depends: iproute2, logrotate, lsof, libc6 (>= 2.38), libcap2 (>= 1:2.10), libcares2 (>= 1.16.0), libcrypt1 (>= 1:4.1.0), libjson-c5 (>= 0.15), liblua5.4-0 (>= 5.4.6), libpam0g (>= 0.99.7.1), libreadline8t64 (>= 7.0~rc1), libunwind8, libyang3 (>= 3.13.6)
+Depends: iproute2, logrotate, lsof, systemd | systemd-standalone-sysusers | systemd-sysusers, libc6 (>= 2.38), libcap2 (>= 1:2.10), libcares2 (>= 1.16.0), libcrypt1 (>= 1:4.1.0), libjson-c5 (>= 0.15), liblua5.4-0 (>= 5.4.6), libpam0g (>= 0.99.7.1), libreadline8t64 (>= 7.0~rc1), libunwind8, libyang3 (>= 3.13.6)
 Recommends: frr-pythontools
 Suggests: frr-doc
 Conflicts: pimd
+Breaks: opensysusers (<< 0.7.3-5.1~), systemd (<< 257), systemd-standalone-sysusers (<< 257)
 Description: FRRouting Internet routing protocol suite
 Homepage: https://github.com/FRRouting/frr
 Description-md5: 58ed4dac82af494ba1b1feb66fdc5d16
 net
 Priority: optional
-Filename: pool/main/f/frr/frr_10.6.1-1_amd64.deb
-Size: 6047040
-MD5sum: 3e50eb7ab438b1684dfb0e38bf7b9729
-SHA256: 87b9eabf8c30018fe2d675f2b491e0fe9b9d876262dec262890b488f4a05fe29
+Filename: pool/main/f/frr/frr_10.6.1-2_amd64.deb
+Size: 6019908
+MD5sum: 6692c80f59ff9a206aa284971ad7a4b6
+SHA256: a80e0d5bf3bf500338d106bc13a9eb8b0f275fd95e409d76dfad0de8b883273a
 
 Package: frr-pythontools
 Source: frr
-Version: 10.6.1-1
-Installed-Size: 238
+Version: 10.6.1-2
+Installed-Size: 239
 Maintainer: Daniel Baumann <daniel@debian.org>
 Architecture: all
-Depends: frr (<< 10.6.1.0-~), frr (>= 10.6.1-1~), python3:any
+Depends: frr (<< 10.6.1.0-~), frr (>= 10.6.1-2~), python3:any
 Description: FRRouting Internet routing protocol suite (reload support)
 Homepage: https://github.com/FRRouting/frr
 Description-md5: 29f05907b203aec25683dd8e9a3a6915
 net
 Priority: optional
-Filename: pool/main/f/frr/frr-pythontools_10.6.1-1_all.deb
-Size: 48792
-MD5sum: da9be782e0e906d0ef9872acb1e91895
-SHA256: 81196e2cb62e485dd314143ad2de629f35cbb389013ad10e2bf9fe2305fadbe1
+Filename: pool/main/f/frr/frr-pythontools_10.6.1-2_all.deb
+Size: 48828
+MD5sum: aff6675b9bf1e90da311d35e3653e59d
+SHA256: 7ec8f900f6c4a6902dbffdec362b45728387dbbe5d07ddec51b6f27a61c34715
 
 Package: frr-rpki-rtrlib
 Source: frr
-Version: 10.6.1-1
-Installed-Size: 120
+Version: 10.6.1-2
+Installed-Size: 121
 Maintainer: Daniel Baumann <daniel@debian.org>
 Architecture: amd64
-Depends: frr (= 10.6.1-1), libc6 (>= 2.38), libjson-c5 (>= 0.15), librtr0t64 (>= 0.6.0)
+Depends: frr (= 10.6.1-2), libc6 (>= 2.38), libjson-c5 (>= 0.15), librtr0t64 (>= 0.6.0)
 Description: FRRouting Internet routing protocol suite (BGP RPKI support)
 Homepage: https://github.com/FRRouting/frr
 Description-md5: 53adb96fe81d792b3ae4ef4795ee27fa
 net
 Priority: optional
-Filename: pool/main/f/frr/frr-rpki-rtrlib_10.6.1-1_amd64.deb
-Size: 33960
-MD5sum: 2993a1624c3e6b822cca765980bcd601
-SHA256: 1fd8502c0b17eff059deaf44789f7bf351403dcf7ae29ddc36c3496369c300b9
+Filename: pool/main/f/frr/frr-rpki-rtrlib_10.6.1-2_amd64.deb
+Size: 34024
+MD5sum: e19a84ac3cb7fc56b71cbf227f410970
+SHA256: b9c9a909dda0657fc83224ccc9668b06855ef032aa49db54094f74aa87f9b745
 
 Package: frr-snmp
 Source: frr
-Version: 10.6.1-1
-Installed-Size: 954
+Version: 10.6.1-2
+Installed-Size: 955
 Maintainer: Daniel Baumann <daniel@debian.org>
 Architecture: amd64
-Depends: frr (= 10.6.1-1), libc6 (>= 2.38), libsnmp45 (>= 5.9.5.2+dfsg)
+Depends: frr (= 10.6.1-2), libc6 (>= 2.38), libsnmp45 (>= 5.9.5.2+dfsg)
 Recommends: snmpd
 Description: FRRouting Internet routing protocol suite (SNMP support)
 Homepage: https://github.com/FRRouting/frr
 Description-md5: 1aaeea6017b3ea1ab30cf287dff76f3a
 net
 Priority: optional
-Filename: pool/main/f/frr/frr-snmp_10.6.1-1_amd64.deb
-Size: 72176
-MD5sum: 064b768f1ed8d8d03565ab79226180d4
-SHA256: 2bdc570b47d71055b3d1d9481c36dbc0ba20706dcbfa377790808726cb60cfbe
+Filename: pool/main/f/frr/frr-snmp_10.6.1-2_amd64.deb
+Size: 72236
+MD5sum: 0c84c45f7ce88895e0ec62b874614408
+SHA256: 5c4b3db1c5ff6c0c479b4e31ee6cece87dcca2ba130d92cdfe765edbd2f3f82d
 
 Package: ftp-upload
 Version: 1.6-4
@@ -13782,8 +13783,8 @@ SHA256: a6871e40561defdffb627a59c1a45cc74e8360a2629dfb99679d66dfc5d4c3a6
 
 Package: lava-common
 Source: lava
-Version: 2026.04-7
-Installed-Size: 183
+Version: 2026.05-2
+Installed-Size: 184
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
 Depends: python3-sentry-sdk, python3-voluptuous, python3-yaml, python3:any
@@ -13793,36 +13794,36 @@ Description-md5: f3bb7113f5dd51e81c4e33cfc1e81950
 Tag: implemented-in::python, role::shared-lib
 net
 Priority: optional
-Filename: pool/main/l/lava/lava-common_2026.04-7_all.deb
-Size: 31280
-MD5sum: bdddc3a045602c69db687c237116cf3d
-SHA256: 5fcfccf199879341d254959f2a2750681830234327279fc266765457e91eb721
+Filename: pool/main/l/lava/lava-common_2026.05-2_all.deb
+Size: 31504
+MD5sum: 8a31bf2ce42030f63aa528766db2f208
+SHA256: a68dbea88351e567ec61b8130af6b35fa430d5d13bd16fc870bb455925eadb32
 
 Package: lava-coordinator
 Source: lava
-Version: 2026.04-7
+Version: 2026.05-2
 Installed-Size: 82
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
-Depends: lava-common (= 2026.04-7), python3
+Depends: lava-common (= 2026.05-2), python3
 Description: LAVA coordinator daemon
 Homepage: https://www.lavasoftware.org/
 Description-md5: 7218b6052497cfc7cf16f1a863b1a50f
 Tag: implemented-in::python, role::program, use::synchronizing
 net
 Priority: optional
-Filename: pool/main/l/lava/lava-coordinator_2026.04-7_all.deb
-Size: 16556
-MD5sum: 26bf9e24411c544094d20c9263c52b97
-SHA256: d35656eeeb814fe5430ff293c2818297dae8bcdc8cdd8063bd9d8a96fda8ab34
+Filename: pool/main/l/lava/lava-coordinator_2026.05-2_all.deb
+Size: 16612
+MD5sum: 230d83427ccb0cfb526a257dbd43fff2
+SHA256: 3f305f1d27e1d75fa245092abcb590d413eb1aa214d234594cc8cdc92eb52868
 
 Package: lava-dispatcher
 Source: lava
-Version: 2026.04-7
-Installed-Size: 1267
+Version: 2026.05-2
+Installed-Size: 1297
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
-Depends: bmaptool, fakeroot, lava-common (= 2026.04-7), python3-guestfs, systemd-sysv, tar (>= 1.27), python3-aiohttp, python3-configobj, python3-jinja2, python3-magic, python3-pexpect, python3-pyudev, python3-requests, python3-setproctitle, python3-yaml, python3:any
+Depends: bmaptool, e2fsprogs, fakeroot, lava-common (= 2026.05-2), python3-guestfs, systemd-sysv, tar (>= 1.27), python3-aiohttp, python3-configobj, python3-jinja2, python3-magic, python3-pexpect, python3-pyudev, python3-requests, python3-setproctitle, python3-yaml, python3:any
 Recommends: bridge-utils, debootstrap, dfu-util, git, iproute2, nfs-kernel-server, openbsd-inetd, qemu-system-arm, qemu-system-x86, rpcbind, rsync, ser2net, sudo, telnet | telnet-client, tftpd-hpa, u-boot-tools, unzip, wget, xz-utils, zstd
 Suggests: android-sdk-libsparse-utils, apache2, docker.io
 Description: Linaro Automated Validation Architecture dispatcher
@@ -13837,18 +13838,18 @@ Tag: admin::automation, admin::benchmarking, admin::boot,
  system::cloud, system::virtual, use::checking, use::monitor
 net
 Priority: optional
-Filename: pool/main/l/lava/lava-dispatcher_2026.04-7_amd64.deb
-Size: 186824
-MD5sum: 33233b16306a1bbb097ee9cb469bdc2e
-SHA256: 141bc11a0d514fa379fa831c58caa2e5ee322fbac7f3115c18b18bd4e842ac84
+Filename: pool/main/l/lava/lava-dispatcher_2026.05-2_amd64.deb
+Size: 192016
+MD5sum: ddc08b1f04ce063cfeddcf259d69a2a0
+SHA256: dbc807df2298a32fab9d17ef61ab49a9c4b6b40f53e13cbfcf00f428d8f0c90d
 
 Package: lava-dispatcher-host
 Source: lava
-Version: 2026.04-7
+Version: 2026.05-2
 Installed-Size: 109
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
-Depends: lava-common (= 2026.04-7), bpftool | linux-tools-generic, linux-headers-amd64 | linux-headers-generic, python3, python3-bpfcc, python3-jinja2, python3-requests, python3-pyudev
+Depends: lava-common (= 2026.05-2), bpftool | linux-tools-generic, linux-headers-amd64 | linux-headers-generic, python3, python3-bpfcc, python3-jinja2, python3-requests, python3-pyudev
 Recommends: docker.io
 Suggests: udev
 Description: LAVA dispatcher host tools
@@ -13856,20 +13857,20 @@ Homepage: https://www.lavasoftware.org/
 Description-md5: 0ab3290455525453cfd5adfebb0e1518
 net
 Priority: optional
-Filename: pool/main/l/lava/lava-dispatcher-host_2026.04-7_amd64.deb
-Size: 21976
-MD5sum: e42833fc7750b1bed48980b4d04ece4e
-SHA256: 350b7c466f16822c338c782c42efe48a14cff32e3253823d73a725ec42341d97
+Filename: pool/main/l/lava/lava-dispatcher-host_2026.05-2_amd64.deb
+Size: 22096
+MD5sum: 605eb4a7220b4be972e48a3993ddba5b
+SHA256: 7858a4635c02a1071fdc3370c8cdd8a80527f2e0db60485c8e3849c517e9d4cb
 
 Package: lava-server
 Source: lava
-Version: 2026.04-7
-Installed-Size: 2770
+Version: 2026.05-2
+Installed-Size: 2773
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
-Depends: adduser, gunicorn, lava-common (= 2026.04-7), lava-server-doc (= 2026.04-7), libjs-bootstrap, libjs-jquery, libjs-jquery-flot, libjs-jquery-typeahead, systemd-sysv, debconf (>= 0.5) | debconf-2.0, python3-aiohttp, python3-asgiref, python3-celery, python3-defusedxml, python3-django, python3-django-allauth, python3-django-auth-ldap, python3-django-environ, python3-django-filters, python3-django-tables2, python3-djangorestframework, python3-djangorestframework-extensions, python3-djangorestframework-filters, python3-jinja2, python3-junit.xml, python3-more-itertools, python3-psycopg2, python3-requests, python3-tap, python3-voluptuous, python3-whitenoise, python3-yaml, python3-zmq, python3:any
+Depends: adduser, gunicorn, lava-common (= 2026.05-2), lava-server-doc (= 2026.05-2), libjs-bootstrap, libjs-jquery, libjs-jquery-flot, libjs-jquery-typeahead, systemd-sysv, debconf (>= 0.5) | debconf-2.0, python3-aiohttp, python3-asgiref, python3-celery, python3-defusedxml, python3-django, python3-django-allauth, python3-django-auth-ldap, python3-django-environ, python3-django-filters, python3-django-tables2, python3-djangorestframework, python3-djangorestframework-extensions, python3-djangorestframework-filters, python3-jinja2, python3-junit.xml, python3-more-itertools, python3-psycopg2, python3-requests, python3-tap, python3-voluptuous, python3-whitenoise, python3-yaml, python3-zmq, python3:any
 Pre-Depends: debconf | debconf-2.0
-Recommends: apache2, lava-coordinator (= 2026.04-7), lava-dispatcher (>= 2026.04-7), lava-dispatcher (<< 2026.04-7.1~), openssh-client, postgresql, postgresql-client, postgresql-common
+Recommends: apache2, lava-coordinator (= 2026.05-2), lava-dispatcher (>= 2026.05-2), lava-dispatcher (<< 2026.05-2.1~), openssh-client, postgresql, postgresql-client, postgresql-common
 Suggests: lavacli, rabbitmq-server | redis-server
 Description: Linaro Automated Validation Architecture server
 Homepage: https://www.lavasoftware.org/
@@ -13879,10 +13880,10 @@ Tag: admin::automation, admin::monitoring, implemented-in::python,
  use::filtering, use::monitor, web::appserver
 net
 Priority: optional
-Filename: pool/main/l/lava/lava-server_2026.04-7_all.deb
-Size: 451308
-MD5sum: 100f6e5cb77d95502137e56c5bc45ab1
-SHA256: 60405775a944666dce6fbca9ffa0c5e70045c0e9bcbca2c4d2460384fe314f71
+Filename: pool/main/l/lava/lava-server_2026.05-2_all.deb
+Size: 451660
+MD5sum: db0e54503d98be3832d7b399468decf1
+SHA256: 6e3f1b9d2d313b270aad3e83b3225aadd568e3064de22469ae2843d9dc287258
 
 Package: lbcd
 Version: 3.5.2-4
@@ -24663,25 +24664,25 @@ MD5sum: 5e1f1ec6a43dee8cd49288cee2ad1c6f
 SHA256: cad36c25973c6b3601a6d129ad3f5c9c634b1f099ac7af397372ac5fc5858a38
 
 Package: poezio
-Version: 0.17-1
-Installed-Size: 3998
+Version: 0.18-1
+Installed-Size: 4232
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
-Depends: python3-aiodns, python3-cffi, python3-gnupg, python3-poezio-poopt (<< 0.17.1~), python3-poezio-poopt (>= 0.17-1), python3-slixmpp (>= 1.12~), python3-setuptools, python3:any, libjs-sphinxdoc (>= 8.2), sphinx-rtd-theme-common (>= 3.1.0+dfsg)
-Recommends: python3-mpd, python3-pillow, python3-pygments, python3-pyinotify, python3-qrcode
+Depends: python3-aiodns, python3-cffi, python3-gnupg, python3-poezio-poopt (<< 0.18.1~), python3-poezio-poopt (>= 0.18-1), python3-slixmpp (>= 1.12~), python3-setuptools, python3:any, libjs-sphinxdoc (>= 9.0), sphinx-rtd-theme-common (>= 3.1.0+dfsg)
+Recommends: python3-mpd, python3-pillow, python3-poezio-omemo, python3-pygments, python3-pyinotify, python3-qrcode
 Description: Console-based XMPP client
 Homepage: https://poez.io/
 Description-md5: 65718021bfc7d68b01173493fdd71129
 net
 Priority: optional
-Filename: pool/main/p/poezio/poezio_0.17-1_all.deb
-Size: 662972
-MD5sum: eb8902e2ba5c7c4eb422db56e2113c88
-SHA256: 7b05c41e98ebc7f81066cc633a50a61f32d72c5eb5bae899b3c94d9f21845597
+Filename: pool/main/p/poezio/poezio_0.18-1_all.deb
+Size: 675668
+MD5sum: f8dafebb5e80bac0e4b5bc1671722639
+SHA256: b82759f6b3dcc2b874d67bd043f584a21f90b83d52fa0a62165a2ef1865c5218
 
 Package: python3-poezio-poopt
 Source: poezio
-Version: 0.17-1
+Version: 0.18-1
 Installed-Size: 60
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
@@ -24692,10 +24693,10 @@ Homepage: https://poez.io/
 Description-md5: 3ca950eac20ac40754bd37f2b287127a
 net
 Priority: optional
-Filename: pool/main/p/poezio/python3-poezio-poopt_0.17-1_amd64.deb
-Size: 18408
-MD5sum: e024c8836a38c00b8aff11b5befa4e8d
-SHA256: a49ca9345dd9c6ea7cb5e4a8bb7a087ba20fe993e5792b6d35810aa34dd30d97
+Filename: pool/main/p/poezio/python3-poezio-poopt_0.18-1_amd64.deb
+Size: 18428
+MD5sum: 41907150fc005de5f441c0d830991d1b
+SHA256: e8de9fdf3feec04263c1c95d8928ecbe593b431ff2e5ff23d5f48343a8c07f78
 
 Package: python3-poezio-omemo
 Source: poezio-omemo
@@ -34448,7 +34449,7 @@ MD5sum: 15d002ff4367aa74d0c5d1d06ea30e99
 SHA256: 73c675a480287d3c65a8e17d5d75e7175c3ee0f4474506c237cc4c26548dba74
 
 Package: wireless-regdb
-Version: 2026.03.18-1
+Version: 2026.05.30-1
 Installed-Size: 47
 Maintainer: Debian kernel team <debian-kernel@lists.debian.org>
 Architecture: all
@@ -34459,10 +34460,10 @@ Description-md5: 92fb1412745a980e27d0623da2d4c26d
 Tag: admin::hardware, role::app-data
 net
 Priority: optional
-Filename: pool/main/w/wireless-regdb/wireless-regdb_2026.03.18-1_all.deb
-Size: 10648
-MD5sum: 474e0ebaf08608afa42c3516d17d80b5
-SHA256: bfaf9782cdfb307111ff35779de58c3f84e632dac328424835d20389952d1046
+Filename: pool/main/w/wireless-regdb/wireless-regdb_2026.05.30-1_all.deb
+Size: 10860
+MD5sum: 1a4ea33c045e74996092104b32a1e0d8
+SHA256: bee1ab86d01104ebcf5566abdffe3dc6bec0ddc78c67ba8f317252a8917e67fc
 
 Package: wireless-tools
 Version: 30~pre9-21

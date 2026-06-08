@@ -255,6 +255,23 @@ Size: 9244
 MD5sum: 57cc63cf17458b32f9843c4695624b44
 SHA256: 5b5aa729f7c3971a817e32d9f4fa28cdfa402c293b343f64d085fecc841c35e3
 
+Package: python3-aioacaia
+Source: aioacaia
+Version: 0.1.18-2
+Installed-Size: 95
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-bleak, python3-bleak-retry-connector, python3:any
+Description: Asynchronous interface for Acaia Bluetooth scales
+Homepage: https://github.com/zweckj/aioacaia
+Description-md5: 68f11011cd8c78eec61c2c8560e47dc7
+python
+Priority: optional
+Filename: pool/main/a/aioacaia/python3-aioacaia_0.1.18-2_all.deb
+Size: 21412
+MD5sum: c8a3b3b98e4d8c0a5af4ae38fb6e551c
+SHA256: 77ed6f35d43441a28384ef2df4a101a8568d34a01891cc42740b71d297cc7d85
+
 Package: python3-aioairzone
 Source: aioairzone
 Version: 1.0.5-1
@@ -870,6 +887,23 @@ Size: 37000
 MD5sum: 9c6c0d0673fc40c7e7871a091d4f0cf0
 SHA256: 37337b5adbf918d70a75a751ac75c7dbe5a536d97bb4a1a12559e03938f7a2c1
 
+Package: python3-aionanoleaf2
+Source: aionanoleaf2
+Version: 1.0.2-2
+Installed-Size: 70
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-aiohttp, python3:any
+Description: Nanoleaf device API client
+Homepage: https://github.com/loebi-ch/aionanoleaf2
+Description-md5: 9f1d2f7abb64a87c9fbe480516ffe95d
+python
+Priority: optional
+Filename: pool/main/a/aionanoleaf2/python3-aionanoleaf2_1.0.2-2_all.deb
+Size: 12364
+MD5sum: 16bdb3092eafb28ccef09abd9eb0bd0f
+SHA256: 9f6ec16d54dfd128fb25e32b3057e4b49ad0e2deb98532dd025b281b2f3bfb93
+
 Package: python3-aionotify
 Source: aionotify
 Version: 0.2.0-3
@@ -1301,6 +1335,23 @@ Filename: pool/main/a/aiozoneinfo/python3-aiozoneinfo_0.2.3-1_all.deb
 Size: 41904
 MD5sum: 8c01e84a371d259922e7458ae7d5baf7
 SHA256: e8d7f15e6cb055399bff4ed4ba812b0dbbfc029679bb323ff035b848bf657b53
+
+Package: python3-airthings-ble
+Source: airthings-ble
+Version: 1.2.0-1
+Installed-Size: 81
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-async-interrupt, python3-bleak | python3-supported-min (>= 3.14), python3-bleak-retry-connector, python3-cbor2, python3:any
+Description: Control Airthings devices via BLE for Python environments
+Homepage: https://github.com/Airthings/airthings-ble
+Description-md5: 6b708a649c164e2a557bb502e9250c87
+python
+Priority: optional
+Filename: pool/main/a/airthings-ble/python3-airthings-ble_1.2.0-1_all.deb
+Size: 15088
+MD5sum: 3decfd4b03f3b90f18fbb18fc31fb55c
+SHA256: 9e144616c7423bd887fddf3f187df684c16b8452493fd5e55b472a30055b14a9
 
 Package: python3-airthings-cloud
 Source: airthings-cloud
@@ -3246,8 +3297,8 @@ SHA256: 422e3ed6810d6d4fa751dc3e16f6dd9c4d38c7ccb30ec9bd5384ff7ba4820117
 
 Package: python3-barman
 Source: barman
-Version: 3.19.1-1
-Installed-Size: 1952
+Version: 3.19.1-3
+Installed-Size: 1959
 Maintainer: Marco Nenciarini <mnencia@debian.org>
 Architecture: all
 Replaces: barman (<< 2.8~~), barman-cli (<< 2.8~~)
@@ -3259,10 +3310,10 @@ Homepage: https://pgbarman.org
 Description-md5: 57e98a13f3a710d7739fa1ccb65deb0e
 python
 Priority: optional
-Filename: pool/main/b/barman/python3-barman_3.19.1-1_all.deb
-Size: 309332
-MD5sum: 4030b5a929868d548d59b50b5295068b
-SHA256: 7994f859e0205df6aecd952fff203fbfe38d335a4d3073d707967939a3c0c10d
+Filename: pool/main/b/barman/python3-barman_3.19.1-3_all.deb
+Size: 311420
+MD5sum: aac0ebaeeb7d98df8e51eac2aba88bb5
+SHA256: f1f72d574dd98a9960d695cb11b71e6fee7430d0c75944b52bbef3f0efef7c1f
 
 Package: python-mpltoolkits.basemap-data
 Source: basemap
@@ -3912,6 +3963,41 @@ Size: 7896
 MD5sum: 5171974e2443d8f18d7d304238d9921b
 SHA256: 514ba2caa7761fdc07444b5670b18840031a0b66586e7379b7ee317b9f90e1c6
 
+Package: python3-bleak
+Source: bleak
+Version: 3.0.2-1
+Installed-Size: 511
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: bluez, python3-dbus-fast, python3-supported-min (>= 3.12) | python3-typing-extensions, python3:any
+Breaks: python3-bleak-retry-connector (<< 4.0.0), python3-bluetooth-adapters (<< 2.0.0), python3-habluetooth (<< 4.0.1), python3-home-assistant-bluetooth (<< 1.13.1-4), python3-pykulersky (<< 0.6.0)
+Description: Bluetooth Low Energy platform agnostic client
+Homepage: https://github.com/hbldh/bleak
+Description-md5: a4833ba020f4cdb5262b7a2d54c48555
+python
+Priority: optional
+Filename: pool/main/b/bleak/python3-bleak_3.0.2-1_all.deb
+Size: 110560
+MD5sum: a0e8cc887cd34297dad5362a21f6b275
+SHA256: c8d9cfc80de8dccb6a37c022914563f0b0f67701cb7691d6e36e4cd9b4056689
+
+Package: python3-bleak-retry-connector
+Source: bleak-retry-connector
+Version: 4.6.1-1
+Installed-Size: 90
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-bleak (>= 2), python3-bluetooth-adapters (>= 2.0.0), python3-dbus-fast, python3:any
+Description: Connector for Bleak Clients that handles transient connection failures
+Homepage: https://github.com/bluetooth-devices/bleak-retry-connector
+Description-md5: 94cf3179d80dc95dc44c0b30cf94cbad
+python
+Priority: optional
+Filename: pool/main/b/bleak-retry-connector/python3-bleak-retry-connector_4.6.1-1_all.deb
+Size: 31008
+MD5sum: 7eea481f259203db3ce8da12e6286a1e
+SHA256: 38bf29698e2fbac38f1f7e2a678c91dd0f4c4914a9f1202f3987a3235dc7908c
+
 Package: python3-blebox-uniapi
 Source: blebox-uniapi
 Version: 2.5.4-1
@@ -4000,6 +4086,41 @@ Size: 121364
 MD5sum: dbf8863eb94eef222415d76158223bfd
 SHA256: 3d0327cdfe7b955b402f2865d80b361798a71cb31f2b3b83a7cf326c68d69801
 
+Package: python3-bluemaestro-ble
+Source: bluemaestro-ble
+Version: 1.0.0-1
+Installed-Size: 156
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-bluetooth-data-tools (>= 1.28.0), python3-bluetooth-sensor-state-data (>= 1.8.0), python3-sensor-state-data, python3:any
+Description: Library for interfacing with BlueMaestro BLE devices
+Homepage: https://github.com/bluetooth-devices/bluemaestro-ble
+Description-md5: c26339a627bf57e08edee2685c13a5c6
+python
+Priority: optional
+Filename: pool/main/b/bluemaestro-ble/python3-bluemaestro-ble_1.0.0-1_all.deb
+Size: 29296
+MD5sum: 4e96983dd3160eece2a395de74b1f9d2
+SHA256: 2ee139ca6607924cf539846512256570773ce4418e6cff63e095abac58e57b3b
+
+Package: python3-bluetooth-auto-recovery
+Source: bluetooth-auto-recovery
+Version: 1.6.4-1
+Installed-Size: 255
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-bluetooth-adapters, python3-btsocket, python3-pyric, python3-usb-devices, python3:any, libjs-jquery (>= 3.6.0), libjs-sphinxdoc (>= 9.0), sphinx-rtd-theme-common (>= 3.1.0+dfsg)
+Description: Recover Bluetooth adapters that are in an stuck state
+Homepage: https://github.com/bluetooth-devices/bluetooth-auto-recovery
+Built-Using: sphinx (= 9.1.0-3)
+Description-md5: a2a7193d795408bdf5cce11308ba3c07
+python
+Priority: optional
+Filename: pool/main/b/bluetooth-auto-recovery/python3-bluetooth-auto-recovery_1.6.4-1_all.deb
+Size: 52892
+MD5sum: 41e813b4d81aaf739b1b80ffce1a5006
+SHA256: 3746edaafd1bdae0de6ba06a265bcdee1ef04e24bc004fd3594af01365148ec9
+
 Package: python3-bluetooth-data-tools
 Source: bluetooth-data-tools
 Version: 1.29.18-1
@@ -4016,6 +4137,25 @@ Filename: pool/main/b/bluetooth-data-tools/python3-bluetooth-data-tools_1.29.18-
 Size: 26604
 MD5sum: 7bef9154cec4ffc9d6f1fde80c9bc9c8
 SHA256: 7c49ccff700b29c7f80862f13d397e54eee733a0598dd9dae661ee6e3c1ba520
+
+Package: python3-bluetooth-sensor-state-data
+Source: bluetooth-sensor-state-data
+Version: 1.9.0-3
+Installed-Size: 167
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-bluetooth-data-tools, python3-habluetooth, python3-sensor-state-data, python3:any, libjs-jquery (>= 3.6.0), libjs-sphinxdoc (>= 8.1), sphinx-rtd-theme-common (>= 3.0.2+dfsg)
+Breaks: python3-bluemaestro-ble (<< 0.4.1), python3-bthome-ble (<< 3.13.0), python3-sensorpro-ble (<< 0.7.1), python3-sensorpush-ble (<< 1.9.0), python3-thermobeacon-ble (<< 0.10.0), python3-thermopro-ble (<< 0.13.0)
+Description: Models for storing and converting Bluetooth Sensor State Data
+Homepage: https://github.com/bluetooth-devices/bluetooth-sensor-state-data
+Built-Using: sphinx (= 8.1.3-5)
+Description-md5: c37688aec2b496787ea2ed513aee9317
+python
+Priority: optional
+Filename: pool/main/b/bluetooth-sensor-state-data/python3-bluetooth-sensor-state-data_1.9.0-3_all.deb
+Size: 34336
+MD5sum: f26bd6cb301accb93747b84e7b7bb0bc
+SHA256: 1c522767a5a27a72b279c344934d98cc5956c514a55db7c0fca49bea2c483588
 
 Package: python3-blurhash
 Source: blurhash-python
@@ -4461,6 +4601,24 @@ Filename: pool/main/b/btchip-python/python3-btchip_0.1.32-4_all.deb
 Size: 21344
 MD5sum: a92cb2c7eeb4fe763f57fac096dfcc5a
 SHA256: ba379f95821f29639067257133677ad21930fa9a003c6bab098e9619c0d13af1
+
+Package: python3-bthome-ble
+Source: bthome-ble
+Version: 3.23.2-1
+Installed-Size: 273
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-home-assistant-bluetooth, python3-sensor-state-data (>= 2.19.0), python3-bluetooth-data-tools, python3-bluetooth-sensor-state-data, python3-cryptography (>= 46.0.7), python3-habluetooth, python3:any, libjs-jquery (>= 3.6.0), libjs-sphinxdoc (>= 9.0), sphinx-rtd-theme-common (>= 3.1.0+dfsg)
+Description: BLE parser for sensors supporting BTHome format
+Homepage: https://github.com/bluetooth-devices/bthome-ble
+Built-Using: sphinx (= 9.1.0-4)
+Description-md5: 99074be46bdd052fdbaa9007a7e39835
+python
+Priority: optional
+Filename: pool/main/b/bthome-ble/python3-bthome-ble_3.23.2-1_all.deb
+Size: 75832
+MD5sum: bef613fb7e43ea8a31f698193bf5a8e6
+SHA256: 7cad98191fab24d179b25afc8a02cce09cc6034e74d768fd9c219af233051241
 
 Package: python3-btrfsutil
 Source: btrfs-progs
@@ -7066,21 +7224,21 @@ SHA256: bbba13c078e2397f4fc610c5df51e3378b731620f31acf725dfd4808dd4b0c78
 
 Package: python3-dbus-fast
 Source: dbus-fast
-Version: 4.3.0-1
-Installed-Size: 5060
+Version: 5.0.17-1
+Installed-Size: 5054
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
 Depends: python3 (<< 3.15), python3 (>= 3.13~), python3:any, libc6 (>= 2.14), libjs-sphinxdoc (>= 9.0)
 Description: Faster version of dbus-next
 Homepage: https://github.com/bluetooth-devices/dbus-fast
-Built-Using: alabaster (= 1.0.0-1), sphinx (= 9.1.0-3)
+Built-Using: alabaster (= 1.0.0-1), sphinx (= 9.1.0-4)
 Description-md5: 8da086c5f5640d274611257614a2c035
 python
 Priority: optional
-Filename: pool/main/d/dbus-fast/python3-dbus-fast_4.3.0-1_amd64.deb
-Size: 968708
-MD5sum: 00a971bf17a0686e59470071861645cd
-SHA256: 387d471e1753a5b5dbd521fa9276cb69e8cfd36de1f76123df10a56fb13377d1
+Filename: pool/main/d/dbus-fast/python3-dbus-fast_5.0.17-1_amd64.deb
+Size: 984708
+MD5sum: 967380d0a90340d93aa5b69c05698525
+SHA256: 02a338e271404ca2b0fa8b72ee70b444722c0aaa492b75ae9f8a3056fccf5223
 
 Package: python-dbus-dev
 Source: dbus-python
@@ -11287,8 +11445,8 @@ SHA256: 0319d31523a19d348bd26442e8edc8dde5a615d43fd096830169042312956eb3
 
 Package: python3-execnet
 Source: execnet
-Version: 2.1.1-1
-Installed-Size: 156
+Version: 2.1.1-2
+Installed-Size: 155
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
 Depends: python3:any
@@ -11298,10 +11456,10 @@ Homepage: https://github.com/pytest-dev/execnet
 Description-md5: 7b37584b6bdc29b861e3880e1eb53f8c
 python
 Priority: optional
-Filename: pool/main/e/execnet/python3-execnet_2.1.1-1_all.deb
-Size: 40172
-MD5sum: eaa82d784d85bfff0a2cc3b4af1cd392
-SHA256: 7777eb32a742fe22f66545a14050881d8f97b90e943282d452c136904de66a04
+Filename: pool/main/e/execnet/python3-execnet_2.1.1-2_all.deb
+Size: 39700
+MD5sum: cae21b489007fba7d00b2d463cc8eb10
+SHA256: fe00582d7e1553ba751c1e8ef61539bd5bbcd89de16e0a662e9573d79b5bb683
 
 Package: python3-exhale
 Source: exhale
@@ -12249,6 +12407,23 @@ Filename: pool/main/f/fivem-api/python3-fivem-api_0.1.2-3_all.deb
 Size: 5000
 MD5sum: 7d4ba1021f03a5db38b69529a6405fa7
 SHA256: 850c8d0fb7757d71ddde94c77110168ae90106b0ff02426b4100e5e83de70a72
+
+Package: python3-fjaraskupan
+Source: fjaraskupan
+Version: 2.3.4-1
+Installed-Size: 39
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-bleak, python3-bleak-retry-connector, python3:any
+Description: Library for controlling Fjäråskupan kitchen fans over Bluetooth
+Homepage: https://github.com/elupus/fjaraskupan
+Description-md5: 7883f402e5205a961bf1edf66df8d155
+python
+Priority: optional
+Filename: pool/main/f/fjaraskupan/python3-fjaraskupan_2.3.4-1_all.deb
+Size: 7692
+MD5sum: 71b0b2065fea9c2c0b67453a70d1342f
+SHA256: f8a6ade5ce2546cc591cf178feb6de8a5d74d1d29034e76a7805c6c592d44b2e
 
 Package: python3-flake8-2020
 Source: flake8-2020
@@ -14720,7 +14895,7 @@ SHA256: de74c9f417e69792f054f7c5ce1da88750ae2b057bd3b40bbc8702c504faeac4
 
 Package: python3-glymur
 Source: glymur
-Version: 0.14.7-1
+Version: 0.14.8-1
 Installed-Size: 478
 Maintainer: Debian GIS Project <pkg-grass-devel@lists.alioth.debian.org>
 Architecture: all
@@ -14731,10 +14906,10 @@ Homepage: https://github.com/quintusdias/glymur
 Description-md5: c7b51df49b86cf1db33d72ce8812406e
 python
 Priority: optional
-Filename: pool/main/g/glymur/python3-glymur_0.14.7-1_all.deb
-Size: 87052
-MD5sum: 0cf63225c90c2427a064d26f7ae792c2
-SHA256: 2bffa4d4b635d712373c327b987fb7fd1045c694bc503da19d9ff714730efc7f
+Filename: pool/main/g/glymur/python3-glymur_0.14.8-1_all.deb
+Size: 85952
+MD5sum: 916f3830dd29085cc93900542e1c8eb4
+SHA256: 152501e4558075e55b46d80c25ce2a44654b463ff2f3d0d875d622de8863634e
 
 Package: python3-glyphslib
 Source: glyphslib
@@ -15019,6 +15194,24 @@ Filename: pool/main/g/goslide-api/python3-goslide-api_0.7.4-2_all.deb
 Size: 8864
 MD5sum: c0743acc00a65c2b34b5de87705b2247
 SHA256: 3ae938f15b5d168d42e7a624a9586648bac8c5524ace224f9b3df3469dd137d3
+
+Package: python3-govee-ble
+Source: govee-ble
+Version: 1.2.0-1
+Installed-Size: 221
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-bluetooth-data-tools, python3-bluetooth-sensor-state-data, python3-cryptography (>= 42.0.0), python3-home-assistant-bluetooth, python3-sensor-state-data, python3:any, libjs-jquery (>= 3.6.0), libjs-sphinxdoc (>= 8.2), sphinx-rtd-theme-common (>= 3.1.0+dfsg)
+Description: Manage Govee BLE devices
+Homepage: https://github.com/bluetooth-devices/govee-ble
+Built-Using: sphinx (= 8.2.3-12)
+Description-md5: 1abe86f4cd6a8cfc86fcf52bbbfd0d7f
+python
+Priority: optional
+Filename: pool/main/g/govee-ble/python3-govee-ble_1.2.0-1_all.deb
+Size: 52940
+MD5sum: f44d8219d311769ed4b2519c0e9bdd56
+SHA256: 5772596acdfacc947773d0476907bb2d4f6eecef16a3db129d090b282229f6b3
 
 Package: python3-govee-local-api
 Source: govee-local-api
@@ -15729,6 +15922,24 @@ Size: 5436
 MD5sum: 55d1eca96f6be851b9c70b1d1d64533e
 SHA256: cb0f470669eae124050448a8ad0e873a30bf1b63392c43defad1fec8392b6db6
 
+Package: python3-habluetooth
+Source: habluetooth
+Version: 6.8.1-1
+Installed-Size: 630
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: amd64
+Depends: python3-async-interrupt, python3-bleak (>= 1.0.1), python3-bleak-retry-connector (>= 3.9.0), python3-bluetooth-adapters, python3-bluetooth-auto-recovery, python3-bluetooth-data-tools (>= 1.28.0), python3-btsocket, python3-dbus-fast, python3:any, libjs-sphinxdoc (>= 9.0)
+Description: High availability Bluetooth
+Homepage: https://github.com/bluetooth-devices/habluetooth
+Built-Using: sphinx (= 9.1.0-4)
+Description-md5: d2c5d765127997632ce7c3b5e929d36d
+python
+Priority: optional
+Filename: pool/main/h/habluetooth/python3-habluetooth_6.8.1-1_amd64.deb
+Size: 129656
+MD5sum: fc7159bf134746fc5d834fd55e49edd9
+SHA256: 851d1d19e9742b2b19bc2f4d75bee6d91ecb59bb53c129c1e6960bd312b2a452
+
 Package: hachoir
 Version: 3.1.0+dfsg-6
 Installed-Size: 2443
@@ -16420,6 +16631,23 @@ Filename: pool/main/h/hnswlib/python3-hnswlib_0.9.0-2_amd64.deb
 Size: 213948
 MD5sum: c5fcf3a739a85b075e45aeaf3d37adda
 SHA256: 6cc4f0880c0bf830222ea83f2697b4d1df57beb1a2eb331dec78ba88d8576892
+
+Package: python3-home-assistant-bluetooth
+Source: home-assistant-bluetooth
+Version: 1.13.1-4
+Installed-Size: 32
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: amd64
+Depends: python3-habluetooth (>= 3.42), python3:any
+Description: Home Assistant Bluetooth Models and Helpers
+Homepage: https://github.com/home-assistant-libs/home-assistant-bluetooth
+Description-md5: 3da3784e205a72031dd48688ea1d88d1
+python
+Priority: optional
+Filename: pool/main/h/home-assistant-bluetooth/python3-home-assistant-bluetooth_1.13.1-4_amd64.deb
+Size: 10792
+MD5sum: 32fb7814315c2cef2815cdd29b02d225
+SHA256: a42510c1ea45b9c1fa21df53dae4badea9c25f8b7b4a3c470854ced7aadef311
 
 Package: python3-home-assistant-intents
 Source: home-assistant-intents
@@ -17260,6 +17488,24 @@ Size: 9064
 MD5sum: cbadb8578a6b089c6ce40ff056d885e9
 SHA256: 4dc899a056bc6acfd105b4b04fc387283557cbff50f4588fcda6bf578b8e7858
 
+Package: python3-inkbird-ble
+Source: inkbird-ble
+Version: 1.5.2-1
+Installed-Size: 277
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-bleak-retry-connector, python3-bluetooth-data-tools, python3-bluetooth-sensor-state-data (>= 1.8.0), python3-sensor-state-data, python3:any, libjs-jquery (>= 3.6.0), libjs-sphinxdoc (>= 9.0), sphinx-rtd-theme-common (>= 3.1.0+dfsg)
+Description: Parser for INKBIRD BLE devices
+Homepage: https://github.com/bluetooth-devices/inkbird-ble
+Built-Using: sphinx (= 9.1.0-4)
+Description-md5: 187fd32efd36e0262e24a8d9eb70b48c
+python
+Priority: optional
+Filename: pool/main/i/inkbird-ble/python3-inkbird-ble_1.5.2-1_all.deb
+Size: 59152
+MD5sum: e967e53b5ed90c1ba9c821c02e4f90d8
+SHA256: bfe27f0e0166dfd36586733706c3426c6b83edd973f167af087984ca5d257d22
+
 Package: python3-inputremapper
 Source: input-remapper
 Version: 2.2.0+git20260107.684a972-1
@@ -18072,7 +18318,7 @@ SHA256: 7f8bb0baeb7fabdf350d586c2d0edf6c8758ef4a7a5568b3821e058bf8de1014
 
 Package: python3-joserfc
 Source: joserfc
-Version: 1.6.8-1
+Version: 1.7.0-1
 Installed-Size: 271
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
@@ -18082,10 +18328,10 @@ Homepage: https://github.com/authlib/joserfc
 Description-md5: b2b640e29b0af465278246984768302a
 python
 Priority: optional
-Filename: pool/main/j/joserfc/python3-joserfc_1.6.8-1_all.deb
-Size: 47400
-MD5sum: c474194a7161308fa7b39e1d94280445
-SHA256: fb0a887d75a6c54f4b0b8dc81ba01292ade91bd1ece03c20b28b0e899eaba50d
+Filename: pool/main/j/joserfc/python3-joserfc_1.7.0-1_all.deb
+Size: 47504
+MD5sum: 72c73d81f9010ccdba5cd2567bef8c6d
+SHA256: 7469979a82d567ed8a83acc17e61c860802f97f3626712498a5aef242ce429a6
 
 Package: python3-joypy
 Source: joypy
@@ -18175,7 +18421,7 @@ SHA256: d1032bc6f14944417bc441865ef2a6c03ed061ed92af92beb085e6ca48b343d2
 
 Package: python3-json-schema-to-pydantic
 Source: json-schema-to-pydantic
-Version: 0.4.11-1
+Version: 0.4.11-1.1
 Installed-Size: 84
 Maintainer: Antoine Beaupré <anarcat@debian.org>
 Architecture: all
@@ -18185,10 +18431,10 @@ Homepage: https://github.com/richard-gyiko/json-schema-to-pydantic
 Description-md5: 4e7ba25f80aeef7d0554b12fb45ba113
 python
 Priority: optional
-Filename: pool/main/j/json-schema-to-pydantic/python3-json-schema-to-pydantic_0.4.11-1_all.deb
-Size: 14696
-MD5sum: f1f959d420ec44ac9159dc790d89d627
-SHA256: fed72dc7b3b80ca7751d37a2d9cd15abb48d5f61c3b32bbbeb5fa43a1d5622c1
+Filename: pool/main/j/json-schema-to-pydantic/python3-json-schema-to-pydantic_0.4.11-1.1_all.deb
+Size: 14812
+MD5sum: 78cfe064bd5a4ff08bb9b9dfcb35a740
+SHA256: 68fd253a609353251ad89a0557cebb548a78b9f425576200c1569c471c1298c4
 
 Package: python3-json-tricks
 Source: json-tricks
@@ -18799,6 +19045,24 @@ Filename: pool/main/k/kconfiglib/python3-kconfiglib_14.1.0-4_all.deb
 Size: 132100
 MD5sum: 9378e969ba837c64d38b5ab51f8d10e1
 SHA256: cefdbaaf68c7d23b7afe018b451b46b72d8fe3540b623d0592066ee1df676be7
+
+Package: python3-kegtron-ble
+Source: kegtron-ble
+Version: 1.0.2-1
+Installed-Size: 152
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-home-assistant-bluetooth, python3-bluetooth-data-tools, python3-bluetooth-sensor-state-data, python3-sensor-state-data, python3:any, libjs-jquery (>= 3.6.0), libjs-sphinxdoc (>= 8.2), sphinx-rtd-theme-common (>= 3.0.2+dfsg)
+Description: Kegtron BLE support for measuring beer keg levels
+Homepage: https://github.com/bluetooth-devices/kegtron-ble
+Built-Using: sphinx (= 8.2.3-7)
+Description-md5: 2a2c9f276dca6489c195ecbd727d6094
+python
+Priority: optional
+Filename: pool/main/k/kegtron-ble/python3-kegtron-ble_1.0.2-1_all.deb
+Size: 24860
+MD5sum: a73ca2f29eaa8f8a3dd9197ee2180c2b
+SHA256: 0c1a5a9a4abf5727e30484ad46bf45e6d2e207e5ac3d0bcf4e3e94a6c89748f2
 
 Package: python3-keras-applications
 Source: keras-applications
@@ -19483,6 +19747,24 @@ Size: 11848
 MD5sum: 4cd6fe742548a29f7d780c5a30f91b0e
 SHA256: f9cc768fb5e96024829c8ea59ba4cf424ccce892e447ab36bcc2539b0e90fdee
 
+Package: python3-ld2410-ble
+Source: ld2410-ble
+Version: 0.2.0-2
+Installed-Size: 170
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-async-timeout, python3-bleak, python3-bleak-retry-connector, python3:any, libjs-jquery (>= 3.6.0), libjs-sphinxdoc (>= 8.1), sphinx-rtd-theme-common (>= 3.0.2+dfsg)
+Description: Interface with LD2410B modules from HiLink
+Homepage: https://github.com/930913/ld2410-ble
+Built-Using: sphinx (= 8.1.3-3)
+Description-md5: 33ef478b6a57242ea196e881150b53a5
+python
+Priority: optional
+Filename: pool/main/l/ld2410-ble/python3-ld2410-ble_0.2.0-2_all.deb
+Size: 26656
+MD5sum: c33b7149b73bcf6ce7a10ada156b86a8
+SHA256: b8c96e459c79338826d77659b29ed229564cb6ac817b9d39c5a464c263a1ff77
+
 Package: python3-ldns
 Source: ldns
 Version: 1.9.0-1
@@ -19500,6 +19782,41 @@ Filename: pool/main/l/ldns/python3-ldns_1.9.0-1_amd64.deb
 Size: 223588
 MD5sum: 37017617ee8831ee95b795a898d68b77
 SHA256: a41c251f033cc78a9ac1ec7a327ff1ce1490f01bca0e212857d813c811eafa71
+
+Package: python3-leaone-ble
+Source: leaone-ble
+Version: 1.0.0-1
+Installed-Size: 279
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-bluetooth-data-tools, python3-bluetooth-sensor-state-data (>= 1.8.0), python3:any
+Description: Bluetooth parser for LeaOne devices
+Homepage: https://github.com/bluetooth-devices/leaone-ble
+Description-md5: ffe91e0cdcb8951ec62f60e3fbc223ac
+python
+Priority: optional
+Filename: pool/main/l/leaone-ble/python3-leaone-ble_1.0.0-1_all.deb
+Size: 40832
+MD5sum: 0b158686a8a430ba2aa51fc970c97b43
+SHA256: d8e2d5bde44fb20aeca885ff7ccf82685a42ac01fed09517f77cc5409ef37cbb
+
+Package: python3-led-ble
+Source: led-ble
+Version: 1.1.11-1
+Installed-Size: 243
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-bleak, python3-bleak-retry-connector, python3-flux-led, python3:any, libjs-jquery (>= 3.6.0), libjs-sphinxdoc (>= 9.0), sphinx-rtd-theme-common (>= 3.1.0+dfsg)
+Description: Control a wide range of LED BLE devices from Python
+Homepage: https://github.com/bluetooth-devices/led-ble
+Built-Using: sphinx (= 9.1.0-3)
+Description-md5: db9108588f379bc2fe5b373098611d8d
+python
+Priority: optional
+Filename: pool/main/l/led-ble/python3-led-ble_1.1.11-1_all.deb
+Size: 46968
+MD5sum: f321a5de7fd8f1e6a5748f3b55a98529
+SHA256: a77d55ac41ca7383baf7c766dde9876d165802045124e30d48531e0677fcd2d9
 
 Package: python3-ledger
 Source: ledger (3.4.0-1)
@@ -23149,6 +23466,23 @@ Size: 1510416
 MD5sum: d03051a9fec6ff8916f26a4216f5969b
 SHA256: 8ef018e61414a1ee59826e194fd508d817ce677fd602ce69cf2536789cc37148
 
+Package: python3-medcom-ble
+Source: medcom-ble
+Version: 0.1.1-2
+Installed-Size: 32
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-bleak, python3-bleak-retry-connector, python3:any
+Description: Library to communicate with Medcom BLE radiation monitors
+Homepage: https://github.com/elafargue/medcom-ble
+Description-md5: c77cbc7dab2b5e57193f8f4d2652e195
+python
+Priority: optional
+Filename: pool/main/m/medcom-ble/python3-medcom-ble_0.1.1-2_all.deb
+Size: 6344
+MD5sum: fade01fd1d383064e522ef91e19b31a1
+SHA256: abde4ed23a7a389e24aa5eb4a9a0f95dd6999a5bd438b97e5deb0965552d4421
+
 Package: python3-meep
 Source: meep
 Version: 1.29.0-2
@@ -24105,6 +24439,24 @@ Size: 22116
 MD5sum: 20aa576f7e8434900907eee00a4a28a8
 SHA256: f9fdec3d6b4363a2cd2ebcc293e53d4faabc8aad2400e1cf721abd61da7196ab
 
+Package: python3-moat-ble
+Source: moat-ble
+Version: 0.1.1-2
+Installed-Size: 140
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-bluetooth-sensor-state-data, python3-home-assistant-bluetooth, python3-sensor-state-data, python3:any, libjs-jquery (>= 3.6.0), libjs-sphinxdoc (>= 7.4), sphinx-rtd-theme-common (>= 2.0.0+dfsg)
+Description: Manager for Moat Bluetooth Low Energy (BLE) devices
+Homepage: https://github.com/bluetooth-devices/moat-ble
+Built-Using: sphinx (= 7.4.7-2)
+Description-md5: dd7781b12678b7c4c1c525e2f5cb77d4
+python
+Priority: optional
+Filename: pool/main/m/moat-ble/python3-moat-ble_0.1.1-2_all.deb
+Size: 21576
+MD5sum: dac05f09815a8e2d4ae19f179df44153
+SHA256: 698626309660a5e09badadd631bc6711b56e0ee3916526ae8d63fa3756be2346
+
 Package: python3-mockldap
 Source: mockldap
 Version: 0.3.0-8
@@ -24193,6 +24545,23 @@ Filename: pool/main/m/monzopy/python3-monzopy_1.5.1-1_all.deb
 Size: 5732
 MD5sum: 1ecc8755293073366f7eaf6877fe6f0c
 SHA256: 2e8504bb0556c563233540b5d065083da9aa1376943e8755c28052751deb59a2
+
+Package: python3-mopeka-iot-ble
+Source: mopeka-iot-ble
+Version: 0.8.0-1
+Installed-Size: 37
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-bluetooth-data-tools, python3-bluetooth-sensor-state-data, python3-home-assistant-bluetooth, python3-sensor-state-data, python3:any
+Description: Python library for parsing Mopeka IoT BLE sensor data
+Homepage: https://github.com/bluetooth-devices/mopeka-iot-ble
+Description-md5: 3adea6455cc0a485112139bb54a28ef6
+python
+Priority: optional
+Filename: pool/main/m/mopeka-iot-ble/python3-mopeka-iot-ble_0.8.0-1_all.deb
+Size: 8584
+MD5sum: 3be28aee2056f9abd925ec2fbb2056d4
+SHA256: 9e4f2675d65418c059fabd1ad8d943d4e9dd777153ee4439596c5ef086c83c6c
 
 Package: python3-more-itertools
 Source: more-itertools
@@ -25684,11 +26053,11 @@ SHA256: 6d2c5784bfa5f2d3f429b1568c80de9ad976e980fb15c89ea651a9be7b2a3c1c
 
 Package: python3-nibabel
 Source: nibabel
-Version: 5.3.3-1
-Installed-Size: 8611
+Version: 5.4.2-4
+Installed-Size: 8649
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
 Architecture: all
-Depends: python3-importlib-resources | python3-supported-min (>= 3.12), python3-numpy, python3-packaging, python3-typing-extensions | python3-supported-min (>= 3.13), python3:any, python3-scipy
+Depends: python3-numpy, python3-packaging, python3-supported-min (>= 3.13) | python3-typing-extensions, python3:any, python3-scipy
 Recommends: python3-pydicom, fuse3
 Suggests: python-nibabel-doc
 Description: Python3 bindings to various neuroimaging data formats
@@ -25696,10 +26065,10 @@ Homepage: https://nipy.org/nibabel/
 Description-md5: eba85b71688d495c2c568f6575f9b5e2
 python
 Priority: optional
-Filename: pool/main/n/nibabel/python3-nibabel_5.3.3-1_all.deb
-Size: 2668016
-MD5sum: 71cba927bc8ed66b14e1bffab46151f7
-SHA256: 5159105632dea771ca12d946bfe22b9ddcd17323c675c1ad65bea5c5183bcdae
+Filename: pool/main/n/nibabel/python3-nibabel_5.4.2-4_all.deb
+Size: 2670884
+MD5sum: 43c76ed4b6080063eb7ce0725769b40f
+SHA256: dccc5a461c0033acf0b6bda790f5364cc6b5e7bef0987654bd97dffab41d2303
 
 Package: python3-nipy
 Source: nipy
@@ -27088,6 +27457,24 @@ Filename: pool/main/o/optuna/python3-optuna_4.1.0-1_all.deb
 Size: 195564
 MD5sum: 518002e6b7de7b9179e05257053fdf2e
 SHA256: 357c5d1e84a2b00895c8b0ceea1d17e17dd29419a78470282eb282567afa8dfe
+
+Package: python3-oralb-ble
+Source: oralb-ble
+Version: 1.1.0-1
+Installed-Size: 173
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-bleak, python3-home-assistant-bluetooth, python3-bleak-retry-connector, python3-bluetooth-data-tools, python3-bluetooth-sensor-state-data, python3:any, libjs-jquery (>= 3.6.0), libjs-sphinxdoc (>= 8.2), sphinx-rtd-theme-common (>= 3.1.0+dfsg)
+Description: Bluetooth library for Oral-B devices
+Homepage: https://github.com/Bluetooth-Devices/oralb-ble
+Built-Using: sphinx (= 8.2.3-12)
+Description-md5: b47d5ddc1b508a9b35bc90f9a021d199
+python
+Priority: optional
+Filename: pool/main/o/oralb-ble/python3-oralb-ble_1.1.0-1_all.deb
+Size: 33288
+MD5sum: ccb156ee3dbc45c7e77f7e5869ac0062
+SHA256: b9dc836177900f4b1837ad7c7021cc8160acaed7408ffdf9ad04cc123e21bb15
 
 Package: python3-orange-canvas-core
 Source: orange-canvas-core
@@ -30298,6 +30685,40 @@ Size: 7460
 MD5sum: a53195d139699986322d2c042b6feec7
 SHA256: f352ef77d39001ab1f0159b25142b9ec376663ae511082bbf990bd7c2261b86f
 
+Package: python3-py-dormakaba-dkey
+Source: py-dormakaba-dkey
+Version: 1.0.6-2
+Installed-Size: 107
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-bleak, python3-bleak-retry-connector, python3-cryptography, python3:any
+Description: Library to interact with Dormakaba dKey locks via Bluetooth
+Homepage: https://github.com/emontnemery/py-dormakaba-dkey
+Description-md5: 5421b2d78c952e01153a06d3fc1ce20e
+python
+Priority: optional
+Filename: pool/main/p/py-dormakaba-dkey/python3-py-dormakaba-dkey_1.0.6-2_all.deb
+Size: 17208
+MD5sum: 1f1ebc6f35684697e621be8a4fef990d
+SHA256: c1f2ef8f50cc4d57c107f072a1e7979147a29979c35999bba5a3223419658258
+
+Package: python3-py-improv-ble-client
+Source: py-improv-ble-client
+Version: 2.0.1-1
+Installed-Size: 66
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-bleak, python3-bleak-retry-connector, python3:any
+Description: API to provision devices implementing Improv via BLE
+Homepage: https://github.com/home-assistant-libs/py-improv-ble-client
+Description-md5: 72847e4549e26ea7dab5e4408d50c9b9
+python
+Priority: optional
+Filename: pool/main/p/py-improv-ble-client/python3-py-improv-ble-client_2.0.1-1_all.deb
+Size: 11280
+MD5sum: 171880248e0566c103c910dd215acf50
+SHA256: 8654ee1452dac9951a66431b14b53f56bb9a30db7f60203b5786d4572bacecec
+
 Package: python3-lmdb
 Source: py-lmdb (1.4.1-3)
 Version: 1.4.1-3+b3
@@ -32805,8 +33226,8 @@ SHA256: bf78a9cc28e2a4f73da33c247842a9361ce742975dd2e10e0ede98693f0ccf03
 
 Package: python3-pygame
 Source: pygame
-Version: 2.6.1-4
-Installed-Size: 7823
+Version: 2.6.1-5
+Installed-Size: 7821
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
 Depends: fonts-freefont-ttf, python3-numpy, python3 (<< 3.15), python3 (>= 3.13~), python3:any, libc6 (>= 2.33), libfreetype6 (>= 2.2.1), libpng16-16t64 (>= 1.6.46), libportmidi2 (>= 2:2.0.8), libsdl2-2.0-0 (>= 2.0.16), libsdl2-image-2.0-0 (>= 2.0.5), libsdl2-mixer-2.0-0 (>= 2.0.4), libsdl2-ttf-2.0-0 (>= 2.20.0)
@@ -32817,10 +33238,10 @@ Description-md5: 306500d85ba0762cf985a58d17463575
 Tag: uitoolkit::sdl
 python
 Priority: optional
-Filename: pool/main/p/pygame/python3-pygame_2.6.1-4_amd64.deb
-Size: 1381924
-MD5sum: dc6f347604d1da1c976d3482dfb97ef3
-SHA256: 35c3e15b55830fc80a0f354cb8b6b1ae540cb4f2c7ef421bbea6c5201c60ce7d
+Filename: pool/main/p/pygame/python3-pygame_2.6.1-5_amd64.deb
+Size: 1378416
+MD5sum: 2510d2b412cfeac3b8edc7d02c667914
+SHA256: b84b5fb4390240b10aee3ba4a75a8017144cb6c93d7a52e3617c0b2e1d8e1a7b
 
 Package: python3-gattlib
 Source: pygattlib (0~20210616-1.1)
@@ -33845,6 +34266,23 @@ Size: 20676
 MD5sum: 871796be535bfe475b658ae2a7d21206
 SHA256: 692c2d30cf6c915e24bd6f7c478a4c47045b227496a9a5312ab4e2a5b163ca8a
 
+Package: python3-pykulersky
+Source: pykulersky
+Version: 0.6.0-1
+Installed-Size: 42
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-bleak (>= 1.0.1), python3-click, python3:any
+Description: Library to control Brightech Kuler Sky Bluetooth LED smart lamps
+Homepage: https://github.com/emlove/pykulersky
+Description-md5: 17031db02137c4ab2ab052cd4e6c8cfe
+python
+Priority: optional
+Filename: pool/main/p/pykulersky/python3-pykulersky_0.6.0-1_all.deb
+Size: 8832
+MD5sum: af0c7e5a4d617f8ba515617670f60e1e
+SHA256: f0a9ae48cfda6deeb4bc8d04e7f714f4cf71c0209e71dd17eace9aa569936d8e
+
 Package: python3-pykwalify
 Source: pykwalify
 Version: 1.8.0-3
@@ -34586,6 +35024,23 @@ Size: 72548
 MD5sum: a04b87f6dda4ec839f29db2988199d1c
 SHA256: 6ab066ba6d9c99cbb78d587f663013dfef6e937abc059b7b0b80974cbaf6006e
 
+Package: python3-pymicrobot
+Source: pymicrobot
+Version: 0.0.22-2
+Installed-Size: 37
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-async-timeout, python3-bleak, python3-bleak-retry-connector, python3:any
+Description: Library for controlling MicroBot Push devices
+Homepage: https://github.com/spycle/pyMicroBot
+Description-md5: fdf59331075a388ea8a999f0755bb317
+python
+Priority: optional
+Filename: pool/main/p/pymicrobot/python3-pymicrobot_0.0.22-2_all.deb
+Size: 6500
+MD5sum: 13790f729d55c55d3ce77b1ea3ed750d
+SHA256: 072e7923c77453f112bb37b5f377489c63444ed7c0785e62a800594d4f4326f1
+
 Package: python3-milter
 Source: pymilter
 Version: 1.0.6-4
@@ -34888,6 +35343,23 @@ Filename: pool/main/p/pynauty/python3-pynauty_2.8.8.1+ds-1+b10_amd64.deb
 Size: 53544
 MD5sum: c4e5eba73beaa4a4d0bc35db9c8d9f9d
 SHA256: 40a3e021037010a67f754fa14b88cf8112ac6ce675927f5924587039547647a7
+
+Package: python3-pynecil
+Source: pynecil
+Version: 4.2.1-1
+Installed-Size: 73
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-aiohttp, python3-bleak, python3-bleak-retry-connector, python3-bluetooth-adapters | python3-supported-max (<< 3.14), python3:any
+Description: Library for Bluetooth communication with Pinecil V2 soldering irons
+Homepage: https://github.com/tr4nt0r/pynecil
+Description-md5: 3291807be84db1866fae099b384866af
+python
+Priority: optional
+Filename: pool/main/p/pynecil/python3-pynecil_4.2.1-1_all.deb
+Size: 14164
+MD5sum: 82d0c33f6a25e2c7ea8f9ad097fe792f
+SHA256: b97fec59ebbc0e01d00a15b3bbc047c900de9ccd314877a7a9dfaad9ad48de4a
 
 Package: python3-pynest2d
 Source: pynest2d
@@ -35679,6 +36151,23 @@ Size: 12256
 MD5sum: 14c93f9bb0a6183618f88a965a23f079
 SHA256: bdf7e6cce4f4cf41796eeb3b826f29ea0a938d5e56789ed550c79a94e0013e65
 
+Package: python3-pyprobeplus
+Source: pyprobeplus
+Version: 1.1.2-1
+Installed-Size: 39
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-bleak, python3-bleak-retry-connector, python3:any
+Description: Library to interact with a Probe Plus BLE device
+Homepage: https://github.com/pantherale0/pyprobeplus
+Description-md5: 9fbbd5384ac4e18678917e3965eeb28d
+python
+Priority: optional
+Filename: pool/main/p/pyprobeplus/python3-pyprobeplus_1.1.2-1_all.deb
+Size: 7232
+MD5sum: ae65fa44f8c7edd70416d6fdb8955bd8
+SHA256: 66ce1107ed2d7ed12f36404fcd59cbb820d01b6050e8e4c33125d0dd51b9bf9b
+
 Package: python3-pyproject-api
 Source: pyproject-api
 Version: 1.10.0-1
@@ -36193,7 +36682,7 @@ SHA256: fada467ace6876993f654158db8261997e4ab2aa379564b8fa3e8d2e9482c70c
 
 Package: pyqt6-dev
 Source: pyqt6
-Version: 6.11.0-1
+Version: 6.11.0-2
 Installed-Size: 3498
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
@@ -36203,48 +36692,48 @@ Homepage: https://riverbankcomputing.com/software/pyqt/intro
 Description-md5: 7738c7e01eb6d5b3a6183ab60076ecb7
 python
 Priority: optional
-Filename: pool/main/p/pyqt6/pyqt6-dev_6.11.0-1_all.deb
-Size: 350612
-MD5sum: 5a86b42f687ba74e0194ec434ea701c8
-SHA256: 2cd48096435f83aa01bfde60efe9a48ad47b47079ee7508b6094b06f81afcd2e
+Filename: pool/main/p/pyqt6/pyqt6-dev_6.11.0-2_all.deb
+Size: 350708
+MD5sum: 0e9feb5b2dc66a476bcfa7e583076ee4
+SHA256: cdddad68f26ae797b7f772ea9c290da14d0fec24ed2db606f81bbe372d250fa9
 
 Package: pyqt6-dev-tools
 Source: pyqt6
-Version: 6.11.0-1
-Installed-Size: 305
+Version: 6.11.0-2
+Installed-Size: 113
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
-Depends: python3-pyqt6 (>= 6.11.0-1), python3:any
+Depends: python3-pyqt6 (>= 6.11.0-2), python3:any
 Description: development tools for PyQt6
 Homepage: https://riverbankcomputing.com/software/pyqt/intro
 Description-md5: 4c728f72a1701223708615dfbd26873b
 python
 Priority: optional
-Filename: pool/main/p/pyqt6/pyqt6-dev-tools_6.11.0-1_all.deb
-Size: 84456
-MD5sum: a1f26f4ff354bb9a8389006fec6f2c3d
-SHA256: c1759570e9872f2105c5ea598150e67018e854f7517f1b3998fe3fa2c2b502c2
+Filename: pool/main/p/pyqt6/pyqt6-dev-tools_6.11.0-2_all.deb
+Size: 56812
+MD5sum: 6377721e01da77cc65a55787929f8be4
+SHA256: 5b76b87b0062d7c3ca728da1338424de3788d173e478ab46aa1a43edcebf7eae
 
 Package: pyqt6-examples
 Source: pyqt6
-Version: 6.11.0-1
+Version: 6.11.0-2
 Installed-Size: 1156
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
-Depends: python3-pyqt6 (>= 6.11.0-1)
+Depends: python3-pyqt6 (>= 6.11.0-2)
 Description: Examples for PyQt6
 Homepage: https://riverbankcomputing.com/software/pyqt/intro
 Description-md5: 712490066543bfdda237659fceaf6055
 python
 Priority: optional
-Filename: pool/main/p/pyqt6/pyqt6-examples_6.11.0-1_all.deb
-Size: 382776
-MD5sum: cda0f3d14809e54ad4686b9188a40785
-SHA256: 3fe9072bbdee6cc7d25fe25b61b64836c60b34e0cd2f58a0f456f8903daba41a
+Filename: pool/main/p/pyqt6/pyqt6-examples_6.11.0-2_all.deb
+Size: 382816
+MD5sum: 8c25a39ce292a089e099c725dc40f74a
+SHA256: becc0f1b4762ae20daef3684e33dcb483c06e784f280cf38c11962d2735ce008
 
 Package: python3-dbus.mainloop.pyqt6
 Source: pyqt6
-Version: 6.11.0-1
+Version: 6.11.0-2
 Installed-Size: 108
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
@@ -36255,351 +36744,353 @@ Description-md5: e87796da3c9a74fe89b21369c8f8e0f1
 Tag: uitoolkit::qt
 python
 Priority: optional
-Filename: pool/main/p/pyqt6/python3-dbus.mainloop.pyqt6_6.11.0-1_amd64.deb
-Size: 63116
-MD5sum: 9c30f0084de8f080025ef3a37438729a
-SHA256: a21872305947116c1677cbc336142640d012f88b7acb82ae582d48245cd89d36
+Filename: pool/main/p/pyqt6/python3-dbus.mainloop.pyqt6_6.11.0-2_amd64.deb
+Size: 63184
+MD5sum: ab3d9b7d79092abd6c42f4d8c14a1309
+SHA256: 83b12e022d422dc203a3292533a4b85e4065fc153ac4d11fcf0fc9755115aa0f
 
 Package: python3-pyqt6
 Source: pyqt6
-Version: 6.11.0-1
-Installed-Size: 17685
+Version: 6.11.0-2
+Installed-Size: 17877
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
+Replaces: pyqt6-dev-tools (<< 6.11.0-2~)
 Depends: python3-pyqt6.sip (<< 14), python3-pyqt6.sip (>= 13.11), python3, python3:any, libc6 (>= 2.35), libqt6core6t64 (>= 6.10.2), libqt6dbus6 (>= 6.10.2), libqt6gui6 (>= 6.10.2), libqt6network6 (>= 6.10.2), libqt6opengl6 (>= 6.3.0), libqt6openglwidgets6 (>= 6.6.0), libqt6printsupport6 (>= 6.8.2), libqt6sql6 (>= 6.9.1), libqt6test6 (>= 6.8.2), libqt6widgets6 (>= 6.10.2), libqt6xml6 (>= 6.9.1), libstdc++6 (>= 5), qt6-base-private-abi (= 6.10.2)
+Breaks: pyqt6-dev-tools (<< 6.11.0-2~)
 Description: Python bindings for Qt 6
 Homepage: https://riverbankcomputing.com/software/pyqt/intro
-Description-md5: 23232b5989429e3958f385f59188e22c
+Description-md5: 820a08ae2fbf2101cd85baf197d42f92
 Tag: uitoolkit::qt
 python
 Priority: optional
-Filename: pool/main/p/pyqt6/python3-pyqt6_6.11.0-1_amd64.deb
-Size: 2632648
-MD5sum: 275231ce8aefea496250961f65939a16
-SHA256: cbff26541c395d7f68a53faca49430ff52e322c6fa7ded667db289f28242e6e0
+Filename: pool/main/p/pyqt6/python3-pyqt6_6.11.0-2_amd64.deb
+Size: 2659884
+MD5sum: e5484b6678fa954b94dd503f52db7b8d
+SHA256: 4cab1c99d95431a0a76b7c6a77062343fea48d0d23f36b3966c55f6c9515fcc9
 
 Package: python3-pyqt6.qtbluetooth
 Source: pyqt6
-Version: 6.11.0-1
+Version: 6.11.0-2
 Installed-Size: 584
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
-Depends: python3-pyqt6 (= 6.11.0-1), python3, libc6 (>= 2.14), libqt6bluetooth6 (>= 6.6.0), libqt6core6t64 (>= 6.10.2), libstdc++6 (>= 5)
+Depends: python3-pyqt6 (= 6.11.0-2), python3, libc6 (>= 2.14), libqt6bluetooth6 (>= 6.6.0), libqt6core6t64 (>= 6.10.2), libstdc++6 (>= 5)
 Description: Python bindings for Qt 6 Bluetooth module
 Homepage: https://riverbankcomputing.com/software/pyqt/intro
 Description-md5: 3a0c433c185ed50638c293ab2a2f2a84
 Tag: uitoolkit::qt
 python
 Priority: optional
-Filename: pool/main/p/pyqt6/python3-pyqt6.qtbluetooth_6.11.0-1_amd64.deb
-Size: 138108
-MD5sum: ce7d98473d63785092901b8581fff431
-SHA256: f77b933ca5d6de86c73c23a600525647d277765b0c106e363346c096c76b3579
+Filename: pool/main/p/pyqt6/python3-pyqt6.qtbluetooth_6.11.0-2_amd64.deb
+Size: 138332
+MD5sum: 379c84543f5ff15c088338041c6b4799
+SHA256: fc9e2293941c6183f524fe2e01c19dc4332072a4bbf9efb9818fa7080976cb58
 
 Package: python3-pyqt6.qtdesigner
 Source: pyqt6
-Version: 6.11.0-1
+Version: 6.11.0-2
 Installed-Size: 477
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
-Depends: python3-pyqt6 (= 6.11.0-1), python3, libc6 (>= 2.14), libgcc-s1 (>= 3.0), libpython3.13 (>= 3.13.0~rc3), libqt6core6t64 (>= 6.10.2), libqt6designer6 (>= 6.6.0), libqt6gui6 (>= 6.1.2), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 5)
+Depends: python3-pyqt6 (= 6.11.0-2), python3, libc6 (>= 2.14), libgcc-s1 (>= 3.0), libpython3.13 (>= 3.13.0~rc3), libqt6core6t64 (>= 6.10.2), libqt6designer6 (>= 6.6.0), libqt6gui6 (>= 6.1.2), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 5)
 Description: Python bindings for Qt 6 Designer module
 Homepage: https://riverbankcomputing.com/software/pyqt/intro
 Description-md5: d8b7474134d2a70338b49df4eaf965cc
 Tag: uitoolkit::qt
 python
 Priority: optional
-Filename: pool/main/p/pyqt6/python3-pyqt6.qtdesigner_6.11.0-1_amd64.deb
-Size: 123632
-MD5sum: 6f1ea685c3acd877f5c6514de623981f
-SHA256: 65daa31007e8185da0277b7ec147b5c0f2326bdf012827220d2290c82f97e455
+Filename: pool/main/p/pyqt6/python3-pyqt6.qtdesigner_6.11.0-2_amd64.deb
+Size: 123580
+MD5sum: b4def5730f11c972fa11932b8f351108
+SHA256: a888f3a117a65cb65eabcf0051fd3fcd44942e538d6991f5af9f05915e38bcc8
 
 Package: python3-pyqt6.qthelp
 Source: pyqt6
-Version: 6.11.0-1
+Version: 6.11.0-2
 Installed-Size: 295
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
-Depends: python3-pyqt6 (= 6.11.0-1), python3, libc6 (>= 2.4), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.1.2), libqt6help6 (>= 6.8.2), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 5)
+Depends: python3-pyqt6 (= 6.11.0-2), python3, libc6 (>= 2.4), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.1.2), libqt6help6 (>= 6.8.2), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 5)
 Description: Python bindings for Qt 6 Help module
 Homepage: https://riverbankcomputing.com/software/pyqt/intro
 Description-md5: eaddbb73fae08e42a023a17a8e6699dc
 Tag: uitoolkit::qt
 python
 Priority: optional
-Filename: pool/main/p/pyqt6/python3-pyqt6.qthelp_6.11.0-1_amd64.deb
-Size: 98580
-MD5sum: 1f4b28c304a392f39c1cc8cd62ad00f5
-SHA256: 9b3377052ac980958c33942ba71f736223b6009ecf96fe24d6b431d66d8c8197
+Filename: pool/main/p/pyqt6/python3-pyqt6.qthelp_6.11.0-2_amd64.deb
+Size: 98384
+MD5sum: d8000a1e62d5b8fd2c535737e50b8591
+SHA256: 0f2a71cfe5c46f5101bce557bca502c856c80c77a33791d74c3875410040ac58
 
 Package: python3-pyqt6.qtmultimedia
 Source: pyqt6
-Version: 6.11.0-1
+Version: 6.11.0-2
 Installed-Size: 930
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
-Depends: python3-pyqt6 (= 6.11.0-1), python3, libc6 (>= 2.14), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.1.2), libqt6multimedia6 (>= 6.10.2), libqt6multimediawidgets6 (>= 6.6.1), libqt6spatialaudio6 (>= 6.6.1), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 5)
+Depends: python3-pyqt6 (= 6.11.0-2), python3, libc6 (>= 2.14), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.1.2), libqt6multimedia6 (>= 6.10.2), libqt6multimediawidgets6 (>= 6.6.1), libqt6spatialaudio6 (>= 6.6.1), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 5)
 Description: Python bindings for Qt 6 Multimedia module
 Homepage: https://riverbankcomputing.com/software/pyqt/intro
 Description-md5: c05c1ec5938e7b1f4111bd424572c41b
 Tag: uitoolkit::qt
 python
 Priority: optional
-Filename: pool/main/p/pyqt6/python3-pyqt6.qtmultimedia_6.11.0-1_amd64.deb
-Size: 183440
-MD5sum: ee511bc613b709935f951ee0e8ef66b1
-SHA256: 1192a78229987c93dac1882341e503e3dbb47ac7f961849905874814bb5c3b24
+Filename: pool/main/p/pyqt6/python3-pyqt6.qtmultimedia_6.11.0-2_amd64.deb
+Size: 183608
+MD5sum: f975064f73b7d48586ed61940d7af06a
+SHA256: 13461fbd086463ee83c78e7b5172849953d58f8b1400f93d6cef6ad53c9712d3
 
 Package: python3-pyqt6.qtnfc
 Source: pyqt6
-Version: 6.11.0-1
+Version: 6.11.0-2
 Installed-Size: 216
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
-Depends: python3-pyqt6 (= 6.11.0-1), python3, libc6 (>= 2.4), libqt6core6t64 (>= 6.10.2), libqt6nfc6 (>= 6.6.0), libstdc++6 (>= 5)
+Depends: python3-pyqt6 (= 6.11.0-2), python3, libc6 (>= 2.4), libqt6core6t64 (>= 6.10.2), libqt6nfc6 (>= 6.6.0), libstdc++6 (>= 5)
 Description: Python bindings for Qt 6 NFC module
 Homepage: https://riverbankcomputing.com/software/pyqt/intro
 Description-md5: d061ac70da688b97ef29789b898fbd10
 Tag: uitoolkit::qt
 python
 Priority: optional
-Filename: pool/main/p/pyqt6/python3-pyqt6.qtnfc_6.11.0-1_amd64.deb
-Size: 82168
-MD5sum: fe03b2968192332e39eb26e5689c854b
-SHA256: 83be329817a86c3379ada9dcc34acdad6eadae6e659e95f715871674baa05e36
+Filename: pool/main/p/pyqt6/python3-pyqt6.qtnfc_6.11.0-2_amd64.deb
+Size: 82204
+MD5sum: 17cba5756b7409eb38a39d8f556143e2
+SHA256: e05f6c6a01d74cd456433a52af0ef5c05e041687b54244e2ff709104260f54de
 
 Package: python3-pyqt6.qtpdf
 Source: pyqt6
-Version: 6.11.0-1
+Version: 6.11.0-2
 Installed-Size: 351
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
-Depends: python3-pyqt6 (= 6.11.0-1), python3, libc6 (>= 2.4), libqt6core6t64 (>= 6.10.2), libqt6pdf6 (>= 6.8.2), libqt6pdfwidgets6 (>= 6.6.0), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 5)
+Depends: python3-pyqt6 (= 6.11.0-2), python3, libc6 (>= 2.4), libqt6core6t64 (>= 6.10.2), libqt6pdf6 (>= 6.8.2), libqt6pdfwidgets6 (>= 6.6.0), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 5)
 Description: Python bindings for Qt 6 PDF module
 Homepage: https://riverbankcomputing.com/software/pyqt/intro
 Description-md5: 48f3ded4a44439c29525c76e0a45a368
 Tag: uitoolkit::qt
 python
 Priority: optional
-Filename: pool/main/p/pyqt6/python3-pyqt6.qtpdf_6.11.0-1_amd64.deb
-Size: 100980
-MD5sum: a4b332c2cb8373d8ba88b6184f217b2b
-SHA256: 8a18ae0b5c0103032faa9d826943e60052675603d507c40cfe6491eee5b0f75b
+Filename: pool/main/p/pyqt6/python3-pyqt6.qtpdf_6.11.0-2_amd64.deb
+Size: 100904
+MD5sum: 5ed5a71b70e3babc590ec9a9df052e04
+SHA256: e46e21b1317969b2becdbd1919bca3550b226a90625a8fb5e8ec203a8ab166ec
 
 Package: python3-pyqt6.qtpositioning
 Source: pyqt6
-Version: 6.11.0-1
+Version: 6.11.0-2
 Installed-Size: 367
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
-Depends: python3-pyqt6 (= 6.11.0-1), python3, libc6 (>= 2.4), libqt6core6t64 (>= 6.10.2), libqt6positioning6 (>= 6.6.0), libstdc++6 (>= 5)
+Depends: python3-pyqt6 (= 6.11.0-2), python3, libc6 (>= 2.4), libqt6core6t64 (>= 6.10.2), libqt6positioning6 (>= 6.6.0), libstdc++6 (>= 5)
 Description: Python bindings for Qt 6 Positioning module
 Homepage: https://riverbankcomputing.com/software/pyqt/intro
 Description-md5: 9b22f5b451fc1abaf2d91a4e5ac56dcf
 Tag: uitoolkit::qt
 python
 Priority: optional
-Filename: pool/main/p/pyqt6/python3-pyqt6.qtpositioning_6.11.0-1_amd64.deb
-Size: 102576
-MD5sum: f98a93a8b23cd8af173b5ceabcc65d31
-SHA256: 25f7353c3086706eddf2789ddaed09aa1b20d72a0694c750d25980f9d69dacc2
+Filename: pool/main/p/pyqt6/python3-pyqt6.qtpositioning_6.11.0-2_amd64.deb
+Size: 102484
+MD5sum: be1ad1dbf9e5883810a7fd09bd72ab4c
+SHA256: 72837fa85457f17176c3de71096ecf3039ba39dcb17b9b166ce607dab49e1c92
 
 Package: python3-pyqt6.qtqml
 Source: pyqt6
-Version: 6.11.0-1
+Version: 6.11.0-2
 Installed-Size: 1536
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
-Depends: python3-pyqt6 (= 6.11.0-1), python3, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libpython3.13 (>= 3.13.0~rc3), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.1.2), libqt6qml6 (>= 6.6.0), libstdc++6 (>= 5)
+Depends: python3-pyqt6 (= 6.11.0-2), python3, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libpython3.13 (>= 3.13.0~rc3), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.1.2), libqt6qml6 (>= 6.6.0), libstdc++6 (>= 5)
 Description: Python bindings for Qt 6 QML module
 Homepage: https://riverbankcomputing.com/software/pyqt/intro
 Description-md5: edefe7ecab7e5b07b5632c71f048ba2f
 Tag: uitoolkit::qt
 python
 Priority: optional
-Filename: pool/main/p/pyqt6/python3-pyqt6.qtqml_6.11.0-1_amd64.deb
-Size: 250216
-MD5sum: ac3bc3cf9a46e5e89acbd540c71489f0
-SHA256: 1faea79607479eb18d4e40fdab1b04a5168cc61d8e9edfb89654efdb602990ea
+Filename: pool/main/p/pyqt6/python3-pyqt6.qtqml_6.11.0-2_amd64.deb
+Size: 247640
+MD5sum: 0f11f5691b84013a86b0aff364d8a3f5
+SHA256: ecf6133d508083aec8ce09cb1a614b24b3d1672e1580ef62e05f15f03b96cd9d
 
 Package: python3-pyqt6.qtquick
 Source: pyqt6
-Version: 6.11.0-1
+Version: 6.11.0-2
 Installed-Size: 1893
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
-Depends: python3-pyqt6 (= 6.11.0-1), python3-pyqt6.qtqml (= 6.11.0-1), python3, libc6 (>= 2.14), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.1.2), libqt6qml6 (>= 6.6.0), libqt6quick6 (>= 6.10.2), libqt6quickwidgets6 (>= 6.9.1), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 5)
+Depends: python3-pyqt6 (= 6.11.0-2), python3-pyqt6.qtqml (= 6.11.0-2), python3, libc6 (>= 2.14), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.1.2), libqt6qml6 (>= 6.6.0), libqt6quick6 (>= 6.10.2), libqt6quickwidgets6 (>= 6.9.1), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 5)
 Description: Python bindings for Qt 6 Quick module
 Homepage: https://riverbankcomputing.com/software/pyqt/intro
 Description-md5: 979c99300088e6e5238296fdc92a768e
 Tag: uitoolkit::qt
 python
 Priority: optional
-Filename: pool/main/p/pyqt6/python3-pyqt6.qtquick_6.11.0-1_amd64.deb
-Size: 265576
-MD5sum: 2ea0b235169d93d7edf98a7ea3be2947
-SHA256: 9a0ef2670a93b7fabefef345b098a704e4077c0e4e8673bd3e5e1bb582b58b06
+Filename: pool/main/p/pyqt6/python3-pyqt6.qtquick_6.11.0-2_amd64.deb
+Size: 266504
+MD5sum: 328b1ae7746668dc9bbc8281e36b3976
+SHA256: 5e6a43dde6a61c01244598356173bd16837369e1ac2fbb5f27f5558e652bd4a8
 
 Package: python3-pyqt6.qtquick3d
 Source: pyqt6
-Version: 6.11.0-1
+Version: 6.11.0-2
 Installed-Size: 153
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
-Depends: python3-pyqt6 (= 6.11.0-1), python3-pyqt6.qtqml (= 6.11.0-1), python3, libc6 (>= 2.4), libqt6core6t64 (>= 6.10.2), libqt6quick3d6 (>= 6.6.1), libstdc++6 (>= 5)
+Depends: python3-pyqt6 (= 6.11.0-2), python3-pyqt6.qtqml (= 6.11.0-2), python3, libc6 (>= 2.4), libqt6core6t64 (>= 6.10.2), libqt6quick3d6 (>= 6.6.1), libstdc++6 (>= 5)
 Description: Python bindings for Qt 6 Quick 3D module
 Homepage: https://riverbankcomputing.com/software/pyqt/intro
 Description-md5: 1cbdd2cb11ab9f02acb6de9b8852a457
 Tag: uitoolkit::qt
 python
 Priority: optional
-Filename: pool/main/p/pyqt6/python3-pyqt6.qtquick3d_6.11.0-1_amd64.deb
-Size: 66736
-MD5sum: c8ea447698c707258fbfbe3b31f843e0
-SHA256: 992645ca8858367fca6160e9e1720d8c8a2c644e973d26154e876ca9ded6bd1e
+Filename: pool/main/p/pyqt6/python3-pyqt6.qtquick3d_6.11.0-2_amd64.deb
+Size: 66788
+MD5sum: 2189aeb9d61e398432d12712ebd2a425
+SHA256: c30d2f817db232fbb0095e907aa018b26372656e3a4d740190bfd2220d8e21c8
 
 Package: python3-pyqt6.qtremoteobjects
 Source: pyqt6
-Version: 6.11.0-1
+Version: 6.11.0-2
 Installed-Size: 207
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
-Depends: python3-pyqt6 (= 6.11.0-1), python3, libc6 (>= 2.4), libqt6core6t64 (>= 6.10.2), libqt6remoteobjects6 (>= 6.7.2), libstdc++6 (>= 5)
+Depends: python3-pyqt6 (= 6.11.0-2), python3, libc6 (>= 2.4), libqt6core6t64 (>= 6.10.2), libqt6remoteobjects6 (>= 6.7.2), libstdc++6 (>= 5)
 Description: Python bindings for Qt 6 Remote Objects module
 Homepage: https://riverbankcomputing.com/software/pyqt/intro
 Description-md5: 8873d6ba381165c264727618d7f775ce
 Tag: uitoolkit::qt
 python
 Priority: optional
-Filename: pool/main/p/pyqt6/python3-pyqt6.qtremoteobjects_6.11.0-1_amd64.deb
-Size: 82956
-MD5sum: 85fd146b0af381074f3068c6eebc414b
-SHA256: e0dd7f57b0b96870513d38f272b56eaac0823fb0deec547e6802cabafc56d67f
+Filename: pool/main/p/pyqt6/python3-pyqt6.qtremoteobjects_6.11.0-2_amd64.deb
+Size: 83052
+MD5sum: 1a7f763ee1d59dfdb72943be134b15b4
+SHA256: 3e42191469c833b4e7a4cc99365e7b7a407e391dc1411b76f6959059ce80040c
 
 Package: python3-pyqt6.qtsensors
 Source: pyqt6
-Version: 6.11.0-1
+Version: 6.11.0-2
 Installed-Size: 365
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
-Depends: python3-pyqt6 (= 6.11.0-1), python3, libc6 (>= 2.14), libqt6core6t64 (>= 6.10.2), libqt6sensors6 (>= 6.6.1), libstdc++6 (>= 5)
+Depends: python3-pyqt6 (= 6.11.0-2), python3, libc6 (>= 2.14), libqt6core6t64 (>= 6.10.2), libqt6sensors6 (>= 6.6.1), libstdc++6 (>= 5)
 Description: Python bindings for Qt 6 Sensors module
 Homepage: https://riverbankcomputing.com/software/pyqt/intro
 Description-md5: dcc0bdb2c16a0d722770d0ac04bbf9b4
 Tag: uitoolkit::qt
 python
 Priority: optional
-Filename: pool/main/p/pyqt6/python3-pyqt6.qtsensors_6.11.0-1_amd64.deb
-Size: 93856
-MD5sum: a666b409a2ee1433a0663cdacd0c00d1
-SHA256: 09a470514c5d14f87365efb443ad684371a39f394fe3de0f34d7685e14a62719
+Filename: pool/main/p/pyqt6/python3-pyqt6.qtsensors_6.11.0-2_amd64.deb
+Size: 94068
+MD5sum: 9e7f0f265f1caae113faeb7ca0df9729
+SHA256: a4de32ca2c41eafec1c32b44ebd45cb298f12be03812f1a88eb9a3cb23b9e230
 
 Package: python3-pyqt6.qtserialport
 Source: pyqt6
-Version: 6.11.0-1
+Version: 6.11.0-2
 Installed-Size: 167
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
-Depends: python3-pyqt6 (= 6.11.0-1), python3, libc6 (>= 2.14), libqt6core6t64 (>= 6.10.2), libqt6serialport6 (>= 6.10.2), libstdc++6 (>= 5)
+Depends: python3-pyqt6 (= 6.11.0-2), python3, libc6 (>= 2.14), libqt6core6t64 (>= 6.10.2), libqt6serialport6 (>= 6.10.2), libstdc++6 (>= 5)
 Description: Python bindings for Qt 6 Serial Port module
 Homepage: https://riverbankcomputing.com/software/pyqt/intro
 Description-md5: 546d638fddbfc0e96c9976f005427e78
 Tag: uitoolkit::qt
 python
 Priority: optional
-Filename: pool/main/p/pyqt6/python3-pyqt6.qtserialport_6.11.0-1_amd64.deb
-Size: 71404
-MD5sum: f77a3b27583eda6e31e1c6a32acfdd73
-SHA256: 604317e113c1ebd1d83c65cd984a7f6705b4c1c5e20d6bb8026b977a6bb8e965
+Filename: pool/main/p/pyqt6/python3-pyqt6.qtserialport_6.11.0-2_amd64.deb
+Size: 71512
+MD5sum: f71c75784bebe44fba9a5f37732ef5af
+SHA256: 727196fb7bcea8ceaae85e807baf37a9e292300ac77d0d861aac70e8c8aabcc8
 
 Package: python3-pyqt6.qtstatemachine
 Source: pyqt6
-Version: 6.11.0-1
+Version: 6.11.0-2
 Installed-Size: 253
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
-Depends: python3-pyqt6 (= 6.11.0-1), python3, libc6 (>= 2.14), libqt6core6t64 (>= 6.10.2), libqt6statemachine6 (>= 6.6.1), libstdc++6 (>= 5)
+Depends: python3-pyqt6 (= 6.11.0-2), python3, libc6 (>= 2.14), libqt6core6t64 (>= 6.10.2), libqt6statemachine6 (>= 6.6.1), libstdc++6 (>= 5)
 Description: Python bindings for Qt 6 StateMachine module
 Homepage: https://riverbankcomputing.com/software/pyqt/intro
 Description-md5: dd26779d76d8195fcd66631c3218da9e
 python
 Priority: optional
-Filename: pool/main/p/pyqt6/python3-pyqt6.qtstatemachine_6.11.0-1_amd64.deb
-Size: 84200
-MD5sum: 845c2320a06e8102a1c234177f06187c
-SHA256: 5a84703eeadac012142e96709e23ff8f0b9910494762101d11f9e40072ed5787
+Filename: pool/main/p/pyqt6/python3-pyqt6.qtstatemachine_6.11.0-2_amd64.deb
+Size: 84344
+MD5sum: 0ecc592e2469f7d8b0a5fdc7a47e92ca
+SHA256: d6575e36773f829e54b343bc0635829d153be046c3b8b4941c63fb912a30bc52
 
 Package: python3-pyqt6.qtsvg
 Source: pyqt6
-Version: 6.11.0-1
+Version: 6.11.0-2
 Installed-Size: 215
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
-Depends: python3-pyqt6 (= 6.11.0-1), python3, libc6 (>= 2.4), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.1.2), libqt6svg6 (>= 6.8.2), libqt6svgwidgets6 (>= 6.7.2), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 5)
+Depends: python3-pyqt6 (= 6.11.0-2), python3, libc6 (>= 2.4), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.1.2), libqt6svg6 (>= 6.8.2), libqt6svgwidgets6 (>= 6.7.2), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 5)
 Description: Python bindings for Qt 6 SVG module
 Homepage: https://riverbankcomputing.com/software/pyqt/intro
 Description-md5: ed04c58635f37eac558fc5ee0cfe6733
 Tag: uitoolkit::qt
 python
 Priority: optional
-Filename: pool/main/p/pyqt6/python3-pyqt6.qtsvg_6.11.0-1_amd64.deb
-Size: 77412
-MD5sum: 6bc0849d5dc27375d79aebd0e8438811
-SHA256: 14cefec208e6a9deb3a77de60845649c7605d5bb6b46647819fca8ba32f0332f
+Filename: pool/main/p/pyqt6/python3-pyqt6.qtsvg_6.11.0-2_amd64.deb
+Size: 77484
+MD5sum: 3c95bb5ef4aa7752b3e227fd681c2bbd
+SHA256: dce357a892a8276c6b24a451343915009fbd817af81da49f84bb699fd4d43012
 
 Package: python3-pyqt6.qttexttospeech
 Source: pyqt6
-Version: 6.11.0-1
+Version: 6.11.0-2
 Installed-Size: 134
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
-Depends: python3-pyqt6 (= 6.11.0-1), python3, libc6 (>= 2.4), libqt6core6t64 (>= 6.10.2), libqt6texttospeech6 (>= 6.6.1), libstdc++6 (>= 5)
+Depends: python3-pyqt6 (= 6.11.0-2), python3, libc6 (>= 2.4), libqt6core6t64 (>= 6.10.2), libqt6texttospeech6 (>= 6.6.1), libstdc++6 (>= 5)
 Description: Python bindings for Qt 6 TextToSpeech module
 Homepage: https://riverbankcomputing.com/software/pyqt/intro
 Description-md5: 4665777e2a34fc9e2e02c1a3ab8204e5
 Tag: uitoolkit::qt
 python
 Priority: optional
-Filename: pool/main/p/pyqt6/python3-pyqt6.qttexttospeech_6.11.0-1_amd64.deb
-Size: 66432
-MD5sum: 0c075ce0af1e9a7e23dbfc437fe23df0
-SHA256: c5115a10568859c7c01e5d01bcfac4d71d9fa37529480698eb9d5adf6095dc9f
+Filename: pool/main/p/pyqt6/python3-pyqt6.qttexttospeech_6.11.0-2_amd64.deb
+Size: 66472
+MD5sum: e23d62696d2df6b39b52c8a7e9311d72
+SHA256: c0ff61cef95a733dfe1ba537e57f3747981fae56dced3d7c7dc066299c6c1299
 
 Package: python3-pyqt6.qtwebchannel
 Source: pyqt6
-Version: 6.11.0-1
+Version: 6.11.0-2
 Installed-Size: 112
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
-Depends: python3-pyqt6 (= 6.11.0-1), python3, libc6 (>= 2.4), libqt6core6t64 (>= 6.10.2), libqt6webchannel6 (>= 6.6.0), libstdc++6 (>= 5)
+Depends: python3-pyqt6 (= 6.11.0-2), python3, libc6 (>= 2.4), libqt6core6t64 (>= 6.10.2), libqt6webchannel6 (>= 6.6.0), libstdc++6 (>= 5)
 Description: Python bindings for Qt 6 WebChannel module
 Homepage: https://riverbankcomputing.com/software/pyqt/intro
 Description-md5: 2b3fa1cd5f54a0c3c03b9de1e2465907
 Tag: uitoolkit::qt
 python
 Priority: optional
-Filename: pool/main/p/pyqt6/python3-pyqt6.qtwebchannel_6.11.0-1_amd64.deb
-Size: 61692
-MD5sum: 8c15882af03f559212a67011f225ee08
-SHA256: c15189bc4238a299207955a52181fc5c2b333a0992951676d2b6694f47328fe1
+Filename: pool/main/p/pyqt6/python3-pyqt6.qtwebchannel_6.11.0-2_amd64.deb
+Size: 61744
+MD5sum: 48d30fb6f93e34ace9a657b3590381fc
+SHA256: 77be80061c16a8da35b0522da5ef0c5c0ed71451c3759a7df46c631c80820a57
 
 Package: python3-pyqt6.qtwebsockets
 Source: pyqt6
-Version: 6.11.0-1
+Version: 6.11.0-2
 Installed-Size: 182
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
-Depends: python3-pyqt6 (= 6.11.0-1), python3, libc6 (>= 2.14), libqt6core6t64 (>= 6.10.2), libqt6network6 (>= 6.1.2), libqt6websockets6 (>= 6.6.0), libstdc++6 (>= 5)
+Depends: python3-pyqt6 (= 6.11.0-2), python3, libc6 (>= 2.14), libqt6core6t64 (>= 6.10.2), libqt6network6 (>= 6.1.2), libqt6websockets6 (>= 6.6.0), libstdc++6 (>= 5)
 Description: Python bindings for Qt 6 WebSockets module
 Homepage: https://riverbankcomputing.com/software/pyqt/intro
 Description-md5: 6bd787b70ec6569558b4ad33d66482c5
 Tag: uitoolkit::qt
 python
 Priority: optional
-Filename: pool/main/p/pyqt6/python3-pyqt6.qtwebsockets_6.11.0-1_amd64.deb
-Size: 73752
-MD5sum: 8cf9c07e6df56495a79e481f83daa7a3
-SHA256: 8e99a555500b09156d0c6c54504c464c675d775fba0264d8cae5bc76cff4910a
+Filename: pool/main/p/pyqt6/python3-pyqt6.qtwebsockets_6.11.0-2_amd64.deb
+Size: 73864
+MD5sum: 66bf1eb2dba9f2a9a86c0e9d3275642e
+SHA256: 30ed9e4b0fb7d0136c3a26b4f4625c3a5a2810636d1fdd441f734afbb7b186c0
 
 Package: pyqt6-charts-dev
 Source: pyqt6-charts
@@ -36761,21 +37252,21 @@ SHA256: 905bc12c3f7896e1933f3cd0041058fa4fcab4dc9198897e7b2523e7ae249ae3
 
 Package: python3-pyrate-limiter
 Source: pyrate-limiter
-Version: 4.1.0-1
-Installed-Size: 2087
+Version: 4.2.0-1
+Installed-Size: 2092
 Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
 Architecture: all
-Depends: python3:any, libjs-sphinxdoc (>= 8.2)
+Depends: python3:any, libjs-sphinxdoc (>= 9.0)
 Description: Request rate limiter using a leaky-bucket algorithm
 Homepage: https://github.com/vutran1710/PyrateLimiter
-Built-Using: sphinx (= 8.2.3-12)
+Built-Using: sphinx (= 9.1.0-4)
 Description-md5: bd7234cd67c45504d91ee9954f2f0a1e
 python
 Priority: optional
-Filename: pool/main/p/pyrate-limiter/python3-pyrate-limiter_4.1.0-1_all.deb
-Size: 376712
-MD5sum: 1625a73d4c92dc5771c1ddd2991a368d
-SHA256: e827b56dbc5f1123363a1c8e61efdb54c1e34b495d5cf32101cdd868b5e66ce6
+Filename: pool/main/p/pyrate-limiter/python3-pyrate-limiter_4.2.0-1_all.deb
+Size: 376844
+MD5sum: a81f67572baf794707b2b8091aadfbb6
+SHA256: 293c06ec1d6402483568344cf0af84f3b910dd237bde1b6dbab3c125c5f5ec6e
 
 Package: python3-pyreadstat
 Source: pyreadstat
@@ -37364,7 +37855,7 @@ SHA256: 9214d7c638ab522f1c123d1e360028de8154f60ba2dd0c06a8fcf737d6850e38
 
 Package: python3-pyshp
 Source: pyshp
-Version: 3.0.9-1
+Version: 3.0.12-1
 Installed-Size: 283
 Maintainer: Debian GIS Project <pkg-grass-devel@lists.alioth.debian.org>
 Architecture: all
@@ -37377,10 +37868,10 @@ Tag: devel::lang:python, devel::library, field::geography,
  implemented-in::python, role::devel-lib
 python
 Priority: optional
-Filename: pool/main/p/pyshp/python3-pyshp_3.0.9-1_all.deb
-Size: 88772
-MD5sum: 53d6f992c69d3cdbef445e874d12dfb6
-SHA256: 0d912683837ba5cddd1d285cb8dd47c3f1ee293a02c7c81de7b8ff602fa4f864
+Filename: pool/main/p/pyshp/python3-pyshp_3.0.12-1_all.deb
+Size: 89340
+MD5sum: 3c498c68e1ab335ef50af9d1798852de
+SHA256: bbe43c8884dc8304f7966ea1564b2abe0118972e89d41b5754c8988f85291499
 
 Package: python3-pyside6.qt3danimation
 Source: pyside6
@@ -38612,9 +39103,9 @@ MD5sum: 9610dc6a20a0218f1c3ca61249760224
 SHA256: d05d2ae147e145207e829020df492afc559b6b214e369fab825cc5c0beb68af6
 
 Package: python3-pyspeex-noise
-Source: pyspeex-noise (2.0.0-1)
-Version: 2.0.0-1+b1
-Installed-Size: 87
+Source: pyspeex-noise
+Version: 2.0.1-1
+Installed-Size: 86
 Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
 Architecture: amd64
 Depends: python3, python3:any, libc6 (>= 2.29)
@@ -38623,16 +39114,16 @@ Homepage: https://github.com/rhasspy/pyspeex-noise
 Description-md5: e38e0ead8a854b496c19cd591223d238
 python
 Priority: optional
-Filename: pool/main/p/pyspeex-noise/python3-pyspeex-noise_2.0.0-1+b1_amd64.deb
-Size: 29992
-MD5sum: b1104259678813e4edd255c962241cf3
-SHA256: 5be1449e11f003ff48652875ee918ccdaa518d892455c8d2e6159cc13dbb281f
+Filename: pool/main/p/pyspeex-noise/python3-pyspeex-noise_2.0.1-1_amd64.deb
+Size: 29784
+MD5sum: 83bfe2cc852d64a4901e14e78e855942
+SHA256: 150820751401387a61f58ffb0dc9c2d8f5624581850275f55f997c1cefc0c4da
 
 Package: python3-spf
 Source: pyspf
-Version: 2.0.14-5
+Version: 2.0.14-6
 Installed-Size: 152
-Maintainer: Scott Kitterman <scott@kitterman.com>
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
 Depends: python3:any, python3-dns | python3-dnspython, python3-authres
 Suggests: python3-yaml
@@ -38641,10 +39132,10 @@ Homepage: https://github.com/sdgathman/pyspf/
 Description-md5: 4d72336c1804d9cfbacf3c008789ffe4
 python
 Priority: optional
-Filename: pool/main/p/pyspf/python3-spf_2.0.14-5_all.deb
-Size: 64560
-MD5sum: b25415e542f6a36c4d2aba53eb34193f
-SHA256: f114930062e06d63ef20ea2ee4c62f8859c4cb280cca2f533b5ba1a445c99a2a
+Filename: pool/main/p/pyspf/python3-spf_2.0.14-6_all.deb
+Size: 63856
+MD5sum: a04bd73ad6e7783fe52baa8e00fb6a70
+SHA256: c64981d74a08f873816ae081a7fa5bfd18b9909fc3a5b145c624ccea0645734c
 
 Package: pyspread
 Version: 2.4.5-1
@@ -39017,6 +39508,23 @@ Filename: pool/main/p/pyswitchbee/python3-pyswitchbee_1.8.3-2_all.deb
 Size: 13412
 MD5sum: a5a63f732ba6bb5b9ecd8435d01fcdb1
 SHA256: 3ec736539faf3019b6932330acf946921606ba6ff8243e5e0cf56a32d7bcc221
+
+Package: python3-pyswitchbot
+Source: pyswitchbot
+Version: 2.2.0-1
+Installed-Size: 347
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-aiohttp, python3-bleak, python3-bleak-retry-connector, python3-cryptography (>= 39.0.0), python3-openssl, python3:any
+Description: Library to control SwitchBot IoT devices over Bluetooth and Wi-Fi
+Homepage: https://github.com/sblibs/pySwitchbot
+Description-md5: 67e1894201be94dbf9a97502984a4ae7
+python
+Priority: optional
+Filename: pool/main/p/pyswitchbot/python3-pyswitchbot_2.2.0-1_all.deb
+Size: 51160
+MD5sum: 870d3e8e1776de327adea7eb8ce6cc01
+SHA256: 9360004bae7486c86d7551fddb37a67ff61cd6f69361632badf04e1ff9e1087b
 
 Package: python3-pysword
 Source: pysword
@@ -40688,6 +41196,23 @@ Size: 32056
 MD5sum: c72a3d4832edd08cd211e8bd1ca8831b
 SHA256: d137fa441abe8072e515dca03dfacd0c1b190fceefe4c7696bfcc92b7eb4e40f
 
+Package: python3-adax-local
+Source: python-adax-local
+Version: 0.1.5-4
+Installed-Size: 30
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-aiohttp, python3-async-timeout, python3-bleak, python3:any
+Description: library to communicate with Adax heating systems
+Homepage: https://github.com/Danielhiversen/pyAdaxLocal
+Description-md5: 4544920a6eda6cf1d4a30e0f58d40997
+python
+Priority: optional
+Filename: pool/main/p/python-adax-local/python3-adax-local_0.1.5-4_all.deb
+Size: 5748
+MD5sum: ec90e7c59decb36b6c387743449adbb1
+SHA256: c4a48d2694ef3f810796bbfb7062e88ba60b8fb216d2c1d44911ce1103704e86
+
 Package: python3-adext
 Source: python-adext
 Version: 0.4.3-3
@@ -41975,6 +42500,23 @@ Size: 7044
 MD5sum: ccdd38f9526996494d37f53e59675301
 SHA256: cb8f01aea46553c675af93cd511b07bb188b00467795164e8e3cd59e6d557174
 
+Package: python3-aioshelly
+Source: python-aioshelly
+Version: 13.23.1-1
+Installed-Size: 202
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-aiohttp, python3-bluetooth-data-tools, python3-habluetooth, python3-orjson, python3-yarl, python3-bleak-retry-connector, python3-zeroconf, python3:any
+Description: asynchronous library to control Shelly devices
+Homepage: https://github.com/home-assistant-libs/aioshelly
+Description-md5: ab0443ee2d4754703b794c400f041a62
+python
+Priority: optional
+Filename: pool/main/p/python-aioshelly/python3-aioshelly_13.23.1-1_all.deb
+Size: 35700
+MD5sum: 522a19f3d3e0dc56c332bea58cbb92fb
+SHA256: a44f0a0b4ec70a44ab35c255bb0985f38c0a074f5d723b8925ea88df88699de0
+
 Package: python3-aioshutil
 Source: python-aioshutil
 Version: 1.5-2
@@ -43075,6 +43617,23 @@ Size: 39664
 MD5sum: 19e67b5efd3589ba4bf1ab37acba16fd
 SHA256: 0c45ae4b7d5e55ba39847839b32ee54e390ddbe8c6748c332233d4c38ee8956a
 
+Package: python3-aranet4
+Source: python-aranet4
+Version: 2.5.1-1
+Installed-Size: 86
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-bleak, python3-requests, python3:any
+Description: Aranet Python client
+Homepage: https://github.com/Anrijs/Aranet4-Python
+Description-md5: 006055072ade32026559f74742e218dc
+python
+Priority: optional
+Filename: pool/main/p/python-aranet4/python3-aranet4_2.5.1-1_all.deb
+Size: 16460
+MD5sum: 7045d4fb171cb36a66cc27fe9979eda0
+SHA256: 4d53dd1cb83037041a39e89fe7f6c21a7bdc1e837631a1206e68f6ca2f5c2831
+
 Package: python3-argcomplete
 Source: python-argcomplete
 Version: 3.6.3-1
@@ -44013,6 +44572,23 @@ Filename: pool/main/p/python-automaton/python3-automaton_3.3.0-2_all.deb
 Size: 14400
 MD5sum: d87de8fd7ee8ddd34451e221dd66bc6d
 SHA256: 70c982e33a578457abc7946a8db3b9cc473863474561df82e41add2ac49ae3b4
+
+Package: python3-automower-ble
+Source: python-automower-ble
+Version: 0.2.8-1
+Installed-Size: 86
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-bleak, python3-bleak-retry-connector, python3:any
+Description: Bluetooth LE control for Husqvarna Automower mowers
+Homepage: https://github.com/alistair23/AutoMower-BLE
+Description-md5: 4f837d258abe7635827053838419e4d9
+python
+Priority: optional
+Filename: pool/main/p/python-automower-ble/python3-automower-ble_0.2.8-1_all.deb
+Size: 16356
+MD5sum: c4b18b9d687ab358b45475db49251c05
+SHA256: 92c911fd40c18f5f3d95e2dff3d72a506adf4607f86eb9bb9e0886c9374fa45f
 
 Package: python3-autopage
 Source: python-autopage
@@ -45224,6 +45800,23 @@ Size: 9580
 MD5sum: 2328dffed826b67743c619a12ddc3296
 SHA256: 32e81fcb23976dcb79189c7826cb97f63d25a06fb6f0f70826de47eacf90a15f
 
+Package: python3-bluetooth-adapters
+Source: python-bluetooth-adapters
+Version: 2.4.0-1
+Installed-Size: 85
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-aiooui, python3-bleak (>= 1.0.1), python3-dbus-fast, python3-uart-devices, python3-usb-devices, python3:any
+Description: Enumerate and find Bluetooth Adapters in Python
+Homepage: https://github.com/bluetooth-devices/bluetooth-adapters
+Description-md5: b70eb1c6538f9d27f49a6f0a7019f2e5
+python
+Priority: optional
+Filename: pool/main/p/python-bluetooth-adapters/python3-bluetooth-adapters_2.4.0-1_all.deb
+Size: 24308
+MD5sum: 73c9f3f9c4a9517d8b6221466f41eaf4
+SHA256: fc64ca1b06ade7b5288f0e306611b82c9101a15a3d9839fa8d2d12c7c814d2dd
+
 Package: python3-boltons
 Source: python-boltons
 Version: 25.0.0-2
@@ -45590,20 +46183,20 @@ SHA256: 70008547632b08891f35692bdee9dc3ca68c55fe4f42d87b65e239b1682a4ed6
 
 Package: python3-bsblan
 Source: python-bsblan
-Version: 5.2.1-1
-Installed-Size: 205
+Version: 6.1.1-1
+Installed-Size: 219
 Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
 Architecture: all
-Depends: python3-aiohttp, python3-backoff, python3-packaging, python3-pydantic, python3-yarl, python3:any
+Depends: python3-aiohttp, python3-packaging, python3-pydantic, python3-yarl, python3:any
 Description: Asynchronous client for monitoring and controlling BSBLan devices
 Homepage: https://github.com/liudger/python-bsblan
 Description-md5: f7143ad5b872df22343df157e5010cef
 python
 Priority: optional
-Filename: pool/main/p/python-bsblan/python3-bsblan_5.2.1-1_all.deb
-Size: 42668
-MD5sum: 2b6fa59db68c72b35eb8d6dce38b7d42
-SHA256: be0db342baa21561ea4e7407cc89a41e1329ad8dfa3db2a16332ffc31880a50b
+Filename: pool/main/p/python-bsblan/python3-bsblan_6.1.1-1_all.deb
+Size: 45384
+MD5sum: 233911c96e390a46088079cb0575cbbe
+SHA256: 1b195d002769022fc747eac8169f9f5d896bfcca9e3444ae787714065e065304
 
 Package: python3-bsddb3
 Source: python-bsddb3
@@ -45726,6 +46319,23 @@ Filename: pool/main/p/python-build/python3-build_1.4.0-1_all.deb
 Size: 38832
 MD5sum: f11a2164fca87cc39ad30eca0cc336a3
 SHA256: 01ff510fd17d964ebf0a3798d5a0216787f4bb9b167a54100415f810af7bbad4
+
+Package: python3-bumble
+Source: python-bumble
+Version: 0.0.229-2
+Installed-Size: 3413
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-aiohttp, python3-click, python3-grpcio, python3-humanize, python3-platformdirs (>= 3.10.0), python3-prettytable, python3-prompt-toolkit, python3-protobuf, python3-pyee, python3-serial, python3-serial-asyncio, python3-usb, python3-websockets, python3:any
+Description: Bluetooth protocol stack for applications, emulation and experimentation
+Homepage: https://github.com/google/bumble
+Description-md5: a9aa246fddcfb13d92bc6874463a1715
+python
+Priority: optional
+Filename: pool/main/p/python-bumble/python3-bumble_0.0.229-2_all.deb
+Size: 440116
+MD5sum: c30066157dc0df3fd88c2e38bf4443d5
+SHA256: 1eeb0929f5bee1ae56257888b60c8d9c290ed8253944680ab63f9c83acb64ff2
 
 Package: python3-bumpfontversion
 Source: python-bumpfontversion
@@ -49999,8 +50609,8 @@ SHA256: 9725c01b5cb9d5c0bb3c4c95a59d797d5192a72cb5286cbc063cdd7ae0de4031
 
 Package: python3-dicompylercore
 Source: python-dicompylercore
-Version: 0.5.6-3
-Installed-Size: 139
+Version: 0.5.6-4
+Installed-Size: 141
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
 Architecture: amd64
 Depends: python3-matplotlib, python3-numpy, python3-pydicom, python3-six, python3:any, python3-pil, python3-shapely, python3-skimage
@@ -50009,10 +50619,10 @@ Homepage: https://github.com/dicompyler/dicompyler-core
 Description-md5: ff86834afb7d0180a98c27dd562a0bc3
 python
 Priority: optional
-Filename: pool/main/p/python-dicompylercore/python3-dicompylercore_0.5.6-3_amd64.deb
-Size: 31248
-MD5sum: 85b655c2f09616bb7e8f5e948fd4abc5
-SHA256: 466c898c6bbf996a770970aae8d0f147436f5e24692c4658485f31ce2821c11d
+Filename: pool/main/p/python-dicompylercore/python3-dicompylercore_0.5.6-4_amd64.deb
+Size: 31572
+MD5sum: 7144459b7d34cee0f58a613e97960df5
+SHA256: 0f1b52022403d92be5da158fae9bb239caa6184ac9e354c2c6447cf379fb40a0
 
 Package: python3-dict2css
 Source: python-dict2css
@@ -55395,6 +56005,23 @@ Size: 446208
 MD5sum: 57828ac2af8af542621834c892f94f92
 SHA256: e4ae56daf338ec40c46c82458b1cff678f85a7140b112615d0036a4a1cefbaab
 
+Package: python3-gardena-bluetooth
+Source: python-gardena-bluetooth
+Version: 1.4.3-1.1
+Installed-Size: 46
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-anyio, python3-bleak, python3-bleak-retry-connector, python3-tzlocal, python3:any
+Description: controlling gardena bluetooth enabled watering
+Homepage: https://github.com/elupus/gardena-bluetooth
+Description-md5: d8b757934a850d9e978f23e36f89d217
+python
+Priority: optional
+Filename: pool/main/p/python-gardena-bluetooth/python3-gardena-bluetooth_1.4.3-1.1_all.deb
+Size: 8872
+MD5sum: 9bad04cfce56ccbc716f9c187ee6dd3d
+SHA256: 5e9b0b073c8e214026c289026b03edafc177f79d5943d46bf99fe635bb7db7e1
+
 Package: python3-gassist-text
 Source: python-gassist-text
 Version: 0.0.11-2
@@ -57664,6 +58291,23 @@ Size: 68996
 MD5sum: 790324358a6cce2118bc087e888a9fe2
 SHA256: cacf6830cd9257eb59db7f529ea5c3e7dd68bb8033d07cb0f2e8d6d1e49b3d13
 
+Package: python3-ibeacon-ble
+Source: python-ibeacon-ble
+Version: 1.2.0-2
+Installed-Size: 30
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-home-assistant-bluetooth, python3-aiooui, python3:any
+Description: parser for iBeacon devices
+Homepage: https://github.com/bluetooth-devices/ibeacon-ble
+Description-md5: 5e4333d8f822a16e320486336e0d5a86
+python
+Priority: optional
+Filename: pool/main/p/python-ibeacon-ble/python3-ibeacon-ble_1.2.0-2_all.deb
+Size: 8064
+MD5sum: 8242471c7a976269790d213a26db9316
+SHA256: f9895afba049bd2fc9a2a35c78126ff2f5c23c6cde679a4061764d16a1aa3341
+
 Package: python3-ibm-cloud-sdk-core
 Source: python-ibm-cloud-sdk-core
 Version: 3.24.2-1
@@ -57766,6 +58410,40 @@ Filename: pool/main/p/python-id/python3-id_1.6.1-1_all.deb
 Size: 10828
 MD5sum: cd0092547c6a4c7b6dd1efda6e0e3e0e
 SHA256: ff8911df51194b7bce6630054db5e244e01c4abe7d8535a899bdacf0904b8fd0
+
+Package: python3-idasen
+Source: python-idasen
+Version: 0.12.0-3
+Installed-Size: 55
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-bleak, python3-voluptuous, python3-yaml, python3:any
+Description: ikea IDÅSEN desk API and CLI
+Homepage: https://github.com/newAM/idasen
+Description-md5: b130b90357eb6f6dd528190bd97da2cc
+python
+Priority: optional
+Filename: pool/main/p/python-idasen/python3-idasen_0.12.0-3_all.deb
+Size: 12976
+MD5sum: 44f4c1f09b90b792a9058a4bbe9e884a
+SHA256: ed6ca01151e5d1df9419812152dc0fe92a03c951b6b305e57b4532b319855866
+
+Package: python3-idasen-ha
+Source: python-idasen-ha
+Version: 2.6.3-2
+Installed-Size: 32
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-idasen, python3:any
+Description: Home Assistant helper lib for the IKEA Idasen Desk integration
+Homepage: https://github.com/abmantis/idasen-ha/
+Description-md5: 562ef776c92a9192004a4a18ea5bd18d
+python
+Priority: optional
+Filename: pool/main/p/python-idasen-ha/python3-idasen-ha_2.6.3-2_all.deb
+Size: 5980
+MD5sum: 354fe45b27db0619d4340b200a5fda27
+SHA256: 2a91929bb09c336b1edb236388cb4b5f2b2a911d69b32078b85aba5557c4df9d
 
 Package: python3-idna
 Source: python-idna
@@ -58030,7 +58708,7 @@ SHA256: 38db9ac27b2f6895cb41c08f41c154132ba8f707cc0cc6bfe9b7f2135029f755
 
 Package: python3-indevolt-api
 Source: python-indevolt-api
-Version: 1.8.1-1
+Version: 1.8.3-1
 Installed-Size: 69
 Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
 Architecture: all
@@ -58040,10 +58718,10 @@ Homepage: https://github.com/xirt/indevolt-api
 Description-md5: 8f39ef82f731bb001685a2431a99a16a
 python
 Priority: optional
-Filename: pool/main/p/python-indevolt-api/python3-indevolt-api_1.8.1-1_all.deb
-Size: 14128
-MD5sum: b3ef8b551a2323c1e9fa93c42973b1ab
-SHA256: c46c9fb2dff89fa95d73cc6fb9da48e918ef2d99e15aba52a30a763d6265c000
+Filename: pool/main/p/python-indevolt-api/python3-indevolt-api_1.8.3-1_all.deb
+Size: 14180
+MD5sum: bc0407abe1685b8a16d81c29669a2055
+SHA256: 152afeb78ac553b6ffab40760be2007770a284810633dcdeb0f465df18601b76
 
 Package: python3-indexed
 Source: python-indexed
@@ -59480,11 +60158,11 @@ SHA256: 2dfc5324877c1540abb972712801eb1236d535de3013b4fe21b86622c293aee4
 
 Package: python3-jsonschema-path
 Source: python-jsonschema-path
-Version: 0.4.5-2
-Installed-Size: 63
+Version: 0.5.0-1
+Installed-Size: 76
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
-Depends: python3-pathable (>= 0.5.0), python3-referencing, python3-yaml, python3:any
+Depends: python3-attr, python3-pathable (>= 0.6.0), python3-referencing, python3-yaml, python3:any
 Breaks: python3-openapi-core (<< 0.23.1), python3-openapi-spec-validator (<< 0.8.0)
 Description: Python module for object-oriented JSONSchema
 Multi-Arch: foreign
@@ -59492,10 +60170,10 @@ Homepage: https://github.com/p1c2u/jsonschema-path
 Description-md5: 68f831d0226fac4dc00c46d731560d2d
 python
 Priority: optional
-Filename: pool/main/p/python-jsonschema-path/python3-jsonschema-path_0.4.5-2_all.deb
-Size: 13112
-MD5sum: c7029a2a5f79a7dc73614b11a1906e2b
-SHA256: a7ce0889cc2681f63ee046352179517f4a55b2162d32e2182c9b800448434064
+Filename: pool/main/p/python-jsonschema-path/python3-jsonschema-path_0.5.0-1_all.deb
+Size: 17544
+MD5sum: 41f1685daf79b7d7489e939c529ae290
+SHA256: 5714d6c260a65472e5eec1c0bd334510460433fd982169b9f1ba65a8862fce22
 
 Package: python3-jsonschema-specifications
 Source: python-jsonschema-specifications
@@ -71525,7 +72203,7 @@ SHA256: 35d05e892d704c52b71cd88f15db17ba07ffe82e2386402c6dfe8ba55e807821
 
 Package: python3-pytest-run-parallel
 Source: python-pytest-run-parallel
-Version: 0.8.2-1
+Version: 0.9.1-1
 Installed-Size: 76
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
@@ -71535,10 +72213,10 @@ Homepage: https://github.com/Quansight-Labs/pytest-run-parallel
 Description-md5: 784700b8b82f99060892f23a9d5f5cee
 python
 Priority: optional
-Filename: pool/main/p/python-pytest-run-parallel/python3-pytest-run-parallel_0.8.2-1_all.deb
-Size: 17488
-MD5sum: 180848edf4097c2bbf39d5099876d87b
-SHA256: 7ab18918044a34900299dd8ee496e0876265aaf67e5db79c0ed6932513562984
+Filename: pool/main/p/python-pytest-run-parallel/python3-pytest-run-parallel_0.9.1-1_all.deb
+Size: 17776
+MD5sum: 6d5c5f7cf31cf91e1a78e13b067ee609
+SHA256: 22ce545f2097175200ce3185e5cfd59673572c5faefc5b1640d2ef6073ccdfcc
 
 Package: python3-pytest-shell-utilities
 Source: python-pytest-shell-utilities
@@ -73817,8 +74495,8 @@ SHA256: 97e50da023d298d18bcd7d1cce6605b1278f8bfe9f215a75025a2b4c4a4d6bee
 
 Package: python3-s3fs
 Source: python-s3fs
-Version: 2026.3.0-1
-Installed-Size: 1001
+Version: 2026.4.0-1
+Installed-Size: 999
 Maintainer: Debian GIS Project <pkg-grass-devel@lists.alioth.debian.org>
 Architecture: all
 Depends: python3-aiobotocore, python3-aiohttp, python3-fsspec, python3:any
@@ -73827,10 +74505,10 @@ Homepage: https://github.com/fsspec/s3fs
 Description-md5: 832dc3dce0f940addf2fcda2f6c378cd
 python
 Priority: optional
-Filename: pool/main/p/python-s3fs/python3-s3fs_2026.3.0-1_all.deb
-Size: 106340
-MD5sum: 1c5d1d42d6baeebecf41f8d493981a4d
-SHA256: c4a22955bbab86eed5ce2be91af366f5ef4687d8c0e1ad1d0cf9fea42fd9bb69
+Filename: pool/main/p/python-s3fs/python3-s3fs_2026.4.0-1_all.deb
+Size: 105964
+MD5sum: 7af6cf0289b4ed31433b4ac21e0c4463
+SHA256: 4faf88959bcb92102112d0bfa7db7f6f2a741eeeb0de33d012049090f63c1434
 
 Package: python3-s3transfer
 Source: python-s3transfer
@@ -74082,7 +74760,7 @@ SHA256: 67e0ad49f5cfaa354aec380cc60e0f184e8e48279b2d4069e66f47ce3dbfae72
 
 Package: python3-scinexus
 Source: python-scinexus
-Version: 2026.5.18-3
+Version: 2026.5.18-4
 Installed-Size: 212
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
 Architecture: all
@@ -74093,10 +74771,10 @@ Homepage: https://github.com/cogent3/scinexus
 Description-md5: 003bacaebc62c024f72e046d14436b10
 python
 Priority: optional
-Filename: pool/main/p/python-scinexus/python3-scinexus_2026.5.18-3_all.deb
-Size: 47784
-MD5sum: d6f9faac5bc9157039354d87cab84ca2
-SHA256: 58d311ca10385f282e3b8641b2b3a436346455255056b961fa743e54f5b64813
+Filename: pool/main/p/python-scinexus/python3-scinexus_2026.5.18-4_all.deb
+Size: 47908
+MD5sum: 04922173c6f2e3150444cbdab0229c70
+SHA256: f79e869a6d07d59e29807903892dbb375190cba6794e981a7ca9f9be922c394c
 
 Package: python3-scitrack
 Source: python-scitrack
@@ -77302,8 +77980,8 @@ SHA256: 619552fded1c4d948dc6b00ff84c64239db0c9dd174644a6595634a39fd50f61
 
 Package: python3-tavern
 Source: python-tavern
-Version: 3.3.3-3
-Installed-Size: 430
+Version: 3.6.0-1
+Installed-Size: 436
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
 Depends: python3-box, python3-jmespath, python3-jsonschema, python3-jwt, python3-pykwalify, python3-pytest, python3-requests, python3-simpleeval, python3-stevedore, python3-yaml, python3:any
@@ -77312,10 +77990,10 @@ Homepage: https://taverntesting.github.io
 Description-md5: dbdb5385cb9b99534fb5313143355056
 python
 Priority: optional
-Filename: pool/main/p/python-tavern/python3-tavern_3.3.3-3_all.deb
-Size: 88728
-MD5sum: eadfb409f769f5b133fb276be059202d
-SHA256: 1655c5c0a02274ca139d4980aed5417e02f24dcfffaf7768a64380423b0f7140
+Filename: pool/main/p/python-tavern/python3-tavern_3.6.0-1_all.deb
+Size: 89804
+MD5sum: d956676ae8cb5bbfc7c43263c6e1a9f3
+SHA256: 9a4fefedddf846f9e23112d5b8e8fa1b4e8b1cb6d94670431a93c8bf0c505a61
 
 Package: python3-tblib
 Source: python-tblib
@@ -78216,7 +78894,7 @@ SHA256: cd5bcd1a3aff5c5cd2dcc5b572247487e8030580d431a118dacb31f86fac00ba
 
 Package: python3-tomli-w
 Source: python-tomli-w
-Version: 1.2.0-2
+Version: 1.2.0-3
 Installed-Size: 35
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
@@ -78227,10 +78905,10 @@ Homepage: https://github.com/hukkin/tomli-w
 Description-md5: 6e3d4eb3d59d08a9bc3842af1335be33
 python
 Priority: optional
-Filename: pool/main/p/python-tomli-w/python3-tomli-w_1.2.0-2_all.deb
-Size: 9196
-MD5sum: 83a94f7c8fa213f695e6f79699f3184a
-SHA256: 3685f13587dd975edfb87393560e9bf2a39986d45dd1c0cf61cac8d77ad8f2e7
+Filename: pool/main/p/python-tomli-w/python3-tomli-w_1.2.0-3_all.deb
+Size: 9028
+MD5sum: faa4d61a0817214b0b27d24c2ea4b915
+SHA256: c3d5fbd67998fc4cc3e975f4b893e22b4bd76fa0a5074efd0dadf79b2850cc43
 
 Package: python3-tomlkit
 Source: python-tomlkit
@@ -78831,8 +79509,8 @@ SHA256: 27acf5754418e7c13061f05bbfc11943342c871b4cead76d3a4ca73b8bc64b42
 
 Package: python3-tx-xmpp
 Source: python-tx-xmpp
-Version: 0.10.1.post1-1
-Installed-Size: 826
+Version: 0.14.0-1
+Installed-Size: 847
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
 Depends: python3-constantly, python3-dateutil, python3-twisted (>= 16.4.0), python3:any, python3-pycryptodome
@@ -78841,10 +79519,10 @@ Homepage: https://www.goffi.org/forge/goffi/tx-xmpp
 Description-md5: 2fd4b5a353001bf658d07e1f6f01b35f
 python
 Priority: optional
-Filename: pool/main/p/python-tx-xmpp/python3-tx-xmpp_0.10.1.post1-1_all.deb
-Size: 102408
-MD5sum: 5f4ae42be5f9c315b1fda481fdb17b96
-SHA256: 2d4ecc30bee7749ed5148a7404ce339d32d6f34bea48d096819e57fd70cd2238
+Filename: pool/main/p/python-tx-xmpp/python3-tx-xmpp_0.14.0-1_all.deb
+Size: 105888
+MD5sum: ffb240af98619e032e96cea36f58c3d6
+SHA256: 0148086300e5d33511a23e32f8f240fe2c43e168dc396e6fb7115628c92fbfbc
 
 Package: python3-txaio
 Source: python-txaio
@@ -79180,8 +79858,8 @@ SHA256: 28cab7692f7f077dedf81a2dea4b1deb3fa1c344d0f7197c07e5b834213420ac
 
 Package: python3-ulid-transform
 Source: python-ulid-transform
-Version: 2.2.6-1
-Installed-Size: 68
+Version: 2.2.9-1
+Installed-Size: 69
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: amd64
 Depends: python3:any
@@ -79190,10 +79868,10 @@ Homepage: https://github.com/Bluetooth-Devices/ulid-transform
 Description-md5: e59a70cd9dd3e357a7570101462ea429
 python
 Priority: optional
-Filename: pool/main/p/python-ulid-transform/python3-ulid-transform_2.2.6-1_amd64.deb
-Size: 20196
-MD5sum: f3cd7a6c9cca2bec62fbef416b32f049
-SHA256: 7ab808abca9a128322b9eda62121949770be102a746c8554816e1530c36ab8b9
+Filename: pool/main/p/python-ulid-transform/python3-ulid-transform_2.2.9-1_amd64.deb
+Size: 20748
+MD5sum: 8e2c0f374c1a9a991745925796254609
+SHA256: b066fe386423c79f98b8c4d828c6f80b762101ddf8b9959adfb64a169e36b3e5
 
 Package: python3-ulmo
 Source: python-ulmo
@@ -81036,6 +81714,23 @@ Size: 14580
 MD5sum: b0019df47277c4799605845f22128ba5
 SHA256: dafc1471f388fc1f2e33df3d7b5e867380048e608fbfcab92720d25542a1474d
 
+Package: python3-xiaomi-ble
+Source: python-xiaomi-ble
+Version: 1.2.0-1
+Installed-Size: 150
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-aiohttp, python3-bleak, python3-bleak-retry-connector, python3-bluetooth-data-tools, python3-bluetooth-sensor-state-data, python3-cryptography (>= 40.0.0), python3-home-assistant-bluetooth, python3-orjson, python3-pycryptodome, python3-sensor-state-data, python3:any
+Description: Parser for Xiaomi BLE devices
+Homepage: https://github.com/bluetooth-devices/xiaomi-ble
+Description-md5: 49adef0edefa98ead119abf8c3d38f40
+python
+Priority: optional
+Filename: pool/main/p/python-xiaomi-ble/python3-xiaomi-ble_1.2.0-1_all.deb
+Size: 38172
+MD5sum: b2d363638ceb8115751f3fa1e724043f
+SHA256: 43eb25a95101731d3ca795b594ed821c2485dc790d3b12c7be7957510dede9be
+
 Package: python3-xkbcommon
 Source: python-xkbcommon
 Version: 1.5.1-2
@@ -82228,6 +82923,40 @@ Filename: pool/main/p/python-youtubeaio/python3-youtubeaio_2.1.2-1_all.deb
 Size: 14180
 MD5sum: 63f83444b2f82f882210558c5d24e952
 SHA256: 757553cac8b0f1f1b3b21c215f238ea0841395111fc3876f089e802bf7e441a6
+
+Package: python3-ytmusicapi
+Source: python-ytmusicapi
+Version: 1.11.5-1
+Installed-Size: 377
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-requests, python3:any
+Description: Unofficial API for YouTube Music
+Homepage: https://github.com/sigma67/ytmusicapi
+Description-md5: 7b90f7f0c16445956ca69b5fbb3f92d3
+python
+Priority: optional
+Filename: pool/main/p/python-ytmusicapi/python3-ytmusicapi_1.11.5-1_all.deb
+Size: 62288
+MD5sum: 0c4db988505fba33fec9b05c0edeaf2e
+SHA256: 46a788e2320adf8a17c3b5a055b94eb6b6cffd4313f60fa7f9761342e59b0392
+
+Package: ytmusicapi
+Source: python-ytmusicapi
+Version: 1.11.5-1
+Installed-Size: 11
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-ytmusicapi, python3:any
+Description: Authentication command for YouTube Music
+Homepage: https://github.com/sigma67/ytmusicapi
+Description-md5: 0ac61e1c539538866ab89c1750d25d00
+python
+Priority: optional
+Filename: pool/main/p/python-ytmusicapi/ytmusicapi_1.11.5-1_all.deb
+Size: 2728
+MD5sum: b150a83d2004d9929dbce3394274e381
+SHA256: 1aa9c8549a5f2945dce7998275dbe1cbe0bb1f09592c860e5cd4edb929ec2582
 
 Package: python-yubico-tools
 Source: python-yubico
@@ -84005,8 +84734,8 @@ SHA256: dfa0bccf7076cb74026f20e8bb436b6d624a09a92b99f4b78a07a25521fc2d1f
 
 Package: python3-pyvlx
 Source: pyvlx
-Version: 0.2.33-1
-Installed-Size: 350
+Version: 0.2.35-1
+Installed-Size: 362
 Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
 Architecture: all
 Depends: python3-yaml, python3-zeroconf, python3:any
@@ -84015,10 +84744,10 @@ Homepage: https://github.com/Julius2342/pyvlx
 Description-md5: e3c05e0f39c4a51cd42578a57611c593
 python
 Priority: optional
-Filename: pool/main/p/pyvlx/python3-pyvlx_0.2.33-1_all.deb
-Size: 46508
-MD5sum: 6639ff2e434224bdcc5b4e623fe831f4
-SHA256: 606c46e5a78fb679c6910c01da3289dbc3d1204681f1582a2b3df120daf4b3a4
+Filename: pool/main/p/pyvlx/python3-pyvlx_0.2.35-1_all.deb
+Size: 48688
+MD5sum: f82890bb62717dac033b4b0ee89e79f1
+SHA256: cd0f0660cbf0cbe046b306c43d6198e1df0674d1a3aafe232328e92da60edf44
 
 Package: python3-pyvo
 Source: pyvo
@@ -84555,6 +85284,23 @@ Size: 6269512
 MD5sum: f7d85761d74609a0118a3b58f648f802
 SHA256: add69873596041dc8644c8bda3e51452ebb619f267303701a5c706bc5577e6b9
 
+Package: python3-qingping-ble
+Source: qingping-ble
+Version: 1.1.5-1
+Installed-Size: 165
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-home-assistant-bluetooth, python3-bluetooth-data-tools, python3-bluetooth-sensor-state-data, python3-sensor-state-data, python3:any
+Description: Library for interacting with Qingping BLE devices
+Homepage: https://github.com/bluetooth-devices/qingping-ble
+Description-md5: 927576c8fc4d3ebeb1b2cfe3428daaf1
+python
+Priority: optional
+Filename: pool/main/q/qingping-ble/python3-qingping-ble_1.1.5-1_all.deb
+Size: 28472
+MD5sum: 3d0773b0384d22dc8f13f9ff3e9f4105
+SHA256: 5ed30a18de7257d71def4c8896f825418c7e0cc48dcff478e117d35ed579f734
+
 Package: python3-qpack
 Source: qpack
 Version: 0.0.21-1
@@ -85018,6 +85764,24 @@ Filename: pool/main/r/rapidfuzz/python3-rapidfuzz_3.12.2+ds-1+b1_amd64.deb
 Size: 2632264
 MD5sum: 56e60f7c7ff33d8d2cea89748c5fff12
 SHA256: 9017d07c746d9d78f7097b01d3fb8f5e84dbd9edcf163eeb5942470c2c05644d
+
+Package: python3-rapt-ble
+Source: rapt-ble
+Version: 0.1.2-3
+Installed-Size: 150
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-bluetooth-sensor-state-data, python3-home-assistant-bluetooth, python3-bluetooth-data-tools, python3-sensor-state-data, python3:any, libjs-jquery (>= 3.6.0), libjs-sphinxdoc (>= 8.1), sphinx-rtd-theme-common (>= 3.0.2+dfsg)
+Description: Parser for RAPT Pill hydrometer BLE packets
+Homepage: https://github.com/sairon/rapt-ble
+Built-Using: sphinx (= 8.1.3-5)
+Description-md5: 18f360cf8d9d28fae3670c83670a5ddb
+python
+Priority: optional
+Filename: pool/main/r/rapt-ble/python3-rapt-ble_0.1.2-3_all.deb
+Size: 23608
+MD5sum: e3f3ba2c90a55a4d8d48af52a120f938
+SHA256: 41246482ab624dd4cf48942f39e25a3a584fdd04905fe0a7a2c6f939a9c74c61
 
 Package: python3-raritan-json-rpc
 Source: raritan-json-rpc-sdk
@@ -88568,6 +89332,23 @@ Size: 6972
 MD5sum: 0a5f1720c9449b559aadc4850821a3dd
 SHA256: bef92d6453b69d0c83eb0adab3d9409f134a96968473f3127cf86319272a121f
 
+Package: python3-ruuvitag-ble
+Source: ruuvitag-ble
+Version: 0.4.0-1
+Installed-Size: 48
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-bluetooth-data-tools, python3-bluetooth-sensor-state-data, python3-home-assistant-bluetooth, python3-sensor-state-data (>= 2.20), python3:any
+Description: Handle RuuviTag BLE devices
+Homepage: https://github.com/Bluetooth-Devices/ruuvitag-ble
+Description-md5: 98e842284356644a3d1d2fc1bab6ac64
+python
+Priority: optional
+Filename: pool/main/r/ruuvitag-ble/python3-ruuvitag-ble_0.4.0-1_all.deb
+Size: 8816
+MD5sum: 8a860dc7f39bcd6573f63b5e3da368d4
+SHA256: 5cd297dce9c711bd118e104d08f58f0a1c2c99c5912749c09381132349da5846
+
 Package: python3-sabctools
 Source: sabctools
 Version: 9.4.0-1
@@ -89363,6 +90144,41 @@ Filename: pool/main/s/sensor-state-data/python3-sensor-state-data_2.20.0-1_all.d
 Size: 14440
 MD5sum: f6c73574fd23268df5713d0612d981fc
 SHA256: 6fe10de1e5e6421c5151183b9c7753bfcf5864306d5300e89f44f56790165d91
+
+Package: python3-sensorpro-ble
+Source: sensorpro-ble
+Version: 1.0.0-1
+Installed-Size: 155
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-bluetooth-data-tools (>= 1.8.0), python3-bluetooth-sensor-state-data (>= 1.8.0), python3-sensor-state-data, python3:any
+Description: Library for interacting with SensorPro BLE devices
+Homepage: https://github.com/bluetooth-devices/sensorpro-ble
+Description-md5: 883fcb6c640499c4bfda9f1088fbd53d
+python
+Priority: optional
+Filename: pool/main/s/sensorpro-ble/python3-sensorpro-ble_1.0.0-1_all.deb
+Size: 28900
+MD5sum: a78764091c43ff1fd155d8cbb0dcf0b4
+SHA256: be018d0f91a3c88c41ea2e80bc4d153a52915c3cb4b84e73090f8491e2ea9ac2
+
+Package: python3-sensorpush-ble
+Source: sensorpush-ble
+Version: 1.9.0-1
+Installed-Size: 166
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-bluetooth-data-tools, python3-bluetooth-sensor-state-data (>= 1.8.0), python3:any, libjs-jquery (>= 3.6.0), libjs-sphinxdoc (>= 8.1), sphinx-rtd-theme-common (>= 3.0.2+dfsg)
+Description: Parser for SensorPush Bluetooth Low Energy (BLE) devices
+Homepage: https://github.com/bluetooth-devices/sensorpush-ble
+Built-Using: sphinx (= 8.1.3-5)
+Description-md5: ab960a630d344d45fba80f4285243c53
+python
+Priority: optional
+Filename: pool/main/s/sensorpush-ble/python3-sensorpush-ble_1.9.0-1_all.deb
+Size: 32692
+MD5sum: 8f8f917740c6c003f8713e10e76a2955
+SHA256: 0d52a8e39377febbfdfc0e0f67c98519f973092f42b20c09bcfc06c02565446e
 
 Package: python3-sentence-stream
 Source: sentence-stream
@@ -90480,20 +91296,20 @@ SHA256: 935d166f2a375168c9cb9f4900c1fbd32933b698c0517f34e950bdb247351d89
 
 Package: python3-slixmpp-omemo
 Source: slixmpp-omemo
-Version: 2.1.0-1
+Version: 2.2.0-1
 Installed-Size: 138
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
-Depends: python3-oldmemo (>= 2~), python3-omemo (>= 2~), python3-slixmpp, python3-twomemo (>= 2~), python3-typing-extensions, python3:any
+Depends: python3-oldmemo (>= 2~), python3-omemo (>= 2~), python3-slixmpp, python3-twomemo (>= 2~), python3:any
 Description: OMEMO End-to-End Encryption plugin for slixmpp
 Homepage: https://github.com/Syndace/slixmpp-omemo
 Description-md5: 2d4c40d5ea293797de3a8544a49b64ac
 python
 Priority: optional
-Filename: pool/main/s/slixmpp-omemo/python3-slixmpp-omemo_2.1.0-1_all.deb
-Size: 31256
-MD5sum: f0d939f69cfd52f4b2ab535e82cf07cd
-SHA256: d04b4b3b7eda4c0371866233f93f28be14d22ab287ec5584024cda6e56318889
+Filename: pool/main/s/slixmpp-omemo/python3-slixmpp-omemo_2.2.0-1_all.deb
+Size: 31476
+MD5sum: ad63d20680ea8550b0f1b8e31dc6a282
+SHA256: 03245fde5598af034a19cfa0654496acfdae9a3c68820a90248608c44a665ff6
 
 Package: python3-smart-meter-texas
 Source: smart-meter-texas
@@ -94792,6 +95608,41 @@ Size: 16176
 MD5sum: 74d2a6414ef6641089536f52371ed3be
 SHA256: afa2355f497a09f36d3e63583bf03d4133bfedaa920e6b0e90f2ca1f3e899d4e
 
+Package: python3-thermobeacon-ble
+Source: thermobeacon-ble
+Version: 1.0.0-1
+Installed-Size: 37
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-bluetooth-data-tools, python3-bluetooth-sensor-state-data (>= 1.8.0), python3:any
+Description: Parser for Thermobeacon devices
+Homepage: https://github.com/bluetooth-devices/thermobeacon-ble
+Description-md5: 012f094e40953e3d80513b2db59dafd7
+python
+Priority: optional
+Filename: pool/main/t/thermobeacon-ble/python3-thermobeacon-ble_1.0.0-1_all.deb
+Size: 10852
+MD5sum: 525537361d668357366b2534368c0123
+SHA256: b11540d45f62dab7f0714783a596ef125672423612101acd734bfa2134da6d8e
+
+Package: python3-thermopro-ble
+Source: thermopro-ble
+Version: 1.1.4-1
+Installed-Size: 219
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-bluetooth-data-tools, python3-bluetooth-sensor-state-data (>= 1.8.0), python3:any, libjs-jquery (>= 3.6.0), libjs-sphinxdoc (>= 9.0), sphinx-rtd-theme-common (>= 3.1.0+dfsg)
+Description: Library for interacting with ThermoPro BLE sensors
+Homepage: https://github.com/bluetooth-devices/thermopro-ble
+Built-Using: sphinx (= 9.1.0-3)
+Description-md5: 942b1359de7955bb3df2c0fac1df2050
+python
+Priority: optional
+Filename: pool/main/t/thermopro-ble/python3-thermopro-ble_1.1.4-1_all.deb
+Size: 45476
+MD5sum: 0e165800bde60c2da146c5f78ac126c4
+SHA256: dc5b4ae67a96295b264ca85105373cfc6dac038955125ee8a5a7a5c23bfb8826
+
 Package: python3-three-merge
 Source: three-merge
 Version: 0.1.1-4
@@ -94896,6 +95747,23 @@ Filename: pool/main/t/tiktoken/python3-tiktoken_0.12.0-2_amd64.deb
 Size: 827980
 MD5sum: 61a5cb22f80b6472d53c5bf87aa0b8ce
 SHA256: 926520be2c8d89a375b13e88d3359573c57a7980201ea5f00bb305621bbf1b7e
+
+Package: python3-tilt-ble
+Source: tilt-ble
+Version: 1.0.1-1
+Installed-Size: 155
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-home-assistant-bluetooth, python3-bluetooth-data-tools, python3-bluetooth-sensor-state-data, python3:any
+Description: Parser library for Tilt BLE devices
+Homepage: https://github.com/Bluetooth-Devices/tilt-ble
+Description-md5: ee64da80e440cfbf2c752ebf6d16ce5e
+python
+Priority: optional
+Filename: pool/main/t/tilt-ble/python3-tilt-ble_1.0.1-1_all.deb
+Size: 28500
+MD5sum: e11a6cd20addd9d41f4ea615084c5540
+SHA256: 33481ae1a0793688c5b1a8d17bfd20da1f020578e11a3a4e3011aba49f419af9
 
 Package: python3-timeout-decorator
 Source: timeout-decorator
@@ -101506,20 +102374,20 @@ SHA256: d77698b5c815ab0f653d2618d05d3dcc9ba6742426a55c7af991d9ac923be3db
 
 Package: python3-xarray-eopf
 Source: xarray-eopf
-Version: 0.2.7-2
-Installed-Size: 27248
+Version: 0.2.8-1
+Installed-Size: 27538
 Maintainer: Debian GIS Project <pkg-grass-devel@lists.alioth.debian.org>
 Architecture: all
-Depends: python3-aiohttp, python3-dask, python3-dask-image, python3-fsspec, python3-numba, python3-numpy, python3-pyproj, python3-requests, python3-s3fs, python3-xarray, python3-xcube-resampling, python3-zarr, python3:any
+Depends: python3-aiohttp, python3-dask, python3-dask-image, python3-flox, python3-fsspec, python3-numpy, python3-pyproj, python3-requests, python3-rioxarray, python3-s3fs, python3-xarray, python3-xcube-resampling, python3-zarr, python3:any
 Description: EOPF Zarr backend for xarray
 Homepage: https://github.com/EOPF-Sample-Service/xarray-eopf
 Description-md5: 8b2d1e5e766e135c15223addb0cc99f3
 python
 Priority: optional
-Filename: pool/main/x/xarray-eopf/python3-xarray-eopf_0.2.7-2_all.deb
-Size: 10126120
-MD5sum: db4041cd9516bada2aae2989ecae615f
-SHA256: 42cb90c213d4ecb95f194361a72e775c97492d0181ec8b1f44cfc7779dc0418b
+Filename: pool/main/x/xarray-eopf/python3-xarray-eopf_0.2.8-1_all.deb
+Size: 10235760
+MD5sum: 9a965fa55b732276ac4653e727aa3a35
+SHA256: b805500f0307b51dde2926a3d20045e933032a6084b7b07c00bd58de36eaff8a
 
 Package: python3-xarray-safe-rcm
 Source: xarray-safe-rcm
@@ -101910,6 +102778,24 @@ Filename: pool/main/x/xyzservices/python3-xyzservices_2026.3.0-1_all.deb
 Size: 597360
 MD5sum: fc732cfc765a4bd766732dc37bfec58b
 SHA256: ae1e4a759b92509162db7fc11b24f984016f24872e8c4e04100f86a0d48a349b
+
+Package: python3-yalexs-ble
+Source: yalexs-ble
+Version: 3.3.0-1
+Installed-Size: 306
+Maintainer: Home Assistant Team <team+homeassistant@tracker.debian.org>
+Architecture: all
+Depends: python3-async-interrupt, python3-bleak, python3-bleak-retry-connector, python3-cryptography (>= 38.0.0), python3-lru-dict, python3:any, libjs-jquery (>= 3.6.0), libjs-sphinxdoc (>= 8.2), sphinx-rtd-theme-common (>= 3.1.0+dfsg)
+Description: Bluetooth control of Yale and August locks
+Homepage: https://github.com/bdraco/yalexs-ble
+Built-Using: sphinx (= 8.2.3-12)
+Description-md5: 7b76154e37447f51f5dc19acd8b65fd6
+python
+Priority: optional
+Filename: pool/main/y/yalexs-ble/python3-yalexs-ble_3.3.0-1_all.deb
+Size: 74196
+MD5sum: 07a294bff72de57f03da3b1b1ca67279
+SHA256: edb40943f9af59b9fd944eb4dfd0c07d1f6b1f42cf709d7ae22f641cf281c35c
 
 Package: python3-yamale
 Source: yamale
@@ -102476,20 +103362,20 @@ SHA256: 89689fb161728f67dc58d261eb45a5b84030bb8d53552f2a88c131d0c15a5015
 
 Package: python3-zigpy-xbee
 Source: zigpy-xbee
-Version: 0.21.1-1
-Installed-Size: 72
+Version: 0.21.1-2
+Installed-Size: 83
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
-Depends: python3-serial-asyncio, python3-voluptuous, python3-zigpy (>= 0.76.1-2), python3:any
+Depends: python3-zigpy, python3:any
 Description: Python library to interface with XBee radios using the zigpy library
 Homepage: https://github.com/zigpy/zigpy-xbee
 Description-md5: bc7aca911abb04e5ae0a085f99b86e2f
 python
 Priority: optional
-Filename: pool/main/z/zigpy-xbee/python3-zigpy-xbee_0.21.1-1_all.deb
-Size: 17572
-MD5sum: a49f09acb8f06c695e0e619efeb8ee0f
-SHA256: 43740c5b3154fc6474a3e826508837b3f80e0944ed39fbf0242684898a831877
+Filename: pool/main/z/zigpy-xbee/python3-zigpy-xbee_0.21.1-2_all.deb
+Size: 20264
+MD5sum: 713ab170c127a1255fe35eda86b904f9
+SHA256: b7bb4dda201b3be69e986e1dc3a3d51820298d31ee1438c0777f58dc9091e7fe
 
 Package: python3-zigpy-zigate
 Source: zigpy-zigate
