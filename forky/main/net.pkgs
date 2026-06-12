@@ -55,8 +55,8 @@ MD5sum: 2b7d659547768497a2179ea9158ff54d
 SHA256: c4eb9a54ab5737af63c953a5d18d2a7e69e4a64b4025735bb7db994c799b5a98
 
 Package: aardvark-dns
-Version: 1.16.0-4
-Installed-Size: 2642
+Version: 1.16.0-5
+Installed-Size: 2630
 Maintainer: Reinhard Tartler <siretart@tauware.de>
 Architecture: amd64
 Depends: netavark (>> 1.14), libc6 (>= 2.34), libgcc-s1 (>= 4.2)
@@ -66,10 +66,10 @@ Homepage: https://github.com/containers/aardvark-dns
 Description-md5: c28905e0e5bc117a59922a396c3d593b
 net
 Priority: optional
-Filename: pool/main/a/aardvark-dns/aardvark-dns_1.16.0-4_amd64.deb
-Size: 829208
-MD5sum: d72c41e9623d79414762b71290e9019f
-SHA256: ee396cf11de0fe40f297ab7205bd335e4ea0cc58dbe4b626a5ba4e0c2dd62ac5
+Filename: pool/main/a/aardvark-dns/aardvark-dns_1.16.0-5_amd64.deb
+Size: 829052
+MD5sum: 66935cef24d6b1e8893b241c12d5be16
+SHA256: 6f870c402eba550650efd1e5b53ce6c1e73231021a9305f3bf6147b5da4cb918
 
 Package: adjutant-common
 Source: adjutant
@@ -2325,7 +2325,7 @@ MD5sum: 1e4c855d349cd956bee0a3db4d037ea6
 SHA256: d329e27ec69fc1189a2ecceca44c81f4b54f99b19979f6e5db1d57832b72b97a
 
 Package: cfingerd
-Version: 1.4.3-11
+Version: 1.4.3-12
 Installed-Size: 172
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: amd64
@@ -2339,10 +2339,10 @@ Tag: interface::daemon, network::server, network::service, protocol::finger,
  role::program, use::scanning, works-with::people
 net
 Priority: optional
-Filename: pool/main/c/cfingerd/cfingerd_1.4.3-11_amd64.deb
-Size: 69092
-MD5sum: 4ac29fdce77b3c1e83b69d686f9e87cb
-SHA256: c296c47c57178c6a9679d1d4e49f98fffdd61b5a098b45cec5cfafa63269a858
+Filename: pool/main/c/cfingerd/cfingerd_1.4.3-12_amd64.deb
+Size: 69164
+MD5sum: 09e4336a93d61d99476d802663885b73
+SHA256: 909e1e6744e4a49c804655f9451ef85c755e066b096a5764a0adfc9f823b2167
 
 Package: cgit
 Version: 1.2.3+git20250818.80.3346409+git2.51.0-1
@@ -3089,6 +3089,25 @@ Filename: pool/main/c/corkscrew/corkscrew_2.0-15_amd64.deb
 Size: 10512
 MD5sum: b07b04b2c673f7dd9579fd7eefb49bc4
 SHA256: 513fef3fa7125aff5425e55891e2a51ab65a347efbeb3ac72e40fb55831fbb86
+
+Package: coturn
+Version: 4.12.0-1
+Installed-Size: 1661
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Provides: stun-server, turn-server
+Depends: sqlite3, telnet | telnet-client, systemd | systemd-standalone-sysusers | systemd-sysusers, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, libc6 (>= 2.38), libevent-core-2.1-7t64 (>= 2.1.8-stable), libevent-extra-2.1-7t64 (>= 2.1.8-stable), libevent-openssl-2.1-7t64 (>= 2.1.8-stable), libevent-pthreads-2.1-7t64 (>= 2.1.8-stable), libhiredis1.1.0 (>= 1.2.0), libmariadb3 (>= 3.0.0), libpq5 (>= 8.4~), libsqlite3-0 (>= 3.6.0), libssl3t64 (>= 3.2.0), libsystemd0
+Suggests: sip-router, xmpp-server
+Conflicts: rfc5766-turn-server, turnserver
+Description: TURN and STUN server for VoIP
+Homepage: https://github.com/coturn/coturn/
+Description-md5: 3baf5e2f083e7f1c9c71ad4c68db3792
+net
+Priority: optional
+Filename: pool/main/c/coturn/coturn_4.12.0-1_amd64.deb
+Size: 405916
+MD5sum: 63abe87784faab51fc016ec33c1e1e2a
+SHA256: d0118a5465532598c4ed84c10c4fde83acdd42eec08dfab0acf2729a421843cd
 
 Package: cowpatty
 Version: 4.8-4
@@ -6311,40 +6330,40 @@ SHA256: 2a29838a595f2f69b2177a8e55c1b9dd6faea8673c3139a5c55981e6897190c9
 
 Package: etcd-client
 Source: etcd
-Version: 3.5.16-11
-Installed-Size: 21530
+Version: 3.5.30-2
+Installed-Size: 21524
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34)
 Description: highly-available key value store -- client
 Homepage: https://etcd.io
 Description-md5: df7ad39b54e72898624c05a59914bc7e
-Static-Built-Using: go-md2man-v2 (= 2.0.7-1), golang-1.26 (= 1.26.3-2), golang-blackfriday-v2 (= 2.1.0-1), golang-github-beorn7-perks (= 1.0.1-3), golang-github-bgentry-speakeasy (= 0.1.0-2), golang-github-cenkalti-backoff (= 5.0.3-3), golang-github-cespare-xxhash (= 2.3.0-1), golang-github-clipperhouse-displaywidth (= 0.11.0+ds-2), golang-github-clipperhouse-uax29 (= 2.7.0-3), golang-github-cockroachdb-datadriven (= 1.0.2-6), golang-github-coreos-bbolt (= 1.4.3-1), golang-github-coreos-go-systemd (= 22.6.0-1), golang-github-coreos-semver (= 0.3.1-1), golang-github-creack-pty (= 1.1.21-1), golang-github-davecgh-go-spew (= 1.1.1-5), golang-github-dustin-go-humanize (= 1.0.1-1), golang-github-fatih-color (= 1.19.0-1), golang-github-go-logr-logr (= 1.4.3-1), golang-github-go-logr-stdr (= 1.2.2-4), golang-github-golang-groupcache (= 0.0~git20210331.41bb18b-2), golang-github-golang-jwt-jwt (= 5.0.0+really4.5.2-1), golang-github-golang-protobuf-1-5 (= 1.5.4-2), golang-github-google-btree (= 1.0.1-1), golang-github-google-uuid (= 1.6.0-1), golang-github-gorilla-websocket (= 1.5.3-1), golang-github-grpc-ecosystem-go-grpc-prometheus (= 1.2.0+git20191002.6af20e3-5), golang-github-grpc-ecosystem-grpc-gateway (= 2.27.2-1), golang-github-jonboulle-clockwork (= 0.5.0+really+0.1.0-1), golang-github-json-iterator-go (= 1.1.12-2), golang-github-mattn-go-colorable (= 0.1.13-1), golang-github-mattn-go-isatty (= 0.0.20-1), golang-github-mattn-go-runewidth (= 0.0.22-1), golang-github-modern-go-concurrent (= 1.0.3-1.1), golang-github-modern-go-reflect2 (= 1.0.2-2), golang-github-munnerz-goautoneg (= 0.0~git20191010.a7dc8b6-2), golang-github-olekukonko-cat (= 0.0~git20250911.50322a0-1), golang-github-olekukonko-errors (= 1.3.0-1), golang-github-olekukonko-ll (= 0.1.8-1), golang-github-olekukonko-tablewriter (= 1.1.4-1), golang-github-pmezard-go-difflib (= 1.0.0-4), golang-github-prometheus-client-golang (= 1.23.2-3), golang-github-prometheus-client-model (= 0.6.2-2), golang-github-prometheus-common (= 0.67.5-1), golang-github-prometheus-procfs (= 0.20.1-2), golang-github-soheilhy-cmux (= 0.1.5-2), golang-github-spf13-cobra (= 1.10.2-1), golang-github-spf13-pflag (= 1.0.10-1), golang-github-tmc-grpc-websocket-proxy (= 0.0~git20200427.3cfed13-3), golang-github-urfave-cli (= 1.22.14-1), golang-github-xiang90-probing (= 0.0.2-2), golang-go.crypto (= 1:0.52.0-1), golang-go.uber-multierr (= 1.11.0-1), golang-go.uber-zap (= 1.27.0-1), golang-gogoprotobuf (= 1.3.2-3), golang-golang-x-net (= 1:0.53.0-2), golang-golang-x-sync (= 0.19.0-1), golang-golang-x-sys (= 0.45.0+dfsg-1), golang-golang-x-text (= 0.36.0-1), golang-golang-x-time (= 0.14.0-1), golang-google-genproto (= 0.0~git20260414.afd174a-1), golang-google-grpc (= 1.81.1-1), golang-google-protobuf (= 1.36.10-2), golang-gopkg-cheggaaa-pb.v1 (= 1.0.25-3), golang-gopkg-natefinch-lumberjack.v2 (= 2.1-2), golang-gopkg-yaml.v3 (= 3.0.4-3), golang-k8s-sigs-yaml (= 1.4.0-2), golang-logrus (= 1.9.3-1), golang-opentelemetry-contrib (= 1.43.0-1), golang-opentelemetry-otel (= 1.43.0-2), golang-opentelemetry-proto (= 1.10.0-1), golang-testify (= 1.11.1-1), golang-yaml.v2 (= 2.4.3-1)
+Static-Built-Using: go-md2man-v2 (= 2.0.7-1), golang-1.26 (= 1.26.4-1), golang-blackfriday-v2 (= 2.1.0-1), golang-github-beorn7-perks (= 1.0.1-3), golang-github-bgentry-speakeasy (= 0.1.0-2), golang-github-cenkalti-backoff (= 5.0.3-3), golang-github-cespare-xxhash (= 2.3.0-1), golang-github-clipperhouse-displaywidth (= 0.11.0+ds-2), golang-github-clipperhouse-uax29 (= 2.7.0-3), golang-github-cockroachdb-datadriven (= 1.0.2-6), golang-github-coreos-bbolt (= 1.4.3-1), golang-github-coreos-go-systemd (= 22.6.0-1), golang-github-coreos-semver (= 0.3.1-1), golang-github-creack-pty (= 1.1.21-1), golang-github-davecgh-go-spew (= 1.1.1-5), golang-github-dustin-go-humanize (= 1.0.1-1), golang-github-fatih-color (= 1.19.0-1), golang-github-go-logr-logr (= 1.4.3-1), golang-github-go-logr-stdr (= 1.2.2-4), golang-github-golang-groupcache (= 0.0~git20210331.41bb18b-2), golang-github-golang-jwt-jwt (= 5.0.0+really4.5.2-1), golang-github-golang-protobuf-1-5 (= 1.5.4-2), golang-github-google-btree (= 1.0.1-1), golang-github-google-uuid (= 1.6.0-1), golang-github-gorilla-websocket (= 1.5.3-1), golang-github-grpc-ecosystem-go-grpc-prometheus (= 1.2.0+git20191002.6af20e3-5), golang-github-grpc-ecosystem-grpc-gateway (= 2.27.2-1), golang-github-jonboulle-clockwork (= 0.5.0+really+0.1.0-1), golang-github-json-iterator-go (= 1.1.12-2), golang-github-mattn-go-colorable (= 0.1.13-1), golang-github-mattn-go-isatty (= 0.0.20-1), golang-github-mattn-go-runewidth (= 0.0.22-1), golang-github-modern-go-concurrent (= 1.0.3-1.1), golang-github-modern-go-reflect2 (= 1.0.2-2), golang-github-munnerz-goautoneg (= 0.0~git20191010.a7dc8b6-2), golang-github-olekukonko-cat (= 0.0~git20250911.50322a0-1), golang-github-olekukonko-errors (= 1.3.0-1), golang-github-olekukonko-ll (= 0.1.8-1), golang-github-olekukonko-tablewriter (= 1.1.4-1), golang-github-pmezard-go-difflib (= 1.0.0-4), golang-github-prometheus-client-golang (= 1.23.2-3), golang-github-prometheus-client-model (= 0.6.2-2), golang-github-prometheus-common (= 0.68.1-1), golang-github-prometheus-procfs (= 0.20.1-2), golang-github-soheilhy-cmux (= 0.1.5-2), golang-github-spf13-cobra (= 1.10.2-1), golang-github-spf13-pflag (= 1.0.10-1), golang-github-tmc-grpc-websocket-proxy (= 0.0~git20200427.3cfed13-3), golang-github-urfave-cli (= 1.22.14-1), golang-github-xiang90-probing (= 0.0.2-2), golang-go.crypto (= 1:0.52.0-1), golang-go.uber-multierr (= 1.11.0-1), golang-go.uber-zap (= 1.27.0-1), golang-gogoprotobuf (= 1.3.2-3), golang-golang-x-net (= 1:0.55.0-1), golang-golang-x-sync (= 0.20.0-1), golang-golang-x-sys (= 0.45.0+dfsg-1), golang-golang-x-text (= 0.36.0-1), golang-golang-x-time (= 0.15.0-1), golang-google-genproto (= 0.0~git20260414.afd174a-1), golang-google-grpc (= 1.81.1-1), golang-google-protobuf (= 1.36.10-2), golang-gopkg-cheggaaa-pb.v1 (= 1.0.25-3), golang-gopkg-natefinch-lumberjack.v2 (= 2.1-2), golang-gopkg-yaml.v3 (= 3.0.4-3), golang-k8s-sigs-yaml (= 1.4.0-2), golang-logrus (= 1.9.3-1), golang-opentelemetry-contrib (= 1.43.0-1), golang-opentelemetry-otel (= 1.43.0-4), golang-opentelemetry-proto (= 1.10.0-1), golang-testify (= 1.11.1-1), golang-yaml.v2 (= 2.4.3-1)
 net
 Priority: optional
-Filename: pool/main/e/etcd/etcd-client_3.5.16-11_amd64.deb
-Size: 5901760
-MD5sum: 6a6c9670edaf7d533926425e25cc4188
-SHA256: 267c271071f9480b2212e644b8b383fab0094e836be6a6f3155b623fe50a6f4e
+Filename: pool/main/e/etcd/etcd-client_3.5.30-2_amd64.deb
+Size: 5898812
+MD5sum: 937acc53390da157e4e3d3f8a8eee744
+SHA256: 1e66ad2aba4cba6842a1ac35d5c525e750102b8fb42748225bcb2e34d6595931
 
 Package: etcd-server
 Source: etcd
-Version: 3.5.16-11
-Installed-Size: 44605
+Version: 3.5.30-2
+Installed-Size: 44643
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
-Depends: adduser, libc6 (>= 2.34)
+Depends: systemd | systemd-standalone-sysusers | systemd-sysusers, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, libc6 (>= 2.34)
 Suggests: etcd-client
 Description: highly-available key value store -- daemon
 Homepage: https://etcd.io
 Description-md5: 8f85560d0278814c3be68fd7bc841ca2
-Static-Built-Using: go-md2man-v2 (= 2.0.7-1), golang-1.26 (= 1.26.3-2), golang-blackfriday-v2 (= 2.1.0-1), golang-github-beorn7-perks (= 1.0.1-3), golang-github-bgentry-speakeasy (= 0.1.0-2), golang-github-cenkalti-backoff (= 5.0.3-3), golang-github-cespare-xxhash (= 2.3.0-1), golang-github-clipperhouse-displaywidth (= 0.11.0+ds-2), golang-github-clipperhouse-uax29 (= 2.7.0-3), golang-github-cockroachdb-datadriven (= 1.0.2-6), golang-github-coreos-bbolt (= 1.4.3-1), golang-github-coreos-go-systemd (= 22.6.0-1), golang-github-coreos-semver (= 0.3.1-1), golang-github-creack-pty (= 1.1.21-1), golang-github-davecgh-go-spew (= 1.1.1-5), golang-github-dustin-go-humanize (= 1.0.1-1), golang-github-fatih-color (= 1.19.0-1), golang-github-go-logr-logr (= 1.4.3-1), golang-github-go-logr-stdr (= 1.2.2-4), golang-github-golang-groupcache (= 0.0~git20210331.41bb18b-2), golang-github-golang-jwt-jwt (= 5.0.0+really4.5.2-1), golang-github-golang-protobuf-1-5 (= 1.5.4-2), golang-github-google-btree (= 1.0.1-1), golang-github-google-uuid (= 1.6.0-1), golang-github-gorilla-websocket (= 1.5.3-1), golang-github-grpc-ecosystem-go-grpc-prometheus (= 1.2.0+git20191002.6af20e3-5), golang-github-grpc-ecosystem-grpc-gateway (= 2.27.2-1), golang-github-jonboulle-clockwork (= 0.5.0+really+0.1.0-1), golang-github-json-iterator-go (= 1.1.12-2), golang-github-mattn-go-colorable (= 0.1.13-1), golang-github-mattn-go-isatty (= 0.0.20-1), golang-github-mattn-go-runewidth (= 0.0.22-1), golang-github-modern-go-concurrent (= 1.0.3-1.1), golang-github-modern-go-reflect2 (= 1.0.2-2), golang-github-munnerz-goautoneg (= 0.0~git20191010.a7dc8b6-2), golang-github-olekukonko-cat (= 0.0~git20250911.50322a0-1), golang-github-olekukonko-errors (= 1.3.0-1), golang-github-olekukonko-ll (= 0.1.8-1), golang-github-olekukonko-tablewriter (= 1.1.4-1), golang-github-pmezard-go-difflib (= 1.0.0-4), golang-github-prometheus-client-golang (= 1.23.2-3), golang-github-prometheus-client-model (= 0.6.2-2), golang-github-prometheus-common (= 0.67.5-1), golang-github-prometheus-procfs (= 0.20.1-2), golang-github-soheilhy-cmux (= 0.1.5-2), golang-github-spf13-cobra (= 1.10.2-1), golang-github-spf13-pflag (= 1.0.10-1), golang-github-tmc-grpc-websocket-proxy (= 0.0~git20200427.3cfed13-3), golang-github-urfave-cli (= 1.22.14-1), golang-github-xiang90-probing (= 0.0.2-2), golang-go.crypto (= 1:0.52.0-1), golang-go.uber-multierr (= 1.11.0-1), golang-go.uber-zap (= 1.27.0-1), golang-gogoprotobuf (= 1.3.2-3), golang-golang-x-net (= 1:0.53.0-2), golang-golang-x-sync (= 0.19.0-1), golang-golang-x-sys (= 0.45.0+dfsg-1), golang-golang-x-text (= 0.36.0-1), golang-golang-x-time (= 0.14.0-1), golang-google-genproto (= 0.0~git20260414.afd174a-1), golang-google-grpc (= 1.81.1-1), golang-google-protobuf (= 1.36.10-2), golang-gopkg-cheggaaa-pb.v1 (= 1.0.25-3), golang-gopkg-natefinch-lumberjack.v2 (= 2.1-2), golang-gopkg-yaml.v3 (= 3.0.4-3), golang-k8s-sigs-yaml (= 1.4.0-2), golang-logrus (= 1.9.3-1), golang-opentelemetry-contrib (= 1.43.0-1), golang-opentelemetry-otel (= 1.43.0-2), golang-opentelemetry-proto (= 1.10.0-1), golang-testify (= 1.11.1-1), golang-yaml.v2 (= 2.4.3-1)
+Static-Built-Using: go-md2man-v2 (= 2.0.7-1), golang-1.26 (= 1.26.4-1), golang-blackfriday-v2 (= 2.1.0-1), golang-github-beorn7-perks (= 1.0.1-3), golang-github-bgentry-speakeasy (= 0.1.0-2), golang-github-cenkalti-backoff (= 5.0.3-3), golang-github-cespare-xxhash (= 2.3.0-1), golang-github-clipperhouse-displaywidth (= 0.11.0+ds-2), golang-github-clipperhouse-uax29 (= 2.7.0-3), golang-github-cockroachdb-datadriven (= 1.0.2-6), golang-github-coreos-bbolt (= 1.4.3-1), golang-github-coreos-go-systemd (= 22.6.0-1), golang-github-coreos-semver (= 0.3.1-1), golang-github-creack-pty (= 1.1.21-1), golang-github-davecgh-go-spew (= 1.1.1-5), golang-github-dustin-go-humanize (= 1.0.1-1), golang-github-fatih-color (= 1.19.0-1), golang-github-go-logr-logr (= 1.4.3-1), golang-github-go-logr-stdr (= 1.2.2-4), golang-github-golang-groupcache (= 0.0~git20210331.41bb18b-2), golang-github-golang-jwt-jwt (= 5.0.0+really4.5.2-1), golang-github-golang-protobuf-1-5 (= 1.5.4-2), golang-github-google-btree (= 1.0.1-1), golang-github-google-uuid (= 1.6.0-1), golang-github-gorilla-websocket (= 1.5.3-1), golang-github-grpc-ecosystem-go-grpc-prometheus (= 1.2.0+git20191002.6af20e3-5), golang-github-grpc-ecosystem-grpc-gateway (= 2.27.2-1), golang-github-jonboulle-clockwork (= 0.5.0+really+0.1.0-1), golang-github-json-iterator-go (= 1.1.12-2), golang-github-mattn-go-colorable (= 0.1.13-1), golang-github-mattn-go-isatty (= 0.0.20-1), golang-github-mattn-go-runewidth (= 0.0.22-1), golang-github-modern-go-concurrent (= 1.0.3-1.1), golang-github-modern-go-reflect2 (= 1.0.2-2), golang-github-munnerz-goautoneg (= 0.0~git20191010.a7dc8b6-2), golang-github-olekukonko-cat (= 0.0~git20250911.50322a0-1), golang-github-olekukonko-errors (= 1.3.0-1), golang-github-olekukonko-ll (= 0.1.8-1), golang-github-olekukonko-tablewriter (= 1.1.4-1), golang-github-pmezard-go-difflib (= 1.0.0-4), golang-github-prometheus-client-golang (= 1.23.2-3), golang-github-prometheus-client-model (= 0.6.2-2), golang-github-prometheus-common (= 0.68.1-1), golang-github-prometheus-procfs (= 0.20.1-2), golang-github-soheilhy-cmux (= 0.1.5-2), golang-github-spf13-cobra (= 1.10.2-1), golang-github-spf13-pflag (= 1.0.10-1), golang-github-tmc-grpc-websocket-proxy (= 0.0~git20200427.3cfed13-3), golang-github-urfave-cli (= 1.22.14-1), golang-github-xiang90-probing (= 0.0.2-2), golang-go.crypto (= 1:0.52.0-1), golang-go.uber-multierr (= 1.11.0-1), golang-go.uber-zap (= 1.27.0-1), golang-gogoprotobuf (= 1.3.2-3), golang-golang-x-net (= 1:0.55.0-1), golang-golang-x-sync (= 0.20.0-1), golang-golang-x-sys (= 0.45.0+dfsg-1), golang-golang-x-text (= 0.36.0-1), golang-golang-x-time (= 0.15.0-1), golang-google-genproto (= 0.0~git20260414.afd174a-1), golang-google-grpc (= 1.81.1-1), golang-google-protobuf (= 1.36.10-2), golang-gopkg-cheggaaa-pb.v1 (= 1.0.25-3), golang-gopkg-natefinch-lumberjack.v2 (= 2.1-2), golang-gopkg-yaml.v3 (= 3.0.4-3), golang-k8s-sigs-yaml (= 1.4.0-2), golang-logrus (= 1.9.3-1), golang-opentelemetry-contrib (= 1.43.0-1), golang-opentelemetry-otel (= 1.43.0-4), golang-opentelemetry-proto (= 1.10.0-1), golang-testify (= 1.11.1-1), golang-yaml.v2 (= 2.4.3-1)
 net
 Priority: optional
-Filename: pool/main/e/etcd/etcd-server_3.5.16-11_amd64.deb
-Size: 12046548
-MD5sum: a91905408121e738aac224a7f708adba
-SHA256: caf67681a44f608b356262e79de3d37109cbe305a03d93301583b999fb8ef9e8
+Filename: pool/main/e/etcd/etcd-server_3.5.30-2_amd64.deb
+Size: 12057556
+MD5sum: c8388219bdccd74beaf0f098f6d20773
+SHA256: 11a4f7e350c5020b83edff5160a6063d4e56ac9cd014d21ce8916378bf96de79
 
 Package: etherpuppet
 Version: 0.3-5
@@ -9136,7 +9155,7 @@ SHA256: 8c113326136591d67c42dac4ecaa8b5a47159c947e6557bdf8cde1c24eccde00
 
 Package: gssdp-tools
 Source: gssdp
-Version: 1.6.4-6
+Version: 1.6.5-1
 Installed-Size: 69
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -9147,10 +9166,10 @@ Description-md5: 05e1716eed0be96fde8938d50df1463a
 Tag: uitoolkit::gtk
 net
 Priority: optional
-Filename: pool/main/g/gssdp/gssdp-tools_1.6.4-6_amd64.deb
-Size: 16192
-MD5sum: e36ba4278a774df032b046acb8a3dc29
-SHA256: 9a28d095c9d38afae9cee2bf555708e2145ccce0d080a50db51b88d44a1ddc1e
+Filename: pool/main/g/gssdp/gssdp-tools_1.6.5-1_amd64.deb
+Size: 16204
+MD5sum: 8569211c550d751663262e1176bda9fb
+SHA256: 3e5932489754d3c5a76d059974826d5fdf748faeb0a57e00dfff7778cd215258
 
 Package: gssproxy
 Version: 0.9.2-5
@@ -14456,22 +14475,22 @@ MD5sum: 7aa1834f6bf668052db57381f028e8ba
 SHA256: 4385f134a79884f0e6ec43a5d673e7dfe42dfbb88938ea0a64b825db4333b6fa
 
 Package: amqp-tools
-Source: librabbitmq (0.15.0-1)
-Version: 0.15.0-1+b2
+Source: librabbitmq
+Version: 0.16.0-1
 Installed-Size: 173
 Maintainer: Florian Ernst <florian@debian.org>
 Architecture: amd64
-Depends: librabbitmq4 (= 0.15.0-1+b2), libc6 (>= 2.34), libpopt0 (>= 1.14)
+Depends: librabbitmq4 (= 0.16.0-1), libc6 (>= 2.34), libpopt0 (>= 1.14)
 Description: Command-line utilities for interacting with AMQP servers
 Homepage: https://github.com/alanxz/rabbitmq-c
 Description-md5: 8059068d01bfb939336097d2add7f12f
 Tag: interface::commandline, role::program
 net
 Priority: optional
-Filename: pool/main/libr/librabbitmq/amqp-tools_0.15.0-1+b2_amd64.deb
-Size: 37948
-MD5sum: 7b679eebea32f4156ea60eadab65510e
-SHA256: 500901fb5e3630c3e9a6148202b86995e7c70ee2610137c019b0417c912f4656
+Filename: pool/main/libr/librabbitmq/amqp-tools_0.16.0-1_amd64.deb
+Size: 38220
+MD5sum: 1f236664723532b0cb6b43b4a02f7172
+SHA256: f5859c1c8f1ebc215551d47fd35311904b6768f666307c2c3a84940a29e3ac74
 
 Package: libre-graph-api-cpp-qt-client
 Version: 1.0.4-2.1
@@ -16671,8 +16690,8 @@ MD5sum: 8fb406615962730bbf448e4d05739dc1
 SHA256: d3cc3eb36f0c8db8b0fda67a3d5bf2f488f88691f77c30784a940b4b2f5521e5
 
 Package: mrtgutils
-Version: 0.8.4-2
-Installed-Size: 83
+Version: 0.8.4-3
+Installed-Size: 82
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38)
@@ -16684,28 +16703,29 @@ Tag: admin::monitoring, implemented-in::c, interface::commandline,
  works-with-format::png, works-with::image, works-with::image:raster
 net
 Priority: optional
-Filename: pool/main/m/mrtgutils/mrtgutils_0.8.4-2_amd64.deb
-Size: 18112
-MD5sum: 1df7cfbc081b76157190760dc09758f2
-SHA256: b4ae91c1d8dace585595270e1b075630ce59e413690212277aecab85d88db812
+Filename: pool/main/m/mrtgutils/mrtgutils_0.8.4-3_amd64.deb
+Size: 17916
+MD5sum: ea1a2ad87b53b64c6ee6c430ce440437
+SHA256: 19dd8b96f537f0882a80b0107ef3314abe28da40a7bf2c5da2b54dc478e9a79f
 
 Package: mrtgutils-sensors
 Source: mrtgutils
-Version: 0.8.4-2
-Installed-Size: 30
+Version: 0.8.4-3
+Installed-Size: 29
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: amd64
+Replaces: mrtgutils (<= 0.7)
 Depends: libc6 (>= 2.38), libsensors5 (>= 1:3.5.0)
 Suggests: mrtgutils
-Conflicts: mrtgutils (<= 0.7)
+Breaks: mrtgutils (<= 0.7)
 Description: Utilities to generate statistics for mrtg (from lm-sensors)
 Description-md5: 122d619b71d60894c3fb4272d0fc83de
 net
 Priority: optional
-Filename: pool/main/m/mrtgutils/mrtgutils-sensors_0.8.4-2_amd64.deb
-Size: 9288
-MD5sum: a2abe4b193f3a1ef8794feee53c79de0
-SHA256: 6f94a087353e7c2e3b6b064572f057228bcfedf82d52046d0b23e55e2d33d062
+Filename: pool/main/m/mrtgutils/mrtgutils-sensors_0.8.4-3_amd64.deb
+Size: 9096
+MD5sum: 20b06a06ed7f1a97630a81a680646b35
+SHA256: e1416ca5d7bcb5c5147216390ba9f51e077f1c6215fca741adb7371d0cece72c
 
 Package: msktutil
 Version: 1.2.2-1
@@ -22745,21 +22765,21 @@ MD5sum: 8a883741d7d0c256d3f0fb422e3a5682
 SHA256: 1e6336930ac25ef58782ad2c3cd0027fa69c58432605565bb5308a1793a3e1d2
 
 Package: openvpn-auth-oauth2
-Version: 1.27.4-1
-Installed-Size: 22414
+Version: 1.28.0-1
+Installed-Size: 22600
 Maintainer: Daniel Baumann <daniel@debian.org>
 Architecture: amd64
 Depends: ssl-cert, libc6 (>= 2.34)
 Description: virtual private network daemon (OAuth2 plugin)
 Homepage: https://github.com/jkroepke/openvpn-auth-oauth2
 Description-md5: 367d1c0d512f62e45be6475462cb4c20
-Static-Built-Using: golang-1.26 (= 1.26.3-1), golang-cel-expr (= 0.24.0-1), golang-github-antlr4-go-antlr (= 4.13.1-2), golang-github-bmatcuk-doublestar (= 4.6.1-1), golang-github-davecgh-go-spew (= 1.1.1-5), golang-github-go-chi-chi (= 5.2.5-1), golang-github-go-jose-go-jose (= 4.1.4-1), golang-github-go-logr-logr (= 1.4.3-1), golang-github-go-logr-stdr (= 1.2.2-4), golang-github-google-cel-go (= 0.27.0+ds-3), golang-github-google-uuid (= 1.6.0-1), golang-github-gorilla-securecookie (= 1.1.2-1), golang-github-muhlemmer-gu (= 0.3.1-2), golang-github-muhlemmer-httpforwarded (= 0.1.0-2), golang-github-pmezard-go-difflib (= 1.0.0-4), golang-github-rs-cors (= 1.7.0-4), golang-github-zitadel-logging (= 0.6.2-1), golang-github-zitadel-oidc (= 3.47.5-1), golang-github-zitadel-schema (= 1.3.2-1), golang-go.crypto (= 1:0.50.0-1), golang-golang-x-exp (= 0.0~git20250911.df92998-1), golang-golang-x-net (= 1:0.53.0-2), golang-golang-x-oauth2 (= 0.27.0-1), golang-golang-x-sys (= 0.42.0-1), golang-golang-x-text (= 0.36.0-1), golang-google-protobuf (= 1.36.7-1), golang-gopkg-yaml.v3 (= 3.0.4-3), golang-logrus (= 1.9.3-1), golang-opentelemetry-otel (= 1.31.0-6), golang-testify (= 1.11.1-1)
+Static-Built-Using: golang-1.26 (= 1.26.4-1), golang-cel-expr (= 0.24.0-1), golang-github-antlr4-go-antlr (= 4.13.1-2), golang-github-bmatcuk-doublestar (= 4.6.1-1), golang-github-cespare-xxhash (= 2.3.0-1), golang-github-davecgh-go-spew (= 1.1.1-5), golang-github-go-chi-chi (= 5.3.0-1), golang-github-go-jose-go-jose (= 4.1.4-1), golang-github-go-logr-logr (= 1.4.3-1), golang-github-go-logr-stdr (= 1.2.2-4), golang-github-google-cel-go (= 0.27.0+ds-3), golang-github-google-uuid (= 1.6.0-1), golang-github-gorilla-securecookie (= 1.1.2-1), golang-github-muhlemmer-gu (= 0.3.1-2), golang-github-muhlemmer-httpforwarded (= 0.1.0-2), golang-github-pmezard-go-difflib (= 1.0.0-4), golang-github-rs-cors (= 1.11.1-2), golang-github-zitadel-logging (= 0.6.2-1), golang-github-zitadel-oidc (= 3.47.5-1), golang-github-zitadel-schema (= 1.3.2-1), golang-go.crypto (= 1:0.52.0-1), golang-golang-x-exp (= 0.0~git20260529.c761662-1), golang-golang-x-net (= 1:0.55.0-1), golang-golang-x-oauth2 (= 0.27.0-1), golang-golang-x-sys (= 0.45.0+dfsg-1), golang-golang-x-text (= 0.36.0-1), golang-google-protobuf (= 1.36.10-2), golang-gopkg-yaml.v3 (= 3.0.4-3), golang-logrus (= 1.9.3-1), golang-opentelemetry-otel (= 1.43.0-4), golang-testify (= 1.11.1-1)
 net
 Priority: optional
-Filename: pool/main/o/openvpn-auth-oauth2/openvpn-auth-oauth2_1.27.4-1_amd64.deb
-Size: 6476576
-MD5sum: 50e598d982d18a3b3c400f490e633125
-SHA256: b4abb3bba7a3e34cb6b4c25bc535be1bb877590736318c8b6d277086793e42ab
+Filename: pool/main/o/openvpn-auth-oauth2/openvpn-auth-oauth2_1.28.0-1_amd64.deb
+Size: 6523556
+MD5sum: e3a7ddb1290467e8d74f143dc813f61b
+SHA256: fd8db5a3154c1e428f2cf5edf98c64e6417cf7adb7757d1f0afb7c8f9e4c5426
 
 Package: openvpn-auth-radius
 Version: 2.1-12
@@ -22981,23 +23001,22 @@ MD5sum: 77e7c9abde58eacd192f4d25439d1637
 SHA256: ec055d6337a76f5d76aa8ca4651619e137053e283aeb118bbba2ba9b54939304
 
 Package: opkssh
-Source: opkssh (0.13.0-1)
-Version: 0.13.0-1+b1
-Installed-Size: 17085
+Version: 0.14.0-2
+Installed-Size: 17626
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34)
 Description: OpenPubkey SSH tools for OpenID SSH logins (program)
 Homepage: https://github.com/openpubkey/opkssh
-Built-Using: go-md2man-v2 (= 2.0.7-1), golang-1.26 (= 1.26.2-1), golang-blackfriday-v2 (= 2.1.0-1), golang-filippo-bigmod (= 0.1.0-2), golang-github-awnumar-memcall (= 0.4.0-2), golang-github-awnumar-memguard (= 0.22.5-2), golang-github-davecgh-go-spew (= 1.1.1-3), golang-github-go-jose-go-jose (= 4.1.4-1), golang-github-go-logr-logr (= 1.4.3-1), golang-github-go-logr-stdr (= 1.2.2-4), golang-github-google-uuid (= 1.6.0-1), golang-github-gorilla-securecookie (= 1.1.2-1), golang-github-kballard-go-shellquote (= 0.0~git20180428.95032a8-2), golang-github-lestrrat-go-blackmagic (= 1.0.4-1), golang-github-lestrrat-go-dsig (= 1.0.0-2), golang-github-lestrrat-go-httpcc (= 1.0.1-2), golang-github-lestrrat-go-httprc (= 3.0.5-1), golang-github-lestrrat-go-jwx (= 3.0.13-1), golang-github-lestrrat-go-option (= 2.0.0-3), golang-github-muhlemmer-gu (= 0.3.1-2), golang-github-openpubkey-openpubkey (= 0.22.0-1), golang-github-pmezard-go-difflib (= 1.0.0-3), golang-github-spf13-afero (= 1.15.0-2), golang-github-spf13-cobra (= 1.10.2-1), golang-github-spf13-pflag (= 1.0.10-1), golang-github-thediveo-enumflag (= 2.1.0-1), golang-github-valyala-fastjson (= 1.6.4-1), golang-github-zitadel-logging (= 0.6.2-1), golang-github-zitadel-oidc (= 3.47.2-1), golang-github-zitadel-schema (= 1.3.2-1), golang-go.crypto (= 1:0.47.0-1), golang-golang-x-exp (= 0.0~git20250911.df92998-1), golang-golang-x-mod (= 0.35.0-1), golang-golang-x-oauth2 (= 0.27.0-1), golang-golang-x-sys (= 0.42.0-1), golang-golang-x-term (= 0.41.0-1), golang-golang-x-text (= 0.36.0-1), golang-gopkg-yaml.v3 (= 3.0.4-3), golang-logrus (= 1.9.3-1), golang-opentelemetry-otel (= 1.31.0-6), golang-testify (= 1.10.0-1)
+Built-Using: go-md2man-v2 (= 2.0.7-1), golang-1.26 (= 1.26.4-1), golang-blackfriday-v2 (= 2.1.0-1), golang-filippo-bigmod (= 0.1.0-2), golang-github-awnumar-memcall (= 0.4.0-2), golang-github-awnumar-memguard (= 0.22.5-2), golang-github-bits-and-blooms-bitset (= 1.24.2-2), golang-github-cespare-xxhash (= 2.3.0-1), golang-github-davecgh-go-spew (= 1.1.1-5), golang-github-go-jose-go-jose (= 4.1.4-1), golang-github-go-logr-logr (= 1.4.3-1), golang-github-go-logr-stdr (= 1.2.2-4), golang-github-google-uuid (= 1.6.0-1), golang-github-gorilla-securecookie (= 1.1.2-1), golang-github-kballard-go-shellquote (= 0.0~git20180428.95032a8-2), golang-github-lestrrat-go-blackmagic (= 1.0.4-1), golang-github-lestrrat-go-dsig (= 1.0.0-2), golang-github-lestrrat-go-httpcc (= 1.0.1-2), golang-github-lestrrat-go-httprc (= 3.0.5-1), golang-github-lestrrat-go-jwx (= 3.0.13-1), golang-github-lestrrat-go-option (= 2.0.0-3), golang-github-muhlemmer-gu (= 0.3.1-2), golang-github-openpubkey-openpubkey (= 0.23.0-1), golang-github-pmezard-go-difflib (= 1.0.0-4), golang-github-spf13-afero (= 1.15.0-2), golang-github-spf13-cobra (= 1.10.2-1), golang-github-spf13-pflag (= 1.0.10-1), golang-github-thediveo-enumflag (= 2.1.0-1), golang-github-valyala-fastjson (= 1.6.10-1), golang-github-yeqown-go-qrcode (= 2.2.5-1), golang-github-yeqown-reedsolomon (= 1.0.0-1), golang-github-zitadel-logging (= 0.6.2-1), golang-github-zitadel-oidc (= 3.47.5-1), golang-github-zitadel-schema (= 1.3.2-1), golang-go.crypto (= 1:0.52.0-1), golang-golang-x-exp (= 0.0~git20260529.c761662-1), golang-golang-x-mod (= 0.36.0-1), golang-golang-x-oauth2 (= 0.27.0-1), golang-golang-x-sys (= 0.45.0+dfsg-1), golang-golang-x-term (= 0.41.0-1), golang-golang-x-text (= 0.36.0-1), golang-gopkg-yaml.v3 (= 3.0.4-3), golang-logrus (= 1.9.3-1), golang-opentelemetry-otel (= 1.43.0-4), golang-testify (= 1.11.1-1)
 Description-md5: 1ccd4fb09ba905431598e11bb329d7b8
-Static-Built-Using: go-md2man-v2 (= 2.0.7-1), golang-1.26 (= 1.26.2-1), golang-blackfriday-v2 (= 2.1.0-1), golang-filippo-bigmod (= 0.1.0-2), golang-github-awnumar-memcall (= 0.4.0-2), golang-github-awnumar-memguard (= 0.22.5-2), golang-github-davecgh-go-spew (= 1.1.1-3), golang-github-go-jose-go-jose (= 4.1.4-1), golang-github-go-logr-logr (= 1.4.3-1), golang-github-go-logr-stdr (= 1.2.2-4), golang-github-google-uuid (= 1.6.0-1), golang-github-gorilla-securecookie (= 1.1.2-1), golang-github-kballard-go-shellquote (= 0.0~git20180428.95032a8-2), golang-github-lestrrat-go-blackmagic (= 1.0.4-1), golang-github-lestrrat-go-dsig (= 1.0.0-2), golang-github-lestrrat-go-httpcc (= 1.0.1-2), golang-github-lestrrat-go-httprc (= 3.0.5-1), golang-github-lestrrat-go-jwx (= 3.0.13-1), golang-github-lestrrat-go-option (= 2.0.0-3), golang-github-muhlemmer-gu (= 0.3.1-2), golang-github-openpubkey-openpubkey (= 0.22.0-1), golang-github-pmezard-go-difflib (= 1.0.0-3), golang-github-spf13-afero (= 1.15.0-2), golang-github-spf13-cobra (= 1.10.2-1), golang-github-spf13-pflag (= 1.0.10-1), golang-github-thediveo-enumflag (= 2.1.0-1), golang-github-valyala-fastjson (= 1.6.4-1), golang-github-zitadel-logging (= 0.6.2-1), golang-github-zitadel-oidc (= 3.47.2-1), golang-github-zitadel-schema (= 1.3.2-1), golang-go.crypto (= 1:0.47.0-1), golang-golang-x-exp (= 0.0~git20250911.df92998-1), golang-golang-x-mod (= 0.35.0-1), golang-golang-x-oauth2 (= 0.27.0-1), golang-golang-x-sys (= 0.42.0-1), golang-golang-x-term (= 0.41.0-1), golang-golang-x-text (= 0.36.0-1), golang-gopkg-yaml.v3 (= 3.0.4-3), golang-logrus (= 1.9.3-1), golang-opentelemetry-otel (= 1.31.0-6), golang-testify (= 1.10.0-1)
+Static-Built-Using: go-md2man-v2 (= 2.0.7-1), golang-1.26 (= 1.26.4-1), golang-blackfriday-v2 (= 2.1.0-1), golang-filippo-bigmod (= 0.1.0-2), golang-github-awnumar-memcall (= 0.4.0-2), golang-github-awnumar-memguard (= 0.22.5-2), golang-github-bits-and-blooms-bitset (= 1.24.2-2), golang-github-cespare-xxhash (= 2.3.0-1), golang-github-davecgh-go-spew (= 1.1.1-5), golang-github-go-jose-go-jose (= 4.1.4-1), golang-github-go-logr-logr (= 1.4.3-1), golang-github-go-logr-stdr (= 1.2.2-4), golang-github-google-uuid (= 1.6.0-1), golang-github-gorilla-securecookie (= 1.1.2-1), golang-github-kballard-go-shellquote (= 0.0~git20180428.95032a8-2), golang-github-lestrrat-go-blackmagic (= 1.0.4-1), golang-github-lestrrat-go-dsig (= 1.0.0-2), golang-github-lestrrat-go-httpcc (= 1.0.1-2), golang-github-lestrrat-go-httprc (= 3.0.5-1), golang-github-lestrrat-go-jwx (= 3.0.13-1), golang-github-lestrrat-go-option (= 2.0.0-3), golang-github-muhlemmer-gu (= 0.3.1-2), golang-github-openpubkey-openpubkey (= 0.23.0-1), golang-github-pmezard-go-difflib (= 1.0.0-4), golang-github-spf13-afero (= 1.15.0-2), golang-github-spf13-cobra (= 1.10.2-1), golang-github-spf13-pflag (= 1.0.10-1), golang-github-thediveo-enumflag (= 2.1.0-1), golang-github-valyala-fastjson (= 1.6.10-1), golang-github-yeqown-go-qrcode (= 2.2.5-1), golang-github-yeqown-reedsolomon (= 1.0.0-1), golang-github-zitadel-logging (= 0.6.2-1), golang-github-zitadel-oidc (= 3.47.5-1), golang-github-zitadel-schema (= 1.3.2-1), golang-go.crypto (= 1:0.52.0-1), golang-golang-x-exp (= 0.0~git20260529.c761662-1), golang-golang-x-mod (= 0.36.0-1), golang-golang-x-oauth2 (= 0.27.0-1), golang-golang-x-sys (= 0.45.0+dfsg-1), golang-golang-x-term (= 0.41.0-1), golang-golang-x-text (= 0.36.0-1), golang-gopkg-yaml.v3 (= 3.0.4-3), golang-logrus (= 1.9.3-1), golang-opentelemetry-otel (= 1.43.0-4), golang-testify (= 1.11.1-1)
 net
 Priority: optional
-Filename: pool/main/o/opkssh/opkssh_0.13.0-1+b1_amd64.deb
-Size: 7093472
-MD5sum: ea629aaa708b15cb34dac9b0fb05493d
-SHA256: 352b9479f59e2ac653c3703685783a867acbc1001eb3207087e44bf4c8e7bf68
+Filename: pool/main/o/opkssh/opkssh_0.14.0-2_amd64.deb
+Size: 7257056
+MD5sum: 88dd69b881ff7efe273da83cd63df25a
+SHA256: dfa53eb0f5182400be49e4ebfc3d341597edf00739f33807f3eb078f17ff929a
 
 Package: abisip-find
 Source: osmo-bsc
@@ -23804,48 +23823,48 @@ SHA256: 00445cf82faa8c15e2853659f1aa803d633b2707bfa267ae4701854b9cc50f2a
 
 Package: pdns-backend-bind
 Source: pdns
-Version: 5.1.0-1
-Installed-Size: 340
+Version: 5.1.1-2
+Installed-Size: 363
 Maintainer: pdns packagers <pdns@packages.debian.org>
 Architecture: amd64
 Provides: pdns-backend
-Depends: pdns-server (= 5.1.0-1), libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 13.1)
+Depends: pdns-server (= 5.1.1-2), libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 13.1)
 Description: BIND backend for PowerDNS
 Homepage: https://www.powerdns.com/
 Description-md5: 102c9606b65f82d362adffd1fbf33801
 net
 Priority: optional
-Filename: pool/main/p/pdns/pdns-backend-bind_5.1.0-1_amd64.deb
-Size: 118636
-MD5sum: 87a9723ebebefebf4ab4d4d41737868d
-SHA256: a8132b614b0d93eeadd363f2c64a22838ae111ce472822bddf98cd39c5a0a6be
+Filename: pool/main/p/pdns/pdns-backend-bind_5.1.1-2_amd64.deb
+Size: 131696
+MD5sum: 5b0eb729b2611d3a08f2bb03d9168242
+SHA256: fefbc0cd733cd85d8b12ce0b1323da9527231441fd874c6644aa5f273dc456f2
 
 Package: pdns-backend-geoip
 Source: pdns
-Version: 5.1.0-1
-Installed-Size: 358
+Version: 5.1.1-2
+Installed-Size: 357
 Maintainer: pdns packagers <pdns@packages.debian.org>
 Architecture: amd64
 Provides: pdns-backend
-Depends: pdns-server (= 5.1.0-1), libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libgeoip1t64 (>= 1.6.12), libmaxminddb0 (>= 1.0.2), libstdc++6 (>= 13.1), libyaml-cpp0.8 (>= 0.8.0+dfsg-9+b1)
+Depends: pdns-server (= 5.1.1-2), libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libgeoip1t64 (>= 1.6.12), libmaxminddb0 (>= 1.0.2), libstdc++6 (>= 13.1), libyaml-cpp0.8 (>= 0.7.0)
 Description: GeoIP backend for PowerDNS
 Homepage: https://www.powerdns.com/
 Description-md5: e7179ddae048f01d1db157ce7ddd97ea
 net
 Priority: optional
-Filename: pool/main/p/pdns/pdns-backend-geoip_5.1.0-1_amd64.deb
-Size: 125080
-MD5sum: e41fe49119f16a111700ddd8e35a6ed1
-SHA256: 4ed2ba64d0c12bf4f77556a230a6aef91534e064e6db128023a09cc12e68b79a
+Filename: pool/main/p/pdns/pdns-backend-geoip_5.1.1-2_amd64.deb
+Size: 126184
+MD5sum: b8702af0fea36feae66d51584a60f3ff
+SHA256: cf3cbc08f9faabf9ab467a9f628fa0616ec768b77f0b4079eb35117850f585d5
 
 Package: pdns-backend-ldap
 Source: pdns
-Version: 5.1.0-1
-Installed-Size: 1004
+Version: 5.1.1-2
+Installed-Size: 1003
 Maintainer: pdns packagers <pdns@packages.debian.org>
 Architecture: amd64
 Provides: pdns-backend
-Depends: pdns-server (= 5.1.0-1), libc6 (>= 2.38), libgcc-s1 (>= 3.4), libkrb5-3 (>= 1.11+dfsg), libldap2 (>= 2.6.2), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14)
+Depends: pdns-server (= 5.1.1-2), libc6 (>= 2.38), libgcc-s1 (>= 3.4), libkrb5-3 (>= 1.11+dfsg), libldap2 (>= 2.6.2), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14)
 Description: LDAP backend for PowerDNS
 Homepage: https://www.powerdns.com/
 Description-md5: 4377905e3dbcdb557368f97cf2ebd506
@@ -23853,55 +23872,55 @@ Tag: interface::daemon, network::server, network::service, protocol::dns,
  protocol::ldap, role::program, works-with::db
 net
 Priority: optional
-Filename: pool/main/p/pdns/pdns-backend-ldap_5.1.0-1_amd64.deb
-Size: 313128
-MD5sum: fe7740a16aedb6c1a6dd0bbaad8d6fb8
-SHA256: 256792152d1dbff0b0f5a736fa5d58f6729f13b5f49d9ada0a89f7e4c6036891
+Filename: pool/main/p/pdns/pdns-backend-ldap_5.1.1-2_amd64.deb
+Size: 314732
+MD5sum: 8a9ef907a3b28d685f3a6a8974021d2f
+SHA256: 2772dae76a0b8383358deb10898d7c464b9b91e9c078f89883b14035435497cd
 
 Package: pdns-backend-lmdb
 Source: pdns
-Version: 5.1.0-1
-Installed-Size: 612
+Version: 5.1.1-2
+Installed-Size: 655
 Maintainer: pdns packagers <pdns@packages.debian.org>
 Architecture: amd64
 Provides: pdns-backend
-Depends: pdns-server (= 5.1.0-1), libboost-serialization1.90.0 (>= 1.90.0), libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), liblmdb0 (>= 0.9.17), libstdc++6 (>= 13.1), libsystemd0
+Depends: pdns-server (= 5.1.1-2), libboost-serialization1.90.0 (>= 1.90.0), libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), liblmdb0 (>= 0.9.17), libssl3t64 (>= 3.0.0), libstdc++6 (>= 13.1), libsystemd0
 Description: LMDB backend for PowerDNS
 Homepage: https://www.powerdns.com/
 Description-md5: b0f7cd9abdd3211559ee3cbffc9c4808
 net
 Priority: optional
-Filename: pool/main/p/pdns/pdns-backend-lmdb_5.1.0-1_amd64.deb
-Size: 183808
-MD5sum: 2f5937bba81ecc841a4cada83c2933cf
-SHA256: f187889d6f9ecc22ea3e105f2e1c8ba04b67dd91288d8cf1148102fa3c3cddbd
+Filename: pool/main/p/pdns/pdns-backend-lmdb_5.1.1-2_amd64.deb
+Size: 198708
+MD5sum: f79860ef393bf1b3234d79222f6e0c14
+SHA256: f1d5ae248423dc64ab0926e0b534c649bce25738c49f705f5dd8865c78f1f0b0
 
 Package: pdns-backend-lua2
 Source: pdns
-Version: 5.1.0-1
-Installed-Size: 342
+Version: 5.1.1-2
+Installed-Size: 333
 Maintainer: pdns packagers <pdns@packages.debian.org>
 Architecture: amd64
 Provides: pdns-backend
-Depends: pdns-server (= 5.1.0-1), libc6 (>= 2.32), libgcc-s1 (>= 3.3.1), libluajit-5.1-2 (>= 2.1.0+openresty20250117~) | libluajit-5.1-2 (>= 2.1.0+openresty), libstdc++6 (>= 13.1)
+Depends: pdns-server (= 5.1.1-2), libc6 (>= 2.32), libgcc-s1 (>= 3.3.1), libluajit-5.1-2 (>= 2.1.0+openresty20250117~) | libluajit-5.1-2 (>= 2.1.0+openresty), libstdc++6 (>= 13.1)
 Description: Lua2 backend for PowerDNS
 Homepage: https://www.powerdns.com/
 Description-md5: 6da4513d40ed667b370664baccc9b3bf
 net
 Priority: optional
-Filename: pool/main/p/pdns/pdns-backend-lua2_5.1.0-1_amd64.deb
-Size: 105292
-MD5sum: 82f4b1efd4df4192fdfbd53e84225f24
-SHA256: bed9dba5f2aeb05b3751e2969fe9af2c1efaa99422f405f93b6bdb7bcfa153bf
+Filename: pool/main/p/pdns/pdns-backend-lua2_5.1.1-2_amd64.deb
+Size: 104160
+MD5sum: 39de4f2648f9559d88f4e645b5796759
+SHA256: da309b500fa7e2fe063935024cd6481dcd9735b6847705628fb2948374cbf2d7
 
 Package: pdns-backend-mysql
 Source: pdns
-Version: 5.1.0-1
-Installed-Size: 201
+Version: 5.1.1-2
+Installed-Size: 188
 Maintainer: pdns packagers <pdns@packages.debian.org>
 Architecture: amd64
 Provides: pdns-backend
-Depends: pdns-server (= 5.1.0-1), libc6 (>= 2.32), libgcc-s1 (>= 3.3.1), libmariadb3 (>= 3.0.0), libstdc++6 (>= 13.1)
+Depends: pdns-server (= 5.1.1-2), libc6 (>= 2.32), libgcc-s1 (>= 3.3.1), libmariadb3 (>= 3.0.0), libstdc++6 (>= 13.1)
 Suggests: mariadb-server | mysql-server
 Description: MySQL/MariaDB backend for PowerDNS
 Homepage: https://www.powerdns.com/
@@ -23910,37 +23929,37 @@ Tag: devel::lang:sql, network::server, network::service, protocol::dns,
  role::program, role::shared-lib, works-with::db
 net
 Priority: optional
-Filename: pool/main/p/pdns/pdns-backend-mysql_5.1.0-1_amd64.deb
-Size: 54216
-MD5sum: 9cdcfb88843624d753ef05791af042fd
-SHA256: 1de6126ac22c01f4cb28751c5b81e04c5aed7d7219f7befb6a47516380d79799
+Filename: pool/main/p/pdns/pdns-backend-mysql_5.1.1-2_amd64.deb
+Size: 51908
+MD5sum: 1bdffd23efcf82b2a7e9f984f8e45a5b
+SHA256: 52f463df78c199fc23ea7aff7f11db6792859a5638628361b2a95b62444be00d
 
 Package: pdns-backend-odbc
 Source: pdns
-Version: 5.1.0-1
-Installed-Size: 167
+Version: 5.1.1-2
+Installed-Size: 150
 Maintainer: pdns packagers <pdns@packages.debian.org>
 Architecture: amd64
 Provides: pdns-backend
-Depends: pdns-server (>= 5.1.0-1), libc6 (>= 2.32), libgcc-s1 (>= 3.3.1), libodbc2 (>= 2.3.1), libstdc++6 (>= 13.1)
+Depends: pdns-server (>= 5.1.1-2), libc6 (>= 2.32), libgcc-s1 (>= 3.3.1), libodbc2 (>= 2.3.1), libstdc++6 (>= 13.1)
 Description: UnixODBC backend for PowerDNS
 Homepage: https://www.powerdns.com/
 Description-md5: aea35375028432f8d6de498767d272e0
 net
 Priority: optional
-Filename: pool/main/p/pdns/pdns-backend-odbc_5.1.0-1_amd64.deb
-Size: 42504
-MD5sum: 268cbd0f69dea3d276ca8be761d15822
-SHA256: 761a599d477169ec5cc5032cb6a7b45421073c34d8c542f4a423739aa2b7d1de
+Filename: pool/main/p/pdns/pdns-backend-odbc_5.1.1-2_amd64.deb
+Size: 39604
+MD5sum: 271ecfa5c11038394b167e481b27263c
+SHA256: 178e6d323e91f3f3e1ec1f1029a3a5fb97a611023103d539f617c9b530ae3552
 
 Package: pdns-backend-pgsql
 Source: pdns
-Version: 5.1.0-1
-Installed-Size: 200
+Version: 5.1.1-2
+Installed-Size: 183
 Maintainer: pdns packagers <pdns@packages.debian.org>
 Architecture: amd64
 Provides: pdns-backend
-Depends: pdns-server (= 5.1.0-1), libc6 (>= 2.32), libgcc-s1 (>= 3.3.1), libpq5, libstdc++6 (>= 14)
+Depends: pdns-server (= 5.1.1-2), libc6 (>= 2.32), libgcc-s1 (>= 3.3.1), libpq5, libstdc++6 (>= 14)
 Suggests: postgresql
 Description: PostgreSQL backend for PowerDNS
 Homepage: https://www.powerdns.com/
@@ -23949,19 +23968,19 @@ Tag: devel::lang:sql, network::server, network::service, protocol::dns,
  role::program, role::shared-lib, works-with::db
 net
 Priority: optional
-Filename: pool/main/p/pdns/pdns-backend-pgsql_5.1.0-1_amd64.deb
-Size: 55016
-MD5sum: 930dfbc7797bbbfde4db3a699d265615
-SHA256: f83869516cad7956a61299419d7395047a684eb754c7cbb175ac7abbb434ab73
+Filename: pool/main/p/pdns/pdns-backend-pgsql_5.1.1-2_amd64.deb
+Size: 51856
+MD5sum: 097ce53dc8b469bb7b04254e7602d486
+SHA256: e4e1db46fe39282ac3cbacdbb5909fa864206f8949b62c3e6c54afb2596c7f82
 
 Package: pdns-backend-pipe
 Source: pdns
-Version: 5.1.0-1
-Installed-Size: 166
+Version: 5.1.1-2
+Installed-Size: 149
 Maintainer: pdns packagers <pdns@packages.debian.org>
 Architecture: amd64
 Provides: pdns-backend
-Depends: pdns-server (= 5.1.0-1), libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 13.1)
+Depends: pdns-server (= 5.1.1-2), libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 13.1)
 Description: pipe/coprocess backend for PowerDNS
 Homepage: https://www.powerdns.com/
 Description-md5: 96ac7ab1bf36aade3437bee6809e2d08
@@ -23969,87 +23988,87 @@ Tag: network::server, network::service, protocol::dns, role::program,
  role::shared-lib
 net
 Priority: optional
-Filename: pool/main/p/pdns/pdns-backend-pipe_5.1.0-1_amd64.deb
-Size: 54664
-MD5sum: d63ab0c1899e571e6cd3cafbc7d16775
-SHA256: e879382f24d63cb1aaef31b719fbb9d884b80aed41887fec68fd7a8ff964148b
+Filename: pool/main/p/pdns/pdns-backend-pipe_5.1.1-2_amd64.deb
+Size: 52768
+MD5sum: 134f20d059aed78204fb354794e366f9
+SHA256: c0d5bceb0d85836b6a31f432e4d9380f42e719c049203bfdad27eae5752bc7c0
 
 Package: pdns-backend-remote
 Source: pdns
-Version: 5.1.0-1
-Installed-Size: 440
+Version: 5.1.1-2
+Installed-Size: 411
 Maintainer: pdns packagers <pdns@packages.debian.org>
 Architecture: amd64
 Provides: pdns-backend
-Depends: pdns-server (= 5.1.0-1), libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 14)
+Depends: pdns-server (= 5.1.1-2), libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 14)
 Description: remote backend for PowerDNS
 Homepage: https://www.powerdns.com/
 Description-md5: 2f76a0e5c0b0f37a802e55878594d3af
 net
 Priority: optional
-Filename: pool/main/p/pdns/pdns-backend-remote_5.1.0-1_amd64.deb
-Size: 145420
-MD5sum: e88d340a6f2de07b15031e8f813b9559
-SHA256: 8f5ccf0dd8518c50961736c3719445cf8f56be227c35116e9502e0ad92eaee30
+Filename: pool/main/p/pdns/pdns-backend-remote_5.1.1-2_amd64.deb
+Size: 139224
+MD5sum: f9773b3d7a6a892ae895d039810deffa
+SHA256: d3dfb78a0e6e734469458222c52b01698f4a7b071d5724f526e19601202d57ca
 
 Package: pdns-backend-sqlite3
 Source: pdns
-Version: 5.1.0-1
-Installed-Size: 164
+Version: 5.1.1-2
+Installed-Size: 147
 Maintainer: pdns packagers <pdns@packages.debian.org>
 Architecture: amd64
 Provides: pdns-backend
-Depends: pdns-server (= 5.1.0-1), libc6 (>= 2.32), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 13.1)
+Depends: pdns-server (= 5.1.1-2), libc6 (>= 2.32), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 13.1)
 Description: sqlite 3 backend for PowerDNS
 Homepage: https://www.powerdns.com/
 Description-md5: 06163408d209318afb0bd43ef103bd2f
 Tag: role::shared-lib
 net
 Priority: optional
-Filename: pool/main/p/pdns/pdns-backend-sqlite3_5.1.0-1_amd64.deb
-Size: 34620
-MD5sum: 05262ec57124367fac0985fd33951f4c
-SHA256: 1b675147ea0d2d1b7d3797cbe41b13f0d6fd0ec841118206acca3dfe72333a39
+Filename: pool/main/p/pdns/pdns-backend-sqlite3_5.1.1-2_amd64.deb
+Size: 31596
+MD5sum: 426311fd08e67b415d793454db2408cb
+SHA256: 51fe7cc0fe31919da5d02f035050ecaccae7c5abf7271c7308c9d818bc297125
 
 Package: pdns-backend-tinydns
 Source: pdns
-Version: 5.1.0-1
-Installed-Size: 163
+Version: 5.1.1-2
+Installed-Size: 146
 Maintainer: pdns packagers <pdns@packages.debian.org>
 Architecture: amd64
 Provides: pdns-backend
-Depends: pdns-server (= 5.1.0-1), libc6 (>= 2.32), libcdb1 (>= 0.76), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 13.1)
+Depends: pdns-server (= 5.1.1-2), libc6 (>= 2.32), libcdb1 (>= 0.76), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 13.1)
 Description: tinydns compatibility backend for PowerDNS
 Homepage: https://www.powerdns.com/
 Description-md5: 30cea6209a213c57e7a1c02415b6f86b
 net
 Priority: optional
-Filename: pool/main/p/pdns/pdns-backend-tinydns_5.1.0-1_amd64.deb
-Size: 55784
-MD5sum: a8055aeee650c0029d17eefe6a04d5ac
-SHA256: 3f74fc6106c744133d92e5c544354297685d76e6a16a5165a91ee97a2e6f9da9
+Filename: pool/main/p/pdns/pdns-backend-tinydns_5.1.1-2_amd64.deb
+Size: 52868
+MD5sum: a9cff6b90da44ced886d2d86583a5b11
+SHA256: 5d96696434c278e694ffd67bdb34930ed522e00209a8792e8963ca2b6e9a17dd
 
 Package: pdns-ixfrdist
 Source: pdns
-Version: 5.1.0-1
-Installed-Size: 1257
+Version: 5.1.1-2
+Installed-Size: 1256
 Maintainer: pdns packagers <pdns@packages.debian.org>
 Architecture: amd64
-Depends: adduser, libboost-program-options1.90.0 (>= 1.90.0), libc6 (>= 2.38), libgcc-s1 (>= 3.4), libp11-kit0 (>= 0.25.0), libsodium26 (>= 0.6.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libyaml-cpp0.8 (>= 0.8.0+dfsg-9+b1)
+Depends: adduser, libboost-program-options1.90.0 (>= 1.90.0), libc6 (>= 2.38), libgcc-s1 (>= 3.4), libluajit-5.1-2 (>= 2.1.0+openresty20250117~) | libluajit-5.1-2 (>= 2.1.0+openresty), libp11-kit0 (>= 0.25.0), libsodium26 (>= 0.6.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libyaml-cpp0.8 (>= 0.7.0)
 Description: Redistribute DNS zones over AXFR/IXFR
 Homepage: https://www.powerdns.com/
 Description-md5: 21f89928b6b404f67525436bd19ef002
 net
 Priority: optional
-Filename: pool/main/p/pdns/pdns-ixfrdist_5.1.0-1_amd64.deb
-Size: 410436
-MD5sum: ef0fdb6be94b41db65c7378d6b1d1265
-SHA256: 6ebc0a858b918fa7478ebe9d9fe9582f775813d7bed7eaf3cd46e82e0954de29
+Filename: pool/main/p/pdns/pdns-ixfrdist_5.1.1-2_amd64.deb
+Size: 412316
+MD5sum: c785b9b6fd91aaa1e9e1f6ae09ee0d5c
+SHA256: f422ac80e3211f513323bc0c74874b9bba3ae2fda7cc94e2f0d8e8bd1ac19ddf
 
 Package: pdns-server
 Source: pdns
-Version: 5.1.0-1
-Installed-Size: 11038
+Version: 5.1.1-2
+Installed-Size: 9888
 Maintainer: pdns packagers <pdns@packages.debian.org>
 Architecture: amd64
 Depends: adduser, libboost-program-options1.90.0 (>= 1.90.0), libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libgcc-s1 (>= 3.4), libluajit-5.1-2 (>= 2.1.0+openresty20250117~) | libluajit-5.1-2 (>= 2.1.0+openresty), libp11-kit0 (>= 0.25.0), libsodium26 (>= 0.6.1), libsqlite3-0 (>= 3.6.5), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libsystemd0
@@ -24062,27 +24081,27 @@ Tag: interface::daemon, network::server, network::service, protocol::dns,
  role::program
 net
 Priority: optional
-Filename: pool/main/p/pdns/pdns-server_5.1.0-1_amd64.deb
-Size: 2791264
-MD5sum: 9cb3cbecaa21fd6a8913e26a19cdcff8
-SHA256: abadf7924d8bf59b24f1cf6cd5082cd32d9b72d3872ba31be1724a7d96c6f36f
+Filename: pool/main/p/pdns/pdns-server_5.1.1-2_amd64.deb
+Size: 2625916
+MD5sum: c4cb6be04563d95a89317b1cec77582b
+SHA256: a8fd33c0f90f3048204de5a8d7d0b80d16f1383aa4e18fcc39af768862550387
 
 Package: pdns-tools
 Source: pdns
-Version: 5.1.0-1
-Installed-Size: 9017
+Version: 5.1.1-2
+Installed-Size: 9224
 Maintainer: pdns packagers <pdns@packages.debian.org>
 Architecture: amd64
-Depends: libboost-program-options1.90.0 (>= 1.90.0), libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libgcc-s1 (>= 3.4), libp11-kit0 (>= 0.25.0), libsodium26 (>= 0.6.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14)
+Depends: libboost-program-options1.90.0 (>= 1.90.0), libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libgcc-s1 (>= 3.4), libgnutls30t64 (>= 3.8.1), libp11-kit0 (>= 0.25.0), libsodium26 (>= 0.6.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14)
 Description: Tools for DNS debugging by PowerDNS
 Homepage: https://www.powerdns.com/
 Description-md5: cb59277fc23b41d8219c2a6896a51033
 net
 Priority: optional
-Filename: pool/main/p/pdns/pdns-tools_5.1.0-1_amd64.deb
-Size: 1529916
-MD5sum: 533ca0e7c648f3902e2a48289861df22
-SHA256: 18aa291d4c2c845d6fd7b594f1bc9ed2cce67c9f80da34154304e6ac006e3e50
+Filename: pool/main/p/pdns/pdns-tools_5.1.1-2_amd64.deb
+Size: 1646624
+MD5sum: e4445d3213a142a2af0d549461d3b005
+SHA256: 01dfa6660c8247678dbddc92417ca5a68c7b1e60ddb0e6bd12ef01ed43792611
 
 Package: pdns-recursor
 Version: 5.4.2-1
@@ -25904,21 +25923,21 @@ MD5sum: 56b40b321fa3472a33c318a8682712e6
 SHA256: b2426f37db4decf3fd5f7741468017f76742094f23d4bd17b937e1ffd360441e
 
 Package: prometheus-redis-exporter
-Version: 1.84.0-1
-Installed-Size: 11402
+Version: 1.86.0-1
+Installed-Size: 11398
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
 Depends: adduser, libc6 (>= 2.34)
 Description: Prometheus exporter for Valkey metrics (Redis-compatible)
 Homepage: https://github.com/oliver006/redis_exporter
 Description-md5: 6522b6b3bdf42db38c8227de9983e172
-Static-Built-Using: golang-1.26 (= 1.26.3-2), golang-github-beorn7-perks (= 1.0.1-3), golang-github-cespare-xxhash (= 2.3.0-1), golang-github-gomodule-redigo (= 1:1.9.3-1), golang-github-klauspost-compress (= 1.18.6+ds1-2), golang-github-mna-redisc (= 1.4.0-1), golang-github-munnerz-goautoneg (= 0.0~git20191010.a7dc8b6-2), golang-github-prometheus-client-golang (= 1.23.2-3), golang-github-prometheus-client-model (= 0.6.2-2), golang-github-prometheus-common (= 0.67.5-1), golang-github-prometheus-procfs (= 0.20.1-2), golang-go.crypto (= 1:0.52.0-1), golang-golang-x-sys (= 0.45.0+dfsg-1), golang-google-protobuf (= 1.36.10-2), golang-logrus (= 1.9.3-1), golang-yaml.v2 (= 2.4.3-1)
+Static-Built-Using: golang-1.26 (= 1.26.4-1), golang-github-beorn7-perks (= 1.0.1-3), golang-github-cespare-xxhash (= 2.3.0-1), golang-github-gomodule-redigo (= 1:1.9.3-1), golang-github-klauspost-compress (= 1.18.6+ds1-2), golang-github-mna-redisc (= 1.4.0-1), golang-github-munnerz-goautoneg (= 0.0~git20191010.a7dc8b6-2), golang-github-prometheus-client-golang (= 1.23.2-3), golang-github-prometheus-client-model (= 0.6.2-2), golang-github-prometheus-common (= 0.68.1-1), golang-github-prometheus-procfs (= 0.20.1-2), golang-go.crypto (= 1:0.52.0-1), golang-golang-x-sys (= 0.45.0+dfsg-1), golang-google-protobuf (= 1.36.10-2), golang-logrus (= 1.9.3-1)
 net
 Priority: optional
-Filename: pool/main/p/prometheus-redis-exporter/prometheus-redis-exporter_1.84.0-1_amd64.deb
-Size: 3477104
-MD5sum: 15d38da9efb02e9ca585adb4f96f7d48
-SHA256: 934389d1801757d524908e7364ccb66490927bde84b65bfdb39e4559f712b9b2
+Filename: pool/main/p/prometheus-redis-exporter/prometheus-redis-exporter_1.86.0-1_amd64.deb
+Size: 3475744
+MD5sum: 7d3d746113e4b9444fc27e14a2960f0c
+SHA256: 3741c2b382ce7e449e8be16f0ee8918e508b008453a4041f67b3732c5c2bea12
 
 Package: prometheus-script-exporter
 Version: 3.0.1-1
@@ -28326,24 +28345,23 @@ MD5sum: 01f7b36fc2cd669ef9f4ac8e292251f4
 SHA256: 822e66c413f98e4c8c8d11171443641ec2dedc4ee11aebbd64e01d5f56588678
 
 Package: hickory-dns
-Source: rust-hickory-dns (0.24.4-1)
-Version: 0.24.4-1+b4
-Installed-Size: 10933
+Source: rust-hickory-dns
+Version: 0.25.2-3
+Installed-Size: 5126
 Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
 Architecture: amd64
 Depends: libc6 (>= 2.34), libgcc-s1 (>= 4.2), libsqlite3-0 (>= 3.6.0)
 Description: safe and secure DNS server with DNSSEC support
-Multi-Arch: allowed
 Homepage: https://hickory-dns.org/
-Built-Using: rust-rustls (= 0.23.37+ds-3), rust-rustls-native-certs (= 0.8.3-1), rust-rustls-pki-types (= 1.14.0+ds-1), rust-rustls-webpki (= 0.103.10+ds-1), rustc (= 1.94.1+dfsg1-1)
+Built-Using: rust-rustls (= 0.23.40+ds-1), rust-rustls-native-certs (= 0.8.3-1), rust-rustls-pki-types (= 1.14.1+ds-1), rust-rustls-platform-verifier (= 0.6.2-1), rust-rustls-webpki (= 0.103.13+ds-1), rustc (= 1.95.0+dfsg1-2)
 Description-md5: e8a9fcf9c85fa49f75d1ff02edb5a3ad
-Static-Built-Using: rust-anstyle (= 1.0.13-1), rust-atomic-waker (= 1.1.2-1), rust-basic-toml (= 0.1.10-1), rust-bitflags (= 2.11.0-1), rust-bytes (= 1.11.1-1), rust-cfg-if (= 1.0.4-1), rust-clap (= 4.5.53-1), rust-clap-builder (= 4.5.53-1), rust-clap-lex (= 0.7.4-1), rust-data-encoding (= 2.9.0-1), rust-deranged (= 0.3.11-1), rust-endian-type (= 0.1.2-2), rust-equivalent (= 1.0.1-1), rust-fallible-iterator (= 0.3.0-2), rust-fallible-streaming-iterator (= 0.1.9-1), rust-fastrand (= 2.3.0-2), rust-fnv (= 1.0.7-1), rust-foldhash (= 0.2.0-2), rust-form-urlencoded (= 1.2.2-1), rust-futures (= 0.3.32-1), rust-futures-channel (= 0.3.32-1), rust-futures-core (= 0.3.32-1), rust-futures-executor (= 0.3.32-1), rust-futures-io (= 0.3.32-1), rust-futures-sink (= 0.3.32-1), rust-futures-task (= 0.3.32-1), rust-futures-util (= 0.3.32-1), rust-getrandom (= 0.4.2-3), rust-h2 (= 0.4.13-1), rust-h3 (= 0.0.6-2), rust-h3-quinn (= 0.0.7-2), rust-hashbrown (= 0.16.1-2), rust-hashlink (= 0.10.0-2), rust-hickory-client (= 0.24.4-1), rust-hickory-proto (= 0.24.4-6), rust-hickory-recursor (= 0.24.1-1), rust-hickory-resolver (= 0.24.4-5), rust-hickory-server (= 0.24.4-2), rust-hostname (= 0.4.1-2), rust-http (= 1.4.0-1), rust-http-0.2 (= 0.2.11-1), rust-idna (= 1.1.0-1), rust-idna-adapter (= 1.1.0-1), rust-idna-mapping (= 1.0.0-1), rust-indexmap (= 2.13.0-1), rust-ipnet (= 2.11.0-2), rust-itoa (= 1.0.15-1), rust-lazy-static (= 1.5.0-1), rust-libc (= 0.2.178-2), rust-libsqlite3-sys (= 0.26.0-2), rust-linked-hash-map (= 0.5.6-2), rust-lock-api (= 0.4.14-1), rust-log (= 0.4.29-1), rust-lru-cache (= 0.1.2-2), rust-lru-slab (= 0.1.2-1), rust-matchers (= 0.2.0-1), rust-memchr (= 2.8.0-1), rust-mio (= 1.1.1-1), rust-nibble-vec (= 0.1.0-1), rust-nu-ansi-term (= 0.50.1-1), rust-num-conv (= 0.2.0-1), rust-once-cell (= 1.21.4-1), rust-openssl-probe (= 0.1.2-1), rust-parking-lot (= 0.12.5-1), rust-parking-lot-core (= 0.9.12-1), rust-percent-encoding (= 2.3.2-2), rust-pin-project-lite (= 0.2.16-1), rust-powerfmt (= 0.2.0-1), rust-ppv-lite86 (= 0.2.21-2), rust-quick-error (= 2.0.1-1), rust-quinn (= 0.11.9-2), rust-quinn-proto (= 0.11.14-1), rust-quinn-udp (= 0.5.14-1), rust-radix-trie (= 0.2.1-1), rust-rand-0.8 (= 0.8.5+dfsg-3), rust-rand-chacha-0.3 (= 0.3.1-4), rust-rand-core-0.6 (= 0.6.4-5), rust-regex-automata (= 0.4.13-1), rust-regex-syntax (= 0.8.10+dfsg-1), rust-resolv-conf (= 0.7.0-2), rust-ring (= 0.17.14-5), rust-rusqlite (= 0.29.0-4), rust-rustc-hash-2 (= 2.0.0-1), rust-rustls (= 0.23.37+ds-3), rust-rustls-native-certs (= 0.8.3-1), rust-rustls-pemfile (= 2.2.0-4), rust-rustls-pki-types (= 1.14.0+ds-1), rust-rustls-webpki (= 0.103.10+ds-1), rust-scopeguard (= 1.2.0-1), rust-serde (= 1.0.228-3), rust-serde-core (= 1.0.228-2), rust-sharded-slab (= 0.1.4-2), rust-slab (= 0.4.9-1), rust-smallvec (= 1.15.1-1), rust-socket2 (= 0.5.10-1), rust-strsim (= 0.11.1-1), rust-subtle (= 2.6.1-1), rust-thiserror (= 2.0.18-1), rust-thiserror-1 (= 1.0.69-1), rust-thread-local (= 1.1.4-1), rust-time (= 0.3.47-1), rust-time-core (= 0.1.8-1), rust-tinyvec (= 1.10.0-1), rust-tinyvec-macros (= 0.1.0-1), rust-tokio (= 1.50.0-1), rust-tokio-rustls (= 0.26.4-1), rust-tokio-util (= 0.7.17-1), rust-tracing (= 0.1.44-1), rust-tracing-core (= 0.1.36-1), rust-tracing-log (= 0.2.0-3), rust-tracing-subscriber (= 0.3.22-3), rust-unicode-bidi (= 0.3.17-1), rust-unicode-joining-type (= 1.0.0-1), rust-unicode-normalization (= 0.1.25-1), rust-untrusted (= 0.9.0-2), rust-url (= 2.5.8-1), rust-utf8-iter (= 1.0.4-1), rust-zerocopy (= 0.8.26-4), rust-zeroize (= 1.8.2-1), rustc (= 1.94.1+dfsg1-1)
+Static-Built-Using: rust-anstyle (= 1.0.14-1), rust-bitflags (= 2.11.0-1), rust-bytes (= 1.11.1-1), rust-cfg-if (= 1.0.4-1), rust-clap (= 4.6.1-1), rust-clap-builder (= 4.6.0-1), rust-clap-lex (= 1.1.0-1), rust-critical-section (= 1.2.0-1), rust-crossbeam-channel (= 0.5.15-1), rust-crossbeam-epoch (= 0.9.18-1), rust-crossbeam-utils (= 0.8.21-1), rust-data-encoding (= 2.11.0-1), rust-deranged (= 0.3.11-1), rust-either (= 1.15.0-1), rust-endian-type (= 0.1.2-2), rust-equivalent (= 1.0.1-1), rust-errno (= 0.3.14-1), rust-fallible-iterator (= 0.3.0-2), rust-fallible-streaming-iterator (= 0.1.9-1), rust-foldhash (= 0.2.0-2), rust-form-urlencoded (= 1.2.2-1), rust-futures-channel (= 0.3.32-1), rust-futures-core (= 0.3.32-1), rust-futures-io (= 0.3.32-1), rust-futures-sink (= 0.3.32-1), rust-futures-task (= 0.3.32-1), rust-futures-util (= 0.3.32-1), rust-getrandom (= 0.4.2-3), rust-hashbrown (= 0.16.1-2), rust-hashlink (= 0.10.0-2), rust-hickory-client (= 0.25.2-2), rust-hickory-proto (= 0.25.2-3), rust-hickory-resolver (= 0.25.2-2), rust-hickory-server (= 0.25.2-2), rust-hostname (= 0.4.1-2), rust-idna (= 1.1.0-1), rust-idna-adapter (= 1.1.0-1), rust-idna-mapping (= 1.0.0-1), rust-indexmap (= 2.14.0-1), rust-ipnet (= 2.12.0-1), rust-itoa (= 1.0.18-1), rust-lazy-static (= 1.5.0-1), rust-libc (= 0.2.186-1), rust-libsqlite3-sys (= 0.26.0-2), rust-lock-api (= 0.4.14-1), rust-log (= 0.4.29-1), rust-matchers (= 0.2.0-1), rust-mio (= 1.2.0-1), rust-moka (= 0.12.13-3), rust-nibble-vec (= 0.1.0-1), rust-num-conv (= 0.2.0-1), rust-num-traits (= 0.2.19-2), rust-once-cell (= 1.21.4-1), rust-openssl-probe (= 0.1.2-1), rust-parking-lot (= 0.12.5-1), rust-parking-lot-core (= 0.9.12-1), rust-percent-encoding (= 2.3.2-2), rust-pin-project-lite (= 0.2.16-1), rust-portable-atomic (= 1.10.0-3), rust-powerfmt (= 0.2.0-1), rust-ppv-lite86 (= 0.2.21-2), rust-prefix-trie (= 0.8.3-2), rust-quick-error (= 2.0.1-1), rust-radix-trie (= 0.2.1-1), rust-rand (= 0.10.1+dfsg-1), rust-rand-chacha (= 0.10.0-2), rust-rand-core (= 0.10.0-2), rust-regex-automata (= 0.4.13-1), rust-regex-syntax (= 0.8.10+dfsg-1), rust-resolv-conf (= 0.7.0-2), rust-rusqlite (= 0.29.0-4), rust-rustls (= 0.23.40+ds-1), rust-rustls-native-certs (= 0.8.3-1), rust-rustls-pki-types (= 1.14.1+ds-1), rust-rustls-platform-verifier (= 0.6.2-1), rust-rustls-webpki (= 0.103.13+ds-1), rust-scopeguard (= 1.2.0-1), rust-serde (= 1.0.228-3), rust-serde-core (= 1.0.228-2), rust-serde-spanned-0.6 (= 0.6.9-2), rust-sharded-slab (= 0.1.4-2), rust-signal-hook-registry (= 1.4.8-1), rust-slab (= 0.4.12-1), rust-smallvec (= 1.15.1-1), rust-socket2 (= 0.5.10-1), rust-strsim (= 0.11.1-1), rust-subtle (= 2.6.1-1), rust-tagptr (= 0.2.0-1), rust-thiserror (= 2.0.18-1), rust-thread-local (= 1.1.4-1), rust-time (= 0.3.47-1), rust-time-core (= 0.1.8-1), rust-tinyvec (= 1.10.0-1), rust-tinyvec-macros (= 0.1.0-1), rust-tokio (= 1.52.3-1), rust-tokio-util (= 0.7.17-1), rust-toml-0.8 (= 0.8.20-1), rust-toml-datetime-0.6 (= 0.6.11-2), rust-toml-edit-0.22 (= 0.22.24-2), rust-tracing (= 0.1.44-1), rust-tracing-core (= 0.1.36-1), rust-tracing-subscriber (= 0.3.22-3), rust-unicode-bidi (= 0.3.17-1), rust-unicode-joining-type (= 1.0.0-1), rust-unicode-normalization (= 0.1.25-1), rust-untrusted (= 0.9.0-2), rust-url (= 2.5.8-1), rust-utf8-iter (= 1.0.4-1), rust-uuid (= 1.23.1-1), rust-winnow (= 0.7.13-1), rust-zerocopy (= 0.8.26-4), rust-zeroize (= 1.8.2-1), rustc (= 1.95.0+dfsg1-2)
 net
 Priority: optional
-Filename: pool/main/r/rust-hickory-dns/hickory-dns_0.24.4-1+b4_amd64.deb
-Size: 3174884
-MD5sum: 6c4a4e4ef2f77c9ecdbdda1ef2fb5250
-SHA256: d62d603a6fd0d1fb689eaaf2e84f21fff6d529b53c475bce2825cd909f10640d
+Filename: pool/main/r/rust-hickory-dns/hickory-dns_0.25.2-3_amd64.deb
+Size: 1576748
+MD5sum: b8c17b97f3ab7f05e6aea05810916276
+SHA256: a0146db607eb16405dacd80db59aa6cdf68b8206ec4523f53f0048b46e5f3bb6
 
 Package: miniserve
 Source: rust-miniserve
@@ -30095,8 +30113,8 @@ MD5sum: 323788e0edb47e8b3a9a19298b5f3090
 SHA256: e189340162f4d06f725c868eb374f3c55a754a22cabc790b0bc3c1228a334fa9
 
 Package: sqlmap
-Version: 1.10.5-1
-Installed-Size: 10617
+Version: 1.10.6-1
+Installed-Size: 10618
 Maintainer: Debian Security Tools <team+pkg-security@tracker.debian.org>
 Architecture: all
 Depends: python3:any, python3-magic
@@ -30105,10 +30123,10 @@ Homepage: https://sqlmap.org/
 Description-md5: 036098a99a4f2acc4ad723ec212bfdd6
 net
 Priority: optional
-Filename: pool/main/s/sqlmap/sqlmap_1.10.5-1_all.deb
-Size: 6908112
-MD5sum: 441bd7af75fca7baf5a3cc5499412619
-SHA256: 4943f22c7ad2a71728714e9306adae84b4732a2be3fe710aa2ce361e4e7f9b3b
+Filename: pool/main/s/sqlmap/sqlmap_1.10.6-1_all.deb
+Size: 6907588
+MD5sum: a6191e17349d5bf1adbc602f182f954a
+SHA256: 761acba6e7371b2fd0ffbd7285cabab39378627b563befcee3e61bffe149caec
 
 Package: squid-deb-proxy
 Version: 0.9.2
@@ -33314,8 +33332,8 @@ SHA256: fcd4ae16ca789f0c6f43ca5091bf5154877e831d02932627e806e62cc0400af7
 
 Package: victoria-metrics
 Source: victoriametrics
-Version: 1.144.0+ds1-3
-Installed-Size: 193704
+Version: 1.145.0+ds1-1
+Installed-Size: 225082
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
 Depends: adduser, libc6 (>= 2.34), libzstd1 (>= 1.5.5)
@@ -33323,13 +33341,13 @@ Description: fast, cost-effective and scalable time series database
 Multi-Arch: foreign
 Homepage: https://github.com/VictoriaMetrics/VictoriaMetrics
 Description-md5: 501b1c659440c82b2a48c77598b94938
-Static-Built-Using: go-md2man-v2 (= 2.0.7-1), golang-1.26 (= 1.26.3-2), golang-blackfriday-v2 (= 2.1.0-1), golang-cel-expr (= 0.24.0-1), golang-github-alecthomas-units (= 0.0~git20240927.0f3dac3-2), golang-github-aws-aws-sdk-go-v2 (= 1.41.7-1), golang-github-aws-smithy-go (= 1.25.1-3), golang-github-bboreham-go-loser (= 0.0~git20230920.fcc2c21-3), golang-github-beorn7-perks (= 1.0.1-3), golang-github-bmatcuk-doublestar (= 4.6.1-1), golang-github-cespare-xxhash (= 2.3.0-1), golang-github-cheggaaa-pb.v3 (= 3.1.7-1), golang-github-clipperhouse-uax29 (= 2.7.0-3), golang-github-cncf-xds (= 0.0~git20260121.a486691-1), golang-github-davecgh-go-spew (= 1.1.1-5), golang-github-dennwc-varint (= 1.0.0-4), golang-github-envoyproxy-go-control-plane (= 0.13.2-2), golang-github-envoyproxy-protoc-gen-validate (= 1.0.2-2), golang-github-fatih-color (= 1.19.0-1), golang-github-felixge-httpsnoop (= 1.0.3-3), golang-github-fxamacker-cbor (= 2.9.2-1), golang-github-go-jose-go-jose (= 4.1.4-1), golang-github-go-logr-logr (= 1.4.3-1), golang-github-go-logr-stdr (= 1.2.2-4), golang-github-go-viper-mapstructure (= 2.5.0-2), golang-github-gobwas-glob (= 0.2.3+git20181002.e7a84e9-1), golang-github-golang-jwt-jwt-v5 (= 5.3.1-1), golang-github-golang-protobuf-1-5 (= 1.5.4-2), golang-github-golang-snappy (= 1.0.0-1), golang-github-google-go-cmp (= 0.7.0-1), golang-github-google-s2a-go (= 0.1.8-1), golang-github-google-uuid (= 1.6.0-1), golang-github-grafana-regexp (= 0.0~git20240518.a468a5b-1), golang-github-hashicorp-go-version (= 1.8.0-1), golang-github-jpillora-backoff (= 1.0.0-1.1), golang-github-json-iterator-go (= 1.1.12-2), golang-github-klauspost-compress (= 1.18.6+ds1-2), golang-github-knadh-koanf (= 2.0.1-1), golang-github-kylelemons-godebug (= 1.1.0-2), golang-github-mattn-go-colorable (= 0.1.13-1), golang-github-mattn-go-isatty (= 0.0.20-1), golang-github-mattn-go-runewidth (= 0.0.22-1), golang-github-mitchellh-copystructure (= 1.2.0-1), golang-github-mitchellh-mapstructure (= 1.5.0+git20231216.8508981-1), golang-github-mitchellh-reflectwalk (= 1.0.1-1), golang-github-modern-go-concurrent (= 1.0.3-1.1), golang-github-modern-go-reflect2 (= 1.0.2-2), golang-github-munnerz-goautoneg (= 0.0~git20191010.a7dc8b6-2), golang-github-mwitkow-go-conntrack (= 0.0~git20190716.2f06839-4), golang-github-oklog-ulid (= 2.0.2+ds-2), golang-github-pkg-browser (= 0.0~git20240102.5ac0b6a-1), golang-github-pmezard-go-difflib (= 1.0.0-4), golang-github-prometheus-client-golang (= 1.23.2-3), golang-github-prometheus-client-model (= 0.6.2-2), golang-github-prometheus-common (= 0.67.5-1), golang-github-prometheus-otlptranslator (= 1.0.0-2), golang-github-prometheus-procfs (= 0.20.1-2), golang-github-prometheus-sigv4 (= 0.4.1-1), golang-github-puzpuzpuz-xsync (= 4.4.0-1), golang-github-spiffe-go-spiffe (= 2.6.0-1), golang-github-urfave-cli-v2 (= 2.25.7-5), golang-github-valyala-bytebufferpool (= 1.0.0-5), golang-github-valyala-fastjson (= 1.6.10-1), golang-github-valyala-fastrand (= 1.1.0-4), golang-github-valyala-fasttemplate (= 1.2.2+ds1-3), golang-github-valyala-gozstd (= 1.24.0+ds1-1), golang-github-valyala-histogram (= 1.2.0+ds1-1), golang-github-valyala-quicktemplate (= 1.8.0+ds1-4), golang-github-victoriametrics-easyproto (= 1.2.0-1), golang-github-victoriametrics-fastcache (= 1.13.3+ds1-1), golang-github-victoriametrics-metrics (= 1.43.2+ds1-1), golang-github-victoriametrics-metricsql (= 0.87.0+ds1-1), golang-github-vividcortex-ewma (= 1.1.1-2), golang-github-x448-float16 (= 0.8.4-3), golang-github-xrash-smetrics (= 0.0~git20201216.039620a-1), golang-go.crypto (= 1:0.52.0-1), golang-go.uber-atomic (= 1.11.0-1), golang-go.uber-multierr (= 1.11.0-1), golang-go.uber-zap (= 1.27.0-1), golang-gogoprotobuf (= 1.3.2-3), golang-golang-x-exp (= 0.0~git20260529.c761662-1), golang-golang-x-net (= 1:0.55.0-1), golang-golang-x-oauth2 (= 0.27.0-1), golang-golang-x-sync (= 0.19.0-1), golang-golang-x-sys (= 0.45.0+dfsg-1), golang-golang-x-term (= 0.41.0-1), golang-golang-x-text (= 0.36.0-1), golang-golang-x-time (= 0.15.0-1), golang-google-cloud (= 0.123.0-3), golang-google-genproto (= 0.0~git20260414.afd174a-1), golang-google-grpc (= 1.81.1-1), golang-google-protobuf (= 1.36.10-2), golang-gopkg-inf.v0 (= 0.9.1-2), golang-gopkg-yaml.v3 (= 3.0.4-3), golang-k8s-apimachinery (= 0.33.4-2), golang-k8s-client-go (= 0.33.4-1), golang-k8s-klog (= 2.130.1-1), golang-k8s-sigs-json (= 0.0~git20241014.cfa47c3-1), golang-k8s-sigs-randfill (= 1.0.0-2), golang-k8s-sigs-structured-merge-diff (= 4.6.0-3), golang-k8s-sigs-yaml (= 1.4.0-2), golang-k8s-utils (= 0.0~git20260319.28399d8-1), golang-opentelemetry-otel (= 1.43.0-3), golang-testify (= 1.11.1-1), golang-uber-goleak (= 1.3.0-2), golang-yaml.v2 (= 2.4.3-1)
+Static-Built-Using: go-md2man-v2 (= 2.0.7-1), golang-1.26 (= 1.26.4-1), golang-blackfriday-v2 (= 2.1.0-1), golang-cel-expr (= 0.24.0-1), golang-github-alecthomas-units (= 0.0~git20240927.0f3dac3-2), golang-github-aws-aws-sdk-go-v2 (= 1.41.7-1), golang-github-aws-smithy-go (= 1.25.1-3), golang-github-bboreham-go-loser (= 0.0~git20230920.fcc2c21-3), golang-github-beorn7-perks (= 1.0.1-3), golang-github-bmatcuk-doublestar (= 4.6.1-1), golang-github-cespare-xxhash (= 2.3.0-1), golang-github-cheggaaa-pb.v3 (= 3.1.7-1), golang-github-clipperhouse-uax29 (= 2.7.0-3), golang-github-cncf-xds (= 0.0~git20260121.a486691-1), golang-github-davecgh-go-spew (= 1.1.1-5), golang-github-dennwc-varint (= 1.0.0-4), golang-github-envoyproxy-go-control-plane (= 0.13.2-2), golang-github-envoyproxy-protoc-gen-validate (= 1.0.2-2), golang-github-fatih-color (= 1.19.0-1), golang-github-felixge-httpsnoop (= 1.0.3-3), golang-github-fxamacker-cbor (= 2.9.2-1), golang-github-go-jose-go-jose (= 4.1.4-1), golang-github-go-logr-logr (= 1.4.3-1), golang-github-go-logr-stdr (= 1.2.2-4), golang-github-go-viper-mapstructure (= 2.5.0-2), golang-github-gobwas-glob (= 0.2.3+git20181002.e7a84e9-1), golang-github-golang-jwt-jwt-v5 (= 5.3.1-1), golang-github-golang-protobuf-1-5 (= 1.5.4-2), golang-github-golang-snappy (= 1.0.0-1), golang-github-google-go-cmp (= 0.7.0-1), golang-github-google-s2a-go (= 0.1.8-1), golang-github-google-uuid (= 1.6.0-1), golang-github-grafana-regexp (= 0.0~git20240518.a468a5b-1), golang-github-hashicorp-go-version (= 1.8.0-1), golang-github-jpillora-backoff (= 1.0.0-1.1), golang-github-json-iterator-go (= 1.1.12-2), golang-github-klauspost-compress (= 1.18.6+ds1-2), golang-github-knadh-koanf (= 2.0.1-1), golang-github-kylelemons-godebug (= 1.1.0-2), golang-github-mattn-go-colorable (= 0.1.13-1), golang-github-mattn-go-isatty (= 0.0.20-1), golang-github-mattn-go-runewidth (= 0.0.22-1), golang-github-mitchellh-copystructure (= 1.2.0-1), golang-github-mitchellh-mapstructure (= 1.5.0+git20231216.8508981-1), golang-github-mitchellh-reflectwalk (= 1.0.1-1), golang-github-modern-go-concurrent (= 1.0.3-1.1), golang-github-modern-go-reflect2 (= 1.0.2-2), golang-github-munnerz-goautoneg (= 0.0~git20191010.a7dc8b6-2), golang-github-mwitkow-go-conntrack (= 0.0~git20190716.2f06839-4), golang-github-oklog-ulid (= 2.0.2+ds-2), golang-github-pkg-browser (= 0.0~git20240102.5ac0b6a-1), golang-github-pmezard-go-difflib (= 1.0.0-4), golang-github-prometheus-client-golang (= 1.23.2-3), golang-github-prometheus-client-model (= 0.6.2-2), golang-github-prometheus-common (= 0.68.1-1), golang-github-prometheus-otlptranslator (= 1.0.0-2), golang-github-prometheus-procfs (= 0.20.1-2), golang-github-prometheus-sigv4 (= 0.4.1-1), golang-github-puzpuzpuz-xsync (= 4.4.0-1), golang-github-spiffe-go-spiffe (= 2.6.0-1), golang-github-urfave-cli-v2 (= 2.25.7-5), golang-github-valyala-bytebufferpool (= 1.0.0-5), golang-github-valyala-fastjson (= 1.6.10-1), golang-github-valyala-fastrand (= 1.1.0-4), golang-github-valyala-fasttemplate (= 1.2.2+ds1-3), golang-github-valyala-gozstd (= 1.24.0+ds1-1), golang-github-valyala-histogram (= 1.2.0+ds1-1), golang-github-valyala-quicktemplate (= 1.8.0+ds1-4), golang-github-victoriametrics-easyproto (= 1.2.0-1), golang-github-victoriametrics-fastcache (= 1.13.3+ds1-1), golang-github-victoriametrics-metrics (= 1.43.2+ds1-1), golang-github-victoriametrics-metricsql (= 0.87.1+ds1-1), golang-github-vividcortex-ewma (= 1.1.1-2), golang-github-x448-float16 (= 0.8.4-3), golang-github-xrash-smetrics (= 0.0~git20201216.039620a-1), golang-go.crypto (= 1:0.52.0-1), golang-go.uber-atomic (= 1.11.0-1), golang-go.uber-multierr (= 1.11.0-1), golang-go.uber-zap (= 1.27.0-1), golang-gogoprotobuf (= 1.3.2-3), golang-golang-x-exp (= 0.0~git20260529.c761662-1), golang-golang-x-net (= 1:0.55.0-1), golang-golang-x-oauth2 (= 0.27.0-1), golang-golang-x-sync (= 0.20.0-1), golang-golang-x-sys (= 0.45.0+dfsg-1), golang-golang-x-term (= 0.41.0-1), golang-golang-x-text (= 0.36.0-1), golang-golang-x-time (= 0.15.0-1), golang-google-cloud (= 0.123.0-3), golang-google-genproto (= 0.0~git20260414.afd174a-1), golang-google-grpc (= 1.81.1-1), golang-google-protobuf (= 1.36.10-2), golang-gopkg-inf.v0 (= 0.9.1-2), golang-gopkg-yaml.v3 (= 3.0.4-3), golang-k8s-apimachinery (= 0.33.4-2), golang-k8s-client-go (= 0.33.4-1), golang-k8s-klog (= 2.130.1-1), golang-k8s-sigs-json (= 0.0~git20241014.cfa47c3-1), golang-k8s-sigs-randfill (= 1.0.0-2), golang-k8s-sigs-structured-merge-diff (= 4.6.0-3), golang-k8s-sigs-yaml (= 1.4.0-2), golang-k8s-utils (= 0.0~git20260319.28399d8-1), golang-opentelemetry-otel (= 1.43.0-4), golang-testify (= 1.11.1-1), golang-uber-goleak (= 1.3.0-2), golang-yaml.v2 (= 2.4.3-1)
 net
 Priority: optional
-Filename: pool/main/v/victoriametrics/victoria-metrics_1.144.0+ds1-3_amd64.deb
-Size: 50013520
-MD5sum: ea7a50a73876ae6802f0312fb5cfa6db
-SHA256: 0918d814196ec756c7d340d6e39771d13a30c7fbbd71ce5ba113d9c398055184
+Filename: pool/main/v/victoriametrics/victoria-metrics_1.145.0+ds1-1_amd64.deb
+Size: 55667352
+MD5sum: 7fd061e5e3c3d413ab84c4e0d8fe124b
+SHA256: c5d29f3ff7797e21f234603e1872a55d9b9a5d2279e3e069fd01feb0bbe6cfb2
 
 Package: vip-manager
 Version: 1.0.2-11
