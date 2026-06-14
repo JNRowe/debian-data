@@ -745,11 +745,11 @@ MD5sum: 756110088902251f20969dfdbed0d83f
 SHA256: ee2e2c078bfea7bfc589acb74bd514329e3ad26acaaa1de75e76ba7fffa63b45
 
 Package: git-hub
-Version: 2.1.3-1
-Installed-Size: 124
+Version: 2.1.3-2
+Installed-Size: 123
 Maintainer: Maximiliano Curia <maxy@debian.org>
 Architecture: all
-Depends: git (>= 1:1.7.7), python3:any
+Depends: git, python3:any
 Recommends: vim-git-hub
 Description: Git command line interface to GitHub
 Multi-Arch: foreign
@@ -757,15 +757,15 @@ Homepage: https://github.com/sociomantic-tsunami/git-hub
 Description-md5: 3e257d1f6193871bc252efaf361c5762
 vcs
 Priority: optional
-Filename: pool/main/g/git-hub/git-hub_2.1.3-1_all.deb
-Size: 39004
-MD5sum: 8fe8049dbe7ad3a6f1880437e1845b81
-SHA256: 81d44591884177977d127f926be92fb372ebaac0e6faf97a6b536113ec6da703
+Filename: pool/main/g/git-hub/git-hub_2.1.3-2_all.deb
+Size: 37892
+MD5sum: 466e2c4f4ab622a3e0bbe18f0f11a8e6
+SHA256: 4ceb692573671c5b5722364356301d102bfa0ba20057bfb273199881bb11344a
 
 Package: vim-git-hub
 Source: git-hub
-Version: 2.1.3-1
-Installed-Size: 25
+Version: 2.1.3-2
+Installed-Size: 24
 Maintainer: Maximiliano Curia <maxy@debian.org>
 Architecture: all
 Depends: vim (>= 2:8.1.0693-2~) | neovim (>= 0.2.2-1~)
@@ -774,10 +774,10 @@ Homepage: https://github.com/sociomantic-tsunami/git-hub
 Description-md5: e0ba799b9e74d12953f326ed6ab82e82
 vcs
 Priority: optional
-Filename: pool/main/g/git-hub/vim-git-hub_2.1.3-1_all.deb
-Size: 4144
-MD5sum: a8cbe396206a68b58ed023f28e895acb
-SHA256: 52ee725a32dabd7765d4d04151cffdd54765d27fea90ffde7dc6133136b67954
+Filename: pool/main/g/git-hub/vim-git-hub_2.1.3-2_all.deb
+Size: 3020
+MD5sum: 5f5875bb07f36ef8e6636f941538042d
+SHA256: 72458396dd5a24a93ef366f75e60e6e3e7626b575eb145f9e464b66ac31491e4
 
 Package: git-imerge
 Version: 1.2.0-5
@@ -2071,6 +2071,66 @@ Filename: pool/main/t/tkrev/tkrev_9.6.1-3_all.deb
 Size: 255912
 MD5sum: 4669353c4a01716edd6182e5fffdcaec
 SHA256: 10ed14aa31f49ff05cd89d9f5da7749703ad3c85894bf6e6fa3bcc801890b02d
+
+Package: tortoisehg
+Version: 7.0.1-4
+Installed-Size: 9459
+Maintainer: Andrej Shadura <andrewsh@debian.org>
+Architecture: all
+Depends: mercurial (<< 7.3~), mercurial (>= 6.5~), python3-iniparse, python3-pygments, python3-pyqt6, python3-pyqt6.qsci, python3:any
+Recommends: libjs-jquery, libjs-underscore
+Suggests: tortoisehg-nautilus
+Description: Graphical tool for working with Mercurial
+Homepage: https://tortoisehg.bitbucket.io
+Description-md5: 4e9c66e6fcc1d4d08cdd223ecf123226
+Tag: devel::rcs, implemented-in::python, interface::graphical,
+ interface::x11, role::program, scope::application, uitoolkit::gtk,
+ use::synchronizing, use::viewing, works-with::vcs, x11::application
+vcs
+Priority: optional
+Filename: pool/main/t/tortoisehg/tortoisehg_7.0.1-4_all.deb
+Size: 2350600
+MD5sum: c98e278dd9614dc580564646306f4fa4
+SHA256: 57e68dcc17932423091f1a4b10399188deff68c4be08a33a5904fc2cc9ef1100
+
+Package: tortoisehg-caja
+Source: tortoisehg
+Version: 7.0.1-4
+Installed-Size: 46
+Maintainer: Andrej Shadura <andrewsh@debian.org>
+Architecture: all
+Depends: mate-icon-theme | gnome-icon-theme-full | gnome-icon-theme, python3-caja (>= 1.1-2), python3-gi, tortoisehg (>= 7.0.1-4)
+Recommends: ssh-askpass-gnome | ssh-askpass
+Description: Graphical tool for working with Mercurial (Caja extension)
+Homepage: https://tortoisehg.bitbucket.io
+Description-md5: 14e2e3ecdca63f8131b64ededbc736dd
+vcs
+Priority: optional
+Filename: pool/main/t/tortoisehg/tortoisehg-caja_7.0.1-4_all.deb
+Size: 12320
+MD5sum: 5b6cd2e76d4f225b7f087dda0200b68f
+SHA256: 9e898bde6a286e9c935344befccc6121788b3480ab9b3a6587ef1ed782cba0f2
+
+Package: tortoisehg-nautilus
+Source: tortoisehg
+Version: 7.0.1-4
+Installed-Size: 46
+Maintainer: Andrej Shadura <andrewsh@debian.org>
+Architecture: all
+Depends: gnome-icon-theme-full | gnome-icon-theme, python3-gi, python3-nautilus (>= 1.1-2), tortoisehg (>= 7.0.1-4)
+Recommends: ssh-askpass-gnome | ssh-askpass
+Description: Graphical tool for working with Mercurial (Nautilus extension)
+Homepage: https://tortoisehg.bitbucket.io
+Description-md5: b9f549998795e501d5d1c3254a8ff145
+Tag: devel::rcs, implemented-in::python, interface::graphical,
+ interface::x11, role::plugin, role::program, uitoolkit::gtk,
+ use::synchronizing, use::viewing, works-with::vcs, x11::application
+vcs
+Priority: optional
+Filename: pool/main/t/tortoisehg/tortoisehg-nautilus_7.0.1-4_all.deb
+Size: 12248
+MD5sum: 264b4b67424d4070337705f1259fb9cc
+SHA256: c8545fa0ffad9410ff0508d5391eb30b439346792dc2fe860d956026200aeacc
 
 Package: wiggle
 Version: 1.3-1
