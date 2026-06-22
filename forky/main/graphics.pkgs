@@ -2082,6 +2082,45 @@ Size: 704424
 MD5sum: 10881e707c50f6532d3074fe37ea7d7e
 SHA256: e575147b39ea8e54e8a25fd52784f56ea86d9d99965a50da87994ce0664e0a80
 
+Package: flpsed
+Version: 0.7.3-11
+Installed-Size: 104
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Replaces: flpsed-data (<< 0.7.3-10)
+Depends: flpsed-data (>= 0.7.3-11), libc6 (>= 2.38), libfltk1.3t64 (>= 1.3.4), libgcc-s1 (>= 3.0), libstdc++6 (>= 5), libx11-6
+Recommends: xpdf-utils | poppler-utils
+Breaks: flpsed-data (<< 0.7.3-10)
+Description: Postscript and PDF annotator
+Homepage: https://flpsed.org/flpsed.html
+Description-md5: ae1da8c08c90881eeebd071fc4254775
+Tag: interface::graphical, interface::x11, role::program, scope::application,
+ uitoolkit::fltk, use::editing, works-with-format::pdf,
+ works-with-format::postscript, works-with::text, x11::application
+graphics
+Priority: optional
+Filename: pool/main/f/flpsed/flpsed_0.7.3-11_amd64.deb
+Size: 33172
+MD5sum: bbe081e497b5a817e8b68d4cc5900480
+SHA256: 2fc07a1684a33f4bf78c43835c19fd67a71d10cffa84ae6b3d006d45cf4766f0
+
+Package: flpsed-data
+Source: flpsed
+Version: 0.7.3-11
+Installed-Size: 150
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: all
+Description: Postscript and PDF annotator - data files
+Multi-Arch: foreign
+Homepage: https://flpsed.org/flpsed.html
+Description-md5: bf0dc755d059ce5c08bf1c7e92a74435
+graphics
+Priority: optional
+Filename: pool/main/f/flpsed/flpsed-data_0.7.3-11_all.deb
+Size: 77772
+MD5sum: bb35273f701253823ee40030e1fae820
+SHA256: 77aa2bbf8d70039e2ae30813666e49baf019b22495bc3b78111038e532cda2b0
+
 Package: fracplanet
 Source: fracplanet (0.5.1-6)
 Version: 0.5.1-6+b3
@@ -3726,60 +3765,6 @@ Filename: pool/main/i/inventor/inventor-demo_2.1.6.1+ds-1_amd64.deb
 Size: 1699840
 MD5sum: c40ca146de022892ca4d915b27c799d1
 SHA256: 37b509fef8055f0b513b68d4d01f6ee544af7818a3618688c27692e233364f67
-
-Package: invesalius
-Version: 3.1.99998-8
-Installed-Size: 51388
-Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
-Architecture: all
-Depends: python3:any, python3-setuptools, python3-numpy, python3-scipy, python3-skimage, python3-wxgtk4.0, python3-pil, python3-gdcm, python3-vtk9, python3-nibabel, python3-serial, python3-psutil, python3-h5py, python3-imageio, python3-pubsub, python3-puremagic, invesalius-bin
-Recommends: python3-torch | python3-torch-cuda
-Description: 3D medical imaging reconstruction software
-Homepage: https://www.cti.gov.br/invesalius/
-Description-md5: 821349267c7fd811dea4f995630c2a40
-Tag: field::medicine, field::medicine:imaging, interface::graphical,
- interface::x11, role::program, use::viewing, x11::application
-graphics
-Priority: optional
-Filename: pool/main/i/invesalius/invesalius_3.1.99998-8_all.deb
-Size: 43861484
-MD5sum: 454e451921e0fa53b4a9fde72592e4a3
-SHA256: 477cda3740bb494d8005bbb457ecb2c8322878b3ca86e58fe25478ae93265eac
-
-Package: invesalius-bin
-Source: invesalius
-Version: 3.1.99998-8
-Installed-Size: 1559
-Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
-Architecture: amd64
-Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.0), libgomp1 (>= 4.9), libstdc++6 (>= 11)
-Description: Implementation of MIDA and contour based visualizations
-Multi-Arch: same
-Homepage: https://www.cti.gov.br/invesalius/
-Description-md5: 57304da02acc6c104179b2b8a697654f
-graphics
-Priority: optional
-Filename: pool/main/i/invesalius/invesalius-bin_3.1.99998-8_amd64.deb
-Size: 330988
-MD5sum: 9fb66cae86dcf458be23937fb65a5bd0
-SHA256: 7d9934151761344e6fa06ad9c64cc9c2915b6da08f31dcb3559a14ead61727e4
-
-Package: invesalius-examples
-Source: invesalius
-Version: 3.1.99998-8
-Installed-Size: 18298
-Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
-Architecture: all
-Description: examples for 3D medical imaging reconstruction software
-Multi-Arch: foreign
-Homepage: https://www.cti.gov.br/invesalius/
-Description-md5: 33b06a19f32b7da3eeab791da567270b
-graphics
-Priority: optional
-Filename: pool/main/i/invesalius/invesalius-examples_3.1.99998-8_all.deb
-Size: 18696636
-MD5sum: eeb0df16b72133a06169078a6c1afb3c
-SHA256: 605739c94c0836dc22e776a5b2c8acdf9875df04e4b4fc035ce83d97473bd9c4
 
 Package: ipe
 Source: ipe (7.2.30-1)
@@ -12243,11 +12228,11 @@ MD5sum: 995212054cfcfd7dc58b44c8cc7a2bae
 SHA256: e26e067d9f79424411fb90f181a2ef771ebb839a122ba54d732520d606294cbe
 
 Package: xbrzscale
-Version: 1.8-2
-Installed-Size: 221
-Maintainer: Peter Blackman <peter@pblackman.plus.com>
+Version: 1.8-3
+Installed-Size: 205
+Maintainer: Peter Blackman <peterb@debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.0), libsdl2-2.0-0 (>= 2.0.12), libsdl2-image-2.0-0 (>= 2.0.5), libstdc++6 (>= 5)
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libsdl2-2.0-0 (>= 2.0.12), libsdl2-image-2.0-0 (>= 2.0.5), libstdc++6 (>= 5)
 Description: Intelligent graphics file upscaling tool
 Homepage: https://github.com/atheros/xbrzscale
 Description-md5: 5543e7be7287ad43dabf4a8be92241bf
@@ -12256,10 +12241,10 @@ Tag: implemented-in::c++, interface::commandline, role::program,
  works-with::image, works-with::image:raster
 graphics
 Priority: optional
-Filename: pool/main/x/xbrzscale/xbrzscale_1.8-2_amd64.deb
-Size: 68552
-MD5sum: 14dbcff2f4478102c57d5f4b95e34b37
-SHA256: 9592d5dad0e98a4deb826adf85e2716b497506bc17655a8a68c69834dd9db94a
+Filename: pool/main/x/xbrzscale/xbrzscale_1.8-3_amd64.deb
+Size: 67372
+MD5sum: 7b163b9320e99c28e21b6a5e2580fcb4
+SHA256: 910097e0118fe6a4b4a866b23080f92014651600bb82b6b35484a25c6ed5dda8
 
 Package: xfig
 Version: 1:3.2.9a-5
@@ -12504,9 +12489,8 @@ MD5sum: 44a7f74e8248969c32350e8ac96e2a61
 SHA256: 6dd9b18c4cd0a2a20667775482c3a1e3598a511e718a08bc58839025e3129d56
 
 Package: zint
-Source: zint (2.15.0-1)
-Version: 2.15.0-1+b2
-Installed-Size: 626
+Version: 2.15.0-2
+Installed-Size: 625
 Maintainer: Dmitry Smirnov <onlyjob@debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34), libzint2.15 (>= 2.12.0)
@@ -12515,15 +12499,15 @@ Homepage: https://zint.org.uk/
 Description-md5: d3105a2ce9714b9df1a7dfc6d6ff7385
 graphics
 Priority: optional
-Filename: pool/main/z/zint/zint_2.15.0-1+b2_amd64.deb
-Size: 197056
-MD5sum: 80d4d5db96b8466d260be996e27eac45
-SHA256: e4478e149cabfdee82d13a3fc0e62dfb87415206c35d004c103c23dea290e578
+Filename: pool/main/z/zint/zint_2.15.0-2_amd64.deb
+Size: 196516
+MD5sum: 96c48de03075a9847b2aa6e681520009
+SHA256: 1881250d6f976ff6f7011bd8739e844667bfb7ff1be9a660b0b56b1a87a5b2ac
 
 Package: zint-qt
-Source: zint (2.15.0-1)
-Version: 2.15.0-1+b2
-Installed-Size: 1324
+Source: zint
+Version: 2.15.0-2
+Installed-Size: 1323
 Maintainer: Dmitry Smirnov <onlyjob@debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libqt5core5t64 (>= 5.15.1), libqt5gui5t64 (>= 5.14.1) | libqt5gui5-gles (>= 5.14.1), libqt5widgets5t64 (>= 5.6.0~beta), libstdc++6 (>= 5), libzint2.15 (>= 2.13.0)
@@ -12533,8 +12517,8 @@ Description-md5: 43691935de273f9cbe18b68093597f49
 Tag: uitoolkit::qt
 graphics
 Priority: optional
-Filename: pool/main/z/zint/zint-qt_2.15.0-1+b2_amd64.deb
-Size: 397148
-MD5sum: 6f2ff741b00395a779d081ec52464109
-SHA256: f56acb011bee2874eddf1a7990bc153ed79f0b4ee3d62b25ce60b2556c7941a5
+Filename: pool/main/z/zint/zint-qt_2.15.0-2_amd64.deb
+Size: 396292
+MD5sum: 038d3e920f57f472e02b81d3e4f8cab2
+SHA256: c81bdecf43f480fab094f72679c0f6f884e722b165214a3ef00019ac76670967
 
