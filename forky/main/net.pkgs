@@ -503,13 +503,12 @@ MD5sum: d98b07bdc735a2fb956d02a0009cf77a
 SHA256: 9dc0d95d24da6bd231b14ecc04606bd46bf8ecf13c5a8d61b8359783228d7599
 
 Package: apt-cacher
-Version: 1.7.32
-Installed-Size: 267
+Version: 1.7.33
+Installed-Size: 265
 Maintainer: Mark Hindley <mark@hindley.org.uk>
 Architecture: all
 Depends: distro-info-data, ed, libdpkg-perl, libfilesys-df-perl, libio-compress-lzma-perl, libio-interactive-perl, libio-interface-perl, libipc-sharelite-perl, libnetaddr-ip-perl, libsys-syscall-perl, libwww-curl-perl, libwww-perl, update-inetd, debconf (>= 0.5) | debconf-2.0, perl:any
-Pre-Depends: init-system-helpers (>= 1.54~)
-Recommends: libberkeleydb-perl
+Recommends: libberkeleydb-perl, cron | cron-daemon
 Suggests: libfreezethaw-perl, libio-socket-inet6-perl
 Description: Caching proxy server for Debian/Ubuntu/Devuan software repositories
 Description-md5: c2a7cf862bdc0d1afaec036dba0d3c94
@@ -523,10 +522,10 @@ Tag: admin::file-distribution, admin::package-management,
  works-with::text
 net
 Priority: optional
-Filename: pool/main/a/apt-cacher/apt-cacher_1.7.32_all.deb
-Size: 77336
-MD5sum: 1aaea326a9d737c72f18d6768cdb4ef4
-SHA256: 5987bd42e8bce2a66636153f75aa0f6aec78a7e7abbf03452164e8e72a44b82c
+Filename: pool/main/a/apt-cacher/apt-cacher_1.7.33_all.deb
+Size: 76348
+MD5sum: e85de978346da1181b0a64e6d0ff95ae
+SHA256: daf5f0b369fcb5d6685225cebb59be1cb8a8b8460bd074078d31da8c399117a3
 
 Package: apt-cacher-ng
 Version: 3.7.5-1.1
@@ -7307,12 +7306,13 @@ MD5sum: 1affa09f31f7d21cab4dbc12eea99c11
 SHA256: 553cc99396f7c6b856ed216ab0256577c55af05adab42ad673f8ac0a1376929b
 
 Package: freeradius
-Version: 3.2.8+dfsg-1
-Installed-Size: 3434
+Source: freeradius (3.2.8+dfsg-1)
+Version: 3.2.8+dfsg-1+b1
+Installed-Size: 3437
 Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Provides: radius-server
-Depends: freeradius-common, freeradius-config, libfreeradius3 (= 3.2.8+dfsg-1), perl:any, libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libct4 (>= 0.64), libgdbm6t64 (>= 1.16), libjson-c5 (>= 0.15), libpam0g (>= 0.99.7.1), libperl5.40 (>= 5.40.0), libreadline8t64 (>= 6.0), libsqlite3-0 (>= 3.7.15), libssl3t64 (>= 3.0.0), libsystemd0, libtalloc2 (>= 2.0.4~git20101213), libwbclient0 (>= 2:4.19.6+dfsg-2~)
+Depends: freeradius-common, freeradius-config, libfreeradius3 (= 3.2.8+dfsg-1+b1), perl:any, libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libct4 (>= 0.64), libgdbm6t64 (>= 1.16), libjson-c5 (>= 0.15), libpam0g (>= 0.99.7.1), libperl5.40 (>= 5.40.0), libreadline8t64 (>= 6.0), libsqlite3-0 (>= 3.7.15), libssl3t64 (>= 3.0.0), libsystemd0, libtalloc2 (>= 2.0.4~git20101213), libwbclient0 (>= 2:4.19.6+dfsg-2~)
 Recommends: freeradius-utils
 Suggests: freeradius-krb5, freeradius-ldap, freeradius-mysql, freeradius-postgresql, freeradius-python3, snmp
 Description: high-performance and highly configurable RADIUS server
@@ -7322,10 +7322,10 @@ Tag: implemented-in::c, interface::daemon, network::server, protocol::radius,
  role::program, security::authentication, works-with::db
 net
 Priority: optional
-Filename: pool/main/f/freeradius/freeradius_3.2.8+dfsg-1_amd64.deb
-Size: 830816
-MD5sum: 972ce94d68898950e838cf8b228436bc
-SHA256: 5fbc12e01b17946190bb1d3f1f5a06f9b49dfabcee90f73b1a23ec760229e84f
+Filename: pool/main/f/freeradius/freeradius_3.2.8+dfsg-1+b1_amd64.deb
+Size: 831952
+MD5sum: cc2ebae89eee260ea8de5c32783caa39
+SHA256: 101a78d7c5fee3bfac6db863296b3362015ac1133027d9ed0bbc612a125363fe
 
 Package: freeradius-common
 Source: freeradius
@@ -7347,9 +7347,9 @@ MD5sum: 4b540e743ef95c2fa312b27e02ba1b87
 SHA256: cdbc3f08fdff29708552d9a22706749411b23dfd5eaf8794febeb2f304fa5070
 
 Package: freeradius-config
-Source: freeradius
-Version: 3.2.8+dfsg-1
-Installed-Size: 1322
+Source: freeradius (3.2.8+dfsg-1)
+Version: 3.2.8+dfsg-1+b1
+Installed-Size: 1321
 Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: adduser, ca-certificates, freeradius-common, make, openssl, ssl-cert
@@ -7359,35 +7359,35 @@ Homepage: http://www.freeradius.org/
 Description-md5: ac5463a5cccad417d59c5cd9a88dd876
 net
 Priority: optional
-Filename: pool/main/f/freeradius/freeradius-config_3.2.8+dfsg-1_amd64.deb
-Size: 234052
-MD5sum: 1060df6eeea00be9658cfae3ee79f94f
-SHA256: 7e524d0cfa7f91ad8a708f94c528b25543d2660b9be739f369e496b754f580fa
+Filename: pool/main/f/freeradius/freeradius-config_3.2.8+dfsg-1+b1_amd64.deb
+Size: 232096
+MD5sum: ec73511fe3f3fb2ca4c8f2376f760c78
+SHA256: d90091ca9a54d1e8a124db8273150667575a59b4085de165636559e676d5cde2
 
 Package: freeradius-dhcp
-Source: freeradius
-Version: 3.2.8+dfsg-1
-Installed-Size: 117
+Source: freeradius (3.2.8+dfsg-1)
+Version: 3.2.8+dfsg-1+b1
+Installed-Size: 116
 Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: freeradius (= 3.2.8+dfsg-1), libc6 (>= 2.38)
+Depends: freeradius (= 3.2.8+dfsg-1+b1), libc6 (>= 2.38)
 Description: DHCP module for FreeRADIUS server
 Homepage: http://www.freeradius.org/
 Description-md5: 63c03705d2b33716c280099cb1b24d9d
 net
 Priority: optional
-Filename: pool/main/f/freeradius/freeradius-dhcp_3.2.8+dfsg-1_amd64.deb
-Size: 40368
-MD5sum: 610ede2761c8e6eb676807a1e55e45d7
-SHA256: 36446366a0ea56a4bea44ac62ff6373fc1f4c40d4880c49e92acde41424db842
+Filename: pool/main/f/freeradius/freeradius-dhcp_3.2.8+dfsg-1+b1_amd64.deb
+Size: 38404
+MD5sum: f36ed3a38410a35ea249cfc67167a646
+SHA256: 5d94d5b9e238282e11b742a80a4472ff4da507bc8704da5292fdd4005f127233
 
 Package: freeradius-iodbc
-Source: freeradius
-Version: 3.2.8+dfsg-1
-Installed-Size: 60
+Source: freeradius (3.2.8+dfsg-1)
+Version: 3.2.8+dfsg-1+b1
+Installed-Size: 59
 Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: freeradius (= 3.2.8+dfsg-1), libc6 (>= 2.4), libiodbc2 (>= 3.52.7)
+Depends: freeradius (= 3.2.8+dfsg-1+b1), libc6 (>= 2.4), libiodbc2 (>= 3.52.7)
 Description: iODBC module for FreeRADIUS server
 Homepage: http://www.freeradius.org/
 Description-md5: 6347edefac75f466ab02895aecb1a016
@@ -7395,18 +7395,18 @@ Tag: implemented-in::c, protocol::radius, role::plugin,
  security::authentication, works-with::db
 net
 Priority: optional
-Filename: pool/main/f/freeradius/freeradius-iodbc_3.2.8+dfsg-1_amd64.deb
-Size: 24924
-MD5sum: 44f89fd1bcda06cafd0a5cd78b814892
-SHA256: 2038f81b118500c245680b227e56b2a5879e2b742d741a4ff675a1ef0f6dee43
+Filename: pool/main/f/freeradius/freeradius-iodbc_3.2.8+dfsg-1+b1_amd64.deb
+Size: 22948
+MD5sum: f8f7d2833a6354de808989b591429b45
+SHA256: 158f6df13f7adb46e5e31e62be239f5d10c3f52f8b03c3b33ac774dfb583cf3f
 
 Package: freeradius-krb5
-Source: freeradius
-Version: 3.2.8+dfsg-1
-Installed-Size: 66
+Source: freeradius (3.2.8+dfsg-1)
+Version: 3.2.8+dfsg-1+b1
+Installed-Size: 65
 Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: freeradius (= 3.2.8+dfsg-1), libc6 (>= 2.38), libcom-err2 (>= 1.43.9), libkrb5-3 (>= 1.13~alpha1+dfsg)
+Depends: freeradius (= 3.2.8+dfsg-1+b1), libc6 (>= 2.38), libcom-err2 (>= 1.43.9), libkrb5-3 (>= 1.13~alpha1+dfsg)
 Description: kerberos module for FreeRADIUS server
 Homepage: http://www.freeradius.org/
 Description-md5: 3a5c3602207569628c542943459c0429
@@ -7414,18 +7414,18 @@ Tag: implemented-in::c, protocol::kerberos, protocol::radius, role::plugin,
  security::authentication, works-with::db
 net
 Priority: optional
-Filename: pool/main/f/freeradius/freeradius-krb5_3.2.8+dfsg-1_amd64.deb
-Size: 25880
-MD5sum: 9b9f4cdb06eb92d34710ffe6989972c6
-SHA256: dff03099236667e2d4248f4d13643d441103d3a9185ae04fc9d246ff425f4451
+Filename: pool/main/f/freeradius/freeradius-krb5_3.2.8+dfsg-1+b1_amd64.deb
+Size: 23908
+MD5sum: 8785ca0c28e5fe0bed7c9f0325cf32db
+SHA256: 508a1d708c2298f5485ce2ae073c0f3274f9427b88ddd4626a60bc113121c8cf
 
 Package: freeradius-ldap
-Source: freeradius
-Version: 3.2.8+dfsg-1
-Installed-Size: 148
+Source: freeradius (3.2.8+dfsg-1)
+Version: 3.2.8+dfsg-1+b1
+Installed-Size: 143
 Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: freeradius (= 3.2.8+dfsg-1), libc6 (>= 2.38), libldap2 (>= 2.6.2)
+Depends: freeradius (= 3.2.8+dfsg-1+b1), libc6 (>= 2.38), libldap2 (>= 2.6.2)
 Description: LDAP module for FreeRADIUS server
 Homepage: http://www.freeradius.org/
 Description-md5: cc9ad4f60cb78e6b940d44e4c3b57d1d
@@ -7433,35 +7433,35 @@ Tag: implemented-in::c, protocol::ldap, protocol::radius, role::plugin,
  security::authentication, works-with::db
 net
 Priority: optional
-Filename: pool/main/f/freeradius/freeradius-ldap_3.2.8+dfsg-1_amd64.deb
-Size: 52032
-MD5sum: d58efc7b5520af818313694947c13e03
-SHA256: 6cdf166107ab4832cab34d70ca300bd78954e03e0a1bb78e7d11fa2ce11f2d99
+Filename: pool/main/f/freeradius/freeradius-ldap_3.2.8+dfsg-1+b1_amd64.deb
+Size: 50252
+MD5sum: 1904a87a57872d1b82f147d73e9eaccb
+SHA256: 1945fd2f01d55d6b0450e87e3fd1e6408db18cebebe9bf6cd0bfb1900a3cef4d
 
 Package: freeradius-memcached
-Source: freeradius
-Version: 3.2.8+dfsg-1
-Installed-Size: 70
+Source: freeradius (3.2.8+dfsg-1)
+Version: 3.2.8+dfsg-1+b1
+Installed-Size: 69
 Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: freeradius (= 3.2.8+dfsg-1), libc6 (>= 2.4), libmemcached11t64 (>= 1.1.4)
+Depends: freeradius (= 3.2.8+dfsg-1+b1), libc6 (>= 2.4), libmemcached11t64 (>= 1.1.4)
 Description: Memcached module for FreeRADIUS server
 Homepage: http://www.freeradius.org/
 Description-md5: 6c7415181d540694968e8e8c5fbf1877
 net
 Priority: optional
-Filename: pool/main/f/freeradius/freeradius-memcached_3.2.8+dfsg-1_amd64.deb
-Size: 26432
-MD5sum: 7bc73dd699712955c30a192c9b950db8
-SHA256: 4731e2f27c25d4790d22b60195a5e31707aabd1b108c4836f77df1108a6598e5
+Filename: pool/main/f/freeradius/freeradius-memcached_3.2.8+dfsg-1+b1_amd64.deb
+Size: 24456
+MD5sum: 92f002ca8906d7b59304101d700f1231
+SHA256: 5c130f5d33fba733bfb1dfc8be122f9622c763679d5779ecbf6fa20264b0594d
 
 Package: freeradius-mysql
-Source: freeradius
-Version: 3.2.8+dfsg-1
-Installed-Size: 70
+Source: freeradius (3.2.8+dfsg-1)
+Version: 3.2.8+dfsg-1+b1
+Installed-Size: 69
 Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: freeradius (= 3.2.8+dfsg-1), libc6 (>= 2.4), libmariadb3 (>= 3.0.0)
+Depends: freeradius (= 3.2.8+dfsg-1+b1), libc6 (>= 2.4), libmariadb3 (>= 3.0.0)
 Description: MySQL module for FreeRADIUS server
 Homepage: http://www.freeradius.org/
 Description-md5: 4423793fbfc997cd42deec2bcb196555
@@ -7469,18 +7469,18 @@ Tag: devel::lang:sql, implemented-in::c, protocol::radius, role::plugin,
  security::authentication, works-with::db
 net
 Priority: optional
-Filename: pool/main/f/freeradius/freeradius-mysql_3.2.8+dfsg-1_amd64.deb
-Size: 26992
-MD5sum: 91a62c7cdad1ce7054240fa7f03e263b
-SHA256: c72e6c006e0b92566cbfe218f80931f26f997cb92e6e7979aad9ab793b771c3e
+Filename: pool/main/f/freeradius/freeradius-mysql_3.2.8+dfsg-1+b1_amd64.deb
+Size: 25064
+MD5sum: 9622df25c60a08489197b9629742e7b1
+SHA256: 2794dab2e3dede7228588f00ebc241c3ea204aee7fad8d2638627c676127aad0
 
 Package: freeradius-postgresql
-Source: freeradius
-Version: 3.2.8+dfsg-1
-Installed-Size: 89
+Source: freeradius (3.2.8+dfsg-1)
+Version: 3.2.8+dfsg-1+b1
+Installed-Size: 88
 Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: freeradius (= 3.2.8+dfsg-1), libc6 (>= 2.38), libpq5 (>= 8.4~)
+Depends: freeradius (= 3.2.8+dfsg-1+b1), libc6 (>= 2.38), libpq5 (>= 8.4~)
 Description: PostgreSQL module for FreeRADIUS server
 Homepage: http://www.freeradius.org/
 Description-md5: 21c022ad780dbebcad8db320d076ccd0
@@ -7488,69 +7488,69 @@ Tag: implemented-in::c, protocol::radius, role::plugin,
  security::authentication, works-with::db
 net
 Priority: optional
-Filename: pool/main/f/freeradius/freeradius-postgresql_3.2.8+dfsg-1_amd64.deb
-Size: 30524
-MD5sum: 3c66ee67890bedbbb6807a581bfc78e1
-SHA256: 661e2ab132eb3489eaefa7baeb63a9deadcd01ead51e619fc7a7866ac94d7f25
+Filename: pool/main/f/freeradius/freeradius-postgresql_3.2.8+dfsg-1+b1_amd64.deb
+Size: 28628
+MD5sum: 5b34fea1697ea98fe71470b7b013dfa6
+SHA256: ba0851a9f8520edff4fce3f9a1d4145ec963ae130b7982175dd694eaa08c0836
 
 Package: freeradius-python3
-Source: freeradius
-Version: 3.2.8+dfsg-1
-Installed-Size: 87
+Source: freeradius (3.2.8+dfsg-1)
+Version: 3.2.8+dfsg-1+b1
+Installed-Size: 86
 Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: freeradius (= 3.2.8+dfsg-1), libc6 (>= 2.34), libpython3.13 (>= 3.13.0~rc3)
+Depends: freeradius (= 3.2.8+dfsg-1+b1), libc6 (>= 2.34), libpython3.14 (>= 3.14.1)
 Description: Python 3 module for FreeRADIUS server
 Homepage: http://www.freeradius.org/
 Description-md5: 80f8197fc7d045314f87c86f25224510
 net
 Priority: optional
-Filename: pool/main/f/freeradius/freeradius-python3_3.2.8+dfsg-1_amd64.deb
-Size: 32944
-MD5sum: e1431334f8ae80324d116defb5d4a9a8
-SHA256: bce382a76f82298a6210ac674bbf98137d1b59fc880dddd05867ac0c3dfe4266
+Filename: pool/main/f/freeradius/freeradius-python3_3.2.8+dfsg-1+b1_amd64.deb
+Size: 31012
+MD5sum: a47f02f6f3305be00e78309077d335d7
+SHA256: 6023b94af1abd58be4200cb6d4911435a5521b7ad03bc00879f8fc5ec7a62e7c
 
 Package: freeradius-redis
-Source: freeradius
-Version: 3.2.8+dfsg-1
-Installed-Size: 104
+Source: freeradius (3.2.8+dfsg-1)
+Version: 3.2.8+dfsg-1+b1
+Installed-Size: 103
 Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: freeradius (= 3.2.8+dfsg-1), libc6 (>= 2.38), libhiredis1.1.0 (>= 1.2.0)
+Depends: freeradius (= 3.2.8+dfsg-1+b1), libc6 (>= 2.38), libhiredis1.1.0 (>= 1.2.0)
 Description: Redis module for FreeRADIUS server
 Homepage: http://www.freeradius.org/
 Description-md5: 409331feca6e7b06facbc4bac2a0f07b
 net
 Priority: optional
-Filename: pool/main/f/freeradius/freeradius-redis_3.2.8+dfsg-1_amd64.deb
-Size: 31280
-MD5sum: 38c7bf760cf3d331152034e78ca7ec90
-SHA256: 1f8e2aa09fb5c2627d954d0b20e8cb62282400c23179d50a01221a26e9d592a5
+Filename: pool/main/f/freeradius/freeradius-redis_3.2.8+dfsg-1+b1_amd64.deb
+Size: 29260
+MD5sum: 930bfadc9c7574723fc3bfdabc643b18
+SHA256: bf4e0d566edeaf94ec0f218063f5075d36d9aaac9c4bb491baaa9c2a4fc76e0b
 
 Package: freeradius-rest
-Source: freeradius
-Version: 3.2.8+dfsg-1
-Installed-Size: 98
+Source: freeradius (3.2.8+dfsg-1)
+Version: 3.2.8+dfsg-1+b1
+Installed-Size: 97
 Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: freeradius (= 3.2.8+dfsg-1), libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libjson-c5 (>= 0.15)
+Depends: freeradius (= 3.2.8+dfsg-1+b1), libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libjson-c5 (>= 0.15)
 Description: REST module for FreeRADIUS server
 Homepage: http://www.freeradius.org/
 Description-md5: 84efad4f894dd87ee01e51563cfab4f8
 net
 Priority: optional
-Filename: pool/main/f/freeradius/freeradius-rest_3.2.8+dfsg-1_amd64.deb
-Size: 39120
-MD5sum: e3996c430c711f418738bd754dc5c126
-SHA256: 320363e86b2617fdd5b97d717bece6032c1da6fde72555becdcf656fddbed92b
+Filename: pool/main/f/freeradius/freeradius-rest_3.2.8+dfsg-1+b1_amd64.deb
+Size: 37196
+MD5sum: 436f07d1ea14b8cab7b439581355182f
+SHA256: 3d1a86f5992b3a612e45c2fd8b3767a8d314fabf2a676b971ab4c835387a8fb7
 
 Package: freeradius-utils
-Source: freeradius
-Version: 3.2.8+dfsg-1
-Installed-Size: 390
+Source: freeradius (3.2.8+dfsg-1)
+Version: 3.2.8+dfsg-1+b1
+Installed-Size: 389
 Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: freeradius-common, freeradius-config, libfreeradius3 (= 3.2.8+dfsg-1), perl:any, libc6 (>= 2.38), libgdbm6t64 (>= 1.16), libpcap0.8t64 (>= 0.9.8), libssl3t64 (>= 3.0.0), libtalloc2 (>= 2.0.4~git20101213)
+Depends: freeradius-common, freeradius-config, libfreeradius3 (= 3.2.8+dfsg-1+b1), perl:any, libc6 (>= 2.38), libgdbm6t64 (>= 1.16), libpcap0.8t64 (>= 0.9.8), libssl3t64 (>= 3.0.0), libtalloc2 (>= 2.0.4~git20101213)
 Recommends: libdbi-perl
 Conflicts: radiusd-livingston, yardradius
 Description: FreeRADIUS client utilities
@@ -7559,27 +7559,27 @@ Description-md5: fb4360d3ae626ff33fe6068c0b23a981
 Tag: role::program
 net
 Priority: optional
-Filename: pool/main/f/freeradius/freeradius-utils_3.2.8+dfsg-1_amd64.deb
-Size: 119796
-MD5sum: 3230a2846b0baac36b48cf4ac02501f4
-SHA256: 5c62fcb76cc2a84b67d0af3845a2c7f4735061c52dd765cf853cc891ea425613
+Filename: pool/main/f/freeradius/freeradius-utils_3.2.8+dfsg-1+b1_amd64.deb
+Size: 117904
+MD5sum: 95be378d995a9c514a893d0dd87c0a94
+SHA256: 0417401f1b4155588f5a6a50f1616e017ca4f96caefd278b90c02095f7eb3d9a
 
 Package: freeradius-yubikey
-Source: freeradius
-Version: 3.2.8+dfsg-1
-Installed-Size: 74
+Source: freeradius (3.2.8+dfsg-1)
+Version: 3.2.8+dfsg-1+b1
+Installed-Size: 73
 Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: freeradius (= 3.2.8+dfsg-1), libc6 (>= 2.38), libykclient3 (>= 2.11), libyubikey0 (>= 1.5)
+Depends: freeradius (= 3.2.8+dfsg-1+b1), libc6 (>= 2.38), libykclient3 (>= 2.12), libyubikey0 (>= 1.5)
 Description: Yubikey module for FreeRADIUS server
 Homepage: http://www.freeradius.org/
 Description-md5: 085fe9fe99855d39801336fb78e00a38
 net
 Priority: optional
-Filename: pool/main/f/freeradius/freeradius-yubikey_3.2.8+dfsg-1_amd64.deb
-Size: 27852
-MD5sum: 07eda42f850c15d968df4106c9fc56c2
-SHA256: 98a949fd7b94f6f076fed4606c129fe7641f77191eb8919124224c6a759bfe71
+Filename: pool/main/f/freeradius/freeradius-yubikey_3.2.8+dfsg-1+b1_amd64.deb
+Size: 25900
+MD5sum: b031767061d49cb4053d78c899e6a667
+SHA256: 522f127cf793a50efc1b346af45c74812eec8f3a87299279d2197175fd40c360
 
 Package: frr
 Version: 10.6.1-2
@@ -10122,8 +10122,8 @@ MD5sum: 655061583ac3a92d74b10dec61e8247a
 SHA256: d8f433a4fe78013646503b166106787f818502645fee8a78f4aeb492c827da09
 
 Package: ieee-data
-Version: 20240722
-Installed-Size: 14892
+Version: 20260625
+Installed-Size: 16523
 Maintainer: Samuel Henrique <samueloph@debian.org>
 Architecture: all
 Depends: wget | libwww-perl | curl
@@ -10132,10 +10132,10 @@ Homepage: https://standards.ieee.org/products-services/regauth/index.html
 Description-md5: 13e4702ce61e6bfe7d48ec34e10250b1
 net
 Priority: optional
-Filename: pool/main/i/ieee-data/ieee-data_20240722_all.deb
-Size: 2221244
-MD5sum: 8246d7e04aba0f4aa3e4fc7873c8aba9
-SHA256: 3bc399924ecb60af22569cb34c07a66a6e4a68c49c78a60b479e7d4913fe54e0
+Filename: pool/main/i/ieee-data/ieee-data_20260625_all.deb
+Size: 2418668
+MD5sum: a6eabf5ad3504962d0794e0768a382b5
+SHA256: 02aa2497d996577615f9cabe68678bf72976560709455abe7dbf5a8f6ae807a3
 
 Package: ifenslave
 Version: 2.14
@@ -32266,7 +32266,7 @@ MD5sum: bbc171f23ed70ee2764cc44aa2b70353
 SHA256: 225353fb02f81c9e369ceabbf88af5fbe9c094f50e29062e1aac26091317f024
 
 Package: tlswrapper
-Version: 0~20260501-2
+Version: 0~20260501-3
 Installed-Size: 223
 Maintainer: Jan Mojžíš <janmojzis@debian.org>
 Architecture: amd64
@@ -32276,10 +32276,10 @@ Homepage: https://github.com/janmojzis/tlswrapper
 Description-md5: 8b45c2176c82551de18b2ab06a248c68
 net
 Priority: optional
-Filename: pool/main/t/tlswrapper/tlswrapper_0~20260501-2_amd64.deb
-Size: 65880
-MD5sum: 3e6dfabba86cf4c88773576fde9c00dd
-SHA256: 95b9915845a4da02cf08c79c8e606cfb98553dbb116fd8e399d954baf8f24766
+Filename: pool/main/t/tlswrapper/tlswrapper_0~20260501-3_amd64.deb
+Size: 66032
+MD5sum: efdc17c03e67a4eddc6248474ebc465f
+SHA256: 983e3b58520273b4b0fc1510f1105bc9b528c850210ed26c4e72db4c21086d68
 
 Package: tnat64
 Source: tnat64 (0.06-1)

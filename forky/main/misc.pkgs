@@ -185,6 +185,22 @@ Size: 485740
 MD5sum: e7157825d4f60cbe426475f483a502ad
 SHA256: e6759e2277f1b66c5b1afc116ee2b0c4d079614a3807fa06b2858d1dba2fbaa8
 
+Package: ansible-lint
+Version: 26.4.0-1
+Installed-Size: 1154
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: ansible-core, black (>= 24.3.0), git, python3-ansible-compat (>= 25.2.0), python3-filelock, python3-jinja2, python3-jsonschema, python3-packaging, python3-pathspec, python3-ruamel.yaml (>= 0.18.5), python3-wcmatch, python3-yaml, yamllint (>= 1.30.0), python3-cffi, python3-cryptography (>= 37), python3-distro, python3-referencing, python3-subprocess-tee, python3-supported-min (>= 3.14) | python3-ruamel.yaml.clib, python3:any
+Description: lint tool for Ansible playbooks
+Homepage: https://github.com/ansible-community/ansible-lint
+Description-md5: a381932960794814b41d4276fb69f7a5
+misc
+Priority: optional
+Filename: pool/main/a/ansible-lint/ansible-lint_26.4.0-1_all.deb
+Size: 185420
+MD5sum: 0af500f8404015f95cee66390b55ae60
+SHA256: a45a1019efe3f83845563d04d7db1301139e828705afd87d820bdf9f6bf4631a
+
 Package: aobook
 Source: aobook (1.0.3-3)
 Version: 1.0.3-3+b1
@@ -856,31 +872,31 @@ MD5sum: d2b09ee7207143e6ebe0c731f77ad08f
 SHA256: 8b501585459c7168de7622baf89dadc38c682ba92c4258111ba7ac5e12255617
 
 Package: ayatana-indicator-bluetooth
-Version: 26.6.1-1
+Version: 26.6.1-2
 Installed-Size: 619
 Maintainer: Ayatana Packagers <pkg-ayatana-devel@lists.alioth.debian.org>
 Architecture: amd64
-Replaces: gnome-bluetooth (<< 3.6.1-0ubuntu2), indicator-bluetooth
-Depends: dconf-gsettings-backend | gsettings-backend, libayatana-common0 (>= 0.9.4), libc6 (>= 2.38), libglib2.0-0t64 (>= 2.80.0), libnotify4 (>= 0.7.0), bluez (>= 5), ayatana-indicator-common
-Suggests: unity-control-center | mate-control-center | gnome-control-center | lomiri-system-settings, blueman | blueman-manager | lomiri-system-settings | gnome-bluetooth
-Breaks: gnome-bluetooth (<< 3.6.1-0ubuntu2), indicator-bluetooth
+Replaces: indicator-bluetooth
+Depends: ayatana-indicator-common, bluez, dconf-gsettings-backend | gsettings-backend, libayatana-common0 (>= 0.9.4), libc6 (>= 2.38), libglib2.0-0t64 (>= 2.80.0), libnotify4 (>= 0.7.0)
+Suggests: blueman | lomiri-system-settings | gnome-bluetooth-sendto, unity-control-center | mate-control-center | gnome-control-center | lomiri-system-settings
+Breaks: indicator-bluetooth
 Description: Ayatana Indicator for managing Bluetooth devices
 Homepage: https://github.com/AyatanaIndicators/ayatana-indicator-bluetooth
 Description-md5: 7b0253c64074182fd96d32aef0f91224
 misc
 Priority: optional
-Filename: pool/main/a/ayatana-indicator-bluetooth/ayatana-indicator-bluetooth_26.6.1-1_amd64.deb
-Size: 67888
-MD5sum: 904f3383b2c0956d64a8771b786239d4
-SHA256: f8cace47cfe264d098335286030d69d90e79635b8f3a8904882c0123153c1f4a
+Filename: pool/main/a/ayatana-indicator-bluetooth/ayatana-indicator-bluetooth_26.6.1-2_amd64.deb
+Size: 68104
+MD5sum: 34606976d167cfdedad336d4c4634e7d
+SHA256: 0d5798407056961d96294589c8cea767a80a05e8333398876a63b2f172194e39
 
 Package: ayatana-indicator-datetime
-Version: 26.6.0-1
+Version: 26.6.0-2
 Installed-Size: 857
 Maintainer: Ayatana Packagers <pkg-ayatana-devel@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: indicator-datetime
-Depends: libaccounts-glib0 (>= 1.18), libayatana-common0 (>= 0.9.4), libc6 (>= 2.34), libecal-2.0-3 (>= 3.33.4), libedataserver-1.2-27t64 (>= 3.17), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.83.0), libgstreamer1.0-0 (>= 1.0.0), libical3t64 (>= 3.0.0), libmessaging-menu0 (>= 0.6.0), libnotify4 (>= 0.8.4), libstdc++6 (>= 14), libuuid1 (>= 2.16), ayatana-indicator-common (>= 0.8.0), ayatana-indicator-datetime-common (>= 26.6.0-1), libglib2.0-bin
+Depends: ayatana-indicator-common, ayatana-indicator-datetime-common (>= 26.6.0-2), libglib2.0-bin, libaccounts-glib0 (>= 1.0), libayatana-common0 (>= 0.9.4), libc6 (>= 2.34), libecal-2.0-3 (>= 3.33.4), libedataserver-1.2-27t64 (>= 3.17), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.83.0), libgstreamer1.0-0 (>= 1.0.0), libical3t64 (>= 3.0.0), libmessaging-menu0 (>= 0.6.0), libnotify4 (>= 0.8.4), libstdc++6 (>= 14), libuuid1 (>= 2.16)
 Recommends: evolution-data-server
 Suggests: indicator-applet | mate-indicator-applet | xfce4-indicator-plugin | indicator-renderer
 Breaks: indicator-datetime
@@ -889,14 +905,14 @@ Homepage: https://github.com/AyatanaIndicators/ayatana-indicator-datetime
 Description-md5: d6648a1549b92d9b7b10e1d610dabe35
 misc
 Priority: optional
-Filename: pool/main/a/ayatana-indicator-datetime/ayatana-indicator-datetime_26.6.0-1_amd64.deb
-Size: 231416
-MD5sum: ef2fc5b7f61f9c45815882bbe17f41ea
-SHA256: 8ef94b4335d6c162f9f019a4e76800425b2067ee627da53c826e4ba068e9ff84
+Filename: pool/main/a/ayatana-indicator-datetime/ayatana-indicator-datetime_26.6.0-2_amd64.deb
+Size: 231464
+MD5sum: 68bebb203d627dfe427e38d3f085225e
+SHA256: c1e62359879568ee1c22934e0f4023ecd83606672e14c87e47ae9835848f8847
 
 Package: ayatana-indicator-datetime-common
 Source: ayatana-indicator-datetime
-Version: 26.6.0-1
+Version: 26.6.0-2
 Installed-Size: 472
 Maintainer: Ayatana Packagers <pkg-ayatana-devel@lists.alioth.debian.org>
 Architecture: all
@@ -908,19 +924,19 @@ Homepage: https://github.com/AyatanaIndicators/ayatana-indicator-datetime
 Description-md5: 3bc7ec8c538f42974aef7ab18fcb8004
 misc
 Priority: optional
-Filename: pool/main/a/ayatana-indicator-datetime/ayatana-indicator-datetime-common_26.6.0-1_all.deb
-Size: 26344
-MD5sum: 4ca3435a7ab928f9f6c21f881468736b
-SHA256: 23c82b3077b0d54aa458ec53ea63ca6f1e3fb9fe6bc0007eefb919338a387ebd
+Filename: pool/main/a/ayatana-indicator-datetime/ayatana-indicator-datetime-common_26.6.0-2_all.deb
+Size: 26460
+MD5sum: d4ea81d5a5b480b4f3f531132b951020
+SHA256: ffe50b201ce4b1c36333f40e46bee722a53e555ae95200b670c680f74ccfd248
 
 Package: lomiri-indicator-datetime
 Source: ayatana-indicator-datetime
-Version: 26.6.0-1
+Version: 26.6.0-2
 Installed-Size: 860
 Maintainer: Ayatana Packagers <pkg-ayatana-devel@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: indicator-datetime
-Depends: libaccounts-glib0 (>= 1.18), libayatana-common0 (>= 0.9.4), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.83.0), libgstreamer1.0-0 (>= 1.0.0), libkf5calendarcore5abi2 (>= 5:5.67.0), liblomiri-url-dispatcher0 (>= 0.1.1), libmessaging-menu0 (>= 0.6.0), libmkcal-qt5-0 (>= 0.7.33+dfsg), libnotify4 (>= 0.8.4), libqt5core5t64 (>= 5.15.1), libstdc++6 (>= 14), libuuid1 (>= 2.16), ayatana-indicator-common, ayatana-indicator-datetime-common (>= 26.6.0-1), libglib2.0-bin
+Depends: ayatana-indicator-common, ayatana-indicator-datetime-common (>= 26.6.0-2), libglib2.0-bin, libaccounts-glib0 (>= 1.0), libayatana-common0 (>= 0.9.4), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.83.0), libgstreamer1.0-0 (>= 1.0.0), libkf5calendarcore5abi2 (>= 5:5.67.0), liblomiri-url-dispatcher0 (>= 0.1.1), libmessaging-menu0 (>= 0.6.0), libmkcal-qt5-0 (>= 0.7.33+dfsg), libnotify4 (>= 0.8.4), libqt5core5t64 (>= 5.15.1), libstdc++6 (>= 14), libuuid1 (>= 2.16)
 Recommends: mkcal-bin
 Suggests: lomiri
 Breaks: indicator-datetime
@@ -929,26 +945,26 @@ Homepage: https://github.com/AyatanaIndicators/ayatana-indicator-datetime
 Description-md5: 2517ebe3523d87b806f71686c16abd81
 misc
 Priority: optional
-Filename: pool/main/a/ayatana-indicator-datetime/lomiri-indicator-datetime_26.6.0-1_amd64.deb
-Size: 234556
-MD5sum: 9ab4f626e98782781885f7fde3364fc0
-SHA256: 7e287f4ed740c025c0a2c87256bee54725f9516a0c4ad5fb4a1c5b726710c867
+Filename: pool/main/a/ayatana-indicator-datetime/lomiri-indicator-datetime_26.6.0-2_amd64.deb
+Size: 234044
+MD5sum: 626fd31f2cf1df9fb39c5f04f4a1e5c8
+SHA256: ef4624d7874b48f133afe8987ed4b0ca72b0ae593208b09b8837fae96ece1e0b
 
 Package: ayatana-indicator-display
-Version: 26.6.0-1
+Version: 26.6.0-2
 Installed-Size: 792
 Maintainer: Ayatana Packagers <pkg-ayatana-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libaccountsservice0 (>= 0.6.8), libayatana-common0 (>= 0.9.4), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libgeoclue-2-0 (>= 2.4.0), libglib2.0-0t64 (>= 2.40.0), librda0 (>= 0.0.1), libstdc++6 (>= 14), libx11-6, libxrandr2 (>= 2:1.2.99.3), dconf-gsettings-backend | gsettings-backend, ayatana-indicator-common, xsct (>= 1.9)
+Depends: ayatana-indicator-common, xsct, dconf-gsettings-backend | gsettings-backend, libaccountsservice0 (>= 0.6.8), libayatana-common0 (>= 0.9.4), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libgeoclue-2-0 (>= 2.4.0), libglib2.0-0t64 (>= 2.40.0), librda0 (>= 0.0.1), libstdc++6 (>= 14), libx11-6, libxrandr2 (>= 2:1.2.99.3)
 Description: Ayatana Indicator for Display configuration
 Homepage: https://github.com/AyatanaIndicators/ayatana-indicator-display
 Description-md5: e3fe9b0ecc09028659a2f521a0e59263
 misc
 Priority: optional
-Filename: pool/main/a/ayatana-indicator-display/ayatana-indicator-display_26.6.0-1_amd64.deb
-Size: 80852
-MD5sum: 32ddcd8f7ed654b05e8c5073cf6df7b6
-SHA256: d73fb228ac558e43ea1e44ddcca589f5c53a1d1b0fcfac0cbfb1d477c7f87f05
+Filename: pool/main/a/ayatana-indicator-display/ayatana-indicator-display_26.6.0-2_amd64.deb
+Size: 80896
+MD5sum: 118976c00fac6d50a518b1870146acef
+SHA256: 8e08b048a8c8a47c0e30f0e18970017da7b1343e96ba690bad5f42d9172da842
 
 Package: ayatana-indicator-keyboard
 Version: 26.6.2-2
@@ -6109,24 +6125,6 @@ Size: 749044
 MD5sum: 3f74cbe203029424393dc00715796c61
 SHA256: b69504f4e5daf46dd4c6058ee730d98fc6848e868157b8e987ced6e8252b8886
 
-Package: libgudhi-examples
-Source: gudhi
-Version: 3.11.0+dfsg-2
-Installed-Size: 298
-Maintainer: Gard Spreemann <gspr@nonempty.org>
-Architecture: all
-Suggests: libgudhi-dev, libgudhi-doc
-Description: Example programs for the GUDHI library
-Multi-Arch: foreign
-Homepage: https://gudhi.inria.fr/
-Description-md5: 9d29a2b4457b1ffa5f5c3f4737176c8f
-misc
-Priority: optional
-Filename: pool/main/g/gudhi/libgudhi-examples_3.11.0+dfsg-2_all.deb
-Size: 40108
-MD5sum: e4065232503e4eb881af11bb65d778fa
-SHA256: 29a3a9dcc09e5c5e52a592824493f70d156c4bd9d30ebc32a1dab0ed3cebe66b
-
 Package: guerillabackup
 Version: 0.5.0-1.1
 Installed-Size: 370
@@ -10113,12 +10111,12 @@ MD5sum: f2e4a92e3174ba5198c8080a1aaaa616
 SHA256: 9c6796b9f55194daf9b72185f3a717439d6be7c28196153bf90732fdf9e0802a
 
 Package: lomiri-telephony-service
-Version: 0.6.2-4
+Version: 0.6.2-5
 Installed-Size: 3960
 Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
 Architecture: amd64
 Replaces: phone-app
-Depends: dconf-cli, libnotify4 (>= 0.7.0), lomiri-history-service, lomiri-schemas, lomiri-sounds, python3, python3-dbus, python3-gi, telepathy-mission-control-5, tone-generator, user-session-migration, libc6 (>= 2.34), libfarstream-0.2-5 (>= 0.1.91), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.32.0), libgstreamer1.0-0 (>= 1.0.0), liblomiri-url-dispatcher0 (>= 0.1.0), liblomirihistoryservice0 (>= 0.6), libmessaging-menu0 (>= 0.6.0), libphonenumber8t64-protobuf32, libpulse0 (>= 4.0), libqt5contacts5a (>= 5.0~git20190618.f9a8f0fc+dfsg1), libqt5core5t64 (>= 5.15.1), libqt5dbus5t64 (>= 5.14.1), libqt5feedback5 (>= 5.0~git20180329.a14bd0bb), libqt5gui5t64 (>= 5.5.0) | libqt5gui5-gles (>= 5.5.0), libqt5multimedia5 (>= 5.6.0~beta), libqt5qml5 (>= 5.0.2), libstdc++6 (>= 14), libtelepathy-farstream3 (>= 0.5.0), libtelepathy-qt5-0 (>= 0.9.6.1), libtelepathy-qt5-farstream0 (>= 0.9.5), libusermetricsinput1 (>= 1.2.0)
+Depends: dconf-cli, libnotify4 (>= 0.7.0), lomiri-history-service, lomiri-schemas, lomiri-sounds, python3, python3-dbus, python3-gi, telepathy-mission-control-5, tone-generator, user-session-migration, libc6 (>= 2.34), libfarstream-0.2-5 (>= 0.1.91), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.32.0), libgstreamer1.0-0 (>= 1.0.0), liblomiri-url-dispatcher0 (>= 0.1.1), liblomirihistoryservice0 (>= 0.6), libmessaging-menu0 (>= 0.6.0), libphonenumber8t64-protobuf32, libpulse0 (>= 4.0), libqt5contacts5a (>= 5.0~git20190618.f9a8f0fc+dfsg1), libqt5core5t64 (>= 5.15.1), libqt5dbus5t64 (>= 5.14.1), libqt5feedback5 (>= 5.0~git20180329.a14bd0bb), libqt5gui5t64 (>= 5.5.0) | libqt5gui5-gles (>= 5.5.0), libqt5multimedia5 (>= 5.6.0~beta), libqt5qml5 (>= 5.0.2), libstdc++6 (>= 14), libtelepathy-farstream3 (>= 0.5.0), libtelepathy-qt5-0 (>= 0.9.6.1), libtelepathy-qt5-farstream0 (>= 0.9.5), libusermetricsinput1 (>= 1.2.0)
 Suggests: telepathy-ofono
 Conflicts: phone-app
 Description: Telephony service components for Lomiri - service daemon
@@ -10128,10 +10126,10 @@ Description-md5: d4b0445bdf3b6e4a33fcacf2cf88db48
 Tag: uitoolkit::qt
 misc
 Priority: optional
-Filename: pool/main/l/lomiri-telephony-service/lomiri-telephony-service_0.6.2-4_amd64.deb
-Size: 817872
-MD5sum: efe6471b130b70e61d9a4978462a1fd0
-SHA256: ad8ef782af62e776760ee755f07f63a45a79f09ba719de792d40c5eb4e573bf4
+Filename: pool/main/l/lomiri-telephony-service/lomiri-telephony-service_0.6.2-5_amd64.deb
+Size: 817912
+MD5sum: d6ced744e3c7877326e993bc12d1cf25
+SHA256: 0b637fd4c9084ba1a44836f46076f43d122a1049d9b43c95a0b710dce6cc54a1
 
 Package: lomiri-teleports-app
 Version: 1.22-2
@@ -15665,7 +15663,7 @@ MD5sum: 58a465b38ad45d0fbe15baf2db03e2f6
 SHA256: 288adc42fede583687850ea07ae45a249f3359427adb7c67a355b5be23fc0679
 
 Package: terminus
-Version: 3.7.1-1
+Version: 3.9.0-1
 Installed-Size: 332
 Maintainer: Barak A. Pearlmutter <bap@debian.org>
 Architecture: amd64
@@ -15676,10 +15674,10 @@ Description-md5: be795d059c82d0176cacc2e7bf6418d3
 Tag: uitoolkit::gtk
 misc
 Priority: optional
-Filename: pool/main/t/terminus/terminus_3.7.1-1_amd64.deb
-Size: 89768
-MD5sum: 7563ed7a37271aaeb3757e4803158551
-SHA256: c4c9a78136b42e5b03716e2c2a537c94aaa0a3e5ade25b59af3c5950a342a667
+Filename: pool/main/t/terminus/terminus_3.9.0-1_amd64.deb
+Size: 90832
+MD5sum: 5e1e40e796e0b5154a90031ff82cf26d
+SHA256: 9af5676ddd59341d8081f3f6484f4a68a3974d949644c1778dfbebe5b9c3c89b
 
 Package: termrec
 Source: termrec (0.19-3)
