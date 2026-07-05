@@ -285,11 +285,11 @@ MD5sum: 264aa757bf7931cb399507448b995d20
 SHA256: 9215fb6ad942b549ce19d4b19c2d06982104e4e623fb57680b2d3e2b348d217d
 
 Package: dhewm3
-Version: 1.5.4+dfsg-1
-Installed-Size: 3804
+Version: 1.5.5+dfsg-2
+Installed-Size: 5262
 Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libcurl3t64-gnutls (>= 7.16.2), libgcc-s1 (>= 4.2), libopenal1 (>= 1.14), libsdl2-2.0-0 (>= 2.0.12), libstdc++6 (>= 5)
+Depends: libc6 (>= 2.38), libcurl4-gnutls (>= 8.20.0-3~), libgcc-s1 (>= 4.2), libgl1, libopenal1 (>= 1.14), libsdl2-2.0-0 (>= 2.0.14), libstb0t64 (>= 0.0~git20180212.15.e6afb9c), libstdc++6 (>= 4.3)
 Suggests: dhewm3-doom3, dhewm3-d3xp
 Description: GPL Doom 3 game engine
 Homepage: https://dhewm3.org/
@@ -297,46 +297,86 @@ Description-md5: f625d3c7626ec44fdef979913e4fb88e
 Tag: uitoolkit::sdl
 contrib/games
 Priority: optional
-Filename: pool/contrib/d/dhewm3/dhewm3_1.5.4+dfsg-1_amd64.deb
-Size: 1433216
-MD5sum: fa682a01d8679bb8d8beb288a9e04ab2
-SHA256: 7e6aac70d024962c34695fa2d30c604da3ee992ec33030a3739dc7b939c70b38
+Filename: pool/contrib/d/dhewm3/dhewm3_1.5.5+dfsg-2_amd64.deb
+Size: 2138072
+MD5sum: b76daa78ca29d2ef2ebecc9212a7bc11
+SHA256: 89c8966cc8566652131aaebfc2891664c53bc3968611aeec851f7a8a84a6b8f6
+
+Package: dhewm3-cdoom
+Source: dhewm3
+Version: 1.5.5+dfsg-2
+Installed-Size: 3496
+Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: doom3-classic-data (<< 89)
+Depends: dhewm3-doom3 (= 1.5.5+dfsg-2), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
+Recommends: doom3-classic-data (>= 89) | game-data-packager (>= 89)
+Breaks: doom3-classic-data (<< 89)
+Description: dhewm3's gamelibrary for the title Classic Doom³
+Homepage: https://dhewm3.org/
+Description-md5: f8565308ef163459a58b6b6741b23cb0
+contrib/games
+Priority: optional
+Filename: pool/contrib/d/dhewm3/dhewm3-cdoom_1.5.5+dfsg-2_amd64.deb
+Size: 1198200
+MD5sum: 3c64d33ba81672ad88a5e30b18e90b2f
+SHA256: 0199c290bb26dc110c1de8426b9d0330a7d930869f65f6027ced71fb65c3d629
+
+Package: dhewm3-d3le
+Source: dhewm3
+Version: 1.5.5+dfsg-2
+Installed-Size: 3710
+Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: doom3-the-lost-mission-data (<< 89)
+Depends: dhewm3-d3xp (= 1.5.5+dfsg-2), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
+Recommends: doom3-the-lost-mission-data (>= 89) | game-data-packager (>= 89)
+Breaks: doom3-the-lost-mission-data (<< 89)
+Description: dhewm3's gamelibrary for the title DOOM³: The Lost Mission
+Homepage: https://dhewm3.org/
+Description-md5: c4d6f95a4525e5681966ffc96e33f611
+contrib/games
+Priority: optional
+Filename: pool/contrib/d/dhewm3/dhewm3-d3le_1.5.5+dfsg-2_amd64.deb
+Size: 1266128
+MD5sum: 36db8852c00ef6b05af610cb51a47e47
+SHA256: 000be0c6aed02b61e083bdec2dc9c54b4b143613babba0e64dc07bd1118c89c7
 
 Package: dhewm3-d3xp
 Source: dhewm3
-Version: 1.5.4+dfsg-1
-Installed-Size: 3645
+Version: 1.5.5+dfsg-2
+Installed-Size: 3634
 Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: dhewm3-doom3 (= 1.5.4+dfsg-1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 5)
+Depends: dhewm3-doom3 (= 1.5.5+dfsg-2), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 4.3)
 Recommends: doom3-resurrection-data | game-data-packager
 Description: dhewm3's gamelibrary for the title DOOM³: Resurrection of Evil
 Homepage: https://dhewm3.org/
 Description-md5: d6ab5641afa5287c2c0a525d43516e3d
 contrib/games
 Priority: optional
-Filename: pool/contrib/d/dhewm3/dhewm3-d3xp_1.5.4+dfsg-1_amd64.deb
-Size: 1235264
-MD5sum: 44d18165f3f0a9644e911d8c96e827de
-SHA256: de1bfc67fe75f561b6bf108c7fe08aa428e753c07f5f95b7f31a21647ae4cdb3
+Filename: pool/contrib/d/dhewm3/dhewm3-d3xp_1.5.5+dfsg-2_amd64.deb
+Size: 1243980
+MD5sum: afae369c9121103738d6b0348a287db9
+SHA256: 7fcdbfe1925773461680b59143d25af367b8524f8934f0c41743f78125826d62
 
 Package: dhewm3-doom3
 Source: dhewm3
-Version: 1.5.4+dfsg-1
-Installed-Size: 3434
+Version: 1.5.5+dfsg-2
+Installed-Size: 3419
 Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: dhewm3 (= 1.5.4+dfsg-1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 5)
+Depends: dhewm3 (= 1.5.5+dfsg-2), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 4.3)
 Recommends: doom3-data | game-data-packager
 Description: dhewm3's gamelibrary for the title DOOM³
 Homepage: https://dhewm3.org/
 Description-md5: e6814d22bd9c206b8ec0d560ca2f21bd
 contrib/games
 Priority: optional
-Filename: pool/contrib/d/dhewm3/dhewm3-doom3_1.5.4+dfsg-1_amd64.deb
-Size: 1165324
-MD5sum: 8303f1771215440e81a0b4baf00ac1bd
-SHA256: d7162ab34d961c4278e68e59326b8de4cbf3cba8fd2bac23470625b6d6fb6120
+Filename: pool/contrib/d/dhewm3/dhewm3-doom3_1.5.5+dfsg-2_amd64.deb
+Size: 1173408
+MD5sum: 6c6534486538a26d90fff8ad7aff2a58
+SHA256: d96316da02406cf6329c97d733c8da68d44560f8baef7965dfa86b0324d1442c
 
 Package: dunedynasty
 Source: dunedynasty (1.6.4+ds-1)
