@@ -2224,6 +2224,21 @@ Size: 22712
 MD5sum: da83de68c8a40e07e8f8962454859504
 SHA256: b333b248c1db5ab76395950ea9207f1aac33bfce7f20fe0f874e4a3555b91758
 
+Package: ruby-async-signals
+Version: 0.6.0-2
+Installed-Size: 58
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Description: Composable process signal handling for Ruby
+Homepage: https://github.com/socketry/async-signals
+Description-md5: 3adf5de1f045a9506cc719f290876a11
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-async-signals/ruby-async-signals_0.6.0-2_all.deb
+Size: 10244
+MD5sum: a238c50f9e12c9bc89ff5e72d87700a3
+SHA256: 53f401dc6a0a4b984653e47b4594b9e4019b98c204accb65306f4f1ca68df6b0
+
 Package: ruby-async-webdriver
 Version: 0.12.2-2
 Installed-Size: 153
@@ -4695,23 +4710,6 @@ Size: 12952
 MD5sum: 2229c2cb5c27ed8bd76bb83c8c3aea39
 SHA256: 2ebd2dfc70bfecaa2bd31ee1ceda46aeeaba12b5c32c87388cb09468e692de7c
 
-Package: ruby-cucumber-expressions
-Version: 8.0.0-1
-Installed-Size: 53
-Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
-Architecture: all
-Depends: ruby | ruby-interpreter
-Description: simple patterns for matching Step Definitions
-Homepage: https://github.com/cucumber/cucumber-expressions-ruby
-Description-md5: 21b442766b5773092646c9cc536f29cf
-Ruby-Versions: all
-ruby
-Priority: optional
-Filename: pool/main/r/ruby-cucumber-expressions/ruby-cucumber-expressions_8.0.0-1_all.deb
-Size: 9736
-MD5sum: 2bbf06c15fd801d90fd10534413b9ac4
-SHA256: 3d98eefd44185087e885c76c0030509b57dd978e32510851615f78e414714471
-
 Package: ruby-cucumber-gherkin
 Version: 39.0.0-2
 Installed-Size: 243
@@ -5693,21 +5691,21 @@ MD5sum: ba761b05a399102450df2943ea55a36f
 SHA256: 43454706475223019e3ed16c58fc8082b85f066aed8e85fb8c7da0d0f72bafac
 
 Package: ruby-dotenv
-Version: 3.2.0-1
+Version: 3.2.0-2
 Installed-Size: 60
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: ruby
+Depends: ruby:any, ruby
 Description: configuration variable loader
 Multi-Arch: foreign
 Homepage: https://github.com/bkeepers/dotenv
 Description-md5: c98720d54d2e1f938a5b9d83ecc7ea09
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-dotenv/ruby-dotenv_3.2.0-1_all.deb
-Size: 16552
-MD5sum: 4ef498dc5c4ccb1385b54218440aa425
-SHA256: 90ea13ab1e8baf4af03f58005c5196147b4a77deb045c1d17e6ee58a69453e34
+Filename: pool/main/r/ruby-dotenv/ruby-dotenv_3.2.0-2_all.deb
+Size: 16644
+MD5sum: 5b1e2e623399a44ebb60f254e82acc0c
+SHA256: 59db47982a433a3110d179df86b5b1be7e444593f57781cca0897aeb1d30ffea
 
 Package: ruby-down
 Version: 5.6.0-2
@@ -5982,6 +5980,72 @@ Size: 5212
 MD5sum: b8e696edbe92f2cf032d68678fe162e8
 SHA256: 138fdc54ff4051ac570b8cf77786b28a1579cb0edab9966cc069ed1cef4cdffe
 
+Package: ruby-elastic-transport
+Version: 8.5.3-2
+Installed-Size: 134
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: ruby-faraday (<< 3), ruby-multi-json
+Description: Low level Ruby client for Elastic services
+Homepage: https://github.com/elastic/elastic-transport-ruby
+Description-md5: 8f2e2b86d42c06930d5b00dde0bee69f
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-elastic-transport/ruby-elastic-transport_8.5.3-2_all.deb
+Size: 28616
+MD5sum: 8b7953ae50c8f69def2464bb2b0b9b46
+SHA256: 455c60c83c5ed43bd6336f46bf3e1b3ad192e8d845a5b92009ff86105610d6a0
+
+Package: ruby-elasticsearch
+Version: 9.4.3-1
+Installed-Size: 58
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: ruby-elasticsearch-api (= 9.4.3-1), ruby, ruby-elastic-transport (>= 8.3)
+Description: Ruby client for connecting to an Elasticsearch cluster
+Homepage: https://github.com/elasticsearch/elasticsearch-ruby
+Description-md5: aeb9403d2981fcc12d8ff9f95741806a
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-elasticsearch/ruby-elasticsearch_9.4.3-1_all.deb
+Size: 18644
+MD5sum: f48937c6f1eac78a95a7923142efbce0
+SHA256: 65640cce71da97026f469e8afae0760e4e60dc5c6c63f25179d2aef7970c9f70
+
+Package: ruby-elasticsearch-api
+Source: ruby-elasticsearch
+Version: 9.4.3-1
+Installed-Size: 2869
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: ruby-base64, ruby-multi-json
+Description: Ruby implementation of the Elasticsearch REST API
+Homepage: https://github.com/elasticsearch/elasticsearch-ruby
+Description-md5: 98e11dc573dd6bdf708db96c882b9f38
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-elasticsearch/ruby-elasticsearch-api_9.4.3-1_all.deb
+Size: 174828
+MD5sum: 77050a43924ff291d5180335f0f64782
+SHA256: 2495d467861f5bcf447596d741d1c827cac367ddaa04b5b065b0a68692f5f16a
+
+Package: ruby-elasticsearch-model
+Version: 7.2.1-1
+Installed-Size: 148
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: ruby | ruby-interpreter, ruby-activesupport (>> 3), ruby-elasticsearch (>> 1), ruby-hashie
+Description: ActiveModel/Record integrations for Elasticsearch
+Homepage: https://github.com/elasticsearch/elasticsearch-rails/
+Description-md5: d88b60e9870346d12652cabcb07623a7
+Ruby-Versions: all
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-elasticsearch-model/ruby-elasticsearch-model_7.2.1-1_all.deb
+Size: 30500
+MD5sum: 1d75479538f31a5e617c04cc9af44060
+SHA256: bb889889d2214bfb2e9836e2672906ef65d283d60c117c4867f895173a607aae
+
 Package: ruby-elasticsearch-rails
 Version: 7.2.1-1
 Installed-Size: 4277
@@ -6081,6 +6145,22 @@ Filename: pool/main/r/ruby-em-websocket/ruby-em-websocket_0.5.3-2_all.deb
 Size: 21560
 MD5sum: ffd699f2139de6c3e2b86b8f4966dc45
 SHA256: 878c5fa4adb3ef73082280568b5d55545fe90e25d0ec9f353d75ab5c75294249
+
+Package: ruby-email-reply-parser
+Version: 0.5.11-1
+Installed-Size: 29
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: ruby-re2
+Description: Small library to parse plain text email content
+Homepage: https://github.com/github/email_reply_parser
+Description-md5: 8bb8606e3baa9e61a4143aa5127936ea
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-email-reply-parser/ruby-email-reply-parser_0.5.11-1_all.deb
+Size: 7396
+MD5sum: 270bacff577bdfbe4cfa44e644d9cc75
+SHA256: 45d9ec647c877851fe2b930cf0c4094d41055f7cb887d011d1c3c103e267602c
 
 Package: ruby-email-reply-trimmer
 Version: 0.2.0-1
@@ -7579,6 +7659,22 @@ Size: 36876
 MD5sum: cec1184b605f8be9389203c7f735ed96
 SHA256: beb13f7ec20fec47137486dce0e37d18dddb4b69dacd1426f16594ebb1fe278b
 
+Package: ruby-gd
+Version: 0.8.0-9
+Installed-Size: 176
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.4), libfreetype6 (>= 2.2.1), libgd3 (>= 2.1.0~alpha~), libjpeg62-turbo (>= 1.3.1), libpng16-16t64 (>= 1.6.46), libx11-6, libxpm4, zlib1g (>= 1:1.1.4), libruby3.3 (>= 3.3.0~preview1), libruby (>= 1:3.3~0), libruby (<< 1:3.4~)
+Description: Extension library to use GD graphics library from Ruby
+Homepage: https://rubygems.org/gems/ruby-gd
+Description-md5: e2b015bd9d1325178c8ed1091e68377e
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-gd/ruby-gd_0.8.0-9_amd64.deb
+Size: 49272
+MD5sum: ece875af189ee9d8d55dc6ca7ef56cf2
+SHA256: 26afb726bdae3ab9df9094e849fe59a96c783b4b4a8f01b29cd9c474842c5b14
+
 Package: ruby-gelf
 Version: 3.1.0-3.1
 Installed-Size: 46
@@ -7741,22 +7837,6 @@ Filename: pool/main/r/ruby-gh/ruby-gh_0.21.0-1_all.deb
 Size: 14812
 MD5sum: fbaa0f8fe8c6f8a2da588e5e5172395b
 SHA256: 8929d31f0b809079c56d99427df3cb39cd3cfc0f6fdc6854199aff83361160a6
-
-Package: ruby-gherkin
-Version: 4.0.0-4
-Installed-Size: 180
-Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
-Architecture: all
-Depends: ruby:any | ruby-interpreter
-Description: lexer and parser for the Gherkin language in Ruby
-Homepage: http://github.com/cucumber/gherkin
-Description-md5: 4b11b977d9792a330c71e55305cc6363
-ruby
-Priority: optional
-Filename: pool/main/r/ruby-gherkin/ruby-gherkin_4.0.0-4_all.deb
-Size: 21676
-MD5sum: 82727dc9b4b2a76ec0db81c80818c917
-SHA256: 060cb85b48a74882b82847c58d5c8ef36bc6fca6ba43c66b1a04332c9fdf4d43
 
 Package: ruby-gir-ffi
 Version: 0.16.1-1
@@ -9166,23 +9246,6 @@ Size: 5204
 MD5sum: 9c82cdacbee29cea7bfada7edec7441c
 SHA256: 949589f3e251d015a673f4498e369b594dc77327b708cf0cf7ac273076c90726
 
-Package: ruby-hangouts-chat
-Version: 0.0.5-2
-Installed-Size: 28
-Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
-Architecture: all
-Depends: ruby | ruby-interpreter
-Description: Library for sending messages to Hangouts Chat rooms
-Homepage: https://github.com/enzinia/hangouts-chat
-Description-md5: a52bea488f314b2433f97d626aeb11b5
-Ruby-Versions: all
-ruby
-Priority: optional
-Filename: pool/main/r/ruby-hangouts-chat/ruby-hangouts-chat_0.0.5-2_all.deb
-Size: 5444
-MD5sum: fdae81f9cfc1a4ea4a4a5802937fdf18
-SHA256: 8d3939cd15d1b06243fc28c3d4025020f78febf174ec54071782b6527f2ad9fc
-
 Package: ruby-has-scope
 Version: 0.9.0-1
 Installed-Size: 33
@@ -9513,6 +9576,22 @@ Size: 9248
 MD5sum: 0484fe4078c7691ea554bfceeb6146e3
 SHA256: 494339202b54ad905f3f6a9569707366119b7b01bcd3d7e72a98ea1e4d1cc5cf
 
+Package: ruby-html-pipeline
+Version: 2.14.3-2
+Installed-Size: 100
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: ruby-activesupport (>= 2:2), ruby-nokogiri (>= 1.4)
+Description: GitHub HTML processing filters and utilities
+Homepage: https://github.com/jch/html-pipeline
+Description-md5: 0c9c4257a3a8bdcb6a81a1b51db38f69
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-html-pipeline/ruby-html-pipeline_2.14.3-2_all.deb
+Size: 33120
+MD5sum: 881fe331ff7005e0542b1281bd0bc1c5
+SHA256: d274dc65a47cbf619c8f5540505633dc9abeed3587ff78c970a6228e1c11b535
+
 Package: ruby-html-proofer
 Version: 5.2.1-1
 Installed-Size: 154
@@ -9578,21 +9657,20 @@ MD5sum: f624c39bd98b70050c44e1202e925f44
 SHA256: 692ee121f05c1c8ff6419fb532375c4c4094dddd6e6c8f222b0febbe58eb86dd
 
 Package: ruby-http
-Version: 4.4.1-7
-Installed-Size: 143
+Version: 6.0.3-1
+Installed-Size: 368
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: ruby-addressable, ruby-http-cookie, ruby-http-form-data (>= 2.2~), ruby-http-parser
-Breaks: ruby-twitter (<< 7.0)
+Depends: ruby-http-form-data (>= 2.2~), ruby-http-parser, ruby-http-cookie (>= 1.0), ruby-llhttp (>= 0.6.1)
 Description: easy-to-use client library for making http requests from Ruby
 Homepage: https://github.com/httprb/http
 Description-md5: db6280d1bf67dfab5844b55174bed239
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-http/ruby-http_4.4.1-7_all.deb
-Size: 37400
-MD5sum: 8da35e3f55cc029e57d02a4c95e25058
-SHA256: c66cab68f476f22b6a4a87f5bac278ab949d429d8adea9b25561d4543fc2eae7
+Filename: pool/main/r/ruby-http/ruby-http_6.0.3-1_all.deb
+Size: 66364
+MD5sum: 03ce33ac15dc427b0bbcb5925f71447f
+SHA256: 76d1b45db1e915689ef11c5c0abe4705126a7d5f55aecc40bc76adea85c44777
 
 Package: ruby-http-2
 Version: 1.2.0-1
@@ -9659,22 +9737,20 @@ MD5sum: ba7650313ecf3f4961e3a40968a49eb7
 SHA256: 6653c2127aa66dd8dcf0eac329a36e7ccc9111516d075d9bc57c675bf0bc71a7
 
 Package: ruby-http-form-data
-Version: 2.3.0-1
-Installed-Size: 45
+Version: 3.0.1-1
+Installed-Size: 66
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
-Breaks: ruby-http (<< 3.3.0-2)
 Description: utility-belt to build form data request bodies
 Multi-Arch: foreign
-Homepage: https://github.com/httprb/form_data.rb
+Homepage: https://github.com/httprb/form_data
 Description-md5: 1f887e51a4c8ba9de43dbc2d933a6a55
-Ruby-Versions: all
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-http-form-data/ruby-http-form-data_2.3.0-1_all.deb
-Size: 9804
-MD5sum: 2ad5a835a688fc52f3d21a8fd493e566
-SHA256: 2b83f07a1f2c10ae8ffc0d8e9ea51cdbec3a760f44eef71587de3b4359625ec9
+Filename: pool/main/r/ruby-http-form-data/ruby-http-form-data_3.0.1-1_all.deb
+Size: 13208
+MD5sum: 431c4cea2153e01a858f33c68c57074e
+SHA256: d37cd4cf5b41170fa7a81aed5af56b6ba013bb00c94df07efb2d14f0bc76d85b
 
 Package: ruby-http-parser
 Version: 1.2.3-1
@@ -9693,22 +9769,21 @@ MD5sum: 98afb3da98fe9ec88d6e855dc8ec236a
 SHA256: 7b76e344f9a72c182832ef394255a35faaf4a12b826656db5aabdd26ba14cc2a
 
 Package: ruby-http-parser.rb
-Source: ruby-http-parser.rb (0.6.0-6)
-Version: 0.6.0-6+b7
-Installed-Size: 49
+Version: 0.8.1-1
+Installed-Size: 63
 Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: ruby | ruby-interpreter, libc6 (>= 2.4), libhttp-parser2.9 (>= 2.1), libruby3.3 (>= 3.3.0~preview1), libruby (>= 1:3.3~0), libruby (<< 1:3.4~)
+Depends: ruby:any, libc6 (>= 2.4), libhttp-parser2.9 (>= 2.1), libruby3.3 (>= 3.3.0~preview2), libruby (>= 1:3.3~0), libruby (<< 1:3.4~)
 Suggests: ruby-http-parser.rb-doc
 Description: Simple callback-based HTTP request/response parser
 Homepage: https://github.com/tmm1/http_parser.rb
 Description-md5: 1ee86ce3fb6001fe280ade0859bf33fb
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-http-parser.rb/ruby-http-parser.rb_0.6.0-6+b7_amd64.deb
-Size: 10580
-MD5sum: 20de2d3e6d7ea620540d6669e21246c1
-SHA256: a9a36e5ef17fb631a868fe65dceac697b74f468fe7a9d8693931406b1fc64bb7
+Filename: pool/main/r/ruby-http-parser.rb/ruby-http-parser.rb_0.8.1-1_amd64.deb
+Size: 13600
+MD5sum: 654c5af2b6df6f535ef75c03d178b585
+SHA256: 13e631a35b4911d5a7b6452524933db701136e9955f302d8277f2093e137ee9b
 
 Package: ruby-httparty
 Version: 0.24.2-2
@@ -10490,6 +10565,24 @@ Filename: pool/main/r/ruby-jekyll-last-modified-at/ruby-jekyll-last-modified-at_
 Size: 6480
 MD5sum: 4a8c7107abd9e2944a10be2b199a2eb1
 SHA256: d22c937343d28818d13da254ea3b93e632f34f9b142261a8ec05168655057774
+
+Package: ruby-jekyll-mentions
+Version: 1.6.0-1
+Installed-Size: 29
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: ruby-html-pipeline (>= 2.3), jekyll (<< 5.0), jekyll (>= 3.7)
+Enhances: jekyll
+Description: Jekyll plugin to add mentionable link support
+Homepage: https://github.com/jekyll/jekyll-mentions
+Description-md5: 448ba7ec71ca1353cc783faaab0ec007
+Ruby-Versions: all
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-jekyll-mentions/ruby-jekyll-mentions_1.6.0-1_all.deb
+Size: 7020
+MD5sum: c932d711797b57b0fc4456d6a3e06aad
+SHA256: f661c4943b44aaed386673262b08633a7dd34e5841b569dd5aeba7bb5a9dfe4c
 
 Package: ruby-jekyll-multiple-languages
 Version: 1.7.0+dfsg-1
@@ -11569,6 +11662,22 @@ Filename: pool/main/r/ruby-little-plugger/ruby-little-plugger_1.1.4-3_all.deb
 Size: 8028
 MD5sum: df9f9e4319817bbbf2ae91bebb6a7792
 SHA256: 060ac20203e28f511e226cc49a7109222e33735aba3ff1e97a5ce23699c38aca
+
+Package: ruby-llhttp
+Version: 0.6.2+dfsg-3
+Installed-Size: 113
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.4), libllhttp9.4 (>= 9.3.0), libruby3.3 (>= 3.3.0~preview2), libruby (>= 1:3.3~0), libruby (<< 1:3.4~)
+Description: Ruby bindings for llhttp
+Homepage: https://github.com/bryanp/llhttp/
+Description-md5: 46e243d78302c0f7faf8bd86b54fb209
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-llhttp/ruby-llhttp_0.6.2+dfsg-3_amd64.deb
+Size: 25476
+MD5sum: d3b94948917e06606e45cc70317cdea7
+SHA256: 5458524e1a62878d06ee51ad70cb02950d9a4eeaffe3eb2b4ec0defb8c481bea
 
 Package: ruby-llm
 Version: 1.16.0-2
@@ -16275,22 +16384,6 @@ Size: 10636
 MD5sum: 1b808e57620b969357bf221fe671d17a
 SHA256: 0af84757215b46b1e62775f0e57c1ab065aa968e3b6a4f500109bc3ceeaf8731
 
-Package: ruby-rails-assets-jquery-placeholder
-Version: 2.3.1-3
-Installed-Size: 27
-Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
-Architecture: all
-Depends: libjs-jquery, libjs-jquery-placeholder, ruby | ruby-interpreter
-Description: provide jquery-placeholder via asset pipeline
-Homepage: https://github.com/mathiasbynens/jquery-placeholder
-Description-md5: a6c500e5efd48b4f8553f87c13c3724b
-ruby
-Priority: optional
-Filename: pool/main/r/ruby-rails-assets-jquery-placeholder/ruby-rails-assets-jquery-placeholder_2.3.1-3_all.deb
-Size: 4220
-MD5sum: 6a1f34c424505df16125f797cf88b125
-SHA256: 46e5599897742aeb52cc3df8eb1287eacafd193e4d0aabf8fadea969ebaebf08
-
 Package: ruby-rails-assets-markdown-it-hashtag
 Version: 0.4.0-3
 Installed-Size: 42
@@ -17382,6 +17475,23 @@ Filename: pool/main/r/ruby-rpam-ruby19/ruby-rpam-ruby19_1.2.1-3_amd64.deb
 Size: 6468
 MD5sum: 62ecbf7f4ced8f215d0ead3b75328817
 SHA256: 7f65394e24d6f00160360b5d1d51cc604d5634b75b103929334058330af451dc
+
+Package: ruby-rpatricia
+Version: 1.0.1-3
+Installed-Size: 53
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libruby3.3 (>= 3.3.0~preview1), libruby (>= 1:3.3~0), libruby (<< 1:3.4~)
+Description: efficient IPv4/IPv6 prefix storage and lookup for Ruby
+Homepage: https://rubygems.org/gems/rpatricia
+Description-md5: f0d0efc38c7921205566508fc502e722
+Tag: role::program
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-rpatricia/ruby-rpatricia_1.0.1-3_amd64.deb
+Size: 15180
+MD5sum: 1a487dfff43a87df8bef14640c0678d3
+SHA256: 1fe2493d89295d53d3b7b45aae6d7c728841f90710056d1cfc5887b7d44e0fa6
 
 Package: ruby-rqrcode
 Version: 3.2.0-1
@@ -19356,6 +19466,22 @@ Size: 7452
 MD5sum: 76305e59e1e74c7797b04ae47bf15aa8
 SHA256: 6c6b65ccaddad094365bcadc271ffbbab300f65730f0c55a533427474aec6bbf
 
+Package: ruby-smarter-csv
+Version: 1.18.0-2
+Installed-Size: 1043
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: ruby-bigdecimal, libc6 (>= 2.14), libruby3.3 (>= 3.3.1), libruby (>= 1:3.3~0), libruby (<< 1:3.4~)
+Description: end-to-end CSV ingestion for Ruby
+Homepage: https://github.com/tilo/smarter_csv
+Description-md5: 2fad0c04820f545e30885f54c485f594
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-smarter-csv/ruby-smarter-csv_1.18.0-2_amd64.deb
+Size: 487508
+MD5sum: 6f188a0e7d4339731bdce1344e28af20
+SHA256: 711a79b31a943e3856bd159783cd7e9118ae211ea356de358683f8e4aca6f3f9
+
 Package: ruby-snaky-hash
 Version: 2.0.6-1
 Installed-Size: 60
@@ -20349,6 +20475,23 @@ Filename: pool/main/r/ruby-tanuki-emoji/ruby-tanuki-emoji_0.13.0-1_all.deb
 Size: 12965684
 MD5sum: 54cab7902b55e06c89889ff237ba8e2b
 SHA256: d34de0e3d25c2404ddf699cd963bef32f1f4dafc2130ee00671296f48a00286e
+
+Package: ruby-task-list
+Version: 2.3.2-2
+Installed-Size: 56
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Provides: node-deckar01-task-list (= 2.3.2-2), ruby-deckar01-task-list (= 2.3.2-2)
+Depends: ruby-html-pipeline
+Description: GitHub-flavored-Markdown TaskList components
+Homepage: https://github.com/deckar01/task_list
+Description-md5: 2ec697ab55cebbb8bb7572f861ddec5f
+ruby
+Priority: optional
+Filename: pool/main/r/ruby-task-list/ruby-task-list_2.3.2-2_all.deb
+Size: 10924
+MD5sum: 4eaf0ebaa70043bd514f4bfe9bf68299
+SHA256: 8847c6f75fb5f56c5f20fe37ee876d3f44814230e38fec045f768d79382bf979
 
 Package: ruby-tdiff
 Version: 0.4.0-2
@@ -21349,22 +21492,20 @@ MD5sum: e0e183d2444b1a5a7dcd0ad498462c69
 SHA256: 8d597650d13a7e217f1e4c163cad2bd3697ac0dc148d3269bdc16e332dc7f1d6
 
 Package: ruby-twitter
-Version: 7.0.0-5
+Version: 7.0.0-6
 Installed-Size: 374
 Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Architecture: all
-Replaces: ruby-twitter4r
-Depends: ruby-addressable, ruby-buftok, ruby-equalizer, ruby-http (>= 4.0~), ruby-http-form-data, ruby-http-parser.rb (>= 0.6.0-5~), ruby-memoizable, ruby-multipart-post, ruby-naught, ruby-simple-oauth
-Conflicts: ruby-twitter4r
+Depends: ruby-addressable (>= 2.3), ruby-buftok (>= 0.3.0), ruby-equalizer (>= 0.0.11), ruby-http (>= 6.0), ruby-http-form-data (>= 2.0), ruby-http-parser.rb (>= 0.6.0), ruby-memoizable (>= 0.4.0), ruby-multipart-post (>= 2.0), ruby-naught (>= 1.0), ruby-simple-oauth (>= 0.3.0)
 Description: Ruby interface to the Twitter API
 Homepage: https://github.com/sferik/twitter/
 Description-md5: 101eb310116055c99decace9f75d690f
 ruby
 Priority: optional
-Filename: pool/main/r/ruby-twitter/ruby-twitter_7.0.0-5_all.deb
-Size: 73664
-MD5sum: 7a23af88d2e960b1fcc3380855963c22
-SHA256: 0231da247e854a5dd9692c9e0c3cd773d2fabc5c4d2fbfc93cf5f04a17a44e75
+Filename: pool/main/r/ruby-twitter/ruby-twitter_7.0.0-6_all.deb
+Size: 73564
+MD5sum: 59e2213e1ba150b8a9ad2b0e2bf55c40
+SHA256: 67b04d1a1046cba38782e7667a0ca7f547cd5ba34a4902d786c8398dabdc1cc8
 
 Package: ruby-twitter-oauth
 Version: 0.4.94-5
