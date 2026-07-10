@@ -1116,9 +1116,9 @@ SHA256: 4f225b379dcdbca02e83fdf960843b8694b5900bd6ba449bdcaaa6021289c103
 
 Package: argagg-dev
 Source: argagg
-Version: 0.4.7-4
+Version: 0.4.7-5
 Installed-Size: 70
-Maintainer: Debian QA Group <packages@qa.debian.org>
+Maintainer: Iliya Abolghasemi <gfaerny@gmail.com>
 Architecture: all
 Description: Argument Aggregator - Simple C++11 command line argument parser
 Multi-Arch: foreign
@@ -1126,10 +1126,10 @@ Homepage: https://github.com/vietjtnguyen/argagg
 Description-md5: 87677cfd6cd5e437d3b5ab338e6dc437
 devel
 Priority: optional
-Filename: pool/main/a/argagg/argagg-dev_0.4.7-4_all.deb
-Size: 17416
-MD5sum: 733544a9c9e0d46f5d20b0bb579870e5
-SHA256: 1c0603966e154b8824cc4430c42d67d4dd8c647c0819063acba8c32c753a2a09
+Filename: pool/main/a/argagg/argagg-dev_0.4.7-5_all.deb
+Size: 17188
+MD5sum: c041d45da6c4d218fa63ff797ecc334d
+SHA256: df13aac80e0812f077b37c88130debb44a67a71444d9529343af63d5cd80f426
 
 Package: as31
 Version: 2.3.1-12
@@ -1735,6 +1735,22 @@ Size: 7482784
 MD5sum: c6f6bed4250667fd8d94dd213927b3e8
 SHA256: 55298252839dac4829ee961c51e1070acf7bb0fe9e1dc212d53bd210f1448cc3
 
+Package: bazel-features
+Version: 1.11.0-2
+Installed-Size: 36
+Maintainer: Debian Bazel Team <team+bazel@tracker.debian.org>
+Architecture: all
+Depends: bazel-skylib
+Description: Bazel features detection library
+Homepage: https://github.com/bazel-contrib/bazel_features
+Description-md5: fc07e4bbfba09298e658db335be01bd8
+devel
+Priority: optional
+Filename: pool/main/b/bazel-features/bazel-features_1.11.0-2_all.deb
+Size: 7264
+MD5sum: c3fef84070868423d969b57c7bd00f20
+SHA256: dd366380ffbbc644add5137a9e256728e97b70ba865bad3b44125a936f568988
+
 Package: bazel-platforms
 Version: 0.0.2-2
 Installed-Size: 25
@@ -1783,37 +1799,88 @@ Size: 6448
 MD5sum: 0ac55e0058930faf4f7aeaf1437895cd
 SHA256: 0d05ed4e053d7c0d3ee0b4e77cdd93857d2757f34e031a8239323c8d0c218e18
 
-Package: bazel-rules-proto
-Version: 4.0.0-3.20.0-3
-Installed-Size: 83
+Package: bazel-rules-license
+Version: 0.0.7-2
+Installed-Size: 203
+Maintainer: Debian Bazel Team <team+bazel@tracker.debian.org>
+Architecture: all
+Description: Starlark license rules for Bazel
+Multi-Arch: foreign
+Homepage: https://github.com/bazelbuild/rules_license
+Description-md5: 813aab16f32024aa937c9f9aa00c47da
+devel
+Priority: optional
+Filename: pool/main/b/bazel-rules-license/bazel-rules-license_0.0.7-2_all.deb
+Size: 30996
+MD5sum: 2b249d6878ebe6f1ef1db5f9d9053be5
+SHA256: 51ccdd687d67a6bf18a55a32da639b0ae3499e85015a144a8fe2e6b15e4f1718
+
+Package: bazel-rules-pkg
+Version: 0.9.1-3
+Installed-Size: 473
 Maintainer: Debian Bazel Team <bazel-team@lists.launchpad.net>
 Architecture: all
+Depends: bazel-rules-license, bazel-rules-python, bazel-skylib
+Description: Bazel package building & fetching rules
+Homepage: https://github.com/bazelbuild/rules_pkg
+Description-md5: 32411c29ea2ad71f4f9b1ee02dfa5ddd
+devel
+Priority: optional
+Filename: pool/main/b/bazel-rules-pkg/bazel-rules-pkg_0.9.1-3_all.deb
+Size: 138072
+MD5sum: 50b50105045138e2f99b7379025dd643
+SHA256: 4fcca07544ad0d7ee4faccd0214716c1617f0bba2d57e02019fd32f7bd1c91be
+
+Package: bazel-rules-proto
+Version: 6.0.0-2
+Installed-Size: 60
+Maintainer: Debian Bazel Team <bazel-team@lists.launchpad.net>
+Architecture: all
+Depends: bazel-features, bazel-rules-license, bazel-skylib
 Description: Starlark implementation of protocol buffer rules in Bazel
 Multi-Arch: foreign
 Homepage: https://github.com/bazelbuild/rules_proto
 Description-md5: c28daa95f018b3888d16ec779d3cfe4c
 devel
 Priority: optional
-Filename: pool/main/b/bazel-rules-proto/bazel-rules-proto_4.0.0-3.20.0-3_all.deb
-Size: 11904
-MD5sum: 9190b5ebd9feacc2065e5fdd6270998e
-SHA256: fccd9819d3b6d0155c473ac2cf40ceadc85e103156ed810610e682b4d61ba786
+Filename: pool/main/b/bazel-rules-proto/bazel-rules-proto_6.0.0-2_all.deb
+Size: 10480
+MD5sum: 227d121ca21f7db9e3dad7276e743526
+SHA256: 48fc5121f61b14fe33724b3dc5cb464dbbf15f9f0cb31cd03cde06c7a15c8fee
+
+Package: bazel-rules-python
+Version: 0.22.1-3
+Installed-Size: 445
+Maintainer: Debian Bazel Team <team+bazel@tracker.debian.org>
+Architecture: all
+Depends: bazel-platforms, bazel-skylib
+Description: Starlark implementation of Python rules in Bazel
+Multi-Arch: foreign
+Homepage: https://github.com/bazel-contrib/rules_python
+Description-md5: 3e2fded033ada8fce0b0fcc9a4db7d81
+devel
+Priority: optional
+Filename: pool/main/b/bazel-rules-python/bazel-rules-python_0.22.1-3_all.deb
+Size: 96424
+MD5sum: 49802601ef1a4a516e78942d048962c7
+SHA256: 5be44630c1a93496442ef447193d8d8c00627260fb70f112770a40c1cb67ba7c
 
 Package: bazel-skylib
-Version: 1.0.3-2
-Installed-Size: 464
+Version: 1.9.1-2
+Installed-Size: 702
 Maintainer: Debian Bazel Team <bazel-team@lists.launchpad.net>
 Architecture: all
+Depends: bazel-platforms, bazel-rules-license
 Description: Skylib library for Bazel
 Multi-Arch: foreign
 Homepage: https://github.com/bazelbuild/bazel-skylib
 Description-md5: 13131c5ca1671ff50911bb32bc4bdfc1
 devel
 Priority: optional
-Filename: pool/main/b/bazel-skylib/bazel-skylib_1.0.3-2_all.deb
-Size: 73948
-MD5sum: 1b86bc2c50ca30acd3c3f6fcbbbefd0b
-SHA256: b7662103ceb16fedb2e348c0d6f18045eba656e3fe1e462ebcfd25efd2548db0
+Filename: pool/main/b/bazel-skylib/bazel-skylib_1.9.1-2_all.deb
+Size: 111680
+MD5sum: 255be38c6abc27151d2a819d91b9397f
+SHA256: 15167e50ed7df9cc04ea13d75f788817754e3036a792284ea3a5f503370e9547
 
 Package: bcpp
 Version: 0.0.20250914-0.1
@@ -3931,8 +3998,8 @@ MD5sum: eef55f81867c15836fb12d21093c7193
 SHA256: f77c6218e24e0c9c6590a7fdb7ee695f83faa8ff187271069795c1e1dd371ecf
 
 Package: buildbox
-Version: 1.4.8-1
-Installed-Size: 47685
+Version: 1.4.12-1
+Installed-Size: 47454
 Maintainer: Theodore Tucker <theodore@tti0.net>
 Architecture: amd64
 Depends: bubblewrap, fuse3, libabsl20260107 (>= 20260107.0-0~), libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libfuse3-4 (>= 3.17.2), libgcc-s1 (>= 3.0), libgrpc++1.51t64 (>= 1.51.1), libgrpc29t64 (>= 1.51.1), libprotobuf32t64 (>= 3.21.12), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libuuid1 (>= 2.16)
@@ -3942,10 +4009,10 @@ Homepage: https://buildgrid.gitlab.io/buildbox/buildbox/index.html
 Description-md5: 059f0fa62a815d2a4d99050bc7d70383
 devel
 Priority: optional
-Filename: pool/main/b/buildbox/buildbox_1.4.8-1_amd64.deb
-Size: 7120220
-MD5sum: 3c9b3d442db6b557f6a6b033ce6c987c
-SHA256: 5222745bc6b7642ff1dbc5366eac484a37e304aac0220cd4ad5dfd9fe6dd9071
+Filename: pool/main/b/buildbox/buildbox_1.4.12-1_amd64.deb
+Size: 7096416
+MD5sum: 245b164f31b0a15bf758ffc161bc9917
+SHA256: 752109f8f1cb2bc35c2e3e7e87543e5631f1efba498faac3abf9d69b80d2cbd3
 
 Package: python3-buildstream-plugins
 Source: buildstream-plugins
@@ -5827,8 +5894,8 @@ MD5sum: 3f8ad5e7a05a6eb26ddf339f25540b26
 SHA256: ec03dde081dac4e4fd260f997374e57969b298d3075751934d51caa627608740
 
 Package: damo
-Version: 3.2.9-1
-Installed-Size: 745
+Version: 3.3.0-1
+Installed-Size: 746
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
 Depends: python3:any
@@ -5837,10 +5904,10 @@ Homepage: https://damonitor.github.io/
 Description-md5: 29c8e6bda2b255abe221853863fc2c80
 devel
 Priority: optional
-Filename: pool/main/d/damo/damo_3.2.9-1_all.deb
-Size: 147556
-MD5sum: 3abcb4895fba0aa3c2cc4b5d7fd3ca0c
-SHA256: b3e2017981f7d29862bd556563fd2c9860359fa682b9cb81e50c62628fa7d039
+Filename: pool/main/d/damo/damo_3.3.0-1_all.deb
+Size: 147636
+MD5sum: a4db020ba28b86c20207a646cb986956
+SHA256: 904cb1125c50ce2641b131f771506763ef0c59cf7f4461abe7a0dcc431d4ef64
 
 Package: darts
 Version: 0.32-20
@@ -6129,13 +6196,13 @@ MD5sum: 7abb9779b0aab5b2b5723980e294b317
 SHA256: 333f0f6e9586d1eb29f6d5c0e5f8a8d007c41ec11e81417cd17e6a08bfe05c71
 
 Package: debhelper
-Version: 14.2
-Installed-Size: 1516
+Version: 14.3
+Installed-Size: 1517
 Maintainer: Debhelper Maintainers <debhelper@packages.debian.org>
 Architecture: all
 Replaces: dh-buildinfo
 Provides: debhelper-compat (= 9), debhelper-compat (= 10), debhelper-compat (= 11), debhelper-compat (= 12), debhelper-compat (= 13), debhelper-compat (= 14), dh-sequence-dwz, dh-sequence-elf-tools, dh-sequence-installinitramfs, dh-sequence-installsysusers, dh-sequence-movetousr, dh-sequence-single-binary, dh-sequence-systemd
-Depends: dh-autoreconf (>= 17~), dh-strip-nondeterminism (>= 0.028~), dpkg-dev (>= 1.18.2~), autotools-dev, dpkg (>= 1.18.0~), dwz (>= 0.12.20190711), file (>= 3.23), libdebhelper-perl (= 14.2), libdpkg-perl (>= 1.17.14), man-db, po-debconf, perl:any
+Depends: dh-autoreconf (>= 17~), dh-strip-nondeterminism (>= 0.028~), dpkg-dev (>= 1.18.2~), autotools-dev, dpkg (>= 1.18.0~), dwz (>= 0.12.20190711), file (>= 3.23), libdebhelper-perl (= 14.3), libdpkg-perl (>= 1.17.14), man-db, po-debconf, perl:any
 Suggests: dh-make
 Conflicts: dh-buildinfo
 Breaks: cmake (<< 3.9~), dh-debputy (<< 0.1.36~), meson (<< 0.40.0~)
@@ -6148,10 +6215,10 @@ Tag: devel::buildtools, devel::debian, devel::packaging,
  scope::utility, suite::debian, works-with::software:source
 devel
 Priority: optional
-Filename: pool/main/d/debhelper/debhelper_14.2_all.deb
-Size: 932780
-MD5sum: 318d658b0dae1f43a20d2ace26cf0cbc
-SHA256: 878bcb8cc8ee4b88c8c3ec5231c4676d54ea4433798e8b6ea74b8fa5c0f954b0
+Filename: pool/main/d/debhelper/debhelper_14.3_all.deb
+Size: 933596
+MD5sum: 3a33ff27eea2affc40e1c39588a102e1
+SHA256: 0ceb35eb8445bedbf171b9c89886e45429652bc2e75af0413beb2d477ec65be6
 
 Package: debian-codesearch-cli
 Version: 1.0.0+nmu4
@@ -6841,6 +6908,37 @@ Size: 17928
 MD5sum: 6cd81fc280c755fbbc65d0cebb118c5b
 SHA256: 7af5b7e2237e65a0991bf4e78fea6dcbdb0068b8a7ec66c2a36a62a8cbf70831
 
+Package: default-d-compiler
+Source: dh-dlang
+Version: 0.6.11
+Installed-Size: 11
+Maintainer: Debian D Language Group <team+d-team@tracker.debian.org>
+Architecture: amd64
+Depends: ldc (>= 1:1.38)
+Description: Default D compiler (metapackage)
+Description-md5: bbbd93771830b7fd3186d8c877db5ddf
+devel
+Priority: optional
+Filename: pool/main/d/dh-dlang/default-d-compiler_0.6.11_amd64.deb
+Size: 3104
+MD5sum: 8f71a4edfdee3c7161c6fd38cfae97d8
+SHA256: 543a0f5c031e473799ed519e301759c27cb5dae29731048fe011aebcbfcb25e7
+
+Package: dh-dlang
+Version: 0.6.11
+Installed-Size: 19
+Maintainer: Debian D Language Group <team+d-team@tracker.debian.org>
+Architecture: all
+Depends: debhelper (>= 12), default-d-compiler, python3
+Description: Packaging helpers for building D code
+Description-md5: b6ef8d67151656ec919d17b29de6dd62
+devel
+Priority: optional
+Filename: pool/main/d/dh-dlang/dh-dlang_0.6.11_all.deb
+Size: 5544
+MD5sum: f162ae69d5a5a4ee9ba026071cadb7a6
+SHA256: bb3ff8db1656b43628dd2350348b730c0e5f6529f240dd86bbfb6b307d0a2dfd
+
 Package: dh-doc-privacy
 Version: 0.3
 Installed-Size: 33
@@ -6859,8 +6957,8 @@ MD5sum: 240b5ff58cf0acd4618f0186f8f79f7c
 SHA256: 89fb045cbcc834db8d8d588a1c005461963d01470cb6462f372227805bc098a9
 
 Package: dh-elpa
-Version: 2.1.9
-Installed-Size: 98
+Version: 2.2.0
+Installed-Size: 96
 Maintainer: Debian Emacsen team <debian-emacsen@lists.debian.org>
 Architecture: all
 Provides: dh-sequence-elpa
@@ -6870,25 +6968,25 @@ Multi-Arch: foreign
 Description-md5: 33114fdf50c8559c3ce451f17cb4c4a3
 devel
 Priority: optional
-Filename: pool/main/d/dh-elpa/dh-elpa_2.1.9_all.deb
-Size: 30464
-MD5sum: 0fca3f3e4c018b25869865198cedcf21
-SHA256: a06e32e596310eb16736f5d9a58bff8b2af515e2692fe4d9590ee61bbdd1337a
+Filename: pool/main/d/dh-elpa/dh-elpa_2.2.0_all.deb
+Size: 28600
+MD5sum: 441f39ddcf41610fc13867d13dcba804
+SHA256: f66994946c257f4dae2206cbc3f0b387a0ac70391dfbbdb2b107fa0710ef0c4a
 
 Package: dh-elpa-helper
 Source: dh-elpa
-Version: 2.1.9
-Installed-Size: 26
+Version: 2.2.0
+Installed-Size: 25
 Maintainer: Debian Emacsen team <debian-emacsen@lists.debian.org>
 Architecture: all
 Description: helper package for emacs lisp extensions
 Description-md5: f15c3557d71fbb9ae8bb650684ca6a80
 devel
 Priority: optional
-Filename: pool/main/d/dh-elpa/dh-elpa-helper_2.1.9_all.deb
-Size: 8852
-MD5sum: 2fd8d17192f2b9117c75eeba6a95c706
-SHA256: 0d5b447bb7084f527f993fb156a8ba093b00db5190699b2663e44b8b6aed6634
+Filename: pool/main/d/dh-elpa/dh-elpa-helper_2.2.0_all.deb
+Size: 7436
+MD5sum: fa04b2fbfb6f30113ad174455247011f
+SHA256: dea9ce5919e599a7c13e6000b1e962c4648c59b3080fdf89aec2f3998b8ac290
 
 Package: dh-exec
 Version: 0.31
@@ -7089,36 +7187,38 @@ MD5sum: 141406c0f287e1e5a3df9abff6b5f90e
 SHA256: 08cde9cf633393b4d1bab06afd68b6f04a8e826dc16de5dca529e01f52fd16f1
 
 Package: dh-octave
-Version: 1.15.0
-Installed-Size: 74
+Version: 1.16.0
+Installed-Size: 75
 Maintainer: Debian Octave Group <team+octave-team@tracker.debian.org>
 Architecture: all
 Provides: dh-sequence-octave
-Depends: cme, debhelper-compat (= 13), dh-octave-autopkgtest, libconfig-model-dpkg-perl, libfile-find-rule-perl, libhtml-parser-perl, libmime-tools-perl, libparse-debcontrol-perl, libperl-critic-perl, libtext-wrapper-perl, libwww-perl, octave-dev, perl:any
+Depends: cme, debhelper-compat (= 14), dh-octave-autopkgtest, libconfig-model-dpkg-perl, libfile-find-rule-perl, libhtml-parser-perl, libmime-tools-perl, libparse-debcontrol-perl, libperl-critic-perl, libtext-wrapper-perl, libwww-perl, octave-dev, perl:any
 Description: Debhelper-based infrastructure for building Octave add-on packages
+Commands: dh_octave_changelogs, dh_octave_clean, dh_octave_examples, dh_octave_make, dh_octave_substvar, dh_octave_version
 Description-md5: d7a3f4307607a5035aed4036a728e25b
 devel
 Priority: optional
-Filename: pool/main/d/dh-octave/dh-octave_1.15.0_all.deb
-Size: 24256
-MD5sum: 6aec1ba011c752362e53cc0a440e0446
-SHA256: 58a81420fea96b7ed47edb96096799bc0df55daf646906fc34f8a01f195ed9c1
+Filename: pool/main/d/dh-octave/dh-octave_1.16.0_all.deb
+Size: 24436
+MD5sum: b6ec81e2384db37961c681fde7ca8efb
+SHA256: d5a1378bba9cb1ebdf6f6404d31e3795face5da0572999a44c4fa6a4daad349a
 
 Package: dh-octave-autopkgtest
 Source: dh-octave
-Version: 1.15.0
-Installed-Size: 25
+Version: 1.16.0
+Installed-Size: 26
 Maintainer: Debian Octave Group <team+octave-team@tracker.debian.org>
 Architecture: all
 Depends: gnuplot-nox, fonts-freefont-otf
 Description: script for the automatic testing of Octave add-on packages
+Commands: dh_octave_check
 Description-md5: dafc9fc8227e34d50fddefbfa6f83570
 devel
 Priority: optional
-Filename: pool/main/d/dh-octave/dh-octave-autopkgtest_1.15.0_all.deb
-Size: 10260
-MD5sum: e00fffb97fe9d9b4c310745ef6066821
-SHA256: 1a6b877d1f78e1c5b441265fc1f97202e54a153ec89bba13356a8137d318be83
+Filename: pool/main/d/dh-octave/dh-octave-autopkgtest_1.16.0_all.deb
+Size: 10396
+MD5sum: 12cf1e91a1308875a56f725e87f99ca3
+SHA256: ea2607c106cd7b2a686539578faf193b568919c8b185e77c3376eba745a3abb0
 
 Package: dh-puredata
 Version: 3.3.0
@@ -7504,6 +7604,40 @@ Filename: pool/main/d/djbsort/djbsort_0~20260621-2_amd64.deb
 Size: 21592
 MD5sum: 3703ed4b7b7b1cd159493ebe5f1db720
 SHA256: bfa8e68099e11b2f94e7b138e40d70214a079ae37e9942458b920cf560f18f56
+
+Package: dlang-libevent
+Version: 2.0.16.1~really2.0.2-0.2
+Installed-Size: 256
+Maintainer: Konstantinos Margaritis <markos@debian.org>
+Architecture: all
+Depends: dlang-openssl, libevent-dev
+Recommends: default-d-compiler
+Description: D version of the C headers for libevent
+Homepage: https://github.com/D-Programming-Deimos/libevent
+Description-md5: 2173a61eac7bad456c25a6bbe11ec7c6
+devel
+Priority: optional
+Filename: pool/main/d/dlang-libevent/dlang-libevent_2.0.16.1~really2.0.2-0.2_all.deb
+Size: 54188
+MD5sum: 83f8256a7f67d0b6e4052e396c1b3265
+SHA256: 58a8b6983951a0a151848800e4095f8a18ded9ca5811930ae7e132de7fe5f3de
+
+Package: dlang-openssl
+Version: 2.0.0+1.1.0h-0.2
+Installed-Size: 1418
+Maintainer: Konstantinos Margaritis <markos@debian.org>
+Architecture: all
+Depends: libssl-dev
+Recommends: default-d-compiler
+Description: D version of the C headers for openssl
+Homepage: https://github.com/D-Programming-Deimos/openssl
+Description-md5: ceae68e070606daaea7150c57cbb6b09
+devel
+Priority: optional
+Filename: pool/main/d/dlang-openssl/dlang-openssl_2.0.0+1.1.0h-0.2_all.deb
+Size: 205504
+MD5sum: 366e0217469730e93224916b823d31bf
+SHA256: dc49b4b53d4090264750cde85bf9790f0ebbbfab971c1535675d2ab03da12748
 
 Package: dlt-viewer
 Version: 2.30.0-dfsg-3
@@ -7957,6 +8091,24 @@ Size: 66576
 MD5sum: 3513e9991eabcaed58e255878f1478b8
 SHA256: 99baba3a99d25060e0ac32a8a86958b7adc40b29ebcb023ec56fc18dae8f78e2
 
+Package: dub
+Source: dub (1.40.0-1)
+Version: 1.40.0-1+b1
+Installed-Size: 5045
+Maintainer: Debian D Language Group <team+d-team@tracker.debian.org>
+Architecture: amd64
+Depends: default-d-compiler, libcurl3t64-gnutls | libcurl4t64, libc6 (>= 2.34), libgcc-s1 (>= 4.2), zlib1g (>= 1:1.1.4)
+Suggests: gdmd | ldc
+Description: Package and build management system for D
+Homepage: https://code.dlang.org/
+Description-md5: 0440199a3a4483ede497fdb26489f474
+devel
+Priority: optional
+Filename: pool/main/d/dub/dub_1.40.0-1+b1_amd64.deb
+Size: 1163924
+MD5sum: ab5236d3b7bfcdf3fc284b48ceaff08c
+SHA256: e558b451df118bcf62ba8d3df135cf0ad9b078fe174e085b1f28d81771b79596
+
 Package: duck
 Version: 0.14.4
 Installed-Size: 114
@@ -8283,9 +8435,8 @@ MD5sum: e0a7288dc3f22c077a8cbddef5174f1a
 SHA256: ca638ade6624de69729ae3268a81790b8d5916fc22d83ea267a658f0952d9f96
 
 Package: elixir-makeup
-Source: elixir-makeup (1.2.1-3)
-Version: 1.2.1-3+b1
-Installed-Size: 1691
+Version: 1.2.2-1
+Installed-Size: 1690
 Maintainer: Debian Erlang Packagers <pkg-erlang-devel@lists.alioth.debian.org>
 Architecture: amd64
 Depends: elixir, elixir-nimble-parsec
@@ -8294,10 +8445,10 @@ Homepage: https://github.com/elixir-makeup/makeup
 Description-md5: 8c4395a535650dd4d491bcc466cf9f65
 devel
 Priority: optional
-Filename: pool/main/e/elixir-makeup/elixir-makeup_1.2.1-3+b1_amd64.deb
-Size: 106552
-MD5sum: 34545de32a080a3619495616adb182d4
-SHA256: 8344bf529c79cb760d9c00dc230f0a80dea7ce5af99a987a71e1929d977c33ae
+Filename: pool/main/e/elixir-makeup/elixir-makeup_1.2.2-1_amd64.deb
+Size: 106396
+MD5sum: ebf27f168973b31820ea2f7eee459035
+SHA256: 30061e55a531b6844eed4e0202a334c98c8c2664c4db37c0edbec5b3ec52b456
 
 Package: elixir-makeup-c
 Source: elixir-makeup-c (0.1.1-5)
@@ -9411,7 +9562,7 @@ SHA256: 3f12784153d7ce35716c8d8ba954d82600c6025c6848909feb7c81d4b304e3ff
 
 Package: python3-fontparts
 Source: fontparts
-Version: 0.14.1-2
+Version: 0.14.1-3
 Installed-Size: 985
 Maintainer: Debian Fonts Task Force <debian-fonts@lists.debian.org>
 Architecture: all
@@ -9422,10 +9573,10 @@ Homepage: https://github.com/robotools/fontParts
 Description-md5: c7c2790f9912fca31ad2c2e3f38bb970
 devel
 Priority: optional
-Filename: pool/main/f/fontparts/python3-fontparts_0.14.1-2_all.deb
-Size: 107880
-MD5sum: e215e4f360a05234533ecb50ad06ce41
-SHA256: 08c9565dd6e1247c783f1d7eb3bb35503b592834ca873596044270bbacbdc4a3
+Filename: pool/main/f/fontparts/python3-fontparts_0.14.1-3_all.deb
+Size: 107904
+MD5sum: 0604a09468ca788bce19fe38886a075b
+SHA256: 65d5589ec0b79f098bf74e40e464d3bdb63811b2164481ef4172d1dbf0a0e0a4
 
 Package: fort77
 Version: 1.15-13
@@ -64694,6 +64845,23 @@ Size: 2658480
 MD5sum: 0b6888db0e5fecbfd65c722591f1f892
 SHA256: ff9e01960daa4f8e361492c8d5e19501f9a9bc192ee142a6cfcc8e30f619806c
 
+Package: gir-to-d
+Version: 0.23.4-2
+Installed-Size: 1163
+Maintainer: Debian D Language Group <team+d-team@tracker.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libphobos2-ldc-shared112 (>= 1:1.42.0)
+Recommends: libglibd-2.0-dev
+Description: Create D bindings from GObject introspection files
+Homepage: https://github.com/gtkd-developers/gir-to-d
+Description-md5: 90c17ef30a28a2fce3a4a14842121350
+devel
+Priority: optional
+Filename: pool/main/g/gir-to-d/gir-to-d_0.23.4-2_amd64.deb
+Size: 290952
+MD5sum: 058e00f3f9d9ca62e5f5a7723405066f
+SHA256: d25807f2ecdb7493bcc5f7ce8f54b2282e2c6292545556cab287012fa24987ef
+
 Package: gir2pas
 Version: 0.1.1-1
 Installed-Size: 1823
@@ -70516,10 +70684,10 @@ MD5sum: ea9c315dc67ac517618fc58112daf2b2
 SHA256: 4703bb5feb57ea31f568ae3c1f8f729b6f83134669f62adda491363036362f8a
 
 Package: libblas-test
-Source: lapack (3.12.1-7)
-Version: 3.12.1-7+b2
-Installed-Size: 2377
-Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
+Source: lapack
+Version: 3.12.1-8
+Installed-Size: 2372
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libblas3 | libblas.so.3, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libgfortran5 (>= 8)
 Description: Basic Linear Algebra Subroutines 3, testing programs
@@ -70528,16 +70696,16 @@ Homepage: https://www.netlib.org/lapack/
 Description-md5: 7e697a3bd80892afd85df0f1b0596433
 devel
 Priority: optional
-Filename: pool/main/l/lapack/libblas-test_3.12.1-7+b2_amd64.deb
-Size: 458756
-MD5sum: 7e9ce4b06efca32f3c678f8473bdfebc
-SHA256: 4b30f8779ecd78cd5de8cc072b3484c6140551986b4e02493bb991493d71bbcd
+Filename: pool/main/l/lapack/libblas-test_3.12.1-8_amd64.deb
+Size: 459140
+MD5sum: 677444d8afb76253767aefdccd94fc44
+SHA256: 871ccaee126a502b2ee47e545c2b5994450e94de379674dcb2a6673b91e30cfc
 
 Package: libblas64-test
-Source: lapack (3.12.1-7)
-Version: 3.12.1-7+b2
-Installed-Size: 2551
-Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
+Source: lapack
+Version: 3.12.1-8
+Installed-Size: 2550
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libblas64-3 | libblas64.so.3, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libgfortran5 (>= 8)
 Description: Basic Linear Algebra Subroutines 3, testing programs (64bit-index)
@@ -70546,16 +70714,16 @@ Homepage: https://www.netlib.org/lapack/
 Description-md5: 87d771807f8e9f385d0433f0579b2453
 devel
 Priority: optional
-Filename: pool/main/l/lapack/libblas64-test_3.12.1-7+b2_amd64.deb
-Size: 482496
-MD5sum: f79e611dd16e033b2a83805bcca6c7ee
-SHA256: 24ca2478ba25b213dd2a186452cd97bf7c342da987ed74087ff8b405efe1fded
+Filename: pool/main/l/lapack/libblas64-test_3.12.1-8_amd64.deb
+Size: 483148
+MD5sum: 136b3c2460afc0ef66652a5c7fb35a1f
+SHA256: fd81be4e8835aeb4e4549f7fa283464e7e7e2c82ba043226a3928fb8d7a4b1b1
 
 Package: liblapack-test
-Source: lapack (3.12.1-7)
-Version: 3.12.1-7+b2
-Installed-Size: 8679
-Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
+Source: lapack
+Version: 3.12.1-8
+Installed-Size: 8674
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libblas3 | libblas.so.3, libc6 (>= 2.34), libgcc-s1 (>= 4.0), libgfortran5 (>= 10), liblapack3 | liblapack.so.3, libtmglib3 (>= 3.12.1)
 Recommends: python3
@@ -70565,16 +70733,16 @@ Homepage: https://www.netlib.org/lapack/
 Description-md5: e2a4bb667b79f7e1206927ea3bf7d8cb
 devel
 Priority: optional
-Filename: pool/main/l/lapack/liblapack-test_3.12.1-7+b2_amd64.deb
-Size: 1773020
-MD5sum: 6090a589f406189052b440007bd8245c
-SHA256: 5b125f332fd2772ea39216ed25b4a7646fbb1bbc5a9a74ccee1e46475cae9078
+Filename: pool/main/l/lapack/liblapack-test_3.12.1-8_amd64.deb
+Size: 1774340
+MD5sum: 908a2470aadcaf27ac4f38bfecf85d68
+SHA256: ed28939122c01758d25a7851bf9ef2e8d9c1e1b036411dd2ac5fcbc83dc5301e
 
 Package: liblapack64-test
-Source: lapack (3.12.1-7)
-Version: 3.12.1-7+b2
-Installed-Size: 9439
-Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
+Source: lapack
+Version: 3.12.1-8
+Installed-Size: 9438
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libblas64-3 | libblas64.so.3, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libgfortran5 (>= 10), liblapack64-3 | liblapack64.so.3, libtmglib64-3 (>= 3.12.1)
 Recommends: python3
@@ -70584,10 +70752,10 @@ Homepage: https://www.netlib.org/lapack/
 Description-md5: 3064bd491d0f1163860a033188f6cb04
 devel
 Priority: optional
-Filename: pool/main/l/lapack/liblapack64-test_3.12.1-7+b2_amd64.deb
-Size: 1852364
-MD5sum: bf615798df212450ea364ebd015f17ec
-SHA256: bdae846fcf00c491c5df5732fe10a3139f9b9e426c64ba988b3ab604dbcca3da
+Filename: pool/main/l/lapack/liblapack64-test_3.12.1-8_amd64.deb
+Size: 1850904
+MD5sum: 41dcfdfb3b1ac90cfb9d07ea653c0435
+SHA256: 832160d9e67ff4eddff9144c39091a5d841d2a823e2622b8d3ecac0433c19173
 
 Package: lava-dev
 Source: lava
@@ -75083,23 +75251,23 @@ MD5sum: d567d936b280ed94b5a8f86e1999d940
 SHA256: d1f475426d0b267106c9aa64582cdff0199bd86eaf05cdc9e38749206108a258
 
 Package: mm-common
-Version: 1.0.7-1
-Installed-Size: 3745
+Version: 1.0.8-1
+Installed-Size: 3750
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: automake | automaken, libtool, pkgconf
-Recommends: g++ | c++-compiler, doxygen, graphviz, xsltproc
-Suggests: libglibmm-2.4-dev, libsigc++-2.0-doc, libglibmm-2.4-doc
+Depends: automake | automaken, libtool, pkgconf, python3:any
+Recommends: doxygen, g++ | c++-compiler, graphviz, xsltproc
+Suggests: libglibmm-2.4-dev, libglibmm-2.4-doc, libsigc++-2.0-doc
 Description: Common build files of the GNOME C++ bindings
 Multi-Arch: foreign
 Homepage: https://www.gtkmm.org/
 Description-md5: d346825f7d0b94a5feb3b3cceb14012a
 devel
 Priority: optional
-Filename: pool/main/m/mm-common/mm-common_1.0.7-1_all.deb
-Size: 290776
-MD5sum: 445fe30b433e10d28bfb19e37728049e
-SHA256: d56f1a68ed44177f6538efa0e440f0350120837397e7986ad38a4a0872d45906
+Filename: pool/main/m/mm-common/mm-common_1.0.8-1_all.deb
+Size: 291400
+MD5sum: 656d31d0f59b5835ffb1a91ce2347415
+SHA256: dc70bc9b8c73970a917fe8cf955c6d631e8e1e55bdb89a2442bb68e4a0ba8d73
 
 Package: mmake
 Version: 2.3-10
@@ -81118,23 +81286,23 @@ MD5sum: 023a29fc5483295586f63d9d4a2f0ddd
 SHA256: 6c18a1fb20115cb9dbc874c989f2cf1da95ef925a8a42532fc2d46b58743539a
 
 Package: just
-Source: rust-just (1.50.0-1)
-Version: 1.50.0-1+b1
-Installed-Size: 4541
+Source: rust-just
+Version: 1.55.1-1
+Installed-Size: 5256
 Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
 Architecture: amd64
 Depends: libc6 (>= 2.39), libgcc-s1 (>= 4.2)
 Description: Save and run project-specific commands
 Homepage: https://github.com/casey/just
-Built-Using: rust-nix (= 0.30.1-3), rust-option-ext (= 0.2.0-1), rustc (= 1.94.1+dfsg1-1)
+Built-Using: rust-nix (= 0.30.1-3), rust-option-ext (= 0.2.0-1), rustc (= 1.95.0+dfsg1-2)
 Description-md5: 21f9e3f6dc06fb78bd65e8dbc14a65d1
-Static-Built-Using: rust-aho-corasick (= 1.1.4-1), rust-anstream (= 0.6.21-1), rust-anstyle (= 1.0.14-1), rust-anstyle-parse (= 0.2.7-1), rust-anstyle-query (= 1.1.4-1), rust-arrayref (= 0.3.9-1), rust-arrayvec (= 0.7.6-3), rust-bitflags (= 2.11.0-1), rust-blake3 (= 1.8.2-1), rust-block-buffer-0.10 (= 0.10.4-1), rust-camino (= 1.2.2-1), rust-cfg-if (= 1.0.4-1), rust-chrono (= 0.4.44-1), rust-clap (= 4.6.1-1), rust-clap-builder (= 4.6.0-1), rust-clap-complete (= 4.6.3-1), rust-clap-lex (= 1.1.0-1), rust-clap-mangen (= 0.2.31-1), rust-colorchoice (= 1.0.0-1), rust-constant-time-eq (= 0.3.1-1), rust-cpufeatures (= 0.2.17-1), rust-crossbeam-deque (= 0.8.6-1), rust-crossbeam-epoch (= 0.9.18-1), rust-crossbeam-utils (= 0.8.21-1), rust-crypto-common-0.1 (= 0.1.7-1), rust-digest-0.10 (= 0.10.7-1), rust-dirs (= 6.0.0-2), rust-dirs-sys (= 0.5.0-2), rust-doc-comment (= 0.3.4-1), rust-dotenvy (= 0.15.7-1), rust-edit-distance (= 2.1.0-1), rust-fastrand (= 2.3.0-2), rust-generic-array (= 0.14.7-1), rust-getrandom (= 0.4.2-3), rust-heck (= 0.5.0-1+really0.5.0-2), rust-iana-time-zone (= 0.1.64-1), rust-is-executable (= 1.0.5-1), rust-is-terminal-polyfill (= 1.70.1-1), rust-itoa (= 1.0.15-1), rust-lexiclean (= 0.0.1-1), rust-libc (= 0.2.186-1), rust-linux-raw-sys (= 0.11.0-1), rust-memchr (= 2.8.0-1), rust-memmap2 (= 0.9.8-1), rust-nix (= 0.30.1-3), rust-nu-ansi-term (= 0.50.1-1), rust-num-cpus (= 1.17.0-1), rust-num-traits (= 0.2.19-2), rust-once-cell (= 1.21.4-1), rust-option-ext (= 0.2.0-1), rust-percent-encoding (= 2.3.2-2), rust-ppv-lite86 (= 0.2.21-2), rust-rand (= 0.10.1+dfsg-1), rust-rand-chacha (= 0.10.0-2), rust-rand-core (= 0.10.0-2), rust-rayon-core (= 1.13.0-1), rust-regex (= 1.12.3-1), rust-regex-automata (= 0.4.13-1), rust-regex-syntax (= 0.8.10+dfsg-1), rust-roff (= 0.2.2-1), rust-rustix (= 1.1.3-1), rust-semver (= 1.0.28-1), rust-serde (= 1.0.228-3), rust-serde-core (= 1.0.228-2), rust-serde-json (= 1.0.149-1), rust-sha2-0.10 (= 0.10.9-2), rust-shellexpand (= 3.1.1-1), rust-shlex (= 1.3.0-1), rust-similar (= 2.7.0-1), rust-snafu (= 0.7.5-2), rust-strsim (= 0.11.1-1), rust-strum (= 0.26.3-2), rust-target (= 2.1.0-2), rust-tempfile (= 3.24.0-3), rust-terminal-size (= 0.4.4-1), rust-typed-arena (= 2.0.2-1), rust-typenum (= 1.20.0-1), rust-unicode-segmentation (= 1.13.2-1), rust-unicode-width (= 0.2.2-1), rust-utf8parse (= 0.2.2-1), rust-uuid (= 1.23.1-1), rust-zerocopy (= 0.8.26-4), rust-zmij (= 1.0.21-1), rustc (= 1.94.1+dfsg1-1)
+Static-Built-Using: rust-aho-corasick (= 1.1.4-1), rust-anstream (= 0.6.21-1), rust-anstyle (= 1.0.14-1), rust-anstyle-parse (= 0.2.7-1), rust-anstyle-query (= 1.1.4-1), rust-arrayref (= 0.3.9-1), rust-arrayvec (= 0.7.8-1), rust-bitflags (= 2.13.0-1), rust-blake3 (= 1.8.2-1), rust-block-buffer (= 0.12.0-1), rust-camino (= 1.2.2-1), rust-cfg-if (= 1.0.4-1), rust-chrono (= 0.4.45-1), rust-clap (= 4.6.1-1), rust-clap-builder (= 4.6.0-1), rust-clap-complete (= 4.6.3-1), rust-clap-lex (= 1.1.0-1), rust-clap-mangen (= 0.3.0-1), rust-colorchoice (= 1.0.0-1), rust-const-oid-0.9 (= 0.9.6-1), rust-constant-time-eq (= 0.3.1-1), rust-cpufeatures-0.2 (= 0.2.17-1), rust-crossbeam-deque (= 0.8.6-1), rust-crossbeam-epoch (= 0.9.18-1), rust-crossbeam-utils (= 0.8.21-1), rust-crypto-common (= 0.2.2-1), rust-digest (= 0.11.3-3), rust-dirs (= 6.0.0-2), rust-dirs-sys (= 0.5.0-2), rust-doc-comment (= 0.3.4-1), rust-dotenvy (= 0.15.7-1), rust-fastrand (= 2.3.0-2), rust-getrandom (= 0.4.2-3), rust-heck (= 0.5.0-1+really0.5.0-2), rust-hex (= 0.4.3-3), rust-hybrid-array (= 0.4.11-1), rust-iana-time-zone (= 0.1.64-1), rust-is-executable (= 1.0.5-1), rust-is-terminal-polyfill (= 1.70.1-1), rust-itoa (= 1.0.18-1), rust-lexiclean (= 0.0.1-1), rust-libc (= 0.2.186-1), rust-linux-raw-sys (= 0.12.1-1), rust-memchr (= 2.8.0-1), rust-memmap2 (= 0.9.8-1), rust-nix (= 0.30.1-3), rust-nu-ansi-term (= 0.50.1-1), rust-num-cpus (= 1.17.0-1), rust-num-traits (= 0.2.19-2), rust-once-cell (= 1.21.4-1), rust-option-ext (= 0.2.0-1), rust-percent-encoding (= 2.3.2-2), rust-ppv-lite86 (= 0.2.21-2), rust-pulldown-cmark (= 0.13.3+dfsg-1), rust-rand (= 0.10.1+dfsg-1), rust-rand-chacha (= 0.10.0-2), rust-rand-core (= 0.10.0-2), rust-rayon-core (= 1.13.0-1), rust-regex (= 1.12.4-1), rust-regex-automata (= 0.4.13-1), rust-regex-syntax (= 0.8.11+dfsg-1), rust-roff (= 1.1.1-1), rust-rustix (= 1.1.4+dfsg-1), rust-semver (= 1.0.28-1), rust-serde (= 1.0.228-3), rust-serde-core (= 1.0.228-2), rust-serde-json (= 1.0.150-1), rust-sha2 (= 0.11.0-1), rust-shellexpand (= 3.1.1-1), rust-shlex (= 1.3.0-1), rust-similar (= 2.7.0-1), rust-snafu (= 0.7.5-2), rust-strsim (= 0.11.1-1), rust-strum (= 0.26.3-2), rust-tempfile (= 3.27.0-1), rust-terminal-size (= 0.4.4-1), rust-typed-arena (= 2.0.2-1), rust-typenum (= 1.20.0-1), rust-unicase (= 2.9.0-1), rust-unicode-segmentation (= 1.13.2-1), rust-unicode-width (= 0.2.2-1), rust-utf8parse (= 0.2.2-1), rust-uuid (= 1.23.1-1), rust-zerocopy (= 0.8.26-4), rust-zmij (= 1.0.21-1), rustc (= 1.95.0+dfsg1-2)
 devel
 Priority: optional
-Filename: pool/main/r/rust-just/just_1.50.0-1+b1_amd64.deb
-Size: 1441336
-MD5sum: 2c7353d20ac9836d1d8c3ac557fd4d7d
-SHA256: 1eefbae44ca7f80cc063ea4d999f3cbd6aee39d09c86b39c2bb2745aa2cbf336
+Filename: pool/main/r/rust-just/just_1.55.1-1_amd64.deb
+Size: 1638552
+MD5sum: b63a0ef35ed750bd34ea2652175839cb
+SHA256: b975df48e5c87ef12e16644dbcb8a6a1945e3d4cd341c3b283470af3da7bdcac
 
 Package: libbpf-cargo
 Source: rust-libbpf-cargo (0.26.0~beta.1-2)
