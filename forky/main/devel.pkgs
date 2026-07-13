@@ -1201,6 +1201,27 @@ Size: 12239704
 MD5sum: 51d915befb779117ec31684716590666
 SHA256: ebbab7e5cfbc737d4569238d5376d83630065f7801b180b81a6663da22a74e86
 
+Package: asterisk-dev
+Source: asterisk
+Version: 1:22.10.0+dfsg+~cs6.17.60671434-3
+Installed-Size: 3222
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Architecture: all
+Provides: dh-sequence-asterisk
+Depends: debhelper, perl:any
+Recommends: asterisk
+Description: Development files for Asterisk
+Multi-Arch: foreign
+Homepage: https://www.asterisk.org/
+Description-md5: d7f6cd2e1ace792a2598dd28d1200ab6
+Tag: devel::library, protocol::voip, role::devel-lib, works-with::audio
+devel
+Priority: optional
+Filename: pool/main/a/asterisk/asterisk-dev_22.10.0+dfsg+~cs6.17.60671434-3_all.deb
+Size: 569556
+MD5sum: 182bc689628bfb5d0486c838c08b85e0
+SHA256: b605fb68b2d9268c500e27e6e59dc06b463ace7d40a25428c410afe943aef6d5
+
 Package: astyle
 Source: astyle (3.6.12-1)
 Version: 3.6.12-1+b1
@@ -1752,20 +1773,21 @@ MD5sum: c3fef84070868423d969b57c7bd00f20
 SHA256: dd366380ffbbc644add5137a9e256728e97b70ba865bad3b44125a936f568988
 
 Package: bazel-platforms
-Version: 0.0.2-2
-Installed-Size: 25
+Version: 0.0.10-4
+Installed-Size: 38
 Maintainer: Debian Bazel Team <bazel-team@lists.launchpad.net>
 Architecture: all
+Depends: bazel-rules-license
 Description: Bazel platforms values
 Multi-Arch: foreign
 Homepage: https://github.com/bazelbuild/platforms
 Description-md5: 99bda57e2a48201ff451e81f475b55b3
 devel
 Priority: optional
-Filename: pool/main/b/bazel-platforms/bazel-platforms_0.0.2-2_all.deb
-Size: 5164
-MD5sum: a0767eb9d94046bb6583ba33e75b424b
-SHA256: 55424b0d6a8b5868b87445a820f2a4cb30b54d43824bab23fb8a96f5cc95da7f
+Filename: pool/main/b/bazel-platforms/bazel-platforms_0.0.10-4_all.deb
+Size: 7764
+MD5sum: c3e2a574ab43f758e7b8f631dbebbc3d
+SHA256: ba4ad76bebeccfb9589cc2a8efa417e157da22749b035707ec2183c1f49f1e56
 
 Package: bazel-rules-cc
 Version: 0.0.4-2
@@ -6100,11 +6122,11 @@ MD5sum: 54c0794c755acf04e8db06d900f14534
 SHA256: 9c179d771a8dabad923a353e5536fe004b484cbbb8c2f15c8b9ab2e8ded273a3
 
 Package: debci
-Version: 4.1
-Installed-Size: 1596
+Version: 4.2
+Installed-Size: 2474
 Maintainer: Debian CI team <team+ci@tracker.debian.org>
 Architecture: all
-Depends: adduser, debootstrap, ruby-pg, sudo, amqp-tools, curl, dctrl-tools, debian-archive-keyring, distro-info, fonts-fork-awesome (>= 1.2.0), inotify-tools, jq, libjs-bootstrap5, libjs-jquery, libjs-jquery-flot, moreutils, patchutils, retry, rsync, ruby, ruby-activerecord (>= 2:7.2.2.2), ruby-ansi, ruby-bunny, ruby-erubi, ruby-omniauth-gitlab, ruby-sinatra, ruby-sinatra-contrib, ruby-kaminari-activerecord, ruby-sqlite3, ruby-table-print, ruby-thor
+Depends: debootstrap, ruby-pg, sudo, dh-sequence-installsysusers, amqp-tools, curl, dctrl-tools, debian-archive-keyring, distro-info, fonts-fork-awesome (>= 1.2.0), inotify-tools, jq, libjs-bootstrap5, libjs-jquery, libjs-jquery-flot, moreutils, patchutils, retry, rsync, ruby, ruby-activerecord (>= 2:7.2.2.2), ruby-ansi, ruby-bunny, ruby-erubi, ruby-omniauth-gitlab, ruby-sinatra, ruby-sinatra-contrib, ruby-kaminari-activerecord, ruby-sqlite3, ruby-table-print, ruby-thor, systemd | systemd-standalone-sysusers | systemd-sysusers, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles
 Recommends: systemd-timesyncd | time-daemon
 Suggests: apt-cacher-ng, auto-apt-proxy
 Description: continuous integration system for Debian
@@ -6112,19 +6134,19 @@ Homepage: http://ci.debian.net/
 Description-md5: 8a0d373a3345132e5d56ea807bd19f4d
 devel
 Priority: optional
-Filename: pool/main/d/debci/debci_4.1_all.deb
-Size: 149220
-MD5sum: cfe737de1294db5381a80ee249af58ff
-SHA256: 6124bbce7abd349b1afe73f71b470749419f6bfacb0973d450af323988cd3003
+Filename: pool/main/d/debci/debci_4.2_all.deb
+Size: 190340
+MD5sum: a18bae328c400f802097b6719e490f5f
+SHA256: eaa23d436725579f2de0627fccf126546ee87f956b1980fff1c731eecb23e89a
 
 Package: debci-collector
 Source: debci
-Version: 4.1
+Version: 4.2
 Installed-Size: 69
 Maintainer: Debian CI team <team+ci@tracker.debian.org>
 Architecture: all
 Replaces: debci (<< 2.6~)
-Depends: debci (= 4.1)
+Depends: debci (= 4.2)
 Recommends: rabbitmq-server
 Breaks: debci (<< 2.6~)
 Description: continuous integration system for Debian (collector daemon)
@@ -6132,28 +6154,28 @@ Homepage: http://ci.debian.net/
 Description-md5: 8c3977a7b69680497852f25220104f1f
 devel
 Priority: optional
-Filename: pool/main/d/debci/debci-collector_4.1_all.deb
-Size: 16544
-MD5sum: 137a00317655899231d50f7d560c8918
-SHA256: 7d17d9c91e2f2ae9b08fa8ca79af4190dcda4e5070c2673d5e5943a7ee3f1db4
+Filename: pool/main/d/debci/debci-collector_4.2_all.deb
+Size: 16888
+MD5sum: c7bed1edace883552b5f5d271a2c53fe
+SHA256: 1ae3aac86df1db36ebfc9fc64468d1021a7677b7870eeca48b33083894309c7a
 
 Package: debci-worker
 Source: debci
-Version: 4.1
+Version: 4.2
 Installed-Size: 31
 Maintainer: Debian CI team <team+ci@tracker.debian.org>
 Architecture: all
-Depends: debci (= 4.1), inotify-tools, autodep8 (>= 0.2~), autopkgtest (>= 5.29~), time-daemon
+Depends: debci (= 4.2), inotify-tools, autodep8 (>= 0.2~), autopkgtest (>= 5.29~), time-daemon
 Recommends: lxc | incus | lxd, distro-info
 Description: continuous integration system for Debian (worker daemon)
 Homepage: http://ci.debian.net/
 Description-md5: 6ea2307dc1e2980b7e8904c22f5f015d
 devel
 Priority: optional
-Filename: pool/main/d/debci/debci-worker_4.1_all.deb
-Size: 10456
-MD5sum: c0e4c876b137166d96b2fff99587eba3
-SHA256: e3c4a12f80df281ab4aaf5f71603168a7faeccf44c817fbacb6e8a615f21e2ba
+Filename: pool/main/d/debci/debci-worker_4.2_all.deb
+Size: 10684
+MD5sum: 69d538d65b48c8b897581deaf343f82a
+SHA256: a710553c2c76cc331b2b3a41db8c703c20ad87969d29e726be7a374b9a9295c8
 
 Package: debconf-utils
 Source: debconf
@@ -7572,21 +7594,22 @@ MD5sum: 9906aea07fd365e28c0eabf15557ebf8
 SHA256: 434a09a174353d0739ac6b32a4ee512c4c5e29e79862fbca2f0a54a5f5886241
 
 Package: distro-info-data
-Version: 0.70
+Version: 0.71-1
 Installed-Size: 20
 Maintainer: Benjamin Drung <bdrung@debian.org>
 Architecture: all
 Breaks: distro-info (<< 1.0~)
 Description: information about the distributions' releases (data files)
 Multi-Arch: foreign
+Homepage: https://salsa.debian.org/debian/distro-info-data
 Description-md5: f7fe06a2e0396bbe8c1c7abad056bf48
 Tag: devel::debian, role::app-data
 devel
 Priority: optional
-Filename: pool/main/d/distro-info-data/distro-info-data_0.70_all.deb
-Size: 5820
-MD5sum: a21c222c2e3ec82ec8bfc1fc0542a61c
-SHA256: 89ea5466551808afcb4bcc8083a9291307e6ee0fef8fd70e63fa6debcb197c4b
+Filename: pool/main/d/distro-info-data/distro-info-data_0.71-1_all.deb
+Size: 5936
+MD5sum: eb161b05cd8812d2d00533d6e841b16c
+SHA256: ad5aef9b6bb0632ce269e21ce6878baf511115091fd321318a90c398d81292b6
 
 Package: djbsort
 Version: 0~20260621-2
@@ -11266,12 +11289,12 @@ MD5sum: 2a43806f258c6e531b6a845eb955899a
 SHA256: abeab94d3f29b2b3aef607b6243b48cc3471676b1dc2ad218c7e81966c915f32
 
 Package: gap-dev
-Source: gap (4.15.1-1)
-Version: 4.15.1-1+b2
-Installed-Size: 143
+Source: gap
+Version: 4.16.0-1
+Installed-Size: 156
 Maintainer: Bill Allombert <ballombe@debian.org>
 Architecture: amd64
-Depends: gap-core (= 4.15.1-1+b2), gcc, libgmp-dev, libgap-dev (= 4.15.1-1+b2)
+Depends: gap-core (= 4.16.0-1), gcc, libgmp-dev, libgap-dev (= 4.16.0-1)
 Description: GAP computer algebra system, compiler and development files
 Homepage: https://www.gap-system.org/
 Description-md5: 4f3ab591e60975613e71e33fd0324211
@@ -11279,10 +11302,10 @@ Tag: devel::compiler, devel::library, field::mathematics, role::devel-lib,
  role::documentation, role::program, works-with::software:source
 devel
 Priority: optional
-Filename: pool/main/g/gap/gap-dev_4.15.1-1+b2_amd64.deb
-Size: 121664
-MD5sum: 90935e1e69316f0e1bca7ba501f93e7c
-SHA256: 2d35148f01d9b5a8dc71dff9826376e88b11b87ed730bfe91d6b800e1987d335
+Filename: pool/main/g/gap/gap-dev_4.16.0-1_amd64.deb
+Size: 129068
+MD5sum: 222a11a36a81f67d6d396baef85b4a02
+SHA256: 6dc568bc51936a3f5d3c895052ce038daaf27475120c429d597bd8654b6690d4
 
 Package: garagemq
 Source: garagemq (0.0~git20200204.15e6a9d+ds-5)
@@ -69047,8 +69070,8 @@ SHA256: 071b74db61bdb0d9c8a207a6667e3b142d55efe56fd9508d176dcc3981ff22d4
 
 Package: icon-ipl
 Source: icon
-Version: 9.5.25a-3
-Installed-Size: 7266
+Version: 9.5.25a-4
+Installed-Size: 7262
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: all
 Recommends: icont
@@ -69059,15 +69082,15 @@ Tag: devel::compiler, devel::interpreter, interface::commandline,
  role::app-data, role::program, works-with::software:source
 devel
 Priority: optional
-Filename: pool/main/i/icon/icon-ipl_9.5.25a-3_all.deb
-Size: 958840
-MD5sum: bc6bb2f256c4b195b1e169271b1fd2e8
-SHA256: cb3ca7aea157dd59f3b84052895d4a912442ce9ee16a6d0515568e10649fc596
+Filename: pool/main/i/icon/icon-ipl_9.5.25a-4_all.deb
+Size: 979740
+MD5sum: 7b98a7c6863086045d98f9751bd921db
+SHA256: 66c35d89c2202b4c358c410bb94fa14dd865b84ac32ae3e42bf365ec5f0cfbb1
 
 Package: icont
 Source: icon
-Version: 9.5.25a-3
-Installed-Size: 150
+Version: 9.5.25a-4
+Installed-Size: 146
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38)
@@ -69080,15 +69103,15 @@ Tag: devel::interpreter, implemented-in::c, interface::commandline,
  role::program, scope::utility, works-with::software:source
 devel
 Priority: optional
-Filename: pool/main/i/icon/icont_9.5.25a-3_amd64.deb
-Size: 54496
-MD5sum: ecd073df4f735ee536b13835e91be4f8
-SHA256: 47db0a19a335efd1bb6d3d0871e9ce808e2f9097c28cb24eb94159000a452242
+Filename: pool/main/i/icon/icont_9.5.25a-4_amd64.deb
+Size: 51516
+MD5sum: c6953d888c58d57e2cb22a7a26012098
+SHA256: 758ab6439b9eb83c62da21165ffaaf39136433281357db62780a111da95ff711
 
 Package: iconx
 Source: icon
-Version: 9.5.25a-3
-Installed-Size: 444
+Version: 9.5.25a-4
+Installed-Size: 440
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libx11-6, libxpm4
@@ -69099,10 +69122,10 @@ Tag: devel::interpreter, implemented-in::c, interface::commandline,
  role::program, scope::utility
 devel
 Priority: optional
-Filename: pool/main/i/icon/iconx_9.5.25a-3_amd64.deb
-Size: 163996
-MD5sum: 7d2d01de3ed8f02855a396d2236bea9a
-SHA256: 363af0bafe2ad47406804e02930bd19f031d3e634f7d3251960b4a895966d42c
+Filename: pool/main/i/icon/iconx_9.5.25a-4_amd64.deb
+Size: 160740
+MD5sum: aecd02a59583d05069b48f02840a08ae
+SHA256: df5bb9b02737d577d3af1dc60848ad4e96f369598e85c1da2a1198a2ba1dc993
 
 Package: id-utils
 Version: 4.6.28-20250503ss15da
@@ -69400,6 +69423,23 @@ Size: 265108
 MD5sum: b66fd6276c0df134e62c027c92b3328d
 SHA256: 43748dda318b45c30bd18bfa610c535c94ed27c73f755fb6f6e7ef1414090f2f
 
+Package: ipfixcol2-dev
+Source: ipfixcol2
+Version: 2.8.0+20260519-2
+Installed-Size: 101
+Maintainer: Daniel Baumann <daniel@debian.org>
+Architecture: amd64
+Depends: ipfixcol2 (= 2.8.0+20260519-2)
+Description: High-performance NetFlow v5/v9 and IPFIX RFC7011 collector (devel)
+Homepage: https://github.com/CESNET/ipfixcol2
+Description-md5: 806c34803247d7c2eed08e693cd2f673
+devel
+Priority: optional
+Filename: pool/main/i/ipfixcol2/ipfixcol2-dev_2.8.0+20260519-2_amd64.deb
+Size: 17612
+MD5sum: 17e87b052713e179425fea9a4c1e468a
+SHA256: 7aee2192c749bada708fa72f220dd1a4bf1746683f289422abe9298de53c3c2a
+
 Package: irtt
 Source: irtt (0.9.1-1)
 Version: 0.9.1-1+b2
@@ -69594,21 +69634,21 @@ SHA256: d6ccc8fd5e843b8ed80942ea3fe6bce84f6d48cfdbb39461861c8833c483a955
 
 Package: janus-dev
 Source: janus
-Version: 1.1.2-4
-Installed-Size: 305
+Version: 1.4.1+ds-4
+Installed-Size: 319
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: janus (= 1.1.2-4), libcurl4-openssl-dev, libglib2.0-dev, libjansson-dev, libnice-dev, libsrtp2-dev
+Depends: janus (= 1.4.1+ds-4), libcurl4-openssl-dev, libglib2.0-dev, libjansson-dev, libnice-dev, libsrtp2-dev
 Suggests: janus-doc
 Description: general purpose WebRTC server/gateway - development files
 Homepage: https://janus.conf.meetecho.com
 Description-md5: a43d387e9fb659100fa84874325248ed
 devel
 Priority: optional
-Filename: pool/main/j/janus/janus-dev_1.1.2-4_amd64.deb
-Size: 86320
-MD5sum: 5cace8e81e90150796aaa6cc61bf9226
-SHA256: 45b483b76d711ba4bbd429e7ecf83c51a13898587d7722a8e5437f740d77e68f
+Filename: pool/main/j/janus/janus-dev_1.4.1+ds-4_amd64.deb
+Size: 88828
+MD5sum: cf5b16cfaa78c8fac99238963c3b208f
+SHA256: 5996176568a22286642d823b3debb11c9dc0c40148223de428a2a4d402383b02
 
 Package: japi-compliance-checker
 Version: 2.4-3
@@ -70633,22 +70673,21 @@ MD5sum: 15697028771951c34216a5dc7b9827ff
 SHA256: 2b06622a614adc9231403f4625596c0df856f746ec4ab69a071c34d9f75638c8
 
 Package: kylin-scanner
-Source: kylin-scanner (1.0.0-1.2)
-Version: 1.0.0-1.2+b1
+Version: 1.0.0-2
 Installed-Size: 470
 Maintainer: Kylin Team <team+kylin@tracker.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.20.0), libleptonica6, libopencv-core410 (>= 4.10.0+dfsg), libopencv-imgcodecs410 (>= 4.10.0+dfsg), libopencv-imgproc410 (>= 4.10.0+dfsg), libopencv-photo410 (>= 4.10.0+dfsg), libqt5core5t64 (>= 5.15.1), libqt5gui5t64 (>= 5.7.0) | libqt5gui5-gles (>= 5.7.0), libqt5widgets5t64 (>= 5.0.2), libsane1 (>= 1.0.27), libstdc++6 (>= 13.1), libtesseract5 (>= 5.5.0)
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.20.0), libleptonica6, libopencv-core410 (>= 4.10.0+dfsg), libopencv-imgcodecs410 (>= 4.10.0+dfsg), libopencv-imgproc410 (>= 4.10.0+dfsg), libopencv-photo410 (>= 4.10.0+dfsg), libqt5core5t64 (>= 5.15.1), libqt5gui5t64 (>= 5.7.0) | libqt5gui5-gles (>= 5.7.0), libqt5widgets5t64 (>= 5.6.0~beta), libsane1 (>= 1.0.27), libstdc++6 (>= 13.1), libtesseract5 (>= 5.5.0), tesseract-ocr-chi-sim
 Description: Scanning utility based on SANE
-Homepage: https://github.com/ubuntukylin/kylin-scanner
+Homepage: https://gitee.com/openkylin/kylin-scanner
 Description-md5: 0272fe49d15841240ba9c5f3090ecd52
 Tag: uitoolkit::qt
 devel
 Priority: optional
-Filename: pool/main/k/kylin-scanner/kylin-scanner_1.0.0-1.2+b1_amd64.deb
-Size: 189812
-MD5sum: 0ae33d2b1dee4281cf10f22970e6da0a
-SHA256: 2fcc5b70b3f7855b59f32372693b5aca542f14ad01960d15e4ca8c1ac4da1e30
+Filename: pool/main/k/kylin-scanner/kylin-scanner_1.0.0-2_amd64.deb
+Size: 190672
+MD5sum: f5ad31b55696ed63a0cb88760e0b8c9a
+SHA256: e872dc0a49e62c9bf6a1afca51091956a0a95bb877301815356cb42d1c2f88e2
 
 Package: kyua
 Version: 0.13+git20240311+0a43bb8d89e3-3
@@ -81228,8 +81267,8 @@ SHA256: 73f03a64d5316ec389f84424d84a5b05d8468ebd71750ccfe032d953c6fbd598
 
 Package: debcargo
 Source: rust-debcargo
-Version: 2.8.3-1
-Installed-Size: 23007
+Version: 2.8.3-2
+Installed-Size: 22991
 Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
 Architecture: amd64
 Depends: libc6 (>= 2.39), libcurl4t64 (>= 7.28.0), libgcc-s1 (>= 4.2), libgit2-1.9 (>= 1.9.0), libsqlite3-0 (>= 3.6.0), libssh2-1t64 (>= 1.2.5), libssl3t64 (>= 3.0.0), quilt
@@ -81238,13 +81277,13 @@ Description: Create a Debian package from a Cargo crate
 Homepage: https://salsa.debian.org/rust-team/debcargo
 Built-Using: rust-bitmaps (= 2.1.0-1), rust-im-rc (= 15.1.0-2), rust-lazy-regex (= 3.4.2+20251114-1), rust-nix (= 0.30.1-3), rust-pkcs8 (= 0.10.2+ds-13), rust-signature (= 2.2.0+ds-5), rust-sized-chunks (= 0.6.5-2), rustc (= 1.95.0+dfsg1-2)
 Description-md5: f2f7a9e991939d8ab97f55a64774c1dd
-Static-Built-Using: rust-adler (= 1.0.2-3), rust-aho-corasick (= 1.1.4-1), rust-allocator-api2 (= 0.2.21-1), rust-annotate-snippets (= 0.11.5-1), rust-anstream (= 0.6.21-1), rust-anstyle (= 1.0.14-1), rust-anstyle-parse (= 0.2.7-1), rust-anstyle-query (= 1.1.4-1), rust-anyhow (= 1.0.102-1), rust-arc-swap (= 1.9.1-1), rust-arrayref (= 0.3.9-1), rust-arrayvec (= 0.7.6-3), rust-base16ct (= 0.2.0-1), rust-base64 (= 0.22.1-2), rust-base64ct (= 1.8.3-1), rust-bitflags (= 2.11.0-1), rust-bitmaps (= 2.1.0-1), rust-blake3 (= 1.8.2-1), rust-block-buffer-0.10 (= 0.10.4-1), rust-bstr (= 1.12.1-1), rust-byteorder (= 1.5.0-1), rust-bytes (= 1.11.1-1), rust-cargo (= 0.91.0-4), rust-cargo-credential (= 0.4.6-1), rust-cargo-credential-libsecret (= 0.5.1-1), rust-cargo-platform (= 0.3.1-1), rust-cargo-util (= 0.2.22-1), rust-cargo-util-schemas (= 0.10.0-2), rust-cfg-if (= 1.0.4-1), rust-chrono (= 0.4.44-1), rust-clap (= 4.6.1-1), rust-clap-builder (= 4.6.0-1), rust-clap-complete (= 4.6.3-1), rust-clap-lex (= 1.1.0-1), rust-clap-mangen (= 0.2.31-1), rust-clru (= 0.6.2-1), rust-color-print (= 0.3.7-1), rust-colorchoice (= 1.0.0-1), rust-const-oid (= 0.9.6-1), rust-constant-time-eq (= 0.3.1-1), rust-countme (= 3.0.1-3), rust-cpufeatures (= 0.2.17-1), rust-crates-io (= 0.40.12-1), rust-crc32fast (= 1.5.0-2), rust-crossbeam-channel (= 0.5.15-1), rust-crossbeam-deque (= 0.8.6-1), rust-crossbeam-epoch (= 0.9.18-1), rust-crossbeam-utils (= 0.8.21-1), rust-crypto-bigint (= 0.5.5-2), rust-crypto-common-0.1 (= 0.1.7-1), rust-ct-codecs (= 1.1.1-1), rust-curl (= 0.4.44-5), rust-curl-sys (= 0.4.67-3), rust-dashmap (= 6.1.0-1), rust-deb822-fast (= 0.2.3-1), rust-deb822-lossless (= 0.5.16-1), rust-debian-control (= 0.3.11-1), rust-debversion (= 0.5.2-1), rust-der (= 0.7.10-1), rust-deranged (= 0.3.11-1), rust-digest-0.10 (= 0.10.7-1), rust-ecdsa (= 0.16.9-1), rust-ed25519-compact (= 2.2.0-2), rust-either (= 1.15.0-1), rust-elliptic-curve (= 0.13.8-1), rust-encoding-rs (= 0.8.35-1), rust-env-filter (= 1.0.1-1), rust-env-logger (= 0.11.10-1), rust-equivalent (= 1.0.1-1), rust-erased-serde (= 0.3.31-1), rust-fallible-iterator (= 0.3.0-2), rust-fallible-streaming-iterator (= 0.1.9-1), rust-faster-hex (= 0.10.0-1), rust-fastrand (= 2.3.0-2), rust-ff (= 0.13.0-1), rust-fiat-crypto (= 0.3.0-1), rust-filetime (= 0.2.26-1), rust-flate2 (= 1.1.9-2), rust-fnv (= 1.0.7-1), rust-foldhash (= 0.2.0-2), rust-form-urlencoded (= 1.2.2-1), rust-generic-array (= 0.14.7-1), rust-getrandom (= 0.4.2-3), rust-git2 (= 0.20.4-1), rust-git2-curl (= 0.21.0-2), rust-gix (= 0.83.0-1), rust-gix-actor (= 0.41.0-1), rust-gix-attributes (= 0.33.0-1), rust-gix-bitmap (= 0.3.1-1), rust-gix-chunk (= 0.7.1-1), rust-gix-command (= 0.9.0-1), rust-gix-commitgraph (= 0.37.0-1), rust-gix-config (= 0.56.0-1), rust-gix-config-value (= 0.18.0-1), rust-gix-credentials (= 0.38.0-1), rust-gix-date (= 0.15.3-1), rust-gix-diff (= 0.63.0-1), rust-gix-dir (= 0.25.0-1), rust-gix-discover (= 0.51.0-1), rust-gix-error (= 0.2.3-1), rust-gix-features (= 0.48.0-1), rust-gix-filter (= 0.30.0-1), rust-gix-fs (= 0.21.1-1), rust-gix-glob (= 0.26.0-1), rust-gix-hash (= 0.25.0-1), rust-gix-hashtable (= 0.15.0-1), rust-gix-ignore (= 0.21.0-1), rust-gix-imara-diff (= 0.2.1-1), rust-gix-index (= 0.51.0-1), rust-gix-lock (= 23.0.0-1), rust-gix-negotiate (= 0.31.0-1), rust-gix-object (= 0.60.0-1), rust-gix-odb (= 0.80.0-1), rust-gix-pack (= 0.70.0-1), rust-gix-packetline (= 0.21.3-1), rust-gix-path (= 0.12.0-1), rust-gix-pathspec (= 0.18.0-1), rust-gix-prompt (= 0.15.0-1), rust-gix-protocol (= 0.61.0-2), rust-gix-quote (= 0.7.1-1), rust-gix-ref (= 0.63.0-1), rust-gix-refspec (= 0.41.0-1), rust-gix-revision (= 0.45.0-1), rust-gix-revwalk (= 0.31.0-1), rust-gix-sec (= 0.14.0-1), rust-gix-shallow (= 0.12.0-1), rust-gix-status (= 0.30.0-1), rust-gix-submodule (= 0.30.0-1), rust-gix-tempfile (= 23.0.0-1), rust-gix-trace (= 0.1.19-1), rust-gix-transport (= 0.57.0-1), rust-gix-traverse (= 0.57.0-1), rust-gix-url (= 0.36.0-1), rust-gix-utils (= 0.3.2-1), rust-gix-validate (= 0.11.1-1), rust-gix-worktree (= 0.52.0-1), rust-glob (= 0.3.3-1), rust-globset (= 0.4.18-1), rust-group (= 0.13.0-3), rust-hash32 (= 0.3.1-2), rust-hashbrown (= 0.16.1-2), rust-hashbrown-0.14 (= 0.14.5-2), rust-hashlink (= 0.10.0-2), rust-heapless (= 0.8.0-2), rust-hex (= 0.4.3-3), rust-hkdf (= 0.12.4-1), rust-hmac-0.12 (= 0.12.1-1), rust-home (= 0.5.11-1), rust-http-auth (= 0.1.10-1), rust-iana-time-zone (= 0.1.64-1), rust-idna (= 1.1.0-1), rust-idna-adapter (= 1.1.0-1), rust-idna-mapping (= 1.0.0-1), rust-ignore (= 0.4.25-1), rust-im-rc (= 15.1.0-2), rust-indexmap (= 2.14.0-1), rust-is-executable (= 1.0.5-1), rust-is-terminal-polyfill (= 1.70.1-1), rust-itertools (= 0.14.0-2), rust-itoa (= 1.0.18-1), rust-jiff (= 0.2.27-1), rust-jobserver (= 0.1.34-1), rust-kstring (= 2.0.0-1), rust-lazy-regex (= 3.4.2+20251114-1), rust-lazy-static (= 1.5.0-2), rust-lazycell (= 1.3.0-4), rust-libc (= 0.2.186-1), rust-libgit2-sys (= 0.18.3-1), rust-libloading (= 0.8.5-1), rust-libnghttp2-sys (= 0.1.3-1), rust-libsqlite3-sys (= 0.26.0-2), rust-libssh2-sys (= 0.3.0-1), rust-libz-sys (= 1.1.20-1), rust-linux-raw-sys (= 0.12.1-1), rust-lock-api (= 0.4.14-1), rust-log (= 0.4.29-1), rust-matchers (= 0.2.0-1), rust-memchr (= 2.8.0-1), rust-memmap2 (= 0.9.8-1), rust-miniz-oxide (= 0.7.1-2), rust-nix (= 0.30.1-3), rust-nonempty (= 0.11.0-1), rust-nu-ansi-term (= 0.50.1-1), rust-num-bigint (= 0.4.6-1), rust-num-conv (= 0.2.0-1), rust-num-integer (= 0.1.46-2), rust-num-traits (= 0.2.19-2), rust-once-cell (= 1.21.4-1), rust-opener (= 0.6.1-3), rust-openssl-probe (= 0.1.2-1), rust-openssl-sys (= 0.9.115-1), rust-ordered-float (= 4.6.0-1), rust-orion (= 0.17.13-2), rust-os-info (= 3.13.0-1), rust-p384 (= 0.13.0-1), rust-parking-lot (= 0.12.5-1), rust-parking-lot-core (= 0.9.12-1), rust-pasetors (= 0.7.8-1), rust-pathdiff (= 0.2.3-1), rust-pem-rfc7468 (= 0.7.0-1), rust-percent-encoding (= 2.3.2-2), rust-pin-project-lite (= 0.2.16-1), rust-pkcs8 (= 0.10.2+ds-13), rust-powerfmt (= 0.2.0-1), rust-ppv-lite86 (= 0.2.21-2), rust-primeorder (= 0.13.6-1), rust-prodash (= 28.0.0-7), rust-rand (= 0.10.1+dfsg-1), rust-rand-chacha (= 0.10.0-2), rust-rand-core (= 0.10.0-2), rust-rand-core-0.6 (= 0.6.4-5), rust-rand-xoshiro (= 0.8.0-2), rust-regex (= 1.12.3-1), rust-regex-automata (= 0.4.13-1), rust-regex-syntax (= 0.8.10+dfsg-1), rust-rfc6979 (= 0.4.0-1), rust-roff (= 0.2.2-1), rust-rowan (= 0.16.1-2), rust-rusqlite (= 0.29.0-4), rust-rustc-hash (= 2.1.2-2), rust-rustc-stable-hash (= 0.1.2-1), rust-rustfix (= 0.9.0-1), rust-rustix (= 1.1.4+dfsg-1), rust-same-file (= 1.0.6-2), rust-scopeguard (= 1.2.0-1), rust-sec1 (= 0.7.3-1), rust-semver (= 1.0.28-1), rust-serde (= 1.0.228-3), rust-serde-core (= 1.0.228-2), rust-serde-ignored (= 0.1.10-1), rust-serde-json (= 1.0.149-1), rust-serde-spanned (= 1.1.1-1), rust-serde-untagged (= 0.1.9-2), rust-serde-value (= 0.7.0-2), rust-sha1-0.10 (= 0.10.6-1), rust-sha1-checked (= 0.10.0-1), rust-sha2-0.10 (= 0.10.9-2), rust-sharded-slab (= 0.1.4-2), rust-shell-escape (= 0.1.5-1), rust-shell-words (= 1.1.0-1), rust-shlex (= 1.3.0-1), rust-signature (= 2.2.0+ds-5), rust-simd-adler32 (= 0.3.9-1), rust-sized-chunks (= 0.6.5-2), rust-smallvec (= 1.15.1-1), rust-smawk (= 0.3.2-1), rust-socket2 (= 0.5.10-1), rust-spki (= 0.7.3-1), rust-stable-deref-trait (= 1.2.0-1), rust-static-assertions (= 1.1.0-1), rust-strsim (= 0.11.1-1), rust-subtle (= 2.6.1-1), rust-supports-hyperlinks (= 3.1.0-1), rust-supports-unicode (= 3.0.0-1), rust-tar (= 0.4.45-2), rust-tempfile (= 3.27.0-1), rust-terminal-size (= 0.4.4-1), rust-text-size (= 1.1.1-1), rust-textwrap (= 0.16.2-1), rust-thiserror (= 2.0.18-1), rust-thiserror-1 (= 1.0.69-1), rust-thread-local (= 1.1.4-1), rust-time (= 0.3.47-1), rust-time-core (= 0.1.8-1), rust-tinyvec (= 1.10.0-1), rust-tinyvec-macros (= 0.1.0-1), rust-toml (= 1.1.2-4), rust-toml-datetime (= 1.1.1-2), rust-toml-edit (= 0.25.11-2), rust-toml-parser (= 1.1.2-2), rust-toml-writer (= 1.1.1-2), rust-tracing (= 0.1.44-1), rust-tracing-core (= 0.1.36-1), rust-tracing-log (= 0.2.0-3), rust-tracing-subscriber (= 0.3.22-3), rust-typeid (= 1.0.2-1), rust-typenum (= 1.20.0-1), rust-unicase (= 2.9.0-1), rust-unicode-bidi (= 0.3.17-1), rust-unicode-bom (= 2.0.3-1), rust-unicode-joining-type (= 1.0.0-1), rust-unicode-linebreak (= 0.1.5-1), rust-unicode-normalization (= 0.1.25-1), rust-unicode-width (= 0.2.2-1), rust-unicode-xid (= 0.2.6-1), rust-url (= 2.5.8-1), rust-utf8-iter (= 1.0.4-1), rust-utf8parse (= 0.2.2-1), rust-walkdir (= 2.5.0-2), rust-winnow (= 0.7.13-1), rust-xattr (= 1.5.1-1), rust-zerocopy (= 0.8.26-4), rust-zeroize (= 1.8.2-1), rust-zlib-rs (= 0.6.2-3), rust-zmij (= 1.0.21-1), rustc (= 1.95.0+dfsg1-2)
+Static-Built-Using: rust-adler2 (= 2.0.1-2), rust-aho-corasick (= 1.1.4-1), rust-allocator-api2 (= 0.2.21-1), rust-annotate-snippets (= 0.11.5-1), rust-anstream (= 0.6.21-1), rust-anstyle (= 1.0.14-1), rust-anstyle-parse (= 0.2.7-1), rust-anstyle-query (= 1.1.4-1), rust-anyhow (= 1.0.102-1), rust-arc-swap (= 1.9.1-1), rust-arrayref (= 0.3.9-1), rust-arrayvec (= 0.7.6-3), rust-base16ct (= 0.2.0-1), rust-base64 (= 0.22.1-2), rust-base64ct (= 1.8.3-1), rust-bitflags (= 2.13.0-1), rust-bitmaps (= 2.1.0-1), rust-blake3 (= 1.8.2-1), rust-block-buffer-0.10 (= 0.10.4-1), rust-bstr (= 1.12.1-1), rust-byteorder (= 1.5.0-1), rust-bytes (= 1.11.1-1), rust-cargo (= 0.91.0-4), rust-cargo-credential (= 0.4.6-1), rust-cargo-credential-libsecret (= 0.5.1-1), rust-cargo-platform (= 0.3.1-1), rust-cargo-util (= 0.2.22-1), rust-cargo-util-schemas (= 0.10.0-2), rust-cfg-if (= 1.0.4-1), rust-chrono (= 0.4.44-1), rust-clap (= 4.6.1-1), rust-clap-builder (= 4.6.0-1), rust-clap-complete (= 4.6.3-1), rust-clap-lex (= 1.1.0-1), rust-clap-mangen (= 0.3.0-1), rust-clru (= 0.6.2-1), rust-color-print (= 0.3.7-1), rust-colorchoice (= 1.0.0-1), rust-const-oid (= 0.9.6-1), rust-constant-time-eq (= 0.3.1-1), rust-countme (= 3.0.1-3), rust-cpufeatures-0.2 (= 0.2.17-1), rust-crates-io (= 0.40.12-1), rust-crc32fast (= 1.5.0-2), rust-crossbeam-channel (= 0.5.15-1), rust-crossbeam-deque (= 0.8.6-1), rust-crossbeam-epoch (= 0.9.18-1), rust-crossbeam-utils (= 0.8.21-1), rust-crypto-bigint (= 0.5.5-2), rust-crypto-common-0.1 (= 0.1.7-1), rust-ct-codecs (= 1.1.1-1), rust-curl (= 0.4.50-1), rust-curl-sys (= 0.4.89+dfsg-1), rust-dashmap (= 6.1.0-1), rust-deb822-fast (= 0.2.3-1), rust-deb822-lossless (= 0.5.18-1), rust-debian-control (= 0.3.11-1), rust-debversion (= 0.5.4-1), rust-der (= 0.7.10-2), rust-deranged (= 0.3.11-1), rust-digest-0.10 (= 0.10.7-1), rust-ecdsa (= 0.16.9-1), rust-ed25519-compact (= 2.2.0-2), rust-either (= 1.15.0-1), rust-elliptic-curve (= 0.13.8-3), rust-encoding-rs (= 0.8.35-1), rust-env-filter (= 1.0.1-1), rust-env-logger (= 0.11.10-1), rust-equivalent (= 1.0.1-1), rust-erased-serde (= 0.3.31-1), rust-fallible-iterator (= 0.3.0-2), rust-fallible-streaming-iterator (= 0.1.9-1), rust-faster-hex (= 0.10.0-1), rust-fastrand (= 2.3.0-2), rust-ff (= 0.13.0-1), rust-fiat-crypto (= 0.3.0-1), rust-filetime (= 0.2.26-1), rust-flate2 (= 1.1.9-2), rust-fnv (= 1.0.7-1), rust-foldhash (= 0.2.0-2), rust-form-urlencoded (= 1.2.2-1), rust-generic-array (= 0.14.7-1), rust-getrandom (= 0.4.2-3), rust-git2 (= 0.20.4-1), rust-git2-curl (= 0.21.0-2), rust-gix (= 0.83.0-1), rust-gix-actor (= 0.41.0-1), rust-gix-attributes (= 0.33.0-1), rust-gix-bitmap (= 0.3.1-1), rust-gix-chunk (= 0.7.1-1), rust-gix-command (= 0.9.0-1), rust-gix-commitgraph (= 0.37.0-1), rust-gix-config (= 0.56.0-1), rust-gix-config-value (= 0.18.0-1), rust-gix-credentials (= 0.38.0-1), rust-gix-date (= 0.15.3-1), rust-gix-diff (= 0.63.0-1), rust-gix-dir (= 0.25.0-1), rust-gix-discover (= 0.51.0-1), rust-gix-error (= 0.2.3-1), rust-gix-features (= 0.48.0-1), rust-gix-filter (= 0.30.0-1), rust-gix-fs (= 0.21.1-1), rust-gix-glob (= 0.26.0-1), rust-gix-hash (= 0.25.0-1), rust-gix-hashtable (= 0.15.0-1), rust-gix-ignore (= 0.21.0-1), rust-gix-imara-diff (= 0.2.2-1), rust-gix-index (= 0.51.0-1), rust-gix-lock (= 23.0.0-1), rust-gix-negotiate (= 0.31.0-1), rust-gix-object (= 0.60.0-1), rust-gix-odb (= 0.80.0-1), rust-gix-pack (= 0.70.0-1), rust-gix-packetline (= 0.21.3-1), rust-gix-path (= 0.12.0-1), rust-gix-pathspec (= 0.18.0-1), rust-gix-prompt (= 0.15.0-1), rust-gix-protocol (= 0.61.0-2), rust-gix-quote (= 0.7.1-1), rust-gix-ref (= 0.63.0-1), rust-gix-refspec (= 0.41.0-1), rust-gix-revision (= 0.45.0-1), rust-gix-revwalk (= 0.31.0-1), rust-gix-sec (= 0.14.0-1), rust-gix-shallow (= 0.12.0-1), rust-gix-status (= 0.30.0-1), rust-gix-submodule (= 0.30.0-1), rust-gix-tempfile (= 23.0.0-1), rust-gix-trace (= 0.1.19-1), rust-gix-transport (= 0.57.0-1), rust-gix-traverse (= 0.57.0-1), rust-gix-url (= 0.36.0-1), rust-gix-utils (= 0.3.2-1), rust-gix-validate (= 0.11.1-1), rust-gix-worktree (= 0.52.0-1), rust-glob (= 0.3.3-1), rust-globset (= 0.4.18-1), rust-group (= 0.13.0-3), rust-hash32 (= 0.3.1-2), rust-hashbrown (= 0.16.1-2), rust-hashbrown-0.14 (= 0.14.5-2), rust-hashlink (= 0.10.0-2), rust-heapless (= 0.8.0-2), rust-hex (= 0.4.3-3), rust-hkdf (= 0.12.4-1), rust-hmac-0.12 (= 0.12.1-1), rust-home (= 0.5.11-1), rust-http-auth (= 0.1.10-1), rust-iana-time-zone (= 0.1.64-1), rust-idna (= 1.1.0-1), rust-idna-adapter (= 1.1.0-1), rust-idna-mapping (= 1.0.0-1), rust-ignore (= 0.4.25-1), rust-im-rc (= 15.1.0-2), rust-indexmap (= 2.14.0-1), rust-is-executable (= 1.0.5-1), rust-is-terminal-polyfill (= 1.70.1-1), rust-itertools (= 0.14.0-2), rust-itoa (= 1.0.18-1), rust-jiff (= 0.2.27-1), rust-jobserver (= 0.1.34-1), rust-kstring (= 2.0.0-1), rust-lazy-regex (= 3.4.2+20251114-1), rust-lazy-static (= 1.5.0-3), rust-lazycell (= 1.3.0-4), rust-libc (= 0.2.186-1), rust-libgit2-sys (= 0.18.3-1), rust-libloading (= 0.8.9-1), rust-libnghttp2-sys (= 0.1.3-1), rust-libsqlite3-sys (= 0.26.0-2), rust-libssh2-sys (= 0.3.0-1), rust-libz-sys (= 1.1.20-1), rust-linux-raw-sys (= 0.12.1-1), rust-lock-api (= 0.4.14-1), rust-log (= 0.4.32-1), rust-matchers (= 0.2.0-1), rust-memchr (= 2.8.0-1), rust-memmap2 (= 0.9.8-1), rust-miniz-oxide (= 0.9.1-2), rust-nix (= 0.30.1-3), rust-nonempty (= 0.11.0-1), rust-nu-ansi-term (= 0.50.1-1), rust-num-bigint (= 0.4.6-1), rust-num-conv (= 0.2.0-1), rust-num-integer (= 0.1.46-2), rust-num-traits (= 0.2.19-2), rust-once-cell (= 1.21.4-1), rust-opener (= 0.6.1-3), rust-openssl-probe (= 0.1.2-1), rust-openssl-sys (= 0.9.115-1), rust-ordered-float (= 4.6.0-1), rust-orion (= 0.17.13-2), rust-os-info (= 3.13.0-1), rust-p384 (= 0.13.0-1), rust-parking-lot (= 0.12.5-1), rust-parking-lot-core (= 0.9.12-1), rust-pasetors (= 0.7.8-1), rust-pathdiff (= 0.2.3-1), rust-pem-rfc7468 (= 1.0.0-1), rust-percent-encoding (= 2.3.2-2), rust-pin-project-lite (= 0.2.16-1), rust-pkcs8 (= 0.10.2+ds-13), rust-powerfmt (= 0.2.0-1), rust-ppv-lite86 (= 0.2.21-2), rust-primeorder (= 0.13.6-1), rust-prodash (= 28.0.0-7), rust-rand (= 0.10.1+dfsg-1), rust-rand-chacha (= 0.10.0-2), rust-rand-core (= 0.10.0-2), rust-rand-core-0.6 (= 0.6.4-5), rust-rand-xoshiro (= 0.8.0-2), rust-regex (= 1.12.3-1), rust-regex-automata (= 0.4.13-1), rust-regex-syntax (= 0.8.10+dfsg-1), rust-rfc6979 (= 0.4.0-1), rust-roff (= 1.1.1-1), rust-rowan (= 0.16.1-2), rust-rusqlite (= 0.29.0-4), rust-rustc-hash (= 2.1.2-2), rust-rustc-stable-hash (= 0.1.2-1), rust-rustfix (= 0.9.0-1), rust-rustix (= 1.1.4+dfsg-1), rust-same-file (= 1.0.6-2), rust-scopeguard (= 1.2.0-1), rust-sec1 (= 0.7.3-1), rust-semver (= 1.0.28-1), rust-serde (= 1.0.228-3), rust-serde-core (= 1.0.228-2), rust-serde-ignored (= 0.1.10-1), rust-serde-json (= 1.0.150-1), rust-serde-spanned (= 1.1.1-1), rust-serde-untagged (= 0.1.9-2), rust-serde-value (= 0.7.0-2), rust-sha1-0.10 (= 0.10.6-1), rust-sha1-checked (= 0.10.0-1), rust-sha2-0.10 (= 0.10.9-2), rust-sharded-slab (= 0.1.4-2), rust-shell-escape (= 0.1.5-1), rust-shell-words (= 1.1.1-1), rust-shlex (= 1.3.0-1), rust-signature (= 2.2.0+ds-5), rust-simd-adler32 (= 0.3.9-1), rust-sized-chunks (= 0.6.5-2), rust-smallvec (= 1.15.1-1), rust-smawk (= 0.3.2-1), rust-socket2 (= 0.6.4-1), rust-spki (= 0.7.3-1), rust-stable-deref-trait (= 1.2.1-1), rust-static-assertions (= 1.1.0-1), rust-strsim (= 0.11.1-1), rust-subtle (= 2.6.1-1), rust-supports-hyperlinks (= 3.1.0-1), rust-supports-unicode (= 3.0.0-1), rust-tar (= 0.4.45-2), rust-tempfile (= 3.27.0-1), rust-terminal-size (= 0.4.4-1), rust-text-size (= 1.1.1-1), rust-textwrap (= 0.16.2-1), rust-thiserror (= 2.0.18-1), rust-thiserror-1 (= 1.0.69-1), rust-thread-local (= 1.1.4-1), rust-time (= 0.3.47-1), rust-time-core (= 0.1.8-1), rust-tinyvec (= 1.10.0-1), rust-tinyvec-macros (= 0.1.0-1), rust-toml (= 1.1.2-4), rust-toml-datetime (= 1.1.1-2), rust-toml-edit (= 0.25.11-2), rust-toml-parser (= 1.1.2-2), rust-toml-writer (= 1.1.1-2), rust-tracing (= 0.1.44-1), rust-tracing-core (= 0.1.36-1), rust-tracing-log (= 0.2.0-3), rust-tracing-subscriber (= 0.3.22-3), rust-typeid (= 1.0.2-1), rust-typenum (= 1.20.0-1), rust-unicase (= 2.9.0-1), rust-unicode-bidi (= 0.3.17-1), rust-unicode-bom (= 2.0.3-1), rust-unicode-joining-type (= 1.0.0-1), rust-unicode-linebreak (= 0.1.5-1), rust-unicode-normalization (= 0.1.25-1), rust-unicode-width (= 0.2.2-1), rust-unicode-xid (= 0.2.6-1), rust-url (= 2.5.8-1), rust-utf8-iter (= 1.0.4-1), rust-utf8parse (= 0.2.2-1), rust-walkdir (= 2.5.0-2), rust-winnow (= 0.7.13-1), rust-xattr (= 1.5.1-1), rust-zerocopy (= 0.8.26-4), rust-zeroize (= 1.8.2-1), rust-zlib-rs (= 0.6.2-3), rust-zmij (= 1.0.21-1), rustc (= 1.95.0+dfsg1-2)
 devel
 Priority: optional
-Filename: pool/main/r/rust-debcargo/debcargo_2.8.3-1_amd64.deb
-Size: 6157576
-MD5sum: a15010087af01af741470f4dfc96c00a
-SHA256: 4e3dff8886ad79fcd6c911dd0af834d9ede0b39ea347c4069b303ac65c5feded
+Filename: pool/main/r/rust-debcargo/debcargo_2.8.3-2_amd64.deb
+Size: 6162700
+MD5sum: d61cb3c583da81cf292a8783ab17e7c6
+SHA256: 7e75e3db4952261a5ae998a50bcb782678ecda82ed20b05002be3bde96571d09
 
 Package: diffr
 Source: rust-diffr (0.1.5-2)
@@ -81267,23 +81306,23 @@ MD5sum: 6fdf6c014cd9885c4b6ddd247e445aca
 SHA256: 39509abf20856b916558a6c6471d1a2c9ba53c9df75c428446fb658585cbdb1f
 
 Package: drt-tools
-Source: rust-drt-tools (0.3.5-2)
-Version: 0.3.5-2+b1
-Installed-Size: 5241
+Source: rust-drt-tools
+Version: 0.3.5-3
+Installed-Size: 5193
 Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
 Architecture: amd64
 Depends: libc6 (>= 2.39), libgcc-s1 (>= 4.2), liblzma5 (>= 5.1.1alpha+20120614), libssl3t64 (>= 3.0.0), zlib1g (>= 1:1.1.4)
 Description: Tools for Debian Release Team work
 Homepage: https://github.com/sebastinas/drt-tools
-Built-Using: rust-assorted-debian-utils (= 0.8.4-1), rust-rustls-pki-types (= 1.14.0+ds-1), rustc (= 1.94.1+dfsg1-1)
+Built-Using: rust-assorted-debian-utils (= 0.8.4-1), rust-rustls-pki-types (= 1.14.1+ds-1), rustc (= 1.95.0+dfsg1-2)
 Description-md5: 6408ee210299c30d5fc6ebd83d4a69b7
-Static-Built-Using: rust-aho-corasick (= 1.1.4-1), rust-anstream (= 0.6.21-1), rust-anstyle (= 1.0.13-1), rust-anstyle-parse (= 0.2.7-1), rust-anstyle-query (= 1.1.4-1), rust-anyhow (= 1.0.102-1), rust-assorted-debian-utils (= 0.8.4-1), rust-atomic-waker (= 1.1.2-1), rust-atty (= 0.2.14-3), rust-base64 (= 0.22.1-1), rust-bitflags (= 2.11.0-1), rust-bytes (= 1.11.1-1), rust-cfg-if (= 1.0.4-1), rust-chrono (= 0.4.44-1), rust-clap (= 4.5.53-1), rust-clap-builder (= 4.5.53-1), rust-clap-lex (= 0.7.4-1), rust-clap-verbosity-flag (= 2.2.1-2), rust-colorchoice (= 1.0.0-1), rust-console (= 0.15.11-1), rust-crc32fast (= 1.5.0-2), rust-either (= 1.15.0-1), rust-encoding-rs (= 0.8.35-1), rust-equivalent (= 1.0.1-1), rust-fastrand (= 2.3.0-2), rust-flate2 (= 1.1.9-1), rust-fmt2io (= 1.0.0-1), rust-fnv (= 1.0.7-1), rust-foreign-types-0.3 (= 0.3.2-2), rust-foreign-types-shared-0.1 (= 0.1.1-2), rust-form-urlencoded (= 1.2.2-1), rust-futures-channel (= 0.3.32-1), rust-futures-core (= 0.3.32-1), rust-futures-sink (= 0.3.32-1), rust-futures-task (= 0.3.32-1), rust-futures-util (= 0.3.32-1), rust-getrandom (= 0.4.2-3), rust-h2 (= 0.4.13-1), rust-hashbrown (= 0.16.1-2), rust-hex (= 0.4.3-3), rust-http (= 1.4.0-1), rust-http-body (= 1.0.1-1), rust-http-body-util (= 0.1.3-1), rust-httparse (= 1.10.1-1), rust-httpdate (= 1.0.3-1), rust-hyper (= 1.8.1-1), rust-hyper-tls (= 0.6.0-1), rust-hyper-util (= 0.1.19-1), rust-iana-time-zone (= 0.1.64-1), rust-idna (= 1.1.0-1), rust-idna-adapter (= 1.1.0-1), rust-idna-mapping (= 1.0.0-1), rust-indexmap (= 2.13.0-1), rust-indicatif (= 0.17.11-1), rust-ipnet (= 2.11.0-2), rust-iri-string (= 0.7.0-1), rust-is-terminal-polyfill (= 1.70.1-1), rust-itertools (= 0.14.0-2), rust-itoa (= 1.0.15-1), rust-lazy-static (= 1.5.0-1), rust-libc (= 0.2.178-2), rust-libz-sys (= 1.1.20-1), rust-linux-raw-sys (= 0.11.0-1), rust-log (= 0.4.29-1), rust-lzma-sys (= 0.1.20-1), rust-memchr (= 2.8.0-1), rust-mime (= 0.3.17-1), rust-mio (= 1.1.1-1), rust-native-tls (= 0.2.14-2), rust-non-zero-byte-slice (= 0.1.0-1), rust-num-traits (= 0.2.19-2), rust-number-prefix (= 0.4.0-1), rust-once-cell (= 1.21.4-1), rust-openssh (= 0.11.6-1), rust-openssh-mux-client (= 0.17.9-1), rust-openssh-mux-client-error (= 0.1.1-1), rust-openssl (= 0.10.73-1), rust-openssl-probe (= 0.1.2-1), rust-openssl-sys (= 0.9.109-2), rust-percent-encoding (= 2.3.2-2), rust-pin-project-lite (= 0.2.16-1), rust-pin-utils (= 0.1.0-1), rust-portable-atomic (= 1.10.0-3), rust-regex (= 1.12.3-1), rust-regex-automata (= 0.4.13-1), rust-regex-syntax (= 0.8.10+dfsg-1), rust-reqwest-0.12 (= 0.12.28-2), rust-rfc822-like (= 0.2.3-1), rust-rustix (= 1.1.3-1), rust-rustls-pki-types (= 1.14.0+ds-1), rust-ryu (= 1.0.22-1), rust-sendfd (= 0.4.4-1), rust-serde (= 1.0.228-3), rust-serde-core (= 1.0.228-2), rust-serde-urlencoded (= 0.7.1-1), rust-serde-yaml (= 0.9.34-1), rust-shell-escape (= 0.1.5-1), rust-signal-hook-registry (= 1.4.0-1), rust-slab (= 0.4.9-1), rust-smallvec (= 1.15.1-1), rust-socket2 (= 0.5.10-1), rust-ssh-format (= 0.14.1-1), rust-ssh-format-error (= 0.1.0-1), rust-stderrlog (= 0.5.4-1), rust-stfu8 (= 0.2.6-2), rust-strsim (= 0.11.1-1), rust-sync-wrapper (= 1.0.2-1), rust-tempfile (= 3.24.0-3), rust-termcolor (= 1.4.1-2), rust-terminal-size (= 0.4.2-2), rust-thiserror (= 2.0.18-1), rust-thiserror-1 (= 1.0.69-1), rust-thread-local (= 1.1.4-1), rust-tinyvec (= 1.10.0-1), rust-tinyvec-macros (= 0.1.0-1), rust-tokio (= 1.50.0-1), rust-tokio-io-utility (= 0.7.6-1), rust-tokio-native-tls (= 0.3.1-4), rust-tokio-util (= 0.7.17-1), rust-tower (= 0.5.2-2), rust-tower-http (= 0.6.8-2), rust-tower-layer (= 0.3.3-1), rust-tower-service (= 0.3.3-1), rust-tracing (= 0.1.44-1), rust-tracing-core (= 0.1.36-1), rust-try-lock (= 0.2.5-1), rust-typed-builder (= 0.23.2-1), rust-unicase (= 2.9.0-1), rust-unicode-bidi (= 0.3.17-1), rust-unicode-joining-type (= 1.0.0-1), rust-unicode-normalization (= 0.1.25-1), rust-unicode-segmentation (= 1.12.0-1), rust-unicode-width (= 0.2.2-1), rust-unsafe-libyaml (= 0.2.11-1), rust-url (= 2.5.8-1), rust-utf8-iter (= 1.0.4-1), rust-utf8parse (= 0.2.2-1), rust-voca-rs (= 1.15.2-1), rust-want (= 0.3.0-1), rust-xdg (= 2.5.2-5), rust-xz2 (= 0.1.7-1), rust-zeroize (= 1.8.2-1), rustc (= 1.94.1+dfsg1-1)
+Static-Built-Using: rust-aho-corasick (= 1.1.4-1), rust-anstream (= 0.6.21-1), rust-anstyle (= 1.0.14-1), rust-anstyle-parse (= 0.2.7-1), rust-anstyle-query (= 1.1.4-1), rust-anyhow (= 1.0.102-1), rust-assorted-debian-utils (= 0.8.4-1), rust-atomic-waker (= 1.1.2-1), rust-atty (= 0.2.14-3), rust-base64 (= 0.22.1-2), rust-bitflags (= 2.13.0-1), rust-bytes (= 1.11.1-1), rust-cfg-if (= 1.0.4-1), rust-chrono (= 0.4.45-1), rust-clap (= 4.6.1-1), rust-clap-builder (= 4.6.0-1), rust-clap-lex (= 1.1.0-1), rust-clap-verbosity-flag (= 3.0.4-1), rust-colorchoice (= 1.0.0-1), rust-console (= 0.15.11-1), rust-crc32fast (= 1.5.0-2), rust-either (= 1.15.0-1), rust-encoding-rs (= 0.8.35-1), rust-equivalent (= 1.0.1-1), rust-errno (= 0.3.14-1), rust-fastrand (= 2.3.0-2), rust-flate2 (= 1.1.9-2), rust-fmt2io (= 1.0.0-1), rust-fnv (= 1.0.7-1), rust-foreign-types-0.3 (= 0.3.2-2), rust-foreign-types-shared-0.1 (= 0.1.1-2), rust-form-urlencoded (= 1.2.2-1), rust-futures-channel (= 0.3.32-1), rust-futures-core (= 0.3.32-1), rust-futures-sink (= 0.3.32-1), rust-futures-task (= 0.3.32-1), rust-futures-util (= 0.3.32-3), rust-getrandom (= 0.4.2-3), rust-h2 (= 0.4.13-1), rust-hashbrown (= 0.16.1-2), rust-hex (= 0.4.3-3), rust-http (= 1.4.0-1), rust-http-body (= 1.0.1-1), rust-http-body-util (= 0.1.3-1), rust-httparse (= 1.10.1-1), rust-httpdate (= 1.0.3-1), rust-hyper (= 1.8.1-1), rust-hyper-tls (= 0.6.0-1), rust-hyper-util (= 0.1.19-1), rust-iana-time-zone (= 0.1.64-1), rust-idna (= 1.1.0-1), rust-idna-adapter (= 1.1.0-1), rust-idna-mapping (= 1.0.0-1), rust-indexmap (= 2.14.0-1), rust-indicatif (= 0.17.11-2), rust-ipnet (= 2.12.0-1), rust-iri-string (= 0.7.0-1), rust-is-terminal-polyfill (= 1.70.1-1), rust-itertools (= 0.14.0-2), rust-itoa (= 1.0.18-1), rust-lazy-static (= 1.5.0-3), rust-libc (= 0.2.186-1), rust-libz-sys (= 1.1.20-1), rust-linux-raw-sys (= 0.12.1-1), rust-log (= 0.4.32-1), rust-lzma-sys (= 0.1.20-1), rust-memchr (= 2.8.0-1), rust-mime (= 0.3.17-1), rust-mio (= 1.2.0-1), rust-native-tls (= 0.2.14-2), rust-non-zero-byte-slice (= 0.1.0-1), rust-num-traits (= 0.2.19-2), rust-number-prefix (= 0.4.0-1), rust-once-cell (= 1.21.4-1), rust-openssh (= 0.11.6-1), rust-openssh-mux-client (= 0.17.9-1), rust-openssh-mux-client-error (= 0.1.1-1), rust-openssl (= 0.10.79-1), rust-openssl-probe (= 0.1.2-1), rust-openssl-sys (= 0.9.115-1), rust-percent-encoding (= 2.3.2-2), rust-pin-project-lite (= 0.2.16-1), rust-pin-utils (= 0.1.0-1), rust-portable-atomic (= 1.10.0-3), rust-regex (= 1.12.4-1), rust-regex-automata (= 0.4.13-1), rust-regex-syntax (= 0.8.11+dfsg-1), rust-reqwest-0.12 (= 0.12.28-4), rust-rfc822-like (= 0.2.3-1), rust-rustix (= 1.1.4+dfsg-1), rust-rustls-pki-types (= 1.14.1+ds-1), rust-ryu (= 1.0.22-1), rust-sendfd (= 0.4.4-1), rust-serde (= 1.0.228-3), rust-serde-core (= 1.0.228-2), rust-serde-urlencoded (= 0.7.1-1), rust-serde-yaml (= 0.9.34-1), rust-shell-escape (= 0.1.5-1), rust-signal-hook-registry (= 1.4.8-1), rust-slab (= 0.4.12-1), rust-smallvec (= 1.15.2-1), rust-socket2 (= 0.6.4-1), rust-socket2-0.5 (= 0.5.10-1), rust-ssh-format (= 0.14.1-1), rust-ssh-format-error (= 0.1.0-1), rust-stderrlog (= 0.5.4-1), rust-stfu8 (= 0.2.6-2), rust-strsim (= 0.11.1-1), rust-sync-wrapper (= 1.0.2-1), rust-tempfile (= 3.27.0-1), rust-termcolor (= 1.4.1-2), rust-terminal-size (= 0.4.4-1), rust-thiserror (= 2.0.18-1), rust-thiserror-1 (= 1.0.69-1), rust-thread-local (= 1.1.4-1), rust-tinyvec (= 1.10.0-1), rust-tinyvec-macros (= 0.1.0-1), rust-tokio (= 1.52.3-2), rust-tokio-io-utility (= 0.7.6-1), rust-tokio-native-tls (= 0.3.1-4), rust-tokio-util (= 0.7.17-1), rust-tower (= 0.5.2-2), rust-tower-http (= 0.6.8-2), rust-tower-layer (= 0.3.3-1), rust-tower-service (= 0.3.3-1), rust-tracing (= 0.1.44-1), rust-tracing-core (= 0.1.36-1), rust-try-lock (= 0.2.5-1), rust-typed-builder (= 0.23.2-1), rust-unicase (= 2.9.0-1), rust-unicode-bidi (= 0.3.17-1), rust-unicode-joining-type (= 1.0.0-1), rust-unicode-normalization (= 0.1.25-1), rust-unicode-segmentation (= 1.13.2-1), rust-unicode-width (= 0.2.2-1), rust-unsafe-libyaml (= 0.2.11-1), rust-url (= 2.5.8-1), rust-utf8-iter (= 1.0.4-1), rust-utf8parse (= 0.2.2-1), rust-voca-rs (= 1.15.2-1), rust-want (= 0.3.0-1), rust-xdg (= 2.5.2-5), rust-xz2 (= 0.1.7-1), rust-zeroize (= 1.8.2-1), rustc (= 1.95.0+dfsg1-2)
 devel
 Priority: optional
-Filename: pool/main/r/rust-drt-tools/drt-tools_0.3.5-2+b1_amd64.deb
-Size: 1603516
-MD5sum: 7fcb3b56390a8e48c547e2a74be7c593
-SHA256: 6ac761c8a3466056449c41a8f9489f03af10cc286dac16f2b97e254250e1fca8
+Filename: pool/main/r/rust-drt-tools/drt-tools_0.3.5-3_amd64.deb
+Size: 1593220
+MD5sum: dab46c449ad1a4f12e087ea94863b885
+SHA256: 74a053a7046f2f13c69fb19de58241a8c0f93adf001118136807dde28e8df174
 
 Package: elfx86exts
 Source: rust-elfx86exts (0.6.2-4)
@@ -81950,20 +81989,20 @@ MD5sum: c087b444c5eefb30ed6b86feff8f5715
 SHA256: 6f01828a8aa69c894f56872c31f14493f21386d8161720df2f6df8e928886721
 
 Package: semodule-utils
-Version: 3.10-1
+Version: 3.11-1
 Installed-Size: 77
 Maintainer: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libsepol2 (>= 3.10)
+Depends: libc6 (>= 2.38), libsepol2 (>= 3.11)
 Description: SELinux core policy utilities (modules utilities)
-Homepage: https://github.com/SELinuxProject
+Homepage: https://selinuxproject.github.io/
 Description-md5: 13e71e2e1a7e23908c56e2c10d0a767b
 devel
 Priority: optional
-Filename: pool/main/s/semodule-utils/semodule-utils_3.10-1_amd64.deb
-Size: 14104
-MD5sum: 0f7d546930178b17f2e1e0480c11f63f
-SHA256: ea06d10064d75579c2e7d9ecbab38c3fe1d8eca5b7a72c12669f35cf5a4af0e0
+Filename: pool/main/s/semodule-utils/semodule-utils_3.11-1_amd64.deb
+Size: 14100
+MD5sum: 424f151aac3f39a5f6c9b39e1e10fca1
+SHA256: 836363c3b09ea3becab945433dd802e062f29eb070671a4300e238a90a4c7612
 
 Package: sequeler
 Version: 0.9.0-1
@@ -82766,20 +82805,20 @@ MD5sum: 59e17eaa541e8372c8da4d21d0faed47
 SHA256: 8b9cbd1aec001c374a73c7376e7b62791c31a488cf06719fcfdc84431928b760
 
 Package: stabber
-Version: 0.0~git20260305.ba6ca07-2
+Version: 0.0~git20260704.95a186e-1
 Installed-Size: 25
 Maintainer: Debian XMPP Maintainers <pkg-xmpp-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.34), libglib2.0-0t64 (>= 2.16.0), libstabber0 (>= 0.0~git20260305.ba6ca07)
+Depends: libc6 (>= 2.34), libglib2.0-0t64 (>= 2.16.0), libstabber0 (>= 0.0~git20260704.95a186e)
 Description: Stubbed XMPP (Jabber) Server
 Homepage: https://github.com/profanity-im/stabber
 Description-md5: b15712bb0546d2782e9fbaec834504eb
 devel
 Priority: optional
-Filename: pool/main/s/stabber/stabber_0.0~git20260305.ba6ca07-2_amd64.deb
-Size: 4396
-MD5sum: 023b25139bdb814fa1a6df2316b6b229
-SHA256: cd9f08141613806e055ce4b8c560d26026d0faad265e06228f63a8f64810f304
+Filename: pool/main/s/stabber/stabber_0.0~git20260704.95a186e-1_amd64.deb
+Size: 4448
+MD5sum: ef4820825d07610f60e5b3c438e37d7e
+SHA256: a334d09534ac111e13043c095b3b323cca2c7e3f94c99a09ff5a21a90daeb99c
 
 Package: golang-github-bgp-stayrtr-dev
 Source: stayrtr

@@ -594,11 +594,11 @@ MD5sum: 50dc1b4fda10a724f37fdb97dc5a8a94
 SHA256: 49792ef29189fb71be26c63818e1a52ddbf3b19f666aebaab9ba1f72008b11c9
 
 Package: cacti
-Version: 1.2.30+ds1-3
-Installed-Size: 56474
-Maintainer: be my guest <cacti@packages.debian.org>
+Version: 1.2.31+ds1-1
+Installed-Size: 57706
+Maintainer: Debian Commons <cacti@packages.debian.org>
 Architecture: all
-Depends: dbconfig-common, dbconfig-mysql | dbconfig-no-thanks, fonts-dejavu-core, fonts-dejavu-extra, node-fortawesome-fontawesome-free, javascript-common, libapache2-mod-php | php, libjs-chart.js, node-d3, node-dompurify, libjs-jquery, libjs-jquery-cookie, libjs-jquery-hotkeys, libjs-jquery-metadata, libjs-jquery-tablesorter, libjs-jquery-timepicker, libjs-jquery-ui, libjs-jquery-ui-touch-punch, libphp-phpmailer (>= 6.1.5~), node-ua-parser-js, php-cli, php-gd, php-json, php-gmp, php-ldap, php-mbstring, php-mysql, php-phpmyadmin-motranslator, php-phpseclib, php-snmp, php-twig, php-xml, rrdtool, snmp, ucf, debconf (>= 0.5) | debconf-2.0, libjs-jquery-colorpicker (>= 1.2.20), libjs-jquery-jstree (>= 3.3.17+dfsg1), libjs-jquery-ui-theme-smoothness (>= 1.14.2+dfsg), libjs-jquery-ui-theme-south-street (>= 1.14.2+dfsg), libjs-jquery-ui-theme-ui-darkness (>= 1.14.2+dfsg), perl:any
+Depends: dbconfig-common, dbconfig-mysql | dbconfig-no-thanks, composer, fonts-dejavu-core, fonts-dejavu-extra, node-fortawesome-fontawesome-free, javascript-common, libapache2-mod-php | php, libjs-chart.js, node-d3, node-dompurify, libjs-jquery, libjs-jquery-cookie, libjs-jquery-hotkeys, libjs-jquery-metadata, libjs-jquery-tablesorter, libjs-jquery-timepicker, libjs-jquery-ui, libjs-jquery-ui-touch-punch, libphp-phpmailer (>= 6.1.5~), node-ua-parser-js, php-cli, php-gd, php-json, php-gmp, php-ldap, php-mbstring, php-mysql, php-phpmyadmin-motranslator, php-phpseclib3, php-snmp, php-twig, php-xml, rrdtool, snmp, ucf, debconf (>= 0.5) | debconf-2.0, libjs-jquery-colorpicker (>= 1.2.20), libjs-jquery-jstree (>= 3.3.17+dfsg1), libjs-jquery-ui-theme-smoothness (>= 1.14.2+dfsg), libjs-jquery-ui-theme-south-street (>= 1.14.2+dfsg), libjs-jquery-ui-theme-ui-darkness (>= 1.14.2+dfsg), perl:any
 Recommends: apache2 | lighttpd | nginx | httpd, default-mysql-server | virtual-mysql-server, inetutils-ping | iputils-ping, logrotate
 Suggests: cacti-spine, moreutils, snmpd
 Description: web interface for graphing of monitoring systems
@@ -608,10 +608,10 @@ Tag: admin::monitoring, implemented-in::php, interface::web, role::program,
  use::monitor, works-with::db
 web
 Priority: optional
-Filename: pool/main/c/cacti/cacti_1.2.30+ds1-3_all.deb
-Size: 30475072
-MD5sum: a9fd2e5b33fa9b6c52b12f481b7e84b2
-SHA256: bcb67e28b621e751ca0aad65b85b95fcf1f6f86b6b11adcf5d7e8b5c9a736c9e
+Filename: pool/main/c/cacti/cacti_1.2.31+ds1-1_all.deb
+Size: 30702464
+MD5sum: e0d7400a9fb5a39ea7e40f814d337bed
+SHA256: 7ae152746498126d4034313e259e013ff15d34188ffeb46b9857d7fe7ee59667
 
 Package: cacti-spine
 Source: cacti-spine (1.2.30-2)
@@ -3679,59 +3679,99 @@ Size: 10856
 MD5sum: e38e018cb0894131f2c1c511f950aeac
 SHA256: f4ad25021bb2cf0912dd1d748c9988629b34793d37b8e60da19884c2081fc5ff
 
-Package: varnish-curl
-Source: libvmod-curl (0.0~git20250603-1)
-Version: 0.0~git20250603-1+b1
-Installed-Size: 63
-Maintainer: Varnish Package Maintainers <team+varnish-team@tracker.debian.org>
+Package: libvmod-curl
+Version: 0.0~git20250603-4
+Installed-Size: 62
+Maintainer: Vinyl Cache Package Maintainers <team+varnish-team@tracker.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.3), libcurl4t64 (>= 7.16.2), varnishabi-21.0-2, varnishabi-strict-2e8180f788715e5bc44df08479d60c9435d79bdd
-Description: Varnish curl module
+Replaces: varnish-curl
+Depends: libc6 (>= 2.3), libcurl4t64 (>= 7.16.2), vinylabi-23.0
+Conflicts: varnish-curl
+Description: Vinyl Cache curl module
 Multi-Arch: same
 Homepage: https://github.com/varnish/libvmod-curl
-Description-md5: c65caa1e87ca1200971344a6b4373a7b
+Description-md5: d2f6683902adcf0109aa26323d71e645
 web
 Priority: optional
-Filename: pool/main/libv/libvmod-curl/varnish-curl_0.0~git20250603-1+b1_amd64.deb
-Size: 14148
-MD5sum: 43b9144052b2f89f1b7984f68b4d5da2
-SHA256: 6f4ede678218ebcfad0619cf4f76daaf20f90ae3d034fac7b3d461d23807244d
+Filename: pool/main/libv/libvmod-curl/libvmod-curl_0.0~git20250603-4_amd64.deb
+Size: 14024
+MD5sum: d3479fa69fc90947a99b0b03fc5b3149
+SHA256: 526ba41f9970788f3c374af9c5827b465dcc84cd1931f5e65b93a8264cb59718
 
-Package: varnish-geoip2
-Source: libvmod-geoip2 (0.0~git20250408-1)
-Version: 0.0~git20250408-1+b1
-Installed-Size: 42
-Maintainer: Varnish Package Maintainers <team+varnish-team@tracker.debian.org>
+Package: libvmod-digest
+Version: 6.4+20230816-11
+Installed-Size: 61
+Maintainer: Vinyl Cache Package Maintainers <team+varnish-team@tracker.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.4), libmaxminddb0 (>= 1.0.2), varnishabi-21.0-2, varnishabi-strict-2e8180f788715e5bc44df08479d60c9435d79bdd
-Description: Varnish re module
+Replaces: varnish-vmod-digest
+Depends: libc6 (>= 2.4), libmhash2 (>= 0.9.9.9), vinylabi-23.0
+Conflicts: varnish-vmod-digest
+Description: Vinyl Cache digest module
+Multi-Arch: same
+Homepage: https://github.com/varnish/libvmod-digest
+Description-md5: d885df1cf790e4d2f7a2f5350fa24ef5
+web
+Priority: optional
+Filename: pool/main/libv/libvmod-digest/libvmod-digest_6.4+20230816-11_amd64.deb
+Size: 15580
+MD5sum: efacb680ae735e2222ee24d636869e30
+SHA256: d92e9b113a7090c947c04ae4e6a08a17dc466a340b7f92960f7cf1fb98da7b4b
+
+Package: libvmod-geoip2
+Version: 0.0~git20250408-5
+Installed-Size: 41
+Maintainer: Vinyl Cache Package Maintainers <team+varnish-team@tracker.debian.org>
+Architecture: amd64
+Replaces: varnish-geoip2
+Depends: libc6 (>= 2.4), libmaxminddb0 (>= 1.0.2), vinylabi-23.0
+Conflicts: varnish-geoip2
+Description: Vinyl Cache module to query MaxMind GeoIP2
 Multi-Arch: same
 Homepage: https://github.com/varnishcache-friends/libvmod-geoip2/
-Description-md5: e2115daaf4b4ec65bbb60054eebb5911
+Description-md5: e82c0bbfdcff7376076cad5fdf6c8c4b
 web
 Priority: optional
-Filename: pool/main/libv/libvmod-geoip2/varnish-geoip2_0.0~git20250408-1+b1_amd64.deb
-Size: 11040
-MD5sum: 6e885f90977d86cc76a9b119fdfcf79b
-SHA256: 7a8b76638716c31d2e8ae11c49ee629e04f2df572e696884f5a554a835296d00
+Filename: pool/main/libv/libvmod-geoip2/libvmod-geoip2_0.0~git20250408-5_amd64.deb
+Size: 10968
+MD5sum: 6ae336cd61063314304ef693c99235d6
+SHA256: 6ffaa994df1119138802b9865485bdbb6a93395170e19fc02e074625446e5995
 
-Package: varnish-re
-Source: libvmod-re (0.0~git20250531-1)
-Version: 0.0~git20250531-1+b1
-Installed-Size: 91
-Maintainer: Varnish Package Maintainers <team+varnish-team@tracker.debian.org>
+Package: libvmod-modules
+Version: 0.28.0-4
+Installed-Size: 253
+Maintainer: Vinyl Cache Package Maintainers <team+varnish-team@tracker.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.14), libpcre2-8-0 (>= 10.32), varnishabi-21.0-2, varnishabi-strict-2e8180f788715e5bc44df08479d60c9435d79bdd
-Description: Varnish re module
+Replaces: varnish-modules
+Depends: libc6 (>= 2.34), libvinylapi3 (>= 9.0.0~), vinylabi-23.0, vinylabi-strict-423648c4cb6b225b3268ffc337354ea938f5efee
+Conflicts: varnish-modules
+Description: Vinyl Cache module collection
+Homepage: https://github.com/varnish/varnish-modules
+Description-md5: 8bccf02aaaa6b1cfab106f4e57e1c58e
+web
+Priority: optional
+Filename: pool/main/libv/libvmod-modules/libvmod-modules_0.28.0-4_amd64.deb
+Size: 60660
+MD5sum: bebafb563beadd5e06a49921adb6ff55
+SHA256: 04e051b9370f3994a31ad6f1b4d4da5c6d4ffeac39d2c08b7d5355ff8fe32fab
+
+Package: libvmod-re
+Version: 0.0~git20260528-1
+Installed-Size: 91
+Maintainer: Vinyl Cache Package Maintainers <team+varnish-team@tracker.debian.org>
+Architecture: amd64
+Replaces: varnish-re
+Depends: libc6 (>= 2.14), libpcre2-8-0 (>= 10.32), vinylabi-23.0
+Conflicts: varnish-re
+Description: Vinyl Cache re module
 Multi-Arch: same
 Homepage: https://code.uplex.de/uplex-varnish/libvmod-re/
-Description-md5: e2115daaf4b4ec65bbb60054eebb5911
+Description-md5: 6247a90545e9747b62c27e1e101c5419
 web
 Priority: optional
-Filename: pool/main/libv/libvmod-re/varnish-re_0.0~git20250531-1+b1_amd64.deb
-Size: 35816
-MD5sum: 8e062688941c3a29e7b68275638cded3
-SHA256: f94720b6aa94e36baa2527fcabf491db08d3ac155833c7a5ff5ef46e5a2755b8
+Filename: pool/main/libv/libvmod-re/libvmod-re_0.0~git20260528-1_amd64.deb
+Size: 35800
+MD5sum: 910f78df4deeb40f1cdeea913efa39ad
+SHA256: 592a5ee05fdfd1efdbf68a081d7787c232ced266c3940aac3512e1914af2b0c4
 
 Package: varnish-re2
 Source: libvmod-re2
@@ -3750,22 +3790,23 @@ Size: 52860
 MD5sum: 208374a30f9217748742fb84926efd6f
 SHA256: 62beac990a0ada431d9bdfb2b1c5928c5f593b0aa7ce842a89c9bec2428acb02
 
-Package: varnish-selector
-Source: libvmod-selector
-Version: 2.6.0+20250506-3
-Installed-Size: 135
-Maintainer: Varnish Package Maintainers <team+varnish-team@tracker.debian.org>
+Package: libvmod-selector
+Version: 2.6.0+20260705-2
+Installed-Size: 139
+Maintainer: Vinyl Cache Package Maintainers <team+varnish-team@tracker.debian.org>
 Architecture: amd64
-Depends: varnishabi-21.0-2, varnishabi-strict-2e8180f788715e5bc44df08479d60c9435d79bdd, libc6 (>= 2.14)
+Replaces: varnish-selector
+Depends: vinylabi-23.0, libc6 (>= 2.14)
+Conflicts: varnish-selector
 Description: match strings with backends, regexen and other strings
 Homepage: https://code.uplex.de/uplex-varnish/libvmod-selector
-Description-md5: 6ae2aa1126cf8b03d8f801d1ae088c25
+Description-md5: 1c29d64960f813da7fa60ca3f0539836
 web
 Priority: optional
-Filename: pool/main/libv/libvmod-selector/varnish-selector_2.6.0+20250506-3_amd64.deb
-Size: 60284
-MD5sum: 821b90b444e9c7fd5bcd0d56b8f957af
-SHA256: f899f54784431576a70c4df9fecd5c4f609cbf7ce51c51b86d7ca11e019b05d5
+Filename: pool/main/libv/libvmod-selector/libvmod-selector_2.6.0+20260705-2_amd64.deb
+Size: 62224
+MD5sum: 946885a9348c13fdb9a5ecfe1cfd3047
+SHA256: cf3caffc763f6c4afee9dcbce999d75b1370c2f98ed11cd26e716a80a8596147
 
 Package: webext-lightbeam
 Source: lightbeam
@@ -7866,6 +7907,26 @@ Filename: pool/main/v/vimium/webext-vimium-firefox_2.1.2-1.1_all.deb
 Size: 226872
 MD5sum: 06c5694ec45bc6b6cdef1938d77fc750
 SHA256: 08bf425a777d3b5d338874014d279bd39d4d59c33c19ff0916bb6ca008c67038
+
+Package: vinyl-cache
+Version: 9.0.1-4
+Installed-Size: 4807
+Maintainer: Vinyl Cache Package Maintainers <team+varnish-team@tracker.debian.org>
+Architecture: amd64
+Replaces: varnish
+Provides: vinylabi-23.0, vinylabi-strict-423648c4cb6b225b3268ffc337354ea938f5efee
+Depends: libc6 (>= 2.42), libedit2 (>= 2.11-20080614-0), libjemalloc2 (>= 2.1.1), libncursesw6 (>= 6), libpcre2-8-0 (>= 10.32), libtinfo6 (>= 6), libvinylapi3 (= 9.0.1-4), systemd | systemd-standalone-sysusers | systemd-sysusers, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, gcc-x86-64-linux-gnu, binutils, libc6-dev | libc6.1-dev
+Suggests: vinyl-cache-doc
+Conflicts: varnish
+Description: state of the art, high-performance web accelerator
+Homepage: https://vinyl-cache.org/
+Description-md5: 1ad4320b209d989186807997cc3327a4
+web
+Priority: optional
+Filename: pool/main/v/vinyl-cache/vinyl-cache_9.0.1-4_amd64.deb
+Size: 1099688
+MD5sum: 776d33b9d77abe57827b185309b774bb
+SHA256: 84f0833a275c9b4b18a4453ca931b6b50136b70f72564ef398520fed509213ed
 
 Package: vnu
 Version: 23.4.11+dfsg-5

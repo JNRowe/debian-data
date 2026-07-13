@@ -31,6 +31,158 @@ Size: 19620
 MD5sum: b7562c1243e8282395293fa28b8067bc
 SHA256: 16f73ee90d5885a70a873dd2db1b999b1d6fab8ab45230e98c1981e787f6e508
 
+Package: asterisk
+Version: 1:22.10.0+dfsg+~cs6.17.60671434-3
+Installed-Size: 8961
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Provides: asterisk-abi-1fb7f5c06d7a2052e38d021b3d8ca151
+Depends: adduser, asterisk-config (= 1:22.10.0+dfsg+~cs6.17.60671434-3) | asterisk-config-custom, asterisk-core-sounds-en, asterisk-modules (= 1:22.10.0+dfsg+~cs6.17.60671434-3), libc6 (>= 2.38), libcap2 (>= 1:2.10), libcrypt1 (>= 1:4.1.0), libedit2 (>= 2.11-20080614-0), libgcc-s1 (>= 3.0), libjansson4 (>= 2.14), libpopt0 (>= 1.14), libsqlite3-0 (>= 3.7.15), libssl3t64 (>= 3.0.0), libstdc++6 (>= 4.1.1), libsystemd0, liburiparser1 (>= 0.6.0), libuuid1 (>= 2.16), libxml2-16 (>= 2.14.1), libxslt1.1 (>= 1.1.25)
+Recommends: asterisk-moh-opsound-gsm, sox
+Suggests: asterisk-dahdi, asterisk-dev, asterisk-doc, asterisk-ooh323, asterisk-opus
+Description: Open Source Private Branch Exchange (PBX)
+Homepage: https://www.asterisk.org/
+Description-md5: 0d5a19208822100a8940b0e2a15d49ea
+Tag: implemented-in::c, interface::daemon, interface::text-mode,
+ network::server, protocol::ssl, protocol::voip, role::program,
+ scope::utility, uitoolkit::ncurses, works-with::audio, works-with::db
+comm
+Priority: optional
+Filename: pool/main/a/asterisk/asterisk_22.10.0+dfsg+~cs6.17.60671434-3_amd64.deb
+Size: 2559660
+MD5sum: eb4a01abff72b78902a9496a3902e8c2
+SHA256: 2b2de944ec2bce84c92d756a001ef323dc601c53918bf10d3fef3f680f0396ff
+
+Package: asterisk-config
+Source: asterisk
+Version: 1:22.10.0+dfsg+~cs6.17.60671434-3
+Installed-Size: 1748
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Architecture: all
+Replaces: asterisk-config-custom
+Recommends: asterisk
+Conflicts: asterisk-config-custom
+Description: Configuration files for Asterisk
+Homepage: https://www.asterisk.org/
+Description-md5: e6341811f25f903eb6ed725a945b19f5
+Tag: role::app-data
+comm
+Priority: optional
+Filename: pool/main/a/asterisk/asterisk-config_22.10.0+dfsg+~cs6.17.60671434-3_all.deb
+Size: 260076
+MD5sum: 4c000058f91f074d5ec23af2a8cffa53
+SHA256: c2a3d303047dbc730ff5469b1adebcd14f8c900ab6d480986f0b8dd45a89c2c5
+
+Package: asterisk-dahdi
+Source: asterisk
+Version: 1:22.10.0+dfsg+~cs6.17.60671434-3
+Installed-Size: 884
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: asterisk-modules (<< 1:11.6.0~dfsg-2)
+Depends: asterisk (= 1:22.10.0+dfsg+~cs6.17.60671434-3), dahdi, libc6 (>= 2.38), libopenr2-3 (>= 1.3.2), libpri1.4 (>= 1.4.15), libss7-2.0 (>= 2.0.0), libtonezone2.0 (>= 1:2.2.1.1)
+Breaks: asterisk-modules (<< 1:11.6.0~dfsg-2)
+Description: DAHDI devices support for the Asterisk PBX
+Homepage: https://www.asterisk.org/
+Description-md5: 73c1e6c431561d79ef7e49d91d2f0024
+Tag: role::plugin, role::shared-lib
+comm
+Priority: optional
+Filename: pool/main/a/asterisk/asterisk-dahdi_22.10.0+dfsg+~cs6.17.60671434-3_amd64.deb
+Size: 334492
+MD5sum: dfdec7496f091895f9860084e52b05e4
+SHA256: 2312c3f61a669711f64fffd25f7c5fb3158eabf6d6c084de3bae26a4f0eea491
+
+Package: asterisk-mobile
+Source: asterisk
+Version: 1:22.10.0+dfsg+~cs6.17.60671434-3
+Installed-Size: 235
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: asterisk (= 1:22.10.0+dfsg+~cs6.17.60671434-3), libbluetooth3 (>= 4.91), libc6 (>= 2.38)
+Description: Bluetooth phone support for the Asterisk PBX
+Homepage: https://www.asterisk.org/
+Description-md5: 9af5b755acba6fb502bd5c4b7ff414b5
+Tag: role::plugin, role::shared-lib
+comm
+Priority: optional
+Filename: pool/main/a/asterisk/asterisk-mobile_22.10.0+dfsg+~cs6.17.60671434-3_amd64.deb
+Size: 101324
+MD5sum: 3c9b8beca8be2fdfca094c04016b38fc
+SHA256: 9c35715226e0dc8c85d902afcd9bc13c87a09412cc52a2f90a8e73491a61c5ca
+
+Package: asterisk-mp3
+Source: asterisk
+Version: 1:22.10.0+dfsg+~cs6.17.60671434-3
+Installed-Size: 202
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: asterisk (= 1:22.10.0+dfsg+~cs6.17.60671434-3), libc6 (>= 2.14)
+Description: MP3 playback support for the Asterisk PBX
+Homepage: https://www.asterisk.org/
+Description-md5: a8b7fcd5ca383240900347228ea7d3d3
+Tag: role::program, role::shared-lib, works-with-format::mp3,
+ works-with::audio
+comm
+Priority: optional
+Filename: pool/main/a/asterisk/asterisk-mp3_22.10.0+dfsg+~cs6.17.60671434-3_amd64.deb
+Size: 92288
+MD5sum: 0221a6bbee773313e902d9bca0de1722
+SHA256: dcbc9b84cd98dbe2b296dd6d4a63e6e4f175651e89ac2ba848ac2723cec4e1f3
+
+Package: asterisk-mysql
+Source: asterisk
+Version: 1:22.10.0+dfsg+~cs6.17.60671434-3
+Installed-Size: 194
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: asterisk (= 1:22.10.0+dfsg+~cs6.17.60671434-3), libc6 (>= 2.38), libmariadb3 (>= 3.0.0)
+Description: MySQL database protocol support for the Asterisk PBX
+Homepage: https://www.asterisk.org/
+Description-md5: b4e04ad174e2e515b790e93ae02fb236
+Tag: protocol::db:mysql, role::shared-lib
+comm
+Priority: optional
+Filename: pool/main/a/asterisk/asterisk-mysql_22.10.0+dfsg+~cs6.17.60671434-3_amd64.deb
+Size: 87904
+MD5sum: 3e6614cad6e7f4767919fb7b70f549be
+SHA256: ee6a2fd19cdc2e74daec1cc435070b2cc2fd9dcce6ac438e3d4be971d4f321ac
+
+Package: asterisk-ooh323
+Source: asterisk
+Version: 1:22.10.0+dfsg+~cs6.17.60671434-3
+Installed-Size: 1531
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: asterisk (= 1:22.10.0+dfsg+~cs6.17.60671434-3), libc6 (>= 2.42)
+Description: H.323 protocol support for the Asterisk PBX - ooH323c
+Homepage: https://www.asterisk.org/
+Description-md5: f76cdd460d16207dcf81055573c61b7d
+Tag: protocol::voip, role::shared-lib
+comm
+Priority: optional
+Filename: pool/main/a/asterisk/asterisk-ooh323_22.10.0+dfsg+~cs6.17.60671434-3_amd64.deb
+Size: 410244
+MD5sum: 86c954ccf10dca6d56f2736d2a8e0a91
+SHA256: c2dac5ac24a0f2cc27f3d748db6d18ad4a8f9595950c1ab0388434182bd78abd
+
+Package: asterisk-tests
+Source: asterisk
+Version: 1:22.10.0+dfsg+~cs6.17.60671434-3
+Installed-Size: 3079
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: asterisk (= 1:22.10.0+dfsg+~cs6.17.60671434-3), libc6 (>= 2.38), libcurl4t64 (>= 7.16.2)
+Description: internal test modules of the Asterisk PBX
+Homepage: https://www.asterisk.org/
+Description-md5: 5bc70ce8ad925fa9cd857d8b59105af6
+comm
+Priority: optional
+Filename: pool/main/a/asterisk/asterisk-tests_22.10.0+dfsg+~cs6.17.60671434-3_amd64.deb
+Size: 617548
+MD5sum: a7200a4acaa6fa8742b61785501fec03
+SHA256: 403297f053153d3fc50d5b5b348ee60b0537a36b8e2c7252b997d4aa4fd1e122
+
 Package: asterisk-core-sounds-en
 Source: asterisk-core-sounds
 Version: 1.6.1-1
@@ -372,6 +524,22 @@ Filename: pool/main/a/asterisk-core-sounds/asterisk-core-sounds-ru-wav_1.6.1-1_a
 Size: 18788860
 MD5sum: ab6cde935fa18160b1f72556989a89e3
 SHA256: ccbfaebfa450b7a9ddf644ae0f3d1e9017d5df7c0aebe816e946345589d38201
+
+Package: asterisk-flite
+Version: 3.0-4
+Installed-Size: 46
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: asterisk-abi-1fb7f5c06d7a2052e38d021b3d8ca151, libc6 (>= 2.14), libflite1 (>= 1.4-release-9~)
+Description: flite module for Asterisk
+Homepage: https://zaf.github.com/Asterisk-Flite/
+Description-md5: b9be22e6118306efe62c81bb71b89039
+comm
+Priority: optional
+Filename: pool/main/a/asterisk-flite/asterisk-flite_3.0-4_amd64.deb
+Size: 10852
+MD5sum: 4d00335108d6a3da4d7e2efbd15d3f35
+SHA256: acf8231a04c2b1111dbd2bfd4abd55ce97d2662d35caed76dfab2ee25cddbe49
 
 Package: asterisk-moh-opsound-g722
 Source: asterisk-moh-opsound
@@ -1336,12 +1504,11 @@ MD5sum: 4cf6aa4379935ddee915625da5ec55db
 SHA256: c64e827ba1d62f1c039be5bdd63ad480402865b5fa5ae6fe09cdc2879dacc0b3
 
 Package: janus
-Version: 1.1.2-4
-Installed-Size: 4154
+Version: 1.4.1+ds-4
+Installed-Size: 4302
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libconfig11 (>= 1.7.3), libcurl4t64 (>= 7.63.0), libduktape207 (>= 2.0.3), libglib2.0-0t64 (>= 2.52.0), libjansson4 (>= 2.14), liblua5.3-0, libmicrohttpd12t64 (>= 0.9.50), libnanomsg5 (>= 1.1.5), libnice10 (>= 0.1.16), libogg0 (>= 1.0rc3), libopus0 (>= 1.1), libpaho-mqtt1.3 (>= 1.3.0), librabbitmq4 (>= 0.8.0), libsofia-sip-ua0t64 (>= 1.12.10), libsrtp2-1 (>= 2.3.0), libssl3t64 (>= 3.0.0), libsystemd0, libusrsctp2 (>= 0.9.4.0~), libwebsockets19t64 (>= 4.0.19), zlib1g (>= 1:1.1.4)
-Pre-Depends: init-system-helpers (>= 1.54~)
+Depends: libc6 (>= 2.38), libconfig11 (>= 1.7.3), libcurl4t64 (>= 7.63.0), libduktape207 (>= 2.0.3), libglib2.0-0t64 (>= 2.52.0), libjansson4 (>= 2.14), liblua5.3-0 (>= 5.3.6), libmicrohttpd12t64 (>= 0.9.50), libnanomsg5 (>= 1.1.5), libnice10 (>= 0.1.16), libogg0 (>= 1.0rc3), libopus0 (>= 1.1), libpaho-mqtt1.3 (>= 1.3.0), librabbitmq4 (>= 0.8.0), libsofia-sip-ua0t64 (>= 1.12.10), libsrtp2-1 (>= 2.3.0), libssl3t64 (>= 3.0.0), libsystemd0, libusrsctp2 (>= 0.9.4.0~), libwebsockets19t64 (>= 4.0.19), zlib1g (>= 1:1.1.4)
 Recommends: lua-ansicolors, lua-json, ssl-cert
 Suggests: janus-doc, janus-tools
 Description: general purpose WebRTC server/gateway
@@ -1349,15 +1516,15 @@ Homepage: https://janus.conf.meetecho.com
 Description-md5: 022f61fae5f25008ff31538c0638cfb3
 comm
 Priority: optional
-Filename: pool/main/j/janus/janus_1.1.2-4_amd64.deb
-Size: 1117492
-MD5sum: af50332d9a7627fa990770011d75bcce
-SHA256: 47af48e0b664644c33cf63a0440e8c74b86d29dd7b51223f5d03491a201a3705
+Filename: pool/main/j/janus/janus_1.4.1+ds-4_amd64.deb
+Size: 1177920
+MD5sum: 0e027e0c8bd7564ef9adb6ea3b14b1a7
+SHA256: 0af02575d548addd4e025e8316ddbcec249ff339c58e628aedb0755cfc5c2830
 
 Package: janus-demos
 Source: janus
-Version: 1.1.2-4
-Installed-Size: 6515
+Version: 1.4.1+ds-4
+Installed-Size: 6294
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: all
 Depends: fonts-font-awesome, libjs-blueimp-md5, libjs-bootbox, libjs-bootstrap, libjs-bootswatch, libjs-janus-gateway, libjs-jquery, libjs-jquery-blockui, libjs-spin.js, libjs-toastr, libjs-webrtc-adapter (>= 8)
@@ -1368,18 +1535,18 @@ Homepage: https://janus.conf.meetecho.com
 Description-md5: fc46cfe9970d817fde5a4d4d91d9bdbc
 comm
 Priority: optional
-Filename: pool/main/j/janus/janus-demos_1.1.2-4_all.deb
-Size: 4572884
-MD5sum: 8d8b0cdc24ae21acc86698656d61b6d3
-SHA256: 23e494757fe85a0dce2bcd9e5d3e1cba39f52678e828732be981830f12c0510b
+Filename: pool/main/j/janus/janus-demos_1.4.1+ds-4_all.deb
+Size: 4555904
+MD5sum: 3d7fe5424d5d9d23998cf211dca07562
+SHA256: c30b8e4ec5a36d4b61fedb4628cc52821d78870183b4f22fe24009d81f8c044c
 
 Package: janus-tools
 Source: janus
-Version: 1.1.2-4
-Installed-Size: 448
+Version: 1.4.1+ds-4
+Installed-Size: 464
 Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libavcodec62 (>= 7:8.0.1), libavformat62 (>= 7:8.0.1), libavutil60 (>= 7:8.0.1), libc6 (>= 2.38), libglib2.0-0t64 (>= 2.52.0), libjansson4 (>= 2.14), libpcap0.8t64 (>= 0.9.8), libssl3t64 (>= 3.0.0), zlib1g (>= 1:1.1.4)
+Depends: libavcodec62 (>= 7:8.1.2), libavformat62 (>= 7:8.1.2), libavutil60 (>= 7:8.1.2), libc6 (>= 2.38), libglib2.0-0t64 (>= 2.52.0), libjansson4 (>= 2.14), libpcap0.8t64 (>= 0.9.8), libssl3t64 (>= 3.0.0), zlib1g (>= 1:1.1.4)
 Suggests: gstreamer1.0-plugins-good, gstreamer1.0-tools, gstreamer1.0-x
 Enhances: janus
 Description: general purpose WebRTC server/gateway - helper tools
@@ -1387,10 +1554,10 @@ Homepage: https://janus.conf.meetecho.com
 Description-md5: 1057f39fa11fc64fe9effaf649942463
 comm
 Priority: optional
-Filename: pool/main/j/janus/janus-tools_1.1.2-4_amd64.deb
-Size: 143904
-MD5sum: c309bf4c1767e9e685e50d15257d8e1b
-SHA256: d598363d62b2fb8b8252df6bcb714e90c4a63fbeafd8ad1aaf8863a682a8c751
+Filename: pool/main/j/janus/janus-tools_1.4.1+ds-4_amd64.deb
+Size: 147956
+MD5sum: 109f107c677e8ed153dc218387c6c388
+SHA256: 56296aa476b192936c70445933b1d07d990b8860f08eeb8630a1c3812c89dec7
 
 Package: jpnevulator
 Version: 2.3.6-1
@@ -2182,7 +2349,7 @@ MD5sum: 9c1b81a634f17a804c2f33b5671f4581
 SHA256: 15a95740b292484cb867f8d9680d1054cbf2397bfa9a3097ff22613c8c943228
 
 Package: usb-modeswitch
-Version: 2.6.2-1
+Version: 2.6.2-2
 Installed-Size: 145
 Maintainer: Thorsten Alteholz <debian@alteholz.de>
 Architecture: amd64
@@ -2197,10 +2364,10 @@ Tag: admin::hardware, admin::kernel, devel::lang:c, devel::library,
  role::program, use::configuring, use::driver
 comm
 Priority: optional
-Filename: pool/main/u/usb-modeswitch/usb-modeswitch_2.6.2-1_amd64.deb
-Size: 50840
-MD5sum: d1b0ca232a95628f912aeae0b3cf81c3
-SHA256: 6389ac4ba7eb0226fab9a7c3f349ee4f2b67ea34f6ee98cf78db5695ad03c770
+Filename: pool/main/u/usb-modeswitch/usb-modeswitch_2.6.2-2_amd64.deb
+Size: 50344
+MD5sum: 449d4789f80f4f3dfcfcbd8e52964f03
+SHA256: a0d624f2b298b82e85fd6d2f016352cbf217acefff151e843e6fa23814df225f
 
 Package: usb-modeswitch-data
 Version: 20251207-1
