@@ -1677,6 +1677,24 @@ Description-en: MaxMind GeoIP/GeoIP2 database updates
  products, or their GeoLite variants that are less accurate but provided
  without charge.
 
+Package: libggml0-backend-cuda
+Description-md5: 56db844880e610d6c8401c92a13f05dd
+Description-en: Tensor library for machine learning - CUDA backend
+ ggml is a tensor library for machine learning with the following features:
+ .
+  * Low-level cross-platform implementation
+  * Integer quantization support
+  * Broad hardware support
+  * Automatic differentiation
+  * ADAM and L-BFGS optimizers
+  * No third-party dependencies
+  * Zero memory allocations during runtime
+ .
+ On Debian, ggml is shipped as a package that depends on one of the CPU or
+ GPU backends.
+ .
+ This package provides the CUDA backend, for NVIDIA GPUs.
+
 Package: ruby-kas-grpc
 Description-md5: 49bf131b372a8015f7e8d12a2e2a28db
 Description-en: Auto-generated gRPC client for KAS
@@ -1758,6 +1776,13 @@ Description-en: Firmware loader for Qualcomm Gobi USB chipsets
  be loaded before they can be used as modems. gobi-loader adds a udev rule that
  will trigger loading of the firmware and make the modem usable.
 
+Package: gpu-burn
+Description-md5: 92df966436bfa80d74015599c50bb431
+Description-en: Multi-GPU CUDA stress test
+ This allows one to run a stress test on your GPUs. Memory usage can
+ be controlled by absolute number or percentage. Also allows one to run
+ on specific GPU, useful if you have mixed multi GPU system.
+
 Package: gpustat
 Description-md5: ead43ed93b6051d1032b832df813e981
 Description-en: pretty nvidia device monitor
@@ -1815,6 +1840,26 @@ Description-en: Japanese male voice data for Open JTalk
  .
  This voice data was trained by using the HTS voice data "NIT ATR503 M001"
  and released by HTS Working Group as a part of Open JTalk.
+
+Package: libhwloc-contrib-plugins
+Description-md5: 2b02fbf995ab5fe6645ca4e4ad3e8d3f
+Description-en: Hierarchical view of the machine - contrib plugins
+ libhwloc provides a portable abstraction (across OS, versions,
+ architectures, ...) of the hierarchical topology of modern architectures. It
+ primarily aims at helping high-performance computing applications with
+ gathering information about the hardware so as to exploit it accordingly and
+ efficiently.
+ .
+ libhwloc provides a hierarchical view of the machine, NUMA memory nodes,
+ sockets, shared caches, cores and simultaneous multithreading. It also gathers
+ various attributes such as cache and memory information.
+ .
+ libhwloc supports old kernels not having sysfs topology information,
+ with knowledge of cpusets, offline cpus, and Kerrighed support
+ .
+ This package contains plugins to add discovery support for non-free items. This
+ includes
+  - CUDA support.
 
 Package: hyperspec
 Description-md5: 51d7bf1353fb0967e7492a36a1d1a585
@@ -2108,6 +2153,91 @@ Description-en: video game preservation platform
  re-implementations and compatibility layers, it gives you a central interface
  to launch all your games.
 
+Package: libmagma-dev
+Description-md5: 8c96c9659ed332fd1cc18082bb49c285
+Description-en: Matrix Algebra on GPU and Multicore Architectures (dev)
+ The MAGMA project aims to develop a dense linear algebra library similar to
+ LAPACK but for heterogeneous/hybrid architectures, starting with current
+ "Multicore+GPU" systems.
+ .
+ The MAGMA research is based on the idea that, to address the complex challenges
+ of the emerging hybrid environments, optimal software solutions will themselves
+ have to hybridize, combining the strengths of different algorithms within a
+ single framework. Building on this idea, we aim to design linear algebra
+ algorithms and frameworks for hybrid manycore and GPU systems that can enable
+ applications to fully exploit the power that each of the hybrid components
+ offers.
+ .
+ This package contains the headers and the static libraries.
+
+Package: libmagma-doc
+Description-md5: acda0a8ac99c17cd5657815ecee12b3d
+Description-en: Matrix Algebra on GPU and Multicore Architectures (doc)
+ The MAGMA project aims to develop a dense linear algebra library similar to
+ LAPACK but for heterogeneous/hybrid architectures, starting with current
+ "Multicore+GPU" systems.
+ .
+ The MAGMA research is based on the idea that, to address the complex challenges
+ of the emerging hybrid environments, optimal software solutions will themselves
+ have to hybridize, combining the strengths of different algorithms within a
+ single framework. Building on this idea, we aim to design linear algebra
+ algorithms and frameworks for hybrid manycore and GPU systems that can enable
+ applications to fully exploit the power that each of the hybrid components
+ offers.
+ .
+ This package contains the Doxygen HTML documentation.
+
+Package: libmagma-sparse2
+Description-md5: 7466d1ecd53172205761e441ae3ae3e8
+Description-en: Matrix Algebra on GPU and Multicore Architectures (solib, sparse)
+ The MAGMA project aims to develop a dense linear algebra library similar to
+ LAPACK but for heterogeneous/hybrid architectures, starting with current
+ "Multicore+GPU" systems.
+ .
+ The MAGMA research is based on the idea that, to address the complex challenges
+ of the emerging hybrid environments, optimal software solutions will themselves
+ have to hybridize, combining the strengths of different algorithms within a
+ single framework. Building on this idea, we aim to design linear algebra
+ algorithms and frameworks for hybrid manycore and GPU systems that can enable
+ applications to fully exploit the power that each of the hybrid components
+ offers.
+ .
+ This package contains the shared object libmagma_sparse.so.2
+
+Package: libmagma-test
+Description-md5: baed7e032a53edc2a27a115e648b92ee
+Description-en: Matrix Algebra on GPU and Multicore Architectures (tests)
+ The MAGMA project aims to develop a dense linear algebra library similar to
+ LAPACK but for heterogeneous/hybrid architectures, starting with current
+ "Multicore+GPU" systems.
+ .
+ The MAGMA research is based on the idea that, to address the complex challenges
+ of the emerging hybrid environments, optimal software solutions will themselves
+ have to hybridize, combining the strengths of different algorithms within a
+ single framework. Building on this idea, we aim to design linear algebra
+ algorithms and frameworks for hybrid manycore and GPU systems that can enable
+ applications to fully exploit the power that each of the hybrid components
+ offers.
+ .
+ This package contains the test executables.
+
+Package: libmagma2
+Description-md5: 1b5c7a1b292272888775bfbb96c3b347
+Description-en: Matrix Algebra on GPU and Multicore Architectures (solib)
+ The MAGMA project aims to develop a dense linear algebra library similar to
+ LAPACK but for heterogeneous/hybrid architectures, starting with current
+ "Multicore+GPU" systems.
+ .
+ The MAGMA research is based on the idea that, to address the complex challenges
+ of the emerging hybrid environments, optimal software solutions will themselves
+ have to hybridize, combining the strengths of different algorithms within a
+ single framework. Building on this idea, we aim to design linear algebra
+ algorithms and frameworks for hybrid manycore and GPU systems that can enable
+ applications to fully exploit the power that each of the hybrid components
+ offers.
+ .
+ This package contains the shared object libmagma.so.2
+
 Package: mathjax-siunitx
 Description-md5: 3a605b1f12a5c496b15c863c62d3b322
 Description-en: Extension for libjs-mathjax to support siunitx
@@ -2221,6 +2351,14 @@ Description-en: vddk plugin for nbdkit
  commercial usage without negotiating a separate license from VMware.
  This plugin does not contain any VMware code. Consult the man page
  nbdkit-vddk-plugin(1) for details on how to use this plugin.
+
+Package: nvbandwidth
+Description-md5: 3761e1e5cbde48c98f34e9b72ed8a46d
+Description-en: tool for bandwidth measurements on NVIDIA GPUs
+ This measures bandwidth for various memcpy patterns across different links
+ using copy engine or kernel copy methods. nvbandwidth reports current measured
+ bandwidth on your system. Additional system-specific tuning may be required to
+ achieve maximal peak bandwidth.
 
 Package: libcutlass-dev
 Description-md5: 4d44009005870b8473610afb57050108
@@ -2725,6 +2863,12 @@ Description-en: gaming server that emulates Battle.net(R)
  icons, ad banners, and channel operators work too.  It is by no means
  complete, though.
 
+Package: python3-pycudwt
+Description-md5: 6df6073c729e5bb493e299895787595d
+Description-en: Python-CUDA implementation of the Wavelet Transform
+ pycudwt is a python module for parallel Discrete Wavelet Transform
+ using CUDA.
+
 Package: python3-pynvml
 Description-md5: a70729a5f02f7f1635513991a7e8a017
 Description-en: Python3 bindings to the NVIDIA Management Library
@@ -2938,6 +3082,23 @@ Description-en: Simple and powerful network transmission of ZFS snapshots
  runs only a small wrapper as root, and the wrapper has only three
  commands it implements.
 
+Package: slurm-wlm-nvml-plugin
+Description-md5: 382ad5eb1a96045c9ecbf90f2e89d21b
+Description-en: SLURM NVML plugins
+ SLURM, the Simple Linux Utility for Resource Management,
+ is an open-source cluster resource management and job scheduling.
+ .
+ This package contains the Nvidia NVML-based SLURM plugin.
+
+Package: slurm-wlm-nvml-plugin-dev
+Description-md5: 25e2f364af04a256ac8860bffe699da0
+Description-en: SLURM NVML plugin development files
+ SLURM, the Simple Linux Utility for Resource Management,
+ is an open-source cluster resource management and job scheduling.
+ .
+ This package contains development files for the Nvidia NVML-based
+ SLURM plugins.
+
 Package: spectemu-common
 Description-md5: 26bc6bd9e66de9535a2d1d86848d0e2c
 Description-en: Fast 48k ZX Spectrum Emulator (common files)
@@ -3077,6 +3238,154 @@ Description-en: Speech Dispatcher: Voxin output module
  which supports IBM TTS (aka Eloquence) and Vocalizer Embedded, which needs to
  be installed separately.
 
+Package: libsocl-contrib-1.4-1t64
+Description-md5: 4a69ce3f02f2cf01466ed8b9a22d8758
+Description-en: Task scheduler for heterogeneous multicore machines
+ StarPU is a runtime system that offers support for heterogeneous
+ multicore machines. While many efforts are devoted to design efficient
+ computation kernels for those architectures (e.g. to implement BLAS
+ kernels on GPUs or on Cell's SPUs), StarPU not only takes care of
+ offloading such kernels (and implementing data coherency across
+ the machine), but it also makes sure the kernels are executed as
+ efficiently as possible.
+ .
+ This package contains an OpenCL-compatible library interface to StarPU.
+ This "contrib" version is built against CUDA.
+
+Package: libstarpu-contrib-1.4-9
+Description-md5: f0ca811d02d6bbb6c830781bf9811bff
+Description-en: Task scheduler for heterogeneous multicore machines
+ StarPU is a runtime system that offers support for heterogeneous
+ multicore machines. While many efforts are devoted to design efficient
+ computation kernels for those architectures (e.g. to implement BLAS
+ kernels on GPUs or on Cell's SPUs), StarPU not only takes care of
+ offloading such kernels (and implementing data coherency across
+ the machine), but it also makes sure the kernels are executed as
+ efficiently as possible.
+ .
+ This package contains the main StarPU library
+ This "contrib" version is built against CUDA.
+
+Package: libstarpu-contrib-dev
+Description-md5: e7f42763fbe9c087a6defa203190f56e
+Description-en: Task scheduler for heterogeneous multicore machines - dev
+ StarPU is a runtime system that offers support for heterogeneous
+ multicore machines. While many efforts are devoted to design efficient
+ computation kernels for those architectures (e.g. to implement BLAS
+ kernels on GPUs or on Cell's SPUs), StarPU not only takes care of
+ offloading such kernels (and implementing data coherency across
+ the machine), but it also makes sure the kernels are executed as
+ efficiently as possible.
+ .
+ This package contains development headers and libraries.
+ This "contrib" version is built against CUDA.
+
+Package: libstarpu-contrib-openmp-llvm-1.4-1t64
+Description-md5: 0c4cf9967f5b66c184481dbb23c8faa6
+Description-en: Task scheduler for heterogeneous multicore machines
+ StarPU is a runtime system that offers support for heterogeneous
+ multicore machines. While many efforts are devoted to design efficient
+ computation kernels for those architectures (e.g. to implement BLAS
+ kernels on GPUs or on Cell's SPUs), StarPU not only takes care of
+ offloading such kernels (and implementing data coherency across
+ the machine), but it also makes sure the kernels are executed as
+ efficiently as possible.
+ .
+ This package contains the runtime support for LLVM OpenMP.
+ This "contrib" version is built against CUDA.
+
+Package: libstarpu-contribfft-1.4-1t64
+Description-md5: 1079179920c93a735ab89566a3855d36
+Description-en: Task scheduler for heterogeneous multicore machines
+ StarPU is a runtime system that offers support for heterogeneous
+ multicore machines. While many efforts are devoted to design efficient
+ computation kernels for those architectures (e.g. to implement BLAS
+ kernels on GPUs or on Cell's SPUs), StarPU not only takes care of
+ offloading such kernels (and implementing data coherency across
+ the machine), but it also makes sure the kernels are executed as
+ efficiently as possible.
+ .
+ This package contains a hybrid CPU+GPU FFT library.
+ This "contrib" version is built against CUDA.
+
+Package: libstarpu-contribmpi-1.4-3t64
+Description-md5: 4d3ce5602db3c9fbd91b7e19dcc14e2a
+Description-en: Task scheduler for heterogeneous multicore machines
+ StarPU is a runtime system that offers support for heterogeneous
+ multicore machines. While many efforts are devoted to design efficient
+ computation kernels for those architectures (e.g. to implement BLAS
+ kernels on GPUs or on Cell's SPUs), StarPU not only takes care of
+ offloading such kernels (and implementing data coherency across
+ the machine), but it also makes sure the kernels are executed as
+ efficiently as possible.
+ .
+ This package contains MPI extensions for StarPU.
+ This "contrib" version is built against CUDA.
+
+Package: libstarpu-contribrm-1.4-1t64
+Description-md5: 3008682b6502a417f1d5f1b0170499a0
+Description-en: Task scheduler for heterogeneous multicore machines
+ StarPU is a runtime system that offers support for heterogeneous
+ multicore machines. While many efforts are devoted to design efficient
+ computation kernels for those architectures (e.g. to implement BLAS
+ kernels on GPUs or on Cell's SPUs), StarPU not only takes care of
+ offloading such kernels (and implementing data coherency across
+ the machine), but it also makes sure the kernels are executed as
+ efficiently as possible.
+ .
+ This package contains the resource management library.
+ This "contrib" version is built against CUDA.
+
+Package: starpu-contrib-examples
+Description-md5: 11b8c6811b08d3b761c4e2f5fd0e0890
+Description-en: Task scheduler for heterogeneous multicore machines - exs
+ StarPU is a runtime system that offers support for heterogeneous
+ multicore machines. While many efforts are devoted to design efficient
+ computation kernels for those architectures (e.g. to implement BLAS
+ kernels on GPUs or on Cell's SPUs), StarPU not only takes care of
+ offloading such kernels (and implementing data coherency across
+ the machine), but it also makes sure the kernels are executed as
+ efficiently as possible.
+ .
+ This package contains application examples.
+ This "contrib" version is built against CUDA.
+
+Package: starpu-contrib-tools
+Description-md5: 21e204c0915cd3972a9cf41ad059d147
+Description-en: Task scheduler for heterogeneous multicore machines - tools
+ StarPU is a runtime system that offers support for heterogeneous
+ multicore machines. While many efforts are devoted to design efficient
+ computation kernels for those architectures (e.g. to implement BLAS
+ kernels on GPUs or on Cell's SPUs), StarPU not only takes care of
+ offloading such kernels (and implementing data coherency across
+ the machine), but it also makes sure the kernels are executed as
+ efficiently as possible.
+ .
+ This package contains StarPU tools.
+ This "contrib" version is built against CUDA.
+
+Package: libstdgpu-cuda-dev
+Description-md5: e4dd50a6deda827edd854dc36f6898ac
+Description-en: Efficient STL-like Data Structures on the GPU (CUDA development headers)
+ stdgpu is an open-source library providing several generic GPU data structures
+ for fast and reliable data management. Multiple platforms such as CUDA,
+ OpenMP, and HIP are supported allowing you to rapidly write highly complex
+ agnostic and native algorithms that look like sequential CPU code but are
+ executed in parallel on the GPU.
+ .
+ This package installs the development headers for the CUDA version.
+
+Package: libstdgpu-cuda0d
+Description-md5: 86f2a09d523e7b55fff456ecf5defbc3
+Description-en: Efficient STL-like Data Structures on the GPU (CUDA backend)
+ stdgpu is an open-source library providing several generic GPU data structures
+ for fast and reliable data management. Multiple platforms such as CUDA,
+ OpenMP, and HIP are supported allowing you to rapidly write highly complex
+ agnostic and native algorithms that look like sequential CPU code but are
+ executed in parallel on the GPU.
+ .
+ This package installs the shared library that runs on CUDA.
+
 Package: steam
 Description-md5: f00a8e4dbf0f43d67b9a04b8ee3d3c03
 Description-en: Transitional package for Steam
@@ -3196,12 +3505,38 @@ Description-en: SDL2 port of Rise of the Triad
  a suitable data package from the publicly available "Rise of the Triad:
  The HUNT Begins" shareware episode.
 
+Package: libtensorpipe-cuda-0
+Description-md5: b49a93726d4da68e6161824dc04f12b3
+Description-en: tensor-aware point-to-point communication primitive for machine learning
+ The TensorPipe project provides a tensor-aware channel to transfer rich
+ objects from one process to another while using the fastest transport for the
+ tensors contained therein (e.g., CUDA device-to-device copy).
+ .
+ This package contains shared objects.
+
+Package: libtensorpipe-cuda-dev
+Description-md5: 6b4397dd30e29fe70ebb4ea9c71ececf
+Description-en: tensor-aware point-to-point communication primitive for machine learning
+ The TensorPipe project provides a tensor-aware channel to transfer rich
+ objects from one process to another while using the fastest transport for the
+ tensors contained therein (e.g., CUDA device-to-device copy).
+ .
+ This package contains development files.
+
 Package: thunar-dropbox-plugin
 Description-md5: f0ed9d7caf26e8422ff1ae0b651acf2c
 Description-en: context-menu items from dropbox for Thunar
  Thunar Dropbox is a plugin for thunar that adds context-menu
  items from dropbox. This plugin does not come with dropbox itself,
  you will need to install that separately.
+
+Package: python3-tomopy
+Description-md5: 9a7c0aa2da2602d75a31a35cb002c912
+Description-en: Python package for tomographic data processing and image reconstruction
+ Features:
+  * Image reconstruction algorithms for tomography.
+  * Various filters, ring removal algorithms, phase retrieval algorithms.
+  * Forward projection operator for absorption and wave propagation.
 
 Package: translate-shell
 Description-md5: 260570fb89512f029e1e68c41e643f5b

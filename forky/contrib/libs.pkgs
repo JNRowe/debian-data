@@ -32,6 +32,25 @@ Size: 1788668
 MD5sum: c541fa2c299f0cc7271c30a6d1141999
 SHA256: fecc2d183e0b3ef937d0233927a63f68b87170aade9cf5d2801635ae2b50ec18
 
+Package: libggml0-backend-cuda
+Source: ggml-cuda
+Version: 0.16.0-1
+Installed-Size: 561069
+Maintainer: Debian Deep Learning Team <debian-ai@lists.debian.org>
+Architecture: amd64
+Provides: libggml0-backend (= 0.16.0-1)
+Depends: libggml0 (>= 0.16.0-1), libggml0 (<< 0.16.0-2~), libc6 (>= 2.38), libcublas12, libcuda1 (>= 440) | libcuda.so.1 (>= 440), libcudart12, libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
+Description: Tensor library for machine learning - CUDA backend
+Multi-Arch: same
+Homepage: https://github.com/ggml-org/ggml
+Description-md5: 56db844880e610d6c8401c92a13f05dd
+contrib/libs
+Priority: optional
+Filename: pool/contrib/g/ggml-cuda/libggml0-backend-cuda_0.16.0-1_amd64.deb
+Size: 104128464
+MD5sum: ce950545b0b41472334d44b69df1ebde
+SHA256: 8448b5394197db14f132bff43813e4607e9adaf897d5b796be3f479138736356
+
 Package: glx-alternative-mesa
 Source: glx-alternatives
 Version: 1.2.2
@@ -112,6 +131,46 @@ Filename: pool/contrib/liby/libydpdict/libydpdict2_1.0.4-3.1_amd64.deb
 Size: 10124
 MD5sum: 08fdac865939a33351a5a9239dc72b37
 SHA256: de1f1fdba8c539cae1a9e89e0383ffb1b0e3d82f0fc0c1dd96457c9ddb967bd5
+
+Package: libmagma-sparse2
+Source: magma
+Version: 2.9.0+ds-3
+Installed-Size: 69655
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: libmagma-sparse2-rocm
+Depends: libblas3 | libblas.so.3, libc6 (>= 2.38), libcudart12, libcusparse12, libgcc-s1 (>= 3.0), libgomp1 (>= 4.9), liblapack3 | liblapack.so.3, libmagma2 (>= 2.9.0+ds), libstdc++6 (>= 4.1.1)
+Breaks: libmagma-sparse2-rocm
+Description: Matrix Algebra on GPU and Multicore Architectures (solib, sparse)
+Homepage: https://icl.cs.utk.edu/magma/
+Description-md5: 7466d1ecd53172205761e441ae3ae3e8
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/m/magma/libmagma-sparse2_2.9.0+ds-3_amd64.deb
+Size: 15563068
+MD5sum: 1ea6f5f4ed50a36a75546d6281039088
+SHA256: b388fae925f1ce76f1b8f3bcb73f5de6483491adcf4a0bbea26c999ab9f3ddae
+
+Package: libmagma2
+Source: magma
+Version: 2.9.0+ds-3
+Installed-Size: 683165
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: libmagma2-rocm
+Depends: libblas3 | libblas.so.3, libc6 (>= 2.38), libcublas12, libcudart12, libcusparse12, libgcc-s1 (>= 3.0), libgomp1 (>= 6), liblapack3 | liblapack.so.3, libstdc++6 (>= 11)
+Breaks: libmagma2-rocm
+Description: Matrix Algebra on GPU and Multicore Architectures (solib)
+Homepage: https://icl.cs.utk.edu/magma/
+Description-md5: 1b5c7a1b292272888775bfbb96c3b347
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/m/magma/libmagma2_2.9.0+ds-3_amd64.deb
+Size: 112502160
+MD5sum: c854d4a6c65c965b828737a3ccc5b151
+SHA256: b61fd6ce22a9a47e83e1fd099ee0728f90578ba73e1414445bf6aad44d32979b
 
 Package: libnvidia-egl-gbm1
 Source: nvidia-egl-gbm
@@ -248,6 +307,193 @@ Filename: pool/contrib/p/primus-vk/nvidia-primus-vk-wrapper_1.6.4-4+b2_amd64.deb
 Size: 9844
 MD5sum: 9efbbf05faf4ab330ab3bd701cd4ae3e
 SHA256: 270aeefc46f2d83bc2c47592a6b87d4b6abb238681a05166049e24f505833410
+
+Package: slurm-wlm-nvml-plugin
+Source: slurm-wlm-contrib
+Version: 25.11.4-1
+Installed-Size: 105
+Maintainer: Gennaro Oliva <oliva@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), slurm-wlm-basic-plugins (>= 25.11.4), slurm-wlm-basic-plugins (<< 25.11.5)
+Enhances: slurmd (>= 25.11.4)
+Description: SLURM NVML plugins
+Homepage: http://slurm.schedmd.com
+Description-md5: 382ad5eb1a96045c9ecbf90f2e89d21b
+Tag: role::shared-lib
+contrib/libs
+Priority: optional
+Filename: pool/contrib/s/slurm-wlm-contrib/slurm-wlm-nvml-plugin_25.11.4-1_amd64.deb
+Size: 28516
+MD5sum: c28b57e7237cc23671a5276fb432dde0
+SHA256: d341a308b69980eb69a41b36aa7c4346b0856cb61a66e144d178e8d79cdf94c7
+
+Package: libsocl-contrib-1.4-1t64
+Source: starpu-contrib
+Version: 1.4.10+dfsg-2
+Installed-Size: 134
+Maintainer: Samuel Thibault <sthibault@debian.org>
+Architecture: amd64
+Replaces: libsocl-contrib-1.4-1
+Provides: libsocl-any-1.4-1, libsocl-contrib-1.4-1 (= 1.4.10+dfsg-2)
+Depends: libc6 (>= 2.38), libstarpu-contrib-1.4-9 (>= 1.4.10+dfsg), ocl-icd-libopencl1 | libopencl1
+Conflicts: libsocl-1.4-1, libsocl-contrib-1.4-1t64
+Breaks: libsocl-contrib-1.4-1 (<< 1.4.10+dfsg-2)
+Description: Task scheduler for heterogeneous multicore machines
+Multi-Arch: same
+Homepage: https://starpu.gitlabpages.inria.fr/
+Description-md5: 4a69ce3f02f2cf01466ed8b9a22d8758
+contrib/libs
+Priority: optional
+Filename: pool/contrib/s/starpu-contrib/libsocl-contrib-1.4-1t64_1.4.10+dfsg-2_amd64.deb
+Size: 58976
+MD5sum: 3a0f92b19627b8d739857540a6bc7631
+SHA256: 9d6659b06d2f923868f17f024ad70d7bec04b90d006a86f8c7a38b7218a1ff8b
+
+Package: libstarpu-contrib-1.4-9
+Source: starpu-contrib
+Version: 1.4.10+dfsg-2
+Installed-Size: 2008
+Maintainer: Samuel Thibault <sthibault@debian.org>
+Architecture: amd64
+Provides: libstarpu-any-1.4-9
+Depends: libc6 (>= 2.38), libcublas12, libcublaslt12, libcudart12, libcusolver11, libcusparse12, libfxt2t64 (>= 0.3.15), libgcc-s1 (>= 3.4), libglpk40 (>= 4.59), libgomp1 (>= 4.9), libhwloc15 (>= 2.12.2), libpapi7.2, ocl-icd-libopencl1 | libopencl1
+Conflicts: libstarpu-1.4-9
+Description: Task scheduler for heterogeneous multicore machines
+Multi-Arch: same
+Homepage: https://starpu.gitlabpages.inria.fr/
+Description-md5: f0ca811d02d6bbb6c830781bf9811bff
+contrib/libs
+Priority: optional
+Filename: pool/contrib/s/starpu-contrib/libstarpu-contrib-1.4-9_1.4.10+dfsg-2_amd64.deb
+Size: 679232
+MD5sum: fdf82ade0bdbae913e3a0b9d8819b338
+SHA256: a782fb304c126d4aca9935c6f002691a2fd0edc700274a1277f63f9d9c9babe1
+
+Package: libstarpu-contrib-openmp-llvm-1.4-1t64
+Source: starpu-contrib
+Version: 1.4.10+dfsg-2
+Installed-Size: 82
+Maintainer: Samuel Thibault <sthibault@debian.org>
+Architecture: amd64
+Replaces: libstarpu-contrib-openmp-llvm-1.4-1
+Provides: libstarpu-any-openmp-llvm-1.4-1, libstarpu-contrib-openmp-llvm-1.4-1 (= 1.4.10+dfsg-2)
+Depends: libc6 (>= 2.4), libstarpu-contrib-1.4-9 (>= 1.4.10+dfsg)
+Conflicts: libstarpu-contrib-openmp-llvm-1.4-1t64, libstarpu-openmp-llvm-1.4-1
+Breaks: libstarpu-contrib-openmp-llvm-1.4-1 (<< 1.4.10+dfsg-2)
+Description: Task scheduler for heterogeneous multicore machines
+Multi-Arch: same
+Homepage: https://starpu.gitlabpages.inria.fr/
+Description-md5: 0c4cf9967f5b66c184481dbb23c8faa6
+contrib/libs
+Priority: optional
+Filename: pool/contrib/s/starpu-contrib/libstarpu-contrib-openmp-llvm-1.4-1t64_1.4.10+dfsg-2_amd64.deb
+Size: 40572
+MD5sum: 232a8241660c3ab15f97a525dfa0577f
+SHA256: 515ba1f4c98dd4feb0f10dde9b4aeba683663838df3a6cd99a2860db9cebe909
+
+Package: libstarpu-contribfft-1.4-1t64
+Source: starpu-contrib
+Version: 1.4.10+dfsg-2
+Installed-Size: 126
+Maintainer: Samuel Thibault <sthibault@debian.org>
+Architecture: amd64
+Replaces: libstarpu-contribfft-1.4-1
+Provides: libstarpu-anyfft-1.4-1, libstarpu-contribfft-1.4-1 (= 1.4.10+dfsg-2)
+Depends: libc6 (>= 2.4), libcudart12, libcufft11, libfftw3-double3 (>= 3.3.10), libfftw3-single3 (>= 3.3.10), libstarpu-contrib-1.4-9 (>= 1.4.10+dfsg)
+Conflicts: libstarpu-contribfft-1.4-1t64, libstarpufft-1.4-1
+Breaks: libstarpu-contribfft-1.4-1 (<< 1.4.10+dfsg-2)
+Description: Task scheduler for heterogeneous multicore machines
+Multi-Arch: same
+Homepage: https://starpu.gitlabpages.inria.fr/
+Description-md5: 1079179920c93a735ab89566a3855d36
+contrib/libs
+Priority: optional
+Filename: pool/contrib/s/starpu-contrib/libstarpu-contribfft-1.4-1t64_1.4.10+dfsg-2_amd64.deb
+Size: 50096
+MD5sum: 9e9bad74a0ec2057f02fb76508c49f0e
+SHA256: 9750d16c94907bf4fe6bbb8f3b0329227713fe7cc052c4f88d992328d8197b37
+
+Package: libstarpu-contribmpi-1.4-3t64
+Source: starpu-contrib
+Version: 1.4.10+dfsg-2
+Installed-Size: 294
+Maintainer: Samuel Thibault <sthibault@debian.org>
+Architecture: amd64
+Replaces: libstarpu-contribmpi-1.4-3
+Provides: libstarpu-anympi-1.4-3, libstarpu-contribmpi-1.4-3 (= 1.4.10+dfsg-2)
+Depends: libc6 (>= 2.38), libfxt2t64 (>= 0.3.15), libopenmpi40 (>= 5.0.9), libstarpu-contrib-1.4-9 (>= 1.4.10+dfsg)
+Conflicts: libstarpu-contribmpi-1.4-3t64, libstarpumpi-1.4-3
+Breaks: libstarpu-contribmpi-1.4-3 (<< 1.4.10+dfsg-2)
+Description: Task scheduler for heterogeneous multicore machines
+Multi-Arch: same
+Homepage: https://starpu.gitlabpages.inria.fr/
+Description-md5: 4d3ce5602db3c9fbd91b7e19dcc14e2a
+contrib/libs
+Priority: optional
+Filename: pool/contrib/s/starpu-contrib/libstarpu-contribmpi-1.4-3t64_1.4.10+dfsg-2_amd64.deb
+Size: 112844
+MD5sum: ef251a830d99f27115a95e8f26803daf
+SHA256: 22e5d4a80a5a3df0487fd2b14893aa1bb65a303282d85dfc96e6f48c3ebac300
+
+Package: libstarpu-contribrm-1.4-1t64
+Source: starpu-contrib
+Version: 1.4.10+dfsg-2
+Installed-Size: 98
+Maintainer: Samuel Thibault <sthibault@debian.org>
+Architecture: amd64
+Replaces: libstarpu-contribrm-1.4-1
+Provides: libstarpu-anyrm-1.4-1, libstarpu-contribrm-1.4-1 (= 1.4.10+dfsg-2)
+Depends: libc6 (>= 2.34), libhwloc15 (>= 2.12.2), libstarpu-contrib-1.4-9 (>= 1.4.10+dfsg)
+Conflicts: libstarpu-contribrm-1.4-1t64, libstarpurm-1.4-1
+Breaks: libstarpu-contribrm-1.4-1 (<< 1.4.10+dfsg-2)
+Description: Task scheduler for heterogeneous multicore machines
+Multi-Arch: same
+Homepage: https://starpu.gitlabpages.inria.fr/
+Description-md5: 3008682b6502a417f1d5f1b0170499a0
+contrib/libs
+Priority: optional
+Filename: pool/contrib/s/starpu-contrib/libstarpu-contribrm-1.4-1t64_1.4.10+dfsg-2_amd64.deb
+Size: 45288
+MD5sum: af39cd58c28fe691c85d4a746e825b34
+SHA256: 74393863188c4411a2075fa4923b24eea4defaab5ea93232ddc77513f552a943
+
+Package: libstdgpu-cuda0d
+Source: stdgpu-contrib
+Version: 1.3.0+git20220507.32e0517-3
+Installed-Size: 71
+Maintainer: Timo Röhling <roehling@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.4), libcudart12, libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
+Description: Efficient STL-like Data Structures on the GPU (CUDA backend)
+Multi-Arch: same
+Homepage: https://github.com/stotko/stdgpu
+Description-md5: 86f2a09d523e7b55fff456ecf5defbc3
+contrib/libs
+Priority: optional
+Filename: pool/contrib/s/stdgpu-contrib/libstdgpu-cuda0d_1.3.0+git20220507.32e0517-3_amd64.deb
+Size: 23116
+MD5sum: 26c56018a4e81888a26e9832de7c2283
+SHA256: 58b0259ed43219cd17a8ddd783468609a4bd76ee0839fb94af558e2acdfb8c68
+
+Package: libtensorpipe-cuda-0
+Source: tensorpipe-cuda
+Version: 0.0~git20220513.bb1473a-6
+Installed-Size: 4224
+Maintainer: Debian Deep Learning Team <debian-ai@lists.debian.org>
+Architecture: amd64
+Replaces: libtensorpipe0
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 12), libuv1t64 (>= 1.18.0)
+Conflicts: libtensorpipe0
+Description: tensor-aware point-to-point communication primitive for machine learning
+Multi-Arch: same
+Homepage: https://github.com/pytorch/tensorpipe
+Description-md5: b49a93726d4da68e6161824dc04f12b3
+contrib/libs
+Priority: optional
+Filename: pool/contrib/t/tensorpipe-cuda/libtensorpipe-cuda-0_0.0~git20220513.bb1473a-6_amd64.deb
+Size: 898884
+MD5sum: e7f9903605092ce574fe531404ea6b31
+SHA256: a7b285b1d3dd27b233d518c4204738957c016b65e4dea45a1f2681e052df6d6d
 
 Package: libnvpair3linux
 Source: zfs-linux
