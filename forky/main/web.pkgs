@@ -2026,8 +2026,8 @@ MD5sum: f13ee12f2b97e9435560e11b2284b370
 SHA256: 2a1df0a9d23e7d1444ff58a317b2cb04b0f24dcc11667b75851dd395d2da20df
 
 Package: gallery-dl
-Version: 1.32.5-1
-Installed-Size: 2951
+Version: 1.32.6-1
+Installed-Size: 2973
 Maintainer: Unit 193 <unit193@debian.org>
 Architecture: all
 Depends: python3-requests, python3:any
@@ -2037,10 +2037,10 @@ Homepage: https://codeberg.org/mikf/gallery-dl
 Description-md5: 0510bb32672915f74b92695fc9fb569d
 web
 Priority: optional
-Filename: pool/main/g/gallery-dl/gallery-dl_1.32.5-1_all.deb
-Size: 514312
-MD5sum: 45811cfd1d13eeb22123ac81905fa26e
-SHA256: a2b2380e657b70f48d2b43cb77e7655856f85a4bb89b88ae0ebaedd86297fca1
+Filename: pool/main/g/gallery-dl/gallery-dl_1.32.6-1_all.deb
+Size: 517272
+MD5sum: 1bf4f3a301c89ad8e1cdbcdb0c3fa1c7
+SHA256: 1e726eaf105a69a4f93b1fc9d35ea2d5ec7ee9907d093bfe83d56adec01804a8
 
 Package: gitit
 Version: 0.16+dfsg-1
@@ -2966,12 +2966,11 @@ MD5sum: 59fd653456dbb5814f61c9209be548da
 SHA256: 8b680ce03e740e8af9b34b187ba451a25c7ed0f6c004dc1d34acee621d3bb19f
 
 Package: ifetch-tools
-Version: 0.18.6-3
-Installed-Size: 349
+Version: 0.18.6-4
+Installed-Size: 351
 Maintainer: Richard Nelson <unixabg@gmail.com>
 Architecture: all
-Depends: adduser, ffmpeg, ruby, ruby-net-http-digest-auth, ruby-rmagick, debconf (>= 0.5) | debconf-2.0
-Pre-Depends: init-system-helpers (>= 1.54~)
+Depends: ffmpeg, ruby, ruby-net-http-digest-auth, ruby-rmagick, debconf (>= 0.5) | debconf-2.0, systemd | systemd-standalone-sysusers | systemd-sysusers, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles
 Description: Collect, monitor, and view images from ip cameras
 Homepage: https://fyeox.com/ifetch-tools/
 Description-md5: e0d6ff951e37987d95f914856e0115f1
@@ -2979,10 +2978,10 @@ Tag: hardware::camera, implemented-in::ruby, role::program, scope::utility,
  use::downloading, works-with::image
 web
 Priority: optional
-Filename: pool/main/i/ifetch-tools/ifetch-tools_0.18.6-3_all.deb
-Size: 190548
-MD5sum: 05678829029c45d5e422b39ea054d1bc
-SHA256: 482186fddfb3f6f2d04f79d6c76ca7817a2663f4f0e2009c9918b7cb6a5653e2
+Filename: pool/main/i/ifetch-tools/ifetch-tools_0.18.6-4_all.deb
+Size: 188812
+MD5sum: c2401079ee7035eca94011e9d16c85ce
+SHA256: 4784bdf5ad7b9712952265e98f1012c2ecceee417751ffae2194d0c07d72118e
 
 Package: igal2
 Version: 3.2-1
@@ -3773,22 +3772,42 @@ Size: 35800
 MD5sum: 910f78df4deeb40f1cdeea913efa39ad
 SHA256: 592a5ee05fdfd1efdbf68a081d7787c232ced266c3940aac3512e1914af2b0c4
 
-Package: varnish-re2
-Source: libvmod-re2
-Version: 2.0.0+20250617-2.1
-Installed-Size: 148
-Maintainer: Varnish Package Maintainers <team+varnish-team@tracker.debian.org>
+Package: libvmod-re2
+Version: 2.0.0+20260327-3
+Installed-Size: 158
+Maintainer: Vinyl Cache Package Maintainers <team+varnish-team@tracker.debian.org>
 Architecture: amd64
-Depends: varnishabi-21.0-2, varnishabi-strict-2e8180f788715e5bc44df08479d60c9435d79bdd, libc6 (>= 2.14), libgcc-s1 (>= 3.0), libre2-11-absl20260107, libstdc++6 (>= 5.2)
-Description: RE2 regular expressions for Varnish
+Replaces: varnish-re2
+Depends: vinylabi-23.0, libc6 (>= 2.14), libgcc-s1 (>= 3.0), libre2-11-absl20260107, libstdc++6 (>= 5.2)
+Conflicts: varnish-re2
+Description: RE2 regular expressions for Vinyl Cache
 Homepage: https://code.uplex.de/uplex-varnish/libvmod-re2
-Description-md5: dab53383ec1f2d8d2c085d5fb06736f1
+Description-md5: ddfc3fbb902b93c0db30c687c955c671
 web
 Priority: optional
-Filename: pool/main/libv/libvmod-re2/varnish-re2_2.0.0+20250617-2.1_amd64.deb
-Size: 52860
-MD5sum: 208374a30f9217748742fb84926efd6f
-SHA256: 62beac990a0ada431d9bdfb2b1c5928c5f593b0aa7ce842a89c9bec2428acb02
+Filename: pool/main/libv/libvmod-re2/libvmod-re2_2.0.0+20260327-3_amd64.deb
+Size: 57040
+MD5sum: 95bff6b61da98665425eb57c144b526a
+SHA256: 7eeeafc852eaf109e1156dbdd238be47d99423ab59e1b26c4778477c2d1c96c1
+
+Package: libvmod-redis
+Version: 23.1+repack-2
+Installed-Size: 234
+Maintainer: Vinyl Cache Package Maintainers <team+varnish-team@tracker.debian.org>
+Architecture: amd64
+Replaces: varnish-redis
+Depends: vinylabi-23.0, vinylabi-strict-423648c4cb6b225b3268ffc337354ea938f5efee, libc6 (>= 2.38), libev4t64 (>= 1:4.04), libhiredis1.1.0 (>= 1.2.0), libvinylapi3 (>= 9.0.0~)
+Conflicts: varnish-redis
+Description: access Redis servers from VCL
+Multi-Arch: same
+Homepage: https://github.com/carlosabalde/libvmod-redis/
+Description-md5: 332ff6fd8e3a6d311c02daf31c24b8e8
+web
+Priority: optional
+Filename: pool/main/libv/libvmod-redis/libvmod-redis_23.1+repack-2_amd64.deb
+Size: 64716
+MD5sum: 846e3798677c68e240ac12266669a611
+SHA256: a8980177f9a94b6925fa5425b1ff3fc58beda334476d1e50b4d04f7031161ad4
 
 Package: libvmod-selector
 Version: 2.6.0+20260705-2
@@ -7115,22 +7134,6 @@ Filename: pool/main/t/tdiary-theme/tdiary-theme_5.4.0-1_all.deb
 Size: 3411596
 MD5sum: 26e1d0b2094218e6dfcdd1167d68d78e
 SHA256: 6068e4069e642d9c69f01fab64eb342b189f49fcf90738188cf2afcbf60bffbe
-
-Package: themole
-Version: 0.3-3.1
-Installed-Size: 283
-Maintainer: Raúl Benencia <rul@kalgan.cc>
-Architecture: all
-Depends: python3, python3-chardet, python3-lxml, python3:any
-Description: automatic SQL injection exploitation tool
-Homepage: https://sourceforge.net/projects/themole/
-Description-md5: dbff3acf3097cd19d618de3dcae1337b
-web
-Priority: optional
-Filename: pool/main/t/themole/themole_0.3-3.1_all.deb
-Size: 39604
-MD5sum: 6f9af0251c8593e4d25d05d36311bb6b
-SHA256: e08961f30b8945e1cf678c63aae7dc21146500ae6a828207b6a0ce49cabe79dc
 
 Package: thin
 Version: 2.0.1-1
