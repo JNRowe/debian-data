@@ -5829,22 +5829,22 @@ SHA256: b9a7e0349d65acb8d4a9266c528abf02f39757464fe0828a10dd845541f89a15
 
 Package: libbiometric0
 Source: biometric-authentication
-Version: 0.9.72-1
+Version: 0.9.72-2
 Installed-Size: 254
 Maintainer: Kylin Team <team+kylin@tracker.debian.org>
 Architecture: amd64
 Provides: bio-drv-api-0.10
-Depends: systemd, libc6 (>= 2.34), libglib2.0-0t64 (>= 2.36), libsqlite3-0 (>= 3.7.14), libusb-1.0-0 (>= 2:1.0.16), libuuid1 (>= 2.16)
+Depends: systemd, libc6 (>= 2.38), libglib2.0-0t64 (>= 2.36), libsqlite3-0 (>= 3.7.14), libusb-1.0-0 (>= 2:1.0.16), libuuid1 (>= 2.16)
 Description: Biometric Identification library
-Homepage: https://github.com/ukui/biometric-authentication.git
+Homepage: https://gitee.com/openkylin/biometric-authentication
 Description-md5: 8cde772c1c7e1685d0aa9831b717834f
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/b/biometric-authentication/libbiometric0_0.9.72-1_amd64.deb
-Size: 49788
-MD5sum: 1d1018d9d3b37e0c849f5128361561db
-SHA256: b7b001208f8c47585f0a27503e92ffb49e232b3e5617c3e66369661e5cfcbcde
+Filename: pool/main/b/biometric-authentication/libbiometric0_0.9.72-2_amd64.deb
+Size: 49940
+MD5sum: 2bc1678c8f5282e8c090cc4eafb22122
+SHA256: a51b724c6d805799bb40ab93b75ca7fcf9ecfffd8161f99ecd285fe698dcd056
 
 Package: libbiometry1
 Source: biometryd
@@ -10099,23 +10099,23 @@ MD5sum: 497df754ac8717ec048ffb14397773c7
 SHA256: 38a7ee6a6453057da22dc9ff43de76ecffaa2af435e93c94cc8c39bcdfecf2fd
 
 Package: cmake-extras
-Version: 1.9-1
-Installed-Size: 319
+Version: 1.10-1
+Installed-Size: 318
 Maintainer: Mike Gabriel <sunweaver@debian.org>
 Architecture: all
-Depends: cmake (>= 3.1), pkgconf, python3
-Suggests: googletest (>= 1.10.0.20201025), libgtest-dev
-Description: Extra CMake utility modules
+Depends: cmake, pkgconf, python3
+Suggests: googletest, libgtest-dev
+Description: extra CMake utility modules
 Multi-Arch: foreign
-Homepage: https://gitlab.com/ubports/core/cmake-extras/
-Description-md5: 465a216c1db639cf227162be3f5d25cc
+Homepage: https://gitlab.com/ubports/development/core/cmake-extras
+Description-md5: 8e654bbe715a9925ea55167b6cefbb88
 Tag: role::shared-lib
 libs
 Priority: extra
-Filename: pool/main/c/cmake-extras/cmake-extras_1.9-1_all.deb
-Size: 65856
-MD5sum: 07bcda2214fb5f4ed338e229df7549a5
-SHA256: 38e6f92f2e69065343905ae6a25821aeec4b99516760bbfde1124ca69b078396
+Filename: pool/main/c/cmake-extras/cmake-extras_1.10-1_all.deb
+Size: 65184
+MD5sum: e78409b175d9ea6aeffa409ec68645ee
+SHA256: 51555b939cbda339957a155c118926b6524a5b967bc7481bd44756add543bd7f
 
 Package: libcmark0.30.2
 Source: cmark (0.30.2-6)
@@ -19057,10 +19057,31 @@ Size: 19560
 MD5sum: f4d42eeaaaa431c0e3ac88ae9dcbf545
 SHA256: 1fb1f7bc595d802942e94a8fd3b53efcf969544785f315e05385ac6d36bf1f63
 
+Package: libdtk6core6
+Source: dtk6core
+Version: 6.7.45-1
+Installed-Size: 1374
+Maintainer: Debian Deepin Packaging Team <pkg-deepin-devel@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: libdtk6core
+Provides: libdtk6core
+Depends: libdtkcommon, lshw, libc6 (>= 2.34), libdbus-1-3 (>= 1.10), libdtk6log0 (>= 6.7.45), libgcc-s1 (>= 3.0), libqt6core6t64 (>= 6.10.2), libqt6dbus6 (>= 6.8.2), libqt6xml6 (>= 6.6.0), libstdc++6 (>= 14), qt6-base-private-abi (= 6.10.2)
+Breaks: libdtk6core
+Description: Deepin Qt6 Tool Kit Core library
+Multi-Arch: same
+Homepage: https://github.com/linuxdeepin/dtkcore
+Description-md5: 5380cec3a4d4c605e9cac8c1a8487b81
+libs
+Priority: optional
+Filename: pool/main/d/dtk6core/libdtk6core6_6.7.45-1_amd64.deb
+Size: 492968
+MD5sum: 963f9acbf048a0e6e94d5e666f831bb0
+SHA256: 5ad4691375d6849ae306d3ffa3c2cecb295a3c9b0dde0dd5f8ed0ee12308c498
+
 Package: libdtk6log0
-Source: dtk6log (0.0.6-1)
-Version: 0.0.6-1+b1
-Installed-Size: 192
+Source: dtk6log
+Version: 6.7.45-1
+Installed-Size: 195
 Maintainer: Debian Deepin Packaging Team <pkg-deepin-devel@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libdtk6log
@@ -19069,14 +19090,14 @@ Depends: libc6 (>= 2.32), libfmt10 (>= 10.1.1+ds1), libgcc-s1 (>= 3.0), libqt6co
 Breaks: libdtk6log
 Description: Simple, convenient and thread-safe C++ Qt6 logger library (shared library)
 Multi-Arch: same
-Homepage: https://github.com/linuxdeepin/dtk6log
+Homepage: https://github.com/linuxdeepin/dtklog
 Description-md5: e100acfffb70ac08333674db727944ae
 libs
 Priority: optional
-Filename: pool/main/d/dtk6log/libdtk6log0_0.0.6-1+b1_amd64.deb
-Size: 57892
-MD5sum: e5708f75964907aa7a450377d6dc04c8
-SHA256: 18f9e2b0c58821c9844f0144ef09d51e3def777f47c5645d662f1caf802067cc
+Filename: pool/main/d/dtk6log/libdtk6log0_6.7.45-1_amd64.deb
+Size: 59144
+MD5sum: 93e380f9d8173b8562c3333742f85d3f
+SHA256: 650a918b657b7b49ad6b6e14c2170b0fbbc6775558e876b7ec080c3fdcedcdac
 
 Package: libdtkcore5
 Source: dtkcore (5.7.12-3)
@@ -22120,7 +22141,7 @@ SHA256: 74d84aa21cefca9dfa13e87d0d0728445eaeebbbaf9fafaf65120419121335f3
 
 Package: libexecline2.9
 Source: execline
-Version: 2.9.9.1-1
+Version: 2.9.9.2-1
 Installed-Size: 45
 Maintainer: Shengjing Zhu <zhsj@debian.org>
 Architecture: amd64
@@ -22132,10 +22153,10 @@ Description-md5: 32477948d3b372fb6969284e8dfaebde
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/e/execline/libexecline2.9_2.9.9.1-1_amd64.deb
-Size: 14052
-MD5sum: dc9963c24cb4c8b1990d3ccc9c70f12f
-SHA256: 73756c1e5ed6ed632db3a5b7ed50fcf0b642071eac7c38c09401614416756c1a
+Filename: pool/main/e/execline/libexecline2.9_2.9.9.2-1_amd64.deb
+Size: 14080
+MD5sum: 83a4749d8a3488dfeb0fa2de6cd93ce4
+SHA256: 7afa98790659de71087fcadb11f44f264f7b182ef61eaaca155b571caf9dd024
 
 Package: libexempi8
 Source: exempi (2.6.6-2)
@@ -38271,8 +38292,8 @@ SHA256: 3864a3fdbad8a896c7e780d80b2f2095821ac6f8d164419acd141347991dd2f0
 
 Package: libhttrack3
 Source: httrack
-Version: 3.49.11-1
-Installed-Size: 916
+Version: 3.49.12-1
+Installed-Size: 941
 Maintainer: Xavier Roche <roche@httrack.com>
 Architecture: amd64
 Replaces: httrack (<< 3.49.8-2~), libhttrack2
@@ -38284,10 +38305,10 @@ Homepage: http://www.httrack.com
 Description-md5: 0e38d54985bcc9c621487b405dc9445e
 libs
 Priority: optional
-Filename: pool/main/h/httrack/libhttrack3_3.49.11-1_amd64.deb
-Size: 333936
-MD5sum: 49c039eda89160ae1a56ca9398f8678f
-SHA256: 9d614935a741ad4434660cbafb697c78a52ca376a4da23f7afb2c7da9dfdd8d1
+Filename: pool/main/h/httrack/libhttrack3_3.49.12-1_amd64.deb
+Size: 344104
+MD5sum: c1e980622e7dc3f46ec356592d9450b1
+SHA256: 65eb136823747b7bedb1b43eab33338c804ec0981a42a752aeb7fb0b4e3b0c92
 
 Package: libhueplusplus1
 Source: hueplusplus (1.2.0+ds-2)
@@ -38489,59 +38510,59 @@ Size: 145492
 MD5sum: 2b2aa3d3289aa6d01c33672648fd43ce
 SHA256: 6b59316c435fc202d11f0fdf0d1721e6df23469547ca90ec1191371e468bf226
 
-Package: libhypre-3.1.0
+Package: libhypre-301
 Source: hypre
-Version: 3.1.0-1
-Installed-Size: 7174
+Version: 3.1.0-3
+Installed-Size: 6883
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libblas3 | libblas.so.3, libc6 (>= 2.38), liblapack3 | liblapack.so.3, libopenmpi40 (>= 5.0.9), libsuperlu-dist9 (>= 9.2.1+dfsg1)
+Depends: libblas3 | libblas.so.3, libc6 (>= 2.14), liblapack3 | liblapack.so.3, libopenmpi40 (>= 5.0.10), libstdc++6 (>= 4.1.1), libsuperlu-dist9 (>= 9.2.1+dfsg1)
 Description: High Performance Matrix Preconditioners - Shared Library
 Multi-Arch: same
 Homepage: https://www.llnl.gov/casc/hypre/
 Description-md5: 478cf6be96dbcdf76f616926e4ebdedb
 libs
 Priority: optional
-Filename: pool/main/h/hypre/libhypre-3.1.0_3.1.0-1_amd64.deb
-Size: 2069700
-MD5sum: add99ce7dd96675b55930b7ca616f706
-SHA256: e904db41bfbf1ac2e575c2953a5648e11d8d51173d4785f8c077cf09517f58a7
+Filename: pool/main/h/hypre/libhypre-301_3.1.0-3_amd64.deb
+Size: 1949512
+MD5sum: a92778f64d82e51ec3f9d7cd28b9ccf0
+SHA256: cecf11347d47e439cb7f9c0cb6bf3a71536833e8f7e983eb058451372a2f9709
 
-Package: libhypre64-3.1.0
+Package: libhypre64-301
 Source: hypre
-Version: 3.1.0-1
-Installed-Size: 7102
+Version: 3.1.0-3
+Installed-Size: 6811
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libblas64-3 | libblas64.so.3, libc6 (>= 2.38), liblapack64-3 | liblapack64.so.3, libopenmpi40 (>= 5.0.9), libsuperlu-dist9 (>= 9.2.1+dfsg1)
+Depends: libblas3 | libblas.so.3, libc6 (>= 2.14), liblapack3 | liblapack.so.3, libopenmpi40 (>= 5.0.10), libstdc++6 (>= 4.1.1), libsuperlu-dist9 (>= 9.2.1+dfsg1)
 Description: High Performance Matrix Preconditioners - 64-bit (bigint) Shared Library
 Multi-Arch: same
 Homepage: https://www.llnl.gov/casc/hypre/
 Description-md5: eb3b32ffb2fb640c4e2c96da274ced79
 libs
 Priority: optional
-Filename: pool/main/h/hypre/libhypre64-3.1.0_3.1.0-1_amd64.deb
-Size: 1921788
-MD5sum: 62421504f3de78c46851f22b30ca0024
-SHA256: 88e5f81c18c2256e6c8719aca74cf38f45326ad59d6d10beb4d522f1694da0bf
+Filename: pool/main/h/hypre/libhypre64-301_3.1.0-3_amd64.deb
+Size: 1808712
+MD5sum: ab98a8403624fb85ccbbd78d322b314c
+SHA256: 99fdc14da141479ceec7b83713febf3182384b00343b242bc95cf7cc9caf76ce
 
-Package: libhypre64m-3.1.0
+Package: libhypre64m-301
 Source: hypre
-Version: 3.1.0-1
-Installed-Size: 6839
+Version: 3.1.0-3
+Installed-Size: 6899
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libblas64-3 | libblas64.so.3, libc6 (>= 2.38), liblapack64-3 | liblapack64.so.3, libopenmpi40 (>= 5.0.9), libsuperlu-dist9 (>= 9.2.1+dfsg1)
+Depends: libblas3 | libblas.so.3, libc6 (>= 2.14), liblapack3 | liblapack.so.3, libopenmpi40 (>= 5.0.10), libstdc++6 (>= 4.1.1), libsuperlu-dist9 (>= 9.2.1+dfsg1)
 Description: High Performance Matrix Preconditioners - 64-bit (mixedint) Shared Library
 Multi-Arch: same
 Homepage: https://www.llnl.gov/casc/hypre/
 Description-md5: 2ee3f646db69100b9f6e20cac373f3b8
 libs
 Priority: optional
-Filename: pool/main/h/hypre/libhypre64m-3.1.0_3.1.0-1_amd64.deb
-Size: 1930436
-MD5sum: 9b26db0e1b264cfa7e34e0948ce7fbba
-SHA256: 83d1a45594a30f0cd92318361a9f70b6e326dad7a74057550cc8e42ef4148c58
+Filename: pool/main/h/hypre/libhypre64m-301_3.1.0-3_amd64.deb
+Size: 1953076
+MD5sum: 1dee7dfd27024f348fb390b8837079b8
+SHA256: b5a751c09e55ac0a2340e5032d4f97c4b432dbfc7a5453e1a90abb432088c27c
 
 Package: libhyprgraphics4
 Source: hyprgraphics (0.5.1-2)
@@ -62871,25 +62892,25 @@ MD5sum: ee3d04f3d835f4c7b4222094559bfac5
 SHA256: 6623eae0f9ee7e3f1ee6235eaf67b66591daf5ab315fe270b628f68fd4206f67
 
 Package: libhx43t64
-Source: libhx (5.2-1.1)
-Version: 5.2-1.1+b1
+Source: libhx
+Version: 5.4-1
 Installed-Size: 128
 Maintainer: Jörg Frings-Fürst <debian@jff.email>
 Architecture: amd64
 Replaces: libhx32t64
-Provides: libhx43 (= 5.2-1.1+b1)
+Provides: libhx43 (= 5.4-1)
 Depends: libc6 (>= 2.38)
-Breaks: libhx32t64 (<< 5.2-1.1)
+Breaks: libhx32t64 (<< 5.4-1)
 Description: C library providing queue, tree, I/O and utility functions
 Multi-Arch: same
 Homepage: https://inai.de/projects/libhx/
 Description-md5: 250f5abedae6b7911e18842967f70d98
 libs
 Priority: optional
-Filename: pool/main/libh/libhx/libhx43t64_5.2-1.1+b1_amd64.deb
-Size: 44720
-MD5sum: de8023069cc189fb7d0f17091ed2e565
-SHA256: fc3b27dc24d48f1fd21064e5d354438d91b1569e6dc37581220cc57888073d33
+Filename: pool/main/libh/libhx/libhx43t64_5.4-1_amd64.deb
+Size: 44680
+MD5sum: b82f588578b07c671615bb518893be02
+SHA256: 7dbf36d8b5bfce810c89af3ebf46c26448c972689f02fe7e400ef528d83e16e0
 
 Package: libical3t64
 Source: libical3 (3.0.20-2)
@@ -71399,25 +71420,25 @@ SHA256: 8766f52260ae469d1a38c8e1268155d4dc3568fa6cea968b09dacc88b3e4d788
 
 Package: libpsl5t64
 Source: libpsl
-Version: 0.22.0-1
-Installed-Size: 104
+Version: 0.23.0-1
+Installed-Size: 103
 Maintainer: Tim Rühsen <tim.ruehsen@gmx.de>
 Architecture: amd64
 Replaces: libpsl5
-Provides: libpsl5 (= 0.22.0-1)
+Provides: libpsl5 (= 0.23.0-1)
 Depends: libidn2-0 (>= 0.16), libc6 (>= 2.38), libunistring5 (>= 1.1)
 Recommends: publicsuffix (>= 20150507)
-Breaks: libpsl5 (<< 0.22.0-1)
+Breaks: libpsl5 (<< 0.23.0-1)
 Description: Library for Public Suffix List (shared libraries)
 Multi-Arch: same
 Homepage: https://github.com/rockdaboot/libpsl
 Description-md5: 737acdacc0f014d042db24cf175d47b8
 libs
 Priority: optional
-Filename: pool/main/libp/libpsl/libpsl5t64_0.22.0-1_amd64.deb
-Size: 60700
-MD5sum: 3c9a123167406bed58ded113f3cb0782
-SHA256: ed2c2af98e889c1392b30f29d41962f20d9740cbe20370b8ef8c6e81137566cf
+Filename: pool/main/libp/libpsl/libpsl5t64_0.23.0-1_amd64.deb
+Size: 60776
+MD5sum: 095027c1c323211980f80c8171c199de
+SHA256: c9b60b845c99117a9160a8807fe4223919796c15f5413cea29381f3ce1a6a7df
 
 Package: libpsm2-2
 Source: libpsm2
@@ -71702,8 +71723,8 @@ SHA256: c577aea37adf1c233935816ba81da0a7f5c6e990928d7948e23126c6bc5fcf1f
 
 Package: libqalculate-data
 Source: libqalculate
-Version: 5.10.0-1
-Installed-Size: 2570
+Version: 5.11.0-1
+Installed-Size: 2611
 Maintainer: Qalculate Team <team+qalculate@tracker.debian.org>
 Architecture: all
 Replaces: libqalculate20-data (<< 3.20.1), libqalculate21-data
@@ -71715,28 +71736,28 @@ Description-md5: b4a9d85057a1a9f8aef5146972590a3a
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/libq/libqalculate/libqalculate-data_5.10.0-1_all.deb
-Size: 407304
-MD5sum: ee47785e4ba1fdbe158f662f3783a557
-SHA256: 970b3d3981706fc81374a0fbcc0a05f42d6e997e1dc7b9974f232c78c0fa0cd6
+Filename: pool/main/libq/libqalculate/libqalculate-data_5.11.0-1_all.deb
+Size: 411892
+MD5sum: ea02b254fe70774471d03a4cdc9412e3
+SHA256: 1c29e9a44dcaed5390743fa3585ae606cddba2421df1c8625cd4ce3ff658e23a
 
 Package: libqalculate23
 Source: libqalculate
-Version: 5.10.0-1
-Installed-Size: 6689
+Version: 5.11.0-1
+Installed-Size: 6766
 Maintainer: Qalculate Team <team+qalculate@tracker.debian.org>
 Architecture: amd64
-Depends: libqalculate-data, libc6 (>= 2.38), libcurl3t64-gnutls (>= 7.16.2), libgcc-s1 (>= 3.0), libgmp10 (>= 2:6.3.0+dfsg), libicu78 (>= 78.1-1~), libmpfr6 (>= 4.0.0), libstdc++6 (>= 13.1), libxml2-16 (>= 2.14.1)
+Depends: libqalculate-data, libc6 (>= 2.38), libcurl4-gnutls (>= 8.20.0-3~), libgcc-s1 (>= 3.0), libgmp10 (>= 2:6.3.0+dfsg), libicu78 (>= 78.1-1~), libmpfr6 (>= 4.0.0), libstdc++6 (>= 13.1), libxml2-16 (>= 2.14.1)
 Description: Powerful and easy to use desktop calculator - library
 Multi-Arch: same
 Homepage: https://qalculate.github.io/
 Description-md5: d259e364d39e86d2ec2ec0bbf8522e97
 libs
 Priority: optional
-Filename: pool/main/libq/libqalculate/libqalculate23_5.10.0-1_amd64.deb
-Size: 1860656
-MD5sum: 4c7a6bcf589ddcb6b0423e2740c7df5d
-SHA256: cda9b0f98f850c530a5bb645dfdd78e5c2721e6e9e1eeeaa4d169bed2d29675a
+Filename: pool/main/libq/libqalculate/libqalculate23_5.11.0-1_amd64.deb
+Size: 1879028
+MD5sum: 97782f0e6789b329c5c82896b06fdc6e
+SHA256: da6dcf0f7fbc77724b9b4bf1218e275d788a7f24fa45468bdd2e0dd5d4569617
 
 Package: libqapt3
 Source: libqapt (3.0.5-5)
@@ -74058,59 +74079,60 @@ SHA256: 32a5d0694b829fc381792728073b2847cba2901e0a98c55cfa00b98631fda336
 
 Package: libselinux1
 Source: libselinux
-Version: 3.10-1
-Installed-Size: 225
+Version: 3.11-2
+Installed-Size: 232
 Maintainer: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libpcre2-8-0 (>= 10.22)
+Recommends: selinux-utils
 Description: SELinux runtime shared libraries
 Multi-Arch: same
-Homepage: https://github.com/SELinuxProject
+Homepage: https://selinuxproject.github.io/
 Description-md5: 90f6e1cb06c527bc3fc11ec6f969c59c
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/libs/libselinux/libselinux1_3.10-1_amd64.deb
-Size: 85424
-MD5sum: a562c846fff3b8755f6d0fdaa3363c63
-SHA256: f2fbf6f89deaea225ad73be261461be91fae16ee27917a1ac2b9144ec998683d
+Filename: pool/main/libs/libselinux/libselinux1_3.11-2_amd64.deb
+Size: 87288
+MD5sum: 8007dc38c208d2e29ffb69fcc49c4598
+SHA256: 07f9cadfafdebd4487b323eed5dcc7ba65bf1f639df1fcf7225869839edad539
 
 Package: libsemanage-common
 Source: libsemanage
-Version: 3.10-1
-Installed-Size: 20
+Version: 3.11-1
+Installed-Size: 21
 Maintainer: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
 Architecture: all
 Description: Common files for SELinux policy management libraries
 Multi-Arch: foreign
-Homepage: https://selinuxproject.org
+Homepage: https://selinuxproject.github.io/
 Description-md5: c7a0a093650c85e838f42492add9b46b
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/libs/libsemanage/libsemanage-common_3.10-1_all.deb
-Size: 6776
-MD5sum: 499a1d1a662b1e39a277da56b5943f69
-SHA256: 2ceb2d8d8e991f4d23f819958ed26d5d0065a82379509c93bcb3b02354983173
+Filename: pool/main/libs/libsemanage/libsemanage-common_3.11-1_all.deb
+Size: 7148
+MD5sum: acb157dc28a4d1c8fe413ad812b699a3
+SHA256: c322450a9ed61de368442c5a5a916aeee5f0783ef2d81fbd4f555c6a1c4fcbcb
 
 Package: libsemanage2
 Source: libsemanage
-Version: 3.10-1
-Installed-Size: 300
+Version: 3.11-1
+Installed-Size: 301
 Maintainer: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libsemanage-common (>= 3.10-1), libaudit1 (>= 1:2.2.1), libbz2-1.0, libc6 (>= 2.38), libselinux1 (>= 3.10), libsepol2 (>= 3.10)
+Depends: libsemanage-common (>= 3.11-1), libaudit1 (>= 1:2.2.1), libbz2-1.0, libc6 (>= 2.38), libselinux1 (>= 3.11), libsepol2 (>= 3.11)
 Description: SELinux policy management library
 Multi-Arch: same
-Homepage: https://selinuxproject.org
+Homepage: https://selinuxproject.github.io/
 Description-md5: 8998b538051f37f69c5f1bf9a005fa56
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/libs/libsemanage/libsemanage2_3.10-1_amd64.deb
-Size: 92448
-MD5sum: 94bf4b8946335ee269506234b3d95e30
-SHA256: 30c49055cbd5ee0197ecf24f69c7231c09c08fec49cdb3691307f8c94852bdd0
+Filename: pool/main/libs/libsemanage/libsemanage2_3.11-1_amd64.deb
+Size: 93164
+MD5sum: 50331d18c2bc9342c9aee89d9f40e9c9
+SHA256: 4f210638036802b12ea8b3f792195a5a696afe21d9bca924e31ab33d1afcc5cf
 
 Package: libsepol2
 Source: libsepol
@@ -87862,22 +87884,22 @@ SHA256: e1959751833ba81d6c931bc853c0f472147654d428cbc18210f327f57a6597d4
 
 Package: libmfem4.9
 Source: mfem (4.9+ds-2)
-Version: 4.9+ds-2+b2
-Installed-Size: 19596
+Version: 4.9+ds-2+b3
+Installed-Size: 19588
 Maintainer: Alex Myczko <tar@debian.org>
 Architecture: amd64
 Replaces: libmfem4.9
-Depends: libc6 (>= 2.38), libgcc-s1 (>= 4.0), libhypre-3.1.0 (>= 3.1.0), libmetis5 (>= 5.1.0.dfsg), libopenmpi40 (>= 5.0.9), libstdc++6 (>= 13.1)
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 4.0), libhypre-301 (>= 3.1.0), libmetis5 (>= 5.1.0.dfsg), libopenmpi40 (>= 5.0.10), libstdc++6 (>= 13.1)
 Description: Lightweight, general, scalable C++ library for finite element methods
 Multi-Arch: same
 Homepage: https://github.com/mfem/mfem
 Description-md5: e1ccc7afcf6f837f0196eee7faa3d6ac
 libs
 Priority: optional
-Filename: pool/main/m/mfem/libmfem4.9_4.9+ds-2+b2_amd64.deb
-Size: 4935560
-MD5sum: 6d3c080ac57668f7a8ee810fba77a4b1
-SHA256: 77955261ed5f6e42247196704a24dcbe2def6940e97ca97406f51d4c7cd4bc80
+Filename: pool/main/m/mfem/libmfem4.9_4.9+ds-2+b3_amd64.deb
+Size: 4926308
+MD5sum: 2ad661149dc8097ce16cd58f7c358306
+SHA256: 3d29cbe14903b13c6d3f7adffc761a9545833649b5dc7043b2ce1a7d8a21e812
 
 Package: mffm-fftw1
 Source: mffm-fftw
@@ -97670,23 +97692,23 @@ MD5sum: 98aec8d605780632d4df1f725b367292
 SHA256: 0d8f14f904e68c95d17121ec3e60bea170c0e8c0375e9bee8187698c3d6d09b1
 
 Package: libots0
-Source: ots (0.5.0-9)
-Version: 0.5.0-9+b3
-Installed-Size: 205
-Maintainer: Debian QA Group <packages@qa.debian.org>
+Source: ots
+Version: 0.5.0-10
+Installed-Size: 203
+Maintainer: Haolin Xue <tzbkk@outlook.com>
 Architecture: amd64
 Depends: libc6 (>= 2.14), libglib2.0-0t64 (>= 2.76.0), libxml2-16 (>= 2.14.1)
 Description: Open Text Summarizer (library)
 Multi-Arch: same
-Homepage: http://libots.sourceforge.net/
+Homepage: https://github.com/neopunisher/Open-Text-Summarizer
 Description-md5: 25297800d6cba6545a5a518c52b09a3e
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/o/ots/libots0_0.5.0-9+b3_amd64.deb
-Size: 36412
-MD5sum: 7ed8e70870058615c043573c69d4a2b5
-SHA256: baacbf21d6c69ec14d6bca0bbb568e05c245fe118fd5dfdfeedaa8d38911606d
+Filename: pool/main/o/ots/libots0_0.5.0-10_amd64.deb
+Size: 35676
+MD5sum: 3799eb8656e9a3061688cd31fe4f5df5
+SHA256: 0f11a01f1011074260fff7594136bbd4c6c201cb17a433d706fabce5bfe1cc09
 
 Package: libow-3.2-4t64
 Source: owfs (3.2p4+dfsg1-7)
@@ -97810,8 +97832,8 @@ SHA256: 4e64ba0accdb96673567e6b8318f70a91f2c3dbb6765b1ae39e16ab0caf411b8
 
 Package: libp11-kit0
 Source: p11-kit
-Version: 0.26.2-3
-Installed-Size: 2110
+Version: 0.26.4-1
+Installed-Size: 2115
 Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libffi8 (>= 3.4)
@@ -97822,10 +97844,10 @@ Description-md5: 35d0359f0f7422b8380df1a478394459
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/p/p11-kit/libp11-kit0_0.26.2-3_amd64.deb
-Size: 466336
-MD5sum: 943ab0567eaa3c0aabc1372a3cdc3841
-SHA256: 987bc1f26a1e3c3e214723b78aabd50a9b301f038100b88f4a0fd5fa2938feb8
+Filename: pool/main/p/p11-kit/libp11-kit0_0.26.4-1_amd64.deb
+Size: 470504
+MD5sum: c3f94c1691eb3e324997a38805162cfe
+SHA256: f8460ff4934a4f7620e7c059058a8244e35b8ebbac302142a4e6dbeb386db97e
 
 Package: libp4est-2.3
 Source: p4est
@@ -99763,13 +99785,13 @@ MD5sum: 060cc17ff8cc9aa68a7ed321154bb178
 SHA256: 3cdd79fa3d2af9a95e5824c77f959ad959980d49e9275685655f433dabf70d11
 
 Package: libpetsc-complex3.25
-Source: petsc
-Version: 3.25.2+dfsg1-1
-Installed-Size: 29969
+Source: petsc (3.25.2+dfsg1-1)
+Version: 3.25.2+dfsg1-1+b1
+Installed-Size: 29970
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libpetsc-complex-3.6 (<< 3.6.2.dfsg1-4)
-Depends: libamd3 (>= 1:7.0.1), libblas3 | libblas.so.3, libc6 (>= 2.38), libcholmod5 (>= 1:7.3.1), libfftw3-double3 (>= 3.3.11), libfftw3-mpi3 (>= 3.3.11), libgcc-s1 (>= 4.0), libgfortran5 (>= 10), libhdf5-openmpi-310 (>= 1.12.0), libklu2 (>= 1:7.0.1), liblapack3 | liblapack.so.3, libmumps-5.9 (>= 5.9.0), libopenmpi40 (>= 5.0.10), libptscotch-7.0c (>= 7.0.11), libscalapack-openmpi2.2 (>= 2.2.3), libscotch-7.0c (>= 7.0.11), libspqr4 (>= 1:7.12.2+dfsg), libsuperlu-dist9 (>= 9.2.1+dfsg1), libsuperlu7 (>= 7.0.1+dfsg1), libumfpack6 (>= 1:7.0.1), libx11-6, libyaml-0-2, ocl-icd-libopencl1 | libopencl1
+Depends: libamd3 (>= 1:7.0.1), libblas3 | libblas.so.3, libc6 (>= 2.38), libcholmod5 (>= 1:7.3.1), libfftw3-double3 (>= 3.3.11), libfftw3-mpi3 (>= 3.3.11), libgcc-s1 (>= 4.0), libgfortran5 (>= 10), libhdf5-openmpi-310 (>= 1.12.0), libklu2 (>= 1:7.0.1), liblapack3 | liblapack.so.3, libmumps-5.9 (>= 5.9.0), libopenmpi40 (>= 5.0.10), libptscotch-7.0c (>= 7.0.12), libscalapack-openmpi2.2 (>= 2.2.3), libscotch-7.0c (>= 7.0.12), libspqr4 (>= 1:7.12.2+dfsg), libsuperlu-dist9 (>= 9.2.1+dfsg1), libsuperlu7 (>= 7.0.1+dfsg1), libumfpack6 (>= 1:7.0.1), libx11-6, libyaml-0-2, ocl-icd-libopencl1 | libopencl1
 Conflicts: libpetsc-complex-3.6 (<< 3.6.2.dfsg1-4)
 Breaks: libpetsc-complex3.10, libpetsc3.10-dev-common, libpetsc3.10-dev-examples, libslepc-complex3.10
 Description: Shared libraries for version 3.25 of PETSc with Complex Numbers
@@ -99778,20 +99800,20 @@ Homepage: http://www.mcs.anl.gov/petsc
 Description-md5: ccc2e67542adf6df9ade7e57c61aa8c0
 libs
 Priority: optional
-Filename: pool/main/p/petsc/libpetsc-complex3.25_3.25.2+dfsg1-1_amd64.deb
-Size: 8183900
-MD5sum: 78b02f3292dc3bf8435b1b1701a83099
-SHA256: 9a616f4a4e35e0108e0ad03a3e3d3435a63865ec977eb5141425e1e8a27ec5b9
+Filename: pool/main/p/petsc/libpetsc-complex3.25_3.25.2+dfsg1-1+b1_amd64.deb
+Size: 8185920
+MD5sum: 2b85da6732a2a450db14927056c241b4
+SHA256: 4f82233d207e8af63899fddf4ad008e5042e9dbf1609469b916e10a706fc187a
 
 Package: libpetsc-real3.25
-Source: petsc
-Version: 3.25.2+dfsg1-1
-Installed-Size: 26111
+Source: petsc (3.25.2+dfsg1-1)
+Version: 3.25.2+dfsg1-1+b1
+Installed-Size: 26112
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libpetsc3.6 (<< 3.6.2.dfsg1-4)
 Provides: libpetsc3.25
-Depends: libamd3 (>= 1:7.0.1), libblas3 | libblas.so.3, libc6 (>= 2.38), libcholmod5 (>= 1:7.3.1), libfftw3-double3 (>= 3.3.11), libfftw3-mpi3 (>= 3.3.11), libgcc-s1 (>= 4.0), libgfortran5 (>= 10), libhdf5-openmpi-310 (>= 1.12.0), libhypre-3.1.0 (>= 3.1.0), libklu2 (>= 1:7.0.1), liblapack3 | liblapack.so.3, libmumps-5.9 (>= 5.9.0), libopenmpi40 (>= 5.0.10), libptscotch-7.0c (>= 7.0.11), libscalapack-openmpi2.2 (>= 2.2.3), libscotch-7.0c (>= 7.0.11), libspqr4 (>= 1:7.12.2+dfsg), libsuperlu-dist9 (>= 9.2.1+dfsg1), libsuperlu7 (>= 7.0.1+dfsg1), libumfpack6 (>= 1:7.0.1), libx11-6, libyaml-0-2, ocl-icd-libopencl1 | libopencl1
+Depends: libamd3 (>= 1:7.0.1), libblas3 | libblas.so.3, libc6 (>= 2.38), libcholmod5 (>= 1:7.3.1), libfftw3-double3 (>= 3.3.11), libfftw3-mpi3 (>= 3.3.11), libgcc-s1 (>= 4.0), libgfortran5 (>= 10), libhdf5-openmpi-310 (>= 1.12.0), libhypre-301 (>= 3.1.0), libklu2 (>= 1:7.0.1), liblapack3 | liblapack.so.3, libmumps-5.9 (>= 5.9.0), libopenmpi40 (>= 5.0.10), libptscotch-7.0c (>= 7.0.12), libscalapack-openmpi2.2 (>= 2.2.3), libscotch-7.0c (>= 7.0.12), libspqr4 (>= 1:7.12.2+dfsg), libsuperlu-dist9 (>= 9.2.1+dfsg1), libsuperlu7 (>= 7.0.1+dfsg1), libumfpack6 (>= 1:7.0.1), libx11-6, libyaml-0-2, ocl-icd-libopencl1 | libopencl1
 Conflicts: libpetsc3.6 (<< 3.6.2.dfsg1-4)
 Breaks: libpetsc-real3.10, libpetsc3.10-dev-common, libpetsc3.10-dev-examples, libslepc-real3.10
 Description: Shared libraries for version 3.25 of PETSc
@@ -99800,47 +99822,47 @@ Homepage: http://www.mcs.anl.gov/petsc
 Description-md5: 9a2bd2fb2ff44e9f695c7c735133e785
 libs
 Priority: optional
-Filename: pool/main/p/petsc/libpetsc-real3.25_3.25.2+dfsg1-1_amd64.deb
-Size: 8027128
-MD5sum: 7554eb03dfb04659911fc4f4ff710331
-SHA256: d9da546cf302824114cdb975fe91d6f2b07096da6253c08e49ef6ff793e38699
+Filename: pool/main/p/petsc/libpetsc-real3.25_3.25.2+dfsg1-1+b1_amd64.deb
+Size: 8026916
+MD5sum: d07b4c0a995afc60f8dd0df659f7c7f4
+SHA256: e044741e1a0752c82da7be0e462ad0acb4a16b5606fc921613283c2b032291ee
 
 Package: libpetsc64-complex3.25
-Source: petsc
-Version: 3.25.2+dfsg1-1
-Installed-Size: 30498
+Source: petsc (3.25.2+dfsg1-1)
+Version: 3.25.2+dfsg1-1+b1
+Installed-Size: 30499
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libamd3 (>= 1:7.0.1), libblas3 | libblas.so.3, libc6 (>= 2.38), libcholmod5 (>= 1:7.3.1), libfftw3-double3 (>= 3.3.11), libfftw3-mpi3 (>= 3.3.11), libgcc-s1 (>= 4.0), libgfortran5 (>= 10), libhdf5-openmpi-310 (>= 1.12.0), libklu2 (>= 1:7.0.1), liblapack3 | liblapack.so.3, libmumps-64pord-5.9 (>= 5.9.0), libopenmpi40 (>= 5.0.10), libptscotch-64i-7.0 (>= 7.0.11), libscalapack-openmpi2.2 (>= 2.2.3), libscotch-64i-7.0 (>= 7.0.11), libspqr4 (>= 1:7.12.2+dfsg), libumfpack6 (>= 1:7.0.1), libx11-6, libyaml-0-2, ocl-icd-libopencl1 | libopencl1
+Depends: libamd3 (>= 1:7.0.1), libblas3 | libblas.so.3, libc6 (>= 2.38), libcholmod5 (>= 1:7.3.1), libfftw3-double3 (>= 3.3.11), libfftw3-mpi3 (>= 3.3.11), libgcc-s1 (>= 4.0), libgfortran5 (>= 10), libhdf5-openmpi-310 (>= 1.12.0), libklu2 (>= 1:7.0.1), liblapack3 | liblapack.so.3, libmumps-64pord-5.9 (>= 5.9.0), libopenmpi40 (>= 5.0.10), libptscotch-64i-7.0 (>= 7.0.12), libscalapack-openmpi2.2 (>= 2.2.3), libscotch-64i-7.0 (>= 7.0.12), libspqr4 (>= 1:7.12.2+dfsg), libumfpack6 (>= 1:7.0.1), libx11-6, libyaml-0-2, ocl-icd-libopencl1 | libopencl1
 Description: Shared libraries for version 3.25 of 64-bit PETSc with Complex Numbers
 Multi-Arch: same
 Homepage: http://www.mcs.anl.gov/petsc
 Description-md5: ccce3105465b48f1c0442c7dce887d19
 libs
 Priority: optional
-Filename: pool/main/p/petsc/libpetsc64-complex3.25_3.25.2+dfsg1-1_amd64.deb
-Size: 8110728
-MD5sum: 8bb4fd55d64ff750cd4bd2c08486bbe4
-SHA256: 770468e39f6cd6684ee5dfa1d36466d958d87b7e92bf9496c9e66e4b3ec9036b
+Filename: pool/main/p/petsc/libpetsc64-complex3.25_3.25.2+dfsg1-1+b1_amd64.deb
+Size: 8105928
+MD5sum: 08db0541ab8bdd51095743aa3b62c6aa
+SHA256: 5d1eb7549bf364d4e242a28e644b1e56f930dcbf41756ec90d5dedbbe0b87356
 
 Package: libpetsc64-real3.25
-Source: petsc
-Version: 3.25.2+dfsg1-1
-Installed-Size: 26503
+Source: petsc (3.25.2+dfsg1-1)
+Version: 3.25.2+dfsg1-1+b1
+Installed-Size: 26504
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Provides: libpetsc64-3.25
-Depends: libamd3 (>= 1:7.0.1), libblas3 | libblas.so.3, libc6 (>= 2.38), libcholmod5 (>= 1:7.3.1), libfftw3-double3 (>= 3.3.11), libfftw3-mpi3 (>= 3.3.11), libgcc-s1 (>= 4.0), libgfortran5 (>= 10), libhdf5-openmpi-310 (>= 1.12.0), libhypre64-3.1.0 (>= 3.1.0), libklu2 (>= 1:7.0.1), liblapack3 | liblapack.so.3, libmumps-64pord-5.9 (>= 5.9.0), libopenmpi40 (>= 5.0.10), libptscotch-64i-7.0 (>= 7.0.11), libscalapack-openmpi2.2 (>= 2.2.3), libscotch-64i-7.0 (>= 7.0.11), libspqr4 (>= 1:7.12.2+dfsg), libumfpack6 (>= 1:7.0.1), libx11-6, libyaml-0-2, ocl-icd-libopencl1 | libopencl1
+Depends: libamd3 (>= 1:7.0.1), libblas3 | libblas.so.3, libc6 (>= 2.38), libcholmod5 (>= 1:7.3.1), libfftw3-double3 (>= 3.3.11), libfftw3-mpi3 (>= 3.3.11), libgcc-s1 (>= 4.0), libgfortran5 (>= 10), libhdf5-openmpi-310 (>= 1.12.0), libhypre64-301 (>= 3.1.0), libklu2 (>= 1:7.0.1), liblapack3 | liblapack.so.3, libmumps-64pord-5.9 (>= 5.9.0), libopenmpi40 (>= 5.0.10), libptscotch-64i-7.0 (>= 7.0.12), libscalapack-openmpi2.2 (>= 2.2.3), libscotch-64i-7.0 (>= 7.0.12), libspqr4 (>= 1:7.12.2+dfsg), libumfpack6 (>= 1:7.0.1), libx11-6, libyaml-0-2, ocl-icd-libopencl1 | libopencl1
 Description: Shared libraries for version 3.25 of 64-bit PETSc
 Multi-Arch: same
 Homepage: http://www.mcs.anl.gov/petsc
 Description-md5: b68f80ea9462979cd4b63d52ea6db846
 libs
 Priority: optional
-Filename: pool/main/p/petsc/libpetsc64-real3.25_3.25.2+dfsg1-1_amd64.deb
-Size: 7923756
-MD5sum: b20e1cbf0c844f392457a1274c0caf2f
-SHA256: b9ac6beb28e68f934a6ea9d27fe4234eb11951ba6e55e6e5893a99708db74a0c
+Filename: pool/main/p/petsc/libpetsc64-real3.25_3.25.2+dfsg1-1+b1_amd64.deb
+Size: 7928868
+MD5sum: 661e6bac8ff08863616747f5aa3780b9
+SHA256: 10d077b6c875320ddec1dfc59d3a3424559912858a058d69608d3d3ae8f7dab0
 
 Package: libpfs2
 Source: pfstools
@@ -116469,7 +116491,7 @@ SHA256: 90fa168a95c445dea3bbe09f3a03c981ad0188bff86c13aeba624d83c892f308
 
 Package: libs6-2.15
 Source: s6
-Version: 2.15.0.0-2
+Version: 2.15.1.0-1
 Installed-Size: 73
 Maintainer: Shengjing Zhu <zhsj@debian.org>
 Architecture: amd64
@@ -116481,10 +116503,10 @@ Homepage: https://skarnet.org/software/s6/
 Description-md5: b55e6190c8eb81d2d82b379960df40e1
 libs
 Priority: optional
-Filename: pool/main/s/s6/libs6-2.15_2.15.0.0-2_amd64.deb
-Size: 20876
-MD5sum: 33ffa14f9393e4459eb7fc0ef3c7509d
-SHA256: e594c7e9142c48acfbbd041f19576ecb9916151d3f51d1e10530095990143cc1
+Filename: pool/main/s/s6/libs6-2.15_2.15.1.0-1_amd64.deb
+Size: 20896
+MD5sum: 59598fd7825203ba745e2705f01557e4
+SHA256: 80b90b39d39dab5ff1b9364b27f84b57543acafc6f9c32517338f6216d8e2628
 
 Package: libsaclib0t64
 Source: saclib (2.2.8-6.1)
@@ -118831,7 +118853,7 @@ SHA256: fbde85087c06fe4b05002b8b78afdd35841f7662f578ed03a1cd06cbfb402136
 
 Package: libskarnet2.15
 Source: skalibs
-Version: 2.15.0.0-2
+Version: 2.15.1.0-1
 Installed-Size: 269
 Maintainer: Shengjing Zhu <zhsj@debian.org>
 Architecture: amd64
@@ -118842,10 +118864,10 @@ Homepage: https://skarnet.org/software/skalibs/
 Description-md5: 2c9bf95082267dbab8cd3dc4e15abcba
 libs
 Priority: optional
-Filename: pool/main/s/skalibs/libskarnet2.15_2.15.0.0-2_amd64.deb
-Size: 86724
-MD5sum: 43710aaaef6a0fcd058dc243ec47789f
-SHA256: 19a441f04414a68c554747d095481be1b311e7499035dcdee425de1cfd1c7ee9
+Filename: pool/main/s/skalibs/libskarnet2.15_2.15.1.0-1_amd64.deb
+Size: 86660
+MD5sum: a9d6685f095f37e8fd19c946ca2a9e94
+SHA256: ccb72eb6ac42ebd6d654eb90647323484cebf3b61fb1405b8fa15a8c26c9cab2
 
 Package: libskypat3t64
 Source: skypat (3.2.0-1)
@@ -122139,7 +122161,7 @@ SHA256: 167e0b6bc63bd882266eccf076fdc0db48e4b1089357cda0e6377f13c272b67a
 
 Package: libsundials-arkode6
 Source: sundials (7.1.1+dfsg1-12)
-Version: 7.1.1+dfsg1-12+b1
+Version: 7.1.1+dfsg1-12+b2
 Installed-Size: 1329
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -122150,14 +122172,14 @@ Homepage: https://www.llnl.gov/CASC/sundials/
 Description-md5: 5c257d12d16e49e3873ad356646fc5bf
 libs
 Priority: optional
-Filename: pool/main/s/sundials/libsundials-arkode6_7.1.1+dfsg1-12+b1_amd64.deb
-Size: 282252
-MD5sum: 61ec2fea2ecd86ee5caa768d329bb09a
-SHA256: ecf59556cc15da94741bf140d4f83e3589dd91e2980dafa8aa5244a73087dffc
+Filename: pool/main/s/sundials/libsundials-arkode6_7.1.1+dfsg1-12+b2_amd64.deb
+Size: 282688
+MD5sum: 6f57731f3aa207b186cad1eda10a2d14
+SHA256: a95516b2eebf4d67137d658fc2163edff1fc8142074f3d9de5b5fba30b82ecce
 
 Package: libsundials-core7
 Source: sundials (7.1.1+dfsg1-12)
-Version: 7.1.1+dfsg1-12+b1
+Version: 7.1.1+dfsg1-12+b2
 Installed-Size: 270
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -122168,14 +122190,14 @@ Homepage: https://www.llnl.gov/CASC/sundials/
 Description-md5: ca34dcaed2a5551b076bb63d558150dd
 libs
 Priority: optional
-Filename: pool/main/s/sundials/libsundials-core7_7.1.1+dfsg1-12+b1_amd64.deb
-Size: 91212
-MD5sum: 73c96ed422e6bcf2602c6bfade2f04f5
-SHA256: d238cb81db46228a6223780841f837c628f4f91b5a9762400d0f52e43212ab9f
+Filename: pool/main/s/sundials/libsundials-core7_7.1.1+dfsg1-12+b2_amd64.deb
+Size: 91052
+MD5sum: 523c124282fa0a9b6fd70a9445ec29a9
+SHA256: 36d138ddcbf2d6307d735cfb5543f8ccecdbc7d1b2c16b5f23c3ff1c5413e3b0
 
 Package: libsundials-cvode7
 Source: sundials (7.1.1+dfsg1-12)
-Version: 7.1.1+dfsg1-12+b1
+Version: 7.1.1+dfsg1-12+b2
 Installed-Size: 588
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -122186,14 +122208,14 @@ Homepage: https://www.llnl.gov/CASC/sundials/
 Description-md5: 0ff52e3f29b18deabc6db57ac3b5e1d1
 libs
 Priority: optional
-Filename: pool/main/s/sundials/libsundials-cvode7_7.1.1+dfsg1-12+b1_amd64.deb
-Size: 151488
-MD5sum: 7220a875b61768fd29a491818409e0a0
-SHA256: 7da65eaf3f7367aef18b25deca42774d908d0a599d968f954875e81e91a3fab4
+Filename: pool/main/s/sundials/libsundials-cvode7_7.1.1+dfsg1-12+b2_amd64.deb
+Size: 151944
+MD5sum: 2fdf08c26cca9dbd484a743aae1047f7
+SHA256: 150c59ab2d39d7872430dffcf07705438ecd5a82083cdeb9a0f7f8b5deef51f7
 
 Package: libsundials-cvodes7
 Source: sundials (7.1.1+dfsg1-12)
-Version: 7.1.1+dfsg1-12+b1
+Version: 7.1.1+dfsg1-12+b2
 Installed-Size: 805
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -122204,14 +122226,14 @@ Homepage: https://www.llnl.gov/CASC/sundials/
 Description-md5: a9a4492d86a28ec7578a00e72cb5d2b1
 libs
 Priority: optional
-Filename: pool/main/s/sundials/libsundials-cvodes7_7.1.1+dfsg1-12+b1_amd64.deb
-Size: 192560
-MD5sum: 85070eacc57e3faf21ddb127a3d6bf1a
-SHA256: 07cd70f10bafef6de1f7a91cc29dc86eac2fafe84231d4adaf581c966ff3468b
+Filename: pool/main/s/sundials/libsundials-cvodes7_7.1.1+dfsg1-12+b2_amd64.deb
+Size: 191044
+MD5sum: a9a9523f14f0451dace97457362605f5
+SHA256: 5257f12aa942cdba99db0c9cd093db0843c9313dd8943773e1e530e3848d4156
 
 Package: libsundials-ida7
 Source: sundials (7.1.1+dfsg1-12)
-Version: 7.1.1+dfsg1-12+b1
+Version: 7.1.1+dfsg1-12+b2
 Installed-Size: 552
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -122222,14 +122244,14 @@ Homepage: https://www.llnl.gov/CASC/sundials/
 Description-md5: c359589cc273deb6f6dddc3d3f3a202d
 libs
 Priority: optional
-Filename: pool/main/s/sundials/libsundials-ida7_7.1.1+dfsg1-12+b1_amd64.deb
-Size: 144648
-MD5sum: 906c4ea2713604ffce9f6b192ea5326e
-SHA256: 23c42b469f82a0174b8dbe08c860653ec5d53cc7cb7d51826e89788e9de74c3f
+Filename: pool/main/s/sundials/libsundials-ida7_7.1.1+dfsg1-12+b2_amd64.deb
+Size: 144424
+MD5sum: f15a5734b507698ca49c2291fac45a33
+SHA256: 6d01d1e03c829ccdac7227d4ee1c0e9204656f1d6273395e59d57c430dbd4724
 
 Package: libsundials-idas6
 Source: sundials (7.1.1+dfsg1-12)
-Version: 7.1.1+dfsg1-12+b1
+Version: 7.1.1+dfsg1-12+b2
 Installed-Size: 769
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -122240,14 +122262,14 @@ Homepage: https://www.llnl.gov/CASC/sundials/
 Description-md5: 503ef1a5c6d979fe325b818c3a88ae03
 libs
 Priority: optional
-Filename: pool/main/s/sundials/libsundials-idas6_7.1.1+dfsg1-12+b1_amd64.deb
-Size: 185504
-MD5sum: 9ef2f342249b7e86c1da21ff4f30f4fd
-SHA256: 03d721baf7a4683aa8fae96c6479671ea01ebda556b164438427041586842d94
+Filename: pool/main/s/sundials/libsundials-idas6_7.1.1+dfsg1-12+b2_amd64.deb
+Size: 184296
+MD5sum: f72a19aa26841dd17662b4efb3e5c916
+SHA256: 5fd62cfe2dcb1659350ef21c39bd47a9bc039a70d2e1dc01b7a911d63ca11a4f
 
 Package: libsundials-kinsol7
 Source: sundials (7.1.1+dfsg1-12)
-Version: 7.1.1+dfsg1-12+b1
+Version: 7.1.1+dfsg1-12+b2
 Installed-Size: 468
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -122258,32 +122280,32 @@ Homepage: https://www.llnl.gov/CASC/sundials/
 Description-md5: f267dbe7489f2eb95d1c6b5d83f7182e
 libs
 Priority: optional
-Filename: pool/main/s/sundials/libsundials-kinsol7_7.1.1+dfsg1-12+b1_amd64.deb
-Size: 126128
-MD5sum: d1cd905667415f90d41773993b7f7939
-SHA256: 761ffc6c14f8872afb70d1b62fa38e29a878e3b15f79ee0ced3fefa669ceedb7
+Filename: pool/main/s/sundials/libsundials-kinsol7_7.1.1+dfsg1-12+b2_amd64.deb
+Size: 126520
+MD5sum: 3db6b974c8b655303fe1a0ca983ba9e4
+SHA256: 50cb3ae868706efa603534ab835666fd2c8738a87d16abc7cbed5a9746a36594
 
 Package: libsundials-nvecparallel-hypre7
 Source: sundials (7.1.1+dfsg1-12)
-Version: 7.1.1+dfsg1-12+b1
+Version: 7.1.1+dfsg1-12+b2
 Installed-Size: 109
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.2.5), libhypre-3.1.0 (>= 3.1.0), libopenmpi40 (>= 5.0.10), libsundials-core7 (>= 7.1.1+dfsg1)
+Depends: libc6 (>= 2.2.5), libhypre-301 (>= 3.1.0), libopenmpi40 (>= 5.0.10), libsundials-core7 (>= 7.1.1+dfsg1)
 Description: HYPRE vector operations library (SUNDIALS library)
 Multi-Arch: same
 Homepage: https://www.llnl.gov/CASC/sundials/
 Description-md5: 8da582d23ea48351d8eb61e029bee537
 libs
 Priority: optional
-Filename: pool/main/s/sundials/libsundials-nvecparallel-hypre7_7.1.1+dfsg1-12+b1_amd64.deb
-Size: 55480
-MD5sum: 59451c022aa4acb65715fe25be73c375
-SHA256: 3cae2833717d120c9edbf33512fcf7594a73dd24607f3c6d3a670938c2d12683
+Filename: pool/main/s/sundials/libsundials-nvecparallel-hypre7_7.1.1+dfsg1-12+b2_amd64.deb
+Size: 55520
+MD5sum: fd8fc61021a67e85f9545332d5cda5e8
+SHA256: 0b9661770ad39720a34a1ebe98527b90c6b83342073d3b53fc17cfab5c1bd8bb
 
 Package: libsundials-nvecparallel-mpi7
 Source: sundials (7.1.1+dfsg1-12)
-Version: 7.1.1+dfsg1-12+b1
+Version: 7.1.1+dfsg1-12+b2
 Installed-Size: 316
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -122296,14 +122318,14 @@ Homepage: https://www.llnl.gov/CASC/sundials/
 Description-md5: 7697e104e796dd21736f11b715949ed5
 libs
 Priority: optional
-Filename: pool/main/s/sundials/libsundials-nvecparallel-mpi7_7.1.1+dfsg1-12+b1_amd64.deb
-Size: 83360
-MD5sum: d7acd62a0d1e0e159b8e616b1c165d39
-SHA256: c9d5647bc12aff30852e826aeffe3599ce9d565f9950f2dd43735bc0614d2c86
+Filename: pool/main/s/sundials/libsundials-nvecparallel-mpi7_7.1.1+dfsg1-12+b2_amd64.deb
+Size: 83512
+MD5sum: c86ed153056b4275bcbf72f228d5ee17
+SHA256: 645b61649fc3953b109b9ae2fef5e42966774094fc17e9d9bd89d4bc5cbf08c9
 
 Package: libsundials-nvecparallel-openmp7
 Source: sundials (7.1.1+dfsg1-12)
-Version: 7.1.1+dfsg1-12+b1
+Version: 7.1.1+dfsg1-12+b2
 Installed-Size: 164
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -122314,32 +122336,32 @@ Homepage: https://www.llnl.gov/CASC/sundials/
 Description-md5: 9c81ecc23d7793f2a719fb8dfd4f9fb5
 libs
 Priority: optional
-Filename: pool/main/s/sundials/libsundials-nvecparallel-openmp7_7.1.1+dfsg1-12+b1_amd64.deb
+Filename: pool/main/s/sundials/libsundials-nvecparallel-openmp7_7.1.1+dfsg1-12+b2_amd64.deb
 Size: 65280
-MD5sum: bcb44761405c5355a8d6b190bf26a83c
-SHA256: b37ea9549e96214e23d9fdeb872b62f88d0e9422f87935194f712921e93dd157
+MD5sum: 959cd7d0b6d0f975f17a2977b71b5de2
+SHA256: ac572f01e4a569879035aaa026eff7e990dd2f9203d93259c0e75c80b5d216f7
 
 Package: libsundials-nvecparallel-petsc7
 Source: sundials (7.1.1+dfsg1-12)
-Version: 7.1.1+dfsg1-12+b1
+Version: 7.1.1+dfsg1-12+b2
 Installed-Size: 105
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.2.5), libopenmpi40 (>= 5.0.10), libpetsc-real3.25 (>= 3.25.1+dfsg1), libsundials-core7 (>= 7.1.1+dfsg1)
+Depends: libc6 (>= 2.2.5), libopenmpi40 (>= 5.0.10), libpetsc-real3.25 (>= 3.25.2+dfsg1), libsundials-core7 (>= 7.1.1+dfsg1)
 Description: PETSc vector operations library (SUNDIALS library)
 Multi-Arch: same
 Homepage: https://www.llnl.gov/CASC/sundials/
 Description-md5: f66e08e2eab2e39bae8b39de4d4a145e
 libs
 Priority: optional
-Filename: pool/main/s/sundials/libsundials-nvecparallel-petsc7_7.1.1+dfsg1-12+b1_amd64.deb
-Size: 56276
-MD5sum: 9f842018858875b3979d21d6e0533db7
-SHA256: 69456e344ee04606f9b56fe194e5a2d34330db6fa7cb9d415ef866e4fded8165
+Filename: pool/main/s/sundials/libsundials-nvecparallel-petsc7_7.1.1+dfsg1-12+b2_amd64.deb
+Size: 56284
+MD5sum: b83c08d2ce806c2eb77c6e4f89458d70
+SHA256: 1b1ea5f29d7fb0b245e679cbe0a67ca405711da9ed7401035997fcd0840a8930
 
 Package: libsundials-nvecparallel-pthread7
 Source: sundials (7.1.1+dfsg1-12)
-Version: 7.1.1+dfsg1-12+b1
+Version: 7.1.1+dfsg1-12+b2
 Installed-Size: 188
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -122350,14 +122372,14 @@ Homepage: https://www.llnl.gov/CASC/sundials/
 Description-md5: d0d9f60c2b63b48333180adeb6b4dcd9
 libs
 Priority: optional
-Filename: pool/main/s/sundials/libsundials-nvecparallel-pthread7_7.1.1+dfsg1-12+b1_amd64.deb
-Size: 67644
-MD5sum: ccbb7b1bb4bc77935e54040bec41b61e
-SHA256: a4feed6439a3e3bbd42799e014cdc13da8a27224d0bdf73670df117ec853463a
+Filename: pool/main/s/sundials/libsundials-nvecparallel-pthread7_7.1.1+dfsg1-12+b2_amd64.deb
+Size: 67696
+MD5sum: b8789df9a25442cb825bdd75c29996ad
+SHA256: 966dd5d1fe23c29f5c10103ce8039bf102d9f160234f7fb638a5f05d4f49ab7e
 
 Package: libsundials-nvecserial7
 Source: sundials (7.1.1+dfsg1-12)
-Version: 7.1.1+dfsg1-12+b1
+Version: 7.1.1+dfsg1-12+b2
 Installed-Size: 230
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -122368,32 +122390,32 @@ Homepage: https://www.llnl.gov/CASC/sundials/
 Description-md5: 8f934980000cb2191bcd580d4875420f
 libs
 Priority: optional
-Filename: pool/main/s/sundials/libsundials-nvecserial7_7.1.1+dfsg1-12+b1_amd64.deb
-Size: 72800
-MD5sum: 293490dad87c29773f647725a4585ae2
-SHA256: b32f6a7812a71232b355245742151fc53bf3037d7c9c764955af8c85e2d4c546
+Filename: pool/main/s/sundials/libsundials-nvecserial7_7.1.1+dfsg1-12+b2_amd64.deb
+Size: 72868
+MD5sum: 9e44aaa05a02f89908694956d3dec296
+SHA256: 8bf7f28784eb0302194388b2ed29d289ab46ab8c6d719f96f7848bd9d0a6a1e2
 
 Package: libsundials-sunlinsol5
 Source: sundials (7.1.1+dfsg1-12)
-Version: 7.1.1+dfsg1-12+b1
+Version: 7.1.1+dfsg1-12+b2
 Installed-Size: 487
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.4), libgcc-s1 (>= 3.0), libklu2 (>= 1:7.0.1), libpetsc-real3.25 (>= 3.25.1+dfsg1), libsundials-core7 (>= 7.1.1+dfsg1), libsundials-nvecparallel-petsc7 (>= 7.1.1+dfsg1), libsundials-sunmatrix5 (>= 7.1.1+dfsg1)
+Depends: libc6 (>= 2.4), libgcc-s1 (>= 3.0), libklu2 (>= 1:7.0.1), libpetsc-real3.25 (>= 3.25.2+dfsg1), libsundials-core7 (>= 7.1.1+dfsg1), libsundials-nvecparallel-petsc7 (>= 7.1.1+dfsg1), libsundials-sunmatrix5 (>= 7.1.1+dfsg1)
 Description: differential equation solver (SUNDIALS library)
 Multi-Arch: same
 Homepage: https://www.llnl.gov/CASC/sundials/
 Description-md5: c2d9713eb79bcc429f16fb6375356abc
 libs
 Priority: optional
-Filename: pool/main/s/sundials/libsundials-sunlinsol5_7.1.1+dfsg1-12+b1_amd64.deb
-Size: 92588
-MD5sum: a66842b43e6ea1303a46805851b3b6ed
-SHA256: c7d379be460a8515e9c197abf3de94c5bb0d25d9ee5eafeb5f2ceeac45a0460f
+Filename: pool/main/s/sundials/libsundials-sunlinsol5_7.1.1+dfsg1-12+b2_amd64.deb
+Size: 92604
+MD5sum: c10b1c119f42d61857e91572215998e4
+SHA256: 93c6b4501b44568dae1f9a092ff58515988f6ad6a56717d936393d73931dcdc4
 
 Package: libsundials-sunmatrix5
 Source: sundials (7.1.1+dfsg1-12)
-Version: 7.1.1+dfsg1-12+b1
+Version: 7.1.1+dfsg1-12+b2
 Installed-Size: 197
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -122404,10 +122426,10 @@ Homepage: https://www.llnl.gov/CASC/sundials/
 Description-md5: c2d9713eb79bcc429f16fb6375356abc
 libs
 Priority: optional
-Filename: pool/main/s/sundials/libsundials-sunmatrix5_7.1.1+dfsg1-12+b1_amd64.deb
-Size: 68112
-MD5sum: f06972182829765c92e715303c43bae2
-SHA256: 0f8ef87a3948cb4d6ba2a374b2bcf8fb4d78eabbb38e5fc34d5913fbfb8f57b6
+Filename: pool/main/s/sundials/libsundials-sunmatrix5_7.1.1+dfsg1-12+b2_amd64.deb
+Size: 68120
+MD5sum: ce5ce3118081c74c13ac35254eda8fd2
+SHA256: 0455328e2191a70fa3077aaabdbd8604f8ecd7f0282fd46522d3549a1133c85e
 
 Package: libsunpinyin3v5
 Source: sunpinyin (3.0.0~rc2+ds1-5)
@@ -123036,8 +123058,8 @@ SHA256: 038d7635aaefec8a1557f9d3182ba758c5ae144d2423fa9072e5300ac4abb587
 
 Package: libsystemd-shared
 Source: systemd
-Version: 261.1-2
-Installed-Size: 8518
+Version: 261.1-3
+Installed-Size: 8519
 Maintainer: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34)
@@ -123050,15 +123072,15 @@ Description-md5: 96ee33bdb47b225b7cbe0eccdc682e81
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/s/systemd/libsystemd-shared_261.1-2_amd64.deb
-Size: 2566872
-MD5sum: 307ca2d5e08a5acadd8432cc9edb38f1
-SHA256: 70ae8bf7bd292e27c2077e874cc97878b5db75e877ca1a7e435fcd51a890146f
+Filename: pool/main/s/systemd/libsystemd-shared_261.1-3_amd64.deb
+Size: 2565708
+MD5sum: b69385122368859c85e37378efdcd7ee
+SHA256: 7eea7c8fa06416606df3d3217849d46690ab672e2192c803002fe8a506d6a756
 
 Package: libsystemd0
 Source: systemd
-Version: 261.1-2
-Installed-Size: 1280
+Version: 261.1-3
+Installed-Size: 1281
 Maintainer: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34)
@@ -123071,15 +123093,15 @@ Description-md5: 9afc42993cf4bce87281097b6b9586c9
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/s/systemd/libsystemd0_261.1-2_amd64.deb
-Size: 467112
-MD5sum: d231542218f303dc83e51345676f2c30
-SHA256: 1fef15b683f3dc798b6d10cb40393e047830f989e2ba6c7fb8b557ca9ae4f800
+Filename: pool/main/s/systemd/libsystemd0_261.1-3_amd64.deb
+Size: 466972
+MD5sum: 24a6923268546c7cdddb3a7f00f18d29
+SHA256: 96e3a4d19a23f1e159271cd7875e141df6352b1795da25537742c73eb88bce28
 
 Package: libudev1
 Source: systemd
-Version: 261.1-2
-Installed-Size: 356
+Version: 261.1-3
+Installed-Size: 357
 Maintainer: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34)
@@ -123090,10 +123112,10 @@ Description-md5: ee41de00cbb160aaa4ae2b193df34f91
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/s/systemd/libudev1_261.1-2_amd64.deb
-Size: 138356
-MD5sum: d7284032babc3b0ebc73fd0df7294a60
-SHA256: 54991d4f06ee2af2b782be6dc2ac49295ed603daa2914fef0e3205c1ac2d12d7
+Filename: pool/main/s/systemd/libudev1_261.1-3_amd64.deb
+Size: 138836
+MD5sum: a6ad7c92beb5d3c230fc9a1514761309
+SHA256: 66ac6284085f792b5f7f638ce7ed980b5328f871c97e963c1e71f8389b956722
 
 Package: libpreferencepanes1
 Source: systempreferences.app (1.2.1-4)
