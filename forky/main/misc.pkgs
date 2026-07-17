@@ -1003,23 +1003,23 @@ MD5sum: 0f2915010bbe4da09d49e66f210d93c5
 SHA256: eac4668c45fc3b77dc28a825fd3182f8e89abf5b7e2b42dbd5ce35d4a2a72db1
 
 Package: ayatana-indicator-sound
-Version: 24.5.2-1
-Installed-Size: 1081
+Version: 24.5.3-4
+Installed-Size: 1185
 Maintainer: Ayatana Packagers <pkg-ayatana-devel@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: indicator-sound
-Depends: libaccountsservice0 (>= 0.6.8), libayatana-common0 (>= 0.9.5), libc6 (>= 2.34), libgee-0.8-2 (>= 0.8.3), libglib2.0-0t64 (>= 2.80.0), libnotify4 (>= 0.7.0), libpulse-mainloop-glib0 (>= 5.0), libpulse0 (>= 5.0), dconf-gsettings-backend | gsettings-backend, init-system-helpers (>= 1.52), pipewire-pulse | pulseaudio, ayatana-indicator-common (>= 0.8.0), libglib2.0-bin
-Suggests: unity-control-center | gnome-control-center | pavucontrol | mate-media | lomiri-system-settings, accountsservice, lomiri-greeter-session-broadcast
+Depends: ayatana-indicator-common, libglib2.0-bin, pipewire-pulse | pulseaudio, dconf-gsettings-backend | gsettings-backend, libaccountsservice0 (>= 0.6.8), libayatana-common0 (>= 0.9.4), libc6 (>= 2.34), libgee-0.8-2 (>= 0.8.3), libglib2.0-0t64 (>= 2.80.0), libnotify4 (>= 0.7.0), libpulse-mainloop-glib0 (>= 0.99.1), libpulse0 (>= 0.99.1)
+Suggests: accountsservice, lomiri-greeter-session-broadcast, unity-control-center | gnome-control-center | pavucontrol | mate-media | lomiri-system-settings
 Breaks: indicator-sound
 Description: Ayatana Indicator for managing system sound
 Homepage: https://github.com/AyatanaIndicators/ayatana-indicator-sound
 Description-md5: 54f86d45d87d74624415675a3536a3b8
 misc
 Priority: optional
-Filename: pool/main/a/ayatana-indicator-sound/ayatana-indicator-sound_24.5.2-1_amd64.deb
-Size: 162784
-MD5sum: ce91c436b9d35861aac8428d3facd503
-SHA256: 612e742b11c89d58601f37a33d5e3d8cca70f8452479d0e354a34825ac3ff66b
+Filename: pool/main/a/ayatana-indicator-sound/ayatana-indicator-sound_24.5.3-4_amd64.deb
+Size: 250484
+MD5sum: 292ee680fe447d2ad6aa3770b9406ed6
+SHA256: bd3d55272c340325ba2b280e720c628bad21855c70d0ab2ce283e1ba96bc957f
 
 Package: bcal
 Version: 2.5-1
@@ -2469,12 +2469,12 @@ MD5sum: b4513afdb6f943a96ceb8c1f16580fe3
 SHA256: 8d42d07f832c9fa2b3c74a2c6cc0a49b3c6574932f523cba1567e410ba082ec8
 
 Package: console-cyrillic
-Version: 0.9-18
-Installed-Size: 2358
+Version: 0.9-19
+Installed-Size: 2279
 Maintainer: Anton Zinoviev <zinoviev@debian.org>
 Architecture: all
 Replaces: console-tools-cyrillic
-Depends: perl-base (>= 5.8.3-2), debconf | debconf-2.0, kbd | console-tools, console-terminus
+Depends: perl:any, debconf | debconf-2.0, kbd | console-tools, console-terminus
 Suggests: libunicode-string-perl, perl, console-setup | console-setup-mini
 Conflicts: console-tools-cyrillic
 Description: Cyrillic fonts and keyboard layouts for Linux console
@@ -2486,10 +2486,10 @@ Tag: admin::configuring, culture::bulgarian, culture::mongolian,
  role::data, role::program, use::configuring, x11::font
 misc
 Priority: optional
-Filename: pool/main/c/console-cyrillic/console-cyrillic_0.9-18_all.deb
-Size: 109956
-MD5sum: ccc46daf51c1519a6c8414066cc24f80
-SHA256: 25cc3874ce3eba37c988bc48097fd32fca7777845b69d2d127512dfda256d8b5
+Filename: pool/main/c/console-cyrillic/console-cyrillic_0.9-19_all.deb
+Size: 116012
+MD5sum: 0ee20a3e37479dceba49d7c0c5dab233
+SHA256: ebf01666f587c20779636fd2da2eefd8ee0cd58fb8a2674608b2f0f86f518eee
 
 Package: credential-sheets
 Version: 0.0.3-5
@@ -7807,25 +7807,6 @@ Filename: pool/main/k/kseexpr/libkseexpr-data_4.0.4.0-8_all.deb
 Size: 75892
 MD5sum: 38bcbcd60e6a48402020c9c3d53b0ad2
 SHA256: 7556164b6680e2b057a9eed880bede3bf65245600bd98ecfb2ee301be644c9ed
-
-Package: kworkflow
-Version: 1:0.10-2
-Installed-Size: 3824
-Maintainer: Rodrigo Siqueira <siqueirajordao@riseup.net>
-Architecture: all
-Depends: git, tar (>= 1.34), pulseaudio-utils, rsync, bzip2, lzip, xz-utils, lzop, bc, git-email, sqlite3, pv, make, screen, wget, dialog, b4, libxml-xpath-perl, curl, libjs-sphinxdoc (>= 9.0)
-Recommends: bison, build-essential, cpio, dwarves, flex, kmod, libelf-dev, libncurses-dev, libssl-dev, openssl
-Suggests: ccache, clang, dunst, fish, libnotify-bin, lld, llvm, patch-hub, pciutils, procps, qemu, xdg-user-dirs, xmlto, zstd
-Description: Inglorious kernel developer workflow tool
-Multi-Arch: foreign
-Homepage: https://github.com/kworkflow/kworkflow
-Description-md5: 137366ee1e6d1959eed90df55dad4f77
-misc
-Priority: optional
-Filename: pool/main/k/kworkflow/kworkflow_0.10-2_all.deb
-Size: 1811204
-MD5sum: 6e76342ccc8e6efd48a46a66d106fc1e
-SHA256: 413f8e1fcf053d2b8715990436068b7de5072f2b0e6acec1d1021f5ee04f93a4
 
 Package: kxstitch
 Version: 3.0.0~git20250215.a6082a9b-1
