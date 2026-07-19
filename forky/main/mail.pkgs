@@ -1320,11 +1320,11 @@ SHA256: eb366d7991ac3e54ee978fcff8baad931458fef2b87f5f93d18e161fcd86ee5d
 
 Package: courier-base
 Source: courier
-Version: 1.5.1-4
-Installed-Size: 748
+Version: 2.0.3-2
+Installed-Size: 927
 Maintainer: Soren Stoutner <soren@debian.org>
 Architecture: amd64
-Depends: courier-authlib-userdb, debconf, gnutls-bin, debconf (>= 0.5) | debconf-2.0, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, perl:any, libc6 (>= 2.38), libcourier-unicode10 (>= 2.4.0), libgcc-s1 (>= 3.0), libgdbm6t64 (>= 1.16), libgnutls30t64 (>= 3.8.6), libidn2-0 (>= 2.0.0), libpcre2-8-0 (>= 10.22), libstdc++6 (>= 5.2)
+Depends: courier-authlib, debconf, gnutls-bin, debconf (>= 0.5) | debconf-2.0, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, perl:any, libc6 (>= 2.38), libcourier-unicode12 (>= 2.6.0), libgcc-s1 (>= 3.0), libgdbm6t64 (>= 1.16), libgnutls30t64 (>= 3.8.6), libidn2-0 (>= 2.0.0), libpcre2-8-0 (>= 10.22), libstdc++6 (>= 13.1)
 Pre-Depends: courier-authdaemon
 Description: Courier mail server - base system
 Homepage: https://www.courier-mta.org/
@@ -1333,18 +1333,18 @@ Tag: interface::daemon, mail::transport-agent, network::server,
  role::program, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/c/courier/courier-base_1.5.1-4_amd64.deb
-Size: 296216
-MD5sum: 980c519336361136bb936ec786597663
-SHA256: 2af479950dd2c6ebdbc264adabb29da93cd0d0c9ea27ac505219f3473be34634
+Filename: pool/main/c/courier/courier-base_2.0.3-2_amd64.deb
+Size: 355308
+MD5sum: 17a9ec2121ccd131d0d98641866f217a
+SHA256: d1c16080ea5380da6b5f911f1fb64dca50065ad8fab1678c6d916d8a4a45a94b
 
 Package: courier-faxmail
 Source: courier
-Version: 1.5.1-4
-Installed-Size: 165
+Version: 2.0.3-2
+Installed-Size: 170
 Maintainer: Soren Stoutner <soren@debian.org>
 Architecture: amd64
-Depends: courier-mta (= 1.5.1-4), ghostscript, groff, mgetty-fax, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles
+Depends: courier-mta (= 2.0.3-2), ghostscript, groff, mgetty-fax, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles
 Recommends: netpbm
 Suggests: courier-doc
 Description: Courier mail server - Fax<->mail gateway
@@ -1354,20 +1354,20 @@ Tag: hardware::modem, interface::daemon, network::server, role::program,
  use::converting, works-with::fax, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/c/courier/courier-faxmail_1.5.1-4_amd64.deb
-Size: 98024
-MD5sum: dccd9562d7674dd434bce75b533bef04
-SHA256: d979f28339d967a85f9ab1d6ac3d364de85c7b69e9a37ef8ad5d7b9b1a61ce17
+Filename: pool/main/c/courier/courier-faxmail_2.0.3-2_amd64.deb
+Size: 101004
+MD5sum: 34f723221618d1b48bf5885585998496
+SHA256: 1f31fe0718c445c135044c96e4a9793f04629294556d80fe0c200af8a5cb7cfe
 
 Package: courier-imap
-Source: courier (1.5.1-4)
-Version: 5.3.1+1.5.1-4
-Installed-Size: 573
+Source: courier (2.0.3-2)
+Version: 6.0.2+2.0.3-2
+Installed-Size: 1192
 Maintainer: Soren Stoutner <soren@debian.org>
 Architecture: amd64
 Replaces: cyrus-imapd, imap-server
 Provides: imap-server
-Depends: courier-base (= 1.5.1-4), debconf, default-mta | mail-transport-agent, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, courier-authlib (>= 0.71), libc6 (>= 2.38), libcourier-unicode10 (>= 2.4.0), libgdbm6t64 (>= 1.16), libidn2-0 (>= 2.0.0)
+Depends: courier-base (= 2.0.3-2), debconf, default-mta | mail-transport-agent, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, libc6 (>= 2.38), libcourier-authlib0 (>= 0.72.7.20260502), libcourier-unicode12 (>= 2.6.0), libgcc-s1 (>= 3.0), libgdbm6t64 (>= 1.16), libidn2-0 (>= 2.0.0), libstdc++6 (>= 14)
 Suggests: courier-doc, imap-client
 Conflicts: imap-server
 Breaks: cyrus-imapd
@@ -1378,19 +1378,19 @@ Tag: interface::daemon, mail::imap, network::server, network::service,
  protocol::imap, role::program, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/c/courier/courier-imap_5.3.1+1.5.1-4_amd64.deb
-Size: 236540
-MD5sum: bd9e3b78014a13db509efc05aa2fa6c2
-SHA256: b444e588a93d8e6eb14b3cd113376839dd31fa8c6d9161393e2de413864a0c9d
+Filename: pool/main/c/courier/courier-imap_6.0.2+2.0.3-2_amd64.deb
+Size: 445692
+MD5sum: 7d72cc511eeb7802c75b6e122ba1e9bd
+SHA256: 9d82d304d50e5fc7e77c809ed21807551d80b298923bdf6fe4984bbdfd97f71e
 
 Package: courier-ldap
 Source: courier
-Version: 1.5.1-4
-Installed-Size: 187
+Version: 2.0.3-2
+Installed-Size: 191
 Maintainer: Soren Stoutner <soren@debian.org>
 Architecture: amd64
 Replaces: courier-imap-authldap
-Depends: courier-authlib-ldap, courier-base (= 1.5.1-4), debconf, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, courier-authlib (>= 0.71), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libldap2 (>= 2.6.2), libstdc++6 (>= 4.1.1)
+Depends: courier-base (= 2.0.3-2), debconf, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, libc6 (>= 2.38), libcourier-authlib0 (>= 0.72.7.20260502), libgcc-s1 (>= 3.0), libldap2 (>= 2.6.2), libstdc++6 (>= 4.1.1)
 Suggests: courier-doc
 Conflicts: courier-imap-authldap
 Description: Courier mail server - LDAP support
@@ -1400,18 +1400,18 @@ Tag: interface::daemon, network::server, protocol::ldap, role::program,
  security::authentication, works-with::db, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/c/courier/courier-ldap_1.5.1-4_amd64.deb
-Size: 103212
-MD5sum: 0c903eee5c0815790ae7e9499c5b94cd
-SHA256: 55e8687ce4a6b0b87acd05ce1cb4d7239e401a1779ff4dc93896f9eb1c6eb10d
+Filename: pool/main/c/courier/courier-ldap_2.0.3-2_amd64.deb
+Size: 106148
+MD5sum: 23cdfedf6b14bec5d8713a1f5b764e61
+SHA256: b3c28f6ceba1a253f0e80c612777b13c289ed03ee66aecd4f058745b53f73634
 
 Package: courier-mlm
 Source: courier
-Version: 1.5.1-4
-Installed-Size: 1133
+Version: 2.0.3-2
+Installed-Size: 1416
 Maintainer: Soren Stoutner <soren@debian.org>
 Architecture: amd64
-Depends: courier-base (= 1.5.1-4), maildrop, libc6 (>= 2.38), libcourier-unicode10 (>= 2.4.0), libgcc-s1 (>= 3.0), libgdbm6t64 (>= 1.16), libidn2-0 (>= 2.0.0), libstdc++6 (>= 13.1)
+Depends: courier-base (= 2.0.3-2), maildrop, libc6 (>= 2.38), libcourier-unicode12 (>= 2.6.0), libgcc-s1 (>= 3.0), libgdbm6t64 (>= 1.16), libidn2-0 (>= 2.0.0), libstdc++6 (>= 13.1)
 Suggests: courier-doc
 Description: Courier mail server - mailing list manager
 Homepage: https://www.courier-mta.org/
@@ -1420,20 +1420,20 @@ Tag: interface::daemon, mail::list, network::server, role::program,
  works-with::mail
 mail
 Priority: optional
-Filename: pool/main/c/courier/courier-mlm_1.5.1-4_amd64.deb
-Size: 414652
-MD5sum: 168a2dd054c1d9929dd2076fd89039af
-SHA256: 40b93c3727ad1aeed8d20ae6d8f5c41143a827eb3b3f559e5d631dace6bd6f1b
+Filename: pool/main/c/courier/courier-mlm_2.0.3-2_amd64.deb
+Size: 482784
+MD5sum: 0e586eaaa077c833fdf36d1c09776785
+SHA256: c2552567dd41bd77e56b4d96a0d19c3819d8c6ab8d02fe666b9586dbc65ef16f
 
 Package: courier-mta
 Source: courier
-Version: 1.5.1-4
-Installed-Size: 2656
+Version: 2.0.3-2
+Installed-Size: 3653
 Maintainer: Soren Stoutner <soren@debian.org>
 Architecture: amd64
 Replaces: dma, esmtp-run, exim4-daemon-heavy, exim4-daemon-light, mail-transport-agent, msmtp-mta, nullmailer, opensmtpd, postfix, rmail, ssmtp
 Provides: mail-transport-agent
-Depends: courier-base (= 1.5.1-4), debconf, libnet-cidr-perl, wget, debconf (>= 0.5) | debconf-2.0, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, courier-authlib (>= 0.71), libc6 (>= 2.38), libcourier-unicode10 (>= 2.4.0), libgcc-s1 (>= 3.0), libgdbm6t64 (>= 1.16), libidn2-0 (>= 2.0.0), libperl5.40 (>= 5.40.0), libstdc++6 (>= 13.1), perl:any
+Depends: courier-base (= 2.0.3-2), debconf, libnet-cidr-perl, wget, debconf (>= 0.5) | debconf-2.0, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, perl:any, libc6 (>= 2.38), libcourier-authlib0 (>= 0.72.7.20260502), libcourier-unicode12 (>= 2.6.0), libgcc-s1 (>= 3.0), libgdbm6t64 (>= 1.16), libidn2-0 (>= 2.0.0), libperl5.40 (>= 5.40.0), libstdc++6 (>= 13.1)
 Suggests: courier-doc, courier-filter-perl, mail-reader
 Conflicts: mail-transport-agent
 Breaks: dma, esmtp-run, exim4-daemon-heavy, exim4-daemon-light, msmtp-mta, nullmailer, opensmtpd, postfix, rmail, ssmtp
@@ -1444,18 +1444,18 @@ Tag: interface::daemon, mail::transport-agent, network::server,
  network::service, protocol::smtp, role::program, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/c/courier/courier-mta_1.5.1-4_amd64.deb
-Size: 670340
-MD5sum: 8f9cc5d63d3ecd13e1ef803e91af8447
-SHA256: 35b3605f7ecd8fdd3b950929c8ba0277c1891b10993ed780c6ae2121e35af7aa
+Filename: pool/main/c/courier/courier-mta_2.0.3-2_amd64.deb
+Size: 803492
+MD5sum: f1ba9e6188ec1d91b5596f4292a9a434
+SHA256: 2ec4de2b8efb9871deb704ffffde92ab38e36b9b15653cd347e590c46374934c
 
 Package: courier-pcp
 Source: courier
-Version: 1.5.1-4
-Installed-Size: 225
+Version: 2.0.3-2
+Installed-Size: 344
 Maintainer: Soren Stoutner <soren@debian.org>
 Architecture: amd64
-Depends: sqwebmail, courier-authlib (>= 0.71), libc6 (>= 2.38)
+Depends: sqwebmail, libc6 (>= 2.38), libcourier-authlib0 (>= 0.72.7.20260502), libcourier-unicode12 (>= 2.6.0), libgcc-s1 (>= 3.0), libidn2-0 (>= 2.0.0), libstdc++6 (>= 13.1)
 Suggests: courier-doc
 Description: Courier mail server - Personal Calendaring Protocol server
 Homepage: https://www.courier-mta.org/
@@ -1464,20 +1464,20 @@ Tag: interface::daemon, network::server, role::program, use::organizing,
  works-with::mail, works-with::pim
 mail
 Priority: optional
-Filename: pool/main/c/courier/courier-pcp_1.5.1-4_amd64.deb
-Size: 129920
-MD5sum: 80beb05a7202fa131ada8b10b8b9cc2d
-SHA256: e338d23f18b78ad0afd4aaa88a091f48dac2388cc106d984e3d1463b416fac7f
+Filename: pool/main/c/courier/courier-pcp_2.0.3-2_amd64.deb
+Size: 177932
+MD5sum: 609995bb360719690e216be347985053
+SHA256: 14e41bc6286b26cad55446fd21d49d969820c5b01064d976f6f8aaebd7885ffd
 
 Package: courier-pop
 Source: courier
-Version: 1.5.1-4
-Installed-Size: 297
+Version: 2.0.3-2
+Installed-Size: 409
 Maintainer: Soren Stoutner <soren@debian.org>
 Architecture: amd64
 Replaces: mailutils-pop3d, pop3-server
 Provides: pop3-server
-Depends: courier-base (= 1.5.1-4), debconf, default-mta | mail-transport-agent, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, courier-authlib (>= 0.71), libc6 (>= 2.38), libcourier-unicode10 (>= 2.4.0), libidn2-0 (>= 2.0.0)
+Depends: courier-base (= 2.0.3-2), debconf, default-mta | mail-transport-agent, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, libc6 (>= 2.38), libcourier-authlib0 (>= 0.72.7.20260502), libcourier-unicode12 (>= 2.6.0), libgcc-s1 (>= 3.0), libidn2-0 (>= 2.0.0), libstdc++6 (>= 12)
 Suggests: courier-doc, mail-reader
 Conflicts: pop3-server
 Breaks: mailutils-pop3d
@@ -1488,38 +1488,38 @@ Tag: interface::daemon, mail::pop, network::server, network::service,
  protocol::pop3, role::program, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/c/courier/courier-pop_1.5.1-4_amd64.deb
-Size: 140532
-MD5sum: 42d64b4832055a66e459821633742267
-SHA256: da67e50670cfdeca86e2d566986816d14c719c05c7080203b43070b9c781f532
+Filename: pool/main/c/courier/courier-pop_2.0.3-2_amd64.deb
+Size: 184472
+MD5sum: d9602eb7ac4229f52a85f10abcfb55e1
+SHA256: 97ef073905aa1677231c9c9010b72a4108a65cbe07f8f94f714a98bcb7034a81
 
 Package: courier-webadmin
 Source: courier
-Version: 1.5.1-4
-Installed-Size: 242
+Version: 2.0.3-2
+Installed-Size: 246
 Maintainer: Soren Stoutner <soren@debian.org>
 Architecture: amd64
-Depends: apache2 | httpd, courier-base (= 1.5.1-4), debconf, libcgi-pm-perl, debconf (>= 0.5) | debconf-2.0, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, libc6 (>= 2.34), perl:any
+Depends: apache2 | httpd, courier-base (= 2.0.3-2), debconf, libcgi-pm-perl, debconf (>= 0.5) | debconf-2.0, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, perl:any, libc6 (>= 2.34)
 Suggests: courier-doc
 Description: Courier mail server - web-based administration frontend
 Homepage: https://www.courier-mta.org/
-Description-md5: ee38bed62cf040f74c6d12c5ff99e304
+Description-md5: b8702d4e1968313ba241fc2cbf6ca5b9
 Tag: admin::configuring, interface::web, role::program, use::configuring,
  web::application
 mail
 Priority: optional
-Filename: pool/main/c/courier/courier-webadmin_1.5.1-4_amd64.deb
-Size: 110588
-MD5sum: b54d459252e818b819e5664f1d3264ff
-SHA256: d755e62f4eeee60ad57057c041a64103f1feaa1167a3a4a719998ee8e09c718e
+Filename: pool/main/c/courier/courier-webadmin_2.0.3-2_amd64.deb
+Size: 113512
+MD5sum: 0646976eb766ffc1b9188c2b5335ff6d
+SHA256: b7742e1fc6ad0dab6f05259007fb881bf59d1b1680979a437ef7eb6efcc722b8
 
 Package: sqwebmail
-Source: courier (1.5.1-4)
-Version: 6.3.1+1.5.1-4
-Installed-Size: 1322
+Source: courier (2.0.3-2)
+Version: 7.0.3+2.0.3-2
+Installed-Size: 2421
 Maintainer: Soren Stoutner <soren@debian.org>
 Architecture: amd64
-Depends: apache2, courier-base (= 1.5.1-4), debconf, default-mta | mail-transport-agent, expect, iamerican | ispell-dictionary, ispell, maildrop, debconf (>= 0.5) | debconf-2.0, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, courier-authlib (>= 0.71), libc6 (>= 2.38), libcourier-unicode10 (>= 2.4.0), libgdbm6t64 (>= 1.16), libidn2-0 (>= 2.0.0), libldap2 (>= 2.6.2), libpcre2-8-0 (>= 10.22), perl:any
+Depends: apache2, courier-base (= 2.0.3-2), debconf, default-mta | mail-transport-agent, expect, iamerican | ispell-dictionary, ispell, maildrop, debconf (>= 0.5) | debconf-2.0, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, perl:any, libc6 (>= 2.38), libcourier-authlib0 (>= 0.72.7.20260502), libcourier-unicode12 (>= 2.6.0), libgcc-s1 (>= 3.0), libgdbm6t64 (>= 1.16), libidn2-0 (>= 2.0.0), libldap2 (>= 2.6.2), libpcre2-8-0 (>= 10.22), libstdc++6 (>= 13.1)
 Recommends: courier-pcp
 Suggests: courier-doc, gnupg
 Description: Courier mail server - webmail server
@@ -1528,174 +1528,69 @@ Description-md5: 9875882d6b06839dd1ca8cca5474dccd
 Tag: interface::web, role::program, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/c/courier/sqwebmail_6.3.1+1.5.1-4_amd64.deb
-Size: 448072
-MD5sum: 1c9caef024b107110d742a87a339d2e2
-SHA256: 10625a72dd0b1bfcb39a76dbe33401b5f2df48c6f2edbae515b0e567dc2c37af
+Filename: pool/main/c/courier/sqwebmail_7.0.3+2.0.3-2_amd64.deb
+Size: 768536
+MD5sum: 61398039659dc26a8f2c948a639c30db
+SHA256: 1723c2fa8ff2b490950014a37445f3f1e2ce7ba1d8d810df3edbdb1bae10b931
 
 Package: courier-authdaemon
 Source: courier-authlib
-Version: 0.72.6-4
-Installed-Size: 136
+Version: 0.73.1-2
+Installed-Size: 139
 Maintainer: Soren Stoutner <soren@debian.org>
 Architecture: amd64
-Depends: courier-authlib (>= 0.72.6-4), libc6 (>= 2.38)
-Pre-Depends: init-system-helpers (>= 1.54~)
+Depends: systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, libc6 (>= 2.38), libcourier-authlib0 (>= 0.72.7.20260502)
+Pre-Depends: courier-authlib (= 0.73.1-2)
 Description: Courier authentication daemon
 Homepage: https://www.courier-mta.org/
-Description-md5: 48c71af6b56ddad7d969cb6a2ff8a060
+Commands: authdaemond, authenumerate, authpasswd, authtest
+Description-md5: 2108a48883c461d4defdbc2a780bbe26
 Tag: interface::daemon, network::server, role::program,
  security::authentication, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/c/courier-authlib/courier-authdaemon_0.72.6-4_amd64.deb
-Size: 40068
-MD5sum: 382b5816328ab7a1e54966e30c079839
-SHA256: 42aecd969c4224028c1abe292e40fce3303ae9eb8bef9bd7073b453d0bd86c65
+Filename: pool/main/c/courier-authlib/courier-authdaemon_0.73.1-2_amd64.deb
+Size: 41284
+MD5sum: 63040377319de4fa85f89430ec5cc69a
+SHA256: 3bccfa4e9e03746802e4e1f37e6c9f1a16f638f5d373530da8005e6c3c2a1c6f
 
 Package: courier-authlib
-Version: 0.72.6-4
-Installed-Size: 374
+Version: 0.73.1-2
+Installed-Size: 307
 Maintainer: Soren Stoutner <soren@debian.org>
 Architecture: amd64
-Depends: adduser, libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libgcc-s1 (>= 3.0), libgdbm6t64 (>= 1.16), libltdl7 (>= 2.5.4), libpam0g (>= 0.99.7.1), libstdc++6 (>= 13.1)
-Recommends: expect
-Description: Courier authentication library
+Replaces: courier-authlib-ldap (<< 0.72.7.20260502-1), courier-authlib-mysql (<< 0.72.7.20260502-1), courier-authlib-pipe (<< 0.72.7.20260502-1), courier-authlib-postgresql (<< 0.72.7.20260502-1), courier-authlib-sqlite (<< 0.72.7.20260502-1), courier-authlib-userdb (<< 0.72.7.20260502-1)
+Depends: expect, libcourier-authlib0 (= 0.73.1-2), systemd | systemd-standalone-sysusers | systemd-sysusers, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, perl:any, libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libgdbm6t64 (>= 1.16), libltdl7 (>= 2.5.4), libstdc++6 (>= 13.1)
+Breaks: courier-authlib-ldap (<< 0.72.7.20260502-1), courier-authlib-mysql (<< 0.72.7.20260502-1), courier-authlib-pipe (<< 0.72.7.20260502-1), courier-authlib-postgresql (<< 0.72.7.20260502-1), courier-authlib-sqlite (<< 0.72.7.20260502-1), courier-authlib-userdb (<< 0.72.7.20260502-1)
+Description: Courier authentication library (main package)
 Homepage: https://www.courier-mta.org/
-Description-md5: df47cce316c565912b13c565476e8761
+Description-md5: f1a21d95b98ff4d8b97a337be50cb448
 Tag: role::plugin, security::authentication
 mail
 Priority: optional
-Filename: pool/main/c/courier-authlib/courier-authlib_0.72.6-4_amd64.deb
-Size: 96480
-MD5sum: 1fa5645b4a56344e029ed6d9cb9cca6d
-SHA256: f8044268b028b062cef89c78ac3c9b329698bb82c32ab52d5f6bb5528899cd7f
+Filename: pool/main/c/courier-authlib/courier-authlib_0.73.1-2_amd64.deb
+Size: 84576
+MD5sum: 5135f2ef192c8bf5a34e63cde9e0878c
+SHA256: 2bae0c2f44f6a2445c0d7cb0255d4486606b7826524aeb1202ded7cab3e0185a
 
 Package: courier-authlib-dev
 Source: courier-authlib
-Version: 0.72.6-4
-Installed-Size: 835
+Version: 0.73.1-2
+Installed-Size: 846
 Maintainer: Soren Stoutner <soren@debian.org>
 Architecture: amd64
-Depends: courier-authlib (>= 0.72.6-4), libc6 (>= 2.34)
+Depends: courier-authlib (= 0.73.1-2), libcourier-authlib0 (= 0.73.1-2), libc6 (>= 2.34)
 Description: Development libraries for the Courier authentication library
 Homepage: https://www.courier-mta.org/
-Description-md5: 8959e6186e43e1f0907ee705b7526166
+Commands: courierauthconfig
+Description-md5: 230594bf6c36c4a2edd43a71f0f1744a
 Tag: devel::library, role::devel-lib
 mail
 Priority: optional
-Filename: pool/main/c/courier-authlib/courier-authlib-dev_0.72.6-4_amd64.deb
-Size: 175884
-MD5sum: b0249718f470ce063e8a6f14fdb93d86
-SHA256: 0a089778ae7c39079b8d55784eeef94d7c58bd1b506169572e460bbddd5ba173
-
-Package: courier-authlib-ldap
-Source: courier-authlib
-Version: 0.72.6-4
-Installed-Size: 152
-Maintainer: Soren Stoutner <soren@debian.org>
-Architecture: amd64
-Depends: courier-authlib (>= 0.72.6-4), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libldap2 (>= 2.6.2), libstdc++6 (>= 5.2)
-Description: LDAP support for the Courier authentication library
-Homepage: https://www.courier-mta.org/
-Description-md5: 0f4f8f674c030d05f05042a3f255703a
-Tag: protocol::ldap, role::plugin
-mail
-Priority: optional
-Filename: pool/main/c/courier-authlib/courier-authlib-ldap_0.72.6-4_amd64.deb
-Size: 51772
-MD5sum: 72cd3601ccd502d4cb3a34049f848e24
-SHA256: faae95269de72c157dcd0502445ae724ce17b5d4f76ee6dbde4eac7f78005df7
-
-Package: courier-authlib-mysql
-Source: courier-authlib
-Version: 0.72.6-4
-Installed-Size: 137
-Maintainer: Soren Stoutner <soren@debian.org>
-Architecture: amd64
-Depends: courier-authlib (>= 0.72.6-4), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libmariadb3 (>= 3.0.0), libstdc++6 (>= 13.1)
-Description: MySQL support for the Courier authentication library
-Homepage: https://www.courier-mta.org/
-Description-md5: f305ead8efa36cfda2d75a0673c57eec
-Tag: implemented-in::c, role::plugin, works-with::db
-mail
-Priority: optional
-Filename: pool/main/c/courier-authlib/courier-authlib-mysql_0.72.6-4_amd64.deb
-Size: 43444
-MD5sum: 62cf76354ae3bc995ecd7516d7ebcaea
-SHA256: 9303099fbae0907c78652945dddb6b26ebfd2b308b470ddf08d282b031fb9ea8
-
-Package: courier-authlib-pipe
-Source: courier-authlib
-Version: 0.72.6-4
-Installed-Size: 113
-Maintainer: Soren Stoutner <soren@debian.org>
-Architecture: amd64
-Depends: courier-authlib (>= 0.72.6-4), libc6 (>= 2.15)
-Description: External authentication support for the Courier authentication library
-Homepage: https://www.courier-mta.org/
-Description-md5: b5e53c9b4126f288c7aa26ed257d2347
-Tag: role::plugin, role::shared-lib, security::authentication
-mail
-Priority: optional
-Filename: pool/main/c/courier-authlib/courier-authlib-pipe_0.72.6-4_amd64.deb
-Size: 32692
-MD5sum: 327014a04f51ebb49fd3b84531042e74
-SHA256: 3f0373cfd890fdceaf0b7a54e46b330b2918763002f11c7e40da12f394fbca5d
-
-Package: courier-authlib-postgresql
-Source: courier-authlib
-Version: 0.72.6-4
-Installed-Size: 125
-Maintainer: Soren Stoutner <soren@debian.org>
-Architecture: amd64
-Depends: courier-authlib (>= 0.72.6-4), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libpq5, libstdc++6 (>= 5.2)
-Description: PostgreSQL support for the Courier authentication library
-Homepage: https://www.courier-mta.org/
-Description-md5: 3bfd13f8d2b23d8f93c06ffcf8393b6f
-Tag: role::plugin, role::shared-lib
-mail
-Priority: optional
-Filename: pool/main/c/courier-authlib/courier-authlib-postgresql_0.72.6-4_amd64.deb
-Size: 41104
-MD5sum: a20d2a67a1d1381a04fa236d3767c236
-SHA256: a306ffbf55b8806c8ffecfca51cc540e2db560e3241dd309a4421a0ffb37661c
-
-Package: courier-authlib-sqlite
-Source: courier-authlib
-Version: 0.72.6-4
-Installed-Size: 118
-Maintainer: Soren Stoutner <soren@debian.org>
-Architecture: amd64
-Depends: courier-authlib (>= 0.72.6-4), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libsqlite3-0 (>= 3.5.9), libstdc++6 (>= 5.2)
-Description: SQLite 3 support for the Courier authentication library
-Homepage: https://www.courier-mta.org/
-Description-md5: b61c6c8cf150a1e2b8a7b7c88ae8b2bb
-mail
-Priority: optional
-Filename: pool/main/c/courier-authlib/courier-authlib-sqlite_0.72.6-4_amd64.deb
-Size: 38036
-MD5sum: f5b93af218697e410cd3f2f7f7cb1ce6
-SHA256: f7f5ce0980f9fc02d947a97d593dbf39dc85d9843e90f34734d3d5691cba31e1
-
-Package: courier-authlib-userdb
-Source: courier-authlib
-Version: 0.72.6-4
-Installed-Size: 122
-Maintainer: Soren Stoutner <soren@debian.org>
-Architecture: amd64
-Depends: courier-authlib (>= 0.72.6-4), libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libgdbm6t64 (>= 1.16)
-Description: userdb support for the Courier authentication library
-Homepage: https://www.courier-mta.org/
-Description-md5: e51045b8c13d9c35a109bca2e4293839
-Tag: admin::monitoring, implemented-in::c, protocol::imap, role::plugin,
- role::program, security::authentication, works-with::mail
-mail
-Priority: optional
-Filename: pool/main/c/courier-authlib/courier-authlib-userdb_0.72.6-4_amd64.deb
-Size: 44060
-MD5sum: 76fdf37c5e000cd5948ff02725932f59
-SHA256: 7cbcf6864d55eb93925722911e2548fd4b47f5dd3d615358e00bbdbe13b4e9d1
+Filename: pool/main/c/courier-authlib/courier-authlib-dev_0.73.1-2_amd64.deb
+Size: 176980
+MD5sum: a885857a58c954d0c6cf1e5237eb9ca2
+SHA256: cfc85e68e25ed6586df8f265e86f7f76d1edcd835f8e270d3b3ffa4acc1466bf
 
 Package: courier-filter-perl
 Version: 0.200+ds-6
