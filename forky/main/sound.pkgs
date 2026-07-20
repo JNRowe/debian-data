@@ -4651,11 +4651,12 @@ MD5sum: bf0391c17614661a97507fdf834d1894
 SHA256: b1e89b80d99295fc431c42549c39f5f67892fe0e53b40d5903f556dfa8c8f4c2
 
 Package: grandorgue
-Version: 3.17.2-1
-Installed-Size: 26849
+Source: grandorgue (3.17.2-1)
+Version: 3.17.2-1+b1
+Installed-Size: 26862
 Maintainer: Sébastien Villemot <sebastien@debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libcurl4t64 (>= 7.28.0), libgcc-s1 (>= 3.0), libjack-jackd2-0 (>= 1.9.10+20150825) | libjack-0.125, libportaudio2 (>= 19+svn20101113), librtaudio7 (>= 6.0.1~ds), librtmidi7 (>= 6.0.0), libstdc++6 (>= 14), libwavpack1 (>= 4.40.0), libwxbase3.2-1t64 (>= 3.2.9+dfsg), libwxgtk3.2-1t64 (>= 3.2.9+dfsg), libyaml-cpp0.8 (>= 0.7.0), libzita-convolver4 (>= 4.0.3), zlib1g (>= 1:1.1.4)
+Depends: libc6 (>= 2.38), libcurl4t64 (>= 7.28.0), libgcc-s1 (>= 3.0), libjack-jackd2-0 (>= 1.9.10+20150825) | libjack-0.125, libportaudio2 (>= 19+svn20101113), librtaudio7 (>= 6.0.1~ds), librtmidi7 (>= 6.0.0), libstdc++6 (>= 14), libwavpack1 (>= 4.40.0), libwxbase3.2-1t64 (>= 3.2.9+dfsg), libwxgtk3.2-1t64 (>= 3.2.9+dfsg), libyaml-cpp0.9 (>= 0.7.0), libzita-convolver4 (>= 4.0.3), zlib1g (>= 1:1.1.4)
 Recommends: grandorgue-demo
 Description: sample-based pipe organ simulator
 Homepage: https://github.com/GrandOrgue/grandorgue
@@ -4663,10 +4664,10 @@ Description-md5: 27438a07a7b227bb1d0373a0aa9a9e90
 Tag: uitoolkit::wxwidgets
 sound
 Priority: optional
-Filename: pool/main/g/grandorgue/grandorgue_3.17.2-1_amd64.deb
-Size: 9696792
-MD5sum: a465433af502ed1979136ff3a3b1c5bb
-SHA256: 426ffdb6857cf1ba95af665b8ee131a66f8e9466c49e668a77cf6e2ad8601ce2
+Filename: pool/main/g/grandorgue/grandorgue_3.17.2-1+b1_amd64.deb
+Size: 9729756
+MD5sum: 587f67a58becb7502310945746cc72aa
+SHA256: 4c27c3684e67f1ea3b4ffb384679ed0077960932e91ebae64443d61bc9eff261
 
 Package: grandorgue-demo
 Source: grandorgue
@@ -7797,31 +7798,33 @@ MD5sum: 4c03f90f67c24af0761e00da2526cd0c
 SHA256: cecf6b39a242c6e29ab0cd35491f333a6df6b251cea5f7ac328a2d7dc58ad880
 
 Package: mpg123
-Version: 1.33.6-1
-Installed-Size: 557
+Version: 1.33.6-2
+Installed-Size: 555
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
 Depends: libasound2t64 (>= 1.0.16), libc6 (>= 2.38), libjack-jackd2-0 (>= 1.9.10+20150825) | libjack-0.125, libmpg123-0t64 (>= 1.32.3), libopenal1 (>= 1.14), libout123-0t64 (>= 1.32.3), libportaudio2 (>= 19+svn20101113), libpulse0 (>= 0.99.1), libsyn123-0t64 (>= 1.32.3)
 Suggests: alsa-utils, jackd, oss-compat, pulseaudio
+Breaks: mpg321 (<< 0.3.2-6~)
 Description: MPEG layer 1/2/3 audio player
 Homepage: http://mpg123.org/
+Commands: mpg123-alsa, mpg123-jack, mpg123-openal, mpg123-oss, mpg123-portaudio, mpg123-pulse
 Description-md5: 5ebabad0916ebd65863379ea1316b415
 Tag: interface::commandline, role::program, sound::player, use::playing,
  works-with-format::mp3, works-with::audio
 sound
 Priority: optional
-Filename: pool/main/m/mpg123/mpg123_1.33.6-1_amd64.deb
-Size: 206944
-MD5sum: 75856ed2f5223c76872e1cf129afb1d4
-SHA256: 581dc0d0116daa01b5dfc6fc5080bfded57786faca531c803d61ab181ce58db2
+Filename: pool/main/m/mpg123/mpg123_1.33.6-2_amd64.deb
+Size: 205972
+MD5sum: db47c9dbf4a5017372074b51446c1e88
+SHA256: 650c40cc40d8e4e671f7a5239b45cc0a4ff9d327cfbbf988757adaacf001b845
 
 Package: mpg321
-Version: 0.3.2-5
-Installed-Size: 115
+Version: 0.3.2-6
+Installed-Size: 114
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
-Provides: mp3-decoder, mpg123
-Depends: libao4 (>= 1.1.0), libasound2t64 (>= 1.0.16), libc6 (>= 2.38), libid3tag0 (>= 0.15.1b), libmad0 (>= 0.15.1b-3)
+Provides: mp3-decoder
+Depends: libao4 (>= 1.1.0), libasound2t64 (>= 1.0.16), libc6 (>= 2.38), libid3tag0 (>= 0.15.1b), libmad0 (>= 0.15.1b)
 Recommends: libaudio-scrobbler-perl
 Description: Simple and lightweight command line MP3 player
 Homepage: https://mpg321.sourceforge.net
@@ -7830,10 +7833,10 @@ Tag: interface::commandline, role::program, scope::utility, sound::player,
  use::playing, works-with-format::mp3, works-with::audio
 sound
 Priority: optional
-Filename: pool/main/m/mpg321/mpg321_0.3.2-5_amd64.deb
-Size: 43480
-MD5sum: 538c2ac788415238ba21299b8f50ad09
-SHA256: f692d0a72ab45b6c2050bc08936f23473b86929f93c30930140be25af049091a
+Filename: pool/main/m/mpg321/mpg321_0.3.2-6_amd64.deb
+Size: 43004
+MD5sum: 075a9fe50ecce3d8d412fae2b63079c0
+SHA256: 326c5594577496ccf64e5d1844efbd94ae71eb67556418f27943a37ee96f9e11
 
 Package: mppenc
 Version: 1.16-3
@@ -13622,8 +13625,9 @@ MD5sum: 078c55a530c3f0a9120a2893534378e6
 SHA256: 8176aa9ea2bbefab8f884fe026f1c4ca7d588dfbefc5775cefc79b0d221fc3a8
 
 Package: supercollider
-Version: 1:3.14.1+repack2-1
-Installed-Size: 134
+Source: supercollider (1:3.14.1+repack2-1)
+Version: 1:3.14.1+repack2-1+b1
+Installed-Size: 135
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
 Depends: supercollider-ide, supercollider-language, supercollider-server
@@ -13636,10 +13640,10 @@ Tag: implemented-in::c++, interface::text-mode, role::program, sound::TODO,
  suite::emacs, use::playing, works-with::audio
 sound
 Priority: optional
-Filename: pool/main/s/supercollider/supercollider_3.14.1+repack2-1_amd64.deb
-Size: 75820
-MD5sum: 5d537d259fd5f446c5f7d768dec15bb9
-SHA256: 6f3e99bc39a7cb68e7369f1785996d7bc9a3c3a8e8b5514fa0fcc3828604f4f7
+Filename: pool/main/s/supercollider/supercollider_3.14.1+repack2-1+b1_amd64.deb
+Size: 76128
+MD5sum: d1065a616bac2b591b4a807eefcfa707
+SHA256: 6fbe35a329c8a8197bfdc1c460ec041190ed8bc7a8a79e12f73729a04f1d3328
 
 Package: supercollider-common
 Source: supercollider
@@ -13662,9 +13666,9 @@ MD5sum: 373af8e908bb8190de40d2937117d7a0
 SHA256: 414efd285b3ccb6e5b509eaf2e979186743305e4cf0870f6d8bdb0bb3e9e8782
 
 Package: supercollider-dev
-Source: supercollider
-Version: 1:3.14.1+repack2-1
-Installed-Size: 348
+Source: supercollider (1:3.14.1+repack2-1)
+Version: 1:3.14.1+repack2-1+b1
+Installed-Size: 349
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
 Replaces: supercollider-common-dev, supercollider-server-dev
@@ -13680,10 +13684,10 @@ Tag: devel::lang:c++, devel::library, implemented-in::c++, role::devel-lib,
  sound::recorder, sound::sequencer, use::playing, works-with::audio
 sound
 Priority: optional
-Filename: pool/main/s/supercollider/supercollider-dev_3.14.1+repack2-1_amd64.deb
-Size: 108316
-MD5sum: a4dd35d128350c7758225bb4e08f264e
-SHA256: 012bf522cffe01d3ca131882d1cb6d5423f04c5694949ee71336338b56bd0817
+Filename: pool/main/s/supercollider/supercollider-dev_3.14.1+repack2-1+b1_amd64.deb
+Size: 108628
+MD5sum: 875a7da71f6c94e2645c887c419299be
+SHA256: c3889a225639e433567803433fdecddfa74db0c1233c78e4fb0a814583f6ab48
 
 Package: supercollider-emacs
 Source: supercollider
@@ -13705,12 +13709,12 @@ MD5sum: 25ef2c994305d280a842bd00666a86c9
 SHA256: 249d4af9c743fd1515a0b9b0e320d478c13419b817aa7c5ad727c1cf5d33c463
 
 Package: supercollider-ide
-Source: supercollider
-Version: 1:3.14.1+repack2-1
-Installed-Size: 1932
+Source: supercollider (1:3.14.1+repack2-1)
+Version: 1:3.14.1+repack2-1+b1
+Installed-Size: 1925
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
-Depends: supercollider-language (>= 1:3.14.1+repack2-1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), liboscpack1 (>= 1.1.0), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.9.1), libqt6network6 (>= 6.1.2), libqt6webchannel6 (>= 6.6.0), libqt6webenginecore6 (>= 6.6.0), libqt6webenginecore6-bin (>= 6.6.0), libqt6webenginewidgets6 (>= 6.6.0), libqt6websockets6 (>= 6.6.0), libqt6widgets6 (>= 6.3.0), libstdc++6 (>= 13.1), libyaml-cpp0.8 (>= 0.8.0+dfsg-9+b1)
+Depends: supercollider-language (>= 1:3.14.1+repack2-1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), liboscpack1 (>= 1.1.0), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.9.1), libqt6network6 (>= 6.1.2), libqt6webchannel6 (>= 6.6.0), libqt6webenginecore6 (>= 6.6.0), libqt6webenginecore6-bin (>= 6.6.0), libqt6webenginewidgets6 (>= 6.6.0), libqt6websockets6 (>= 6.6.0), libqt6widgets6 (>= 6.3.0), libstdc++6 (>= 13.1), libyaml-cpp0.9 (>= 0.9.0)
 Description: integrated development environment for supercollider audio system
 Homepage: https://supercollider.github.io
 Description-md5: 6b26d4803617382bd4f04a2ef5d095f5
@@ -13718,19 +13722,19 @@ Tag: implemented-in::c++, interface::graphical, interface::x11,
  role::program, uitoolkit::qt, x11::application
 sound
 Priority: optional
-Filename: pool/main/s/supercollider/supercollider-ide_3.14.1+repack2-1_amd64.deb
-Size: 584276
-MD5sum: 7e15b39c6ac5a9f49ed43a45a83e18a2
-SHA256: a2be81f7dd4556a682daa0cba3438f40f7630f2814bfc75571f93d9f4d0e8a27
+Filename: pool/main/s/supercollider/supercollider-ide_3.14.1+repack2-1+b1_amd64.deb
+Size: 581920
+MD5sum: 74c6247d849b65f6ac51171d42ad780d
+SHA256: 5bf1b6bf610d7b05311695820901f75c29a5ddaf772ca0fcad0c915907744a6f
 
 Package: supercollider-language
-Source: supercollider
-Version: 1:3.14.1+repack2-1
-Installed-Size: 3838
+Source: supercollider (1:3.14.1+repack2-1)
+Version: 1:3.14.1+repack2-1+b1
+Installed-Size: 3839
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
-Depends: supercollider-common (= 1:3.14.1+repack2-1), libasound2t64 (>= 1.0.16), libboost-program-options1.90.0 (>= 1.90.0), libboost-thread1.90.0 (>= 1.90.0), libc6 (>= 2.42), libgcc-s1 (>= 4.0), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.9.1), libqt6network6 (>= 6.4.0), libqt6printsupport6 (>= 6.1.2), libqt6svg6 (>= 6.6.0), libqt6webenginecore6 (>= 6.6.0), libqt6webenginecore6-bin (>= 6.6.0), libqt6webenginewidgets6 (>= 6.6.0), libqt6widgets6 (>= 6.1.2), libreadline8t64 (>= 6.0), libscsynth1t64 (>= 1:3.14.1+repack2), libsndfile1 (>= 1.0.20), libstdc++6 (>= 14), libudev1 (>= 183), libyaml-cpp0.8 (>= 0.8.0+dfsg-9+b1)
-Recommends: supercollider-server (= 1:3.14.1+repack2-1)
+Depends: supercollider-common (= 1:3.14.1+repack2-1), libasound2t64 (>= 1.0.16), libboost-program-options1.90.0 (>= 1.90.0), libboost-thread1.90.0 (>= 1.90.0), libc6 (>= 2.42), libgcc-s1 (>= 4.0), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.9.1), libqt6network6 (>= 6.4.0), libqt6printsupport6 (>= 6.1.2), libqt6svg6 (>= 6.6.0), libqt6webenginecore6 (>= 6.6.0), libqt6webenginecore6-bin (>= 6.6.0), libqt6webenginewidgets6 (>= 6.6.0), libqt6widgets6 (>= 6.1.2), libreadline8t64 (>= 6.0), libscsynth1t64 (>= 1:3.14.1+repack2), libsndfile1 (>= 1.0.20), libstdc++6 (>= 14), libudev1 (>= 183), libyaml-cpp0.9 (>= 0.9.0)
+Recommends: supercollider-server (= 1:3.14.1+repack2-1+b1)
 Suggests: subversion, supercollider-ide
 Description: real time audio synthesis programming language
 Homepage: https://supercollider.github.io
@@ -13739,15 +13743,15 @@ Tag: implemented-in::c++, interface::graphical, interface::x11,
  role::program, uitoolkit::qt, x11::application
 sound
 Priority: optional
-Filename: pool/main/s/supercollider/supercollider-language_3.14.1+repack2-1_amd64.deb
-Size: 1237844
-MD5sum: 9d7c9ec951042b36ed6e5a794951d05b
-SHA256: 556c61d9160ce268c2355d0f0d66d28717808c8f789709927b27a5e4c658203f
+Filename: pool/main/s/supercollider/supercollider-language_3.14.1+repack2-1+b1_amd64.deb
+Size: 1238456
+MD5sum: c07afe7db1e6dafbda43e29945452852
+SHA256: d66f5ecced17608fe92bba7faf150c5f8d560edb623811c968c35cc97fb854b0
 
 Package: supercollider-server
-Source: supercollider
-Version: 1:3.14.1+repack2-1
-Installed-Size: 1554
+Source: supercollider (1:3.14.1+repack2-1)
+Version: 1:3.14.1+repack2-1+b1
+Installed-Size: 1555
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libscsynth1t64 (>= 1:3.14.1+repack2), libsndfile1 (>= 1.0.20), libstdc++6 (>= 12), libx11-6
@@ -13757,18 +13761,18 @@ Description-md5: 0efc9f1a38881679805fd7b74d820e7d
 Tag: implemented-in::c++, interface::daemon, role::program
 sound
 Priority: optional
-Filename: pool/main/s/supercollider/supercollider-server_3.14.1+repack2-1_amd64.deb
-Size: 467320
-MD5sum: 2c8541d165cf33559b1d14cb283e217b
-SHA256: 2ef4172dd9f483584bcfb0a201b3a0e0436ed83e54134a208f9c0ff99f51a689
+Filename: pool/main/s/supercollider/supercollider-server_3.14.1+repack2-1+b1_amd64.deb
+Size: 467088
+MD5sum: 730a6fcf79fa0174c5e9070f66d78d06
+SHA256: 6c1f233b4c2713a7ec6a756b5cebeb0ef017beabc941d49eb68572905471ee79
 
 Package: supercollider-supernova
-Source: supercollider
-Version: 1:3.14.1+repack2-1
-Installed-Size: 2608
+Source: supercollider (1:3.14.1+repack2-1)
+Version: 1:3.14.1+repack2-1+b1
+Installed-Size: 2609
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
-Depends: libboost-program-options1.90.0 (>= 1.90.0), libboost-thread1.90.0 (>= 1.90.0), libc6 (>= 2.38), libfftw3-single3 (>= 3.3.10), libgcc-s1 (>= 3.0), libjack-jackd2-0 (>= 1.9.10+20150825) | libjack-0.125, liboscpack1 (>= 1.1.0), libsndfile1 (>= 1.0.20), libstdc++6 (>= 14), libx11-6
+Depends: libboost-program-options1.90.0 (>= 1.90.0), libboost-thread1.90.0 (>= 1.90.0), libc6 (>= 2.38), libfftw3-single3 (>= 3.3.11), libgcc-s1 (>= 3.0), libjack-jackd2-0 (>= 1.9.10+20150825) | libjack-0.125, liboscpack1 (>= 1.1.0), libsndfile1 (>= 1.0.20), libstdc++6 (>= 14), libx11-6
 Description: real time audio synthesis server (multiprocessor version)
 Homepage: https://supercollider.github.io
 Description-md5: 986afb0a3fe9dce2e4d0c1ce68706579
@@ -13776,10 +13780,10 @@ Tag: implemented-in::c++, interface::graphical, interface::x11,
  role::program, uitoolkit::qt, x11::application
 sound
 Priority: optional
-Filename: pool/main/s/supercollider/supercollider-supernova_3.14.1+repack2-1_amd64.deb
-Size: 796308
-MD5sum: 45dd382177c96a3fc6758e8429442897
-SHA256: 0039e6e87d52165bdeb9f9185c7b66d2352ea464b15b2636b8c5670226e48616
+Filename: pool/main/s/supercollider/supercollider-supernova_3.14.1+repack2-1+b1_amd64.deb
+Size: 796108
+MD5sum: ace475f3ffdf08d459f170532e28d998
+SHA256: 19e5f5a90dc888bbcf746b1b46a6336c0a3d96979238d89c48c0ad90d5d81c11
 
 Package: supercollider-vim
 Source: supercollider

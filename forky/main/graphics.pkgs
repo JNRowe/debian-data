@@ -2298,16 +2298,16 @@ MD5sum: cb28b904dc0dd5afc2d5fb636257a593
 SHA256: e2b2bfd79fb7cd863ce3914142bfaa081d27516300cd459fbd4fead81f171148
 
 Package: gem
-Version: 1:0.94-10
-Installed-Size: 12271
+Version: 1:0.95.0-1
+Installed-Size: 13376
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
-Depends: puredata | pd | puredata64 | pd64, libc6 (>= 2.38), libfribidi0 (>= 0.19.2), libftgl2 (>= 2.4.0), libgcc-s1 (>= 3.0), libgl1, libglu1-mesa | libglu1, libstdc++6 (>= 14), libxrender1 (>= 1:0.9.12), libxxf86vm1 (>= 1:1.1.4)
-Recommends: gem-doc, gem-extra, gem-plugin-assimp | gem-plugin-model, gem-plugin-gmerlin | gem-plugin-film, gem-plugin-lqt | gem-plugin-record, gem-plugin-magick | gem-plugin-image, gem-plugin-v4l2 | gem-plugin-video
+Depends: puredata-core | pd | puredata64-core | pd64, libc6 (>= 2.38), libfribidi0 (>= 0.19.2), libftgl2 (>= 2.4.0), libgcc-s1 (>= 3.0), libgl1, libglu1-mesa | libglu1, libstb0t64 (>= 0.0~git20180212.15.e6afb9c), libstdc++6 (>= 14), libxrender1 (>= 1:0.9.12), libxxf86vm1 (>= 1:1.1.4)
+Recommends: gem-doc, gem-extra, gem-plugin-assimp | gem-plugin-model, gem-plugin-glfw3, gem-plugin-gmerlin | gem-plugin-film, gem-plugin-lqt | gem-plugin-record, gem-plugin-magick | gem-plugin-image, gem-plugin-v4l2 | gem-plugin-video, puredata | puredata64
 Suggests: fonts-dejavu-core, pd-zexy, pd-libdir, pd64-libdir
 Description: Graphics Environment for Multimedia - Pure Data library
 Homepage: https://gem.iem.at/
-Description-md5: 67f209f2756b5e6ccae0680df67002a5
+Description-md5: b263313890bef580e0219ab487c2c139
 Tag: devel::lang:c++, devel::library, implemented-in::c++,
  interface::commandline, interface::graphical, interface::x11,
  role::devel-lib, role::plugin, role::program, science::visualisation,
@@ -2318,335 +2318,327 @@ Tag: devel::lang:c++, devel::library, implemented-in::c++,
  x11::application, x11::library
 graphics
 Priority: optional
-Filename: pool/main/g/gem/gem_0.94-10_amd64.deb
-Size: 2351224
-MD5sum: 3fbfd131817802e5cf1514f9b0ba606d
-SHA256: 49ca39e89ae844c23a991d771553ff582d359e40b082e59a7c184531383188aa
+Filename: pool/main/g/gem/gem_0.95.0-1_amd64.deb
+Size: 2725812
+MD5sum: 2faff1293be12d1930b2767404d050c5
+SHA256: 60fa9a885461bad4efd7c141a5ae82fde3fffc9505426a48690efb79264e4859
 
 Package: gem-extra
 Source: gem
-Version: 1:0.94-10
-Installed-Size: 528
+Version: 1:0.95.0-1
+Installed-Size: 852
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
-Depends: gem (<< 1:0.94+1~), gem (>= 1:0.94-10), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
+Depends: gem (<< 1:0.95.0+1~), gem (>= 1:0.95.0-1), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
 Description: Graphics Environment for Multimedia - extra objects
 Homepage: https://gem.iem.at/
 Description-md5: 2631f815a487aef7b6c13ef2b35a036e
 graphics
 Priority: optional
-Filename: pool/main/g/gem/gem-extra_0.94-10_amd64.deb
-Size: 173688
-MD5sum: b077f75be4d3bf6bef664d675f89517a
-SHA256: cc3e68c61b39f89ff9581d01993345b1c01958be3b85e4bb1e8fd257f876a85b
+Filename: pool/main/g/gem/gem-extra_0.95.0-1_amd64.deb
+Size: 509220
+MD5sum: 25cb01ceecc4c8c043a660f9a7fcb3c6
+SHA256: 878d8c389ea4c541e054f80f07a035453e5da0da88d104da5f8ac50ad19d64c6
 
 Package: gem-plugin-assimp
 Source: gem
-Version: 1:0.94-10
-Installed-Size: 182
+Version: 1:0.95.0-1
+Installed-Size: 507
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
+Replaces: gem (<< 1:0.95~)
 Provides: gem-plugin-model
-Depends: gem (<< 1:0.94+1~), gem (>= 1:0.94-10), libassimp6 (>= 6.0.4+ds), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libgl1, libstdc++6 (>= 13.1)
+Depends: gem (<< 1:0.95.0+1~), gem (>= 1:0.95.0-1), libassimp6 (>= 6.0.5+ds), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
+Breaks: gem (<< 1:0.95~)
 Description: Graphics Environment for Multimedia - Assimp support
 Homepage: https://gem.iem.at/
 Description-md5: 2cb4bbe47baa9de2d99c93a0076d2364
 graphics
 Priority: optional
-Filename: pool/main/g/gem/gem-plugin-assimp_0.94-10_amd64.deb
-Size: 129244
-MD5sum: 0f2e1a8c1b81c498b17faff070f67cd5
-SHA256: be6e203a59d215e46189328fa679be189bb87cf8717cf2f380ddf307c16edbe4
+Filename: pool/main/g/gem/gem-plugin-assimp_0.95.0-1_amd64.deb
+Size: 447040
+MD5sum: c2c658816303aac60cfacead3f7e9b14
+SHA256: 5d052cd2a4e9159443cf8a79f90368ce5e0fd7271a47bcba0e3ce25194fde2e2
 
-Package: gem-plugin-dc1394
+Package: gem-plugin-bad
 Source: gem
-Version: 1:0.94-10
-Installed-Size: 206
+Version: 1:0.95.0-1
+Installed-Size: 832
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
-Provides: gem-plugin-video
-Depends: gem (<< 1:0.94+1~), gem (>= 1:0.94-10), libc6 (>= 2.14), libdc1394-25 (>= 2.2.6), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
-Description: Graphics Environment for Multimedia - DC1394 support
+Replaces: gem (<< 1:0.95~), gem-plugin-dc1394 (<< 1:0.95~), gem-plugin-dv4l (<< 1:0.95~), gem-plugin-glut (<< 1:0.95~), gem-plugin-mpeg3 (<< 1:0.95~), gem-plugin-unicap (<< 1:0.95~)
+Provides: gem-plugin-dc1394, gem-plugin-dv4l, gem-plugin-film, gem-plugin-glut, gem-plugin-mpeg3, gem-plugin-unicap, gem-plugin-video, gem-plugin-window
+Depends: gem (<< 1:0.95.0+1~), gem (>= 1:0.95.0-1), libavcodec62 (>= 7:8.1.2), libavformat62 (>= 7:8.1.2), libavutil60 (>= 7:8.1.2), libc6 (>= 2.15), libdc1394-25 (>= 2.2.6), libdv4t64 (>= 1.0.0), libgcc-s1 (>= 3.0), libglut3.12 (>= 3.4.0), libiec61883-0 (>= 1.2.0), libmpeg3-2t64 (>= 1.8~), libraw1394-11 (>= 2.1.2), libstdc++6 (>= 13.1), libswscale9 (>= 7:8.1.2), libunicap2 (>= 0.9.12~)
+Breaks: gem (<< 1:0.95~), gem-plugin-dc1394 (<< 1:0.95~), gem-plugin-dv4l (<< 1:0.95~), gem-plugin-glut (<< 1:0.95~), gem-plugin-mpeg3 (<< 1:0.95~), gem-plugin-unicap (<< 1:0.95~)
+Description: Graphics Environment for Multimedia - plugins from the "bad" set
 Homepage: https://gem.iem.at/
-Description-md5: 809dc083b48443c2e7d4a359028f2079
+Description-md5: e4ac12d27b65cfb86d0f4b2b7503b3d6
 graphics
 Priority: optional
-Filename: pool/main/g/gem/gem-plugin-dc1394_0.94-10_amd64.deb
-Size: 136416
-MD5sum: 1c5d7bf00121b8d59fd1f9934caffa4a
-SHA256: a7bfe3c5964f7b3c5fd45526e25ea11feb219b1accc9a803bfd2c5b8efe76b1e
-
-Package: gem-plugin-dv4l
-Source: gem
-Version: 1:0.94-10
-Installed-Size: 186
-Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
-Architecture: amd64
-Provides: gem-plugin-video
-Depends: gem (<< 1:0.94+1~), gem (>= 1:0.94-10), libc6 (>= 2.15), libdv4t64 (>= 1.0.0), libgcc-s1 (>= 3.0), libiec61883-0 (>= 1.2.0), libraw1394-11 (>= 2.1.2), libstdc++6 (>= 13.1)
-Description: Graphics Environment for Multimedia - DV support
-Homepage: https://gem.iem.at/
-Description-md5: 81bd7aee18117ac1df26dd1c06677c27
-graphics
-Priority: optional
-Filename: pool/main/g/gem/gem-plugin-dv4l_0.94-10_amd64.deb
-Size: 128480
-MD5sum: a71d3acddd84e0802620051587d0a20a
-SHA256: 26779b3de20d207ad707e0c4cd1828b55df75e12b4bc7375e6b61524e2240666
+Filename: pool/main/g/gem/gem-plugin-bad_0.95.0-1_amd64.deb
+Size: 514072
+MD5sum: 1de0bd2f483795bbc8c8c610d7d1e4cb
+SHA256: 51c2f4f92758a9f9a0d050ca8801a7e381ecc8e3021f31b9caf65f0320800e8b
 
 Package: gem-plugin-glfw3
 Source: gem
-Version: 1:0.94-10
-Installed-Size: 210
+Version: 1:0.95.0-1
+Installed-Size: 569
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
+Replaces: gem (<< 1:0.95~)
 Provides: gem-plugin-window
-Depends: gem (<< 1:0.94+1~), gem (>= 1:0.94-10), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libglfw3 (>= 3.2), libstdc++6 (>= 5.2)
+Depends: gem (<< 1:0.95.0+1~), gem (>= 1:0.95.0-1), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libglfw3 (>= 3.4), libstdc++6 (>= 5.2)
+Breaks: gem (<< 1:0.95~)
 Description: Graphics Environment for Multimedia - GLFW3 support
 Homepage: https://gem.iem.at/
-Description-md5: 296e5a75f026e50e77378a73af441788
+Description-md5: 913e0a3b6be4421a55cdc481d1469c85
 graphics
 Priority: optional
-Filename: pool/main/g/gem/gem-plugin-glfw3_0.94-10_amd64.deb
-Size: 124516
-MD5sum: 1b5566628c05d21f1c97b42310b37904
-SHA256: e5f47dfe741f04ecdec0f18c069b69f13b0d56123eb1e5dfa43e894c0fedb743
-
-Package: gem-plugin-glut
-Source: gem
-Version: 1:0.94-10
-Installed-Size: 214
-Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
-Architecture: amd64
-Provides: gem-plugin-window
-Depends: gem (<< 1:0.94+1~), gem (>= 1:0.94-10), libc6 (>= 2.4), libgcc-s1 (>= 3.0), libglut3.12 (>= 3.4.0), libstdc++6 (>= 5.2)
-Description: Graphics Environment for Multimedia - GLUT support
-Homepage: https://gem.iem.at/
-Description-md5: e8faf0863e69bf91d6bf67f2f38d8ae9
-graphics
-Priority: optional
-Filename: pool/main/g/gem/gem-plugin-glut_0.94-10_amd64.deb
-Size: 124612
-MD5sum: 984c6ae020d26df6258f603717254413
-SHA256: fc39fb6f88955c9807500b5f110db2f5fb8c3d8347af10bee6f9b084feba3669
+Filename: pool/main/g/gem/gem-plugin-glfw3_0.95.0-1_amd64.deb
+Size: 445988
+MD5sum: a5fc4bbb066f701f2953817187cac9fb
+SHA256: 35d6ae73a4be101ec417c359fdcdb531e1a4b3a68053f8226289655f98039986
 
 Package: gem-plugin-gmerlin
 Source: gem
-Version: 1:0.94-10
-Installed-Size: 162
+Version: 1:0.95.0-1
+Installed-Size: 486
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
+Replaces: gem (<< 1:0.95~)
 Provides: gem-plugin-film
-Depends: gem (<< 1:0.94+1~), gem (>= 1:0.94-10), libc6 (>= 2.14), libgavl3 (>= 2.0.1~), libgcc-s1 (>= 3.0), libgmerlin-avdec3 (>= 2.0.0~), libstdc++6 (>= 13.1)
+Depends: gem (<< 1:0.95.0+1~), gem (>= 1:0.95.0-1), libc6 (>= 2.14), libgavl3 (>= 2.0.1~), libgcc-s1 (>= 3.0), libgmerlin-avdec3 (>= 2.0.0~), libstdc++6 (>= 13.1)
+Breaks: gem (<< 1:0.95~)
 Description: Graphics Environment for Multimedia - GMERLIN support
 Homepage: https://gem.iem.at/
 Description-md5: 31de2c9ee3a78c8693acb7c1dd7bd311
 graphics
 Priority: optional
-Filename: pool/main/g/gem/gem-plugin-gmerlin_0.94-10_amd64.deb
-Size: 121136
-MD5sum: 5fceb4f425a526469192dbc50416c1a7
-SHA256: bf1186009da24fc02ea3032f829d4e21daf005557290e818b4ff0254d58fd46c
+Filename: pool/main/g/gem/gem-plugin-gmerlin_0.95.0-1_amd64.deb
+Size: 437824
+MD5sum: de1110dcdbe797da7d2f4f84302258df
+SHA256: 75b2e0cd861c6ba10830b76824d844af95bf8b61491847720071b412aa216b0d
 
 Package: gem-plugin-jpeg
 Source: gem
-Version: 1:0.94-10
-Installed-Size: 174
+Version: 1:0.95.0-1
+Installed-Size: 500
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
+Replaces: gem (<< 1:0.95~)
 Provides: gem-plugin-image
-Depends: gem (<< 1:0.94+1~), gem (>= 1:0.94-10), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libjpeg62-turbo (>= 1.3.1), libstdc++6 (>= 13.1)
+Depends: gem (<< 1:0.95.0+1~), gem (>= 1:0.95.0-1), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libjpeg62-turbo (>= 1.3.1), libstdc++6 (>= 13.1)
+Breaks: gem (<< 1:0.95~)
 Description: Graphics Environment for Multimedia - JPEG support
 Homepage: https://gem.iem.at/
 Description-md5: a8b010a22b8f65f3c61b7e7964ddaaec
 graphics
 Priority: optional
-Filename: pool/main/g/gem/gem-plugin-jpeg_0.94-10_amd64.deb
-Size: 124428
-MD5sum: f219b965e60ced146c3f57f0b6859f20
-SHA256: bb181f86cd703d1468dc8e3d8c554bae9d6d27a8a263a8cc972bb13e1e4841b5
+Filename: pool/main/g/gem/gem-plugin-jpeg_0.95.0-1_amd64.deb
+Size: 441288
+MD5sum: b4f7028ba46a1afb108d98fb35af207a
+SHA256: a57336aad2c2a714dace9ebf03248e27e872031ae1cf313436b5f57a353d239b
 
 Package: gem-plugin-lqt
 Source: gem
-Version: 1:0.94-10
-Installed-Size: 225
+Version: 1:0.95.0-1
+Installed-Size: 559
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
+Replaces: gem (<< 1:0.95~)
 Provides: gem-plugin-film, gem-plugin-record
-Depends: gem (<< 1:0.94+1~), gem (>= 1:0.94-10), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libquicktime2 (>= 2:1.2.2), libstdc++6 (>= 13.1)
+Depends: gem (<< 1:0.95.0+1~), gem (>= 1:0.95.0-1), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libquicktime2 (>= 2:1.2.4), libstdc++6 (>= 13.1)
+Breaks: gem (<< 1:0.95~)
 Description: Graphics Environment for Multimedia - LQT support
 Homepage: https://gem.iem.at/
 Description-md5: e359a47ef863114275ed0c9ea6a6bf13
 graphics
 Priority: optional
-Filename: pool/main/g/gem/gem-plugin-lqt_0.94-10_amd64.deb
-Size: 137848
-MD5sum: 114cd4da67838bac4568b98c92e938bb
-SHA256: 9522e53d756e6966384eb9af91eda2fff6a9ee50df82915f7b65bc08617a15ee
+Filename: pool/main/g/gem/gem-plugin-lqt_0.95.0-1_amd64.deb
+Size: 459872
+MD5sum: dcf473e9e5a015be2dba919bc08417fe
+SHA256: ba4090b00a34f7e751cb8ba872ffe4ffa232de4d25f9c081ab4cc7f9436d6a86
 
 Package: gem-plugin-magick
 Source: gem
-Version: 1:0.94-10
-Installed-Size: 174
+Version: 1:0.95.0-1
+Installed-Size: 500
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
+Replaces: gem (<< 1:0.95~)
 Provides: gem-plugin-image
-Depends: gem (<< 1:0.94+1~), gem (>= 1:0.94-10), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libmagick++-7.q16-5 (>= 8:7.1.1.21), libmagickcore-7.q16-10 (>= 8:7.1.1.21), libstdc++6 (>= 13.1)
+Depends: gem (<< 1:0.95.0+1~), gem (>= 1:0.95.0-1), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libmagick++-7.q16-5 (>= 8:7.1.1.21), libmagickcore-7.q16-10 (>= 8:7.1.1.21), libstdc++6 (>= 13.1)
+Breaks: gem (<< 1:0.95~)
 Description: Graphics Environment for Multimedia - ImageMagick support
 Homepage: https://gem.iem.at/
 Description-md5: ecb07097215819f8f9fda73c550fc7e7
 graphics
 Priority: optional
-Filename: pool/main/g/gem/gem-plugin-magick_0.94-10_amd64.deb
-Size: 125656
-MD5sum: b024ce3c56fc756294966830974e6b27
-SHA256: 8348b46321757571dda62f9944e4e343c6d23118df36b61da3eb38d2bd1785f6
+Filename: pool/main/g/gem/gem-plugin-magick_0.95.0-1_amd64.deb
+Size: 443176
+MD5sum: 66e0a2dbc31a480ca79c4dfd640cdfff
+SHA256: 0d6c1cb3b746ea7b194893812835bf4aa42ff3cb1105970031eff7de031a95e4
 
-Package: gem-plugin-mpeg3
+Package: gem-plugin-pipewire
 Source: gem
-Version: 1:0.94-10
-Installed-Size: 170
+Version: 1:0.95.0-1
+Installed-Size: 624
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
-Provides: gem-plugin-film
-Depends: gem (<< 1:0.94+1~), gem (>= 1:0.94-10), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libmpeg3-2t64 (>= 1.8~), libstdc++6 (>= 13.1)
-Description: Graphics Environment for Multimedia - MPEG support
+Provides: gem-plugin-record, gem-plugin-video
+Depends: gem (<< 1:0.95.0+1~), gem (>= 1:0.95.0-1), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libpipewire-0.3-0t64 (>= 0.3.38), libstdc++6 (>= 13.1)
+Description: Graphics Environment for Multimedia - pipewire plugins
 Homepage: https://gem.iem.at/
-Description-md5: 0d15eda23f4928acdc86a98efab54d5b
+Description-md5: 04e26e8defca249411f7d706c853c596
 graphics
 Priority: optional
-Filename: pool/main/g/gem/gem-plugin-mpeg3_0.94-10_amd64.deb
-Size: 123856
-MD5sum: c30798f83fc4b4a85449eef0a85ab42d
-SHA256: 36fcad165c0b605224ffa52c810737b2e4a9195eaa2f082d161f394c3a26c180
+Filename: pool/main/g/gem/gem-plugin-pipewire_0.95.0-1_amd64.deb
+Size: 469896
+MD5sum: d64941b7e522ce6096171ebfe4d0e574
+SHA256: bf854155f5e31ee77e83f4834a96e13184d347a7c207165726b099f0829ec83d
 
 Package: gem-plugin-sdl
 Source: gem
-Version: 1:0.94-10
-Installed-Size: 222
+Version: 1:0.95.0-1
+Installed-Size: 578
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
+Replaces: gem (<< 1:0.95~)
 Provides: gem-plugin-window
-Depends: gem (<< 1:0.94+1~), gem (>= 1:0.94-10), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libsdl1.2debian (>= 1.2.15), libstdc++6 (>= 5.2)
-Description: Graphics Environment for Multimedia - SDL support
+Depends: gem (<< 1:0.95.0+1~), gem (>= 1:0.95.0-1), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libsdl2-2.0-0 (>= 2.0.12), libstdc++6 (>= 5.2)
+Breaks: gem (<< 1:0.95~)
+Description: Graphics Environment for Multimedia - SDL2 support
 Homepage: https://gem.iem.at/
-Description-md5: 410ac0e175eb69ebb8c893046a2a7382
+Description-md5: 7b47860405135a238791b81c02146f35
 Tag: uitoolkit::sdl
 graphics
 Priority: optional
-Filename: pool/main/g/gem/gem-plugin-sdl_0.94-10_amd64.deb
-Size: 125192
-MD5sum: e0cb1c984930422a31f0bc1fc6559a28
-SHA256: 2476a38e4b3248cd5290f121630b87454a4017ce0550a6a5dee126e8637cefb3
+Filename: pool/main/g/gem/gem-plugin-sdl_0.95.0-1_amd64.deb
+Size: 455264
+MD5sum: 4f77bfa6e76ab343eaa048bcbdd9f683
+SHA256: 8e1e242ffd325514ac27bed166711e073988648ec196d172b4c7bd305431323f
 
 Package: gem-plugin-sgi
 Source: gem
-Version: 1:0.94-10
-Installed-Size: 194
+Version: 1:0.95.0-1
+Installed-Size: 520
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
+Replaces: gem (<< 1:0.95~)
 Provides: gem-plugin-image
-Depends: gem (<< 1:0.94+1~), gem (>= 1:0.94-10), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
+Depends: gem (<< 1:0.95.0+1~), gem (>= 1:0.95.0-1), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
+Breaks: gem (<< 1:0.95~)
 Description: Graphics Environment for Multimedia - SGI support
 Homepage: https://gem.iem.at/
 Description-md5: 3e254b814bb5b05693a2f799ce2a40f9
 graphics
 Priority: optional
-Filename: pool/main/g/gem/gem-plugin-sgi_0.94-10_amd64.deb
-Size: 134816
-MD5sum: 33f51105fe078dbdfe1378bd00fc270f
-SHA256: c9a3f0d2fb46d53dcca0a52fce2c7c4d49b6491cc6f72d4be38c2dac3857570c
+Filename: pool/main/g/gem/gem-plugin-sgi_0.95.0-1_amd64.deb
+Size: 452648
+MD5sum: 5c1bc38892f3cef8859b798928bdeeef
+SHA256: 4003c2ef1840ca48e4c3fa246aed763fb6ae836cd8dfb39b201709eeb7d61dbf
 
 Package: gem-plugin-tiff
 Source: gem
-Version: 1:0.94-10
-Installed-Size: 186
+Version: 1:0.95.0-1
+Installed-Size: 512
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
+Replaces: gem (<< 1:0.95~)
 Provides: gem-plugin-image
-Depends: gem (<< 1:0.94+1~), gem (>= 1:0.94-10), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1), libtiff6 (>= 4.0.3)
+Depends: gem (<< 1:0.95.0+1~), gem (>= 1:0.95.0-1), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1), libtiff6 (>= 4.0.3)
+Breaks: gem (<< 1:0.95~)
 Description: Graphics Environment for Multimedia - TIFF support
 Homepage: https://gem.iem.at/
 Description-md5: 18bb323199c2240ce61a8dc55898c962
 graphics
 Priority: optional
-Filename: pool/main/g/gem/gem-plugin-tiff_0.94-10_amd64.deb
-Size: 129496
-MD5sum: 0dd1b389af8fa3c6b1d0f04b346fab5a
-SHA256: 51f2f32ec0600c85374ca61ce3fa02f4853549e932f1c5ab6ef57e41cb3539bf
+Filename: pool/main/g/gem/gem-plugin-tiff_0.95.0-1_amd64.deb
+Size: 447428
+MD5sum: 362bb7e667623c35d3ed2b60e4bf9a15
+SHA256: d7468c72a9eadb2d1f8ec88b018100b2cd29f9c3f7d39aace4d0b9b26710ffa3
 
-Package: gem-plugin-unicap
+Package: gem-plugin-ugly
 Source: gem
-Version: 1:0.94-10
-Installed-Size: 206
+Version: 1:0.95.0-1
+Installed-Size: 683
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
-Provides: gem-plugin-video
-Depends: gem (<< 1:0.94+1~), gem (>= 1:0.94-10), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1), libunicap2 (>= 0.9.12~)
-Description: Graphics Environment for Multimedia - unicap support
+Replaces: gem (<< 1:0.95~)
+Provides: gem-plugin-record, gem-plugin-video
+Depends: gem (<< 1:0.95.0+1~), gem (>= 1:0.95.0-1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
+Breaks: gem (<< 1:0.95~)
+Description: Graphics Environment for Multimedia - plugins from the "ugly" set
 Homepage: https://gem.iem.at/
-Description-md5: dbdad23ef8e4c9616421ac0e4ea6e11d
+Description-md5: 60020678da46600b9c63739e0b61058e
 graphics
 Priority: optional
-Filename: pool/main/g/gem/gem-plugin-unicap_0.94-10_amd64.deb
-Size: 138680
-MD5sum: 3a4fcfc8e76e71a56a4d2cb58dbb94d5
-SHA256: e819649878b9413689e6356ed240daa00615692260311dcbeb3ac79468ba48e5
+Filename: pool/main/g/gem/gem-plugin-ugly_0.95.0-1_amd64.deb
+Size: 485736
+MD5sum: 832e001e459e21efee332b0108741580
+SHA256: fd3a8cc6392b7b11ad8111bae5cbce2cf8ffb4eee5b31502b21e8a05021c7c8d
 
 Package: gem-plugin-v4l2
 Source: gem
-Version: 1:0.94-10
-Installed-Size: 233
+Version: 1:0.95.0-1
+Installed-Size: 562
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
+Replaces: gem (<< 1:0.95~)
 Provides: gem-plugin-record, gem-plugin-video
-Depends: gem (<< 1:0.94+1~), gem (>= 1:0.94-10), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1), libv4l-0t64 (>= 0.5.0)
+Depends: gem (<< 1:0.95.0+1~), gem (>= 1:0.95.0-1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1), libv4l-0t64 (>= 0.5.0)
 Suggests: v4l2loopback-dkms | v4l2loopback-modules
+Breaks: gem (<< 1:0.95~)
 Description: Graphics Environment for Multimedia - V4L2 output support
 Homepage: https://gem.iem.at/
 Description-md5: 8ad179c790ef5e00d4fa8f9e8c835e97
 graphics
 Priority: optional
-Filename: pool/main/g/gem/gem-plugin-v4l2_0.94-10_amd64.deb
-Size: 144532
-MD5sum: bdef493ddf2b9bd901631b29ce483448
-SHA256: 9f8b528aa42bbc72147eb91df96467029945b74b9f5cdcadb7e962ad928f624f
+Filename: pool/main/g/gem/gem-plugin-v4l2_0.95.0-1_amd64.deb
+Size: 463168
+MD5sum: 74e60ea2fac9738a2de1ceadf0052327
+SHA256: d3c20ae4658a3129cfc73372530f1f3bd2c44657257dae0d10813c3edb5b6f91
 
 Package: gem-plugin-vlc
 Source: gem
-Version: 1:0.94-10
-Installed-Size: 174
+Version: 1:0.95.0-1
+Installed-Size: 500
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
+Replaces: gem (<< 1:0.95~)
 Provides: gem-plugin-video
-Depends: gem (<< 1:0.94+1~), gem (>= 1:0.94-10), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1), libvlc5 (>= 2.0.0)
+Depends: gem (<< 1:0.95.0+1~), gem (>= 1:0.95.0-1), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1), libvlc5 (>= 2.0.0)
+Breaks: gem (<< 1:0.95~)
 Description: Graphics Environment for Multimedia - VLC support
 Homepage: https://gem.iem.at/
-Description-md5: 4233421cf30151e84c790c138f1d3b41
+Description-md5: 940e621efb8261e59f8382026989c209
 graphics
 Priority: optional
-Filename: pool/main/g/gem/gem-plugin-vlc_0.94-10_amd64.deb
-Size: 125264
-MD5sum: 96c3574a8fda80c66cc8ce4d1c69b85b
-SHA256: 3a6e59dcd0a3c434c2e4e2d2bd3d69fc8f3d375435016fe997e2b3768dd95a61
+Filename: pool/main/g/gem/gem-plugin-vlc_0.95.0-1_amd64.deb
+Size: 442756
+MD5sum: fb75cc709d4291f4a5e2b8ea00bcc2ab
+SHA256: cae3776cba1015000341413dc3ea3220ebce196eceaa7b69d14294df2e8bec3d
 
 Package: gem-plugin-vnc
 Source: gem
-Version: 1:0.94-10
-Installed-Size: 174
+Version: 1:0.95.0-1
+Installed-Size: 499
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
+Replaces: gem (<< 1:0.95~)
 Provides: gem-plugin-video
-Depends: gem (<< 1:0.94+1~), gem (>= 1:0.94-10), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1), libvncclient1 (>= 0.9.10)
+Depends: gem (<< 1:0.95.0+1~), gem (>= 1:0.95.0-1), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1), libvncclient1 (>= 0.9.10)
+Breaks: gem (<< 1:0.95~)
 Description: Graphics Environment for Multimedia - VNC support
 Homepage: https://gem.iem.at/
-Description-md5: 4716f77b68ca2ab345c877a4603c759a
+Description-md5: ae67296fdda2a146e4e542e2387ce0a7
 graphics
 Priority: optional
-Filename: pool/main/g/gem/gem-plugin-vnc_0.94-10_amd64.deb
-Size: 125272
-MD5sum: cd3ae132e7c4e4915b047ebba187539f
-SHA256: 723689aaa9c2ab37851c42b84e5501849f50adc3ebeb04f0bec3346c866a1b55
+Filename: pool/main/g/gem/gem-plugin-vnc_0.95.0-1_amd64.deb
+Size: 442204
+MD5sum: 4c8a4a8edd02496ad313a3605138e666
+SHA256: 3541c220d75d2e294b9bc4ffe8d5e7cce8f864f304f7021b8221b17c4f4d1074
 
 Package: gifsicle
 Version: 1.96-1
