@@ -10761,6 +10761,21 @@ Size: 8756
 MD5sum: 0cd80ae443edad98a2b1c8673fb65e76
 SHA256: cc5407e14dda628d8fa99a62956dd4de338ea38dc5c1f1e67da7895a31d2462d
 
+Package: node-dayjs
+Version: 1.11.21-2
+Installed-Size: 1183
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Architecture: all
+Description: minimalist date time library for Node.js
+Homepage: https://day.js.org
+Description-md5: 57b519fab5f8306bd99bab8683a3c5b8
+javascript
+Priority: optional
+Filename: pool/main/n/node-dayjs/node-dayjs_1.11.21-2_all.deb
+Size: 285848
+MD5sum: f3db511a3376086f89b6884b57cd4039
+SHA256: 4180d446748c0bf58c4114af5d139c68ea0bc52acda34d8ce76c20c905c0cfe2
+
 Package: node-de-indent
 Version: 1.0.2-3
 Installed-Size: 13
@@ -17307,40 +17322,44 @@ SHA256: f8687e58551e3084fa406ca7a752ad8e28bfa4097c32818fdd92c3a530538550
 
 Package: inwasm
 Source: node-inwasm
-Version: 0.0.13~git20230419+dfsg-4
-Installed-Size: 140
+Version: 0.1.2+dfsg-4
+Installed-Size: 182
 Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
 Architecture: all
-Provides: node-inwasm (= 0.0.13)
-Depends: clang | wabt | emscripten, node-inwasm-runtime, nodejs:any
+Replaces: node-inwasm-runtime (<< 0.1.2+dfsg-1~)
+Provides: node-inwasm (= 0.1.2+dfsg-4)
+Depends: node-inwasm-runtime (= 0.1.2+dfsg-4), clang | wabt | emscripten, nodejs:any
 Recommends: clang, lld, wabt
 Suggests: emscripten
+Breaks: node-inwasm-runtime (<< 0.1.2+dfsg-1~)
 Description: Compiler part of InWasm, Inline WebAssembly for Typescript
 Homepage: https://github.com/jerch/inwasm#readme
 Description-md5: 27d0420a89d1b3b42ed2782d76cacf1d
 javascript
 Priority: optional
-Filename: pool/main/n/node-inwasm/inwasm_0.0.13~git20230419+dfsg-4_all.deb
-Size: 23436
-MD5sum: 96d29890a1205c050f951901477fdbc3
-SHA256: dd823e156fbd298447d6dca82595b6db75e096f7bde30d019a9ae9e4b2f55885
+Filename: pool/main/n/node-inwasm/inwasm_0.1.2+dfsg-4_all.deb
+Size: 28192
+MD5sum: 1ed47255e272d2b7af79f396d9150c4a
+SHA256: f81bb83dea806d66712528884a314ff354e4c6cdf03e026ddc942975d327a3f7
 
 Package: node-inwasm-runtime
 Source: node-inwasm
-Version: 0.0.13~git20230419+dfsg-4
-Installed-Size: 36
+Version: 0.1.2+dfsg-4
+Installed-Size: 39
 Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
 Architecture: all
-Depends: node-acorn, node-acorn-walk, node-chokidar, node-colorette, node-glob (>= 10~)
+Replaces: inwasm (<< 0.1.2+dfsg-1~)
+Depends: nodejs:any, node-acorn, node-acorn-walk, node-chokidar, node-colorette, node-glob (>= 10~), node-minimatch
+Breaks: inwasm (<< 0.1.2+dfsg-1~)
 Description: Runtime part of InWasm, Inline WebAssembly for Typescript
 Homepage: https://github.com/jerch/inwasm#readme
 Description-md5: d76565e543d940c59db5a63b9e059ba3
 javascript
 Priority: optional
-Filename: pool/main/n/node-inwasm/node-inwasm-runtime_0.0.13~git20230419+dfsg-4_all.deb
-Size: 7732
-MD5sum: bb1eeae21b041279acd2cb194f400484
-SHA256: e379e87e55636199254aad3fb6c4fc53043857f4c89515da7d40451e8c33644c
+Filename: pool/main/n/node-inwasm/node-inwasm-runtime_0.1.2+dfsg-4_all.deb
+Size: 14272
+MD5sum: 885c0fb35cd0ca6cadf4645a293c9070
+SHA256: d8b18c7a5f090243002452c2f496b335de2b83229db1baf6c87debbb7e978f71
 
 Package: node-ip
 Version: 2.0.1+~1.1.3-3
@@ -31692,11 +31711,11 @@ SHA256: 826613faba337322fb91c4e9d4609b9ec61db7f88c7d23b4b60248477c2f9fd2
 
 Package: libjs-terser
 Source: node-terser
-Version: 5.47.1-1
-Installed-Size: 1427
+Version: 5.49.0-1
+Installed-Size: 1438
 Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
 Architecture: all
-Depends: node-terser (= 5.47.1-1)
+Depends: node-terser (= 5.49.0-1)
 Recommends: javascript-common, libjs-source-map
 Description: parser/mangler/compressor for ES6+ - browser library
 Multi-Arch: foreign
@@ -31704,14 +31723,14 @@ Homepage: https://terser.org/
 Description-md5: ddd9405d8fbb06dac1d3c1270bce5646
 javascript
 Priority: optional
-Filename: pool/main/n/node-terser/libjs-terser_5.47.1-1_all.deb
-Size: 541112
-MD5sum: 29ebf130b563f739fa6d477ef86f7a29
-SHA256: 021847067d2f3dcd5985b780b29c22d7a4ce505e4925c9057037e544bbd75d19
+Filename: pool/main/n/node-terser/libjs-terser_5.49.0-1_all.deb
+Size: 545648
+MD5sum: 252e73b3214f6b4f2012634de930b9c4
+SHA256: 8175ce36b2fdf8572e71ff1291dc739f4dd6c4bd4440f6dc3ae1ec4c00e53200
 
 Package: node-terser
-Version: 5.47.1-1
-Installed-Size: 2280
+Version: 5.49.0-1
+Installed-Size: 2296
 Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
 Architecture: all
 Replaces: uglifyjs.terser (<< 4.8.0-1~)
@@ -31724,19 +31743,19 @@ Homepage: https://terser.org/
 Description-md5: fa26c9c614622e8f1ac6ab825c85fa4e
 javascript
 Priority: optional
-Filename: pool/main/n/node-terser/node-terser_5.47.1-1_all.deb
-Size: 225132
-MD5sum: 5053a0ac2432b6f8bf1473bf1a5bcdcb
-SHA256: e2d525861ef8f775073adeddeb0b426c80ddd76bbd614c418e3ea4042ed428f7
+Filename: pool/main/n/node-terser/node-terser_5.49.0-1_all.deb
+Size: 226784
+MD5sum: 333b1f54a0ae0bddfc14d66046c3b9f0
+SHA256: 9e0d71a3ff99cb3611c6f39a7470cff4327041213bf5d01b2e41b5c07257d6cc
 
 Package: terser
 Source: node-terser
-Version: 5.47.1-1
+Version: 5.49.0-1
 Installed-Size: 34
 Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
 Architecture: all
 Replaces: uglifyjs.terser (<< 4.8.0-1~)
-Depends: node-commander (>= 14), node-terser (= 5.47.1-1), nodejs:any
+Depends: node-commander (>= 14), node-terser (= 5.49.0-1), nodejs:any
 Recommends: node-source-map-support
 Suggests: node-acorn
 Breaks: uglifyjs.terser (<< 4.8.0-1~)
@@ -31746,10 +31765,10 @@ Homepage: https://terser.org/
 Description-md5: fffba1807075157f85104d975686268c
 javascript
 Priority: optional
-Filename: pool/main/n/node-terser/terser_5.47.1-1_all.deb
-Size: 17884
-MD5sum: 1671450234c0469f0206bba9ee151a10
-SHA256: 3d9de4e38629aed2db963b6b7d9f10f134d2646f8741b42d8e04e8c959b4d424
+Filename: pool/main/n/node-terser/terser_5.49.0-1_all.deb
+Size: 18008
+MD5sum: 7d13c66ff7860b38a9538d39eedd856d
+SHA256: 5d71ad970a9310967719296bbf47a44965dc327e0f7799fe328945f6b44261e5
 
 Package: node-test
 Version: 0.6.0-12
@@ -35336,40 +35355,41 @@ SHA256: c64e37fbea40de012b59adbfa61e703b52c12713f34cbfd2d4049ebcc549f270
 
 Package: libjs-xterm
 Source: node-xterm
-Version: 5.3.0-6
-Installed-Size: 2705
+Version: 5.5.0-2
+Installed-Size: 2939
 Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
 Architecture: all
 Recommends: javascript-common
 Description: terminal front-end component for the browser - browser library
 Multi-Arch: foreign
 Homepage: https://xtermjs.org
-Description-md5: 3c5fd37ab6e3122e45467c151886a870
+Description-md5: 5f708e19abed631bdec138ffd6c99625
 javascript
 Priority: optional
-Filename: pool/main/n/node-xterm/libjs-xterm_5.3.0-6_all.deb
-Size: 454488
-MD5sum: 387ef59f09183b19d9bd3e199ba5885d
-SHA256: 52941c9ade9e8edc08b34767947211891681a8ad839cba698edeaf1d488e9aaf
+Filename: pool/main/n/node-xterm/libjs-xterm_5.5.0-2_all.deb
+Size: 483028
+MD5sum: d98aaf549db48772b16c92ad7766f205
+SHA256: 1c51cb7584ad14f9e0c6c406da329deb699ebdef9ccdc586c2a4f4902c6e88aa
 
 Package: node-xterm
-Version: 5.3.0-6
-Installed-Size: 4271
+Version: 5.5.0-2
+Installed-Size: 1700
 Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
 Architecture: all
-Provides: node-xterm-addon-attach (= 0.9.0), node-xterm-addon-canvas (= 0.5.0), node-xterm-addon-fit (= 0.8.0), node-xterm-addon-image (= 0.6.0), node-xterm-addon-search (= 0.13.0), node-xterm-addon-serialize (= 0.11.0), node-xterm-addon-unicode11 (= 0.6.0), node-xterm-addon-web-links (= 0.9.0), node-xterm-addon-webgl (= 0.16.0), node-xterm-wasm-parts (= 0.1.0)
+Provides: node-xterm-addon-attach (= 0.11.0), node-xterm-addon-canvas (= 0.7.0), node-xterm-addon-fit (= 0.10.0), node-xterm-addon-image (= 0.8.0), node-xterm-addon-search (= 0.15.0), node-xterm-addon-serialize (= 0.13.0), node-xterm-addon-unicode-graphemes (= 0.3.0), node-xterm-addon-unicode11 (= 0.8.0), node-xterm-addon-web-links (= 0.11.0), node-xterm-addon-webgl (= 0.18.0), node-xterm-wasm-parts (= 0.4.1), node-xterm-xterm (= 5.5.0)
+Depends: libjs-xterm (= 5.5.0-2)
 Recommends: node-inwasm-runtime
 Suggests: nodejs:any
 Description: terminal front-end component for the browser - NodeJS modules
 Multi-Arch: foreign
 Homepage: https://xtermjs.org
-Description-md5: fb5b7a68aaf8c158f85c5db47e4be578
+Description-md5: 7cfbcfb6ddeb48cba27e641dfe53879e
 javascript
 Priority: optional
-Filename: pool/main/n/node-xterm/node-xterm_5.3.0-6_all.deb
-Size: 604184
-MD5sum: 1ab442618305187ff3bcc592e930213f
-SHA256: 08d866088895ec30d4035048bb4d320d84e51345c7f87e803ab4e3a059ef24db
+Filename: pool/main/n/node-xterm/node-xterm_5.5.0-2_all.deb
+Size: 286992
+MD5sum: 58a524d00e021edef0cef009b9c4c485
+SHA256: 8471dfee6adb7823d71fc049bd438130dd09e7476e2bc2ce9c4f49c37615d326
 
 Package: node-xxhashjs
 Version: 0.2.2+dfsg+~0.2.4-1

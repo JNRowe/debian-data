@@ -2479,6 +2479,99 @@ Filename: pool/updates/main/r/rsync/rsync_3.2.7-1+deb12u5_amd64.deb
 Size: 424536
 SHA256: 7dbc5cb82b8d70c61747819a3ebe397bc4c5f274f266184e557860f1b7a6cafa
 
+Package: rtpengine
+Version: 10.5.3.5-1+deb12u1
+Installed-Size: 72
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: rtpengine-daemon (>= 10.5.3.5-1+deb12u1), rtpengine-iptables (>= 10.5.3.5-1+deb12u1), rtpengine-kernel-dkms (>= 10.5.3.5-1+deb12u1), rtpengine-recording-daemon (>= 10.5.3.5-1+deb12u1), rtpengine-utils (>= 10.5.3.5-1+deb12u1)
+Conflicts: ngcp-rtpengine
+Description: NGCP RTP/media proxy - metapackage
+Homepage: https://github.com/sipwise/rtpengine/
+Description-md5: ff2ff6afc221559454e6cb2d402d73da
+Multi-Arch: foreign
+net
+Priority: optional
+Filename: pool/updates/main/r/rtpengine/rtpengine_10.5.3.5-1+deb12u1_all.deb
+Size: 64940
+SHA256: c448bef9fb4e4c653d691b5a44da5f559ccbc8806e35ce2b1d709b5d38894a8c
+
+Package: rtpengine-daemon
+Source: rtpengine
+Version: 10.5.3.5-1+deb12u1
+Installed-Size: 1127
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: iptables, sysvinit-utils (>= 3.05-4~) | lsb-base (>= 3.0-6), libavcodec59 (>= 7:5.0), libavformat59 (>= 7:5.0), libavutil57 (>= 7:5.1), libbcg729-0 (>= 1.0.0), libc6 (>= 2.34), libevent-2.1-7 (>= 2.1.8-stable), libevent-pthreads-2.1-7 (>= 2.1.8-stable), libglib2.0-0 (>= 2.67.3), libhiredis0.14 (>= 0.14.1), libip4tc2 (>= 1.8.3), libip6tc2 (>= 1.8.3), libjson-glib-1.0-0 (>= 1.5.2), libmariadb3 (>= 3.0.0), libmosquitto1 (>= 1.4), libpcap0.8 (>= 0.9.8), libpcre3, libspandsp2 (>= 0.0.6), libssl3 (>= 3.0.0), libswresample4 (>= 7:5.1), libsystemd0, libwebsockets17 (>= 2.4.1), libxmlrpc-core-c3, zlib1g (>= 1:1.1.4)
+Conflicts: ngcp-rtpengine-daemon
+Description: proxy for RTP and media streams used in NGCP, userspace part
+Homepage: https://github.com/sipwise/rtpengine/
+Description-md5: 385824689e327542f7397f02667ac52d
+Multi-Arch: foreign
+Pre-Depends: adduser, init-system-helpers (>= 1.54~)
+Recommends: rtpengine-recording-daemon, rtpengine-utils
+net
+Priority: optional
+Filename: pool/updates/main/r/rtpengine/rtpengine-daemon_10.5.3.5-1+deb12u1_amd64.deb
+Size: 408336
+SHA256: acd8de7924de52dde1396d45e52c7b22dbfdf51a3c1028202bf7db8431ec50fa
+
+Package: rtpengine-iptables
+Source: rtpengine
+Version: 10.5.3.5-1+deb12u1
+Installed-Size: 29
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.2.5)
+Conflicts: ngcp-rtpengine-iptables
+Description: IPtables extension module for the kernel-space NGCP media proxy
+Homepage: https://github.com/sipwise/rtpengine/
+Description-md5: 68474a21be025f62cc8b419587931d3a
+Multi-Arch: foreign
+net
+Priority: optional
+Filename: pool/updates/main/r/rtpengine/rtpengine-iptables_10.5.3.5-1+deb12u1_amd64.deb
+Size: 5216
+SHA256: face00da85bcfac7aa498ed42d80f3ef530b882bc3fa179318d1b795120ffcc7
+
+Package: rtpengine-recording-daemon
+Source: rtpengine
+Version: 10.5.3.5-1+deb12u1
+Installed-Size: 253
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: nfs-common, rtpengine-daemon, sysvinit-utils (>= 3.05-4~) | lsb-base (>= 3.0-6), libavcodec59 (>= 7:5.0), libavfilter8 (>= 7:5.0), libavformat59 (>= 7:5.0), libavutil57 (>= 7:5.1), libbcg729-0 (>= 1.0.0), libc6 (>= 2.34), libglib2.0-0 (>= 2.30), libmariadb3 (>= 3.0.0), libssl3 (>= 3.0.0), libswresample4 (>= 7:5.1), libsystemd0
+Conflicts: ngcp-rtpengine-recording-daemon
+Description: recording daemon for RTP and media streams
+Homepage: https://github.com/sipwise/rtpengine/
+Description-md5: 0eb56e8f03cb21f79e12372990b4be8e
+Multi-Arch: foreign
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: rtpengine-utils
+net
+Priority: optional
+Filename: pool/updates/main/r/rtpengine/rtpengine-recording-daemon_10.5.3.5-1+deb12u1_amd64.deb
+Size: 83620
+SHA256: 9115bd7312cc0820fb1f343bf6be01951e8eb7aafae12ef8c6c23df072c027c8
+
+Package: rtpengine-utils
+Source: rtpengine
+Version: 10.5.3.5-1+deb12u1
+Installed-Size: 126
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: libbencode-perl, libconfig-tiny-perl, libcrypt-rijndael-perl, libdigest-hmac-perl, libio-socket-inet6-perl, libio-socket-ip-perl, libsocket6-perl, netcat-openbsd | netcat, perl:any
+Conflicts: ngcp-rtpengine-utils
+Description: scripts and Perl modules for NGCP rtpengine
+Homepage: https://github.com/sipwise/rtpengine/
+Description-md5: b1c7c4d801ccd26dc6ee9025d31f5a9a
+Multi-Arch: foreign
+net
+Priority: optional
+Filename: pool/updates/main/r/rtpengine/rtpengine-utils_10.5.3.5-1+deb12u1_all.deb
+Size: 27648
+SHA256: a40042fbf7664efcf3905d654f94873ff6d22359f48c5dfee55d7a52bbca2028
+
 Package: ctdb
 Source: samba
 Version: 2:4.17.12+dfsg-0+deb12u4
