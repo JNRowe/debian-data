@@ -9113,6 +9113,200 @@ Description-en: entropy source using the HAVEGE algorithm - shared library
  .
  This package contains the shared library.
 
+Package: hpijs-ppds
+Description-md5: 979d2d553e8b615deb4af0e078d0def7
+Description-en: HP Linux Printing and Imaging - HPIJS PPD files
+ This package contains PPD (printer definition) files for the
+ printers supported through the HP Linux Printing and Imaging
+ System HPIJS driver.
+ .
+ These PPDs should work well with the matching versions of HPLIP
+ and HPIJS, but may not be the most up-to-date PPDs available for
+ a given printer.  See http://www.openprinting.org/ for the latest
+ version of the PPDs (which are not guaranteed to work well).
+
+Package: hplip
+Description-md5: d0f235dee296936ac63dbe1c1e9b59f7
+Description-en: HP Linux Printing and Imaging System (HPLIP)
+ The HP Linux Printing and Imaging System provides full support for
+ printing on most HP SFP (single function peripheral) inkjets and many
+ LaserJets, and for scanning, sending faxes and for photo-card access on
+ most HP MFP (multi-function peripheral) printers.
+ .
+ HPLIP is composed of:
+  * System services to handle communications with the printers
+  * HP CUPS backend driver (hp:) with bi-directional communication with
+    HP printers (provides printer status feedback to CUPS and enhanced
+    HPIJS functionality such as 4-side full-bleed printing support)
+  * HP CUPS backend driver for sending faxes (hpfax:)
+  * hpcups CUPS Raster driver to turn rasterized input from the CUPS
+    filter chain into the printer's native format (PCL, LIDIL, ...).
+    (hpcups is shipped in a separate package)
+  * HPIJS Ghostscript IJS driver to rasterize output from PostScript(tm)
+    files or from any other input format supported by Ghostscript, and
+    also for PostScript(tm) to fax conversion support
+    (HPIJS is shipped in a separate package)
+  * Command line utilities to perform printer maintenance, such as
+    ink-level monitoring or pen cleaning and calibration
+  * GUI and command line utility to download data from the photo card
+    interfaces in MFP devices
+  * GUI and command line utilities to interface with the fax functions
+  * A GUI toolbox to access all these functions in a friendly way
+  * HPAIO SANE backend (hpaio) for flatbed and Automatic Document Feeder
+    (ADF) scanning using MFP devices
+ .
+ USB and JetDirect (network) devices are supported.
+
+Package: hplip-data
+Description-md5: 3b25de2ec5e828f0e61d78047df8b6e7
+Description-en: HP Linux Printing and Imaging - data files
+ The HP Linux Printing and Imaging System provides full support for
+ printing on most HP SFP (single function peripheral) inkjets and many
+ LaserJets, and for scanning, sending faxes and for photo-card access on
+ most HP MFP (multi-function peripheral) printers.
+ .
+ This package contains data files for the HP Linux Printing and Imaging
+ System.
+
+Package: hplip-doc
+Description-md5: 7a9d622f180b9cbe47e31edb62d9f944
+Description-en: HP Linux Printing and Imaging - documentation
+ The HP Linux Printing and Imaging System provides full support for
+ printing on most HP SFP (single function peripheral) inkjets and many
+ LaserJets, and for scanning, sending faxes and for photo-card access on
+ most HP MFP (multi-function peripheral) printers.
+ .
+ This package contains the full documentation for the HP Linux
+ Printing and Imaging System for off-line reading.  It includes
+ the documentation for the HPIJS IJS driver as well.
+
+Package: hplip-gui
+Description-md5: 0e8b9881942aaafee62df05b01b6d0d0
+Description-en: HP Linux Printing and Imaging - GUI utilities (Qt-based)
+ The HP Linux Printing and Imaging System provides full support for
+ printing on most HP SFP (single function peripheral) inkjets and many
+ LaserJets, and for scanning, sending faxes and for photo-card access on
+ most HP MFP (multi-function peripheral) printers.
+ .
+ This package contains utilities with graphical user interface (GUI) for
+ HPLIP: HP Toolbox, HP Fax, ...
+ .
+ Note that all GUI utilities are based on the Qt GUI environment. There
+ are currently no equivalent utilities based on GTK+.
+
+Package: libhpmud-dev
+Description-md5: c3037acc090b7dd9e9bb4af0e55b60d8
+Description-en: HP Multi-Point Transport Driver (hpmud) development libraries
+ The HP Linux Printing and Imaging System provides full support for
+ printing on most HP SFP (single function peripheral) inkjets and many
+ LaserJets, and for scanning, sending faxes and for photo-card access on
+ most HP MFP (multi-function peripheral) printers.
+ .
+ Shared library that provides direct I/O for each process. Prior to
+ hpmud, all I/O was serialized through hpiod, a monolithic I/O processor.
+ The new hpmud direct I/O is faster. Hpmud supports parallel, USB and
+ JetDirect connectivity.
+ .
+ With hpmud, HPLIP no longer has Linux specific libusb extensions. This
+ means any UNIX/Linux derivative that supports libusb may work with
+ HPLIP. A public HPLIP "C" API is exposed through hpmud. See hpmud.h
+ for documentation. A Python wrapper for hpmud, called hpmudext, is also
+ available.
+ .
+ This package contains the development headers necessary if you wish
+ to build packages depending on libhpmud.
+
+Package: libhpmud0
+Description-md5: 1edbc501bdc7dd319ba80065197918f1
+Description-en: HP Multi-Point Transport Driver (hpmud) run-time libraries
+ The HP Linux Printing and Imaging System provides full support for
+ printing on most HP SFP (single function peripheral) inkjets and many
+ LaserJets, and for scanning, sending faxes and for photo-card access on
+ most HP MFP (multi-function peripheral) printers.
+ .
+ Shared library that provides direct I/O for each process. Prior to
+ hpmud, all I/O was serialized through hpiod, a monolithic I/O processor.
+ The new hpmud direct I/O is faster. Hpmud supports parallel, USB and
+ JetDirect connectivity.
+ .
+ With hpmud, HPLIP no longer has Linux specific libusb extensions. This
+ means any UNIX/Linux derivative that supports libusb may work with
+ HPLIP. A public HPLIP "C" API is exposed through hpmud. See hpmud.h
+ for documentation. A Python wrapper for hpmud, called hpmudext, is also
+ available.
+
+Package: libsane-hpaio
+Description-md5: 208dafbff3569d9b6dbc7f0b94df7754
+Description-en: HP SANE backend for multi-function peripherals
+ The HP Linux Printing and Imaging System provides full support for
+ printing on most HP SFP (single function peripheral) inkjets and many
+ LaserJets, and for scanning, sending faxes and for photo-card access on
+ most HP MFP (multi-function peripheral) printers.
+ .
+ This package contains the SANE backend libraries for use with HP
+ Multi-function peripherals.
+ .
+ Users of hplip are advised to install the hplip{-gui} packages for
+ command line and GUI tools associated with HPLIP.
+ .
+ This package is useful for a minimal footprint headless scanning solution.
+
+Package: printer-driver-hpcups
+Description-md5: ada0514587fab5c2bab3c115ac6c4800
+Description-en: HP Linux Printing and Imaging - CUPS Raster driver (hpcups)
+ This package contains a CUPS-Raster-based printer driver which adds support
+ for most inkjet printers and some LaserJet printers manufactured by HP. It
+ does not provide PPDs for the fax functionality of HP's multi-function
+ devices.
+ .
+ Users of the CUPS printing system are advised to also install the
+ hplip package, and use the hp CUPS backend to send data to the printer.
+ HPLIP supports USB and networked devices, and enables
+ extended hpcups functionality such as border-less printing.
+ Selecting any hpcups ppd in CUPS will use hpcups automatically.
+ .
+ No physical PPDs are shipped with this driver. PPDs are dynamically
+ generated via a CUPS DDK .drv file.
+ .
+ This package can be installed to provide a minimal headless printer
+ solution using CUPS.
+
+Package: printer-driver-hpijs
+Description-md5: 6ab962d256c4da1e18d9397ae22fbd86
+Description-en: HP Linux Printing and Imaging - printer driver (hpijs)
+ This package contains an IJS printer driver for Ghostscript, which
+ adds support for most inkjet printers and some LaserJet printers
+ manufactured by HP.  It is also required for HPLIP fax support.
+ .
+ The Debian package of hpijs includes the so-called rss patch, to use
+ pure black ink instead of composite black in printers that don't do
+ color map conversion in firmware.
+ .
+ HPIJS can take advantage of Ghostscript IJS KRGB support when
+ available, to enhance black printing on printers that do color
+ map conversion in firmware and are thus not affected by the old
+ rss patch.
+ .
+ Users of the CUPS printing system are advised to also install the
+ hplip package, and use the hp CUPS backend to send data to the printer.
+ HPLIP supports USB and networked devices, and enables
+ extended HPIJS functionality such as border-less printing.
+ Selecting any hpijs ppd in CUPS will use hpijs automatically.
+ .
+ HPIJS is meant to be used through the foomatic system (see the
+ foomatic-filters package or foomatic-rip in the cups-filters package).
+
+Package: printer-driver-postscript-hp
+Description-md5: a4f2a7386b4164a6709665b9dbe23d95
+Description-en: HP Printers PostScript Descriptions
+ The HP Linux Printing and Imaging System provides full support for
+ printing on most HP SFP (single function peripheral) inkjets and many
+ LaserJets, and for scanning, sending faxes and for photo-card access on
+ most HP MFP (multi-function peripheral) printers.
+ .
+ This package contains the compressed PPDs for the PostScript HP
+ Printers and the hpps filter.
+
 Package: hsqldb-utils
 Description-md5: 8790ad9c9ca663dc4dc2734d16431d2f
 Description-en: Java SQL database engine (utilities)

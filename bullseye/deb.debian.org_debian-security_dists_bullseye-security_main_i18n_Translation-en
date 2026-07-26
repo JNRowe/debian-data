@@ -13989,6 +13989,200 @@ Description-en: Heimdal Kerberos - stringprep implementation
  .
  This package contains the stringprep library.
 
+Package: hpijs-ppds
+Description-md5: 979d2d553e8b615deb4af0e078d0def7
+Description-en: HP Linux Printing and Imaging - HPIJS PPD files
+ This package contains PPD (printer definition) files for the
+ printers supported through the HP Linux Printing and Imaging
+ System HPIJS driver.
+ .
+ These PPDs should work well with the matching versions of HPLIP
+ and HPIJS, but may not be the most up-to-date PPDs available for
+ a given printer.  See http://www.openprinting.org/ for the latest
+ version of the PPDs (which are not guaranteed to work well).
+
+Package: hplip
+Description-md5: d0f235dee296936ac63dbe1c1e9b59f7
+Description-en: HP Linux Printing and Imaging System (HPLIP)
+ The HP Linux Printing and Imaging System provides full support for
+ printing on most HP SFP (single function peripheral) inkjets and many
+ LaserJets, and for scanning, sending faxes and for photo-card access on
+ most HP MFP (multi-function peripheral) printers.
+ .
+ HPLIP is composed of:
+  * System services to handle communications with the printers
+  * HP CUPS backend driver (hp:) with bi-directional communication with
+    HP printers (provides printer status feedback to CUPS and enhanced
+    HPIJS functionality such as 4-side full-bleed printing support)
+  * HP CUPS backend driver for sending faxes (hpfax:)
+  * hpcups CUPS Raster driver to turn rasterized input from the CUPS
+    filter chain into the printer's native format (PCL, LIDIL, ...).
+    (hpcups is shipped in a separate package)
+  * HPIJS Ghostscript IJS driver to rasterize output from PostScript(tm)
+    files or from any other input format supported by Ghostscript, and
+    also for PostScript(tm) to fax conversion support
+    (HPIJS is shipped in a separate package)
+  * Command line utilities to perform printer maintenance, such as
+    ink-level monitoring or pen cleaning and calibration
+  * GUI and command line utility to download data from the photo card
+    interfaces in MFP devices
+  * GUI and command line utilities to interface with the fax functions
+  * A GUI toolbox to access all these functions in a friendly way
+  * HPAIO SANE backend (hpaio) for flatbed and Automatic Document Feeder
+    (ADF) scanning using MFP devices
+ .
+ USB and JetDirect (network) devices are supported.
+
+Package: hplip-data
+Description-md5: 3b25de2ec5e828f0e61d78047df8b6e7
+Description-en: HP Linux Printing and Imaging - data files
+ The HP Linux Printing and Imaging System provides full support for
+ printing on most HP SFP (single function peripheral) inkjets and many
+ LaserJets, and for scanning, sending faxes and for photo-card access on
+ most HP MFP (multi-function peripheral) printers.
+ .
+ This package contains data files for the HP Linux Printing and Imaging
+ System.
+
+Package: hplip-doc
+Description-md5: 7a9d622f180b9cbe47e31edb62d9f944
+Description-en: HP Linux Printing and Imaging - documentation
+ The HP Linux Printing and Imaging System provides full support for
+ printing on most HP SFP (single function peripheral) inkjets and many
+ LaserJets, and for scanning, sending faxes and for photo-card access on
+ most HP MFP (multi-function peripheral) printers.
+ .
+ This package contains the full documentation for the HP Linux
+ Printing and Imaging System for off-line reading.  It includes
+ the documentation for the HPIJS IJS driver as well.
+
+Package: hplip-gui
+Description-md5: 0e8b9881942aaafee62df05b01b6d0d0
+Description-en: HP Linux Printing and Imaging - GUI utilities (Qt-based)
+ The HP Linux Printing and Imaging System provides full support for
+ printing on most HP SFP (single function peripheral) inkjets and many
+ LaserJets, and for scanning, sending faxes and for photo-card access on
+ most HP MFP (multi-function peripheral) printers.
+ .
+ This package contains utilities with graphical user interface (GUI) for
+ HPLIP: HP Toolbox, HP Fax, ...
+ .
+ Note that all GUI utilities are based on the Qt GUI environment. There
+ are currently no equivalent utilities based on GTK+.
+
+Package: libhpmud-dev
+Description-md5: c3037acc090b7dd9e9bb4af0e55b60d8
+Description-en: HP Multi-Point Transport Driver (hpmud) development libraries
+ The HP Linux Printing and Imaging System provides full support for
+ printing on most HP SFP (single function peripheral) inkjets and many
+ LaserJets, and for scanning, sending faxes and for photo-card access on
+ most HP MFP (multi-function peripheral) printers.
+ .
+ Shared library that provides direct I/O for each process. Prior to
+ hpmud, all I/O was serialized through hpiod, a monolithic I/O processor.
+ The new hpmud direct I/O is faster. Hpmud supports parallel, USB and
+ JetDirect connectivity.
+ .
+ With hpmud, HPLIP no longer has Linux specific libusb extensions. This
+ means any UNIX/Linux derivative that supports libusb may work with
+ HPLIP. A public HPLIP "C" API is exposed through hpmud. See hpmud.h
+ for documentation. A Python wrapper for hpmud, called hpmudext, is also
+ available.
+ .
+ This package contains the development headers necessary if you wish
+ to build packages depending on libhpmud.
+
+Package: libhpmud0
+Description-md5: 1edbc501bdc7dd319ba80065197918f1
+Description-en: HP Multi-Point Transport Driver (hpmud) run-time libraries
+ The HP Linux Printing and Imaging System provides full support for
+ printing on most HP SFP (single function peripheral) inkjets and many
+ LaserJets, and for scanning, sending faxes and for photo-card access on
+ most HP MFP (multi-function peripheral) printers.
+ .
+ Shared library that provides direct I/O for each process. Prior to
+ hpmud, all I/O was serialized through hpiod, a monolithic I/O processor.
+ The new hpmud direct I/O is faster. Hpmud supports parallel, USB and
+ JetDirect connectivity.
+ .
+ With hpmud, HPLIP no longer has Linux specific libusb extensions. This
+ means any UNIX/Linux derivative that supports libusb may work with
+ HPLIP. A public HPLIP "C" API is exposed through hpmud. See hpmud.h
+ for documentation. A Python wrapper for hpmud, called hpmudext, is also
+ available.
+
+Package: libsane-hpaio
+Description-md5: 208dafbff3569d9b6dbc7f0b94df7754
+Description-en: HP SANE backend for multi-function peripherals
+ The HP Linux Printing and Imaging System provides full support for
+ printing on most HP SFP (single function peripheral) inkjets and many
+ LaserJets, and for scanning, sending faxes and for photo-card access on
+ most HP MFP (multi-function peripheral) printers.
+ .
+ This package contains the SANE backend libraries for use with HP
+ Multi-function peripherals.
+ .
+ Users of hplip are advised to install the hplip{-gui} packages for
+ command line and GUI tools associated with HPLIP.
+ .
+ This package is useful for a minimal footprint headless scanning solution.
+
+Package: printer-driver-hpcups
+Description-md5: ada0514587fab5c2bab3c115ac6c4800
+Description-en: HP Linux Printing and Imaging - CUPS Raster driver (hpcups)
+ This package contains a CUPS-Raster-based printer driver which adds support
+ for most inkjet printers and some LaserJet printers manufactured by HP. It
+ does not provide PPDs for the fax functionality of HP's multi-function
+ devices.
+ .
+ Users of the CUPS printing system are advised to also install the
+ hplip package, and use the hp CUPS backend to send data to the printer.
+ HPLIP supports USB and networked devices, and enables
+ extended hpcups functionality such as border-less printing.
+ Selecting any hpcups ppd in CUPS will use hpcups automatically.
+ .
+ No physical PPDs are shipped with this driver. PPDs are dynamically
+ generated via a CUPS DDK .drv file.
+ .
+ This package can be installed to provide a minimal headless printer
+ solution using CUPS.
+
+Package: printer-driver-hpijs
+Description-md5: 6ab962d256c4da1e18d9397ae22fbd86
+Description-en: HP Linux Printing and Imaging - printer driver (hpijs)
+ This package contains an IJS printer driver for Ghostscript, which
+ adds support for most inkjet printers and some LaserJet printers
+ manufactured by HP.  It is also required for HPLIP fax support.
+ .
+ The Debian package of hpijs includes the so-called rss patch, to use
+ pure black ink instead of composite black in printers that don't do
+ color map conversion in firmware.
+ .
+ HPIJS can take advantage of Ghostscript IJS KRGB support when
+ available, to enhance black printing on printers that do color
+ map conversion in firmware and are thus not affected by the old
+ rss patch.
+ .
+ Users of the CUPS printing system are advised to also install the
+ hplip package, and use the hp CUPS backend to send data to the printer.
+ HPLIP supports USB and networked devices, and enables
+ extended HPIJS functionality such as border-less printing.
+ Selecting any hpijs ppd in CUPS will use hpijs automatically.
+ .
+ HPIJS is meant to be used through the foomatic system (see the
+ foomatic-filters package or foomatic-rip in the cups-filters package).
+
+Package: printer-driver-postscript-hp
+Description-md5: a4f2a7386b4164a6709665b9dbe23d95
+Description-en: HP Printers PostScript Descriptions
+ The HP Linux Printing and Imaging System provides full support for
+ printing on most HP SFP (single function peripheral) inkjets and many
+ LaserJets, and for scanning, sending faxes and for photo-card access on
+ most HP MFP (multi-function peripheral) printers.
+ .
+ This package contains the compressed PPDs for the PostScript HP
+ Printers and the hpps filter.
+
 Package: hsqldb-utils
 Description-md5: 8790ad9c9ca663dc4dc2734d16431d2f
 Description-en: Java SQL database engine (utilities)
@@ -24743,6 +24937,36 @@ Description-en: Header files for Linux 6.1.0-0.deb11.50-rt-armmp
  building modules that load into the kernel provided by the
  linux-image-6.1.0-0.deb11.50-rt-armmp package.
 
+Package: linux-headers-6.1.0-0.deb11.51-686
+Description-md5: 75fec935e4b7d17ee53a4ec75fcfb6e3
+Description-en: Header files for Linux 6.1.0-0.deb11.51-686
+ This package provides the architecture-specific kernel header files for
+ Linux kernel 6.1.0-0.deb11.51-686, generally used for building out-of-tree
+ kernel modules.  These files are going to be installed into
+ /usr/src/linux-headers-6.1.0-0.deb11.51-686, and can be used for building
+ modules that load into the kernel provided by the
+ linux-image-6.1.0-0.deb11.51-686 package.
+
+Package: linux-headers-6.1.0-0.deb11.51-686-pae
+Description-md5: 3c8a205ba7350b96deb9e67cdc74d237
+Description-en: Header files for Linux 6.1.0-0.deb11.51-686-pae
+ This package provides the architecture-specific kernel header files for
+ Linux kernel 6.1.0-0.deb11.51-686-pae, generally used for building
+ out-of-tree kernel modules.  These files are going to be installed into
+ /usr/src/linux-headers-6.1.0-0.deb11.51-686-pae, and can be used for
+ building modules that load into the kernel provided by the
+ linux-image-6.1.0-0.deb11.51-686-pae package.
+
+Package: linux-headers-6.1.0-0.deb11.51-amd64
+Description-md5: a477c9094b3bb223551c6c0989e6a828
+Description-en: Header files for Linux 6.1.0-0.deb11.51-amd64
+ This package provides the architecture-specific kernel header files for
+ Linux kernel 6.1.0-0.deb11.51-amd64, generally used for building
+ out-of-tree kernel modules.  These files are going to be installed into
+ /usr/src/linux-headers-6.1.0-0.deb11.51-amd64, and can be used for
+ building modules that load into the kernel provided by the
+ linux-image-6.1.0-0.deb11.51-amd64 package.
+
 Package: linux-headers-6.1.0-0.deb11.51-arm64
 Description-md5: e47e48b442a2ce504dabf81950fac7ea
 Description-en: Header files for Linux 6.1.0-0.deb11.51-arm64
@@ -24773,6 +24997,16 @@ Description-en: Header files for Linux 6.1.0-0.deb11.51-armmp-lpae
  building modules that load into the kernel provided by the
  linux-image-6.1.0-0.deb11.51-armmp-lpae package.
 
+Package: linux-headers-6.1.0-0.deb11.51-cloud-amd64
+Description-md5: 3a5aab771b5ee5300abee8a65d2f21fa
+Description-en: Header files for Linux 6.1.0-0.deb11.51-cloud-amd64
+ This package provides the architecture-specific kernel header files for
+ Linux kernel 6.1.0-0.deb11.51-cloud-amd64, generally used for building
+ out-of-tree kernel modules.  These files are going to be installed into
+ /usr/src/linux-headers-6.1.0-0.deb11.51-cloud-amd64, and can be used for
+ building modules that load into the kernel provided by the
+ linux-image-6.1.0-0.deb11.51-cloud-amd64 package.
+
 Package: linux-headers-6.1.0-0.deb11.51-cloud-arm64
 Description-md5: 6b6a3d19c2ae73ca005e01036df2a43c
 Description-en: Header files for Linux 6.1.0-0.deb11.51-cloud-arm64
@@ -24801,6 +25035,26 @@ Description-en: Common header files for Linux 6.1.0-0.deb11.51-rt
  headers you also need to install the
  linux-headers-6.1.0-0.deb11.51-(flavour) package, matching the flavour of
  the kernel you intend the build for.
+
+Package: linux-headers-6.1.0-0.deb11.51-rt-686-pae
+Description-md5: 92eab7ad37ff6acb5fc35bdcfc6dda24
+Description-en: Header files for Linux 6.1.0-0.deb11.51-rt-686-pae
+ This package provides the architecture-specific kernel header files for
+ Linux kernel 6.1.0-0.deb11.51-rt-686-pae, generally used for building
+ out-of-tree kernel modules.  These files are going to be installed into
+ /usr/src/linux-headers-6.1.0-0.deb11.51-rt-686-pae, and can be used for
+ building modules that load into the kernel provided by the
+ linux-image-6.1.0-0.deb11.51-rt-686-pae package.
+
+Package: linux-headers-6.1.0-0.deb11.51-rt-amd64
+Description-md5: 275dc2caf27d1bdefd41dc5f863da8c1
+Description-en: Header files for Linux 6.1.0-0.deb11.51-rt-amd64
+ This package provides the architecture-specific kernel header files for
+ Linux kernel 6.1.0-0.deb11.51-rt-amd64, generally used for building
+ out-of-tree kernel modules.  These files are going to be installed into
+ /usr/src/linux-headers-6.1.0-0.deb11.51-rt-amd64, and can be used for
+ building modules that load into the kernel provided by the
+ linux-image-6.1.0-0.deb11.51-rt-amd64 package.
 
 Package: linux-headers-6.1.0-0.deb11.51-rt-arm64
 Description-md5: 15e87f00533b5fed8970f87e1ac01847
@@ -25425,6 +25679,47 @@ Description-en: Debug symbols for linux-image-6.1.0-0.deb11.50-rt-armmp
  This package provides the detached debug symbols for the Linux kernel and
  modules in linux-image-6.1.0-0.deb11.50-rt-armmp.
 
+Package: linux-image-6.1.0-0.deb11.51-686-dbg
+Description-md5: 03f19cfa6f53e309666a86ce0ae494c3
+Description-en: Debug symbols for linux-image-6.1.0-0.deb11.51-686
+ This package provides the detached debug symbols for the Linux kernel and
+ modules in linux-image-6.1.0-0.deb11.51-686.
+
+Package: linux-image-6.1.0-0.deb11.51-686-pae-dbg
+Description-md5: 6d02268f2889469b4331e43816b47b7f
+Description-en: Debug symbols for linux-image-6.1.0-0.deb11.51-686-pae
+ This package provides the detached debug symbols for the Linux kernel and
+ modules in linux-image-6.1.0-0.deb11.51-686-pae.
+
+Package: linux-image-6.1.0-0.deb11.51-686-pae-unsigned
+Description-md5: a6e03d00ecd5837a289c1dd32069a9ef
+Description-en: Linux 6.1 for modern PCs
+ The Linux kernel 6.1 and modules for use on PCs with one or more
+ processors supporting PAE.
+ .
+ This kernel requires PAE (Physical Address Extension). This feature is
+ supported by the Intel Pentium Pro/II/III/4/4M/D, Xeon, Core and Atom; AMD
+ Geode NX, Athlon (K7), Duron, Opteron, Sempron, Turion or Phenom;
+ Transmeta Efficeon; VIA C7; and some other processors.
+
+Package: linux-image-6.1.0-0.deb11.51-686-unsigned
+Description-md5: 1a43e0951e051fa44477aa191374ada1
+Description-en: Linux 6.1 for older PCs
+ The Linux kernel 6.1 and modules for use on PCs with one or more
+ processors not supporting PAE.
+
+Package: linux-image-6.1.0-0.deb11.51-amd64-dbg
+Description-md5: a7031fd7f6057a7215f99e5ce6ba1c91
+Description-en: Debug symbols for linux-image-6.1.0-0.deb11.51-amd64
+ This package provides the detached debug symbols for the Linux kernel and
+ modules in linux-image-6.1.0-0.deb11.51-amd64.
+
+Package: linux-image-6.1.0-0.deb11.51-amd64-unsigned
+Description-md5: 0aa9928538ff7ff0f28e8072ac8b130d
+Description-en: Linux 6.1 for 64-bit PCs
+ The Linux kernel 6.1 and modules for use on PCs with AMD64, Intel 64 or
+ VIA Nano processors.
+
 Package: linux-image-6.1.0-0.deb11.51-arm64-dbg
 Description-md5: ebdb5e708632ff41ef495805b7b6eb18
 Description-en: Debug symbols for linux-image-6.1.0-0.deb11.51-arm64
@@ -25462,6 +25757,18 @@ Description-en: Debug symbols for linux-image-6.1.0-0.deb11.51-armmp-lpae
  This package provides the detached debug symbols for the Linux kernel and
  modules in linux-image-6.1.0-0.deb11.51-armmp-lpae.
 
+Package: linux-image-6.1.0-0.deb11.51-cloud-amd64-dbg
+Description-md5: 715ab2d3c1b066f6bdc1ac95e73d675e
+Description-en: Debug symbols for linux-image-6.1.0-0.deb11.51-cloud-amd64
+ This package provides the detached debug symbols for the Linux kernel and
+ modules in linux-image-6.1.0-0.deb11.51-cloud-amd64.
+
+Package: linux-image-6.1.0-0.deb11.51-cloud-amd64-unsigned
+Description-md5: f1cfd45517446f0f1122649ef7e2011b
+Description-en: Linux 6.1 for x86-64 cloud
+ The Linux kernel 6.1 and modules for use on cloud platforms including
+ Amazon EC2, Microsoft Azure, and Google Compute Engine.
+
 Package: linux-image-6.1.0-0.deb11.51-cloud-arm64-dbg
 Description-md5: c9aa56fb9d5029885b76535c8dfd345f
 Description-en: Debug symbols for linux-image-6.1.0-0.deb11.51-cloud-arm64
@@ -25473,6 +25780,39 @@ Description-md5: e5d90db06b19352c219e9a1839e014f6
 Description-en: Linux 6.1 for arm64 cloud
  The Linux kernel 6.1 and modules for use on cloud platforms supporting
  arm64 virtual machines.
+
+Package: linux-image-6.1.0-0.deb11.51-rt-686-pae-dbg
+Description-md5: 82644b69536b0841073edad7c8decc06
+Description-en: Debug symbols for linux-image-6.1.0-0.deb11.51-rt-686-pae
+ This package provides the detached debug symbols for the Linux kernel and
+ modules in linux-image-6.1.0-0.deb11.51-rt-686-pae.
+
+Package: linux-image-6.1.0-0.deb11.51-rt-686-pae-unsigned
+Description-md5: 70af84fee93f2b2fba148b1e4f25b61b
+Description-en: Linux 6.1 for modern PCs, PREEMPT_RT
+ The Linux kernel 6.1 and modules for use on PCs with one or more
+ processors supporting PAE.
+ .
+ This kernel requires PAE (Physical Address Extension). This feature is
+ supported by the Intel Pentium Pro/II/III/4/4M/D, Xeon, Core and Atom; AMD
+ Geode NX, Athlon (K7), Duron, Opteron, Sempron, Turion or Phenom;
+ Transmeta Efficeon; VIA C7; and some other processors.
+ .
+ This kernel includes the PREEMPT_RT realtime patch set.
+
+Package: linux-image-6.1.0-0.deb11.51-rt-amd64-dbg
+Description-md5: d3ff00e1a1c6d456eac9c98d98f7478a
+Description-en: Debug symbols for linux-image-6.1.0-0.deb11.51-rt-amd64
+ This package provides the detached debug symbols for the Linux kernel and
+ modules in linux-image-6.1.0-0.deb11.51-rt-amd64.
+
+Package: linux-image-6.1.0-0.deb11.51-rt-amd64-unsigned
+Description-md5: bd03ccfc6a2f9556f43d88b2bb1d93d2
+Description-en: Linux 6.1 for 64-bit PCs, PREEMPT_RT
+ The Linux kernel 6.1 and modules for use on PCs with AMD64, Intel 64 or
+ VIA Nano processors.
+ .
+ This kernel includes the PREEMPT_RT realtime patch set.
 
 Package: linux-image-6.1.0-0.deb11.51-rt-arm64-dbg
 Description-md5: 8d3ceb9c20e617f77437529357bd2bf4
@@ -25660,6 +26000,32 @@ Description-en: Linux 6.1 for 64-bit PCs, PREEMPT_RT (signed)
  .
  The kernel image and modules are signed for use with Secure Boot.
 
+Package: linux-image-6.1.0-0.deb11.51-amd64
+Description-md5: eaf7b81be84ec12eb25fe90a4bac0f60
+Description-en: Linux 6.1 for 64-bit PCs (signed)
+ The Linux kernel 6.1 and modules for use on PCs with AMD64, Intel 64 or
+ VIA Nano processors.
+ .
+ The kernel image and modules are signed for use with Secure Boot.
+
+Package: linux-image-6.1.0-0.deb11.51-cloud-amd64
+Description-md5: e242fc20b020c823e8161e99ef4b93ef
+Description-en: Linux 6.1 for x86-64 cloud (signed)
+ The Linux kernel 6.1 and modules for use on cloud platforms including
+ Amazon EC2, Microsoft Azure, and Google Compute Engine.
+ .
+ The kernel image and modules are signed for use with Secure Boot.
+
+Package: linux-image-6.1.0-0.deb11.51-rt-amd64
+Description-md5: 13d930b82f9ee59ba93802293a9c893c
+Description-en: Linux 6.1 for 64-bit PCs, PREEMPT_RT (signed)
+ The Linux kernel 6.1 and modules for use on PCs with AMD64, Intel 64 or
+ VIA Nano processors.
+ .
+ This kernel includes the PREEMPT_RT realtime patch set.
+ .
+ The kernel image and modules are signed for use with Secure Boot.
+
 Package: linux-headers-6.1-arm64
 Description-md5: 4e17cbf21c014805036003e22aa96e1b
 Description-en: Header files for Linux arm64 configuration (meta-package)
@@ -25832,6 +26198,30 @@ Description-en: Linux 6.1 for arm64 cloud (signed)
  The kernel image and modules are signed for use with Secure Boot.
 
 Package: linux-image-6.1.0-0.deb11.50-rt-arm64
+Description-md5: 04cbadd7c10c8c4c440bfeb58bb1ece4
+Description-en: Linux 6.1 for 64-bit ARMv8 machines, PREEMPT_RT (signed)
+ The Linux kernel 6.1 and modules for use on 64-bit ARMv8 machines.
+ .
+ This kernel includes the PREEMPT_RT realtime patch set.
+ .
+ The kernel image and modules are signed for use with Secure Boot.
+
+Package: linux-image-6.1.0-0.deb11.51-arm64
+Description-md5: 8984a74982020a0fd2ccf51053a84d0e
+Description-en: Linux 6.1 for 64-bit ARMv8 machines (signed)
+ The Linux kernel 6.1 and modules for use on 64-bit ARMv8 machines.
+ .
+ The kernel image and modules are signed for use with Secure Boot.
+
+Package: linux-image-6.1.0-0.deb11.51-cloud-arm64
+Description-md5: 22db14b4e038eec4f42d28d1d8171061
+Description-en: Linux 6.1 for arm64 cloud (signed)
+ The Linux kernel 6.1 and modules for use on cloud platforms supporting
+ arm64 virtual machines.
+ .
+ The kernel image and modules are signed for use with Secure Boot.
+
+Package: linux-image-6.1.0-0.deb11.51-rt-arm64
 Description-md5: 04cbadd7c10c8c4c440bfeb58bb1ece4
 Description-en: Linux 6.1 for 64-bit ARMv8 machines, PREEMPT_RT (signed)
  The Linux kernel 6.1 and modules for use on 64-bit ARMv8 machines.
@@ -26078,6 +26468,42 @@ Description-en: Linux 6.1 for modern PCs (signed)
  The kernel image and modules are signed for use with Secure Boot.
 
 Package: linux-image-6.1.0-0.deb11.50-rt-686-pae
+Description-md5: 33ad131d459fb34ce14f5df1218f8117
+Description-en: Linux 6.1 for modern PCs, PREEMPT_RT (signed)
+ The Linux kernel 6.1 and modules for use on PCs with one or more
+ processors supporting PAE.
+ .
+ This kernel requires PAE (Physical Address Extension). This feature is
+ supported by the Intel Pentium Pro/II/III/4/4M/D, Xeon, Core and Atom; AMD
+ Geode NX, Athlon (K7), Duron, Opteron, Sempron, Turion or Phenom;
+ Transmeta Efficeon; VIA C7; and some other processors.
+ .
+ This kernel includes the PREEMPT_RT realtime patch set.
+ .
+ The kernel image and modules are signed for use with Secure Boot.
+
+Package: linux-image-6.1.0-0.deb11.51-686
+Description-md5: 70542f91c467e54998c2a76ee608bcec
+Description-en: Linux 6.1 for older PCs (signed)
+ The Linux kernel 6.1 and modules for use on PCs with one or more
+ processors not supporting PAE.
+ .
+ The kernel image and modules are signed for use with Secure Boot.
+
+Package: linux-image-6.1.0-0.deb11.51-686-pae
+Description-md5: 7fd348fe0bef1aad8c50ae598cfc39dd
+Description-en: Linux 6.1 for modern PCs (signed)
+ The Linux kernel 6.1 and modules for use on PCs with one or more
+ processors supporting PAE.
+ .
+ This kernel requires PAE (Physical Address Extension). This feature is
+ supported by the Intel Pentium Pro/II/III/4/4M/D, Xeon, Core and Atom; AMD
+ Geode NX, Athlon (K7), Duron, Opteron, Sempron, Turion or Phenom;
+ Transmeta Efficeon; VIA C7; and some other processors.
+ .
+ The kernel image and modules are signed for use with Secure Boot.
+
+Package: linux-image-6.1.0-0.deb11.51-rt-686-pae
 Description-md5: 33ad131d459fb34ce14f5df1218f8117
 Description-en: Linux 6.1 for modern PCs, PREEMPT_RT (signed)
  The Linux kernel 6.1 and modules for use on PCs with one or more
