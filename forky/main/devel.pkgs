@@ -321,15 +321,15 @@ SHA256: dc59a0821a3c9ce6776f142ba15ec5d68c50a5ce76ccc46f0fffbafe64c0a50c
 
 Package: afl++
 Source: aflplusplus
-Version: 4.33c-1.1
-Installed-Size: 3395
+Version: 5.02c-0.4
+Installed-Size: 4477
 Maintainer: Debian Security Tools <team+pkg-security@tracker.debian.org>
 Architecture: amd64
 Replaces: afl (<< 2.53c), afl++-clang (<< 3.14c)
-Depends: build-essential, procps, clang-21, clang, python3:any, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libpython3.13 (>= 3.13.0~rc3), libstdc++6 (>= 13.1), zlib1g (>= 1:1.2.3.4)
+Depends: build-essential, procps, clang-21, clang, python3:any, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libpython3.14 (>= 3.14.1), libstdc++6 (>= 13.1), zlib1g (>= 1:1.2.3.4)
 Recommends: afl++-doc
 Suggests: gnuplot
-Breaks: afl (<< 2.53c), afl++-clang (<< 3.14c)
+Breaks: afl (<< 2.53c), afl++-clang (<< 3.14c), libafl-persistent-ocaml-dev (<< 1.4-7~)
 Description: instrumentation-driven fuzzer for binary formats
 Homepage: https://github.com/AFLplusplus/AFLplusplus
 Description-md5: dad03c98adce45fdfb6d2610388bb2e7
@@ -338,10 +338,10 @@ Tag: devel::debugger, devel::testing-qa, implemented-in::c,
  scope::application, use::checking, works-with::software:running
 devel
 Priority: optional
-Filename: pool/main/a/aflplusplus/afl++_4.33c-1.1_amd64.deb
-Size: 726168
-MD5sum: c0a38e85662e0afa403518f4cf11e1a8
-SHA256: 6b2771a3342eaaa40d03c5c9408137ddb0bde0e215566832da569d53d8cc08b7
+Filename: pool/main/a/aflplusplus/afl++_5.02c-0.4_amd64.deb
+Size: 928820
+MD5sum: 89b30637bb33dc6d3174d02ff41bf7a8
+SHA256: c5917b02da61d3004021fc7bb824f0517cdca41bb0c9e3ef8ffb9203787b7132
 
 Package: algol68g
 Version: 3.1.2-1.2
@@ -7701,9 +7701,9 @@ MD5sum: 83f8256a7f67d0b6e4052e396c1b3265
 SHA256: 58a8b6983951a0a151848800e4095f8a18ded9ca5811930ae7e132de7fe5f3de
 
 Package: dlang-openssl
-Version: 2.0.0+1.1.0h-0.2
-Installed-Size: 1418
-Maintainer: Konstantinos Margaritis <markos@debian.org>
+Version: 3.4.0-1
+Installed-Size: 1566
+Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: all
 Depends: libssl-dev
 Recommends: default-d-compiler
@@ -7712,10 +7712,10 @@ Homepage: https://github.com/D-Programming-Deimos/openssl
 Description-md5: ceae68e070606daaea7150c57cbb6b09
 devel
 Priority: optional
-Filename: pool/main/d/dlang-openssl/dlang-openssl_2.0.0+1.1.0h-0.2_all.deb
-Size: 205504
-MD5sum: 366e0217469730e93224916b823d31bf
-SHA256: dc49b4b53d4090264750cde85bf9790f0ebbbfab971c1535675d2ab03da12748
+Filename: pool/main/d/dlang-openssl/dlang-openssl_3.4.0-1_all.deb
+Size: 227560
+MD5sum: cbb99f6e90f027ab36c71e9da81cc65f
+SHA256: d9f5a09993eae0c52cf35116333707a5768f69318c7d4f41abb04c7688cf7a82
 
 Package: dlt-viewer
 Version: 2.30.0-dfsg-3
@@ -66173,23 +66173,24 @@ SHA256: b4efc7de6a7b09ac5e164367a4006815a20f9a16a6465b69189cbad7ceeba998
 
 Package: containernetworking-plugins
 Source: golang-github-containernetworking-plugins
-Version: 1.1.1+ds1-4
-Installed-Size: 58882
+Version: 1.9.1+ds1-1
+Installed-Size: 67276
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
 Provides: container-network-stack (= 1)
-Depends: iptables, libc6 (>= 2.34)
+Depends: libc6 (>= 2.34)
+Recommends: nftables | iptables
 Description: standard networking plugins - binaries
 Homepage: https://github.com/containernetworking/plugins
-Built-Using: golang-1.26 (= 1.26.5-1), golang-dbus (= 5.1.0-1), golang-github-alexflint-go-filemutex (= 1.2.0-1), golang-github-appc-cni (= 1.3.0-2), golang-github-coreos-go-iptables (= 0.6.0-1), golang-github-coreos-go-systemd (= 22.6.0-1), golang-github-d2g-dhcp4 (= 0.0~git20150413-4), golang-github-d2g-dhcp4client (= 1.0.0-2), golang-github-mattn-go-shellwords (= 1.0.12-1), golang-github-networkplumbing-go-nft (= 0.2.0-2), golang-github-safchain-ethtool (= 0.7.0-1), golang-github-vishvananda-netlink (= 1.3.1-1), golang-github-vishvananda-netns (= 0.0.5-1), golang-golang-x-sys (= 0.45.0+dfsg-1)
+Built-Using: golang-1.26 (= 1.26.5-1), golang-dbus (= 5.1.0-1), golang-github-alexflint-go-filemutex (= 1.2.0-1), golang-github-appc-cni (= 1.3.0-2), golang-github-coreos-go-iptables (= 0.6.0-1), golang-github-coreos-go-systemd (= 22.6.0-1), golang-github-cyphar-filepath-securejoin (= 0.5.2-1), golang-github-insomniacslk-dhcp (= 0.0~git20260603.a415979-1), golang-github-josharian-native (= 1.1.0-2), golang-github-mattn-go-shellwords (= 1.0.12-1), golang-github-mdlayher-packet (= 1.1.2-2), golang-github-mdlayher-socket (= 0.6.1-1), golang-github-networkplumbing-go-nft (= 0.4.0-1), golang-github-opencontainers-selinux (= 1.15.1-1), golang-github-pierrec-lz4 (= 4.1.18-2), golang-github-pkg-errors (= 0.9.1-3), golang-github-safchain-ethtool (= 0.7.0-1), golang-github-u-root-uio (= 0.0~git20240224.d2acac8-1), golang-github-vishvananda-netlink (= 1.3.1-1), golang-github-vishvananda-netns (= 0.0.5-1), golang-golang-x-net (= 1:0.57.0-1), golang-golang-x-sync (= 0.20.0-1), golang-golang-x-sys (= 0.45.0+dfsg-1), golang-k8s-sigs-knftables (= 0.0.18+ds1-2)
 Description-md5: da8efbf7d7835dbafe60f6925ce27282
-Static-Built-Using: golang-1.26 (= 1.26.5-1), golang-dbus (= 5.1.0-1), golang-github-alexflint-go-filemutex (= 1.2.0-1), golang-github-appc-cni (= 1.3.0-2), golang-github-coreos-go-iptables (= 0.6.0-1), golang-github-coreos-go-systemd (= 22.6.0-1), golang-github-d2g-dhcp4 (= 0.0~git20150413-4), golang-github-d2g-dhcp4client (= 1.0.0-2), golang-github-mattn-go-shellwords (= 1.0.12-1), golang-github-networkplumbing-go-nft (= 0.2.0-2), golang-github-safchain-ethtool (= 0.7.0-1), golang-github-vishvananda-netlink (= 1.3.1-1), golang-github-vishvananda-netns (= 0.0.5-1), golang-golang-x-sys (= 0.45.0+dfsg-1)
+Static-Built-Using: golang-1.26 (= 1.26.5-1), golang-dbus (= 5.1.0-1), golang-github-alexflint-go-filemutex (= 1.2.0-1), golang-github-appc-cni (= 1.3.0-2), golang-github-coreos-go-iptables (= 0.6.0-1), golang-github-coreos-go-systemd (= 22.6.0-1), golang-github-cyphar-filepath-securejoin (= 0.5.2-1), golang-github-insomniacslk-dhcp (= 0.0~git20260603.a415979-1), golang-github-josharian-native (= 1.1.0-2), golang-github-mattn-go-shellwords (= 1.0.12-1), golang-github-mdlayher-packet (= 1.1.2-2), golang-github-mdlayher-socket (= 0.6.1-1), golang-github-networkplumbing-go-nft (= 0.4.0-1), golang-github-opencontainers-selinux (= 1.15.1-1), golang-github-pierrec-lz4 (= 4.1.18-2), golang-github-pkg-errors (= 0.9.1-3), golang-github-safchain-ethtool (= 0.7.0-1), golang-github-u-root-uio (= 0.0~git20240224.d2acac8-1), golang-github-vishvananda-netlink (= 1.3.1-1), golang-github-vishvananda-netns (= 0.0.5-1), golang-golang-x-net (= 1:0.57.0-1), golang-golang-x-sync (= 0.20.0-1), golang-golang-x-sys (= 0.45.0+dfsg-1), golang-k8s-sigs-knftables (= 0.0.18+ds1-2)
 devel
 Priority: optional
-Filename: pool/main/g/golang-github-containernetworking-plugins/containernetworking-plugins_1.1.1+ds1-4_amd64.deb
-Size: 9724572
-MD5sum: 5b5861c26dca49e8e4bcea48b6f9e3e3
-SHA256: 4a2f6e47807a3fee317d5fc370b1d38309e87251acf30d54c1eb779fa11129c2
+Filename: pool/main/g/golang-github-containernetworking-plugins/containernetworking-plugins_1.9.1+ds1-1_amd64.deb
+Size: 10599464
+MD5sum: a606d0511cb91366bf9e28a83efc6344
+SHA256: 12857dd3136d61e00bffcc2c8823d14df586e94406098326e02846cfa46a058e
 
 Package: buildah
 Source: golang-github-containers-buildah
@@ -79025,25 +79026,25 @@ MD5sum: 43af60dc1bda61e2fb5644c3d28fc847
 SHA256: c32a66c07efb918aec9f919983584b5c615ff6660e76d2c0d6a58fa27c5b77ce
 
 Package: qbs
-Version: 3.3.0-1
+Version: 3.3.1-1
 Installed-Size: 3409
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
-Depends: qbs-common (= 3.3.0-1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libqbscore3.3 (>= 3.3.0), libqt6core5compat6 (>= 6.6.0), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.4.2+dfsg-12~), libqt6network6 (>= 6.4.2+dfsg-12~), libqt6widgets6 (>= 6.4.2+dfsg-12~), libstdc++6 (>= 13.1)
+Depends: qbs-common (= 3.3.1-1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libqbscore3.3 (>= 3.3.1), libqt6core5compat6 (>= 6.6.0), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.4.2+dfsg-12~), libqt6network6 (>= 6.4.2+dfsg-12~), libqt6widgets6 (>= 6.4.2+dfsg-12~), libstdc++6 (>= 13.1)
 Description: cross-platform build tool
 Homepage: https://wiki.qt.io/Qbs
 Description-md5: 9b7ebcf2e4b8ab2de8f2effccb27d22a
 Tag: uitoolkit::qt
 devel
 Priority: optional
-Filename: pool/main/q/qbs/qbs_3.3.0-1_amd64.deb
-Size: 808072
-MD5sum: 3c4891d8a40eda9f56eaae823a4f7e4b
-SHA256: a560d4eebde1702d579df76fc16582dd8ed065fb31f0e4fcfa3c3219389cfc3a
+Filename: pool/main/q/qbs/qbs_3.3.1-1_amd64.deb
+Size: 808184
+MD5sum: 1bb03700126d58f3651eac762317de9f
+SHA256: c1258ab98f736cf032bf07287dd3ed6f297ad03ef5d9a8b68a5b1367ec65d321
 
 Package: qbs-common
 Source: qbs
-Version: 3.3.0-1
+Version: 3.3.1-1
 Installed-Size: 1698
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: all
@@ -79053,10 +79054,10 @@ Homepage: https://wiki.qt.io/Qbs
 Description-md5: 964d236b7ecbd9c2cc8740e701c571a3
 devel
 Priority: optional
-Filename: pool/main/q/qbs/qbs-common_3.3.0-1_all.deb
-Size: 209148
-MD5sum: 2ddcd18cbe32f3c5fcaaca2be50b7a5b
-SHA256: 65d332fe4b559c31288f6e486b668ebaddb42d677efb7552c741665977eb183a
+Filename: pool/main/q/qbs/qbs-common_3.3.1-1_all.deb
+Size: 209256
+MD5sum: 8030c803926e8ff6c93d9bbd20d1f956
+SHA256: 80695aecb3e3401db4496e11aacec5af15266e7561db9a1a697aceb9ca9dc902
 
 Package: qconf
 Version: 2.5-2
