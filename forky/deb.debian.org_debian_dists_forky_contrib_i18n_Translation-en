@@ -2280,6 +2280,37 @@ Description-en: tool for bandwidth measurements on NVIDIA GPUs
  bandwidth on your system. Additional system-specific tuning may be required to
  achieve maximal peak bandwidth.
 
+Package: nvidia-cudnn
+Description-md5: aff2caf53c29838279b63dd35dec1798
+Description-en: NVIDIA CUDA Deep Neural Network library (install script)
+ The NVIDIA CUDA Deep Neural Network library (cuDNN) is a GPU-accelerated
+ library of primitives for deep neural networks. cuDNN provides highly
+ tuned implementations for standard routines such as forward and backward
+ convolution, pooling, normalization, and activation layers. cuDNN is part
+ of the NVIDIA Deep Learning SDK.
+ .
+ This package only contains the script "/usr/sbin/update-nvidia-cudnn" to
+ download and install Nvidia cuDNN locally. It will be automatically
+ invoked during installation.
+
+Package: libcudnn-frontend-dev
+Description-md5: 6272d149e1d6d63a6a1faa440ced237d
+Description-en: c++ wrapper for the cudnn backend API (development files)
+ The cuDNN frontend API is a C++ header-only library that wraps the cuDNN C
+ backend API. Both the frontend and backend APIs are entry points to the same
+ set of functionality that we commonly refer to as the "graph API".
+ .
+ While there are two entry points to the graph API (i.e. backend and frontend),
+ we expect that most users will use the frontend entry point because:
+ .
+ It is less verbose without loss of control. All functionality accessible
+ through the backend API is also accessible through the frontend API.  It adds
+ functionality on top of the backend API, like errata filters and autotuning.
+ Also, for those who want to use the backend API, the frontend source can serve
+ as a reference implementation.
+ .
+ This is a header-only C++ library.
+
 Package: libcutlass-dev
 Description-md5: 4d44009005870b8473610afb57050108
 Description-en: CUDA Templates for Linear Algebra Subroutines
