@@ -16,24 +16,24 @@ MD5sum: 028fbe63099a0aa40ac2716546e07135
 SHA256: f47e05c635785d96ac9c79e844a911130b537025833900cbf949ad2644a1cd97
 
 Package: libcoq-aac-tactics
-Source: aac-tactics (8.20.0-1)
-Version: 8.20.0-1+b7
-Installed-Size: 2896
+Source: aac-tactics (9.0.0-4)
+Version: 9.0.0-4+b1
+Installed-Size: 2482
 Maintainer: Debian OCaml Maintainers <debian-ocaml-maint@lists.debian.org>
 Architecture: amd64
 Replaces: libaac-tactics-coq, libaac-tactics-ocaml, libaac-tactics-ocaml-dev
-Provides: aac-tactics, libcoq-aac-tactics-41wf3
-Depends: libcoq-stdlib-qv5t6, libcoq-core-ocaml-u8uq8, libstdlib-ocaml-1ltp0, libzarith-ocaml-igxp5
+Provides: libcoq-aac-tactics-91qs9
+Depends: libcoq-stdlib-78iu5, libcoq-core-ocaml-plkl7, libstdlib-ocaml-1ltp0, libzarith-ocaml-igxp5
 Breaks: libaac-tactics-coq
-Description: Coq tactics for reasoning modulo AC (theories)
+Description: Rocq tactics for reasoning modulo AC (theories)
 Homepage: https://github.com/coq-community/aac-tactics
-Description-md5: d468e31e016a5d91fa8d79cdff35cd0d
+Description-md5: 1fa1dc67e2b50aa8e970728fc914b32e
 math
 Priority: optional
-Filename: pool/main/a/aac-tactics/libcoq-aac-tactics_8.20.0-1+b7_amd64.deb
-Size: 392456
-MD5sum: 7e7d173452d8b9df980c57b494596f55
-SHA256: 00d95ba1ec5954555598b5891fe5df3cd8761768b07b17eae4afa4dd229b51fe
+Filename: pool/main/a/aac-tactics/libcoq-aac-tactics_9.0.0-4+b1_amd64.deb
+Size: 396984
+MD5sum: 9eba3e1383c74f61a530dd056976c588
+SHA256: a8cfca57fdd7b2fa061299bb2daa0fa3af6783bd62a48cfd3ab06971fb474249
 
 Package: acl2
 Version: 8.7+dfsg-3
@@ -1094,16 +1094,14 @@ MD5sum: 60eb43c9c1ba4999593cc5c9f1608c25
 SHA256: 5f8a6c847cb42d69e7d8886f7fb659c66cd4cb4a93647222da6f0005421f4ea2
 
 Package: coq
-Source: coq (8.20.1+dfsg-1)
-Version: 8.20.1+dfsg-1+b4
-Installed-Size: 258885
+Source: coq (9.2.0+dfsg-3)
+Version: 9.2.0+dfsg-3+b1
+Installed-Size: 166407
 Maintainer: Debian OCaml Maintainers <debian-ocaml-maint@lists.debian.org>
 Architecture: amd64
-Replaces: coq-libs (<< 8.2.pl1)
-Provides: coq-8.20.1+5.4.1
-Depends: libcoq-stdlib (= 8.20.1+dfsg-1+b4), libcoq-core-ocaml-u8uq8, libfindlib-ocaml-hz390, libstdlib-ocaml-1ltp0, libzarith-ocaml-igxp5, ocaml-base-5.4.1, python3:any, libc6 (>= 2.42), libgmp10 (>= 2:6.3.0+dfsg), ocaml, ocaml-findlib
-Suggests: coqide | proofgeneral, ledit | readline-editor, libcoq-core-ocaml-dev, why (>= 2.19), coq-doc
-Breaks: coq-libs (<< 8.2.pl1)
+Provides: coq-9.2+5.4.1
+Depends: libcoq-core (= 9.2.0+dfsg-3+b1), libcoq-core-ocaml-plkl7, libfindlib-ocaml-hz390, libstdlib-ocaml-1ltp0, libzarith-ocaml-igxp5, ocaml-base-5.4.1, libc6 (>= 2.42), libgmp10 (>= 2:6.3.0+dfsg), ocaml, ocaml-findlib, python3
+Suggests: rocqide | proofgeneral, ledit | readline-editor, libcoq-core-ocaml-dev, why3, coq-doc
 Description: proof assistant for higher-order logic (toplevel and compiler)
 Homepage: http://coq.inria.fr/
 Description-md5: 2c4259e8b83c839ff539d48b854ee31a
@@ -1112,69 +1110,67 @@ Tag: devel::compiler, field::mathematics, implemented-in::ocaml,
  scope::utility, uitoolkit::ncurses
 math
 Priority: optional
-Filename: pool/main/c/coq/coq_8.20.1+dfsg-1+b4_amd64.deb
-Size: 71111940
-MD5sum: 42f6858453b08286e7d181edcdd7d740
-SHA256: c77cadfd759de7c0f6c1dec7b907751188e34612eb17c9d1d4a885c32fd91b3e
+Filename: pool/main/c/coq/coq_9.2.0+dfsg-3+b1_amd64.deb
+Size: 41288728
+MD5sum: 30713004000eb260bb46f275a57c9762
+SHA256: 943b0a224838167a69cb451084dd033d96f2fa39c0209ed16e4ce2df54dd9dc8
 
-Package: coqide
-Source: coq (8.20.1+dfsg-1)
-Version: 8.20.1+dfsg-1+b4
-Installed-Size: 8844
+Package: libcoq-core
+Source: coq (9.2.0+dfsg-3)
+Version: 9.2.0+dfsg-3+b1
+Installed-Size: 5686
 Maintainer: Debian OCaml Maintainers <debian-ocaml-maint@lists.debian.org>
 Architecture: amd64
-Depends: coq (= 8.20.1+dfsg-1+b4), libc6 (>= 2.42), libcairo2 (>= 1.12.0), libfontconfig1 (>= 2.12.6), libfreetype6 (>= 2.2.1), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.36.0), libgtk-3-0t64 (>= 3.11.5), libgtksourceview-3.0-1 (>= 2.91.4), libpango-1.0-0 (>= 1.14.0)
-Description: proof assistant for higher-order logic (gtk interface)
-Homepage: http://coq.inria.fr/
-Description-md5: ed74063b20a63106a7031db76f847ec1
-Tag: devel::ide, field::mathematics, implemented-in::ocaml,
- interface::graphical, interface::x11, role::program,
- scope::application, uitoolkit::gtk, uitoolkit::ncurses, use::checking,
- x11::application
-math
-Priority: optional
-Filename: pool/main/c/coq/coqide_8.20.1+dfsg-1+b4_amd64.deb
-Size: 1936232
-MD5sum: c0eeac3e48d6c693c66538b63fb7aa3d
-SHA256: 0dfda453a45b167fc22d98672cfb0dbeff2d685e861e0d23fd335330689d82ac
-
-Package: libcoq-stdlib
-Source: coq (8.20.1+dfsg-1)
-Version: 8.20.1+dfsg-1+b4
-Installed-Size: 146161
-Maintainer: Debian OCaml Maintainers <debian-ocaml-maint@lists.debian.org>
-Architecture: amd64
-Replaces: coq-libs (<< 8.2.pl1), coq-theories
-Provides: coq-theories (= 8.20.1+dfsg-1+b4), libcoq-stdlib-qv5t6
+Replaces: libcoq-stdlib (<< 9)
+Provides: libcoq-core-azi36
 Recommends: coq
-Breaks: coq-doc (<= 8.0pl1.0-2), coq-libs (<< 8.2.pl1), coq-theories
+Breaks: libcoq-stdlib (<< 9)
 Description: proof assistant for higher-order logic (theories)
 Homepage: http://coq.inria.fr/
 Description-md5: 9e601d42ac375ebc4cb75dff6e4c368e
 math
 Priority: optional
-Filename: pool/main/c/coq/libcoq-stdlib_8.20.1+dfsg-1+b4_amd64.deb
-Size: 23525832
-MD5sum: 1dab3c5b1829826507020794fe63339b
-SHA256: 83afb47612b4d444c846bbbf4f3490b620549b87356858b59a9b853f0a1ebe2f
+Filename: pool/main/c/coq/libcoq-core_9.2.0+dfsg-3+b1_amd64.deb
+Size: 1154548
+MD5sum: ab78b1441f37fa238e08c0acaadbe740
+SHA256: 23f49274791849ea08ea0d1ad66219c9aa485f3bd51901ee190411f4a2905b8f
 
-Package: libcoq-gappa
-Source: coq-gappa (1.7.0-1)
-Version: 1.7.0-1+b4
-Installed-Size: 1385
+Package: rocqide
+Source: coq (9.2.0+dfsg-3)
+Version: 9.2.0+dfsg-3+b1
+Installed-Size: 8909
 Maintainer: Debian OCaml Maintainers <debian-ocaml-maint@lists.debian.org>
 Architecture: amd64
-Provides: libcoq-gappa-7xi71
-Depends: gappa, libcoq-flocq-9b8d9, libcoq-stdlib-qv5t6
+Replaces: coqide
+Depends: coq (= 9.2.0+dfsg-3+b1), libc6 (>= 2.42), libcairo2 (>= 1.12.0), libfontconfig1 (>= 2.12.6), libfreetype6 (>= 2.2.1), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.36.0), libgtk-3-0t64 (>= 3.11.5), libgtksourceview-3.0-1 (>= 2.91.4), libpango-1.0-0 (>= 1.14.0)
+Conflicts: coqide
+Description: proof assistant for higher-order logic (gtk interface)
+Homepage: http://coq.inria.fr/
+Description-md5: c6fb144d57a56407344a4003317f4e68
+math
+Priority: optional
+Filename: pool/main/c/coq/rocqide_9.2.0+dfsg-3+b1_amd64.deb
+Size: 1951308
+MD5sum: 062e1af00a771c7c629e41e102caa3ce
+SHA256: 13b571c6ded7dd590193c8c6e0e6c6559490807aeeaac49e86aea25feb260efd
+
+Package: libcoq-gappa
+Source: coq-gappa
+Version: 1.11.0-1
+Installed-Size: 1571
+Maintainer: Debian OCaml Maintainers <debian-ocaml-maint@lists.debian.org>
+Architecture: amd64
+Provides: libcoq-gappa-u4yt6
+Depends: gappa, libcoq-flocq-8r4a8, libcoq-stdlib-78iu5
 Description: Coq tactic to use Gappa for floating-point goals
 Homepage: https://gappa.gitlabpages.inria.fr
 Description-md5: d29401f049a277a5f2cc3ee885c0c926
 math
 Priority: optional
-Filename: pool/main/c/coq-gappa/libcoq-gappa_1.7.0-1+b4_amd64.deb
-Size: 550932
-MD5sum: d30fef7434a6fae0f5039f507eb494e2
-SHA256: a33b15a0dc3c0e108082dc7f1efde77c2f424892be097b76bfc0917fa4acbf1b
+Filename: pool/main/c/coq-gappa/libcoq-gappa_1.11.0-1_amd64.deb
+Size: 623808
+MD5sum: 03dc0111707acc91f2e1d43afac555eb
+SHA256: 4c0361fcdbc93282093a57327385ed7855058afc744cb8108082cb346ff9e449
 
 Package: cvc4
 Source: cvc4 (1.8-5)
@@ -3621,11 +3617,11 @@ SHA256: 8d3487e381d3d49c676818a8830420b519b5cc9a0f4f42c1f41d7c07f614f1cb
 
 Package: labplot
 Source: labplot (2.12.1-5)
-Version: 2.12.1-5+b2
-Installed-Size: 23065
+Version: 2.12.1-5+b3
+Installed-Size: 23385
 Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
 Architecture: amd64
-Depends: kio6, libc6 (>= 2.39), libcantorlibs28abi3 (>= 4:24.12.2), libcerf3 (>= 3.1), libcfitsio10t64 (>= 4.2.0~), libfftw3-double3 (>= 3.3.11), libgcc-s1 (>= 3.0), libgsl28 (>= 2.8+dfsg), libgslcblas0 (>= 2.8), libhdf5-310 (>= 1.14.3), libixion-0.20-0 (>= 0.20.0), libkf6archive6 (>= 6.3.0~), libkf6colorscheme6 (>= 6.0.0), libkf6completion6 (>= 6.3.0~), libkf6configcore6 (>= 6.3.0~), libkf6configgui6 (>= 6.3.0~), libkf6configwidgets6 (>= 6.3.0), libkf6coreaddons6 (>= 6.3.0~), libkf6crash6 (>= 6.3.0~), libkf6i18n6 (>= 6.3.0~), libkf6iconthemes6 (>= 6.3.0), libkf6kiowidgets6 (>= 6.3.0~), libkf6parts6 (>= 6.3.0~), libkf6purpose-bin, libkf6purpose6 (>= 6.3.0~), libkf6purposewidgets6 (>= 6.3.0~), libkf6syntaxhighlighting6 (>= 6.3.0~), libkf6textwidgets6 (>= 6.3.0~), libkf6userfeedbackcore6 (>= 6.0.0), libkf6userfeedbackwidgets6 (>= 6.0.0), libkf6widgetsaddons6 (>= 6.3.0~), libkf6xmlgui6 (>= 6.3.0~), liblz4-1 (>= 1.8.0), libmarkdown2 (>= 2.0.6), libmatio14 (>= 1.5.30), libnetcdf22 (>= 4.0.1), liborcus-0.21-0 (>= 0.21.0), liborcus-parser-0.21-0 (>= 0.21.0), liborcus-spreadsheet-model-0.21-0 (>= 0.21.0), libpoppler-qt6-3t64 (>= 19.12~), libqt-advanced-docking-system4 (>= 4.5.0), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.9.1), libqt6network6 (>= 6.6.1), libqt6printsupport6 (>= 6.5.0~), libqt6serialport6 (>= 6.6.0), libqt6sql6 (>= 6.5.0~), libqt6svg6 (>= 6.6.0), libqt6widgets6 (>= 6.5.0~), libqt6xml6 (>= 6.6.0), libreadstat1t64 (>= 1.1.7), libstdc++6 (>= 14), libzstd1 (>= 1.5.5), qt6-base-private-abi (= 6.10.2), zlib1g (>= 1:1.1.4), labplot-data (= 2.12.1-5)
+Depends: kio6, libc6 (>= 2.39), libcantorlibs28abi3 (>= 4:24.12.2), libcerf3 (>= 3.1), libcfitsio10t64 (>= 4.2.0~), libfftw3-double3 (>= 3.3.11), libgcc-s1 (>= 3.0), libgsl28 (>= 2.8+dfsg), libgslcblas0 (>= 2.8), libhdf5-320 (>= 2.1.0), libixion-0.20-0 (>= 0.20.0), libkf6archive6 (>= 6.3.0~), libkf6colorscheme6 (>= 6.0.0), libkf6completion6 (>= 6.3.0~), libkf6configcore6 (>= 6.3.0~), libkf6configgui6 (>= 6.3.0~), libkf6configwidgets6 (>= 6.3.0), libkf6coreaddons6 (>= 6.3.0~), libkf6crash6 (>= 6.3.0~), libkf6i18n6 (>= 6.3.0~), libkf6iconthemes6 (>= 6.3.0), libkf6kiowidgets6 (>= 6.3.0~), libkf6parts6 (>= 6.3.0~), libkf6purpose-bin, libkf6purpose6 (>= 6.3.0~), libkf6purposewidgets6 (>= 6.3.0~), libkf6syntaxhighlighting6 (>= 6.3.0~), libkf6textwidgets6 (>= 6.3.0~), libkf6userfeedbackcore6 (>= 6.0.0), libkf6userfeedbackwidgets6 (>= 6.0.0), libkf6widgetsaddons6 (>= 6.3.0~), libkf6xmlgui6 (>= 6.3.0~), liblz4-1 (>= 1.8.0), libmarkdown2 (>= 2.0.6), libmatio14 (>= 1.5.30), libnetcdf22 (>= 4.0.1), liborcus-0.21-0 (>= 0.21.0), liborcus-parser-0.21-0 (>= 0.21.0), liborcus-spreadsheet-model-0.21-0 (>= 0.21.0), libpoppler-qt6-3t64 (>= 19.12~), libqt-advanced-docking-system4 (>= 4.5.0), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.9.1), libqt6network6 (>= 6.6.1), libqt6printsupport6 (>= 6.5.0~), libqt6serialport6 (>= 6.6.0), libqt6sql6 (>= 6.5.0~), libqt6svg6 (>= 6.6.0), libqt6widgets6 (>= 6.5.0~), libqt6xml6 (>= 6.6.0), libreadstat1t64 (>= 1.1.7), libstdc++6 (>= 14), libzstd1 (>= 1.5.5), qt6-base-private-abi (= 6.10.2), zlib1g (>= 1:1.1.4), labplot-data (= 2.12.1-5)
 Description: interactive graphing and analysis of scientific data
 Homepage: https://labplot.kde.org/
 Description-md5: 2a538569efcdb8dcc59d68e146ffa641
@@ -3635,10 +3631,10 @@ Tag: field::mathematics, field::statistics, implemented-in::c++,
  use::viewing, x11::application
 math
 Priority: optional
-Filename: pool/main/l/labplot/labplot_2.12.1-5+b2_amd64.deb
-Size: 5791208
-MD5sum: aaa75f8d862be9203894f86df88aca1a
-SHA256: 317b270bc8e5c45dc3a12b45be2b98f47089efaa16c7cecf6d3eb24cb558d74c
+Filename: pool/main/l/labplot/labplot_2.12.1-5+b3_amd64.deb
+Size: 5904228
+MD5sum: f2065e09f094c2e373e40166131e1cac
+SHA256: 4425585c602a310288672081a89332d56582ee5222a8b895367e72e1683136d3
 
 Package: labplot-data
 Source: labplot
@@ -3696,9 +3692,9 @@ MD5sum: 7de3c470ba1b63c44d4bdc392981d9b9
 SHA256: 23f0cd7de56a38c42a041e70ca97b54a4e853d371e5b2125bea59b4b0ee0dc2c
 
 Package: matio-tools
-Source: libmatio
-Version: 1.5.30-4
-Installed-Size: 48
+Source: libmatio (1.5.30-4)
+Version: 1.5.30-4+b1
+Installed-Size: 49
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libmatio14 (>= 1.5.30)
@@ -3707,10 +3703,10 @@ Homepage: https://github.com/tbeu/matio
 Description-md5: bfb2621ca75844f70d4d0d207368ffb9
 math
 Priority: optional
-Filename: pool/main/libm/libmatio/matio-tools_1.5.30-4_amd64.deb
-Size: 13356
-MD5sum: 38df72b104ef6b2cdcc8359f84da43d6
-SHA256: d33c8bfdf5a86c0902c8235e58c7838f1b1bbd28ace3f8652a76570037f9685c
+Filename: pool/main/libm/libmatio/matio-tools_1.5.30-4+b1_amd64.deb
+Size: 14060
+MD5sum: d5b3fe0f178792221f83962819d13312
+SHA256: c71a2f665af1dff96a24446ed1df0149e0813430ea0dbb85de98dac2952c4b90
 
 Package: qalc
 Source: libqalculate
@@ -4579,12 +4575,13 @@ MD5sum: af841403978c420cb950eddc2dc18569
 SHA256: 90db62fa1882bd24e2a5f34cafd4c11d1ecad55e3144ccf7c4301e96b4392b20
 
 Package: octave
-Version: 11.3.0-1
-Installed-Size: 41190
+Source: octave (11.3.0-1)
+Version: 11.3.0-1+b1
+Installed-Size: 42041
 Maintainer: Debian Octave Group <team+octave-team@tracker.debian.org>
 Architecture: amd64
 Provides: octave-abi-61
-Depends: libamd3 (>= 1:7.0.1), libarpack2t64 (>= 2.1), libblas3 | libblas.so.3, libbz2-1.0, libc6 (>= 2.38), libccolamd3 (>= 1:7.0.1), libcholmod5 (>= 1:7.3.1), libcolamd3 (>= 1:7.0.1), libcurl4-gnutls (>= 8.20.0-3~), libcxsparse4 (>= 1:7.0.1), libfftw3-double3 (>= 3.3.11), libfftw3-single3 (>= 3.3.11), libfltk-gl1.4, libfltk1.4, libfontconfig1 (>= 2.12.6), libfreetype6 (>= 2.4.2), libgcc-s1 (>= 4.0), libgfortran5 (>= 8), libgl1, libgl2ps1.4 (>= 1.4.2+dfsg1), libglpk40 (>= 4.59), libglu1-mesa | libglu1, libgomp1 (>= 4.2.1), libgraphicsmagick++-q16-12t64 (>= 1.3.26-5~), libgraphicsmagick-q16-3t64 (>= 1.3.5), libhdf5-310 (>= 1.14.3), liblapack3 | liblapack.so.3, libpcre2-8-0 (>= 10.22), libportaudio2 (>= 19+svn20101113), libqhull-r8.0 (>= 2020.1), libqrupdate1 (>= 1.1.1), libqscintilla2-qt6-15 (>= 2.13.3), libqt6core5compat6 (>= 6.6.0), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.9.1), libqt6help6 (>= 6.6.0), libqt6network6 (>= 6.1.2), libqt6opengl6 (>= 6.1.2), libqt6openglwidgets6 (>= 6.1.2), libqt6printsupport6 (>= 6.1.2), libqt6widgets6 (>= 6.8.2), libqt6xml6 (>= 6.6.0), libreadline8t64 (>= 6.0), libsndfile1 (>= 1.0.20), libspqr4 (>= 1:7.12.2+dfsg), libstdc++6 (>= 14), libsuitesparseconfig7 (>= 1:7.0.1), libumfpack6 (>= 1:7.0.1), libx11-6, zlib1g (>= 1:1.2.11.dfsg), texinfo, octave-common (= 11.3.0-1)
+Depends: libamd3 (>= 1:7.0.1), libarpack2t64 (>= 2.1), libblas3 | libblas.so.3, libbz2-1.0, libc6 (>= 2.38), libccolamd3 (>= 1:7.0.1), libcholmod5 (>= 1:7.3.1), libcolamd3 (>= 1:7.0.1), libcurl4-gnutls (>= 8.20.0-3~), libcxsparse4 (>= 1:7.0.1), libfftw3-double3 (>= 3.3.11), libfftw3-single3 (>= 3.3.11), libfltk-gl1.4, libfltk1.4, libfontconfig1 (>= 2.12.6), libfreetype6 (>= 2.4.2), libgcc-s1 (>= 4.0), libgfortran5 (>= 8), libgl1, libgl2ps1.4 (>= 1.4.2+dfsg1), libglpk40 (>= 4.59), libglu1-mesa | libglu1, libgomp1 (>= 4.2.1), libgraphicsmagick++-q16-12t64 (>= 1.4+really1.3.48), libgraphicsmagick-q16-3t64 (>= 1.3.5), libhdf5-openmpi-320 (>= 1.10.0), liblapack3 | liblapack.so.3, libpcre2-8-0 (>= 10.22), libportaudio2 (>= 19+svn20101113), libqhull-r8.0 (>= 2020.1), libqrupdate1 (>= 1.1.1), libqscintilla2-qt6-15 (>= 2.13.3), libqt6core5compat6 (>= 6.6.0), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.9.1), libqt6help6 (>= 6.6.0), libqt6network6 (>= 6.1.2), libqt6opengl6 (>= 6.1.2), libqt6openglwidgets6 (>= 6.1.2), libqt6printsupport6 (>= 6.1.2), libqt6widgets6 (>= 6.8.2), libqt6xml6 (>= 6.6.0), libreadline8t64 (>= 6.0), libsndfile1 (>= 1.0.20), libspqr4 (>= 1:7.12.2+dfsg), libstdc++6 (>= 14), libsuitesparseconfig7 (>= 1:7.0.1), libumfpack6 (>= 1:7.0.1), libx11-6, zlib1g (>= 1:1.2.11.dfsg), texinfo, octave-common (= 11.3.0-1)
 Recommends: gnuplot-qt | gnuplot-x11 | gnuplot-nox, libopenblas0 | libblis4, pstoedit, epstool, default-jre-headless (>= 2:1.25), octave-doc
 Suggests: octave-dev
 Breaks: octave-ga (<< 0.10.4), octave-queueing (<< 1.2.8)
@@ -4599,10 +4596,10 @@ Tag: field::mathematics, field::medicine, implemented-in::TODO,
  x11::application
 math
 Priority: optional
-Filename: pool/main/o/octave/octave_11.3.0-1_amd64.deb
-Size: 9526528
-MD5sum: 3980a493ab5678cb3fc5606f35d4dd28
-SHA256: 605debdcd1917ccef576ca6bacd44dd5cd444dca66618e23835c26f157570f68
+Filename: pool/main/o/octave/octave_11.3.0-1+b1_amd64.deb
+Size: 9833708
+MD5sum: 58421b05cf558328b996060dc13a6c90
+SHA256: 756cc53d13df2b85df99623c689215d2dea0a6600690921f03b955e65a2966c1
 
 Package: octave-common
 Source: octave
@@ -4744,20 +4741,20 @@ MD5sum: 591b0c4952e79389e6acca2a59c4d3d6
 SHA256: e84c70b4c6bcd3dc671132e60e7436416cd34d52c761116c68cf33e6aafa72b3
 
 Package: octave-control
-Version: 4.2.2-2
-Installed-Size: 2108
+Version: 4.2.3-1
+Installed-Size: 2118
 Maintainer: Debian Octave Group <team+octave-team@tracker.debian.org>
 Architecture: amd64
-Depends: libblas3 | libblas.so.3, libc6 (>= 2.4), libgcc-s1 (>= 3.0), liblapack3 | liblapack.so.3, libslicot5 (>= 5.9.1), libstdc++6 (>= 11), octave-abi-61, octave (>= 11.3.0)
+Depends: libblas3 | libblas.so.3, libc6 (>= 2.14), libgcc-s1 (>= 3.0), liblapack3 | liblapack.so.3, libslicot5 (>= 5.9.1), libstdc++6 (>= 13), octave-abi-61, octave (>= 11.3.0)
 Description: computer-aided control system design (CACSD) for Octave
 Homepage: https://gnu-octave.github.io/packages/control/
-Description-md5: 37aa7bf6c830ebc4a7201fa6987314a8
+Description-md5: 096d2352493be91f08a27c0a822fc072
 math
 Priority: optional
-Filename: pool/main/o/octave-control/octave-control_4.2.2-2_amd64.deb
-Size: 330184
-MD5sum: 6a73f680c0423347bb28f4b555345736
-SHA256: f474220aab340b347cd3cdc7db8df1460dc08b397cf6331b50cf551d56d5dffe
+Filename: pool/main/o/octave-control/octave-control_4.2.3-1_amd64.deb
+Size: 326516
+MD5sum: 9d70d62c0163e76f5b0c16e86db97ab4
+SHA256: 841ca5f373b29ac3144ebf56d44e6c5b9d442030813718d6abc105c60676b9fc
 
 Package: octave-data-smoothing
 Version: 1.3.0-12
@@ -6511,6 +6508,43 @@ Filename: pool/main/r/rkward/rkward-data_0.8.3-1_all.deb
 Size: 3066304
 MD5sum: 12f412c5187556b450b1f4c398470ff0
 SHA256: 308cafec740401b1f530c0f781ec0992cfe1f845e8d525fd673fe80c7e3af8ad
+
+Package: libcoq-micromega-plugin
+Source: rocq-micromega-plugin (1.1.1-1)
+Version: 1.1.1-1+b1
+Installed-Size: 17386
+Maintainer: Debian OCaml Maintainers <debian-ocaml-maint@lists.debian.org>
+Architecture: amd64
+Provides: libcoq-micromega-plugin-8goy4
+Recommends: coq
+Description: Semi-decision procedures for arithmetic in Rocq
+Homepage: https://github.com/rocq-community/micromega-plugin
+Description-md5: 36db3b2040d28472cc18759033991246
+math
+Priority: optional
+Filename: pool/main/r/rocq-micromega-plugin/libcoq-micromega-plugin_1.1.1-1+b1_amd64.deb
+Size: 3856456
+MD5sum: 1d3b7ca51af75ccae92e10fc95a2730c
+SHA256: f95bacb3427c89b08c81dfc0b4af7da28cac0aa371d40b9c32164bdae72efee6
+
+Package: libcoq-stdlib
+Source: rocq-stdlib (9.2.0-1)
+Version: 9.2.0-1+b1
+Installed-Size: 70604
+Maintainer: Debian OCaml Maintainers <debian-ocaml-maint@lists.debian.org>
+Architecture: amd64
+Provides: libcoq-stdlib-78iu5
+Depends: libcoq-core-azi36
+Recommends: coq
+Description: Standard library for the Rocq Theorem Prover
+Homepage: https://rocq-prover.org
+Description-md5: 0b24e694693db60c1cd6cd2d76d1f65f
+math
+Priority: optional
+Filename: pool/main/r/rocq-stdlib/libcoq-stdlib_9.2.0-1+b1_amd64.deb
+Size: 20085576
+MD5sum: 7fe95c16511474aaee8ef0b3e07279d0
+SHA256: 29b306b9f63b2509baae4a2fd1075f7a066e22af170d255eca8189e5e2af92c3
 
 Package: rocs
 Version: 4:26.04.0-1
