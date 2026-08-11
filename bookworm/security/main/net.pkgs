@@ -1449,6 +1449,242 @@ Filename: pool/updates/main/n/net-tools/net-tools_2.10-0.1+deb12u2_amd64.deb
 Size: 243404
 SHA256: 724ae901a4fa3f8ad40d87d8231015b1edc24cbd99faf0969e6f2cba0cfed0bc
 
+Package: neutron-api
+Source: neutron
+Version: 2:21.0.0-7+deb12u1
+Installed-Size: 138
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Replaces: neutron-server (<< 2:12.0.2-5~)
+Depends: adduser, debconf, neutron-common (= 2:21.0.0-7+deb12u1), python3-keystoneclient, python3-openstackclient, python3-pastescript, q-text-as-data, uwsgi-plugin-python3, debconf (>= 0.5) | debconf-2.0, lsb-base (>= 3.0.6)
+Breaks: neutron-server (<< 2:12.0.2-5~)
+Description: OpenStack virtual network service - API service
+Homepage: http://neutron.openstack.org/
+Description-md5: 68d3c6a70746a6f621a548d5d7501c84
+net
+Priority: optional
+Filename: pool/updates/main/n/neutron/neutron-api_21.0.0-7+deb12u1_all.deb
+Size: 21876
+SHA256: 12d17c66d3c748bd749fa005b8d3bff00a16b50f07ef53a9d246564feaf01c59
+
+Package: neutron-common
+Source: neutron
+Version: 2:21.0.0-7+deb12u1
+Installed-Size: 588
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Replaces: python3-networking-ovn
+Provides: neutron-plugin, neutron-plugin-bigswitch, neutron-plugin-brocade, neutron-plugin-cisco, neutron-plugin-hyperv, neutron-plugin-linuxbridge, neutron-plugin-metaplugin, neutron-plugin-ml2, neutron-plugin-nec, neutron-plugin-nicira, neutron-plugin-openvswitch, neutron-plugin-plumgrid, neutron-plugin-ryu, python3-networking-ovn
+Depends: adduser, dbconfig-common, debconf, dpkg-dev, python3-neutron (= 2:21.0.0-7+deb12u1), python3-openstackclient, python3-pyparsing, python3-sqlalchemy (>= 1.4.23), sqlite3, debconf (>= 0.5) | debconf-2.0, python3:any
+Breaks: python3-networking-ovn
+Description: OpenStack virtual network service - common files
+Homepage: http://neutron.openstack.org/
+Description-md5: c61c2ed65d5a5d765ce30a75c7a7d08c
+net
+Priority: optional
+Filename: pool/updates/main/n/neutron/neutron-common_21.0.0-7+deb12u1_all.deb
+Size: 79592
+SHA256: 3cb093458b6282e72ee0eb8999714a8f1d1a7e871b361ba18bd8a812f9adaaf4
+
+Package: neutron-dhcp-agent
+Source: neutron
+Version: 2:21.0.0-7+deb12u1
+Installed-Size: 80
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: adduser, dnsmasq-base, dnsmasq-utils, haproxy, iptables, neutron-common (= 2:21.0.0-7+deb12u1), sudo, lsb-base (>= 3.0.6)
+Description: OpenStack virtual network service - DHCP agent
+Homepage: http://neutron.openstack.org/
+Description-md5: 43c87530664414ccf407bff8f5a7f951
+net
+Priority: optional
+Filename: pool/updates/main/n/neutron/neutron-dhcp-agent_21.0.0-7+deb12u1_all.deb
+Size: 19688
+SHA256: 711dbaceb0d1526fe9fc31246a9ca8f6801d35560e6ee9d279ad90c57faa82da
+
+Package: neutron-l3-agent
+Source: neutron
+Version: 2:21.0.0-7+deb12u1
+Installed-Size: 32
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: adduser, debconf, haproxy, iptables, iputils-arping, keepalived, neutron-common (= 2:21.0.0-7+deb12u1), radvd, sudo, lsb-base (>= 3.0.6)
+Conflicts: neutron-vpn-agent
+Description: OpenStack virtual network service - l3 agent
+Homepage: http://neutron.openstack.org/
+Description-md5: d05a7678d49ef9a85809ada9d821ab32
+Recommends: openvswitch-switch
+net
+Priority: optional
+Filename: pool/updates/main/n/neutron/neutron-l3-agent_21.0.0-7+deb12u1_all.deb
+Size: 9484
+SHA256: 21306d2262fda5970243cdd19a7818889fb673c711f66de927c9363bcd54dbfa
+
+Package: neutron-linuxbridge-agent
+Source: neutron
+Version: 2:21.0.0-7+deb12u1
+Installed-Size: 50
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Provides: neutron-plugin-linuxbridge-agent
+Depends: bridge-utils, ebtables, neutron-common (= 2:21.0.0-7+deb12u1), sudo, lsb-base (>= 3.0.6)
+Description: OpenStack virtual network service - Linux bridge agent
+Homepage: http://neutron.openstack.org/
+Description-md5: a047d7a00c2b7d41cb9139a0c074bde5
+net
+Priority: optional
+Filename: pool/updates/main/n/neutron/neutron-linuxbridge-agent_21.0.0-7+deb12u1_all.deb
+Size: 13532
+SHA256: 570708bfb13bb399dafa525b3430b328a6b2df08b64ecd58e242bcad1e7b3ed8
+
+Package: neutron-macvtap-agent
+Source: neutron
+Version: 2:21.0.0-7+deb12u1
+Installed-Size: 44
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: neutron-common (= 2:21.0.0-7+deb12u1), lsb-base (>= 3.0.6)
+Description: OpenStack virtual network service - MacVTap Agent
+Homepage: http://neutron.openstack.org/
+Description-md5: 8c8b828b7e4eb543d0410950f658e1d3
+net
+Priority: optional
+Filename: pool/updates/main/n/neutron/neutron-macvtap-agent_21.0.0-7+deb12u1_all.deb
+Size: 12088
+SHA256: d42bc02bc7b665087796f67f9b23dc915a648d1a900e9cc439a1306233eef526
+
+Package: neutron-metadata-agent
+Source: neutron
+Version: 2:21.0.0-7+deb12u1
+Installed-Size: 157
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: adduser, haproxy, neutron-common (= 2:21.0.0-7+deb12u1), debconf (>= 0.5) | debconf-2.0, lsb-base (>= 3.0.6)
+Description: OpenStack virtual network service - metadata agent
+Homepage: http://neutron.openstack.org/
+Description-md5: 193571245ba8a01144e37a055bee988d
+net
+Priority: optional
+Filename: pool/updates/main/n/neutron/neutron-metadata-agent_21.0.0-7+deb12u1_all.deb
+Size: 27164
+SHA256: 2acf23634b19d563914ec9accfb354b4c2f84c24ede47042a2262b46968f01b3
+
+Package: neutron-metering-agent
+Source: neutron
+Version: 2:21.0.0-7+deb12u1
+Installed-Size: 43
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Provides: neutron-plugin-metering-agent
+Depends: adduser, debconf, neutron-common (= 2:21.0.0-7+deb12u1), lsb-base (>= 3.0.6)
+Description: OpenStack virtual network service - metering agent
+Homepage: http://neutron.openstack.org/
+Description-md5: f11af209387f53e9bae31e97823f7948
+net
+Priority: optional
+Filename: pool/updates/main/n/neutron/neutron-metering-agent_21.0.0-7+deb12u1_all.deb
+Size: 12532
+SHA256: 7539037b1407948d908e1611e2c42501336c72ca3082fd56c5d02d5925832a56
+
+Package: neutron-openvswitch-agent
+Source: neutron
+Version: 2:21.0.0-7+deb12u1
+Installed-Size: 135
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Provides: neutron-plugin-openvswitch-agent
+Depends: neutron-common (= 2:21.0.0-7+deb12u1), sudo, debconf (>= 0.5) | debconf-2.0, lsb-base (>= 3.0.6)
+Description: OpenStack virtual network service - Open vSwitch agent
+Homepage: http://neutron.openstack.org/
+Description-md5: 7c934b4e15bd67f2060eff81d322a721
+Pre-Depends: openvswitch-switch
+Recommends: openvswitch-datapath-dkms
+net
+Priority: optional
+Filename: pool/updates/main/n/neutron/neutron-openvswitch-agent_21.0.0-7+deb12u1_all.deb
+Size: 20492
+SHA256: e0790323b7edea86a50daedb736d1ba4bb96c2efb42ea4c27e8bc77497fd6278
+
+Package: neutron-ovn-metadata-agent
+Source: neutron
+Version: 2:21.0.0-7+deb12u1
+Installed-Size: 44
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: neutron-common (= 2:21.0.0-7+deb12u1), sudo
+Description: OpenStack virtual network service - OVN Metadata Agent
+Homepage: http://neutron.openstack.org/
+Description-md5: 88185a2ae213a889068244467579d6cd
+net
+Priority: optional
+Filename: pool/updates/main/n/neutron/neutron-ovn-metadata-agent_21.0.0-7+deb12u1_all.deb
+Size: 12428
+SHA256: 7443d81bcbefce14ccaa482a15e8bb15f04b3dcb1ee13e513a3b3949a4d67101
+
+Package: neutron-plugin-nec-agent
+Source: neutron
+Version: 2:21.0.0-7+deb12u1
+Installed-Size: 16
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: neutron-common (= 2:21.0.0-7+deb12u1), sudo
+Description: OpenStack virtual network service - NEC agent
+Homepage: http://neutron.openstack.org/
+Description-md5: 38e73e58fdfd62f6c8d04eccd42b38c0
+net
+Priority: optional
+Filename: pool/updates/main/n/neutron/neutron-plugin-nec-agent_21.0.0-7+deb12u1_all.deb
+Size: 6448
+SHA256: 7798e5c5a0bea1b00112f4568352415a0e59d4e53edec6214c2a06ec9769372c
+
+Package: neutron-rpc-server
+Source: neutron
+Version: 2:21.0.0-7+deb12u1
+Installed-Size: 33
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: adduser, neutron-common (= 2:21.0.0-7+deb12u1), lsb-base (>= 3.0.6)
+Description: OpenStack virtual network service - RPC service
+Homepage: http://neutron.openstack.org/
+Description-md5: df65950a74c73bc11041e4938241abe0
+net
+Priority: optional
+Filename: pool/updates/main/n/neutron/neutron-rpc-server_21.0.0-7+deb12u1_all.deb
+Size: 9684
+SHA256: a8083b5d341955fd1bbb508edbf5a5519aa8b3210d540bb83d7fd750840e4934
+
+Package: neutron-server
+Source: neutron
+Version: 2:21.0.0-7+deb12u1
+Installed-Size: 13
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: neutron-api (= 2:21.0.0-7+deb12u1), neutron-rpc-server (= 2:21.0.0-7+deb12u1)
+Description: OpenStack virtual network service - metapackage for the server
+Homepage: http://neutron.openstack.org/
+Description-md5: 7b62a56b9122552f499d2a68a8e0f658
+net
+Priority: optional
+Filename: pool/updates/main/n/neutron/neutron-server_21.0.0-7+deb12u1_all.deb
+Size: 6420
+SHA256: 1333a77aa90f214fe805d8f03c1e72a677dda6de9872f2e8d648d2387355476f
+
+Package: neutron-sriov-agent
+Source: neutron
+Version: 2:21.0.0-7+deb12u1
+Installed-Size: 32
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: neutron-common (= 2:21.0.0-7+deb12u1), lsb-base (>= 3.0.6)
+Description: OpenStack virtual network service - SR-IOV agent
+Homepage: http://neutron.openstack.org/
+Description-md5: 24e4dbc58813297ba840f713883dfccb
+net
+Priority: optional
+Filename: pool/updates/main/n/neutron/neutron-sriov-agent_21.0.0-7+deb12u1_all.deb
+Size: 9400
+SHA256: e6a0a09231618cfb8853fe740f7e816e41b5a78d80a076f0f6564d380a46c3d6
+
 Package: nova-api
 Source: nova
 Version: 2:26.2.2-1~deb12u4
