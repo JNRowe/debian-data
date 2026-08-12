@@ -364,6 +364,276 @@ Filename: pool/updates/main/l/linux-6.12/linux-support-6.12.100+deb12_6.12.100-1
 Size: 1375496
 SHA256: 30af9dfb14a3b58f16986ad20187802d1f1e740e23f71b78bdce5525070c1f7b
 
+Package: bolt-22
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb12u1
+Installed-Size: 176027
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.36), libgcc-s1 (>= 3.3), libstdc++6 (>= 12), libz3-4 (>= 4.8.12), libzstd1 (>= 1.5.2), zlib1g (>= 1:1.2.0), libbolt-22-dev (= 1:22.1.8-1~deb12u1)
+Description: Post-link optimizer
+Homepage: https://www.llvm.org/
+Description-md5: a5816535f62942b4fcded9b86fb66840
+devel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/bolt-22_22.1.8-1~deb12u1_amd64.deb
+Size: 37011088
+SHA256: 2a5952b3b5d04bd860adac0951b42c9051f313b42392e3bf2b741cb43b65aceb
+
+Package: clang-22
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb12u1
+Installed-Size: 533
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: clang-tools-22 (<< 1:22~++20251124083138+173600880b8f-1~exp1)
+Provides: c++-compiler, c-compiler, objc++-compiler, objc-compiler
+Depends: libc6 (>= 2.34), libclang-cpp22 (>= 1:22.1.8), libgcc-s1 (>= 3.0), libllvm22 (= 1:22.1.8-1~deb12u1), libstdc++6 (>= 11), libstdc++-12-dev, libgcc-12-dev, libobjc-12-dev, libclang-common-22-dev (= 1:22.1.8-1~deb12u1), llvm-22-linker-tools (= 1:22.1.8-1~deb12u1), libclang1-22 (= 1:22.1.8-1~deb12u1), libc6-dev, binutils
+Suggests: clang-22-doc, wasi-libc
+Breaks: clang-tools-22 (<< 1:22~++20251124083138+173600880b8f-1~exp1)
+Description: C, C++ and Objective-C compiler
+Homepage: https://www.llvm.org/
+Description-md5: c364160e44345420df0f2e97b3082b69
+Recommends: llvm-22-dev, python3, clang-tools-22
+devel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/clang-22_22.1.8-1~deb12u1_amd64.deb
+Size: 173508
+SHA256: b6ffc4ffae2bf3d0757bab0623701060b30f5bb59e7ba4123d66b56fbb91362a
+
+Package: clang-format-22
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb12u1
+Installed-Size: 257
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34), libclang-cpp22 (>= 1:22.1.8), libgcc-s1 (>= 3.0), libllvm22 (= 1:22.1.8-1~deb12u1), libstdc++6 (>= 11), python3
+Description: Tool to format C/C++/Obj-C code
+Homepage: https://www.llvm.org/
+Description-md5: 5fdb7838fa336de9de2703cb644c12e4
+devel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/clang-format-22_22.1.8-1~deb12u1_amd64.deb
+Size: 104524
+SHA256: 59adb21893e6c0fd3e399d1bc9b104cd62dc753d0065f3e58a544fe787c02cbd
+
+Package: clang-tidy-22
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb12u1
+Installed-Size: 12220
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34), libclang-cpp22 (>= 1:22.1.8), libgcc-s1 (>= 3.0), libllvm22 (= 1:22.1.8-1~deb12u1), libstdc++6 (>= 11), python3, libclang-common-22-dev (= 1:22.1.8-1~deb12u1), clang-tools-22, python3-yaml
+Description: clang-based C++ linter tool
+Homepage: https://www.llvm.org/
+Description-md5: 239d974b460ce0b6a914aa94c05888ad
+devel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/clang-tidy-22_22.1.8-1~deb12u1_amd64.deb
+Size: 1997272
+SHA256: 9800b796290fa463348f1ad03f122e8dc5a09e212961c8108ba80f83becc5a51
+
+Package: clang-tools-22
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb12u1
+Installed-Size: 40083
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: clang-22 (<< 1:22~++20251124083138+173600880b8f-1~exp1)
+Depends: libc6 (>= 2.36), libclang-cpp22 (>= 1:22.1.8), libclang1-22 (>= 1:21.1.4), libgcc-s1 (>= 3.3), libllvm22, libstdc++6 (>= 11), libxml2 (>= 2.7.4), libz3-4 (>= 4.8.12), libzstd1 (>= 1.5.2), zlib1g (>= 1:1.1.4), clang-22 (= 1:22.1.8-1~deb12u1), python3:any
+Breaks: clang-22 (<< 1:22~++20251124083138+173600880b8f-1~exp1)
+Description: clang-based tools for C/C++ developments
+Homepage: https://www.llvm.org/
+Description-md5: 0ac52908e51dad320be3476963296f5f
+devel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/clang-tools-22_22.1.8-1~deb12u1_amd64.deb
+Size: 9297912
+SHA256: 4aa071cf2a72270f7ed8ea637e902e3857c450c73c2e6eeb4b8e96406582798a
+
+Package: clangd-22
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb12u1
+Installed-Size: 17952
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libabsl20220623 (>= 0~20220623.0-1), libc-ares2 (>= 1.7.0), libc6 (>= 2.34), libclang-cpp22 (>= 1:22.1.8), libgcc-s1 (>= 3.0), libgrpc++1.51 (>= 1.51.1), libgrpc29 (>= 1.51.1), libllvm22 (= 1:22.1.8-1~deb12u1), libprotobuf32 (>= 3.21.12), libre2-9 (>= 0+hg23), libssl3 (>= 3.0.0), libstdc++6 (>= 12), zlib1g (>= 1:1.1.4), libclang-common-22-dev (= 1:22.1.8-1~deb12u1)
+Description: Language server that provides IDE-like features to editors
+Homepage: https://www.llvm.org/
+Description-md5: 9ae9ea58c7af3228199dd96c36ecd0bb
+devel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/clangd-22_22.1.8-1~deb12u1_amd64.deb
+Size: 3428840
+SHA256: 5f54554d5b43284044522784530dff819c3a3a1a99920a5ff281089de1a245e7
+
+Package: flang-22
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb12u1
+Installed-Size: 111266
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: amd64
+Provides: fortran-compiler, gfortran-mod-15
+Depends: libc6 (>= 2.34), libclang-cpp22 (>= 1:22.1.8), libgcc-s1 (>= 3.0), libllvm22, libmlir-22 (>= 1:22.1.8), libquadmath0 (>= 4.6), libstdc++6 (>= 11), libstdc++-12-dev, libgcc-12-dev, libflang-22-dev (= 1:22.1.8-1~deb12u1)
+Description: Fortran compiler
+Homepage: https://www.llvm.org/
+Description-md5: bd017b88c85853e1292c78015b1d62a8
+devel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/flang-22_22.1.8-1~deb12u1_amd64.deb
+Size: 17685144
+SHA256: 327e4061ff469f1153b29dfe3561ce0f0f9df1b6a888353c4b27280de9740608
+
+Package: liboffload-22
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb12u1
+Installed-Size: 1703
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: liboffload-x.y
+Provides: liboffload-x.y
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libllvm22, libomp5-19, libstdc++6 (>= 12)
+Conflicts: liboffload-x.y
+Description: Offload Library
+Homepage: https://www.llvm.org/
+Description-md5: 841bdc20a27b40722e37c7b2d0838a75
+devel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/liboffload-22_22.1.8-1~deb12u1_amd64.deb
+Size: 378736
+SHA256: ad5ad2d0fa394a2716926e572dc795a84e032ed97729c468ca69cd80019a0b7d
+
+Package: lld-22
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb12u1
+Installed-Size: 6021
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libllvm22 (= 1:22.1.8-1~deb12u1), libstdc++6 (>= 12), libzstd1 (>= 1.5.2), zlib1g (>= 1:1.2.2)
+Description: LLVM-based linker
+Homepage: https://www.llvm.org/
+Description-md5: 39b52f07f105b329dd7852cce89ebb7d
+devel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/lld-22_22.1.8-1~deb12u1_amd64.deb
+Size: 1487860
+SHA256: 13103b3fb3195bfeade9835d3906a4cc91002010f9013d98aa1fc55b841d07b4
+
+Package: lldb-22
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb12u1
+Installed-Size: 5810
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.36), libclang-cpp22 (>= 1:22.1.8), libedit2 (>= 2.11-20080614-0), libgcc-s1 (>= 3.3), liblldb-22, libllvm22 (= 1:22.1.8-1~deb12u1), libncurses6 (>= 6), libstdc++6 (>= 12), libtinfo6 (>= 6), libxml2 (>= 2.6.27), libz3-4 (>= 4.8.12), libzstd1 (>= 1.5.2), zlib1g (>= 1:1.1.4), python3-lldb-22
+Description: Next generation, high-performance debugger
+Homepage: https://www.llvm.org/
+Description-md5: 45d52d0209cd7953d2f2bc4d1a99170f
+devel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/lldb-22_22.1.8-1~deb12u1_amd64.deb
+Size: 1561572
+SHA256: 748dd1fcb732ba672670cff14c5773ee23fcc7d33c0fcd0a8735e76ab01ce63c
+
+Package: llvm-22
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb12u1
+Installed-Size: 90164
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: amd64
+Depends: llvm-22-runtime (= 1:22.1.8-1~deb12u1), llvm-22-linker-tools (= 1:22.1.8-1~deb12u1), libc6 (>= 2.36), libcurl4 (>= 7.16.2), libgcc-s1 (>= 3.3), libllvm22, libpfm4, libstdc++6 (>= 12), libz3-4 (>= 4.8.12), libzstd1 (>= 1.5.2), zlib1g (>= 1:1.2.0)
+Suggests: llvm-22-doc
+Description: Modular compiler and toolchain technologies
+Homepage: https://www.llvm.org/
+Description-md5: 07d463911771b9679a5f0131f40992d4
+Recommends: llvm-22-dev
+devel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/llvm-22_22.1.8-1~deb12u1_amd64.deb
+Size: 19143812
+SHA256: fcde579693b3f1cf1da596694c1add8a961ab1e1bd22744d4bff165d4f865add
+
+Package: llvm-22-dev
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb12u1
+Installed-Size: 410954
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.2.5), libgcc-s1 (>= 3.0), libllvm22 (= 1:22.1.8-1~deb12u1), libstdc++6 (>= 4.1.1), libffi-dev, llvm-22 (= 1:22.1.8-1~deb12u1), libncurses-dev, llvm-22-tools (= 1:22.1.8-1~deb12u1), libclang-cpp22 (= 1:22.1.8-1~deb12u1), libxml2-dev, libz3-dev
+Description: Modular compiler and toolchain technologies, libraries and headers
+Homepage: https://www.llvm.org/
+Description-md5: 29f654aa391c01f742a2023c872d7a49
+devel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/llvm-22-dev_22.1.8-1~deb12u1_amd64.deb
+Size: 52412280
+SHA256: 72250802fb65f281aa88bffe317bec70d6ddbe21134736c354a4f13ed24709ad
+
+Package: llvm-22-linker-tools
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb12u1
+Installed-Size: 4006
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.32), libgcc-s1 (>= 3.0), libllvm22, libstdc++6 (>= 11)
+Description: Modular compiler and toolchain technologies - Plugins
+Homepage: https://www.llvm.org/
+Description-md5: 34d6480db2d150315f7bca6065772d03
+devel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/llvm-22-linker-tools_22.1.8-1~deb12u1_amd64.deb
+Size: 1235352
+SHA256: dc11dfd532a9394847a6aecbb8f4087adb73ac31663b00758c1aa110769e0d67
+
+Package: llvm-22-runtime
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb12u1
+Installed-Size: 1839
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.36), libgcc-s1 (>= 3.3), libllvm22, libstdc++6 (>= 12), libz3-4 (>= 4.8.12), libzstd1 (>= 1.5.2), zlib1g (>= 1:1.1.4)
+Description: Modular compiler and toolchain technologies, IR interpreter
+Homepage: https://www.llvm.org/
+Description-md5: a2e425ebfc2fcd56b539f44a28559b4a
+Recommends: binfmt-support | systemd
+devel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/llvm-22-runtime_22.1.8-1~deb12u1_amd64.deb
+Size: 604888
+SHA256: 8543d3f618b05504353a6d5c526107088a88b8fb73b4c96ee7f4ce7be5e9ab41
+
+Package: llvm-22-tools
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb12u1
+Installed-Size: 2194
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.36), libgcc-s1 (>= 3.3), libllvm22, libstdc++6 (>= 11), libz3-4 (>= 4.8.12), libzstd1 (>= 1.5.2), zlib1g (>= 1:1.1.4), python3:any, python3-pygments, python3-yaml
+Description: Modular compiler and toolchain technologies, tools
+Homepage: https://www.llvm.org/
+Description-md5: 709eba32627c3c079585c05fc5963fe8
+devel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/llvm-22-tools_22.1.8-1~deb12u1_amd64.deb
+Size: 498548
+SHA256: 6edd5aaa2703a8507dd3eb6f8ecb6c8b6f70e5a75cc2c39c3a4d7d31d7766911
+
+Package: mlir-22-tools
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb12u1
+Installed-Size: 169829
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.36), libgcc-s1 (>= 3.3), libllvm22, libmlir-22 (>= 1:22.1.8), libstdc++6 (>= 12), libz3-4 (>= 4.8.12), libzstd1 (>= 1.5.2), zlib1g (>= 1:1.1.4)
+Description: Multi-Level Intermediate Representation tools
+Homepage: https://www.llvm.org/
+Description-md5: d0b5aeb3d29bd335ae224dda484fdc7a
+devel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/mlir-22-tools_22.1.8-1~deb12u1_amd64.deb
+Size: 26909444
+SHA256: bbfaa827931d8f2ca2dcf031c3ef1c20341a4658ec9019694d3c1c4c9920ffa7
+
 Package: mosquitto-dev
 Source: mosquitto
 Version: 2.0.11-1.2+deb12u1

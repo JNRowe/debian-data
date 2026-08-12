@@ -93,6 +93,112 @@ Filename: pool/updates/main/l/lasso/liblasso-perl_2.8.2-9+deb13u1_amd64.deb
 Size: 772276
 SHA256: b51f9d6a0b600476dc0d8ec901dbe037e738ed9250d06310e4e8d04514504c95
 
+Package: lemonldap-ng
+Version: 2.21.2+ds-1+deb13u3
+Installed-Size: 186
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: all
+Provides: openid-connect-provider, openid-connect-relying-party, saml-identity-provider, saml-service-provider
+Depends: lemonldap-ng-handler (= 2.21.2+ds-1+deb13u3), liblemonldap-ng-manager-perl (= 2.21.2+ds-1+deb13u3), liblemonldap-ng-portal-perl (= 2.21.2+ds-1+deb13u3)
+Description: OpenID-Connect, CAS and SAML compatible Web-SSO system
+Homepage: https://lemonldap-ng.org/
+Description-md5: d9956485953b0264aad783e87c61e25d
+perl
+Priority: optional
+Filename: pool/updates/main/l/lemonldap-ng/lemonldap-ng_2.21.2+ds-1+deb13u3_all.deb
+Size: 88952
+SHA256: ea817d3c729620086adb67163a3616891d8da00b1159640301ea3553a2ee6423
+
+Package: lemonldap-ng-handler
+Source: lemonldap-ng
+Version: 2.21.2+ds-1+deb13u3
+Installed-Size: 248
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: liblemonldap-ng-handler-perl (= 2.21.2+ds-1+deb13u3)
+Suggests: libcache-memcached-perl, libdigest-hmac-perl, libsoap-lite-perl
+Description: Lemonldap::NG handler part
+Homepage: https://lemonldap-ng.org/
+Description-md5: 9581d765c8dbdafc58e31f96283b6764
+Recommends: lemonldap-ng-fastcgi-server (= 2.21.2+ds-1+deb13u3) | lemonldap-ng-uwsgi-app (= 2.21.2+ds-1+deb13u3) | libapache2-mod-perl2
+perl
+Priority: optional
+Filename: pool/updates/main/l/lemonldap-ng/lemonldap-ng-handler_2.21.2+ds-1+deb13u3_all.deb
+Size: 97976
+SHA256: fe1acc1ddd4d22d010e6afb49b366e7b8e56505a2af65fc28f1bd9b30cf7bab5
+
+Package: liblemonldap-ng-common-perl
+Source: lemonldap-ng
+Version: 2.21.2+ds-1+deb13u3
+Installed-Size: 905
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: debconf, libapache-session-perl, libcache-cache-perl, libclass-xsaccessor-perl, libconfig-inifiles-perl, libcrypt-openssl-rsa-perl, libcrypt-openssl-x509-perl, libconvert-pem-perl, libcrypt-rijndael-perl, libcrypt-urandom-perl, libhtml-template-perl, libjson-perl, libjson-xs-perl, libmouse-perl, libnet-cidr-perl, libnet-ssleay-perl, libplack-perl, liburi-perl, libwww-perl, debconf (>= 0.5) | debconf-2.0, perl:any
+Suggests: libconvert-base32-perl, liblog-log4perl-perl, libnet-ldap-perl, libsoap-lite-perl, libxml-libxml-perl
+Description: Lemonldap::NG common files
+Homepage: https://lemonldap-ng.org/
+Description-md5: d0b1b116b90ac4255174dccda83adf20
+Recommends: libapache-session-browseable-perl, libcookie-baker-xs-perl, libdbi-perl, libemail-address-xs-perl | libemail-address-perl, libemail-sender-perl, libhttp-parser-xs-perl, liblwp-protocol-https-perl, libstring-random-perl
+perl
+Priority: optional
+Filename: pool/updates/main/l/lemonldap-ng/liblemonldap-ng-common-perl_2.21.2+ds-1+deb13u3_all.deb
+Size: 244748
+SHA256: f7b278ec2073b8537410d1dc04d05e070b8f81ac695e8c7ee9f2bbaf0c32d2da
+
+Package: liblemonldap-ng-handler-perl
+Source: lemonldap-ng
+Version: 2.21.2+ds-1+deb13u3
+Installed-Size: 437
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: liblemonldap-ng-common-perl (= 2.21.2+ds-1+deb13u3), perl:any
+Description: Lemonldap::NG handler common libraries
+Homepage: https://lemonldap-ng.org/
+Description-md5: c31967de31456a28e089d30c57912036
+perl
+Priority: optional
+Filename: pool/updates/main/l/lemonldap-ng/liblemonldap-ng-handler-perl_2.21.2+ds-1+deb13u3_all.deb
+Size: 135692
+SHA256: 6298d19bc0c7535aeda2f9fb7c289fe3fd312cbf049b8079175145eaac4e6394
+
+Package: liblemonldap-ng-manager-perl
+Source: lemonldap-ng
+Version: 2.21.2+ds-1+deb13u3
+Installed-Size: 4824
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: lemonldap-ng-fastcgi-server (= 2.21.2+ds-1+deb13u3) | lemonldap-ng-uwsgi-app (= 2.21.2+ds-1+deb13u3) | apache2 | httpd-cgi, libemail-date-format-perl, libhash-merge-simple-perl, libjs-angularjs, libjs-bootstrap, libjs-es5-shim, libjs-jquery, liblemonldap-ng-handler-perl (= 2.21.2+ds-1+deb13u3), libregexp-common-perl, perl:any
+Suggests: libclone-perl, libregexp-assemble-perl
+Description: Lemonldap::NG manager part
+Homepage: https://lemonldap-ng.org/
+Description-md5: ab72e3f536bf2e52dc3ca8f4623dfb67
+Pre-Depends: debconf
+Recommends: lemonldap-ng-doc (= 2.21.2+ds-1+deb13u3), libxml-libxml-perl, libxml-libxslt-perl
+perl
+Priority: optional
+Filename: pool/updates/main/l/lemonldap-ng/liblemonldap-ng-manager-perl_2.21.2+ds-1+deb13u3_all.deb
+Size: 1021448
+SHA256: acc65881dd6740e813f425f34d423ff672bb945adbb4f03f477c892f66c5e8f6
+
+Package: liblemonldap-ng-portal-perl
+Source: lemonldap-ng
+Version: 2.21.2+ds-1+deb13u3
+Installed-Size: 6001
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: fonts-font-awesome, lemonldap-ng-fastcgi-server (= 2.21.2+ds-1+deb13u3) | lemonldap-ng-uwsgi-app (= 2.21.2+ds-1+deb13u3) | apache2 | httpd-cgi, libclone-perl, libconvert-base32-perl, libdigest-hmac-perl, libemail-date-format-perl, libhtml-formattext-withlinks-perl, libjs-bootstrap4, libjs-jquery, libjs-jquery-cookie, libjs-jquery-ui, liblemonldap-ng-handler-perl (= 2.21.2+ds-1+deb13u3), liblist-moreutils-perl, libregexp-assemble-perl, libtext-unidecode-perl, perl:any
+Suggests: crowdsec, gpg, libauthen-radius-perl, libdata-password-zxcvbn-perl, libdbi-perl, libgeoip2-perl, libglib-perl, libgssapi-perl, libhttp-browserdetect-perl, libimage-magick-perl, liblasso-perl, libnet-facebook-oauth2-perl, libnet-oauth-perl, libnet-openid-consumer-perl, libnet-openid-server-perl, libsoap-lite-perl, libweb-id-perl, slapd
+Description: Lemonldap::NG authentication portal part
+Homepage: https://lemonldap-ng.org/
+Description-md5: c6218bab631fa3f70f300a843ef336c1
+Pre-Depends: debconf
+Recommends: fonts-urw-base35, libauthen-webauthn-perl, libconvert-pem-perl, libcrypt-jwt-perl, libgd-securityimage-perl, libio-socket-timeout-perl, libio-string-perl, libipc-run-perl, libmime-tools-perl, libnet-ldap-perl
+perl
+Priority: optional
+Filename: pool/updates/main/l/lemonldap-ng/liblemonldap-ng-portal-perl_2.21.2+ds-1+deb13u3_all.deb
+Size: 3122528
+SHA256: 4c945cc535ca6699e20d850e25532d2c87b2a2646850e88ffb7ffc041ff31ca4
+
 Package: libconfig-inifiles-perl
 Version: 3.000003-3+deb13u1
 Installed-Size: 122

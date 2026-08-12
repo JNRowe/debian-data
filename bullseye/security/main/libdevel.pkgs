@@ -3228,20 +3228,20 @@ SHA256: bec0d3cac39073676cf80c759556a83c0671233685e5974a2d3120da0d610429
 
 Package: libgd-dev
 Source: libgd2
-Version: 2.3.0-2+deb11u1
+Version: 2.3.0-2+deb11u2
 Installed-Size: 785
 Maintainer: GD Team <team+gd@tracker.debian.org>
 Architecture: i386
-Depends: libgd3 (= 2.3.0-2+deb11u1), libpng-dev, libz-dev, libjpeg-dev, libfreetype6-dev, libxpm-dev, libx11-dev, libxt-dev, libfontconfig-dev, libvpx-dev, libtiff-dev
+Depends: libgd3 (= 2.3.0-2+deb11u2), libpng-dev, libz-dev, libjpeg-dev, libfreetype6-dev, libxpm-dev, libx11-dev, libxt-dev, libfontconfig-dev, libvpx-dev, libtiff-dev
 Description: GD Graphics Library (development version)
 Homepage: http://www.libgd.org/
 Description-md5: e2e1452132bfe957f8694d8a8920856e
 Multi-Arch: same
 libdevel
 Priority: optional
-Filename: pool/updates/main/libg/libgd2/libgd-dev_2.3.0-2+deb11u1_i386.deb
-Size: 283968
-SHA256: 46a9027c065077b2915b2293f0735ad59efe2ab53681d3c64689df13f003d738
+Filename: pool/updates/main/libg/libgd2/libgd-dev_2.3.0-2+deb11u2_i386.deb
+Size: 283888
+SHA256: ab70d40d385893432a58868757a4aa49385e7dc18497d364a717f47f72410082
 
 Package: libgit2-dev
 Source: libgit2
@@ -4359,6 +4359,324 @@ Priority: optional
 Filename: pool/updates/main/l/llvm-toolchain-19/libunwind-19-dev_19.1.7-3~deb11u1_i386.deb
 Size: 111848
 SHA256: ced9998419cafa23cb645e28acf0490f112c0205a16adaa5ccb2e677bea37130
+
+Package: libc++-22-dev
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb11u1
+Installed-Size: 16686
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: i386
+Replaces: libc++-x.y-dev, libc++1 (<< 1:22~++20251023025710+3f47a7be1ae6-1~exp4)
+Provides: libc++-x.y-dev
+Depends: libc++1-19, libc++abi-22-dev (= 1:22.1.8-1~deb11u1)
+Conflicts: libc++-x.y-dev
+Breaks: libc++1 (<< 1:22~++20251023025710+3f47a7be1ae6-1~exp4)
+Description: LLVM C++ Standard library (development files)
+Homepage: https://www.llvm.org/
+Description-md5: 3d949e623a59b5e265cbdc7c28d199d8
+libdevel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/libc++-22-dev_22.1.8-1~deb11u1_i386.deb
+Size: 1593456
+SHA256: 7a6a6fdb75f41d43d06961d05d24eb49b54af60cd8740d5c74e91041aaaf0eaf
+
+Package: libc++-22-dev-wasm32
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb11u1
+Installed-Size: 100
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: all
+Replaces: libc++-x.y-dev-wasm32
+Provides: libc++-x.y-dev-wasm32
+Depends: wasi-libc, libc++abi-22-dev-wasm32
+Conflicts: libc++-x.y-dev-wasm32
+Description: LLVM C++ Standard library (WASI)
+Homepage: https://www.llvm.org/
+Description-md5: 21e20e19acf2a499a9e194408e3990d7
+Multi-Arch: foreign
+libdevel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/libc++-22-dev-wasm32_22.1.8-1~deb11u1_all.deb
+Size: 82860
+SHA256: a1f99c43fab17fc99354c6aecee86cf501307f402b63d065103bf03a6a42fe2c
+
+Package: libc++abi-22-dev
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb11u1
+Installed-Size: 634
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: i386
+Replaces: libc++abi-x.y-dev, libc++abi1 (<< 1:22~++20251023025710+3f47a7be1ae6-1~exp4)
+Provides: libc++abi-x.y-dev
+Depends: libc++abi1-19
+Conflicts: libc++abi-x.y-dev
+Breaks: libc++abi-dev (<= 44), libc++abi1 (<< 1:22~++20251023025710+3f47a7be1ae6-1~exp4)
+Description: LLVM low level support for a standard C++ library (development files)
+Homepage: https://www.llvm.org/
+Description-md5: cfed1e32b74a68758680e06ca83ac94b
+libdevel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/libc++abi-22-dev_22.1.8-1~deb11u1_i386.deb
+Size: 170624
+SHA256: 00d969589ed6832f7836f1c7a9064e5250fdcb8f7e73531ee7930141d82c1bab
+
+Package: libc++abi-22-dev-wasm32
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb11u1
+Installed-Size: 101
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: all
+Replaces: libc++abi-x.y-dev-wasm32
+Provides: libc++abi-x.y-dev-wasm32
+Depends: wasi-libc
+Conflicts: libc++abi-x.y-dev-wasm32
+Description: LLVM low level support for a standard C++ library (WASI)
+Homepage: https://www.llvm.org/
+Description-md5: 9a34398f2ed6518894f52de69f57d517
+Multi-Arch: foreign
+libdevel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/libc++abi-22-dev-wasm32_22.1.8-1~deb11u1_all.deb
+Size: 82784
+SHA256: 97e099ad4cd6397e90b688ea93fe1bcce4da87ff0178bb4942d92ad5c0f1c80d
+
+Package: libclang-22-dev
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb11u1
+Installed-Size: 286504
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: i386
+Depends: libstdc++-10-dev, libgcc-10-dev, libobjc-10-dev, libclang1-22 (= 1:22.1.8-1~deb11u1), libclang-common-22-dev (= 1:22.1.8-1~deb11u1)
+Description: Clang library - Development package
+Homepage: https://www.llvm.org/
+Description-md5: 2913d96deb7536b7b59b7b10e996a469
+libdevel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/libclang-22-dev_22.1.8-1~deb11u1_i386.deb
+Size: 33277796
+SHA256: d2f22758da1f69c32f45d3a884cfe085da31f3c752d899af5053d98c3e519dd4
+
+Package: libclang-common-22-dev
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb11u1
+Installed-Size: 14745
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: i386
+Description: Clang library - Common development package
+Homepage: https://www.llvm.org/
+Description-md5: c70051d53e23270c29353f55183e81aa
+Multi-Arch: same
+Recommends: libclang-rt-22-dev
+libdevel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/libclang-common-22-dev_22.1.8-1~deb11u1_i386.deb
+Size: 832032
+SHA256: 472ecf9b7b1c23f23601915c2e84c36e14922f6fb75bda6b8f6cb076f252e156
+
+Package: libclang-cpp22-dev
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb11u1
+Installed-Size: 97
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: i386
+Depends: libstdc++-10-dev, libgcc-10-dev, libclang-cpp22 (= 1:22.1.8-1~deb11u1)
+Description: C++ interface to the Clang library
+Homepage: https://www.llvm.org/
+Description-md5: f5afea2f6b71ba0705e995aaab21eef9
+libdevel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/libclang-cpp22-dev_22.1.8-1~deb11u1_i386.deb
+Size: 82836
+SHA256: 528ecffb461d7a68965f2042bb77b0427d60151889ef10a52e24ea3ae0d9ad83
+
+Package: libclang-rt-22-dev
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb11u1
+Installed-Size: 50481
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: i386
+Depends: lib64atomic1 (>= 4.8), lib64stdc++6 (>= 4.1.1), libatomic1 (>= 4.8), libc6 (>= 2.28), libc6-amd64 (>= 2.29), libstdc++6 (>= 4.1.1)
+Description: Compiler-rt - development package
+Homepage: https://www.llvm.org/
+Description-md5: 2aaff3e893bfd063ceaf38e310dc3055
+libdevel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/libclang-rt-22-dev_22.1.8-1~deb11u1_i386.deb
+Size: 4040800
+SHA256: be7a4dba51d86dce61b55ffe68129110dd98c07b42d1c4390f8ad0d72b6ed61c
+
+Package: libclang-rt-22-dev-wasm32
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb11u1
+Installed-Size: 336
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: all
+Description: Compiler-rt - wasm32 builtins
+Homepage: https://www.llvm.org/
+Description-md5: 0a3a8bf20b284a6b0fb9f63d5541c217
+Multi-Arch: foreign
+libdevel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/libclang-rt-22-dev-wasm32_22.1.8-1~deb11u1_all.deb
+Size: 122972
+SHA256: 431eacabecefa860d3c301772e66a41371e48e5cf6984804912fbfb995c8a170
+
+Package: libclang-rt-22-dev-wasm64
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb11u1
+Installed-Size: 343
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: all
+Description: Compiler-rt - wasm64 builtins
+Homepage: https://www.llvm.org/
+Description-md5: f6fba666aadae95050bf103b52358363
+Multi-Arch: foreign
+libdevel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/libclang-rt-22-dev-wasm64_22.1.8-1~deb11u1_all.deb
+Size: 123276
+SHA256: 6d734750f4a95eb0f29dd4344dc746cac2a73ed9be71e4b2bc573eff7859238a
+
+Package: libclang-rt-22-dev-win
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb11u1
+Installed-Size: 1486
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: all
+Description: Compiler-rt - Windows builtins
+Homepage: https://www.llvm.org/
+Description-md5: 3b8b2cd8160ba15aca1c19bf79c9c97c
+Multi-Arch: foreign
+libdevel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/libclang-rt-22-dev-win_22.1.8-1~deb11u1_all.deb
+Size: 283752
+SHA256: 506d71c5fdc5992c94fbacf9894d8964e5a9443e6040171178305b1038b3e7b7
+
+Package: libclc-22-dev
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb11u1
+Installed-Size: 97
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: all
+Replaces: libclc-dev, libclc-x.y-dev
+Provides: libclc-x.y-dev
+Conflicts: libclc-x.y-dev
+Breaks: libclc-dev
+Description: OpenCL C language implementation - development files
+Homepage: https://www.llvm.org/
+Description-md5: af42cc63b204a8c47b782398389a6170
+Multi-Arch: foreign
+libdevel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/libclc-22-dev_22.1.8-1~deb11u1_all.deb
+Size: 83076
+SHA256: 496ff05298c5c76b520b231a35b8ec3287e30cd32764fd0ce1e445d57d19f5d6
+
+Package: libfuzzer-22-dev
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb11u1
+Installed-Size: 832
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: i386
+Depends: clang-22 (= 1:22.1.8-1~deb11u1)
+Description: Library for coverage-guided fuzz testing
+Homepage: https://www.llvm.org/
+Description-md5: bc55cd127b8dab148b78e61e5e475b8e
+libdevel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/libfuzzer-22-dev_22.1.8-1~deb11u1_i386.deb
+Size: 246096
+SHA256: 19ba7a497e08b98def653332e55a8d4e0aab85cee8d8b4fac35791f9858d268e
+
+Package: liblld-22-dev
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb11u1
+Installed-Size: 165
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: i386
+Depends: lld-22 (= 1:22.1.8-1~deb11u1), liblld-22 (= 1:22.1.8-1~deb11u1), libzstd-dev, zlib1g-dev
+Description: LLVM-based linker, header files
+Homepage: https://www.llvm.org/
+Description-md5: d5f91d89aa80d28cd4d98b74563f075b
+libdevel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/liblld-22-dev_22.1.8-1~deb11u1_i386.deb
+Size: 97672
+SHA256: ed459102e5af44b67b1c90d713477a6e9db7a922974d602b3fe98e6265d93596
+
+Package: liblldb-22-dev
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb11u1
+Installed-Size: 3949
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: i386
+Replaces: liblldb-22 (<< 1:22~++20251023025710+3f47a7be1ae6-1~exp7)
+Depends: lldb-22 (= 1:22.1.8-1~deb11u1)
+Breaks: liblldb-22 (<< 1:22~++20251023025710+3f47a7be1ae6-1~exp7)
+Description: Next generation, high-performance debugger, header files
+Homepage: https://www.llvm.org/
+Description-md5: 8f3dc7f570ba958d1f7496e3e5195498
+libdevel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/liblldb-22-dev_22.1.8-1~deb11u1_i386.deb
+Size: 670348
+SHA256: 94b5692fabbb82a4c9cd7ca79bec30957c426321315eeb3ba4f91371be50e255
+
+Package: libmlir-22-dev
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb11u1
+Installed-Size: 521182
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: i386
+Replaces: libmlir-dev, libmlir-x.y-dev
+Provides: libmlir-x.y-dev
+Depends: libmlir-22 (= 1:22.1.8-1~deb11u1)
+Conflicts: libmlir-x.y-dev
+Breaks: libmlir-dev
+Description: Multi-Level Intermediate Representation library
+Homepage: https://www.llvm.org/
+Description-md5: b2671453793175bc5bd7c93d05c96c40
+libdevel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/libmlir-22-dev_22.1.8-1~deb11u1_i386.deb
+Size: 35986960
+SHA256: e433a72cd25f81b6f14313b6d20e78e876c7f62b3739ad1c39169f60c799224b
+
+Package: libpolly-22-dev
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb11u1
+Installed-Size: 9666
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: i386
+Description: High-level loop and data-locality optimizer
+Homepage: https://www.llvm.org/
+Description-md5: 840a80a0b2b70b4ddca3d4d6f53126e7
+libdevel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/libpolly-22-dev_22.1.8-1~deb11u1_i386.deb
+Size: 1674372
+SHA256: f02c75c247a649ef53b346adc7dfa384d3fb21a6b80954e0b620a20de92356b3
+
+Package: libunwind-22-dev
+Source: llvm-toolchain-22
+Version: 1:22.1.8-1~deb11u1
+Installed-Size: 383
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: i386
+Replaces: libunwind-dev, libunwind-x.y-dev, llvm-libunwind1 (<< 1:22~++20251023025710+3f47a7be1ae6-1~exp4)
+Provides: libunwind-x.y-dev
+Depends: libunwind-19
+Conflicts: libunwind-dev, libunwind-x.y-dev
+Breaks: llvm-libunwind1 (<< 1:22~++20251023025710+3f47a7be1ae6-1~exp4)
+Description: LLVM unwinder, not compatible with glibc
+Homepage: https://www.llvm.org/
+Description-md5: a5717ef78133cdbdbac4a9ee0300b202
+libdevel
+Priority: optional
+Filename: pool/updates/main/l/llvm-toolchain-22/libunwind-22-dev_22.1.8-1~deb11u1_i386.deb
+Size: 123408
+SHA256: 1ea2697eb211f3251b44ad89ae465c0fa0ffb1aff6bc3052f8b071345444d4e1
 
 Package: liblog4cxx-dev
 Source: log4cxx
