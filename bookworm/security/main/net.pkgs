@@ -398,6 +398,181 @@ Filename: pool/updates/main/c/cups-filters/cups-filters-core-drivers_1.28.17-3+d
 Size: 204244
 SHA256: 0b8c8222da4331747c4f4ddd57be0f3e98dbfc1e4a4e182140359a6b62bf11c4
 
+Package: designate
+Version: 1:15.0.2-0+deb11u1
+Installed-Size: 13
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: designate-agent (= 1:15.0.2-0+deb11u1), designate-api (= 1:15.0.2-0+deb11u1), designate-central (= 1:15.0.2-0+deb11u1), designate-common (= 1:15.0.2-0+deb11u1)
+Description: OpenStack DNS as a Service - metapackage
+Homepage: https://github.com/openstack/designate
+Description-md5: 5e5faeb3467a3894a663a0991a2ae390
+net
+Priority: optional
+Filename: pool/updates/main/d/designate/designate_15.0.2-0+deb11u1_all.deb
+Size: 5292
+SHA256: b19063b007e735d7a66e7f99ef23ebdb98462c862b276f36fb9cc9717184fc59
+
+Package: designate-agent
+Source: designate
+Version: 1:15.0.2-0+deb11u1
+Installed-Size: 32
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: designate-common (= 1:15.0.2-0+deb11u1), python3-designate (= 1:15.0.2-0+deb11u1)
+Description: OpenStack DNS as a Service - agent
+Homepage: https://github.com/openstack/designate
+Description-md5: 7cc04b3512040c9633e4a99f9885997e
+net
+Priority: optional
+Filename: pool/updates/main/d/designate/designate-agent_15.0.2-0+deb11u1_all.deb
+Size: 8384
+SHA256: 5a375f02bdeb06772bdecbe5febb545df77f0575c24540f28340c68882d8d396
+
+Package: designate-api
+Source: designate
+Version: 1:15.0.2-0+deb11u1
+Installed-Size: 154
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: adduser, debconf, designate-common (= 1:15.0.2-0+deb11u1), python3-designate (= 1:15.0.2-0+deb11u1), python3-keystoneclient, python3-openstackclient, python3-pastescript, q-text-as-data, uwsgi-plugin-python3, debconf (>= 0.5) | debconf-2.0, lsb-base (>= 3.0.6)
+Description: OpenStack DNS as a Service - API server
+Homepage: https://github.com/openstack/designate
+Description-md5: 8bee6e64749abc3dcc78e5d68f3a8215
+net
+Priority: optional
+Filename: pool/updates/main/d/designate/designate-api_15.0.2-0+deb11u1_all.deb
+Size: 25356
+SHA256: 2d17101423e63dde526da6e47390e931eb9cee9e89af30b442404a47a8b33313
+
+Package: designate-central
+Source: designate
+Version: 1:15.0.2-0+deb11u1
+Installed-Size: 32
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: designate-common (= 1:15.0.2-0+deb11u1), python3-designate (= 1:15.0.2-0+deb11u1), lsb-base (>= 3.0.6)
+Description: OpenStack DNS as a Service - central daemon
+Homepage: https://github.com/openstack/designate
+Description-md5: 555318af061865ddf2a1b49a8f9d3c28
+net
+Priority: optional
+Filename: pool/updates/main/d/designate/designate-central_15.0.2-0+deb11u1_all.deb
+Size: 8504
+SHA256: 947b49a7f21c922184036f073b3e11063fcc289f0861c0c0a790bdb3e4d3c2a9
+
+Package: designate-common
+Source: designate
+Version: 1:15.0.2-0+deb11u1
+Installed-Size: 297
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: adduser, dbconfig-common, python3-designate (= 1:15.0.2-0+deb11u1), sqlite3, debconf (>= 0.5) | debconf-2.0, python3:any
+Description: OpenStack DNS as a Service - common files
+Homepage: https://github.com/openstack/designate
+Description-md5: 05524676aa230b8ebf21d08e6cdeff38
+net
+Priority: optional
+Filename: pool/updates/main/d/designate/designate-common_15.0.2-0+deb11u1_all.deb
+Size: 48620
+SHA256: 4eac9633df6418fd4086e025e489b3e1e6534475bb77c1b70481277bc2b2f7ad
+
+Package: designate-mdns
+Source: designate
+Version: 1:15.0.2-0+deb11u1
+Installed-Size: 32
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: designate-common (= 1:15.0.2-0+deb11u1), python3-designate (= 1:15.0.2-0+deb11u1), lsb-base (>= 3.0.6)
+Description: OpenStack DNS as a Service - mdns
+Homepage: https://github.com/openstack/designate
+Description-md5: b29d17ddf8ad058b52c2bad4c24397ff
+net
+Priority: optional
+Filename: pool/updates/main/d/designate/designate-mdns_15.0.2-0+deb11u1_all.deb
+Size: 8576
+SHA256: 8627cab57cce5b5246f1fb9e1070ba60b0f462352e88350fb6090da42161c60b
+
+Package: designate-pool-manager
+Source: designate
+Version: 1:15.0.2-0+deb11u1
+Installed-Size: 32
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: designate-common (= 1:15.0.2-0+deb11u1), python3-designate (= 1:15.0.2-0+deb11u1), lsb-base (>= 3.0.6)
+Description: OpenStack DNS as a Service - pool manager
+Homepage: https://github.com/openstack/designate
+Description-md5: 069fd368d09b5fec7f9abb8fe2c610fe
+net
+Priority: optional
+Filename: pool/updates/main/d/designate/designate-pool-manager_15.0.2-0+deb11u1_all.deb
+Size: 8420
+SHA256: 929d478e0d4a7bd40160b6aa70d19196cbe3b1a47c2533bd452579930f098625
+
+Package: designate-producer
+Source: designate
+Version: 1:15.0.2-0+deb11u1
+Installed-Size: 32
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: designate-common (= 1:15.0.2-0+deb11u1), python3-designate (= 1:15.0.2-0+deb11u1)
+Description: OpenStack DNS as a Service - producer
+Homepage: https://github.com/openstack/designate
+Description-md5: cd7d354102c1071a0357d330ce57a268
+net
+Priority: optional
+Filename: pool/updates/main/d/designate/designate-producer_15.0.2-0+deb11u1_all.deb
+Size: 8796
+SHA256: 811471f1aecadf6a8ebdb4822561fde0a2fd36d0b3b0bac267fdd50c0a29430a
+
+Package: designate-sink
+Source: designate
+Version: 1:15.0.2-0+deb11u1
+Installed-Size: 32
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: designate-common (= 1:15.0.2-0+deb11u1), python3-designate (= 1:15.0.2-0+deb11u1)
+Description: OpenStack DNS as a Service - sink
+Homepage: https://github.com/openstack/designate
+Description-md5: 9d569fe832940fecaff01c56981324c2
+net
+Priority: optional
+Filename: pool/updates/main/d/designate/designate-sink_15.0.2-0+deb11u1_all.deb
+Size: 8576
+SHA256: ff4734c218c38eae8db97149230a32bec1d5b9c63c0edd9fcaddd29c627a872e
+
+Package: designate-worker
+Source: designate
+Version: 1:15.0.2-0+deb11u1
+Installed-Size: 32
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: designate-common (= 1:15.0.2-0+deb11u1), python3-designate (= 1:15.0.2-0+deb11u1)
+Description: OpenStack DNS as a Service - worker
+Homepage: https://github.com/openstack/designate
+Description-md5: 48c8dec02349f8ed5bbddc8ddf74220c
+net
+Priority: optional
+Filename: pool/updates/main/d/designate/designate-worker_15.0.2-0+deb11u1_all.deb
+Size: 8624
+SHA256: ea56246f47e7323359bdfccd0723e7f87131a45459f310905cd31cb91b2a9d44
+
+Package: designate-zone-manager
+Source: designate
+Version: 1:15.0.2-0+deb11u1
+Installed-Size: 32
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: designate-common (= 1:15.0.2-0+deb11u1), python3-designate (= 1:15.0.2-0+deb11u1), lsb-base (>= 3.0.6)
+Description: OpenStack DNS as a Service - zone manager
+Homepage: https://github.com/openstack/designate
+Description-md5: 4d10d7c0b809be038f8edbb5fa363b84
+net
+Priority: optional
+Filename: pool/updates/main/d/designate/designate-zone-manager_15.0.2-0+deb11u1_all.deb
+Size: 8424
+SHA256: 4bd95d5dd903a3ab902d4fe6355dfad1af85cde8891ad67c29a8f63d0953231c
+
 Package: dnsmasq
 Version: 2.90-4~deb12u2
 Installed-Size: 152

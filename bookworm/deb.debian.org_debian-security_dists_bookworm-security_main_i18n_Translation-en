@@ -2653,6 +2653,185 @@ Description-en: fast and small AV1 video stream decoder (shared library)
  .
  This package provides the shared library.
 
+Package: designate
+Description-md5: 5e5faeb3467a3894a663a0991a2ae390
+Description-en: OpenStack DNS as a Service - metapackage
+ Designate provides DNSaaS services for OpenStack. It provides a multi-tenant
+ REST API for domain & record management. It is Integrated with Keystone for
+ authentication, and provides a framework in place to integrate with Nova and
+ Neutron notifications (for auto-generated records). Designate supports
+ PowerDNS and Bind9 out of the box.
+ .
+ This package is a metapackage that helps installing all of Designate at once.
+
+Package: designate-agent
+Description-md5: 7cc04b3512040c9633e4a99f9885997e
+Description-en: OpenStack DNS as a Service - agent
+ Designate provides DNSaaS services for OpenStack. It provides a multi-tenant
+ REST API for domain & record management. It is Integrated with Keystone for
+ authentication, and provides a framework in place to integrate with Nova and
+ Neutron notifications (for auto-generated records). Designate supports
+ PowerDNS and Bind9 out of the box.
+ .
+ This package provides the agent.
+
+Package: designate-api
+Description-md5: 8bee6e64749abc3dcc78e5d68f3a8215
+Description-en: OpenStack DNS as a Service - API server
+ Designate provides DNSaaS services for OpenStack. It provides a multi-tenant
+ REST API for domain & record management. It is Integrated with Keystone for
+ authentication, and provides a framework in place to integrate with Nova and
+ Neutron notifications (for auto-generated records). Designate supports
+ PowerDNS and Bind9 out of the box.
+ .
+ This package provides the REST API server, accepting HTTP requests, validating
+ authentication tokens with Keystone and passing them to the Designate Central
+ service over AMQP. Multiple versions of the API can be hosted, as well as API
+ extensions, allowing for pluggable extensions to the core API.
+
+Package: designate-central
+Description-md5: 555318af061865ddf2a1b49a8f9d3c28
+Description-en: OpenStack DNS as a Service - central daemon
+ Designate provides DNSaaS services for OpenStack. It provides a multi-tenant
+ REST API for domain & record management. It is Integrated with Keystone for
+ authentication, and provides a framework in place to integrate with Nova and
+ Neutron notifications (for auto-generated records). Designate supports
+ PowerDNS and Bind9 out of the box.
+ .
+ This package provides the central daemon. It is the service that handles RPC
+ requests via the MQ, it coordinates the persistent storage of data and applies
+ business logic to data from the API.
+
+Package: designate-common
+Description-md5: 05524676aa230b8ebf21d08e6cdeff38
+Description-en: OpenStack DNS as a Service - common files
+ Designate provides DNSaaS services for OpenStack. It provides a multi-tenant
+ REST API for domain & record management. It is Integrated with Keystone for
+ authentication, and provides a framework in place to integrate with Nova and
+ Neutron notifications (for auto-generated records). Designate supports
+ PowerDNS and Bind9 out of the box.
+ .
+ This package contains common files.
+
+Package: designate-doc
+Description-md5: 6bcc546e9410a4ee9bb5f000afda5188
+Description-en: OpenStack DNS as a Service - doc
+ Designate provides DNSaaS services for OpenStack. It provides a multi-tenant
+ REST API for domain & record management. It is Integrated with Keystone for
+ authentication, and provides a framework in place to integrate with Nova and
+ Neutron notifications (for auto-generated records). Designate supports
+ PowerDNS and Bind9 out of the box.
+ .
+ This package contains the documentation.
+
+Package: designate-mdns
+Description-md5: b29d17ddf8ad058b52c2bad4c24397ff
+Description-en: OpenStack DNS as a Service - mdns
+ Designate provides DNSaaS services for OpenStack. It provides a multi-tenant
+ REST API for domain & record management. It is Integrated with Keystone for
+ authentication, and provides a framework in place to integrate with Nova and
+ Neutron notifications (for auto-generated records). Designate supports
+ PowerDNS and Bind9 out of the box.
+ .
+ This package provides the mini-dns service. It is the service that sends DNS
+ NOTIFY and answers zone transfer (AXFR) requests. This allows Designate to
+ integrate with any DNS server that supports these very standard methods of
+ communicating. designate-mdns also encapsulates all other forms of DNS
+ protocol that Designate performs. For example, sending SOA queries to check
+ that a change is live.
+
+Package: designate-pool-manager
+Description-md5: 069fd368d09b5fec7f9abb8fe2c610fe
+Description-en: OpenStack DNS as a Service - pool manager
+ Designate provides DNSaaS services for OpenStack. It provides a multi-tenant
+ REST API for domain & record management. It is Integrated with Keystone for
+ authentication, and provides a framework in place to integrate with Nova and
+ Neutron notifications (for auto-generated records). Designate supports
+ PowerDNS and Bind9 out of the box.
+ .
+ This package provides the pool manager service.
+
+Package: designate-producer
+Description-md5: cd7d354102c1071a0357d330ce57a268
+Description-en: OpenStack DNS as a Service - producer
+ Designate provides DNSaaS services for OpenStack. It provides a multi-tenant
+ REST API for domain & record management. It is Integrated with Keystone for
+ authentication, and provides a framework in place to integrate with Nova and
+ Neutron notifications (for auto-generated records). Designate supports
+ PowerDNS and Bind9 out of the box.
+ .
+ This package provides the producer service. It is a service that handles the
+ invocation of long-running and potentially large jobs. Producer processes
+ start work for an automatically assigned shard of the zones Designate manages.
+ Shards are allocated based on the first three characters of the zone ID (a
+ UUID field). The number of shards under management of a single producer
+ process is equal to the total number of shards divided by the number of
+ producer processes. This means the more producer processes are started, the
+ less work is created at any one time.
+ .
+ The current implemented tasks in producer include emitting dns.zone.exists
+ events for Ceilometer, purging deleted zones from database, polling secondary
+ zones at their refresh intervals, generating delayed NOTIFY transactions, and
+ invoking a periodic recovery of zones in an error state.
+
+Package: designate-sink
+Description-md5: 9d569fe832940fecaff01c56981324c2
+Description-en: OpenStack DNS as a Service - sink
+ Designate provides DNSaaS services for OpenStack. It provides a multi-tenant
+ REST API for domain & record management. It is Integrated with Keystone for
+ authentication, and provides a framework in place to integrate with Nova and
+ Neutron notifications (for auto-generated records). Designate supports
+ PowerDNS and Bind9 out of the box.
+ .
+ This package provides the sink service. It is an optional service which
+ listens for event Notifications, such as compute.instance.create.end, handlers
+ are available for Nova and Neutron. Notification events can then be used to
+ trigger record creation & deletion.
+ .
+ The current sink implementations generate simple forward lookup A records,
+ using a format specified in handler-nova configuration. Any field in the event
+ notification can be used to generate a record.
+
+Package: designate-worker
+Description-md5: 48c8dec02349f8ed5bbddc8ddf74220c
+Description-en: OpenStack DNS as a Service - worker
+ Designate provides DNSaaS services for OpenStack. It provides a multi-tenant
+ REST API for domain & record management. It is Integrated with Keystone for
+ authentication, and provides a framework in place to integrate with Nova and
+ Neutron notifications (for auto-generated records). Designate supports
+ PowerDNS and Bind9 out of the box.
+ .
+ This package provides the worker service. It is a service that manages state
+ of the DNS servers Designate manages, and any other long-running or otherwise
+ complicated piece of work. The worker reads configuration for DNS servers from
+ the Designate database, which is populated via the pools.yaml file. These DNS
+ server backends are loaded into the worker so it understands how to create,
+ update, and delete zones and recordsets on each DNS server. The Worker is
+ fully aware of DNS Server 'Pools', so a single worker process can manage many
+ pools of DNS servers.
+
+Package: designate-zone-manager
+Description-md5: 4d10d7c0b809be038f8edbb5fa363b84
+Description-en: OpenStack DNS as a Service - zone manager
+ Designate provides DNSaaS services for OpenStack. It provides a multi-tenant
+ REST API for domain & record management. It is Integrated with Keystone for
+ authentication, and provides a framework in place to integrate with Nova and
+ Neutron notifications (for auto-generated records). Designate supports
+ PowerDNS and Bind9 out of the box.
+ .
+ This package provides the zone manager service.
+
+Package: python3-designate
+Description-md5: 1da03a9731c2f330cead472bdb2ad28d
+Description-en: OpenStack DNS as a Service - Python libs
+ Designate provides DNSaaS services for OpenStack. It provides a multi-tenant
+ REST API for domain & record management. It is Integrated with Keystone for
+ authentication, and provides a framework in place to integrate with Nova and
+ Neutron notifications (for auto-generated records). Designate supports
+ PowerDNS and Bind9 out of the box.
+ .
+ This package provides the Python libraries.
+
 Package: djview
 Description-md5: 70f803a157a01cd392d199dbc03dfe1f
 Description-en: Transition package, djview3 to djview4
@@ -24736,6 +24915,22 @@ Description-en: storage backends in Django (SFTP)
  .
  Each backend is shipped as a separate package to ensure granular dependencies.
  This package contains the SFTP backend.
+
+Package: python3-httplib2
+Description-md5: 43b4287928c3dbd3553ba0279a8b162d
+Description-en: comprehensive HTTP client library written for Python3
+ httplib2.py supports many features left out of other HTTP libraries.
+  * HTTP and HTTPS
+  * Keep-Alive
+  * Authentication
+  * Caching
+  * All Methods
+  * Redirects
+  * Compression
+  * Lost update support
+  * Unit Tested
+ .
+ This package provides module for python3 series.
 
 Package: internetarchive
 Description-md5: 3e29b5bc60e2d746e8092710a685416d
