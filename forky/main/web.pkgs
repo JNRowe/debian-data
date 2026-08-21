@@ -1511,25 +1511,26 @@ MD5sum: e90e9b14ae12ad48e8852b567216a4cf
 SHA256: b042bef8910503b31b782247ad24024d85b3329c104caac2df4f61dafc1a3b1f
 
 Package: dillo
-Version: 3.3.0-1
-Installed-Size: 2202
+Version: 3.3.0-3
+Installed-Size: 2203
 Maintainer: Nikolas Nyby <nikolas@gnu.org>
 Architecture: amd64
 Provides: www-browser
-Depends: wget, libc6 (>= 2.38), libfltk1.3t64 (>= 1.3.4), libjpeg62-turbo (>= 1.3.1), libpng16-16t64 (>= 1.6.46), libssl3t64 (>= 3.0.0), libstdc++6 (>= 5), libx11-6, zlib1g (>= 1:1.1.4)
-Recommends: perl, perl:any
+Depends: wget, libbrotli1 (>= 0.6.0), libc6 (>= 2.38), libfltk1.3t64 (>= 1.3.4), libjpeg62-turbo (>= 1.3.1), libpng16-16t64 (>= 1.6.46), libssl3t64 (>= 3.0.0), libstdc++6 (>= 5), libwebp7 (>= 1.5.0), libx11-6, zlib1g (>= 1:1.1.4), perl:any
+Recommends: perl
 Description: Small and fast web browser
 Homepage: https://dillo-browser.org/
+Commands: dillo-install-hyphenation
 Description-md5: 2fe5a324f3cd74e1167b8a96fa1bef8a
 Tag: implemented-in::c, interface::graphical, interface::x11,
  network::client, protocol::http, protocol::ssl, role::program,
  uitoolkit::gtk, use::browsing, web::browser, x11::application
 web
 Priority: optional
-Filename: pool/main/d/dillo/dillo_3.3.0-1_amd64.deb
-Size: 683000
-MD5sum: 3c0d2607c808876dfea2d83f7b33a424
-SHA256: 190ce9b24aadf74fd64b8871d3f5f18615f54ec837654d273a92b448e9164b78
+Filename: pool/main/d/dillo/dillo_3.3.0-3_amd64.deb
+Size: 683644
+MD5sum: ce90441d8b0196250bcdad7ff207f0f5
+SHA256: 6d0518a56e3fcb84cf32f158d7dde8b9117cf9596a7156d46b95a70a88efa7f5
 
 Package: djvuserve
 Source: djvulibre
@@ -3135,11 +3136,11 @@ MD5sum: 5cb71ff115dc5568df895bd3f193fcf8
 SHA256: 3f39bf9056811a6545e118c2d79af5bfa29a57e0e009f3fd88a373a06e87d38b
 
 Package: httrack
-Version: 3.49.14-1
-Installed-Size: 75
+Version: 3.49.22-1
+Installed-Size: 93
 Maintainer: Xavier Roche <roche@httrack.com>
 Architecture: amd64
-Depends: libc6 (>= 2.34), libhttrack3 (>= 3.49.14)
+Depends: libc6 (>= 2.34), libhttrack3 (>= 3.49.22)
 Suggests: webhttrack, httrack-doc
 Description: Copy websites to your computer (Offline browser)
 Multi-Arch: foreign
@@ -3152,15 +3153,15 @@ Tag: devel::doc, devel::lang:c, devel::library, implemented-in::c,
  works-with-format::html, works-with::text
 web
 Priority: optional
-Filename: pool/main/h/httrack/httrack_3.49.14-1_amd64.deb
-Size: 41492
-MD5sum: a41542ef4e8b7cf803073ed0fd8c1db3
-SHA256: 47050c255f1f69fa08cd44afc610284d2935a707028302cfaf21a7f5123bba31
+Filename: pool/main/h/httrack/httrack_3.49.22-1_amd64.deb
+Size: 54488
+MD5sum: df974c17830b6573ded425e5259257ca
+SHA256: 147474b91193ab5627cb135fb57b6c388be068c96041d7c71c2a93f8d7be8b40
 
 Package: proxytrack
 Source: httrack
-Version: 3.49.14-1
-Installed-Size: 184
+Version: 3.49.22-1
+Installed-Size: 205
 Maintainer: Xavier Roche <roche@httrack.com>
 Architecture: amd64
 Depends: libc6 (>= 2.38), zlib1g (>= 1:1.1.4)
@@ -3172,19 +3173,20 @@ Description-md5: 184e6e135b92e971d44cae6217ce752a
 Tag: implemented-in::c, role::program, use::proxying
 web
 Priority: optional
-Filename: pool/main/h/httrack/proxytrack_3.49.14-1_amd64.deb
-Size: 82156
-MD5sum: e87909b11fc147841be2f77c2717aa7b
-SHA256: c40c71e95d7df847c6faa6139f98d1547eb0c2acd98b3264cb1de9952211d1ae
+Filename: pool/main/h/httrack/proxytrack_3.49.22-1_amd64.deb
+Size: 97292
+MD5sum: 84bc119dc3347c61df4282ba9ceb171b
+SHA256: e8a4591949430fc4c6e21d9ce20f0907a7490b631410b3d94676fa389f32ad3d
 
 Package: webhttrack
 Source: httrack
-Version: 3.49.14-1
-Installed-Size: 148
+Version: 3.49.22-1
+Installed-Size: 181
 Maintainer: Xavier Roche <roche@httrack.com>
 Architecture: amd64
 Replaces: webhttrack-common (<< 3.43.9-2)
-Depends: libc6 (>= 2.38), libhttrack3 (>= 3.49.14), webhttrack-common, sensible-utils, chromium | firefox-esr | www-browser
+Depends: libc6 (>= 2.38), libhttrack3 (>= 3.49.22), webhttrack-common, sensible-utils
+Recommends: firefox-esr | chromium | www-browser
 Suggests: httrack, httrack-doc
 Enhances: httrack
 Breaks: webhttrack-common (<< 3.43.9-2)
@@ -3198,15 +3200,15 @@ Tag: implemented-in::c, implemented-in::shell, interface::daemon,
  works-with-format::html, works-with::text
 web
 Priority: optional
-Filename: pool/main/h/httrack/webhttrack_3.49.14-1_amd64.deb
-Size: 67020
-MD5sum: 67b0695f73c50bd7efb6912f73d9668c
-SHA256: d6e341cf9c12a23c63509ae25b72cd4c2c6f7229fe38ea243ed8f9172b3d4d50
+Filename: pool/main/h/httrack/webhttrack_3.49.22-1_amd64.deb
+Size: 86676
+MD5sum: 3245e9ad8d9024bbd5b504f7a1cc3043
+SHA256: 25aae926a6a1b8a4de0b71e36b3b43c8d95d3ccce9169407b68a7221cac2a992
 
 Package: webhttrack-common
 Source: httrack
-Version: 3.49.14-1
-Installed-Size: 1393
+Version: 3.49.22-1
+Installed-Size: 1572
 Maintainer: Xavier Roche <roche@httrack.com>
 Architecture: all
 Description: webhttrack common files
@@ -3216,28 +3218,27 @@ Description-md5: 7c22061b1b7e6e730f1cd9c72a497577
 Tag: role::app-data
 web
 Priority: optional
-Filename: pool/main/h/httrack/webhttrack-common_3.49.14-1_all.deb
-Size: 257052
-MD5sum: 1c84e5eb5b76183536471c02ec58922a
-SHA256: 50c75e4e8c1305f66c52f497e85be74b3fe797a8e919af62157752ffb5d71faa
+Filename: pool/main/h/httrack/webhttrack-common_3.49.22-1_all.deb
+Size: 295856
+MD5sum: 3e4c734e4846334cc7e832276d0b09e6
+SHA256: 55d292e56138e13aa415659f8e641dd54e457055ab91fcff7fc8f6ea98f1d4db
 
 Package: httraqt
-Source: httraqt (1.4.11-2)
-Version: 1.4.11-2+b1
-Installed-Size: 2101
+Version: 1.4.11-3
+Installed-Size: 2109
 Maintainer: Anton Gladky <gladk@debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.34), libhttrack3 (>= 3.49.9), libqt6core6t64 (>= 6.10.2), libqt6dbus6 (>= 6.1.2), libqt6gui6 (>= 6.1.2), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 5)
+Depends: libc6 (>= 2.34), libhttrack3 (>= 3.49.17), libqt6core6t64 (>= 6.10.2), libqt6dbus6 (>= 6.1.2), libqt6gui6 (>= 6.1.2), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 5)
 Description: program for downloading of internet sites
 Homepage: https://httraqt.sourceforge.net/
 Description-md5: ab46956fa549f67dcb2a219bea0267f2
 Tag: uitoolkit::qt
 web
 Priority: optional
-Filename: pool/main/h/httraqt/httraqt_1.4.11-2+b1_amd64.deb
-Size: 688056
-MD5sum: d0e407c3679d043e1100c7b74163108f
-SHA256: 5641d5ea7346d7014751fd1f6df4d3c39f1a1b744a6f51860dfc9ccb21edb321
+Filename: pool/main/h/httraqt/httraqt_1.4.11-3_amd64.deb
+Size: 686816
+MD5sum: bc168ba30835708030bfa87a67da51f3
+SHA256: b096f7e8adc8e6d8b9c2fb1a92680de0b9e3674a80e8f43762f8074e3cd4a224
 
 Package: hugo
 Version: 0.162.1-7
