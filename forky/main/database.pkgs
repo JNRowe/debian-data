@@ -1877,8 +1877,8 @@ MD5sum: 300443bb87d9916c9bb33dcf7b051498
 SHA256: 2e7a811f303ab35be8503aa3548a5ea43c218144cf4457bf75517bbd0ae0235b
 
 Package: mycli
-Version: 2.13.2-1
-Installed-Size: 1108
+Version: 2.14.0-1
+Installed-Size: 1107
 Maintainer: Daniel Baumann <daniel@debian.org>
 Architecture: all
 Depends: python3-cli-helpers, python3-clickdc, python3-prompt-toolkit (>= 2.0), python3-pyfzf, python3-sqlglot, python3-sqlparse (>= 0.4), python3-tabulate, python3-yaspin, python3-click, python3-configobj, python3-cryptography, python3-jinja2, python3-keyring, python3-pycryptodome, python3-pygments, python3-pymysql, python3-pyperclip, python3-rapidfuzz, python3-wcwidth, python3:any
@@ -1888,10 +1888,10 @@ Homepage: https://github.com/dbcli/mycli
 Description-md5: e04938f2346d9234e44cdc164e951042
 database
 Priority: optional
-Filename: pool/main/m/mycli/mycli_2.13.2-1_all.deb
-Size: 352476
-MD5sum: 0716811f56cec13ffd6705a6e4375be6
-SHA256: ac495878b5803399b31d02f643d3ed23f96a4ea0e115befc05032296a0ac0a9d
+Filename: pool/main/m/mycli/mycli_2.14.0-1_all.deb
+Size: 352460
+MD5sum: d899d7f64c9d80cf89799b46ea24b092
+SHA256: 3925599ff492c6e66b16966837a502be96228d43feadd96719d56fa5f911c055
 
 Package: default-libmysqlclient-dev
 Source: mysql-defaults (1.1.1)
@@ -3567,52 +3567,51 @@ MD5sum: 9e55e9b231e3b37131e8296b43ba84b0
 SHA256: d3fe10844836467e10cd80e61d0e494f11e2b086b8ca5fc7b90c9793c5ef7812
 
 Package: postgresql-18
-Source: postgresql-18 (18.4-1)
-Version: 18.4-1+b2
-Installed-Size: 35105
+Version: 18.6-3
+Installed-Size: 35353
 Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
 Architecture: amd64
 Provides: postgresql-contrib-18
-Depends: locales | locales-all, postgresql-client-18 (= 18.4-1+b2), postgresql-common (>= 275~), ssl-cert, tzdata, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38), libgssapi-krb5-2 (>= 1.14+dfsg), libicu78 (>= 78.1-1~), libldap2 (>= 2.6.2), liblz4-1 (>= 0.0~r130), libnuma1 (>= 2.0.11), libpam0g (>= 0.99.7.1), libpq5 (>= 17~~), libselinux1 (>= 3.1~), libssl3t64 (>= 3.4.0), libsystemd0, liburing2 (>= 2.5), libuuid1 (>= 2.16), libxml2-16 (>= 2.14.1), libxslt1.1 (>= 1.1.25), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
+Depends: locales | locales-all, postgresql-client-18 (= 18.6-3), postgresql-common (>= 275~), ssl-cert, tzdata, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.43), libgssapi-krb5-2 (>= 1.14+dfsg), libicu78 (>= 78.1-1~), libldap2 (>= 2.6.2), liblz4-1 (>= 0.0~r130), libnuma1 (>= 2.0.11), libpam0g (>= 0.99.7.1), libpq5 (>= 17~~), libselinux1 (>= 3.1~), libssl3t64 (>= 3.4.0), libsystemd0, liburing2 (>= 2.5), libuuid1 (>= 2.16), libxml2-16 (>= 2.14.1), libxslt1.1 (>= 1.1.25), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
 Recommends: postgresql-18-jit, sysstat
-Breaks: dbconfig-common (<< 2.0.22~)
+Breaks: postgresql-18-decoderbufs (<< 3.6.0-2), postgresql-18-pg-rewrite (<< 2.2-2), postgresql-18-squeeze (<< 1.9.4-2), postgresql-18-timescaledb (<< 2.29.1+dfsg-2), postgresql-18-wal2json (<< 2.6-4)
 Description: The World's Most Advanced Open Source Relational Database
 Homepage: http://www.postgresql.org/
 Description-md5: dcb0488ab35080ca4e8e57faa4716e66
 Postgresql-Catversion: 202506291-1800
 database
 Priority: optional
-Filename: pool/main/p/postgresql-18/postgresql-18_18.4-1+b2_amd64.deb
-Size: 7282884
-MD5sum: 87ecdddb0eac2a4ff7dd28eb4d447f97
-SHA256: 5a37d5c61c570351ea765675244a3ce62b60b12ca33a1947a663b70ae61d79f0
+Filename: pool/main/p/postgresql-18/postgresql-18_18.6-3_amd64.deb
+Size: 7430980
+MD5sum: c426366127ef4f84f263ed9d39e08b36
+SHA256: 606c4d9b24ad721c4c8d297e7f52269743004cb556efc79c41042e40d8f631aa
 
 Package: postgresql-18-jit
-Source: postgresql-18 (18.4-1)
-Version: 18.4-1+b2
-Installed-Size: 23764
+Source: postgresql-18
+Version: 18.6-3
+Installed-Size: 23821
 Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
 Architecture: amd64
 Provides: postgresql-18-jit-llvm (= 21)
-Depends: postgresql-18 (= 18.4-1+b2), libc6 (>= 2.17), libgcc-s1 (>= 3.0), libllvm21 (>= 1:21.1.0), libstdc++6 (>= 5.2)
+Depends: postgresql-18 (= 18.6-3), libc6 (>= 2.17), libgcc-s1 (>= 3.0), libllvm21 (>= 1:21.1.0), libstdc++6 (>= 5.2)
 Description: LLVM JIT support for PostgreSQL 18
 Homepage: http://www.postgresql.org/
 Description-md5: d6473045d91a06e2d8a9b3940cf9e428
 database
 Priority: optional
-Filename: pool/main/p/postgresql-18/postgresql-18-jit_18.4-1+b2_amd64.deb
-Size: 9863056
-MD5sum: 0ce2decbcf41997ede2eac2f116f5f68
-SHA256: 09f1d08061b350c4a0d418ef4ee641e43b39c42205d53e8e3de5885a2e6599df
+Filename: pool/main/p/postgresql-18/postgresql-18-jit_18.6-3_amd64.deb
+Size: 9907940
+MD5sum: b5759f6c4a478394649535e8d76723e4
+SHA256: 76e0231a53bd796ecff51c1bb9d6a402581098cef897d819de79750126a1b7e1
 
 Package: postgresql-client-18
-Source: postgresql-18 (18.4-1)
-Version: 18.4-1+b2
-Installed-Size: 11074
+Source: postgresql-18
+Version: 18.6-3
+Installed-Size: 11144
 Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
 Architecture: amd64
 Provides: postgresql-client
-Depends: libpq5 (>= 18.4), postgresql-client-common (>= 182~), sensible-utils, libc6 (>= 2.38), liblz4-1 (>= 0.0~r127), libreadline8t64 (>= 6.0), libssl3t64 (>= 3.0.0), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
+Depends: libpq5 (>= 18.6), postgresql-client-common (>= 182~), sensible-utils, libc6 (>= 2.38), liblz4-1 (>= 0.0~r127), libreadline8t64 (>= 6.0), libssl3t64 (>= 3.0.0), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
 Suggests: postgresql-18, postgresql-doc-18
 Description: front-end programs for PostgreSQL 18
 Multi-Arch: foreign
@@ -3620,64 +3619,64 @@ Homepage: http://www.postgresql.org/
 Description-md5: 2521718fad80ea50b924172bfcb11d91
 database
 Priority: optional
-Filename: pool/main/p/postgresql-18/postgresql-client-18_18.4-1+b2_amd64.deb
-Size: 2120128
-MD5sum: 727d81eb60dfde62df5e22287864f1e3
-SHA256: c3bb559f3f835aea005b017b1083e85db16c37fafe439452c207b2d341dbcd94
+Filename: pool/main/p/postgresql-18/postgresql-client-18_18.6-3_amd64.deb
+Size: 2154296
+MD5sum: 3460e9b070087ca2a226be661fd512f0
+SHA256: 5341f80ad72db4a9330d5413409c23d33a89595a02c208c300256ced5e40a7f2
 
 Package: postgresql-plperl-18
-Source: postgresql-18 (18.4-1)
-Version: 18.4-1+b2
-Installed-Size: 352
+Source: postgresql-18
+Version: 18.6-3
+Installed-Size: 357
 Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
 Architecture: amd64
 Provides: postgresql-plperl
-Depends: perl, postgresql-18 (= 18.4-1+b2), libc6 (>= 2.34), libperl5.42 (>= 5.42.0)
+Depends: perl, postgresql-18 (= 18.6-3), libc6 (>= 2.34), libperl5.42 (>= 5.42.0)
 Description: PL/Perl procedural language for PostgreSQL 18
 Homepage: http://www.postgresql.org/
 Description-md5: bef0ae96461b3098bdeaa43d6ad22e86
 database
 Priority: optional
-Filename: pool/main/p/postgresql-18/postgresql-plperl-18_18.4-1+b2_amd64.deb
-Size: 71332
-MD5sum: 9855745e882b26d0ac8dd9fe80f867f8
-SHA256: 62696efe18cfb433254667859b1dedb2c5eccdd7ddbebcdcdb8cb583197172b9
+Filename: pool/main/p/postgresql-18/postgresql-plperl-18_18.6-3_amd64.deb
+Size: 77396
+MD5sum: 7f32f71767899ce7e07b61a012227e1f
+SHA256: c9d0d85c6adc1b27a1bce7905ba7035558772b877383c1efbc4227b6bb26e324
 
 Package: postgresql-plpython3-18
-Source: postgresql-18 (18.4-1)
-Version: 18.4-1+b2
-Installed-Size: 493
+Source: postgresql-18
+Version: 18.6-3
+Installed-Size: 498
 Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
 Architecture: amd64
 Provides: postgresql-plpython3
-Depends: postgresql-18 (= 18.4-1+b2), libc6 (>= 2.14), libpython3.14 (>= 3.14.1)
+Depends: postgresql-18 (= 18.6-3), libc6 (>= 2.14), libpython3.14 (>= 3.14.1)
 Description: PL/Python 3 procedural language for PostgreSQL 18
 Homepage: http://www.postgresql.org/
 Description-md5: 06aefbd4f15d365710e64c69fbb67e3c
 database
 Priority: optional
-Filename: pool/main/p/postgresql-18/postgresql-plpython3-18_18.4-1+b2_amd64.deb
-Size: 94492
-MD5sum: 663de391a31ea5f0e783cf4c4fe17e3e
-SHA256: 721fce2c361a072a3e65d06607729ebcda33b0a2c04c589d39ff344a88ced2e2
+Filename: pool/main/p/postgresql-18/postgresql-plpython3-18_18.6-3_amd64.deb
+Size: 101252
+MD5sum: e515a01d7c671597672b9fac2e56c2a2
+SHA256: 1180109b0e6c0d462d8e96bcd1990790389b89bd4d37220194ad08b0d92de6e4
 
 Package: postgresql-pltcl-18
-Source: postgresql-18 (18.4-1)
-Version: 18.4-1+b2
-Installed-Size: 212
+Source: postgresql-18
+Version: 18.6-3
+Installed-Size: 217
 Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
 Architecture: amd64
 Provides: postgresql-pltcl
-Depends: postgresql-18 (= 18.4-1+b2), libc6 (>= 2.4), libtcl8.6 (>= 8.6.0)
+Depends: postgresql-18 (= 18.6-3), libc6 (>= 2.4), libtcl8.6 (>= 8.6.0)
 Description: PL/Tcl procedural language for PostgreSQL 18
 Homepage: http://www.postgresql.org/
 Description-md5: 7f093863638480777ffb50ead25dfa06
 database
 Priority: optional
-Filename: pool/main/p/postgresql-18/postgresql-pltcl-18_18.4-1+b2_amd64.deb
-Size: 44540
-MD5sum: 5709587616cb0d9aa7b757312c75ee25
-SHA256: 57acef7c4984e0ee2f8889598ca8814d85245d78706ec59f8d2cc46ff723a815
+Filename: pool/main/p/postgresql-18/postgresql-pltcl-18_18.6-3_amd64.deb
+Size: 49924
+MD5sum: b5ea0a694a9fc85c561522eee122e622
+SHA256: 5e434702fba78325f349bdedf30bc838a5a3f6c5340d9abbe0aede992a11a4a1
 
 Package: postgresql-18-age
 Version: 1.8.0~rc0-2
@@ -4085,8 +4084,8 @@ SHA256: d0c383007ed41ae09fad362c12e8758266a7d59df0b9e20c34e64411b296de5d
 
 Package: postgresql-18-powa
 Source: powa-archivist
-Version: 5.2.0-1
-Installed-Size: 2612
+Version: 5.3.0-1
+Installed-Size: 2927
 Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
 Architecture: amd64
 Provides: postgresql-powa
@@ -4098,10 +4097,10 @@ Homepage: https://powa.readthedocs.io/
 Description-md5: c2d7c31904425e96e06e4053fc416f5f
 database
 Priority: optional
-Filename: pool/main/p/powa-archivist/postgresql-18-powa_5.2.0-1_amd64.deb
-Size: 67820
-MD5sum: 59f7a8b3fe27b7db6d5afda6c05b98b6
-SHA256: 542fdc99c040dc7ac37ff8809e5678d33b115a9a5d4f9e009a819698cb129d18
+Filename: pool/main/p/powa-archivist/postgresql-18-powa_5.3.0-1_amd64.deb
+Size: 68276
+MD5sum: cdbccb8111bc46510357e7716f297806
+SHA256: 2684486cc60a9daa8fe6b85d21d95dc6d1b1a49197d01455a8deccc3048ea63c
 
 Package: powa-collector
 Version: 1.3.2-1
