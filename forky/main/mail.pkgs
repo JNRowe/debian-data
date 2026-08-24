@@ -3752,13 +3752,12 @@ MD5sum: cc4f0ac26221f59762f605d3f8a2853f
 SHA256: eac510a2082bbf826cf48d3145beaa1aa17f4a0a09760f3fd830c7aaea64f022
 
 Package: mailutils
-Source: mailutils (1:3.20-3)
-Version: 1:3.20-3+b2
-Installed-Size: 975
+Version: 1:3.21-1
+Installed-Size: 947
 Maintainer: Jordi Mallach <jordi@debian.org>
 Architecture: amd64
 Provides: mail-reader, mailx
-Depends: mailutils-common (= 1:3.20-3), libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libfribidi0 (>= 0.19.2), libgnutls30t64 (>= 3.7.0), libgsasl18 (>= 1.1), libldap2 (>= 2.6.2), libmailutils9t64 (>= 1:3.20), libncurses6 (>= 6), libpam0g (>= 0.99.7.1), libreadline8t64 (>= 6.0), libtinfo6 (>= 6), libunistring5 (>= 1.1)
+Depends: mailutils-common (= 1:3.21-1), libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libfribidi0 (>= 0.19.2), libgnutls30t64 (>= 3.7.0), libgsasl18 (>= 1.1), libldap2 (>= 2.6.2), libmailutils9t64 (>= 1:3.21-1), libncurses6 (>= 6), libpam0g (>= 0.99.7.1), libreadline8t64 (>= 6.0), libtinfo6 (>= 6), libunistring5 (>= 1.1)
 Recommends: default-mta | mail-transport-agent
 Suggests: mailutils-mh, mailutils-doc
 Breaks: elm-me+ (<< 2.4pl25ME+99c-3), heirloom-mailx (<< 12.3-3)
@@ -3771,15 +3770,15 @@ Tag: interface::text-mode, mail::filters, mail::imap, mail::pop, mail::smtp,
  uitoolkit::ncurses, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/m/mailutils/mailutils_3.20-3+b2_amd64.deb
-Size: 577232
-MD5sum: 8d76b3d0cc485fe9382f2e4fe4701d53
-SHA256: 1390848aa1d468037b5738183b96b459df0443c08e569cd904e1527d1f62c37d
+Filename: pool/main/m/mailutils/mailutils_3.21-1_amd64.deb
+Size: 593580
+MD5sum: feba098bedd51df2182e7cd5be443664
+SHA256: ac80ed9b73a3133a87360d5cedc37145313b3b516e12ebf3bcce550a36f1e64c
 
 Package: mailutils-common
 Source: mailutils
-Version: 1:3.20-3
-Installed-Size: 2688
+Version: 1:3.21-1
+Installed-Size: 2579
 Maintainer: Jordi Mallach <jordi@debian.org>
 Architecture: all
 Description: common files for GNU mailutils
@@ -3788,55 +3787,57 @@ Homepage: https://www.gnu.org/software/mailutils/
 Description-md5: 32f3c1102382b478ae851a124c7c0abe
 mail
 Priority: optional
-Filename: pool/main/m/mailutils/mailutils-common_3.20-3_all.deb
-Size: 827392
-MD5sum: fa8758412fc4058dbb2f530021ec12ec
-SHA256: 23044b56f5d7e3be6ebabec4305d98c1226a58640266d16348cc6aeeeba63d88
+Filename: pool/main/m/mailutils/mailutils-common_3.21-1_all.deb
+Size: 833080
+MD5sum: 91ef306a30c256102259195003cfd3a4
+SHA256: ad418b966d2722e012777243e4508460c9e5be29625d999f2d0f8169e8fd20b6
 
 Package: mailutils-guile
-Source: mailutils (1:3.20-3)
-Version: 1:3.20-3+b2
-Installed-Size: 495
+Source: mailutils
+Version: 1:3.21-1
+Installed-Size: 593
 Maintainer: Jordi Mallach <jordi@debian.org>
 Architecture: amd64
-Depends: mailutils-common (= 1:3.20-3), libmailutils-dev, guile-3.0 | guile
+Replaces: libmailutils9t64 (<< 1:3.21-1)
+Depends: mailutils-common (= 1:3.21-1), libmailutils-dev, guile-3.0 | guile, guile-3.0-libs, libc6 (>= 2.11), libmailutils9t64 (>= 1:3.20)
+Breaks: libmailutils9t64 (<< 1:3.21-1)
 Description: GNU mailutils Guile interpreter and modules
 Homepage: https://www.gnu.org/software/mailutils/
 Description-md5: f532ab9c9ef3692825aa37e42f652304
 mail
 Priority: optional
-Filename: pool/main/m/mailutils/mailutils-guile_3.20-3+b2_amd64.deb
-Size: 466188
-MD5sum: 7b89d91ecf8fad21e8fc48548471c2b4
-SHA256: 559deba3e918f462497671b9f36a359f68c1ed02dfe632dd6dc912881f3c4e47
+Filename: pool/main/m/mailutils/mailutils-guile_3.21-1_amd64.deb
+Size: 494996
+MD5sum: 9ad21fe60f754fb909a23d226ba4c325
+SHA256: 22e90283258e812f722c20d3cf097283734aec96ee3d6001793608c4003de1c8
 
 Package: mailutils-mda
-Source: mailutils (1:3.20-3)
-Version: 1:3.20-3+b2
-Installed-Size: 656
+Source: mailutils
+Version: 1:3.21-1
+Installed-Size: 647
 Maintainer: Jordi Mallach <jordi@debian.org>
 Architecture: amd64
 Replaces: libmailutils6 (<< 1:3.7-1~)
-Depends: mailutils-common (= 1:3.20-3), guile-3.0-libs, libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libdb5.3t64, libgc1 (>= 1:7.2d), libgdbm6t64 (>= 1.16), libgnutls30t64 (>= 3.7.0), libgsasl18 (>= 1.1), libkyotocabinet16v5 (>= 1.2.80), libldap2 (>= 2.6.2), libmailutils9t64 (>= 1:3.17), libmu-dbm9t64 (>= 1:3.17), libpam0g (>= 0.99.7.1), libpython3.14 (>= 3.14.1), libunistring5 (>= 1.1), libwrap0 (>= 7.6-4~)
+Depends: mailutils-common (= 1:3.21-1), guile-3.0-libs, libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libgc1 (>= 1:7.2d), libgdbm6t64 (>= 1.16), libgnutls30t64 (>= 3.7.0), libgsasl18 (>= 1.1), libkyotocabinet16v5 (>= 1.2.80), libldap2 (>= 2.6.2), libmailutils9t64 (>= 1:3.21-1), libmu-dbm9t64 (>= 1:3.17), libpam0g (>= 0.99.7.1), libpython3.14 (>= 3.14.1), libunistring5 (>= 1.1), libwrap0 (>= 7.6-4~), mailutils-guile (>= 1:3.17), python3-mailutils (>= 1:3.17)
 Breaks: libmailutils6 (<< 1:3.7-1~)
 Description: GNU mailutils utilities for handling mail -- MDA
 Homepage: https://www.gnu.org/software/mailutils/
 Description-md5: 380dd342b5dac86ccd3e45b0f932a59a
 mail
 Priority: optional
-Filename: pool/main/m/mailutils/mailutils-mda_3.20-3+b2_amd64.deb
-Size: 493032
-MD5sum: e57da525d42575d9320dc15f66553506
-SHA256: 0542d3a4bc70c9a4c0a6bc97dbd1ae0732950cb3b8c8cbe618f6996778f131d6
+Filename: pool/main/m/mailutils/mailutils-mda_3.21-1_amd64.deb
+Size: 497120
+MD5sum: 2b9210a0d4c66258db6331ea3753e19b
+SHA256: 6f2ab3f53ecf38df381bbb3f08e1d6b58c1fd34d69eb21c7fa7fea2fc6abb363
 
 Package: mailutils-mh
-Source: mailutils (1:3.20-3)
-Version: 1:3.20-3+b2
-Installed-Size: 5329
+Source: mailutils
+Version: 1:3.21-1
+Installed-Size: 4936
 Maintainer: Jordi Mallach <jordi@debian.org>
 Architecture: amd64
 Provides: mail-reader
-Depends: mailutils-common (= 1:3.20-3), guile-3.0-libs, libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libgc1 (>= 1:7.2d), libgnutls30t64 (>= 3.7.0), libgsasl18 (>= 1.1), libldap2 (>= 2.6.2), libmailutils9t64 (>= 1:3.17), libncurses6 (>= 6), libpam0g (>= 0.99.7.1), libpython3.14 (>= 3.14.1), libreadline8t64 (>= 6.0), libtinfo6 (>= 6), libunistring5 (>= 1.1)
+Depends: mailutils-common (= 1:3.21-1), guile-3.0-libs, libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libgc1 (>= 1:7.2d), libgnutls30t64 (>= 3.7.0), libgsasl18 (>= 1.1), libldap2 (>= 2.6.2), libmailutils9t64 (>= 1:3.21-1), libncurses6 (>= 6), libpam0g (>= 0.99.7.1), libpython3.14 (>= 3.14.1), libreadline8t64 (>= 6.0), libtinfo6 (>= 6), libunistring5 (>= 1.1), mailutils-guile (>= 1:3.17), python3-mailutils (>= 1:3.17)
 Suggests: mailutils, mh-e
 Description: GNU mailutils-based MH utilities
 Homepage: https://www.gnu.org/software/mailutils/
@@ -3845,10 +3846,10 @@ Tag: interface::text-mode, mail::user-agent, protocol::ssl, role::program,
  scope::utility, suite::gnu, uitoolkit::ncurses, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/m/mailutils/mailutils-mh_3.20-3+b2_amd64.deb
-Size: 946640
-MD5sum: ac76112b6b5581c64f8a56f562a6fe35
-SHA256: 73d23ac8a949d448de55e6567de1cf398ea4fd916b60529b3f8fccea88c66183
+Filename: pool/main/m/mailutils/mailutils-mh_3.21-1_amd64.deb
+Size: 978256
+MD5sum: af3034999e10fd619c916a9e14d330a8
+SHA256: e841427c0e37a30265a52ea7f54897c41e4aef93e01e90bed858b793a7896fb5
 
 Package: mairix
 Version: 0.24-2
@@ -6467,8 +6468,8 @@ MD5sum: c6b4159b78f207c8d9ddbae87a567afc
 SHA256: b6d0a8e7816ff4d1adfffaab8bfe539d93fffebed9d4cf1e6de2ba1620a027ba
 
 Package: urlscan
-Version: 1.0.8-0.1
-Installed-Size: 136
+Version: 1.1.2-1
+Installed-Size: 137
 Maintainer: Marcin Kulisz <debian@kulisz.net>
 Architecture: all
 Depends: python3-urwid, python3:any
@@ -6480,10 +6481,10 @@ Tag: implemented-in::python, interface::text-mode, role::program,
  scope::utility, uitoolkit::ncurses, use::searching, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/u/urlscan/urlscan_1.0.8-0.1_all.deb
-Size: 36944
-MD5sum: 463493956d1e2c89c6360e81471a4b2d
-SHA256: bf5f2644c7f6282ca04f8174143727b931f1139d192a55d612b5d3b222b0603c
+Filename: pool/main/u/urlscan/urlscan_1.1.2-1_all.deb
+Size: 37044
+MD5sum: 6b183395ee9857084dc2bced8262ccfd
+SHA256: b1ec56cae787b37d1c2f00a0ea44c1700e47a5c3d842a0dc1392f2ffe5adc1a9
 
 Package: vacation
 Version: 3.3.3+nmu1

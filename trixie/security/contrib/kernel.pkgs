@@ -1,0 +1,58 @@
+Package: zfs-dkms
+Source: zfs-linux
+Version: 2.3.9-0+deb13u1
+Installed-Size: 18660
+Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
+Architecture: all
+Replaces: spl-dkms
+Provides: zfs-modules
+Depends: dkms (>= 3.0.11), file, libc6-dev | libc-dev, lsb-release, libpython3-stdlib, debconf (>= 0.5) | debconf-2.0
+Suggests: debhelper
+Breaks: spl-dkms (<< 0.8.0~rc1), zfs-fuse (<< 2.3.9-0+deb13u1)
+Description: OpenZFS filesystem kernel modules for Linux
+Homepage: https://zfsonlinux.org/
+Description-md5: 39e75ed3c1d3a5bc9c23ff32d0b5bbe1
+Multi-Arch: foreign
+Recommends: zfs-zed, zfsutils-linux (>= 2.3.9-0+deb13u1), linux-libc-dev (<< 7.3~), linux-libc-dev (>= 4.18~)
+contrib/kernel
+Priority: optional
+Filename: pool/updates/contrib/z/zfs-linux/zfs-dkms_2.3.9-0+deb13u1_all.deb
+Size: 2488712
+SHA256: 63f3add03706103c8ae6cf7d22821ecf8c46bfe8d0bae1a12e459e7bcbcee792
+
+Package: zfs-dracut
+Source: zfs-linux
+Version: 2.3.9-0+deb13u1
+Installed-Size: 111
+Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
+Architecture: all
+Depends: dracut, zfs-modules | zfs-dkms, zfsutils-linux (>= 2.3.9-0+deb13u1)
+Description: OpenZFS root filesystem capabilities for Linux - dracut
+Homepage: https://zfsonlinux.org/
+Description-md5: 965d2232071aa7eaad3e0a3ca11764b0
+Multi-Arch: foreign
+contrib/kernel
+Priority: optional
+Filename: pool/updates/contrib/z/zfs-linux/zfs-dracut_2.3.9-0+deb13u1_all.deb
+Size: 37296
+SHA256: 6c2fb8e325701360119e41433f2f9429af2664435100135d3c8518f8d01da4a2
+
+Package: zfs-initramfs
+Source: zfs-linux
+Version: 2.3.9-0+deb13u1
+Installed-Size: 118
+Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
+Architecture: all
+Replaces: zfsutils-linux (<= 0.7.11-2)
+Depends: busybox-initramfs | busybox-static | busybox, initramfs-tools, zfs-modules | zfs-dkms, zfsutils-linux (>= 2.3.9-0+deb13u1)
+Breaks: zfsutils-linux (<= 0.7.11-2)
+Description: OpenZFS root filesystem capabilities for Linux - initramfs
+Homepage: https://zfsonlinux.org/
+Description-md5: ed136876804c562cd1f81b87863a33a9
+Multi-Arch: foreign
+contrib/kernel
+Priority: optional
+Filename: pool/updates/contrib/z/zfs-linux/zfs-initramfs_2.3.9-0+deb13u1_all.deb
+Size: 37544
+SHA256: 9a3aaad7520d27bf7a726611bffd6c7a06006834b24bfe60821254bf642b5a4d
+
