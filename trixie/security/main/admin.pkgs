@@ -51,6 +51,23 @@ Filename: pool/updates/main/a/aide/aide-dynamic_0.19.1-2+deb13u1_all.deb
 Size: 35280
 SHA256: 57e5dd21068cf7daabc425a8cd937584c8fb7e3ec1ba378c8da5947bf923d4f6
 
+Package: bubblewrap
+Version: 0.12.0-1~deb13u1
+Installed-Size: 142
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libcap2 (>= 1:2.10), libselinux1 (>= 3.1~)
+Description: utility for unprivileged chroot and namespace manipulation
+Homepage: https://github.com/containers/bubblewrap
+Description-md5: 8d0374e451b24b92bb7911ec002d9ed8
+Multi-Arch: foreign
+Recommends: procps
+admin
+Priority: optional
+Filename: pool/updates/main/b/bubblewrap/bubblewrap_0.12.0-1~deb13u1_amd64.deb
+Size: 56876
+SHA256: 70aca4fa8daeacb677ec00e8063eb586f08ae3d94b1f11e684370b5524c43431
+
 Package: ceph
 Version: 18.2.7+ds-1+deb13u1
 Installed-Size: 85
@@ -516,6 +533,153 @@ Priority: optional
 Filename: pool/updates/main/c/ceph/rbd-nbd_18.2.7+ds-1+deb13u1_amd64.deb
 Size: 203412
 SHA256: b252c691fcdad63f35ae056a17ac817ad5148ed13143630b8ffa9c44908cf947
+
+Package: cockpit
+Version: 337-1+deb13u2
+Installed-Size: 70
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: cockpit-bridge (>= 337-1+deb13u2), cockpit-ws (>= 337-1+deb13u2), cockpit-system (>= 337-1+deb13u2)
+Suggests: cockpit-doc (>= 337-1+deb13u2), cockpit-sosreport (>= 337-1+deb13u2), xdg-utils
+Description: Web Console for Linux servers
+Homepage: https://cockpit-project.org/
+Description-md5: 24b0aa0c07779dcba10e15ca9244d9e9
+Multi-Arch: foreign
+Recommends: cockpit-storaged (>= 337-1+deb13u2), cockpit-networkmanager (>= 337-1+deb13u2), cockpit-packagekit (>= 337-1+deb13u2)
+admin
+Priority: optional
+Filename: pool/updates/main/c/cockpit/cockpit_337-1+deb13u2_all.deb
+Size: 30732
+SHA256: 5aaa70e06ced3a658c7fdbd8337b30d2aed2e0af829940414099e2aa1489c09c
+
+Package: cockpit-bridge
+Source: cockpit
+Version: 337-1+deb13u2
+Installed-Size: 846
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: all
+Replaces: cockpit-pcp (<< 236)
+Provides: cockpit-pcp
+Depends: python3:any
+Suggests: python3-pcp
+Conflicts: cockpit-pcp
+Description: Cockpit bridge server-side component
+Homepage: https://cockpit-project.org/
+Description-md5: 34419f40043aa83e9a0fb5968fe56ce7
+Recommends: openssh-client
+admin
+Priority: optional
+Filename: pool/updates/main/c/cockpit/cockpit-bridge_337-1+deb13u2_all.deb
+Size: 386192
+SHA256: 8caa8c3f36d6eb2f95561614923518bc6e78d17962673d5be3d43b1967dc4961
+
+Package: cockpit-networkmanager
+Source: cockpit
+Version: 337-1+deb13u2
+Installed-Size: 896
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: cockpit-bridge (>= 337-1+deb13u2), network-manager (>= 1.6)
+Description: Cockpit user interface for networking
+Homepage: https://cockpit-project.org/
+Description-md5: d453350593dcc4aba8e5cd9e282c9e7c
+Multi-Arch: foreign
+admin
+Priority: optional
+Filename: pool/updates/main/c/cockpit/cockpit-networkmanager_337-1+deb13u2_all.deb
+Size: 864584
+SHA256: cc65a198f07ad5a7e5e488a1cffca28fe395c9f9e3033411eb4c76e53614cb8a
+
+Package: cockpit-packagekit
+Source: cockpit
+Version: 337-1+deb13u2
+Installed-Size: 925
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: cockpit-bridge (>= 337-1+deb13u2), packagekit, python3
+Description: Cockpit user interface for apps and package updates
+Homepage: https://cockpit-project.org/
+Description-md5: 78e1cc24dd1b7a3c1e724e0fb54d4968
+Multi-Arch: foreign
+admin
+Priority: optional
+Filename: pool/updates/main/c/cockpit/cockpit-packagekit_337-1+deb13u2_all.deb
+Size: 877220
+SHA256: efa7b906e09d4df3f3bac3cf2dc29065c01067ec6d30a838bfb3a832c00e4a40
+
+Package: cockpit-sosreport
+Source: cockpit
+Version: 337-1+deb13u2
+Installed-Size: 512
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: cockpit-bridge (>= 337-1+deb13u2), sos | sosreport
+Description: Cockpit user interface for diagnostic reports
+Homepage: https://cockpit-project.org/
+Description-md5: 4758fe190de68c7b853346fee5745606
+Multi-Arch: foreign
+admin
+Priority: optional
+Filename: pool/updates/main/c/cockpit/cockpit-sosreport_337-1+deb13u2_all.deb
+Size: 463664
+SHA256: 92196dfb87c243d79350a9e4437797c271f7daaf113728d9323cc44d0a264133
+
+Package: cockpit-storaged
+Source: cockpit
+Version: 337-1+deb13u2
+Installed-Size: 842
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: udisks2 (>= 2.9), udisks2 (>= 2.10) | libblockdev-mdraid2, cockpit-bridge (>= 337-1+deb13u2), python3, python3-dbus
+Suggests: udisks2-btrfs, udisks2-lvm2, mdadm
+Description: Cockpit user interface for storage
+Homepage: https://cockpit-project.org/
+Description-md5: c2ebe73ae22d08ed61f7619b0540e9d3
+Multi-Arch: foreign
+admin
+Priority: optional
+Filename: pool/updates/main/c/cockpit/cockpit-storaged_337-1+deb13u2_all.deb
+Size: 820492
+SHA256: 74a6f8e1f0902c14218fbab791c582c32eb3fcb13295f7d61ca7ea83b439c8af
+
+Package: cockpit-system
+Source: cockpit
+Version: 337-1+deb13u2
+Installed-Size: 3417
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: all
+Provides: cockpit-shell, cockpit-systemd, cockpit-tuned, cockpit-users
+Depends: cockpit-bridge (>= 337-1+deb13u2), libpwquality-tools, openssl
+Suggests: lastlog2
+Description: Cockpit admin interface for a system
+Homepage: https://cockpit-project.org/
+Description-md5: 305239ce7fcb5c6043156a1e54c69f73
+Multi-Arch: foreign
+Recommends: sudo | pkexec | policykit-1
+admin
+Priority: optional
+Filename: pool/updates/main/c/cockpit/cockpit-system_337-1+deb13u2_all.deb
+Size: 3302580
+SHA256: 309f12329a15cf5f465e8f8f328c70a1c24078637bb0e8334c10d88aad274c11
+
+Package: cockpit-ws
+Source: cockpit
+Version: 337-1+deb13u2
+Installed-Size: 1949
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: cockpit-tests (<< 331)
+Depends: libc6 (>= 2.39), libcrypt1 (>= 1:4.1.0), libglib2.0-0t64 (>= 2.68.0), libgnutls30t64 (>= 3.8.1), libgssapi-krb5-2 (>= 1.17), libjson-glib-1.0-0 (>= 1.5.2), libpam0g (>= 1.3.1), libsystemd0 (>= 237), glib-networking, adduser, openssl, systemd (>= 235), libnss-systemd
+Suggests: sssd-dbus (>= 2.6.2), python3
+Conflicts: cockpit-tests (<< 331)
+Description: Cockpit Web Service
+Homepage: https://cockpit-project.org/
+Description-md5: f492a869e15f8c92004032f384bce124
+admin
+Priority: optional
+Filename: pool/updates/main/c/cockpit/cockpit-ws_337-1+deb13u2_amd64.deb
+Size: 1038576
+SHA256: f74347e89be9f25da9645f2975cb9d8227333c2461782bd701b6cf9fcc43ff1c
 
 Package: containerd
 Version: 1.7.24~ds1-6+deb13u1
