@@ -14970,21 +14970,22 @@ MD5sum: da108ff9c34ec3c9b050960b23e34514
 SHA256: 178d642cd2a4a008d6918066f0c33f7a6da76e227d7a845880973e2af58e5af7
 
 Package: lua-resty-core
-Version: 0.1.32-1
+Version: 0.1.32-3
 Installed-Size: 263
 Maintainer: Debian Lua Team <pkg-lua-devel@lists.alioth.debian.org>
 Architecture: all
 Provides: lua5.1-resty-core
-Depends: libluajit-5.1-2, libnginx-mod-http-lua (<< 1:0.10.29.1~), libnginx-mod-http-lua (>= 1:0.10.29), lua-resty-lrucache (>= 0.13-11)
+Depends: libluajit-5.1-2, lua-resty-lrucache (>= 0.13-11)
+Breaks: libnginx-mod-http-lua (<< 1:0.10.29)
 Description: New FFI-based Lua API for NGINX Lua module
 Homepage: https://github.com/openresty/lua-resty-core
 Description-md5: 233f138a7d6e6c22ddd35f302d972b98
 net
 Priority: optional
-Filename: pool/main/l/lua-resty-core/lua-resty-core_0.1.32-1_all.deb
-Size: 36176
-MD5sum: fe772d425379ae2f35e1aeb8065b5315
-SHA256: 7e7325a7fe47be668be29219bd651e05a69434a17cdc207234e850ad411aed53
+Filename: pool/main/l/lua-resty-core/lua-resty-core_0.1.32-3_all.deb
+Size: 35808
+MD5sum: 9e8c8dc61f0456e13d02f5561b529226
+SHA256: ccaa31cfac13757a76edc40559dea5fb394e397de189c2c445f6a7f046f82632
 
 Package: lua-resty-lrucache
 Version: 0.15-5
@@ -22142,24 +22143,6 @@ Size: 719444
 MD5sum: 8cd0457404b84d1dd77f54f103e3ad25
 SHA256: 9f59c8ba7a783aabbaf675d4d5d09e0a21ea616351e11ff137efe2c117b04102
 
-Package: openssh-client-gssapi
-Source: openssh
-Version: 1:10.4p1-4
-Installed-Size: 10
-Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
-Architecture: amd64
-Depends: openssh-client (>= 1:10.4p1-4), openssh-common (= 1:10.4p1-4)
-Description: secure shell (SSH) client, with GSS-API support
-Multi-Arch: foreign
-Homepage: https://www.openssh.com/
-Description-md5: 1032b939c358dc15573b09b448ce55b6
-net
-Priority: optional
-Filename: pool/main/o/openssh/openssh-client-gssapi_10.4p1-4_amd64.deb
-Size: 1556
-MD5sum: c060a1c63abbda130a7c41ff963c5bbc
-SHA256: dbf7efad771cea107600db911ead46ff124484e7dab9bb4eaf1116d959e9c196
-
 Package: openssh-common
 Source: openssh
 Version: 1:10.4p1-4
@@ -22205,24 +22188,6 @@ Filename: pool/main/o/openssh/openssh-server_10.4p1-4_amd64.deb
 Size: 635612
 MD5sum: 90393f9816c5d8b501495911696c273f
 SHA256: c26cf5eb341fab1736a9e16f3edc6699bed0117f9069050337fd7fafc2f932e7
-
-Package: openssh-server-gssapi
-Source: openssh
-Version: 1:10.4p1-4
-Installed-Size: 10
-Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
-Architecture: amd64
-Depends: openssh-server (>= 1:10.4p1-4), openssh-common (= 1:10.4p1-4)
-Description: secure shell (SSH) server, with GSS-API key exchange
-Multi-Arch: foreign
-Homepage: https://www.openssh.com/
-Description-md5: e0464de7c75a87f097d73cf92e00b779
-net
-Priority: optional
-Filename: pool/main/o/openssh/openssh-server-gssapi_10.4p1-4_amd64.deb
-Size: 1548
-MD5sum: ec35dacd5fa8d5455fbe38631716fda5
-SHA256: 2dde02c5f38d6a0be794a7cd9474fe6048342a1b7e9b00ce3e18a062e021ea74
 
 Package: openssh-sftp-server
 Source: openssh
@@ -22284,6 +22249,54 @@ Filename: pool/main/o/openssh/ssh_10.4p1-4_amd64.deb
 Size: 1196
 MD5sum: 14659badbd2f968e09aa2a4d42ddc6a6
 SHA256: e1e89af9b919342c9823d00db206c2e43c0fdea4ca68069edb06858b8352f0a8
+
+Package: openssh-client-gssapi
+Source: openssh-gssapi
+Version: 1:10.4p1-5
+Installed-Size: 3827
+Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
+Architecture: amd64
+Replaces: openssh-client, openssh-sk-helper, ssh, ssh-krb5
+Provides: openssh-client (= 1:10.4p1-5), ssh-client
+Depends: openssh-common (<< 1:10.4p1.1), openssh-common (>= 1:10.4p1), systemd | systemd-standalone-sysusers | systemd-sysusers, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, libc6 (>= 2.42), libedit2 (>= 2.11-20080614-0), libgssapi-krb5-2 (>= 1.17), libselinux1 (>= 3.1~), libssl3t64 (>= 3.0.0), zlib1g (>= 1:1.1.4)
+Recommends: xauth
+Suggests: keychain, libpam-ssh, monkeysphere, ssh-askpass
+Conflicts: openssh-client, openssh-server (<< 1:10.3p1-6~)
+Breaks: openssh-sk-helper
+Description: secure shell (SSH) client, with GSS-API support
+Multi-Arch: foreign
+Homepage: https://www.openssh.com/
+Description-md5: 84e178376dd44c711f76d67da34c387b
+net
+Priority: optional
+Filename: pool/main/o/openssh-gssapi/openssh-client-gssapi_10.4p1-5_amd64.deb
+Size: 928484
+MD5sum: 1409858f1bd59d7e5086f8566e92295b
+SHA256: 9eb44b897763ff2d59b44f9a788da2be331daaab5117631a6dcdaf90c8715a52
+
+Package: openssh-server-gssapi
+Source: openssh-gssapi
+Version: 1:10.4p1-5
+Installed-Size: 3886
+Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
+Architecture: amd64
+Replaces: openssh-server, ssh, ssh-krb5
+Provides: openssh-server (= 1:10.4p1-5), ssh-server
+Depends: libpam-modules, libpam-runtime, openssh-common (<< 1:10.4p1.1), openssh-common (>= 1:10.4p1), openssh-sftp-server, procps, ucf, debconf (>= 0.5) | debconf-2.0, runit-helper (>= 2.14.0~), systemd | systemd-standalone-sysusers | systemd-sysusers, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, libaudit1 (>= 1:2.2.1), libc6 (>= 2.42), libcom-err2 (>= 1.43.9), libcrypt1 (>= 1:4.1.0), libgssapi-krb5-2 (>= 1.17), libkrb5-3 (>= 1.13~alpha1+dfsg), libpam0g (>= 0.99.7.1), libselinux1 (>= 3.1~), libssl3t64 (>= 3.0.0), libwrap0 (>= 7.6-4~), libwtmpdb0 (>= 0.13.0), zlib1g (>= 1:1.1.4)
+Recommends: default-logind | logind | libpam-systemd, ncurses-term, passwd, xauth
+Suggests: molly-guard, monkeysphere, ssh-askpass, ufw
+Conflicts: openssh-server
+Breaks: runit (<< 2.1.2-51~)
+Description: secure shell (SSH) server, with GSS-API key exchange
+Multi-Arch: foreign
+Homepage: https://www.openssh.com/
+Description-md5: 313d07ca69861be6e5ee1c580476618c
+net
+Priority: optional
+Filename: pool/main/o/openssh-gssapi/openssh-server-gssapi_10.4p1-5_amd64.deb
+Size: 835924
+MD5sum: 3378b9cab0e14e5417b69e28cb470877
+SHA256: d050196215a6b80e2869b69b1031483d2fbb864ef6e87548bd6af0d8d871dd76
 
 Package: openssh-known-hosts
 Version: 0.6.3-1
