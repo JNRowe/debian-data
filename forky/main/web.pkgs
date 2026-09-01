@@ -54,8 +54,8 @@ MD5sum: 6383c772c67ec8f0ed12b521bfd2bca4
 SHA256: 29525f2fa25a7c0614ea6cccc4e97c6e9290e965df90a266ca5a6295b95826a0
 
 Package: adminer
-Version: 6.0.0-1
-Installed-Size: 3260
+Version: 6.0.1-1
+Installed-Size: 3354
 Maintainer: Alexandre Rossi <niol@zincube.net>
 Architecture: all
 Depends: libapache2-mod-php | php-cgi | php-fpm | php, php-mysql | php-mysqli | php-pdo-mysql | php-sqlite3 | php-pgsql
@@ -66,10 +66,10 @@ Homepage: https://www.adminer.org/
 Description-md5: d71217c0cebda0e847dbf809dc3cf035
 web
 Priority: optional
-Filename: pool/main/a/adminer/adminer_6.0.0-1_all.deb
-Size: 819216
-MD5sum: 7ceeeba5da6541466eacfc60bbbad02c
-SHA256: c15f9d0efb76dd6b6bbb9603afeeba5fe70c46ffdb05e5f19ab654dbbb9df816
+Filename: pool/main/a/adminer/adminer_6.0.1-1_all.deb
+Size: 857424
+MD5sum: 9442b1035b7a11dcd6b2f9e3e3fd0a25
+SHA256: 8f35d54a37507306f6aaaa5d106898f1ea162a99aea2cc96c0f19ed033e2615a
 
 Package: apache2-block-ai-bots
 Source: ai.robots.txt
@@ -1595,8 +1595,8 @@ MD5sum: 8a20455011b71f06089794ab3f16041c
 SHA256: 2e00a125736ef9496afac0a4827ab8ff51ded6d93545357e12d72681e7894809
 
 Package: dokuwiki-plugin-acknowledge
-Version: 2026-08-03-1
-Installed-Size: 144
+Version: 2026-08-25-1
+Installed-Size: 149
 Maintainer: Daniel Baumann <daniel@debian.org>
 Architecture: all
 Provides: dokuwiki-plugin
@@ -1607,10 +1607,10 @@ Homepage: https://github.com/cosmocode/dokuwiki-plugin-acknowledge
 Description-md5: 8038d3e9665ac58b255a43b18b0e39b5
 web
 Priority: optional
-Filename: pool/main/d/dokuwiki-plugin-acknowledge/dokuwiki-plugin-acknowledge_2026-08-03-1_all.deb
-Size: 28312
-MD5sum: e4bb879477588a750a5f768b2d65d947
-SHA256: c81a91c4d0cffd5d2c8a8cb62eee56e90afa17d30cc77dcfdd2007ae70359391
+Filename: pool/main/d/dokuwiki-plugin-acknowledge/dokuwiki-plugin-acknowledge_2026-08-25-1_all.deb
+Size: 29448
+MD5sum: 04b66cd58e70c0fe45fb8ae90d11182b
+SHA256: 9db42e6fecac005e4090b40f0d40268c0f96a6f3c8750612032b196fa9bc9e0c
 
 Package: dokuwiki-plugin-aclinfo
 Version: 2026-03-08-1
@@ -3865,27 +3865,45 @@ Size: 22640
 MD5sum: 20b3b869dcbe365b22056e4b1a71d1cb
 SHA256: 585100d9d78f859d87b3d2fc6ce6d7c8794fab52084b7330fec90ecad58fe6c5
 
-Package: libreoffice-script-provider-js
+Package: libreoffice-jsuno
 Source: libreoffice
-Version: 4:26.2.5.2-2
-Installed-Size: 97
+Version: 4:26.8.0.3-2
+Installed-Size: 221
 Maintainer: Debian LibreOffice Maintainers <debian-openoffice@lists.debian.org>
-Architecture: all
-Depends: liblibreoffice-java, libreoffice-common, libreoffice-core-nogui | libreoffice-core, libreoffice-java-common, default-jre (>= 2:1.8) | java-runtime (>= 8) | java8-runtime | jre, librhino-java
-Description: JavaScript script support provider for LibreOffice scripting framework
+Architecture: amd64
+Depends: libreoffice-core-nogui | libreoffice-core, libc6 (>= 2.14), libgcc-s1 (>= 3.3.1), libqjs0 (>= 0.13.0), libstdc++6 (>= 13.1), libuno-cppu3t64 (>= 4.4.0~alpha), libuno-cppuhelpergcc3-3t64 (>= 3.5.0~beta), libuno-sal3t64 (>= 4.1.0~alpha), uno-libs-private
+Recommends: libreoffice-script-provider-js (>> 1:26.8.0.0.alpha~)
+Description: LibreOffice module to allow scripting in JavaScript
 Homepage: http://www.libreoffice.org
-Description-md5: 41b18315e9be2aaa24a28415b907118e
+Description-md5: cd0a63e678a9957bcbefb59d0560d39a
 web
 Priority: optional
-Filename: pool/main/libr/libreoffice/libreoffice-script-provider-js_26.2.5.2-2_all.deb
-Size: 36060
-MD5sum: a2f7f120716e91873294b03621972d2d
-SHA256: 11a870aad296ffbed193854222a948da0e1033ccca182c20f57f37bd67215022
+Filename: pool/main/libr/libreoffice/libreoffice-jsuno_26.8.0.3-2_amd64.deb
+Size: 87436
+MD5sum: cab475d71092c08f4342c418df3b6f55
+SHA256: 1f318015374e2a9ec8befcd00031da0183e726665f6bfa55cc4a619b84dc69ca
+
+Package: libreoffice-script-provider-js
+Source: libreoffice
+Version: 4:26.8.0.3-2
+Installed-Size: 134
+Maintainer: Debian LibreOffice Maintainers <debian-openoffice@lists.debian.org>
+Architecture: amd64
+Depends: liblibreoffice-java, libreoffice-common, libreoffice-core-nogui (>= 4:26.8.0.0.alpha0~) | libreoffice-core (>= 4:26.8.0.0.alpha0~), libreoffice-jsuno (= 4:26.8.0.3-2), libreoffice-java-common (>= 4:26.8.0.3~), default-jre (>= 2:1.8) | java-runtime (>= 8) | java8-runtime | jre, librhino-java, libc6 (>= 2.32), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 5), libuno-cppu3t64 (>= 3.6), libuno-cppuhelpergcc3-3t64 (>= 1.4.0), libuno-sal3t64 (>= 1.4.0), uno-libs-private
+Description: JavaScript script support provider for LibreOffice scripting framework
+Homepage: http://www.libreoffice.org
+Description-md5: 2cd7c16ea46e40cf9d73f8c637a0ae90
+web
+Priority: optional
+Filename: pool/main/libr/libreoffice/libreoffice-script-provider-js_26.8.0.3-2_amd64.deb
+Size: 46504
+MD5sum: 0dd9f3f8283591f9f499d6b585ea1482
+SHA256: f9cba367d3225772b59c5f88cb9d96db8fd121373ee06b052ce1c8aa79ac4efa
 
 Package: libreofficekit-data
 Source: libreoffice
-Version: 4:26.2.5.2-2
-Installed-Size: 60
+Version: 4:26.8.0.3-2
+Installed-Size: 61
 Maintainer: Debian LibreOffice Maintainers <debian-openoffice@lists.debian.org>
 Architecture: all
 Recommends: gir1.2-lokdocview-0.1
@@ -3894,10 +3912,10 @@ Homepage: http://www.libreoffice.org
 Description-md5: 9859813cd8462f5d488366ee3cfaed15
 web
 Priority: optional
-Filename: pool/main/libr/libreoffice/libreofficekit-data_26.2.5.2-2_all.deb
-Size: 28204
-MD5sum: 4bc5b3ade51b860504b1e1f6a4a77bf4
-SHA256: 8f7949e3c37e79f07060887589fb4fffd6c871dfcd6b92b22e4951edf5f9f463
+Filename: pool/main/libr/libreoffice/libreofficekit-data_26.8.0.3-2_all.deb
+Size: 28652
+MD5sum: 47599ae174a9ca3d0dbb9f5855d0a808
+SHA256: e575924473e7bc35e73c345349bb92634fea7a2098ff3e5edbae7bdb0032b7e2
 
 Package: pysassc
 Source: libsass-python
