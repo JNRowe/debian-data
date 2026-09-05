@@ -2571,22 +2571,41 @@ MD5sum: 9bfdce4e525f9a65ddba050315ceed42
 SHA256: c73fca5a3dc350ae85eb86539a52019be33e93119b7a9a1b2e889b36264f5daa
 
 Package: eviacam
-Version: 2.1.4+git20221109.a4032ed-3
-Installed-Size: 7976
+Version: 2.1.4+git20221109.a4032ed-5
+Installed-Size: 1898
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: amd64
-Depends: opencv-data, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libgtk-3-0t64 (>= 3.0.0), libopencv-core410 (>= 4.10.0+dfsg), libopencv-imgproc410 (>= 4.10.0+dfsg), libopencv-objdetect410 (>= 4.10.0+dfsg), libopencv-video410 (>= 4.10.0+dfsg), libopencv-videoio410 (>= 4.10.0+dfsg), libstdc++6 (>= 14), libv4l-0t64 (>= 0.5.0), libwxbase3.2-1t64 (>= 3.2.11+dfsg), libwxgtk3.2-1t64 (>= 3.2.11+dfsg), libx11-6, libxtst6 (>= 2:1.2.5)
+Depends: opencv-data, eviacam-data, libc6 (>= 2.43), libgcc-s1 (>= 3.0), libgtk-3-0t64 (>= 3.0.0), libopencv-core410 (>= 4.10.0+dfsg), libopencv-imgproc410 (>= 4.10.0+dfsg), libopencv-objdetect410 (>= 4.10.0+dfsg), libopencv-video410 (>= 4.10.0+dfsg), libopencv-videoio410 (>= 4.10.0+dfsg), libstdc++6 (>= 14), libv4l-0t64 (>= 0.5.0), libwxbase3.2-1t64 (>= 3.2.11+dfsg), libwxgtk3.2-1t64 (>= 3.2.11+dfsg), libx11-6, libxtst6 (>= 2:1.2.5)
 Recommends: wx3.2-i18n
 Description: camera based mouse emulator
-Homepage: http://viacam.org
+Homepage: https://eviacam.crea-si.com/
 Description-md5: f372eec82c7f83b8a3bcda26a5d8bcee
 Tag: uitoolkit::gtk, uitoolkit::wxwidgets
 x11
 Priority: optional
-Filename: pool/main/e/eviacam/eviacam_2.1.4+git20221109.a4032ed-3_amd64.deb
-Size: 5723984
-MD5sum: a7a33485b98f6529269d15ba04cb6fff
-SHA256: 553bda886367e365eef858d85811324bc97dfb502946954bf3a2812145ec77ec
+Filename: pool/main/e/eviacam/eviacam_2.1.4+git20221109.a4032ed-5_amd64.deb
+Size: 396840
+MD5sum: a0f814ab14e9820da9238d210283e4df
+SHA256: e7082206321be58acbb9d5d45c4a2160a7e6f2ca6173eeb6099433d8075ec1d6
+
+Package: eviacam-data
+Source: eviacam
+Version: 2.1.4+git20221109.a4032ed-5
+Installed-Size: 6080
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: all
+Replaces: eviacam (<< 2.1.4+git20221109.a4032ed-4)
+Enhances: eviacam
+Breaks: eviacam (<< 2.1.4+git20221109.a4032ed-4)
+Description: camera based mouse emulator (architecture independent data)
+Homepage: https://eviacam.crea-si.com/
+Description-md5: 63e21d38105934ff474bb692dd9f2d3f
+x11
+Priority: optional
+Filename: pool/main/e/eviacam/eviacam-data_2.1.4+git20221109.a4032ed-5_all.deb
+Size: 5350352
+MD5sum: ac8e8e59be8e3635f122c223351c6635
+SHA256: 1614d512b86b0f90adca2509dadcd53128d00dda987ad2a293d1a3ebbc96cfda
 
 Package: evilwm
 Version: 1.5-1
@@ -13637,14 +13656,13 @@ MD5sum: a916245850303805c34ae56709028bfa
 SHA256: 02c88678b38554365d6f3038c42e33b17ca41af323445c1d4213e7abd3920f4c
 
 Package: wmaker
-Source: wmaker (0.96.0-5)
-Version: 0.96.0-5+b1
-Installed-Size: 1429
+Version: 0.96.0-6
+Installed-Size: 1444
 Maintainer: Debian Window Maker Team <team+wmaker@tracker.debian.org>
 Architecture: amd64
 Replaces: wmaker-common (<< 0.95.8-2~)
 Provides: x-window-manager
-Depends: wmaker-common (= 0.96.0-5), libc6 (>= 2.38), libexif12 (>= 0.6.21), libfontconfig1 (>= 2.12.6), libwings3 (>= 0.96.0), libwraster6 (>= 0.96.0), libwutil5 (>= 0.96.0), libx11-6, libxext6, libxinerama1 (>= 2:1.1.4), libxpm4
+Depends: wmaker-common (= 0.96.0-6), libc6 (>= 2.43), libexif12 (>= 0.6.21), libfontconfig1 (>= 2.12.6), libwings3 (>= 0.96.0), libwraster6 (>= 0.96.0), libwutil5 (>= 0.96.0), libx11-6, libxext6, libxinerama1 (>= 2:1.1.4), libxpm4
 Suggests: desktop-base, wmaker-data, wmaker-utils, x-terminal-emulator, x11-apps, xterm
 Breaks: wmaker-common (<< 0.95.8-2~)
 Description: NeXTSTEP-like window manager for X
@@ -13656,15 +13674,15 @@ Tag: interface::graphical, interface::x11, network::server, role::program,
  x11::application, x11::window-manager
 x11
 Priority: optional
-Filename: pool/main/w/wmaker/wmaker_0.96.0-5+b1_amd64.deb
-Size: 508940
-MD5sum: 53207749a1cac911acc80b0578510a47
-SHA256: 11b5bd3de82dc6aa97f85d72d5dc7bfc127bdf215dae50b114e9076fd7108d12
+Filename: pool/main/w/wmaker/wmaker_0.96.0-6_amd64.deb
+Size: 522240
+MD5sum: 813b8a05d68957dd9d7a251473240e57
+SHA256: b26a40213d561e3fe431308f41364c134cd18ad6c73a8f863c87f3c6a3e999b3
 
 Package: wmaker-common
 Source: wmaker
-Version: 0.96.0-5
-Installed-Size: 4347
+Version: 0.96.0-6
+Installed-Size: 4346
 Maintainer: Debian Window Maker Team <team+wmaker@tracker.debian.org>
 Architecture: all
 Suggests: wmaker
@@ -13674,15 +13692,15 @@ Homepage: https://www.windowmaker.org/
 Description-md5: f3cf3e4e2c0dddd99432dce9a9df9c48
 x11
 Priority: optional
-Filename: pool/main/w/wmaker/wmaker-common_0.96.0-5_all.deb
-Size: 1553408
-MD5sum: cb0fbb2f69ecfb94315a55ccb9a9ff65
-SHA256: 6363393be3f64c75ea0ae1576c0f7624eab818b5199520b813ade6d1cd7e1d51
+Filename: pool/main/w/wmaker/wmaker-common_0.96.0-6_all.deb
+Size: 1553524
+MD5sum: f2c3908566320176e3533210d75173a1
+SHA256: 918169346aaee13abf880ab11252ba931ca0e36afc6c8b5cc6ff6d7f4f85bc34
 
 Package: wmaker-utils
-Source: wmaker (0.96.0-5)
-Version: 0.96.0-5+b1
-Installed-Size: 139
+Source: wmaker
+Version: 0.96.0-6
+Installed-Size: 138
 Maintainer: Debian Window Maker Team <team+wmaker@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libx11-6
@@ -13692,10 +13710,10 @@ Homepage: https://www.windowmaker.org/
 Description-md5: 22e211c8cab9bf58239e50d9a19225d1
 x11
 Priority: optional
-Filename: pool/main/w/wmaker/wmaker-utils_0.96.0-5+b1_amd64.deb
-Size: 93252
-MD5sum: 53472b6b1ecc1b4d01e5f8592128ce52
-SHA256: 6cc169d050320b0aff72b27db6aa30117bfd840e37782e6b612f636c3a3a2c25
+Filename: pool/main/w/wmaker/wmaker-utils_0.96.0-6_amd64.deb
+Size: 93104
+MD5sum: d19d3f0402f43d1976b82191f2969fbe
+SHA256: 26e41ccdcb2b9ed162674ded780f07904e81cdbc263453846c75765419cc93ad
 
 Package: wmaker-data
 Version: 0.9~4-2
@@ -18026,8 +18044,8 @@ MD5sum: 858fe21b8d5f2045bfec8ad395fc6f88
 SHA256: b931a8688e99d2eca4635aa411d96c438a862d8b6866596b1324a6cc6f29e30e
 
 Package: xterm
-Version: 410-1
-Installed-Size: 2578
+Version: 411-1
+Installed-Size: 2637
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
 Architecture: amd64
 Provides: x-terminal-emulator
@@ -18043,10 +18061,10 @@ Tag: implemented-in::c, interface::graphical, interface::x11, role::program,
  x11::terminal
 x11
 Priority: optional
-Filename: pool/main/x/xterm/xterm_410-1_amd64.deb
-Size: 886552
-MD5sum: 3b33fdf1847e081b024e369fa9cb8832
-SHA256: 97fa6e6f3161f6ff3cd91020657754d1f22d1669b71306749bf898bfcdbb51cc
+Filename: pool/main/x/xterm/xterm_411-1_amd64.deb
+Size: 914488
+MD5sum: dae07658bab755e790d5512c2f2519c9
+SHA256: 4e7192b395570fb8a24b9709fdeb2972ecfddea68ef4d66e1da25567a265b185
 
 Package: xtermcontrol
 Version: 3.8-6
