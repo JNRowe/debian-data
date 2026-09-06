@@ -3196,26 +3196,46 @@ Size: 103328
 MD5sum: 88877f2fc15d8c17de4e2aa0b0cd71dc
 SHA256: 3aadef265b55a32634d15744568e6dd4b28a0f2a1aa199e9a459b22def059447
 
+Package: libanthy2
+Source: anthy
+Version: 1:1.0.0.20260213-1
+Installed-Size: 416
+Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
+Architecture: amd64
+Replaces: libanthy1t64 (= 1:1.0.0.20260213-1~exp1)
+Depends: anthy-common, libc6 (>= 2.38)
+Breaks: libanthy1t64 (= 1:1.0.0.20260213-1~exp1)
+Description: Japanese kana-kanji conversion - runtime library
+Multi-Arch: same
+Homepage: https://wiki.debian.org/Teams/DebianAnthy
+Description-md5: 8782ebf3bba63e05d041c63e80ce0c29
+libs
+Priority: optional
+Filename: pool/main/a/anthy/libanthy2_1.0.0.20260213-1_amd64.deb
+Size: 122516
+MD5sum: 19b849534653d0f35201644eb6413c7d
+SHA256: ca08b08dbce09e00dca749121651827bef235cfa539884c15437711d1a33e469
+
 Package: libanthyinput0t64
-Source: anthy (1:0.4-3)
-Version: 1:0.4-3+b2
-Installed-Size: 119
+Source: anthy
+Version: 1:1.0.0.20260213-1
+Installed-Size: 125
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
 Replaces: libanthy0 (<< 1:0.3-1), libanthyinput0
-Provides: libanthyinput0 (= 1:0.4-3+b2)
-Depends: libanthy1t64, libc6 (>= 2.14)
-Breaks: libanthy0 (<< 1:0.3-1), libanthyinput0 (<< 1:0.4-3)
+Provides: libanthyinput0 (= 1:1.0.0.20260213-1)
+Depends: libanthy2 (>= 0.4), libc6 (>= 2.14)
+Breaks: libanthy0 (<< 1:0.3-1), libanthyinput0 (<< 1:1.0.0.20260213-1)
 Description: Japanese kana-kanji conversion - runtime library for input
 Multi-Arch: same
 Homepage: https://wiki.debian.org/Teams/DebianAnthy
 Description-md5: 42af3bb2019df4d9bcfa1f1e9ecfc640
 libs
 Priority: optional
-Filename: pool/main/a/anthy/libanthyinput0t64_0.4-3+b2_amd64.deb
-Size: 24224
-MD5sum: f48772cf02fc74037917719369072837
-SHA256: e471a49c2836ddb25eedbc40b14f5a4b4e4707a16e277764108ebf5822bf17cb
+Filename: pool/main/a/anthy/libanthyinput0t64_1.0.0.20260213-1_amd64.deb
+Size: 25804
+MD5sum: 50284297be34fcd56f8dc7472be08ba9
+SHA256: 1df88b279644970dd0f3e1bc351675b71ce9ca8cb4d2436d7b140b8bbbfe796d
 
 Package: libantlr4-runtime4.9
 Source: antlr4-cpp-runtime (4.9+dfsg-4)
@@ -3528,7 +3548,7 @@ SHA256: 541b9bf6df8a557864773aa0a5177ba0b2d8a2a52d8f493b6e160ffd92cfc8f2
 
 Package: libapparmor1
 Source: apparmor
-Version: 4.1.8-1
+Version: 4.1.8-2
 Installed-Size: 112
 Maintainer: Debian AppArmor Team <pkg-apparmor-team@lists.alioth.debian.org>
 Architecture: amd64
@@ -3542,14 +3562,14 @@ Description-md5: f5c1acf1bc73c3aa32ae8c2037c1d85a
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/a/apparmor/libapparmor1_4.1.8-1_amd64.deb
-Size: 38736
-MD5sum: b9d60a6acf664956ee5a9d252feac478
-SHA256: c91fd23576fef14ce48dd198e8e5b1a6b65473c4a20f6343c83a22afba6a3ad5
+Filename: pool/main/a/apparmor/libapparmor1_4.1.8-2_amd64.deb
+Size: 38744
+MD5sum: ce5e2aea8171fc87528ec6229a488439
+SHA256: 241cc115dfdc7c3a885be8538b3e0f68ed8ef69f5ea0bc02a31c28f753614724
 
 Package: libpam-apparmor
 Source: apparmor
-Version: 4.1.8-1
+Version: 4.1.8-2
 Installed-Size: 37
 Maintainer: Debian AppArmor Team <pkg-apparmor-team@lists.alioth.debian.org>
 Architecture: amd64
@@ -3560,10 +3580,10 @@ Description-md5: 918c214ce48cc6f3fc9db6a4756692b1
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/a/apparmor/libpam-apparmor_4.1.8-1_amd64.deb
-Size: 10712
-MD5sum: afab5629dbf2ea4cd4d3e06dfb349a0f
-SHA256: 0d5d8499d46dbfb9baaabd9aef9586c4b2c5c159646de5db523e2949db6df734
+Filename: pool/main/a/apparmor/libpam-apparmor_4.1.8-2_amd64.deb
+Size: 10732
+MD5sum: 58e6dfa2c6c75491ee4780e580b4582f
+SHA256: 81b6b218f79b7e027165f85408b4fc7b5e3ad3c6e3485c2648ad39dfc745ec4b
 
 Package: appmenu-gtk-module-common
 Source: appmenu-gtk-module
@@ -8472,7 +8492,7 @@ SHA256: 979bbdf42703fb62832c6e312f7bed7ad0d8f89063fd28c04dc619fccf32a9cd
 
 Package: libc4core0.6
 Source: c4core
-Version: 0.6.0-2
+Version: 0.6.0-4
 Installed-Size: 64
 Maintainer: Gabriel Barrantes <gabriel.barrantes.dev@outlook.com>
 Architecture: amd64
@@ -8483,10 +8503,10 @@ Homepage: https://github.com/biojppm/c4core
 Description-md5: cf38346aed066bf2ceefc5c9f6289865
 libs
 Priority: optional
-Filename: pool/main/c/c4core/libc4core0.6_0.6.0-2_amd64.deb
-Size: 17104
-MD5sum: 9b34b7452a0d5c1910f0f5a6af5c579f
-SHA256: 39560b2470bf5a8a44ba39f246e32585c8b8eca76d4d257514ef0336ed5d331e
+Filename: pool/main/c/c4core/libc4core0.6_0.6.0-4_amd64.deb
+Size: 17244
+MD5sum: da13d02f6da4f4e90708b3e2e74b7373
+SHA256: 187b0c05b2a925a3aad800e4a6da4ab41c865483f39e0114025c3dd965230dad
 
 Package: libcairo-gobject2
 Source: cairo (1.18.4-3)
@@ -21416,87 +21436,87 @@ SHA256: 2da6b1ed408fb7cafca370546c403fa8a72c77827b9aff9387004baa4ca21116
 
 Package: libasm1t64
 Source: elfutils
-Version: 0.195-1
+Version: 0.196-1
 Installed-Size: 67
 Maintainer: Debian Elfutils Maintainers <debian-gcc@lists.debian.org>
 Architecture: amd64
 Replaces: libasm1
-Provides: libasm1 (= 0.195-1)
-Depends: libc6 (>= 2.14), libdw1t64 (= 0.195-1), libelf1t64 (= 0.195-1)
-Breaks: libasm1 (<< 0.195-1)
+Provides: libasm1 (= 0.196-1)
+Depends: libc6 (>= 2.14), libdw1t64 (= 0.196-1), libelf1t64 (= 0.196-1)
+Breaks: libasm1 (<< 0.196-1)
 Description: library with a programmable assembler interface
 Multi-Arch: same
 Homepage: https://sourceware.org/elfutils/
 Description-md5: 8f886b0de17b2f986416475036400a7b
 libs
 Priority: optional
-Filename: pool/main/e/elfutils/libasm1t64_0.195-1_amd64.deb
-Size: 25468
-MD5sum: cded417b66f95845add9e839bdc60964
-SHA256: 4c85e5b7cc6088eba3e996d82b72e14bd771e4d254413622ae71401b42f0a3d7
+Filename: pool/main/e/elfutils/libasm1t64_0.196-1_amd64.deb
+Size: 26364
+MD5sum: b6c11dbde9526387d707241278583afe
+SHA256: 2b3200cae7d373212b9ea6a32e97057f457f8f4225c0b08d6f94a6680f795638
 
 Package: libdebuginfod1t64
 Source: elfutils
-Version: 0.195-1
+Version: 0.196-1
 Installed-Size: 78
 Maintainer: Debian Elfutils Maintainers <debian-gcc@lists.debian.org>
 Architecture: amd64
 Replaces: libdebuginfod1
-Provides: libdebuginfod1 (= 0.195-1)
-Depends: libc6 (>= 2.38), libcurl3t64-gnutls (>= 7.28.0), libelf1t64 (= 0.195-1), libjson-c5 (>= 0.15), libdw1t64 (= 0.195-1), libdebuginfod-common (>= 0.195-1)
-Breaks: libdebuginfod1 (<< 0.195-1)
+Provides: libdebuginfod1 (= 0.196-1)
+Depends: libc6 (>= 2.38), libcurl4-gnutls (>= 8.20.0-3~), libelf1t64 (= 0.196-1), libjson-c5 (>= 0.15), libdw1t64 (= 0.196-1), libdebuginfod-common (>= 0.196-1)
+Breaks: libdebuginfod1 (<< 0.196-1)
 Description: library to interact with debuginfod (development files)
 Multi-Arch: same
 Homepage: https://sourceware.org/elfutils/
 Description-md5: d62f7cacb6384ca72053831f668bd54c
 libs
 Priority: optional
-Filename: pool/main/e/elfutils/libdebuginfod1t64_0.195-1_amd64.deb
-Size: 29492
-MD5sum: b7f6d5fae8d81ce0702db0e5649127f1
-SHA256: 404a4524ea382677f6f9c2cf6908e9fd1abb41583ab08407c643d60f1343ab27
+Filename: pool/main/e/elfutils/libdebuginfod1t64_0.196-1_amd64.deb
+Size: 29900
+MD5sum: 8f49bf36e4cc18eff947276ba424e39c
+SHA256: 11004d68da40db0d6267fd1b73b98d26ffa180e1955167597d489f6309b260dc
 
 Package: libdw1t64
 Source: elfutils
-Version: 0.195-1
-Installed-Size: 815
+Version: 0.196-1
+Installed-Size: 852
 Maintainer: Debian Elfutils Maintainers <debian-gcc@lists.debian.org>
 Architecture: amd64
 Replaces: libdw1
-Provides: libdw1 (= 0.195-1)
-Depends: libbz2-1.0, libc6 (>= 2.38), libelf1t64 (= 0.195-1), liblzma5 (>= 5.1.1alpha+20120614), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.2.2.3)
-Breaks: libdw1 (<< 0.195-1)
+Provides: libdw1 (= 0.196-1)
+Depends: libbz2-1.0, libc6 (>= 2.38), libelf1t64 (= 0.196-1), liblzma5 (>= 5.1.1alpha+20120614), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.2.2.3)
+Breaks: libdw1 (<< 0.196-1)
 Description: library that provides access to the DWARF debug information
 Multi-Arch: same
 Homepage: https://sourceware.org/elfutils/
 Description-md5: 400b1d81b4127a4393ad2848aee6ecfa
 libs
 Priority: optional
-Filename: pool/main/e/elfutils/libdw1t64_0.195-1_amd64.deb
-Size: 264168
-MD5sum: 48db5345fc364a802b65c6994685bc10
-SHA256: ee52fcab00260e05886dc3d488008517b83a2c329684f36f26721001165b47d4
+Filename: pool/main/e/elfutils/libdw1t64_0.196-1_amd64.deb
+Size: 278932
+MD5sum: dedb8413b5da3709e0d2c84cddc5fd19
+SHA256: 428b24b34bdd4f67c470e735ad72e4d8a2f12b6f277c5f0eeaab457dff4bb75f
 
 Package: libelf1t64
 Source: elfutils
-Version: 0.195-1
-Installed-Size: 164
+Version: 0.196-1
+Installed-Size: 174
 Maintainer: Debian Elfutils Maintainers <debian-gcc@lists.debian.org>
 Architecture: amd64
 Replaces: libelf1
-Provides: libelf1 (= 0.195-1)
+Provides: libelf1 (= 0.196-1)
 Depends: libc6 (>= 2.38), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
-Breaks: libelf1 (<< 0.195-1)
+Breaks: libelf1 (<< 0.196-1)
 Description: library to read and write ELF files
 Multi-Arch: same
 Homepage: https://sourceware.org/elfutils/
 Description-md5: 0e9f703e8803a8baa9314c41c8b7ee96
 libs
 Priority: optional
-Filename: pool/main/e/elfutils/libelf1t64_0.195-1_amd64.deb
-Size: 58104
-MD5sum: 58043a2befa4c1081c3b7767c3861ed5
-SHA256: f4070c4d251c95f14ed7e45f3be8576b588df16a38f8b9e938f0206f2c4394f9
+Filename: pool/main/e/elfutils/libelf1t64_0.196-1_amd64.deb
+Size: 61224
+MD5sum: 61735b18f9e374b27a343d89728057b9
+SHA256: dde2ab88aebdc4dfc017c5309cd17917f7230f1684fb82551390089cf0b7ced1
 
 Package: libelk0t64
 Source: elk (3.99.8-10)
@@ -22833,11 +22853,11 @@ SHA256: 53de04ed31d9252fb0e398b97efaf57b203dbdf69ca4a54c784b98a18eead1af
 
 Package: libexiv2-28
 Source: exiv2
-Version: 0.28.8+dfsg-1
-Installed-Size: 3698
+Version: 0.28.9+dfsg-1
+Installed-Size: 3793
 Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libbrotli1 (>= 0.6.0), libc6 (>= 2.38), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.3.1), libinireader0 (>= 48), libstdc++6 (>= 14), zlib1g (>= 1:1.1.4), libexiv2-data (>= 0.28.8+dfsg-1)
+Depends: libbrotli1 (>= 0.6.0), libc6 (>= 2.38), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.3.1), libinireader0 (>= 48), libstdc++6 (>= 14), zlib1g (>= 1:1.1.4), libexiv2-data (>= 0.28.9+dfsg-1)
 Suggests: exiv2
 Description: EXIF/IPTC/XMP metadata manipulation library
 Multi-Arch: same
@@ -22845,10 +22865,10 @@ Homepage: https://www.exiv2.org/
 Description-md5: 0cef82cd4c7bd76f6d4f353b700168e9
 libs
 Priority: optional
-Filename: pool/main/e/exiv2/libexiv2-28_0.28.8+dfsg-1_amd64.deb
-Size: 935744
-MD5sum: abd65004d2247f2885709a19baf753c5
-SHA256: cfe83636ca6b8e72fcb7c2f76bade9c451c45fe37aefeefc992c03fdcdc249e9
+Filename: pool/main/e/exiv2/libexiv2-28_0.28.9+dfsg-1_amd64.deb
+Size: 974884
+MD5sum: 08617746114627f3d9b1c72ee5084ccb
+SHA256: 6a0728895e2024b429a206fcac8c7ee6506db34de57313b2d706272f3f939a68
 
 Package: libexo-2-0
 Source: exo (4.20.0-1)
@@ -39478,21 +39498,21 @@ SHA256: 7267342ec46f00a723636a5e1a5a86800ca367e985521da3f2ba445799c7c5de
 
 Package: libhyprutils13
 Source: hyprutils
-Version: 0.14.0-2
-Installed-Size: 426
+Version: 0.14.1-1
+Installed-Size: 534
 Maintainer: Debian Hyprland Maintainers <team+hyprland@tracker.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libgcc-s1 (>= 4.3), libpixman-1-0 (>= 0.25.2), libstdc++6 (>= 15)
+Depends: libc6 (>= 2.43), libgcc-s1 (>= 13), libpixman-1-0 (>= 0.25.2), libstdc++6 (>= 16.2.0-1)
 Description: Utilities used across the Hyprland ecosystem (library)
 Multi-Arch: same
 Homepage: https://github.com/hyprwm/hyprutils
 Description-md5: 3dde75c4cb1a772947d17d934ff07623
 libs
 Priority: optional
-Filename: pool/main/h/hyprutils/libhyprutils13_0.14.0-2_amd64.deb
-Size: 149136
-MD5sum: 792e798839d8d570ac14da36b407f7ea
-SHA256: e2f92c213476d2a2468e51cddc45ace2565b78dfa04dd1fc09f784bc8fbe55e7
+Filename: pool/main/h/hyprutils/libhyprutils13_0.14.1-1_amd64.deb
+Size: 180796
+MD5sum: 3ce561910956f8d8628f088ec4fac853
+SHA256: 9766c6c4ccf70ddb4e1774b1ab5e1472df0d73576d0e7a59ee4bcaf05dfc2777
 
 Package: hyprwire-scanner
 Source: hyprwire (0.3.1-3)
@@ -56521,23 +56541,23 @@ Size: 57452
 MD5sum: d574fa38e65344298881639c9e705785
 SHA256: c005c45c87995959e7fbc855caf1679edd1e027de63cb03411df226633d33255
 
-Package: libconfig++11
-Source: libconfig (1.7.3-2.1)
-Version: 1.7.3-2.1+b1
-Installed-Size: 136
+Package: libconfig++15
+Source: libconfig
+Version: 1.8.2+ds-1
+Installed-Size: 148
 Maintainer: Mohammed Bilal <rmb@debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2)
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 13)
 Description: parsing/manipulation of structured configuration files (C++ binding)
 Multi-Arch: same
 Homepage: https://hyperrealm.github.io/libconfig/
 Description-md5: 9a8df51133928631226892f0ee52493b
 libs
 Priority: optional
-Filename: pool/main/libc/libconfig/libconfig++11_1.7.3-2.1+b1_amd64.deb
-Size: 44760
-MD5sum: b970b548ddbe24ed3b63d71f4ccdabd8
-SHA256: 036a5379ed15ead28631f4df5d00d94ca408abe16654c5cbf044f384f34fdfc3
+Filename: pool/main/libc/libconfig/libconfig++15_1.8.2+ds-1_amd64.deb
+Size: 50848
+MD5sum: f5f7159776662f2f714acdec35fc944d
+SHA256: 383fd99c576ce90ba075def6e89cfa032c2eba49a9ef5cd8f59f1b701c1bab3d
 
 Package: libconfig11
 Source: libconfig (1.7.3-2.1)
@@ -56556,6 +56576,24 @@ Filename: pool/main/libc/libconfig/libconfig11_1.7.3-2.1+b1_amd64.deb
 Size: 34008
 MD5sum: 98ac4f280d66ad729d612d2b5ad131ad
 SHA256: 27f243ce0c1c20cf0b42f923aca1523edd5d1286b8b8c0a735a1538ebb9dde20
+
+Package: libconfig15
+Source: libconfig
+Version: 1.8.2+ds-1
+Installed-Size: 99
+Maintainer: Mohammed Bilal <rmb@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38)
+Description: parsing/manipulation of structured configuration files
+Multi-Arch: same
+Homepage: https://hyperrealm.github.io/libconfig/
+Description-md5: f9e4a016d7fc40b75858220651e186b8
+libs
+Priority: optional
+Filename: pool/main/libc/libconfig/libconfig15_1.8.2+ds-1_amd64.deb
+Size: 37888
+MD5sum: 0b65cb6f3233ad152213b2e29c949f5f
+SHA256: 87e37acca35590eacfc9a71f8db3ad5dc375fc5572a85b9e6e50e8eb0c06375f
 
 Package: libconfuse-common
 Source: libconfuse
@@ -60103,12 +60141,12 @@ MD5sum: 28de4d23c4df9bcf3f321ff42d487a48
 SHA256: 7c1f71a0e72a484f4cf97b78f25f430874ee24b2fec1c416870b711fe32f136f
 
 Package: libffado2
-Source: libffado
-Version: 2.5.0-5
-Installed-Size: 2631
+Source: libffado (2.5.0-5)
+Version: 2.5.0-5+b1
+Installed-Size: 2844
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libconfig++11 (>= 1.7.3), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.0), libiec61883-0 (>= 1.2.0), libraw1394-11 (>= 2.1.2), libstdc++6 (>= 14)
+Depends: libc6 (>= 2.38), libconfig++15 (>= 1.8.2+ds), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.0), libiec61883-0 (>= 1.2.0), libraw1394-11 (>= 2.1.2), libstdc++6 (>= 14)
 Description: FFADO API
 Multi-Arch: same
 Homepage: http://www.ffado.org/
@@ -60116,10 +60154,10 @@ Description-md5: 4c331f90e31074719b77f3d0b71de841
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/libf/libffado/libffado2_2.5.0-5_amd64.deb
-Size: 694748
-MD5sum: 4d687ab238f97539db9d69230a27492e
-SHA256: 3a32a3282df306abde04b5647c98374d793285c6db95666e297623e69dfc0990
+Filename: pool/main/libf/libffado/libffado2_2.5.0-5+b1_amd64.deb
+Size: 771296
+MD5sum: 9575dafbf3d12fcd2cec889b765977ce
+SHA256: 8d7e14996e0f70fa8be6a2dbb9911f91ef6bd6bf1e201f6a7e38f7117d9af409
 
 Package: libffi8
 Source: libffi
@@ -63118,9 +63156,9 @@ MD5sum: dd3b9363e1bfe7c2c76b097107368364
 SHA256: 480b8c8ad47fa892de1f8c3023a2617fd1725509ac54a951b6bfdbb5eabf94a8
 
 Package: libhandy-1-0
-Source: libhandy-1
-Version: 1.8.3-4
-Installed-Size: 1383
+Source: libhandy
+Version: 1.8.3-6
+Installed-Size: 1385
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libatk1.0-0t64 (>= 1.12.4), libc6 (>= 2.29), libcairo2 (>= 1.14.0), libfribidi0 (>= 0.19.2), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.80.0), libgtk-3-0t64 (>= 3.23.1), libpango-1.0-0 (>= 1.14.0)
@@ -63131,10 +63169,10 @@ Description-md5: 29a55a565f246f402a92d52e2aeedf17
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/libh/libhandy-1/libhandy-1-0_1.8.3-4_amd64.deb
-Size: 321168
-MD5sum: f3a5f363288ffba4a04e186680e56d10
-SHA256: deb1fd3fa895bf1d6d04141e06e63755627a45ee0476e76901e965342c644592
+Filename: pool/main/libh/libhandy/libhandy-1-0_1.8.3-6_amd64.deb
+Size: 321048
+MD5sum: 4e3cba36c5d4fccdfd2801144f14d5fa
+SHA256: f1703ca1e4801dfb16e39febb0589221c63b3e9d59ce6a480b7157908948bd3f
 
 Package: libhangul-data
 Source: libhangul
@@ -66698,11 +66736,11 @@ SHA256: 0fc3eefdff5a9aaed3e2606b7d273bb729ee181e5da9db7de8f1251d34b7d63a
 
 Package: liblouis20
 Source: liblouis
-Version: 3.38.0-1
-Installed-Size: 231
+Version: 3.39.0-1
+Installed-Size: 243
 Maintainer: Debian Accessibility Team <pkg-a11y-devel@alioth-lists.debian.net>
 Architecture: amd64
-Depends: libc6 (>= 2.33), liblouis-data (>= 3.38.0~)
+Depends: libc6 (>= 2.33), liblouis-data (>= 3.39.0~)
 Description: Braille translation library - shared libs
 Multi-Arch: same
 Homepage: http://liblouis.org/
@@ -66710,10 +66748,10 @@ Description-md5: 40448590cf7dc3c13633552fcd3ac521
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/libl/liblouis/liblouis20_3.38.0-1_amd64.deb
-Size: 103240
-MD5sum: 40bd94fc57a7a79f42d5c8ec159debe4
-SHA256: 620e001eafea98dc7d88517378df4a8a2c2f0ff39fc6896e33579bca314c3133
+Filename: pool/main/libl/liblouis/liblouis20_3.39.0-1_amd64.deb
+Size: 107064
+MD5sum: 6ff71142798fd3346fb1c59d3e4ce2e4
+SHA256: c37aed709266e125b0dd665ca394dc823aa6a065fd74eade16387e362cc6d999
 
 Package: liblouisutdml9t64
 Source: liblouisutdml (2.12.0-8)
@@ -67458,21 +67496,21 @@ MD5sum: f7f08fe531788b854d0727c259e258d0
 SHA256: 727d545c9bc4409e4161be91a88897b945b0c18061f49bf70fabb08d920e7e29
 
 Package: libmegapixels1
-Source: libmegapixels
-Version: 0.2.3-1
-Installed-Size: 91
+Source: libmegapixels (0.2.3-1)
+Version: 0.2.3-1+b1
+Installed-Size: 92
 Maintainer: DebianOnMobile Maintainers <debian-on-mobile-maintainers@alioth-lists.debian.net>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libconfig11 (>= 1.7.3)
+Depends: libc6 (>= 2.38), libconfig15 (>= 1.8.2+ds)
 Description: Device abstraction library for Megapixels -- Shared library
 Homepage: https://gitlab.com/megapixels-org/libmegapixels
 Description-md5: 16322899c6100ee6ab6a9e5b5e824153
 libs
 Priority: optional
-Filename: pool/main/libm/libmegapixels/libmegapixels1_0.2.3-1_amd64.deb
-Size: 19224
-MD5sum: 00f46c1a5919bbf87652ce515d395b54
-SHA256: cf788ed6fd6384a484cd1c8e62a8e4086cb270338e05c39e85a668be382f644e
+Filename: pool/main/libm/libmegapixels/libmegapixels1_0.2.3-1+b1_amd64.deb
+Size: 20336
+MD5sum: 77591120dfbe9595de5ab3dabff913c0
+SHA256: 5a17d2d972b63210469fe967e07e8313f3f6756dae14dde5d796c7610a9e0b88
 
 Package: libhashkit2t64
 Source: libmemcached
@@ -68059,24 +68097,24 @@ SHA256: 22f0c697f86e4d340222fa70fee6f4f158e837cd3b0a9576e2f479fd01ecd9e3
 
 Package: libmpdclient2t64
 Source: libmpdclient
-Version: 2.24-1
-Installed-Size: 198
+Version: 2.27-1
+Installed-Size: 204
 Maintainer: mpd maintainers <pkg-mpd-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libmpdclient2
-Provides: libmpdclient2 (= 2.24-1)
+Provides: libmpdclient2 (= 2.27-1)
 Depends: libc6 (>= 2.38)
-Breaks: libmpdclient2 (<< 2.24-1)
+Breaks: libmpdclient2 (<< 2.27-1)
 Description: client library for the Music Player Daemon
 Multi-Arch: same
 Homepage: https://www.musicpd.org/libs/libmpdclient/
 Description-md5: 78173fe783f2412444a570648f780872
 libs
 Priority: optional
-Filename: pool/main/libm/libmpdclient/libmpdclient2t64_2.24-1_amd64.deb
-Size: 54380
-MD5sum: a365383caf6a8b74815e2ae144a42405
-SHA256: b1666a3ce757badb5a0377372f70f7af4f15bf2c590ac4ae9343b19ec6e44e35
+Filename: pool/main/libm/libmpdclient/libmpdclient2t64_2.27-1_amd64.deb
+Size: 56712
+MD5sum: fdfc47a85ecf6b5199151793e48735d4
+SHA256: 3d327199701adf903a23e13f34fa19cf81eb148448081945b43b8718c34002e0
 
 Package: libmpeg3-2t64
 Source: libmpeg3 (1.8.dfsg-6)
@@ -69716,26 +69754,26 @@ MD5sum: 1b685d4789ba10b4aa03911a4f2ef2a1
 SHA256: d470bc8473b812c5f87f9ea5702014f03b6496dfd21e3c479e890b2c326ea199
 
 Package: libofx7t64
-Source: libofx (1:0.10.9-1.1)
-Version: 1:0.10.9-1.1+b3
-Installed-Size: 644
+Source: libofx
+Version: 1:0.10.9-1.3
+Installed-Size: 682
 Maintainer: Dylan Aïssi <daissi@debian.org>
 Architecture: amd64
 Replaces: libofx7
-Provides: libofx7 (= 1:0.10.9-1.1+b3)
+Provides: libofx7 (= 1:0.10.9-1.3)
 Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libosp5 (>= 1.5.2-1), libstdc++6 (>= 14)
 Suggests: ofx
-Breaks: libofx7 (<< 1:0.10.9-1.1)
+Breaks: libofx7 (<< 1:0.10.9-1.3)
 Description: library to support the Open Financial Exchange format
 Multi-Arch: same
 Homepage: https://github.com/libofx/libofx
 Description-md5: e975558c55288eb8c7f6715d9f429c4b
 libs
 Priority: optional
-Filename: pool/main/libo/libofx/libofx7t64_0.10.9-1.1+b3_amd64.deb
-Size: 162328
-MD5sum: 8deb2b877474709721c355cd0bed03f5
-SHA256: e6a690c74cdda5960518e1d47d82eed8696424395d8391c81d9e35b5ffad9eff
+Filename: pool/main/libo/libofx/libofx7t64_0.10.9-1.3_amd64.deb
+Size: 181892
+MD5sum: 1d8ea44e1ed46f804fbbf0cb88302697
+SHA256: 4ac4957ef0bb9dada3c55ed49cdc0081900ed96ef91e610b0de3c6d32cdbfd55
 
 Package: libogg0
 Source: libogg (1.3.6-2)
@@ -72700,75 +72738,75 @@ SHA256: 2ffaca8d5dd869198c10d66d46e485413e0912f8326ad00a1f1e6a80b23ff218
 
 Package: libqofonoext-qt6-1
 Source: libqofonoext
-Version: 1.0.35-1
-Installed-Size: 397
+Version: 1.2.0-1
+Installed-Size: 409
 Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.0), libqofono-qt6-0 (>= 0.130), libqt6core6t64 (>= 6.10.2), libqt6dbus6 (>= 6.8.2), libstdc++6 (>= 5)
+Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.0), libqofono-qt6-0 (>= 0.131), libqt6core6t64 (>= 6.10.2), libqt6dbus6 (>= 6.8.2), libstdc++6 (>= 5)
 Description: Qt 6 bindings for ofono extensions
 Multi-Arch: same
 Homepage: https://github.com/sailfishos/libqofonoext
 Description-md5: 9d00b0e44f3b767645aa3cc5a6b33a4b
 libs
 Priority: optional
-Filename: pool/main/libq/libqofonoext/libqofonoext-qt6-1_1.0.35-1_amd64.deb
-Size: 95984
-MD5sum: 54b614c7bb920b894e08484c2781a63e
-SHA256: b896d2f4c39ab535d5c3a257af739e00e0d2948be6d19638ca7ba3dd8c06e9c5
+Filename: pool/main/libq/libqofonoext/libqofonoext-qt6-1_1.2.0-1_amd64.deb
+Size: 102428
+MD5sum: 2e6534910ad8ac775c603bb57c72bf43
+SHA256: 62f6ed56eedbd0b086437117a746a13baaada17df235ad47b2667a4c338297c7
 
 Package: libqofonoext1
 Source: libqofonoext
-Version: 1.0.35-1
-Installed-Size: 302
+Version: 1.2.0-1
+Installed-Size: 314
 Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.0), libqofono-qt5-0 (>= 0.130), libqt5core5t64 (>= 5.15.1), libqt5dbus5t64 (>= 5.14.1), libstdc++6 (>= 14)
+Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.0), libqofono-qt5-0 (>= 0.131), libqt5core5t64 (>= 5.15.1), libqt5dbus5t64 (>= 5.14.1), libstdc++6 (>= 14)
 Description: Qt 5 bindings for ofono extensions
 Multi-Arch: same
 Homepage: https://github.com/sailfishos/libqofonoext
 Description-md5: c3551dee00c33b3765fb305c71b0041e
 libs
 Priority: optional
-Filename: pool/main/libq/libqofonoext/libqofonoext1_1.0.35-1_amd64.deb
-Size: 77308
-MD5sum: 2c3bce080da6964459d46f689be03026
-SHA256: 28e4e24e293b192b86f7cd643348ffc6a6cfad27b4e60ccc796b29b34d2a7980
+Filename: pool/main/libq/libqofonoext/libqofonoext1_1.2.0-1_amd64.deb
+Size: 82304
+MD5sum: 3d8d314f60151ea233b9f4559ecc6cd2
+SHA256: be78ab389e3cc82288475b5afc47b69dc8f041514628d688a12272caf4bb2d7c
 
 Package: qml-module-qofonoext
 Source: libqofonoext
-Version: 1.0.35-1
-Installed-Size: 144
+Version: 1.2.0-1
+Installed-Size: 156
 Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.0), libqofono-qt5-0 (>= 0.130), libqofonoext1 (>= 1.0.35), libqt5core5t64 (>= 5.15.1), libqt5qml5 (>= 5.6.0~beta), libstdc++6 (>= 5)
+Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.0), libqofono-qt5-0 (>= 0.131), libqofonoext1 (>= 1.2.0), libqt5core5t64 (>= 5.15.1), libqt5qml5 (>= 5.6.0~beta), libstdc++6 (>= 5)
 Description: QML plugin with bindings for ofono extensions (Qt 5 version)
 Multi-Arch: same
 Homepage: https://github.com/sailfishos/libqofonoext
 Description-md5: 0f0dac18a5411be7c1a1697688bd13cc
 libs
 Priority: optional
-Filename: pool/main/libq/libqofonoext/qml-module-qofonoext_1.0.35-1_amd64.deb
-Size: 30816
-MD5sum: 8d377aad323426dd77e8d26fe05a55cc
-SHA256: e1e0a6e6d632c91ca989ee9199b404b6c84bdc7244675ba0e4b0f23b620d1f69
+Filename: pool/main/libq/libqofonoext/qml-module-qofonoext_1.2.0-1_amd64.deb
+Size: 33496
+MD5sum: 51ea08bc343e07f145d4fbb5995adab5
+SHA256: b975d1e418ec4f6a03f9ae18fb93fc2df8db9d5c859fe210af05d31bbe40cf4c
 
 Package: qml6-module-qofonoext
 Source: libqofonoext
-Version: 1.0.35-1
-Installed-Size: 162
+Version: 1.2.0-1
+Installed-Size: 174
 Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.0), libqofono-qt6-0 (>= 0.130), libqofonoext-qt6-1 (>= 1.0.35), libqt6core6t64 (>= 6.10.2), libqt6qml6 (>= 6.6.0), libstdc++6 (>= 5)
+Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.0), libqofono-qt6-0 (>= 0.131), libqofonoext-qt6-1 (>= 1.2.0), libqt6core6t64 (>= 6.10.2), libqt6qml6 (>= 6.6.0), libstdc++6 (>= 5)
 Description: QML plugin with bindings for ofono extensions (Qt 6 version)
 Multi-Arch: same
 Homepage: https://github.com/sailfishos/libqofonoext
 Description-md5: abcba2897d4b94ea5118094241c144ca
 libs
 Priority: optional
-Filename: pool/main/libq/libqofonoext/qml6-module-qofonoext_1.0.35-1_amd64.deb
-Size: 36100
-MD5sum: 554b39894ed7ed9b38de81d3aa9076e5
-SHA256: 923f5197fe21a11e347f1e2ed29e4f44cc3068e1d4e7070e16eafc31af2cce3d
+Filename: pool/main/libq/libqofonoext/qml6-module-qofonoext_1.2.0-1_amd64.deb
+Size: 38776
+MD5sum: 17b01fed9bc1bc69b94d7f0e3eabe2c6
+SHA256: 25fecb17a6f460bb55cc8eccd8ceaa9a4d22f8dc922f31cb04c9d0f4a4f82666
 
 Package: libqrtr-glib0
 Source: libqrtr-glib (1.4.0-1)
@@ -77529,8 +77567,8 @@ SHA256: 96cf3b632915401e90dc123e58828b84b4fed48c82d1ac2c6dd935e6fad5ef3b
 
 Package: libtoxcore2
 Source: libtoxcore (0.2.22-1)
-Version: 0.2.22-1+b1
-Installed-Size: 766
+Version: 0.2.22-1+b2
+Installed-Size: 794
 Maintainer: Yangfl <mmyangfl@gmail.com>
 Architecture: amd64
 Depends: libc6 (>= 2.34), libopus0 (>= 1.1), libsodium26 (>= 0.7.0), libvpx12 (>= 1.16.0)
@@ -77541,10 +77579,10 @@ Description-md5: f9f98e79255ba7b37fa39bfa6cf0de06
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/libt/libtoxcore/libtoxcore2_0.2.22-1+b1_amd64.deb
-Size: 295876
-MD5sum: c3c5a43e3f31363a9f72fb786b04729c
-SHA256: 2f476501bc5b42c0fa8c08a2971f68b943131d809280490b6e44d54ebe2eb510
+Filename: pool/main/libt/libtoxcore/libtoxcore2_0.2.22-1+b2_amd64.deb
+Size: 312292
+MD5sum: 19c2133e564dcefd686eb4699a632695
+SHA256: f1455e24db5ad796830e635ed0be96980e695d605a1c24e26ee8305cc4d4853b
 
 Package: libtpl0
 Source: libtpl
@@ -78270,22 +78308,22 @@ MD5sum: ac12ce2f6c0aa60303e3532bbc231515
 SHA256: 922e2bb2f02b6de143c149a9666c96df3147e1ef7fe53ffc21a512a32f202987
 
 Package: libusbgx3
-Source: libusbgx
-Version: 0.3.0-3
-Installed-Size: 155
+Source: libusbgx (0.3.0-3)
+Version: 0.3.0-3+b1
+Installed-Size: 156
 Maintainer: Manuel Traut <manut@mecka.net>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libconfig11 (>= 1.7.3)
+Depends: libc6 (>= 2.38), libconfig15 (>= 1.8.2+ds)
 Description: C library encapsulating the kernel USB gadget-configfs
 Multi-Arch: same
 Homepage: https://github.com/linux-usb-gadgets/libusbgx
 Description-md5: c571147c3733f349fd0be1d370598de7
 libs
 Priority: optional
-Filename: pool/main/libu/libusbgx/libusbgx3_0.3.0-3_amd64.deb
-Size: 41816
-MD5sum: 4d96bb131c66015af38e197a67a5b488
-SHA256: b8f231d17c294a3b012a96eb1f5bd9e4757f11d4a3062a5ada6877bbd0b1ee69
+Filename: pool/main/libu/libusbgx/libusbgx3_0.3.0-3+b1_amd64.deb
+Size: 43544
+MD5sum: 0deca4a04d5fbf6970ba2d3d3fe3cd39
+SHA256: c094d8edf1c1a3c36c5cdfb4a63c3aca7594b8048976e11f4697ba50b8ebef32
 
 Package: libusbmuxd-2.0-7
 Source: libusbmuxd (2.1.1-1)
@@ -79273,8 +79311,8 @@ SHA256: 11559b44aad9b0dba72f3c5b4e693aedb233026cda93927e04b040ea8354ec55
 
 Package: libvpx12
 Source: libvpx
-Version: 1.16.0-3
-Installed-Size: 3890
+Version: 1.17.0-1
+Installed-Size: 3719
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34)
@@ -79284,10 +79322,10 @@ Homepage: https://www.webmproject.org
 Description-md5: 9cee3076e27a3ba8414aeb5e611c4e9f
 libs
 Priority: optional
-Filename: pool/main/libv/libvpx/libvpx12_1.16.0-3_amd64.deb
-Size: 1172256
-MD5sum: 60bf693c1d4e9deb47cfac9ddea172b3
-SHA256: 0007a10a29fbf5307555f2f71223618bff10745c83ef25f74c3d189b1df1fbbe
+Filename: pool/main/libv/libvpx/libvpx12_1.17.0-1_amd64.deb
+Size: 1154004
+MD5sum: e1ad9ae883a499c5db7ebc65329f0cf1
+SHA256: 1fdb45506046db5e8f3cf33046c6ad5d9c409b64f78fad7d4d3c5f803dd62f3a
 
 Package: libvsapm1
 Source: libvsapm (0~20240503-2)
@@ -81226,8 +81264,8 @@ SHA256: 82014b070638f101a848f8c7d4ef0a7d0483bad095057ffb71abea8d3ef453a4
 
 Package: libxpertmasscore1
 Source: libxpertmass
-Version: 1.16.1-1
-Installed-Size: 2375
+Version: 1.17.1-1
+Installed-Size: 2871
 Maintainer: The Debichem Group <debichem-devel@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libxpertmass1
@@ -81240,19 +81278,19 @@ Homepage: http://www.msxpertsuite.org/xpertmass/
 Description-md5: f1b40a79647ac2c5caf6d39043c380e3
 libs
 Priority: optional
-Filename: pool/main/libx/libxpertmass/libxpertmasscore1_1.16.1-1_amd64.deb
-Size: 582548
-MD5sum: 50369e4b9fd9fc963404ba31154b9191
-SHA256: 78372163cdaf92f0ec3e6e52588c4ace0676a962da309fea7786288d7b9824d2
+Filename: pool/main/libx/libxpertmass/libxpertmasscore1_1.17.1-1_amd64.deb
+Size: 693048
+MD5sum: a49f6b501813512f74c330ffd2f79711
+SHA256: 14601e1220373f06cee1a835acf08189e4ff230961ba41622ffb652f92456fec
 
 Package: libxpertmassgui1
 Source: libxpertmass
-Version: 1.16.1-1
-Installed-Size: 967
+Version: 1.17.1-1
+Installed-Size: 1003
 Maintainer: The Debichem Group <debichem-devel@lists.alioth.debian.org>
 Architecture: amd64
-Replaces: libxpertmassgui1 (<< 1.16.1-1)
-Depends: libxpertmasscore1 (= 1.16.1-1), libboost-atomic1.90.0 (>= 1.90.0), libboost-chrono1.90.0 (>= 1.90.0), libboost-container1.90.0 (>= 1.90.0), libboost-date-time1.90.0 (>= 1.90.0), libboost-filesystem1.90.0 (>= 1.90.0), libboost-iostreams1.90.0 (>= 1.90.0), libboost-random1.90.0 (>= 1.90.0), libboost-regex1.90.0 (>= 1.90.0), libboost-thread1.90.0 (>= 1.90.0), libbz2-1.0, libc6 (>= 2.32), libgcc-s1 (>= 3.0), libglx0, libisospec++2t64 (>= 2.3.2), liblzf1 (>= 1.5), libodsstream0 (>= 0.9.14), libopengl0, libpappsomspp-gui0 (>= 0.11.26-1), libpwizlite3t64 (>= 3.0.14), libqcustomplot2.1-qt6 (>= 2.1.1+dfsg1), libqscintilla2-qt6-15 (>= 2.13.3), libqt6concurrent6 (>= 6.1.2), libqt6core5compat6 (>= 6.6.0), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.4.0), libqt6network6 (>= 6.1.2), libqt6printsupport6 (>= 6.1.2), libqt6qml6 (>= 6.6.0), libqt6sql6 (>= 6.1.2), libqt6svg6 (>= 6.6.0), libqt6widgets6 (>= 6.8.2), libqt6xml6 (>= 6.1.2), libquazip1-qt6-1.7 (>= 1.7.2), libsqlite3-0 (>= 3.5.9), libstdc++6 (>= 13.1), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
+Replaces: libxpertmassgui1 (<< 1.17.1-1)
+Depends: libxpertmasscore1 (= 1.17.1-1), libboost-atomic1.90.0 (>= 1.90.0), libboost-chrono1.90.0 (>= 1.90.0), libboost-container1.90.0 (>= 1.90.0), libboost-date-time1.90.0 (>= 1.90.0), libboost-filesystem1.90.0 (>= 1.90.0), libboost-iostreams1.90.0 (>= 1.90.0), libboost-random1.90.0 (>= 1.90.0), libboost-regex1.90.0 (>= 1.90.0), libboost-thread1.90.0 (>= 1.90.0), libbz2-1.0, libc6 (>= 2.32), libgcc-s1 (>= 3.0), libglx0, libisospec++2t64 (>= 2.3.2), liblzf1 (>= 1.5), libodsstream0 (>= 0.9.14), libopengl0, libpappsomspp-gui0 (>= 0.11.26-1), libpwizlite3t64 (>= 3.0.14), libqcustomplot2.1-qt6 (>= 2.1.1+dfsg1), libqscintilla2-qt6-15 (>= 2.13.3), libqt6concurrent6 (>= 6.1.2), libqt6core5compat6 (>= 6.6.0), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.4.0), libqt6network6 (>= 6.1.2), libqt6printsupport6 (>= 6.1.2), libqt6qml6 (>= 6.6.0), libqt6sql6 (>= 6.1.2), libqt6svg6 (>= 6.6.0), libqt6widgets6 (>= 6.8.2), libqt6xml6 (>= 6.1.2), libquazip1-qt6-1.7 (>= 1.7.2), libsqlite3-0 (>= 3.5.9), libstdc++6 (>= 13.1), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
 Conflicts: libxpertmassgui1
 Description: C++ mass spectrometry libraries (GUI runtime files)
 Multi-Arch: same
@@ -81260,10 +81298,10 @@ Homepage: http://www.msxpertsuite.org/xpertmass/
 Description-md5: 0fcc702af88a56a750505f6527ffdc5b
 libs
 Priority: optional
-Filename: pool/main/libx/libxpertmass/libxpertmassgui1_1.16.1-1_amd64.deb
-Size: 239472
-MD5sum: 80897f6f15fafecdd400f47f4c3bd369
-SHA256: 929b6885c918dfc0afc18617b59888e517e142e9684a80ce8471cdd1a14ff775
+Filename: pool/main/libx/libxpertmass/libxpertmassgui1_1.17.1-1_amd64.deb
+Size: 251268
+MD5sum: f87bc4d4f0c681ff3d69906aaff4b428
+SHA256: 221e4599ae28c8294abbea7e4053cfda07f56247d2f9f81cf242590424933d0c
 
 Package: libxpm4
 Source: libxpm
@@ -86630,8 +86668,8 @@ SHA256: e6d203343d6031d486a3a0c651b44c3f9c1672bf93831c264a17e37588a1cba9
 
 Package: libm17n-0
 Source: m17n-lib (1.8.6-1)
-Version: 1.8.6-1+b2
-Installed-Size: 686
+Version: 1.8.6-1+b3
+Installed-Size: 702
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
 Depends: m17n-db, libc6 (>= 2.38), libfontconfig1 (>= 2.12.6), libfreetype6 (>= 2.2.1), libfribidi0 (>= 0.19.2), libgd3 (>= 2.1.0~alpha~), libotf1 (>= 0.9.16), libthai0 (>= 0.1.12), libx11-6, libxft2 (>> 2.1.1), libxml2-16 (>= 2.14.1), libxt6t64
@@ -86643,10 +86681,10 @@ Description-md5: 246a450e6bd01a098f1121b3d4600f87
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/m/m17n-lib/libm17n-0_1.8.6-1+b2_amd64.deb
-Size: 260812
-MD5sum: e7f339db193442234ea75fdd9cd12004
-SHA256: 37a6c9c6a6a1cdfc6243a86f499c5aca558a8000564aa83cdd47f3f2c962f976
+Filename: pool/main/m/m17n-lib/libm17n-0_1.8.6-1+b3_amd64.deb
+Size: 271108
+MD5sum: c944c888ddce89a9a11d88283c61036b
+SHA256: e5f89d48e368c63d576fe53e078ba4246e19b3b573d5e2684079842124a80df1
 
 Package: libm4api0.3t64
 Source: m4api
@@ -91662,23 +91700,25 @@ Size: 201816
 MD5sum: 37917eb25f8b9138ce7a24dd3af89efa
 SHA256: 275ea87b410493061d9585eb3534acb6ff2104fdc88f2204445c876deaf27b69
 
-Package: libmupdf27.0
+Package: libmupdf28.2
 Source: mupdf
-Version: 1.27.0+ds1-6
-Installed-Size: 75797
+Version: 1.28.2+ds1-2
+Installed-Size: 76146
 Maintainer: Kan-Ru Chen (陳侃如) <koster@debian.org>
 Architecture: amd64
-Depends: libjbig2dec0 (>= 0.19), libbrotli1 (>= 0.6.0), libc6 (>= 2.38), libfreetype6 (>= 2.6), libgcc-s1 (>= 3.0), libgumbo3 (>= 0.13.0), libharfbuzz0b (>= 0.9.42), libjpeg62-turbo (>= 1.3.1), libmujs3 (>= 1.3.8), libopenjp2-7 (>= 2.0.0), libstdc++6 (>= 5.2), zlib1g (>= 1:1.2.0)
+Replaces: libmupdf28.0 (<< 1.28.2+ds1-1~)
+Depends: libjbig2dec0 (>= 0.19), libbrotli1 (>= 0.6.0), libc6 (>= 2.43), libcmark-gfm-extensions0.29.0.gfm.13 (>= 0.29.0.gfm.13), libcmark-gfm0.29.0.gfm.13 (>= 0.29.0.gfm.13), libfreetype6 (>= 2.6), libgcc-s1 (>= 3.0), libgumbo3 (>= 0.13.0), libharfbuzz0b (>= 0.9.42), libjpeg62-turbo (>= 1.3.1), libleptonica6, libmujs3 (>= 1.3.8), libopenjp2-7 (>= 2.0.0), libstdc++6 (>= 13), libtesseract5 (>= 5.5.0), zlib1g (>= 1:1.2.0)
+Breaks: libmupdf28.0 (<< 1.28.2+ds1-1~)
 Description: shared library for the MuPDF viewer
 Homepage: https://mupdf.com/
-Built-Using: fonts-android (= 1:8.1.0r7-1~1.gbp36536b), fonts-noto (= 20201225-6), fonts-noto-cjk (= 1:20240730+repack1-1), fonts-sil-charis (= 6.200-1), fonts-urw-base35 (= 20200910-9), texlive-extra (= 2026.20260328-5)
+Built-Using: fonts-android (= 1:8.1.0r7-1~1.gbp36536b), fonts-noto (= 20201225-6), fonts-noto-cjk (= 1:20240730+repack1-1), fonts-sil-charis (= 6.200-1), fonts-urw-base35 (= 20200910-9), texlive-extra (= 2026.20260711-2)
 Description-md5: d083b8a93eeb2faa1ea3f2d4e7f2fa79
 libs
 Priority: optional
-Filename: pool/main/m/mupdf/libmupdf27.0_1.27.0+ds1-6_amd64.deb
-Size: 31673924
-MD5sum: 32e2cde039d48a458e652972d8d4c607
-SHA256: f7f3ed2b6f13b3b068f458aeae106ea6a42002c241b665f8d76d09e4ac9c5702
+Filename: pool/main/m/mupdf/libmupdf28.2_1.28.2+ds1-2_amd64.deb
+Size: 31777252
+MD5sum: 09d38ccd79c6c6453085c2ecd4e58226
+SHA256: f940435afb54e0a120feee67dcdf1b4d3452f247ef54c48bb8d3b61599a8e473
 
 Package: libmupen64plus2
 Source: mupen64plus-core
@@ -100557,8 +100597,8 @@ SHA256: 4ed799635128ffcbce540e806194b4835328516e2c6259c343743e7a0dbed57f
 
 Package: libpdfio1
 Source: pdfio
-Version: 1.6.3+dfsg-2
-Installed-Size: 200
+Version: 1.6.5+dfsg-1
+Installed-Size: 196
 Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libpng16-16t64 (>= 1.6.46), zlib1g (>= 1:1.1.4)
@@ -100568,10 +100608,10 @@ Homepage: https://www.msweet.org/pdfio/
 Description-md5: 6865db77a7c330b85bb515979967073c
 libs
 Priority: optional
-Filename: pool/main/p/pdfio/libpdfio1_1.6.3+dfsg-2_amd64.deb
-Size: 77840
-MD5sum: 89e7becd71e68d9f7857b958eec4ad79
-SHA256: c50674d8457088ea8e7f98ab44ccb20e0543380b4ffba5d05e48a8f8eaf206c7
+Filename: pool/main/p/pdfio/libpdfio1_1.6.5+dfsg-1_amd64.deb
+Size: 78312
+MD5sum: fcad3ba033e7fba151ff29d0616c47b9
+SHA256: f1974dd674a6d3f9985d3a162a5bd4fa9751365fcf41877b618e18339f182928
 
 Package: pdqsort-dev
 Source: pdqsort
@@ -123831,9 +123871,9 @@ MD5sum: 1c9c6f938eb3e38fd00cb19ace584619
 SHA256: 927c70dc6f1fab74814485f53a64b1e94c102b0a19a836f5bffe05edfe4366e3
 
 Package: libswupdate0.1
-Source: swupdate
-Version: 2026.05.1+dfsg-1
-Installed-Size: 164
+Source: swupdate (2026.05.1+dfsg-1)
+Version: 2026.05.1+dfsg-1+b1
+Installed-Size: 165
 Maintainer: Debian IoT Maintainers <debian-iot-maintainers@alioth-lists.debian.net>
 Architecture: amd64
 Depends: libc6 (>= 2.34)
@@ -123844,10 +123884,10 @@ Description-md5: 48ccd008c9c84f73e934d9ff263c5943
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/s/swupdate/libswupdate0.1_2026.05.1+dfsg-1_amd64.deb
-Size: 37000
-MD5sum: 465497c48154e84f96824c9a7e27cbbd
-SHA256: cacebd9004427419cf880cd31e83474ea5abd37309ac7d722ee582987065ce54
+Filename: pool/main/s/swupdate/libswupdate0.1_2026.05.1+dfsg-1+b1_amd64.deb
+Size: 37272
+MD5sum: 3577d10eb2415434183ddfa51e62a033
+SHA256: 1e83087389030f653313d71247c9a0f7c044bbd1047e5e1e560fa6a0a2093248
 
 Package: libsymmetrica3
 Source: symmetrica (3.1.0+ds-2)
@@ -124977,7 +125017,7 @@ SHA256: 46c16e2874c56c4f62ded8cc57990d047e4c4059e3988cdb83ca3c4fc2ea2157
 
 Package: libtelepathy-qt5-0
 Source: telepathy-qt
-Version: 0.9.8+git16.g04302908-4
+Version: 0.9.8+git16.g04302908-5
 Installed-Size: 4608
 Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
 Architecture: amd64
@@ -124989,18 +125029,18 @@ Description-md5: dacff9664347699bb76fe688c7f19ca2
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/t/telepathy-qt/libtelepathy-qt5-0_0.9.8+git16.g04302908-4_amd64.deb
-Size: 1131996
-MD5sum: 7850ecb1fb1db046fc197e32cd425553
-SHA256: 8f1e818b1619f65b8d9a10e1092509316d1f759da5dcb16f982dfa9cc709516a
+Filename: pool/main/t/telepathy-qt/libtelepathy-qt5-0_0.9.8+git16.g04302908-5_amd64.deb
+Size: 1131892
+MD5sum: 17d842bf3712176447652b79f600e403
+SHA256: 0ea05e1dc734b018d19f3417cffb508b012b68888794f0c3057d7bbb664d8066
 
 Package: libtelepathy-qt5-farstream0
 Source: telepathy-qt
-Version: 0.9.8+git16.g04302908-4
+Version: 0.9.8+git16.g04302908-5
 Installed-Size: 47
 Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
 Architecture: amd64
-Depends: libtelepathy-qt5-0 (= 0.9.8+git16.g04302908-4), libc6 (>= 2.4), libgcc-s1 (>= 3.3.1), libglib2.0-0t64 (>= 2.12.0), libqt5core5t64 (>= 5.15.1), libstdc++6 (>= 4.1.1), libtelepathy-farstream3 (>= 0.5.0), libtelepathy-glib0t64 (>= 0.17.5)
+Depends: libtelepathy-qt5-0 (= 0.9.8+git16.g04302908-5), libc6 (>= 2.4), libgcc-s1 (>= 3.3.1), libglib2.0-0t64 (>= 2.12.0), libqt5core5t64 (>= 5.15.1), libstdc++6 (>= 4.1.1), libtelepathy-farstream3 (>= 0.5.0), libtelepathy-glib0t64 (>= 0.17.5)
 Description: Telepathy/Farsight integration - Qt 5 library
 Multi-Arch: same
 Homepage: https://telepathy.freedesktop.org/wiki/
@@ -125008,14 +125048,14 @@ Description-md5: 5dbfede9b048d543a72c1c05878cf6e0
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/t/telepathy-qt/libtelepathy-qt5-farstream0_0.9.8+git16.g04302908-4_amd64.deb
-Size: 11800
-MD5sum: c5893ebe805468e3a016a7d2d401c183
-SHA256: 5660d337ce6cc86afdd87628e30316e368db59ac4fa3b796173cc90b02f0f140
+Filename: pool/main/t/telepathy-qt/libtelepathy-qt5-farstream0_0.9.8+git16.g04302908-5_amd64.deb
+Size: 11924
+MD5sum: 1ef05318f956740287b98207560abd9d
+SHA256: 58a1688da5e48c0831e55b6030d23de34909094962bd7ed0f74a1cf0dcbd111d
 
 Package: libtelepathy-qt6-0
 Source: telepathy-qt
-Version: 0.9.8+git16.g04302908-4
+Version: 0.9.8+git16.g04302908-5
 Installed-Size: 6263
 Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
 Architecture: amd64
@@ -125026,28 +125066,28 @@ Homepage: https://telepathy.freedesktop.org/wiki/
 Description-md5: ae0455535e42dc737449daf140b83800
 libs
 Priority: optional
-Filename: pool/main/t/telepathy-qt/libtelepathy-qt6-0_0.9.8+git16.g04302908-4_amd64.deb
-Size: 1442204
-MD5sum: 10796ac19db0d52b4a4fec244e9c27b4
-SHA256: 9e36c5bdf3b6392f0671528291cfd5e063a1c6cc927c914cf4d879e4ef3c4ee4
+Filename: pool/main/t/telepathy-qt/libtelepathy-qt6-0_0.9.8+git16.g04302908-5_amd64.deb
+Size: 1442452
+MD5sum: 8c6ece8cd406a44d48cb8957f7dc0dc9
+SHA256: 8c4f50a0d3d4277eecd94a0dd368653ec853ae4906bc5bbd03d5ac8a80aa77f7
 
 Package: libtelepathy-qt6-farstream0
 Source: telepathy-qt
-Version: 0.9.8+git16.g04302908-4
+Version: 0.9.8+git16.g04302908-5
 Installed-Size: 44
 Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
 Architecture: amd64
-Depends: libtelepathy-qt6-0 (= 0.9.8+git16.g04302908-4), libc6 (>= 2.4), libgcc-s1 (>= 3.3.1), libglib2.0-0t64 (>= 2.12.0), libqt6core6t64 (>= 6.10.2), libstdc++6 (>= 5), libtelepathy-farstream3 (>= 0.5.0), libtelepathy-glib0t64 (>= 0.17.5)
+Depends: libtelepathy-qt6-0 (= 0.9.8+git16.g04302908-5), libc6 (>= 2.4), libgcc-s1 (>= 3.3.1), libglib2.0-0t64 (>= 2.12.0), libqt6core6t64 (>= 6.10.2), libstdc++6 (>= 5), libtelepathy-farstream3 (>= 0.5.0), libtelepathy-glib0t64 (>= 0.17.5)
 Description: Telepathy/Farsight integration - Qt 6 library
 Multi-Arch: same
 Homepage: https://telepathy.freedesktop.org/wiki/
 Description-md5: 1011556a86ef1ffc9a4acb106112bffc
 libs
 Priority: optional
-Filename: pool/main/t/telepathy-qt/libtelepathy-qt6-farstream0_0.9.8+git16.g04302908-4_amd64.deb
-Size: 11688
-MD5sum: 09a5a856c59604cb0ffdc263fa91febb
-SHA256: 16f11e102ef94dbbbdbceff49455e5db95ddca44e17f89440ee90a0462abba52
+Filename: pool/main/t/telepathy-qt/libtelepathy-qt6-farstream0_0.9.8+git16.g04302908-5_amd64.deb
+Size: 11796
+MD5sum: 19beae65afcdf88fc8144b50df75a78a
+SHA256: bf662785bc31bc5b2c1e26cab036ae02f78cc11104b174b04809d4d9dcbe83a9
 
 Package: libtemplate-glib-1.0-0
 Source: template-glib
@@ -127258,9 +127298,9 @@ MD5sum: efb1c639da98e209bf5b58ced78ebd5e
 SHA256: 3ab991f74f3ed7cf0756842d6c62dc35976c04cc29250c2af584db644a941534
 
 Package: libucl1
-Source: ucl (1.03+repack-6)
-Version: 1.03+repack-6+b4
-Installed-Size: 89
+Source: ucl
+Version: 1.03+repack-6.1
+Installed-Size: 88
 Maintainer: Robert Luberda <robert@debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.14)
@@ -127271,10 +127311,10 @@ Description-md5: 305d9f4fbeae07df4577e6af524e4d70
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/u/ucl/libucl1_1.03+repack-6+b4_amd64.deb
-Size: 27924
-MD5sum: 90d3056bcc3281bcadf9df0927f5aaf7
-SHA256: cfd491272e4173f9231e5228a03e62126738c9283dd5f83bc89604bf1ce401cc
+Filename: pool/main/u/ucl/libucl1_1.03+repack-6.1_amd64.deb
+Size: 28632
+MD5sum: dbd30cde2dfb4830879ea609cb935df4
+SHA256: 244f4be42db0b797e338df50712a4edac863a316ac4528fe111dd85d4c4b30c9
 
 Package: libucommon8t64
 Source: ucommon (7.0.1-1)
@@ -127612,13 +127652,13 @@ MD5sum: 32045b854e181d37435f12812a894b13
 SHA256: fd656ff04013e8d66714e720d3a16a70b0eb307cbb2912b1a27c41a83520128a
 
 Package: libuim-custom2
-Source: uim (1:1.9.6-1)
-Version: 1:1.9.6-1+b4
-Installed-Size: 66
+Source: uim
+Version: 1:1.9.6-1.1
+Installed-Size: 65
 Maintainer: NOKUBI Takatsugu <knok@daionet.gr.jp>
 Architecture: amd64
 Replaces: uim-common (<< 1:1.8.6+gh20161003.0.d63dadd-5~)
-Depends: libc6 (>= 2.38), libuim-scm0 (>= 1:1.5.7), libuim8 (= 1:1.9.6-1+b4)
+Depends: libc6 (>= 2.38), libuim-scm0 (>= 1:1.5.7), libuim8 (= 1:1.9.6-1.1)
 Breaks: uim-common (<< 1:1.8.6+gh20161003.0.d63dadd-5~)
 Description: Universal Input Method - uim-custom API library
 Multi-Arch: same
@@ -127627,19 +127667,19 @@ Description-md5: 95ecf48b184888c048deac99b4aeb3e8
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/u/uim/libuim-custom2_1.9.6-1+b4_amd64.deb
-Size: 18824
-MD5sum: 2523f7102e27e9486d22fd8441798085
-SHA256: ced19c8396e1f756032a3c6c17703d877b107fe15368d92b86455a0f2bc53aa2
+Filename: pool/main/u/uim/libuim-custom2_1.9.6-1.1_amd64.deb
+Size: 19188
+MD5sum: 111febf1ae20a81d0a01a791f569f97f
+SHA256: b59fc467e6df0af13a74babe74f8b789e0deec268fab335b1b3e215f91ab1a89
 
 Package: libuim-scm0
-Source: uim (1:1.9.6-1)
-Version: 1:1.9.6-1+b4
-Installed-Size: 191
+Source: uim
+Version: 1:1.9.6-1.1
+Installed-Size: 194
 Maintainer: NOKUBI Takatsugu <knok@daionet.gr.jp>
 Architecture: amd64
 Replaces: uim-common (<< 1:1.8.6+gh20161003.0.d63dadd-5~)
-Depends: libc6 (>= 2.38), libgcroots0 (>= 0.9.0), libuim8 (= 1:1.9.6-1+b4)
+Depends: libc6 (>= 2.38), libgcroots0 (>= 0.9.0), libuim8 (= 1:1.9.6-1.1)
 Breaks: uim-common (<< 1:1.8.6+gh20161003.0.d63dadd-5~)
 Description: Universal Input Method - uim-scm API library
 Multi-Arch: same
@@ -127648,15 +127688,15 @@ Description-md5: 3b232a735696f1e6e82c20b0998e8f53
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/u/uim/libuim-scm0_1.9.6-1+b4_amd64.deb
-Size: 59868
-MD5sum: 0b06832287234fb684f6cfa792a41da1
-SHA256: b3d007ae1b1e2ea0e42d7c05d9ea28b167dc2c45382ceb784119c7dc921f4239
+Filename: pool/main/u/uim/libuim-scm0_1.9.6-1.1_amd64.deb
+Size: 62328
+MD5sum: dd6c40ea72b4a0e221161964557d32c4
+SHA256: 37c41e4b98ca34a0f1f73973ccfb03d51bead9ec28a833e0bb5089756ed977f1
 
 Package: libuim8
-Source: uim (1:1.9.6-1)
-Version: 1:1.9.6-1+b4
-Installed-Size: 132
+Source: uim
+Version: 1:1.9.6-1.1
+Installed-Size: 131
 Maintainer: NOKUBI Takatsugu <knok@daionet.gr.jp>
 Architecture: amd64
 Replaces: uim (<< 1:1.8.8-9.4~), uim-common (<< 1:1.8.6+gh20161003.0.d63dadd-5~)
@@ -127669,10 +127709,10 @@ Description-md5: be939239d1627c4303df37c61d2d92f9
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/u/uim/libuim8_1.9.6-1+b4_amd64.deb
-Size: 36224
-MD5sum: e09c27f4e795720fa16582d76342f7e3
-SHA256: 86c19fab554ab0352fb36fb2ca004c2e03be8cb4543298aeb1ca8e30b2860ea5
+Filename: pool/main/u/uim/libuim8_1.9.6-1.1_amd64.deb
+Size: 36208
+MD5sum: 11854503d30d4bfba91136b3ad396848
+SHA256: d3c7c720f24a67707bc08a46d36b975357b45a92c96dc01321da23218214a582
 
 Package: libukui-appwidget-manager0
 Source: ukui-app-widget
@@ -130199,8 +130239,8 @@ SHA256: 7ff27d84063f463baea5ee7687bcd8fde63ebba669c754b12aba1d2792327e48
 
 Package: libwayland-client++1
 Source: waylandpp
-Version: 1.0.1-2
-Installed-Size: 1189
+Version: 1.0.1-3
+Installed-Size: 1193
 Maintainer: Georges Khaznadar <georgesk@debian.org>
 Architecture: amd64
 Replaces: libwayland-client++0
@@ -130213,14 +130253,14 @@ Description-md5: 5cab03ca2a30aca348233648c7ee75f0
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/w/waylandpp/libwayland-client++1_1.0.1-2_amd64.deb
-Size: 183976
-MD5sum: 14faee3d8962baf12c6e89411942b49b
-SHA256: de1fbe209f44aafe2e2403cc221f6fcb9ac808f2d6dd524ae694fcee521b900f
+Filename: pool/main/w/waylandpp/libwayland-client++1_1.0.1-3_amd64.deb
+Size: 188048
+MD5sum: 1f9c507343bf2e93a72fcf0a7b380386
+SHA256: 12e66782530ebb98c830524d74d2e50b6b020adbbca23aa989cb4c117bb3a505
 
 Package: libwayland-client-extra++1
 Source: waylandpp
-Version: 1.0.1-2
+Version: 1.0.1-3
 Installed-Size: 156
 Maintainer: Georges Khaznadar <georgesk@debian.org>
 Architecture: amd64
@@ -130234,15 +130274,15 @@ Description-md5: d0d4481a0aa68b05449b4ef6ed79f317
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/w/waylandpp/libwayland-client-extra++1_1.0.1-2_amd64.deb
-Size: 30260
-MD5sum: a69c8c372efb1bc86e0aec309eb2b15e
-SHA256: f5127ed2df794a8244106258d775c8dc427ec6754eb75aa6c81d18edbdfbf478
+Filename: pool/main/w/waylandpp/libwayland-client-extra++1_1.0.1-3_amd64.deb
+Size: 30608
+MD5sum: 63f9815e7e8c7a0b237616bff9f50e64
+SHA256: 3651cbbde830db9562e506da56c6f6408840b458a9c88dfaa2e6362a297a82d0
 
 Package: libwayland-cursor++1
 Source: waylandpp
-Version: 1.0.1-2
-Installed-Size: 40
+Version: 1.0.1-3
+Installed-Size: 44
 Maintainer: Georges Khaznadar <georgesk@debian.org>
 Architecture: amd64
 Replaces: libwayland-cursor++0
@@ -130255,14 +130295,14 @@ Description-md5: 729d091c9892800465b2fe3df685da28
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/w/waylandpp/libwayland-cursor++1_1.0.1-2_amd64.deb
-Size: 9684
-MD5sum: 4788ab408c72b51c59ca8f816cc4879c
-SHA256: 13d58e8f1bd35e954f9c7517e9aa794f87cf5652887759be57932107b7f1983b
+Filename: pool/main/w/waylandpp/libwayland-cursor++1_1.0.1-3_amd64.deb
+Size: 10272
+MD5sum: b17c9d92278c4dd37a0454f65095f846
+SHA256: 54bb8796afecf540afa3884be8caacf0d40b1605a645577ed3c94fa56a6e607f
 
 Package: libwayland-egl++1
 Source: waylandpp
-Version: 1.0.1-2
+Version: 1.0.1-3
 Installed-Size: 40
 Maintainer: Georges Khaznadar <georgesk@debian.org>
 Architecture: amd64
@@ -130276,15 +130316,15 @@ Description-md5: 2ebdd495f3690b4c6726cea0b2c08789
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/w/waylandpp/libwayland-egl++1_1.0.1-2_amd64.deb
-Size: 7972
-MD5sum: 1d9b7fbeeffff26e32fae065c9aab95a
-SHA256: 382e516e139fda4189303a6a954e72bca1e4f8402fb5e00920fb2dbda04d807a
+Filename: pool/main/w/waylandpp/libwayland-egl++1_1.0.1-3_amd64.deb
+Size: 8368
+MD5sum: 66813e0d0986d9d684f14d18154eb80d
+SHA256: f53084e31b9726da55283c7baa2d383c4a1dd20954dcbe0bb9f1a2d8f268a595
 
 Package: libwayland-server++1
 Source: waylandpp
-Version: 1.0.1-2
-Installed-Size: 1093
+Version: 1.0.1-3
+Installed-Size: 1109
 Maintainer: Georges Khaznadar <georgesk@debian.org>
 Architecture: amd64
 Replaces: libwayland-server++0
@@ -130297,10 +130337,10 @@ Description-md5: 8e336945346055a78432d3c2f280b2a9
 Tag: role::shared-lib
 libs
 Priority: optional
-Filename: pool/main/w/waylandpp/libwayland-server++1_1.0.1-2_amd64.deb
-Size: 178712
-MD5sum: 2224d4ab6a4b6fdb1335542003e27551
-SHA256: be0678509062bc6a8b7813c0fdb881989d2ec14cffb2f0c25f3c97dc59de3f9e
+Filename: pool/main/w/waylandpp/libwayland-server++1_1.0.1-3_amd64.deb
+Size: 183540
+MD5sum: be36b4832120c826f8453ce8c4f21a06
+SHA256: 4b743e43abb346c0160a7dd1203c1b81c34db191e64c7ba0c0b495395dae86e2
 
 Package: libwbxml2-1
 Source: wbxml2

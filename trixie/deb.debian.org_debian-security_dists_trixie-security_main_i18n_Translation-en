@@ -22059,6 +22059,149 @@ Description-en: GeoIP database for Tor
  Tor controllers like arm or Vidalia can use it, or if they want to
  configure path selection preferences.
 
+Package: tryton-modules-company
+Description-md5: 1b8b94d0d0d3af0072cdf9a19b44c88c
+Description-en: Tryton application platform - company module
+ Tryton is a high-level general purpose application platform. It is the base
+ of a complete business solution as well as a comprehensive health and hospital
+ information system (GNUHealth).
+ .
+ This package defines company and employees:
+ .
+  * Add main and current company on users preferences.
+  * Add company on properties.
+  * Define new report parser for report with company header.
+  * Add letter template on party.
+  * Make the scheduler run on each company.
+
+Package: tryton-modules-marketing-automation
+Description-md5: 6e84c7a9252c9fe0031101d55b4a66d6
+Description-en: Tryton application platform - marketing automation module
+ Tryton is a high-level general purpose application platform. It is the base
+ of a complete business solution as well as a comprehensive health and hospital
+ information system (GNUHealth).
+ .
+ The marketing_automation module allows marketing actions to be automated. It is
+ based on scenarios and activities that are executed on selected records.
+ .
+ Scenario
+ ********
+ .
+ A scenario provides the entry point for records into an automated marketing
+ campaign. Each record can only enter a scenario once.
+ .
+ A cron task runs periodically to find new records to apply the scenario to.
+ .
+ Activity
+ ********
+ .
+ The activities form a scenario. They define which action should be triggered
+ and when it should happen. The activities are organized as a tree.
+ .
+ Actions
+ *******
+ .
+ Send E-Mail
+ .
+ The activity send an e-mail to the party defined on the record.
+ The E-mail is composed using an HTML `Genshi <https://genshi.edgewall.org/>`_
+ template with `record` in the evaluation context.
+ All `<a>` elements have their `href` replaced by a shortened version used to
+ trigger children activities. If the `href` value is `unsubscribe`, it is
+ replaced by the URL which allows the recipient to block their record for the
+ scenario.
+ A empty image is automatically added at the end of the `<body>` to track when
+ emails are opened.
+ .
+ Record
+ ******
+ .
+ It stores a reference to the records included in each scenario. If the record
+ is blocked, no activity will be triggered for the record.
+ .
+ Record Activity
+ ***************
+ .
+ It stores the state of a record for an activity of the scenario.
+ .
+ A cron task runs periodically to execute any waiting record activity that is
+ due.
+ .
+ Configuration
+ *************
+ .
+ The marketing_automation module uses parameters from the section:
+ .
+ [marketing]:
+  - `email_from`: The default `From` for the email.
+  - `automation_base`: The base URL without a path for the unsubscribe URL
+     and the empty image.
+     The default value is created using the configuration `[web]` `hostname`.
+
+Package: tryton-modules-marketing-email
+Description-md5: 78116e728ff61784b3ce143002f6e35c
+Description-en: Tryton application platform - marketing email module
+ Tryton is a high-level general purpose application platform. It is the base
+ of a complete business solution as well as a comprehensive health and hospital
+ information system (GNUHealth).
+ .
+ The marketing_email module manages mailing lists.
+ .
+ Mailing List
+ ************
+ .
+ A mailing list groups emails under a name and a language
+ .
+ Email
+ *****
+ .
+ It stores emails for a mailing list and provides links to the related party or
+ web user.
+ .
+ Two actions are available:
+ .
+  - *Request Subscribe* which sends an e-mail to confirm the subscription to a
+   list.
+ .
+  - *Request Unsubscribe* which sends an e-mail to confirm the unsubscription of
+   an email address from the list.
+ .
+ Message
+ *******
+ .
+ It stores a message to send to all e-mails addresses on a list. A message is
+ defined by:
+ .
+     * From: the address from which the message is sent.
+     * List: the list of addresses to send the message to.
+     * Title
+     * Content
+     * State:
+ .
+         * Draft
+         * Sending
+         * Sent
+ .
+ A wizard is available that sends a message to a unique e-mail address from the
+ list for test purposes.
+ .
+ Configuration
+ *************
+ .
+ The marketing_email module uses parameters from the section:
+ .
+  - `[marketing]`:
+ .
+     - `email_from`: The default `From` for the e-mails that get sent.
+ .
+     - `email_subscribe_url`: the URL to confirm the subscription to which the
+       parameter `token` will be added.
+ .
+     - `email_unsubscribe_url`: the URL to unsubscribe an e-mail address to
+       which the parameter `token` will be added.
+ .
+     - `email_spy_pixel`: A boolean to activate spy pixel. Disable by default.
+
 Package: tryton-sao
 Description-md5: e21bcc92cad3abd9f738228c831b1885
 Description-en: Tryton application platform - web client
