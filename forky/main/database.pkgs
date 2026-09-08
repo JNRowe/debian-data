@@ -53,12 +53,12 @@ MD5sum: a7405348ed7fbb1aa90d87d716f88b1e
 SHA256: f5fd3ff032866006556f5603103596e1fd9ab5cbc366ec187fc7f28bcfccbdca
 
 Package: barman
-Version: 3.19.1-3
-Installed-Size: 185
+Version: 3.20.0-2
+Installed-Size: 193
 Maintainer: Marco Nenciarini <mnencia@debian.org>
 Architecture: all
 Replaces: barman-cli (<< 3.18~)
-Depends: python3-barman (= 3.19.1-3), adduser, file, rsync, python3:any
+Depends: python3-barman (= 3.20.0-2), file, rsync, systemd | systemd-standalone-sysusers | systemd-sysusers, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, python3:any
 Recommends: openssh-server, openssh-client, postgresql-client, python3-argcomplete, polkitd
 Suggests: barman-cli, repmgr
 Breaks: barman-cli (<< 3.18~)
@@ -67,18 +67,18 @@ Homepage: https://pgbarman.org
 Description-md5: c01daa785e513f09a6935c6fe6b4365b
 database
 Priority: optional
-Filename: pool/main/b/barman/barman_3.19.1-3_all.deb
-Size: 128596
-MD5sum: a70656bc33033c47a4425a0a54770f4d
-SHA256: 3ce8a8888c579098debdd646aae210b2f62bc69c12526620deec53b31a4d536b
+Filename: pool/main/b/barman/barman_3.20.0-2_all.deb
+Size: 137280
+MD5sum: 5ed8b6aa77a5bb25e34f8139c59c5d75
+SHA256: 14351feb7c7180d813ca20e013eeda36691f1cbe399cc094d92768b7f550c5ee
 
 Package: barman-cli
 Source: barman
-Version: 3.19.1-3
+Version: 3.20.0-2
 Installed-Size: 21
 Maintainer: Marco Nenciarini <mnencia@debian.org>
 Architecture: all
-Depends: python3-barman (= 3.19.1-3), rsync, python3:any
+Depends: python3-barman (= 3.20.0-2), rsync, python3:any
 Recommends: openssh-client
 Suggests: barman-cli-cloud
 Description: Client utilities for the integration of Barman in PostgreSQL clusters
@@ -86,29 +86,29 @@ Homepage: https://pgbarman.org
 Description-md5: ecc6d72b61d496bc456c157361167032
 database
 Priority: optional
-Filename: pool/main/b/barman/barman-cli_3.19.1-3_all.deb
-Size: 9028
-MD5sum: 0c6850f42ee8d8e386ccf740b68d1b3a
-SHA256: 617e016c145431452a6f9abb989d7aa7b44e827839cc4a628464a5b4f4472461
+Filename: pool/main/b/barman/barman-cli_3.20.0-2_all.deb
+Size: 9412
+MD5sum: 4296feaefff95b85c00a07a6ed302b29
+SHA256: 66ad1c901b5226e846142f86ee4800939d9fb5dc4afdfd8c3093401eb14cbeda
 
 Package: barman-cli-cloud
 Source: barman
-Version: 3.19.1-3
-Installed-Size: 53
+Version: 3.20.0-2
+Installed-Size: 56
 Maintainer: Marco Nenciarini <mnencia@debian.org>
 Architecture: all
 Replaces: barman-cli (<< 2.10-3~~)
-Depends: python3-barman (= 3.19.1-3), rsync, python3:any, python3-boto3
+Depends: python3-barman (= 3.20.0-2), rsync, python3:any, python3-boto3
 Breaks: barman-cli (<< 2.10-3~~)
 Description: Cloud client utilities for the integration of Barman in PostgreSQL clusters
 Homepage: https://pgbarman.org
 Description-md5: f53a41a5e1b849dd3c87b8bf761b0a11
 database
 Priority: optional
-Filename: pool/main/b/barman/barman-cli-cloud_3.19.1-3_all.deb
-Size: 31088
-MD5sum: 6bc425a5e71844105a0f1f6a6fc34900
-SHA256: c285a7731877cfa228c770ab70d958bd8f015c9c3c1842f9c4cf00e598d4edff
+Filename: pool/main/b/barman/barman-cli-cloud_3.20.0-2_all.deb
+Size: 33708
+MD5sum: 6de1ad6e913a5d9a45463f5bb5f92c2e
+SHA256: 5fd145f36989a7938fefa991b8b7735bd4dd10d51bd462fbdca6d0cd873b7d19
 
 Package: basex
 Version: 12.4+ds-1
@@ -1786,20 +1786,20 @@ SHA256: 3bcc28f6326aa52febb48ee8dda8273c3a39357dd4ebdf44004a9155e3841c3f
 
 Package: odbc-mariadb
 Source: mariadb-connector-odbc
-Version: 3.2.6-1.1
-Installed-Size: 851
+Version: 3.2.9-1
+Installed-Size: 870
 Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libmariadb3 (>= 3.0.0), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 11), odbcinst
+Depends: odbcinst, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libmariadb3 (>= 3.0.0), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 11)
 Description: ODBC driver for MariaDB
 Homepage: https://mariadb.com/docs/connectors/mariadb-connector-odbc
 Description-md5: 1caed7558e1f2b538fb3bd787b8791c2
 database
 Priority: optional
-Filename: pool/main/m/mariadb-connector-odbc/odbc-mariadb_3.2.6-1.1_amd64.deb
-Size: 265472
-MD5sum: 2ee0fdc5c475b37be718e04f07e64263
-SHA256: eb3587c6eaa341bc0c602f954abf4c3c3fcb492430ab8d3f389ce5cbf36cb027
+Filename: pool/main/m/mariadb-connector-odbc/odbc-mariadb_3.2.9-1_amd64.deb
+Size: 279416
+MD5sum: 52e616285135f9868ba84b488bc7ba44
+SHA256: 7c540c1a9911448013e70c08f19d5191183e0fa5cd7c058e50f8d18feb5c19d5
 
 Package: mdbtools
 Source: mdbtools (1.0.1-0.1)
@@ -2996,8 +2996,8 @@ MD5sum: 95a6afce34802f99dc7d7d6185b292fd
 SHA256: bbe03f61bf48b26b1604c0b5e8a639d2ad3af2b5eae7b4c5c717f6ab35b4f416
 
 Package: pgformatter
-Version: 5.10-1
-Installed-Size: 300
+Version: 5.11-1
+Installed-Size: 321
 Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
 Architecture: all
 Depends: perl:any
@@ -3007,10 +3007,10 @@ Homepage: https://sqlformat.darold.net/
 Description-md5: 1214317c4e851f4f5f784d53fe04ef1a
 database
 Priority: optional
-Filename: pool/main/p/pgformatter/pgformatter_5.10-1_all.deb
-Size: 90864
-MD5sum: 5e341c7ebaf163d8e24b005fe6d41ddf
-SHA256: 2d059ca12d22693eb06e716310d8c26f50ea03ae0f62a13c63c7a888d685c826
+Filename: pool/main/p/pgformatter/pgformatter_5.11-1_all.deb
+Size: 98152
+MD5sum: a3507f829c899736e97d4e2835130776
+SHA256: 00e890febb9886cd3bf83263cf56c3bcde56aa051277191eaa1a6592a4796cfe
 
 Package: pgloader
 Version: 3.6.10-5
@@ -4283,72 +4283,72 @@ MD5sum: 185a5c6530c3e3128781a818ba179176
 SHA256: 4df4cb879b75267f4cb18fbcf7e37663e78e13c5f521f22a20ec8612b55a5a35
 
 Package: redict
-Version: 7.3.6+ds-2
+Version: 7.3.6+ds-3
 Installed-Size: 17
 Maintainer: Debian Redict Maintainers <team+redict@tracker.debian.org>
 Architecture: all
-Depends: redict-server (<< 7.3.6+ds-2.1~), redict-server (>= 7.3.6+ds-2)
+Depends: redict-server (<< 7.3.6+ds-3.1~), redict-server (>= 7.3.6+ds-3)
 Description: Persistent key-value database with network interface (metapackage)
 Homepage: https://redict.io/
 Description-md5: a24100ff742656e1ccbdc703c57ae579
 database
 Priority: optional
-Filename: pool/main/r/redict/redict_7.3.6+ds-2_all.deb
-Size: 4568
-MD5sum: dcbaec14dabba4f368fa925570679580
-SHA256: cd66caaa6b2e1f7ed8f671f70c37f69838ca1df4d437e98a35afb1a1922948b0
+Filename: pool/main/r/redict/redict_7.3.6+ds-3_all.deb
+Size: 4664
+MD5sum: b927df04deb31831a32ed0209aa73b27
+SHA256: db00abf51b6810ae27fc450b18f90c6102f43ffb0e8c92dda782eb107fff1af5
 
 Package: redict-sentinel
 Source: redict
-Version: 7.3.6+ds-2
+Version: 7.3.6+ds-3
 Installed-Size: 62
 Maintainer: Debian Redict Maintainers <team+redict@tracker.debian.org>
 Architecture: amd64
-Depends: redict-tools (= 7.3.6+ds-2)
+Depends: redict-tools (= 7.3.6+ds-3)
 Description: Persistent key-value database with network interface (monitoring)
 Homepage: https://redict.io/
 Description-md5: df8245b0b163b8977dcedb239669935f
 database
 Priority: optional
-Filename: pool/main/r/redict/redict-sentinel_7.3.6+ds-2_amd64.deb
-Size: 13216
-MD5sum: c5116f118c7f2d0aed14b3a2545ca143
-SHA256: e274764b3f243ae6c07b60a829542f65e6dbf9f310725995d5f0977f9ca2da3d
+Filename: pool/main/r/redict/redict-sentinel_7.3.6+ds-3_amd64.deb
+Size: 13320
+MD5sum: 83a468dc1f288bc7356c558ec2a988a9
+SHA256: fd02ca691cbed457d308c47d9b57c8f385cf0a5afc1d1819a316154e595b0ea3
 
 Package: redict-server
 Source: redict
-Version: 7.3.6+ds-2
+Version: 7.3.6+ds-3
 Installed-Size: 156
 Maintainer: Debian Redict Maintainers <team+redict@tracker.debian.org>
 Architecture: amd64
-Depends: redict-tools (= 7.3.6+ds-2)
+Depends: redict-tools (= 7.3.6+ds-3)
 Description: Persistent key-value database with network interface
 Homepage: https://redict.io/
 Description-md5: 997f243540b72915804088154e0152f4
 database
 Priority: optional
-Filename: pool/main/r/redict/redict-server_7.3.6+ds-2_amd64.deb
-Size: 41316
-MD5sum: c7823f581909e013bc486b48e0f1b99b
-SHA256: 302d52e33e110f9a5e8b5b406495378d815bc527cb58d7cd87b20a210247391b
+Filename: pool/main/r/redict/redict-server_7.3.6+ds-3_amd64.deb
+Size: 41404
+MD5sum: dba28b17baa5826400f9219d6991d782
+SHA256: 7578bd6a7268a6a4717f759ee6dac711b985248cae696be8fcc9fe8cadd337bd
 
 Package: redict-tools
 Source: redict
-Version: 7.3.6+ds-2
-Installed-Size: 6115
+Version: 7.3.6+ds-3
+Installed-Size: 6207
 Maintainer: Debian Redict Maintainers <team+redict@tracker.debian.org>
 Architecture: amd64
-Depends: systemd | systemd-standalone-sysusers | systemd-sysusers, libatomic1 (>= 4.8), libc6 (>= 2.38), libhiredict1.3.1 (>= 1.3.1), libjemalloc2 (>= 3.5.0), liblzf1 (>= 1.5), libssl3t64 (>= 3.0.0), libsystemd0
+Depends: systemd | systemd-standalone-sysusers | systemd-sysusers, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, libatomic1 (>= 4.8), libc6 (>= 2.38), libhiredict1.3.1 (>= 1.3.1), libjemalloc2 (>= 3.5.0), liblzf1 (>= 1.5), libssl3t64 (>= 3.0.0), libsystemd0
 Suggests: ruby-redis
 Description: Persistent key-value database with network interface (client)
 Homepage: https://redict.io/
 Description-md5: 08dd10c9e48872ff63f1f1c31f20c871
 database
 Priority: optional
-Filename: pool/main/r/redict/redict-tools_7.3.6+ds-2_amd64.deb
-Size: 1074084
-MD5sum: 71316546642445e86e929fb554115e5e
-SHA256: ae674a7d937902b45668836517d77645a9c968d3390c6d4d8060cdd6debf2c92
+Filename: pool/main/r/redict/redict-tools_7.3.6+ds-3_amd64.deb
+Size: 1109124
+MD5sum: c845399cb33433b61ae2f0f1728a6d26
+SHA256: 941faf32f33bc66d5af0d01c0374bf19ae38a16117ca3853f468997955a01bf9
 
 Package: redis
 Version: 5:8.0.6-2
@@ -4453,11 +4453,11 @@ MD5sum: 7c61bcdb75a190c31467ae16ec30e3db
 SHA256: ba4c0ab6a827c562d4856ea7ead99e8f1da1f2705d45ed0e180ada4537c3b4bb
 
 Package: sqlcipher
-Version: 4.14.0-1
-Installed-Size: 1967
+Version: 4.18.0-1
+Installed-Size: 2125
 Maintainer: Syed Shahrukh Hussain <syed.shahrukh@ossrevival.org>
 Architecture: amd64
-Depends: libsqlcipher2 (= 4.14.0-1), libc6 (>= 2.38), libreadline8t64 (>= 6.0), libssl3t64 (>= 3.0.0), zlib1g (>= 1:1.2.0)
+Depends: libsqlcipher2 (= 4.18.0-1), libc6 (>= 2.38), libreadline8t64 (>= 6.0), libssl3t64 (>= 3.0.0), zlib1g (>= 1:1.2.0)
 Suggests: sqlite3-doc
 Description: Command line interface for SQLCipher
 Multi-Arch: foreign
@@ -4466,10 +4466,10 @@ Description-md5: b1eacd025d41ebec965e7f871bbe56ef
 Tag: uitoolkit::ncurses
 database
 Priority: optional
-Filename: pool/main/s/sqlcipher/sqlcipher_4.14.0-1_amd64.deb
-Size: 884928
-MD5sum: b220ed3f6c69ac3f554979ce45b57be3
-SHA256: 269873ad3c21981e3626e594356a52286ab6eefe21a8c49ae7bd4c037987a905
+Filename: pool/main/s/sqlcipher/sqlcipher_4.18.0-1_amd64.deb
+Size: 963208
+MD5sum: b2d59dfd0b083ca8715ab39679fdebee
+SHA256: 3d2aaa0614e39aef9b74d0b5f8934bf68c2d3f0b4dc834fa8ecd3aa7135c9097
 
 Package: sqlite3
 Version: 3.53.4-2
