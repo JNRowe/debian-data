@@ -5689,15 +5689,14 @@ MD5sum: 68af810d7f261a9ade94442e8172ce92
 SHA256: 63060b71c0eca662af7923da8ce6f17d16e8ab2a519dfa02d95542c05c5e611c
 
 Package: ejabberd
-Source: ejabberd (26.02-1)
-Version: 26.02-1+b1
-Installed-Size: 14842
+Version: 26.07-1
+Installed-Size: 15259
 Maintainer: Ejabberd Packaging Team <ejabberd@packages.debian.org>
 Architecture: amd64
 Provides: mqtt-broker, stun-server, turn-server, xmpp-server
-Depends: adduser, erlang-base (>= 1:29.0.2+dfsg), erlang-base64url (>= 1.0.1), erlang-goldrush (>= 0.1.9), erlang-idna (>= 6.0.0), erlang-jiffy (>= 1.1.1), erlang-jose (>= 1.11.10), erlang-lager (>= 3.9.1), erlang-os-mon (>= 1:29.0.2+dfsg), erlang-p1-acme (>= 1.0.30), erlang-p1-cache-tab (>= 1.0.33), erlang-p1-eimp (>= 1.0.26), erlang-erlydtl (>= 0.14.0), erlang-p1-mqtree (>= 1.0.19), erlang-p1-pkix (>= 1.0.10-2~), erlang-p1-stringprep (>= 1.0.33), erlang-p1-stun (>= 1.2.21), erlang-p1-tls (>= 1.1.25), erlang-p1-utils (>= 1.0.28), erlang-p1-xml (>= 1.1.57), erlang-p1-xmpp (>= 1.12.0), erlang-p1-yaml (>= 1.0.39), erlang-p1-yconf (>= 1.0.22), erlang-p1-zlib (>= 1.0.15), erlang-unicode-util-compat (>= 0.3.1), erlang-xmerl, ucf, erlang-abi (= 17.0), erlang-asn1 (>= 1:29.0.2+dfsg), erlang-crypto (>= 1:29.0.2+dfsg), erlang-inets (>= 1:29.0.2+dfsg), erlang-mnesia (>= 1:29.0.2+dfsg), erlang-odbc (>= 1:29.0.2+dfsg), erlang-public-key (>= 1:29.0.2+dfsg), erlang-ssl (>= 1:29.0.2+dfsg), erlang-syntax-tools (>= 1:29.0.2+dfsg), debconf (>= 0.5) | debconf-2.0, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles
+Depends: erlang-base (>= 1:29.0.4+dfsg), erlang-erlydtl (>= 0.15.0), erlang-idna (>= 7.1.0), erlang-jose (>= 1.11.12), erlang-os-mon (>= 1:29.0.4+dfsg), erlang-p1-acme (>= 1.0.31), erlang-p1-cache-tab (>= 1.0.34), erlang-p1-eimp (>= 1.0.27), erlang-p1-mqtree (>= 1.0.20), erlang-p1-pkix (>= 1.0.10-2~), erlang-p1-stringprep (>= 1.0.34), erlang-p1-stun (>= 1.2.22), erlang-p1-tls (>= 1.1.26), erlang-p1-utils (>= 1.0.29), erlang-p1-xml (>= 1.1.60), erlang-p1-xmpp (>= 1.13.4), erlang-p1-yaml (>= 1.0.40), erlang-p1-yconf (>= 1.0.23), erlang-p1-zlib (>= 1.0.16), erlang-xmerl, ucf, erlang-abi (= 17.0), erlang-asn1 (>= 1:29.0.4+dfsg), erlang-crypto (>= 1:29.0.4+dfsg), erlang-inets (>= 1:29.0.4+dfsg), erlang-mnesia (>= 1:29.0.4+dfsg), erlang-odbc (>= 1:29.0.4+dfsg), erlang-public-key (>= 1:29.0.4+dfsg), erlang-ssl (>= 1:29.0.4+dfsg), erlang-syntax-tools (>= 1:29.0.4+dfsg), debconf (>= 0.5) | debconf-2.0, systemd | systemd-standalone-sysusers | systemd-sysusers, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles
 Pre-Depends: openssl
-Suggests: ejabberd-contrib, erlang-luerl, erlang-p1-mysql (>= 1.0.27), erlang-p1-oauth2 (>= 0.6.14), erlang-p1-pam (>= 1.0.14-3~), erlang-p1-pgsql (>= 1.1.38), erlang-p1-sip (>= 1.0.59), erlang-p1-sqlite3 (>= 1.1.15-2~), erlang-redis-client (>= 1.2.0-8~), imagemagick, libunix-syslog-perl, yamllint
+Suggests: ejabberd-contrib, erlang-luerl, erlang-p1-mysql (>= 1.0.28), erlang-p1-oauth2 (>= 0.6.14), erlang-p1-pam (>= 1.0.14-3~), erlang-p1-pgsql (>= 1.1.41), erlang-p1-sip (>= 1.0.60), erlang-p1-sqlite3 (>= 1.1.15-2~), erlang-redis-client (>= 1.2.0-8~), imagemagick, libjs-bootstrap5, libunix-syslog-perl, yamllint
 Description: extensible realtime platform (XMPP server + MQTT broker + SIP service)
 Multi-Arch: allowed
 Homepage: https://www.ejabberd.im
@@ -5705,10 +5704,404 @@ Description-md5: 30d974a171fa390dbf4aa0a06f7cfc56
 Tag: implemented-in::TODO, network::server, protocol::jabber, role::program
 net
 Priority: optional
-Filename: pool/main/e/ejabberd/ejabberd_26.02-1+b1_amd64.deb
-Size: 7780804
-MD5sum: 48db65554dca09d4b12331749ecfd918
-SHA256: ff082e29fb99cd2ea24c0ed4a69a60d7089d5c80a14d9e16b1dce0556063b7e3
+Filename: pool/main/e/ejabberd/ejabberd_26.07-1_amd64.deb
+Size: 8181364
+MD5sum: a899abbe59b0b982d2d9690a7404e5c1
+SHA256: 0ef615fd63f306e5c098c55945626b3d78303b82836c9185ac393fcf32178b1a
+
+Package: ejabberd-contrib
+Version: 0.2026.08.06~dfsg0-1
+Installed-Size: 20
+Maintainer: Ejabberd Packaging Team <ejabberd@packages.debian.org>
+Architecture: all
+Depends: ejabberd (>= 26.07-1), ejabberd-mod-cron, ejabberd-mod-default-contacts, ejabberd-mod-default-rooms, ejabberd-mod-deny-omemo, ejabberd-mod-filter, ejabberd-mod-grafite, ejabberd-mod-irc, ejabberd-mod-isolation, ejabberd-mod-log-chat, ejabberd-mod-logsession, ejabberd-mod-logxml, ejabberd-mod-message-log, ejabberd-mod-muc-log-http, ejabberd-mod-post-log, ejabberd-mod-pottymouth, ejabberd-mod-rest, ejabberd-mod-s2s-log, ejabberd-mod-shcommands, ejabberd-mod-spam-filter, ejabberd-mod-statsdx, ejabberd-mod-webpresence, erlang-base, erlang-abi (= 17.0)
+Description: user-contributed modules for ejabberd (metapackage)
+Homepage: https://github.com/processone/ejabberd-contrib
+Description-md5: 7b5704c8dc6d0038641ee2e84c0cf4f9
+net
+Priority: optional
+Filename: pool/main/e/ejabberd-contrib/ejabberd-contrib_0.2026.08.06~dfsg0-1_all.deb
+Size: 5988
+MD5sum: 6d9354a0287cfef5bb1729d088fbf5af
+SHA256: 1d116e7a810d3dfd2e41614991c8a32f7cac9fb37e1ad22ed7db6e09698373d1
+
+Package: ejabberd-mod-cron
+Source: ejabberd-contrib
+Version: 0.2026.08.06~dfsg0-1
+Installed-Size: 29
+Maintainer: Ejabberd Packaging Team <ejabberd@packages.debian.org>
+Architecture: amd64
+Depends: ejabberd (>= 26.07-1), erlang-base (>= 1:29.0.4+dfsg), erlang-abi (= 17.0)
+Description: ejabberd module to execute scheduled commands
+Multi-Arch: allowed
+Homepage: https://github.com/processone/ejabberd-contrib
+Description-md5: f5f6f02fdae5c6c8464923d769abec64
+net
+Priority: optional
+Filename: pool/main/e/ejabberd-contrib/ejabberd-mod-cron_0.2026.08.06~dfsg0-1_amd64.deb
+Size: 10284
+MD5sum: 3d5e0f111d168a3fc440d2ef4a905033
+SHA256: 59bf8b3503e8b44817d57260f43afbe65ccb80c8943bdb7ff59612a7988d355d
+
+Package: ejabberd-mod-default-contacts
+Source: ejabberd-contrib
+Version: 0.2026.08.06~dfsg0-1
+Installed-Size: 21
+Maintainer: Ejabberd Packaging Team <ejabberd@packages.debian.org>
+Architecture: amd64
+Depends: ejabberd (>= 26.07-1), erlang-base (>= 1:29.0.4+dfsg), erlang-abi (= 17.0)
+Description: ejabberd module to add roster contact(s) upon registration
+Multi-Arch: allowed
+Homepage: https://github.com/processone/ejabberd-contrib
+Description-md5: 897081f19c87845ee8ac682816e33884
+net
+Priority: optional
+Filename: pool/main/e/ejabberd-contrib/ejabberd-mod-default-contacts_0.2026.08.06~dfsg0-1_amd64.deb
+Size: 5380
+MD5sum: f5930d230d1f6d323925ecf9b65899e4
+SHA256: 272bc1d29e1342e019070b92f9fe1354c726def156abea76c5fb98c791a2135a
+
+Package: ejabberd-mod-default-rooms
+Source: ejabberd-contrib
+Version: 0.2026.08.06~dfsg0-1
+Installed-Size: 21
+Maintainer: Ejabberd Packaging Team <ejabberd@packages.debian.org>
+Architecture: amd64
+Depends: ejabberd (>= 26.07-1), erlang-base (>= 1:29.0.4+dfsg), erlang-abi (= 17.0)
+Description: ejabberd module to add MUC bookmark(s) upon registration
+Multi-Arch: allowed
+Homepage: https://github.com/processone/ejabberd-contrib
+Description-md5: 02d7a6a8e550a8d0ebe4ab8cd673c76b
+net
+Priority: optional
+Filename: pool/main/e/ejabberd-contrib/ejabberd-mod-default-rooms_0.2026.08.06~dfsg0-1_amd64.deb
+Size: 5456
+MD5sum: 9e31a152847776d4c0423f57c1ba508a
+SHA256: bf99d7b9fd47fa39c17ecc374d260dd16241ccd7f6237f93a0e6e4aa95761a2b
+
+Package: ejabberd-mod-deny-omemo
+Source: ejabberd-contrib
+Version: 0.2026.08.06~dfsg0-1
+Installed-Size: 25
+Maintainer: Ejabberd Packaging Team <ejabberd@packages.debian.org>
+Architecture: amd64
+Depends: ejabberd (>= 26.07-1), erlang-base (>= 1:29.0.4+dfsg), erlang-abi (= 17.0)
+Description: ejabberd module to prevent OMEMO sessions from being established
+Multi-Arch: allowed
+Homepage: https://github.com/processone/ejabberd-contrib
+Description-md5: f25987f212f425f7fa61ebe33c91f8de
+net
+Priority: optional
+Filename: pool/main/e/ejabberd-contrib/ejabberd-mod-deny-omemo_0.2026.08.06~dfsg0-1_amd64.deb
+Size: 6992
+MD5sum: 6d55af2edd1fa414a04284f93d71f28b
+SHA256: 22757b49b329cad7ea0bfc9e62a144e8fde1c246b3987dfab997730d5f78fb6b
+
+Package: ejabberd-mod-filter
+Source: ejabberd-contrib
+Version: 0.2026.08.06~dfsg0-1
+Installed-Size: 22
+Maintainer: Ejabberd Packaging Team <ejabberd@packages.debian.org>
+Architecture: amd64
+Depends: ejabberd (>= 26.07-1), erlang-base (>= 1:29.0.4+dfsg), erlang-abi (= 17.0)
+Description: ejabberd module to allow specifying packet filtering rules using ACL and ACCESS
+Multi-Arch: allowed
+Homepage: https://github.com/processone/ejabberd-contrib
+Description-md5: 948a6b0945f92a0bc722982f80798dba
+net
+Priority: optional
+Filename: pool/main/e/ejabberd-contrib/ejabberd-mod-filter_0.2026.08.06~dfsg0-1_amd64.deb
+Size: 6548
+MD5sum: 584e7a764c17e6b98cd3a77612fc2bb8
+SHA256: 412ff1a29d5dc8cf1b7632b00a1664a22d24b604be872de5d03dbf1b802d7f8c
+
+Package: ejabberd-mod-grafite
+Source: ejabberd-contrib
+Version: 0.2026.08.06~dfsg0-1
+Installed-Size: 24
+Maintainer: Ejabberd Packaging Team <ejabberd@packages.debian.org>
+Architecture: amd64
+Depends: ejabberd (>= 26.07-1), erlang-base (>= 1:29.0.4+dfsg), erlang-abi (= 17.0)
+Description: ejabberd module to gather statistics and publish them via statsd/grafite
+Multi-Arch: allowed
+Homepage: https://github.com/processone/ejabberd-contrib
+Description-md5: 21763309d26e7f09ce32907702925ef0
+net
+Priority: optional
+Filename: pool/main/e/ejabberd-contrib/ejabberd-mod-grafite_0.2026.08.06~dfsg0-1_amd64.deb
+Size: 6648
+MD5sum: 37035deba8dca7f83d01b18068a46a99
+SHA256: 177352cb516a4aaa1a893d102913285668249b4b47428423e12a3b55781238ba
+
+Package: ejabberd-mod-irc
+Source: ejabberd-contrib
+Version: 0.2026.08.06~dfsg0-1
+Installed-Size: 87
+Maintainer: Ejabberd Packaging Team <ejabberd@packages.debian.org>
+Architecture: amd64
+Depends: ejabberd (>= 26.07-1), erlang-base (>= 1:29.0.4+dfsg), erlang-abi (= 17.0), erlang-mnesia (>= 1:29.0.4+dfsg)
+Description: ejabberd module providing an IRC transport
+Multi-Arch: allowed
+Homepage: https://github.com/processone/ejabberd-contrib
+Description-md5: cf967b3e86dc0e5ffefb9835ae66365e
+net
+Priority: optional
+Filename: pool/main/e/ejabberd-contrib/ejabberd-mod-irc_0.2026.08.06~dfsg0-1_amd64.deb
+Size: 29516
+MD5sum: d5ded97d95894cb6739ce17bb2697310
+SHA256: fe132559217b8a316879848d90d428bd2d257d618377790ff7a087936c510638
+
+Package: ejabberd-mod-isolation
+Source: ejabberd-contrib
+Version: 0.2026.08.06~dfsg0-1
+Installed-Size: 20
+Maintainer: Ejabberd Packaging Team <ejabberd@packages.debian.org>
+Architecture: amd64
+Depends: ejabberd (>= 26.07-1), erlang-base (>= 1:29.0.4+dfsg), erlang-abi (= 17.0)
+Description: ejabberd module to block communication of users between different virtual hosts
+Multi-Arch: allowed
+Homepage: https://github.com/processone/ejabberd-contrib
+Description-md5: b08c14c85f1698bd1d5078fb0a32efdc
+net
+Priority: optional
+Filename: pool/main/e/ejabberd-contrib/ejabberd-mod-isolation_0.2026.08.06~dfsg0-1_amd64.deb
+Size: 4920
+MD5sum: 4029455679f9a1f4f70ffecbc4d588eb
+SHA256: 79e2f3601cc71f0906d56c902d2e30f2f07a3f3f51a66985b3cb01d723f09559
+
+Package: ejabberd-mod-log-chat
+Source: ejabberd-contrib
+Version: 0.2026.08.06~dfsg0-1
+Installed-Size: 32
+Maintainer: Ejabberd Packaging Team <ejabberd@packages.debian.org>
+Architecture: amd64
+Depends: ejabberd (>= 26.07-1), erlang-base (>= 1:29.0.4+dfsg), erlang-abi (= 17.0)
+Description: ejabberd module to log chat messages to text or html
+Multi-Arch: allowed
+Homepage: https://github.com/processone/ejabberd-contrib
+Description-md5: bfca46effad2db01d4555c08a39acf02
+net
+Priority: optional
+Filename: pool/main/e/ejabberd-contrib/ejabberd-mod-log-chat_0.2026.08.06~dfsg0-1_amd64.deb
+Size: 9132
+MD5sum: 98490a598fe5bd5be82981a20fdfe87a
+SHA256: c800edb2394db3bca73c07ca920956454a8a2618ce3557566cf55ef5171aadce
+
+Package: ejabberd-mod-logsession
+Source: ejabberd-contrib
+Version: 0.2026.08.06~dfsg0-1
+Installed-Size: 25
+Maintainer: Ejabberd Packaging Team <ejabberd@packages.debian.org>
+Architecture: amd64
+Depends: ejabberd (>= 26.07-1), erlang-base (>= 1:29.0.4+dfsg), erlang-abi (= 17.0)
+Description: ejabberd module to log session connections to a text file
+Multi-Arch: allowed
+Homepage: https://github.com/processone/ejabberd-contrib
+Description-md5: 2e9c05ec34aa61009d556357b2cc169c
+net
+Priority: optional
+Filename: pool/main/e/ejabberd-contrib/ejabberd-mod-logsession_0.2026.08.06~dfsg0-1_amd64.deb
+Size: 7088
+MD5sum: 11c9b33478ef38b016fd8149a9756c3b
+SHA256: e34c30f018ef3f00a50d5cec55981de195f05db50d8814d1aff8a788ec8d2c56
+
+Package: ejabberd-mod-logxml
+Source: ejabberd-contrib
+Version: 0.2026.08.06~dfsg0-1
+Installed-Size: 28
+Maintainer: Ejabberd Packaging Team <ejabberd@packages.debian.org>
+Architecture: amd64
+Depends: ejabberd (>= 26.07-1), erlang-base (>= 1:29.0.4+dfsg), erlang-abi (= 17.0)
+Description: ejabberd module to log XMPP packets to an XML file
+Multi-Arch: allowed
+Homepage: https://github.com/processone/ejabberd-contrib
+Description-md5: f9d2ab3e306411501b2868cb56bf3588
+net
+Priority: optional
+Filename: pool/main/e/ejabberd-contrib/ejabberd-mod-logxml_0.2026.08.06~dfsg0-1_amd64.deb
+Size: 8856
+MD5sum: 5df5f9dc91bf3cc876d1d68193adb34a
+SHA256: 0022eeacc6a702079f949d8af784c78da49784a55243b3506da255d0477c4656
+
+Package: ejabberd-mod-message-log
+Source: ejabberd-contrib
+Version: 0.2026.08.06~dfsg0-1
+Installed-Size: 26
+Maintainer: Ejabberd Packaging Team <ejabberd@packages.debian.org>
+Architecture: amd64
+Depends: ejabberd (>= 26.07-1), erlang-base (>= 1:29.0.4+dfsg), erlang-abi (= 17.0)
+Description: ejabberd module to write a line for each message to a log file
+Multi-Arch: allowed
+Homepage: https://github.com/processone/ejabberd-contrib
+Description-md5: 5ceea4a48bd540c1337e1a71fdb5f182
+net
+Priority: optional
+Filename: pool/main/e/ejabberd-contrib/ejabberd-mod-message-log_0.2026.08.06~dfsg0-1_amd64.deb
+Size: 6772
+MD5sum: 65c4e9e5c206a9c0b5b01d24d945b18d
+SHA256: c99a787268656390e5bebdaa155921254f9fb6f63d7b46b42456128a7a020704
+
+Package: ejabberd-mod-muc-log-http
+Source: ejabberd-contrib
+Version: 0.2026.08.06~dfsg0-1
+Installed-Size: 27
+Maintainer: Ejabberd Packaging Team <ejabberd@packages.debian.org>
+Architecture: amd64
+Depends: ejabberd (>= 26.07-1), erlang-base (>= 1:29.0.4+dfsg), erlang-abi (= 17.0), erlang-inets (>= 1:29.0.4+dfsg)
+Description: ejabberd module to serve MUC logs on the web
+Multi-Arch: allowed
+Homepage: https://github.com/processone/ejabberd-contrib
+Description-md5: 9185bb42d43fb31122e4d3e4d2ea2023
+net
+Priority: optional
+Filename: pool/main/e/ejabberd-contrib/ejabberd-mod-muc-log-http_0.2026.08.06~dfsg0-1_amd64.deb
+Size: 8856
+MD5sum: 7d42e1dc5d5cf7fbf8b59110561ed45f
+SHA256: 05c463d79386b3edb3edaac75887e028bf97a62f9b9f07eff5f53e4cac069b42
+
+Package: ejabberd-mod-post-log
+Source: ejabberd-contrib
+Version: 0.2026.08.06~dfsg0-1
+Installed-Size: 25
+Maintainer: Ejabberd Packaging Team <ejabberd@packages.debian.org>
+Architecture: amd64
+Depends: ejabberd (>= 26.07-1), erlang-base (>= 1:29.0.4+dfsg), erlang-abi (= 17.0), erlang-inets (>= 1:29.0.4+dfsg)
+Description: ejabberd module to log all messages to an HTTP API
+Multi-Arch: allowed
+Homepage: https://github.com/processone/ejabberd-contrib
+Description-md5: 0ea0e8df4648e0a00a52bab35dc7aa4c
+net
+Priority: optional
+Filename: pool/main/e/ejabberd-contrib/ejabberd-mod-post-log_0.2026.08.06~dfsg0-1_amd64.deb
+Size: 6272
+MD5sum: 651d4ed61bc7152b2d0deba98d11a4fe
+SHA256: 35b36756ffee76d7390be646d8a6c5e4cd31721a26a59189ed8642bc9e08b604
+
+Package: ejabberd-mod-pottymouth
+Source: ejabberd-contrib
+Version: 0.2026.08.06~dfsg0-1
+Installed-Size: 34
+Maintainer: Ejabberd Packaging Team <ejabberd@packages.debian.org>
+Architecture: amd64
+Depends: ejabberd (>= 26.07-1), erlang-base (>= 1:29.0.4+dfsg), erlang-abi (= 17.0)
+Description: ejabberd module to filter messages using blacklists
+Multi-Arch: allowed
+Homepage: https://github.com/processone/ejabberd-contrib
+Description-md5: 7f8eab20ba02486c14a47789b833aba4
+net
+Priority: optional
+Filename: pool/main/e/ejabberd-contrib/ejabberd-mod-pottymouth_0.2026.08.06~dfsg0-1_amd64.deb
+Size: 9108
+MD5sum: 6a6567f17260706c467f5ca8f08ce7e3
+SHA256: 9171cb587d6e787127f6c5151c9f00d174a902dad1ee5d433a69b3d633ada399
+
+Package: ejabberd-mod-rest
+Source: ejabberd-contrib
+Version: 0.2026.08.06~dfsg0-1
+Installed-Size: 30
+Maintainer: Ejabberd Packaging Team <ejabberd@packages.debian.org>
+Architecture: amd64
+Depends: ejabberd (>= 26.07-1), erlang-base (>= 1:29.0.4+dfsg), erlang-abi (= 17.0)
+Description: ejabberd module providing an HTTP REST interface
+Multi-Arch: allowed
+Homepage: https://github.com/processone/ejabberd-contrib
+Description-md5: 74e466144c0f14c151280f00b1ebfffd
+net
+Priority: optional
+Filename: pool/main/e/ejabberd-contrib/ejabberd-mod-rest_0.2026.08.06~dfsg0-1_amd64.deb
+Size: 10432
+MD5sum: c3d1274b46004a1da1cedcbe95b5c9dd
+SHA256: 829376934b46ab9ab44cc9730df0f431e3d6f650b749109cc35e370c488b70d5
+
+Package: ejabberd-mod-s2s-log
+Source: ejabberd-contrib
+Version: 0.2026.08.06~dfsg0-1
+Installed-Size: 23
+Maintainer: Ejabberd Packaging Team <ejabberd@packages.debian.org>
+Architecture: amd64
+Depends: ejabberd (>= 26.07-1), erlang-base (>= 1:29.0.4+dfsg), erlang-abi (= 17.0)
+Description: ejabberd module to log XMPP s2s connections
+Multi-Arch: allowed
+Homepage: https://github.com/processone/ejabberd-contrib
+Description-md5: 40f6624d7ca491cc049aef3a900ff739
+net
+Priority: optional
+Filename: pool/main/e/ejabberd-contrib/ejabberd-mod-s2s-log_0.2026.08.06~dfsg0-1_amd64.deb
+Size: 5972
+MD5sum: 443bcddceef33b2bf4765db3c99776ce
+SHA256: 8d5fa2fb8f8fc37e7d8968a7d3126eb30742436fb26a8755b3fbf0d199eae966
+
+Package: ejabberd-mod-shcommands
+Source: ejabberd-contrib
+Version: 0.2026.08.06~dfsg0-1
+Installed-Size: 27
+Maintainer: Ejabberd Packaging Team <ejabberd@packages.debian.org>
+Architecture: amd64
+Depends: ejabberd (>= 26.07-1), erlang-base (>= 1:29.0.4+dfsg), erlang-abi (= 17.0)
+Description: ejabberd module to execute shell commands via XMPP (dangerous!)
+Multi-Arch: allowed
+Homepage: https://github.com/processone/ejabberd-contrib
+Description-md5: 5a7a26f97136409a577eb108ea268f2d
+net
+Priority: optional
+Filename: pool/main/e/ejabberd-contrib/ejabberd-mod-shcommands_0.2026.08.06~dfsg0-1_amd64.deb
+Size: 8464
+MD5sum: 62086610a0f92eb0f39496dc9d5286f8
+SHA256: 0b169f9d5ab5af69089d6abb7ae5b2793d66df96bc0782123a162276ad142608
+
+Package: ejabberd-mod-spam-filter
+Source: ejabberd-contrib
+Version: 0.2026.08.06~dfsg0-1
+Installed-Size: 56
+Maintainer: Ejabberd Packaging Team <ejabberd@packages.debian.org>
+Architecture: amd64
+Depends: ejabberd (>= 26.07-1), erlang-base (>= 1:29.0.4+dfsg), erlang-abi (= 17.0), erlang-inets (>= 1:29.0.4+dfsg)
+Description: ejabberd module to filter spam messages based on JID/content
+Multi-Arch: allowed
+Homepage: https://github.com/processone/ejabberd-contrib
+Description-md5: 038db50892514f6d3cb56c7dadf0924b
+net
+Priority: optional
+Filename: pool/main/e/ejabberd-contrib/ejabberd-mod-spam-filter_0.2026.08.06~dfsg0-1_amd64.deb
+Size: 20116
+MD5sum: 86f1dafc963bc3759ae6f5e008bb19d8
+SHA256: 036c162aea36974912a34f722ab42121aa158841f9e26ced19629221d9576534
+
+Package: ejabberd-mod-statsdx
+Source: ejabberd-contrib
+Version: 0.2026.08.06~dfsg0-1
+Installed-Size: 90
+Maintainer: Ejabberd Packaging Team <ejabberd@packages.debian.org>
+Architecture: amd64
+Depends: ejabberd (>= 26.07-1), erlang-base (>= 1:29.0.4+dfsg), erlang-abi (= 17.0), erlang-mnesia (>= 1:29.0.4+dfsg), erlang-os-mon (>= 1:29.0.4+dfsg)
+Description: ejabberd module to calculate and gather statistics actively
+Multi-Arch: allowed
+Homepage: https://github.com/processone/ejabberd-contrib
+Description-md5: beab8ba34f0be29e3dd2fd05e7cbb9db
+net
+Priority: optional
+Filename: pool/main/e/ejabberd-contrib/ejabberd-mod-statsdx_0.2026.08.06~dfsg0-1_amd64.deb
+Size: 29156
+MD5sum: 229da09a061d59311b934d26b6f5b0b0
+SHA256: 4d94765c1d99b4c926494626386b1f181d5e330c06b1efdfba19bcd9773118a7
+
+Package: ejabberd-mod-webpresence
+Source: ejabberd-contrib
+Version: 0.2026.08.06~dfsg0-1
+Installed-Size: 667
+Maintainer: Ejabberd Packaging Team <ejabberd@packages.debian.org>
+Architecture: amd64
+Depends: ejabberd (>= 26.07-1), erlang-base (>= 1:29.0.4+dfsg), erlang-abi (= 17.0), erlang-mnesia (>= 1:29.0.4+dfsg)
+Description: ejabberd module allowing users to publish their presence information
+Multi-Arch: allowed
+Homepage: https://github.com/processone/ejabberd-contrib
+Description-md5: 27e56b01f709bf952d6eb06e9b8e5478
+net
+Priority: optional
+Filename: pool/main/e/ejabberd-contrib/ejabberd-mod-webpresence_0.2026.08.06~dfsg0-1_amd64.deb
+Size: 304480
+MD5sum: 5fa5704e2ad9020868d094ef4d06ab76
+SHA256: 6cdc2b1e58ea7476c4a7b8cc8cbdda6f34e3b59cc3d9e23dd511304858ce0991
 
 Package: eldav
 Version: 0.8.1-11
@@ -14739,11 +15132,11 @@ MD5sum: a1d786b8039eaaa394bd189e443d8a06
 SHA256: e2cdbe38b6d805de439228d621fa27f33b92765c03dc4318e6af704e401d2457
 
 Package: lomiri-download-manager
-Version: 0.3.2-1
-Installed-Size: 581
+Version: 0.3.2-2
+Installed-Size: 644
 Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
 Architecture: amd64
-Depends: libldm-common0t64 (= 0.3.2-1), libldm-priv-common0t64 (= 0.3.2-1), liblomiri-download-manager-common0t64 (= 0.3.2-1), lomiri-download-manager-common (>= 0.3.2-1), unzip, libboost-program-options1.90.0 (>= 1.90.0), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libgoogle-glog0v6t64 (>= 0.6.0), libqt5core5t64 (>= 5.15.1), libqt5dbus5t64 (>= 5.0.2), libqt5network5t64 (>= 5.14.1), libqt5sql5t64 (>= 5.0.2), libstdc++6 (>= 14)
+Depends: libldm-common0t64 (= 0.3.2-2), libldm-priv-common0t64 (= 0.3.2-2), liblomiri-download-manager-common0t64 (= 0.3.2-2), lomiri-download-manager-common (>= 0.3.2-2), unzip, libboost-program-options1.90.0 (>= 1.90.0), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libgoogle-glog0v6t64 (>= 0.6.0), libqt5core5t64 (>= 5.15.1), libqt5dbus5t64 (>= 5.0.2), libqt5network5t64 (>= 5.14.1), libqt5sql5t64 (>= 5.0.2), libstdc++6 (>= 14)
 Suggests: apparmor
 Description: Lomiri Download Manager - daemon
 Multi-Arch: foreign
@@ -14752,35 +15145,36 @@ Description-md5: 425d7a3b3bef72d14b5a97edbb48a710
 Tag: uitoolkit::qt
 net
 Priority: optional
-Filename: pool/main/l/lomiri-download-manager/lomiri-download-manager_0.3.2-1_amd64.deb
-Size: 154680
-MD5sum: 2b3a754225d8c76b7880535c950d247d
-SHA256: 9e647aed81d0b2e40dbdb2264e48f8e94023a51001fac0075bd61bf19337b4aa
+Filename: pool/main/l/lomiri-download-manager/lomiri-download-manager_0.3.2-2_amd64.deb
+Size: 215856
+MD5sum: 05474afc69a91470b802fc180cec558c
+SHA256: 71b5b1c2f142ef135dddab0fab05ecae48b66a09bd3d910f2daccb66921b7d2d
 
 Package: lomiri-download-manager-common
 Source: lomiri-download-manager
-Version: 0.3.2-1
-Installed-Size: 516
+Version: 0.3.2-2
+Installed-Size: 573
 Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
 Architecture: all
+Depends: user-session-migration
 Description: Lomiri Download Manager - Common files
 Multi-Arch: foreign
 Homepage: https://gitlab.com/ubports/development/core/lomiri-download-manager
 Description-md5: 0cfb78634c93c70162ae12d3660b4e76
 net
 Priority: optional
-Filename: pool/main/l/lomiri-download-manager/lomiri-download-manager-common_0.3.2-1_all.deb
-Size: 24164
-MD5sum: 51d4c5470384b63bff7e2e895e5834ea
-SHA256: 95938391698ccb9788e873f7ef1e0333493859ac7ef07834567ad5fc38cd355a
+Filename: pool/main/l/lomiri-download-manager/lomiri-download-manager-common_0.3.2-2_all.deb
+Size: 79796
+MD5sum: d4142c5d1722aa94774f5ef2a4c7b518
+SHA256: 1d856e6c4e7f7fcf8a0c2492323319570d0cb531867434c7d0ade3dddebb7a18
 
 Package: lomiri-upload-manager
 Source: lomiri-download-manager
-Version: 0.3.2-1
-Installed-Size: 212
+Version: 0.3.2-2
+Installed-Size: 265
 Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
 Architecture: amd64
-Depends: libldm-common0t64 (= 0.3.2-1), libldm-priv-common0t64 (= 0.3.2-1), liblomiri-upload-manager-common0t64 (= 0.3.2-1), lomiri-download-manager-common (>= 0.3.2-1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libgoogle-glog0v6t64 (>= 0.6.0), libqt5core5t64 (>= 5.15.1), libqt5dbus5t64 (>= 5.0.2), libqt5network5t64 (>= 5.6.0~beta), libstdc++6 (>= 14)
+Depends: libldm-common0t64 (= 0.3.2-2), libldm-priv-common0t64 (= 0.3.2-2), liblomiri-upload-manager-common0t64 (= 0.3.2-2), lomiri-download-manager-common (>= 0.3.2-2), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libgoogle-glog0v6t64 (>= 0.6.0), libqt5core5t64 (>= 5.15.1), libqt5dbus5t64 (>= 5.0.2), libqt5network5t64 (>= 5.6.0~beta), libstdc++6 (>= 14)
 Description: Lomiri Upload Manager - daemon
 Multi-Arch: foreign
 Homepage: https://gitlab.com/ubports/development/core/lomiri-download-manager
@@ -14788,18 +15182,18 @@ Description-md5: fe636a964cc639a71629fc5876d9d3e4
 Tag: uitoolkit::qt
 net
 Priority: optional
-Filename: pool/main/l/lomiri-download-manager/lomiri-upload-manager_0.3.2-1_amd64.deb
-Size: 53040
-MD5sum: 56d1af3d374574ffb34014e10666ae1d
-SHA256: ddf5606ab73f3d302d9744434e64ca8e2b801e3273975fce7c0cfef43f61c45c
+Filename: pool/main/l/lomiri-download-manager/lomiri-upload-manager_0.3.2-2_amd64.deb
+Size: 108660
+MD5sum: 160b5f5d39432ef693f040495027836e
+SHA256: fbc8a1cf37afe0eff40884fcb66e6341375bbd0c57d991eab193e2c2dfdcbce6
 
 Package: qml-module-lomiri-downloadmanager
 Source: lomiri-download-manager
-Version: 0.3.2-1
-Installed-Size: 212
+Version: 0.3.2-2
+Installed-Size: 265
 Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
 Architecture: amd64
-Depends: libldm-common0t64 (= 0.3.2-1), liblomiri-download-manager-client0t64 (= 0.3.2-1), liblomiri-download-manager-common0t64 (= 0.3.2-1), lomiri-download-manager (= 0.3.2-1), lomiri-download-manager-common (>= 0.3.2-1), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libgoogle-glog0v6t64 (>= 0.6.0), libqt5core5t64 (>= 5.15.1), libqt5qml5 (>= 5.6.0~beta), libstdc++6 (>= 5)
+Depends: libldm-common0t64 (= 0.3.2-2), liblomiri-download-manager-client0t64 (= 0.3.2-2), liblomiri-download-manager-common0t64 (= 0.3.2-2), lomiri-download-manager (= 0.3.2-2), lomiri-download-manager-common (>= 0.3.2-2), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libgoogle-glog0v6t64 (>= 0.6.0), libqt5core5t64 (>= 5.15.1), libqt5qml5 (>= 5.6.0~beta), libstdc++6 (>= 5)
 Description: Lomiri Download Manager QML Plugin (Qt5)
 Multi-Arch: same
 Homepage: https://gitlab.com/ubports/development/core/lomiri-download-manager
@@ -14807,28 +15201,28 @@ Description-md5: 7539db15e7569141dc82bd12fda98646
 Tag: uitoolkit::qt
 net
 Priority: optional
-Filename: pool/main/l/lomiri-download-manager/qml-module-lomiri-downloadmanager_0.3.2-1_amd64.deb
-Size: 50384
-MD5sum: 0129c3a3ae5e3d7907b3541c2bf25f74
-SHA256: 0e42821beca74ef23541b0af820ee6be29f5c168633bd0283685b3bdcec0e680
+Filename: pool/main/l/lomiri-download-manager/qml-module-lomiri-downloadmanager_0.3.2-2_amd64.deb
+Size: 106760
+MD5sum: a1e9d8e464b0800140601bce903c68e4
+SHA256: 3310728a0818941bb8e98af8f5c0b9a085bfc9ee62d60a8403221567de20e357
 
 Package: qml6-module-lomiri-downloadmanager
 Source: lomiri-download-manager
-Version: 0.3.2-1
-Installed-Size: 214
+Version: 0.3.2-2
+Installed-Size: 271
 Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
 Architecture: amd64
-Depends: libldm-common-qt6-0 (= 0.3.2-1), liblomiri-download-manager-client-qt6-0 (= 0.3.2-1), liblomiri-download-manager-common-qt6-0 (= 0.3.2-1), lomiri-download-manager (= 0.3.2-1), lomiri-download-manager-common (>= 0.3.2-1), libc6 (>= 2.4), libgcc-s1 (>= 3.0), libgoogle-glog0v6t64 (>= 0.6.0), libqt6core6t64 (>= 6.10.2), libqt6qml6 (>= 6.6.0), libstdc++6 (>= 5)
+Depends: libldm-common-qt6-0 (= 0.3.2-2), liblomiri-download-manager-client-qt6-0 (= 0.3.2-2), liblomiri-download-manager-common-qt6-0 (= 0.3.2-2), lomiri-download-manager (= 0.3.2-2), lomiri-download-manager-common (>= 0.3.2-2), libc6 (>= 2.4), libgcc-s1 (>= 3.0), libgoogle-glog0v6t64 (>= 0.6.0), libqt6core6t64 (>= 6.10.2), libqt6qml6 (>= 6.6.0), libstdc++6 (>= 5)
 Description: Lomiri Download Manager QML Plugin (Qt6)
 Multi-Arch: same
 Homepage: https://gitlab.com/ubports/development/core/lomiri-download-manager
 Description-md5: 01005f19e34a1ae5776d12b85cb9883b
 net
 Priority: optional
-Filename: pool/main/l/lomiri-download-manager/qml6-module-lomiri-downloadmanager_0.3.2-1_amd64.deb
-Size: 51912
-MD5sum: 5df3e43ae1a767b9e6f8d1908d00c8f8
-SHA256: 2f36878a734666b5cfa9841dd28ebe5e53638c318408dc73c7d2652b66d9e9f0
+Filename: pool/main/l/lomiri-download-manager/qml6-module-lomiri-downloadmanager_0.3.2-2_amd64.deb
+Size: 109312
+MD5sum: 155f61f5d20ab636ffab2a1b9f96deba
+SHA256: 80be670f38ef1e1853f19b4fe9fc37b3a51684c9d74c148b0f4425786fb0b6d4
 
 Package: lomiri-push-server
 Source: lomiri-push-service
@@ -19767,11 +20161,11 @@ MD5sum: e25f21587f2cdb4be5c06d0a95e37108
 SHA256: 20298022a19ce1be89b4a35e45350760043809c7ce49771d51c11a0d69458b23
 
 Package: ngrep
-Version: 1.47+ds1-8
-Installed-Size: 73
+Version: 1.49.0+ds-1
+Installed-Size: 86
 Maintainer: Debian Security Tools <team+pkg-security@tracker.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libnet9 (>= 1.1.2.1), libpcap0.8t64 (>= 0.9.8), libpcre2-8-0 (>= 10.22)
+Depends: libc6 (>= 2.38), libnet9 (>= 1.1.2.1), libpcap0.8t64 (>= 0.9.8), libpcre2-8-0 (>= 10.47)
 Description: grep for network traffic
 Homepage: https://github.com/jpr5/ngrep
 Description-md5: 8a3f8312388527a9d518e8ed9294e2ba
@@ -19779,10 +20173,10 @@ Tag: interface::commandline, network::scanner, role::program, scope::utility,
  use::searching
 net
 Priority: optional
-Filename: pool/main/n/ngrep/ngrep_1.47+ds1-8_amd64.deb
-Size: 35796
-MD5sum: 545b18c3a9b2fc1ce28a1102555cc8b9
-SHA256: 84a8bed6d6a5f93987ec4d1d842ca3e178747a97e364ab27e4ee38f8817b59f6
+Filename: pool/main/n/ngrep/ngrep_1.49.0+ds-1_amd64.deb
+Size: 39768
+MD5sum: 32b0df868355d19de65fa906ff8dc25b
+SHA256: 7746304c419a8452558f781febe9cde3fe78bb2f48a7acc17716b6808796652e
 
 Package: nheko
 Source: nheko (0.12.1-1+ds+~0.10.1+ds+~1.0.0+ds+~0.3.2+ds-1)
@@ -24221,7 +24615,7 @@ SHA256: 60f9c17b61885613319224d325fb6d43e0489342a2907ab8231a4012aba8ea75
 
 Package: pkcs11-daemon
 Source: pkcs11-proxy
-Version: 0.4.1-4
+Version: 0.4.1-5
 Installed-Size: 128
 Maintainer: Thorsten Alteholz <debian@alteholz.de>
 Architecture: amd64
@@ -24230,10 +24624,10 @@ Description: proxy for the PKCS11-library (server)
 Description-md5: 0697a51b40a2c5f575a482e58720f8e0
 net
 Priority: optional
-Filename: pool/main/p/pkcs11-proxy/pkcs11-daemon_0.4.1-4_amd64.deb
-Size: 33584
-MD5sum: b9cb66922a47c388cea6964bf69e77dd
-SHA256: 86917ec120bf17cee9e0d0e58a67ac73b0726c345dda19816c05a57be22d6b62
+Filename: pool/main/p/pkcs11-proxy/pkcs11-daemon_0.4.1-5_amd64.deb
+Size: 34300
+MD5sum: 4d3ad43debfbe0252ce72006aff37c61
+SHA256: c28cd05905729d875a470927a2048c8453ed9d4793694c8c67c26cfbe6abe5ea
 
 Package: pktanon
 Version: 2~git20240314.84e136f+dfsg-1

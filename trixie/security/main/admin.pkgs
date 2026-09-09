@@ -1258,6 +1258,407 @@ Filename: pool/updates/main/p/packagekit/packagekit_1.3.1-1+deb13u1_amd64.deb
 Size: 663500
 SHA256: 15c450dfb327ec86615894eb678c61fec0507949b02631422b35e8280bee9163
 
+Package: libpam-slurm
+Source: slurm-wlm
+Version: 24.11.5-4+deb13u1
+Installed-Size: 89
+Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34), libslurm42t64 (>= 20.11.2)
+Description: PAM module to authenticate using the Slurm resource manager
+Homepage: http://slurm.schedmd.com
+Description-md5: 035a8fde10a3e36e6768e0962da94426
+admin
+Priority: optional
+Filename: pool/updates/main/s/slurm-wlm/libpam-slurm_24.11.5-4+deb13u1_amd64.deb
+Size: 23396
+SHA256: 2f4e5f2a3955742caada9f4c5c7dd2591e8933d9179d6d98eff34407a41356bc
+
+Package: libpam-slurm-adopt
+Source: slurm-wlm
+Version: 24.11.5-4+deb13u1
+Installed-Size: 103
+Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libslurm42t64 (>= 22.05.7)
+Description: PAM module to authenticate users running a Slurm job and track their processes
+Homepage: http://slurm.schedmd.com
+Description-md5: b2879f460905c22e7d0452e9df8102d0
+admin
+Priority: optional
+Filename: pool/updates/main/s/slurm-wlm/libpam-slurm-adopt_24.11.5-4+deb13u1_amd64.deb
+Size: 26140
+SHA256: ea61eb8a582ee3866a5517fcc5dddd95df2408f48dd6e15b519a4e612817f66e
+
+Package: sackd
+Source: slurm-wlm
+Version: 24.11.5-4+deb13u1
+Installed-Size: 101
+Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34), slurm-wlm-basic-plugins (= 24.11.5-4+deb13u1)
+Description: Slurm auth and cred kiosk daemon
+Homepage: http://slurm.schedmd.com
+Description-md5: 85dae07e8cf1ae3ffe4cac84106dca83
+admin
+Priority: optional
+Filename: pool/updates/main/s/slurm-wlm/sackd_24.11.5-4+deb13u1_amd64.deb
+Size: 26924
+SHA256: d9571c9835064724c5c8e2c02842deaa8572ceac5e71c1257394061e84a7232a
+
+Package: slurm-client
+Source: slurm-wlm
+Version: 24.11.5-4+deb13u1
+Installed-Size: 2175
+Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), liblua5.1-0 (>= 5.1.3), liblz4-1 (>= 0.0~r130), libreadline8t64 (>= 6.0), slurm-wlm-basic-plugins (= 24.11.5-4+deb13u1), munge, ucf
+Conflicts: sinfo (<< 0.0.47-4)
+Description: Slurm client side commands
+Homepage: http://slurm.schedmd.com
+Description-md5: adef5647f57454f084982d9520a1e78d
+admin
+Priority: optional
+Filename: pool/updates/main/s/slurm-wlm/slurm-client_24.11.5-4+deb13u1_amd64.deb
+Size: 842472
+SHA256: b6efa82f76a6765c0cc0808526bfccc6716aba93d415e965b6e8225dd57b9a49
+
+Package: slurm-client-emulator
+Source: slurm-wlm
+Version: 24.11.5-4+deb13u1
+Installed-Size: 1439
+Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), liblz4-1 (>= 0.0~r130), libreadline8t64 (>= 6.0)
+Description: Slurm client side commands for the emulator
+Homepage: http://slurm.schedmd.com
+Description-md5: 9e1200b9e10ad3efa6879b4acca3a494
+admin
+Priority: optional
+Filename: pool/updates/main/s/slurm-wlm/slurm-client-emulator_24.11.5-4+deb13u1_amd64.deb
+Size: 394116
+SHA256: 6314ee799917cccf019eeae1e9c67e7d9e56b4b3c15ed7a74aa221c63f2354d6
+
+Package: slurm-wlm
+Version: 24.11.5-4+deb13u1
+Installed-Size: 354
+Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
+Architecture: amd64
+Depends: slurmd (= 24.11.5-4+deb13u1), slurmctld (= 24.11.5-4+deb13u1), slurm-client (= 24.11.5-4+deb13u1)
+Description: Slurm Workload Manager
+Homepage: http://slurm.schedmd.com
+Description-md5: 399ac2cb1117840799562988613d20ad
+admin
+Priority: optional
+Filename: pool/updates/main/s/slurm-wlm/slurm-wlm_24.11.5-4+deb13u1_amd64.deb
+Size: 314332
+SHA256: 2de4343bc59ae4291c568fc61ba0c11e23ad7d6ba33f4d8e1699a3f958dde991
+
+Package: slurm-wlm-basic-plugins
+Source: slurm-wlm
+Version: 24.11.5-4+deb13u1
+Installed-Size: 10136
+Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libdbus-1-3 (>= 1.12), libhwloc15 (>= 2.12.0), libjson-c5 (>= 0.15), libjwt2 (>= 1.10.1), liblua5.1-0 (>= 5.1.3), libmunge2 (>= 0.5.8), libnuma1 (>= 2.0.11), libyaml-0-2, systemd | systemd-standalone-sysusers | systemd-sysusers, adduser | systemd-sysusers, libpmix2t64
+Description: Slurm basic plugins
+Homepage: http://slurm.schedmd.com
+Description-md5: c72a31e5e1676a1de0cc863aa2004a4f
+Recommends: slurm-wlm-plugins (= 24.11.5-4+deb13u1)
+admin
+Priority: optional
+Filename: pool/updates/main/s/slurm-wlm/slurm-wlm-basic-plugins_24.11.5-4+deb13u1_amd64.deb
+Size: 1920188
+SHA256: b28673d0a96c86a8b9d8f6c17539799706b0da5a3d36266f8ee295c193c1a46c
+
+Package: slurm-wlm-elasticsearch-plugin
+Source: slurm-wlm
+Version: 24.11.5-4+deb13u1
+Installed-Size: 94
+Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
+Architecture: amd64
+Replaces: slurm-wlm-basic-plugins (<< 22.05.7-1)
+Depends: libc6 (>= 2.34), libcurl4t64 (>= 7.16.2), slurm-wlm-basic-plugins (= 24.11.5-4+deb13u1)
+Breaks: slurm-wlm-basic-plugins (<< 22.05.7-1)
+Description: Slurm Elasticsearch job-completion plugin
+Homepage: http://slurm.schedmd.com
+Description-md5: 45fa7419e0b8a561d11ea762d312aeff
+admin
+Priority: optional
+Filename: pool/updates/main/s/slurm-wlm/slurm-wlm-elasticsearch-plugin_24.11.5-4+deb13u1_amd64.deb
+Size: 26112
+SHA256: 274ab6086b399daed2174c465b705c961c2c08bd466291a68d7494b7d3582e40
+
+Package: slurm-wlm-emulator
+Source: slurm-wlm
+Version: 24.11.5-4+deb13u1
+Installed-Size: 1902
+Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libhwloc15 (>= 2.12.0), liblz4-1 (>= 0.0~r130), libnuma1 (>= 2.0.11), libpam0g (>= 0.99.7.1), slurmctld (= 24.11.5-4+deb13u1), slurmd (= 24.11.5-4+deb13u1)
+Description: Slurm emulator
+Homepage: http://slurm.schedmd.com
+Description-md5: 6e35deaac9a681e49040df99cac4901b
+admin
+Priority: optional
+Filename: pool/updates/main/s/slurm-wlm/slurm-wlm-emulator_24.11.5-4+deb13u1_amd64.deb
+Size: 665440
+SHA256: 3706760c08e124edd5c1b56b85bed0a2bebb6dfd147622ffac810d0e1194943d
+
+Package: slurm-wlm-hdf5-plugin
+Source: slurm-wlm
+Version: 24.11.5-4+deb13u1
+Installed-Size: 144
+Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
+Architecture: amd64
+Replaces: slurm-client (<< 22.05.7-1), slurm-wlm-basic-plugins (<< 22.05.7-1)
+Depends: libc6 (>= 2.38), libhdf5-310 (>= 1.14.3), libhdf5-hl-310 (>= 1.14.3), slurm-wlm-basic-plugins (= 24.11.5-4+deb13u1)
+Breaks: slurm-client (<< 22.05.7-1), slurm-wlm-basic-plugins (<< 22.05.7-1)
+Description: Slurm HDF5 plugin
+Homepage: http://slurm.schedmd.com
+Description-md5: a8bbdd24e4e112c35314584a6ef5a3eb
+admin
+Priority: optional
+Filename: pool/updates/main/s/slurm-wlm/slurm-wlm-hdf5-plugin_24.11.5-4+deb13u1_amd64.deb
+Size: 39460
+SHA256: e99aff97c114866416b5b5cd73fbcf839fb0f3272300a970b2e495febdcc3059
+
+Package: slurm-wlm-influxdb-plugin
+Source: slurm-wlm
+Version: 24.11.5-4+deb13u1
+Installed-Size: 94
+Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
+Architecture: amd64
+Replaces: slurm-wlm-basic-plugins (<< 22.05.7-1)
+Depends: libc6 (>= 2.14), libcurl4t64 (>= 7.16.2), slurm-wlm-basic-plugins (= 24.11.5-4+deb13u1)
+Breaks: slurm-wlm-basic-plugins (<< 22.05.7-1)
+Description: Slurm InfluxDB plugin
+Homepage: http://slurm.schedmd.com
+Description-md5: 1a9e9429c768146072d5430d71ef6945
+admin
+Priority: optional
+Filename: pool/updates/main/s/slurm-wlm/slurm-wlm-influxdb-plugin_24.11.5-4+deb13u1_amd64.deb
+Size: 23916
+SHA256: fc526dd50028d134d10b250043ec748888541546c0d81ac86843f8f6351d2748
+
+Package: slurm-wlm-ipmi-plugins
+Source: slurm-wlm
+Version: 24.11.5-4+deb13u1
+Installed-Size: 133
+Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
+Architecture: amd64
+Replaces: slurm-wlm-basic-plugins (<< 22.05.7-1)
+Depends: libc6 (>= 2.34), libfreeipmi17 (>= 1.4.4), libipmimonitoring6 (>= 1.1.5), slurm-wlm-basic-plugins (= 24.11.5-4+deb13u1)
+Breaks: slurm-wlm-basic-plugins (<< 22.05.7-1)
+Description: Slurm IPMI plugins
+Homepage: http://slurm.schedmd.com
+Description-md5: 7de77f0497421507e54ec7a07828bdb5
+admin
+Priority: optional
+Filename: pool/updates/main/s/slurm-wlm/slurm-wlm-ipmi-plugins_24.11.5-4+deb13u1_amd64.deb
+Size: 35560
+SHA256: d1686828d00b3109779e0aaeda7beb8bd1d84c3cb91b0d96188f01150df78abb
+
+Package: slurm-wlm-jwt-plugin
+Source: slurm-wlm
+Version: 24.11.5-4+deb13u1
+Installed-Size: 90
+Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
+Architecture: amd64
+Replaces: slurm-wlm-basic-plugins (<< 22.05.7-1)
+Depends: libc6 (>= 2.33), libjwt2 (>= 1.10.1), slurm-wlm-basic-plugins (= 24.11.5-4+deb13u1)
+Breaks: slurm-wlm-basic-plugins (<< 22.05.7-1)
+Description: Slurm JWT authentication plugins
+Homepage: http://slurm.schedmd.com
+Description-md5: 6ff906b649b8b5d759b20956c55222ee
+admin
+Priority: optional
+Filename: pool/updates/main/s/slurm-wlm/slurm-wlm-jwt-plugin_24.11.5-4+deb13u1_amd64.deb
+Size: 24640
+SHA256: d12de06adb02b8d74af0f668adfa8f68bf0491e191763f678b97fe8327bc6473
+
+Package: slurm-wlm-kafka-plugin
+Source: slurm-wlm
+Version: 24.11.5-4+deb13u1
+Installed-Size: 102
+Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34), librdkafka1 (>= 1.2.1), slurm-wlm-basic-plugins (= 24.11.5-4+deb13u1)
+Description: Slurm Kafka job-completion plugin
+Homepage: http://slurm.schedmd.com
+Description-md5: 4d5935e6d180641fc8584af3eb429036
+admin
+Priority: optional
+Filename: pool/updates/main/s/slurm-wlm/slurm-wlm-kafka-plugin_24.11.5-4+deb13u1_amd64.deb
+Size: 27004
+SHA256: 8df1b4f6c2ee8c634d9f7fc3cf9ffc1dd54ec0ace65a47242890425d6f346008
+
+Package: slurm-wlm-mysql-plugin
+Source: slurm-wlm
+Version: 24.11.5-4+deb13u1
+Installed-Size: 627
+Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
+Architecture: amd64
+Replaces: slurm-wlm-basic-plugins (<< 22.05.7-1)
+Depends: libc6 (>= 2.34), libmariadb3 (>= 3.0.0), slurm-wlm-basic-plugins (= 24.11.5-4+deb13u1)
+Breaks: slurm-wlm-basic-plugins (<< 22.05.7-1)
+Description: Slurm MySQL plugins
+Homepage: http://slurm.schedmd.com
+Description-md5: 7b151d92ec0cd067c873fe539d0006b1
+admin
+Priority: optional
+Filename: pool/updates/main/s/slurm-wlm/slurm-wlm-mysql-plugin_24.11.5-4+deb13u1_amd64.deb
+Size: 205088
+SHA256: 3db11adb11e2518652899e05dcf5c9e578f87fc1d9bfd49b39150ef8ef27443f
+
+Package: slurm-wlm-plugins
+Source: slurm-wlm
+Version: 24.11.5-4+deb13u1
+Installed-Size: 61
+Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
+Architecture: amd64
+Depends: slurm-wlm-basic-plugins (= 24.11.5-4+deb13u1), slurm-wlm-elasticsearch-plugin (= 24.11.5-4+deb13u1), slurm-wlm-hdf5-plugin (= 24.11.5-4+deb13u1), slurm-wlm-influxdb-plugin (= 24.11.5-4+deb13u1), slurm-wlm-ipmi-plugins (= 24.11.5-4+deb13u1), slurm-wlm-jwt-plugin (= 24.11.5-4+deb13u1), slurm-wlm-mysql-plugin (= 24.11.5-4+deb13u1), slurm-wlm-rsmi-plugin (= 24.11.5-4+deb13u1)
+Description: Slurm free plugins (metapackage)
+Homepage: http://slurm.schedmd.com
+Description-md5: d026317f09e940bbb9894c558582c42f
+admin
+Priority: optional
+Filename: pool/updates/main/s/slurm-wlm/slurm-wlm-plugins_24.11.5-4+deb13u1_amd64.deb
+Size: 16952
+SHA256: 052c96e2d878496100451fe73df5975d07077754f492e80f6f5862d10c1a0e5b
+
+Package: slurm-wlm-plugins-dev
+Source: slurm-wlm
+Version: 24.11.5-4+deb13u1
+Installed-Size: 61
+Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
+Architecture: amd64
+Depends: slurm-wlm-basic-plugins-dev (= 24.11.5-4+deb13u1), slurm-wlm-elasticsearch-plugin-dev (= 24.11.5-4+deb13u1), slurm-wlm-hdf5-plugin-dev (= 24.11.5-4+deb13u1), slurm-wlm-influxdb-plugin-dev (= 24.11.5-4+deb13u1), slurm-wlm-ipmi-plugins-dev (= 24.11.5-4+deb13u1), slurm-wlm-jwt-plugin-dev (= 24.11.5-4+deb13u1), slurm-wlm-mysql-plugin-dev (= 24.11.5-4+deb13u1), slurm-wlm-rsmi-plugin-dev (= 24.11.5-4+deb13u1)
+Description: Slurm free plugins development files (metapackage)
+Homepage: http://slurm.schedmd.com
+Description-md5: 26a932e3c3df5b59ea4f849e9bfb8f73
+admin
+Priority: optional
+Filename: pool/updates/main/s/slurm-wlm/slurm-wlm-plugins-dev_24.11.5-4+deb13u1_amd64.deb
+Size: 16980
+SHA256: e16c78b99bc6adc94731a19df380e94b7fa79cc149a17b1bc6cbc3999bec090c
+
+Package: slurm-wlm-rsmi-plugin
+Source: slurm-wlm
+Version: 24.11.5-4+deb13u1
+Installed-Size: 102
+Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.4), libnuma1 (>= 2.0.11), librocm-smi-dev, slurm-wlm-basic-plugins (= 24.11.5-4+deb13u1)
+Description: Slurm RSMI plugin
+Homepage: http://slurm.schedmd.com
+Description-md5: bc5cac3e07406058eb620354151ce026
+admin
+Priority: optional
+Filename: pool/updates/main/s/slurm-wlm/slurm-wlm-rsmi-plugin_24.11.5-4+deb13u1_amd64.deb
+Size: 27944
+SHA256: 1d55f32aecbd3249c42579ecbdbd79ca2fb1340eaebaba1534b97f31cd3d7bb9
+
+Package: slurm-wlm-torque
+Source: slurm-wlm
+Version: 24.11.5-4+deb13u1
+Installed-Size: 179
+Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
+Architecture: all
+Depends: libslurm-perl (>= 24.11.5-4+deb13u1), libslurmdb-perl (>= 24.11.5-4+deb13u1), perl:any, libswitch-perl, slurm-client (>= 24.11.5-4+deb13u1)
+Conflicts: gridengine-client, torque-client, torque-client-x11
+Description: Torque compatibility wrappers for Slurm
+Homepage: http://slurm.schedmd.com
+Description-md5: a2c9009e8d15f1e6e248602bb43281a2
+admin
+Priority: optional
+Filename: pool/updates/main/s/slurm-wlm/slurm-wlm-torque_24.11.5-4+deb13u1_all.deb
+Size: 49056
+SHA256: f41a559f7b2072ac355277f92572b27f85cb773e1f560dc4eebdaaa412a606c5
+
+Package: slurmctld
+Source: slurm-wlm
+Version: 24.11.5-4+deb13u1
+Installed-Size: 1423
+Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), slurm-client (= 24.11.5-4+deb13u1), slurm-wlm-basic-plugins (= 24.11.5-4+deb13u1), ucf, munge
+Description: Slurm central management daemon
+Homepage: http://slurm.schedmd.com
+Description-md5: e04abc7871bdeee2cc83ef6ed8923c45
+Pre-Depends: init-system-helpers (>= 1.54~)
+admin
+Priority: optional
+Filename: pool/updates/main/s/slurm-wlm/slurmctld_24.11.5-4+deb13u1_amd64.deb
+Size: 512812
+SHA256: d1900ffa5d7e985c51845bc050394fa760584466a88c837bfa2bd31339fac0a6
+
+Package: slurmd
+Source: slurm-wlm
+Version: 24.11.5-4+deb13u1
+Installed-Size: 803
+Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libhwloc15 (>= 2.12.0), liblz4-1 (>= 0.0~r130), libnuma1 (>= 2.0.11), libpam0g (>= 0.99.7.1), slurm-wlm-basic-plugins (= 24.11.5-4+deb13u1), ucf, munge
+Description: Slurm compute node daemon
+Homepage: http://slurm.schedmd.com
+Description-md5: c0b71b00caae130250a7d5fa4f22251c
+Pre-Depends: init-system-helpers (>= 1.54~)
+admin
+Priority: optional
+Filename: pool/updates/main/s/slurm-wlm/slurmd_24.11.5-4+deb13u1_amd64.deb
+Size: 260296
+SHA256: 05d65382e266c25f4803b5a38b59746e2920efbc4d91fc95d9f5da5e5f9f8b48
+
+Package: slurmdbd
+Source: slurm-wlm
+Version: 24.11.5-4+deb13u1
+Installed-Size: 270
+Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34), slurm-wlm-basic-plugins (= 24.11.5-4+deb13u1), slurm-wlm-mysql-plugin (= 24.11.5-4+deb13u1), munge, ucf
+Description: Secure enterprise-wide interface to a database for Slurm
+Homepage: http://slurm.schedmd.com
+Description-md5: 12414cec2d4629f45386e342015ae60c
+Pre-Depends: init-system-helpers (>= 1.54~)
+admin
+Priority: optional
+Filename: pool/updates/main/s/slurm-wlm/slurmdbd_24.11.5-4+deb13u1_amd64.deb
+Size: 72644
+SHA256: 8c00c99d2fae5f213047a3ccdf465ed501da2f67dcd2b10e9cb49bb367253e29
+
+Package: slurmrestd
+Source: slurm-wlm
+Version: 24.11.5-4+deb13u1
+Installed-Size: 166
+Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libhttp-parser2.9 (>= 2.7.1)
+Description: Slurm REST API daemon
+Homepage: http://slurm.schedmd.com
+Description-md5: 10e4b84c8772a200af93d44178fa9381
+admin
+Priority: optional
+Filename: pool/updates/main/s/slurm-wlm/slurmrestd_24.11.5-4+deb13u1_amd64.deb
+Size: 52388
+SHA256: 59a427f64d880533828f6f87eece52efc5528b2bb4ef995381a70963e5d122d5
+
+Package: sview
+Source: slurm-wlm
+Version: 24.11.5-4+deb13u1
+Installed-Size: 398
+Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.32.0), libgtk2.0-0t64 (>= 2.18.0), slurm-client (= 24.11.5-4+deb13u1)
+Description: GUI to view and modify Slurm state
+Homepage: http://slurm.schedmd.com
+Description-md5: 3af6f7cbc36f6d68b37816d4b4e73988
+admin
+Priority: optional
+Filename: pool/updates/main/s/slurm-wlm/sview_24.11.5-4+deb13u1_amd64.deb
+Size: 118856
+SHA256: 3f6572bd9050e9ce9d03a3eac5cdc30f86536c4ce51994b5973859785f39b8b1
+
 Package: udisks2
 Version: 2.10.1-12.1+deb13u2
 Installed-Size: 2806
