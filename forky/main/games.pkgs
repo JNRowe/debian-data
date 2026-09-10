@@ -1982,37 +1982,80 @@ MD5sum: 0f2b862c67d2770105343c5d7af0971a
 SHA256: 652848dd813900bdd92ceec10129215a3f890ac589d77ecc6e4f8d08a34808f8
 
 Package: bucklespring
-Version: 1.5.1-1
-Installed-Size: 36
-Maintainer: Debian QA Group <packages@qa.debian.org>
-Architecture: amd64
-Depends: libalure1 (>= 1.0), libc6 (>= 2.38), libopenal1 (>= 1.14), libx11-6, libxtst6 (>= 2:1.2.5), bucklespring-data
-Description: Nostalgia bucklespring keyboard sound
+Version: 1.5.1-2
+Installed-Size: 10
+Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Architecture: all
+Depends: bucklespring-x11 | bucklespring-libinput
+Description: Nostalgia bucklespring keyboard sound - transitional package
 Homepage: https://github.com/zevv/bucklespring
-Description-md5: 06b4bde282664a556e659636d7abd594
+Description-md5: b0d0331dcb46ec58d16500d4db4113f7
 games
 Priority: optional
-Filename: pool/main/b/bucklespring/bucklespring_1.5.1-1_amd64.deb
-Size: 8704
-MD5sum: d81ffdf324e8db7bc54d5edb311c72af
-SHA256: 633ffc7d611e20c41856e920fdec3fc46ad9dc1f6275c38d2f147f4b569c2a1c
+Filename: pool/main/b/bucklespring/bucklespring_1.5.1-2_all.deb
+Size: 3376
+MD5sum: 7d90facb91592fbe7c31b9af72aed317
+SHA256: 64e490df487404afb8651aab1738359e8f3127ab7a4e1ba9f68a330581985a85
 
 Package: bucklespring-data
 Source: bucklespring
-Version: 1.5.1-1
-Installed-Size: 5562
-Maintainer: Debian QA Group <packages@qa.debian.org>
+Version: 1.5.1-2
+Installed-Size: 5563
+Maintainer: Barak A. Pearlmutter <bap@debian.org>
 Architecture: all
+Breaks: bucklespring (<< 1.5.1-2~)
 Description: Nostalgia bucklespring keyboard sound - sound files
 Multi-Arch: foreign
 Homepage: https://github.com/zevv/bucklespring
-Description-md5: 1605c34f7c0c2a5eb28e43423d6a97f4
+Description-md5: 39efa95bfea118b4738e165c10085090
 games
 Priority: optional
-Filename: pool/main/b/bucklespring/bucklespring-data_1.5.1-1_all.deb
-Size: 2985496
-MD5sum: d3dca3a43a92a5527c44f9c6e7b91890
-SHA256: 01d4b7ab6bf292836bbf62e4983974c57468a67625ed27e879d137f0c225d817
+Filename: pool/main/b/bucklespring/bucklespring-data_1.5.1-2_all.deb
+Size: 2986324
+MD5sum: 823a7f8bd1d1a1bd75c2d016b23786f7
+SHA256: 1ec19834a84b1f1e4e1e79f378faacfa1fe82b48216fef818bf51ae61ed6de12
+
+Package: bucklespring-libinput
+Source: bucklespring
+Version: 1.5.1-2
+Installed-Size: 71
+Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Architecture: amd64
+Replaces: bucklespring (<< 1.5.1-2~)
+Provides: bucklespring
+Depends: libalure1 (>= 1.1), libc6 (>= 2.38), libinput10 (>= 0.15.0), libopenal1 (>= 1.14), libudev1 (>= 183), debconf (>= 0.5) | debconf-2.0, init-system-helpers (>= 1.66~), bucklespring-data (>= 1.5.1-2)
+Conflicts: bucklespring (<< 1.5.1-2~)
+Description: Nostalgia bucklespring keyboard sound - libinput flavour
+Homepage: https://github.com/zevv/bucklespring
+Commands: buckle, buckle-libinput
+Description-md5: 20edb6b0bd1c7aecd60b6c61e9b04e0f
+games
+Priority: optional
+Filename: pool/main/b/bucklespring/bucklespring-libinput_1.5.1-2_amd64.deb
+Size: 18668
+MD5sum: 44b8e3ca6952cfeed60a592cfa903ae2
+SHA256: 744348abf9911b2be7b356c8c7ce391b0383cd7af932309962e8613941401ce9
+
+Package: bucklespring-x11
+Source: bucklespring
+Version: 1.5.1-2
+Installed-Size: 55
+Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Architecture: amd64
+Replaces: bucklespring (<< 1.5.1-2~)
+Provides: bucklespring
+Depends: libalure1 (>= 1.1), libc6 (>= 2.38), libopenal1 (>= 1.14), libx11-6, libxtst6 (>= 2:1.2.5), bucklespring-data (>= 1.5.1-2), init-system-helpers (>= 1.66~)
+Conflicts: bucklespring (<< 1.5.1-2~)
+Description: Nostalgia bucklespring keyboard sound - X11 flavour
+Homepage: https://github.com/zevv/bucklespring
+Commands: buckle, buckle-x11
+Description-md5: d71f131ad2821f357c81fb461db97ff4
+games
+Priority: optional
+Filename: pool/main/b/bucklespring/bucklespring-x11_1.5.1-2_amd64.deb
+Size: 12836
+MD5sum: d8a0bcba74f25abc4745627558f5bb9c
+SHA256: 99e09819c521ab67fa110733054e80e85f8522fffef821f98d3877e979aa308b
 
 Package: bugsquish
 Version: 0.0.6-11
