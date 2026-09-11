@@ -6298,11 +6298,11 @@ MD5sum: 54c0794c755acf04e8db06d900f14534
 SHA256: 9c179d771a8dabad923a353e5536fe004b484cbbb8c2f15c8b9ab2e8ded273a3
 
 Package: debci
-Version: 4.2
-Installed-Size: 2474
+Version: 4.3
+Installed-Size: 2530
 Maintainer: Debian CI team <team+ci@tracker.debian.org>
 Architecture: all
-Depends: debootstrap, ruby-pg, sudo, dh-sequence-installsysusers, amqp-tools, curl, dctrl-tools, debian-archive-keyring, distro-info, fonts-fork-awesome (>= 1.2.0), inotify-tools, jq, libjs-bootstrap5, libjs-jquery, libjs-jquery-flot, moreutils, patchutils, retry, rsync, ruby, ruby-activerecord (>= 2:7.2.2.2), ruby-ansi, ruby-bunny, ruby-erubi, ruby-omniauth-gitlab, ruby-sinatra, ruby-sinatra-contrib, ruby-kaminari-activerecord, ruby-sqlite3, ruby-table-print, ruby-thor, systemd | systemd-standalone-sysusers | systemd-sysusers, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles
+Depends: ruby-pg, sudo, debootstrap, amqp-tools, curl, dctrl-tools, debian-archive-keyring, distro-info, fonts-fork-awesome (>= 1.2.0), inotify-tools, jq, libjs-bootstrap5, libjs-jquery, libjs-jquery-flot, moreutils, patchutils, retry, rsync, ruby, ruby-activerecord (>= 2:7.2.2.2), ruby-ansi, ruby-bunny, ruby-erubi, ruby-omniauth-gitlab, ruby-sinatra, ruby-sinatra-contrib, ruby-kaminari-activerecord, ruby-sqlite3, ruby-table-print, ruby-thor, systemd | systemd-standalone-sysusers | systemd-sysusers, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles
 Recommends: systemd-timesyncd | time-daemon
 Suggests: apt-cacher-ng, auto-apt-proxy
 Description: continuous integration system for Debian
@@ -6310,19 +6310,19 @@ Homepage: http://ci.debian.net/
 Description-md5: 8a0d373a3345132e5d56ea807bd19f4d
 devel
 Priority: optional
-Filename: pool/main/d/debci/debci_4.2_all.deb
-Size: 190340
-MD5sum: a18bae328c400f802097b6719e490f5f
-SHA256: eaa23d436725579f2de0627fccf126546ee87f956b1980fff1c731eecb23e89a
+Filename: pool/main/d/debci/debci_4.3_all.deb
+Size: 193840
+MD5sum: 39fe78891f6abc3c0960bd243a6e4934
+SHA256: 1face67193c86f6c8b17e95ddab56b4dc2b0ff0a5885ade685eec98d3892c56f
 
 Package: debci-collector
 Source: debci
-Version: 4.2
-Installed-Size: 69
+Version: 4.3
+Installed-Size: 70
 Maintainer: Debian CI team <team+ci@tracker.debian.org>
 Architecture: all
 Replaces: debci (<< 2.6~)
-Depends: debci (= 4.2)
+Depends: debci (= 4.3)
 Recommends: rabbitmq-server
 Breaks: debci (<< 2.6~)
 Description: continuous integration system for Debian (collector daemon)
@@ -6330,28 +6330,28 @@ Homepage: http://ci.debian.net/
 Description-md5: 8c3977a7b69680497852f25220104f1f
 devel
 Priority: optional
-Filename: pool/main/d/debci/debci-collector_4.2_all.deb
-Size: 16888
-MD5sum: c7bed1edace883552b5f5d271a2c53fe
-SHA256: 1ae3aac86df1db36ebfc9fc64468d1021a7677b7870eeca48b33083894309c7a
+Filename: pool/main/d/debci/debci-collector_4.3_all.deb
+Size: 18472
+MD5sum: 7b1e2931f0abcb93c469d39daf5b8b3a
+SHA256: e087c06c6d8e5f01c388f893467491ee39dd4b76c0119b7aea659d5bfb3a7113
 
 Package: debci-worker
 Source: debci
-Version: 4.2
+Version: 4.3
 Installed-Size: 31
 Maintainer: Debian CI team <team+ci@tracker.debian.org>
 Architecture: all
-Depends: debci (= 4.2), inotify-tools, autodep8 (>= 0.2~), autopkgtest (>= 5.29~), time-daemon
+Depends: debci (= 4.3), debootstrap, mmdebstrap, inotify-tools, autodep8 (>= 0.2~), autopkgtest (>= 5.29~), time-daemon
 Recommends: lxc | incus | lxd, distro-info
 Description: continuous integration system for Debian (worker daemon)
 Homepage: http://ci.debian.net/
 Description-md5: 6ea2307dc1e2980b7e8904c22f5f015d
 devel
 Priority: optional
-Filename: pool/main/d/debci/debci-worker_4.2_all.deb
-Size: 10684
-MD5sum: 69d538d65b48c8b897581deaf343f82a
-SHA256: a710553c2c76cc331b2b3a41db8c703c20ad87969d29e726be7a374b9a9295c8
+Filename: pool/main/d/debci/debci-worker_4.3_all.deb
+Size: 11112
+MD5sum: 8aa4466847ab7852587b990e85ce122b
+SHA256: 273b1eaa38e12e72b244edaf9df145d7c5ba52aefaf3df6645db0ffdb2633ecc
 
 Package: debconf-utils
 Source: debconf
@@ -6561,11 +6561,11 @@ SHA256: 50ca51c76f6f2e79cb46e81ec083a2989d8a9b0dcd2c329ed6ecd65c25f5eb03
 
 Package: dh-debputy
 Source: debputy
-Version: 0.1.94
-Installed-Size: 2759
+Version: 0.1.95
+Installed-Size: 2762
 Maintainer: Debputy Maintainers <debputy@packages.debian.org>
 Architecture: all
-Provides: debputy (= 0.1.94), debputy-plugin-gnome, debputy-plugin-grantlee, debputy-plugin-numpy3, debputy-plugin-perl-openssl, dh-sequence-debputy (= 0.1.94), dh-sequence-installdebputy (= 0.1.94), dh-sequence-zz-debputy (= 0.1.94), dh-sequence-zz-debputy-rrr (= 0.1.94)
+Provides: debputy (= 0.1.95), debputy-plugin-gnome, debputy-plugin-grantlee, debputy-plugin-numpy3, debputy-plugin-perl-openssl, dh-sequence-debputy (= 0.1.95), dh-sequence-installdebputy (= 0.1.95), dh-sequence-zz-debputy (= 0.1.95), dh-sequence-zz-debputy-rrr (= 0.1.95)
 Depends: debhelper, dwz, man-db, python3-colored, python3-colorlog, python3-debian (>= 1.1.0~), python3-ruyaml | python3-ruamel.yaml, python3:any (>= 3.11~), strip-nondeterminism, perl:any
 Recommends: python3-argcomplete
 Suggests: debputy-lsp, hunspell-en-us, python3-hunspell, python3-junit.xml, python3-levenshtein, python3-lsprotocol, python3-pygls
@@ -6577,10 +6577,10 @@ Commands: debputy, dh_debputy, dh_installdebputy
 Description-md5: 0a43251d363265f0459e396fcab3fea3
 devel
 Priority: optional
-Filename: pool/main/d/debputy/dh-debputy_0.1.94_all.deb
-Size: 536164
-MD5sum: b23f9a3bb41fd7cbd9d73b50943d9afc
-SHA256: 9fe86f540b1fad18da14f13d70a69c4aacd9706ae5b0b0ade73a6ffc00d169d9
+Filename: pool/main/d/debputy/dh-debputy_0.1.95_all.deb
+Size: 537056
+MD5sum: a14e630e5f34264ca993ecaed6094d7e
+SHA256: 0dbb5bd262f83c40fac7952c5d44e31984de20c2e92c20bceefcd7006c75b8f6
 
 Package: debputy-lsp
 Version: 0.2.2
@@ -7030,20 +7030,20 @@ MD5sum: 98149a7e9ecab2ebee6875cf43b04a58
 SHA256: 7948bec3c3f56f1b7eaebd3921c1dd64cd1619e3db8fc1aae345831323af036f
 
 Package: dh-clojure
-Version: 0.4.4
-Installed-Size: 65
+Version: 0.5.0
+Installed-Size: 67
 Maintainer: Debian Clojure Maintainers <team+clojure@tracker.debian.org>
 Architecture: all
-Depends: debhelper (>= 13), leiningen (>= 2.11.2-2), xmlstarlet, maven-debian-helper, perl:any
+Depends: debhelper (>= 13), leiningen (>= 2.11.2-3), xmlstarlet, maven-debian-helper, perl:any
 Description: debhelper support for clojure packaging
 Homepage: https://salsa.debian.org/clojure-team/dh-clojure
 Description-md5: 379f52026ff4c297124f068395e05e4c
 devel
 Priority: optional
-Filename: pool/main/d/dh-clojure/dh-clojure_0.4.4_all.deb
-Size: 22748
-MD5sum: e23895b485b675a6286f1baef51cdb3c
-SHA256: 2cee603b2fb353017058e799d13f76b49b328d7afc366637a8518fd9d7d50be7
+Filename: pool/main/d/dh-clojure/dh-clojure_0.5.0_all.deb
+Size: 23836
+MD5sum: 6e09a65bf66d570c2cb3edabd5047221
+SHA256: 2f47174dca3d6b512d6cfc90efd22033bd6fd6ff312834030f670ffe953d5372
 
 Package: dh-cmake
 Version: 0.6.3
@@ -8150,22 +8150,22 @@ MD5sum: 102376a4f4dff03e2dec0ca42204de42
 SHA256: 1c2393f2bf9a301262153b86ed169d843a697af2fb6afadaa93871157f57e252
 
 Package: dpdk-dev
-Source: dpdk (25.11.2-1)
-Version: 25.11.2-1+b1
-Installed-Size: 13402
+Source: dpdk
+Version: 25.11.3-1
+Installed-Size: 13405
 Maintainer: Debian DPDK Maintainers <pkg-dpdk-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libdpdk-dev (>= 25.11.2-1), python3, ibverbs-providers (>= 23~), libbsd0 (>= 0.0), libc6 (>= 2.38), libelf1t64 (>= 0.131), libfdt1 (>= 1.7.2), libibverbs1 (>= 23~), libjansson4 (>= 2.14), libnuma1 (>= 2.0.11), libpcap0.8t64 (>= 1.5.1), librte-acl26 (>= 25.11~rc1), librte-argparse26 (>= 24.11~rc1), librte-baseband-acc26 (>= 25.11.2), librte-baseband-fpga-5gnr-fec26 (>= 20.11), librte-baseband-fpga-lte-fec26 (>= 20.11), librte-baseband-la12xx26 (>= 25.11~rc1), librte-bbdev26 (>= 25.11~rc1), librte-bitratestats26 (>= 23.11), librte-bpf26 (>= 23.11), librte-bus-auxiliary26 (>= 25.11.2), librte-bus-dpaa26 (>= 25.11.2), librte-bus-pci26 (>= 20.11), librte-bus-vdev26 (>= 23.11), librte-cfgfile26 (>= 23.11), librte-cmdline26 (>= 25.11~rc2), librte-common-dpaax26 (>= 20.08), librte-common-mlx5-26 (>= 25.11.2), librte-compressdev26 (>= 25.11~rc1), librte-crypto-scheduler26 (>= 23.11), librte-cryptodev26 (>= 25.11~rc1), librte-dispatcher26 (>= 23.11), librte-distributor26 (>= 23.11), librte-dmadev26 (>= 25.11~rc1), librte-eal26 (>= 25.11~rc2), librte-efd26 (>= 23.11), librte-ethdev26 (>= 25.11~rc2), librte-eventdev26 (>= 25.11~rc2), librte-fib26 (>= 25.11~rc2), librte-gpudev26 (>= 22.11), librte-graph26 (>= 25.11~rc2), librte-gro26 (>= 23.11), librte-gso26 (>= 23.11), librte-hash26 (>= 24.11~rc2), librte-ip-frag26 (>= 23.11), librte-ipsec26 (>= 25.11~rc1), librte-kvargs26 (>= 24.11~rc1), librte-latencystats26 (>= 23.11), librte-log26 (>= 23.11), librte-lpm26 (>= 23.11), librte-mbuf26 (>= 25.11~rc2), librte-member26 (>= 23.11), librte-mempool-dpaa26 (>= 25.11.2), librte-mempool26 (>= 24.11~rc1), librte-meter26 (>= 23.11), librte-metrics26 (>= 23.11), librte-mldev26 (>= 23.11), librte-net-bnxt26 (>= 23.11), librte-net-bond26 (>= 24.11~rc2), librte-net-dpaa26 (>= 23.11), librte-net-i40e26 (>= 23.11), librte-net-iavf26 (>= 25.11~rc2), librte-net-ice26 (>= 24.11~rc1), librte-net-ixgbe26 (>= 23.11), librte-net-mlx5-26 (>= 24.11~rc1), librte-net-null26 (>= 25.11~rc1), librte-net-ring26 (>= 23.11), librte-net26 (>= 25.11~rc2), librte-node26 (>= 25.11~rc2), librte-pcapng26 (>= 23.11), librte-pci26 (>= 23.11), librte-pdcp26 (>= 23.11), librte-pdump26 (>= 23.11), librte-pipeline26 (>= 25.11~rc1), librte-pmu26 (>= 25.11~rc2), librte-port26 (>= 23.11), librte-power-acpi26 (>= 25.11.2), librte-power-amd-pstate26 (>= 25.11.2), librte-power-cppc26 (>= 25.11.2), librte-power-intel-pstate26 (>= 25.11.2), librte-power-intel-uncore26 (>= 25.11.2), librte-power-kvm-vm26 (>= 25.11.2), librte-power26 (>= 23.11), librte-raw-skeleton26 (>= 25.11~rc1), librte-rawdev26 (>= 23.11), librte-rcu26 (>= 23.11), librte-regexdev26 (>= 20.11), librte-reorder26 (>= 23.11), librte-rib26 (>= 23.11), librte-ring26 (>= 25.11~rc2), librte-sched26 (>= 23.11), librte-security26 (>= 25.11~rc1), librte-stack26 (>= 23.11), librte-table26 (>= 23.11), librte-telemetry26 (>= 23.11), librte-timer26 (>= 23.11), zlib1g (>= 1:1.1.4), sse4.2-support
+Depends: libdpdk-dev (>= 25.11.3-1), python3, ibverbs-providers (>= 23~), libbsd0 (>= 0.0), libc6 (>= 2.38), libelf1t64 (>= 0.131), libfdt1 (>= 1.8.1), libibverbs1 (>= 23~), libjansson4 (>= 2.14), libnuma1 (>= 2.0.11), libpcap0.8t64 (>= 1.5.1), librte-acl26 (>= 25.11~rc1), librte-argparse26 (>= 24.11~rc1), librte-baseband-acc26 (>= 25.11.3), librte-baseband-fpga-5gnr-fec26 (>= 20.11), librte-baseband-fpga-lte-fec26 (>= 20.11), librte-baseband-la12xx26 (>= 25.11~rc1), librte-bbdev26 (>= 25.11~rc1), librte-bitratestats26 (>= 23.11), librte-bpf26 (>= 23.11), librte-bus-auxiliary26 (>= 25.11.3), librte-bus-dpaa26 (>= 25.11.3), librte-bus-pci26 (>= 20.11), librte-bus-vdev26 (>= 23.11), librte-cfgfile26 (>= 23.11), librte-cmdline26 (>= 25.11~rc2), librte-common-dpaax26 (>= 20.08), librte-common-mlx5-26 (>= 25.11.3), librte-compressdev26 (>= 25.11~rc1), librte-crypto-scheduler26 (>= 23.11), librte-cryptodev26 (>= 25.11~rc1), librte-dispatcher26 (>= 23.11), librte-distributor26 (>= 23.11), librte-dmadev26 (>= 25.11~rc1), librte-eal26 (>= 25.11~rc2), librte-efd26 (>= 23.11), librte-ethdev26 (>= 25.11~rc2), librte-eventdev26 (>= 25.11~rc2), librte-fib26 (>= 25.11~rc2), librte-gpudev26 (>= 22.11), librte-graph26 (>= 25.11~rc2), librte-gro26 (>= 23.11), librte-gso26 (>= 23.11), librte-hash26 (>= 24.11~rc2), librte-ip-frag26 (>= 23.11), librte-ipsec26 (>= 25.11~rc1), librte-kvargs26 (>= 24.11~rc1), librte-latencystats26 (>= 23.11), librte-log26 (>= 23.11), librte-lpm26 (>= 23.11), librte-mbuf26 (>= 25.11~rc2), librte-member26 (>= 23.11), librte-mempool-dpaa26 (>= 25.11.3), librte-mempool26 (>= 24.11~rc1), librte-meter26 (>= 23.11), librte-metrics26 (>= 23.11), librte-mldev26 (>= 23.11), librte-net-bnxt26 (>= 23.11), librte-net-bond26 (>= 24.11~rc2), librte-net-dpaa26 (>= 23.11), librte-net-i40e26 (>= 23.11), librte-net-iavf26 (>= 25.11~rc2), librte-net-ice26 (>= 24.11~rc1), librte-net-ixgbe26 (>= 23.11), librte-net-mlx5-26 (>= 24.11~rc1), librte-net-null26 (>= 25.11~rc1), librte-net-ring26 (>= 23.11), librte-net26 (>= 25.11~rc2), librte-node26 (>= 25.11~rc2), librte-pcapng26 (>= 23.11), librte-pci26 (>= 23.11), librte-pdcp26 (>= 23.11), librte-pdump26 (>= 23.11), librte-pipeline26 (>= 25.11~rc1), librte-pmu26 (>= 25.11~rc2), librte-port26 (>= 23.11), librte-power-acpi26 (>= 25.11.3), librte-power-amd-pstate26 (>= 25.11.3), librte-power-cppc26 (>= 25.11.3), librte-power-intel-pstate26 (>= 25.11.3), librte-power-intel-uncore26 (>= 25.11.3), librte-power-kvm-vm26 (>= 25.11.3), librte-power26 (>= 23.11), librte-raw-skeleton26 (>= 25.11~rc1), librte-rawdev26 (>= 23.11), librte-rcu26 (>= 23.11), librte-regexdev26 (>= 20.11), librte-reorder26 (>= 23.11), librte-rib26 (>= 23.11), librte-ring26 (>= 25.11~rc2), librte-sched26 (>= 23.11), librte-security26 (>= 25.11~rc1), librte-stack26 (>= 23.11), librte-table26 (>= 23.11), librte-telemetry26 (>= 23.11), librte-timer26 (>= 23.11), zlib1g (>= 1:1.1.4), sse4.2-support
 Breaks: dpdk (<< 24.11~rc1-1)
 Description: Data Plane Development Kit (dev tools)
 Homepage: https://www.dpdk.org
 Description-md5: 2bac84865b00597889092d76d90f8114
 devel
 Priority: optional
-Filename: pool/main/d/dpdk/dpdk-dev_25.11.2-1+b1_amd64.deb
-Size: 1714100
-MD5sum: 5ed44d3911c8fd586fd95ffc7f008e0e
-SHA256: 45d6e94c333f86f290be813c53c2a2ac9cde4868ed7c90ab19236a9625b9d099
+Filename: pool/main/d/dpdk/dpdk-dev_25.11.3-1_amd64.deb
+Size: 1716440
+MD5sum: 0a577beafbe3120d0109f686ac678aef
+SHA256: 536c0033b26933bb7ab530d548ced5de812a51e8dfd638a50809a5d1d446b7fd
 
 Package: dpkg-awk
 Version: 1.2+nmu3
@@ -69342,11 +69342,11 @@ MD5sum: 4d7740e7a54e4a1e9e5a0c786b6c8efc
 SHA256: 0870fefd1bb3f4605691806c2148293a6ba15cec30c1521e9bdb0801c0efe802
 
 Package: icmake
-Version: 13.05.01-1
-Installed-Size: 2643
+Version: 13.06.01-1
+Installed-Size: 2798
 Maintainer: Francesco Paolo Lovergine <frankie@debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 16)
 Description: Intelligent C-like MAKEr, or the ICce MAKE utility
 Homepage: https://fbb-git.gitlab.io/icmake
 Description-md5: a550161f00554825a211dc2edc36ee34
@@ -69354,10 +69354,10 @@ Tag: devel::buildtools, implemented-in::c, interface::commandline,
  role::program, scope::utility
 devel
 Priority: optional
-Filename: pool/main/i/icmake/icmake_13.05.01-1_amd64.deb
-Size: 579532
-MD5sum: b60d652a60cc3de307ea265b9f56fcfd
-SHA256: 071b74db61bdb0d9c8a207a6667e3b142d55efe56fd9508d176dcc3981ff22d4
+Filename: pool/main/i/icmake/icmake_13.06.01-1_amd64.deb
+Size: 605624
+MD5sum: 593667fe8561b387888f04e32d53bb86
+SHA256: 56e41bdf4da084cdfdfec355d232ab367248a16c743bab01a8a1e002a8c65ddc
 
 Package: icon-ipl
 Source: icon
@@ -72464,8 +72464,8 @@ SHA256: 6f40a88f488614d98e02af337b35ee3a48e3f4746dcad8d89dd933f842c2a033
 
 Package: libxml2-source
 Source: libxml2
-Version: 2.15.3+dfsg-1
-Installed-Size: 2393
+Version: 2.15.4+dfsg-1
+Installed-Size: 2413
 Maintainer: Debian XML/SGML Group <debian-xml-sgml-pkgs@lists.alioth.debian.org>
 Architecture: all
 Description: GNOME XML library - source code
@@ -72474,10 +72474,10 @@ Homepage: http://xmlsoft.org
 Description-md5: f61923e1f4152bcaf08026d1680eb8d0
 devel
 Priority: optional
-Filename: pool/main/libx/libxml2/libxml2-source_2.15.3+dfsg-1_all.deb
-Size: 2442084
-MD5sum: bf288c799966e1bd53b0e7d3962b1bb8
-SHA256: a0ef1ebf60ebda0e9cd9d242643a71cef8b96f55445848a2fdf7da5e3cf74f56
+Filename: pool/main/libx/libxml2/libxml2-source_2.15.4+dfsg-1_all.deb
+Size: 2461380
+MD5sum: 1b8dc4900b83e0d81529cda65eef10cf
+SHA256: 8f4c782b2246e7e346051cf379c2dfc0c9b0aa4299455b71f70f3e0ee5c3d91e
 
 Package: libyang3-tools
 Source: libyang (3.13.6-1)
@@ -76059,11 +76059,11 @@ MD5sum: 66ee1cd29cdc7d0722a28ef8451c8feb
 SHA256: 5b23e2b1b4009c1bee0e7b7adfec62508453bad3b0adb4f246da461d6aad9538
 
 Package: mwrap
-Version: 1.3.5-1
-Installed-Size: 380
+Version: 1.3.5-2
+Installed-Size: 400
 Maintainer: Debian Octave Group <team+octave-team@tracker.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2)
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libstdc++6 (>= 13)
 Recommends: octave
 Description: Octave/MATLAB mex generator
 Homepage: https://github.com/zgimbutas/mwrap
@@ -76071,10 +76071,10 @@ Commands: mwrap
 Description-md5: 837ed1ddf8be236eed910832e9857faa
 devel
 Priority: optional
-Filename: pool/main/m/mwrap/mwrap_1.3.5-1_amd64.deb
-Size: 245988
-MD5sum: 41a2215e1e3d77f6d1bb68b6e740c95f
-SHA256: 4057d97b55fec2d77b74d866107c205b80f2b9f977f6f6860945e6d8505f33b9
+Filename: pool/main/m/mwrap/mwrap_1.3.5-2_amd64.deb
+Size: 254172
+MD5sum: 40b3c74fa4eefb258ccf7cb24ad01a87
+SHA256: f165a9f4448a1e74242d1d005b05c6ec2668e3f2127e56a754d6f101bdb7f104
 
 Package: mymake
 Version: 2.4.5+dfsg-1
