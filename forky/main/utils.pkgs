@@ -2573,21 +2573,21 @@ MD5sum: 22bb030d3135632e236a5b3e559b7c1b
 SHA256: f9f618bf1b505bd8c810448f921e6273aaea9e33f295e3e49ead7cd4e3f521bf
 
 Package: bpftrace
-Version: 0.26.1-1.1
-Installed-Size: 15076
+Version: 0.27.0-1
+Installed-Size: 15228
 Maintainer: Vincent Bernat <bernat@debian.org>
 Architecture: amd64
-Depends: libbpfcc (>= 0.35.0+ds), libc6 (>= 2.38), libclang-cpp21 (>= 1:21.1.8), libclang1-21 (>= 1:15.0.7), libdw1t64 (>= 0.171), libelf1t64 (>= 0.144), libgcc-s1 (>= 3.0), libllvm21 (>= 1:21.1.0), libsframe3 (>= 2.45.50), libstdc++6 (>= 16.2.0-1), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.2.11.dfsg)
+Depends: libbpfcc (>= 0.35.0+ds), libc6 (>= 2.38), libclang-cpp21 (>= 1:21.1.8), libclang1-21 (>= 1:15.0.7), libdw1t64 (>= 0.171), libelf1t64 (>= 0.144), libgcc-s1 (>= 3.0), libllvm21 (>= 1:21.1.0), libsframe3 (>= 2.45.50), libstdc++6 (>= 16.2.0-2), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.2.11.dfsg)
 Recommends: libc6-dev
 Description: high-level tracing language for Linux eBPF
 Homepage: https://github.com/iovisor/bpftrace
 Description-md5: 77220d45de965013d79717740b8659e5
 utils
 Priority: optional
-Filename: pool/main/b/bpftrace/bpftrace_0.26.1-1.1_amd64.deb
-Size: 3771544
-MD5sum: 65c11632c935d66d57f4f53665221e81
-SHA256: 4d1b77a83cd008a86a787b419684b68c410d1abf4cd40b68424d3a222b553fba
+Filename: pool/main/b/bpftrace/bpftrace_0.27.0-1_amd64.deb
+Size: 3819932
+MD5sum: 23709b5f1766750fc6829a74c4de56ae
+SHA256: 3a1abefff37e32ef9f9baa6d4e5c4b2996633a43febabd6282d9dfa224dd2618
 
 Package: bpytop
 Version: 1.0.68-2
@@ -7437,15 +7437,16 @@ SHA256: c261d93573063aef0bd711a8e0c6cbc7a61c91611f3bb0af5349e3717222af31
 
 Package: dpkg-dev
 Source: dpkg
-Version: 1.23.7
-Installed-Size: 1715
+Version: 1.23.11
+Installed-Size: 1398
 Maintainer: Dpkg Developers <debian-dpkg@lists.debian.org>
 Architecture: all
+Replaces: bash-completion (<< 1:2.16.0-9)
 Provides: dpkg-build-api (= 0), dpkg-build-api (= 1)
-Depends: perl:any, libdpkg-perl (= 1.23.7), tar (>= 1.28-1), bzip2, xz-utils (>= 5.4.0), patch (>= 2.7), make (>= 4.4), binutils
-Recommends: build-essential, gcc | c-compiler, fakeroot, sq | sqop | rsop | gosop | pgpainless-cli | gpg-sq | gnupg, sqv | sqopv | rsopv | sopv | gosop | pgpainless-cli | gpgv-sq | gpgv, libalgorithm-merge-perl
+Depends: perl:any, libdpkg-perl (= 1.23.11), bzip2, xz-utils (>= 5.4.0), patch (>= 2.7), make (>= 4.4), binutils
+Recommends: build-essential, gcc | c-compiler, fakeroot, sq | sqop | rsop | gosop | hopenpgp-tools | pgpainless-cli | gpg-sq | gnupg, sqv | sqopv | rsopv | sopv | gosop | hopenpgp-tools | pgpainless-cli | gpgv-sq | gpgv, libalgorithm-merge-perl
 Suggests: debian-keyring, debian-tag2upload-keyring
-Breaks: debhelper (<< 10.10.1~), debian-keyring (<< 2025.04.25~), devuan-keyring (<< 2025.07.30~), gosop (<< 1.1.0~), libsop-java-java (<< 4.0.7~), pgpainless-cli (<< 1.3.13~), rsop (<< 0.4.0~), sq (<< 0.40.0~), sqop (<< 0.27.2~), sqv (<< 1.3.0~)
+Breaks: bash-completion (<< 1:2.12~), debian-keyring (<< 2025.04.25~), devuan-keyring (<< 2025.07.30~), hopenpgp-tools (<< 0.25.1~), pureos-archive-keyring (<< 2026.02.0~)
 Description: Debian package development tools
 Multi-Arch: foreign
 Homepage: https://wiki.debian.org/Teams/Dpkg
@@ -7457,10 +7458,10 @@ Tag: admin::package-management, devel::debian, devel::packaging,
  works-with::software:package, works-with::software:source
 utils
 Priority: optional
-Filename: pool/main/d/dpkg/dpkg-dev_1.23.7_all.deb
-Size: 1318356
-MD5sum: 9714b3d902a9a29baaf0d1daeab2b244
-SHA256: 603ff013c15aba32c03e2afc2db17d0312da5ccd0f667ee4130c5916b46089d9
+Filename: pool/main/d/dpkg/dpkg-dev_1.23.11_all.deb
+Size: 1005400
+MD5sum: 8664c345ee5b5316c49a94d8e0403d4a
+SHA256: 9d253cff494e1497f09e6ba6045a7a92879009efc2bcc35b951baa8107798f8e
 
 Package: cross-config
 Source: dpkg-cross
@@ -9033,493 +9034,6 @@ Size: 8756
 MD5sum: cb8906d17b540372cd7b21e67c3bb632
 SHA256: 9a36e9c2d9c2061449736cc3f6c9b0c0db26d60f35f6c8150a1555cfa1d2790f
 
-Package: fcitx
-Version: 1:4.2.9.9-2.1
-Installed-Size: 44
-Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
-Architecture: all
-Depends: fcitx-bin, fcitx-data, fcitx-modules
-Recommends: fcitx-config-gtk | kde-config-fcitx, fcitx-frontend-all | fcitx-frontend-fbterm, fcitx-ui-classic | fcitx-ui-light, im-config (>= 0.5)
-Suggests: fcitx-m17n, fcitx-tools
-Conflicts: fcitx5
-Description: Flexible Input Method Framework
-Homepage: https://github.com/fcitx/fcitx
-Description-md5: eb148ca7ce16b2d84d02264d801fd140
-Tag: accessibility::input, culture::chinese, implemented-in::c,
- interface::graphical, interface::x11, role::metapackage, role::program,
- uitoolkit::xlib, use::typesetting, x11::application
-utils
-Priority: optional
-Filename: pool/main/f/fcitx/fcitx_4.2.9.9-2.1_all.deb
-Size: 20752
-MD5sum: 3fe81b68759589464ad9204f1c2379da
-SHA256: b0e1007bc2b98db736176d47296007279f915cb79ad16c03d7443903721d55a9
-
-Package: fcitx-bin
-Source: fcitx (1:4.2.9.9-2.1)
-Version: 1:4.2.9.9-2.1+b1
-Installed-Size: 231
-Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
-Architecture: amd64
-Replaces: fcitx (<< 1:4.2.9.9), fcitx-libs-dev (<< 1:4.2.9.9-2.1)
-Depends: libc6 (>= 2.38), libdbus-1-3 (>= 1.10), libfcitx-config4 (>= 4.2.7), libfcitx-core0 (>= 4.2.8.1), libfcitx-utils0 (>= 4.2.7), libgettextpo0 (>= 0.23.2)
-Recommends: fcitx-data, fcitx-modules
-Suggests: fcitx (>= 1:4.2.9.9)
-Conflicts: fcitx5
-Breaks: fcitx (<< 1:4.2.9.9), fcitx-libs-dev (<< 1:4.2.9.9-2.1)
-Description: Flexible Input Method Framework - essential binaries
-Homepage: https://github.com/fcitx/fcitx
-Description-md5: 1e8503ca9b0600b223cb65ab79e07da3
-Tag: accessibility::input, implemented-in::c, role::program, use::typesetting
-utils
-Priority: optional
-Filename: pool/main/f/fcitx/fcitx-bin_4.2.9.9-2.1+b1_amd64.deb
-Size: 56896
-MD5sum: 22fa3b8f0884489ce9834d94abf3ac80
-SHA256: ddec93fa7fa4dceb29c9c9333f5b94ead6d64b59497bdc9a10e1fad6daaedd1d
-
-Package: fcitx-data
-Source: fcitx
-Version: 1:4.2.9.9-2.1
-Installed-Size: 943
-Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
-Architecture: all
-Replaces: fcitx (<< 1:4.2.9.9)
-Recommends: fcitx-bin
-Suggests: fcitx (>= 1:4.2.9.9)
-Conflicts: fcitx5
-Breaks: fcitx (<< 1:4.2.9.9)
-Description: Flexible Input Method Framework - essential data files
-Multi-Arch: foreign
-Homepage: https://github.com/fcitx/fcitx
-Description-md5: 777cd97c0efe8db67653031bd078d3d8
-Tag: accessibility::input, role::app-data, use::typesetting
-utils
-Priority: optional
-Filename: pool/main/f/fcitx/fcitx-data_4.2.9.9-2.1_all.deb
-Size: 201528
-MD5sum: 60127e5098b7d09be58a1c1c6accee83
-SHA256: 5621e6fb458038f4fec2c722d979f2740dee167ecd4e87580921ddeb05fbccc8
-
-Package: fcitx-frontend-all
-Source: fcitx
-Version: 1:4.2.9.9-2.1
-Installed-Size: 32
-Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
-Architecture: all
-Recommends: fcitx-frontend-gtk2, fcitx-frontend-gtk3, fcitx-frontend-qt5, fcitx-frontend-qt6
-Description: Flexible Input Method Framework - frontends metapackage
-Homepage: https://github.com/fcitx/fcitx
-Description-md5: 4b50cd489430e2781f36b30f5c4204fe
-utils
-Priority: optional
-Filename: pool/main/f/fcitx/fcitx-frontend-all_4.2.9.9-2.1_all.deb
-Size: 19172
-MD5sum: 09e05a660eeed4d27e689d16c64b0015
-SHA256: d6193cb0d85ea8eb337c142f0d0ed9483b807bb3c20356f7f4c35e71620d6176
-
-Package: fcitx-frontend-gtk2
-Source: fcitx (1:4.2.9.9-2.1)
-Version: 1:4.2.9.9-2.1+b1
-Installed-Size: 76
-Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
-Architecture: amd64
-Depends: fcitx-module-dbus, libc6 (>= 2.14), libfcitx-gclient1 (>= 1:4.2.9.5), libfcitx-utils0 (>= 4.2.7), libglib2.0-0t64 (>= 2.76.0), libgtk2.0-0t64 (>= 2.24.0), libpango-1.0-0 (>= 1.14.0), libxkbcommon0 (>= 0.5.0)
-Recommends: fcitx-frontend-gtk3
-Description: Flexible Input Method Framework - GTK+ 2 IM Module frontend
-Homepage: https://github.com/fcitx/fcitx
-Description-md5: c124d036a7a879d7e22d4195a4db5c88
-Tag: accessibility::input, implemented-in::c, interface::graphical,
- interface::x11, role::plugin, role::program, uitoolkit::gtk,
- use::typesetting, works-with-format::tex, works-with::text,
- x11::application
-utils
-Priority: optional
-Filename: pool/main/f/fcitx/fcitx-frontend-gtk2_4.2.9.9-2.1+b1_amd64.deb
-Size: 28832
-MD5sum: ba8989e3b25ed63bdb9166b61beee445
-SHA256: 76a9e58b0b75e558503b8fa13b08c4145d61e2bfa1b3ed824b4e9c3a93cb3b77
-
-Package: fcitx-frontend-gtk3
-Source: fcitx (1:4.2.9.9-2.1)
-Version: 1:4.2.9.9-2.1+b1
-Installed-Size: 76
-Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
-Architecture: amd64
-Depends: fcitx-module-dbus, libc6 (>= 2.14), libfcitx-gclient1 (>= 1:4.2.9.5), libfcitx-utils0 (>= 4.2.7), libglib2.0-0t64 (>= 2.76.0), libgtk-3-0t64 (>= 3.9.10), libpango-1.0-0 (>= 1.14.0), libxkbcommon0 (>= 0.5.0)
-Recommends: fcitx-frontend-gtk2
-Description: Flexible Input Method Framework - GTK+ 3 IM Module frontend
-Homepage: https://github.com/fcitx/fcitx
-Description-md5: 995f4a50b6717913464e9a396ea8fff3
-Tag: accessibility::input, implemented-in::c, interface::graphical,
- interface::x11, role::program, uitoolkit::gtk, use::typesetting
-utils
-Priority: optional
-Filename: pool/main/f/fcitx/fcitx-frontend-gtk3_4.2.9.9-2.1+b1_amd64.deb
-Size: 29756
-MD5sum: e58b23bdf784c651be52ea602122a8a4
-SHA256: 404cfcfacb93f6fcbbdfdbb64c7e080480fda615500eca975e4a74bafade0f67
-
-Package: fcitx-module-dbus
-Source: fcitx (1:4.2.9.9-2.1)
-Version: 1:4.2.9.9-2.1+b1
-Installed-Size: 144
-Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
-Architecture: amd64
-Depends: fcitx-modules, libc6 (>= 2.38), libdbus-1-3 (>= 1.10)
-Recommends: dbus-x11
-Description: Flexible Input Method Framework - D-Bus module and IPC frontend
-Multi-Arch: foreign
-Homepage: https://github.com/fcitx/fcitx
-Description-md5: 8eea19c59915073fef88febb963cfef6
-utils
-Priority: optional
-Filename: pool/main/f/fcitx/fcitx-module-dbus_4.2.9.9-2.1+b1_amd64.deb
-Size: 45464
-MD5sum: 220b1986f8b2b1428125f9e254c62e0a
-SHA256: 644d6a56865e1722fa3c2920fe3dfa66ccdac599a2a1955107d62ea35dd3f717
-
-Package: fcitx-module-kimpanel
-Source: fcitx (1:4.2.9.9-2.1)
-Version: 1:4.2.9.9-2.1+b1
-Installed-Size: 81
-Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
-Architecture: amd64
-Replaces: fcitx (<< 1:4.2.9.9), fcitx-ui-kimpanel
-Provides: fcitx-ui-kimpanel
-Depends: fcitx-module-dbus, libc6 (>= 2.38), libdbus-1-3 (>= 1.10)
-Suggests: kdialog, plasma-widgets-kimpanel
-Breaks: fcitx (<< 1:4.2.9.9)
-Description: Flexible Input Method Framework - KIMPanel protocol module
-Multi-Arch: foreign
-Homepage: https://github.com/fcitx/fcitx
-Description-md5: f9f707a1f53efc8a151d6c50e473f648
-utils
-Priority: optional
-Filename: pool/main/f/fcitx/fcitx-module-kimpanel_4.2.9.9-2.1+b1_amd64.deb
-Size: 32328
-MD5sum: 1d68e56794f9463b6104886855b6d393
-SHA256: 994e04f47ab6ec9928010058eb6e3282dba4bdb31dcc8f2e305680e6b53633ef
-
-Package: fcitx-module-lua
-Source: fcitx (1:4.2.9.9-2.1)
-Version: 1:4.2.9.9-2.1+b1
-Installed-Size: 77
-Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
-Architecture: amd64
-Depends: fcitx-modules, libc6 (>= 2.14), liblua5.1-0 (>= 5.1.3)
-Description: Flexible Input Method Framework - Lua module
-Homepage: https://github.com/fcitx/fcitx
-Description-md5: 5e6f8d9280382f2ae2d61744276268c4
-utils
-Priority: optional
-Filename: pool/main/f/fcitx/fcitx-module-lua_4.2.9.9-2.1+b1_amd64.deb
-Size: 31588
-MD5sum: 7e4aca550917eec8b7c21ae7940a0610
-SHA256: d53f17c8d9ff7d42819dee7e10f407e4e28af0aa2b7ab0a149e2ca9791a5b755
-
-Package: fcitx-module-x11
-Source: fcitx (1:4.2.9.9-2.1)
-Version: 1:4.2.9.9-2.1+b1
-Installed-Size: 300
-Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
-Architecture: amd64
-Depends: fcitx-modules, libc6 (>= 2.33), libcairo2 (>= 1.2.4), libdbus-1-3 (>= 1.10), libglib2.0-0t64 (>= 2.12.0), libjson-c5 (>= 0.15), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.22.0), libx11-6, libxfixes3, libxinerama1 (>= 2:1.1.4), libxkbfile1 (>= 1:1.1.0), libxml2-16 (>= 2.14.1), libxrender1 (>= 1:0.9.12)
-Description: Flexible Input Method Framework - X11 module and XIM frontend
-Homepage: https://github.com/fcitx/fcitx
-Description-md5: dc0d7a69bb3c4812dc10eee00cfd720e
-utils
-Priority: optional
-Filename: pool/main/f/fcitx/fcitx-module-x11_4.2.9.9-2.1+b1_amd64.deb
-Size: 99272
-MD5sum: 7a8165b30ab3e9f1233e510f88b7d80a
-SHA256: 21d9f6af5a1483647bc5e39742e6639d796968a3298987a39afe7fec7809dc40
-
-Package: fcitx-modules
-Source: fcitx (1:4.2.9.9-2.1)
-Version: 1:4.2.9.9-2.1+b1
-Installed-Size: 5604
-Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
-Architecture: amd64
-Replaces: fcitx (<< 1:4.2.9.9), fcitx-keyboard, fcitx-module-quickphrase-editor, fcitx-modules-x11 (<< 1:4.2.7), fcitx5-module-quickphrase-editor
-Provides: fcitx-keyboard
-Depends: libc6 (>= 2.38), libdbus-1-3 (>= 1.10), libjson-c5 (>= 0.15), libuuid1 (>= 2.16), libxkbcommon0 (>= 0.5.0), libpresage1v5 (>= 0.9~), libenchant-2-2 (>= 2.2.7~)
-Recommends: fcitx, fcitx-module-dbus, fcitx-module-kimpanel, fcitx-module-lua, fcitx-module-x11, fcitx-module-quickphrase-editor5
-Breaks: fcitx (<< 1:4.2.9.9), fcitx-keyboard, fcitx-module-quickphrase-editor, fcitx-modules-x11 (<< 1:4.2.7), fcitx5-module-quickphrase-editor
-Description: Flexible Input Method Framework - core modules
-Homepage: https://github.com/fcitx/fcitx
-Description-md5: 714628719488a68058d871c98b097e51
-utils
-Priority: optional
-Filename: pool/main/f/fcitx/fcitx-modules_4.2.9.9-2.1+b1_amd64.deb
-Size: 1478020
-MD5sum: 391eb88359f971c75becc094957e1c82
-SHA256: b3a5d0721c8bd5aedaf9715b3d0b84019b15edd51c3ddef616a0c64876cd68a0
-
-Package: fcitx-pinyin
-Source: fcitx (1:4.2.9.9-2.1)
-Version: 1:4.2.9.9-2.1+b1
-Installed-Size: 7340
-Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
-Architecture: amd64
-Replaces: fcitx (<< 1:4.2.9.9)
-Depends: fcitx-bin, fcitx-data (>= 1:4.2.9.9), fcitx-modules, libc6 (>= 2.33)
-Recommends: fcitx
-Enhances: fcitx-table
-Breaks: fcitx (<< 1:4.2.9.9)
-Description: Flexible Input Method Framework - classic Pinyin engine
-Homepage: https://github.com/fcitx/fcitx
-Description-md5: eeb7ffedc8a62bef4c90794c05fba610
-utils
-Priority: optional
-Filename: pool/main/f/fcitx/fcitx-pinyin_4.2.9.9-2.1+b1_amd64.deb
-Size: 2072384
-MD5sum: 0d0877f52dab85ec21434f59954ae115
-SHA256: 3bcfd8fcaeca972c833332329102888d619b5acd096ef866eb4b9e5a7a3af52e
-
-Package: fcitx-qw
-Source: fcitx (1:4.2.9.9-2.1)
-Version: 1:4.2.9.9-2.1+b1
-Installed-Size: 54
-Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
-Architecture: amd64
-Replaces: fcitx (<< 1:4.2.9.9)
-Depends: fcitx-bin, fcitx-data (>= 1:4.2.9.9), fcitx-modules, libc6 (>= 2.4)
-Recommends: fcitx
-Breaks: fcitx (<< 1:4.2.9.9)
-Description: Flexible Input Method Framework - QuWei engine
-Homepage: https://github.com/fcitx/fcitx
-Description-md5: 7e9f9d35e216ca0fc94c14f01ea4314b
-utils
-Priority: optional
-Filename: pool/main/f/fcitx/fcitx-qw_4.2.9.9-2.1+b1_amd64.deb
-Size: 22092
-MD5sum: 3425d2929769dccdf96db3dad8dc75b6
-SHA256: c1251401df81e22875d7013f93c456e197f639461f936619c2ebea7f167e8b8f
-
-Package: fcitx-table
-Source: fcitx (1:4.2.9.9-2.1)
-Version: 1:4.2.9.9-2.1+b1
-Installed-Size: 351
-Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
-Architecture: amd64
-Replaces: fcitx (<< 1:4.2.9.9)
-Depends: fcitx-bin, fcitx-data (>= 1:4.2.9.9), fcitx-modules, libc6 (>= 2.14)
-Recommends: fcitx, fcitx-pinyin (>= 1:4.2.9.9)
-Suggests: fcitx-table-all
-Breaks: fcitx (<< 1:4.2.9.9)
-Description: Flexible Input Method Framework - table engine
-Homepage: https://github.com/fcitx/fcitx
-Description-md5: 7f54a70fb1467e93b3f6a5147f8c9670
-utils
-Priority: optional
-Filename: pool/main/f/fcitx/fcitx-table_4.2.9.9-2.1+b1_amd64.deb
-Size: 58412
-MD5sum: 5ccd4a1cd4e674ffa8be8a5572a45d5e
-SHA256: d28eb73aff1b51dbfa51b09544f574146e34a61ec4694784c259e762ff6b7461
-
-Package: fcitx-table-all
-Source: fcitx
-Version: 1:4.2.9.9-2.1
-Installed-Size: 32
-Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
-Architecture: all
-Recommends: fcitx-table-bingchan, fcitx-table-cangjie, fcitx-table-dianbaoma, fcitx-table-erbi, fcitx-table-wanfeng, fcitx-table-wbpy, fcitx-table-wubi, fcitx-table-ziranma
-Description: Flexible Input Method Framework - tables metapackage
-Homepage: https://github.com/fcitx/fcitx
-Description-md5: 846ab873522663e00d81392becf317f8
-Tag: role::app-data, role::metapackage
-utils
-Priority: optional
-Filename: pool/main/f/fcitx/fcitx-table-all_4.2.9.9-2.1_all.deb
-Size: 19224
-MD5sum: 5b87b8c081cc3940f874becd9d45954d
-SHA256: 54ce1076dc81725e16b80a2dd4256d21eff31ed8a7ea7f38d7ce75766770c568
-
-Package: fcitx-table-bingchan
-Source: fcitx
-Version: 1:4.2.9.9-2.1
-Installed-Size: 549
-Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
-Architecture: all
-Depends: fcitx-table (>= 1:4.2.6)
-Description: Flexible Input Method Framework - Bingchan table
-Homepage: https://github.com/fcitx/fcitx
-Description-md5: 5d7fde5544e2f8f73a944dc5ea9a931d
-Tag: culture::chinese, role::app-data
-utils
-Priority: optional
-Filename: pool/main/f/fcitx/fcitx-table-bingchan_4.2.9.9-2.1_all.deb
-Size: 124220
-MD5sum: 89be72d996d8e6312fc6d82188b10089
-SHA256: c9676022ffb0ed879b223e9277ad3a1c029ac601becd8d1eb84dc7ac957251bc
-
-Package: fcitx-table-cangjie
-Source: fcitx
-Version: 1:4.2.9.9-2.1
-Installed-Size: 193
-Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
-Architecture: all
-Depends: fcitx-table (>= 1:4.2.6)
-Description: Flexible Input Method Framework - Cangjie table (DO NOT USE)
-Homepage: https://github.com/fcitx/fcitx
-Description-md5: c0c6d1507a4dabc0959303228eddc1ee
-Tag: culture::chinese, role::app-data
-utils
-Priority: optional
-Filename: pool/main/f/fcitx/fcitx-table-cangjie_4.2.9.9-2.1_all.deb
-Size: 41956
-MD5sum: 2b5f95d6c884aa9f5a584a4d1aceaf37
-SHA256: d6a233353f8adb623c0c035722ec15393ddf60b02031ad590e9730ee07c5d677
-
-Package: fcitx-table-dianbaoma
-Source: fcitx
-Version: 1:4.2.9.9-2.1
-Installed-Size: 179
-Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
-Architecture: all
-Depends: fcitx-table (>= 1:4.2.6)
-Description: Flexible Input Method Framework - Dianbaoma table
-Homepage: https://github.com/fcitx/fcitx
-Description-md5: cb4a60ce8abc26c7b38bb83b9fb7fbf9
-Tag: culture::chinese, role::app-data
-utils
-Priority: optional
-Filename: pool/main/f/fcitx/fcitx-table-dianbaoma_4.2.9.9-2.1_all.deb
-Size: 32328
-MD5sum: d3aa8bdf0a7c2365b2a85a82ec34cec2
-SHA256: 2bb9b942060e92472b7bb3a4fb58c87f59e6856a6d98f33d7ccf0bb1d68a6e20
-
-Package: fcitx-table-erbi
-Source: fcitx
-Version: 1:4.2.9.9-2.1
-Installed-Size: 1977
-Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
-Architecture: all
-Depends: fcitx-table (>= 1:4.2.6)
-Description: Flexible Input Method Framework - Erbi table
-Homepage: https://github.com/fcitx/fcitx
-Description-md5: 3225b441335dd980dd7f61184232d665
-Tag: culture::chinese, role::app-data
-utils
-Priority: optional
-Filename: pool/main/f/fcitx/fcitx-table-erbi_4.2.9.9-2.1_all.deb
-Size: 379784
-MD5sum: ee6ba4d8f972effedecbdc66542a0789
-SHA256: deb25115caa4b0e6051cfa5249b79ab1e6afd46363a82cbd72b0832b9f28e244
-
-Package: fcitx-table-wanfeng
-Source: fcitx
-Version: 1:4.2.9.9-2.1
-Installed-Size: 2495
-Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
-Architecture: all
-Depends: fcitx-table (>= 1:4.2.6)
-Description: Flexible Input Method Framework - Wanfeng table
-Homepage: https://github.com/fcitx/fcitx
-Description-md5: 72a1ec1f02f89b2ddf914236fb4f6e23
-Tag: culture::chinese, role::app-data
-utils
-Priority: optional
-Filename: pool/main/f/fcitx/fcitx-table-wanfeng_4.2.9.9-2.1_all.deb
-Size: 515864
-MD5sum: 01d01006faa43af1b3d6768c8b9643a6
-SHA256: 16fbc0e3f00492bed63e6c71166df7f7e381b2849998454bf9cda60e3ea64244
-
-Package: fcitx-table-wbpy
-Source: fcitx
-Version: 1:4.2.9.9-2.1
-Installed-Size: 10273
-Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
-Architecture: all
-Depends: fcitx-table (>= 1:4.2.6)
-Description: Flexible Input Method Framework - WubiPinyin table
-Homepage: https://github.com/fcitx/fcitx
-Description-md5: bdb4c7397151321d2b912b36ba47a138
-Tag: culture::chinese, role::app-data
-utils
-Priority: optional
-Filename: pool/main/f/fcitx/fcitx-table-wbpy_4.2.9.9-2.1_all.deb
-Size: 1657932
-MD5sum: 166f5d27ff7a6ce439f5d5ec68db77c7
-SHA256: 20982aa2bf54f5f4b6ba4924211f6253d53a07315572eee0de5eae09f92ce2a7
-
-Package: fcitx-table-wubi
-Source: fcitx
-Version: 1:4.2.9.9-2.1
-Installed-Size: 2481
-Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
-Architecture: all
-Depends: fcitx-table (>= 1:4.2.6)
-Description: Flexible Input Method Framework - Wubi table
-Homepage: https://github.com/fcitx/fcitx
-Description-md5: 0fcf710fc45e93d17f7fc38351992ce6
-Tag: culture::chinese, role::app-data
-utils
-Priority: optional
-Filename: pool/main/f/fcitx/fcitx-table-wubi_4.2.9.9-2.1_all.deb
-Size: 512660
-MD5sum: 8e461460811a3b263e18f4a85009c68f
-SHA256: 684f48b5e927a665ba77d6f8120c955577f091cdd2d0510cd168ba68863d60cf
-
-Package: fcitx-table-ziranma
-Source: fcitx
-Version: 1:4.2.9.9-2.1
-Installed-Size: 1503
-Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
-Architecture: all
-Depends: fcitx-table (>= 1:4.2.6)
-Description: Flexible Input Method Framework - Ziranma table
-Homepage: https://github.com/fcitx/fcitx
-Description-md5: abdabf28bba4d6c85d346995428a6d11
-Tag: culture::chinese, role::app-data
-utils
-Priority: optional
-Filename: pool/main/f/fcitx/fcitx-table-ziranma_4.2.9.9-2.1_all.deb
-Size: 321368
-MD5sum: c0908a5cf62da060ee9649e2d01e813e
-SHA256: aebe468f9ce9a3897a8d31909fdfd5fc297c4a1dbfb3acea0a53df42840d1375
-
-Package: fcitx-tools
-Source: fcitx (1:4.2.9.9-2.1)
-Version: 1:4.2.9.9-2.1+b1
-Installed-Size: 643
-Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
-Architecture: amd64
-Replaces: fcitx (<< 1:4.2.9.9)
-Depends: fcitx-bin (>= 1:4.2.9.9), libc6 (>= 2.38), libfcitx-config4 (>= 4.2.7), libfcitx-utils0 (>= 4.2.7)
-Suggests: fcitx
-Breaks: fcitx (<< 1:4.2.9.9)
-Description: Flexible Input Method Framework - various tools
-Homepage: https://github.com/fcitx/fcitx
-Description-md5: 08c64ab1cec4ff1049b92611102718bb
-utils
-Priority: optional
-Filename: pool/main/f/fcitx/fcitx-tools_4.2.9.9-2.1+b1_amd64.deb
-Size: 90836
-MD5sum: c813875b223eb6dbedf159b0d5a9c5f9
-SHA256: f00d162ebf3ccdc4d09ce7127e67045e9062302b7d4d1d59d65958f835ca04a7
-
-Package: fcitx-ui-classic
-Source: fcitx (1:4.2.9.9-2.1)
-Version: 1:4.2.9.9-2.1+b1
-Installed-Size: 318
-Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
-Architecture: amd64
-Replaces: fcitx (<< 1:4.2.9.9), fcitx-hangul (<< 0.3.0), fcitx-unikey (<< 0.2.0)
-Depends: fcitx-module-x11, libc6 (>= 2.38), libcairo2 (>= 1.2.4), libdbus-1-3 (>= 1.10), libglib2.0-0t64 (>= 2.12.0), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.22.0), libx11-6, libxext6
-Recommends: fcitx (>= 1:4.2.9.9), zenity | kdialog
-Breaks: fcitx (<< 1:4.2.9.9), fcitx-hangul (<< 0.3.0), fcitx-unikey (<< 0.2.0)
-Description: Flexible Input Method Framework - Classic user interface
-Homepage: https://github.com/fcitx/fcitx
-Description-md5: dbe49affc97198f8d8c30f4f756c2715
-utils
-Priority: optional
-Filename: pool/main/f/fcitx/fcitx-ui-classic_4.2.9.9-2.1+b1_amd64.deb
-Size: 129236
-MD5sum: 0e9d4eafc26c5bfea1d02a4c5ddfd377
-SHA256: 9dc73c703745b640dbf9c1de13908bfba37eb26ee254ce2d56d1acbef7a5f712
-
 Package: fcitx-imlist
 Version: 0.6.0-1
 Installed-Size: 39
@@ -9537,11 +9051,11 @@ MD5sum: 888151f7f5fc96a1a80d1394902b6915
 SHA256: 7226ad9c6dcf0dd69db0d043a4753214c19e1c23d9666c15c77b9353b7cc032a
 
 Package: fcitx5
-Version: 5.1.21-1
-Installed-Size: 761
+Version: 5.1.22-1
+Installed-Size: 689
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: fcitx5-data (= 5.1.21-1), fcitx5-modules (= 5.1.21-1), libfcitx5config6 (= 5.1.21-1), libfcitx5core7 (= 5.1.21-1), libfcitx5utils2 (= 5.1.21-1), libc6 (>= 2.38), libexpat1 (>= 2.0.1), libgcc-s1 (>= 4.3), libstdc++6 (>= 13.1), libxkbcommon0 (>= 0.5.0)
+Depends: fcitx5-data (= 5.1.22-1), fcitx5-modules (= 5.1.22-1), libfcitx5config6 (= 5.1.22-1), libfcitx5core7 (= 5.1.22-1), libfcitx5utils2 (= 5.1.22-1), libc6 (>= 2.38), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.0), libstdc++6 (>= 16), libxkbcommon0 (>= 0.5.0)
 Recommends: fcitx5-config-qt, fcitx5-frontend-all, im-config (>= 0.44)
 Suggests: fcitx5-chinese-addons, kde-config-fcitx5
 Conflicts: fcitx (<< 1:5), fcitx-bin (<< 1:5), fcitx-data (<< 1:5)
@@ -9551,15 +9065,15 @@ Description-md5: dcdce0dad9ad71558671ead12239aa69
 Tag: accessibility::input, implemented-in::c++
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5/fcitx5_5.1.21-1_amd64.deb
-Size: 220748
-MD5sum: 10fdaba9003cc770353f0198360b2c1e
-SHA256: 7df991ce45940fb6d717192ce05088b540a717aa62bde23044b8ee9290af291e
+Filename: pool/main/f/fcitx5/fcitx5_5.1.22-1_amd64.deb
+Size: 194692
+MD5sum: 16c0e0f57a1deea6b96fe8adf0a910e6
+SHA256: d4308848158a4b57fe0ff432f387f7aa6f720326f2a3a37bb2a2519410bd711e
 
 Package: fcitx5-data
 Source: fcitx5
-Version: 5.1.21-1
-Installed-Size: 11750
+Version: 5.1.22-1
+Installed-Size: 11820
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: all
 Description: Fcitx Input Method Framework v5 (common data files)
@@ -9568,20 +9082,20 @@ Homepage: https://github.com/fcitx/fcitx5
 Description-md5: ca24ac6dfe869b8d58681d802b3db6ce
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5/fcitx5-data_5.1.21-1_all.deb
-Size: 6963732
-MD5sum: ce50c7bbb515e35ba3e1b0a20e929945
-SHA256: b3c1f5bbe00e3b1b979c5739f94d02a8c5ded2035da798fe61342316f20845d9
+Filename: pool/main/f/fcitx5/fcitx5-data_5.1.22-1_all.deb
+Size: 6970324
+MD5sum: 0c3aca77fd81e0bfb0ad7a79b110c3d7
+SHA256: ce6f0e6949091dc9ac71441dfb7be351ea6f96a653581cd55436cc6ce2cfcd6a
 
 Package: fcitx5-modules
 Source: fcitx5
-Version: 5.1.21-1
-Installed-Size: 4837
+Version: 5.1.22-1
+Installed-Size: 4737
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
 Replaces: fcitx5-module-dbus (<< 5.0.4-2), fcitx5-module-emoji (<< 5.0.20), fcitx5-module-fcitx4 (<< 5.0.4-2), fcitx5-module-ibus (<< 5.0.4-2), fcitx5-module-kimpanel (<< 5.0.4-2), fcitx5-module-quickphrase (<< 5.0.20), fcitx5-module-wayland (<< 5.0.20), fcitx5-module-xorg (<< 5.0.20)
 Provides: fcitx5-module-dbus, fcitx5-module-emoji, fcitx5-module-ibus, fcitx5-module-kimpanel, fcitx5-module-quickphrase, fcitx5-module-wayland, fcitx5-module-xorg
-Depends: fcitx5-data (= 5.1.21-1), plasma-wayland-protocols (>= 1.20), libc6 (>= 2.38), libcairo2 (>= 1.12.0), libenchant-2-2 (>= 2.2.3), libfcitx5config6 (>= 5.1.21), libfcitx5core7 (>= 5.1.21), libfcitx5utils2 (>= 5.1.21), libgcc-s1 (>= 4.3), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.26.0), libpango-1.0-0 (>= 1.37.5), libpangocairo-1.0-0 (>= 1.14.0), libstdc++6 (>= 14), libuuid1 (>= 2.16), libwayland-client0 (>= 1.20.0), libwayland-cursor0 (>= 1.8.1), libxcb-ewmh2 (>= 0.4.2), libxcb-icccm4 (>= 0.4.2), libxcb-imdkit1 (>= 1.0.5~), libxcb-keysyms1 (>= 0.4.1), libxcb-randr0 (>= 1.3), libxcb-util1 (>= 0.4.0), libxcb-xfixes0 (>= 1.15), libxcb-xinerama0, libxcb-xkb1, libxcb1 (>= 1.12), libxkbcommon-x11-0 (>= 0.5.0), libxkbcommon0 (>= 0.5.0), libxkbfile1 (>= 1:1.1.0), zlib1g (>= 1:1.1.4)
+Depends: fcitx5-data (= 5.1.22-1), plasma-wayland-protocols (>= 1.20), libc6 (>= 2.38), libcairo2 (>= 1.14.0), libenchant-2-2 (>= 2.2.3), libfcitx5config6 (>= 5.1.22), libfcitx5core7 (>= 5.1.22), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.0), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.26.0), libpango-1.0-0 (>= 1.37.5), libpangocairo-1.0-0 (>= 1.14.0), librsvg2-2 (>= 2.52.5), libstdc++6 (>= 16), libuuid1 (>= 2.16), libwayland-client0 (>= 1.24.0), libwayland-cursor0 (>= 1.8.1), libxcb-ewmh2 (>= 0.4.2), libxcb-icccm4 (>= 0.4.2), libxcb-imdkit1 (>= 1.0.5~), libxcb-keysyms1 (>= 0.4.1), libxcb-randr0 (>= 1.3), libxcb-util1 (>= 0.4.0), libxcb-xfixes0 (>= 1.15), libxcb-xinerama0, libxcb-xkb1, libxcb1 (>= 1.12), libxkbcommon-x11-0 (>= 0.5.0), libxkbcommon0 (>= 0.5.0), libxkbfile1 (>= 1:1.1.0), zlib1g (>= 1:1.1.4)
 Breaks: fcitx5-module-dbus (<< 5.0.4-2), fcitx5-module-emoji (<< 5.0.20), fcitx5-module-fcitx4 (<< 5.0.4-2), fcitx5-module-ibus (<< 5.0.4-2), fcitx5-module-kimpanel (<< 5.0.4-2), fcitx5-module-quickphrase (<< 5.0.20), fcitx5-module-wayland (<< 5.0.20), fcitx5-module-xorg (<< 5.0.20)
 Description: Fcitx Input Method Framework v5 (core modules)
 Multi-Arch: same
@@ -9589,18 +9103,17 @@ Homepage: https://github.com/fcitx/fcitx5
 Description-md5: 2895cac742fd359e51715588e78108a9
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5/fcitx5-modules_5.1.21-1_amd64.deb
-Size: 1052728
-MD5sum: c75a8215bbfe65ad8ff660dc8c148e76
-SHA256: 6228c7d757ba3cea4adc9c06b2f537a37709e07437fd4de9058284420a3bac30
+Filename: pool/main/f/fcitx5/fcitx5-modules_5.1.22-1_amd64.deb
+Size: 1073560
+MD5sum: 68a09301ebb29d4164c1e8e390738992
+SHA256: 80677d3d9e49dc0cb089de8784f4d8aececdaf07477e2a6f9f74070220eab72e
 
 Package: fcitx5-anthy
-Source: fcitx5-anthy (5.1.10-1)
-Version: 5.1.10-1+b1
-Installed-Size: 841
+Version: 5.1.11-1
+Installed-Size: 853
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: fcitx5, libanthy2 (>= 0.4), libc6 (>= 2.32), libfcitx5config6 (>= 5.1.21), libfcitx5core7 (>= 5.1.21), libfcitx5utils2 (>= 5.1.21), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
+Depends: fcitx5, libanthy2 (>= 0.4), libc6 (>= 2.32), libfcitx5config6 (>= 5.1.22), libfcitx5core7 (>= 5.1.22), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
 Conflicts: fcitx-anthy
 Description: Fcitx5 wrapper for Anthy IM engine
 Multi-Arch: same
@@ -9608,17 +9121,17 @@ Homepage: https://github.com/fcitx/fcitx5-anthy
 Description-md5: 931615f72a339ba039cf9731180ad3b7
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5-anthy/fcitx5-anthy_5.1.10-1+b1_amd64.deb
-Size: 204040
-MD5sum: 6a9483e59380d61541950a1e74ff2325
-SHA256: 78fcd9402ad3381613d2329cd35e2c854f91f73cfeb239f4374af5ecacff9857
+Filename: pool/main/f/fcitx5-anthy/fcitx5-anthy_5.1.11-1_amd64.deb
+Size: 204140
+MD5sum: 834b081caa15199295c650561c435aa1
+SHA256: a867ad0e9fa5a6985f885fc450c49741358577b5229fecfcb158fa485e57015e
 
 Package: fcitx5-bamboo
-Version: 1.0.10-1
-Installed-Size: 2386
+Version: 1.0.11-1
+Installed-Size: 2298
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.34), libfcitx5config6 (>= 5.1.21), libfcitx5core7 (>= 5.1.21), libfcitx5utils2 (>= 5.1.21), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
+Depends: libc6 (>= 2.34), libfcitx5config6 (>= 5.1.22), libfcitx5core7 (>= 5.1.22), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
 Recommends: fcitx5
 Description: Bamboo (Vietnamese Input Method) engine support for Fcitx
 Multi-Arch: same
@@ -9626,17 +9139,17 @@ Homepage: https://github.com/fcitx/fcitx5-bamboo
 Description-md5: 82a2281d3a3c45ef29201c41cb028486
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5-bamboo/fcitx5-bamboo_1.0.10-1_amd64.deb
-Size: 789400
-MD5sum: 3814f9e3f895cc65cd1d0fa48193ec04
-SHA256: d90ff7ee215160091cc17450281346457e3ad18d3851c1f92dec63ef20dca52e
+Filename: pool/main/f/fcitx5-bamboo/fcitx5-bamboo_1.0.11-1_amd64.deb
+Size: 770604
+MD5sum: 9bf5517a2fbc87e9225af9f3af043ffc
+SHA256: d33296eb77397afdfaf8d096b87547091fa221f8f5e4d92844609b4aeca3fe4d
 
 Package: fcitx5-chewing
-Version: 5.1.12-1
-Installed-Size: 217
+Version: 5.1.13-1
+Installed-Size: 228
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: fcitx5, libc6 (>= 2.32), libchewing3 (>= 0.9.0), libfcitx5config6 (>= 5.1.20), libfcitx5core7 (>= 5.1.20), libfcitx5utils2 (>= 5.1.20), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
+Depends: fcitx5, libc6 (>= 2.32), libchewing3 (>= 0.9.0), libfcitx5config6 (>= 5.1.22), libfcitx5core7 (>= 5.1.22), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
 Conflicts: fcitx-chewing
 Description: Chewing input method support for fcitx5
 Multi-Arch: same
@@ -9644,32 +9157,32 @@ Homepage: https://github.com/fcitx/fcitx5-chewing
 Description-md5: 4e35027f4ba22ceb46d956c6cf425e91
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5-chewing/fcitx5-chewing_5.1.12-1_amd64.deb
-Size: 46008
-MD5sum: 3b162ad1ccefeaf1b108486d0e3a6d1a
-SHA256: b2c747c5061f54292d3f6aae3a728fbfa055cf829571446f6a03c7af73149caf
+Filename: pool/main/f/fcitx5-chewing/fcitx5-chewing_5.1.13-1_amd64.deb
+Size: 47920
+MD5sum: 38e0512a8a789615c2257017b4498465
+SHA256: 38c3cfa56723ff1e16425388d9d1e006ec3a3703608139e3b21916677f31807c
 
 Package: fcitx5-chinese-addons-bin
-Source: fcitx5-chinese-addons (5.1.13-1)
-Version: 5.1.13-1+b1
-Installed-Size: 80
+Source: fcitx5-chinese-addons
+Version: 5.1.14-1
+Installed-Size: 79
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: fcitx5-chinese-addons-data, libc6 (>= 2.34), libfcitx5utils2 (>= 5.1.21), libgcc-s1 (>= 3.0), libstdc++6 (>= 16)
+Depends: fcitx5-chinese-addons-data, libc6 (>= 2.34), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.0), libstdc++6 (>= 16)
 Description: Chinese-related addon for fcitx5 (binary tools)
 Homepage: https://github.com/fcitx/fcitx5-chinese-addons
 Description-md5: a1861a3dd1e84eeca046355aac32f4cd
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5-chinese-addons/fcitx5-chinese-addons-bin_5.1.13-1+b1_amd64.deb
-Size: 23796
-MD5sum: eb1fd4ce49740e3abb477b539d974628
-SHA256: 238a178603dc28ffeb0db24c380e7ae577e3d39bb8204220e47a8c7a54344634
+Filename: pool/main/f/fcitx5-chinese-addons/fcitx5-chinese-addons-bin_5.1.14-1_amd64.deb
+Size: 23452
+MD5sum: 3be6c3156592ffb726a79e58bf98ebf1
+SHA256: 7aaa3cf0fa5af7596a3a236c4d85e5027d775be84b9c509f5a53c8ffd7d1f416
 
 Package: fcitx5-chinese-addons-data
 Source: fcitx5-chinese-addons
-Version: 5.1.13-1
-Installed-Size: 270
+Version: 5.1.14-1
+Installed-Size: 305
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: all
 Conflicts: fcitx-data
@@ -9679,18 +9192,18 @@ Homepage: https://github.com/fcitx/fcitx5-chinese-addons
 Description-md5: 09bfa4b4d427a02fdfeeac6b0ea3f530
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5-chinese-addons/fcitx5-chinese-addons-data_5.1.13-1_all.deb
-Size: 49516
-MD5sum: ab65d7829b34c3a042bc2fa59c527785
-SHA256: 0796ad3250ff65da57b274de1186938e637e79ca4e03f58cc605b114ed5bbd7e
+Filename: pool/main/f/fcitx5-chinese-addons/fcitx5-chinese-addons-data_5.1.14-1_all.deb
+Size: 53912
+MD5sum: 17850e3e76f1e3fdd15b3663a4086128
+SHA256: ae691501026c6a714082706ca72322b5654c0df2022982608fc78afd6eeb1186
 
 Package: fcitx5-module-chttrans
-Source: fcitx5-chinese-addons (5.1.13-1)
-Version: 5.1.13-1+b1
-Installed-Size: 586
+Source: fcitx5-chinese-addons
+Version: 5.1.14-1
+Installed-Size: 297
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: fcitx5-chinese-addons-data, libc6 (>= 2.32), libfcitx5config6 (>= 5.1.21), libfcitx5core7 (>= 5.1.21), libfcitx5utils2 (>= 5.1.21), libgcc-s1 (>= 3.0), libopencc1.4 (>= 1.2.0), libstdc++6 (>= 16)
+Depends: fcitx5-chinese-addons-data, libc6 (>= 2.38), libfcitx5config6 (>= 5.1.22), libfcitx5core7 (>= 5.1.22), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.0), libopencc1.4 (>= 1.2.0), libstdc++6 (>= 16)
 Conflicts: fcitx-data
 Description: Fcitx Input Method Framework v5 (chttrans module)
 Multi-Arch: same
@@ -9698,36 +9211,36 @@ Homepage: https://github.com/fcitx/fcitx5-chinese-addons
 Description-md5: 9bb42d27fe3ef2c3c6f2222c084635a0
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5-chinese-addons/fcitx5-module-chttrans_5.1.13-1+b1_amd64.deb
-Size: 208720
-MD5sum: 8a1ce54e9ab7b04a52564198ff6f397f
-SHA256: fc25fae6d4be14d7c3a503ab3bd15bbc475745b345d7699334d5b57c233c8d4c
+Filename: pool/main/f/fcitx5-chinese-addons/fcitx5-module-chttrans_5.1.14-1_amd64.deb
+Size: 102620
+MD5sum: 1507a1be25bcffa34aaa5be592b3ba91
+SHA256: 8a06e22c0f69e8b2672a97052a062cccd693dad54a6c40178758b2ab1d09c783
 
 Package: fcitx5-module-cloudpinyin
-Source: fcitx5-chinese-addons (5.1.13-1)
-Version: 5.1.13-1+b1
-Installed-Size: 125
+Source: fcitx5-chinese-addons
+Version: 5.1.14-1
+Installed-Size: 220
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: fcitx5-chinese-addons-data, libc6 (>= 2.32), libcurl4t64 (>= 7.16.3), libfcitx5config6 (>= 5.1.21), libfcitx5core7 (>= 5.1.21), libfcitx5utils2 (>= 5.1.21), libgcc-s1 (>= 3.0), libstdc++6 (>= 16)
+Depends: fcitx5-chinese-addons-data, libc6 (>= 2.38), libcurl4t64 (>= 7.16.3), libfcitx5config6 (>= 5.1.22), libfcitx5core7 (>= 5.1.22), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.0), libstdc++6 (>= 16)
 Description: Fcitx Input Method Framework v5 (cloudpinyin module)
 Multi-Arch: same
 Homepage: https://github.com/fcitx/fcitx5-chinese-addons
 Description-md5: 446bd5e69b34d74a63fb896a43719e7c
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5-chinese-addons/fcitx5-module-cloudpinyin_5.1.13-1+b1_amd64.deb
-Size: 41156
-MD5sum: a9f32d28cb4f9c3b2c6b2362c289e6e6
-SHA256: ad27a561c19409c1cadac6279c8f6829bdeebba3e1d811d06a1148ece4309167
+Filename: pool/main/f/fcitx5-chinese-addons/fcitx5-module-cloudpinyin_5.1.14-1_amd64.deb
+Size: 74788
+MD5sum: bff01abf77c1f937643d9733169570ff
+SHA256: ad41909ea1c15e2ff6ea1a7646f57e074d51ae2f8fea16e82b994d0706140db6
 
 Package: fcitx5-module-fullwidth
-Source: fcitx5-chinese-addons (5.1.13-1)
-Version: 5.1.13-1+b1
-Installed-Size: 127
+Source: fcitx5-chinese-addons
+Version: 5.1.14-1
+Installed-Size: 126
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: fcitx5-chinese-addons-data, libc6 (>= 2.32), libfcitx5config6 (>= 5.1.21), libfcitx5core7 (>= 5.1.21), libfcitx5utils2 (>= 5.1.21), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
+Depends: fcitx5-chinese-addons-data, libc6 (>= 2.32), libfcitx5config6 (>= 5.1.22), libfcitx5core7 (>= 5.1.22), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
 Conflicts: fcitx-data
 Description: Fcitx Input Method Framework v5 (fullwidth module)
 Multi-Arch: same
@@ -9735,36 +9248,36 @@ Homepage: https://github.com/fcitx/fcitx5-chinese-addons
 Description-md5: 81be67a6b9d6edd017008977970ad047
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5-chinese-addons/fcitx5-module-fullwidth_5.1.13-1+b1_amd64.deb
-Size: 32368
-MD5sum: 20df4cae7fa34b155b559d24f4e80f44
-SHA256: c8ddf0d84875f8786639cbc4eb51756ef6adeec4ab1aae01c5abd643cb5096cf
+Filename: pool/main/f/fcitx5-chinese-addons/fcitx5-module-fullwidth_5.1.14-1_amd64.deb
+Size: 32056
+MD5sum: 7a07458efce4c0c7b2e62e516a433a02
+SHA256: 20180a9c8782d19652b0703ff208ddeb7af3270af9462c6e82c7848d9d9788b5
 
 Package: fcitx5-module-pinyinhelper
-Source: fcitx5-chinese-addons (5.1.13-1)
-Version: 5.1.13-1+b1
-Installed-Size: 1845
+Source: fcitx5-chinese-addons
+Version: 5.1.14-1
+Installed-Size: 1844
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: fcitx5-chinese-addons-data, fcitx5-pinyin (= 5.1.13-1+b1), libc6 (>= 2.34), libfcitx5core7 (>= 5.1.21), libfcitx5utils2 (>= 5.1.21), libgcc-s1 (>= 3.0), libimecore0 (>= 1.1.15), libstdc++6 (>= 16)
+Depends: fcitx5-chinese-addons-data, fcitx5-pinyin (= 5.1.14-1), libc6 (>= 2.34), libfcitx5core7 (>= 5.1.22), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.0), libimecore0 (>= 1.1.16), libstdc++6 (>= 16)
 Description: Fcitx Input Method Framework v5 (pinyinhelper module)
 Multi-Arch: same
 Homepage: https://github.com/fcitx/fcitx5-chinese-addons
 Description-md5: ca394ad0a942f498951bbda4942fd4a7
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5-chinese-addons/fcitx5-module-pinyinhelper_5.1.13-1+b1_amd64.deb
-Size: 517924
-MD5sum: 6bec25cda02a5ec1c9b59c8c1ee79914
-SHA256: 158760851ac152d66d91e4b7af84da485a8b734e8ae24b49559d7021c368ac7a
+Filename: pool/main/f/fcitx5-chinese-addons/fcitx5-module-pinyinhelper_5.1.14-1_amd64.deb
+Size: 518228
+MD5sum: 20a8b8f8b8e113c674e1f035240cf231
+SHA256: 4d256a6ba77966c1333e47af85f7bba62c980329dbc594d327fb950110b9966e
 
 Package: fcitx5-module-punctuation
-Source: fcitx5-chinese-addons (5.1.13-1)
-Version: 5.1.13-1+b1
-Installed-Size: 221
+Source: fcitx5-chinese-addons
+Version: 5.1.14-1
+Installed-Size: 220
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: fcitx5-chinese-addons-data, libc6 (>= 2.32), libfcitx5config6 (>= 5.1.21), libfcitx5core7 (>= 5.1.21), libfcitx5utils2 (>= 5.1.21), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
+Depends: fcitx5-chinese-addons-data, libc6 (>= 2.32), libfcitx5config6 (>= 5.1.22), libfcitx5core7 (>= 5.1.22), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
 Conflicts: fcitx-data
 Description: Fcitx Input Method Framework v5 (punctuation module)
 Multi-Arch: same
@@ -9772,19 +9285,19 @@ Homepage: https://github.com/fcitx/fcitx5-chinese-addons
 Description-md5: 2d9d867c9890bf6020b4e925f53d36ce
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5-chinese-addons/fcitx5-module-punctuation_5.1.13-1+b1_amd64.deb
-Size: 56252
-MD5sum: fd8d8bd6cced1101f70c7fd9af0d16a2
-SHA256: 945ba19a5cf634e916a81f31e1d0e689a98554c7800996736005d6c6badb8efb
+Filename: pool/main/f/fcitx5-chinese-addons/fcitx5-module-punctuation_5.1.14-1_amd64.deb
+Size: 55768
+MD5sum: 9e22ae3248d4f3fc7bd32c10ab9ef3e6
+SHA256: 16fba71f930214f96d0a7a71c2178732835c57dd740f5480e592d031f9d642af
 
 Package: fcitx5-pinyin
-Source: fcitx5-chinese-addons (5.1.13-1)
-Version: 5.1.13-1+b1
-Installed-Size: 996
+Source: fcitx5-chinese-addons
+Version: 5.1.14-1
+Installed-Size: 1000
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: fcitx5, fcitx5-chinese-addons-data, fcitx5-module-punctuation (= 5.1.13-1+b1), libc6 (>= 2.38), libfcitx5config6 (>= 5.1.21), libfcitx5core7 (>= 5.1.21), libfcitx5utils2 (>= 5.1.21), libgcc-s1 (>= 3.0), libimecore0 (>= 1.1.15), libimepinyin0 (>= 1.1.15), libstdc++6 (>= 16)
-Recommends: fcitx5-module-chttrans (= 5.1.13-1+b1), fcitx5-module-cloudpinyin (= 5.1.13-1+b1), fcitx5-module-fullwidth (= 5.1.13-1+b1), fcitx5-module-pinyinhelper (= 5.1.13-1+b1), fcitx5-module-quickphrase, fcitx5-modules, fcitx5-pinyin-gui
+Depends: fcitx5, fcitx5-chinese-addons-data, fcitx5-module-punctuation (= 5.1.14-1), libc6 (>= 2.38), libfcitx5config6 (>= 5.1.22), libfcitx5core7 (>= 5.1.22), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.0), libimecore0 (>= 1.1.16), libimepinyin0 (>= 1.1.16), libstdc++6 (>= 16)
+Recommends: fcitx5-module-chttrans (= 5.1.14-1), fcitx5-module-cloudpinyin (= 5.1.14-1), fcitx5-module-fullwidth (= 5.1.14-1), fcitx5-module-pinyinhelper (= 5.1.14-1), fcitx5-module-quickphrase, fcitx5-modules, fcitx5-pinyin-gui
 Conflicts: fcitx-data
 Description: Fcitx Input Method Framework v5 (builtin pinyin support)
 Multi-Arch: same
@@ -9793,19 +9306,19 @@ Description-md5: e85629ecd31038086b241dbf6894beff
 Tag: uitoolkit::qt
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5-chinese-addons/fcitx5-pinyin_5.1.13-1+b1_amd64.deb
-Size: 426576
-MD5sum: b9e19501e9e08128b831ad926d23acf8
-SHA256: 4d6fe43dbd37cec5b16f42cbf604a6d1838aa14c9276ce8dbdca3f9930628408
+Filename: pool/main/f/fcitx5-chinese-addons/fcitx5-pinyin_5.1.14-1_amd64.deb
+Size: 428536
+MD5sum: 10234686fb225456d62cca14689ac476
+SHA256: 12d2ddd89c1c09bfaa4d2a00abe0424242e561954dcda3660cb035c90ce81807
 
 Package: fcitx5-pinyin-gui
-Source: fcitx5-chinese-addons (5.1.13-1)
-Version: 5.1.13-1+b1
-Installed-Size: 384
+Source: fcitx5-chinese-addons
+Version: 5.1.14-1
+Installed-Size: 383
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
 Replaces: fcitx5-pinyin (<< 5.1.0)
-Depends: fcitx5-pinyin (= 5.1.13-1+b1), libc6 (>= 2.14), libfcitx5-qt6-1 (>= 5.1.14), libfcitx5utils2 (>= 5.1.21), libgcc-s1 (>= 3.0), libimecore0 (>= 1.1.15), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.1.2), libqt6network6 (>= 6.1.2), libqt6webenginecore6 (>= 6.6.0), libqt6webenginecore6-bin (>= 6.6.0), libqt6webenginewidgets6 (>= 6.6.0), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 16)
+Depends: fcitx5-pinyin (= 5.1.14-1), libc6 (>= 2.14), libfcitx5-qt6-1 (>= 5.1.15), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.0), libimecore0 (>= 1.1.16), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.1.2), libqt6network6 (>= 6.1.2), libqt6webenginecore6 (>= 6.6.0), libqt6webenginecore6-bin (>= 6.6.0), libqt6webenginewidgets6 (>= 6.6.0), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 16)
 Breaks: fcitx5-pinyin (<< 5.1.0)
 Description: Fcitx Input Method Framework v5 (builtin pinyin GUI tools)
 Multi-Arch: same
@@ -9813,19 +9326,19 @@ Homepage: https://github.com/fcitx/fcitx5-chinese-addons
 Description-md5: 04330047407bff7b2ad3e1205901d92a
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5-chinese-addons/fcitx5-pinyin-gui_5.1.13-1+b1_amd64.deb
-Size: 115056
-MD5sum: dcccb91d1aa5c7f4f94696c467c007e9
-SHA256: 29245f3a4ce8f4083cfa4ad8a8d833b0cd095493a3d3dc8c34c26b716b576d30
+Filename: pool/main/f/fcitx5-chinese-addons/fcitx5-pinyin-gui_5.1.14-1_amd64.deb
+Size: 114264
+MD5sum: 10101caf8c193a053734d6743c1cfaa4
+SHA256: ed491803e6a56752ee83d5f51b67649fae7f4bdf7a9856dc52349c9f745d978b
 
 Package: fcitx5-table
-Source: fcitx5-chinese-addons (5.1.13-1)
-Version: 5.1.13-1+b1
-Installed-Size: 417
+Source: fcitx5-chinese-addons
+Version: 5.1.14-1
+Installed-Size: 428
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: fcitx5, fcitx5-chinese-addons-data, fcitx5-module-pinyinhelper (= 5.1.13-1+b1), fcitx5-module-punctuation (= 5.1.13-1+b1), libc6 (>= 2.32), libfcitx5config6 (>= 5.1.21), libfcitx5core7 (>= 5.1.21), libfcitx5utils2 (>= 5.1.21), libgcc-s1 (>= 3.0), libimecore0 (>= 1.1.15), libimepinyin0 (>= 1.1.15), libimetable0 (>= 1.1.15), libstdc++6 (>= 16)
-Recommends: fcitx5-module-fullwidth (= 5.1.13-1+b1), fcitx5-module-quickphrase
+Depends: fcitx5, fcitx5-chinese-addons-data, fcitx5-module-pinyinhelper (= 5.1.14-1), fcitx5-module-punctuation (= 5.1.14-1), libc6 (>= 2.32), libfcitx5config6 (>= 5.1.22), libfcitx5core7 (>= 5.1.22), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.0), libimecore0 (>= 1.1.16), libimepinyin0 (>= 1.1.16), libimetable0 (>= 1.1.16), libstdc++6 (>= 16)
+Recommends: fcitx5-module-fullwidth (= 5.1.14-1), fcitx5-module-quickphrase
 Conflicts: fcitx-data
 Description: Fcitx Input Method Framework v5 (builtin table support)
 Multi-Arch: same
@@ -9833,10 +9346,10 @@ Homepage: https://github.com/fcitx/fcitx5-chinese-addons
 Description-md5: c645ae2a1b936f887abacac75a92b3ac
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5-chinese-addons/fcitx5-table_5.1.13-1+b1_amd64.deb
-Size: 134104
-MD5sum: f8f02606831c1f5e2cdccc0fa62fcd59
-SHA256: 603718a5b80a468456f7b1c119dc0d2e7a28da9c35c19d6bb6e7f74627ee3169
+Filename: pool/main/f/fcitx5-chinese-addons/fcitx5-table_5.1.14-1_amd64.deb
+Size: 135164
+MD5sum: c540d6a3dbed30e1e9d59818cd159e44
+SHA256: 8f3b355347410b1a0d4b86e2a606c7a0f582f3f82a07cc9b535fcea18cd1731a
 
 Package: fcitx5-frontend-fbterm
 Source: fcitx5-fbterm
@@ -9911,11 +9424,11 @@ MD5sum: 4fbc5677ae26a321333accad4402a9dc
 SHA256: 559a5d41931fc0089faec5443e1e3768327739a0e06cd4ef4e72524c9c08043f
 
 Package: fcitx5-hangul
-Version: 5.1.10-1
-Installed-Size: 235
+Version: 5.1.11-1
+Installed-Size: 239
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: fcitx5, libhangul-data, libc6 (>= 2.32), libfcitx5config6 (>= 5.1.21), libfcitx5core7 (>= 5.1.21), libfcitx5utils2 (>= 5.1.21), libgcc-s1 (>= 3.0), libhangul1 (>= 0.1.0+git20170815), libstdc++6 (>= 13.1)
+Depends: fcitx5, libhangul-data, libc6 (>= 2.32), libfcitx5config6 (>= 5.1.22), libfcitx5core7 (>= 5.1.22), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.0), libhangul1 (>= 0.1.0+git20170815), libstdc++6 (>= 13.1)
 Conflicts: fcitx-hangul
 Description: Hangul input method wrapper for fcitx5
 Multi-Arch: same
@@ -9923,18 +9436,17 @@ Homepage: https://github.com/fcitx/fcitx5-hangul
 Description-md5: b0cec1a6feb1893c4ac0ef5a89a38610
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5-hangul/fcitx5-hangul_5.1.10-1_amd64.deb
-Size: 56916
-MD5sum: fe0236269eae48d82315063837cedb4f
-SHA256: 0201bc5a7a958c5fc064dca39eb6c47489993cc9de411151c9b3b87d79463d5f
+Filename: pool/main/f/fcitx5-hangul/fcitx5-hangul_5.1.11-1_amd64.deb
+Size: 58508
+MD5sum: 6cc656ceb8ba41d3eca215064fc0b3b6
+SHA256: 676152315ea5a19fb3f206174c1016b0c39aac744ac78944f8c7dcea2ff5781d
 
 Package: fcitx5-keyman
-Source: fcitx5-keyman (1.1.5-1)
-Version: 1.1.5-1+b1
-Installed-Size: 235
+Version: 1.1.6-1
+Installed-Size: 241
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libfcitx5config6 (>= 5.1.19), libfcitx5core7 (>= 5.1.19), libfcitx5utils2 (>= 5.1.19), libgcc-s1 (>= 3.0), libkeymancore2 (>= 18.0.156), libstdc++6 (>= 13.1)
+Depends: libc6 (>= 2.38), libfcitx5config6 (>= 5.1.22), libfcitx5core7 (>= 5.1.22), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.0), libkeymancore2 (>= 18.0.156), libstdc++6 (>= 13.1)
 Recommends: fcitx5
 Description: Fcitx5 wrapper for Keyman keyboarding platform
 Multi-Arch: same
@@ -9942,17 +9454,17 @@ Homepage: https://github.com/fcitx/fcitx5-keyman
 Description-md5: 8c5ccc713bb910da49f04ab20f5ad63d
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5-keyman/fcitx5-keyman_1.1.5-1+b1_amd64.deb
-Size: 71200
-MD5sum: 01ef54a6c34466a2a338670feb891429
-SHA256: e591e7a5708168a91b4f95ed18f37ca92940611550a326a3ab6c567980256a1f
+Filename: pool/main/f/fcitx5-keyman/fcitx5-keyman_1.1.6-1_amd64.deb
+Size: 73004
+MD5sum: 827e6fbf0e9f2d8a083cb99d3c5cb3b3
+SHA256: 1c87e3d00064b3a908337e538e6b5b762ad4fd7aa2c83033c9243ac62d35bc97
 
 Package: fcitx5-kkc
-Version: 5.1.10-1
-Installed-Size: 416
+Version: 5.1.11-1
+Installed-Size: 418
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.32), libfcitx5-qt6-1 (>= 5.1.13), libfcitx5config6 (>= 5.1.19), libfcitx5core7 (>= 5.1.19), libfcitx5utils2 (>= 5.1.19), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.16.0), libkkc2 (>= 0.3.2), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.1.2), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 13.1)
+Depends: libc6 (>= 2.32), libfcitx5-qt6-1 (>= 5.1.15), libfcitx5config6 (>= 5.1.22), libfcitx5core7 (>= 5.1.22), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.16.0), libkkc2 (>= 0.3.2), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.1.2), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 13.1)
 Recommends: fcitx5
 Conflicts: fcitx-kkc
 Description: Fcitx5 wrapper for libkkc IM engine
@@ -9962,17 +9474,17 @@ Description-md5: 27e5dd5326a25c6408bc3bfcb213204f
 Tag: uitoolkit::qt
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5-kkc/fcitx5-kkc_5.1.10-1_amd64.deb
-Size: 103808
-MD5sum: 6789dd25d552cae523bd32834f57e4e3
-SHA256: ee43538791610a4d1de88f79978ef68353528d7388f5c6ce87bdbfe4bfde3839
+Filename: pool/main/f/fcitx5-kkc/fcitx5-kkc_5.1.11-1_amd64.deb
+Size: 105332
+MD5sum: 238348064dcc5b8af0ca52d4dc30e641
+SHA256: b207d0956977bd9ab87fb4f9cf04145ec1edb31247d169bcacdaf2daba7d7da2
 
 Package: fcitx5-libthai
-Version: 5.1.10-1
+Version: 5.1.11-1
 Installed-Size: 119
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.32), libfcitx5config6 (>= 5.1.20), libfcitx5core7 (>= 5.1.20), libfcitx5utils2 (>= 5.1.20), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1), libthai0 (>= 0.1.19)
+Depends: libc6 (>= 2.32), libfcitx5config6 (>= 5.1.22), libfcitx5core7 (>= 5.1.22), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1), libthai0 (>= 0.1.19)
 Recommends: fcitx5
 Description: Thai input method engine for Fcitx5 based on LibThai
 Multi-Arch: same
@@ -9980,33 +9492,33 @@ Homepage: https://github.com/fcitx/fcitx5-libthai
 Description-md5: dbe2f3fe407ee60040c7d4e0c2ca5c4e
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5-libthai/fcitx5-libthai_5.1.10-1_amd64.deb
-Size: 23548
-MD5sum: 2bd9c42eae3166b65358f0f01a0a2abb
-SHA256: 47333c9d352cfa7a13232b7170967aba123639319a4a888bbff400a5cb35bb29
+Filename: pool/main/f/fcitx5-libthai/fcitx5-libthai_5.1.11-1_amd64.deb
+Size: 23840
+MD5sum: 9154653ac143624b2963a4c1a988a789
+SHA256: c141fea6aa3783c88018d75982f5aebdb345e5da1924118d85e4c4c5f5704f0f
 
 Package: fcitx5-module-lua
 Source: fcitx5-lua
-Version: 5.0.17-1
-Installed-Size: 137
+Version: 5.0.18-1
+Installed-Size: 145
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: fcitx5-module-lua-common (= 5.0.17-1), liblua5.3-0, libc6 (>= 2.32), libfcitx5config6 (>= 5.1.20), libfcitx5core7 (>= 5.1.20), libfcitx5utils2 (>= 5.1.20), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
+Depends: fcitx5-module-lua-common (= 5.0.18-1), liblua5.3-0, libc6 (>= 2.32), libfcitx5config6 (>= 5.1.22), libfcitx5core7 (>= 5.1.22), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
 Description: Lua support for fcitx5
 Multi-Arch: same
 Homepage: https://github.com/fcitx/fcitx5-lua
 Description-md5: 2b69b49518287de541e0e68792e4fc65
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5-lua/fcitx5-module-lua_5.0.17-1_amd64.deb
-Size: 40576
-MD5sum: 9221ccdd6de6493d5e3cfe828c77b078
-SHA256: a6641096f2325608fa6f2567fc7fc0a92f018212e5096f81344e8c9e62665e45
+Filename: pool/main/f/fcitx5-lua/fcitx5-module-lua_5.0.18-1_amd64.deb
+Size: 43700
+MD5sum: 9701e0e66389fff922bfc75433a39ec9
+SHA256: 5b6166d0e6a4ed2a18a217f357f32a44ba3148d8747f80e9e3a4945ca4cc6a91
 
 Package: fcitx5-module-lua-common
 Source: fcitx5-lua
-Version: 5.0.17-1
-Installed-Size: 50
+Version: 5.0.18-1
+Installed-Size: 53
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: all
 Description: Lua support for fcitx5 (common files)
@@ -10015,17 +9527,17 @@ Homepage: https://github.com/fcitx/fcitx5-lua
 Description-md5: fe9387a499834f3099090d280a51bbef
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5-lua/fcitx5-module-lua-common_5.0.17-1_all.deb
-Size: 8188
-MD5sum: b3c4883b0caa8e73f57d576410377f11
-SHA256: 7cdab1489cee94d91a811295dd202de7899b5b035c05e6b2704e7229c5729c3e
+Filename: pool/main/f/fcitx5-lua/fcitx5-module-lua-common_5.0.18-1_all.deb
+Size: 8408
+MD5sum: ce9d9e4c27c3bc160cb88ed01ea552cf
+SHA256: d4732c13f4dd055f502f400eece7b3dffc86caa3b7befcc158ede2eac5ce6e91
 
 Package: fcitx5-m17n
-Version: 5.1.6-1
-Installed-Size: 259
+Version: 5.1.7-1
+Installed-Size: 171
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libfcitx5config6 (>= 5.1.19), libfcitx5core7 (>= 5.1.19), libfcitx5utils2 (>= 5.1.19), libgcc-s1 (>= 4.3), libm17n-0 (>= 1.8.6~), libstdc++6 (>= 13.1)
+Depends: libc6 (>= 2.38), libfcitx5config6 (>= 5.1.22), libfcitx5core7 (>= 5.1.22), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.0), libm17n-0 (>= 1.8.6~), libstdc++6 (>= 16)
 Conflicts: fcitx-m17n
 Description: m17n support module for Fcitx5 Input Method Framework
 Multi-Arch: same
@@ -10033,10 +9545,10 @@ Homepage: https://github.com/fcitx/fcitx5-m17n
 Description-md5: 752fc3d55fa8735f41e13a56d1292918
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5-m17n/fcitx5-m17n_5.1.6-1_amd64.deb
-Size: 74720
-MD5sum: 64309233707d5148a1c24a6fb736785a
-SHA256: c527fe847d44f6774f26ed3a5cc1e4a87589d35a60d14fb4494289e326f52962
+Filename: pool/main/f/fcitx5-m17n/fcitx5-m17n_5.1.7-1_amd64.deb
+Size: 41752
+MD5sum: 0c8d2ce3f0b7babcf10c35f78739410c
+SHA256: ca64d8902455f4824dfb5e09cfcc2cf0c89e5e2aa9e67c9189406cf5b1984083
 
 Package: fcitx5-skin-nord
 Source: fcitx5-nord
@@ -10096,11 +9608,11 @@ MD5sum: f8be8139dc1a95ed4a53f1dcd8d03d48
 SHA256: 18b7ab2766dba689e289912663b9f06bcb3b700ee3ebc5b4f2de2ff37eb87cf3
 
 Package: fcitx5-sayura
-Version: 5.1.6-1
-Installed-Size: 132
+Version: 5.1.7-1
+Installed-Size: 135
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.14), libfcitx5core7 (>= 5.1.19), libfcitx5utils2 (>= 5.1.19), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
+Depends: libc6 (>= 2.14), libfcitx5core7 (>= 5.1.22), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
 Recommends: fcitx5
 Conflicts: fcitx-sayura
 Description: Fcitx5 wrapper for Sayura IM engine
@@ -10109,17 +9621,17 @@ Homepage: https://github.com/fcitx/fcitx5-sayura
 Description-md5: a1e946cf94510b099d6b97878e29ba08
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5-sayura/fcitx5-sayura_5.1.6-1_amd64.deb
-Size: 23548
-MD5sum: 4a1ef2ef3371f35994fc0394087b04f4
-SHA256: 594533d26fc30791e081ff6950b92c61ee7092f022f3e02cd7ddfd78a68eff11
+Filename: pool/main/f/fcitx5-sayura/fcitx5-sayura_5.1.7-1_amd64.deb
+Size: 24404
+MD5sum: c6f11458df487caf2f193b1422ddf86b
+SHA256: ac91eee0632c27d80f6d2dd4990f28a84ccd0c4b6ef454336f3c8d30878f55f7
 
 Package: fcitx5-skk
-Version: 5.1.10-1
-Installed-Size: 369
+Version: 5.1.11-1
+Installed-Size: 370
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: skkdic, libc6 (>= 2.38), libfcitx5-qt6-1 (>= 5.1.13), libfcitx5config6 (>= 5.1.19), libfcitx5core7 (>= 5.1.19), libfcitx5utils2 (>= 5.1.19), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.16.0), libqt6core6t64 (>= 6.9.1), libqt6gui6 (>= 6.1.2), libqt6widgets6 (>= 6.1.2), libskk0 (>= 1.1.1~), libstdc++6 (>= 13.1)
+Depends: skkdic, libc6 (>= 2.38), libfcitx5-qt6-1 (>= 5.1.15), libfcitx5config6 (>= 5.1.22), libfcitx5core7 (>= 5.1.22), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.16.0), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.1.2), libqt6widgets6 (>= 6.1.2), libskk0 (>= 1.1.1~), libstdc++6 (>= 13.1)
 Recommends: skkdic-extra
 Conflicts: fcitx-skk
 Description: Japanese SKK input engine for Fcitx5
@@ -10129,10 +9641,10 @@ Description-md5: 973c4b6c63df884ef058bed513176f77
 Tag: uitoolkit::qt
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5-skk/fcitx5-skk_5.1.10-1_amd64.deb
-Size: 93592
-MD5sum: 9c8e1021722f7d9a8547b43de79e5e7c
-SHA256: aee7dc759c79a9a2058b8d1d65bb7fe72c731e4b0021164df0e3574810236bc4
+Filename: pool/main/f/fcitx5-skk/fcitx5-skk_5.1.11-1_amd64.deb
+Size: 93632
+MD5sum: fc50707ab890cd6935f2a6da0f72cb7e
+SHA256: e7d4f9bd5ff0f23ca33fcbc25b5e4598a78077aa3a71de4f3f17462c899f01cc
 
 Package: fcitx5-table-array30
 Source: fcitx5-table-extra
@@ -10889,11 +10401,11 @@ MD5sum: 536514a05feed0bf874920d1215a47fc
 SHA256: 457ddd49d140d3dd8c6392d7fcf8202bcf1af487795f92676eed2cdd6ae34391
 
 Package: fcitx5-unikey
-Version: 5.1.11-1
-Installed-Size: 588
+Version: 5.1.12-1
+Installed-Size: 624
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: fcitx5, libc6 (>= 2.38), libfcitx5-qt6-1 (>= 5.1.14), libfcitx5config6 (>= 5.1.20), libfcitx5core7 (>= 5.1.20), libfcitx5utils2 (>= 5.1.20), libgcc-s1 (>= 3.0), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.1.2), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 14)
+Depends: fcitx5, libc6 (>= 2.38), libfcitx5-qt6-1 (>= 5.1.15), libfcitx5config6 (>= 5.1.22), libfcitx5core7 (>= 5.1.22), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.0), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.1.2), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 14)
 Description: Vietnamese Input Method Engine for Fcitx5 using Unikey Engine
 Multi-Arch: same
 Homepage: https://github.com/fcitx/fcitx5-unikey
@@ -10901,10 +10413,10 @@ Description-md5: eefef7c7541bad044565dd12e247d28c
 Tag: uitoolkit::qt
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5-unikey/fcitx5-unikey_5.1.11-1_amd64.deb
-Size: 140348
-MD5sum: 677c7416a1c8949bc40755e7111f65df
-SHA256: 1cad09f09bff83e054a0fabe21ba26a2c096da1ca4b0eac9432a13e7441c8d1c
+Filename: pool/main/f/fcitx5-unikey/fcitx5-unikey_5.1.12-1_amd64.deb
+Size: 149240
+MD5sum: 11998ecd1d02e92a331a27e2f38fdb6e
+SHA256: 4bcabcf4fee201d2622a89df760d6c8dfce4cbe2d976737d4cc5e77ac4b9c098
 
 Package: fcitx5-varnam
 Version: 0.0.2-2
@@ -10924,21 +10436,21 @@ MD5sum: 1956914dffd7ab9be25a379788eead40
 SHA256: 34f2b985e6a9c0f12bf35f43f46ba609fde36e305e51e0cc92fae2b1ecb47e89
 
 Package: fcitx5-zhuyin
-Version: 5.1.8-1
-Installed-Size: 41051
+Version: 5.1.9-1
+Installed-Size: 108535
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.32), libfcitx5config6 (>= 5.1.20), libfcitx5core7 (>= 5.1.20), libfcitx5utils2 (>= 5.1.20), libgcc-s1 (>= 4.3), libglib2.0-0t64 (>= 2.12.0), libstdc++6 (>= 14), libzhuyin15 (>= 2.10)
+Depends: libc6 (>= 2.32), libfcitx5config6 (>= 5.1.22), libfcitx5core7 (>= 5.1.22), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.3.1), libglib2.0-0t64 (>= 2.12.0), libstdc++6 (>= 16), libzhuyin15 (>= 2.10)
 Recommends: fcitx5
 Description: Libzhuyin Wrapper for Fcitx5
 Homepage: https://github.com/fcitx/fcitx5-zhuyin
 Description-md5: c2058db80180fc3035838e60f1eb9ca2
 utils
 Priority: optional
-Filename: pool/main/f/fcitx5-zhuyin/fcitx5-zhuyin_5.1.8-1_amd64.deb
-Size: 8938224
-MD5sum: bc994da0a9aea1f360013b120b938ebf
-SHA256: b97b132b608e84500bf4eb1ca9aa9367ea41e3cb0f9c891f0fc93e917a8f5af8
+Filename: pool/main/f/fcitx5-zhuyin/fcitx5-zhuyin_5.1.9-1_amd64.deb
+Size: 7281872
+MD5sum: d45c34dcf7b58e214de0e375d0db4a47
+SHA256: 0bc4f2e3765b3f29f1216773c12d2fad9ba6dd8199f8ddd06b936864c39e3762
 
 Package: fcm
 Version: 2021.05.01-4
@@ -12306,8 +11818,8 @@ SHA256: cdf75f4256985a94650ad61d28451d515aa536fb2203d1263683e1dd7f5d39c5
 
 Package: fuse
 Source: fuse3
-Version: 3.18.2-2
-Installed-Size: 25
+Version: 3.18.3-1
+Installed-Size: 27
 Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 Architecture: all
 Depends: fuse3
@@ -12318,28 +11830,28 @@ Tag: admin::filesystem, implemented-in::c, interface::commandline,
  role::program, scope::utility
 utils
 Priority: optional
-Filename: pool/main/f/fuse3/fuse_3.18.2-2_all.deb
-Size: 16032
-MD5sum: 9d150732f80447f3ae71bac35ae40728
-SHA256: 469e8c3d712cadc9908b23993de9b7b00ea1bf01a834e3a407099edf79121e8f
+Filename: pool/main/f/fuse3/fuse_3.18.3-1_all.deb
+Size: 18552
+MD5sum: c6371cf387ff40706b5d74d8c3f2fe5e
+SHA256: 7c6fbb7f689dfff24712a7cfe6447a8659369f631052eecc1a91a920c6c43c20
 
 Package: fuse3
-Version: 3.18.2-2
-Installed-Size: 109
+Version: 3.18.3-1
+Installed-Size: 115
 Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 Architecture: amd64
-Provides: fuse (= 3.18.2-2)
-Depends: libc6 (>= 2.38), libfuse3-4 (= 3.18.2-2), mount
-Conflicts: fuse (<< 3.18.2-2)
+Provides: fuse (= 3.18.3-1)
+Depends: libc6 (>= 2.38), libfuse3-4 (= 3.18.3-1), mount
+Conflicts: fuse (<< 3.18.3-1)
 Description: Filesystem in Userspace (3.x version)
 Homepage: https://github.com/libfuse/libfuse/wiki
 Description-md5: 1dc2bd9cb9743525c3eff838f436b6a8
 utils
 Priority: optional
-Filename: pool/main/f/fuse3/fuse3_3.18.2-2_amd64.deb
-Size: 41156
-MD5sum: 50cede4be3d1106c91860a8dc86e2256
-SHA256: 37ce472f2b6bca315a6892fabb8f02bb3dd2123615f9d31c5f203bdcb9cd75cf
+Filename: pool/main/f/fuse3/fuse3_3.18.3-1_amd64.deb
+Size: 44324
+MD5sum: 0794a6b0a3081938010d4134faa15c8f
+SHA256: f99f3365ba6153f246ec7201bdbe962bdb4e0460f7ba1aa729f1128d1096fdb0
 
 Package: fvs
 Version: 0.3.4-1
@@ -18403,21 +17915,21 @@ MD5sum: b49546c5aaf1f6d786bff998ed79d084
 SHA256: 0989356e1feb7d974306799ff2c1f68181d1594672707a2adf8c38502b80d47e
 
 Package: jupyter-client
-Version: 8.8.0-1
+Version: 8.8.0-2
 Installed-Size: 36
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
-Depends: jupyter-core, python3-jupyter-client (= 8.8.0-1), python3:any
+Depends: jupyter-core, python3-jupyter-client (= 8.8.0-2), python3:any
 Suggests: python-jupyter-client-doc
 Description: Jupyter protocol client APIs (tools)
 Homepage: https://github.com/jupyter/jupyter_client
 Description-md5: 50a323ff448352989b3b74ce1470431e
 utils
 Priority: optional
-Filename: pool/main/j/jupyter-client/jupyter-client_8.8.0-1_all.deb
-Size: 23308
-MD5sum: b33e1e48007fd55701ace3e6be246f4c
-SHA256: d1ac0b7b63e0ea609356b608fa98a652a5ade6ab016ba107613b8ad796812ac4
+Filename: pool/main/j/jupyter-client/jupyter-client_8.8.0-2_all.deb
+Size: 23512
+MD5sum: 1bbb0a3f21e07e190f4c9e1a6428ef9c
+SHA256: 8e5670f27d89756b22f9fb9b7bf13b527a66c5d3622abbdc6ae305c7f070b177
 
 Package: jupyter-console
 Version: 6.6.3-3
@@ -21154,43 +20666,43 @@ SHA256: 24d94d14eeddee78446ea1e001ac6cb717db2f221f323baefa4127edb3e4ca17
 
 Package: libime-bin
 Source: libime
-Version: 1.1.15-2
-Installed-Size: 885
+Version: 1.1.16-1
+Installed-Size: 893
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: libimecore0 (= 1.1.15-2), libimepinyin0 (= 1.1.15-2), libimetable0 (= 1.1.15-2), libc6 (>= 2.38), libfcitx5utils2 (>= 5.1.20), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
+Depends: libimecore0 (= 1.1.16-1), libimepinyin0 (= 1.1.16-1), libimetable0 (= 1.1.16-1), libc6 (>= 2.38), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
 Description: Generic Input Method Implementation (tools)
 Homepage: https://github.com/fcitx/libime
 Description-md5: ca6557a0920883baaa5120a8410e6405
 utils
 Priority: optional
-Filename: pool/main/libi/libime/libime-bin_1.1.15-2_amd64.deb
-Size: 274612
-MD5sum: d724e25806a1a89114dd3201f8c35433
-SHA256: 91d9992e81511da78de12a796b4c9cfa1f677a99c0209dbe728030c28c2ef39a
+Filename: pool/main/libi/libime/libime-bin_1.1.16-1_amd64.deb
+Size: 276952
+MD5sum: 715945f833a2b59624eb0a3caad18ed1
+SHA256: b470bc7568d5cb3e2223d8c63a1a8b2576a2fe21f7913f651374e280900a684f
 
 Package: libime-data
 Source: libime
-Version: 1.1.15-2
-Installed-Size: 16489
+Version: 1.1.16-1
+Installed-Size: 16320
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: all
-Depends: libime-data-language-model (<< 1.1.15-2.1~), libime-data-language-model (>= 1.1.15-2)
+Depends: libime-data-language-model (<< 1.1.16-1.1~), libime-data-language-model (>= 1.1.16-1)
 Description: Generic Input Method Implementation (data files)
 Multi-Arch: foreign
 Homepage: https://github.com/fcitx/libime
 Description-md5: cf78423d51b2ab5764f6962774757740
 utils
 Priority: optional
-Filename: pool/main/libi/libime/libime-data_1.1.15-2_all.deb
-Size: 16522368
-MD5sum: dd7b17a164a6183f4f98aac8f65fc555
-SHA256: beeb6d432fbed9c2f6675ba47f33e4fff4370f568836920b3b768cda9857f609
+Filename: pool/main/libi/libime/libime-data_1.1.16-1_all.deb
+Size: 16362836
+MD5sum: 942c5d33ab8909c7630b9f6a3a51fbe0
+SHA256: cd32f412be2d6d0960211e563b714625eabd7007217945d51ca1407f1c833bbe
 
 Package: libime-data-language-model
 Source: libime
-Version: 1.1.15-2
-Installed-Size: 28030
+Version: 1.1.16-1
+Installed-Size: 36456
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
 Replaces: libimecore0 (<< 1.0.1-2)
@@ -21201,50 +20713,50 @@ Homepage: https://github.com/fcitx/libime
 Description-md5: d6b193e4355845ad06489705611fa0b3
 utils
 Priority: optional
-Filename: pool/main/libi/libime/libime-data-language-model_1.1.15-2_amd64.deb
-Size: 19570720
-MD5sum: 51c7a7614375ee1fada880e82735a79c
-SHA256: d43e573a3566ad217c1d192e20508272d03e799db9388e4f94db8b9399172ec8
+Filename: pool/main/libi/libime/libime-data-language-model_1.1.16-1_amd64.deb
+Size: 26425756
+MD5sum: d2022d4c5057d60e4cd4bd5c02242607
+SHA256: 042fb6c701298cd8c9cee388061a9373bb7fadaa1747629d9f758cf1b956d42c
 
 Package: fcitx5-jyutping
 Source: libime-jyutping
-Version: 1.0.17-1
-Installed-Size: 243
+Version: 1.0.18-1
+Installed-Size: 174
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.32), libfcitx5config6 (>= 5.1.19), libfcitx5core7 (>= 5.1.19), libfcitx5utils2 (>= 5.1.19), libgcc-s1 (>= 4.3), libimecore0 (>= 1.1.14), libimejyutping1 (>= 1.0.17), libstdc++6 (>= 13.1)
+Depends: libc6 (>= 2.32), libfcitx5config6 (>= 5.1.22), libfcitx5core7 (>= 5.1.22), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.0), libimecore0 (>= 1.1.16), libimejyutping1 (>= 1.0.18), libstdc++6 (>= 16)
 Description: Fcitx5 libime implementation of jyutping input method
 Multi-Arch: same
 Homepage: https://github.com/fcitx/libime-jyutping
 Description-md5: 85eb0f2cd21168f21b0e3b3a2e719c91
 utils
 Priority: optional
-Filename: pool/main/libi/libime-jyutping/fcitx5-jyutping_1.0.17-1_amd64.deb
-Size: 76984
-MD5sum: e0b336c05ad3a3edc72582013e53938c
-SHA256: 7c91fd6c54e8a72ec94f8b077be6c958fd875c3ad47b2a0902bc9cbeda7ee9b4
+Filename: pool/main/libi/libime-jyutping/fcitx5-jyutping_1.0.18-1_amd64.deb
+Size: 47768
+MD5sum: 4e69a0245d57ef25305090b54cd3cf33
+SHA256: 55802784a58f9ba6c0f29dceafa27663cbadb69711a45fd5ae2276e7b75c3dba
 
 Package: libime-data-jyutping
 Source: libime-jyutping
-Version: 1.0.17-1
+Version: 1.0.18-1
 Installed-Size: 6698
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: all
-Depends: libime-data-jyutping-language-model (>= 1.0.17-1)
+Depends: libime-data-jyutping-language-model (>= 1.0.18-1)
 Description: Fcitx5 libime implementation of jyutping input method (data)
 Multi-Arch: foreign
 Homepage: https://github.com/fcitx/libime-jyutping
 Description-md5: 6cffd423db743c2fa94c43df58bb16cb
 utils
 Priority: optional
-Filename: pool/main/libi/libime-jyutping/libime-data-jyutping_1.0.17-1_all.deb
-Size: 6753532
-MD5sum: c2eabd80aa2757f8c275102578de52ea
-SHA256: c2614f4a75498916f6a4dc6ca0c426e23c16a811eecc56cc1557fab6463527fc
+Filename: pool/main/libi/libime-jyutping/libime-data-jyutping_1.0.18-1_all.deb
+Size: 6753548
+MD5sum: ed879f1685212362e91483a13ff3ad30
+SHA256: 0722313def0392a5ad1585b9eeee46e6e4c9c8b090d3bcc60b995e206d4f6e5a
 
 Package: libime-data-jyutping-language-model
 Source: libime-jyutping
-Version: 1.0.17-1
+Version: 1.0.18-1
 Installed-Size: 13304
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
@@ -21254,63 +20766,63 @@ Homepage: https://github.com/fcitx/libime-jyutping
 Description-md5: 5fa3dbf2333ccb7391236717549851db
 utils
 Priority: optional
-Filename: pool/main/libi/libime-jyutping/libime-data-jyutping-language-model_1.0.17-1_amd64.deb
-Size: 8249924
-MD5sum: 7897651f5e7c4f975be9de12afe74215
-SHA256: 15cb47674f6e5fcc5ec23185d54be5476dcf45c6f11036b9fc4d2da207abf22f
+Filename: pool/main/libi/libime-jyutping/libime-data-jyutping-language-model_1.0.18-1_amd64.deb
+Size: 8250064
+MD5sum: 49aa7a757d115a433ebcded70231b092
+SHA256: 3b211c8ed8bfacdf640ef8437eb757e0b3472ba204789237ccb61de4780b807f
 
 Package: libime-jyutping-bin
 Source: libime-jyutping
-Version: 1.0.17-1
+Version: 1.0.18-1
 Installed-Size: 26
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libimejyutping1 (>= 1.0.17), libstdc++6 (>= 13.1)
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libimejyutping1 (>= 1.0.18), libstdc++6 (>= 13.1)
 Description: Fcitx5 libime implementation of jyutping input method (tools)
 Homepage: https://github.com/fcitx/libime-jyutping
 Description-md5: b4c41f7aa41fce28c11816800491aefe
 utils
 Priority: optional
-Filename: pool/main/libi/libime-jyutping/libime-jyutping-bin_1.0.17-1_amd64.deb
+Filename: pool/main/libi/libime-jyutping/libime-jyutping-bin_1.0.18-1_amd64.deb
 Size: 5564
-MD5sum: f9fd242b987964cd138747b0b2230c31
-SHA256: d205eba542b35a36d352d70d25ac635bdfdd1ce9149b010bd3bd34b14adeba6f
+MD5sum: e5819615a02e4c856df04aeb13a80e56
+SHA256: 8e484ced3368085a4faaa6b82562e3a7559b4b7fc3921d23940382a3c0fac0db
 
 Package: libimejyutping-dev
 Source: libime-jyutping
-Version: 1.0.17-1
+Version: 1.0.18-1
 Installed-Size: 48
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: libimejyutping1 (= 1.0.17-1)
+Depends: libimejyutping1 (= 1.0.18-1)
 Description: Fcitx5 libime implementation of jyutping input method (dev)
 Multi-Arch: same
 Homepage: https://github.com/fcitx/libime-jyutping
 Description-md5: 5b7db921aef28fbd8f75929692c0d4cd
 utils
 Priority: optional
-Filename: pool/main/libi/libime-jyutping/libimejyutping-dev_1.0.17-1_amd64.deb
-Size: 9148
-MD5sum: a54f947acbddf3d88ea3428549de31fe
-SHA256: 4cd01c39226e92ee21ae4ebdabb23cc7ead8ca4e7923eefdcf2dc13fe833e676
+Filename: pool/main/libi/libime-jyutping/libimejyutping-dev_1.0.18-1_amd64.deb
+Size: 9164
+MD5sum: 8cd770080ae1a0808f22312274cb700d
+SHA256: e986d8458417f64504f8db648556a44be476c0969a166465974881f04db161c7
 
 Package: libimejyutping1
 Source: libime-jyutping
-Version: 1.0.17-1
-Installed-Size: 454
+Version: 1.0.18-1
+Installed-Size: 494
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.32), libfcitx5utils2 (>= 5.1.19), libgcc-s1 (>= 3.0), libimecore0 (>= 1.1.14), libstdc++6 (>= 14), libzstd1 (>= 1.5.5), libime-data-jyutping (= 1.0.17-1)
+Depends: libc6 (>= 2.32), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.0), libimecore0 (>= 1.1.16), libstdc++6 (>= 14), libzstd1 (>= 1.5.5), libime-data-jyutping (= 1.0.18-1)
 Description: Fcitx5 libime implementation of jyutping input method (lib)
 Multi-Arch: same
 Homepage: https://github.com/fcitx/libime-jyutping
 Description-md5: 37f5c2872123457a2c0d5c9c989de87c
 utils
 Priority: optional
-Filename: pool/main/libi/libime-jyutping/libimejyutping1_1.0.17-1_amd64.deb
-Size: 140780
-MD5sum: 6b439a631eaf61a7623a9ea092ebe7e6
-SHA256: 60e101c70b4fb50aa98eaaafd8dfb442ede7f5258aa6f4d8adf2f9fc881a5935
+Filename: pool/main/libi/libime-jyutping/libimejyutping1_1.0.18-1_amd64.deb
+Size: 154604
+MD5sum: d69b0a869541fd96c3dc105ea730ad23
+SHA256: 66351de501703304eb61519cc7ebefe9c4b4e6024cf113a74d7c0e6e8e61a616
 
 Package: libimobiledevice-utils
 Source: libimobiledevice (1.4.0-1)
@@ -25473,62 +24985,43 @@ MD5sum: 3744169dc1b2ec843c9ba08b582c2150
 SHA256: 8a3f50bc3bc31f071ec5c922577cda200367701b29ccdc859ddfe83ef8cc2712
 
 Package: emacs-mozc
-Source: mozc (2.29.5160.102+dfsg-1.6)
-Version: 2.29.5160.102+dfsg-1.6+b1
-Installed-Size: 120
+Source: mozc
+Version: 2.29.5160.102+dfsg-1.7
+Installed-Size: 119
 Maintainer: Nobuhiro Iwamatsu <iwamatsu@debian.org>
 Architecture: amd64
-Depends: emacs | emacs23 | emacs24, emacs-mozc-bin (= 2.29.5160.102+dfsg-1.6+b1)
+Depends: emacs | emacs23 | emacs24, emacs-mozc-bin (= 2.29.5160.102+dfsg-1.7)
 Conflicts: emacsen-common (<< 2.0.0)
 Description: Mozc for Emacs
 Homepage: https://github.com/google/mozc
 Description-md5: d7fbcd37fe4b1aea877c378ab81adc91
 utils
 Priority: optional
-Filename: pool/main/m/mozc/emacs-mozc_2.29.5160.102+dfsg-1.6+b1_amd64.deb
-Size: 26004
-MD5sum: 505da6c9da17078bd44d1445b100f5c0
-SHA256: b42930884a82c83c5f6a32e5b0490f0199c7b680e8df7c1ad28a7ddc2b54b91a
+Filename: pool/main/m/mozc/emacs-mozc_2.29.5160.102+dfsg-1.7_amd64.deb
+Size: 25928
+MD5sum: 74f23cb8246042ff51561485622815ad
+SHA256: a18fdf92c3c626f79fc655a0dc6eb258aaac244d7a7c33eb4d53dd9dc64f70f8
 
 Package: emacs-mozc-bin
-Source: mozc (2.29.5160.102+dfsg-1.6)
-Version: 2.29.5160.102+dfsg-1.6+b1
-Installed-Size: 838
+Source: mozc
+Version: 2.29.5160.102+dfsg-1.7
+Installed-Size: 897
 Maintainer: Nobuhiro Iwamatsu <iwamatsu@debian.org>
 Architecture: amd64
-Depends: libabsl20260526 (>= 20260526.0-0~), libc6 (>= 2.34), libgcc-s1 (>= 3.4), libprotobuf32t64 (>= 3.21.12), libstdc++6 (>= 13.1), mozc-server (= 2.29.5160.102+dfsg-1.6+b1)
+Depends: libabsl20260526 (>= 20260526.0-0~), libc6 (>= 2.34), libgcc-s1 (>= 3.4), libprotobuf32t64 (>= 3.21.12), libstdc++6 (>= 13.1), mozc-server (= 2.29.5160.102+dfsg-1.7)
 Description: Helper module for emacs-mozc
 Homepage: https://github.com/google/mozc
 Description-md5: d0382006f98c09382d8522d3a438b943
 utils
 Priority: optional
-Filename: pool/main/m/mozc/emacs-mozc-bin_2.29.5160.102+dfsg-1.6+b1_amd64.deb
-Size: 212224
-MD5sum: 526cfc9fa287413d59252dc554556d5b
-SHA256: 2a59746cda0b666d71cfd8e363f8822d3ee06c14b4a19d36f001788963cd07e3
-
-Package: fcitx-mozc
-Source: mozc (2.29.5160.102+dfsg-1.6)
-Version: 2.29.5160.102+dfsg-1.6+b1
-Installed-Size: 1130
-Maintainer: Nobuhiro Iwamatsu <iwamatsu@debian.org>
-Architecture: amd64
-Depends: libabsl20260526 (>= 20260526.0-0~), libc6 (>= 2.34), libgcc-s1 (>= 3.4), libprotobuf32t64 (>= 3.21.12), libstdc++6 (>= 13.1), fcitx-bin, fcitx-data, fcitx-modules, mozc-server (= 2.29.5160.102+dfsg-1.6+b1), fcitx-mozc-data
-Recommends: fcitx, mozc-utils-gui (= 2.29.5160.102+dfsg-1.6+b1)
-Description: Mozc engine for fcitx - Client of the Mozc input method
-Multi-Arch: same
-Homepage: https://github.com/google/mozc
-Description-md5: cc0f91c7fed6f08bdb82d8e08a339167
-utils
-Priority: optional
-Filename: pool/main/m/mozc/fcitx-mozc_2.29.5160.102+dfsg-1.6+b1_amd64.deb
-Size: 262644
-MD5sum: dd59ce4c89e527e203b2b839f4b4f219
-SHA256: 5136d888c069bc5c4c49c7af0aa7afbb643b5fe733371e9047fa553fa078b547
+Filename: pool/main/m/mozc/emacs-mozc-bin_2.29.5160.102+dfsg-1.7_amd64.deb
+Size: 230472
+MD5sum: 3bcd786e5ba91bf5ee3e4ece2257b672
+SHA256: 980ca091aa6eed95d59995ccb7c3951fb85403c6fb26c71b17f9182bdab58400
 
 Package: fcitx-mozc-data
 Source: mozc
-Version: 2.29.5160.102+dfsg-1.6
+Version: 2.29.5160.102+dfsg-1.7
 Installed-Size: 61
 Maintainer: Nobuhiro Iwamatsu <iwamatsu@debian.org>
 Architecture: all
@@ -25540,38 +25033,38 @@ Homepage: https://github.com/google/mozc
 Description-md5: 72e2b7c3382ff0dd1563040418a37447
 utils
 Priority: optional
-Filename: pool/main/m/mozc/fcitx-mozc-data_2.29.5160.102+dfsg-1.6_all.deb
-Size: 7116
-MD5sum: d1c6372964516fa8702010f867edb6a4
-SHA256: 00db2b5de0ba91f7fe6fe2281f02261ab5218201cfd971cab6badef237689bc5
+Filename: pool/main/m/mozc/fcitx-mozc-data_2.29.5160.102+dfsg-1.7_all.deb
+Size: 7332
+MD5sum: 5d72ef9168a210faff0ad2cadf18000b
+SHA256: 7bf6273f6380396201767580d371fd9de3ee39ebe5e2b4034eb77f801fba8ae1
 
 Package: fcitx5-mozc
-Source: mozc (2.29.5160.102+dfsg-1.6)
-Version: 2.29.5160.102+dfsg-1.6+b1
-Installed-Size: 1265
+Source: mozc
+Version: 2.29.5160.102+dfsg-1.7
+Installed-Size: 1328
 Maintainer: Nobuhiro Iwamatsu <iwamatsu@debian.org>
 Architecture: amd64
-Depends: libabsl20260526 (>= 20260526.0-0~), libc6 (>= 2.34), libfcitx5config6 (>= 5.1.21), libfcitx5core7 (>= 5.1.21), libfcitx5utils2 (>= 5.1.21), libgcc-s1 (>= 3.4), libprotobuf32t64 (>= 3.21.12), libstdc++6 (>= 13.1), fcitx5, mozc-server (= 2.29.5160.102+dfsg-1.6+b1), fcitx-mozc-data
-Recommends: mozc-utils-gui (= 2.29.5160.102+dfsg-1.6+b1)
+Depends: libabsl20260526 (>= 20260526.0-0~), libc6 (>= 2.34), libfcitx5config6 (>= 5.1.22), libfcitx5core7 (>= 5.1.22), libfcitx5utils2 (>= 5.1.22), libgcc-s1 (>= 3.4), libprotobuf32t64 (>= 3.21.12), libstdc++6 (>= 13.1), fcitx5, mozc-server (= 2.29.5160.102+dfsg-1.7), fcitx-mozc-data
+Recommends: mozc-utils-gui (= 2.29.5160.102+dfsg-1.7)
 Description: Mozc engine for fcitx5 - Client of the Mozc input method
 Multi-Arch: same
 Homepage: https://github.com/google/mozc
 Description-md5: 513f0ba596c268d92ac11f491c899024
 utils
 Priority: optional
-Filename: pool/main/m/mozc/fcitx5-mozc_2.29.5160.102+dfsg-1.6+b1_amd64.deb
-Size: 292272
-MD5sum: 63a9d422c0458446f4f540de72f712b4
-SHA256: 09665cf24a1da95d87df5e8f691a9f54e58e34fd857e94f81eddde5a2e7fe189
+Filename: pool/main/m/mozc/fcitx5-mozc_2.29.5160.102+dfsg-1.7_amd64.deb
+Size: 314088
+MD5sum: 10f7c419fc9d98e52eb68721f1ac9ca0
+SHA256: 58701b7115d07c3ec59f55ac6982fc4ed6ef54b76d75becd104d1e36ee1dc05f
 
 Package: ibus-mozc
-Source: mozc (2.29.5160.102+dfsg-1.6)
-Version: 2.29.5160.102+dfsg-1.6+b1
-Installed-Size: 979
+Source: mozc
+Version: 2.29.5160.102+dfsg-1.7
+Installed-Size: 1054
 Maintainer: Nobuhiro Iwamatsu <iwamatsu@debian.org>
 Architecture: amd64
-Depends: libabsl20260526 (>= 20260526.0-0~), libc6 (>= 2.34), libgcc-s1 (>= 3.4), libglib2.0-0t64 (>= 2.32.0), libibus-1.0-5 (>= 1.5.4), libprotobuf32t64 (>= 3.21.12), libstdc++6 (>= 13.1), libxcb-xfixes0, libxcb1, mozc-data, mozc-server (= 2.29.5160.102+dfsg-1.6+b1), ibus (>= 1.2)
-Recommends: mozc-utils-gui (= 2.29.5160.102+dfsg-1.6+b1)
+Depends: libabsl20260526 (>= 20260526.0-0~), libc6 (>= 2.34), libgcc-s1 (>= 3.4), libglib2.0-0t64 (>= 2.32.0), libibus-1.0-5 (>= 1.5.4), libprotobuf32t64 (>= 3.21.12), libstdc++6 (>= 13.1), libxcb-xfixes0, libxcb1, mozc-data, mozc-server (= 2.29.5160.102+dfsg-1.7), ibus (>= 1.2)
+Recommends: mozc-utils-gui (= 2.29.5160.102+dfsg-1.7)
 Description: Mozc engine for IBus - Client of the Mozc input method
 Homepage: https://github.com/google/mozc
 Description-md5: 88b12aa5cdc5ae186ce940b50e7ee25b
@@ -25579,14 +25072,14 @@ Tag: accessibility::input, culture::japanese, implemented-in::c++,
  role::plugin
 utils
 Priority: optional
-Filename: pool/main/m/mozc/ibus-mozc_2.29.5160.102+dfsg-1.6+b1_amd64.deb
-Size: 243700
-MD5sum: 2e0e3f9215f23877be497521be3fe504
-SHA256: 32d2f5b82ebd0299844c4e474d7f3b3404531e1c28de351ad5b1d213f874ac56
+Filename: pool/main/m/mozc/ibus-mozc_2.29.5160.102+dfsg-1.7_amd64.deb
+Size: 269512
+MD5sum: 40adf52ce06fbc01168688e440a398e6
+SHA256: 7db398d682584a049213403205d3bd4abfa19a6884063c16cfcfd9200ada48dd
 
 Package: mozc-data
 Source: mozc
-Version: 2.29.5160.102+dfsg-1.6
+Version: 2.29.5160.102+dfsg-1.7
 Installed-Size: 38
 Maintainer: Nobuhiro Iwamatsu <iwamatsu@debian.org>
 Architecture: all
@@ -25596,15 +25089,15 @@ Homepage: https://github.com/google/mozc
 Description-md5: 6eff62dbff103ae6b02bc9b4937df5fa
 utils
 Priority: optional
-Filename: pool/main/m/mozc/mozc-data_2.29.5160.102+dfsg-1.6_all.deb
-Size: 15536
-MD5sum: 7ac73d3a885b881d2e14cc649db5ec5c
-SHA256: 3e618f942aea65acb0e1774a62c99979c79321e6051026b2f01c0af691cbc555
+Filename: pool/main/m/mozc/mozc-data_2.29.5160.102+dfsg-1.7_all.deb
+Size: 15744
+MD5sum: e7114b7abc34f9125990cc84283469bf
+SHA256: 28a5333ee610ff8a0f9f0ca2820a16d84ea749499beb9c95672932971f929e35
 
 Package: mozc-server
-Source: mozc (2.29.5160.102+dfsg-1.6)
-Version: 2.29.5160.102+dfsg-1.6+b1
-Installed-Size: 20616
+Source: mozc
+Version: 2.29.5160.102+dfsg-1.7
+Installed-Size: 21223
 Maintainer: Nobuhiro Iwamatsu <iwamatsu@debian.org>
 Architecture: amd64
 Depends: libabsl20260526 (>= 20260526.0-0~), libc6 (>= 2.38), libcairo2 (>= 1.2.4), libgcc-s1 (>= 3.4), libglib2.0-0t64 (>= 2.12.0), libgtk-3-0t64 (>= 3.0.0), libpango-1.0-0 (>= 1.20.0), libpangocairo-1.0-0 (>= 1.14.0), libprotobuf32t64 (>= 3.21.12), libstdc++6 (>= 13.1)
@@ -25615,19 +25108,19 @@ Description-md5: 8c20219f07f38ad45616b5119e58023e
 Tag: uitoolkit::gtk
 utils
 Priority: optional
-Filename: pool/main/m/mozc/mozc-server_2.29.5160.102+dfsg-1.6+b1_amd64.deb
-Size: 12560856
-MD5sum: 91d21c4e88390529469f8f01be91daf3
-SHA256: 4d5af609f49ff5c40029e21b235ddeb6979072289c08a28d2d1e4c3d02b81458
+Filename: pool/main/m/mozc/mozc-server_2.29.5160.102+dfsg-1.7_amd64.deb
+Size: 12748712
+MD5sum: e51335500c2ab5a4255c2e9587cb33a3
+SHA256: ebebda7837e7af960fca1c315dda80b41cd4c45ac65a4a298b97eb4e5ddb894c
 
 Package: mozc-utils-gui
-Source: mozc (2.29.5160.102+dfsg-1.6)
-Version: 2.29.5160.102+dfsg-1.6+b1
-Installed-Size: 3089
+Source: mozc
+Version: 2.29.5160.102+dfsg-1.7
+Installed-Size: 3180
 Maintainer: Nobuhiro Iwamatsu <iwamatsu@debian.org>
 Architecture: amd64
 Depends: libabsl20260526 (>= 20260526.0-0~), libc6 (>= 2.38), libgcc-s1 (>= 3.4), libqt5core5t64 (>= 5.15.1), libqt5gui5t64 (>= 5.0.2) | libqt5gui5-gles (>= 5.0.2), libqt5widgets5t64 (>= 5.15.1), libstdc++6 (>= 14), mozc-data
-Recommends: mozc-server (= 2.29.5160.102+dfsg-1.6+b1)
+Recommends: mozc-server (= 2.29.5160.102+dfsg-1.7)
 Suggests: ibus-qt5
 Description: GUI utilities of the Mozc input method
 Homepage: https://github.com/google/mozc
@@ -25635,29 +25128,29 @@ Description-md5: 26ec796df53363feb223226aacb6085e
 Tag: uitoolkit::qt
 utils
 Priority: optional
-Filename: pool/main/m/mozc/mozc-utils-gui_2.29.5160.102+dfsg-1.6+b1_amd64.deb
-Size: 894580
-MD5sum: 3d664558f3485b938d0d610a12dbff9b
-SHA256: cfe806189201728224149a05311fbf5a9dd1d23bb81a426e530d1a1fc470e2d3
+Filename: pool/main/m/mozc/mozc-utils-gui_2.29.5160.102+dfsg-1.7_amd64.deb
+Size: 928536
+MD5sum: 0f070649d91f3891a9a591b755df5578
+SHA256: 36ee99b8ae8f63b1bd2d9efc47a8404efd26d6dab6b2053b6ddf5e66aba9f067
 
 Package: uim-mozc
-Source: mozc (2.29.5160.102+dfsg-1.6)
-Version: 2.29.5160.102+dfsg-1.6+b1
-Installed-Size: 1137
+Source: mozc
+Version: 2.29.5160.102+dfsg-1.7
+Installed-Size: 1196
 Maintainer: Nobuhiro Iwamatsu <iwamatsu@debian.org>
 Architecture: amd64
-Depends: libabsl20260526 (>= 20260526.0-0~), libc6 (>= 2.34), libgcc-s1 (>= 3.4), libprotobuf32t64 (>= 3.21.12), libstdc++6 (>= 13.1), libuim-scm0 (>= 1:1.5.7), libuim8 (>= 1:1.5.7), mozc-data, mozc-server (= 2.29.5160.102+dfsg-1.6+b1)
-Recommends: mozc-utils-gui (= 2.29.5160.102+dfsg-1.6+b1)
+Depends: libabsl20260526 (>= 20260526.0-0~), libc6 (>= 2.34), libgcc-s1 (>= 3.4), libprotobuf32t64 (>= 3.21.12), libstdc++6 (>= 13.1), libuim-scm0 (>= 1:1.5.7), libuim8 (>= 1:1.5.7), mozc-data, mozc-server (= 2.29.5160.102+dfsg-1.7)
+Recommends: mozc-utils-gui (= 2.29.5160.102+dfsg-1.7)
 Description: Mozc engine for uim - Client of the Mozc input method
 Multi-Arch: same
 Homepage: https://github.com/google/mozc
 Description-md5: d356d87e8c6ad11ff55a4f9485240410
 utils
 Priority: optional
-Filename: pool/main/m/mozc/uim-mozc_2.29.5160.102+dfsg-1.6+b1_amd64.deb
-Size: 259896
-MD5sum: f3625c56f6759d2226eed9f3465584ea
-SHA256: 57c42de5f80c63059afad6755a7f017d871ddfe8fee6e0f9bb111307bd257c0f
+Filename: pool/main/m/mozc/uim-mozc_2.29.5160.102+dfsg-1.7_amd64.deb
+Size: 277024
+MD5sum: 7a8546f9235e0ae81b876eaecc74b26c
+SHA256: 9213315eee199dcda4c6189140b35e70767c291f87c1b160414eb7389f6db520
 
 Package: mozo
 Version: 1.28.0-2
@@ -26899,8 +26392,8 @@ MD5sum: 86baf31d935c0dc111a34d7b6fda74fb
 SHA256: 7fba145eed467c25576900eec99d00e9dda963f58347cc26804b3d2b5da40cc3
 
 Package: onioncircuits
-Version: 0.8.2-1
-Installed-Size: 364
+Version: 0.9-1
+Installed-Size: 323
 Maintainer: Debian Privacy Tools Maintainers <pkg-privacy-maintainers@lists.alioth.debian.org>
 Architecture: all
 Depends: python3-stem (>= 1.8.0), python3:any, python3-gi, python3-pycountry, gir1.2-gtk-3.0, gir1.2-glib-2.0
@@ -26913,10 +26406,10 @@ Tag: implemented-in::python, interface::graphical, interface::x11,
  x11::application
 utils
 Priority: optional
-Filename: pool/main/o/onioncircuits/onioncircuits_0.8.2-1_all.deb
-Size: 35936
-MD5sum: 4d98546e7567599a75cd82f4b36224c5
-SHA256: 00aa8abf99bd976cd82b48fd16d947f6732cbcc944d414f37eabd9591d4e5c69
+Filename: pool/main/o/onioncircuits/onioncircuits_0.9-1_all.deb
+Size: 33800
+MD5sum: af53d41876c02dca7f918c5b8a80ccc9
+SHA256: 8050c6f034f377e6f891738a708a046ddc7ef92e2df201fe4672a87d659ac5c0
 
 Package: ontospy
 Version: 2.1.1~dfsg2-4
@@ -29714,23 +29207,24 @@ MD5sum: 6795709ce0763440b5d9caffd0574a24
 SHA256: 66edef73b1ff62d389b509e7474b74f0edaded397d1e13f552a85318c40cc971
 
 Package: pristine-tar
-Version: 1.50+nmu2
-Installed-Size: 546
+Version: 1.50+nmu3
+Installed-Size: 568
 Maintainer: Tomasz Buchert <tomasz@debian.org>
 Architecture: amd64
-Depends: bzip2, libsys-cpuaffinity-perl, pbzip2, pixz, tar (>= 1.29b-1.1), xdelta, xdelta3, xz-utils, perl:any, libbz2-1.0, libc6 (>= 2.34), zlib1g (>= 1:1.1.4)
+Depends: bzip2, libsys-cpuaffinity-perl, pbzip2, pixz, xdelta, xdelta3, xz-utils, perl:any, libbz2-1.0, libc6 (>= 2.38), zlib1g (>= 1:1.1.4)
 Description: regenerate pristine tarballs
 Homepage: https://kitenet.net/~joey/code/pristine-tar/
+Commands: pristine-bz2, pristine-gz, pristine-tar, pristine-xz, zgz
 Description-md5: 3cfce5eb84507505c671f03a5101c3b2
 Tag: admin::backup, devel::packaging, implemented-in::perl,
  interface::commandline, role::program, scope::utility,
  use::compressing, use::storing, works-with::vcs
 utils
 Priority: optional
-Filename: pool/main/p/pristine-tar/pristine-tar_1.50+nmu2_amd64.deb
-Size: 107624
-MD5sum: e74baa905264586b3a3aa52e861052e1
-SHA256: ef5d997753c8a831e618d2bca8daab88ccfaa9b611be0ef3954ef8c0fcc79c4c
+Filename: pool/main/p/pristine-tar/pristine-tar_1.50+nmu3_amd64.deb
+Size: 112636
+MD5sum: 2a065f4392be2b387787accbf4904288
+SHA256: c635024a0e0b08cd4887fc04e64d9ed762c8d48a30523988b4302f738c69c4c7
 
 Package: procdump
 Version: 2.2-6
@@ -30629,21 +30123,21 @@ SHA256: ab05759a8c131e3b529326f63e6862848499c2f929ae5c0c33aa208cb77e1e78
 
 Package: stetl
 Source: python-stetl
-Version: 2.1-2
+Version: 2.1-3
 Installed-Size: 18
 Maintainer: Debian GIS Project <pkg-grass-devel@lists.alioth.debian.org>
 Architecture: all
-Depends: python3-stetl (>= 2.1-2), python3:any
+Depends: python3-stetl (>= 2.1-3), python3:any
 Description: Streaming ETL - Commandline utility
 Homepage: http://stetl.org/
 Description-md5: e5095f0d59189eccf76b1c253469f8a5
 Tag: field::geography, implemented-in::python, role::program
 utils
 Priority: optional
-Filename: pool/main/p/python-stetl/stetl_2.1-2_all.deb
-Size: 7192
-MD5sum: e6fb5b9c2343add1c249aeee234f2e80
-SHA256: abd8cd2a0f022b64d9f8842c266c87464378fb75112b499ed926cfb4e0cb8df5
+Filename: pool/main/p/python-stetl/stetl_2.1-3_all.deb
+Size: 7204
+MD5sum: 7760abd5cad40909a11ca1ac4617b7d6
+SHA256: 43cbeed6b359ced48ed764e5c17a94733b7c8dcb7d25655d4ade7d595c0bde86
 
 Package: trezor
 Source: python-trezor
@@ -33304,20 +32798,20 @@ MD5sum: 05d425e1fa7f58a38fcf1e098ca1c86f
 SHA256: b36368c28a9466654335432903555bf04cda128b45ace682e41418a39f48ef66
 
 Package: rtc-testbench
-Version: 5.4-1
-Installed-Size: 940
+Version: 5.5-1
+Installed-Size: 1132
 Maintainer: Gavin Lai (賴建宇) <gavin09@gmail.com>
 Architecture: amd64
-Depends: libbpf1 (>= 5.2.6), libc6 (>= 2.38), libssl3t64 (>= 3.0.0), libxdp1 (>= 1.5.0), libyaml-0-2, iproute2, ethtool, rt-tests, linuxptp, iperf3
+Depends: libbpf1 (>= 5.2.6), libc6 (>= 2.38), libssl3t64 (>= 3.0.0), libxdp1 (>= 1.5.0), libyaml-0-2, iproute2, ethtool, rt-tests, linuxptp, iperf3, bc
 Description: Linux RealTime Communication Testbench
 Homepage: https://github.com/Linutronix/RTC-Testbench
 Description-md5: e8085e757e1b2cee40cf4106c927a9cf
 utils
 Priority: optional
-Filename: pool/main/r/rtc-testbench/rtc-testbench_5.4-1_amd64.deb
-Size: 96764
-MD5sum: d0ab8df430d88badbd35867e38f3e5da
-SHA256: fad25c5bf3fefa5f430703f95667f7caee9c84064ffb84ed992171c2f171bb7c
+Filename: pool/main/r/rtc-testbench/rtc-testbench_5.5-1_amd64.deb
+Size: 108816
+MD5sum: 373923640489f1bb6f4b376035742433
+SHA256: 88e3b9e06e094088b39af3151edb3d33fd27754d0f0ec0898d66de743f341a02
 
 Package: rtr-tools
 Source: rtrlib (0.8.0-7)
