@@ -1,9 +1,9 @@
 Package: acme.sh
-Version: 3.1.4+~cs0.0.20260716-2
-Installed-Size: 2251
+Version: 3.1.5+~cs0.0.20260919-1
+Installed-Size: 2413
 Maintainer: Debian Let's Encrypt <team+letsencrypt@tracker.debian.org>
 Architecture: all
-Depends: systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, curl | wget
+Depends: curl | wget
 Recommends: socat
 Description: Pure unix shell script implementing ACME client protocol
 Multi-Arch: foreign
@@ -11,10 +11,10 @@ Homepage: https://github.com/acmesh-official/acme.sh
 Description-md5: a91ab167bf02d9b84ca9c91bd336c6bf
 web
 Priority: optional
-Filename: pool/main/a/acme.sh/acme.sh_3.1.4+~cs0.0.20260716-2_all.deb
-Size: 499592
-MD5sum: 1352dece49fd23d6febbf5f9b2d81d68
-SHA256: 64b42169303672c53cea2829fdbd06d8442469eb3173b122eda20b1f1ac61e61
+Filename: pool/main/a/acme.sh/acme.sh_3.1.5+~cs0.0.20260919-1_all.deb
+Size: 537384
+MD5sum: 0377b62ca2274a037ee159eaecb49518
+SHA256: c7df8c36483a20dc04981354af7bef6841f6a886330995104d92c672334e8e00
 
 Package: acmetool
 Source: acmetool (0.2.2-3)
@@ -7536,6 +7536,157 @@ Filename: pool/main/t/toot/toot_0.52.1-1_all.deb
 Size: 82640
 MD5sum: 5e3805ae2b5197c246b200cb5c3db59f
 SHA256: aa5f335d7e91509b8ec3a08a2f02489d796798bfca6967fbbb5eba884a815e70
+
+Package: trac
+Version: 1.6-5
+Installed-Size: 8096
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: libjs-excanvas, libjs-jquery, libjs-jquery-ui, libjs-jquery-timepicker, python3-jinja2, python3-setuptools, python3-multipart | python3-supported-max (<< 3.13), python3:any
+Recommends: apache2 | httpd, python3-babel, python3-docutils, python3-pygments, python3-pytz, python3-subversion
+Suggests: libapache2-mod-wsgi, python3-psycopg2, python3-textile, trac-accountmanager, trac-authopenid, trac-bitten, trac-bzr (>= 0.2+bzr45), trac-customfieldadmin, trac-email2trac, trac-graphviz, trac-ja-resource, trac-mastertickets, trac-mercurial (>= 0.11.0.4), trac-spamfilter, trac-wikiprint, trac-wikirename, trac-wysiwyg, trac-xmlrpc
+Description: Enhanced wiki and issue tracking system for software development projects
+Homepage: http://trac.edgewall.com
+Description-md5: 2cccb18baaf0a79bddc72153a6b2f521
+Tag: devel::bugtracker, devel::rcs, implemented-in::python, interface::web,
+ role::program, scope::application, web::application, web::wiki,
+ works-with::bugs, works-with::software:source
+web
+Priority: optional
+Filename: pool/main/t/trac/trac_1.6-5_all.deb
+Size: 1466460
+MD5sum: 49f33a63669e0bbddf336fc5a674a1ac
+SHA256: 480daacbece7d35d0b413c6ce06a51f39ffbf4c9a5129f18841904d9ae824c2f
+
+Package: trac-customfieldadmin
+Version: 0.4.0+svn18456-2
+Installed-Size: 57
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3:any, trac
+Description: panel for administrating custom ticket fields in Trac
+Homepage: http://trac-hacks.org/wiki/CustomFieldAdminPlugin
+Description-md5: f4acf6d666ee1230ae26123042117708
+web
+Priority: optional
+Filename: pool/main/t/trac-customfieldadmin/trac-customfieldadmin_0.4.0+svn18456-2_all.deb
+Size: 10468
+MD5sum: 5357a8ab826c0d55901c1e5eb449a01f
+SHA256: 22ba5092ba1ab3d5028df5db85919fb4a32985f57f5e72981d34d25b0aeb8908
+
+Package: trac-httpauth
+Version: 1.3+svn18631-1
+Installed-Size: 24
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3:any, trac-accountmanager, trac
+Description: Force HTTP authentication from within Trac
+Homepage: http://trac-hacks.org/wiki/HttpAuthPlugin
+Description-md5: 9f43969b1f62922a0beca48ea30c55e3
+web
+Priority: optional
+Filename: pool/main/t/trac-httpauth/trac-httpauth_1.3+svn18631-1_all.deb
+Size: 4900
+MD5sum: 0fe520e17ddb06801f843b14ce70a8ca
+SHA256: 80da5750c8e573f6fd518739d33d502c581730c3dbc668313f00debb12719cc4
+
+Package: trac-roadmap
+Version: 0.4.3-1
+Installed-Size: 44
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3:any, trac
+Description: enhances the Trac roadmap with sorting and filtering
+Homepage: http://trac-hacks.org/wiki/RoadmapPlugin
+Description-md5: 84c1f9f9291dd73fe1a4a610d1ce3167
+web
+Priority: optional
+Filename: pool/main/t/trac-roadmap/trac-roadmap_0.4.3-1_all.deb
+Size: 7676
+MD5sum: 9ea114221fbf3d00edf0b564cb846752
+SHA256: a53f26c3e009b4b19a20e68160807d558dd09c94dab42b090cb06f5e3cc6f445
+
+Package: trac-subcomponents
+Version: 1.3.3-2
+Installed-Size: 50
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3:any, trac (>= 1.6)
+Recommends: libjs-jquery, graphviz
+Description: use multiple layers of components in Trac
+Homepage: https://trac-hacks.org/wiki/SubcomponentsPlugin
+Description-md5: e93e08e4758cf921e3bbfbcc498dbbfb
+web
+Priority: optional
+Filename: pool/main/t/trac-subcomponents/trac-subcomponents_1.3.3-2_all.deb
+Size: 10956
+MD5sum: 39fb5f3d2162246927cf7a259b33b100
+SHA256: cbd02fe34f08df666f8c111cf8356782c7bd6cf4faba25fdfcb13778c4a4c7cb
+
+Package: trac-tickettemplate
+Version: 1.0.1-2
+Installed-Size: 113
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3:any, trac
+Description: create Trac tickets using templates
+Homepage: https://trac-hacks.org/wiki/TracTicketTemplatePlugin
+Description-md5: 2a048163e4159dc26109f185130c0204
+web
+Priority: optional
+Filename: pool/main/t/trac-tickettemplate/trac-tickettemplate_1.0.1-2_all.deb
+Size: 22044
+MD5sum: 5d5a8674b9e88589e0e6e1e60fff9f0b
+SHA256: a8893817c897f55546faf0b874a1fbd29d93442ae9c0d1f1cab904ef515772e6
+
+Package: trac-wikiprint
+Version: 4.0.0+svn18614+really3.0.0+svn18295-1
+Installed-Size: 82
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3-pil, python3-xhtml2pdf, python3:any, trac
+Recommends: python3-pygments
+Description: Make Trac wiki pages printable, exporting to PDF or printable HTML
+Homepage: http://trac-hacks.org/wiki/TracWikiPrintPlugin
+Description-md5: e42b454e34cf0f3c9edd97e974fec019
+web
+Priority: optional
+Filename: pool/main/t/trac-wikiprint/trac-wikiprint_4.0.0+svn18614+really3.0.0+svn18295-1_all.deb
+Size: 15572
+MD5sum: 200fd9f1f9107167fea78dd31896c434
+SHA256: 0b0fe507eea91b3609aba4a1ad25c486639a775997809b1f141de53906df6bcd
+
+Package: trac-wysiwyg
+Version: 0.12.0.7+svn18546-2
+Installed-Size: 188
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3:any, trac, libjs-jquery
+Description: WYSIWYG style editor for the Trac issue tracking system
+Homepage: https://trac-hacks.org/wiki/TracWysiwygPlugin
+Description-md5: 4ccff9c6ccaeae17bf00263ea6e4e4f5
+web
+Priority: optional
+Filename: pool/main/t/trac-wysiwyg/trac-wysiwyg_0.12.0.7+svn18546-2_all.deb
+Size: 35136
+MD5sum: cbd01d874522930410f2c29f99de01c1
+SHA256: 6112a7db6fb6594969326a4170d8c546661bb61b84392d4105abba6774d444dd
+
+Package: trac-xmlrpc
+Version: 1.2.0+svn18657-1
+Installed-Size: 119
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Architecture: all
+Depends: python3:any, trac
+Description: XML-RPC interface to the Trac wiki and issue tracking system
+Homepage: https://trac-hacks.org/wiki/XmlRpcPlugin
+Description-md5: 0b53e3a84951714a57566dd5a5c7c0cb
+web
+Priority: optional
+Filename: pool/main/t/trac-xmlrpc/trac-xmlrpc_1.2.0+svn18657-1_all.deb
+Size: 24652
+MD5sum: a4617d1be9e7b3e3ef25689b3c6bae42
+SHA256: 0ed355050bae3974918ff0d9cd60cd7dbb8a5b0c89540d95597208127acb049a
 
 Package: libtrantor-dev
 Source: trantor
