@@ -5001,8 +5001,8 @@ MD5sum: b2e1de231413f2984cc1457e1d1470fa
 SHA256: 1070220eab6628ec63fe61bec5841f1aa43fdfde5b6ecc5476f817fbb9e01fca
 
 Package: hvcc
-Version: 0.17.1-1
-Installed-Size: 20
+Version: 0.17.2-1
+Installed-Size: 21
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: all
 Depends: python3-hvcc, python3:any
@@ -5011,27 +5011,28 @@ Homepage: https://wasted-audio.github.io/hvcc/
 Description-md5: e1fed4732049b9510cb4be41ad83d9a1
 sound
 Priority: optional
-Filename: pool/main/h/hvcc/hvcc_0.17.1-1_all.deb
-Size: 5592
-MD5sum: 7b0611db181516457b3297cb929dc380
-SHA256: 0468b56250c638714c21a170861afa66fe583508fafabd53201835d703bbc02f
+Filename: pool/main/h/hvcc/hvcc_0.17.2-1_all.deb
+Size: 5764
+MD5sum: bdf47509a3252db896936bb5f36e27b1
+SHA256: 6e3b3838a5a0228b7fa252129cc2bb757d027a79f77e63aba441e042c3d39990
 
 Package: python3-hvcc
 Source: hvcc
-Version: 0.17.1-1
-Installed-Size: 2429
+Version: 0.17.2-1
+Installed-Size: 2433
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: all
-Depends: pd-lib-builder, python3-arpeggio, python3-jinja2, python3-pydantic, python3-pydantic-extra-types, python3:any
+Depends: python3-arpeggio, python3-jinja2, python3-pydantic, python3-pydantic-extra-types, python3:any
+Recommends: dpf-source, pd-lib-builder
 Description: heavy dataflow audio programming language transpiler (Python 3 interface)
 Homepage: https://wasted-audio.github.io/hvcc/
 Description-md5: 1980a4355736d54d142bda993d665e2e
 sound
 Priority: optional
-Filename: pool/main/h/hvcc/python3-hvcc_0.17.1-1_all.deb
-Size: 300892
-MD5sum: 2f3b54f09f5845a8d8a8fcee86c6a65f
-SHA256: 4a32edc40c70642a196e942f150a6aad8594de157b4c4f9e21da80061396c5f4
+Filename: pool/main/h/hvcc/python3-hvcc_0.17.2-1_all.deb
+Size: 302040
+MD5sum: 277cbbd0424cd38ffe2dd72200c61f1a
+SHA256: 6a3308ceb1a1960d4c3fd05c05e566c0744fcdcf419bdd5eccac1359197a123f
 
 Package: hydrogen
 Version: 1.2.6+dfsg-1
@@ -10167,22 +10168,23 @@ MD5sum: 7cac14cab36fcb4c542faca6e0c4d7a1
 SHA256: 448d80bb8a30d8830a55acbd1c6f3dcb0ebfea3537fdc42543c944d4912046c5
 
 Package: pd-vbap
-Version: 1.2.1-2
+Version: 1.2.1-3
 Installed-Size: 224
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
-Depends: puredata | pd | puredata64 | pd64, libc6 (>= 2.4)
-Recommends: pd-cyclone, pd-import
-Suggests: pd-libdir
+Provides: pd64-vbap (= 1.2.1-3)
+Depends: libc6 (>= 2.43), puredata-core | pd | puredata64-core | pd64
+Recommends: pd-cyclone, pd-import, puredata | puredata64
+Suggests: pd-libdir, pd64-libdir
 Description: Pd library for Vector Base Amplitude Panning spatialization
-Homepage: http://www.acoustics.hut.fi/research/cat/vbap/
+Homepage: https://github.com/pd-externals/vbap
 Description-md5: 1267b8ee1f6655c81014f44b0256cdd5
 sound
 Priority: optional
-Filename: pool/main/p/pd-vbap/pd-vbap_1.2.1-2_amd64.deb
-Size: 45572
-MD5sum: 3b0a4c241b5cae0b298fad33daf14d3f
-SHA256: 46e2d3b6cb68959ec75cd7c74cda9bac342858b7b5d1bee09baa5424024f8b34
+Filename: pool/main/p/pd-vbap/pd-vbap_1.2.1-3_amd64.deb
+Size: 48340
+MD5sum: b09bebf56bb10eb3afee8e8715ccfa0e
+SHA256: 3b0e5f6869d8eda1f8c5a798773feb922fdcc166af9891bbdc5a76f4e510db2c
 
 Package: pd-vstplugin
 Version: 0.6.2-3
@@ -11142,11 +11144,11 @@ MD5sum: c085f3584aa52345bb4fed7a35f9f6c1
 SHA256: f820547ec92a52631393dcccbd2d5f1a0a9569121dfa7884aab7991c69114689
 
 Package: puredata
-Version: 0.56.5+ds-2
+Version: 0.56.5+ds-4
 Installed-Size: 25
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: all
-Depends: puredata-common (<< 0.56.5+ds+1~), puredata-common (>= 0.56.5+ds-2), puredata-core (<< 0.56.5+ds+1~), puredata-core (>= 0.56.5+ds-2), puredata-dev (<< 0.56.5+ds+1~), puredata-dev (>= 0.56.5+ds-2), puredata-doc (<< 0.56.5+ds+1~), puredata-doc (>= 0.56.5+ds-2), puredata-extra (<< 0.56.5+ds+1~), puredata-extra (>= 0.56.5+ds-2), puredata-gui (<< 0.56.5+ds+1~), puredata-gui (>= 0.56.5+ds-2), puredata-utils
+Depends: puredata-common (<< 0.56.5+ds+1~), puredata-common (>= 0.56.5+ds-4), puredata-core (<< 0.56.5+ds+1~), puredata-core (>= 0.56.5+ds-4), puredata-dev (<< 0.56.5+ds+1~), puredata-dev (>= 0.56.5+ds-4), puredata-doc (<< 0.56.5+ds+1~), puredata-doc (>= 0.56.5+ds-4), puredata-extra (<< 0.56.5+ds+1~), puredata-extra (>= 0.56.5+ds-4), puredata-gui (<< 0.56.5+ds+1~), puredata-gui (>= 0.56.5+ds-4), puredata-utils
 Suggests: gem, multimedia-puredata, pd-aubio, pd-csound, pd-pdp, pd-zexy
 Description: realtime computer music and graphics system
 Homepage: https://puredata.info
@@ -11159,14 +11161,14 @@ Tag: devel::editor, devel::ide, devel::ui-builder, field::arts,
  works-with::image:raster, x11::application
 sound
 Priority: optional
-Filename: pool/main/p/puredata/puredata_0.56.5+ds-2_all.deb
-Size: 12780
-MD5sum: 7567cc32f2cc8200a31681c0a00afa1b
-SHA256: a4170a620a7b7bb78e3914c2442df2f6f28bf45eebc07f903a35bd1037e36761
+Filename: pool/main/p/puredata/puredata_0.56.5+ds-4_all.deb
+Size: 12872
+MD5sum: d21b7372c77d373cfc5027e3dad37fdf
+SHA256: 64051d9ec151f297c64189e35540e30bdb45dcadcfb38f4f6b4d2ad952b1cd8a
 
 Package: puredata-common
 Source: puredata
-Version: 0.56.5+ds-2
+Version: 0.56.5+ds-4
 Installed-Size: 1392
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
@@ -11179,51 +11181,52 @@ Homepage: https://puredata.info
 Description-md5: e7507b4791084a8b1b0a0fec111f0dde
 sound
 Priority: optional
-Filename: pool/main/p/puredata/puredata-common_0.56.5+ds-2_amd64.deb
-Size: 258260
-MD5sum: 5817216e314996bcfee3c446c7e9ea0d
-SHA256: 6997eb06d62e5c8b2f75bb95666878b2f10b5079fdd6d89295c6d6735d113b68
+Filename: pool/main/p/puredata/puredata-common_0.56.5+ds-4_amd64.deb
+Size: 258420
+MD5sum: 96654abc20e5040d95cc3e3136c9bf2a
+SHA256: d4960e5a00815bc0210534463797632403f1854c1149afe90adf68ca1daf9c55
 
 Package: puredata-core
 Source: puredata
-Version: 0.56.5+ds-2
-Installed-Size: 1566
+Version: 0.56.5+ds-4
+Installed-Size: 1594
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
-Provides: pd
-Depends: libasound2t64 (>= 1.0.18), libc6 (>= 2.38), libjack-jackd2-0 (>= 1.9.10+20150825) | libjack-0.125, libportaudio2 (>= 19+svn20101113)
+Provides: pd (= 0.56.5+ds-4)
+Depends: libasound2t64 (>= 1.0.18), libc6 (>= 2.43), libjack-jackd2-0 (>= 1.9.10+20150825) | libjack-0.125, libportaudio2 (>= 19+svn20101113)
 Recommends: puredata-common, puredata-gui
 Breaks: puredata-gui (>> 0.56.5+ds+1~), puredata-gui (<< 0.56.5+ds)
 Description: realtime computer music and graphics system - core components
 Homepage: https://puredata.info
+Commands: puredata
 Description-md5: f20faf9925954d850883bbd603153e29
 sound
 Priority: optional
-Filename: pool/main/p/puredata/puredata-core_0.56.5+ds-2_amd64.deb
-Size: 620300
-MD5sum: 43ce8de01e1c54b03ab9c8b727b6fb08
-SHA256: 149eea7f066e9e0d2b21a2cf416b71682e9f74aa9cf80439fad168630261ecb5
+Filename: pool/main/p/puredata/puredata-core_0.56.5+ds-4_amd64.deb
+Size: 636092
+MD5sum: 5a88d3c374d286d1120eb1f6257d1c26
+SHA256: 806c108dab70ef17c5b4f85fb0abd349056db63a8ecde1b57eddd11862b2fb9f
 
 Package: puredata-extra
 Source: puredata
-Version: 0.56.5+ds-2
+Version: 0.56.5+ds-4
 Installed-Size: 699
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
-Depends: puredata-core (<< 0.56.5+ds+1~) | puredata64-core (<< 0.56.5+ds+1~), puredata-core (>= 0.56.5+ds-2) | puredata64-core (>= 0.56.5+ds-2), libc6 (>= 2.38)
+Depends: puredata-core (<< 0.56.5+ds+1~) | puredata64-core (<< 0.56.5+ds+1~), puredata-core (>= 0.56.5+ds-4) | puredata64-core (>= 0.56.5+ds-4), libc6 (>= 2.38)
 Description: realtime computer music and graphics system - extra files
 Homepage: https://puredata.info
 Description-md5: cfd2137b07d9db2a81f24f68a06c88e5
 sound
 Priority: optional
-Filename: pool/main/p/puredata/puredata-extra_0.56.5+ds-2_amd64.deb
-Size: 155872
-MD5sum: dc67c16fe9758e610224406d831fdaa4
-SHA256: 0683e91db935e27f4bddf97e64e06920182e654f0c1131f5da6ba105e0900c84
+Filename: pool/main/p/puredata/puredata-extra_0.56.5+ds-4_amd64.deb
+Size: 156468
+MD5sum: 043a95741e1c2130ca6f39abae265de6
+SHA256: e35d731b1a2b12eb228f2386ccd3697851bf3d1a7a8b785348a3e0f00c3069dc
 
 Package: puredata-gui
 Source: puredata
-Version: 0.56.5+ds-2
+Version: 0.56.5+ds-4
 Installed-Size: 673
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: all
@@ -11233,18 +11236,19 @@ Breaks: puredata-core (>> 0.56.5+ds+1~), puredata-core (<< 0.56.5+ds)
 Description: realtime computer music and graphics system - GUI
 Multi-Arch: foreign
 Homepage: https://puredata.info
+Commands: pd-gui, pd-gui-plugin
 Description-md5: 8d219983e2157002c021696009de2629
 Tag: role::program
 sound
 Priority: optional
-Filename: pool/main/p/puredata/puredata-gui_0.56.5+ds-2_all.deb
-Size: 146152
-MD5sum: 9f636761a0a0b68b0c15444221e11746
-SHA256: 913bde937ace5d6dad0019e7b4e886723649dc1a4ba67171fca6396fa15ea0f4
+Filename: pool/main/p/puredata/puredata-gui_0.56.5+ds-4_all.deb
+Size: 146212
+MD5sum: c4d74a6ba3cfc4abbdb3c5c0b60c388f
+SHA256: 6110310a6c4bae08facfe4d133d87725185a9daa56b422a4c1599a882c85997d
 
 Package: puredata-gui-l10n
 Source: puredata
-Version: 0.56.5+ds-2
+Version: 0.56.5+ds-4
 Installed-Size: 1006
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: all
@@ -11255,47 +11259,48 @@ Homepage: https://puredata.info
 Description-md5: 65c7802af2386dac2949d096515fc486
 sound
 Priority: optional
-Filename: pool/main/p/puredata/puredata-gui-l10n_0.56.5+ds-2_all.deb
-Size: 133612
-MD5sum: ea63574944caa314ab57f7579f98db43
-SHA256: 770a113fd12347138dc29f8fa017550859bd1faaa036f8074be73ee53f891b9c
+Filename: pool/main/p/puredata/puredata-gui-l10n_0.56.5+ds-4_all.deb
+Size: 133712
+MD5sum: b89146e155da0e657aa8a0dd744d809f
+SHA256: 64b47a08f38538dfc9233045c1eb36ea9eceb74da0037df2a823aa57dbc86b94
 
 Package: puredata64
 Source: puredata
-Version: 0.56.5+ds-2
+Version: 0.56.5+ds-4
 Installed-Size: 23
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: all
-Depends: puredata-common (<< 0.56.5+ds+1~), puredata-common (>= 0.56.5+ds-2), puredata-dev (<< 0.56.5+ds+1~), puredata-dev (>= 0.56.5+ds-2), puredata-doc (<< 0.56.5+ds+1~), puredata-doc (>= 0.56.5+ds-2), puredata-extra (<< 0.56.5+ds+1~), puredata-extra (>= 0.56.5+ds-2), puredata-gui (<< 0.56.5+ds+1~), puredata-gui (>= 0.56.5+ds-2), puredata-utils, puredata64-core (<< 0.56.5+ds+1~), puredata64-core (>= 0.56.5+ds-2)
+Depends: puredata-common (<< 0.56.5+ds+1~), puredata-common (>= 0.56.5+ds-4), puredata-dev (<< 0.56.5+ds+1~), puredata-dev (>= 0.56.5+ds-4), puredata-doc (<< 0.56.5+ds+1~), puredata-doc (>= 0.56.5+ds-4), puredata-extra (<< 0.56.5+ds+1~), puredata-extra (>= 0.56.5+ds-4), puredata-gui (<< 0.56.5+ds+1~), puredata-gui (>= 0.56.5+ds-4), puredata-utils, puredata64-core (<< 0.56.5+ds+1~), puredata64-core (>= 0.56.5+ds-4)
 Description: realtime computer music and graphics system (double precision)
 Homepage: https://puredata.info
 Description-md5: e778fbbed9efc8725ee60f24382ce2bf
 sound
 Priority: optional
-Filename: pool/main/p/puredata/puredata64_0.56.5+ds-2_all.deb
-Size: 11772
-MD5sum: 2c590c74b5b1aa6748c32618af45193a
-SHA256: 00dfe74dfead6a6b5f459efdbf34f23ef86344d6f2d6478d697689c4ac999aaf
+Filename: pool/main/p/puredata/puredata64_0.56.5+ds-4_all.deb
+Size: 11868
+MD5sum: 61ab6fd35af3f5a07b48015c7955d68c
+SHA256: 776bfc6c0934d06306d919fc1307264333a051b079f7f8d0f0053c5555282c50
 
 Package: puredata64-core
 Source: puredata
-Version: 0.56.5+ds-2
-Installed-Size: 1571
+Version: 0.56.5+ds-4
+Installed-Size: 1595
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
-Provides: pd64
+Provides: pd64 (= 0.56.5+ds-4)
 Depends: libasound2t64 (>= 1.0.18), libc6 (>= 2.38), libjack-jackd2-0 (>= 1.9.10+20150825) | libjack-0.125, libportaudio2 (>= 19+svn20101113)
 Recommends: puredata-common, puredata-gui
 Breaks: puredata-gui (>> 0.56.5+ds+1~), puredata-gui (<< 0.56.5+ds)
 Description: realtime computer music and graphics system - core components (double)
 Homepage: https://puredata.info
+Commands: puredata64
 Description-md5: 7de3fc180e996d1f69287d69e3daf004
 sound
 Priority: optional
-Filename: pool/main/p/puredata/puredata64-core_0.56.5+ds-2_amd64.deb
-Size: 618520
-MD5sum: 0f48101183ae562dfde49b0e41299f31
-SHA256: 16e7d7e3613c0b1799d369e99db8c59e6cbffcb5d98e2a88bac33c68cf1257cd
+Filename: pool/main/p/puredata/puredata64-core_0.56.5+ds-4_amd64.deb
+Size: 633452
+MD5sum: 33f9b5c56b72e98085526e48649e954a
+SHA256: d4ed585f97ba4f467e741e63f354bab719a36bfeb5195fcae0bb94d805666533
 
 Package: puredata-import
 Version: 1.3-6
