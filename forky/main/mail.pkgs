@@ -2743,13 +2743,13 @@ MD5sum: 9fc91b65f047f2f879de91d479038ecc
 SHA256: 16afc4168225e8ff33d43af2d70e91dd37c2ac310b762173e49ea9fa996ea5b4
 
 Package: fetchmail
-Version: 6.6.6-1
-Installed-Size: 1868
+Version: 6.6.8-1
+Installed-Size: 2106
 Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 Architecture: amd64
 Replaces: fetchmail-common, fetchmail-ssl
 Provides: fetchmail-ssl
-Depends: libc6 (>= 2.38), libcom-err2 (>= 1.43.9), libgssapi-krb5-2 (>= 1.17), libkrb5-3 (>= 1.13~alpha1+dfsg), libssl3t64 (>= 3.0.0), systemd | systemd-standalone-sysusers | systemd-sysusers, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles
+Depends: libc6 (>= 2.43), libcom-err2 (>= 1.43.9), libgssapi-krb5-2 (>= 1.17), libkrb5-3 (>= 1.13~alpha1+dfsg), libssl3t64 (>= 3.0.0), systemd | systemd-standalone-sysusers | systemd-sysusers
 Recommends: ca-certificates
 Suggests: fetchmailconf, default-mta | mail-transport-agent, resolvconf
 Conflicts: fetchmail-common
@@ -2762,10 +2762,10 @@ Tag: implemented-in::c, interface::daemon, mail::imap, mail::pop,
  protocol::ssl, role::program, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/f/fetchmail/fetchmail_6.6.6-1_amd64.deb
-Size: 550476
-MD5sum: 9062510134b33b280e4cfa18d8638f45
-SHA256: a897b4f730d1c63be5fcf5d188b2901fc16baddc5932ad99bc610389f8797c18
+Filename: pool/main/f/fetchmail/fetchmail_6.6.8-1_amd64.deb
+Size: 585996
+MD5sum: a5af699e93d6aa88cb0614e7e8011f2a
+SHA256: eca778befa94e470d675f6d2372f3b96167aa586b18dd9029eb88df231cbdbcd
 
 Package: filter
 Version: 2.6.3+ds1-7
@@ -6106,11 +6106,11 @@ SHA256: 2094635e33e8fe020ee992eef223f352bbd16fd7c6bf74c180c62e46e47b891c
 
 Package: sa-compile
 Source: spamassassin
-Version: 4.0.2+svn1935691-1
-Installed-Size: 65
+Version: 4.0.2+svn1938422-1
+Installed-Size: 67
 Maintainer: Noah Meyerhans <noahm@debian.org>
 Architecture: all
-Depends: spamassassin (= 4.0.2+svn1935691-1), re2c, gcc, libc6-dev, libcrypt-dev, make
+Depends: spamassassin (= 4.0.2+svn1938422-1), re2c, gcc, libc6-dev, libcrypt-dev, make
 Enhances: spamassassin
 Description: Tools for compiling SpamAssassin rules into C
 Multi-Arch: foreign
@@ -6118,20 +6118,20 @@ Homepage: https://www.spamassassin.org/
 Description-md5: 4b3f9d42fcff1aff87d28f86f9496c4e
 mail
 Priority: optional
-Filename: pool/main/s/spamassassin/sa-compile_4.0.2+svn1935691-1_all.deb
-Size: 31564
-MD5sum: ff17634048949dea6d9bd1b26b243f4b
-SHA256: 8da643caeb84b5c90d30ce123c450572c696c5e6fe1c4f4c890c6c4b69a1f921
+Filename: pool/main/s/spamassassin/sa-compile_4.0.2+svn1938422-1_all.deb
+Size: 31796
+MD5sum: f7a168a3813f950a06124dbec757fffd
+SHA256: 63a8fb4820395c62b74d9a055c5746f6bdef57a0930036a4c1c12cc27d8d43a7
 
 Package: spamassassin
-Version: 4.0.2+svn1935691-1
-Installed-Size: 5315
+Version: 4.0.2+svn1938422-1
+Installed-Size: 5619
 Maintainer: Noah Meyerhans <noahm@debian.org>
 Architecture: all
 Provides: libmail-spamassassin-perl
 Depends: perl, libhtml-parser-perl, libsocket6-perl, adduser, libsys-hostname-long-perl, libarchive-tar-perl, libnet-dns-perl, libnetaddr-ip-perl, libhttp-date-perl, libmail-dkim-perl, libio-string-perl, libwww-perl | curl | w3m
-Recommends: spamc, sa-compile (= 4.0.2+svn1935691-1), libmail-spf-perl, libsys-syslog-perl, gnupg, libbsd-resource-perl, libmail-dmarc-perl
-Suggests: razor, libio-socket-ssl-perl, libdbi-perl, pyzor, libcompress-zlib-perl, libencode-detect-perl, libgeoip2-perl, libnet-patricia-perl
+Recommends: spamc, sa-compile (= 4.0.2+svn1938422-1), libmail-spf-perl, libsys-syslog-perl, gnupg, libbsd-resource-perl, libmail-dmarc-perl
+Suggests: razor, libio-socket-ssl-perl, libdbi-perl, pyzor, libcompress-zlib-perl, libencode-detect-perl, libgeoip2-perl, libnet-patricia-perl, libconvert-ascii85-perl, libcrypt-rc4-perl, libcrypt-cbc-perl
 Description: Perl-based spam filter using text analysis
 Multi-Arch: foreign
 Homepage: https://www.spamassassin.org/
@@ -6141,18 +6141,18 @@ Tag: implemented-in::perl, interface::daemon, mail::filters, network::server,
  use::scanning, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/s/spamassassin/spamassassin_4.0.2+svn1935691-1_all.deb
-Size: 1342088
-MD5sum: 850998cbe51c3f641313f6e65862ef1c
-SHA256: e2de6ccc7ad558378f930872a7fce132a1d1cbcfd38cb6521a636e59a2bc2983
+Filename: pool/main/s/spamassassin/spamassassin_4.0.2+svn1938422-1_all.deb
+Size: 1432376
+MD5sum: c2dadd20eb7eb08972f8740fa588634e
+SHA256: 0b3bf50936024c82b973c851cf7b9412c7af8063cc933e8467367732b0a9315a
 
 Package: spamc
 Source: spamassassin
-Version: 4.0.2+svn1935691-1
+Version: 4.0.2+svn1938422-1
 Installed-Size: 122
 Maintainer: Noah Meyerhans <noahm@debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libssl3t64 (>= 3.0.0)
+Depends: libc6 (>= 2.38), libssl3t64 (>= 3.0.0), zlib1g (>= 1:1.1.4)
 Recommends: spamd
 Description: Client for SpamAssassin spam filtering daemon
 Multi-Arch: foreign
@@ -6163,19 +6163,19 @@ Tag: implemented-in::c, interface::commandline, interface::daemon,
  use::scanning, works-with::mail
 mail
 Priority: optional
-Filename: pool/main/s/spamassassin/spamc_4.0.2+svn1935691-1_amd64.deb
-Size: 67592
-MD5sum: 7ef1b22cb4341ae254dcb96a87782b6f
-SHA256: 43ae71b9da4c8a1fc55b6f9cf0f2ffb10647f699251e6876bde6649a95b4974e
+Filename: pool/main/s/spamassassin/spamc_4.0.2+svn1938422-1_amd64.deb
+Size: 69520
+MD5sum: 9f98e35357e15e17cd5a184377f6da95
+SHA256: e72700dc657fdf7d66d376327ddabde3a55798b82de6a78035ea46b832c7eaa7
 
 Package: spamd
 Source: spamassassin
-Version: 4.0.2+svn1935691-1
+Version: 4.0.2+svn1938422-1
 Installed-Size: 211
 Maintainer: Noah Meyerhans <noahm@debian.org>
 Architecture: all
 Replaces: spamassassin (<< 4.0.0~0.0svn1883440-2)
-Depends: spamassassin (= 4.0.2+svn1935691-1), init-system-helpers (>= 1.51)
+Depends: spamassassin (= 4.0.2+svn1938422-1), init-system-helpers (>= 1.51)
 Recommends: systemd | rsyslog | system-log-daemon
 Breaks: spamassassin (<< 4.0.0~0.0svn1883440-2)
 Description: Server for SpamAssassin spam filtering daemon
@@ -6184,10 +6184,10 @@ Homepage: https://www.spamassassin.org/
 Description-md5: 54f8b1e00ba8e7cb63aa21851c6b64fa
 mail
 Priority: optional
-Filename: pool/main/s/spamassassin/spamd_4.0.2+svn1935691-1_all.deb
-Size: 79244
-MD5sum: 41ec5c3fb54bd3eb123b18828ac44fac
-SHA256: 80bed52b886186d23697ad758ccff607446a0dcb8dd77e47a7520f5f6b661303
+Filename: pool/main/s/spamassassin/spamd_4.0.2+svn1938422-1_all.deb
+Size: 79400
+MD5sum: 86ce0401020e4a78c7fe72b76db34cff
+SHA256: 8cf016673aa7a7c4d1e4889c581f16852a8ff0a84b488e43d0708ba52745d4be
 
 Package: spamassassin-heatu
 Version: 3.02+20101108-6
