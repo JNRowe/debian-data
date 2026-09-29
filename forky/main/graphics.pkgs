@@ -472,21 +472,22 @@ MD5sum: 03a51489d9d91a739c1316eb60570b6e
 SHA256: 8a2a942f40710410e36d952b0c537c34186a2161f46f62b73014691baa92cf54
 
 Package: cairosvg
-Version: 2.9.0-2
-Installed-Size: 16
+Version: 2.9.1-1
+Installed-Size: 17
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
-Depends: python3-cairosvg (= 2.9.0-2), python3:any
+Depends: python3-cairosvg (= 2.9.1-1), python3:any
 Breaks: python-cairosvg (<< 2~), python3-cairosvg (<< 2~)
 Description: SVG to PDF/PS/PNG converter based on Cairo
 Homepage: https://cairosvg.org/
+Commands: cairosvg
 Description-md5: 31719718d06444d946a2ea1cc1d773f7
 graphics
 Priority: optional
-Filename: pool/main/c/cairosvg/cairosvg_2.9.0-2_all.deb
-Size: 4508
-MD5sum: c2d6525d47fcba6b36abc47cbf33916f
-SHA256: 31722710f9426f0c3cbcd0e0e5cd6826523619ecc066d1ec9389183452351946
+Filename: pool/main/c/cairosvg/cairosvg_2.9.1-1_all.deb
+Size: 4568
+MD5sum: 6f58e89f5e78a2a274a17f5da8295f92
+SHA256: ef50cd3c44d296db4ef9d33d9fa77517de859ee03ce21a319d49fcbd6b1c57dd
 
 Package: karbon
 Source: calligra
@@ -969,112 +970,124 @@ MD5sum: 069da00301ef57f5e85ba48566abad59
 SHA256: 38b2221b007f157213014c73799709a1aff9e7c4942acf5263bed2aaddd7497e
 
 Package: debian-edu-artwork
-Version: 2.13.1-1
-Installed-Size: 84
+Version: 2.13.6-1
+Installed-Size: 272
 Maintainer: Debian Edu Developers <debian-edu@lists.debian.org>
 Architecture: all
-Depends: dconf-gsettings-backend | gsettings-backend, debian-edu-artwork-ceratopsian | debian-edu-artwork-emerald | debian-edu-artwork-homeworld | debian-edu-artwork-buster | debian-edu-artwork-softwaves | debian-edu-artwork-spacefun, desktop-base, libconfig-inifiles-perl
+Replaces: debian-edu-artwork-ceratopsian (<< 2.13.5-1~), debian-edu-artwork-emerald (<< 2.13.5-1~), debian-edu-artwork-futureprototype (<< 2.13.5-1~), debian-edu-artwork-homeworld (<< 2.13.5-1~), debian-edu-artwork-softwaves (<< 2.13.5-1~)
+Depends: dconf-gsettings-backend | gsettings-backend, debian-edu-artwork-ceratopsian | debian-edu-artwork-emerald | debian-edu-artwork-homeworld | debian-edu-artwork-buster | debian-edu-artwork-softwaves | debian-edu-artwork-spacefun, libconfig-inifiles-perl
 Suggests: debian-edu-artwork-spacefun
 Enhances: gdm3, lightdm, sddm, slim
+Breaks: debian-edu-artwork-ceratopsian (<< 2.13.5-1~), debian-edu-artwork-emerald (<< 2.13.5-1~), debian-edu-artwork-futureprototype (<< 2.13.5-1~), debian-edu-artwork-homeworld (<< 2.13.5-1~), debian-edu-artwork-softwaves (<< 2.13.5-1~)
 Description: Debian Edu themes and artwork
 Homepage: https://blends.debian.org/edu
-Description-md5: 2142fa9ed37f8efaecd7e01114d7be93
+Description-md5: 3312440eeae438142fc0dcbdb5078f09
 graphics
 Priority: optional
-Filename: pool/main/d/debian-edu-artwork/debian-edu-artwork_2.13.1-1_all.deb
-Size: 50444
-MD5sum: c437931517b2544b1474f4afbe3de1cc
-SHA256: fbf10d32fd59328c65ed7f9d6dfe37ad78c4d80bcbd1601824d4c00cfb0549d1
-
-Package: debian-edu-artwork-buster
-Source: debian-edu-artwork
-Version: 2.13.1-1
-Installed-Size: 726
-Maintainer: Debian Edu Developers <debian-edu@lists.debian.org>
-Architecture: all
-Depends: desktop-base
-Recommends: debian-edu-artwork, fonts-quicksand
-Description: Debian Edu futurePrototype "buster" theme and artwork
-Homepage: https://blends.debian.org/edu
-Description-md5: 52bb4178610add116f885d84b39a0a38
-graphics
-Priority: optional
-Filename: pool/main/d/debian-edu-artwork/debian-edu-artwork-buster_2.13.1-1_all.deb
-Size: 235084
-MD5sum: 476dd51c3c1d9384d9779747ac0f9be7
-SHA256: a62a357967ad47e243b54303eb7defc158e88c4d190fff3520c27ccf8f4985f3
+Filename: pool/main/d/debian-edu-artwork/debian-edu-artwork_2.13.6-1_all.deb
+Size: 205632
+MD5sum: 8fa721ff37bc5d538d8fe9d1c78de703
+SHA256: 0069ad36a1c8eab26c3304929a71883b7b509b24231be1392e7bf9eeaa3a723c
 
 Package: debian-edu-artwork-ceratopsian
 Source: debian-edu-artwork
-Version: 2.13.1-1
-Installed-Size: 2948
+Version: 2.13.6-1
+Installed-Size: 2924
 Maintainer: Debian Edu Developers <debian-edu@lists.debian.org>
 Architecture: all
-Depends: desktop-base
-Recommends: debian-edu-artwork
-Description: Debian Edu Ceratopsian "trixie" theme and artwork
+Replaces: debian-edu-artwork-buster, debian-edu-artwork-emerald, debian-edu-artwork-futureprototype, debian-edu-artwork-homeworld, debian-edu-artwork-softwaves, debian-edu-artwork-spacefun
+Pre-Depends: desktop-base
+Recommends: debian-edu-artwork, plymouth-label
+Breaks: debian-edu-artwork-buster, debian-edu-artwork-emerald, debian-edu-artwork-futureprototype, debian-edu-artwork-homeworld, debian-edu-artwork-softwaves, debian-edu-artwork-spacefun
+Description: Debian Edu Ceratopsian ("trixie" aka Debian 13) theme and artwork
 Homepage: https://blends.debian.org/edu
-Description-md5: ffff838ffee0e41c35f60c0dcfc7112e
+Description-md5: 6626fe542b559f482039d288a6802394
 graphics
 Priority: optional
-Filename: pool/main/d/debian-edu-artwork/debian-edu-artwork-ceratopsian_2.13.1-1_all.deb
-Size: 1745220
-MD5sum: ee1c378b9171df3ff2faa41382df3003
-SHA256: b165d56bb74bea0a9a9797616fd3252572ef3c3d8cd661409aa4cabc35902079
+Filename: pool/main/d/debian-edu-artwork/debian-edu-artwork-ceratopsian_2.13.6-1_all.deb
+Size: 1717672
+MD5sum: 46e28a2f8fd8d2c1369b4760adf092e6
+SHA256: 453bb78438d18779abfcaff462724e11a74f99ebdcc135fd62bec224f9fa0d2d
 
 Package: debian-edu-artwork-emerald
 Source: debian-edu-artwork
-Version: 2.13.1-1
-Installed-Size: 2717
+Version: 2.13.6-1
+Installed-Size: 2672
 Maintainer: Debian Edu Developers <debian-edu@lists.debian.org>
 Architecture: all
-Depends: desktop-base
-Recommends: debian-edu-artwork
-Description: Debian Edu Emerald "bookworm" theme and artwork
+Replaces: debian-edu-artwork-buster, debian-edu-artwork-ceratopsian, debian-edu-artwork-futureprototype, debian-edu-artwork-homeworld, debian-edu-artwork-softwaves, debian-edu-artwork-spacefun
+Pre-Depends: desktop-base
+Recommends: debian-edu-artwork, plymouth-label
+Breaks: debian-edu-artwork-buster, debian-edu-artwork-ceratopsian, debian-edu-artwork-futureprototype, debian-edu-artwork-homeworld, debian-edu-artwork-softwaves, debian-edu-artwork-spacefun
+Description: Debian Edu Emerald ("bookworm" aka Debian 12) theme and artwork
 Homepage: https://blends.debian.org/edu
-Description-md5: 39d5663a652cb094225e48fc5e79838b
+Description-md5: d7203acb34dcad65c747bfe2899c708c
 graphics
 Priority: optional
-Filename: pool/main/d/debian-edu-artwork/debian-edu-artwork-emerald_2.13.1-1_all.deb
-Size: 1995708
-MD5sum: cfcff85c9658d7598eb99dc6ae454894
-SHA256: f09f8e7618054e30c83073df192b9f27b70f5f5248f2478f42ea18771d0db0c2
+Filename: pool/main/d/debian-edu-artwork/debian-edu-artwork-emerald_2.13.6-1_all.deb
+Size: 1947332
+MD5sum: 583c6ccd89de7611bfc9d6ca69227f31
+SHA256: b7eeacb8e14e578a22d0da8ec90416c2b4aa0aa4112cdbb35434255187e582c1
+
+Package: debian-edu-artwork-futureprototype
+Source: debian-edu-artwork
+Version: 2.13.6-1
+Installed-Size: 692
+Maintainer: Debian Edu Developers <debian-edu@lists.debian.org>
+Architecture: all
+Replaces: debian-edu-artwork-buster, debian-edu-artwork-ceratopsian, debian-edu-artwork-emerald, debian-edu-artwork-homeworld, debian-edu-artwork-softwaves, debian-edu-artwork-spacefun
+Pre-Depends: desktop-base
+Recommends: debian-edu-artwork, fonts-quicksand, plymouth-label
+Breaks: debian-edu-artwork-buster, debian-edu-artwork-ceratopsian, debian-edu-artwork-emerald, debian-edu-artwork-homeworld, debian-edu-artwork-softwaves, debian-edu-artwork-spacefun
+Description: Debian Edu futurePrototype ("buster" aka Debian 10) theme and artwork
+Homepage: https://blends.debian.org/edu
+Description-md5: a8b5d4d2eb7b994bdbf53d8fdd63c3ef
+graphics
+Priority: optional
+Filename: pool/main/d/debian-edu-artwork/debian-edu-artwork-futureprototype_2.13.6-1_all.deb
+Size: 224104
+MD5sum: 6c88141e980ec45890038a2dc9275969
+SHA256: d1cbe306feab051e4cd14b9ff58acc8bd3d5ed9243d7f1f0c5f8ef2041090d53
 
 Package: debian-edu-artwork-homeworld
 Source: debian-edu-artwork
-Version: 2.13.1-1
-Installed-Size: 817
+Version: 2.13.6-1
+Installed-Size: 754
 Maintainer: Debian Edu Developers <debian-edu@lists.debian.org>
 Architecture: all
-Depends: desktop-base
-Recommends: debian-edu-artwork
-Description: Debian Edu Homeworld "bullseye" theme and artwork
+Replaces: debian-edu-artwork-buster, debian-edu-artwork-ceratopsian, debian-edu-artwork-emerald, debian-edu-artwork-futureprototype, debian-edu-artwork-softwaves, debian-edu-artwork-spacefun
+Pre-Depends: desktop-base
+Recommends: debian-edu-artwork, plymouth-label
+Breaks: debian-edu-artwork-buster, debian-edu-artwork-ceratopsian, debian-edu-artwork-emerald, debian-edu-artwork-futureprototype, debian-edu-artwork-softwaves, debian-edu-artwork-spacefun
+Description: Debian Edu Homeworld ("bullseye" aka Debian 11) theme and artwork
 Homepage: https://blends.debian.org/edu
-Description-md5: 48c9166119d3d7418a62b5d8d966d1e0
+Description-md5: 1120e00624a4ed50fe81e616421aceda
 graphics
 Priority: optional
-Filename: pool/main/d/debian-edu-artwork/debian-edu-artwork-homeworld_2.13.1-1_all.deb
-Size: 273556
-MD5sum: f8c4df9d87248a0f6899c0ab0405b5b0
-SHA256: da7a1729dce70c56453cb594e5b2d85879306a4e354403cf9ee55c331875986b
+Filename: pool/main/d/debian-edu-artwork/debian-edu-artwork-homeworld_2.13.6-1_all.deb
+Size: 260916
+MD5sum: 064e4119c989cec019c5a8a5f533b781
+SHA256: fdb453366ade4f6663f46eadf4fe219835fe8dc952658d6fa7cbabef2c6fa605
 
 Package: debian-edu-artwork-softwaves
 Source: debian-edu-artwork
-Version: 2.13.1-1
-Installed-Size: 3287
+Version: 2.13.6-1
+Installed-Size: 3209
 Maintainer: Debian Edu Developers <debian-edu@lists.debian.org>
 Architecture: all
-Depends: desktop-base
-Recommends: debian-edu-artwork
-Description: Debian Edu softWaves ("stretch") theme and artwork
+Replaces: debian-edu-artwork-buster, debian-edu-artwork-ceratopsian, debian-edu-artwork-emerald, debian-edu-artwork-futureprototype, debian-edu-artwork-homeworld, debian-edu-artwork-spacefun
+Pre-Depends: desktop-base
+Recommends: debian-edu-artwork, plymouth-label
+Breaks: debian-edu-artwork-buster, debian-edu-artwork-ceratopsian, debian-edu-artwork-emerald, debian-edu-artwork-futureprototype, debian-edu-artwork-homeworld, debian-edu-artwork-spacefun
+Description: Debian Edu softWaves ("stretch" aka Debian 9) theme and artwork
 Homepage: https://blends.debian.org/edu
-Description-md5: 2b2ad2868a1401bb01570717fdc1a189
+Description-md5: 5c93259b7dae15cadf3e3ca7c9775d19
 graphics
 Priority: optional
-Filename: pool/main/d/debian-edu-artwork/debian-edu-artwork-softwaves_2.13.1-1_all.deb
-Size: 2793744
-MD5sum: 7a48e2e12063ff2b7bf5d6f92503beec
-SHA256: dd7e9dfd5516a71b08274e2ccfe34220f99484fc9e2d9908a2ed7a68ccfc43c2
+Filename: pool/main/d/debian-edu-artwork/debian-edu-artwork-softwaves_2.13.6-1_all.deb
+Size: 2734396
+MD5sum: 46256e53010361cd2320006f3a69c183
+SHA256: 4092682188f6b16e42d1d2f0b26e3d3d2c9aca111706a6241322ea907836cf32
 
 Package: debian-edu-artwork-spacefun
 Source: debian-edu-artwork-legacy
@@ -5439,23 +5452,22 @@ MD5sum: cda200173abc7963a7a474ca2cfacad3
 SHA256: 6086f8dcb10619f3b9377ae5b37f89d85223cd183ffa1093ff4651e84831d862
 
 Package: luminance-hdr
-Source: luminance-hdr (2.6.1.1+dfsg-7)
-Version: 2.6.1.1+dfsg-7+b4
-Installed-Size: 10973
+Version: 2.6.1.1+dfsg-8
+Installed-Size: 10828
 Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: dcraw, hugin-tools, libqt5sql5-sqlite, libboost-program-options1.90.0 (>= 1.90.0), libc6 (>= 2.43), libcfitsio10t64 (>= 4.2.0~), libexiv2-28 (>= 0.28.0), libfftw3-single3 (>= 3.3.11), libgcc-s1 (>= 3.0), libgomp1 (>= 6), libgsl28 (>= 2.8+dfsg), libjpeg62-turbo (>= 1.3.1), liblcms2-2 (>= 2.2+git20110628), libopenexr-3-4-33-imath-3-2, libpng16-16t64 (>= 1.6.46), libqt5concurrent5t64 (>= 5.6.0~rc), libqt5core5t64 (>= 5.15.1), libqt5gui5t64 (>= 5.14.1) | libqt5gui5-gles (>= 5.14.1), libqt5network5t64 (>= 5.0.2), libqt5printsupport5t64 (>= 5.0.2), libqt5sql5t64 (>= 5.0.2), libqt5webenginewidgets5 (>= 5.14.1), libqt5widgets5t64 (>= 5.2.0), libqt5xml5t64 (>= 5.6.0~beta), libraw25 (>= 0.22.0), libstdc++6 (>= 14), libtiff6 (>= 4.0.3)
+Depends: dcraw, hugin-tools, libqt5sql5-sqlite, libboost-program-options1.90.0 (>= 1.90.0), libc6 (>= 2.43), libcfitsio10t64 (>= 4.2.0~), libexiv2-28 (>= 0.28.0), libfftw3-single3 (>= 3.3.11), libgcc-s1 (>= 3.0), libgomp1 (>= 6), libgsl28 (>= 2.8+dfsg), libjpeg62-turbo (>= 1.3.1), liblcms2-2 (>= 2.2+git20110628), libopenexr-3-4-33-imath-3-2, libpng16-16t64 (>= 1.6.46), libqt5concurrent5t64 (>= 5.6.0~rc), libqt5core5t64 (>= 5.15.1), libqt5gui5t64 (>= 5.14.1) | libqt5gui5-gles (>= 5.14.1), libqt5network5t64 (>= 5.6.0~beta), libqt5sql5t64 (>= 5.0.2), libqt5widgets5t64 (>= 5.2.0), libqt5xml5t64 (>= 5.0.2), libraw25 (>= 0.22.0), libstdc++6 (>= 14), libtiff6 (>= 4.0.3)
 Description: graphical user interface providing a workflow for HDR imaging
 Homepage: http://qtpfsgui.sourceforge.net/
-Built-Using: eigen3 (= 3.4.0-5)
+Built-Using: eigen3 (= 5.0.1-3)
 Description-md5: d942bd08d26ad50d79260b51bc57b172
 Tag: uitoolkit::qt
 graphics
 Priority: optional
-Filename: pool/main/l/luminance-hdr/luminance-hdr_2.6.1.1+dfsg-7+b4_amd64.deb
-Size: 4927008
-MD5sum: 6f213b299dfa2ee8ed2cb144c513bb37
-SHA256: 470873b39721b9dd49989ae30830eab6c128478f7ed68acb17e52b502645effd
+Filename: pool/main/l/luminance-hdr/luminance-hdr_2.6.1.1+dfsg-8_amd64.deb
+Size: 4889784
+MD5sum: 1e108f6452f55c2009fd33eb9224da8e
+SHA256: ef8759e91f8d81b15144fe59c85c13f1a2b2df5fe8bec0d2326a39ff9ec1a088
 
 Package: makexvpics
 Version: 1.0.1-4
