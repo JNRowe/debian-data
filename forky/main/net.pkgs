@@ -328,15 +328,15 @@ MD5sum: 6563faa28e8732cef7a063465f2a2333
 SHA256: bbf028b26524c3ca0eeb88b691f324e9f683d8743cb9ead1a41140d2ab0a625f
 
 Package: amule
-Version: 1:2.3.3-4.1
-Installed-Size: 7441
+Version: 1:3.1.0-2
+Installed-Size: 7836
 Maintainer: Sandro Tosi <morph@debian.org>
 Architecture: amd64
-Depends: amule-common (= 1:2.3.3-4.1), libc6 (>= 2.38), libcrypto++8t64 (>= 8.9.0), libgcc-s1 (>= 3.0), libgeoip1t64 (>= 1.6.12), libixml11t64 (>= 1:1.14.0), libstdc++6 (>= 14), libupnp17t64 (>= 1:1.14.0), libwxbase3.2-1t64 (>= 3.2.9+dfsg), libwxgtk3.2-1t64 (>= 3.2.9+dfsg), zlib1g (>= 1:1.1.4)
+Depends: amule-common (= 1:3.1.0-2), libayatana-appindicator3-1 (>= 0.4.90), libc6 (>= 2.38), libcrypto++8t64 (>= 8.9.0), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.26.0), libgtk-3-0t64 (>= 3.0.0), libixml11t64 (>= 1:1.14.0), libmaxminddb0 (>= 1.0.2), libstdc++6 (>= 14), libupnp17t64 (>= 1:1.14.0), libwxbase3.2-1t64 (>= 3.2.11+dfsg1), libwxgtk3.2-1t64 (>= 3.2.11+dfsg1), zlib1g (>= 1:1.1.4)
 Recommends: amule-utils, unzip
-Suggests: amule-utils-gui
+Suggests: amule-utils-gui, ffmpeg
 Description: client for the eD2k and Kad networks, like eMule
-Homepage: https://www.amule.org
+Homepage: https://amule-org.github.io/
 Description-md5: 5c464e6adf41c7373294617a696146d0
 Tag: implemented-in::c, implemented-in::c++, interface::graphical,
  interface::x11, network::client, protocol::TODO, role::program,
@@ -344,111 +344,92 @@ Tag: implemented-in::c, implemented-in::c++, interface::graphical,
  works-with::file, x11::application
 net
 Priority: optional
-Filename: pool/main/a/amule/amule_2.3.3-4.1_amd64.deb
-Size: 1985620
-MD5sum: 4e901e805c8307669de707ee8269a1bf
-SHA256: 4850501f559a8d963cd9bf03ec56bc5d80b830ffba57e0ce6afeb48bd22cb378
+Filename: pool/main/a/amule/amule_3.1.0-2_amd64.deb
+Size: 2500272
+MD5sum: b413f92cb6f21f9c64fb0f7e820d1ae4
+SHA256: e3d62f4ff7e550acf6158abdd9bbe5a4704e1ed5146fcfcf8fba16a270c3392b
 
 Package: amule-common
 Source: amule
-Version: 1:2.3.3-4.1
-Installed-Size: 5188
+Version: 1:3.1.0-2
+Installed-Size: 6476
 Maintainer: Sandro Tosi <morph@debian.org>
 Architecture: all
 Description: common files for the rest of aMule packages
 Multi-Arch: foreign
-Homepage: https://www.amule.org
+Homepage: https://amule-org.github.io/
 Description-md5: aa97dc31848cd80e35cd00e92da4b1fa
 Tag: role::app-data, role::program, use::downloading
 net
 Priority: optional
-Filename: pool/main/a/amule/amule-common_2.3.3-4.1_all.deb
-Size: 1251452
-MD5sum: a391c046c7077d247ce682c5c0001ea4
-SHA256: 451c444917e52894d35d5fd9c68d89f1ba6994ba8acc90c0e5d3057f2233cf44
+Filename: pool/main/a/amule/amule-common_3.1.0-2_all.deb
+Size: 1542248
+MD5sum: e5c4cee4707347581141067a27b4e30f
+SHA256: 989845fee17d9a0dc93344f59e41276c4c1e03352a4dad6df0fd233dcbe2fb9a
 
 Package: amule-daemon
 Source: amule
-Version: 1:2.3.3-4.1
-Installed-Size: 4334
+Version: 1:3.1.0-2
+Installed-Size: 9688
 Maintainer: Sandro Tosi <morph@debian.org>
 Architecture: amd64
-Depends: amule-common (= 1:2.3.3-4.1), lsb-base, libc6 (>= 2.38), libcrypto++8t64 (>= 8.9.0), libgcc-s1 (>= 3.0), libixml11t64 (>= 1:1.14.0), libpng16-16t64 (>= 1.6.46), libreadline8t64 (>= 6.0), libstdc++6 (>= 14), libupnp17t64 (>= 1:1.14.0), libwxbase3.2-1t64 (>= 3.2.9+dfsg), zlib1g (>= 1:1.1.4)
+Depends: amule-common (= 1:3.1.0-2), libc6 (>= 2.38), libcrypto++8t64 (>= 8.9.0), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.12.0), libixml11t64 (>= 1:1.14.0), libmaxminddb0 (>= 1.0.2), libpng16-16t64 (>= 1.6.46), libreadline8t64 (>= 6.0), libstdc++6 (>= 14), libupnp17t64 (>= 1:1.14.0), libwxbase3.2-1t64 (>= 3.2.11+dfsg1), zlib1g (>= 1:1.2.0)
 Recommends: amule-utils, unzip
+Suggests: ffmpeg
 Description: non-graphic version of aMule, a client for the eD2k and Kad networks
-Homepage: https://www.amule.org
-Description-md5: 0eb0fa1f3a72f84aa9c272e9b3f0a18c
+Homepage: https://amule-org.github.io/
+Description-md5: 1d3937729e05eff48e0f865633a0f672
 Tag: implemented-in::c, interface::commandline, interface::daemon,
  interface::web, network::server, protocol::http, role::program,
  scope::utility, use::downloading, use::transmission
 net
 Priority: optional
-Filename: pool/main/a/amule/amule-daemon_2.3.3-4.1_amd64.deb
-Size: 1340712
-MD5sum: 7404b72b0cdef08ceb2dfe7ee68cc0b9
-SHA256: dedf8b18c88d17b6f417565095664066ab8e3420790b6e90f83795e17ff3f1bd
-
-Package: amule-gnome-support
-Source: amule
-Version: 1:2.3.3-4.1
-Installed-Size: 135
-Maintainer: Sandro Tosi <morph@debian.org>
-Architecture: all
-Depends: amule-utils
-Recommends: amule | amule-daemon
-Description: ed2k links handling support for GNOME web browsers
-Homepage: https://www.amule.org
-Description-md5: 7b5da1cdcd6c8dd1ee3a59dc56bde46d
-Tag: role::app-data
-net
-Priority: optional
-Filename: pool/main/a/amule/amule-gnome-support_2.3.3-4.1_all.deb
-Size: 122032
-MD5sum: 2826cde9346fa37bd1001d127b551cb7
-SHA256: e1a374ad2d10d6d509de3bc8aa28614ae69e3f5d7274833e8c7020267287c51e
+Filename: pool/main/a/amule/amule-daemon_3.1.0-2_amd64.deb
+Size: 2840336
+MD5sum: a3339b35e634a5c71adc6e149622ecc9
+SHA256: abea59f28706d333c863ce19ab995840624dfd58e17ebe26a297267488ee8682
 
 Package: amule-utils
 Source: amule
-Version: 1:2.3.3-4.1
-Installed-Size: 1305
+Version: 1:3.1.0-2
+Installed-Size: 1664
 Maintainer: Sandro Tosi <morph@debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libgd3 (>= 2.1.0~alpha~), libreadline8t64 (>= 6.0), libstdc++6 (>= 14), libwxbase3.2-1t64 (>= 3.2.9+dfsg), zlib1g (>= 1:1.1.4)
+Depends: libc6 (>= 2.38), libcrypto++8t64 (>= 8.9.0), libgcc-s1 (>= 3.0), libgd3 (>= 2.1.0~alpha~), libreadline8t64 (>= 6.0), libstdc++6 (>= 14), libwxbase3.2-1t64 (>= 3.2.11+dfsg1), zlib1g (>= 1:1.1.4)
 Recommends: amule-common, fonts-dejavu-core
-Suggests: amule-gnome-support
 Breaks: xmule (<= 1.10.0b-1)
 Description: utilities for aMule (command-line version)
-Homepage: https://www.amule.org
+Homepage: https://amule-org.github.io/
 Description-md5: 3a57c98d8bce187bf65ae89385b66814
 Tag: implemented-in::c, interface::commandline, protocol::TODO,
  role::program, scope::utility, use::downloading
 net
 Priority: optional
-Filename: pool/main/a/amule/amule-utils_2.3.3-4.1_amd64.deb
-Size: 614140
-MD5sum: 047946818840df805925b27220aa40b7
-SHA256: 4a009e16a19e51b73471a5f3bb69b8b62fe8c22f444cb4c7ff43dedf47a8d671
+Filename: pool/main/a/amule/amule-utils_3.1.0-2_amd64.deb
+Size: 752484
+MD5sum: ce292d3a9c1c79bf0448cea1e26e5878
+SHA256: 1f25c7d65b3268abacc9906faae8a55e4c95416fb8afd5e23986e4a2a6c854b1
 
 Package: amule-utils-gui
 Source: amule
-Version: 1:2.3.3-4.1
-Installed-Size: 6227
+Version: 1:3.1.0-2
+Installed-Size: 6047
 Maintainer: Sandro Tosi <morph@debian.org>
 Architecture: amd64
 Replaces: astats
-Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libgeoip1t64 (>= 1.6.12), libstdc++6 (>= 14), libwxbase3.2-1t64 (>= 3.2.9+dfsg), libwxgtk3.2-1t64 (>= 3.2.9+dfsg), zlib1g (>= 1:1.1.4)
+Depends: libayatana-appindicator3-1 (>= 0.4.90), libc6 (>= 2.38), libcrypto++8t64 (>= 8.9.0), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.26.0), libgtk-3-0t64 (>= 3.0.0), libstdc++6 (>= 14), libwxbase3.2-1t64 (>= 3.2.11+dfsg1), libwxgtk3.2-1t64 (>= 3.2.11+dfsg1), zlib1g (>= 1:1.1.4)
 Recommends: amule-common
 Description: graphic utilities for aMule
-Homepage: https://www.amule.org
+Homepage: https://amule-org.github.io/
 Description-md5: a9233d00727fe62a812dc8b77ad2e9ca
 Tag: interface::graphical, interface::x11, role::program, scope::utility,
  uitoolkit::wxwidgets, x11::application
 net
 Priority: optional
-Filename: pool/main/a/amule/amule-utils-gui_2.3.3-4.1_amd64.deb
-Size: 1493628
-MD5sum: d52782093b40ddb86e1332976fb6aa8b
-SHA256: 0b50d731bed19f94b1c4f0ae87063ad0678b099a86b21709ed5b5e271ca42640
+Filename: pool/main/a/amule/amule-utils-gui_3.1.0-2_amd64.deb
+Size: 1830368
+MD5sum: a2cbdc38e276dbd02078e1d0e5df79ab
+SHA256: 764b6b69324ce933852f40284b8c661239dcd18b5826395df09dcfdda692ba24
 
 Package: anope
 Version: 2.0.17-1.1
@@ -1199,20 +1180,20 @@ MD5sum: 9fa9122ace3025491c55ae34be362ac8
 SHA256: dfde52806ecc5a1409857aafa5e1a4abd2b6d5f5a7eb6dc5805f4bec84f41f88
 
 Package: barbican-tempest-plugin
-Version: 4.5.0-2
+Version: 4.6.0-1
 Installed-Size: 262
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: python3-pbr, python3-cryptography, python3-oslo.config, tempest (>= 27.0.0), python3-tempest, python3:any
+Depends: python3-pbr, python3-cryptography, python3-oslo.config, python3-oslo.utils, tempest (>= 27.0.0), python3-tempest, python3:any
 Description: OpenStack Integration Test Suite - Barbican plugin
 Homepage: https://opendev.org/openstack/barbican-tempest-plugin
 Description-md5: 6b02ebf0d2fc3e81c636dd98f61646b1
 net
 Priority: optional
-Filename: pool/main/b/barbican-tempest-plugin/barbican-tempest-plugin_4.5.0-2_all.deb
-Size: 31956
-MD5sum: 81578bccac247b46f10f931eb4cf5651
-SHA256: 3168ede2c98be0edfa54165fb5d348c2d9a70ca767506c4f83c6e45131a06c33
+Filename: pool/main/b/barbican-tempest-plugin/barbican-tempest-plugin_4.6.0-1_all.deb
+Size: 32172
+MD5sum: 3f74bf6121c8a89c180c80a20f50f67e
+SHA256: e3179658e1ba3826ded695dcd7bcd5538fca7225a7c45466c474b45cb4e3b1ae
 
 Package: barnowl
 Source: barnowl (1.10-2)
@@ -4380,6 +4361,25 @@ Filename: pool/main/d/dianara/dianara_1.4.4-5_amd64.deb
 Size: 935500
 MD5sum: bbf2f4f8f66071287d4826be69060a2e
 SHA256: 948df14c8d1bcdc95074024499c13bf89bcffcd9d88a666c69ffa30f4f272be0
+
+Package: diaspora-common
+Source: diaspora-installer
+Version: 0.9.0.0+debian3
+Installed-Size: 182
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: adduser, bc, certbot, curl, dbconfig-pgsql | dbconfig-mysql | dbconfig-no-thanks, default-mta | mail-transport-agent, net-tools, nginx | httpd, nodejs, postgresql | default-mysql-server | virtual-mysql-server, rake, redis-server (>= 2:2.8), ruby-rspec, sudo, systemd, ucf, debconf (>= 0.5) | debconf-2.0
+Pre-Depends: ca-certificates
+Suggests: easy-rsa
+Description: distributed social networking service - common files
+Homepage: https://wiki.debian.org/Diaspora
+Description-md5: fca0adb2b58e8d8531627141d1d4c892
+net
+Priority: optional
+Filename: pool/main/d/diaspora-installer/diaspora-common_0.9.0.0+debian3_all.deb
+Size: 43400
+MD5sum: ffa93c18e46c1a2e79d4b6902060f161
+SHA256: dfa1e953c76280b2d54e8e7786ebfaa3ac7c09d8909ff869853ddf6e0bfb04df
 
 Package: dino-im
 Source: dino-im (0.5.1-1)
