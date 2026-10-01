@@ -1624,6 +1624,37 @@ Filename: pool/updates/main/n/net-tools/net-tools_2.10-0.1+deb12u2_amd64.deb
 Size: 243404
 SHA256: 724ae901a4fa3f8ad40d87d8231015b1edc24cbd99faf0969e6f2cba0cfed0bc
 
+Package: network-manager-l2tp
+Version: 1.20.8-1+deb12u1
+Installed-Size: 762
+Maintainer: Douglas Kosovic <doug@uq.edu.au>
+Architecture: amd64
+Depends: libc6 (>= 2.34), libglib2.0-0 (>= 2.39.4), libnm0 (>= 1.20.0), libnspr4 (>= 2:4.9-2~), libnss3 (>= 2:3.13.4-2~), libssl3 (>= 3.0.0), ppp (<< 2.4.9-2~), ppp (>= 2.4.9-1+~), network-manager, xl2tpd, strongswan | libreswan
+Description: network management framework (L2TP plugin core)
+Homepage: https://github.com/nm-l2tp/NetworkManager-l2tp
+Description-md5: cef15f24ded69e6c1ae52be59433ac7d
+net
+Priority: optional
+Filename: pool/updates/main/n/network-manager-l2tp/network-manager-l2tp_1.20.8-1+deb12u1_amd64.deb
+Size: 142492
+SHA256: 0c1c40c9f6b08ae1678a6da872197e0d1a579e46541671d2ea6369e40926ff6e
+
+Package: network-manager-l2tp-gnome
+Source: network-manager-l2tp
+Version: 1.20.8-1+deb12u1
+Installed-Size: 330
+Maintainer: Douglas Kosovic <doug@uq.edu.au>
+Architecture: amd64
+Depends: libc6 (>= 2.34), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.3.16), libgtk-4-1 (>= 4.0.0), libnm0 (>= 1.20.0), libnma-gtk4-0 (>= 1.8.34), libnma0 (>= 1.8.0), libsecret-1-0 (>= 0.7), libssl3 (>= 3.0.0), network-manager-l2tp (= 1.20.8-1+deb12u1)
+Description: network management framework (L2TP plugin GNOME GUI)
+Homepage: https://github.com/nm-l2tp/NetworkManager-l2tp
+Description-md5: 320ca0927d7e89f363d3e9e4eb52bf73
+net
+Priority: optional
+Filename: pool/updates/main/n/network-manager-l2tp/network-manager-l2tp-gnome_1.20.8-1+deb12u1_amd64.deb
+Size: 50616
+SHA256: a0e36c714712f423a7c580497f16847d5f38ae348ff45a7d984f0b7f8f33c443
+
 Package: neutron-api
 Source: neutron
 Version: 2:21.0.0-7+deb12u1
@@ -2161,6 +2192,76 @@ Priority: optional
 Filename: pool/updates/main/n/ntpsec/sntp_4.2.8p15+dfsg-2~1.2.2+dfsg1-1+deb12u1_all.deb
 Size: 22136
 SHA256: ccb12f7b3c06511264f2ef6af2d6dfd6a3a01f36f05fdbe9a97e6bb74682e485
+
+Package: iscsiuio
+Source: open-iscsi
+Version: 2.1.8-1+deb12u1
+Installed-Size: 248
+Maintainer: Debian iSCSI Maintainers <open-iscsi@packages.debian.org>
+Architecture: amd64
+Depends: init-system-helpers (>= 1.51), libc6 (>= 2.34), libsystemd0, libopeniscsiusr, udev
+Description: iSCSI offloading daemon for QLogic devices
+Homepage: https://www.open-iscsi.com/
+Description-md5: a92910cbc50853dedae1656f53a1feb2
+Enhances: open-iscsi
+Multi-Arch: foreign
+net
+Priority: optional
+Filename: pool/updates/main/o/open-iscsi/iscsiuio_2.1.8-1+deb12u1_amd64.deb
+Size: 119808
+SHA256: bcd793415820cdc81f352a67f3712730f6c97c208490c7c31b443b178f71380b
+
+Package: libopeniscsiusr
+Source: open-iscsi
+Version: 2.1.8-1+deb12u1
+Installed-Size: 172
+Maintainer: Debian iSCSI Maintainers <open-iscsi@packages.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.33), libkmod2 (>= 5~)
+Description: iSCSI userspace library
+Homepage: https://www.open-iscsi.com/
+Description-md5: 69c33f1ad99621103525019b9ea2cf82
+Enhances: open-iscsi
+net
+Priority: optional
+Filename: pool/updates/main/o/open-iscsi/libopeniscsiusr_2.1.8-1+deb12u1_amd64.deb
+Size: 60132
+SHA256: a2aca0345026470e2707141825bf74b891da36c0170c84071d3b1eaf03254a41
+
+Package: libopeniscsiusr-dev
+Source: open-iscsi
+Version: 2.1.8-1+deb12u1
+Installed-Size: 147
+Maintainer: Debian iSCSI Maintainers <open-iscsi@packages.debian.org>
+Architecture: all
+Depends: libopeniscsiusr
+Description: iSCSI userspace library headers
+Homepage: https://www.open-iscsi.com/
+Description-md5: d4b0fa7a26591b5c834e6519b796a42c
+Enhances: open-iscsi
+net
+Priority: optional
+Filename: pool/updates/main/o/open-iscsi/libopeniscsiusr-dev_2.1.8-1+deb12u1_all.deb
+Size: 57448
+SHA256: b7771836b660f3917de70640d9c492a586e9cf3476df142fe7df69d60f89a0b3
+
+Package: open-iscsi
+Version: 2.1.8-1+deb12u1
+Installed-Size: 1423
+Maintainer: Debian iSCSI Maintainers <open-iscsi@packages.debian.org>
+Architecture: amd64
+Depends: debconf (>= 0.5) | debconf-2.0, init-system-helpers (>= 1.51), libc6 (>= 2.34), libisns0, libkmod2 (>= 5~), libmount1 (>= 2.24.2), libopeniscsiusr (>= 2.1.8), libssl3 (>= 3.0.0), libsystemd0, udev
+Description: iSCSI initiator tools
+Homepage: https://www.open-iscsi.com/
+Description-md5: 067891012a9e049900724bddbc58bf8f
+Multi-Arch: foreign
+Pre-Depends: debconf | debconf-2.0
+Recommends: busybox | busybox-static, finalrd (>= 3)
+net
+Priority: optional
+Filename: pool/updates/main/o/open-iscsi/open-iscsi_2.1.8-1+deb12u1_amd64.deb
+Size: 315040
+SHA256: 6563dfb5313f5dd33547e50939f54010e7cc4e993017e1b5223b295be82a9903
 
 Package: openafs-client
 Source: openafs

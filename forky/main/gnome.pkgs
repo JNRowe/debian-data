@@ -6173,71 +6173,90 @@ MD5sum: 99611c6032a396d488c1f8750fe5674b
 SHA256: c5c2f8463df7b7dedb052fe1112d36e7f70db4acefa69d7aeb5945486d1b2d22
 
 Package: lomiri-url-dispatcher
-Version: 0.1.5-1
-Installed-Size: 656
+Version: 0.1.5-3
+Installed-Size: 184
 Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
 Architecture: amd64
-Depends: qml-module-lomiri-components, qtchooser, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.83.0), libjson-glib-1.0-0 (>= 1.5.2), liblomiri-app-launch0 (>= 0.1.12), libsqlite3-0 (>= 3.5.9), libstdc++6 (>= 5.2)
+Depends: lomiri-url-dispatcher-common (>= 0.1.5-3), qml-module-lomiri-components, qtchooser, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.83.0), libjson-glib-1.0-0 (>= 1.5.2), liblomiri-app-launch0 (>= 0.2.0), libsqlite3-0 (>= 3.5.9), libstdc++6 (>= 5.2)
 Description: Lomiri Operating Environment service for requesting URLs to be opened
 Homepage: https://gitlab.com/ubports/development/core/lomiri-url-dispatcher
 Description-md5: 8cb020b52aaae10e7f6e44442c3d3164
 gnome
 Priority: optional
-Filename: pool/main/l/lomiri-url-dispatcher/lomiri-url-dispatcher_0.1.5-1_amd64.deb
-Size: 65424
-MD5sum: 53ec41390e2bf26e9982f9d31a2c61d6
-SHA256: 557c46a0d98383ce41fcd83f31e3fb4ca9303c836ad27c60bd80957f942a004e
+Filename: pool/main/l/lomiri-url-dispatcher/lomiri-url-dispatcher_0.1.5-3_amd64.deb
+Size: 52784
+MD5sum: ecc0535fe682953a9bd803f86ea2f113
+SHA256: 22232453861f9193d75e76f66cbe98a9605642568aa0928dee4b4ccb2ad5021b
+
+Package: lomiri-url-dispatcher-common
+Source: lomiri-url-dispatcher
+Version: 0.1.5-3
+Installed-Size: 510
+Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
+Architecture: all
+Replaces: lomiri-url-dispatcher (<< 0.1.5-2~)
+Breaks: lomiri-url-dispatcher (<< 0.1.5-2~)
+Description: Lomiri Operating Environment service for opening URLs (common files)
+Multi-Arch: foreign
+Homepage: https://gitlab.com/ubports/development/core/lomiri-url-dispatcher
+Description-md5: 5d17986ffc5b515c7162d88d753d614a
+gnome
+Priority: optional
+Filename: pool/main/l/lomiri-url-dispatcher/lomiri-url-dispatcher-common_0.1.5-3_all.deb
+Size: 42556
+MD5sum: d192a16526a3f52e3d59bc0fcc5a9651
+SHA256: 8a1d860bc36b6e50b7d97514d58ac1630d291436d9fff6a604ad99deec2097d6
 
 Package: lomiri-url-dispatcher-testability
 Source: lomiri-url-dispatcher
-Version: 0.1.5-1
+Version: 0.1.5-3
 Installed-Size: 49
 Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
 Architecture: all
-Depends: python3-dbusmock, python3:any
+Depends: python3-dbusmock, python3-fixtures, python3:any
 Description: Fake Lomiri URL Dispatcher for use in testing
 Homepage: https://gitlab.com/ubports/development/core/lomiri-url-dispatcher
 Description-md5: f088b44c17b130c0d6178bbd90dcdeb5
 gnome
 Priority: optional
-Filename: pool/main/l/lomiri-url-dispatcher/lomiri-url-dispatcher-testability_0.1.5-1_all.deb
-Size: 29788
-MD5sum: e608ca7bd7202a91446fc70fa25a56c5
-SHA256: edd0683f64e7a981b8643cae3c6cfe6d729fad6d8d66a748f9617202e81d4cbe
+Filename: pool/main/l/lomiri-url-dispatcher/lomiri-url-dispatcher-testability_0.1.5-3_all.deb
+Size: 29844
+MD5sum: 142b157495c6274aeac4c91b3e576de9
+SHA256: 7f6ac304b93368f7f7d512853d1a9b3cf18c197e0481d6dc1bd680e5ac787864
 
 Package: lomiri-url-dispatcher-tools
 Source: lomiri-url-dispatcher
-Version: 0.1.5-1
+Version: 0.1.5-3
 Installed-Size: 57
 Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
 Architecture: amd64
-Depends: lomiri-url-dispatcher (= 0.1.5-1), libc6 (>= 2.34), libglib2.0-0t64 (>= 2.12.0), liblomiri-url-dispatcher0 (>= 0.1.1)
+Depends: lomiri-url-dispatcher (= 0.1.5-3), libc6 (>= 2.34), libglib2.0-0t64 (>= 2.12.0), liblomiri-url-dispatcher0 (>= 0.1.1)
 Description: Tools for working with the Lomiri URL Dispatcher
 Homepage: https://gitlab.com/ubports/development/core/lomiri-url-dispatcher
 Description-md5: 2d81893c5c268363ca233ac3f7f8c6c8
 gnome
 Priority: optional
-Filename: pool/main/l/lomiri-url-dispatcher/lomiri-url-dispatcher-tools_0.1.5-1_amd64.deb
-Size: 30432
-MD5sum: d17ff17a9def828eebb9783e47b4f83f
-SHA256: 0efa5768285a562d844327c58e22692487d4cf0870175ae633d87ae7f1536b23
+Filename: pool/main/l/lomiri-url-dispatcher/lomiri-url-dispatcher-tools_0.1.5-3_amd64.deb
+Size: 30504
+MD5sum: ae48bf82fcd340030595607c43f2aa11
+SHA256: 1118a073fb08799f6c592cb4e68eeef872dd3f4423cbac909680d7b14c015650
 
 Package: lomiri-url-dispatcher-tools-gui
 Source: lomiri-url-dispatcher
-Version: 0.1.5-1
+Version: 0.1.5-3
 Installed-Size: 67
 Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
 Architecture: amd64
-Depends: lomiri-url-dispatcher (= 0.1.5-1), qml-module-lomiri-components-labs, qtchooser
+Depends: lomiri-url-dispatcher (= 0.1.5-3), qml-module-lomiri-components-labs, qtchooser
 Description: GUI tools for working with the Lomiri URL Dispatcher
 Homepage: https://gitlab.com/ubports/development/core/lomiri-url-dispatcher
 Description-md5: 85f8e160337c781ab6c933b4633ef381
 gnome
 Priority: optional
-Filename: pool/main/l/lomiri-url-dispatcher/lomiri-url-dispatcher-tools-gui_0.1.5-1_amd64.deb
-Size: 34608
-MD5sum: 7a5f4c5f0fa2bbc042ea4d687062656c
-SHA256: 9953980d16c2859c22e5d40837179f3ab71620ecf2ea73701acd5f8299045962
+Filename: pool/main/l/lomiri-url-dispatcher/lomiri-url-dispatcher-tools-gui_0.1.5-3_amd64.deb
+Size: 34664
+MD5sum: ac10044f9e3e63f27cc88f361f6a64b2
+SHA256: 910c8eef8962e30f7f0992f30632cec283dd3dc4c9fb80d104e9c1a3d85da1e4
 
 Package: loupe
 Version: 51.0-1
@@ -6658,7 +6677,7 @@ MD5sum: bf10594344da198dad1557e47ac38ec0
 SHA256: 460bec914d5f5da20f3a3a83ca08e32fab8a5539a1f4a3208fbc1dc068f0267b
 
 Package: orca
-Version: 51.0-2
+Version: 51.0-4
 Installed-Size: 19152
 Maintainer: Debian Accessibility Team <pkg-a11y-devel@alioth-lists.debian.net>
 Architecture: all
@@ -6671,10 +6690,10 @@ Homepage: https://wiki.gnome.org/Projects/Orca
 Description-md5: 7e9825746bd4509b700a0a82b5f84c0b
 gnome
 Priority: optional
-Filename: pool/main/o/orca/orca_51.0-2_all.deb
-Size: 2406388
-MD5sum: 2e221402622249a07aaa5e948be90fae
-SHA256: 4918ee86fcc011d72abb9b377fff843ff8f07b00b1a2b2b37fddf21abcd16e2c
+Filename: pool/main/o/orca/orca_51.0-4_all.deb
+Size: 2403972
+MD5sum: 47c09e7b59f4362e801a075fa1d2bd86
+SHA256: 85d9fa8986682833370b7c85447c1ffd694f726af70bebaedd39f44097329ca9
 
 Package: nautilus-owncloud
 Source: owncloud-client-desktop-shell-integration-nautilus

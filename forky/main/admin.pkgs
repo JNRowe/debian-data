@@ -2609,6 +2609,42 @@ Size: 922056
 MD5sum: 238de64ad569784f6d11f8ad3192b0f9
 SHA256: 4431533266cc8e7e0bbf680bdebbf04b9b7fd679c290224ad00e1692b3a98ee2
 
+Package: borgbackup-is-borgbackup2
+Source: borgbackup2
+Version: 2.0.0b24-4
+Installed-Size: 67
+Maintainer: Debian Borg Collective <team+borg@tracker.debian.org>
+Architecture: amd64
+Depends: borgbackup2 (= 2.0.0b24-4)
+Conflicts: borgbackup
+Description: deduplicating and compressing backup program (unversioned symlink)
+Homepage: https://borgbackup.github.io/borgbackup/
+Description-md5: 5c86689f60e9c50b17c4b923069e6573
+admin
+Priority: optional
+Filename: pool/main/b/borgbackup2/borgbackup-is-borgbackup2_2.0.0b24-4_amd64.deb
+Size: 1888
+MD5sum: 8a16c7ba3da825e41695ad14f4f50486
+SHA256: 8898e887a5012ed3ec01c85e1d3228eafc8dd90cf653d0067be082167c9c10f4
+
+Package: borgbackup2
+Version: 2.0.0b24-4
+Installed-Size: 6530
+Maintainer: Debian Borg Collective <team+borg@tracker.debian.org>
+Architecture: amd64
+Depends: python3 (<< 3.15), python3 (>= 3.14~), python3-blake3, python3-borghash (>= 0.2.0-1~), python3-borgstore (>= 0.6.1-1~), python3-jsonargparse, python3-msgpack, python3-packaging, python3-platformdirs (<< 5.0.0), python3-platformdirs (>= 2.6.0), python3-shtab (>= 1.11.0-1~), python3-supported-min (>= 3.14) | python3-backports.zstd, python3-yaml, python3:any, libacl1 (>= 2.2.51), libc6 (>= 2.34), liblz4-1 (>= 0.0~r130), libssl3t64 (>= 3.2.0)
+Recommends: fuse3, python3-pyfuse3
+Suggests: borgbackup2-doc
+Description: deduplicating and compressing backup program (version 2.x)
+Homepage: https://borgbackup.github.io/borgbackup/
+Description-md5: 18ebb529308383ae67945351bf0498b0
+admin
+Priority: optional
+Filename: pool/main/b/borgbackup2/borgbackup2_2.0.0b24-4_amd64.deb
+Size: 1558352
+MD5sum: dac9289bb0606758b668a337552b10c9
+SHA256: 7223fa60cfd77adebc6e3699f5ba294d6a2beb451ce49357dcba7bcf94c9f371
+
 Package: boxer
 Version: 1.4.3-2
 Installed-Size: 431
@@ -5132,7 +5168,7 @@ MD5sum: cabb584659911bd9e887115925723543
 SHA256: 54d9e54eb21609aa2c7d7ddc4c7619f854cb3ed4c8b6e0ad35436218ad5cb600
 
 Package: cron
-Version: 3.0pl1-210
+Version: 3.0pl1-211
 Installed-Size: 248
 Maintainer: Georges Khaznadar <georgesk@debian.org>
 Architecture: amd64
@@ -5151,14 +5187,14 @@ Tag: admin::automation, implemented-in::c, interface::daemon, role::program,
  scope::utility
 admin
 Priority: important
-Filename: pool/main/c/cron/cron_3.0pl1-210_amd64.deb
-Size: 86548
-MD5sum: c57e3c55847dcbae2b3eef69fd520e96
-SHA256: 3f2a36c3c35fc515452eac1957b7177d23addabc9ba5ba1684b05285766e0f14
+Filename: pool/main/c/cron/cron_3.0pl1-211_amd64.deb
+Size: 86824
+MD5sum: b56c89fab7746b88166a0688ac24f6e8
+SHA256: 08385da8b6c491a139a40648f391214bea539e6af542fb5883410410194457ae
 
 Package: cron-daemon-common
 Source: cron
-Version: 3.0pl1-210
+Version: 3.0pl1-211
 Installed-Size: 56
 Maintainer: Georges Khaznadar <georgesk@debian.org>
 Architecture: all
@@ -5172,10 +5208,10 @@ Homepage: https://ftp.isc.org/isc/cron/
 Description-md5: 356827341f19f1a10278dd3b9540ab43
 admin
 Priority: important
-Filename: pool/main/c/cron/cron-daemon-common_3.0pl1-210_all.deb
-Size: 15840
-MD5sum: c4a1aa0667229925cc0eefdf2f3a2003
-SHA256: 58dd92780431a9b9fad6437c4d6d63fcf7f11147e9b19713f97e67989de59b0e
+Filename: pool/main/c/cron/cron-daemon-common_3.0pl1-211_all.deb
+Size: 15884
+MD5sum: 6f1116fb7ab71f77dd46d8c720566c37
+SHA256: 6acb53685689dea92641e084f413ed2c02848242ca818fd6a639dac96abb868a
 
 Package: cron-apt
 Version: 0.13.0.1
@@ -6275,21 +6311,22 @@ MD5sum: a9139dcec2948fa842f837d80bbfe083
 SHA256: f806544e75c0ee75b0691524c23561bfbccf45ae1a7cbf58264d65f39b476907
 
 Package: dehydrated-tools-extra
-Version: 20260506-1
-Installed-Size: 91
+Version: 20260926-1
+Installed-Size: 90
 Maintainer: Daniel Baumann <daniel@debian.org>
 Architecture: all
 Depends: dehydrated, ssl-cert, debconf (>= 0.5) | debconf-2.0
 Enhances: dehydrated
 Description: additional tools for dehydrated Letsencrypt client
 Homepage: https://git.open-infrastructure.net/tools/dehydrated-tools-extra
+Commands: dehydrated-cron, dehydrated-hook, dehydrated-nsupdate
 Description-md5: 2c8e8cea7201a57f6e128b02c6fd8a61
 admin
 Priority: optional
-Filename: pool/main/d/dehydrated-tools-extra/dehydrated-tools-extra_20260506-1_all.deb
-Size: 19712
-MD5sum: ba5491f258aafd9786fb48b062660c8e
-SHA256: dab2e335879a48afec6aeb11c90f05a907e6b33c98c051f0d342507e7c1dcb42
+Filename: pool/main/d/dehydrated-tools-extra/dehydrated-tools-extra_20260926-1_all.deb
+Size: 19912
+MD5sum: 99ffe45b652ff4fe6ac1102113bf446b
+SHA256: f56ce16abc3488eb8fae56095a581b6c44edc4c9c04c962fa8582249bfe1d265
 
 Package: deltarpm
 Source: deltarpm (3.6.5+dfsg-3)
@@ -14825,22 +14862,23 @@ SHA256: 939d775b250195797a2df1b0eb4bd9152ba9a78ffb66bc1ce5c25805be0a6021
 
 Package: selinux-utils
 Source: libselinux
-Version: 3.11-2
+Version: 3.11-2.1
 Installed-Size: 553
 Maintainer: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, libc6 (>= 2.38), libpcre2-8-0 (>= 10.22), libselinux1 (>= 3.5), libsepol2 (>= 3.11)
+Depends: libc6 (>= 2.38), libpcre2-8-0 (>= 10.47), libselinux1 (>= 3.5), libsepol2 (>= 3.11)
 Description: SELinux utility programs
 Homepage: https://selinuxproject.github.io/
+Commands: avcstat, compute_av, compute_create, compute_member, compute_relabel, getconlist, getdefaultcon, getenforce, getfilecon, getpidcon, getpidprevcon, getpolicyload, getsebool, getseuser, matchpathcon, policyvers, sefcontext_compile, selabel_compare, selabel_digest, selabel_get_digests_all_partial_matches, selabel_lookup, selabel_lookup_best_match, selabel_partial_match, selinux_check_access, selinux_check_securetty_context, selinuxenabled, selinuxexeccon, setenforce, setfilecon, togglesebool, validatetrans
 Description-md5: 0dfe4ba09954ecdcb854ff898167f98b
 Tag: admin::configuring, admin::user-management, role::program,
  scope::utility, security::TODO
 admin
 Priority: optional
-Filename: pool/main/libs/libselinux/selinux-utils_3.11-2_amd64.deb
-Size: 73832
-MD5sum: fd1a95c601edc81cc07a1e1f2358a2de
-SHA256: fd12c90da8cdf5181e1db4c318825bb49749a9465f679f8d377c12d5e62e2837
+Filename: pool/main/libs/libselinux/selinux-utils_3.11-2.1_amd64.deb
+Size: 74904
+MD5sum: 5c41f17baa9d6172748b592613a04729
+SHA256: 6c5ce16c357ea143b8cc72980b32272c5c2d3cfcf327906f5d3f00f40a6fc880
 
 Package: semanage-utils
 Source: libsemanage
@@ -15637,8 +15675,8 @@ SHA256: 4c69ebc5216ea91400cbc1109596ccc4760ec067a3d25ef852f7ac257d767b19
 
 Package: hyperv-daemons
 Source: linux
-Version: 7.2.6-1
-Installed-Size: 426
+Version: 7.2.8-1
+Installed-Size: 452
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38)
@@ -15647,15 +15685,15 @@ Homepage: https://www.kernel.org/
 Description-md5: 58917e0b17ef6adea3e3091118057457
 admin
 Priority: optional
-Filename: pool/main/l/linux/hyperv-daemons_7.2.6-1_amd64.deb
-Size: 325292
-MD5sum: 8e818f78ebe9953cd38d901803833348
-SHA256: 747e6415c72f9f34dc42f85d5e660ef88ca092d9367a87574764d9c7d30c3340
+Filename: pool/main/l/linux/hyperv-daemons_7.2.8-1_amd64.deb
+Size: 353112
+MD5sum: 675a0808542d5a990b12081d8ad2b98f
+SHA256: 69707a642fe378661e699f991e1c66575cd8fcf7c3e4d85286dbeac283e54433
 
 Package: intel-sdsi
 Source: linux
-Version: 7.2.6-1
-Installed-Size: 333
+Version: 7.2.8-1
+Installed-Size: 359
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38)
@@ -15664,15 +15702,15 @@ Homepage: https://www.kernel.org/
 Description-md5: a3073b24bc2ab88b6668c0b7642a18f5
 admin
 Priority: optional
-Filename: pool/main/l/linux/intel-sdsi_7.2.6-1_amd64.deb
-Size: 309028
-MD5sum: 67b616b6a49f593c13724dbfe6d46512
-SHA256: 96ca246a241289a7e209f298ba3a6bd9d66f9fc642be035a54af714c450fb083
+Filename: pool/main/l/linux/intel-sdsi_7.2.8-1_amd64.deb
+Size: 335992
+MD5sum: a4d4c6cc6ec473a5c007837b44e2be9e
+SHA256: a77e7ad4054058cbcaa672ecb7ffb8cd92280919819291acb4fba50a7ab5d9b2
 
 Package: linux-cpupower
 Source: linux
-Version: 7.2.6-1
-Installed-Size: 912
+Version: 7.2.8-1
+Installed-Size: 938
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libcap2 (>= 1:2.10), libcpupower1 (>= 6.14~), libnl-3-200 (>= 3.11.0), libnl-genl-3-200 (>= 3.11.0), libpci3 (>= 1:3.8.0)
@@ -15681,15 +15719,15 @@ Homepage: https://www.kernel.org/
 Description-md5: e32c8b4931e9356e0f0adbe447a967fc
 admin
 Priority: optional
-Filename: pool/main/l/linux/linux-cpupower_7.2.6-1_amd64.deb
-Size: 500920
-MD5sum: 702fbc36d6ad459c6349d1a47ceb3c29
-SHA256: dda730413cc5c6f83f78d1f01517721867f9ce6b8cf37e6ddb1a1ee1c1f9bf6a
+Filename: pool/main/l/linux/linux-cpupower_7.2.8-1_amd64.deb
+Size: 528776
+MD5sum: c7a5908f3d5b4d28d6b43a7cbf8cc677
+SHA256: 15efc7d9791868f92296228b332195fb153e036d9839c614d44ab214eb5abd33
 
 Package: linux-misc-tools
 Source: linux
-Version: 7.2.6-1
-Installed-Size: 426
+Version: 7.2.8-1
+Installed-Size: 452
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libconfig15 (>= 1.8.2+ds), libncursesw6 (>= 6), libtinfo6 (>= 6)
@@ -15698,15 +15736,15 @@ Homepage: https://www.kernel.org/
 Description-md5: 005eab2e323119ce8359c8a3ec1c8e16
 admin
 Priority: optional
-Filename: pool/main/l/linux/linux-misc-tools_7.2.6-1_amd64.deb
-Size: 338724
-MD5sum: 9737a0e7d93e057308f12dae02249d2c
-SHA256: 588085cc3a41153b39dc383047385474aa15a01e0a7eab19122759994d6e6942
+Filename: pool/main/l/linux/linux-misc-tools_7.2.8-1_amd64.deb
+Size: 366552
+MD5sum: aff80e4307a2eaae2bb64f1fbad7c81e
+SHA256: 0035940cd5b735cdd313e7923b568fadb26ab246e47da512e96a653c717a563f
 
 Package: usbip
-Source: linux (7.2.6-1)
-Version: 2.0+7.2.6-1
-Installed-Size: 466
+Source: linux (7.2.8-1)
+Version: 2.0+7.2.8-1
+Installed-Size: 492
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
 Depends: usb.ids, libc6 (>= 2.34), libudev1 (>= 183), libwrap0 (>= 7.6-4~)
@@ -15716,10 +15754,10 @@ Description-md5: 84110e083527a27b37417dcab69e5ab7
 Tag: implemented-in::c, role::program
 admin
 Priority: optional
-Filename: pool/main/l/linux/usbip_2.0+7.2.6-1_amd64.deb
-Size: 346568
-MD5sum: d0cfa6273bcd88e93d74335922f104a1
-SHA256: 1386fd59d3f9b8052e8c737b86a7e4f478306f617d2215559cf351ddc65d2a6f
+Filename: pool/main/l/linux/usbip_2.0+7.2.8-1_amd64.deb
+Size: 373624
+MD5sum: 148840333b32f0f67df42c72c05131e3
+SHA256: c98b263228a4d0ba9ea808607880e090517dd9ac53636b4ed0309b707124b276
 
 Package: linux-vulnerability-mitigation
 Version: 20260629-2
@@ -16676,8 +16714,8 @@ MD5sum: 7188cf719f63814e38be2b9fd3b8b917
 SHA256: 28f4da335969c5b3b5b15ca1bafc31c808e1348cd5b603e4187bbc365e065376
 
 Package: mkosi
-Version: 27-1
-Installed-Size: 1873
+Version: 27.1-1
+Installed-Size: 1882
 Maintainer: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
 Architecture: all
 Depends: systemd (>= 254~), systemd-boot-efi | s390-tools | librtas-dev, systemd-boot-tools, systemd-container (>= 254~), systemd-repart, systemd-tpm, systemd-ukify, python3-cryptography, python3-pefile, fdisk, apt, apt-utils, debian-archive-keyring | ubuntu-keyring, cryptsetup-bin, dosfstools, mtools, cpio, kmod, btrfs-progs, e2fsprogs, erofs-utils, squashfs-tools, xz-utils, zstd, gnupg, pesign | s390-tools | librtas-dev, tpm2-tools, efitools | s390-tools | librtas-dev, openssl, jq, python3:any
@@ -16689,10 +16727,10 @@ Tag: admin::file-distribution, admin::install, implemented-in::c,
  interface::commandline, role::program
 admin
 Priority: optional
-Filename: pool/main/m/mkosi/mkosi_27-1_all.deb
-Size: 367836
-MD5sum: f7fda78d33e6a868b7a742930d76cf58
-SHA256: 374b121fe598b89f1c2e3b99a65b305822b31b75e621ebda1f431a1e306766e9
+Filename: pool/main/m/mkosi/mkosi_27.1-1_all.deb
+Size: 370332
+MD5sum: a5de20338fe23df216da4a31d20608c0
+SHA256: b8cec2f88e217bbfcde6b70605f67ea94069f64c21b1b6a9b88c0e177b23af81
 
 Package: mmdebstrap
 Version: 1.5.7-3
@@ -17073,7 +17111,7 @@ SHA256: 778440b5b0a4f33b91b0e9de73a7663f7c67336258202818522a12f05777aa91
 
 Package: kpartx
 Source: multipath-tools
-Version: 0.15.0-1
+Version: 0.15.1-1
 Installed-Size: 78
 Maintainer: Debian DM Multipath Team <team+linux-blocks@tracker.debian.org>
 Architecture: amd64
@@ -17084,17 +17122,17 @@ Description-md5: f27bd840eff7aca2039cea83387ed292
 Tag: role::program
 admin
 Priority: optional
-Filename: pool/main/m/multipath-tools/kpartx_0.15.0-1_amd64.deb
-Size: 28708
-MD5sum: e1daf8494772abaa57b9d5824ef296de
-SHA256: 90f6c109d6a5ed148d2e57092a8ae8a5125f615cfc163b1f0e5940292bbfaa31
+Filename: pool/main/m/multipath-tools/kpartx_0.15.1-1_amd64.deb
+Size: 28844
+MD5sum: 69941f5e3bbc1289d380d025cc13c8a6
+SHA256: 3867d7b1f4deb1b81d5610eb7440d2c7e7f2afca519f197e82dd7880122d19ae
 
 Package: multipath-tools
-Version: 0.15.0-1
-Installed-Size: 671
+Version: 0.15.1-1
+Installed-Size: 672
 Maintainer: Debian DM Multipath Team <team+linux-blocks@tracker.debian.org>
 Architecture: amd64
-Depends: kpartx (>= 0.15.0-1), sg3-utils-udev, systemd (>= 245~), udev, libaio1t64 (>= 0.3.93), libc6 (>= 2.38), libdevmapper1.02.1 (>= 2:1.02.98), libedit2 (>= 2.11-20080614-0), libgcc-s1 (>= 3.3.1), libmpathcmd0 (= 0.15.0-1), libmpathpersist0 (= 0.15.0-1), libmultipath0 (= 0.15.0-1), libsystemd0, liburcu8t64 (>= 0.13.0)
+Depends: kpartx (>= 0.15.1-1), sg3-utils-udev, systemd (>= 245~), udev, libaio1t64 (>= 0.3.93), libc6 (>= 2.38), libdevmapper1.02.1 (>= 2:1.02.98), libedit2 (>= 2.11-20080614-0), libgcc-s1 (>= 3.3.1), libmpathcmd0 (= 0.15.1-1), libmpathpersist0 (= 0.15.1-1), libmultipath0 (= 0.15.1-1), libsystemd0, liburcu8t64 (>= 0.15.7)
 Suggests: multipath-tools-boot
 Description: maintain multipath block device access
 Homepage: http://christophe.varoqui.free.fr/
@@ -17104,27 +17142,27 @@ Tag: admin::kernel, devel::lang:c, devel::library, implemented-in::c,
  uitoolkit::ncurses
 admin
 Priority: optional
-Filename: pool/main/m/multipath-tools/multipath-tools_0.15.0-1_amd64.deb
-Size: 166628
-MD5sum: 167ff81ea835bf1c378a3ad38a969f0a
-SHA256: bb72c26a5c61b09b2081943854c8c1c879b30c6e1edfc9099ada012710eab2ad
+Filename: pool/main/m/multipath-tools/multipath-tools_0.15.1-1_amd64.deb
+Size: 168464
+MD5sum: cafc60fc177b0183837866dc9710663f
+SHA256: 089651eddbb6f0899c8264cea5d18d140379552aa802f59d1ca093c2e7636b86
 
 Package: multipath-tools-boot
 Source: multipath-tools
-Version: 0.15.0-1
+Version: 0.15.1-1
 Installed-Size: 31
 Maintainer: Debian DM Multipath Team <team+linux-blocks@tracker.debian.org>
 Architecture: all
-Depends: initramfs-tools | linux-initramfs-tool, multipath-tools (<< 0.15.0-1.1~), multipath-tools (>= 0.15.0-1), procps
+Depends: initramfs-tools | linux-initramfs-tool, multipath-tools (<< 0.15.1-1.1~), multipath-tools (>= 0.15.1-1), procps
 Description: Support booting from multipath devices
 Homepage: http://christophe.varoqui.free.fr/
 Description-md5: 24b848655cff6a3dd257c2afda6cf91f
 admin
 Priority: optional
-Filename: pool/main/m/multipath-tools/multipath-tools-boot_0.15.0-1_all.deb
-Size: 7576
-MD5sum: 8498ab176f57c6ee5afa4a36461c3a5b
-SHA256: 9b99cf8b6e9f43b7b22ca2169197e36f3c7494c9e7ee1e539b5cca58a6fafbd9
+Filename: pool/main/m/multipath-tools/multipath-tools-boot_0.15.1-1_all.deb
+Size: 7612
+MD5sum: 19b112045e1a70f748e5fe0d9bd9aee4
+SHA256: 465648f75a83d90f23db1b3566c13e6a331523fb1d8626c390d5ee8177e41515
 
 Package: munge
 Version: 0.5.18-1
@@ -19458,11 +19496,11 @@ MD5sum: 6337e22c82f06a25158c059f14859839
 SHA256: 513b90e7344d210c01d078e4a305c183e08b3996cdd59969826320238fcf8251
 
 Package: parted
-Version: 3.7-1
-Installed-Size: 122
+Version: 3.8-2
+Installed-Size: 126
 Maintainer: Parted Maintainer Team <parted-maintainers@alioth-lists.debian.net>
 Architecture: amd64
-Depends: libparted2t64 (= 3.7-1), libc6 (>= 2.38), libreadline8t64 (>= 6.0), libtinfo6 (>= 6), libuuid1 (>= 2.16)
+Depends: libparted2t64 (= 3.8-2), libc6 (>= 2.38), libreadline8t64 (>= 6.0), libtinfo6 (>= 6), libuuid1 (>= 2.16)
 Suggests: parted-doc
 Conflicts: parted-doc (<< 3.5-2~)
 Description: disk partition manipulator
@@ -19474,10 +19512,10 @@ Tag: admin::filesystem, implemented-in::c, interface::commandline,
  uitoolkit::ncurses
 admin
 Priority: optional
-Filename: pool/main/p/parted/parted_3.7-1_amd64.deb
-Size: 40780
-MD5sum: 2d79327986ef4262ff1ff9c2b28680b8
-SHA256: 591477f558a95c2a14a5e737f2931c19a3bf7b99254a28b472f54ea88758f02c
+Filename: pool/main/p/parted/parted_3.8-2_amd64.deb
+Size: 42296
+MD5sum: 184673620732e98ee3e006385e0ca9b3
+SHA256: b9d61b5d9712fb49f619facc6baade21adc9a35eb275293fbaa8a254c8d51d67
 
 Package: partimage
 Version: 0.6.9-13
