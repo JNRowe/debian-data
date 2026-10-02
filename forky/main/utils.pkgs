@@ -4671,8 +4671,8 @@ MD5sum: 3735c851a2e31fcc071a44bad208b8dc
 SHA256: 09b4ffe511eced90c6939a3c8e9417bc0cf6f90d26c58b008c1ef07699533839
 
 Package: commitizen
-Version: 4.18.1-1
-Installed-Size: 331
+Version: 4.19.0-2
+Installed-Size: 332
 Maintainer: Daniel Baumann <daniel@debian.org>
 Architecture: all
 Depends: python3-argcomplete, python3-charset-normalizer, python3-colorama, python3-decli, python3-deprecated, python3-jinja2, python3-packaging, python3-prompt-toolkit, python3-questionary, python3-supported-min (>= 3.11.0) | python3-typing-extensions, python3-termcolor, python3-tomlkit, python3-yaml, python3:any
@@ -4683,10 +4683,10 @@ Commands: cz, git-cz
 Description-md5: 793f7135578e3044a636410316290b1e
 utils
 Priority: optional
-Filename: pool/main/c/commitizen/commitizen_4.18.1-1_all.deb
-Size: 73696
-MD5sum: c36b9344c59527c2209cc295117a0025
-SHA256: 78799b750db3c84d07db5d44d62dcad59062d975082dec343e09f6a4d3fe84c7
+Filename: pool/main/c/commitizen/commitizen_4.19.0-2_all.deb
+Size: 74072
+MD5sum: 38382de2eba19d7ab28e35cdd0e33f4f
+SHA256: 2658464ab0a5278bca3da2f443cfbe40caf836f4ebdc42f04c06dcc4b3b7da21
 
 Package: jsvc
 Source: commons-daemon
@@ -5273,6 +5273,65 @@ Filename: pool/main/c/cortado/cortado_0.6.0-5_all.deb
 Size: 26408
 MD5sum: 444dd817271780c126c4593f6c7db7a5
 SHA256: 8a7309e653daad18f36875acaae0e09c701c692dae9c572b80a8f9cf313f5c2c
+
+Package: cowbuilder
+Source: cowdancer
+Version: 0.91
+Installed-Size: 73
+Maintainer: Debian pbuilder maintenance team <team+pbuilder@tracker.debian.org>
+Architecture: amd64
+Depends: cowdancer, pbuilder, libc6 (>= 2.38)
+Description: pbuilder running on cowdancer
+Commands: cowbuilder
+Description-md5: 3f6a79a018c77ab19e6b7986aaa41b78
+Tag: admin::package-management, devel::buildtools, devel::debian,
+ devel::packaging, implemented-in::c, interface::commandline,
+ role::program, scope::utility, suite::debian, uitoolkit::ncurses,
+ works-with::software:package, works-with::software:source
+utils
+Priority: optional
+Filename: pool/main/c/cowdancer/cowbuilder_0.91_amd64.deb
+Size: 21484
+MD5sum: a264f6212e868c734728d8a84e61b7cb
+SHA256: 74fb085bddb3753416ae168e8cc1f9da5f1e60a21102126a5107313e427697db
+
+Package: cowdancer
+Version: 0.91
+Installed-Size: 105
+Maintainer: Debian pbuilder maintenance team <team+pbuilder@tracker.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38)
+Description: Copy-on-write directory tree utility
+Homepage: https://www.netfort.gr.jp/~dancer/software/cowdancer.html
+Commands: cow-shell, cowdancer-ilistcreate, cowdancer-ilistdump
+Description-md5: c58bfc3ffe4032aabae52a79f682f365
+Tag: admin::filesystem, field::TODO, role::program, scope::utility,
+ uitoolkit::ncurses, use::TODO, works-with::file
+utils
+Priority: optional
+Filename: pool/main/c/cowdancer/cowdancer_0.91_amd64.deb
+Size: 21788
+MD5sum: 660703359fbad44c0698e59a608fa751
+SHA256: 8186589507be6e9bd4130af2d7b9dbfe769d1b28ecf16bc2e7d8b796eaa9f6b4
+
+Package: qemubuilder
+Source: cowdancer
+Version: 0.91
+Installed-Size: 104
+Maintainer: Debian pbuilder maintenance team <team+pbuilder@tracker.debian.org>
+Architecture: amd64
+Depends: debootstrap, e2fsprogs, pbuilder, qemu-system | kvm, libc6 (>= 2.38)
+Description: pbuilder using QEMU as backend
+Homepage: https://wiki.debian.org/qemubuilder
+Commands: qemubuilder
+Description-md5: 31513dff9e10e1a3f94a0a85286a99bc
+Tag: implemented-in::c, role::program, uitoolkit::ncurses
+utils
+Priority: optional
+Filename: pool/main/c/cowdancer/qemubuilder_0.91_amd64.deb
+Size: 30356
+MD5sum: be390557cf82a407abe05335cd56e9c2
+SHA256: 5c08520f55476028695e87842f0f4e56c08eb4cc7da9285482f1a19df898585b
 
 Package: cpio
 Version: 2.15+dfsg-2.1
@@ -7772,25 +7831,6 @@ Size: 72852
 MD5sum: c3b13b080b614be153088987fe554ee7
 SHA256: b6d50392520390c219051c9d6f6e9d3f18528ddf5ea3db616fcfd5ff5664f02c
 
-Package: libdtkcore5-bin
-Source: dtkcore (5.7.12-3)
-Version: 5.7.12-3+b1
-Installed-Size: 1062
-Maintainer: Debian Deepin Packaging Team <pkg-deepin-devel@lists.alioth.debian.org>
-Architecture: amd64
-Provides: dtkcore-bin
-Depends: libdtkcore5 (= 5.7.12-3+b1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libqt5core5t64 (>= 5.15.1), libqt5dbus5t64 (>= 5.6.0~beta), libqt5xml5t64 (>= 5.6.0~beta), libstdc++6 (>= 13.1), qtbase-abi-5-15-19
-Description: Deepin Tool Kit Core library (utilities)
-Homepage: https://github.com/linuxdeepin/dtkcore
-Description-md5: b352d5da70e89a0d6c6022e44e737a1c
-Tag: uitoolkit::qt
-utils
-Priority: optional
-Filename: pool/main/d/dtkcore/libdtkcore5-bin_5.7.12-3+b1_amd64.deb
-Size: 269392
-MD5sum: 8fde0133acc5bf4f3d30fd20ffb5e458
-SHA256: 77680d9054ae74d5c330a2334848795d01782cb099cd77294a48b7b09b653205
-
 Package: dtmf2num
 Version: 0.1.1-3
 Installed-Size: 45
@@ -8213,8 +8253,8 @@ MD5sum: b1f4f1347870f1d39e048eacd63b3bba
 SHA256: d1d3bea92045d7fc645add338d3e7100bff29d984d06049be66f1ea1716f0d38
 
 Package: dwarves
-Version: 1.31-2
-Installed-Size: 23
+Version: 1.32-1
+Installed-Size: 15
 Maintainer: Håvard F. Aasen <havard.f.aasen@pfft.no>
 Architecture: all
 Depends: pahole (>= 1.22)
@@ -8225,19 +8265,19 @@ Description-md5: 25fa4d0dfb55ebab9863ad37247366dd
 Tag: devel::debugger, implemented-in::c, role::program
 utils
 Priority: optional
-Filename: pool/main/d/dwarves/dwarves_1.31-2_all.deb
-Size: 14072
-MD5sum: 0c63bd6601e47dab70f93a62b7e990b1
-SHA256: 9d4510e5717c129a14f3590e42e0e3d9f01a0bfb8f7c889d361b55fb32a42a4c
+Filename: pool/main/d/dwarves/dwarves_1.32-1_all.deb
+Size: 6340
+MD5sum: 740e0b33f342eea85edde4bb47bd1ca2
+SHA256: a270af109119e6a0bece466d5ed8ed4e1ccc7ee6ba7d74be6d37858a9ab449a8
 
 Package: pahole
 Source: dwarves
-Version: 1.31-2
-Installed-Size: 338
+Version: 1.32-1
+Installed-Size: 350
 Maintainer: Håvard F. Aasen <havard.f.aasen@pfft.no>
 Architecture: amd64
 Replaces: dwarves (<< 1.22)
-Depends: libdwarves1 (= 1.31-2), libbpf1 (>= 1:1.6.1), libc6 (>= 2.38), libelf1t64 (>= 0.142)
+Depends: libdwarves1 (= 1.32-1), libbpf1 (>= 1:1.6.1), libc6 (>= 2.38), libelf1t64 (>= 0.142)
 Breaks: dwarves (<< 1.22)
 Description: set of advanced DWARF utilities
 Multi-Arch: foreign
@@ -8245,10 +8285,10 @@ Homepage: https://git.kernel.org/pub/scm/devel/pahole/pahole.git
 Description-md5: f56916834da42533de4999daa9a31a25
 utils
 Priority: optional
-Filename: pool/main/d/dwarves/pahole_1.31-2_amd64.deb
-Size: 119072
-MD5sum: 1b88b95856d11a0f3558dc5937d5f72e
-SHA256: e6bcb80fe0ae87af127adae36ebf5fbd55ecf0eee281aaeab48d4451015baf0b
+Filename: pool/main/d/dwarves/pahole_1.32-1_amd64.deb
+Size: 123364
+MD5sum: 3951f149890c6db0e914030906a34029
+SHA256: 2eea79813df2eb0109e4acf182584b2d94fc24841847c477fe44e340c0df74ea
 
 Package: dwdiff
 Source: dwdiff (2.1.4-2)
@@ -12569,8 +12609,8 @@ MD5sum: 822e0178b6838b60e4a936218fbbb311
 SHA256: b4ee64ef44291c5193eb3082c04ddfbab7d1a23a4d13d0142d1dc8dad2870ba5
 
 Package: git-changelog
-Version: 2.9.7-3
-Installed-Size: 191
+Version: 2.10.0-1
+Installed-Size: 195
 Maintainer: Daniel Baumann <daniel@debian.org>
 Architecture: all
 Depends: git, debconf (>= 0.5) | debconf-2.0, python3-jinja2, python3-packaging, python3-platformdirs (>= 4.4), python3-semver, python3-supported-min (>= 3.13) | python3-typing-extensions, python3:any
@@ -12580,10 +12620,10 @@ Commands: git-changelog2
 Description-md5: 7f3b597aa0c613dd6314ea65b9ea6e3f
 utils
 Priority: optional
-Filename: pool/main/g/git-changelog/git-changelog_2.9.7-3_all.deb
-Size: 42400
-MD5sum: fcae81585f2f72689a44d525ff20ff35
-SHA256: 411d0134d2a75a865410cd9830d208a1063e3ee115ea46773135ee55fe688386
+Filename: pool/main/g/git-changelog/git-changelog_2.10.0-1_all.deb
+Size: 42916
+MD5sum: a88f8c98073138e42864ca05749f5f7c
+SHA256: 276d587c5705d2cf34dfbaa6cc9c9f7956dc594fdeac98eb7764f9a8d66e996e
 
 Package: git-keeper
 Version: 0.20251024.1
@@ -41512,21 +41552,22 @@ MD5sum: f4611ea0de5b04509646dc37ef03be4f
 SHA256: 57479c172b8a57211530b221067903c6618f26fcb4437b6bcd84cbecc2994dbf
 
 Package: usbguard
-Version: 1.1.4+ds-4
-Installed-Size: 591
-Maintainer: Birger Schacht <birger@debian.org>
+Version: 1.1.4+ds-8
+Installed-Size: 604
+Maintainer: Daniel Baumann <daniel@debian.org>
 Architecture: amd64
-Depends: default-dbus-system-bus | dbus-system-bus, libaudit1 (>= 1:2.2.1), libc6 (>= 2.38), libcap-ng0 (>= 0.7.9), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.26.0), libpolkit-gobject-1-0 (>= 0.99), libseccomp2 (>= 0.0.0~20120605), libstdc++6 (>= 13.1), libusbguard1 (>= 1.1.4+ds)
-Description: USB device authorization policy framework
-Homepage: https://usbguard.github.io/
-Description-md5: a6cec4108f73a10ab878fe530fbe674b
+Depends: default-dbus-system-bus | dbus-system-bus, debconf (>= 0.5) | debconf-2.0, libaudit1 (>= 1:2.2.1), libc6 (>= 2.38), libcap-ng0 (>= 0.7.9), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.26.0), libpolkit-gobject-1-0 (>= 0.99), libseccomp2 (>= 0.0.0~20120605), libstdc++6 (>= 13.1), libusbguard1 (>= 1.1.4+ds)
+Description: USB device authorization policy framework (utility)
+Homepage: https://github.com/USBGuard/usbguard
+Commands: usbguard, usbguard-daemon, usbguard-dbus, usbguard-rule-parser
+Description-md5: 623e4023fe8d0c14e7a0399cbf6fb164
 Tag: hardware::usb, security::privacy
 utils
 Priority: optional
-Filename: pool/main/u/usbguard/usbguard_1.1.4+ds-4_amd64.deb
-Size: 180584
-MD5sum: 03b62f10654fe5c5509dc5aaa1dad611
-SHA256: 580fde33a8c59512d954068f3383b0f2e85fe9ce03ec8e5b3dfc4e38f106aee7
+Filename: pool/main/u/usbguard/usbguard_1.1.4+ds-8_amd64.deb
+Size: 188700
+MD5sum: da147b485b74733c56f1d27c83613c0a
+SHA256: eee236f68a54098191b633158879cc33c0f0e24dcec2fcd314f57000fb0232b2
 
 Package: usbguard-notifier
 Version: 0.1.0-4

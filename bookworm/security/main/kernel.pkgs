@@ -316,8 +316,8 @@ SHA256: 76380ebac2fca37119a17be6affecaa90804959943a963af86be099ddffe5863
 
 Package: linux-config-6.12
 Source: linux-6.12
-Version: 6.12.107-1~deb12u1
-Installed-Size: 1493
+Version: 6.12.111-1~deb12u1
+Installed-Size: 1560
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
 Description: Debian kernel configurations for Linux 6.12
@@ -327,9 +327,9 @@ Multi-Arch: same
 Recommends: linux-source-6.12
 kernel
 Priority: optional
-Filename: pool/updates/main/l/linux-6.12/linux-config-6.12_6.12.107-1~deb12u1_amd64.deb
-Size: 1510096
-SHA256: 0c9434f9f52f8952e8e24258297becfa3870fa5fff371169f13d45e063bad57a
+Filename: pool/updates/main/l/linux-6.12/linux-config-6.12_6.12.111-1~deb12u1_amd64.deb
+Size: 1579400
+SHA256: 12dad6518fc6e72882b83c914701b5079cb514b61bee1fc14451b4cb10421285
 
 Package: linux-headers-6.12.107+deb12-amd64
 Source: linux-6.12
@@ -411,27 +411,107 @@ Filename: pool/updates/main/l/linux-6.12/linux-headers-6.12.107+deb12-rt-amd64_6
 Size: 3101508
 SHA256: 182824f07e326682bb59f72920f28199270e21dc0439b24cb1dbc20978d5bf0e
 
+Package: linux-headers-6.12.111+deb12-amd64
+Source: linux-6.12
+Version: 6.12.111-1~deb12u1
+Installed-Size: 10162
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: amd64
+Depends: linux-base (>= 4.12~), linux-headers-6.12.111+deb12-common (= 6.12.111-1~deb12u1), linux-image-6.12.111+deb12-amd64 (= 6.12.111-1~deb12u1) | linux-image-6.12.111+deb12-amd64-unsigned (= 6.12.111-1~deb12u1), linux-kbuild-6.12.111+deb12, gcc-12
+Description: Header files for Linux 6.12.111+deb12-amd64
+Homepage: https://www.kernel.org/
+Description-md5: baf9b0a764dca1f5642fa5880fbbc1fd
+kernel
+Priority: optional
+Filename: pool/updates/main/l/linux-6.12/linux-headers-6.12.111+deb12-amd64_6.12.111-1~deb12u1_amd64.deb
+Size: 3177040
+SHA256: 9af1c20a5db32bb8e4f8c7d6861b0b88d4f01e3c1fcdc33f8d7359fd0935a05d
+
+Package: linux-headers-6.12.111+deb12-cloud-amd64
+Source: linux-6.12
+Version: 6.12.111-1~deb12u1
+Installed-Size: 7822
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: amd64
+Depends: linux-base (>= 4.12~), linux-headers-6.12.111+deb12-common (= 6.12.111-1~deb12u1), linux-image-6.12.111+deb12-cloud-amd64 (= 6.12.111-1~deb12u1) | linux-image-6.12.111+deb12-cloud-amd64-unsigned (= 6.12.111-1~deb12u1), linux-kbuild-6.12.111+deb12, gcc-12
+Description: Header files for Linux 6.12.111+deb12-cloud-amd64
+Homepage: https://www.kernel.org/
+Description-md5: b47aecc7914a3860ec63082b381d2dd0
+kernel
+Priority: optional
+Filename: pool/updates/main/l/linux-6.12/linux-headers-6.12.111+deb12-cloud-amd64_6.12.111-1~deb12u1_amd64.deb
+Size: 2838072
+SHA256: e1bfb2bf76c6dffee7230b5aaa2812908c4ad50bd7d9a7986d0b363856942a62
+
+Package: linux-headers-6.12.111+deb12-common
+Source: linux-6.12
+Version: 6.12.111-1~deb12u1
+Installed-Size: 61424
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: all
+Description: Common header files for Linux 6.12.111+deb12
+Homepage: https://www.kernel.org/
+Description-md5: 0188eaee0c0bfb36b83483b8fb73a60f
+Multi-Arch: foreign
+kernel
+Priority: optional
+Filename: pool/updates/main/l/linux-6.12/linux-headers-6.12.111+deb12-common_6.12.111-1~deb12u1_all.deb
+Size: 11293424
+SHA256: 1cf276d424a312da5b7fc2a77134c77455e35afd95e8bb6c1f2c0b082172dd2a
+
+Package: linux-headers-6.12.111+deb12-common-rt
+Source: linux-6.12
+Version: 6.12.111-1~deb12u1
+Installed-Size: 50178
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: all
+Description: Common header files for Linux 6.12.111+deb12-rt
+Homepage: https://www.kernel.org/
+Description-md5: 7d2fa187a9c869827462ef68cb3036c3
+Multi-Arch: foreign
+kernel
+Priority: optional
+Filename: pool/updates/main/l/linux-6.12/linux-headers-6.12.111+deb12-common-rt_6.12.111-1~deb12u1_all.deb
+Size: 9647428
+SHA256: aa4151606aa31db1644204d527866b5840bf2412db78be896bb29c9df41007d3
+
+Package: linux-headers-6.12.111+deb12-rt-amd64
+Source: linux-6.12
+Version: 6.12.111-1~deb12u1
+Installed-Size: 10124
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: amd64
+Depends: linux-base (>= 4.12~), linux-headers-6.12.111+deb12-common-rt (= 6.12.111-1~deb12u1), linux-image-6.12.111+deb12-rt-amd64 (= 6.12.111-1~deb12u1) | linux-image-6.12.111+deb12-rt-amd64-unsigned (= 6.12.111-1~deb12u1), linux-kbuild-6.12.111+deb12, gcc-12
+Description: Header files for Linux 6.12.111+deb12-rt-amd64
+Homepage: https://www.kernel.org/
+Description-md5: 8d1ecfc00249ea8158e90185700c5814
+kernel
+Priority: optional
+Filename: pool/updates/main/l/linux-6.12/linux-headers-6.12.111+deb12-rt-amd64_6.12.111-1~deb12u1_amd64.deb
+Size: 3172648
+SHA256: 5dec9fa6374978209803a4d34b8d92b3f619bd81ffc725537203a474b40e1f52
+
 Package: linux-image-6.12-amd64-dbg
 Source: linux-6.12
-Version: 6.12.107-1~deb12u1
+Version: 6.12.111-1~deb12u1
 Installed-Size: 10
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
 Provides: linux-latest-image-dbg
-Depends: linux-image-6.12.107+deb12-amd64-dbg (= 6.12.107-1~deb12u1)
+Depends: linux-image-6.12.111+deb12-amd64-dbg (= 6.12.111-1~deb12u1)
 Description: Debugging symbols for Linux amd64 configuration (meta-package)
 Homepage: https://www.kernel.org/
 Description-md5: cef66019bff5137491f4d86a25f6417d
 kernel
 Priority: optional
-Filename: pool/updates/main/l/linux-6.12/linux-image-6.12-amd64-dbg_6.12.107-1~deb12u1_amd64.deb
+Filename: pool/updates/main/l/linux-6.12/linux-image-6.12-amd64-dbg_6.12.111-1~deb12u1_amd64.deb
 Size: 1176
-SHA256: 8579f23b7c75fd9e441e9138a0d72becf3e199939cb80fac164f5c67871930f4
+SHA256: 6e32de5a8025fe731d0807afbadb050f6e7a35a30a44b396ecd46f44d18f0a25
 
 Package: linux-image-6.12-amd64-signed-template
 Source: linux-6.12
-Version: 6.12.107-1~deb12u1
-Installed-Size: 5903
+Version: 6.12.111-1~deb12u1
+Installed-Size: 6165
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
 Depends: dpkg-dev, python3:any
@@ -440,43 +520,43 @@ Homepage: https://www.kernel.org/
 Description-md5: 413d038b34e3191692ff71a0b3590de1
 kernel
 Priority: optional
-Filename: pool/updates/main/l/linux-6.12/linux-image-6.12-amd64-signed-template_6.12.107-1~deb12u1_amd64.deb
-Size: 2376448
-SHA256: 3710e4d0993721b43ae7042d865f9f049965016504080fc505a6411023521b66
+Filename: pool/updates/main/l/linux-6.12/linux-image-6.12-amd64-signed-template_6.12.111-1~deb12u1_amd64.deb
+Size: 2493508
+SHA256: 9412a5753675b029c4f471a2e33544636f457bb06a7cdcad74292328da532418
 
 Package: linux-image-6.12-cloud-amd64-dbg
 Source: linux-6.12
-Version: 6.12.107-1~deb12u1
+Version: 6.12.111-1~deb12u1
 Installed-Size: 10
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
 Provides: linux-latest-image-dbg
-Depends: linux-image-6.12.107+deb12-cloud-amd64-dbg (= 6.12.107-1~deb12u1)
+Depends: linux-image-6.12.111+deb12-cloud-amd64-dbg (= 6.12.111-1~deb12u1)
 Description: Debugging symbols for Linux cloud-amd64 configuration (meta-package)
 Homepage: https://www.kernel.org/
 Description-md5: 5480348a5b148364715ed73b4b7d00ea
 kernel
 Priority: optional
-Filename: pool/updates/main/l/linux-6.12/linux-image-6.12-cloud-amd64-dbg_6.12.107-1~deb12u1_amd64.deb
+Filename: pool/updates/main/l/linux-6.12/linux-image-6.12-cloud-amd64-dbg_6.12.111-1~deb12u1_amd64.deb
 Size: 1188
-SHA256: 4ad349053456b30f2c3e92c885941ac8002f1c845d822b6b5a1ade50bbd5a220
+SHA256: e3a53af6dd43cc9139c527d32aa894a44a50070dc6aba39e9f62fec706aa54c0
 
 Package: linux-image-6.12-rt-amd64-dbg
 Source: linux-6.12
-Version: 6.12.107-1~deb12u1
+Version: 6.12.111-1~deb12u1
 Installed-Size: 10
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
 Provides: linux-latest-image-dbg
-Depends: linux-image-6.12.107+deb12-rt-amd64-dbg (= 6.12.107-1~deb12u1)
+Depends: linux-image-6.12.111+deb12-rt-amd64-dbg (= 6.12.111-1~deb12u1)
 Description: Debugging symbols for Linux rt-amd64 configuration (meta-package)
 Homepage: https://www.kernel.org/
 Description-md5: 8018dd5995396d044276eb5a83634c3c
 kernel
 Priority: optional
-Filename: pool/updates/main/l/linux-6.12/linux-image-6.12-rt-amd64-dbg_6.12.107-1~deb12u1_amd64.deb
+Filename: pool/updates/main/l/linux-6.12/linux-image-6.12-rt-amd64-dbg_6.12.111-1~deb12u1_amd64.deb
 Size: 1184
-SHA256: aa658e6a6882e176b1811ab63b1c780afafc436ab1ddd14a84ce21a86aae80bc
+SHA256: 0c33731104595b5dd0bd6ee82cf5debeb6faa436df4c579ba0a6f4993030d700
 
 Package: linux-image-6.12.107+deb12-amd64-unsigned
 Source: linux-6.12
@@ -544,6 +624,72 @@ Filename: pool/updates/main/l/linux-6.12/linux-image-6.12.107+deb12-rt-amd64-uns
 Size: 106553600
 SHA256: a7010ca11ea0e7356dbb070de96f4a507d096d973a035c995e25c1b36a0482b7
 
+Package: linux-image-6.12.111+deb12-amd64-unsigned
+Source: linux-6.12
+Version: 6.12.111-1~deb12u1
+Installed-Size: 107216
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: amd64
+Replaces: linux-image-6.12.111+deb12-amd64
+Depends: kmod, initramfs-tools (>= 0.120+deb8u2) | linux-initramfs-tool
+Suggests: firmware-linux-free, linux-doc-6.12, debian-kernel-handbook, grub-pc | grub-efi-amd64 | extlinux
+Conflicts: linux-image-6.12.111+deb12-amd64
+Breaks: fwupdate (<< 12-7), initramfs-tools (<< 0.120+deb8u2), wireless-regdb (<< 2019.06.03-1~)
+Description: Linux 6.12 for 64-bit PCs
+Homepage: https://www.kernel.org/
+Description-md5: faccb96a3fff2d1523870e550e879d00
+Pre-Depends: linux-base (>= 4.12~)
+Recommends: apparmor
+kernel
+Priority: optional
+Filename: pool/updates/main/l/linux-6.12/linux-image-6.12.111+deb12-amd64-unsigned_6.12.111-1~deb12u1_amd64.deb
+Size: 106731440
+SHA256: 0597c5ec2ef142ee7e1922ef7ebf0a8002ae5081621d1a077b3f1eaf3c35cdf9
+
+Package: linux-image-6.12.111+deb12-cloud-amd64-unsigned
+Source: linux-6.12
+Version: 6.12.111-1~deb12u1
+Installed-Size: 34395
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: amd64
+Replaces: linux-image-6.12.111+deb12-cloud-amd64
+Depends: kmod, initramfs-tools (>= 0.120+deb8u2) | linux-initramfs-tool
+Suggests: firmware-linux-free, linux-doc-6.12, debian-kernel-handbook, grub-pc | grub-efi-amd64 | extlinux
+Conflicts: linux-image-6.12.111+deb12-cloud-amd64
+Breaks: fwupdate (<< 12-7), initramfs-tools (<< 0.120+deb8u2), wireless-regdb (<< 2019.06.03-1~)
+Description: Linux 6.12 for x86-64 cloud
+Homepage: https://www.kernel.org/
+Description-md5: 07b366522b969b1514d747d01da43283
+Pre-Depends: linux-base (>= 4.12~)
+Recommends: apparmor
+kernel
+Priority: optional
+Filename: pool/updates/main/l/linux-6.12/linux-image-6.12.111+deb12-cloud-amd64-unsigned_6.12.111-1~deb12u1_amd64.deb
+Size: 34135424
+SHA256: dc865307efabed70bf8710287d95118308be0ec1b222adcc22496b8f21bf1059
+
+Package: linux-image-6.12.111+deb12-rt-amd64-unsigned
+Source: linux-6.12
+Version: 6.12.111-1~deb12u1
+Installed-Size: 107186
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: amd64
+Replaces: linux-image-6.12.111+deb12-rt-amd64
+Depends: kmod, initramfs-tools (>= 0.120+deb8u2) | linux-initramfs-tool
+Suggests: firmware-linux-free, linux-doc-6.12, debian-kernel-handbook, grub-pc | grub-efi-amd64 | extlinux
+Conflicts: linux-image-6.12.111+deb12-rt-amd64
+Breaks: fwupdate (<< 12-7), initramfs-tools (<< 0.120+deb8u2), wireless-regdb (<< 2019.06.03-1~)
+Description: Linux 6.12 for 64-bit PCs, PREEMPT_RT
+Homepage: https://www.kernel.org/
+Description-md5: d07a6b410c7bedbda06e165ddf1cc9ff
+Pre-Depends: linux-base (>= 4.12~)
+Recommends: apparmor
+kernel
+Priority: optional
+Filename: pool/updates/main/l/linux-6.12/linux-image-6.12.111+deb12-rt-amd64-unsigned_6.12.111-1~deb12u1_amd64.deb
+Size: 106703732
+SHA256: 9b08aef4899cb96f517e07a322d20232132ee9028b4129449156d2c3a8b6b3db
+
 Package: linux-kbuild-6.12.107+deb12
 Source: linux-6.12
 Version: 6.12.107-1~deb12u1
@@ -560,6 +706,23 @@ Priority: optional
 Filename: pool/updates/main/l/linux-6.12/linux-kbuild-6.12.107+deb12_6.12.107-1~deb12u1_amd64.deb
 Size: 1794200
 SHA256: 3b787d4dea5c50afd36cf677fe49de8c5e71f603526324a43b65edf007d4af20
+
+Package: linux-kbuild-6.12.111+deb12
+Source: linux-6.12
+Version: 6.12.111-1~deb12u1
+Installed-Size: 3127
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34), libelf1 (>= 0.144), libssl3 (>= 3.0.0), zlib1g (>= 1:1.2.3.3), pahole
+Description: Kbuild infrastructure for Linux 6.12.111+deb12
+Homepage: https://www.kernel.org/
+Description-md5: 16c39d9c53d9338a280c3d4083b2ba7d
+Multi-Arch: foreign
+kernel
+Priority: optional
+Filename: pool/updates/main/l/linux-6.12/linux-kbuild-6.12.111+deb12_6.12.111-1~deb12u1_amd64.deb
+Size: 1862760
+SHA256: 33d70f6c1688f4ec1ee7ccefc72fa5ce18143bdc44895d79d0c15ed6f1b5c242
 
 Package: linux-source-6.12
 Source: linux-6.12
@@ -579,6 +742,25 @@ Priority: optional
 Filename: pool/updates/main/l/linux-6.12/linux-source-6.12_6.12.107-1~deb12u1_all.deb
 Size: 152784256
 SHA256: 4a0576bf631e78bffea0c1d906cc3387f36736c9e6102d7338163d525429c5fd
+
+Package: linux-source-6.12
+Source: linux-6.12
+Version: 6.12.111-1~deb12u1
+Installed-Size: 149414
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: all
+Depends: binutils, xz-utils
+Suggests: libncurses-dev | ncurses-dev, qtbase5-dev, pkgconf
+Description: Linux kernel source for version 6.12 with Debian patches
+Homepage: https://www.kernel.org/
+Description-md5: fc53c36e9fc69af8ceb72b6fe1b96ea0
+Multi-Arch: foreign
+Recommends: build-essential, bc, rsync, kmod, cpio, bison, flex, libelf-dev, libssl-dev, linux-config-6.12
+kernel
+Priority: optional
+Filename: pool/updates/main/l/linux-6.12/linux-source-6.12_6.12.111-1~deb12u1_all.deb
+Size: 152999372
+SHA256: c3b5e1686bddf9997855e24e64140d359434f9d3e38ae6efcf9f39b4f2414e50
 
 Package: linux-base
 Version: 4.12.1~deb12u1
