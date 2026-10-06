@@ -4221,54 +4221,72 @@ SHA256: 7ff61d51918201e52acc405cdbee643fddfb53defc0dbffa593ea4c575374dfd
 
 Package: derby-tools
 Source: derby
-Version: 10.14.2.0-3
-Installed-Size: 263
+Version: 10.17.1.0-1
+Installed-Size: 284
 Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: default-jre | java6-runtime-headless, java-wrappers, libderby-java, libderbyclient-java
+Depends: default-jre-headless (>= 2:1.21), java-wrappers, libderby-java, libderbyclient-java
 Description: Apache Derby Tools
 Homepage: https://db.apache.org/derby/
 Description-md5: 294a46c2c9b97271cce6cf08af585760
 java
 Priority: optional
-Filename: pool/main/d/derby/derby-tools_10.14.2.0-3_all.deb
-Size: 220588
-MD5sum: 7834f9e864c1ed0f1d4e24bec5b0dd29
-SHA256: e6b7cc47b084a3f74305fc209d705bb57a3d98cea6be37c45c64cf55c2e16440
+Filename: pool/main/d/derby/derby-tools_10.17.1.0-1_all.deb
+Size: 246712
+MD5sum: 841f7b8cc50613ce5a6332bef088cf0b
+SHA256: 72f9b921ac9937a0f8869fdbf4f13586641ab10be97064dfed1b827400e74ed8
 
 Package: libderby-java
 Source: derby
-Version: 10.14.2.0-3
-Installed-Size: 4987
+Version: 10.17.1.0-1
+Installed-Size: 5116
 Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
 Architecture: all
+Depends: libderbyshared-java
 Suggests: derby-doc
 Description: Apache Derby Database Engine and Embedded JDBC Driver
 Homepage: https://db.apache.org/derby/
 Description-md5: 67baef04351c08b0cc71042c5fa2e2d1
 java
 Priority: optional
-Filename: pool/main/d/derby/libderby-java_10.14.2.0-3_all.deb
-Size: 4356736
-MD5sum: 1d807370e1828d0efb518510f7d1d8cb
-SHA256: b5a0f75880962f85e1fdc9651a5afc2dcb7519ecf77cd37c18e72c62329e44bb
+Filename: pool/main/d/derby/libderby-java_10.17.1.0-1_all.deb
+Size: 4610896
+MD5sum: 6fbc5f221a0b19787aed6ea8515914a2
+SHA256: 143a836bdeed1e9a09e7f99546569b710eb23802ad5bdefaae5c212cbec6cb52
 
 Package: libderbyclient-java
 Source: derby
-Version: 10.14.2.0-3
-Installed-Size: 604
+Version: 10.17.1.0-1
+Installed-Size: 612
 Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
 Architecture: all
+Depends: libderbyshared-java
 Suggests: derby-doc, derby-tools
 Description: Apache Derby Client JDBC Driver
 Homepage: https://db.apache.org/derby/
 Description-md5: 8fcbffe4916b4ee3cc0ff3336afc418b
 java
 Priority: optional
-Filename: pool/main/d/derby/libderbyclient-java_10.14.2.0-3_all.deb
-Size: 559196
-MD5sum: 810999cd41e6b9d4dadba09321bfb68f
-SHA256: 33728ec908183f497421f2168176c789248e11473637091d316bb192dbd799d9
+Filename: pool/main/d/derby/libderbyclient-java_10.17.1.0-1_all.deb
+Size: 578588
+MD5sum: c5569e47d3e5f8eb5bc7b88a17738847
+SHA256: e0fd40a76010c6d9ac9d3cedc250eb62b84b7fe3f75dbbe3f0df80682743fac5
+
+Package: libderbyshared-java
+Source: derby
+Version: 10.17.1.0-1
+Installed-Size: 112
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Description: Apache Derby Shared Code
+Homepage: https://db.apache.org/derby/
+Description-md5: fba1a1266e72b6da8e9429361181779c
+java
+Priority: optional
+Filename: pool/main/d/derby/libderbyshared-java_10.17.1.0-1_all.deb
+Size: 81328
+MD5sum: b17f60711ffa3a3de501154262a0f493
+SHA256: f2fe978ca1cfdc5e5a4439133df3ac7ede8eed7a2a2e5115db7a18a80a39f078
 
 Package: libdictzip-java
 Source: dictzip-java
@@ -7316,6 +7334,25 @@ Size: 16570164
 MD5sum: f93c0b83842576612c306248899dab04
 SHA256: 9f269815b0a28efb29ffc09832f974c75bd2a580a25d622e6348dbf360f0215c
 
+Package: libequalsverifier-java
+Source: equalsverifier
+Version: 4.5.2-2
+Installed-Size: 332
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: libbyte-buddy-java (>= 1.18.14), libobjenesis-java (>= 3.6)
+Suggests: kotlin, libmockito-java
+Description: Java library to test equals() and hashCode() contracts
+Multi-Arch: foreign
+Homepage: https://jqno.nl/equalsverifier
+Description-md5: b4c516928abfe86c21c0c344ca7d4db2
+java
+Priority: optional
+Filename: pool/main/e/equalsverifier/libequalsverifier-java_4.5.2-2_all.deb
+Size: 271816
+MD5sum: 2f5575e759ac179bcc34900f159eb5f6
+SHA256: a237cb94df0b3864dc2cd9a375a2a450c824c4ea024dd83535aceb05e30b4da1
+
 Package: libequinox-frameworkadmin-equinox-java
 Source: equinox-p2 (4.30-1)
 Version: 1.3.0+eclipse4.30-1
@@ -9804,6 +9841,23 @@ Size: 9940
 MD5sum: 23d7edc877be82d9c1954168fe852610
 SHA256: f799ea5f9837afe7301c1d06aa95200545f2ecc527dbf404a3f1bd66de9cf34f
 
+Package: libgradle-kotlin-dsl-java
+Source: gradle-kotlin-dsl
+Version: 0.15.6-3
+Installed-Size: 825
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: kotlin, libgradle-core-java (>= 4.6)
+Description: Gradle Kotlin DSL
+Homepage: https://github.com/gradle/kotlin-dsl
+Description-md5: 1ea41ada8654aa049791fa7446692a25
+java
+Priority: optional
+Filename: pool/main/g/gradle-kotlin-dsl/libgradle-kotlin-dsl-java_0.15.6-3_all.deb
+Size: 678652
+MD5sum: f894f1d9401519294ac8fb13c187d295
+SHA256: 8929171c40af448d9bc05a86a6fbc16f961ef8efc192163a7847b39a03a83ab5
+
 Package: gradle-plugin-protobuf
 Version: 0.9.2-2
 Installed-Size: 50
@@ -10045,21 +10099,21 @@ SHA256: c74948cd0f03194ba06adefa71986aae92a89e42d47b4fa1061106dd0aeaf24b
 
 Package: libh2-java
 Source: h2database
-Version: 2.2.220-1
-Installed-Size: 2655
+Version: 2.5.252-1
+Installed-Size: 2723
 Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
 Architecture: all
-Suggests: libjts-java, liblucene8-java, libslf4j-java
+Suggests: libjts-java, liblucene9-java, libslf4j-java
 Description: H2 Database Engine
 Multi-Arch: foreign
 Homepage: https://www.h2database.com
 Description-md5: eb5c4f1785cf58561d6ab65d36a5af47
 java
 Priority: optional
-Filename: pool/main/h/h2database/libh2-java_2.2.220-1_all.deb
-Size: 2553148
-MD5sum: b6aae0b20fe9f36a10e61fd77b607445
-SHA256: 9ac604f25590d59a37eb15a5ef6304581dbaa5d33e698988ddf225d7c7d0741e
+Filename: pool/main/h/h2database/libh2-java_2.5.252-1_all.deb
+Size: 2621496
+MD5sum: 3bba15f9c4566a58fca6dcb03f6dff56
+SHA256: d8d1c11c545c9dda0c8d9208eab3e825ac763acd0fc2529cb695d564a1263067
 
 Package: libhawtbuf-java
 Source: hawtbuf
@@ -11653,21 +11707,21 @@ MD5sum: 9cfdca4f020f4b5faf355a6ffcc0bd43
 SHA256: 3702ca0b1022666bf3a0044e2a5f9708352649aca485f9d59cacee0e7d774ebf
 
 Package: jameica-h2database
-Version: 1.4.199-1
-Installed-Size: 2253
+Version: 1.4.199-2
+Installed-Size: 2251
 Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
 Architecture: all
-Suggests: libjts-java, liblucene4.10-java, libslf4j-java
+Suggests: libjts-java, liblucene9-java, libslf4j-java
 Description: H2 Database Engine (jameica version)
 Multi-Arch: foreign
 Homepage: http://www.h2database.com
 Description-md5: 8177bddfe6609fc1bfe23177991e214f
 java
 Priority: optional
-Filename: pool/main/j/jameica-h2database/jameica-h2database_1.4.199-1_all.deb
-Size: 2176516
-MD5sum: ce864ba8333a4e4178843b728f2edf32
-SHA256: ee265cd54a87d6111b843d65a8603ffaa27c19bd49e3d6f61b1f09b914aaffed
+Filename: pool/main/j/jameica-h2database/jameica-h2database_1.4.199-2_all.deb
+Size: 2176228
+MD5sum: 7abffb73fbeeecb3a2e0a82d7f9ef2c9
+SHA256: fa1f6c248bde419cb32bf0c44eb87c27510cda3208ec509e22599562f79a0ba0
 
 Package: libjameica-util-java
 Source: jameica-util
@@ -13020,11 +13074,10 @@ SHA256: 9ebfae4523a4269f8b896a84280cf63c4f923edaf514bea8a81a6647bf661e6f
 
 Package: libjboss-logging-java
 Source: jboss-logging
-Version: 3.5.3-1
+Version: 3.5.3-2
 Installed-Size: 86
 Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
 Architecture: all
-Suggests: libjboss-logging-java-doc
 Description: JBoss Logging Framework
 Multi-Arch: foreign
 Homepage: https://www.jboss.org
@@ -13032,10 +13085,10 @@ Description-md5: 0fc8008287f13bc8958a2346aee7e3ba
 Tag: devel::lang:java, devel::library, implemented-in::java, role::devel-lib
 java
 Priority: optional
-Filename: pool/main/j/jboss-logging/libjboss-logging-java_3.5.3-1_all.deb
-Size: 56220
-MD5sum: ac86e467673d06666e73bff9d5bc3ad2
-SHA256: 1c73939e3b134059e5aa460c980260c6793e1ba30694269760928ec8a037464a
+Filename: pool/main/j/jboss-logging/libjboss-logging-java_3.5.3-2_all.deb
+Size: 56128
+MD5sum: 1ae33064fead6b2564e72b24fd77ac33
+SHA256: 23afc163733db13f596f52bfc1651bde51aa36d9b7be28704e60ba71c6ba890c
 
 Package: libjboss-logging-tools-java
 Source: jboss-logging-tools
@@ -15286,20 +15339,39 @@ SHA256: d1daa57fe30506c35be5877c38e52d06452dd978732d9acbb12dcde56b45519b
 
 Package: libjss-java
 Source: jss
-Version: 5.9.0~beta3-4
-Installed-Size: 1911
+Version: 5.10.1-1
+Installed-Size: 3364
 Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
 Architecture: amd64
-Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.0), libnspr4 (>= 2:4.10.9), libnss3 (>= 2:3.101), libstdc++6 (>= 9), libcommons-lang3-java (>= 3.17.0), libslf4j-java (>= 1.7.32), libtomcat10-java
+Replaces: libtomcatjss-java (<< 8.5.0)
+Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.0), libnspr4 (>= 2:4.10.9), libnss3 (>= 2:3.101), libstdc++6 (>= 11), libcommons-lang3-java (>= 3.20.0), libslf4j-java (>= 1.7.32), libtomcat10-java
+Breaks: libtomcatjss-java (<< 8.5.0)
 Description: Network Security Services for Java
 Homepage: https://github.com/dogtagpki/jss
 Description-md5: 9307bd0c38418b7815bb38c02b381af2
 java
 Priority: optional
-Filename: pool/main/j/jss/libjss-java_5.9.0~beta3-4_amd64.deb
-Size: 1474252
-MD5sum: 4ba35dc4d3ee4cad63269008869761db
-SHA256: 77c254c367d6178c1b2477d952d768957249678cc743ae7ea1932cb5ac81f676
+Filename: pool/main/j/jss/libjss-java_5.10.1-1_amd64.deb
+Size: 1499116
+MD5sum: e3bdfa062c4f7380727d4ecaa58f5629
+SHA256: ae0bef22414bd657b46e55b1828f4af6544175c20b8c9d6e16386545b6803dc8
+
+Package: libjss-tools
+Source: jss
+Version: 5.10.1-1
+Installed-Size: 269
+Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libnspr4 (>= 2:4.12), libnss3 (>= 2:3.101)
+Description: Network Security Services for Java -- tools
+Homepage: https://github.com/dogtagpki/jss
+Description-md5: 1d58065f991e6c1c01951f501ee4c680
+java
+Priority: optional
+Filename: pool/main/j/jss/libjss-tools_5.10.1-1_amd64.deb
+Size: 79696
+MD5sum: 9205d95839316d47cbabeff322501500
+SHA256: bec1e2692908f60b240be3b17c74fcf4c146caf8fa68d6ccb788796a4de7e8be
 
 Package: libjssc-java
 Source: jssc
@@ -15533,7 +15605,7 @@ SHA256: b465b99c642071fb420a626dfc2132c14de196d935058f5172be5af66c81b193
 
 Package: libjunit5-system-exit-java
 Source: junit5-system-exit
-Version: 2.0.3-1
+Version: 2.0.3-2
 Installed-Size: 38
 Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
 Architecture: all
@@ -15543,10 +15615,10 @@ Homepage: https://github.com/tginsberg/junit5-system-exit
 Description-md5: 4d621915776c461490f197c599668514
 java
 Priority: optional
-Filename: pool/main/j/junit5-system-exit/libjunit5-system-exit-java_2.0.3-1_all.deb
-Size: 15500
-MD5sum: 72a110d6aa188b5131d2b22fc4d7f1e1
-SHA256: c3ebc557ea119970ff4d955a2cad206b88a4e3094b4f2c556719550b6d6414b4
+Filename: pool/main/j/junit5-system-exit/libjunit5-system-exit-java_2.0.3-2_all.deb
+Size: 15684
+MD5sum: a76e7f2e123d892b236e894770351154
+SHA256: 131729b404b9746a3b37805e6606d5d2c240108f1760c6e3ce229325fb274723
 
 Package: libjunixsocket-java
 Source: junixsocket
@@ -15802,6 +15874,55 @@ Filename: pool/main/k/knopflerfish-osgi/libknopflerfish-osgi-framework-java_6.1.
 Size: 651268
 MD5sum: efa89f984869bdbf3228fb916bf2f616
 SHA256: 6cbb9aabb9359796771640804a6aeeed47642fdf6226baedabf46b5794ad132e
+
+Package: kotlin
+Version: 1.3.31+ds1-6
+Installed-Size: 287924
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: ant, libatinject-jsr330-api-java, libgeronimo-annotation-1.3-spec-java, libjansi-java, libjetbrains-annotations-java, libjline3-java, libmaven-compiler-plugin-java, libmaven-plugin-tools-java, libmaven3-core-java, libtrove-intellij-java, libvavr0-java
+Description: cross-platform, general-purpose programming language
+Homepage: https://kotlinlang.org
+Description-md5: 5f91cea3d5916cc450fb11e290d0993f
+java
+Priority: optional
+Filename: pool/main/k/kotlin/kotlin_1.3.31+ds1-6_all.deb
+Size: 48801152
+MD5sum: 594b6e591ff11fae47d5cb6348c9d575
+SHA256: 6b655f3aba07a9973322efa23242f3b2e66c8d9f6219b6bf23776e392b9bdcb4
+
+Package: libkotlinx-atomicfu-java
+Source: kotlinx-atomicfu
+Version: 0.11.12-3
+Installed-Size: 218
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: libasm-java
+Description: AtomicFU - Idiomatic atomic operations in Kotlin
+Homepage: https://github.com/Kotlin/kotlinx-atomicfu
+Description-md5: a5946a7a3c9df3c6213188df1e4154ef
+java
+Priority: optional
+Filename: pool/main/k/kotlinx-atomicfu/libkotlinx-atomicfu-java_0.11.12-3_all.deb
+Size: 150548
+MD5sum: 34b369e5a30293e1520c8bdee99b9b1d
+SHA256: 2e94cb4ec9cbf5dc962683eeb16c30db2eac86cce229e17c935f0cb26fe97ef5
+
+Package: libkotlinx-coroutines-java
+Source: kotlinx-coroutines
+Version: 1.0.1-3
+Installed-Size: 923
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Description: Library support for Kotlin coroutines
+Homepage: https://github.com/Kotlin/kotlinx.coroutines
+Description-md5: f3ff6a24d799e5291baa109b916b884d
+java
+Priority: optional
+Filename: pool/main/k/kotlinx-coroutines/libkotlinx-coroutines-java_1.0.1-3_all.deb
+Size: 813468
+MD5sum: d7cb2f0ad8832823e44c9f5a6f789bd1
+SHA256: 4ccfc4d7f1eb8764aea965a424305bb2fe1cec7460e2973690d4d52575db56c9
 
 Package: libkxml2-java
 Source: kxml2
@@ -16308,12 +16429,10 @@ MD5sum: febd7d792514ba22d386d90137ad30f1
 SHA256: da2646c35a2d42c0871f67521982a8be01cddaa3aaeb302da0f41ada3e9601da
 
 Package: libcommons-collections3-java
-Version: 3.2.2-3
-Installed-Size: 612
+Version: 3.2.2-4
+Installed-Size: 614
 Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
 Architecture: all
-Suggests: libcommons-collections3-java-doc
-Breaks: jenkins-json (<= 2.4-jenkins-3-1)
 Description: Apache Commons Collections - Extended Collections API for Java
 Multi-Arch: foreign
 Homepage: https://commons.apache.org/collections/
@@ -16322,10 +16441,10 @@ Tag: devel::lang:java, devel::library, implemented-in::java, role::devel-lib,
  role::shared-lib
 java
 Priority: optional
-Filename: pool/main/libc/libcommons-collections3-java/libcommons-collections3-java_3.2.2-3_all.deb
-Size: 529796
-MD5sum: ebcb100f330a6d1ffb31512bef605179
-SHA256: 109ffd2dd6ab588b88f16b4af1bae36b9b8da98ac807211eb9bac03a2b9ce3d2
+Filename: pool/main/libc/libcommons-collections3-java/libcommons-collections3-java_3.2.2-4_all.deb
+Size: 531200
+MD5sum: ba8db79b5c65b5e82200e900d92f5e5b
+SHA256: 54e384d05adede56cfd7edb36cde8463a8590e8d86528551320b924a563170d5
 
 Package: libcommons-collections4-java
 Version: 4.6.0-1
@@ -19727,6 +19846,39 @@ Size: 1463128
 MD5sum: c3037375ead889b659902aebcaed047f
 SHA256: 1a6d7ddb6c47ba98a5ecbd814ff82ffa2cf5a13bf3e114bc4e3a71db678b9ab5
 
+Package: libpf4j-java
+Version: 3.15.0+dfsg-2
+Installed-Size: 183
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: libasm-java, libsemver-java, libslf4j-java (>= 1.7.32), libguava-java
+Suggests: libasm-java (>= 9.9.1)
+Description: framework to turn monolithic Java applications into modular ones
+Homepage: https://www.pf4j.org/
+Description-md5: 006b8b095db77aad8635d60a57203aaf
+java
+Priority: optional
+Filename: pool/main/libp/libpf4j-java/libpf4j-java_3.15.0+dfsg-2_all.deb
+Size: 140280
+MD5sum: 4681c15d42a1ce529338f1f7ddf5a865
+SHA256: 96bbec3dd70fce75716874bbad6cdfe6e1cc33217198bb1e182ea03c2b303768
+
+Package: libpf4j-update-java
+Version: 2.3.0+dfsg-7
+Installed-Size: 50
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: libcommons-codec-java (>= 1.22.0), libgoogle-gson-java, libpf4j-java, libslf4j-java
+Description: update mechanism for Java modular applications
+Homepage: http://www.pf4j.org/
+Description-md5: 75d518527e9618d2be8c57e34ab7f785
+java
+Priority: optional
+Filename: pool/main/libp/libpf4j-update-java/libpf4j-update-java_2.3.0+dfsg-7_all.deb
+Size: 26228
+MD5sum: 029a5f8949ac502ea1a9d4b3f546a3ec
+SHA256: 91d31f9a637fc77ea1489536c1013286754585f0fe4a28cfd3bfe5f09f76076d
+
 Package: libpostgresql-jdbc-java
 Source: libpgjava
 Version: 42.7.13-1
@@ -19891,6 +20043,23 @@ Filename: pool/main/libp/libpulse-java/libpulse-jni_2.4.7-2_amd64.deb
 Size: 16428
 MD5sum: 50eb5bb27da25ce4e8e75991303fef53
 SHA256: 905a832782b8c0301318a27b9fff8e08b2ff606419a3ff5d0bc256e109419194
+
+Package: libquartz-java
+Version: 1:1.8.6-9
+Installed-Size: 495
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: libslf4j-java (>= 1.7.32)
+Suggests: libcommons-dbcp-java (>= 1.4), libcommons-pool-java, liblog4j1.2-java (>= 1.2.17)
+Description: open source job scheduling system
+Homepage: http://quartz-scheduler.org
+Description-md5: e19cdb50400c888327cada3dd4096723
+java
+Priority: optional
+Filename: pool/main/libq/libquartz-java/libquartz-java_1.8.6-9_all.deb
+Size: 439532
+MD5sum: 79e85d69327d248726d3640266068116
+SHA256: c930d2c355feada02f06b5b3741117a7782a6dc72e91f3debe8a49f8c600374d
 
 Package: libquartz2-java
 Version: 2.3.2-4
@@ -20423,11 +20592,11 @@ MD5sum: 22e8915b2f320ea3242b959761c65127
 SHA256: e58cf9bf958cadc43b8eab25e7124d5ceac80e25d74cb9b42e7265b82d4af2da
 
 Package: libslf4j-java
-Version: 1.7.32-2
-Installed-Size: 277
+Version: 1.7.36-1
+Installed-Size: 282
 Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
 Architecture: all
-Suggests: libcommons-logging-java, liblog4j1.2-java
+Depends: libcommons-logging-java (>= 1.3.0), liblog4j1.2-java (>= 1.2.17)
 Description: Simple Logging Facade for Java
 Homepage: http://www.slf4j.org
 Description-md5: 307af13d2db4d50e6f124f83f84006d9
@@ -20435,10 +20604,10 @@ Tag: admin::logging, devel::lang:java, devel::library, implemented-in::java,
  role::devel-lib, role::shared-lib
 java
 Priority: optional
-Filename: pool/main/libs/libslf4j-java/libslf4j-java_1.7.32-2_all.deb
-Size: 142252
-MD5sum: 7bac6f685a588a99b495939832816004
-SHA256: aedf00036236f26542933821354a8dcc588dcc8ca736162d89e4b97b74cc6384
+Filename: pool/main/libs/libslf4j-java/libslf4j-java_1.7.36-1_all.deb
+Size: 140128
+MD5sum: d8b74f4de559128c2c1cdff9fbf3553b
+SHA256: 6fbd27025ad5ab0ad494b9d503c3e7fb6e6cda945d001ed93a387e9aa56bea44
 
 Package: libslf4j2-java
 Version: 2.0.17-1
@@ -21968,21 +22137,21 @@ SHA256: 8a376b32333837e370d41b142bc2e43b3210e3fab4fd8dba157cb9e0d5dbab9b
 
 Package: libmariadb-java
 Source: mariadb-connector-java
-Version: 2.7.6-1
-Installed-Size: 661
+Version: 3.5.10-1
+Installed-Size: 831
 Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
 Architecture: all
-Suggests: libjna-java, libjna-platform-java, libslf4j-java (>= 1.7.32)
+Suggests: libbcpkix-java, libjna-java, libjna-platform-java, libslf4j-java (>= 1.7.32)
 Description: Java database driver for MariaDB and MySQL
 Multi-Arch: foreign
 Homepage: https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/
-Description-md5: f57148b7ca2c6af81995e7f4cc432c4b
+Description-md5: 3bdf2e488c513e80e67484d911fe45b8
 java
 Priority: optional
-Filename: pool/main/m/mariadb-connector-java/libmariadb-java_2.7.6-1_all.deb
-Size: 601300
-MD5sum: 0745dcde13202f3b8aa021d69b229730
-SHA256: 6be594486de3829457e7cf3430637b43043b0b14207807b89dc5ca9baf26ccb9
+Filename: pool/main/m/mariadb-connector-java/libmariadb-java_3.5.10-1_all.deb
+Size: 761116
+MD5sum: 3c51514b9fd345bceb9adf396c8bc38a
+SHA256: 821c69ae4d414135d536425d780f9ac8d41109c02848de53ee84722cbafe9f43
 
 Package: libmath-combinatorics-clojure
 Source: math-combinatorics-clojure
@@ -26312,7 +26481,7 @@ SHA256: 9e944acc3db28ceae953c0e1da47e8a40b0a05fb362070ad3a5eb785337ceac6
 
 Package: libprotobuf-java
 Source: protobuf
-Version: 3.21.12-16
+Version: 3.21.12-17
 Installed-Size: 2609
 Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 Architecture: all
@@ -26324,10 +26493,10 @@ Description-md5: 2ac9477d01e9d2920f1793f9f58f3aa6
 Tag: devel::lang:java, devel::library, implemented-in::java, role::devel-lib
 java
 Priority: optional
-Filename: pool/main/p/protobuf/libprotobuf-java_3.21.12-16_all.deb
-Size: 1266064
-MD5sum: 96c3d9fe83ac42540cc69c7c580fc020
-SHA256: fce804224d413c8c55d621a17343394f418a27b0161a239febac123cd773eb2e
+Filename: pool/main/p/protobuf/libprotobuf-java_3.21.12-17_all.deb
+Size: 1266172
+MD5sum: 1905c7246e15a1fde547c43f5b53dfb3
+SHA256: e3c3a0214c02f695f0f669b6f3f2bc2b194d63fbe20e7576886021dbe65dea0e
 
 Package: libprotobuf-java-format-java
 Source: protobuf-java-format
@@ -27589,6 +27758,24 @@ Filename: pool/main/s/shimdandy/libshimdandy-java_1.2.1-1.1_all.deb
 Size: 17080
 MD5sum: 386cd5f5ec09ae673e45ca5ef380d14c
 SHA256: e125f35ea3e84a39995057ffffb36649ab41d427854ce15687c5c05f27fa1e5f
+
+Package: libshiro-java
+Source: shiro
+Version: 1.3.2-6
+Installed-Size: 858
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: libcommons-beanutils-java, libslf4j-java
+Suggests: libaspectj-java, libcommons-cli-java, libehcache-java, libquartz-java, libspring-context-java, libtaglibs-standard-spec-java
+Description: Apache Shiro - Java Security Framework
+Homepage: http://shiro.apache.org
+Description-md5: 62642f43d7bbb47f76cecf9c433ab3bd
+java
+Priority: optional
+Filename: pool/main/s/shiro/libshiro-java_1.3.2-6_all.deb
+Size: 575988
+MD5sum: 84db0ef093d3c66a8a1387980b4b8d03
+SHA256: c91d5f9e0be2741f5aad7e9a9b0f73241fa2978244d45454d4284859159f1c6d
 
 Package: simgrid-java
 Source: simgrid

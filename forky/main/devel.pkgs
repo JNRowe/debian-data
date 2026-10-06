@@ -3862,8 +3862,8 @@ MD5sum: e191b92cd47ad471c0432411ebed47a8
 SHA256: 4a1e2a9961765dcc7ca90e86d998743064563ab1ebe5a00065b11bbec122296f
 
 Package: bmake
-Version: 20200710-17
-Installed-Size: 930
+Version: 20200710-18
+Installed-Size: 931
 Maintainer: Andrej Shadura <andrewsh@debian.org>
 Architecture: amd64
 Provides: pmake
@@ -3876,10 +3876,10 @@ Tag: devel::buildtools, implemented-in::c, interface::commandline,
  role::program, scope::utility, suite::bsd
 devel
 Priority: optional
-Filename: pool/main/b/bmake/bmake_20200710-17_amd64.deb
-Size: 378240
-MD5sum: 22b89b70e9eb0abb20d57b5eb517334d
-SHA256: 7def59c505272cae2235b9b546e494e38ad422821cb4b13c6e7b9bd73c45fd31
+Filename: pool/main/b/bmake/bmake_20200710-18_amd64.deb
+Size: 381148
+MD5sum: aa25bffbb4b059c699d4b7eb3cb83707
+SHA256: 8bc01b250ae50b8597303623048cc4c455fd363421be763326c8d14822c117ce
 
 Package: bnfc
 Source: bnfc (2.9.6.1-1)
@@ -7895,23 +7895,23 @@ MD5sum: 772ee9732ba670e158e4c4df81e35301
 SHA256: 701c114c8c2c98da7735a630ecff18fe54fa14ffcee889f71b772c75bf098e90
 
 Package: distro-info
-Version: 1.17
+Version: 1.19
 Installed-Size: 74
 Maintainer: Benjamin Drung <bdrung@debian.org>
 Architecture: amd64
-Depends: distro-info-data (>= 0.59~), libc6 (>= 2.34)
+Depends: distro-info-data (>= 0.65~), libc6 (>= 2.34)
 Suggests: shunit2
 Description: provides information about the distributions' releases
-Commands: debian-distro-info, ubuntu-distro-info
+Commands: debian-distro-info, distro-info, ubuntu-distro-info
 Description-md5: 5671943e370fd3dd7449d885e6363cee
 Tag: devel::debian, implemented-in::c, interface::commandline, role::program,
  scope::utility
 devel
 Priority: optional
-Filename: pool/main/d/distro-info/distro-info_1.17_amd64.deb
-Size: 17904
-MD5sum: 24bf0f30de1e27c2638555609fab52cb
-SHA256: 063d9a9c2ce1a9a5dc04a6cd276f3ff9370ff58088b60393ad4ffaa8a5d30963
+Filename: pool/main/d/distro-info/distro-info_1.19_amd64.deb
+Size: 18436
+MD5sum: 902af23b19b5928470198b766ae9be7c
+SHA256: b09533630372c4a6f590a88858e8bd5bd6e9df1db628753e347d93abee74abba
 
 Package: distro-info-data
 Version: 2026.08.20-1
@@ -8378,14 +8378,16 @@ MD5sum: 71df4ac4d29153ea52d9bd3b2131290b
 SHA256: a84148224da478f26cc33a93b55a058fa14b309dd687237109a5469ddc2dbc7d
 
 Package: dput
-Version: 1.2.4
-Installed-Size: 209
+Version: 1.2.5
+Installed-Size: 216
 Maintainer: Ben Finney <bignose@debian.org>
 Architecture: all
 Depends: python3-debian, python3-gpg, python3-xdg, python3:any
-Suggests: openssh-client, lintian, mini-dinstall, rsync
+Suggests: lintian, mini-dinstall, openssh-client, rsync
+Conflicts: dput-ng
 Description: Debian package upload tool
 Homepage: https://packages.debian.org/source/sid/dput
+Commands: dcut, dput
 Description-md5: f0b4509e6ecacad8ad2e5bd0f3a231d0
 Tag: admin::file-distribution, devel::packaging, implemented-in::python,
  interface::commandline, protocol::TODO, role::program, scope::utility,
@@ -8393,10 +8395,10 @@ Tag: admin::file-distribution, devel::packaging, implemented-in::python,
  works-with::software:package
 devel
 Priority: optional
-Filename: pool/main/d/dput/dput_1.2.4_all.deb
-Size: 45224
-MD5sum: 90eac691754f39494e95f87724a1aa6a
-SHA256: 262ab6ac161711b933f55679fde73870f2d6da5a03b74d72c1eb15fb70995bca
+Filename: pool/main/d/dput/dput_1.2.5_all.deb
+Size: 45416
+MD5sum: d0a90d83dbdcfc83aa2d775098648ebc
+SHA256: ef734b05a835b17395db085a89b481f9690291e08617e46fa76d9119469c41b5
 
 Package: dput-ng
 Version: 1.46
@@ -11324,6 +11326,42 @@ Filename: pool/main/f/fweb/fweb_1.62-15_amd64.deb
 Size: 267968
 MD5sum: 6f00d3d28679c6059a03479daa83f252
 SHA256: d04e19426dda9b2954d7069b1bca523b194c2c2e796ba540ba65c9169cff2472
+
+Package: fwts
+Version: 26.09.00-1
+Installed-Size: 3992
+Maintainer: Manuel Traut <manut@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libfdt1 (>= 1.8.1), libglib2.0-0t64 (>= 2.26.0), zlib1g (>= 1:1.1.4), pciutils, device-tree-compiler
+Suggests: dmidecode
+Description: FirmWare Test Suite
+Homepage: https://github.com/fwts/fwts
+Commands: fwts, fwts-collect
+Description-md5: 2ced4a548490b16630bde449e3861f20
+devel
+Priority: optional
+Filename: pool/main/f/fwts/fwts_26.09.00-1_amd64.deb
+Size: 1117096
+MD5sum: e566f366e0995d32129d96a76eaaa395
+SHA256: d11ffc389fc2549f5102bf3e0bdf80ef88b2f23c8ea84f1c2ce2ad088a9615cc
+
+Package: fwts-frontend
+Source: fwts
+Version: 26.09.00-1
+Installed-Size: 34
+Maintainer: Manuel Traut <manut@debian.org>
+Architecture: amd64
+Depends: dialog, fwts
+Description: Firmware Test Suite frontend interface
+Homepage: https://github.com/fwts/fwts
+Commands: fwts-frontend-text
+Description-md5: fc98ee1ccd80b6332c879648cc78e424
+devel
+Priority: optional
+Filename: pool/main/f/fwts/fwts-frontend_26.09.00-1_amd64.deb
+Size: 8364
+MD5sum: 4ae3fbae0499f2794fac26bd316c77f3
+SHA256: b5b1ad036e03a27f07b9a3de3d3487024fc0db7020c35582b824a2c0ee704702
 
 Package: g10k
 Version: 0.9.10-3
@@ -66160,25 +66198,6 @@ Size: 106552
 MD5sum: 742d0cd3bf49c0f39786075c61f8843a
 SHA256: 19648d6d8a2f323cd22321e8a883d3fe0b7eb07cc003904aca9d7153c819cebb
 
-Package: gccgo-go
-Source: golang-defaults
-Version: 2:1.26~1
-Installed-Size: 60
-Maintainer: Debian Go Compiler Team <team+go-compiler@tracker.debian.org>
-Architecture: amd64
-Depends: g++-14, gccgo-14
-Conflicts: golang-go
-Description: Go programming language -- gccgo
-Multi-Arch: same
-Homepage: https://go.dev
-Description-md5: e9367fd5d4bee8931b5073c4b70ed278
-devel
-Priority: optional
-Filename: pool/main/g/golang-defaults/gccgo-go_1.26~1_amd64.deb
-Size: 39908
-MD5sum: cb523f9dd6e6fac9507f694b5d6ff0ce
-SHA256: d01653404a40f49b97e7c29bd5bdb88994d4179dc375f1fe6c6cd891e32b000c
-
 Package: golang-github-adam-hanna-arrayoperations-dev
 Source: golang-github-adam-hanna-arrayoperations
 Version: 1.0.1-1
@@ -66504,25 +66523,25 @@ MD5sum: a606d0511cb91366bf9e28a83efc6344
 SHA256: 12857dd3136d61e00bffcc2c8823d14df586e94406098326e02846cfa46a058e
 
 Package: buildah
-Source: golang-github-containers-buildah
-Version: 1.43.2+ds1-3
-Installed-Size: 130172
+Source: golang-github-containers-buildah (1.43.2+ds1-3)
+Version: 1.43.2+ds1-3+b1
+Installed-Size: 133016
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
-Depends: golang-github-containers-common (>> 0.67.0), uidmap, libc6 (>= 2.38), libgpgme45 (>= 1.23.2), libseccomp2 (>= 2.6.0), libsqlite3-0 (>= 3.36.0), libsubid5 (>= 1:4.16.0)
+Depends: golang-github-containers-common (>> 0.67.0), uidmap, libc6 (>= 2.38), libgpgme45 (>= 2.2.0), libseccomp2 (>= 2.6.0), libsqlite3-0 (>= 3.36.0), libsubid6 (>= 1:4.20.2)
 Recommends: cpp, crun | runc, fuse-overlayfs (>= 0.7.1~)
 Suggests: containers-storage
 Breaks: fuse-overlayfs (<< 0.7.1)
 Description: CLI tool to facilitate building OCI images
 Homepage: https://github.com/containers/buildah
 Description-md5: d5bd7614dccbe136c14f36ef68327be3
-Static-Built-Using: docker-registry (= 2.8.3+ds1-3), docker.io (= 28.5.2+dfsg4-3), go-containerregistry (= 0.20.7+ds1-3), golang-1.26 (= 1.26.5-1), golang-dbus (= 5.1.0-1), golang-fsnotify (= 1.10.1-1), golang-github-acarl005-stripansi (= 0.0~git20180116.5a71ef0-3), golang-github-aead-serpent (= 0.1-2), golang-github-appc-cni (= 1.3.0-2), golang-github-cespare-xxhash (= 2.3.0-2), golang-github-chzyer-readline (= 1.5.1-1), golang-github-clipperhouse-uax29 (= 2.7.0-4), golang-github-containerd-errdefs (= 0.3.0-4), golang-github-containerd-log (= 0.1.0-2), golang-github-containerd-platforms (= 1.0.0~rc4-2), golang-github-containerd-stargz-snapshotter (= 0.14.3-6), golang-github-containerd-typeurl (= 2.2.3-1), golang-github-containernetworking-plugins (= 1.9.1+ds1-1), golang-github-containers-common (= 0.67.1-2), golang-github-containers-image (= 5.39.2-1), golang-github-containers-libtrust (= 0.0~git20230121.c1716e8-2), golang-github-containers-luksy (= 0.0~git20240812.2e7307c+ds1-1), golang-github-containers-ocicrypt (= 1.1.10-3), golang-github-containers-storage (= 1.62.0-3), golang-github-coreos-bbolt (= 1.4.3-1), golang-github-coreos-go-systemd (= 22.6.0-1), golang-github-cyphar-filepath-securejoin (= 0.5.2-1), golang-github-davecgh-go-spew (= 1.1.1-7), golang-github-disiqueira-gotree (= 3.0.2-3), golang-github-distribution-reference (= 0.6.0-4), golang-github-docker-docker-credential-helpers (= 0.9.6+ds1-2), golang-github-docker-go-connections (= 0.4.0-4), golang-github-docker-go-units (= 0.5.0-1), golang-github-felixge-httpsnoop (= 1.0.3-3), golang-github-fsouza-go-dockerclient (= 1.12.3-1), golang-github-fullsailor-pkcs7 (= 0.0~git20210826.33d0574-3), golang-github-go-jose-go-jose (= 4.1.4-2), golang-github-go-logr-logr (= 1.4.3-1), golang-github-go-logr-stdr (= 1.2.2-4), golang-github-golang-protobuf-1-5 (= 1.5.4-2), golang-github-google-go-intervals (= 0.0.2-3), golang-github-google-uuid (= 1.6.0-1), golang-github-gorilla-mux (= 1.8.1-1), golang-github-hashicorp-errwrap (= 1.1.0-1), golang-github-hashicorp-go-multierror (= 1.1.1-2), golang-github-imdario-mergo (= 1.0.1-2), golang-github-jinzhu-copier (= 0.3.2-2), golang-github-json-iterator-go (= 1.1.12-2), golang-github-klauspost-compress (= 1.19.0+ds1-1), golang-github-klauspost-pgzip (= 1.2.6-1), golang-github-manifoldco-promptui (= 0.9.0-1), golang-github-mattn-go-runewidth (= 0.0.27-1), golang-github-mattn-go-shellwords (= 1.0.12-1), golang-github-mattn-go-sqlite3 (= 1.14.47~ds1-1), golang-github-miekg-pkcs11 (= 1.0.3+dfsg1-3), golang-github-moby-docker-image-spec (= 1.3.1-2), golang-github-moby-go-archive (= 0.2.0-1), golang-github-moby-patternmatcher (= 0.6.0-1), golang-github-moby-sys (= 0.0~git20250819.9dc3a90-1), golang-github-moby-term (= 0.0~git20230502.9c3c875-1), golang-github-modern-go-concurrent (= 1.0.3-1.1), golang-github-modern-go-reflect2 (= 1.0.2-2), golang-github-morikuni-aec (= 1.0.0-3), golang-github-opencontainers-cgroups (= 0.0.5-3), golang-github-opencontainers-go-digest (= 1.0.0-2), golang-github-opencontainers-image-spec (= 1.1.1-2), golang-github-opencontainers-runtime-tools (= 0.9.0.109.ge931285-1), golang-github-opencontainers-selinux (= 1.15.1-1), golang-github-opencontainers-specs (= 1.2.1-2), golang-github-openshift-imagebuilder (= 1.2.19+ds1-3), golang-github-pkg-errors (= 0.9.1-3), golang-github-planetscale-vtprotobuf (= 0.6.0-3), golang-github-pmezard-go-difflib (= 1.0.0-4), golang-github-proglottis-gpgme (= 0.1.5-1), golang-github-secure-systems-lab-go-securesystemslib (= 0.11.0-1), golang-github-sigstore-fulcio (= 1.8.8-1), golang-github-sigstore-protobuf-specs (= 0.5.1-1), golang-github-sigstore-sigstore (= 1.10.9-1), golang-github-spf13-cobra (= 1.10.2-1), golang-github-spf13-pflag (= 1.0.10-1), golang-github-stefanberger-go-pkcs11uri (= 0.0~git20201008.78d3cae-2), golang-github-sylabs-sif (= 2.24.1-1), golang-github-ulikunitz-xz (= 0.5.15-1), golang-github-vbatts-tar-split (= 0.11.6-1), golang-github-vbauerster-mpb (= 8.8.3-2), golang-github-vividcortex-ewma (= 1.1.1-2), golang-github-youmark-pkcs8 (= 1.3-1), golang-go-patricia (= 2.3.3-2), golang-go-zfs (= 3.0.0-2), golang-go.crypto (= 1:0.54.0-1), golang-gocapability-dev (= 0.0+git20200815.42c35b4-2), golang-gogoprotobuf (= 1.3.2-3), golang-golang-x-mod (= 0.37.0-1), golang-golang-x-net (= 1:0.57.0-1), golang-golang-x-sync (= 0.22.0-1), golang-golang-x-sys (= 0.47.0+dfsg-1), golang-golang-x-term (= 0.45.0-1), golang-golang-x-text (= 0.40.0-1), golang-google-genproto (= 0.0~git20260414.afd174a-2), golang-google-grpc (= 1.81.1-1), golang-google-protobuf (= 1.36.10-2), golang-gopkg-yaml.v3 (= 3.0.4-3), golang-k8s-sigs-yaml (= 1.4.0-2), golang-logrus (= 1.9.3-2), golang-opentelemetry-contrib (= 1.43.0-1), golang-opentelemetry-otel (= 1.43.0-4), golang-tags.cncf-container-device-interface (= 1.0.1-2), golang-toml (= 1.6.0-1), golang-webpki-org-jsoncanonicalizer (= 1.0.1-3), runc (= 1.3.6+ds1-1)
+Static-Built-Using: docker-registry (= 2.8.3+ds1-3), docker.io (= 28.5.2+dfsg4-5), go-containerregistry (= 0.20.7+ds1-4), golang-1.27 (= 1.27.1-2), golang-dbus (= 5.1.0-1), golang-fsnotify (= 1.10.1-1), golang-github-acarl005-stripansi (= 0.0~git20180116.5a71ef0-3), golang-github-aead-serpent (= 0.1-2), golang-github-appc-cni (= 1.3.0-2), golang-github-cespare-xxhash-v2 (= 2.3.0-4), golang-github-chzyer-readline (= 1.5.1-1), golang-github-clipperhouse-uax29 (= 2.7.0-4), golang-github-containerd-errdefs (= 0.3.0-4), golang-github-containerd-log (= 0.1.0-2), golang-github-containerd-platforms (= 1.0.0~rc4-2), golang-github-containerd-stargz-snapshotter (= 0.14.3-7), golang-github-containerd-typeurl (= 2.2.3-1), golang-github-containernetworking-plugins (= 1.9.1+ds1-1), golang-github-containers-common (= 0.67.1-3), golang-github-containers-image (= 5.39.2-3), golang-github-containers-libtrust (= 0.0~git20230121.c1716e8-2), golang-github-containers-luksy (= 0.0~git20240812.2e7307c+ds1-1), golang-github-containers-ocicrypt (= 1.1.10-4), golang-github-containers-storage (= 1.64.0-1), golang-github-coreos-bbolt (= 1.4.3-1), golang-github-coreos-go-systemd (= 22.6.0-1), golang-github-cyphar-filepath-securejoin (= 0.5.2-2), golang-github-davecgh-go-spew (= 1.1.1-7), golang-github-disiqueira-gotree (= 3.0.2-3), golang-github-distribution-reference (= 0.6.0-4), golang-github-docker-docker-credential-helpers (= 0.9.6+ds1-2), golang-github-docker-go-connections (= 0.4.0-4), golang-github-docker-go-units (= 0.5.0-1), golang-github-felixge-httpsnoop (= 1.0.3-3), golang-github-fsouza-go-dockerclient (= 1.12.3-1), golang-github-go-jose-go-jose (= 4.1.4-2), golang-github-go-logr-logr (= 1.4.4-1), golang-github-go-logr-stdr (= 1.2.2-4), golang-github-golang-protobuf-1-5 (= 1.5.4-2), golang-github-google-go-intervals (= 0.0.2-3), golang-github-google-uuid (= 1.6.0-1), golang-github-gorilla-mux (= 1.8.1-1), golang-github-hashicorp-errwrap (= 1.1.0-1), golang-github-hashicorp-go-multierror (= 1.1.1-2), golang-github-imdario-mergo (= 1.0.1-2), golang-github-jinzhu-copier (= 0.3.2-2), golang-github-json-iterator-go (= 1.1.12-3), golang-github-klauspost-compress (= 1.20.0+ds1-1), golang-github-klauspost-pgzip (= 1.2.6-1), golang-github-manifoldco-promptui (= 0.9.0-1), golang-github-mattn-go-runewidth (= 0.0.27-1), golang-github-mattn-go-shellwords (= 1.0.12-1), golang-github-mattn-go-sqlite3 (= 1.14.52~ds1-1), golang-github-miekg-pkcs11 (= 1.0.3+dfsg1-4), golang-github-mistifyio-go-zfs-v4 (= 4.0.0-3), golang-github-moby-docker-image-spec (= 1.3.1-2), golang-github-moby-go-archive (= 0.3.3-1), golang-github-moby-patternmatcher (= 0.6.0-1), golang-github-moby-sys (= 0.0~git20260904.79376e0-2), golang-github-moby-term (= 0.0~git20230502.9c3c875-1), golang-github-modern-go-concurrent (= 1.0.3-1.1), golang-github-modern-go-reflect2 (= 1.0.2-2), golang-github-morikuni-aec (= 1.0.0-3), golang-github-opencontainers-cgroups (= 0.0.5-3), golang-github-opencontainers-go-digest (= 1.0.0-2), golang-github-opencontainers-image-spec (= 1.1.1-3), golang-github-opencontainers-runtime-tools (= 0.9.0.109.ge931285-1), golang-github-opencontainers-selinux (= 1.15.1-1), golang-github-opencontainers-specs (= 1.2.1-2), golang-github-openshift-imagebuilder (= 1.2.22+ds1-2), golang-github-pkg-errors (= 0.9.1-3), golang-github-planetscale-vtprotobuf (= 0.6.0-3), golang-github-pmezard-go-difflib (= 1.0.0-4), golang-github-proglottis-gpgme (= 0.1.5-1), golang-github-secure-systems-lab-go-securesystemslib (= 0.11.0-1), golang-github-sigstore-fulcio (= 1.8.8-1), golang-github-sigstore-protobuf-specs (= 0.5.1-1), golang-github-sigstore-sigstore (= 1.10.9-1), golang-github-smallstep-pkcs7 (= 0.2.3-2), golang-github-spf13-cobra (= 1.10.2-1), golang-github-spf13-pflag (= 1.0.10-1), golang-github-stefanberger-go-pkcs11uri (= 0.0~git20201008.78d3cae-2), golang-github-sylabs-sif (= 2.24.1-1), golang-github-tonistiigi-dchapes-mode (= 0.0~git20250318.73d941a-1), golang-github-ulikunitz-xz (= 0.5.15-1), golang-github-vbatts-tar-split (= 0.12.3-1), golang-github-vbauerster-mpb (= 8.8.3-2), golang-github-vividcortex-ewma (= 1.1.1-2), golang-github-youmark-pkcs8 (= 1.3-1), golang-go-patricia (= 2.3.3-2), golang-go.crypto (= 1:0.56.0-1), golang-gocapability-dev (= 0.0+git20200815.42c35b4-2), golang-gogoprotobuf (= 1.3.2-3), golang-golang-x-mod (= 0.40.0-1), golang-golang-x-net (= 1:0.58.0-1), golang-golang-x-sync (= 0.22.0-1), golang-golang-x-sys (= 0.47.0+dfsg-1), golang-golang-x-term (= 0.45.0-1), golang-golang-x-text (= 0.41.0-1), golang-google-genproto (= 0.0~git20260414.afd174a-2), golang-google-grpc (= 1.81.1-1), golang-google-protobuf (= 1.36.10-2), golang-gopkg-yaml.v3 (= 3.0.5-1), golang-k8s-sigs-yaml (= 1.6.0-1), golang-logrus (= 1.9.3-2), golang-opentelemetry-contrib (= 1.43.0-1), golang-opentelemetry-otel (= 1.43.0-4), golang-tags.cncf-container-device-interface (= 1.0.1-2), golang-toml (= 1.6.0-1), golang-webpki-org-jsoncanonicalizer (= 1.0.1-3), golang-yaml.v2 (= 2.4.4-1), runc (= 1.3.6+ds1-1)
 devel
 Priority: optional
-Filename: pool/main/g/golang-github-containers-buildah/buildah_1.43.2+ds1-3_amd64.deb
-Size: 36995408
-MD5sum: feee34ff6995cb5a0aee0197e8e00282
-SHA256: dc840c762750dfbbf6d72f3163517d81a37c140c77742a0d2377c77c67ceb2de
+Filename: pool/main/g/golang-github-containers-buildah/buildah_1.43.2+ds1-3+b1_amd64.deb
+Size: 38086872
+MD5sum: f8158c877642e6d6a258e0a079657f95
+SHA256: f5a233198ff432f75728955da96f65cbdbc43de03b6bf2c25fba609339ccb334
 
 Package: containers-storage
 Source: golang-github-containers-storage
@@ -66650,22 +66669,6 @@ Filename: pool/main/g/golang-github-dataence-porter2/suffixfsm_0.0~git20150829.5
 Size: 818152
 MD5sum: faf312410d8062ea219365abee075f91
 SHA256: 3772bfbe4bedff74e97c387094b3999ff662e91c28f1861bd6237f26d41c3188
-
-Package: golang-github-dgryski-go-sip13-dev
-Source: golang-github-dgryski-go-sip13
-Version: 0.0~git20200911.62edffc-3
-Installed-Size: 29
-Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
-Architecture: all
-Description: library for siphash 1-3
-Homepage: https://github.com/dgryski/go-sip13
-Description-md5: 1cb9fe944b027ef172b972175167b58d
-devel
-Priority: optional
-Filename: pool/main/g/golang-github-dgryski-go-sip13/golang-github-dgryski-go-sip13-dev_0.0~git20200911.62edffc-3_all.deb
-Size: 5968
-MD5sum: 05e9fff52e946220957fc54db46c9992
-SHA256: 238f330c6596d362aef956344792508da553e212c21ac536a5d8e9bf4d513c25
 
 Package: golang-github-einride-aip-go-dev
 Source: golang-github-einride-aip-go
@@ -74721,8 +74724,8 @@ MD5sum: bab2af32020ee4309cda398a19de34bf
 SHA256: e9b7a1d56ce2a6c2c6be200c9d0a4305b6abd532cb10f9c27e356b62e21aa034
 
 Package: meson
-Version: 1.12.0-2
-Installed-Size: 4388
+Version: 1.12.1-2
+Installed-Size: 4402
 Maintainer: Jussi Pakkanen <jussi.pakkanen@mailbox.org>
 Architecture: all
 Depends: python3:any (>= 3.7~), ninja-build (>= 1.6), python3-setuptools
@@ -74734,10 +74737,10 @@ Description-md5: 05e8ad52532257641a3b106a0836e789
 Tag: devel::buildtools, implemented-in::python, role::program
 devel
 Priority: optional
-Filename: pool/main/m/meson/meson_1.12.0-2_all.deb
-Size: 713588
-MD5sum: 2f6355f0aa1c5cf19412d4e263defc3d
-SHA256: 5497f20ca5c330a4789e4548ace5cc4ba927ed166f8327eddc521b6e764a4a78
+Filename: pool/main/m/meson/meson_1.12.1-2_all.deb
+Size: 715268
+MD5sum: ae9a6f91cb5169962a2b93847c0068d5
+SHA256: 3fdbe63dacb2ae5a973a44a5c6955dfd940e20bf8464a24fb9a58e01127a634c
 
 Package: gnome-devel
 Source: meta-gnome (50+3)
@@ -76985,21 +76988,21 @@ MD5sum: 2e75949044f22da63aeda7f6bf88971f
 SHA256: 57fef8ed9553fad3d7fcb417c01a30caf130788bd436c09e25bf7be0d7d91b29
 
 Package: panicparse
-Version: 2.5.0-1
-Installed-Size: 4281
+Version: 2.5.0-3
+Installed-Size: 4840
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34)
 Description: Crash your app in style (compiled Go binaries)
 Homepage: https://github.com/maruel/panicparse
 Description-md5: 3ffa3f55ac4dff2d5ba5247abb9e0650
-Static-Built-Using: golang-1.26 (= 1.26.2-3), golang-github-mattn-go-colorable (= 0.1.13-1), golang-github-mattn-go-isatty (= 0.0.20-1), golang-github-mgutz-ansi (= 0.0~git20200706.d51e80e-1), golang-golang-x-sys (= 0.42.0-1)
+Static-Built-Using: golang-1.27 (= 1.27.1-2), golang-github-mattn-go-colorable (= 0.1.13-1), golang-github-mattn-go-isatty (= 0.0.24-1), golang-github-mgutz-ansi (= 0.0~git20200706.d51e80e-1), golang-golang-x-sys (= 0.47.0+dfsg-1)
 devel
 Priority: optional
-Filename: pool/main/p/panicparse/panicparse_2.5.0-1_amd64.deb
-Size: 1414452
-MD5sum: 557133c3414f41e99c97998c04ec09d9
-SHA256: e11c9202bd98ff4db73083b8fd626a65e9eec88490a5b713250b8e08d416b4de
+Filename: pool/main/p/panicparse/panicparse_2.5.0-3_amd64.deb
+Size: 1604764
+MD5sum: 2e0d145066796c207b660804463a1288
+SHA256: bbf346419f235c1baed0a0c8a3fbf3b191c7851870742715151364a413187934
 
 Package: papi-examples
 Source: papi (7.2.0-2)
@@ -78444,11 +78447,11 @@ SHA256: b580fd726ab19ed8ea3bdc01cc1a5d6c29e61c842d590b448aa90da15a8d0dcc
 
 Package: protobuf-compiler
 Source: protobuf
-Version: 3.21.12-16
+Version: 3.21.12-17
 Installed-Size: 167
 Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libprotoc32t64 (= 3.21.12-16), libstdc++6 (>= 13.1)
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libprotoc32t64 (= 3.21.12-17), libstdc++6 (>= 13.1)
 Recommends: libprotobuf-dev
 Suggests: protobuf-mode-el
 Description: compiler for protocol buffer definition files
@@ -78458,10 +78461,10 @@ Description-md5: 1054ab94728e41bc0d59a82d40d1611e
 Tag: devel::code-generator, implemented-in::c++, role::program
 devel
 Priority: optional
-Filename: pool/main/p/protobuf/protobuf-compiler_3.21.12-16_amd64.deb
-Size: 83208
-MD5sum: 4eb54bbc4ee21ce7dc2c97a19c78c31d
-SHA256: e5dc2b400bb9d733dd7717d2e5b49d587f3229ddade278446fedb5257ab4d158
+Filename: pool/main/p/protobuf/protobuf-compiler_3.21.12-17_amd64.deb
+Size: 83308
+MD5sum: f57dd6d68961215801e97688d96c738f
+SHA256: 25a5a0d9ebbcac38873cf878497c4c9c8bbb6e191b5b84982fc545684ed810d9
 
 Package: protobuf-c-compiler
 Source: protobuf-c (1.5.1-1)

@@ -582,6 +582,76 @@ Size: 13876
 MD5sum: ee0e2db6a6a00c09628302c70193fd18
 SHA256: 5951ef026472684318847da3eae51ec746f6cf9495bcd32c739e327fa01da969
 
+Package: amanda-client
+Source: amanda
+Version: 1:3.5.4-2.2
+Installed-Size: 1109
+Maintainer: Jose M Calhariz <calhariz@debian.org>
+Architecture: amd64
+Depends: amanda-common (= 1:3.5.4-2.2), libxml-simple-perl, perl:any, libc6 (>= 2.38), libglib2.0-0t64 (>= 2.76.0), libreadline8t64 (>= 6.0)
+Suggests: dump, gnuplot, smbclient
+Conflicts: amanda
+Description: Advanced Maryland Automatic Network Disk Archiver (Client)
+Homepage: http://www.amanda.org/
+Description-md5: eb340217bc77fc442e67d6d525d8c0fb
+Tag: admin::backup, hardware::storage, implemented-in::c,
+ interface::text-mode, network::client, network::service, role::program,
+ uitoolkit::ncurses, use::storing, works-with-format::tar,
+ works-with::archive
+utils
+Priority: optional
+Filename: pool/main/a/amanda/amanda-client_3.5.4-2.2_amd64.deb
+Size: 442036
+MD5sum: abb4ffd09bc11cf07bc1131d1f61f3fd
+SHA256: f262ce943f4427bb7371784ad6f60bae0516db0b8877fc5edacae572211dc2d6
+
+Package: amanda-common
+Source: amanda
+Version: 1:3.5.4-2.2
+Installed-Size: 9951
+Maintainer: Jose M Calhariz <calhariz@debian.org>
+Architecture: amd64
+Replaces: amanda, amanda-client (<< 1:3.5), amanda-server (<< 1:3.5.1-3~)
+Depends: adduser, bsd-mailx | mailx, debconf (>= 0.5) | debconf-2.0, openbsd-inetd | inet-superserver, update-inetd, libjson-perl, perl (>= 5.42.3-1), perlapi-5.42.3, libc6 (>= 2.42), libcurl4t64 (>= 7.16.2), libglib2.0-0t64 (>= 2.76.0), libssl3t64 (>= 3.0.0), libtirpc3t64 (>= 1.0.2)
+Suggests: amanda-server (= 1:3.5.4-2.2) | amanda-client (= 1:3.5.4-2.2)
+Conflicts: amanda
+Breaks: amanda-client (<< 1:3.5), amanda-server (<< 1:3.5.1-3~)
+Description: Advanced Maryland Automatic Network Disk Archiver (Libs)
+Homepage: http://www.amanda.org/
+Description-md5: 9be314450886c6bdecdb2064ccfdb4bd
+Tag: admin::backup, hardware::storage, interface::commandline,
+ interface::text-mode, network::service, role::app-data, role::program,
+ scope::utility, uitoolkit::ncurses, use::storing,
+ works-with-format::tar, works-with::archive
+utils
+Priority: optional
+Filename: pool/main/a/amanda/amanda-common_3.5.4-2.2_amd64.deb
+Size: 2049236
+MD5sum: 67a45370865490ad095cbb52efc4905c
+SHA256: ff16db79a9fd217ac19d829dd5c9112acbcc6130d7a4c555cbdd06c2a9b3d238
+
+Package: amanda-server
+Source: amanda
+Version: 1:3.5.4-2.2
+Installed-Size: 1095
+Maintainer: Jose M Calhariz <calhariz@debian.org>
+Architecture: amd64
+Depends: amanda-common (= 1:3.5.4-2.2), bsd-mailx | mailx, libjson-perl, perl:any, libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libglib2.0-0t64 (>= 2.76.0)
+Suggests: amanda-client (= 1:3.5.4-2.2), cpio | mt-st, gnuplot
+Conflicts: amanda
+Description: Advanced Maryland Automatic Network Disk Archiver (Server)
+Homepage: http://www.amanda.org/
+Description-md5: 7a44af7cb005595215636c1ed7a211fa
+Tag: admin::backup, hardware::storage, implemented-in::c, interface::daemon,
+ network::server, network::service, role::program, uitoolkit::ncurses,
+ works-with-format::tar, works-with::archive
+utils
+Priority: optional
+Filename: pool/main/a/amanda/amanda-server_3.5.4-2.2_amd64.deb
+Size: 462940
+MD5sum: 8ee8be1f1954ed0c6e5969820ff5b8b4
+SHA256: 4b49ba40faf8d58d01d90eba0f722a5490bf7d9943132e90f7a77544b16419eb
+
 Package: amarok-utils
 Source: amarok (3.3.3-1)
 Version: 3.3.3-1+b1
@@ -13681,23 +13751,23 @@ MD5sum: 70c412938c26a028842d7ee14f34a0bc
 SHA256: 8a2f4ae602009845d91458a63d1e19b76d8828ad075c89637cb194ea884ef855
 
 Package: podman-toolbox
-Source: golang-github-containers-toolbox
-Version: 0.0.99.4-2
-Installed-Size: 8267
+Source: golang-github-containers-toolbox (0.0.99.4-2)
+Version: 0.0.99.4-2+b1
+Installed-Size: 8887
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
 Provides: toolbx
-Depends: flatpak, podman, uidmap, libc6 (>= 2.34), libsubid5
+Depends: flatpak, podman, uidmap, libc6 (>= 2.34), libsubid6
 Recommends: bash-completion
 Description: unprivileged development environment using containers
 Homepage: https://containertoolbx.org/
 Description-md5: 10e8d422bedd6a457bb570604e8b047f
 utils
 Priority: optional
-Filename: pool/main/g/golang-github-containers-toolbox/podman-toolbox_0.0.99.4-2_amd64.deb
-Size: 2636720
-MD5sum: d71ea01fcf6043cd9b6eb60666084da7
-SHA256: 5592ae5500ca12614f4c648bee7ce3fb0dd7afb91470f1f9f74ee8be3f1619d4
+Filename: pool/main/g/golang-github-containers-toolbox/podman-toolbox_0.0.99.4-2+b1_amd64.deb
+Size: 2870404
+MD5sum: 7f59399b2f2e3ecc686c251d79606e78
+SHA256: 6a3e22010e46e2f8c1036cfaada1a0bbe2c19f3592fb70166e5dcb7fc5fc1e8f
 
 Package: terraform-config-inspect
 Source: golang-github-hashicorp-terraform-config-inspect (0.0~git20230614.f32df32-2)
@@ -14123,11 +14193,11 @@ SHA256: dc5537d19b17974bb33ae248c95242338577121e54338806981e270a31c1d04f
 
 Package: grads
 Source: grads (3:2.2.1-12)
-Version: 3:2.2.1-12+b1
-Installed-Size: 10821
+Version: 3:2.2.1-12+b2
+Installed-Size: 10781
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libcairo2 (>= 1.6.0), libdap27t64 (>= 3.21.1), libdapclient6t64 (>= 3.21.1), libedit2 (>= 3.1-20160903-0), libfreetype6 (>= 2.2.1), libg2c0 (>= 2.3.0), libgcc-s1 (>= 3.0), libgd3 (>= 2.1.0~alpha~), libgeotiff5 (>= 1.3.0), libhdf4-0 (>= 4.1r2), libhdf5-320 (>= 2.1.0), libnetcdf22 (>= 4.0.1), libshp4 (>= 1.3.0), libstdc++6 (>= 13.1), libtiff6 (>= 4.0.3), libudunits2-0 (>= 2.2.14), libx11-6
+Depends: libc6 (>= 2.38), libcairo2 (>= 1.6.0), libdap27t64 (>= 3.21.1), libdapclient6t64 (>= 3.21.1), libedit2 (>= 3.1-20160903-0), libfreetype6 (>= 2.2.1), libg2c0 (>= 2.3.0), libgcc-s1 (>= 3.0), libgd3 (>= 2.1.0~alpha~), libgeotiff5 (>= 1.3.0), libhdf5-320 (>= 2.1.0), libnetcdf22 (>= 4.0.1), libshp4 (>= 1.3.0), libstdc++6 (>= 13.1), libtiff6 (>= 4.0.3), libudunits2-0 (>= 2.2.14), libx11-6
 Description: Grid Analysis and Display System for earth science data
 Homepage: https://opengrads.org/
 Description-md5: 84551e8fdd6469194a90b28b624c624e
@@ -14135,10 +14205,10 @@ Tag: field::meteorology, interface::commandline, role::program,
  uitoolkit::ncurses, use::analysing, use::viewing, works-with::image
 utils
 Priority: optional
-Filename: pool/main/g/grads/grads_2.2.1-12+b1_amd64.deb
-Size: 3986068
-MD5sum: b1d1f84ecad0f4cf517da5a1558e782b
-SHA256: aa730d160d4de498179f0c0a13df7e3e5d7b7de46a4340b3468a14e7f2b72bfc
+Filename: pool/main/g/grads/grads_2.2.1-12+b2_amd64.deb
+Size: 3975668
+MD5sum: 01346885c86d2e97f4558a36a4ed52ee
+SHA256: 2032d89869033c15f8a85049919d9597c095ea68037fc01e3af8cdfcefd45368
 
 Package: graphite-carbon
 Version: 1.1.10-2
@@ -23790,21 +23860,21 @@ MD5sum: 1d0c689bdde960f9544c39c061aa6ff7
 SHA256: 195ca68a5d2f7af277da0febffabcc1c7165cc027a66fa18cdab4f476ec3fdeb
 
 Package: marisa
-Source: marisa (0.3.1+git20250817-2)
-Version: 0.3.1+git20250817-2+b1
-Installed-Size: 172
+Version: 0.3.1+git20250817-3
+Installed-Size: 171
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: libmarisa1 (= 0.3.1+git20250817-2+b1), libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 13.1)
+Depends: libmarisa1 (= 0.3.1+git20250817-3), libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 13.1)
 Description: command line tools for libmarisa
 Homepage: https://github.com/s-yata/marisa-trie
+Commands: marisa-benchmark, marisa-build, marisa-common-prefix-search, marisa-dump, marisa-lookup, marisa-predictive-search, marisa-reverse-lookup
 Description-md5: d93b84a24d3e4ba003fb52bd879d4222
 utils
 Priority: optional
-Filename: pool/main/m/marisa/marisa_0.3.1+git20250817-2+b1_amd64.deb
-Size: 32336
-MD5sum: 9676e7659f2e5e4605f93935a4dbee54
-SHA256: 7da78127664f13ef699f12b0bc707ec848c5f9717fa56c236f4099895597f890
+Filename: pool/main/m/marisa/marisa_0.3.1+git20250817-3_amd64.deb
+Size: 32564
+MD5sum: dbe086cc3c52016d2a7396af694215fb
+SHA256: 7692a70438695d690d37017a9156a5314bd99bc91aaba68ad4867f838e0175e7
 
 Package: markdownpart
 Version: 26.04.0-1
@@ -25592,6 +25662,22 @@ Filename: pool/main/n/nemo-compare/nemo-compare_6.6.0-1_all.deb
 Size: 8576
 MD5sum: 7daac00df7ba032c91b365fcc05021eb
 SHA256: b54c5fbd56fbdf1cd1b99ba33724f228c7df1ad6e6a9d30521b92eec9a61650d
+
+Package: nerdlog
+Version: 1.13.0-1
+Installed-Size: 8145
+Maintainer: Daniel Baumann <daniel@debian.org>
+Architecture: amd64
+Description: multi-host, remote, TUI log viewer
+Homepage: https://github.com/dimonomid/nerdlog
+Description-md5: 4a6e6f373aef296b84856a220d0b7bb7
+Static-Built-Using: golang-1.27 (= 1.27.1-2), golang-github-clipperhouse-uax29 (= 2.7.0-4), golang-github-dimonomid-clock (= 0.0~git20250112.cbee01f-7), golang-github-dimonomid-ssh-config (= 0.0.1-6), golang-github-gdamore-encoding (= 1.0.1-2), golang-github-gdamore-tcell.v2 (= 2.13.10-1), golang-github-gobwas-glob (= 1.0.0-2), golang-github-juju-errors (= 1.0.0-1), golang-github-lucasb-eyer-go-colorful (= 1.4.0-2), golang-github-mattn-go-runewidth (= 0.0.27-1), golang-github-rivo-tview (= 0.42.0-2), golang-github-rivo-uniseg (= 0.4.7-1), golang-github-spf13-pflag (= 1.0.10-1), golang-go.crypto (= 1:0.56.0-1), golang-golang-x-clipboard (= 0.11.0-1), golang-golang-x-sys (= 0.47.0+dfsg-1), golang-golang-x-term (= 0.45.0-1), golang-golang-x-text (= 0.41.0-1), golang-golang-x-x11 (= 0.2.0-3), golang-mvdan-sh (= 3.14.1-1), golang-yaml.v2 (= 2.4.4-1)
+utils
+Priority: optional
+Filename: pool/main/n/nerdlog/nerdlog_1.13.0-1_amd64.deb
+Size: 2653568
+MD5sum: 2b1f274bbcd7f54e6c1ce085551a25a3
+SHA256: 1caf5a159202b74bab40ac6d535d7a7b13fd5d254ba4a83fa4f38b027e0e3599
 
 Package: networkd-dispatcher
 Version: 2.2.4-1.2
@@ -32366,11 +32452,11 @@ MD5sum: 451db191753c3d2d1d7f3081406d28a0
 SHA256: a8675744c952695153e14847794287f0d96869bc6c5bb927c12d1fc9bb21646d
 
 Package: rpl
-Version: 2.1.0-1
+Version: 2.1.2-1
 Installed-Size: 84
 Maintainer: Patrick Matthäi <pmatthaei@debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.34), libglib2.0-0t64 (>= 2.60.0), libpcre2-8-0 (>= 10.32), libuchardet0 (>= 0.0.1)
+Depends: libc6 (>= 2.34), libglib2.0-0t64 (>= 2.76.0), libpcre2-8-0 (>= 10.47), libuchardet0 (>= 0.0.1)
 Description: replace strings in files
 Homepage: https://github.com/rrthomas/rpl
 Description-md5: 1cb905b4fa5032e19c0a3aa08791c695
@@ -32378,10 +32464,10 @@ Tag: implemented-in::python, interface::commandline, role::program,
  scope::utility, works-with::text
 utils
 Priority: optional
-Filename: pool/main/r/rpl/rpl_2.1.0-1_amd64.deb
-Size: 25432
-MD5sum: 151e08a1da300da300afa211fe6e0737
-SHA256: 9e6bd7fa97d8a74c7848264697a2da3eb64fe126fd63442c89d60963b571f170
+Filename: pool/main/r/rpl/rpl_2.1.2-1_amd64.deb
+Size: 26228
+MD5sum: fd6a0aaba492411a7b09b030329be7d4
+SHA256: b997af82097fc9566fb6f7789e1bedc4fcbd1ae30e8c9c404529a5ca56ff373f
 
 Package: rrdcached
 Source: rrdtool (1.9.0-2.1)
@@ -37054,8 +37140,8 @@ MD5sum: 28ca158ef97d73043881fb5bd3b069b2
 SHA256: b25b001abf9a1e2508497c327fa2e68503ec22c75c5a0156feb1ff4bdc7c7d79
 
 Package: snapper-gui
-Version: 0git.960a94834f-8
-Installed-Size: 156
+Version: 0git.960a94834f-9
+Installed-Size: 158
 Maintainer: Ritesh Raj Sarraf <rrs@debian.org>
 Architecture: all
 Depends: python3:any, gir1.2-gtksource-3.0, snapper, python3-dbus
@@ -37064,10 +37150,10 @@ Homepage: https://github.com/ricardomv/snapper-gui
 Description-md5: 7ea717b12f7aeb4fae77e62c44208f07
 utils
 Priority: optional
-Filename: pool/main/s/snapper-gui/snapper-gui_0git.960a94834f-8_all.deb
-Size: 17228
-MD5sum: 202ca1aa39440737ce5180e43bf4964f
-SHA256: 4077b7aae5f94153f821e72bcf2a2500c05a01cd26ae04308b8fe1bfdf8522e4
+Filename: pool/main/s/snapper-gui/snapper-gui_0git.960a94834f-9_all.deb
+Size: 17828
+MD5sum: cc3fb8be55b066557f7f64d9d8cd6ae6
+SHA256: 699ee65121d7097979f63704f9170c344139ffba5cf3e22ef811572115090ae5
 
 Package: snappy-tools
 Version: 1-1
@@ -41310,28 +41396,28 @@ SHA256: 794c7da04a1c3a8491fe1f9984504372d1730eea67294757beaf4cd5c28597c6
 
 Package: bsdextrautils
 Source: util-linux
-Version: 2.42.3-1
+Version: 2.42.4-1
 Installed-Size: 382
 Maintainer: Chris Hofstaedtler <zeha@debian.org>
 Architecture: amd64
 Replaces: bsdmainutils (<< 12.1.3), util-linux (<< 2.42-1~)
-Depends: libc6 (>= 2.38), libsmartcols1 (= 2.42.3-1), libtinfo6 (>= 6)
+Depends: libc6 (>= 2.38), libsmartcols1 (= 2.42.4-1), libtinfo6 (>= 6)
 Breaks: bsdmainutils (<< 12.1.3), util-linux (<< 2.42-1~)
 Description: extra utilities from 4.4BSD-Lite
 Multi-Arch: foreign
 Homepage: https://github.com/util-linux/util-linux
-Commands: col, colcrt, colrm, column, hexdump, look, rev, ul
+Commands: col, colcrt, colrm, column, hd, hexdump, look, rev, ul
 Description-md5: b86dd3da61a1a05ba31d461f1164ac9b
 utils
 Priority: optional
-Filename: pool/main/u/util-linux/bsdextrautils_2.42.3-1_amd64.deb
-Size: 102500
-MD5sum: a411d353ff5293f565b601ca27ea7ed4
-SHA256: 1460ddb93ee2f7244576b353e4a0a96f36ffa923666f656b2ef92d33bf6c6747
+Filename: pool/main/u/util-linux/bsdextrautils_2.42.4-1_amd64.deb
+Size: 102656
+MD5sum: f88ddd379f336aeec102dc28c4bcc5e4
+SHA256: 55a3c9becda60f9fc40039f171625405e84e4d0bd85799afc1e6add989825e1f
 
 Package: bsdutils
-Source: util-linux (2.42.3-1)
-Version: 1:2.42.3-1
+Source: util-linux (2.42.4-1)
+Version: 1:2.42.4-1
 Installed-Size: 338
 Maintainer: Chris Hofstaedtler <zeha@debian.org>
 Architecture: amd64
@@ -41347,18 +41433,18 @@ Tag: admin::logging, implemented-in::c, interface::commandline,
  works-with::software:running, works-with::text
 utils
 Priority: required
-Filename: pool/main/u/util-linux/bsdutils_2.42.3-1_amd64.deb
-Size: 92848
-MD5sum: f8a9ed86804ae211a9b857934cc25160
-SHA256: d4038db274d1c4bd9cf8cf6dd58b694f8a29863968486134f774718a540ed705
+Filename: pool/main/u/util-linux/bsdutils_2.42.4-1_amd64.deb
+Size: 92884
+MD5sum: c6234f465bd1447a4ffb2ad75745b674
+SHA256: dd20e50c67c4685db91edaebe5d7169925f82cd6c543d8b925d41fb6ec9ef6c8
 
 Package: eject
 Source: util-linux
-Version: 2.42.3-1
+Version: 2.42.4-1
 Installed-Size: 162
 Maintainer: Chris Hofstaedtler <zeha@debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libmount1 (= 2.42.3-1)
+Depends: libc6 (>= 2.38), libmount1 (= 2.42.4-1)
 Description: ejects CDs and operates CD-Changers under Linux
 Multi-Arch: foreign
 Homepage: https://github.com/util-linux/util-linux
@@ -41368,18 +41454,18 @@ Tag: hardware::storage, hardware::storage:cd, implemented-in::c,
  interface::commandline, role::program, scope::utility, use::driver
 utils
 Priority: optional
-Filename: pool/main/u/util-linux/eject_2.42.3-1_amd64.deb
-Size: 61336
-MD5sum: 24b8b404fa214d969f03adb74217d4a1
-SHA256: eee313b018d19cafa528c27bf5bdd4cbbb2e3ea2b758a77f62ff5406d17f2f95
+Filename: pool/main/u/util-linux/eject_2.42.4-1_amd64.deb
+Size: 62628
+MD5sum: e622bce21982b2b191581cad231833a9
+SHA256: 82588be5e514ca9881326f5ed2e12d716acf0d07ef1df3495c4a34da8a3e1098
 
 Package: fdisk
 Source: util-linux
-Version: 2.42.3-1
+Version: 2.42.4-1
 Installed-Size: 545
 Maintainer: Chris Hofstaedtler <zeha@debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libfdisk1 (= 2.42.3-1), libmount1 (= 2.42.3-1), libncursesw6 (>= 6), libreadline8t64 (>= 6.0), libsmartcols1 (= 2.42.3-1), libtinfo6 (>= 6)
+Depends: libc6 (>= 2.38), libfdisk1 (= 2.42.4-1), libmount1 (= 2.42.4-1), libncursesw6 (>= 6), libreadline8t64 (>= 6.0), libsmartcols1 (= 2.42.4-1), libtinfo6 (>= 6)
 Recommends: sensible-utils
 Description: collection of partitioning utilities
 Multi-Arch: foreign
@@ -41390,18 +41476,18 @@ Tag: admin::filesystem, implemented-in::c, interface::commandline,
  role::program, uitoolkit::ncurses
 utils
 Priority: important
-Filename: pool/main/u/util-linux/fdisk_2.42.3-1_amd64.deb
-Size: 161788
-MD5sum: e4b918d90e455e818c9226d62cc0710e
-SHA256: eefbd262d5b79284ecc72c69c8f3768b25fba43006e9e99a550603e73e0f6d20
+Filename: pool/main/u/util-linux/fdisk_2.42.4-1_amd64.deb
+Size: 162232
+MD5sum: f49c8a09a8ab43e49c23c882b5226ae5
+SHA256: 6724754514a686e1ba78e235c62966e51f6959a38477215eb3d5552f8d2c400d
 
 Package: lastlog2
 Source: util-linux
-Version: 2.42.3-1
+Version: 2.42.4-1
 Installed-Size: 91
 Maintainer: Chris Hofstaedtler <zeha@debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), liblastlog2-2 (= 2.42.3-1)
+Depends: libc6 (>= 2.38), liblastlog2-2 (= 2.42.4-1)
 Recommends: libpam-lastlog2
 Description: Read lastlog2 database
 Multi-Arch: foreign
@@ -41410,18 +41496,18 @@ Commands: lastlog2
 Description-md5: a81b4cb36ae4cda8dff736646e2d36b6
 utils
 Priority: optional
-Filename: pool/main/u/util-linux/lastlog2_2.42.3-1_amd64.deb
-Size: 33508
-MD5sum: f1e806f8e9c6f15a5a8d846fa698a3cd
-SHA256: a71313bc1da0598d8b8aceb2765dbc1a412b973f283fd42404baadea57f16054
+Filename: pool/main/u/util-linux/lastlog2_2.42.4-1_amd64.deb
+Size: 33564
+MD5sum: b2201b3fcd08ebb92146ee460f7d9ee2
+SHA256: 37ac1bf298990f0c4f1883ea46ddb5849ce7db853f37ab85bf2d1da4fa964fb3
 
 Package: rfkill
 Source: util-linux
-Version: 2.42.3-1
+Version: 2.42.4-1
 Installed-Size: 111
 Maintainer: Chris Hofstaedtler <zeha@debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libsmartcols1 (= 2.42.3-1)
+Depends: libc6 (>= 2.38), libsmartcols1 (= 2.42.4-1)
 Description: tool for enabling and disabling wireless devices
 Multi-Arch: foreign
 Homepage: https://github.com/util-linux/util-linux
@@ -41433,20 +41519,20 @@ Tag: admin::hardware, admin::kernel, devel::lang:c, devel::library,
  use::configuring, use::driver
 utils
 Priority: optional
-Filename: pool/main/u/util-linux/rfkill_2.42.3-1_amd64.deb
-Size: 41500
-MD5sum: 14c297d25f2ea2a16542b261fc285684
-SHA256: b154e4c0ff705c7e814f2404382beb44dd259debafbebc5044efb63c9987398a
+Filename: pool/main/u/util-linux/rfkill_2.42.4-1_amd64.deb
+Size: 41504
+MD5sum: b06c512ea2fc7099de560902c01a6e98
+SHA256: ea82bd4b7042d85ecaac32255bc1fbd4364aa93317103bb8768b89cb62a8a807
 
 Package: util-linux
-Version: 2.42.3-1
+Version: 2.42.4-1
 Essential: yes
-Installed-Size: 4760
+Installed-Size: 4826
 Maintainer: Chris Hofstaedtler <zeha@debian.org>
 Architecture: amd64
 Replaces: bsdutils (<< 1:2.42-1~), hardlink
 Provides: hardlink
-Pre-Depends: libpam-modules, libpam-runtime, libblkid1 (= 2.42.3-1), libc6 (>= 2.42), libcap-ng0 (>= 0.7.9), libcrypt1 (>= 1:4.1.0), libmount1 (= 2.42.3-1), libpam0g (>= 0.99.7.1), libselinux1 (>= 3.1~), libsmartcols1 (= 2.42.3-1), libsystemd0 (>= 251), libtinfo6 (>= 6), libudev1 (>= 183), libuuid1 (= 2.42.3-1)
+Pre-Depends: libpam-modules, libpam-runtime, libblkid1 (= 2.42.4-1), libc6 (>= 2.42), libcap-ng0 (>= 0.7.9), libcrypt1 (>= 1:4.1.0), libmount1 (= 2.42.4-1), libpam0g (>= 0.99.7.1), libselinux1 (>= 3.1~), libsmartcols1 (= 2.42.4-1), libsystemd0 (>= 251), libtinfo6 (>= 6), libudev1 (>= 183), libuuid1 (= 2.42.4-1)
 Recommends: sensible-utils
 Suggests: dosfstools, kbd, util-linux-extra, util-linux-locales, wtmpdb
 Conflicts: hardlink
@@ -41454,46 +41540,46 @@ Breaks: bsdutils (<< 1:2.42-1~), dracut (<< 108-6~)
 Description: miscellaneous system utilities
 Multi-Arch: foreign
 Homepage: https://github.com/util-linux/util-linux
-Commands: agetty, blkdiscard, blkid, blockdev, choom, chrt, dmesg, fallocate, findfs, findmnt, flock, fsck, fsfreeze, fstrim, getopt, hardlink, ionice, ipcmk, ipcrm, ipcs, logger, lsblk, lscpu, lsipc, lslocks, lsns, mcookie, mkfs, mkswap, more, mountpoint, namei, nsenter, partx, prlimit, readprofile, rtcwake, runuser, setarch, setpriv, setsid, setterm, su, sulogin, swaplabel, taskset, uclampset, unshare, whereis, wipefs, zramctl
+Commands: agetty, blkdiscard, blkid, blockdev, choom, chrt, dmesg, fallocate, findfs, findmnt, flock, fsck, fsfreeze, fstrim, getopt, getty, hardlink, i386, ionice, ipcmk, ipcrm, ipcs, linux32, linux64, logger, lsblk, lscpu, lsipc, lslocks, lsns, mcookie, mkfs, mkswap, more, mountpoint, namei, nsenter, partx, prlimit, readprofile, rtcwake, runuser, setarch, setpriv, setsid, setterm, su, sulogin, swaplabel, taskset, uclampset, unshare, whereis, wipefs, x86_64, zramctl
 Description-md5: 33d0291a69ffd307cfba295915df602a
 Tag: admin::configuring, admin::filesystem, admin::hardware,
  implemented-in::c, interface::commandline, interface::text-mode,
  role::program, scope::utility, uitoolkit::ncurses
 utils
 Priority: required
-Filename: pool/main/u/util-linux/util-linux_2.42.3-1_amd64.deb
-Size: 1245812
-MD5sum: 71978df225665f5852f32e21834ae9b1
-SHA256: bf5248da5fdead36debc7ef71a29b0fae8062fc15d3cc0ec11d3e535f84ad05d
+Filename: pool/main/u/util-linux/util-linux_2.42.4-1_amd64.deb
+Size: 1254484
+MD5sum: 068b6ecb1ae001254ec3031a89f3663d
+SHA256: eb0692f9ea11a123181d198ac9276f7bdf42a64dab1985136157f6ddac1cd432
 
 Package: util-linux-extra
 Source: util-linux
-Version: 2.42.3-1
-Installed-Size: 2438
+Version: 2.42.4-1
+Installed-Size: 2518
 Maintainer: Chris Hofstaedtler <zeha@debian.org>
 Architecture: amd64
 Replaces: login (<< 1:4.16.0-2+really2.42-1~), util-linux (<< 2.42-1~)
-Depends: libaudit1 (>= 1:2.2.1), libc6 (>= 2.42), libcrypt1 (>= 1:4.1.0), liblastlog2-2 (= 2.42.3-1), libselinux1 (>= 3.1~), libsmartcols1 (= 2.42.3-1), libsystemd0, zlib1g (>= 1:1.1.4)
+Depends: libaudit1 (>= 1:2.2.1), libc6 (>= 2.42), libcrypt1 (>= 1:4.1.0), liblastlog2-2 (= 2.42.4-1), libselinux1 (>= 3.1~), libsmartcols1 (= 2.42.4-1), libsystemd0, zlib1g (>= 1:1.1.4)
 Breaks: initscripts (<< 3.08-2~), login (<< 1:4.16.0-2+really2.42-1~), util-linux (<< 2.42-1~)
 Description: interactive login tools
 Multi-Arch: foreign
 Homepage: https://github.com/util-linux/util-linux
-Commands: addpart, bits, blkpr, blkzone, chcpu, chmem, copyfilerange, coresched, ctrlaltdel, delpart, enosys, exch, fadvise, fincore, fsck.cramfs, fsck.minix, getino, hwclock, isosize, ldattach, lsclocks, lsfd, lsirq, lslogins, lsmem, mkfs.bfs, mkfs.cramfs, mkfs.minix, newgrp, pipesz, pivot_root, resizepart, switch_root, waitpid, wdctl
+Commands: addpart, bits, blkpr, blkzone, chcpu, chmem, copyfilerange, coresched, ctrlaltdel, delpart, enosys, exch, fadvise, fincore, fsck.cramfs, fsck.minix, getino, hwclock, isosize, ldattach, lsclocks, lsfd, lsirq, lslogins, lsmem, mkfs.bfs, mkfs.cramfs, mkfs.minix, newgrp, pipesz, pivot_root, rename.ul, resizepart, sg, switch_root, waitpid, wdctl
 Description-md5: da490b987901dfef18f9574cef6fbcb9
 utils
 Priority: standard
-Filename: pool/main/u/util-linux/util-linux-extra_2.42.3-1_amd64.deb
-Size: 454420
-MD5sum: e9e1db36c04e63bd885b98c014d36559
-SHA256: e021bf2b029d7e12a8731cef7e62303608783f62ae90ac6c1663c657be4f68e3
+Filename: pool/main/u/util-linux/util-linux-extra_2.42.4-1_amd64.deb
+Size: 460516
+MD5sum: ae25cdf03c15c9a1b5a9a6a4787677c7
+SHA256: e1aa0db77b9ac1bbaabfaad0d100b6823ac28efa9a90a9237e506f6bf25ad953
 
 Package: uuid-runtime
 Source: util-linux
-Version: 2.42.3-1
+Version: 2.42.4-1
 Installed-Size: 213
 Maintainer: Chris Hofstaedtler <zeha@debian.org>
 Architecture: amd64
-Depends: systemd | systemd-standalone-sysusers | systemd-sysusers, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, libc6 (>= 2.38), libsmartcols1 (= 2.42.3-1), libsystemd0, libuuid1 (= 2.42.3-1)
+Depends: systemd | systemd-standalone-sysusers | systemd-sysusers, libc6 (>= 2.38), libsmartcols1 (= 2.42.4-1), libsystemd0, libuuid1 (= 2.42.4-1)
 Pre-Depends: libuuid1
 Description: runtime components for the Universally Unique ID library
 Multi-Arch: foreign
@@ -41503,10 +41589,10 @@ Description-md5: c848721d4a6e6dbc698c36d06bf45ef9
 Tag: role::program
 utils
 Priority: optional
-Filename: pool/main/u/util-linux/uuid-runtime_2.42.3-1_amd64.deb
-Size: 58016
-MD5sum: 3fa7eb58fa8be6afbd190a8f6953e4cc
-SHA256: 64fc280d3b2aa0250a797abd1a70d42ed071b5c375910613b5ce65f736765048
+Filename: pool/main/u/util-linux/uuid-runtime_2.42.4-1_amd64.deb
+Size: 57936
+MD5sum: b8c533ad9488f62a4f2c6e68edd2f88c
+SHA256: 54d27bd67416234ed3a3cb5d275866fb0aae6114f107e360ac615b81b9907d8b
 
 Package: uudeview
 Version: 0.5.20+20250228-1
