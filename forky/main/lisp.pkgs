@@ -1511,19 +1511,19 @@ MD5sum: 4f72206ff65f611d1d3cef21421bf393
 SHA256: f1fb33b4fac2a0f27a2f6f863315174076ca2b89ab52d282d55aa3117441c040
 
 Package: cl-metatilities-base
-Version: 20170403-1.1
+Version: 20170403-1.2
 Installed-Size: 499
 Maintainer: Dimitri Fontaine <dim@tapoueh.org>
 Architecture: all
 Description: Common Lisp set of utilities from Metabang
-Homepage: http://common-lisp.net/project/metatilities-base/
+Homepage: https://metatilities-base.common-lisp.dev/
 Description-md5: 31b94f3c4a0bf677576faa25bd0bb032
 lisp
 Priority: optional
-Filename: pool/main/c/cl-metatilities-base/cl-metatilities-base_20170403-1.1_all.deb
-Size: 51868
-MD5sum: 31d7164a54bae5268d85c26f8eebd2d8
-SHA256: e7d57cfed266871388f08556d3e31290d595339644c43b5a142ff8417e9a748c
+Filename: pool/main/c/cl-metatilities-base/cl-metatilities-base_20170403-1.2_all.deb
+Size: 52220
+MD5sum: 495367301111d056dcea3d746fd03d04
+SHA256: 919c06d664dc8dd7932320d2da4a9542d99a50b2925508f49a9e627e2c6ffb17
 
 Package: cl-modlisp
 Version: 0.6-8
@@ -5069,11 +5069,11 @@ SHA256: bf3f46515549bdf248b3e034b7f9475a604692b185f7937e23157c07ac3b0d39
 
 Package: elpa-ghub
 Source: ghub-el
-Version: 5.3.2-1
+Version: 5.3.3-1
 Installed-Size: 303
 Maintainer: Debian Emacsen Team <debian-emacsen@lists.debian.org>
 Architecture: all
-Depends: elpa-compat (>= 31.0), elpa-cond-let (>= 1.1), elpa-llama (>= 1.0), elpa-treepy (>= 0.1.3), dh-elpa-helper, emacsen-common
+Depends: elpa-compat (>= 31.1), elpa-cond-let (>= 1.1), elpa-llama (>= 1.0), elpa-treepy (>= 0.1.3), dh-elpa-helper, emacsen-common
 Recommends: emacs
 Enhances: emacs
 Description: minuscule client for the Github API
@@ -5081,10 +5081,10 @@ Homepage: https://github.com/magit/ghub
 Description-md5: 5379c42710503d1b745d864bc172eecd
 lisp
 Priority: optional
-Filename: pool/main/g/ghub-el/elpa-ghub_5.3.2-1_all.deb
-Size: 228892
-MD5sum: f4b13d6e8eefcced87279f01e069d398
-SHA256: 653fbd0510619c72ee75a1b71f8854721376c4b5228ac69ecfcfdee8e7c35f03
+Filename: pool/main/g/ghub-el/elpa-ghub_5.3.3-1_all.deb
+Size: 228884
+MD5sum: 978b11a00efb00e81925d2d25af5fbef
+SHA256: a79b1d5495f90631acb153262095cb3bcf4e02eb61cfaa34648474043021e758
 
 Package: elpa-git-annex
 Source: git-annex-el
@@ -6766,16 +6766,18 @@ MD5sum: 62b4f28beb5ae7c17e8ff3822db94e78
 SHA256: 4c9afd79f2c8d31b1191f3f2bc6070a75be02f93fb75b97a2007742614894f82
 
 Package: mit-scheme
-Version: 12.1-5
-Installed-Size: 57613
+Version: 12.1-13
+Installed-Size: 57788
 Maintainer: Barak A. Pearlmutter <bap@debian.org>
 Architecture: amd64
+Provides: mit-scheme-interpreter
 Depends: libc6 (>= 2.42), libgdbm6t64 (>= 1.16), libtinfo6 (>= 6), libx11-6
 Recommends: media-types
 Suggests: mit-scheme-dbg, mit-scheme-doc
 Description: MIT/GNU Scheme development environment
 Multi-Arch: same
 Homepage: https://www.gnu.org/software/mit-scheme/
+Commands: mit-scheme-x86-64, mit-scheme-x86-64-12.1
 Description-md5: 092cd7e0ce27e329e2f76b047e32adda
 Tag: devel::compiler, devel::interpreter, devel::lang:scheme, devel::runtime,
  implemented-in::lisp, interface::text-mode, role::plugin,
@@ -6783,10 +6785,31 @@ Tag: devel::compiler, devel::interpreter, devel::lang:scheme, devel::runtime,
  use::editing, works-with::mail
 lisp
 Priority: optional
-Filename: pool/main/m/mit-scheme/mit-scheme_12.1-5_amd64.deb
-Size: 8146076
-MD5sum: 31cca725c70123daec03126661f44058
-SHA256: 0470d57b91d05f6c6a349347879fecaab99e6354078bef015d65fafffacfa3a0
+Filename: pool/main/m/mit-scheme/mit-scheme_12.1-13_amd64.deb
+Size: 8172180
+MD5sum: 676842f8fae5314142599b0fdb25d7c8
+SHA256: bd5a0662a4c984fb357c4265d6dc4ec9edbbec9aada17dbb9f5046ac980c4c39
+
+Package: mit-scheme-svm
+Source: mit-scheme
+Version: 12.1-13
+Installed-Size: 44524
+Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Architecture: amd64
+Provides: mit-scheme-interpreter
+Depends: libc6 (>= 2.42), libgdbm6t64 (>= 1.16), libtinfo6 (>= 6), libx11-6
+Recommends: media-types
+Suggests: mit-scheme-doc
+Description: MIT/GNU Scheme development environment (portable SVM build)
+Homepage: https://www.gnu.org/software/mit-scheme/
+Commands: mit-scheme-svm1-64le, mit-scheme-svm1-64le-12.1
+Description-md5: a488cfee25c97ef6f01f1ad905a21d29
+lisp
+Priority: optional
+Filename: pool/main/m/mit-scheme/mit-scheme-svm_12.1-13_amd64.deb
+Size: 7335284
+MD5sum: 7e5e900e98b42eb71c57d9427ba0f783
+SHA256: aa1024933b1ab24a8691dc5a4290fd03351fc10867e2a4efe716396b501b0cb1
 
 Package: elpa-mocker
 Source: mocker-el
@@ -7619,7 +7642,7 @@ SHA256: 69ffb04a3fd6c12748ff2273d055f2d006e20f6b1b6ddc2c5c76652e0db0fffc
 
 Package: elpa-racket-mode
 Source: racket-mode
-Version: 20260908~git.747b922-1
+Version: 20260926~git.112ede7-1
 Installed-Size: 1035
 Maintainer: Debian Emacsen team <debian-emacsen@lists.debian.org>
 Architecture: all
@@ -7632,10 +7655,10 @@ Homepage: https://github.com/greghendershott/racket-mode
 Description-md5: c5e2cfd81b12a438872a1765c41fcb3d
 lisp
 Priority: optional
-Filename: pool/main/r/racket-mode/elpa-racket-mode_20260908~git.747b922-1_all.deb
-Size: 209800
-MD5sum: 6c28a7f97b854f3565d386953c7a4ddf
-SHA256: 8c80c6c815c5ff6b58302212d9562f20790d101d8c502b5b374f0411e2c4fea5
+Filename: pool/main/r/racket-mode/elpa-racket-mode_20260926~git.112ede7-1_all.deb
+Size: 209860
+MD5sum: bd96b3bf10f90d6cf17a4f2fd2a988b6
+SHA256: aa03d6153f0e182a1cee3b04cba52710e45e8a32ceb381504b1c033648a9157d
 
 Package: rail
 Version: 1.2.14-4

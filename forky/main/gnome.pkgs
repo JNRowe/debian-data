@@ -1610,15 +1610,15 @@ MD5sum: 842d1a412ef4e2e4431a1baa526e449c
 SHA256: 140663e1297af0e2e174adfa1a5aa8635ce1ca4a6728eb15df11e06054c3afb3
 
 Package: gdm3
-Version: 50.3-1
-Installed-Size: 5877
+Version: 51.0-2
+Installed-Size: 2925
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Provides: x-display-manager
-Depends: accountsservice (>= 0.6.35), dconf-cli (>= 0.20), dconf-gsettings-backend (>= 0.20), dbus-bin | systemd-sysv, default-dbus-system-bus | dbus-system-bus, default-logind | logind, gir1.2-gdm-1.0 (= 50.3-1), gnome-session | x-session-manager | x-window-manager | x-terminal-emulator, gnome-session-bin (>= 50~alpha), gnome-session-common (>= 50~alpha), gnome-settings-daemon (>= 3.37.0), gnome-shell (>= 50~alpha), gsettings-desktop-schemas, libgdm1 (= 50.3-1), libglib2.0-bin (>= 2.35.0), libnss-systemd (>= 258.1-2~), libpam-modules (>= 0.72-1), libpam-runtime (>= 0.76-13.1), librsvg2-common, polkitd, procps, ucf, x11-common (>= 1:7.6+11), x11-xserver-utils, debconf (>= 0.5) | debconf-2.0, systemd | systemd-standalone-sysusers | systemd-sysusers, libaccountsservice0 (>= 0.6.55), libaudit1 (>= 1:2.2.1), libc6 (>= 2.38), libglib2.0-0t64 (>= 2.83.0), libgudev-1.0-0 (>= 232), libjson-glib-1.0-0 (>= 1.5.2), libkeyutils1 (>= 1.5.9), libpam0g (>= 0.99.7.1), libpolkit-gobject-1-0 (>= 0.99), libselinux1 (>= 3.1~), libsystemd0 (>= 259), libxau6 (>= 1:1.0.11)
-Recommends: at-spi2-core, desktop-base (>= 10.0.0), gnome-session | x-session-manager, x11-xkb-utils, zenity
-Suggests: orca, libpam-fprintd (>= 0.8.0-2), libpam-sss (>= 2.3.0-1), libpam-pkcs11, libpam-gnome-keyring
-Breaks: gnome-remote-desktop (<< 50~rc)
+Depends: accountsservice, dbus-bin | systemd-sysv, dconf-cli, dconf-gsettings-backend, default-dbus-system-bus | dbus-system-bus, default-logind | logind, gir1.2-gdm-1.0 (= 51.0-2), gnome-session | x-session-manager | x-window-manager | x-terminal-emulator, gnome-session-bin (>= 50~alpha), gnome-session-common (>= 50~alpha), gnome-settings-daemon, gnome-shell (>= 50~alpha), gsettings-desktop-schemas, libgdm1 (= 51.0-2), libglib2.0-bin, libnss-systemd (>= 258.1-2~), libpam-modules, libpam-runtime, librsvg2-common, polkitd, procps, ucf, x11-common, x11-xserver-utils, debconf (>= 0.5) | debconf-2.0, systemd | systemd-standalone-sysusers | systemd-sysusers, libaccountsservice0 (>= 0.6.55), libaudit1 (>= 1:2.2.1), libc6 (>= 2.38), libglib2.0-0t64 (>= 2.83.0), libgudev-1.0-0 (>= 165), libjson-glib-1.0-0 (>= 1.5.2), libkeyutils1 (>= 1.5.9), libpam0g (>= 0.99.7.1), libpolkit-gobject-1-0 (>= 0.99), libselinux1 (>= 3.1~), libsystemd0 (>= 259), libxau6 (>= 1:1.0.11)
+Recommends: at-spi2-core, desktop-base, gnome-session | x-session-manager, x11-xkb-utils, zenity
+Suggests: libpam-fprintd, libpam-gnome-keyring, libpam-pkcs11, libpam-sss, orca
+Breaks: gnome-remote-desktop (<< 51~)
 Description: GNOME Display Manager
 Homepage: https://wiki.gnome.org/Projects/GDM/
 Description-md5: 9be0fb38ba2581f623b79242c9c7918d
@@ -1627,10 +1627,10 @@ Tag: admin::login, implemented-in::c, interface::graphical, interface::x11,
  suite::gnome, uitoolkit::gtk, use::login, x11::display-manager
 gnome
 Priority: optional
-Filename: pool/main/g/gdm3/gdm3_50.3-1_amd64.deb
-Size: 842768
-MD5sum: af31f2d8194f4447c2153283ade84615
-SHA256: e4ee413323576ead169a881fd72da9983a7edf4a833975b77e50e1f0c1bafaa8
+Filename: pool/main/g/gdm3/gdm3_51.0-2_amd64.deb
+Size: 477532
+MD5sum: 4598a87e09e68c48ac2531acba0d8cf3
+SHA256: af9f4889ad4ad068210e5696c6e7e3379d4831ffac1647414779479b1ecfc5a5
 
 Package: gedit
 Source: gedit (48.1-9)
@@ -2068,21 +2068,22 @@ MD5sum: e43ea7bb83e0eee5869ecd1cad7c1fc9
 SHA256: c78d9a925fa9d8bc9e2a5afc7b512fd024e3202d3df288b4c3aa19e8b93fec54
 
 Package: gi-docgen
-Version: 2026.1-1
-Installed-Size: 672
+Version: 2026.1-2
+Installed-Size: 671
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: python3-jinja2, python3-markdown, python3-markupsafe, python3-packaging, python3-pygments, python3-typogrify, python3:any (>= 3.11~)
+Depends: python3-jinja2, python3-markdown, python3-markupsafe, python3-packaging, python3-pygments, python3-typogrify, python3:any
 Description: source code documentation tool using GObject-Introspection
 Multi-Arch: foreign
 Homepage: https://gitlab.gnome.org/GNOME/gi-docgen/
+Commands: gi-docgen
 Description-md5: f5026ca8c63d0ace411a87537c6c0b54
 gnome
 Priority: optional
-Filename: pool/main/g/gi-docgen/gi-docgen_2026.1-1_all.deb
-Size: 89532
-MD5sum: 66712a39146a60d36a3ea1707d532c50
-SHA256: 2bc8d2b051c81784afba7d4652ec3972f8c2e833e6f9e867217a3421356c598a
+Filename: pool/main/g/gi-docgen/gi-docgen_2026.1-2_all.deb
+Size: 88892
+MD5sum: b734f51c0e65fd2fc8a32b14f67be77f
+SHA256: f91e863f7ca8348049dc6137ec25c0a6947f6769c06b8a791501152afa8735cf
 
 Package: gir-rust-code-generator
 Version: 0.22.3-4
@@ -7982,8 +7983,8 @@ MD5sum: f54f0c4f748357cbbccb9f5c865a3ceb
 SHA256: d5c86cfaf063b3fb10ae3cd51443edf022f62a7de57c7cde4a3728f026b02f83
 
 Package: xdg-desktop-portal-phosh
-Version: 0.57.0-1
-Installed-Size: 5608
+Version: 0.58.0-1
+Installed-Size: 5808
 Maintainer: DebianOnMobile Maintainers <debian-on-mobile-maintainers@alioth-lists.debian.net>
 Architecture: amd64
 Replaces: phosh (<< 0.44~)
@@ -7995,10 +7996,10 @@ Multi-Arch: foreign
 Description-md5: 900723e01238ceacbd9a8b81624c7943
 gnome
 Priority: optional
-Filename: pool/main/x/xdg-desktop-portal-phosh/xdg-desktop-portal-phosh_0.57.0-1_amd64.deb
-Size: 1431608
-MD5sum: 60fb0fd6972f0a892d5d287ee71d7cd8
-SHA256: 2e84c9d71ddd470778717d0a3f9032865cd84e8b603c17877123343b84b58e0f
+Filename: pool/main/x/xdg-desktop-portal-phosh/xdg-desktop-portal-phosh_0.58.0-1_amd64.deb
+Size: 1451140
+MD5sum: c4b9a0365456ea63a020babd5a3c9444
+SHA256: 7512d60673b155eef1f64c55ad085dbc2d62ab727b26f0038867bc9f7a0069f2
 
 Package: xdg-desktop-portal-xapp
 Version: 1.1.3-1
