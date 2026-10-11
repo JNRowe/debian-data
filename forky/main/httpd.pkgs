@@ -217,29 +217,29 @@ MD5sum: 77cde2a3f5336c55e93aee1f70213040
 SHA256: 76f461ef3a123b18d77c4653a10b14d77b92c4ca13654a05236e9d5e9c49e3f3
 
 Package: gunicorn
-Version: 25.3.0-4
+Version: 26.2.2-2
 Installed-Size: 28
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
 Replaces: gunicorn3
 Provides: gunicorn3, httpd-wsgi3
-Depends: python3-gunicorn (= 25.3.0-4), python3:any
-Suggests: python3-pastedeploy, python3-setproctitle, python3-tornado
+Depends: python3-gunicorn (= 26.2.2-2), python3:any
 Conflicts: gunicorn3
 Description: Event-based HTTP/WSGI server
 Homepage: https://gunicorn.org/
+Commands: gunicorn, gunicorn3, gunicornc
 Description-md5: 2ff72d8c5c219c7f7f89448c09a76c6c
 httpd
 Priority: optional
-Filename: pool/main/g/gunicorn/gunicorn_25.3.0-4_all.deb
-Size: 8976
-MD5sum: 7ccd9a2912ef8f07e17ae075d28e47fc
-SHA256: 6d956c4dc1bdb851e01aa57ae1bb55d80e99d570e8d9b9c5f2c7c71ccfec9b40
+Filename: pool/main/g/gunicorn/gunicorn_26.2.2-2_all.deb
+Size: 9404
+MD5sum: 96ff750817387f9520a995bfd10c1a09
+SHA256: 2682e5e0addc16f8d50366118cd02b7134e7cfa514e8134db9a1afb4584e1d20
 
 Package: gunicorn-examples
 Source: gunicorn
-Version: 25.3.0-4
-Installed-Size: 371
+Version: 26.2.2-2
+Installed-Size: 370
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
 Recommends: libjs-jquery, libjs-jquery-flot
@@ -249,27 +249,29 @@ Homepage: https://gunicorn.org/
 Description-md5: 534f86a64db17a6022cff39be7f319e8
 httpd
 Priority: optional
-Filename: pool/main/g/gunicorn/gunicorn-examples_25.3.0-4_all.deb
-Size: 68556
-MD5sum: 2cdb754865f8784b69e4ee20e2fdbec2
-SHA256: 1b9638b3f8f1bafd1b366a9bba1b1d28c71f0698767ca290178defdfa2902a6f
+Filename: pool/main/g/gunicorn/gunicorn-examples_26.2.2-2_all.deb
+Size: 68856
+MD5sum: 4a85102b2ea6c8ad80a25a0566596bd3
+SHA256: 823898f1596e011fed33a7045074acc4e6524c607742f52dabd79176fbfe5af8
 
 Package: python3-gunicorn
 Source: gunicorn
-Version: 25.3.0-4
-Installed-Size: 803
+Version: 26.2.2-2
+Installed-Size: 929
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
-Depends: python3-packaging, python3:any
+Depends: python3:any
+Recommends: python3-gunicorn-h1c (>= 0.6.9~), python3-setproctitle
+Suggests: python3-pastedeploy, python3-tornado, python3-gevent
 Description: Event-based HTTP/WSGI server (Python 3 libraries)
 Homepage: https://gunicorn.org/
 Description-md5: 09a7d941cfaad6a1c9d3ac57aa53ca80
 httpd
 Priority: optional
-Filename: pool/main/g/gunicorn/python3-gunicorn_25.3.0-4_all.deb
-Size: 139472
-MD5sum: 530aea80bc0be9a2f10835b153c3f9e1
-SHA256: e8578a9959f3775df9dd9447bea2d847dc028da27e5374a1e7f71233ccdbbef9
+Filename: pool/main/g/gunicorn/python3-gunicorn_26.2.2-2_all.deb
+Size: 163664
+MD5sum: 9d20aa98e6b3ea3f0a91b7ccff827449
+SHA256: 10aa122383068a339134446f65df13ab8ff44192a857c6cea3b87ad8c5066671
 
 Package: kore
 Version: 4.2.3-2
@@ -2334,12 +2336,12 @@ SHA256: 59d8facefc640233f5e0f4fb1e44b588d510b9be74b12b8a97cb53a5a0723c88
 
 Package: libapache2-mod-php8.4
 Source: php8.4
-Version: 8.4.24-1
-Installed-Size: 5914
+Version: 8.4.26-1
+Installed-Size: 6050
 Maintainer: Debian PHP Maintainers <team+pkg-php@tracker.debian.org>
 Architecture: amd64
 Provides: libapache2-mod-php, php-json, php8.4-json, phpapi-20240924
-Depends: media-types | mime-support, php8.4-cli, php8.4-common (= 8.4.24-1), php8.4-opcache, tzdata, ucf, apache2-api-20120211, apache2-bin (>= 2.4.16), libargon2-1 (>= 0~20171227), libc6 (>= 2.38), libpcre2-8-0 (>= 10.32), libsodium26 (>= 1.0.19), libssl3t64 (>= 3.0.0), libxml2-16 (>= 2.14.1), zlib1g (>= 1:1.1.4)
+Depends: media-types | mime-support, php8.4-cli, php8.4-common (= 8.4.26-1), php8.4-opcache, tzdata, ucf, apache2-api-20120211, apache2-bin (>= 2.4.16), libargon2-1 (>= 0~20171227), libc6 (>= 2.38), libpcre2-8-0 (>= 10.47), libsodium26 (>= 1.0.19), libssl3t64 (>= 3.0.0), libxml2-16 (>= 2.14.1), zlib1g (>= 1:1.1.4)
 Recommends: apache2
 Suggests: php-pear
 Description: server-side, HTML-embedded scripting language (Apache 2 module)
@@ -2347,10 +2349,10 @@ Homepage: http://www.php.net/
 Description-md5: 6a338a642132f78b17e5228372062a40
 httpd
 Priority: optional
-Filename: pool/main/p/php8.4/libapache2-mod-php8.4_8.4.24-1_amd64.deb
-Size: 1821604
-MD5sum: f93e6804b2fce9b3341862618e7095bc
-SHA256: 57f47586a08ec209ae4fa824ce23c0e9601dd78b2c0d22e1ea52e797fd7e25dd
+Filename: pool/main/p/php8.4/libapache2-mod-php8.4_8.4.26-1_amd64.deb
+Size: 1894764
+MD5sum: b48cbb83983ee783ca982c85ff7f02c5
+SHA256: 245e4105041094e47b65fdedde65fb3fae9199c023d35a0383399014699fb83a
 
 Package: daphne
 Source: python-daphne
