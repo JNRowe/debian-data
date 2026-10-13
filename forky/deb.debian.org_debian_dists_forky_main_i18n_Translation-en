@@ -23499,6 +23499,14 @@ Description-en: Starlark implementation of Python rules in Bazel
  and runfiles support libraries required to build Python projects using
  the Bazel build system.
 
+Package: bazel-rules-rust
+Description-md5: 609bca0c0596dd5f3af1bf4b3943ba67
+Description-en: Rust rules for Bazel
+ rules_rust provides Bazel rules for building Rust code and libraries.
+ .
+ This package provides the Starlark definitions and toolchains for
+ compiling Rust crates, binaries, and libraries within Bazel projects.
+
 Package: bazel-rules-shell
 Description-md5: f024746a85d2116e33a87584e450e916
 Description-en: Bazel rules for shell scripts
@@ -36887,7 +36895,7 @@ Description-en: Nostalgia bucklespring keyboard sound - sound files
  This package contains the keyboard sound files.
 
 Package: bucklespring-libinput
-Description-md5: 20edb6b0bd1c7aecd60b6c61e9b04e0f
+Description-md5: a940580fc45455d00926b86e886b968c
 Description-en: Nostalgia bucklespring keyboard sound - libinput flavour
  Bucklespring emulates the sound of an old IBM Model-M space saver
  bucklespring keyboard while typing.
@@ -36901,13 +36909,13 @@ Description-en: Nostalgia bucklespring keyboard sound - libinput flavour
  This flavour reads the key events straight from the raw input devices
  in /dev/input through libinput instead of from X11, so it also works
  under a Wayland compositor and on the console. Those devices are not
- readable for ordinary users out of the box; a debconf question, asked at
- medium priority and answered no by default, offers to grant the access to
- the user at the local seat, see README.Debian. It is registered as an
- alternative for /usr/games/buckle.
+ readable for ordinary users out of the box; a debconf question, asked
+ at medium priority and answered no by default, offers to grant the
+ access to the user at the local seat, see README.Debian. It is
+ registered as an alternative for /usr/games/buckle.
 
 Package: bucklespring-x11
-Description-md5: d71f131ad2821f357c81fb461db97ff4
+Description-md5: 4309f6f6b6d8380474305d5c8868939f
 Description-en: Nostalgia bucklespring keyboard sound - X11 flavour
  Bucklespring emulates the sound of an old IBM Model-M space saver
  bucklespring keyboard while typing within an X session.
@@ -36920,8 +36928,8 @@ Description-en: Nostalgia bucklespring keyboard sound - X11 flavour
  .
  This flavour grabs the key events through X11, and thus only sounds
  for keys typed within an X session. It is registered as an
- alternative for /usr/games/buckle; see bucklespring-libinput for
- the Wayland and console flavour.
+ alternative for /usr/games/buckle; see bucklespring-libinput for the
+ Wayland and console flavour.
 
 Package: libbdd-dev
 Description-md5: caaa42509b2e5eb065636f9cd6cf753a
@@ -42385,6 +42393,50 @@ Description-en: Difference table between TAI and UTC for casacore
  This package contains the leap second difference between TAI and UTC, created
  from /usr/share/zoneinfo/leap-seconds.list. The data are in a format specific
  to casacore. The table is kept in sync with the tzdata package.
+
+Package: casadi
+Description-md5: 2e8e4955043e88a1b8cac89282ec6c45
+Description-en: Nonlinear optimization and algorithmic differentiation
+ CasADi is an open-source tool for nonlinear optimization and
+ algorithmic differentiation.  It facilitates rapid — yet efficient —
+ implementation of different methods for numerical optimal control,
+ both in an offline context and for nonlinear model predictive control
+ (NMPC).
+ .
+ This package contains the main binaries.
+
+Package: libcasadi-dev
+Description-md5: f38656a00b2f0a37a0fb140e2f7b021d
+Description-en: Nonlinear optimization and algorithmic differentiation - development files
+ CasADi is an open-source tool for nonlinear optimization and
+ algorithmic differentiation.  It facilitates rapid — yet efficient —
+ implementation of different methods for numerical optimal control,
+ both in an offline context and for nonlinear model predictive control
+ (NMPC).
+ .
+ This package contains the development files.
+
+Package: libcasadi3.7
+Description-md5: 88a82ac7bccd93629161f05e3121dbed
+Description-en: Nonlinear optimization and algorithmic differentiation
+ CasADi is an open-source tool for nonlinear optimization and
+ algorithmic differentiation.  It facilitates rapid — yet efficient —
+ implementation of different methods for numerical optimal control,
+ both in an offline context and for nonlinear model predictive control
+ (NMPC).
+ .
+ This package contains the libraries.
+
+Package: python3-casadi
+Description-md5: 410ea2c735e132223a81b4b40bf15986
+Description-en: Nonlinear optimization and algorithmic differentiation - Python bindings
+ CasADi is an open-source tool for nonlinear optimization and
+ algorithmic differentiation.  It facilitates rapid — yet efficient —
+ implementation of different methods for numerical optimal control,
+ both in an offline context and for nonlinear model predictive control
+ (NMPC).
+ .
+ This package contains the Python bindings.
 
 Package: cashbox
 Description-md5: c677e8c2cd3e511c3f4d9871ffe607d7
@@ -61739,6 +61791,33 @@ Description-en: Test-Case Reduction for C Compiler Bugs
  property.  It is intended for use by people who discover and report
  bugs in compilers and other tools that process C/C++ code.
 
+Package: libcrengine-ng-dev
+Description-md5: b4948d3f965f563ada226d42fd7613c5
+Description-en: cross-platform library for implementing e-book readers - development files
+ crengine-ng parses and lays out e-book documents, applies CSS styling and
+ hyphenation, and renders them through FreeType, HarfBuzz and FriBidi.
+ .
+ This package contains the header files, the CMake package configuration
+ and the pkg-config file needed to build programs against libcrengine-ng.
+
+Package: libcrengine-ng7
+Description-md5: bba14c2f281c974dd00c97fd67da21b3
+Description-en: cross-platform library for implementing e-book readers
+ crengine-ng parses and lays out e-book documents: fb2, fb3, epub (without
+ DRM), rtf, doc, docx, odt, htm, Markdown, chm, pdb, mobi (without DRM),
+ txt, tcr and prc. It applies CSS styling, hyphenation dictionaries and
+ bidirectional text handling, and renders the result through FreeType,
+ HarfBuzz and FriBidi.
+ .
+ This is the fork of the crengine library that Debian already ships inside
+ the coolreader source package, maintained by the same upstream author
+ alongside CoolReader. Debian does not currently provide the engine as a
+ shared library, which is what the fork adds: it lets other programs use
+ crengine-ng, and it lets more than one user interface be built from it
+ (crqt-ng for Qt 6 and crwx-ng for wxWidgets are packaged separately).
+ .
+ This package contains the shared library and its hyphenation and CSS data.
+
 Package: cricket
 Description-md5: 03e1e8a573de472a25aeaf1447321186
 Description-en: Program for collection and display of time-series data
@@ -62719,6 +62798,23 @@ Description-en: CrowdSec bouncer for custom scripts
  This package uses the CrowdSec API to fetch the latest decisions
  periodically, and passes them as arguments to a custom user script.
 
+Package: crqt-ng
+Description-md5: 66d52d178c9803e47e12b83cb46deb74
+Description-en: cross-platform open source e-book reader using crengine-ng
+ crqt-ng is an e-book reader with a Qt 6 user interface, built on the
+ crengine-ng rendering library.  It reads fb2, fb3, epub (without DRM), doc,
+ docx, odt, rtf, pdb, mobi (without DRM), txt, html, Markdown, chm and tcr
+ files, and offers CSS styling, hyphenation dictionaries, multiple tabs,
+ text search, reading books straight from ZIP archives and flexible font
+ rendering.
+ .
+ It is the Qt frontend of the crengine-ng family, a fork of CoolReader
+ maintained by the same upstream author.  Debian already has src:coolreader,
+ which bundles the older engine together with its own Qt frontend; the two
+ are co-installable, because crqt-ng ships /usr/bin/crqt and uses
+ /usr/share/crqt, while coolreader ships /usr/bin/coolreader and uses
+ /usr/share/cr3.
+
 Package: crrcsim
 Description-md5: 81c11328dbefe49009d5872019c51d46
 Description-en: Model-Airplane Flight Simulator
@@ -62826,6 +62922,21 @@ Description-en: SCP firmware for Allwinner sunxi boards
  .
  There is usually no need to install this package.  The same contents
  are more conveniently available from the u-boot-sunxi package.
+
+Package: crwx-ng
+Description-md5: fe0f0874a11200702e95e6f64f39e240
+Description-en: cross-platform open source e-book reader using crengine-ng and wxWidgets
+ crwx-ng is an e-book reader with a wxWidgets user interface, built on the
+ crengine-ng rendering library.  It reads the same formats as the library
+ (fb2, fb3, epub and mobi without DRM, doc, docx, odt, rtf, pdb, txt, html,
+ Markdown, chm, tcr) and offers CSS styling, hyphenation dictionaries, text
+ search and reading books directly from ZIP archives.
+ .
+ It is the wxWidgets frontend of the crengine-ng family, a fork of
+ CoolReader maintained by the same upstream author.  It is co-installable
+ with src:coolreader, which ships a Qt frontend but no wxWidgets one: crwx-ng
+ installs /usr/bin/crwx and uses /usr/share/crwx, while coolreader ships
+ /usr/bin/coolreader and uses /usr/share/cr3.
 
 Package: cryfs
 Description-md5: 6a193616bfd007a57999d6d65d2c809f
@@ -75363,6 +75474,64 @@ Description-en: debugger for the Go programming language
  Delve enables you to interact with your program by controlling the execution
  of the process, evaluating variables, and providing information of
  thread/goroutine state, CPU register state and more.
+
+Package: denemo
+Description-md5: 167f8e8517e834f579dc7fbd7c3c79b0
+Description-en: free graphical music notation editor (GTK front end to LilyPond)
+ Denemo is a free music notation program GUI for GNU/Linux, macOS and Windows
+ that lets you rapidly enter notation which it typesets using the LilyPond
+ music engraver.  Music can be typed in at the PC keyboard, or played in
+ via MIDI controller, or input acoustically into a microphone plugged into
+ your computer’s soundcard.
+ .
+ Denemo uses LilyPond which generates beautiful sheet music to the highest
+ publishing standards.  During input Denemo displays the staffs in a simple
+ fashion, so you can enter and edit the music efficiently.  The typesetting
+ is done in the background while you work, and is generally flawless
+ publication quality.  Some final tweaks can be done on the typeset score
+ with the mouse if needed.  This represents an enormous practical improvement
+ over the popular programs which require you to re-position colliding
+ notation constantly as you enter the music.
+ .
+ Beginner to Professional: Denemo can be used for a brief student homework
+ all the way to a full-scale opera.  Support is there for creating the
+ widest range of notation – Tablature, Chord Charts, Fret Diagrams, Drums,
+ transposing instruments, ossia, ottava, cue, title pages, table-of-contents,
+ critical commentaries, footnotes quoting music, and more with LilyPond’s
+ extensive syntax available for even more demanding uses.
+
+Package: denemo-data
+Description-md5: 024b017c661eb5283972ae33777ed288
+Description-en: data for Denemo
+ Denemo is a free (GPL) graphical music notation editor that lets you
+ rapidly enter notation which it typesets using the LilyPond music engraver,
+ creating notation straight from your input that outshines the commercial
+ competition.  You can compose, transcribe, arrange, listen to the music
+ and much more.
+ .
+ This package contains the arch-independent files.
+
+Package: denemo-doc
+Description-md5: 432e166a5b95162d504028cd484ae0db
+Description-en: documentation and examples for Denemo
+ Denemo is a free (GPL) graphical music notation editor that lets you
+ rapidly enter notation which it typesets using the LilyPond music engraver,
+ creating notation straight from your input that outshines the commercial
+ competition.  You can compose, transcribe, arrange, listen to the music
+ and much more.
+ .
+ This package contains the HTML documentation and examples.
+
+Package: fonts-denemo
+Description-md5: d563771d3b6de5dcd50a9cc4afb495a8
+Description-en: music notation symbol fonts for Denemo
+ Denemo is a free (GPL) graphical music notation editor that lets you
+ rapidly enter notation which it typesets using the LilyPond music engraver,
+ creating notation straight from your input that outshines the commercial
+ competition.  You can compose, transcribe, arrange, listen to the music
+ and much more.
+ .
+ This package contains the music notation symbol fonts.
 
 Package: density-fitness
 Description-md5: a0d73a3885bbe1e21b3bb9575d5b6f5c
@@ -117312,6 +117481,15 @@ Description-en: fast type-safe C++ formatting library -- documentation
  This package contains the documentation files.
 
 Package: libfmt10
+Description-md5: bf00d7b126b81746ed9bbb189e83fcc1
+Description-en: fast type-safe C++ formatting library -- library
+ This library provides fast, type-safe, small, C++11-aware replacement of
+ (s)printf and related machinery. In some cases it's noticeably faster
+ than boost::format, boost::lexical_cast and even sprintf itself.
+ .
+ This package contains the shared library.
+
+Package: libfmt11
 Description-md5: bf00d7b126b81746ed9bbb189e83fcc1
 Description-en: fast type-safe C++ formatting library -- library
  This library provides fast, type-safe, small, C++11-aware replacement of
@@ -185550,224 +185728,6 @@ Description-en: command-line tools for the iPod family of portable music players
  of songs and playlists on an Apple iPod.  The original iPod, iPod Mini,
  and iPod Shuffle players are all supported.
 
-Package: gnuradio
-Description-md5: 7ddcd2ec394dcefbac5267b9552f12c3
-Description-en: GNU Radio Software Radio Toolkit
- GNU Radio provides signal processing blocks to implement software
- radios. It can be used with readily-available low-cost external RF
- hardware to create software-defined radios, or without hardware in a
- simulation-like environment. It is widely used in hobbyist, academic
- and commercial environments to support both wireless communications
- research and real-world radio systems.
- .
- GNU Radio applications are primarily written using the Python
- programming language, while the supplied performance-critical signal
- processing path is implemented in C++ using processor floating-point
- extensions, where available. Thus, the developer is able to implement
- real-time, high-throughput radio systems in a simple-to-use,
- rapid-application-development environment.
- .
- While not primarily a simulation tool, GNU Radio does support
- development of signal processing algorithms using pre-recorded or
- generated data, avoiding the need for actual RF hardware.
- .
- This package contains the gnuradio-companion, a graphical tool for
- creating signal flow graphs and generating flow-graph source code.
- Also included are a variety of tools and utility programs.
-
-Package: gnuradio-dev
-Description-md5: 5bb8c3545aecb809389b9c38779dfbca
-Description-en: GNU Software Defined Radio toolkit development
- Header files for the GNU Radio software defined radio system.
- Since GNU Radio is a framework for development of SDR
- applications, you are likely to need this installed.
- .
- Part of the main gnuradio build.
-
-Package: gnuradio-doc
-Description-md5: 22ee057ba99e69902805afee82426a18
-Description-en: GNU Software Defined Radio toolkit documentation
- Documentation for the GNU Radio software defined radio system
- in html and PDF form.
- .
- HTML docs start file:///usr/share/doc/gnuradio-doc/html/index.html
- .
- PDF docs in file:///usr/share/doc/gnuradio-doc/refman.pdf.gz
- .
- Part of the main gnuradio build.
-
-Package: libgnuradio-analog3.10.12
-Description-md5: 3d88ee6c337e47267fede2494cb9f2e4
-Description-en: gnuradio analog functions
- Library for handling analog signal processing functions.
- These functions are also in gnuradio-core.
- Part of the main gnuradio build.
-
-Package: libgnuradio-audio3.10.12
-Description-md5: f5bb32c4a24d434c08d8a973aa860840
-Description-en: gnuradio audio functions
- This is the gr-audio library, used to connect to audio sources
- (mic-in) and sinks (speaker-out) ports on a computer. The underlying
- hardware driver is system and OS dependent and this module should
- automatically discover the correct one to use.  Part of the main
- gnuradio build.
-
-Package: libgnuradio-blocks3.10.12
-Description-md5: c2df21cc192bf1b929366d6340f78189
-Description-en: gnuradio blocks functions
- Some non-signal processing blocks.
- These functions are also in gnuradio-core.
- Part of the main gnuradio build.
-
-Package: libgnuradio-channels3.10.12
-Description-md5: 9eb2ac8d51d697df58640b28e607df3c
-Description-en: gnuradio channels functions
- Some channel oriented processing blocks.
- These functions are also in gnuradio-core.
- Part of the main gnuradio build.
-
-Package: libgnuradio-digital3.10.12
-Description-md5: 42026ba96232d8ed9bce33531e9feae8
-Description-en: gnuradio digital communications functions
- All the functions for doing digital modulation and demodulation,
- including bpsk, qpsk, gmsk and ofdm signals.
- Part of the main gnuradio build.
-
-Package: libgnuradio-dtv3.10.12
-Description-md5: d8a125d35c8f558167b79c2abf61062b
-Description-en: gnuradio digital TV signal processing blocks
- ATSC support, gr-atsc ported to a new framework, as well as
- DVB-S2, DVB-T, DVB-T2 digital video broadcast standards.
- Part of the main gnuradio build.
-
-Package: libgnuradio-fec3.10.12
-Description-md5: 4603e05c76586caedc5c05d4c7fcfe9b
-Description-en: gnuradio forward error correction support
- Handle forward error correction processing in gnuradio.
- Implements the GNU Radio FEC API, supporting encoders and
- decoders for no-op dummmy, repetition, and convolutional classes.
- Part of the main gnuradio build.
-
-Package: libgnuradio-fft3.10.12
-Description-md5: 544f2ac48e471aa4593f6909f337d7da
-Description-en: gnuradio fast Fourier transform functions
- Library for Fourier transform techniques used in gnuradio.
- Uses single precision FFT from libfftw3-single3.
- Part of the main gnuradio build.
-
-Package: libgnuradio-filter3.10.12
-Description-md5: 0f2aeac43193cf5b5151505285675492
-Description-en: gnuradio filter functions
- Library of filter blocks used in gnuradio. Implements
- FIR, IIR and FFT filters, as well as Polyphase filterbank and
- PFB arbitrary resampler methods.
- Part of the main gnuradio build.
-
-Package: libgnuradio-iio3.10.12
-Description-md5: 06045448fd28862166b114aa4a4422f3
-Description-en: IIO blocks for GnuRadio
- Libiio is a library that has been conceived to ease the development of
- applications interfacing Industrial Input/Output (IIO) devices through
- the IIO subsystem of the Linux kernel.
- .
- The IIO blocks for GnuRadio can be used to create flowgraphs that interface
- IIO devices through libiio.
- .
- Part of the main gnuradio build.
-
-Package: libgnuradio-network3.10.12
-Description-md5: 0c35e9fa3188431e10e3c732ed374377
-Description-en: gnuradio network library
- Library of  blocks that implement UDP and TCP source and
- sink blocks supporting both IPv4 and IPv6.
- Part of the main gnuradio build.
-
-Package: libgnuradio-pdu3.10.12
-Description-md5: e60a0657b0dcf6c1619f76d881d29549
-Description-en: gnuradio streaming protocol library
- Protocol Data Units library provides signal processing
- blocks that operate on Protocol Data Unit format messages. Many
- such blocks are analogs of streaming API functionality.
- Part of the main gnuradio build.
-
-Package: libgnuradio-pmt3.10.12
-Description-md5: 653aedd1567eba8b157188969da4c76b
-Description-en: gnuradio pmt container library
- Polymorphic Types are opaque data types that are designed as generic
- containers of data that can be safely passed around between blocks
- and threads in GNU Radio.
- Part of the main gnuradio build.
-
-Package: libgnuradio-qtgui3.10.12
-Description-md5: 78840934166cde690f3708cac44c0689
-Description-en: gnuradio Qt graphical user interface functions
- QT-based graphical sinks for gnuradio applications.
- Implements opengl, raster and native plotting methods, and
- supports a QT Style Sheet (QSS) file to adjust the look.
- Part of the main gnuradio build.
-
-Package: libgnuradio-runtime3.10.12
-Description-md5: e73009f780eee5fc595dc4da8d24cf71
-Description-en: gnuradio core runtime
- Top level component library. Defines core blocks. Handles
- settings for logging, performance counters, and control port.
- Part of the main gnuradio build.
-
-Package: libgnuradio-soapy3.10.12
-Description-md5: eb287e97d9393a929f10abdbcbc71636
-Description-en: gnuradio SoapySDR support
- Soapy hardware drivers using the SoapySDR driver framework.
- Part of the main gnuradio build.
-
-Package: libgnuradio-trellis3.10.12
-Description-md5: 93ea87d97d5bf7a5d6272bbfd279ded5
-Description-en: gnuradio trellis modulation functions
- Library for trellis coding modulation, including the Viterbi
- Algorithm, Concatenated Coding and Turbo Decoding
- based upon finite state machine (FSM) class.
- Part of the main gnuradio build.
-
-Package: libgnuradio-uhd3.10.12
-Description-md5: 99e0943e04dc3702c287f7beab797428
-Description-en: gnuradio universal hardware driver functions
- The gnuradio interface to the UHD library to connect to and send and
- receive data between to the Ettus Research, LLC product line -
- including the USRP family of software radio peripheral devices.
- Part of the main gnuradio build.
-
-Package: libgnuradio-video-sdl3.10.12
-Description-md5: 81449e40176027f155aef2502ecffd77
-Description-en: gnuradio video functions
- Library for handling SDL (Simple DirectMedia Layer) video data.
- Implements input and output blocks.
- Part of the main gnuradio build.
-
-Package: libgnuradio-vocoder3.10.12
-Description-md5: 58d0150c5fe739990bdb32a77526f016
-Description-en: gnuradio vocoder functions
- Library of vocoder blocks, including ulaw, alaw, gsm and codec2.
- Debian uses external libraries for gsm and codec2.
- .
- Part of the main gnuradio build.
-
-Package: libgnuradio-wavelet3.10.12
-Description-md5: 1c51b1d67b8ca0587a908ff0217bc021
-Description-en: gnuradio wavelet functions
- Library of Daubechies wavelet function blocks.
- wvps computes the Wavelet Power Spectrum from
- a set of wavelet coefficients.
- .
- Part of the main gnuradio build.
-
-Package: libgnuradio-zeromq3.10.12
-Description-md5: fad8379800018fcef6de6233eaff6ed5
-Description-en: gnuradio zeromq functions
- 0MQ messaging library support. Provide network socket
- endpoints for gnuradio data and message streams.
- PUB/SUB, PUSH/PULL, REP/REQ models supported.
- .
- Part of the main gnuradio build.
-
 Package: gnurobbo
 Description-md5: 797d18c35275ee4573897948c4097a84
 Description-en: logic game ported from ATARI XE/XL
@@ -187729,75 +187689,6 @@ Description-en: rsync client and daemon, implemented in Go
  Note that this implementation is younger and less battle-tested than
  the C rsync from the Samba project; users are encouraged to verify
  their transfers and report discrepancies upstream.
-
-Package: golang-1.25
-Description-md5: 1278999215b463c2ea8d5794b72f2203
-Description-en: Go programming language compiler - metapackage
- The Go programming language is an open source project to make
- programmers more productive. Go is expressive, concise, clean, and
- efficient. Its concurrency mechanisms make it easy to write programs
- that get the most out of multicore and networked machines, while its
- novel type system enables flexible and modular program construction.
- Go compiles quickly to machine code yet has the convenience of
- garbage collection and the power of run-time reflection. It's a
- fast, statically typed, compiled language that feels like a
- dynamically typed, interpreted language.
- .
- This package is a metapackage that, when installed, guarantees
- that (most of) a full Go development environment is installed.
- .
- To use this version, instead of the default one provided by golang-go
- package, add /usr/lib/go-1.25/bin/ to PATH, or invoke /usr/lib/go-1.25/bin/go
- directly.
-
-Package: golang-1.25-doc
-Description-md5: 70faba58bee63cd1d9d375165fa0d6d6
-Description-en: Go programming language - documentation
- The Go programming language is an open source project to make
- programmers more productive. Go is expressive, concise, clean, and
- efficient. Its concurrency mechanisms make it easy to write programs
- that get the most out of multicore and networked machines, while its
- novel type system enables flexible and modular program construction.
- Go compiles quickly to machine code yet has the convenience of
- garbage collection and the power of run-time reflection. It's a fast,
- statically typed, compiled language that feels like a dynamically
- typed, interpreted language.
- .
- This package provides the documentation for the Go programming
- language.
-
-Package: golang-1.25-go
-Description-md5: 054594fea59465527f83d8f272a0ae73
-Description-en: Go programming language compiler, linker, compiled stdlib
- The Go programming language is an open source project to make programmers more
- productive. Go is expressive, concise, clean, and efficient. Its concurrency
- mechanisms make it easy to write programs that get the most out of multicore
- and networked machines, while its novel type system enables flexible and
- modular program construction. Go compiles quickly to machine code yet has the
- convenience of garbage collection and the power of run-time reflection. It's a
- fast, statically typed, compiled language that feels like a dynamically typed,
- interpreted language.
- .
- This package provides an assembler, compiler, linker, and compiled libraries
- for the Go programming language.
- .
- To use this version, instead of the default one provided by golang-go package,
- add /usr/lib/go-1.25/bin/ to PATH, or invoke /usr/lib/go-1.25/bin/go directly.
-
-Package: golang-1.25-src
-Description-md5: 641317c503e9fe0a9039cd8790bb4657
-Description-en: Go programming language - source files
- The Go programming language is an open source project to make programmers more
- productive. Go is expressive, concise, clean, and efficient. Its concurrency
- mechanisms make it easy to write programs that get the most out of multicore
- and networked machines, while its novel type system enables flexible and
- modular program construction. Go compiles quickly to machine code yet has the
- convenience of garbage collection and the power of run-time reflection. It's a
- fast, statically typed, compiled language that feels like a dynamically typed,
- interpreted language.
- .
- This package provides the Go programming language source files needed for
- compilation.
 
 Package: golang-1.26
 Description-md5: 322a3f5d6dfe85ed4a41b40bf14a1582
@@ -191590,11 +191481,6 @@ Description-en: generating online histograms and plotting them with golang
  Thist is a go library for calculating online histograms
  with plotting to the terminal and images.
 
-Package: golang-github-bsm-go-vlq-dev
-Description-md5: 867f1170c290ed3854f1f7bfeb501ef2
-Description-en: variable-length quantity encoding library
- Implementation of "VLQ" encoding of 64-bit integers.
-
 Package: golang-github-bsm-pool-dev
 Description-md5: 3110c2440ec8df39b6abbb449c975e0a
 Description-en: simple connection pool library for Golang
@@ -192914,18 +192800,6 @@ Description-en: extension of Table-Driven Testing (library)
  reading these tests.
  .
  This package contains the Go library.
-
-Package: golang-github-codahale-hdrhistogram-dev
-Description-md5: 60d9d1c6d6807bcee2ef5f634d3c799c
-Description-en: implementation of Gil Tene's HDR Histogram
- This package contains a pure Go implementation of the HDR Histogram
- .
- A Histogram that supports recording and analyzing sampled data value
- counts across a configurable integer value range with configurable value
- precision within the range. Value precision is expressed as the number
- of significant digits in the value recording, and provides control over
- value quantization behavior across the value range and the subsequent
- value resolution at any given level.
 
 Package: golang-github-codeclysm-extract-dev
 Description-md5: 48159c10744dbc189d81dda0521ae6be
@@ -195063,29 +194937,6 @@ Description-md5: db8ee33beee37586ebaa003c0b27cfce
 Description-en: Simple, semantic and developer-friendly crypto package
  Dongle is a simple, semantic and developer-friendly golang crypto
  package with 100% unit test coverage.
-
-Package: golang-github-drone-envsubst-dev
-Description-md5: 29b79ace81eb3e54bec2098b1a7ccb9c
-Description-en: Go library for performing Bash-style parameter expansion
- This library allows Go programs to expand strings which reference
- environment variables with the  syntax, as used by GNU Bash. It
- supports most of the expansion syntaxes offered by Bash, including the
- search and replace forms.
-
-Package: golang-github-dropbox-dropbox-sdk-go-unofficial-dev
-Description-md5: e3d908b4369e4f8505f68784945e3ee5
-Description-en: Unofficial Go SDK for integrating with the Dropbox API v2
- WARNING: This SDK is **NOT yet official**. What does this mean?
-  * There is no formal Dropbox support for this SDK at this point
-  * Bugs may or may not get fixed
-  * Not all SDK features may be implemented and implemented features
-    may be buggy or incorrect
- .
- However:
-  * The SDK, while unofficial, _is_ usable.
-  * Dropbox would like to get feedback from the community and evaluate
-    the level of interest/enthusiasm before investing into official
-    supporting one more SDK
 
 Package: golang-github-dsnet-compress-dev
 Description-md5: 92e8deea43fa98b215395eaea106f78a
@@ -199703,14 +199554,6 @@ Description-en: helper CLI tool for shallow inspection of Terraform configuratio
  that allows viewing module information in either a Markdown-like format
  or in JSON format.
 
-Package: golang-github-hashicorp-terraform-registry-address-dev
-Description-md5: e14502ab968e6a1f25763db9563874f0
-Description-en: Go library to represent, compare and parse Terraform Registry address
- This Go module enables parsing, comparison and canonical representation of
- Terraform Registry (https://registry.terraform.io/) "provider" addresses
- (such as registry.terraform.io/grafana/grafana or hashicorp/aws) and
- "module" addresses (such as hashicorp/subnets/cidr).
-
 Package: golang-github-hashicorp-terraform-svchost-dev
 Description-md5: ee75d50fb2afd56e412015a2cc89de44
 Description-en: handling of friendly hostnames for terraform
@@ -200668,14 +200511,6 @@ Description-en: writing and mounting user-space file systems from Go
  The very large disadvantage over using the bazil.org packages is that many
  features have not yet been exposed.
 
-Package: golang-github-jacobsa-gcloud-dev
-Description-md5: 2d34026e2266aec88741b8b10ef02e25
-Description-en: convenience wrapper around google cloud platform APIs
- This repo contains unofficial code related to Google Cloud Platform services;
- in particular a package for interacting with Google Cloud Storage. The latter
- is just a wrapper around code that exists elsewhere, presenting it with a
- different API.
-
 Package: golang-github-jacobsa-oglematchers-dev
 Description-md5: c72ce1f60ef859cff6d872d0c94885de
 Description-en: matchers for testing/mocking frameworks such as ogletest
@@ -200773,14 +200608,6 @@ Package: golang-github-jamesclonk-vultr-dev
 Description-md5: fb8a687b4dae6215160193248dc43f68
 Description-en: Vultr API client library
  Vultr (https://www.vultr.com) API client library, written in Go.
-
-Package: golang-github-jamesruan-go-rfc1924-dev
-Description-md5: ee1bb1bbefed6fe890459d6bace133ee
-Description-en: RFC1924 base85 encoding (library)
- Implementation of the RFC1924 base85 encoding.
- .
- This encoding can be used to, among other things, represent any IPv6
- address in 20 octets.
 
 Package: golang-github-jamiealquiza-envy-dev
 Description-md5: c29ea63443e0d3a9f3e6848a7836cfbe
@@ -203674,20 +203501,6 @@ Description-en: Simple Certificate Enrollment Protocol server/client in Go
  scep implements Simple Certificate Enrollment Protocol server and client.
  .
  This package provides the binaries 'scepserver' and 'scepclient'.
-
-Package: golang-github-microsoft-didx509go-dev
-Description-md5: 226bd62e73095367dd042005cb7414e6
-Description-en: Resolver for DID:x509 method implemented in Go (library)
- This package contains a Go implementation of a resolver for the DID:x509
- Decentralized Identifier (DID) method. It enables interoperability between
- traditional X.509 public key infrastructures (PKI) and decentralized identity
- frameworks, allowing applications to resolve did:x509 identifiers to DID
- documents, leveraging X.509 certificate data.
- .
- The DID:x509 method supports environments in which full migration to DIDs
- may not be feasible, enabling seamless integration with existing PKI systems.
- This is useful for developers and systems aiming to adopt decentralized
- identifiers without disrupting current X.509-based workflows.
 
 Package: golang-github-microsoft-go-winio-dev
 Description-md5: 2b6ac90a1f01d298e4ab3a375ab0b9a2
@@ -207915,12 +207728,6 @@ Description-en: Golang library for fuzzy matching within a set of strings
  n-grams. The precomputation scales well and is much faster and more
  accurate than Levenshtein for long strings.
 
-Package: golang-github-schollz-peerdiscovery-dev
-Description-md5: d541ef13c01fdba7841c270bb383e00f
-Description-en: Library for cross-platform local peer discovery using UDP multicast (library)
- Pure-go library for cross-platform thread-safe local peer discovery using
- UDP multicast.
-
 Package: golang-github-schollz-progressbar-dev
 Description-md5: 8e1a60c346d1b73840b86ddaa28318f8
 Description-en: thread-safe progress bar for Golang applications
@@ -210571,15 +210378,6 @@ Description-en: Template compiler (converter) for quicktemplate
  The tool can be called directly or via «go generate», with the latter being
  the preferred form.
 
-Package: golang-github-valyala-tcplisten-dev
-Description-md5: 830a6ce70701269aaaa16bea6c52f4d1
-Description-en: Customizable TCP net.Listener for Go (library)
- Package tcplisten provides customizable TCP net.Listener with
- various performance-related options like SO_REUSEPORT, TCPDEFERACCEPT.
- .
- The package is derived from go_reuseport
- (https://github.com/kavu/go_reuseport).
-
 Package: golang-github-varlink-go-dev
 Description-md5: 24ee346ded63461a0b69729733c91cd7
 Description-en: Golang implementation of the Varlink protocol
@@ -210992,12 +210790,6 @@ Description-md5: edcf659093a0df54d748a12b24f074f3
 Description-en: Go wrapper around the ioctl(2) syscall (library)
  go-ioctl is a very small Go wrapper around the ioctl(2) syscall.
 
-Package: golang-github-vulcand-predicate-dev
-Description-md5: 53a43cc94313eb56e59b2b452ce03566
-Description-en: Library for creating predicate mini-languages in Go
- Predicate is a package used to create interpreted mini languages with
- Go syntax - mostly to define various predicates for configuration.
-
 Package: golang-github-vultr-govultr-dev
 Description-md5: 4cbb5d261d2de9eedfa32b0306ba1d13
 Description-en: Vultr Go API client
@@ -211072,18 +210864,6 @@ Description-en: collection of utility for wazero
  hopes to provide a helpful base for wazero users that fall into these
  engineering categories, while allowing wazero itself to continue to
  focus on being an excellent WebAssembly runtime for Go.
-
-Package: golang-github-wenerme-astgo-dev
-Description-md5: d20b5a0504554073a0fae91440792459
-Description-en: Libraries to work with Asterisk (library)
- Includes support for AMI (Asterisk Manager Interface) and AGI (Asterisk
- Gateway Interface).
- .
- AMI: Async action, Sync Action, Event Subscribe, Auto Reconnect, Generated
- Action with document, Generated Event with document, Generated Client Action
- with Response.
- .
- AGI: FastAGI, AGI Bin, Generated Command, Generated Client.
 
 Package: golang-github-weppos-dnsimple-go-dev
 Description-md5: 828cb9beab2026d2a7f67100746f1c12
@@ -216721,104 +216501,6 @@ Description-en: views GPS traces collected in the GPX format
  duration or maximum speed. You are also shown the trace on an OpenStreetMap
  map, where you can scroll around and zoom.
 
-Package: gqrx-sdr
-Description-md5: 903d16e73d7641406e10d7b18dacc21d
-Description-en: Software defined radio receiver
- Gqrx works with hardware supported by gr-osmosdr, including Funcube
- Dongle, RTL-SDR, Airspy, HackRF, BladeRF, RFSpace, USRP and SoapySDR.
- .
- Gqrx can operate as an AM/FM/SSB receiver with audio output or as an
- FFT-only instrument. The built-in Gqrx AFSK1200 decoder can decode
- and display AX.25 packets.  There are also various hooks for
- interacting with external applications using network sockets.
- .
- Wideband FM mode has mono, stereo, and RDS (Radio Data System) modes.
- Displays FFT plot and spectrum waterfall.
- .
- It is powered by GNU Radio and the Qt GUI toolkit.
-
-Package: gr-air-modes
-Description-md5: bd7b856548046046279e205e670faad5
-Description-en: Gnuradio Mode-S/ADS-B radio
- A software-defined radio receiver for Mode S
- transponder signals, including ADS-B reports from equipped aircraft.
- .
- Multiple output formats are supported:
-  * Raw (or minimally processed) output of packet data
-  * Parsed text
-  * SQLite database
-  * KML for use with Google Earth
-  * SBS-1-compatible output for use with e.g. PlanePlotter or Virtual
-    Radar Server
-  * FlightGear multiplayer interface for real-time display of traffic
-    within the simulator
-
-Package: libgnuradio-air-modes1t64
-Description-md5: de9c42f0df66feb5e1c1e93825f66091
-Description-en: Gnuradio Mode-S/ADS-B radio - library
- A software-defined radio receiver for Mode S
- transponder signals, including ADS-B reports from equipped aircraft.
- .
- This package provides a shared library.
-
-Package: gr-dab
-Description-md5: fa9f1dd4cafa866a57ba8d79c5651963
-Description-en: GNU Radio blocks and tools for receiving DAB and DAB+ radio
- Contains necessary DSP blocks for receiving DAB and DAB+ transmissions
- using a software defined radio such as hackrf, rtl-sdr, USRP etc.
- .
- GNU Radio Companion modules are also included.
-
-Package: gr-dab-dev
-Description-md5: e8b6b7a99c08c43a780de030331b911d
-Description-en: Development files for gr-dab (DAB/DAB+ receiver)
- Contains necessary DSP blocks for receiving DAB and DAB+ transmissions
- using a software defined radio such as hackrf, rtl-sdr, USRP etc.
- .
- This package contains the development files for gr-dab
-
-Package: gr-dab-doc
-Description-md5: 24344dbc8746e9e3b37355495429846b
-Description-en: Documentation files for gr-dab (DAB/DAB+ receiver)
- Contains necessary DSP blocks for receiving DAB and DAB+ transmissions
- using a software defined radio such as hackrf, rtl-sdr, USRP etc.
- .
- This package contains the Doxygen generated HTML documentation for gr-dab.
-
-Package: libgnuradio-dab3.10.0
-Description-md5: d6e3d099bef12c79061b33f06781a15e
-Description-en: Shared library for gr-dab (DAB/DAB+ receiver)
- Contains necessary DSP blocks for receiving DAB and DAB+ transmissions
- using a software defined radio such as hackrf, rtl-sdr, USRP etc.
- .
- This package contains the shared library for gr-dab.
-
-Package: gr-fosphor
-Description-md5: 22a6b9110834daf9bb3248036c0083bc
-Description-en: gnuradio fosphor block (GPU spectrum display)
- This implements a GNU Radio sink consisting of a GL display window
- that provides a Real Time Spectrum Analyzer (RTSA)-like spectrum
- visualization using OpenCL and OpenGL acceleration.
- .
- To use the fosphor blocks in Python, import it as :
- .
- from gnuradio import fosphor
- .
- See the Doxygen documentation for details about the blocks available
- in this package. A quick listing of the details can be found in Python
- after importing by using:
- .
- help(fosphor)
-
-Package: libgnuradio-fosphor3.9.0
-Description-md5: 614c73b6f47df0c22ec4d72415499cec
-Description-en: gnuradio fosphor block (GPU spectrum display) (library)
- This implements a GNU Radio sink consisting of a GL display window
- that provides a Real Time Spectrum Analyzer (RTSA)-like spectrum
- visualization using OpenCL and OpenGL acceleration.
- .
- This package provides a shared library.
-
 Package: fonts-gr-framework
 Description-md5: 76aa2a05346fa2aec3813c1134608bde
 Description-en: Bundled Font of Graphical Kernel System (GKS) and OpenGL
@@ -217004,280 +216686,6 @@ Description-en: Library of Graphical Kernel System (GKS) and OpenGL
  scenes.
  .
  This package contains runtime library for GR.
-
-Package: gr-funcube
-Description-md5: 95b4539533d6bcde52cd347ce237f0fc
-Description-en: Funcube Dongle controller for GNU Radio
- Support hardware for software radio using the fcdproplus
- which provides sampled RF IQ data as a USB audio stereo
- data stream. Control is done over USB HID protocol.
- .
- Both the Funcube Dongle and Funcube Dongle Pro+ are supported
- by this package.
- .
- This package provides a Python library as well as
- a gnuradio companion source object.
-
-Package: libgnuradio-funcube3.10.0
-Description-md5: 3aee1116acdbacf6e8a4bef6121f456a
-Description-en: Funcube Dongle controller for GNU Radio (runtime)
- Support hardware for software radio using the fcdproplus
- which provides sampled RF IQ data as a USB audio stereo
- data stream. Control is done over USB HID protocol.
- .
- Both the Funcube Dongle and Funcube Diongle Pro+ are supported
- by this package.
- .
- This package provides a shared library.
-
-Package: gr-gsm
-Description-md5: 5ba4a216fc47a8080343265237ff7d35
-Description-en: GNU Radio blocks and tools for receiving GSM transmissions
- Implementation of the Global System for Mobile Communications
- protocol and provide tools for scanning for GSM base stations and for
- decoding GSM radio trafic.
-
-Package: gr-hpsdr
-Description-md5: d4862883866ce872d364b748eed36383
-Description-en: gnuradio interface module for OpenHPSDR protocol 1
- Hardware supported includes OpenHPSDR Hermes / Metis and Red Pitaya
- using the OpenHpsdr protocol.
- .
- hermesNB sources decimated downconverted 48K-to-384K receiver complex
- stream(s), and sinks one 48k sample rate transmit complex stream.
- .
- hermesWB sources raw ADC samples as a vector of floats, with
- vlen=16384. Each individual vector contains time contiguous
- samples. However there are large time gaps between vectors. This is
- how HPSDR produces raw samples, it is due to Ethernet interface rate
- limitations between HPSDR and the host computer.
- .
- The modules are compatible with version 3.8 of gnuradio and versions of
- Hermes firmware 1.8 through at 3.2. (known as OpenHPSDR protocol
- 1). It is not compatible with the new OpenHPSDR protocol 2.
- .
- This package contains the header files and grc block definitions.
-
-Package: libgnuradio-hpsdr1.0.0
-Description-md5: 0b550515bae63a80b0b5f6de34b16b49
-Description-en: gnuradio library for OpenHPSDR protocol 1
- Hardware supported includes OpenHPSDR Hermes / Metis and Red Pitaya
- using the OpenHpsdr protocol.
- .
- The modules are compatible with version 3.8 of gnuradio and versions of
- Hermes firmware 1.8 through 3.2. (known as OpenHPSDR protocol 1). It
- is not compatible with the new OpenHPSDR protocol 2.
- .
- This package contains the shared library.
-
-Package: gr-iqbal
-Description-md5: d1941592a7b1ef5f4224711566fb3e9c
-Description-en: GNU Radio Blind IQ imbalance estimator and correction
- The general idea is to suppress symmetrical images caused by IQ
- imbalance in the RX path of quadrature receivers.
- It's composed of two subblocks:
- .
- "IQ Bal Fix": This applies the actual correction. to a complex
- stream. The correction parameters are only magnitude/phase and the
- actual correction algo is the same as applied in hardware in the USRP.
- You can either specify the correction parameters manually on the
- block, or send them via 'messages'.
- .
- "IQ Bal Optimize": This blocks tries to blindly detect the imbalance
- by minimizing the correlation between the left and right part of the
- spectrum. See the code for the "how it does it". The general idea is
- inspired from papers found on the internet and the way some SDR
- software achieve the same things (sdr# for eg, although there are
- significant differences in the actual implementation).
-
-Package: libgnuradio-iqbalance3.9.0
-Description-md5: f3fa21c85b7648b2254e19f56b652c7b
-Description-en: GNU Radio Blind IQ imbalance estimator and correction (shared library)
- The general idea is to suppress symmetrical images caused by IQ
- imbalance in the RX path of quadrature receivers.
- It's composed of two subblocks: "IQ Bal Fix" and "IQ Bal Optimize".
- .
- This package provides a shared library for gr-iqbal.
-
-Package: gr-osmosdr
-Description-md5: 9e2f478a3fa3e6df7e580dc1b0091f68
-Description-en: GNU Radio blocks from the OsmoSDR project
- The Osmocom project is a family of projects regarding Open source
- mobile communications.
- .
- While primarily being developed for the OsmoSDR hardware, this block
- as well supports:
-  - FUNcube Dongle through gr-funcube
-  - FUNcube Dongle Pro+ through gr-funcube
-  - RTL2832U based DVB-T dongles through librtlsdr
-  - RTL-TCP spectrum server (see librtlsdr project)
-  - gnuradio .cfile input through libgnuradio-blocks
-  - RFSPACE SDR-IQ, SDR-IP, NetSDR (incl. X2 option)
-  - Great Scott Gadgets HackRF through libhackrf
-  - Nuand LLC bladeRF through libbladeRF library
-  - Ettus USRP Devices through Ettus UHD library
-  - Fairwaves UmTRX through Fairwaves' fork of UHD
-  - AIRSPY Receiver
-  - AIRSPY HF+ Receiver
-  - SoapySDR support
-  - Red Pitaya SDR transceiver (http://bazaar.redpitaya.com)
-  - FreeSRP through libfreesrp
- .
- Example applications include osmocom_fft, osmocom_siggen,
- and osmocom_spectrum_sense.
- .
- By using the OsmoSDR block you can take advantage of a common
- software API in your application(s) independent of the underlying
- radio hardware. This package provides C++ header files,
- documentation, and Python3 wrappers to the library.
-
-Package: gr-osmosdr-doc
-Description-md5: d40ca7e0ce88b8accb7f7bad00c9183f
-Description-en: Gnuradio blocks from the OsmoSDR project - documentation
- The Osmocom project is a family of projects regarding Open source
- mobile communications. This library provides hardware support for
- a variety of radio hardware in the form of gnuradio blocks.
- .
- This package contains generated documentation.
-
-Package: libgnuradio-osmosdr0.2.0t64
-Description-md5: 51a1965d4251d4df3ef91a58383567be
-Description-en: GNU Radio blocks from the OsmoSDR project - library
- The Osmocom project is a family of projects regarding Open source
- mobile communications. This library provides hardware support for
- a variety of radio hardware in the form of GNU Radio blocks.
- .
- This package contains the shared library.
-
-Package: gr-radar
-Description-md5: 516497234069f69ccb45a35f7b96d2d1
-Description-en: GNU Radio Radar Toolbox
- The *gr-radar* project provides a toolbox of commonly used radar
- algorithms. An important part is the *UHD Echotimer*, which enables a
- synchronized TX and RX stream from USRPs to ensure a constant phase
- relation in measurements. Example flowgraphs for CW, Dual CW, FSK,
- FMCW and OFDM radar are given and partly tested on hardware. GUI
- elements for target representation and further signal processing
- algorithms such as target tracking are implemented. Check out the
- project website for example videos and further information.
- .
- gr-radar provides GNU Radio Companion flowgraphs to handle RADAR data.
-
-Package: gr-radar-doc
-Description-md5: 73da5e2fe5c2ba906af94578ebf6c695
-Description-en: GNU Radio Radar Toolbox - Documentation
- The *gr-radar* project provides a toolbox of commonly used radar
- algorithms. An important part is the *UHD Echotimer*, which enables a
- synchronized TX and RX stream from USRPs to ensure a constant phase
- relation in measurements. Example flowgraphs for CW, Dual CW, FSK,
- FMCW and OFDM radar are given and partly tested on hardware. GUI
- elements for target representation and further signal processing
- algorithms such as target tracking are implemented. Check out the
- project website for example videos and further information.
- .
- gr-radar-doc provides Doxygen generated documentation.
-
-Package: libgnuradio-radar1.0.0
-Description-md5: f7c6f8b5ce5b7919b9641017de16de97
-Description-en: GNU Radio Radar Toolbox - library
- The *gr-radar* project provides a toolbox of commonly used radar
- algorithms. An important part is the *UHD Echotimer*, which enables a
- synchronized TX and RX stream from USRPs to ensure a constant phase
- relation in measurements. Example flowgraphs for CW, Dual CW, FSK,
- FMCW and OFDM radar are given and partly tested on hardware. GUI
- elements for target representation and further signal processing
- algorithms such as target tracking are implemented. Check out the
- project website for example videos and further information.
- .
- This package provides a shared library.
-
-Package: gr-rds
-Description-md5: 381f2d5bc7ea9a68ee3ab929814a53b8
-Description-en: GNU Radio FM RDS/TMC Transceiver
- A Radio Data System - Traffic Message Channel (RDS-TMC) block
- for GNU Radio.
- .
- Radio Data System (RDS) is a communications protocol standard for
- embedding  small amounts of digital information in conventional
- FM radio broadcasts.
- .
- gr-rds provides GNU Radio Companion flowgraphs to handle RDS data.
-
-Package: libgnuradio-rds1
-Description-md5: 720b1d3ef91dd3dca79a151a90f49fec
-Description-en: GNU Radio FM RDS/TMC Transceiver (library)
- A Radio Data System - Traffic Message Channel (RDS-TMC) block
- for GNU Radio.
- .
- Radio Data System (RDS) is a communications protocol standard for
- embedding  small amounts of digital information in conventional
- FM radio broadcasts.
- .
- This package provides a shared library.
-
-Package: gr-satellites
-Description-md5: c4cba52cc86945f8b21a0fd06acf0af8
-Description-en: Collection of satellite telemetry signal decoders
- This GNU Radio out-of-tree module can be used to decode frames
- transmitted from most Amateur satellites in orbit, performing
- demodulation, forward error correction, etc. Decoded frames can be
- saved to a file or displayed in hex format. For some satellites the
- telemetry format definition is included in gr-satellites, so the
- decoded telemetry frames can be printed out as human-readable values
- such as bus voltages and currents. Additionally, some satellites
- transmit files such as JPEG images. gr-satellites can be used to
- reassemble these files and even display the images in real-time as
- they are being received.
- .
- It supports most popular protocols, such as AX.25, the GOMspace
- NanoCom U482C and AX100 modems, an important part of the CCSDS stack,
- the AO-40 protocol used in the FUNcube satellites, and several ad-hoc
- protocols used in other satellites.
- .
- This package contains the header files and grc block definitions,
- and a set of satellite telemetry decoding scripts.
-
-Package: gr-satellites-doc
-Description-md5: 49ba4641ac7cc3cabdde2c496c199a62
-Description-en: Documentation of gr-satellite telemetry signal decoders
- This GNU Radio out-of-tree module can be used to decode frames
- transmitted from most Amateur satellites in orbit, performing
- demodulation, forward error correction, etc. Decoded frames can be
- saved to a file or displayed in hex format. For some satellites the
- telemetry format definition is included in gr-satellites, so the
- decoded telemetry frames can be printed out as human-readable values
- such as bus voltages and currents. Additionally, some satellites
- transmit files such as JPEG images. gr-satellites can be used to
- reassemble these files and even display the images in real-time as
- they are being received.
- .
- It supports most popular protocols, such as AX.25, the GOMspace
- NanoCom U482C and AX100 modems, an important part of the CCSDS stack,
- the AO-40 protocol used in the FUNcube satellites, and several ad-hoc
- protocols used in other satellites.
- .
- This package contains the HTML documentation.
-
-Package: libgnuradio-satellites5.8.0
-Description-md5: 6dead797c65cee5e03cb685bbdbaa04b
-Description-en: library of satellite telemetry signal decoders
- This GNU Radio out-of-tree module can be used to decode frames
- transmitted from most Amateur satellites in orbit, performing
- demodulation, forward error correction, etc. Decoded frames can be
- saved to a file or displayed in hex format. For some satellites the
- telemetry format definition is included in gr-satellites, so the
- decoded telemetry frames can be printed out as human-readable values
- such as bus voltages and currents. Additionally, some satellites
- transmit files such as JPEG images. gr-satellites can be used to
- reassemble these files and even display the images in real-time as
- they are being received.
- .
- It supports most popular protocols, such as AX.25, the GOMspace
- NanoCom U482C and AX100 modems, an important part of the CCSDS stack,
- the AO-40 protocol used in the FUNcube satellites, and several ad-hoc
- protocols used in other satellites.
- .
- This package contains the shared library.
 
 Package: grabc
 Description-md5: 24ba57c1fca546f8f8410efdf7a8f845
@@ -377959,16 +377367,6 @@ Description-en: Documentation for the Osmocom SIGTRAN library
  .
  This package contains documentation.
 
-Package: libosmo-sigtran11
-Description-md5: 931e9059b6ea1bd9aea1d467b415dd00
-Description-en: Osmocom SIGTRAN library (SCCP, SUA, M3UA and more)
- This is a shared library containing SS7/SIGTRAN related functionality,
- including connection-less and connection-oriented SCCP as per ITU-T Q.71x,
- M3UA (MTP3 User Adaptation) according to IETF RFC4666,
- SUA (SCCP User Adpatation) according to IETF RFC3868
- as well as MTP-level routing function and handling of signaling links,
- linksets, ASPs, SGs, etc.
-
 Package: libosmo-sigtran12
 Description-md5: 931e9059b6ea1bd9aea1d467b415dd00
 Description-en: Osmocom SIGTRAN library (SCCP, SUA, M3UA and more)
@@ -428527,7 +427925,7 @@ Description-en: library for calculating Littlewood-Richardson coefficients - dev
  .
  This package contains the development files for the library.
 
-Package: liblrcalc1t64
+Package: liblrcalc2
 Description-md5: 14aa2ad4875f6a3eadc4b1fa034a7c75
 Description-en: library for calculating Littlewood-Richardson coefficients
  The "Littlewood-Richardson Calculator" is a package of C programs for
@@ -428548,6 +427946,15 @@ Description-en: programs for calculating Littlewood-Richardson coefficients
  make it easier to use both packages at the same time.
  .
  This package contains the command-line programs.
+
+Package: python3-lrcalc
+Description-md5: 478852891513cc0763eb54a9cdd3f8a8
+Description-en: Python interface to lrcalc -- Python 3
+ The "Littlewood-Richardson Calculator" is a package of C programs for
+ computing Littlewood-Richardson coefficients, providing fast calculation of
+ single LR coefficients, products of Schur functions, and skew Schur functions.
+ .
+ This package contains the Python 3 bindings.
 
 Package: liblrs-dev
 Description-md5: 5d0168d74b6acf76565022e34c5a9fa9
@@ -434086,6 +433493,24 @@ Description-en: OpenStack containers as a service - Python library
   * Integration with Neutron for Kubernetes multi-tenancy network security
  .
  This package contains the Python code.
+
+Package: python3-magnum-capi-helm
+Description-md5: b27dab18a3fb93e6ea4f890b1dd50920
+Description-en: Magnum driver that uses Kubernetes Cluster API via Helm
+ OpenStack Magnum driver using Helm to create k8s clusters with Cluster API.
+ .
+ The driver uses capi-helm-charts to create the k8s resources needed to
+ provision a k8s cluster using Cluster API, including various useful
+ add-ons like a CNI and a monitoring stack.
+ .
+ Note, the above Helm charts are intended to be a way to share a reference
+ method to create K8s on OpenStack. The charts are not expected or intended
+ to be specific to Magnum. The hope is they can also be used by ArgoCD, Flux
+ or Azimuth to create k8s clusters on OpenStack.
+ .
+ Work on this driver started upstream around October 2021. After failing to
+ get merged during Bobcat, we created this downstream repo as a stop-gap to
+ help those wanting to use this driver now.
 
 Package: magnum-tempest-plugin
 Description-md5: 3296cd19955a1427e9de1808944747dd
@@ -445198,6 +444623,70 @@ Description-en: OCaml Platform (metapackage)
  compiler with a coherent set of tools, documentation, libraries, and
  testing resources.
 
+Package: phosh-core
+Description-md5: 42098eeb3f6cb4210f721b450be19087
+Description-en: Phosh Mobile Environment -- essential components
+ These are the core components of the Phosh environment for mobile
+ devices.
+ .
+ This aims to be similar to the GNOME desktop environment but for mobile
+ devices.
+ .
+ This metapackage depends on a basic set of programs, including a
+ web browser and a contacts application.
+
+Package: phosh-full
+Description-md5: 955f321c687872637f1f3c5b4fb8c443
+Description-en: Phosh Mobile Environment, with extra components
+ This is the Phosh environment for mobile devices.
+ .
+ This metapackage depends on a bigger set of programs than phosh-core
+ giving a more complete environment.
+
+Package: phosh-games
+Description-md5: 0845fdcb767c7f33e65c7bcdd2f400e6
+Description-en: games for the Phosh mobile environment
+ These are the games from the Phosh environment that should fit the
+ screens of mobile devices.
+ .
+ Games are now split in separate packages; this metapackage brings all
+ of them but they can be installed separately.
+
+Package: phosh-phone
+Description-md5: 48bf4cd03833928427677d92dea476ac
+Description-en: Phosh mobile environment -- phone components
+ These are the phone related components of the Phosh environment for
+ mobile devices.
+ .
+ This aims to be similar to the GNOME desktop environment but for mobile
+ devices.
+ .
+ This metapackage depends on a set of programs that are needed for
+ phone calls and sms handling.
+
+Package: phosh-pim
+Description-md5: a1b8e016676ccf05adc62c8d6a91c071
+Description-en: Phosh Mobile Environment -- PIM components
+ These are the PIM related components of the Phosh environment for
+ mobile devices.
+ .
+ This aims to be similar to the GNOME desktop environment but for mobile
+ devices.
+ .
+ This metapackage depends on a set of programs for managing personal
+ information such as contacts, tasks and calendars.
+
+Package: phosh-tablet
+Description-md5: 3f28d8ee21d7609fb652a360fc790b04
+Description-en: Phosh Mobile Environment -- tablet components
+ These are the tablet related components of the Phosh environment for
+ mobile devices.
+ .
+ This aims to be similar to the GNOME desktop environment but for mobile
+ devices.
+ .
+ This metapackage depends on a set of programs that are useful on tablets.
+
 Package: plasma-mobile-core
 Description-md5: f3f92f549deaa0f9ab5d06d20bcab9aa
 Description-en: Plasma mobile Environment -- essential components
@@ -453119,6 +452608,97 @@ Description-en: GPU video filter library
  accelerate computation of common filters and transitions, facilitating
  real-time HD video editing even on modest hardware.
 
+Package: emacs-mozc
+Description-md5: d7fbcd37fe4b1aea877c378ab81adc91
+Description-en: Mozc for Emacs
+ Mozc is a Japanese Input Method Editor (IME) designed for multi-platform
+ such as Chromium OS, Windows, Mac and Linux.
+ .
+ This package provides the elisp files to run mozc with GNU Emacs.
+ .
+ This open-source project originates from Google Japanese Input.
+
+Package: emacs-mozc-bin
+Description-md5: d0382006f98c09382d8522d3a438b943
+Description-en: Helper module for emacs-mozc
+ Mozc is a Japanese Input Method Editor (IME) designed for multi-platform
+ such as Chromium OS, Windows, Mac and Linux.
+ .
+ This package provides the helper module to the GNU Emacs.
+ .
+ This open-source project originates from Google Japanese Input.
+
+Package: fcitx-mozc-data
+Description-md5: 72e2b7c3382ff0dd1563040418a37447
+Description-en: Mozc input method - data files for fcitx
+ Mozc is a Japanese Input Method Editor (IME) designed for multi-platform
+ such as Chromium OS, Windows, Mac and Linux.
+ .
+ This package provides the image files for fcitx.
+ .
+ This open-source project originates from Google Japanese Input.
+
+Package: fcitx5-mozc
+Description-md5: 513f0ba596c268d92ac11f491c899024
+Description-en: Mozc engine for fcitx5 - Client of the Mozc input method
+ This is the mozc engine for fcitx version 5.
+ Fcitx is a input method framework with extension support, which provides
+ an interface for entering characters of different scripts in applications
+ using a variety of mapping systems.
+ .
+ It offers a pleasant and modern experience, with intuitive graphical
+ configuration tools and customizable skins and mapping tables.
+ It is highly modularized and extensible, with GTK+ 2/3 and Qt4 IM Modules,
+ support for UIs based on Fbterm, pure Xlib, GTK+, or KDE, and
+ a developer-friendly API.
+ .
+ fcitx5-mozc provides client part of the Mozc input method.
+
+Package: ibus-mozc
+Description-md5: 88b12aa5cdc5ae186ce940b50e7ee25b
+Description-en: Mozc engine for IBus - Client of the Mozc input method
+ IBus is an Intelligent Input Bus. It is a new input framework for Linux OS.
+ It provides full featured and user friendly input method user interface.
+ It also may help developers to develop input method easily.
+ .
+ Mozc is a Japanese Input Method Editor (IME) designed for multi-platform
+ such as Chromium OS, Windows, Mac and Linux.
+ .
+ ibus-mozc provides client part of the Mozc input method.
+ .
+ This open-source project originates from Google Japanese Input.
+
+Package: mozc-data
+Description-md5: 6eff62dbff103ae6b02bc9b4937df5fa
+Description-en: Mozc input method - data files
+ Mozc is a Japanese Input Method Editor (IME) designed for multi-platform
+ such as Chromium OS, Windows, Mac and Linux.
+ .
+ This package provides the essential data files.
+ .
+ This open-source project originates from Google Japanese Input.
+
+Package: mozc-server
+Description-md5: 8c20219f07f38ad45616b5119e58023e
+Description-en: Server of the Mozc input method
+ Mozc is a Japanese Input Method Editor (IME) designed for multi-platform
+ such as Chromium OS, Windows, Mac and Linux.
+ .
+ mozc-server provides GUI utilities of the Mozc input method.
+ .
+ This open-source project originates from Google Japanese Input.
+
+Package: mozc-utils-gui
+Description-md5: 26ec796df53363feb223226aacb6085e
+Description-en: GUI utilities of the Mozc input method
+ Mozc is a Japanese Input Method Editor (IME) designed for multi-platform
+ such as Chromium OS, Windows, Mac and Linux.
+ .
+ mozc-server provides GUI uitilities of the Mozc input method.
+ This uses GUI and can set ibus-mozc and the user's dictionary.
+ .
+ This open-source project originates from Google Japanese Input.
+
 Package: libmozjs-140-0
 Description-md5: f89af245fcd7e180a36a8d4344ddb570
 Description-en: SpiderMonkey JavaScript library
@@ -460420,6 +460000,103 @@ Description-en: Tiny and efficient C++/Python bindings (Python 3 module)
  .
  This package installs the Python 3 module.
 
+Package: nanoc
+Description-md5: 673b1b9c35412f18d401106bbe003a85
+Description-en: static site generator written in Ruby
+ Nanoc is a static site generator, fit for building anything from a small
+ personal blog to a large corporate web site. It can transform content
+ from one format (e.g. Haml or Markdown) into another (usually HTML) and
+ lay out pages so that the site's look and feel is consistent across all
+ pages.
+ .
+ Extending Nanoc is easy because of its modular architecture. It comes
+ with only a couple of extensions, but allows new functionality to be
+ plugged in quickly and easily.
+ .
+ Some knowledge of the Ruby programming language is required in order to use
+ Nanoc.
+
+Package: ruby-nanoc-checking
+Description-md5: 782b6f870d5c566e7db02ab382eb8a75
+Description-en: static site generator written in Ruby - checker
+ Nanoc is a static site generator, fit for building anything from a small
+ personal blog to a large corporate web site. It can transform content
+ from one format (e.g. Haml or Markdown) into another (usually HTML) and
+ lay out pages so that the site's look and feel is consistent across all
+ pages.
+ .
+ This package provides the `check` command, which does QA checks on nanoc
+ websites.
+
+Package: ruby-nanoc-cli
+Description-md5: b80f887aef667c3b048852347055c29e
+Description-en: static site generator written in Ruby - command line interface
+ Nanoc is a static site generator, fit for building anything from a small
+ personal blog to a large corporate web site. It can transform content
+ from one format (e.g. Haml or Markdown) into another (usually HTML) and
+ lay out pages so that the site's look and feel is consistent across all
+ pages.
+ .
+ This package contains the command line interface for Nanoc.
+
+Package: ruby-nanoc-core
+Description-md5: 29734d2fd2bd9654bc19343aa9572180
+Description-en: static site generator written in Ruby - core package
+ Nanoc is a static site generator, fit for building anything from a small
+ personal blog to a large corporate web site. It can transform content
+ from one format (e.g. Haml or Markdown) into another (usually HTML) and
+ lay out pages so that the site's look and feel is consistent across all
+ pages.
+ .
+ This package contains the core of Nanoc.
+
+Package: ruby-nanoc-deploying
+Description-md5: 07284c6c3c93d1b282bba5c8d3c37230
+Description-en: static site generator written in Ruby - deployer
+ Nanoc is a static site generator, fit for building anything from a small
+ personal blog to a large corporate web site. It can transform content
+ from one format (e.g. Haml or Markdown) into another (usually HTML) and
+ lay out pages so that the site's look and feel is consistent across all
+ pages.
+ .
+ This package provides the `deploy` command or Nanoc, which allows users to
+ deploy Nanoc sites.
+
+Package: ruby-nanoc-external
+Description-md5: f9bc9692e438e07cc3b067492befab3f
+Description-en: static site generator written in Ruby - external filter
+ Nanoc is a static site generator, fit for building anything from a small
+ personal blog to a large corporate web site. It can transform content
+ from one format (e.g. Haml or Markdown) into another (usually HTML) and
+ lay out pages so that the site's look and feel is consistent across all
+ pages.
+ .
+ This package contains the external filter for Nanoc, allowing one to run any
+ tool to process items.
+
+Package: ruby-nanoc-live
+Description-md5: aad7fac6d837ff6e102ca92e7d899216
+Description-en: static site generator written in Ruby - live support
+ Nanoc is a static site generator, fit for building anything from a small
+ personal blog to a large corporate web site. It can transform content
+ from one format (e.g. Haml or Markdown) into another (usually HTML) and
+ lay out pages so that the site's look and feel is consistent across all
+ pages.
+ .
+ This package contains the live support for Nanoc.
+
+Package: ruby-nanoc-org-mode
+Description-md5: ce1b639416a2b39e170cdc6de424286c
+Description-en: static site generator written in Ruby - org-ruby mode
+ Nanoc is a static site generator, fit for building anything from a small
+ personal blog to a large corporate web site. It can transform content
+ from one format (e.g. Haml or Markdown) into another (usually HTML) and
+ lay out pages so that the site's look and feel is consistent across all
+ pages.
+ .
+ This package provides the filter allowing Nanoc to process content in the Org
+ Mode format.
+
 Package: nanofilt
 Description-md5: 998b0e0bc110f38eca7c027373e24307
 Description-en: filtering and trimming of long read sequencing data
@@ -467017,16 +466694,6 @@ Description-en: nfs-ganesha fsal mem libraries
  HPSS, LUSTRE and ZFS.
  .
  This package contains a library for a FSAL_MEM
-
-Package: nfs-ganesha-mount-9p
-Description-md5: f255b1e9ee9bd5ac7acc7cb8025f2fb5
-Description-en: nfs-ganesha mount.9P
- NFS-GANESHA is a NFS Server running in user space with a large cache.
- It comes with various backend modules to support different file systems
- and namespaces. Supported name spaces are POSIX, PROXY, SNMP, FUSE-like,
- HPSS, LUSTRE and ZFS.
- .
- This package contains mount.9P
 
 Package: nfs-ganesha-nullfs
 Description-md5: 8eec76d4f94c5d9c631c35262464c046
@@ -513362,12 +513029,6 @@ Description-en: Serving GPRS Support Node for 2G and 3G networks
     like OsmoHNBGW
   - the GSUP Interface/Protocol towards OsmoHLR
 
-Package: osmo-tetra
-Description-md5: 5da72ec42ffc4c655c6ca819518b895c
-Description-en: TETRA trunked radio system software
- This project aims at practical research and
- experimentation with the TETRA trunked radio system.
-
 Package: osmo-trx
 Description-md5: 0d147a2be02a4a1d765f13af9e1e3150
 Description-en: SDR transceiver that implements Layer 1 of a GSM BTS
@@ -526203,6 +525864,113 @@ Description-en: Phosh File Chooser Utils
  This package contains additional utilities like an implementation
  of the org.freedesktop.FileManager1 interface.
 
+Package: gir1.2-pms-1.0
+Description-md5: 8ebf97f05b6033cb5c315b2cc308b3d4
+Description-en: GObject introspection data for libpms
+ Mobile Settings allows one to configure settings of the Phosh mobile
+ environment that would otherwise involve using the command line.
+ .
+ This package contains introspection data for the gmoible library.
+
+Package: libpms-1.0-0
+Description-md5: 22dffea55a929ffcacdd2dc6a6443c33
+Description-en: Phosh and related settings for mobile - shared libraries
+ Mobile Settings allows one to configure settings of the Phosh mobile
+ environment that would otherwise involve using the command line.
+ .
+ This package contains the shared library.
+
+Package: libpms-1.0-common
+Description-md5: ed3cf74193619d113f1f11f71aa58331
+Description-en: Phosh and related settings for mobile - common files
+ Mobile Settings allows one to configure settings of the Phosh mobile
+ environment that would otherwise involve using the command line.
+ .
+ This package contains the architecture independent files
+
+Package: libpms-dev
+Description-md5: 32d3cd5c1b8cee9b0ba6842d884a8dec
+Description-en: Phosh and related settings for mobile - library development files
+ Mobile Settings allows one to configure settings of the Phosh mobile
+ environment that would otherwise involve using the command line.
+ .
+ This package contains the development files.
+
+Package: phosh-mobile-settings
+Description-md5: 9cbef2b465ce89d3aff8487efcd5a175
+Description-en: Phosh and related settings for mobile
+ Mobile Settings allows one to configure settings of the Phosh mobile
+ environment that would otherwise involve using the command line.
+
+Package: phosh-osk-stevia
+Description-md5: b6d08e828ffd826e8aaafe8e872eea09
+Description-en: On screen keyboard for Phosh
+ Stevia is the default on screen keyboard (OSK) for Phosh. It features
+ .
+  * Character popovers
+  * Emoji layout
+  * Cursor navigation via space-bar long-press
+  * Word correction and completion via hunspell or presage
+  * Special layouts for pin, digit and phone number input purpose
+  * A customizable shortcut bar in the terminal layout
+  * Paste buttons in the completion bar and menu
+  * Experimental input of Indic languages using govarnam
+  * Experimental input of Chinese and Japanese using uim
+ .
+ If you're looking for flexible layouts customization look at squeekboard.
+
+Package: phosh-osk-stevia-common
+Description-md5: 8033b7a01802c4b9d54a50de16ce84df
+Description-en: On screen keyboard for Phosh
+ Stevia is the default on screen keyboard (OSK) for Phosh. It features
+ .
+  * Character popovers
+  * Emoji layout
+  * Cursor navigation via space-bar long-press
+  * Word correction and completion via hunspell or presage
+  * Special layouts for pin, digit and phone number input purpose
+  * A customizable shortcut bar in the terminal layout
+  * Paste buttons in the completion bar and menu
+  * Experimental input of Indic languages using govarnam
+  * Experimental input of Chinese and Japanese using uim
+ .
+ This package contains arch independent files needed by Stevia and
+ Phosh Mobile Settings.
+
+Package: phosh-osk-stevia-doc
+Description-md5: 6e06f4b835474960156853d0bdd71180
+Description-en: API documentation for Stevia
+ Stevia is the default on screen keyboard (OSK) for Phosh. It features
+ .
+  * Character popovers
+  * Emoji layout
+  * Cursor navigation via space-bar long-press
+  * Word correction and completion via hunspell or presage
+  * Special layouts for pin, digit and phone number input purpose
+  * A customizable shortcut bar in the terminal layout
+  * Paste buttons in the completion bar and menu
+  * Experimental input of Indic languages using govarnam
+ .
+ This package contains the development documentation.
+
+Package: phosh-osk-stevia-uim
+Description-md5: 5e4aeb66f6861bf4867f518031f94b35
+Description-en: Universal Input Method support for stevia
+ Stevia is the default on screen keyboard (OSK) for Phosh. It features
+ .
+  * Character popovers
+  * Emoji layout
+  * Cursor navigation via space-bar long-press
+  * Word correction and completion via hunspell or presage
+  * Special layouts for pin, digit and phone number input purpose
+  * A customizable shortcut bar in the terminal layout
+  * Paste buttons in the completion bar and menu
+  * Experimental input of Indic languages using govarnam
+  * Experimental input of Chinese and Japanese using uim
+ .
+ This is a dependency package to allow for Asian scripts
+ input using uim for e.g. Japanese and Chinese.
+
 Package: phosh-tour
 Description-md5: cedf60ab96c4142431f7080dfeedd614
 Description-en: Short introduction to phosh on smartphones
@@ -531291,6 +531059,16 @@ Description-en: extra graphical numbers to PHP Web Counter
  This package has some graphical numbers to use with PHP Web Counter.
  .
  Demo site: https://phpwebcounter.sf.net
+
+Package: phrog
+Description-md5: adadcb98d28bb078de50004ecd77091c
+Description-en: Greetd-compatible greeter for mobile phones
+ Phrog is a graphical greeter speaking the `greetd` protocol and aimed at mobile
+ devices like smart phones and tablets using touch based inputs and small
+ screens.
+ .
+ It was initially designed for the Phosh Mobile Environment based on GNOME/GTK
+ but can spawn any graphical session.
 
 Package: phybin
 Description-md5: bd5ecd29808dab83aa6049e97e00b573
@@ -579864,10 +579642,16 @@ Description-en: Open-Source PEMFC Simulation Tool
  parameters of PEMFC.
 
 Package: python3-open-meteo
-Description-md5: b1c00712374daffbcabb1ae037c2cc3e
+Description-md5: 5a2d025235bdd65685cfbde238c709ff
 Description-en: asynchronous client for the Open-Meteo API
- Open-Meteo offers free weather forecast APIs for open-source developers and
- non-commercial use. No API key is required. You can start using it immediately!
+ This Python library provides asynchronous access to Open-Meteo's weather
+ forecast, air quality, geocoding and elevation APIs. It retrieves current
+ weather conditions and hourly and daily forecasts, including temperature,
+ precipitation and wind data.
+ .
+ Applications can select the variables, units and time zone for weather
+ requests. Responses are returned as Python objects. Open-Meteo provides free
+ API access for non-commercial use without an API key.
  .
  This package is a dependency of Home Assistant.
 
@@ -588234,6 +588018,14 @@ Description-en: miscellaneous utility code used by scverse packages
  scverse contains foundational tools for single-cell omics data analysis.
  .
  This Python3 package contains common tools for all these packages.
+
+Package: python3-scverse-misc-settings
+Description-md5: 0a249d976f3ffc96cf3908a438760f50
+Description-en: miscellaneous utility code used by scverse packages, settings extra
+ scverse contains foundational tools for single-cell omics data analysis.
+ .
+ This Python3 metapackage depends on the main package plus the extra
+ dependencies for the "settings" extra.
 
 Package: python3-sdbus
 Description-md5: d4a784d8cece8e6c12134771baa7a12f
@@ -608506,6 +608298,17 @@ Description-en: Standard solid-state pseudopotentials (SSSP) library
   - the convergence of the bands structure, η10 and max η10 with
   respect to the converged value.
 
+Package: quanty
+Description-md5: 33e28720211ea75d07100cae10bb29e9
+Description-en: quantum many body script language
+ Quanty is a script language which allows the user to program quantum
+ mechanical problems in second quantization and when possible solve
+ these. It can be used in quantum chemistry as post Hartree-Fock or in
+ one of the LDA++ schemes. (self consistent field, configuration
+ interaction, coupled cluster, restricted active space, …) The idea of
+ Quanty is that the user can focus on the model and its physical or
+ chemical meaning. Quanty will take care of the mathematics.
+
 Package: python-quart-doc
 Description-md5: 607306823762ff9cfd15e7065b3d5c4d
 Description-en: Python ASGI web microframework with the same API as Flask (Documentation)
@@ -615109,12 +614912,6 @@ Description-en: Fitting of Univariate Mixture Distributions to Data
  and von Mises mixtures. For more details see Merkys (2018)
  https://www.lvb.lt/permalink/370LABT_NETWORK/1m6ui06/alma9910036312108451
 
-Package: r-cran-mlbench
-Description-md5: a218f31912962c0139e57dc2f34b31ed
-Description-en: Machine Learning Benchmark Problems
- A collection of artificial and real-world machine learning benchmark problems,
- including, e.g., several data sets from the UCI repository.
-
 Package: r-cran-mlmetrics
 Description-md5: 1b293a3e44087a7922aa7cd757553001
 Description-en: GNU R machine learning evaluation metrics
@@ -616365,13 +616162,19 @@ Description-en: Inclusive, Unifying API for Progress Updates
  The package is compatible with Shiny applications.
 
 Package: r-cran-projpred
-Description-md5: 1ffc337918328a1bded35a41d5710d9e
-Description-en: GNU R projection predictive feature selection
+Description-md5: 48b351a4c5b7290aeb2c6610b0efe609
+Description-en: Projection Predictive Feature Selection
  Performs projection predictive feature selection for generalized linear models
- (see, Piironen, Paasiniemi and Vehtari, 2018, <arXiv:1810.02406>).
- The package is compatible with the 'rstanarm' and 'brms' packages, but other
- reference models can also be used. See the package vignette for more
- information and examples.
+ (Piironen, Paasiniemi, and Vehtari, 2020, <doi:10.1214/20-EJS1711>) with or
+ without multilevel or additive terms (Catalina, Bürkner, and Vehtari,
+ 2022, <https://proceedings.mlr.press/v151/catalina22a.html>), for some
+ ordinal and nominal regression models (Weber, Glass, and Vehtari,
+ 2025, <doi:10.1007/s00180-024-01506-0>), and for many other regression models
+ (using the latent projection by Catalina, Bürkner, and Vehtari,
+ 2021, <doi:10.48550/arXiv.2109.04702>, which can also be applied to most of
+ the former models). The package is compatible with the 'rstanarm' and 'brms'
+ packages, but other reference models can also be used. See the vignettes and
+ the documentation for more information and examples.
 
 Package: r-cran-promises
 Description-md5: a7f8578281d8513fd3d83348573847cd
@@ -656676,6 +656479,11 @@ Description-md5: 2b6364f508c99c167f76ca81f690edbf
 Description-en: Format Hurl files - Rust source code
  Source code for Debianized Rust crate "hurlfmt"
 
+Package: librust-hussh-rustcrypto-ssh-key-dev
+Description-md5: 31b2778c7fc50bd9d0ebcee9402cb3a4
+Description-en: Fork of ssh-key compatible with latest RustCrypto ecosystem - Rust source code
+ Source code for Debianized Rust crate "hussh-rustcrypto-ssh-key"
+
 Package: librust-hut-dev
 Description-md5: b547bb2bc2a1dce7f6e046f63c1bbb2b
 Description-en: HID Usage Tables - Rust source code
@@ -671412,6 +671220,20 @@ Package: librust-urlshortener-dev
 Description-md5: 4d56a9ef91a639a93d29f47c1a2dd8a6
 Description-en: Very simple url shortener client library - Rust source code
  Source code for Debianized Rust crate "urlshortener"
+
+Package: librust-usage-argv-dev
+Description-md5: bf42a2a281382c09f3932b5cede4ea18
+Description-en: Zero-allocation argv parser for usage specs - Rust source code
+ A dependency-free argv parser for compiled usage specifications, with optional
+ help, diagnostics, specification metadata, and completion support.
+ Source code for Debianized Rust crate "usage-argv"
+
+Package: librust-usage-derive-dev
+Description-md5: 5abe4d2467f27d0ab248c5d3bc3f0550
+Description-en: Derive macros for usage command-line parsers - Rust source code
+ Procedural macros that compile Rust command-line declarations into usage
+ parse tables and specification metadata.
+ Source code for Debianized Rust crate "usage-derive"
 
 Package: librust-usb-disk-probe-dev
 Description-md5: d9b9871b3e78befd596282ce34ae1b73
@@ -686860,6 +686682,19 @@ Description-en: variant of Nethack (X11 window port)
  friendly place).
  .
  This package provides the X11 window port of Slash'EM
+
+Package: slat
+Description-md5: 76bfe94fffef085ca7d94e19f70b29e0
+Description-en: terminal multiplexer with tiling panes, tabs and workspaces
+ slat splits one terminal into panes, tabs and workspaces. The shells
+ run inside a background daemon, so closing the terminal window or losing
+ an SSH connection does not end them: running slat again reattaches to the
+ same session with every pane intact.
+ .
+ Each pane has its own terminal emulator, so full-screen programs such as
+ editors and system monitors stay confined to their pane, and its output
+ can be scrolled back and searched. Keys are driven by a single prefix key
+ and can be remapped in a TOML configuration file.
 
 Package: slay
 Description-md5: fc1ab6dd5e3d3338e130378f33942374
@@ -743996,6 +743831,377 @@ Description-en: Advanced iptables-firewall script
  rules using perl. It was developed for a diskless router
  system that can store its configurations in regular files or
  LDAP databases.
+
+Package: libuim-custom2
+Description-md5: 95ecf48b184888c048deac99b4aeb3e8
+Description-en: Universal Input Method - uim-custom API library
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package contains the shared library for uim-custom API.
+
+Package: libuim-dev
+Description-md5: c93b7ee9698316e85277bf4058c29558
+Description-en: Universal Input Method - development files
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package contains header files and static libraries for uim development.
+
+Package: libuim-scm0
+Description-md5: 3b232a735696f1e6e82c20b0998e8f53
+Description-en: Universal Input Method - uim-scm API library
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package contains the shared library for uim-scm API.
+
+Package: libuim8
+Description-md5: be939239d1627c4303df37c61d2d92f9
+Description-en: Universal Input Method - uim library
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package contains the shared libraries for uim.
+
+Package: uim
+Description-md5: 7d5fc5c62a66ae896a4bce984f82125e
+Description-en: Universal Input Method - main binary package
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package is a package designed to install the basic uim infrastructure.
+
+Package: uim-anthy
+Description-md5: 4c96f15472625d25585f2295d1eaeb6e
+Description-en: Universal Input Method - Anthy support metapackage
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package contains a plugin for uim to support the use of the Japanese
+ input method Anthy.
+
+Package: uim-byeoru
+Description-md5: cf9ccf236e5aa929c2d1fa958f937420
+Description-en: Universal Input Method - byeoru hangul input support metapackage
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package contains a plugin for uim to support the use of the Byeoru input
+ module for hangul.
+
+Package: uim-data
+Description-md5: 21997c6d30c950caa148f9266c51cf33
+Description-en: Universal Input Method - data files
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package contains the data files for uim.
+
+Package: uim-el
+Description-md5: 41539f8605bc65a7a832e83863352a01
+Description-en: Universal Input Method - Emacs front end
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package contains an Emacs front end for uim.
+
+Package: uim-fep
+Description-md5: 1e7a34676ac7358ed943fa5c34e4f48a
+Description-en: Universal Input Method - front end processor
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package contains a curses Front End Processor to support the use of
+ uim in a text terminal.
+
+Package: uim-gtk3
+Description-md5: f90b22bfcbdcf4116ac1b37306fc35e2
+Description-en: Universal Input Method - GTK+3.x front end
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package contains an GTK+3.0 front-end applications for uim.
+
+Package: uim-gtk3-immodule
+Description-md5: b49d2f2f535f32de9f2f7a2f43ea56ba
+Description-en: Universal Input Method - GTK+3.x IM module
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ PRIME, or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package contains an IM-module to support the use of uim on GTK+3.0
+ applications.
+
+Package: uim-gtk4-immodule
+Description-md5: 02d6c4e77a749dbe78078cab80fdaaf0
+Description-en: Universal Input Method - GTK 4.x IM module
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package contains an IM-module to support the use of uim on GTK 4.x
+ applications. The module is implemented as a GIO module implementing the
+ "gtk-im-module" extension point, and is registered automatically through
+ the libgtk-4-1 triggers.
+
+Package: uim-ipa-x-sampa
+Description-md5: c2650de1193bcb2174f13bebef0e458d
+Description-en: Universal Input Method - X-SAMPA IPA input support metapackage
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package provides uim support for the International Phonetic Alphabet,
+ using the 7-bit extended-SAMPA system - see
+ http://www.phon.ucl.ac.uk/home/sampa/x-sampa.htm
+
+Package: uim-latin
+Description-md5: 458a67f604ed5eca4057f23301af4ac9
+Description-en: Universal Input Method - Latin script input support metapackage
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package contains a plugin for uim to support the use of the (Emacs)
+ Latin input method, which provides composing sequences for accented and
+ otherwise modified Roman-alphabet letters.
+
+Package: uim-look
+Description-md5: 68692cad22e0b17f7a31936f7dc6d098
+Description-en: Universal Input Method - Dictionary-based completion input support metapackage
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package contains Dictionary-based completion input style for uim.
+
+Package: uim-m17nlib
+Description-md5: 6239c32fcae2a4525cfdab4595a432a6
+Description-en: Universal Input Method - m17nlib plugin metapackage
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package contains a plugin for uim to support the use of the
+ general-purpose input method M17n (for "Multilingualization").
+
+Package: uim-mozc
+Description-md5: 1746262808e05901806b3be41ed822cb
+Description-en: Universal Input Method - Mozc support package
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package contains a helper program for uim to support the use of the
+ Japanese input method Mozc.
+
+Package: uim-pinyin
+Description-md5: 848296bfa329cbc741a26cccfa542a52
+Description-en: Universal Input Method - pinyin input support metapackage
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package provides uim support for the (Traditional and Simplified)
+ Chinese input methods py, pyunihan, and pinyin-big5.
+
+Package: uim-plugins
+Description-md5: 582b7f16190017bfcf28569d682de7bd
+Description-en: Universal Input Method - plugin files
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package contains the plugin files for uim.
+
+Package: uim-qt5
+Description-md5: 7d91f8f1272e6e081d0c070ad1b08aa1
+Description-en: Universal Input Method - Qt 5.x front end
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package contains some graphical utilities (but not a full IM-module)
+ using Qt 5.x.
+
+Package: uim-qt5-immodule
+Description-md5: f0c434e9ace644faf06922b724ab427d
+Description-en: Universal Input Method - Qt 5.x IM module
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ PRIME, or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package contains an IM-module to support the use of uim on Qt 5.x.
+
+Package: uim-qt6
+Description-md5: 189f21ae8fb8680e1db45264d57eebde
+Description-en: Universal Input Method - Qt 6.x front end
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package contains some graphical utilities (but not a full IM-module)
+ using Qt 6.x.
+
+Package: uim-qt6-immodule
+Description-md5: 8c9d9b5f9fa04f87ee97009cf86697f6
+Description-en: Universal Input Method - Qt 6.x IM module
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ PRIME, or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package contains an IM-module to support the use of uim on Qt 6.x.
+
+Package: uim-skk
+Description-md5: fcebaaa8993b1d8d700443b7690fc17f
+Description-en: Universal Input Method - SKK support metapackage
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package contains a plugin for uim to support the use of the Japanese
+ input method SKK.
+
+Package: uim-tcode
+Description-md5: c0af5cb650f1ab96a24e0b07fe205e25
+Description-en: Universal Input Method - T-Code support metapackage
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package provides uim support for T-Code, a Japanese input method
+ mapping pairs of alphanumeric codes to individual kanji - see
+ http://openlab.jp/tcode/ (in Japanese).
+
+Package: uim-tutcode
+Description-md5: e87dbd277c782aa2c62c372f9a96419e
+Description-en: TUT-code input method plugin for uim
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package provides uim support for TUT-Code, a Japanese input method
+ mapping two or three of key strokes to individual kanji - see
+ https://code.google.com/archive/p/uim-doc-ja/wikis/UimTutcode.wiki (in
+ Japanese).
+
+Package: uim-viqr
+Description-md5: ec62cccdb102bb883f5573b1e814975f
+Description-en: Universal Input Method - Vietnamese Quoted-Readable support metapackage
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package provides uim support for VIQR (Vietnamese Quoted-Readable)
+ input. VIQR is a mnemonic encoding of Vietnamese characters into US ASCII
+ for use on 7-bit systems - see RFC1456.
+
+Package: uim-wayland
+Description-md5: 5ff423d9f63c692181d3469c04efc4b0
+Description-en: Universal Input Method - Wayland front end
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package provides an input method for Wayland compositors that
+ implement zwp_input_method_v1 (KWin and Weston).  It makes uim usable in
+ applications that talk to the compositor with text-input instead of
+ loading a GTK or Qt input module, for example Chromium and Electron
+ applications running natively on Wayland.
+
+Package: uim-xim
+Description-md5: b0b88ca1ca136569ca748ae268f27b79
+Description-en: Universal Input Method - XIM compatibility interface
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package provides a bridge allowing software that can only interface
+ with the X Input Method to work with uim.
+
+Package: uim-chewing
+Description-md5: 4df756a3d8c628df3255e74b97517808
+Description-en: Universal Input Method - Chewing plugin
+ Uim is an input method module library which supports various scripts and can
+ act as a front end for a range of input methods, including Anthy, Canna,
+ PRIME, or SKK (for Japanese), Pinyin (for Chinese), Byeoru (for Korean), and
+ M17n (for many other languages). Most of its functions are implemented in
+ Scheme, so it's very simple and flexible.
+ .
+ This package contains a plugin for uim to support the use of the Chinese
+ input method Chewing.
 
 Package: libuima-addons-java
 Description-md5: f5dc98a4ad1fb7d6a982d5c51a34740a
