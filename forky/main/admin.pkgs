@@ -18630,24 +18630,64 @@ MD5sum: 1673d2e24f124bb1c35679262930b372
 SHA256: ddc67998349d5c0daf1e4b954b45867f47c4ccf4b1e888c1da8016e280771112
 
 Package: openrc
-Version: 0.63.3-1
-Installed-Size: 1927
+Version: 0.64.1-2
+Installed-Size: 2102
 Maintainer: OpenRC Debian Maintainers <openrc@packages.debian.org>
 Architecture: amd64
 Replaces: sysv-rc
-Depends: insserv, mount, libaudit1 (>= 1:2.2.1), libc6 (>= 2.38), libcap2 (>= 1:2.33), libeinfo1 (>= 0.63.3), libpam0g (>= 0.99.7.1), librc1t64 (>= 0.63.3), libselinux1 (>= 3.1~)
+Depends: insserv, mount, librc1t64 (= 0.64.1-2), libeinfo1 (= 0.64.1-2), libaudit1 (>= 1:2.2.1), libc6 (>= 2.38), libcap2 (>= 1:2.33), libpam0g (>= 0.99.7.1), libselinux1 (>= 3.1~)
 Suggests: policycoreutils, sysvinit-core
 Conflicts: file-rc, sysv-rc
 Description: dependency based service manager (runlevel change mechanism)
 Multi-Arch: foreign
 Homepage: https://github.com/openrc/openrc
+Commands: openrc, openrc-init, openrc-run, openrc-shutdown, rc-environ, rc-service, rc-sstat, rc-status, rc-update, supervise-daemon
 Description-md5: 92fcb871d74246777ace5b4dfff92a08
 admin
 Priority: optional
-Filename: pool/main/o/openrc/openrc_0.63.3-1_amd64.deb
-Size: 198704
-MD5sum: 7b5fb8d33d9f173a4f217c65b24e8c75
-SHA256: 5b8eba59c0875cf4ddbdc9cfdbaef2fd79a3f812e8312d0eca84323c4932ef53
+Filename: pool/main/o/openrc/openrc_0.64.1-2_amd64.deb
+Size: 213720
+MD5sum: 1a023df1fb87bfe9142847d9927e459e
+SHA256: 91a4952a512926b0b25ff1a7e663ef9d69b850193435075153d6f35bd6b6f935
+
+Package: openrc-dbus-user-session
+Source: openrc
+Version: 0.64.1-2
+Installed-Size: 28
+Maintainer: OpenRC Debian Maintainers <openrc@packages.debian.org>
+Architecture: all
+Provides: dbus-session-bus
+Depends: openrc (>= 0.62.6-1~), dbus-user-session
+Recommends: utrans (>= 0.8-1~)
+Description: simple interprocess messaging system (openrc --user integration)
+Homepage: https://github.com/openrc/openrc
+Description-md5: 3fd52d1f97f44e924171bd1306d9dcbb
+admin
+Priority: optional
+Filename: pool/main/o/openrc/openrc-dbus-user-session_0.64.1-2_all.deb
+Size: 7896
+MD5sum: 94700c5152e1a63f503cc0e5353ac1d8
+SHA256: cff6028e37edae3cdc981a6ec85e3e8890df06200cb6f9bbf5622452c021385f
+
+Package: openrc-init
+Source: openrc
+Version: 0.64.1-2
+Installed-Size: 30
+Maintainer: OpenRC Debian Maintainers <openrc@packages.debian.org>
+Architecture: all
+Replaces: bfh-container, finit-sysv, molly-guard, progress-linux-container, runit-init, systemd-sysv, sysvinit-core
+Depends: openrc
+Conflicts: bfh-container, finit-sysv, molly-guard, progress-linux-container, runit-init, systemd-sysv, sysvinit-core
+Description: dependency based service manager (init package)
+Homepage: https://github.com/openrc/openrc
+Commands: halt, init, poweroff, reboot, shutdown
+Description-md5: b59b8fc8c9bb378ed6fa05d03730d9f0
+admin
+Priority: optional
+Filename: pool/main/o/openrc/openrc-init_0.64.1-2_all.deb
+Size: 8400
+MD5sum: cb552d7bf9d7507abb126657e9e6e583
+SHA256: 27cc384bf209f1006597b625dafcaac2da66cecbb475fd99eb5d3c629b415a20
 
 Package: openscap-common
 Source: openscap
@@ -22037,26 +22077,26 @@ MD5sum: 0cefc955692d1e0fa2622c883ac419b5
 SHA256: ca9f9d9e981cdcfc75be7bedced4532592dad17905e5fa069922ad9e3be93b5f
 
 Package: repowerd
-Version: 2026.06-2
-Installed-Size: 785
+Version: 2026.06-3
+Installed-Size: 797
 Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
 Architecture: amd64
 Replaces: powerd
-Depends: repowerd-data (>= 2026.06), libc6 (>= 2.38), libdeviceinfo0 (>= 0.2.4), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.36.0), libstdc++6 (>= 13.1)
+Depends: repowerd-data (>= 2026.06), libc6 (>= 2.38), libdeviceinfo0 (>= 0.2.4), libgbinder1 (>= 1.1.45), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.36.0), libstdc++6 (>= 13.1)
 Breaks: powerd
 Description: Power daemon to monitor and control system power state (daemon)
 Homepage: https://gitlab.com/ubports/development/core/repowerd/
 Description-md5: dc440d8c4a5bce27f30d9755c7dd6155
 admin
 Priority: optional
-Filename: pool/main/r/repowerd/repowerd_2026.06-2_amd64.deb
-Size: 223680
-MD5sum: b41a0cb875418cc9f299d6a7a94fdb92
-SHA256: 82581d4c8f501bedc83cea46fb51b583d4748598af533cda7a2b320fffd930f2
+Filename: pool/main/r/repowerd/repowerd_2026.06-3_amd64.deb
+Size: 228428
+MD5sum: cb5e349820013bc9f1089f08c43afe25
+SHA256: 7da043f00a9a5f17e75b75f3a95f59097996941ab18b565d72044f29a62c4270
 
 Package: repowerd-data
 Source: repowerd
-Version: 2026.06-2
+Version: 2026.06-3
 Installed-Size: 69
 Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
 Architecture: all
@@ -22068,27 +22108,27 @@ Homepage: https://gitlab.com/ubports/development/core/repowerd/
 Description-md5: 058f4d338c983fcefd8201abf29fe647
 admin
 Priority: optional
-Filename: pool/main/r/repowerd/repowerd-data_2026.06-2_all.deb
-Size: 22332
-MD5sum: a485065f45779ed5b9dc0ff089c5105a
-SHA256: 0d49412fea64af0f9c7989064441072cef5004281df415a9e7d2370bd733f3be
+Filename: pool/main/r/repowerd/repowerd-data_2026.06-3_all.deb
+Size: 22372
+MD5sum: cae2c0247f35c7bdfdeea5cf526ee62f
+SHA256: 3861c6e04abebee334dda677a259b04e52a92d784ed497213237cb8264f94a94
 
 Package: repowerd-tools
 Source: repowerd
-Version: 2026.06-2
-Installed-Size: 2410
+Version: 2026.06-3
+Installed-Size: 2482
 Maintainer: Debian UBports Team <team+ubports@tracker.debian.org>
 Architecture: amd64
-Depends: repowerd-data (>= 2026.06), libc6 (>= 2.38), libdeviceinfo0 (>= 0.2.4), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.36.0), libstdc++6 (>= 13.1)
+Depends: repowerd-data (>= 2026.06), libc6 (>= 2.38), libdeviceinfo0 (>= 0.2.4), libgbinder1 (>= 1.1.45), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.36.0), libstdc++6 (>= 13.1)
 Description: Power daemon to monitor and control system power state (tools)
 Homepage: https://gitlab.com/ubports/development/core/repowerd/
 Description-md5: 82d793bff848fc9d901cc1f3e2b76103
 admin
 Priority: optional
-Filename: pool/main/r/repowerd/repowerd-tools_2026.06-2_amd64.deb
-Size: 341156
-MD5sum: a6358f69ef96bc8e3fe68d5309068c87
-SHA256: 0b422538f84f3cfd3ff30980c1861582cdc16b52c109e3735a36e0fb7d727477
+Filename: pool/main/r/repowerd/repowerd-tools_2026.06-3_amd64.deb
+Size: 347920
+MD5sum: 162f549a3a52c00ed67c54ba939f26c7
+SHA256: 6f38ec7eddee806bd8fd05ed58e054885aefc20cf024a6a5ad9dfdff21ef23fa
 
 Package: ldirectord
 Source: resource-agents
@@ -27716,23 +27756,6 @@ Filename: pool/main/u/unscd/unscd_0.54-1+b14_amd64.deb
 Size: 21976
 MD5sum: bfe1190136a9b528f0b0caff4d572e2c
 SHA256: d244d93368ab436e1451b69f5e6378f49896032cbe48b216b78fb6b24cad4b35
-
-Package: upass
-Version: 0.3.0-1.1
-Installed-Size: 59
-Maintainer: Dominik George <natureshadow@debian.org>
-Architecture: all
-Depends: pass, python3-pyperclip, python3-urwid, python3:any
-Enhances: pass
-Description: console UI for pass
-Homepage: https://github.com/Kwpolska/upass
-Description-md5: 3c19964ad9ba6f96af24ebc0d2d8a38e
-admin
-Priority: optional
-Filename: pool/main/u/upass/upass_0.3.0-1.1_all.deb
-Size: 11504
-MD5sum: 440d9bf3ed5fe62b06fa031802a56269
-SHA256: a2d7fb982e380111b8bad5cf3eded04135c319f1fd0e7145dd112a1c6e955501
 
 Package: update-inetd
 Version: 4.54
