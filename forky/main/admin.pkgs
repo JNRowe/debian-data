@@ -3212,518 +3212,533 @@ MD5sum: 0115724a1592eee37ce6b586357bf0af
 SHA256: 2f6b6a4be221fa0b3e8fa5ecfc308b6ee76de9ba59c731bacb1091bd6df8f330
 
 Package: ceph
-Version: 20.2.4+ds-1
+Version: 20.2.4+ds-2
 Installed-Size: 98
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: amd64
-Depends: ceph-mgr (= 20.2.4+ds-1), ceph-mon (= 20.2.4+ds-1), ceph-osd (= 20.2.4+ds-1)
-Suggests: ceph-mds (= 20.2.4+ds-1)
+Depends: ceph-mgr (= 20.2.4+ds-2), ceph-mon (= 20.2.4+ds-2), ceph-osd (= 20.2.4+ds-2)
+Suggests: ceph-mds (= 20.2.4+ds-2)
 Description: distributed storage and file system
 Homepage: http://ceph.com
 Description-md5: 744df4d020b57452ac4638e56eff9c7b
 Tag: interface::graphical, interface::x11, role::program, uitoolkit::gtk
 admin
 Priority: optional
-Filename: pool/main/c/ceph/ceph_20.2.4+ds-1_amd64.deb
-Size: 32628
-MD5sum: 04d9ed46562860a49d9891a4aa369956
-SHA256: 968771984b8fbda40b705e6891c5a5265b343db1016491ad4880726b06ae460b
+Filename: pool/main/c/ceph/ceph_20.2.4+ds-2_amd64.deb
+Size: 32980
+MD5sum: 23055b57bdbb925345518b4478a1a579
+SHA256: e68a2a72ce84aa0643d90dbfe7874c56ba9d02f3f058cab4820d379440a79cd8
 
 Package: ceph-base
 Source: ceph
-Version: 20.2.4+ds-1
-Installed-Size: 28209
+Version: 20.2.4+ds-2
+Installed-Size: 28229
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: amd64
-Depends: binutils, ceph-common (= 20.2.4+ds-1), cryptsetup-bin | cryptsetup, e2fsprogs, gdisk, hdparm | sdparm, logrotate, nvme-cli, parted, psmisc, python3-packaging, smartmontools, uuid-runtime, xfsprogs, python3:any, libaio1t64 (>= 0.3.93), libc6 (>= 2.38), libcap2 (>= 1:2.10), libgcc-s1 (>= 3.4), libgoogle-perftools4t64 (>= 2.18.1), liblz4-1 (>= 0.0~r130), libpmem1 (>= 1.4), librados2 (>= 20.2.4+ds), libsnappy1v5 (>= 1.2.2), libstdc++6 (>= 14), liburing2 (>= 2.3), zlib1g (>= 1:1.2.0)
-Recommends: ceph-mds (= 20.2.4+ds-1), chrony | time-daemon | ntp, librados2 (= 20.2.4+ds-1), libradosstriper1 (= 20.2.4+ds-1), librbd1 (= 20.2.4+ds-1)
+Depends: binutils, ceph-common (= 20.2.4+ds-2), cryptsetup-bin | cryptsetup, e2fsprogs, gdisk, hdparm | sdparm, logrotate, nvme-cli, parted, psmisc, python3-packaging, smartmontools, uuid-runtime, xfsprogs, python3:any, libaio1t64 (>= 0.3.93), libc6 (>= 2.38), libcap2 (>= 1:2.10), libgcc-s1 (>= 3.4), libgoogle-perftools4t64 (>= 2.18.1), liblz4-1 (>= 0.0~r130), libpmem1 (>= 1.4), librados2 (>= 20.2.4+ds), libsnappy1v5 (>= 1.3.1), libstdc++6 (>= 14), liburing2 (>= 2.3), zlib1g (>= 1:1.2.0)
+Recommends: ceph-mds (= 20.2.4+ds-2), chrony | time-daemon | ntp, librados2 (= 20.2.4+ds-2), libradosstriper1 (= 20.2.4+ds-2), librbd1 (= 20.2.4+ds-2)
 Description: common ceph daemon libraries and management tools
 Homepage: http://ceph.com
+Commands: ceph-crash, ceph-create-keys, ceph-kvstore-tool, ceph-run, crushtool, monmaptool, osdmaptool
 Description-md5: 38862c56180e1d3d93a838a6386f82bc
 admin
 Priority: optional
-Filename: pool/main/c/ceph/ceph-base_20.2.4+ds-1_amd64.deb
-Size: 6130352
-MD5sum: 16dc5cad5c72314648481c1af1aed928
-SHA256: ef18ed048dcaa3cb9dfa1e7507e477214467be97fd976b05d02961e848c3a890
+Filename: pool/main/c/ceph/ceph-base_20.2.4+ds-2_amd64.deb
+Size: 6136520
+MD5sum: 9219cb715f3da252d7d5667c97f745f2
+SHA256: d347d807818b7c8e006f6817e97abac848497c4db18bc8dcaee1393c1b1be12d
 
 Package: ceph-common
 Source: ceph
-Version: 20.2.4+ds-1
-Installed-Size: 64606
+Version: 20.2.4+ds-2
+Installed-Size: 65096
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: amd64
-Replaces: radosgw (<< 18)
-Depends: adduser, librbd1 (= 20.2.4+ds-1), python3-ceph-argparse (= 20.2.4+ds-1), python3-ceph-common (<< 20.2.4+ds-1.1~), python3-ceph-common (>= 20.2.4+ds-1), python3-cephfs (= 20.2.4+ds-1), python3-prettytable, python3-rados (= 20.2.4+ds-1), python3-rbd (= 20.2.4+ds-1), python3-requests, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, python3:any, libbabeltrace1 (>= 1.5.4), libblkid1 (>= 2.17.2), libboost-context1.90.0 (>= 1.90.0), libboost-filesystem1.90.0 (>= 1.90.0), libboost-locale1.90.0 (>= 1.90.0), libboost-program-options1.90.0 (>= 1.90.0), libboost-thread1.90.0 (>= 1.90.0), libboost-url1.90.0 (>= 1.90.0), libc6 (>= 2.38), libcap-ng0 (>= 0.7.9), libcephfs2 (>= 12.0.3), libcurl4-gnutls (>= 8.20.0-3~), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.4), libgoogle-perftools4t64 (>= 2.18.1), libicu78 (>= 78.1-1~), libkeyutils1 (>= 1.4), libldap2 (>= 2.6.2), liblmdb0 (>= 0.9.7), liblua5.3-0 (>= 5.3.6), libncurses6 (>= 6), liboath0t64 (>= 1.10.0), librabbitmq4 (>= 0.10.0), librados2 (>= 20.2.4+ds), libradosstriper1 (>= 0.87), libsqlite3-0 (>= 3.14.0), libssl3t64 (>= 3.4.0), libstdc++6 (>= 14), libtinfo6 (>= 6), libudev1 (>= 183)
+Depends: adduser, librbd1 (= 20.2.4+ds-2), python3-ceph-argparse (= 20.2.4+ds-2), python3-ceph-common (<< 20.2.4+ds-2.1~), python3-ceph-common (>= 20.2.4+ds-2), python3-cephfs (= 20.2.4+ds-2), python3-prettytable, python3-rados (= 20.2.4+ds-2), python3-rbd (= 20.2.4+ds-2), python3-requests, python3:any, libbabeltrace1 (>= 1.5.4), libblkid1 (>= 2.17.2), libboost-context1.92.0 (>= 1.92.0), libboost-filesystem1.92.0 (>= 1.92.0), libboost-locale1.92.0 (>= 1.92.0), libboost-program-options1.92.0 (>= 1.92.0), libboost-thread1.92.0 (>= 1.92.0), libboost-url1.92.0 (>= 1.92.0), libc6 (>= 2.38), libcap-ng0 (>= 0.7.9), libcephfs2 (>= 12.0.3), libcurl4-gnutls (>= 8.20.0-3~), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.4), libgoogle-perftools4t64 (>= 2.18.1), libicu78 (>= 78.1-1~), libkeyutils1 (>= 1.4), libldap2 (>= 2.6.2), liblmdb0 (>= 0.9.7), liblua5.3-0 (>= 5.3.6), libncurses6 (>= 6), liboath0t64 (>= 1.10.0), librabbitmq4 (>= 0.10.0), librados2 (>= 20.2.4+ds), libradosstriper1 (>= 0.87), libsqlite3-0 (>= 3.14.0), libssl3t64 (>= 3.4.0), libstdc++6 (>= 14), libtinfo6 (>= 6), libudev1 (>= 183)
 Suggests: ceph, ceph-mds
-Conflicts: ceph-client-tools
-Breaks: radosgw (<< 18)
 Description: common utilities to mount and interact with a ceph storage cluster
 Homepage: http://ceph.com
+Commands: ceph, ceph-authtool, ceph-conf, ceph-dencoder, ceph-post-file, ceph-rbdnamer, ceph-syn, cephfs-data-scan, cephfs-journal-tool, cephfs-table-tool, crushdiff, mount.ceph, rados, radosgw-admin, rbd, rbd-replay, rbd-replay-many, rbd-replay-prep, rbdmap, rgw-gap-list, rgw-gap-list-comparator, rgw-orphan-list, rgw-restore-bucket-index
 Description-md5: 90f488e054c1b3b23b645137c2977504
 Tag: uitoolkit::ncurses
 admin
 Priority: optional
-Filename: pool/main/c/ceph/ceph-common_20.2.4+ds-1_amd64.deb
-Size: 16496972
-MD5sum: ddeb362305b0f212a30e68b3f5ac3862
-SHA256: a2818cd4fbd2b75deb7db772d6ceeabf77186af184291d7d07ba7d29bb26c6b7
+Filename: pool/main/c/ceph/ceph-common_20.2.4+ds-2_amd64.deb
+Size: 17084776
+MD5sum: 22bdae66619ad522842955da35a78baa
+SHA256: d88cacc60cb4baac81d790a21048063686529ab5c848db08bed99701f7f4d89b
 
 Package: ceph-fuse
 Source: ceph
-Version: 20.2.4+ds-1
+Version: 20.2.4+ds-2
 Installed-Size: 2310
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: amd64
-Depends: python3, libboost-locale1.90.0 (>= 1.90.0), libc6 (>= 2.38), libfuse3-4 (>= 3.17.2), libgcc-s1 (>= 3.0), librados2 (>= 20.2.4+ds), libstdc++6 (>= 14)
+Depends: python3, libboost-locale1.92.0 (>= 1.92.0), libc6 (>= 2.38), libfuse3-4 (>= 3.17.2), libgcc-s1 (>= 3.0), librados2 (>= 20.2.4+ds), libstdc++6 (>= 14)
 Recommends: fuse3
 Description: FUSE-based client for the Ceph distributed file system
 Homepage: http://ceph.com
+Commands: ceph-fuse, mount.fuse.ceph
 Description-md5: 2e66da405a3a0048edd7d65c675526ff
 admin
 Priority: optional
-Filename: pool/main/c/ceph/ceph-fuse_20.2.4+ds-1_amd64.deb
-Size: 753824
-MD5sum: 08505ed3b25ce645452587000be6a2d5
-SHA256: eb8cadc64e5c6f2463e93a84474c857ad78fabc11497a2a08b33b16bfdbe53d5
+Filename: pool/main/c/ceph/ceph-fuse_20.2.4+ds-2_amd64.deb
+Size: 756760
+MD5sum: 1d5b32e1f64eccf13a741721ddf98ebb
+SHA256: 96195a4bd70d4b6f1573a7d6222768e46f64b069ef4a85815a52ec4a64969116
 
 Package: ceph-fuse-dbg
 Source: ceph
-Version: 20.2.4+ds-1
-Installed-Size: 16657
+Version: 20.2.4+ds-2
+Installed-Size: 16685
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: amd64
 Depends: python3
 Recommends: fuse3
 Description: FUSE-based client for the Ceph distributed file system - debug
 Homepage: http://ceph.com
-Build-Ids: b1db4b98af169bcbe24a928ab117b70dad2b9c8d
+Build-Ids: 9251e099ac7a5d3baa768e977e3fe399fa3dfdf4
 Description-md5: 9a82ee5bfdf8088b5961ad597bf77b1a
 admin
 Priority: optional
-Filename: pool/main/c/ceph/ceph-fuse-dbg_20.2.4+ds-1_amd64.deb
-Size: 16154408
-MD5sum: c1f46976ca542030aa3bf009d19c2bb0
-SHA256: 600416f24c508e5bd384fd21fc14efacebae9ab2429f4a1f69ed8d8b02e0f2a4
+Filename: pool/main/c/ceph/ceph-fuse-dbg_20.2.4+ds-2_amd64.deb
+Size: 16186564
+MD5sum: a39051d2fb1cd58c5e1fa723f19235dd
+SHA256: 58d75db44bf0e13e24258c07ec2fdb6676a306371521b076c55af3fee977b6c7
 
 Package: ceph-grafana-dashboards
 Source: ceph
-Version: 20.2.4+ds-1
+Version: 20.2.4+ds-2
 Installed-Size: 1229
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: all
 Description: grafana dashboards for the ceph dashboard
+Multi-Arch: foreign
 Homepage: http://ceph.com
 Description-md5: 572ead2beed8c309540d500ef8c53174
 admin
 Priority: optional
-Filename: pool/main/c/ceph/ceph-grafana-dashboards_20.2.4+ds-1_all.deb
-Size: 71428
-MD5sum: a52e25f5d8ee41d87f430f88c5236bda
-SHA256: 4a232e0807e1bc7e37170d48d04e2cbcaf02a3d7f6a1dadcb797ee8b3d6bbf8d
+Filename: pool/main/c/ceph/ceph-grafana-dashboards_20.2.4+ds-2_all.deb
+Size: 71844
+MD5sum: e6563531eec89ea8b8340ed539bc63c9
+SHA256: 948db278d0f5a9a6687c4cb08c63d3b2b770cf39e2e3e2659f4c7dbe135b30e2
 
 Package: ceph-immutable-object-cache
 Source: ceph
-Version: 20.2.4+ds-1
-Installed-Size: 667
+Version: 20.2.4+ds-2
+Installed-Size: 671
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: amd64
-Depends: ceph-common (= 20.2.4+ds-1), librados2 (= 20.2.4+ds-1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
+Depends: ceph-common (= 20.2.4+ds-2), librados2 (= 20.2.4+ds-2), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libstdc++6 (>= 14)
 Description: Ceph daemon for immutable object cache
 Homepage: http://ceph.com
+Commands: ceph-immutable-object-cache
 Description-md5: c76c82274d014d060096f8293a6f711f
 admin
 Priority: optional
-Filename: pool/main/c/ceph/ceph-immutable-object-cache_20.2.4+ds-1_amd64.deb
-Size: 210112
-MD5sum: 54a84874b8c4ab4ab98b34212a9e2814
-SHA256: f48ae3d1f8c5349fd1ab13a561fc573338ffa53fa8c2e8ca3acfff98c23d9abe
+Filename: pool/main/c/ceph/ceph-immutable-object-cache_20.2.4+ds-2_amd64.deb
+Size: 210576
+MD5sum: 8f22c90bc7860995aeb68416ce8dbb38
+SHA256: d3ac3345dd9bbd4afa454128e59b8b14cc40b0740e76e78cfd73d4e628706bce
 
 Package: ceph-mds
 Source: ceph
-Version: 20.2.4+ds-1
-Installed-Size: 8090
+Version: 20.2.4+ds-2
+Installed-Size: 8242
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: amd64
-Depends: ceph-common (= 20.2.4+ds-1), libboost-url1.90.0 (>= 1.90.0), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libgoogle-perftools4t64 (>= 2.18.1), liblua5.3-0 (>= 5.3.6), librados2 (>= 20.2.4+ds), libstdc++6 (>= 14)
+Depends: ceph-common (= 20.2.4+ds-2), libboost-url1.92.0 (>= 1.92.0), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libgoogle-perftools4t64 (>= 2.18.1), liblua5.3-0 (>= 5.3.6), librados2 (>= 20.2.4+ds), libstdc++6 (>= 14)
 Recommends: ceph-fuse, libcephfs2
 Description: metadata server for the ceph distributed file system
 Homepage: http://ceph.com
+Commands: ceph-mds
 Description-md5: d37d51a4735a093f21799c80f707168f
 admin
 Priority: optional
-Filename: pool/main/c/ceph/ceph-mds_20.2.4+ds-1_amd64.deb
-Size: 2530832
-MD5sum: 8f561efea7d56e2e939b83aa7a2527ab
-SHA256: 1efdb954ca846003cec70ff6cc8c56554a5f6136df19000197a53960e153d756
+Filename: pool/main/c/ceph/ceph-mds_20.2.4+ds-2_amd64.deb
+Size: 2579600
+MD5sum: fadda3fa163539c50eacbeb94ca0cebf
+SHA256: d435c28a8b0efcfdb28911b74c0006e4ad229b44846f27add9f96646824ed708
 
 Package: ceph-mgr
 Source: ceph
-Version: 20.2.4+ds-1
-Installed-Size: 3643
+Version: 20.2.4+ds-2
+Installed-Size: 3655
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: amd64
-Depends: ceph-common (= 20.2.4+ds-1), ceph-mgr-modules-core (<< 20.2.4+ds-1.1~), ceph-mgr-modules-core (>= 20.2.4+ds-1), libsqlite3-mod-ceph (<< 20.2.4+ds-1.1~), libsqlite3-mod-ceph (>= 20.2.4+ds-1), python3-bcrypt, python3-ceph-argparse (= 20.2.4+ds-1), python3-cephfs (= 20.2.4+ds-1), python3-cherrypy3, python3-jwt, python3-openssl, python3-pecan, python3-requests, python3-werkzeug, python3-yaml, libboost-python1.90.0 (>= 1.90.0), libboost-python1.90.0-py314, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libgoogle-perftools4t64 (>= 2.18.1), libpython3.14 (>= 3.14.1), librados2 (>= 20.2.4+ds), libsqlite3-0 (>= 3.5.9), libstdc++6 (>= 14)
+Depends: ceph-common (= 20.2.4+ds-2), ceph-mgr-modules-core (<< 20.2.4+ds-2.1~), ceph-mgr-modules-core (>= 20.2.4+ds-2), libsqlite3-mod-ceph (<< 20.2.4+ds-2.1~), libsqlite3-mod-ceph (>= 20.2.4+ds-2), python3-bcrypt, python3-ceph-argparse (= 20.2.4+ds-2), python3-cephfs (= 20.2.4+ds-2), python3-cherrypy3, python3-jwt, python3-openssl, python3-pecan, python3-requests, python3-werkzeug, python3-yaml, libboost-python1.92.0 (>= 1.92.0), libboost-python1.92.0-py314, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libgoogle-perftools4t64 (>= 2.18.1), libpython3.14 (>= 3.14.1), librados2 (>= 20.2.4+ds), libsqlite3-0 (>= 3.5.9), libstdc++6 (>= 14)
 Suggests: ceph-mgr-dashboard, ceph-mgr-diskprediction-local, ceph-mgr-rook
 Description: manager for the ceph distributed file system
 Homepage: http://ceph.com
+Commands: ceph-mgr
 Description-md5: 749cc8e373d9ddb619b2b98fce8761a4
 admin
 Priority: optional
-Filename: pool/main/c/ceph/ceph-mgr_20.2.4+ds-1_amd64.deb
-Size: 1062916
-MD5sum: 2e482c7055bf976c20a0d77d2ed98833
-SHA256: bc9f60c0e9d7f0522a5192cb6ede61e3bc0d1623ce94feb97490cc6407ae1799
+Filename: pool/main/c/ceph/ceph-mgr_20.2.4+ds-2_amd64.deb
+Size: 1065996
+MD5sum: fed16560a4f024ac5590f8282b6aad77
+SHA256: b6785fee71152ac3c1df24abcc61f3066123497387040b4bbec047d099328f3c
 
 Package: ceph-mgr-cephadm
 Source: ceph
-Version: 20.2.4+ds-1
+Version: 20.2.4+ds-2
 Installed-Size: 1113
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: all
-Depends: ceph-mgr (<< 20.2.4+ds-1.1~), ceph-mgr (>= 20.2.4+ds-1), cephadm, openssh-client, python3-asyncssh, python3-cherrypy3, python3-cryptography, python3-jinja2
+Depends: ceph-mgr (<< 20.2.4+ds-2.1~), ceph-mgr (>= 20.2.4+ds-2), cephadm, openssh-client, python3-asyncssh, python3-cherrypy3, python3-cryptography, python3-jinja2
 Description: cephadm orchestrator module for ceph-mgr
 Homepage: http://ceph.com
 Description-md5: 0da38d6bcb55495002fa13c0136a25ef
 admin
 Priority: optional
-Filename: pool/main/c/ceph/ceph-mgr-cephadm_20.2.4+ds-1_all.deb
-Size: 198540
-MD5sum: 49182a6d9065e6de2a1b561735e82d67
-SHA256: 8109fff36284e2a9d28b513c9f0cf4d623a07361f9693c3be5c5e5043f980c73
+Filename: pool/main/c/ceph/ceph-mgr-cephadm_20.2.4+ds-2_all.deb
+Size: 198876
+MD5sum: b2a77da28c520ceed3a75a27a27dd5ba
+SHA256: bcfb405933a2946c2b28dbe4bf3229132addb1e8a4a75e6a1b816a1fec91354d
 
 Package: ceph-mgr-dashboard
 Source: ceph
-Version: 20.2.4+ds-1
+Version: 20.2.4+ds-2
 Installed-Size: 149341
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: all
-Depends: ceph-common (<< 20.2.4+ds-1.1~), ceph-common (>= 20.2.4+ds-1), ceph-mgr (<< 20.2.4+ds-1.1~), ceph-mgr (>= 20.2.4+ds-1), python3-bcrypt, python3-cherrypy3, python3-jwt, python3-more-itertools, python3-openssl, python3-prettytable, python3-requests, python3-routes, python3-werkzeug, python3-yaml
+Depends: ceph-common (<< 20.2.4+ds-2.1~), ceph-common (>= 20.2.4+ds-2), ceph-mgr (<< 20.2.4+ds-2.1~), ceph-mgr (>= 20.2.4+ds-2), python3-bcrypt, python3-cherrypy3, python3-jwt, python3-more-itertools, python3-openssl, python3-prettytable, python3-requests, python3-routes, python3-werkzeug, python3-yaml
 Description: dashboard plugin for ceph-mgr
 Homepage: http://ceph.com
 Description-md5: c5eb3c42fa1ecd862891daab20a65250
 admin
 Priority: optional
-Filename: pool/main/c/ceph/ceph-mgr-dashboard_20.2.4+ds-1_all.deb
-Size: 46022896
-MD5sum: a2eb5992f0a9e76d5b20cd2bd74dd83d
-SHA256: 73d525b6bc21845f377582c2d1d3c775bf6ce8e1c47067fe3d9997bad0c102e4
+Filename: pool/main/c/ceph/ceph-mgr-dashboard_20.2.4+ds-2_all.deb
+Size: 46022944
+MD5sum: 3151cd2c181d7c54ac5cd430b86db406
+SHA256: 594c994613abcc0872253d3a182c1fb9ce756b9313416985b94abaad9cc04a88
 
 Package: ceph-mgr-k8sevents
 Source: ceph
-Version: 20.2.4+ds-1
+Version: 20.2.4+ds-2
 Installed-Size: 158
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: all
-Depends: ceph-mgr (>= 20.2.4+ds-1), python3-kubernetes, python3-yaml
+Depends: ceph-mgr (>= 20.2.4+ds-2), python3-kubernetes, python3-yaml
 Description: kubernetes events plugin for ceph-mgr
 Homepage: http://ceph.com
 Description-md5: 8a84a34d91285d5fc50b60bde0babf8f
 admin
 Priority: optional
-Filename: pool/main/c/ceph/ceph-mgr-k8sevents_20.2.4+ds-1_all.deb
-Size: 46124
-MD5sum: d56442eb3b448abeaa9a169d62238d86
-SHA256: 975869623af02a455d78b3dae1f19dc233039ccb9e93f98d46e8e1832d48cac2
+Filename: pool/main/c/ceph/ceph-mgr-k8sevents_20.2.4+ds-2_all.deb
+Size: 46484
+MD5sum: 2f00329347da4b69d0d5b0e815ae401a
+SHA256: 16302cb8e29ef9902f7c52708764894098959a8bfe7772f5dce794df554f7e29
 
 Package: ceph-mgr-modules-core
 Source: ceph
-Version: 20.2.4+ds-1
+Version: 20.2.4+ds-2
 Installed-Size: 1890
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: all
-Replaces: ceph-mgr (<< 15.1.0)
 Depends: python3-cherrypy3, python3-dateutil, python3-natsort, python3-openssl, python3-packaging, python3-requests
-Breaks: ceph-mgr (<< 15.1.0)
 Description: ceph manager modules which are always enabled
 Homepage: http://ceph.com
 Description-md5: 76ec9efc7e6e0d4aa49f8158d74a7c3b
 admin
 Priority: optional
-Filename: pool/main/c/ceph/ceph-mgr-modules-core_20.2.4+ds-1_all.deb
-Size: 306668
-MD5sum: aad76af1b42f882b86917a5e4336ce73
-SHA256: 47985ed98e5c900b4a0a6816937107d555618c65d6ecc97636c806b5908e14b6
+Filename: pool/main/c/ceph/ceph-mgr-modules-core_20.2.4+ds-2_all.deb
+Size: 307084
+MD5sum: 8e41bd7cf41d52c9f38abac43d087d41
+SHA256: d5b3811f3dc93aec0629416b26cebcd103ef90860c721936d3fc054cfc23596b
 
 Package: ceph-mgr-rook
 Source: ceph
-Version: 20.2.4+ds-1
+Version: 20.2.4+ds-2
 Installed-Size: 687
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: all
-Depends: ceph-mgr (>= 20.2.4+ds-1), python3-jsonpatch, python3-kubernetes
+Depends: ceph-mgr (>= 20.2.4+ds-2), python3-jsonpatch, python3-kubernetes
 Description: rook plugin for ceph-mgr
 Homepage: http://ceph.com
 Description-md5: 541bdb021651d6794fb016e449ed9d43
 admin
 Priority: optional
-Filename: pool/main/c/ceph/ceph-mgr-rook_20.2.4+ds-1_all.deb
-Size: 71724
-MD5sum: d2867a2a9e9b1e4cce3c0c8795fee9bc
-SHA256: a05fcd6c7b239122ae7f55feeabe3777404d877c1fe6e679cc1dbb1c1841ad73
+Filename: pool/main/c/ceph/ceph-mgr-rook_20.2.4+ds-2_all.deb
+Size: 72108
+MD5sum: be70f52fa052ea33f5cc63691ce40b77
+SHA256: a7306fccc5957c3fbb4d93af0968aa5b640102a911cbfc4c479158fb93c135f7
 
 Package: ceph-mon
 Source: ceph
-Version: 20.2.4+ds-1
-Installed-Size: 24113
+Version: 20.2.4+ds-2
+Installed-Size: 24130
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: amd64
-Depends: ceph-common (= 20.2.4+ds-1), libboost-program-options1.90.0 (>= 1.90.0), libc6 (>= 2.38), libgcc-s1 (>= 3.4), libgoogle-perftools4t64 (>= 2.18.1), liblz4-1 (>= 0.0~r130), librados2 (>= 20.2.4+ds), libsnappy1v5 (>= 1.2.2), libstdc++6 (>= 14), zlib1g (>= 1:1.2.0)
+Depends: ceph-common (= 20.2.4+ds-2), libboost-program-options1.92.0 (>= 1.92.0), libc6 (>= 2.38), libgcc-s1 (>= 3.4), libgoogle-perftools4t64 (>= 2.18.1), liblz4-1 (>= 0.0~r130), librados2 (>= 20.2.4+ds), libsnappy1v5 (>= 1.3.1), libstdc++6 (>= 14), zlib1g (>= 1:1.2.0)
 Description: monitor server for the ceph storage system
 Homepage: http://ceph.com
+Commands: ceph-mon, ceph-monstore-tool
 Description-md5: aa343322863ec9d4c967e6b512da062d
 admin
 Priority: optional
-Filename: pool/main/c/ceph/ceph-mon_20.2.4+ds-1_amd64.deb
-Size: 7133744
-MD5sum: 8f2f10e7c53ae142a76404cb61efa753
-SHA256: 3455a0a184cc95413b396ba910c6079d045ba269a0ba4e9aaf1843536dc42026
+Filename: pool/main/c/ceph/ceph-mon_20.2.4+ds-2_amd64.deb
+Size: 7138188
+MD5sum: eb76f35e05515989c8114a1f81640313
+SHA256: 46a4ee414cd76b86d1f437d93986c895a04c70f07e7a81312385fef1381485ad
 
 Package: ceph-osd
 Source: ceph
-Version: 20.2.4+ds-1
-Installed-Size: 71568
+Version: 20.2.4+ds-2
+Installed-Size: 71625
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: amd64
-Depends: ceph-base (= 20.2.4+ds-1), ceph-volume (= 20.2.4+ds-1), lvm2, sudo, libaio1t64 (>= 0.3.93), libblkid1 (>= 2.17.2), libboost-iostreams1.90.0 (>= 1.90.0), libboost-program-options1.90.0 (>= 1.90.0), libboost-thread1.90.0 (>= 1.90.0), libc6 (>= 2.43), libcap2 (>= 1:2.10), libfuse3-4 (>= 3.17.2), libgcc-s1 (>= 3.4), libgoogle-perftools4t64 (>= 2.18.1), libibverbs1 (>= 1.1.6), liblz4-1 (>= 0.0~r130), libpmem1 (>= 1.4), librados2 (>= 20.2.4+ds), librdmacm1t64 (>= 1.0.15), libsnappy1v5 (>= 1.2.2), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libudev1 (>= 183), liburing2 (>= 2.3), zlib1g (>= 1:1.2.0)
-Pre-Depends: ceph-common (= 20.2.4+ds-1)
+Depends: ceph-base (= 20.2.4+ds-2), ceph-volume (= 20.2.4+ds-2), lvm2, sudo, libaio1t64 (>= 0.3.93), libblkid1 (>= 2.17.2), libboost-iostreams1.92.0 (>= 1.92.0), libboost-program-options1.92.0 (>= 1.92.0), libboost-thread1.92.0 (>= 1.92.0), libc6 (>= 2.43), libcap2 (>= 1:2.10), libfuse3-4 (>= 3.17.2), libgcc-s1 (>= 3.4), libgoogle-perftools4t64 (>= 2.18.1), libibverbs1 (>= 1.1.6), liblz4-1 (>= 0.0~r130), libpmem1 (>= 1.4), librados2 (>= 20.2.4+ds), librdmacm1t64 (>= 1.0.15), libsnappy1v5 (>= 1.3.1), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libudev1 (>= 183), liburing2 (>= 2.3), zlib1g (>= 1:1.2.0)
+Pre-Depends: ceph-common (= 20.2.4+ds-2)
 Recommends: smartmontools
 Suggests: nvme-cli
 Description: OSD server for the ceph storage system
 Homepage: http://ceph.com
+Commands: ceph-bluestore-tool, ceph-clsinfo, ceph-erasure-code-tool, ceph-objectstore-tool, ceph-osd
 Description-md5: fb08b00d788b505eb4bb23072221ce43
 admin
 Priority: optional
-Filename: pool/main/c/ceph/ceph-osd_20.2.4+ds-1_amd64.deb
-Size: 21030580
-MD5sum: a86f9dd64b13d52fbbc687cd8df6e4ce
-SHA256: 1e4e6e8fea85286340b43a4af32cb932008ed7b7d2bf54c4412902814f7085d3
+Filename: pool/main/c/ceph/ceph-osd_20.2.4+ds-2_amd64.deb
+Size: 21061056
+MD5sum: b81fe843ed8454b99786ad98b601e4fb
+SHA256: df3cc9f244ff518f92ac13714bb851a177c9819ffca1674f0d37a62b6a55628e
 
 Package: ceph-prometheus-alerts
 Source: ceph
-Version: 20.2.4+ds-1
+Version: 20.2.4+ds-2
 Installed-Size: 159
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: all
 Description: prometheus alerts for the ceph dashboard
+Multi-Arch: foreign
 Homepage: http://ceph.com
 Description-md5: 401c37fc3e9eb666884d3eaf34d65dce
 admin
 Priority: optional
-Filename: pool/main/c/ceph/ceph-prometheus-alerts_20.2.4+ds-1_all.deb
-Size: 41940
-MD5sum: 92922c168069d17757684f1947b7cf3c
-SHA256: ad409084842251baf6a64571896c53ccca5b4ed55bf59371c264691e0dfb2c17
+Filename: pool/main/c/ceph/ceph-prometheus-alerts_20.2.4+ds-2_all.deb
+Size: 42304
+MD5sum: ecdaf74446c1a3ed09b0ed796d6fe66c
+SHA256: 1facd21d1e45a31cf5f5f4b38453f91310d380dbd7ffdfc07d450ec08d3d3402
 
 Package: ceph-resource-agents
 Source: ceph
-Version: 20.2.4+ds-1
+Version: 20.2.4+ds-2
 Installed-Size: 105
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: all
-Depends: ceph (>= 20.2.4+ds-1), resource-agents
+Depends: ceph (>= 20.2.4+ds-2), resource-agents
 Recommends: pacemaker
 Description: OCF-compliant resource agents for Ceph
 Homepage: http://ceph.com
 Description-md5: f350d6a1d9754497356ffd017b1cd63e
 admin
 Priority: optional
-Filename: pool/main/c/ceph/ceph-resource-agents_20.2.4+ds-1_all.deb
-Size: 33864
-MD5sum: dd54b2a0492450251a35aad116ad7919
-SHA256: 03f602d64859b81a8c11367385292326085246ffe401ab32e4cf43fdefdcf325
+Filename: pool/main/c/ceph/ceph-resource-agents_20.2.4+ds-2_all.deb
+Size: 34232
+MD5sum: 1fa25a757e993b4d0e63f653d06db775
+SHA256: b6aa139a1ddec3d33dfce5dc479255d3ec02defa24063aebcb8d0b67f686bfda
 
 Package: ceph-test
 Source: ceph
-Version: 20.2.4+ds-1
-Installed-Size: 259836
+Version: 20.2.4+ds-2
+Installed-Size: 262345
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: amd64
-Depends: ceph-common (= 20.2.4+ds-1), curl, jq, socat, xmlstarlet, libaio1t64 (>= 0.3.93), libblkid1 (>= 2.17.2), libboost-context1.90.0 (>= 1.90.0), libboost-filesystem1.90.0 (>= 1.90.0), libboost-locale1.90.0 (>= 1.90.0), libboost-program-options1.90.0 (>= 1.90.0), libboost-thread1.90.0 (>= 1.90.0), libc6 (>= 2.38), libcap2 (>= 1:2.10), libcephfs2 (>= 20.2.2+ds-9), libcryptsetup12 (>= 2:2.4), libcurl4-gnutls (>= 8.20.0-3~), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.4), libgoogle-perftools4t64 (>= 2.18.1), libicu78 (>= 78.1-1~), libkeyutils1 (>= 1.4), libldap2 (>= 2.6.2), liblmdb0 (>= 0.9.7), liblua5.3-0 (>= 5.3.6), liblz4-1 (>= 0.0~r130), libnbd0 (>= 1.0.0), libpmem1 (>= 1.4), librabbitmq4 (>= 0.10.0), librados2 (>= 20.2.4+ds), libradosstriper1 (>= 18.2.0+ds), librbd1 (>= 14.2.0), librgw2 (>= 20.2.4+ds), libsnappy1v5 (>= 1.2.2), libsqlite3-0 (>= 3.14.0), libssl3t64 (>= 3.4.0), libstdc++6 (>= 16), libudev1 (>= 183), liburing2 (>= 2.3), zlib1g (>= 1:1.2.0)
+Depends: ceph-common (= 20.2.4+ds-2), curl, jq, socat, xmlstarlet, libaio1t64 (>= 0.3.93), libblkid1 (>= 2.17.2), libboost-context1.92.0 (>= 1.92.0), libboost-filesystem1.92.0 (>= 1.92.0), libboost-locale1.92.0 (>= 1.92.0), libboost-program-options1.92.0 (>= 1.92.0), libboost-thread1.92.0 (>= 1.92.0), libc6 (>= 2.38), libcap2 (>= 1:2.10), libcephfs2 (>= 20.2.2+ds-9), libcryptsetup12 (>= 2:2.4), libcurl4-gnutls (>= 8.20.0-3~), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.4), libgoogle-perftools4t64 (>= 2.18.1), libicu78 (>= 78.1-1~), libkeyutils1 (>= 1.4), libldap2 (>= 2.6.2), liblmdb0 (>= 0.9.7), liblua5.3-0 (>= 5.3.6), liblz4-1 (>= 0.0~r130), libnbd0 (>= 1.0.0), libpmem1 (>= 1.4), librabbitmq4 (>= 0.10.0), librados2 (>= 20.2.4+ds), libradosstriper1 (>= 18.2.0+ds), librbd1 (>= 14.2.0), librgw2 (>= 20.2.4+ds), libsnappy1v5 (>= 1.3.1), libsqlite3-0 (>= 3.14.0), libssl3t64 (>= 3.4.0), libstdc++6 (>= 16), libudev1 (>= 183), liburing2 (>= 2.3), zlib1g (>= 1:1.2.0)
 Description: Ceph test and benchmarking tools
 Homepage: http://ceph.com
+Commands: ceph-client-debug, ceph-coverage, ceph-dedup-daemon, ceph-dedup-tool, ceph_bench_log, ceph_erasure_code_benchmark, ceph_multi_stress_watch, ceph_omapbench, ceph_perf_local, ceph_perf_msgr_client, ceph_perf_msgr_server, ceph_perf_objectstore, ceph_psim, ceph_radosacl, ceph_rgw_jsonparser, ceph_rgw_multiparser, ceph_scratchtool, ceph_scratchtoolpp, ceph_test_admin_socket_output, ceph_test_alloc_replay, ceph_test_async_driver, ceph_test_async_networkstack, ceph_test_bluefs, ceph_test_bluestore_vselector, ceph_test_c2c, ceph_test_client, ceph_test_cls_2pc_queue, ceph_test_cls_cas, ceph_test_cls_cmpomap, ceph_test_cls_hello, ceph_test_cls_journal, ceph_test_cls_lock, ceph_test_cls_log, ceph_test_cls_lua, ceph_test_cls_numops, ceph_test_cls_queue, ceph_test_cls_rbd, ceph_test_cls_refcount, ceph_test_cls_rgw, ceph_test_cls_rgw_admin_account_quota_set, ceph_test_cls_rgw_gc, ceph_test_cls_rgw_meta, ceph_test_cls_rgw_stats, ceph_test_cls_sdk, ceph_test_cls_sem_set, ceph_test_cls_user, ceph_test_datalog, ceph_test_immutable_obj_cache, ceph_test_ino_release_cb, ceph_test_keyvaluedb, ceph_test_lazy_omap_stats, ceph_test_libcephfs, ceph_test_libcephfs_access, ceph_test_libcephfs_lazyio, ceph_test_libcephfs_newops, ceph_test_libcephfs_perfcounters, ceph_test_libcephfs_reclaim, ceph_test_libcephfs_snapdiff, ceph_test_libcephfs_suidsgid, ceph_test_libcephfs_vxattr, ceph_test_libcephsqlite, ceph_test_librbd, ceph_test_librbd_fsx, ceph_test_librgw_file, ceph_test_librgw_file_aw, ceph_test_librgw_file_cd, ceph_test_librgw_file_gp, ceph_test_librgw_file_marker, ceph_test_librgw_file_nfsns, ceph_test_librgw_file_rename, ceph_test_log_rss_usage, ceph_test_mon_memory_target, ceph_test_mon_msg, ceph_test_mon_rss_usage, ceph_test_mon_workloadgen, ceph_test_msgr, ceph_test_neocls_fifo, ceph_test_neocls_log, ceph_test_neocls_version, ceph_test_neorados_cls, ceph_test_neorados_cmd, ceph_test_neorados_completions, ceph_test_neorados_ec_io, ceph_test_neorados_ec_list, ceph_test_neorados_handler_error, ceph_test_neorados_io, ceph_test_neorados_leak_watch_notify, ceph_test_neorados_list, ceph_test_neorados_misc, ceph_test_neorados_pool, ceph_test_neorados_read_operations, ceph_test_neorados_snapshots, ceph_test_neorados_watch_notify, ceph_test_neorados_write_operations, ceph_test_objectcacher_misc, ceph_test_objectcacher_stress, ceph_test_objectstore, ceph_test_osd_stale_read, ceph_test_rados, ceph_test_rados_api_aio, ceph_test_rados_api_aio_pp, ceph_test_rados_api_asio, ceph_test_rados_api_c_read_operations, ceph_test_rados_api_c_write_operations, ceph_test_rados_api_cmd, ceph_test_rados_api_cmd_pp, ceph_test_rados_api_io, ceph_test_rados_api_io_pp, ceph_test_rados_api_list, ceph_test_rados_api_lock, ceph_test_rados_api_lock_pp, ceph_test_rados_api_misc, ceph_test_rados_api_misc_pp, ceph_test_rados_api_pool, ceph_test_rados_api_service, ceph_test_rados_api_service_pp, ceph_test_rados_api_snapshots, ceph_test_rados_api_snapshots_pp, ceph_test_rados_api_stat, ceph_test_rados_api_stat_pp, ceph_test_rados_api_watch_notify, ceph_test_rados_api_watch_notify_pp, ceph_test_rados_delete_pools_parallel, ceph_test_rados_io_sequence, ceph_test_rados_list_parallel, ceph_test_rados_open_pools_parallel, ceph_test_rados_striper_api_aio, ceph_test_rados_striper_api_io, ceph_test_rados_striper_api_striping, ceph_test_rbd_mirror, ceph_test_rbd_mirror_random_write, ceph_test_rgw_d4n_directory, ceph_test_rgw_d4n_filter, ceph_test_rgw_d4n_policy, ceph_test_rgw_gc_log, ceph_test_rgw_obj, ceph_test_rgw_redis_driver, ceph_test_rgw_ssd_driver, ceph_test_snap_mapper, ceph_test_stress_watch, ceph_test_trim_caps
 Description-md5: 753990ea3e585674a20cae3849addf9b
 admin
 Priority: optional
-Filename: pool/main/c/ceph/ceph-test_20.2.4+ds-1_amd64.deb
-Size: 53816264
-MD5sum: ec9ee05aab371d3fc57d768980673207
-SHA256: d481103b03e9c1c0c6d9488554114d3ea610e003c1296b845b80e2808e4f6e7e
+Filename: pool/main/c/ceph/ceph-test_20.2.4+ds-2_amd64.deb
+Size: 54282336
+MD5sum: 9bad41768701b82e9fa2be8f0603009f
+SHA256: fe1866a6c44803ab4bf8bf9a8579b5b76422f3dff00ff911ef3b29ce1e436c71
 
 Package: ceph-test-dbg
 Source: ceph
-Version: 20.2.4+ds-1
-Installed-Size: 1979540
+Version: 20.2.4+ds-2
+Installed-Size: 1988951
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: amd64
-Depends: ceph-common (= 20.2.4+ds-1)
+Depends: ceph-common (= 20.2.4+ds-2)
 Description: Ceph test and benchmarking tools - ceph-test debug
 Homepage: http://ceph.com
-Build-Ids: 0125bd89f3ebf0784c97c412cd834c5f21cea59b 0235a999db3bc81326fb181db2f8ff3d10867da4 04d3fa2903d547a6de51cc025ba5de454482161a 070f19afca2b546b7006ae30ea033f3bab12c609 0771c14e528eab260c35cbd711d1d759c22e8cd2 091af38f0f62f23329f7957083485ec5a74505f5 0a0ebea5718edb439587a3f90dcfdf4a9ee5ac61 0b084a84faa294f267a5b64c187ae317a99de6a1 0ddf77f8de037ea05c219c0d94e9ea9791c30988 0defac35e7a1687c52160c737a9218832c33f4f2 17ae0e8b3417bf67531b225b7305ed25ff7f12b9 181a768ad74eba156b49303db1917d95a4642a85 187cf258aeb797674f7ab22a1316c1e3ba304eb7 19185f418541889f6e15c310c3ecccb5f1711317 1d664c704589b87452ff7c3295adb72dc857c1bc 1f46f163c3a3163c9171251847c3457afc079dbb 2001d95daa28c914002503d80a8b7c27639f9373 213bfb0011a431d7ae306ac052b60dc513bd8b1a 242ad17912bea354146ef95e2a389831f2bf6e3a 242bbba48b93e821cc9c7725ec95cfa95dc51f10 247b1616e0d0955372c17a885bae33ba2e64f1e4 294fa993c25236555283c8ac75d5547bfe0db5d2 2b4be1eca91081e154e2f6384faa86ec68b890d6 2b6a6929f573eadf4bb94231400e97c46f0944f6 2bd6a37dae89202d686e74447a393f64a99afeac 2c19ac9a9345a9872cbe79ddc5ec8799ec004d4b 2d5b4158a85ab071492dc336ef205567e05c34ef 2e28db7afa743e00f4692c3b80406396c3b89fa1 2ead24f45a5d9b3813fee15ce09bf7a542fab755 2f25f2401e9d7f4c23d418938e5266e3ec677adc 2f5cf0cb133ff8396c2d3091d53ecca2c56762dd 303e36b20ccbc325d6a46e7d28feb4af4955776c 323faffc4af4c442a4dc705064048c6c3bd72a21 33fe2157d600899a75957ef9cd4d9c9551ea4ca7 3a738dbac4d8a10bfda40fe50112c985af7add7e 3b52fb71f1a0e0305dbd00b0c0f177b76afa8067 3c48a0e138770d7ab6c84268fc3c95e4a84157bd 3dec08e0167af35f8e08b246daab23a6113f4fe3 3def97391b61284bde4888858342ff75845e467d 3fabbd88d6e8df65a20d14849a04c819f72d0533 4045d381c6501a67589b899fe2683bac9230c2d8 4343bac0831fe3de1da0341224ebefc476f81c4f 44010dc7823be264f04bb8bbd82489b03f4a9131 443378d16f6c51abe49dc7ff0c919abe8ffcfffb 4596a51f6647f722e4e0122a72fd9e4ea8c6094c 471ce5147540ba75a1d2abeb183940b8ea805af6 48580ab194ed5cb070789e6056ec8d7d18c7275b 492274e121616c20a006d887c34a67e3e0c6dc8a 4f249ad9da93325dfc41c76ddb845720bf9bd6ef 502b720d08087d53d67f44b09936948d4b467f79 510e5e62b2027a96a4ee07184336a2e1c7c654de 523d8dc7d36de1783e7afbe3e85b5bda2f6f6d3f 53fc1be7944671064ddcc3fbae4f22ecbff1da6f 55d7102ce81c43ebf87d1333a0560c6af2d42b80 5819bb6561711c7ed9990d8340038bf9272fb307 58c2acae813fe8399d76edd758ae834f7421c66e 5bc84f9973ca3e7ae42288252c5cecf1e1926da1 5e63a6dc21f254e234eee9e9a0aae3256ca75bd4 5e7e939c6e7ba94cc6478aa00d69f2f86ffcd521 613d698ba13806d2059bf678b43710e443319648 62d16448490d99f3140d65de529d52ef545d0dfa 63709bfc4422b44ff91e916a0731775655408196 64da66da141623afc4bde83bf70720867a29d1b7 64e5b24612d9d9e5fd272709cedbe238cee22057 651bab04639ecf68d40ce0b4f1ca507f93431bdc 654bd9e2b59549508c7f6144272b52490891d0fe 65e9515cdaccaf58bdb5161e54c18bcc65a0155f 6759c004aaea3ce3bb916dd18cc1e86ed59c3a7f 69d3525bcb5dc0c13094a2ffa9e6c50cff3fa7ed 6f3eba57418d860bb3073d0c945ee3051e2a8821 71cb9d2ce06c38d56a2dae14f74b040df32e9fd1 73fcb9dc86cb1c4850b6a260b8b14f643f8bacda 78730267a3f2077fcab2bcc35e16aa11c5a60232 78ad8c52ba391472e66e7a873e4d1a79d4b5904f 7b6d1835716b611bd6701c0572862e08811d6075 7c8793be7d6bd8639c9c76d96eb8553097382e6f 7dd770fdf7e9291fe4a48c839045c1333990829c 8097b36f6a751fdcc1a39aa98814759c7ef0eff2 81c0feb4712e7e24752610a500e91cd6725329bb 846ad5042eb795e7a8e4c090faa1e037f2adb530 846d1c36f0a9d4e04ec6d6bf26fee2fa7d3e0e85 8592edb012b0a0903d8a47c7ab6d87fe198c599c 8bdf4702fc5c53045d8d5c6e38b5c6894c6113e9 8cda033776cd5f68523e050eac2eb10addf2a721 8cf826613366b5cde018cc5fcc7b5795d42d0eac 91982537b362d63afbf4122614c5e0897aea4c2e 924e91942d510f35f8619ef97f6c0010398ebece 93c178237e53a9cb5677559c73ed2f3ac76567f2 940d0292621a33fb759a2667e89b58d47cc41a9b 9433c4247cfb020eee572bf8fcc3cf5cc5e8c243 976ce5aac2460c4ce82894957d0ce69039c35014 9851b94b764063ba2735cd38aa57af98806b9d56 9dc81a4e4db8a374dd5196dc113a600bf80dd732 a07fd4a953dd8b8bc8baa99967bb82463d50c1d9 a2d941621ab370dbf7b69988398f4f5a72461c67 a2ec5bc5a2ad1f73701c2dcd41fb3e5dc8102283 a33f556d4daf84632103e45d80a6742abe344172 a8a1d1ff62e1da557588f8d33346ad5756d1d3a3 aa6cd7a2c3ad86e36acdbc3dd3d8d80639d0afe8 aa7ec62a67157b6e7fa9e85f22b79d1803f390a1 ab88e6e8cb129460bd24c9a53df98661b6689aba af390d49956c92bd8d28a6951e6745022f471c9a af5c7b6f58a6d047b2b5464e6ca0c3e98adf5c32 b8bfe4d8a5dcb7bf2832644cf25cc0bfc6236188 bd15132126919d68a1d37d3d5e52c92664ca271e c009d0b828ae726ec4256f717a6327533822fa17 c133227981f09cf4d416fb81a26123ccea5fe590 c15de78223a8fae6b160259d8e238c521ff50088 c3f79ad6700bde25e3bf3714702eb7e15519e200 c5037e0900aeba0fa6b0429638f6ba8ef4d42bf8 c6496bed25bc8e0c103626222f4827694556057a c6af57e739d3383ea6050840af151fbd9cdd9aa8 c7f20d778901fb0486d0a93bd6912db8e9ee08c6 c8a025a7ca931541b47def08829b6075f592dd73 c9e63ae6c688f1d7e1ccf2b5b1b01704a22acb64 cbce4f0042fd115e6f67d8fb3d92e7c8b0953ae3 ce09006968af7ffd9126720a69754bbf4d43e57e ce497859cf671f3fb200d3683825436179628ffb cf9478648fa82d7016e9f53d39c13f3b789b10c0 d0a1c2dfd9f7a9fa04737a831671e217f3210567 d7bb5507b30ad1e8b01de68adb5c88e751561f79 da9d46bb82badadb2f9fdc3bf2732981eb964e0a df0c7ce36976aaf210c414f8eff6d80fa0bcfa57 df214cb141aae7d4fac26355ada8c80975ff3b14 df3a900ce4d1a0f997ccf92f4000edfd1136b592 df6ef36022d05ccef33b258d1a948a683e74dfe6 e09e3bb618d0a0b1af3141f4edfaa178b08b766a e4bd2abbb03ec185bf76111434ccc5e02c811006 e52b6e839f2732cb642a0c816e544dbe47ea5587 e744cb7ef5b43a3d27a5bd34360c71cd692138c2 e836402e2c21e99905ce8d7745b8604c677ff4b3 e916fc2c27401642f0d7bafcae63d5359729d7e9 ec253922a7ac184d972260b14423e708c55519c5 ee318b615daa0f698abba7bb81c1a09bf3140972 f27f96ba61e41fb50aac967959e402db366c38b0 f4c50eadae88134c41a1ddec5d77490ed1aec83b f5547f67e0c3cd8dc1e4531f905dca563ea8ff86 f5c782fe1746a6784b5e6d75a985ee56cba1fb7d f81bef7191d55e7d53c192edc02d537a16cbcb66 f9933e2cd63821d63ed3aca0c11412cc743e38e8
+Build-Ids: 0890f8b3685a5071ceabf5fc63ba60f5670d5a25 0a3dde56c899b956009c2192921623bce0b05c2a 0a790ae0c363fed4fb083bd7d98eec24d011653a 0e40365c227e5b71d07656dd507c065eddf8db08 0f5470f8aac6a36517f45425f96672c5c19f145d 11db006dbd1cf5699f5aa562d7cfc14a24ad2aea 155dc3c9686c32050509a1e9f55b8d504d259f0e 16ed4edc2a3c3d82928fbce7884efff58bc6f7d7 170d54904fe520acacf4e2609d9e3f3a6d75e32a 190b425dab8cc5bc36fc35e2f2c07259267379c9 1c7f4d4486bd32db9a9cbe88e5ab483636a80778 1fa30e7ea9e43f20f564da0d3a1eade86538a40e 23719cb7ac2574ad007e731d6e39c88b28bf53a1 247a787cfa434eac0c7e7f78347b36781e63caf9 256814b41582e8e554a82326d8519210925ee62b 259d201c6b7bbcbc2ef41a742493e7a63dcddd93 25d416b7b7b4e6eddeb6e602d9695cdbe97584ec 268a4dbdd33f5dfc6d997d8b62e1d6a851702f39 26cf2a3fe9c0d457e653ebd2f451db848c2d15ba 28b5f04edb8e2f29bd7cb37baf1a2ec21e837502 2abd7a65a91c11d19bddc92120e90221fd0392d4 2b0d2006e56781401900981198f02665ebeb5437 2c4df4f0e81d356965b0636ea278b71d9f679ee1 2ed5c119bc307bec1d808f951c4ef54b45d0e5e1 30a6303989f054f6450ce5b56dbbdec2897d785e 314d4ae8753fae37fd96654a0149eabbf35b6b84 3546d54dc69bb9e252293a52458a7ea807b61d36 3659a8003e8f5a3ef1c4bfd1861becd89bf74157 3747774a0d692c6e360b4f14f21debad57d2e396 37af210dbbbc5707bda6115c1686c61bb22a9823 38cdadb869c730a3a6b3edd6e58c08371bc77bfa 39897bf8a4181a39a9f84949512775fc1380a0e5 3a6bec4cdf5b86440ba7a32338198b8153832013 3abd58306726842903048d11c25cdebd495d2356 3bfb66b202abf13717f019fd8bd1ec60a608f4c0 3f76c346caa8b68ffab011899489a53e8656a074 43bc904012a1850e9118ac03a9b93094f098f26d 45aa9cd0faec66a07b5a1b329577cc077a00d298 469336d145e0a2335edd8c2059c879ff18a1f175 47c161af04b5436c0e51ed1dad77df15268e8db0 4936a15eb6320fddbdb27729a7d6b51964014e4c 4c71f7ce959fedd0ef6f302e67a13a318050d957 4c936eaed68df5a66ce23f6fe95ebcd5eef57834 50bc1c2cd69ce783db3bdea8d3280e0e638314ac 50c6a544a82a801e48abfce2394f7f8d6322a63e 52e2e488937896fba5b295ad108a40a085005151 55e627c71552dba33ea965563882796e6578737b 56577eba9416e8accbb70e19d3d422a593af9585 5b003d581c633e4800f58194c74052c7c1531b30 5b6fbe3add397b31bdb354638c2bf4a8d05f4198 5b80bce022edebfb03fcf42d865927e918207f68 5f5cbbc973c98a624c55d23a69cee11e0ffceaad 64639024a47eade567d8dada19dbe6d30458d276 67bdcf557777b7d0f2c520335ea0a15a6b505141 67d94b801f05b5344eea6a1315589e162a7180c9 68c9441efbe55790d0041308bc8caabbc9bc0df4 69c22df3bc7b4bacf4e9aaf57222ac6fa572b388 6b8073e17d2ae101701ce0bf1fb023f684201596 6c699e7385d4f6d9c3625d084c7880e2983db0a8 6cda31740639380c5646dea3d1b7ef34772f0baa 6d9793c922058d8d3931956fe0bf91b8fca4fbda 6e62fa1789e7c2a1a04f80bb7dc3c9a4ea7f9c3b 6e9a3f6b331871d7f3bd8cb246b6dfd8964b450e 71837b8fa8757ca8fc5671b2acb903415933ca47 733b3fda2c1b62389ab083acd5c1d6b139072bb1 734faceef2c01481cc61d1ecddd06baa92ac62ff 741fd92c7d14cc4d453e2a86789ae251ce1f6979 75189b4572a69dafdeaf16bd8467ceb05602e9c7 75f4ea6a4b29751a5b7ec967078abc41058885db 7ef1ab74f5190d63138d2d0fa99f154119464feb 80ec86fc0bde3c6d0deff23b3944566479e61c15 81601142e3c6b1ba1ce10947e0aeeb2b76852d3a 825375e00892f4df20277c75c4ef369752264803 83204821e7bcf4cf014b5b8b3527fac092c12392 871a600aeb93563fd6716243a5dfcd7e8b8535e3 878e2d4e021ca1e635a2761ace6face1818207d9 88238eec9ce8f6b02d991f0cc96380d488b61b83 89128dc6805465e9d4c5dc57455a18770dd15264 8a35765b020f778d5b152972749bc3c3b785fa16 8be9177173b8667040d70025f9eeeaf97811d82e 8c81e3a014f521fb84cfaf36bda0252610b04d8d 8cac599d94adb9b6124f1f50aa1b9abe7c79c0ca 8ea1ad6073901c5393f041ed13285e2fcd541793 8f66a5022d497dec67cd10392bd4732b1c2cbf69 90f36ef696b6eef5c8e8db5b4d8fffab5141298e 913c4c66c8d33727e1680438c0d1b5dbdac7508b 91f494a56ae32402f74c7d5c2c6c513376fa2d7c 9394b1eff966ef4c712efd1bb1aa62d7ec5730bd 946f4bcd2e1ee12e0702967630dcdd1ccfcddae3 96e9878bd1e95e22108ccdbf8c53616078f145bb 97777193bcc66f90a5e2ddb95c2d2345c152552e 984f3e0b0ebc500767effbc167a4446fcf98d5b3 99afc767e0f121ab18e6ded2d47ee5125848fe8b 9b802ae18b3bf7c587d6328c412970e05a763434 9e5feb71396e6039dad64320ccafd675ffac8daf 9fe1abaf77b3becfe3fb537026b0bbba5eebd374 a01447e53c9cdc607a66bed061d9bf7cb7b35e05 a10a7320aec4ba54c8e87d208f2a3236321f492b a918988960c008e790b294613ff0a4212ff0dd3c a94e0a7e51f007354a15b46a441bbb865dffcaae ab335561663cc11c0fbd519f6bbc6936b9e593aa abe07db344a9c8eedb9c5b918eeacbc60e6fc444 ad6baa2ddb65f28cbe72cb385ee8528a255bfe41 b37daf8228970ce6120beee9269ed112e88ac67b b834ab733d0e966778872f8dca089e0341e149c3 b8d2d83be5c38db4c5aa1e5e9c91f8d81c5db451 b8e122d3810087933ff5628f0c563a249e16916e b92c5349ccd6e0dafc4b48d309cf8fb382087278 ba64471bf8817fb4bfc1dae23eb7eef9a7fac2b6 bb485993bcd224fbdde024465fb7d62b2fed556c bc74dbd57a9a8fe92184725f121028ae129cc449 c79733dbf10d3f7e35e0a9dc0dac37f86990987e c93c68516cb2b4f7cf97ecfb8f74a63be8b4113b c97f206835f155f1d6a8f8ffa26866796f4d64b6 cdf7c2b9dc72d9f45018b67a4bbe7771c417b2ab ceb97241ed9a7b0cc36ce2f6794d46007da1958c d17f162c2a5acf4161794cbf887c38c993a8cc47 d310d584da74abc2d95f42673e891b6cc5813aa4 d6fd70e6bcf14fd8ccacc43a8f4892f45adecbbf d982b98e69fb79917112f80dec660b216987cda6 e1c09dc7f472719ecee6c2c37832c1a449c1dca7 e207e92cd880d66e5b7aa8b5670e3aab8ffba2ee e213c416b4551e5915e2f5cab927894c0e2425fe e29d5dfb3b7ac0a9286c9f1d3efa3ccd446b29cc e2ce0821aacd61a12de76552f18c402b5bcd8bf3 ea1793c4d8c7054645600f215b649d9bfe9d39f1 eb6edaac6a5e917e85e97b31844867686140ff92 ecbd7f1e2110d45ded55714b81333429b74f9255 eeecfee556aa46d857c188afe86f2cdaaa1d7fd2 f0113ef4651b8097861b1cf97ab98f1fc2ef9d47 f189688068b4105bf80365841dd42fc16676dc01 f2ae37024268ec92d39c2c69777aeed35d17b6a2 f412a006cfcf75272f69f1e653dea29d1c151b25 f46f46b66081ad36f9f71c545aee6be34799afad f4b8999023e8e1eda8b798ccf74dfe0cb7ffa830 f4ff586112638ab9a38dced57f08982b321f81f1 f521914ac9dce651605de5d06d8b332e9f82bd5d f8812594d3a651ecdbc2355f430e2ae0044e44da fa4f7856b11d7b1d54c81bcddf8b9dc745ebfbe9 fb1b05e92ee134756f230f406203c46aaa104fd6
 Description-md5: 124859ee520844546ccfa9e1fd6c8f2e
 admin
 Priority: optional
-Filename: pool/main/c/ceph/ceph-test-dbg_20.2.4+ds-1_amd64.deb
-Size: 1910276688
-MD5sum: bdc9cf0a427026fff15e3f5b0fb0c00e
-SHA256: 0729b7cbc04f4abb8e6bc72a9babec7965517794615fd4bea1837c036ed03142
+Filename: pool/main/c/ceph/ceph-test-dbg_20.2.4+ds-2_amd64.deb
+Size: 1918490936
+MD5sum: 5b6fd08234f78cb3cf10763cded25700
+SHA256: e53944e03d07fc8cb56c797d5363d256e8b799fd9ce672494571289f844adbe8
 
 Package: cephadm
 Source: ceph
-Version: 20.2.4+ds-1
-Installed-Size: 1543
+Version: 20.2.4+ds-2
+Installed-Size: 1542
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: amd64
 Depends: adduser, lvm2
 Recommends: podman (>= 2.0.2) | docker.io
 Description: utility to bootstrap ceph daemons with systemd and containers
 Homepage: http://ceph.com
+Commands: cephadm
 Description-md5: bcb0bc17aafe2a9393d85f7ff98d4413
 admin
 Priority: optional
-Filename: pool/main/c/ceph/cephadm_20.2.4+ds-1_amd64.deb
-Size: 1491508
-MD5sum: d7fcd66662ed6a3956c5bf68325c9873
-SHA256: 77060e2d01ffee5d67539b208b144b70c73972417a2b9b042ec1d92fd08f4e99
+Filename: pool/main/c/ceph/cephadm_20.2.4+ds-2_amd64.deb
+Size: 1491836
+MD5sum: 3e8a5775eab991e2eb856b8627eec342
+SHA256: 870c28ca09013fe6684b650b3ddc299030c5be6a4cae9637cf0042b2be1ea550
 
 Package: cephfs-mirror
 Source: ceph
-Version: 20.2.4+ds-1
-Installed-Size: 997
+Version: 20.2.4+ds-2
+Installed-Size: 1001
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: amd64
-Depends: ceph-common (= 20.2.4+ds-1), libcephfs2 (= 20.2.4+ds-1), librados2 (= 20.2.4+ds-1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libgoogle-perftools4t64 (>= 2.18.1), libstdc++6 (>= 14)
+Depends: ceph-common (= 20.2.4+ds-2), libcephfs2 (= 20.2.4+ds-2), librados2 (= 20.2.4+ds-2), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libgoogle-perftools4t64 (>= 2.18.1), libstdc++6 (>= 14)
 Description: Ceph is a massively scalable, open-source, distributed
 Homepage: http://ceph.com
+Commands: cephfs-mirror
 Description-md5: 615bdcdbdb0d3d359c007edb2aa3e765
 admin
 Priority: optional
-Filename: pool/main/c/ceph/cephfs-mirror_20.2.4+ds-1_amd64.deb
-Size: 320788
-MD5sum: f2086a797822e221eeeb554d29001301
-SHA256: ceb94d5eb118300b8cc466d6d40fa432ee8de7cc123c80e127dd866f966d93ec
+Filename: pool/main/c/ceph/cephfs-mirror_20.2.4+ds-2_amd64.deb
+Size: 322280
+MD5sum: afd204d4657517c9d277f926f66b7c4b
+SHA256: 8e28178b28d77185de5c0d7fdae5da95b57f093c6df9fbb06da3f1c3b534b772
 
 Package: cephfs-shell
 Source: ceph
-Version: 20.2.4+ds-1
+Version: 20.2.4+ds-2
 Installed-Size: 178
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: all
 Depends: python3-cephfs, python3-cmd2, python3-colorama, python3:any
 Description: interactive shell for the Ceph distributed file system
 Homepage: http://ceph.com
+Commands: cephfs-shell
 Description-md5: 0270e88f7113c49abc31ad8ecd0f5323
 admin
 Priority: optional
-Filename: pool/main/c/ceph/cephfs-shell_20.2.4+ds-1_all.deb
-Size: 50568
-MD5sum: 8325b70849454ee229e257521c56b9e3
-SHA256: 1320051bdf569a6c19d0b6d74f352068e09dc6bd379e954a404d09bc81c04184
+Filename: pool/main/c/ceph/cephfs-shell_20.2.4+ds-2_all.deb
+Size: 50928
+MD5sum: ce1bcbcaba2d002504b1a40f1accfff1
+SHA256: 23a5af532ea065bc994bad047b4b6cab2a3449dd58eef890a2585ccb3cafb9a5
 
 Package: cephfs-top
 Source: ceph
-Version: 20.2.4+ds-1
+Version: 20.2.4+ds-2
 Installed-Size: 153
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: all
 Depends: python3-rados, python3:any
 Description: top like utility for Ceph filesystem
 Homepage: http://ceph.com
+Commands: cephfs-top
 Description-md5: b2cf5069c1684e1dd5584008f7b86f44
 admin
 Priority: optional
-Filename: pool/main/c/ceph/cephfs-top_20.2.4+ds-1_all.deb
-Size: 40352
-MD5sum: 6b51028650de52d228840dd04929892d
-SHA256: ac93ddf2c5d8c1c1cbb4bc35ace91362d30d4a1afff0741e57e2da7ee499ef30
+Filename: pool/main/c/ceph/cephfs-top_20.2.4+ds-2_all.deb
+Size: 40756
+MD5sum: e06d3b837e8f0fcf6711d4b24ecc5b08
+SHA256: b9199539c26d8389e4daeb82257c0d81f6e871fcca625d46735d1fa705be1781
 
 Package: libcephfs-daemon
 Source: ceph
-Version: 20.2.4+ds-1
+Version: 20.2.4+ds-2
 Installed-Size: 179
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: amd64
-Depends: libcephfs2 (= 20.2.4+ds-1), libc6 (>= 2.34), libssl3t64 (>= 3.0.0)
+Depends: libcephfs2 (= 20.2.4+ds-2), libc6 (>= 2.34), libssl3t64 (>= 3.0.0)
 Description: Libcephfs proxy daemon
 Homepage: http://ceph.com
+Commands: libcephfsd
 Description-md5: 992e59d5025c933cc0fe94336f37a237
 admin
 Priority: optional
-Filename: pool/main/c/ceph/libcephfs-daemon_20.2.4+ds-1_amd64.deb
-Size: 57844
-MD5sum: 46e1dc3ee9ac0bb790093cb1c1ad9802
-SHA256: dc2fc4027b8009c78591be4ec2858533edb4983235dc02d71d2d89ea63f210bc
+Filename: pool/main/c/ceph/libcephfs-daemon_20.2.4+ds-2_amd64.deb
+Size: 58156
+MD5sum: 407ffc96f8b98a24eb2c4fdc673444b2
+SHA256: 68dcf5a66b15cefb2b1301747264d44e9e2aaefaab3f331605dabb2309541874
 
 Package: radosgw
 Source: ceph
-Version: 20.2.4+ds-1
-Installed-Size: 61152
+Version: 20.2.4+ds-2
+Installed-Size: 62296
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: amd64
-Depends: ceph-common (= 20.2.4+ds-1), librgw2 (= 20.2.4+ds-1), media-types, libboost-context1.90.0 (>= 1.90.0), libboost-filesystem1.90.0 (>= 1.90.0), libboost-thread1.90.0 (>= 1.90.0), libc6 (>= 2.38), libcurl4-gnutls (>= 8.20.0-3~), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.4), libgoogle-perftools4t64 (>= 2.18.1), libicu78 (>= 78.1-1~), libldap2 (>= 2.6.2), liblmdb0 (>= 0.9.7), liblua5.3-0 (>= 5.3.6), librabbitmq4 (>= 0.10.0), librados2 (>= 20.2.4+ds), libsqlite3-0 (>= 3.14.0), libssl3t64 (>= 3.4.0), libstdc++6 (>= 14)
+Depends: ceph-common (= 20.2.4+ds-2), librgw2 (= 20.2.4+ds-2), media-types, libboost-context1.92.0 (>= 1.92.0), libboost-filesystem1.92.0 (>= 1.92.0), libboost-thread1.92.0 (>= 1.92.0), libc6 (>= 2.38), libcurl4-gnutls (>= 8.20.0-3~), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.4), libgoogle-perftools4t64 (>= 2.18.1), libicu78 (>= 78.1-1~), libldap2 (>= 2.6.2), liblmdb0 (>= 0.9.7), liblua5.3-0 (>= 5.3.6), librabbitmq4 (>= 0.10.0), librados2 (>= 20.2.4+ds), libsqlite3-0 (>= 3.14.0), libssl3t64 (>= 3.4.0), libstdc++6 (>= 14)
 Suggests: logrotate
 Description: REST gateway for RADOS distributed object store
 Homepage: http://ceph.com
+Commands: radosgw, radosgw-es, radosgw-object-expirer, radosgw-token
 Description-md5: b4529fcdad48f423601d2e19b1260783
 Tag: role::program
 admin
 Priority: optional
-Filename: pool/main/c/ceph/radosgw_20.2.4+ds-1_amd64.deb
-Size: 15824584
-MD5sum: 149002e35cddbb94ead461d8499f2e51
-SHA256: e95a0a3f43350bc01155782c98cb84cf1ee8c3068816a791443a963e546a2997
+Filename: pool/main/c/ceph/radosgw_20.2.4+ds-2_amd64.deb
+Size: 16061536
+MD5sum: a77fd80d2ea543893ad9162c2fd53d51
+SHA256: 3e1e3879309f938b3b25b0f8a7aaacfb6cc0534c00b63532f525f932bf9d90e0
 
 Package: rbd-fuse
 Source: ceph
-Version: 20.2.4+ds-1
-Installed-Size: 383
+Version: 20.2.4+ds-2
+Installed-Size: 388
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libfuse3-4 (>= 3.17.2), libgcc-s1 (>= 3.0), librados2 (>= 20.2.4+ds), librbd1 (>= 14.2.0), libstdc++6 (>= 14)
 Recommends: fuse3
 Description: FUSE-based rbd client for the Ceph distributed file system
 Homepage: http://ceph.com
+Commands: rbd-fuse
 Description-md5: 15cf24eaec74387c1ae6ddef87cdb866
 admin
 Priority: optional
-Filename: pool/main/c/ceph/rbd-fuse_20.2.4+ds-1_amd64.deb
-Size: 125308
-MD5sum: bc15b06381c64fb90d0f117e1cf544fe
-SHA256: c2e0d96cba4e468698dce5a30f3315c778be360207e758d75612ec6b0ed656c0
+Filename: pool/main/c/ceph/rbd-fuse_20.2.4+ds-2_amd64.deb
+Size: 126328
+MD5sum: 842eaf35f5a45e5a8433252fdcdba85a
+SHA256: 2181ced2981ab6797eaa4b768ca278147261bc24ad1b38a9ecadf9ac87ad8fc4
 
 Package: rbd-mirror
 Source: ceph
-Version: 20.2.4+ds-1
-Installed-Size: 13901
+Version: 20.2.4+ds-2
+Installed-Size: 13929
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: amd64
-Depends: ceph-common (= 20.2.4+ds-1), librados2 (= 20.2.4+ds-1), libc6 (>= 2.38), libcryptsetup12 (>= 2:2.4), libgcc-s1 (>= 3.0), libgoogle-perftools4t64 (>= 2.18.1), libnbd0 (>= 1.0.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 16)
+Depends: ceph-common (= 20.2.4+ds-2), librados2 (= 20.2.4+ds-2), libc6 (>= 2.38), libcryptsetup12 (>= 2:2.4), libgcc-s1 (>= 3.0), libgoogle-perftools4t64 (>= 2.18.1), libnbd0 (>= 1.0.0), libssl3t64 (>= 3.0.0), libstdc++6 (>= 16)
 Description: Ceph daemon for mirroring RBD images
 Homepage: http://ceph.com
+Commands: rbd-mirror
 Description-md5: 1d710ddd4d105de6cfd76d4ca18a79b3
 admin
 Priority: optional
-Filename: pool/main/c/ceph/rbd-mirror_20.2.4+ds-1_amd64.deb
-Size: 3368476
-MD5sum: a39cf28ef22d98c73e8782e3e0cfda0d
-SHA256: 30ed75f12680873a5f76a2d5d53d69ad6133470f0b5da745daff47ae78eb1a63
+Filename: pool/main/c/ceph/rbd-mirror_20.2.4+ds-2_amd64.deb
+Size: 3376640
+MD5sum: 87e5f42740bb3d3ba0c59359ec21f833
+SHA256: d3e98fbb96cfa05eb4c1cd9d73ec15b7629e9aaf0a4f0ec958414cb394de4e46
 
 Package: rbd-nbd
 Source: ceph
-Version: 20.2.4+ds-1
+Version: 20.2.4+ds-2
 Installed-Size: 673
 Maintainer: Ceph Packaging Team <team+ceph@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libnl-3-200 (>= 3.11.0), libnl-genl-3-200 (>= 3.11.0), librados2 (>= 20.2.4+ds), librbd1 (>= 0.87), libstdc++6 (>= 14)
 Description: NBD-based rbd client for the Ceph distributed file system
 Homepage: http://ceph.com
+Commands: rbd-nbd
 Description-md5: 7780c9ecf943aeed38e3b3d394062e74
 admin
 Priority: optional
-Filename: pool/main/c/ceph/rbd-nbd_20.2.4+ds-1_amd64.deb
-Size: 218352
-MD5sum: 51cc9664f243604d06d4f8090ce7ab07
-SHA256: f1860962e70ede41e2aa52acac9f8f76a2ec3e3c2a528b64fb25ace23ff0c7e2
+Filename: pool/main/c/ceph/rbd-nbd_20.2.4+ds-2_amd64.deb
+Size: 219856
+MD5sum: f4bb67994f50e2557cb554103fbd15bb
+SHA256: f31f0c8c321a372c232ded19f55a136f0860d8ee7ecc71f8c7f59d9709217a59
 
 Package: certstream-server-go
 Version: 1.9.0-1
@@ -20315,43 +20330,45 @@ SHA256: d7d9b59f3f9a64058e80caccafff1aa9b6c3925beeb08b97f05e7a2a3564b89f
 
 Package: pkexec
 Source: policykit-1
-Version: 127-3
+Version: 128-1
 Installed-Size: 55
 Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: policykit-1 (<< 0.120-4~)
-Depends: polkitd (= 127-3), libc6 (>= 2.34), libglib2.0-0t64 (>= 2.80.0), libpam0g (>= 0.99.7.1), libpolkit-agent-1-0 (= 127-3), libpolkit-gobject-1-0 (= 127-3)
+Depends: polkitd (= 128-1), libc6 (>= 2.34), libglib2.0-0t64 (>= 2.80.0), libpam0g (>= 0.99.7.1), libpolkit-agent-1-0 (= 128-1), libpolkit-gobject-1-0 (= 128-1)
 Breaks: policykit-1 (<< 0.120-4~)
 Description: run commands as another user with polkit authorization
 Multi-Arch: foreign
 Homepage: https://github.com/polkit-org/polkit/
+Commands: pkexec
 Description-md5: 220b2dc5fa280403052088b9c3dcca5a
 admin
 Priority: optional
-Filename: pool/main/p/policykit-1/pkexec_127-3_amd64.deb
-Size: 18260
-MD5sum: d8306fc3bee71a201ef8f1b2c99ac22e
-SHA256: 6f9a7ad02b31718cd03ba1b7be6a2a207eb8f2c4125841ceb2f5a81a40cd0f66
+Filename: pool/main/p/policykit-1/pkexec_128-1_amd64.deb
+Size: 18280
+MD5sum: cadd035a69c81df84f886f61c27cd882
+SHA256: b69294d13ac06ef8629194e2a22441e76bda1ec4b2431b93f391c9ebd4b780e0
 
 Package: polkitd
 Source: policykit-1
-Version: 127-3
-Installed-Size: 540
+Version: 128-1
+Installed-Size: 577
 Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: policykit-1 (<< 0.120-4~), polkitd-javascript (<< 121+compat0.1-3~)
-Depends: systemd | systemd-standalone-sysusers | systemd-sysusers, default-dbus-system-bus | dbus-system-bus, default-logind | logind, xml-core (>= 0.14), libc6 (>= 2.38), libduktape207 (>= 2.0.3), libexpat1 (>= 2.0.1), libglib2.0-0t64 (>= 2.38.0), libpam0g (>= 0.99.7.1), libpolkit-agent-1-0 (= 127-3), libpolkit-gobject-1-0 (= 127-3), libsystemd0 (>= 253)
+Depends: systemd | systemd-standalone-sysusers | systemd-sysusers, default-dbus-system-bus | dbus-system-bus, default-logind | logind, xml-core (>= 0.14), libc6 (>= 2.38), libduktape207 (>= 2.0.3), libexpat1 (>= 2.0.1), libglib2.0-0t64 (>= 2.38.0), libpam0g (>= 0.99.7.1), libpolkit-agent-1-0 (= 128-1), libpolkit-gobject-1-0 (= 128-1), libsystemd0 (>= 253)
 Breaks: policykit-1 (<< 0.120-4~), polkitd-javascript (<< 121+compat0.1-3~)
 Description: framework for managing administrative policies and privileges
 Multi-Arch: foreign
 Homepage: https://github.com/polkit-org/polkit/
+Commands: pkaction, pkcheck, pkttyagent
 Description-md5: 9502a7bb99b13ec238a7b4995aa16328
 admin
 Priority: optional
-Filename: pool/main/p/policykit-1/polkitd_127-3_amd64.deb
-Size: 122576
-MD5sum: 0684f67a32d307be226206e6ed525748
-SHA256: b12632066dce7990770cb63b64f7410b594c19a5ec2cd9482fba960ad031709d
+Filename: pool/main/p/policykit-1/polkitd_128-1_amd64.deb
+Size: 132684
+MD5sum: a2bf00a8beb0b5fc9a8f84327699a653
+SHA256: d1c570de5973691ef69ff0aaffbcdbbf21470eb5b593c30733772917d0661763
 
 Package: policyrcd-script-zg2
 Version: 0.3-1

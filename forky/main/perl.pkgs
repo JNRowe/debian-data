@@ -1084,6 +1084,134 @@ Size: 780796
 MD5sum: 6c307aab1563025975428d317b97632d
 SHA256: 5d13d66a55cf52170b408fde456b15aad410c6a14ab46ae23eb2bc1e33e20e05
 
+Package: lemonldap-ng
+Version: 2.23.4+ds+~0.5.5-1
+Installed-Size: 190
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: all
+Provides: openid-connect-provider, openid-connect-relying-party, saml-identity-provider, saml-service-provider
+Depends: lemonldap-ng-handler (= 2.23.4+ds+~0.5.5-1), liblemonldap-ng-manager-perl (= 2.23.4+ds+~0.5.5-1), liblemonldap-ng-portal-perl (= 2.23.4+ds+~0.5.5-1)
+Description: OpenID-Connect, CAS and SAML compatible Web-SSO system
+Homepage: https://lemonldap-ng.org/
+Description-md5: d9956485953b0264aad783e87c61e25d
+Tag: implemented-in::perl, interface::web, protocol::http, role::metapackage,
+ role::program, security::TODO, security::authentication, suite::apache,
+ web::application
+perl
+Priority: optional
+Filename: pool/main/l/lemonldap-ng/lemonldap-ng_2.23.4+ds+~0.5.5-1_all.deb
+Size: 91588
+MD5sum: de1ff85cd9c6abedf031e2a3bf5f0b10
+SHA256: 666b3bbf1d513ff58c4fd2fe3ba0393e60c1e702120b3b0d282b06b60b913a76
+
+Package: lemonldap-ng-handler
+Source: lemonldap-ng
+Version: 2.23.4+ds+~0.5.5-1
+Installed-Size: 246
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: liblemonldap-ng-handler-perl (= 2.23.4+ds+~0.5.5-1)
+Recommends: lemonldap-ng-fastcgi-server (= 2.23.4+ds+~0.5.5-1) | lemonldap-ng-uwsgi-app (= 2.23.4+ds+~0.5.5-1) | libapache2-mod-perl2
+Suggests: libcache-memcached-perl, libsoap-lite-perl
+Description: Lemonldap::NG handler part
+Homepage: https://lemonldap-ng.org/
+Description-md5: 9581d765c8dbdafc58e31f96283b6764
+perl
+Priority: optional
+Filename: pool/main/l/lemonldap-ng/lemonldap-ng-handler_2.23.4+ds+~0.5.5-1_all.deb
+Size: 100220
+MD5sum: b9bd0e17449528d11ac7f98fd1aa4a5d
+SHA256: ea3dee11fe8dc2eb96b1b77e843bf1692682299137dd43eac2e302c9331daa68
+
+Package: liblemonldap-ng-common-perl
+Source: lemonldap-ng
+Version: 2.23.4+ds+~0.5.5-1
+Installed-Size: 983
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: debconf, libapache-session-perl, libcache-cache-perl, libclass-xsaccessor-perl, libconfig-inifiles-perl, libcrypt-openssl-rsa-perl, libcrypt-openssl-x509-perl, libconvert-pem-perl, libcrypt-rijndael-perl, libcrypt-urandom-perl, libhtml-template-perl, libjson-perl, libjson-xs-perl, libmouse-perl, libnet-cidr-perl, libnet-ssleay-perl, libplack-perl, liburi-perl, libwww-perl, debconf (>= 0.5) | debconf-2.0, perl:any
+Recommends: libapache-session-browseable-perl, libcookie-baker-xs-perl, libdbi-perl, libemail-address-xs-perl | libemail-address-perl, libemail-sender-perl, libhttp-parser-xs-perl, liblwp-protocol-https-perl, libstring-random-perl
+Suggests: libconvert-base32-perl, liblog-log4perl-perl, libnet-ldap-perl, libsoap-lite-perl, libxml-libxml-perl
+Description: Lemonldap::NG common files
+Homepage: https://lemonldap-ng.org/
+Description-md5: d0b1b116b90ac4255174dccda83adf20
+Tag: devel::lang:perl, devel::library, implemented-in::perl, role::devel-lib,
+ role::shared-lib
+perl
+Priority: optional
+Filename: pool/main/l/lemonldap-ng/liblemonldap-ng-common-perl_2.23.4+ds+~0.5.5-1_all.deb
+Size: 262124
+MD5sum: 8a671f36c0543aad24fa56f9f539f5e3
+SHA256: 5dc6f4622e639ce00913d281d4918d18ae7a76bcf92c9082c8c28deb612c067e
+
+Package: liblemonldap-ng-handler-perl
+Source: lemonldap-ng
+Version: 2.23.4+ds+~0.5.5-1
+Installed-Size: 422
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: liblemonldap-ng-common-perl (= 2.23.4+ds+~0.5.5-1), perl:any
+Description: Lemonldap::NG handler common libraries
+Homepage: https://lemonldap-ng.org/
+Description-md5: c31967de31456a28e089d30c57912036
+Tag: devel::lang:perl, devel::library, implemented-in::perl, interface::web,
+ network::service, protocol::http, role::plugin, role::program,
+ security::TODO, security::authentication, suite::apache, web::TODO
+perl
+Priority: optional
+Filename: pool/main/l/lemonldap-ng/liblemonldap-ng-handler-perl_2.23.4+ds+~0.5.5-1_all.deb
+Size: 138912
+MD5sum: 1b4bd14370778fcac4e5c1c368453f91
+SHA256: aa6f0abc36835f3a3ce9d10fa6ef0730ed383f76fc6fae8ba1a56ffaf4eb48b2
+
+Package: liblemonldap-ng-manager-perl
+Source: lemonldap-ng
+Version: 2.23.4+ds+~0.5.5-1
+Installed-Size: 9835
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: lemonldap-ng-fastcgi-server (= 2.23.4+ds+~0.5.5-1) | lemonldap-ng-uwsgi-app (= 2.23.4+ds+~0.5.5-1) | apache2 | httpd-cgi, libemail-date-format-perl, libhash-merge-simple-perl, liblemonldap-ng-handler-perl (= 2.23.4+ds+~0.5.5-1), libregexp-common-perl, perl:any
+Pre-Depends: debconf
+Recommends: lemonldap-ng-doc (= 2.23.4+ds+~0.5.5-1), libxml-libxml-perl, libxml-libxslt-perl
+Suggests: libclone-perl, libregexp-assemble-perl
+Description: Lemonldap::NG manager part
+Homepage: https://lemonldap-ng.org/
+Description-md5: ab72e3f536bf2e52dc3ca8f4623dfb67
+Tag: admin::configuring, devel::lang:perl, devel::library,
+ implemented-in::perl, interface::web, protocol::http, role::program,
+ security::TODO, security::authentication, suite::apache, use::editing,
+ web::application, web::cgi, works-with::db
+perl
+Priority: optional
+Filename: pool/main/l/lemonldap-ng/liblemonldap-ng-manager-perl_2.23.4+ds+~0.5.5-1_all.deb
+Size: 930644
+MD5sum: d87c93169ebf40bdc82f165b9728c2d6
+SHA256: 0b15623cec361496b9303d74a5ea9780d90a5c933d0ce230c4095eb336a07536
+
+Package: liblemonldap-ng-portal-perl
+Source: lemonldap-ng
+Version: 2.23.4+ds+~0.5.5-1
+Installed-Size: 5973
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: fonts-font-awesome, lemonldap-ng-fastcgi-server (= 2.23.4+ds+~0.5.5-1) | lemonldap-ng-uwsgi-app (= 2.23.4+ds+~0.5.5-1) | apache2 | httpd-cgi, libclone-perl, libconvert-base32-perl, libdigest-hmac-perl, libemail-date-format-perl, libhtml-formattext-withlinks-perl, libjs-bootstrap5, libjs-jquery, libjs-jquery-cookie, libjs-jquery-ui, liblemonldap-ng-handler-perl (= 2.23.4+ds+~0.5.5-1), liblist-moreutils-perl, libregexp-assemble-perl, libtext-unidecode-perl, perl:any
+Pre-Depends: debconf
+Recommends: libauthen-webauthn-perl, libconvert-pem-perl, libcrypt-jwt-perl, libgd-perl, libio-socket-timeout-perl, libio-string-perl, libipc-run-perl, libmime-tools-perl, libnet-ldap-perl
+Suggests: crowdsec, gpg, libauthen-radius-perl, libdata-password-zxcvbn-perl, libdbi-perl, libmaxmind-db-reader-perl, libglib-perl, libgssapi-perl, libhttp-browserdetect-perl, libimage-magick-perl, liblasso-perl, libnet-facebook-oauth2-perl, libnet-oauth-perl, libnet-openid-consumer-perl, libnet-openid-server-perl, libsoap-lite-perl, libweb-id-perl, slapd
+Description: Lemonldap::NG authentication portal part
+Homepage: https://lemonldap-ng.org/
+Description-md5: f7206438910a77b0f25d8f246a2c7c9d
+Tag: devel::lang:perl, devel::library, devel::web, implemented-in::perl,
+ interface::web, network::service, protocol::TODO, protocol::http,
+ role::devel-lib, role::program, security::authentication,
+ suite::apache, web::application, web::cgi, works-with::db
+perl
+Priority: optional
+Filename: pool/main/l/lemonldap-ng/liblemonldap-ng-portal-perl_2.23.4+ds+~0.5.5-1_all.deb
+Size: 3126780
+MD5sum: 164255efcd4bc9ce93e1b7736626f822
+SHA256: 467a62e46832d138a3aa33eb953ae0fc26d55ceff9589cd2b3ba3fecc3f90e71
+
 Package: libaccessors-perl
 Version: 1.01-4
 Installed-Size: 44

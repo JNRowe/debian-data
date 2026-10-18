@@ -18420,7 +18420,7 @@ Description-en: Data files for Audacious plugins
  Audacious plugins.
 
 Package: audacity
-Description-md5: f3049c5343ef448931624eb10a0c6627
+Description-md5: 1fbc2097c031466569d7a485100fdabf
 Description-en: fast, cross-platform audio editor
  Audacity is a multi-track audio editor for Linux/Unix, MacOS and
  Windows.  It is designed for easy recording, playing and editing of
@@ -18428,16 +18428,22 @@ Description-en: fast, cross-platform audio editor
  analysis tools.  Editing is very fast and provides unlimited
  undo/redo.
  .
+ Audacity 4 uses a Qt6-based UI and introduces a new clip-editing
+ model. Most Audacity 3 workflows remain available.
+ .
  Supported file formats include Ogg Vorbis, MP2, MP3, WAV, AIFF, and AU.
 
 Package: audacity-data
-Description-md5: 33567c6e9f3ccd4163a600c05ed3f802
+Description-md5: 94cb8fa69d7d805326b59673e0a4feee
 Description-en: fast, cross-platform audio editor (data)
  Audacity is a multi-track audio editor for Linux/Unix, MacOS and
  Windows.  It is designed for easy recording, playing and editing of
  digital audio.  Audacity features digital effects and spectrum
  analysis tools.  Editing is very fast and provides unlimited
  undo/redo.
+ .
+ Audacity 4 uses a Qt6-based UI and introduces a new clip-editing
+ model. Most Audacity 3 workflows remain available.
  .
  This package contains the architecture-independent data files.
 
@@ -38569,6 +38575,13 @@ Description-en: D-Bus activity visualiser
  .
  Bustle is a GNOME Circle app.
 
+Package: bustools
+Description-md5: bcf093f753bea7e5a120ad263ad7abba
+Description-en: program for manipulating BUS files for single cell RNA-Seq datasets
+ This package contains BUStools program, it can be used to error correct
+ barcodes, collapse UMIs, produce gene count or transcript compatibility
+ count matrices
+
 Package: busybox
 Description-md5: 868c2e57f9e208f2f6216022b38967f5
 Description-en: Tiny utilities for small and embedded systems
@@ -47974,6 +47987,72 @@ Description-en: chiark system administration utilities
  crypto libraries; xbatmon-simple needs the Suggested X libraries.
  .
  cgi-fcgi-interp: for use with cgi-fcgi as a #! interpreter
+
+Package: chibi-scheme
+Description-md5: 8bfc1c10be1ef1d5ea6d1c609f5d8fb2
+Description-en: embeddable Scheme interpreter
+ Chibi-Scheme is a really small embeddable interpreter of R7RS Scheme,
+ intended for use as an extension and scripting language in C programs.
+ .
+ This package provides REPL and interpreter "chibi-scheme"
+ as well as tools for documenting Scheme code ("chibi-doc"),
+ generating FFI bindings ("chibi-ffi"),
+ and managing Scheme packages ("snow-chibi").
+
+Package: chibi-scheme-common
+Description-md5: 3a91ef0ce616443c9fbb16fe35470d9e
+Description-en: embeddable Scheme interpreter (standard libraries)
+ Chibi-Scheme is a really small embeddable interpreter of R7RS Scheme,
+ intended for use as an extension and scripting language in C programs.
+ .
+ This package provides the standard library for R7RS Scheme, as well as
+ some additional extension libraries.
+
+Package: chibi-scheme-doc
+Description-md5: 3e8e8a9ea65b21c7533df60ab81be7e3
+Description-en: embeddable Scheme interpreter (documentation)
+ Chibi-Scheme is a really small embeddable interpreter of R7RS Scheme,
+ intended for use as an extension and scripting language in C programs.
+ .
+ This package provides documentation on the interpreter library,
+ FFI interfaces, and built-in extension modules.
+
+Package: chibi-scheme-images
+Description-md5: eeca36c848118b9b5a6fc1ee38ee538e
+Description-en: embeddable Scheme interpreter (standard library images)
+ Chibi-Scheme is a really small embeddable interpreter of R7RS Scheme,
+ intended for use as an extension and scripting language in C programs.
+ .
+ A dummy package providing preloaded images for use with "chibi-scheme -i".
+ They allow faster startup times when using common library sets.
+
+Package: libchibi-scheme-dev
+Description-md5: d5ab333444c9516219c74e73c5986a5c
+Description-en: embeddable Scheme interpreter (development files)
+ Chibi-Scheme is a really small embeddable interpreter of R7RS Scheme,
+ intended for use as an extension and scripting language in C programs.
+ .
+ This package provides the header files, libraries, and symbolic links
+ necessary to build applications that use Chibi-Scheme and extension
+ modules for Chibi-Scheme.
+
+Package: libchibi-scheme-ffi
+Description-md5: 8f4f2b6bd7522174b0bb6668db8876e2
+Description-en: embeddable Scheme interpreter (native modules)
+ Chibi-Scheme is a really small embeddable interpreter of R7RS Scheme,
+ intended for use as an extension and scripting language in C programs.
+ .
+ This package provides native binary modules required by some of the
+ libraries in Chibi's standard package.
+
+Package: libchibi-scheme0
+Description-md5: 37a084317c878487d30a3d505ad0e7c4
+Description-en: embeddable Scheme interpreter (shared library)
+ Chibi-Scheme is a really small embeddable interpreter of R7RS Scheme,
+ intended for use as an extension and scripting language in C programs.
+ .
+ This package provides the core shared library for applications that
+ are using Chibi.
 
 Package: chibicc
 Description-md5: 396ba981f00d40581f7c81cd7619bb29
@@ -70888,6 +70967,18 @@ Description-en: program to control monitor parameters
  DDCcontrol is a tool used to control monitor parameters, like brightness
  and contrast, without using the OSD (On Screen Display) and the buttons
  in front of the monitor.
+
+Package: ddccontrol-dbgen
+Description-md5: fb79c33fb96a3c7a17eb53ebe725f3d4
+Description-en: generator for the ddccontrol binary monitor database
+ DDCcontrol is a tool used to control monitor parameters, like brightness
+ and contrast, without using the OSD (On Screen Display) and the buttons
+ in front of the monitor.
+ .
+ This package provides ddccontrol-dbgen, which converts the XML monitor
+ database of ddccontrol-db into the compact CBOR format, and can
+ validate, dump, and rewrite such CBOR databases.  It is needed only to
+ build ddccontrol-db.
 
 Package: gddccontrol
 Description-md5: 230512d347910986616da4777d340cf3
@@ -99782,6 +99873,15 @@ Description-en: converts text to Postscript, HTML or RTF with syntax highlightin
  It is often used for its syntax highlighting, as it comes with rules
  for a wide range of programming languages.  New rules can be added
  using an awk-like stateful scripting language.
+
+Package: libensmallen-dev
+Description-md5: 53786bc3db68afada07edf24cfdd11fb
+Description-en: C++ header-only library for mathematical optimization
+ Ensmallen provides a simple set of abstractions for writing an objective
+ function to optimize. It also provides a large set of standard and cutting-edge
+ optimizers that can be used for virtually any mathematical optimization task.
+ These include full-batch gradient descent techniques, small-batch techniques,
+ gradient-free optimizers, and constrained optimization.
 
 Package: ent
 Description-md5: ee7ab52dbfd2e0415762ea1e5778dee1
@@ -136496,6 +136596,58 @@ Description-en: NCEP GRIB2 encoder/decoder library
  This is the libg2c library from NCEP for encoding and decoding 'GRIB2'
  data formats.
 
+Package: libg2o-dev
+Description-md5: 947789f4684c9c3be4d09d2ca0074fc5
+Description-en: C++ framework for optimizing graph-based nonlinear error functions
+ A wide range of problems in robotics as well as in computer-vision involve the
+ minimization of a non-linear error function that can be represented as a graph.
+ Typical instances are simultaneous localization and mapping (SLAM) or bundle
+ adjustment (BA). The overall goal in these problems is to find the
+ configuration of parameters or state variables that maximally explain a set of
+ measurements affected by Gaussian noise. g2o is an open-source C++ framework
+ for such nonlinear least squares problems. g2o has been designed to be easily
+ extensible to a wide range of problems and a new problem typically can be
+ specified in a few lines of code. The current implementation provides solutions
+ to several variants of SLAM and BA. g2o offers a performance comparable to
+ implementations of state-of-the-art approaches for the specific problems
+ (02/2011)
+ .
+ Development files
+
+Package: libg2o-doc
+Description-md5: eb5e6c13ca2205d84c9100315ee17fef
+Description-en: C++ framework for optimizing graph-based nonlinear error functions
+ A wide range of problems in robotics as well as in computer-vision involve the
+ minimization of a non-linear error function that can be represented as a graph.
+ Typical instances are simultaneous localization and mapping (SLAM) or bundle
+ adjustment (BA). The overall goal in these problems is to find the
+ configuration of parameters or state variables that maximally explain a set of
+ measurements affected by Gaussian noise. g2o is an open-source C++ framework
+ for such nonlinear least squares problems. g2o has been designed to be easily
+ extensible to a wide range of problems and a new problem typically can be
+ specified in a few lines of code. The current implementation provides solutions
+ to several variants of SLAM and BA. g2o offers a performance comparable to
+ implementations of state-of-the-art approaches for the specific problems
+ (02/2011)
+ .
+ Documentation
+
+Package: libg2o0t64
+Description-md5: 322d08c53e059be8e75ea5f2b3569c44
+Description-en: C++ framework for optimizing graph-based nonlinear error functions
+ A wide range of problems in robotics as well as in computer-vision involve the
+ minimization of a non-linear error function that can be represented as a graph.
+ Typical instances are simultaneous localization and mapping (SLAM) or bundle
+ adjustment (BA). The overall goal in these problems is to find the
+ configuration of parameters or state variables that maximally explain a set of
+ measurements affected by Gaussian noise. g2o is an open-source C++ framework
+ for such nonlinear least squares problems. g2o has been designed to be easily
+ extensible to a wide range of problems and a new problem typically can be
+ specified in a few lines of code. The current implementation provides solutions
+ to several variants of SLAM and BA. g2o offers a performance comparable to
+ implementations of state-of-the-art approaches for the specific problems
+ (02/2011)
+
 Package: g2p-sk
 Description-md5: cbf936b7d9397440de30518b6f0acb30
 Description-en: Phonetic transcription for Slovak language
@@ -171602,6 +171754,30 @@ Description-en: meta-build system for ninja
  originally, part of the Chromium source tree, and has since been
  extracted into its own standalone repo.
 
+Package: generator-scripting-language
+Description-md5: 5a179059900204995bfc9ec6467ff829
+Description-en: Generator Scripting Language code generator
+ GSL/4.1 is a code construction tool.  It will generate code in all
+ languages and for all purposes.  If this sounds too good to be true,
+ welcome to 1996, when we invented these techniques.  Magic is simply
+ technology that is twenty years ahead of its time. In addition to
+ code construction, GSL has been used to generate database schema
+ definitions, user interfaces, reports, system administration tools
+ and much more.
+
+Package: generator-scripting-language-examples
+Description-md5: 7ef0b275b5917668f88f21def15261fc
+Description-en: Examples for the Generator Scripting Language code generator
+ GSL/4.1 is a code construction tool.  It will generate code in all
+ languages and for all purposes.  If this sounds too good to be true,
+ welcome to 1996, when we invented these techniques.  Magic is simply
+ technology that is twenty years ahead of its time. In addition to
+ code construction, GSL has been used to generate database schema
+ definitions, user interfaces, reports, system administration tools
+ and much more.
+ .
+ This package contains examples to get started with gsl.
+
 Package: libgeners-dev
 Description-md5: 1d2e692998c9d512716d749435757ef2
 Description-en: generic serialization library for C++ (development package)
@@ -188442,6 +188618,12 @@ Description-en: Headers format parser to match Netlify's _headers file format (G
  Headers format parser to match Netlify's _headers file format,
  plus a compatible unparser.
 
+Package: golang-codeberg-git-pages-go-redirects-dev
+Description-md5: 6d8bb095924b96828f0c6967b0bbecc1
+Description-en: Redirect format parser to match Netlify's format (Go library)
+ This is a Go library implementing the redirect format parser to match Netlify's
+ format.
+
 Package: golang-codeberg-git-pages-go-slog-syslog-dev
 Description-md5: c0b7fd1937a3af24d0af3aa9dc0a97ec
 Description-en: Syslog handler for the Go slog module
@@ -189007,12 +189189,6 @@ Description-en: Little Go package for removing ANSI color escape codes from stri
  process. However, sometimes this can't be helped, and one needs to be able
  to deal with that noise. This will use a regexp to remove those unwanted
  escape codes.
-
-Package: golang-github-achannarasappa-term-grid-dev
-Description-md5: 95d85b5c07058834d398a0e1833ee7f3
-Description-en: Position text and visuals in a grid layout
- A library enabling you to position test and visuals neatly in
- a TUI. Providing feautures such as margins, alignment and a flexible layout.
 
 Package: golang-github-acobaugh-osrelease-dev
 Description-md5: 7ef777c743ce138a16dc478ff72ecbcf
@@ -196017,12 +196193,6 @@ Description-en: Django-syntax like template-engine for Go (library)
  template renderer compatible with the Django syntax but for the
  Go language.
 
-Package: golang-github-flowstack-go-jsonschema-dev
-Description-md5: 56e879b56de507ba9a5de517a5e0cf07
-Description-en: Go JSON Schema parser and validator (library)
- This module uses the excellent jsonparser, which is waaaay faster than
- Go's builtin parser.
-
 Package: golang-github-fluent-fluent-logger-golang-dev
 Description-md5: 0806c9696a814790fe7344ca61efb520
 Description-en: Go structured logger for Fluentd
@@ -196688,17 +196858,6 @@ Description-en: Easy SSH servers in Golang
  for building SSH servers. The goal of the API was to make it as simple
  as using net/http (https://golang.org/pkg/net/http/), so the API is
  very similar.
-
-Package: golang-github-globocom-go-buffer-dev
-Description-md5: d9ce4db01f194b6f12868c52da9b92f2
-Description-en: Asynchronous data buffer for Go applications (library)
- go-buffer represents a buffer that asynchronously flushes its contents.
- It is useful for applications that need to aggregate data before writing
- it to an external storage. A buffer is flushed manually, or
- automatically when it becomes full or after an interval has elapsed,
- whichever comes first.
- .
- This package contains the Go development library.
 
 Package: golang-github-glycerine-go-unsnap-stream-dev
 Description-md5: e9d8cb0dc305752c927310316920fb87
@@ -197827,21 +197986,6 @@ Description-en: collection of Goldmark extensions (library)
  created by the Hugo community, focusing on expanding Hugo's
  markdown functionality.
 
-Package: golang-github-gohxs-readline-dev
-Description-md5: 461df9d1c86b510494bb92c969f3fde1
-Description-en: Go implementation of GNU Readline with syntax highlighting (library)
- This package provides a Go library for implementing readline functionality,
- enabling interactive command-line interfaces with line editing and history
- management. It offers a lightweight and flexible API for developers building
- terminal-based applications, allowing efficient handling of user input.
- .
- It includes the source code and development files for integrating the library
- into Go projects. The library is particularly useful for creating custom CLI
- tools or interactive shells, supporting features like tab completion and
- history navigation.
- .
- The github.com/gohxs/readline is unique in that it offers syntax highlighting.
-
 Package: golang-github-goji-param-dev
 Description-md5: aa750aa3e79de12b9902b4ec7b1f65e3
 Description-en: Rack / jQuery style parameter parsing for Go
@@ -198837,16 +198981,6 @@ Description-en: Go to Javascript compiler
  still run in all browsers.
  .
  Documentation: https://godoc.org/github.com/gopherjs/gopherjs/js
-
-Package: golang-github-gorgonia-tensor-dev
-Description-md5: 72cb99144971e6227e440bd4351d6f6a
-Description-en: generic n-dimensional array Go library
- Package tensor is a package that provides efficient, generic (by some
- definitions of generic) n-dimensional arrays in Go. Also in this package
- are functions and methods that are used commonly in arithmetic,
- comparison and linear algebra operations.
- .
- This package contains the Go development library.
 
 Package: golang-github-gorgonia-vecf32-dev
 Description-md5: f2014d31b55caffdf9942a882e4ef811
@@ -200990,11 +201124,6 @@ Description-en: Flatten nested maps or JSON in Go (library)
  .
  Alternatively, you can pass a custom style.
 
-Package: golang-github-jeromer-syslogparser-dev
-Description-md5: 38e1731a3ceb7f6f213e0c877453b278
-Description-en: syslog parser library
- Syslog parser for the Go programming language.
-
 Package: golang-github-jesseduffield-generics-dev
 Description-md5: e87ed9fb8098d314abb754b210c25fae
 Description-en: extensions on the official Go generics packages (library)
@@ -202445,11 +202574,6 @@ Description-en: fast strftime implementation for Go (library)
  aims for POSIX compliance while still including widely-used non-POSIX
  format specifications such as "%f" or "%L" for milliseconds.
 
-Package: golang-github-letsencrypt-borp-dev
-Description-md5: f7a6c225b6c206678a3e3827418b91eb
-Description-en: Boulder's version of go-gorp/gorp (library)
- Boulder's Object Relational Persistence version of go-gorp/gorp
-
 Package: golang-github-letsencrypt-boulder-dev
 Description-md5: a078925221004a3c4fa2224b153a5351
 Description-en: ACME-based certificate authority (stripped down Go library)
@@ -202474,12 +202598,6 @@ Description-en: ACME challenge mock server
  Important note: The `challtestsrv` library is for TEST USAGE ONLY.  It
  is trivially insecure, offering no authentication whatsoever.  Only
  use this library in a controlled test environment.
-
-Package: golang-github-liamg-clinch-dev
-Description-md5: 904d5eaed1d05df3351ec04586a5e6e7
-Description-en: Go library for interactive CLI applications
- A Go module to make interactive CLI applications easier to develop, better
- looking and visually consistent.
 
 Package: golang-github-lib-pq-dev
 Description-md5: e2723af3683a81dc8eebbd8727b682ff
@@ -202972,13 +203090,6 @@ Description-en: Fast resizable golang semaphore primitive (library)
   * supports cancellation via context;
   * allows change semaphore limit after creation;
   * faster than channel based semaphores.
-
-Package: golang-github-masahiro331-go-mvn-version-dev
-Description-md5: 3697f018364a20306c7b0009b4481690
-Description-en: Go library for parsing maven(java) package versions
- go-mvn-version is a library for parsing and comparing versions of maven.
- The implementation is based on this specification.
- (https://maven.apache.org/pom.html#Version_Order_Specification)
 
 Package: golang-github-masterminds-goutils-dev
 Description-md5: 7b540b8f7804136859cfab38b5c01d81
@@ -206889,13 +207000,6 @@ Description-en: starter kit for building protoc plugins (library)
  .
  This package contains the Go library.
 
-Package: golang-github-pterm-pterm-dev
-Description-md5: d65acd7ff3e0d86cd2b01e2fc4c5caa7
-Description-en: modern Go module to easily beautify console output (library)
- pterm features charts, progressbars, tables, trees, text input, select menus
- and much more. It's completely configurable and 100% cross-platform
- compatible.
-
 Package: golang-github-puerkitobio-goquery-dev
 Description-md5: 098263c141da9628293157ae3ffa0436
 Description-en: jQuery-style HTML manipulation in Go
@@ -206919,15 +207023,6 @@ Description-en: diffing library for Go structures
  to compare two structures of the same type and create a changelog of
  all modified values. The produced changelog can easily be serialized
  to JSON.
-
-Package: golang-github-r3labs-sse-dev
-Description-md5: 35f9b6e72c9c3ae5e3bbc8fef89061aa
-Description-en: Server Sent Events server and client for Golang (library)
- With server-sent events, it is possible for a server to send new data
- to a web page at any time, by pushing messages to the web page.
- .
- This library provides a server and a client implementation of SSE for
- Go.
 
 Package: golang-github-rabbitmq-amqp091-go-dev
 Description-md5: f607745cb2d0d03f49d19bc2d0e08207
@@ -207064,30 +207159,6 @@ Package: golang-github-remyoudompheng-go-liblzma-dev
 Description-md5: 653bab6ba401d69055454083b5bb565b
 Description-en: Go bindings for XZ Utils/liblzma
  Provides Go bindings for XZ Utils/liblzma
-
-Package: golang-github-renekroon-ttlcache-dev
-Description-md5: 53771f748a0ba8b11e3c284cc4655913
-Description-en: In-memory string-interface{} map with expiration for Golang
- TTLCache is a simple key/value cache in golang with the following functions:
- .
-   - Thread-safe
-   - Individual expiring time or global expiring time, you can choose
-   - Auto-Extending expiration on Get
-   - DNS style TTL, see SkipTtlExtensionOnHit(bool)
-   - Fast and memory efficient
-   - Can trigger callback on key expiration
- .
- Project TTLCache was forked from wunderlist/ttlcache to add extra functions
- not available in the original scope. The main differences are:
- .
-   - An item can store any kind of object, previously, only strings could be
-     saved
-   - Optionally, you can add callbacks to: check if a value should expire, be
-     notified if a value expires, and be notified when new values are added
-     to the cache
-   - The expiration can be either global or per item
-   - Can exist items without expiration time
-   - Expirations and callbacks are realtime
 
 Package: golang-github-restic-chunker-dev
 Description-md5: d8bfa9fcf8073c667f72e9dd528fbe02
@@ -207952,13 +208023,6 @@ Description-en: SendGrid's Golang HTTP Client for calling APIs (library)
  This package contains a library to quickly and easily access any
  RESTful or RESTful-like API.
 
-Package: golang-github-serenize-snaker-dev
-Description-md5: 1a55b2610ed43bc1b30c6b4aa057bb41
-Description-en: Convert camel cased strings to snake case and back
- This is a small Go library to convert camel cased strings to snake
- case and back, except some defined words such as common acronyms and
- initialisms).
-
 Package: golang-github-sergi-go-diff-dev
 Description-md5: 531ac379be3fa9016b88a5c31dc15e20
 Description-en: Diff, match and patch text in Go
@@ -208645,16 +208709,6 @@ Description-md5: 83b55f5d0bdf1a4b70c8f617a603d576
 Description-en: client and server implementation of JSON-RPC 2.0 (library)
  JSON-RPC 2.0 implementation for Go Build Status provides a Go implementation
  of JSON-RPC 2.0.
-
-Package: golang-github-sourcegraph-syntaxhighlight-dev
-Description-md5: a36c263d28e7d4d41c83705ac4d9c635
-Description-en: Go package for syntax highlighting of code
- syntaxhighlight is a versatile Go package designed to add syntax
- highlighting to code snippets. Utilizing a language-independent
- lexer, it delivers effective highlighting for multiple programming
- languages, including JavaScript, Java, Ruby, Python, Go, and C.
- This package offers a reliable solution for enhancing code
- readability and presentation across a range of languages.
 
 Package: golang-github-spacejam-loghisto-dev
 Description-md5: 87b924f517c8098655986bc97108bcc0
@@ -268235,20 +268289,31 @@ Description-en: Yamaha DX7 modeling DSSI plugin
  with great accuracy.
 
 Package: hexwalk
-Description-md5: 223a83d56a8a1804735d82c3333a3c8d
-Description-en: Hex analyzer, editor and viewer
- HexWalk is an Hex editor, viewer, analyzer based on opensource
- projects like qhexedit2, binwalk and QT
- It is cross platform and has plenty of features:
-  - Advanced find patterns in binary files based on HEX, UTF8, UTF16 and regex
-  - Binwalk integration
-  - Entropy Analysis
-  - Byte Map
-  - Hash Calculator
-  - Bin/Dec/Hex Converter
-  - Hex file editing
-  - Diff file analysis
-  - Byte Patterns to parse headers
+Description-md5: 4522bd217800185fe468547c9407709e
+Description-en: hex editor, viewer and binary analyzer
+ HexWalk is a Qt-based hex editor, viewer and binary analyzer aimed at
+ reverse engineering and firmware analysis. Features include:
+  * Advanced search across HEX, UTF-8, UTF-16 and regular expressions
+  * Built-in binary signature scanner and extractor (HexDig)
+  * Disassembler view powered by Capstone
+  * Entropy chart and byte map visualisations
+  * Hash calculator and bin/dec/hex converter
+  * Diff view between two files
+  * Byte-pattern tagging for parsing custom headers
+ .
+ The 7zip (or legacy p7zip-full) package is recommended to enable the
+ archive extraction features of the embedded HexDig scanner.
+
+Package: golang-github-rakyll-hey-dev
+Description-md5: d78e259f19f8d9cc29ab654ea73dfa1b
+Description-en: Sends some load to a web application (library)
+ HTTP load generator, ApacheBench (ab) replacement, formerly
+ known as rakyll/boom
+ .
+ Originally called boom and was influenced from Tarek Ziade's
+ tool at github.com/tarekziade/boom. Using the same name was a
+ mistake as it resulted in cases where binary name conflicts
+ created confusion.
 
 Package: hey
 Description-md5: 6c7cde0adaa5c6af8fdeebf480cdcd19
@@ -315286,6 +315351,13 @@ Description-en: Limited-memory quasi-Newton bound-constrained optimization
  optimization (2011), to appear in ACM Transactions on Mathematical
  Software.
 
+Package: liblbfgspp-dev
+Description-md5: 1e1bc107294a60c779f539eab80f7460
+Description-en: C++ library that implements the Limited-memory BFGS algorithm
+ LBFGS++ is a header-only C++ library that implements the Limited-memory BFGS
+ algorithm (L-BFGS) for unconstrained minimization problems, and a modified
+ version of the L-BFGS-B algorithm for box-constrained ones.
+
 Package: lbreakout2
 Description-md5: 19b96ee8d5ec329f97dd2d8a43355907
 Description-en: ball-and-paddle game - transitional package
@@ -316538,6 +316610,156 @@ Description-en: lightweight bar based on XCB
  lemonbar is a lightweight bar based on XCB. It provides foreground/background
  color switching along with text alignment and colored under/overlining of text,
  full utf8 support and reduced memory footprint. Nothing less and nothing more.
+
+Package: lemonldap-ng
+Description-md5: d9956485953b0264aad783e87c61e25d
+Description-en: OpenID-Connect, CAS and SAML compatible Web-SSO system
+ Lemonldap::NG is a complete Web-SSO system that can run with reverse-proxies
+ or directly on application webservers. It can be used in conjunction with
+ OpenID-Connect, CAS and SAML systems as identity or service provider. It can
+ also be used as proxy between those federation systems.
+ .
+ It manages both authentication and authorization and provides headers for
+ accounting. So you can have a full AAA protection. Authorizations are built by
+ associating a regular expression and a rule. Regular expression is applied on
+ the requested URL and the rule calculates if the user is authorized.
+ .
+ This package is a metapackage that install handler, manager and portal.
+
+Package: lemonldap-ng-doc
+Description-md5: 5ba7f28cfbbd6982f3d9a31469f11e55
+Description-en: Lemonldap::NG Web-SSO system documentation
+ Lemonldap::NG is a complete Web-SSO system that can run with reverse-proxies
+ or directly on application webservers. It can be used in conjunction with
+ OpenID-Connect, CAS and SAML systems as identity or service provider. It can
+ also be used as proxy between those federation systems.
+ .
+ It manages both authentication and authorization and provides headers for
+ accounting. So you can have a full AAA protection. Authorizations are built by
+ associating a regular expression and a rule. Regular expression is applied on
+ the requested URL and the rule calculates if the user is authorized.
+ .
+ This package contains html documentation.
+
+Package: lemonldap-ng-fastcgi-server
+Description-md5: bc2de4a4fd7d43a3eb12419c5cb1273f
+Description-en: Lemonldap::NG FastCGI server
+ Lemonldap::NG is a complete Web-SSO system that can run with reverse-proxies
+ or directly on application webservers. It can be used in conjunction with
+ OpenID-Connect, CAS and SAML systems as identity or service provider. It can
+ also be used as proxy between those federation systems.
+ .
+ It manages both authentication and authorization and provides headers for
+ accounting. So you can have a full AAA protection. Authorizations are built by
+ associating a regular expression and a rule. Regular expression is applied on
+ the requested URL and the rule calculates if the user is authorized.
+ .
+ Lemonldap::NG FastCGI server provides a Nginx auth_request server that handles
+ also LLNG Portal and Manager.
+
+Package: lemonldap-ng-handler
+Description-md5: 9581d765c8dbdafc58e31f96283b6764
+Description-en: Lemonldap::NG handler part
+ Lemonldap::NG is a complete Web-SSO system that can run with reverse-proxies
+ or directly on application webservers. It can be used in conjunction with
+ OpenID-Connect, CAS and SAML systems as identity or service provider. It can
+ also be used as proxy between those federation systems.
+ .
+ It manages both authentication and authorization and provides headers for
+ accounting. So you can have a full AAA protection. Authorizations are built by
+ associating a regular expression and a rule. Regular expression is applied on
+ the requested URL and the rule calculates if the user is authorized.
+ .
+ This package provides configuration files for Apache and Nginx used to protect
+ web areas.
+
+Package: lemonldap-ng-uwsgi-app
+Description-md5: 11e1ef1ab9b2680624488ca85209bbf4
+Description-en: Lemonldap::NG uWSGI server
+ Lemonldap::NG is a complete Web-SSO system that can run with reverse-proxies
+ or directly on application webservers. It can be used in conjunction with
+ OpenID-Connect, CAS and SAML systems as identity or service provider. It can
+ also be used as proxy between those federation systems.
+ .
+ It manages both authentication and authorization and provides headers for
+ accounting. So you can have a full AAA protection. Authorization are built by
+ associating a regular expression and a rule. Regular expression is applied on
+ the requested URL and the rule calculates if the user is authorized.
+ .
+ Lemonldap::NG uWSGI server provides a replacement to Lemonldap::NG FastCGI
+ server, using uWSGI instead of Plack FCGI.
+
+Package: liblemonldap-ng-common-perl
+Description-md5: d0b1b116b90ac4255174dccda83adf20
+Description-en: Lemonldap::NG common files
+ Lemonldap::NG is a complete Web-SSO system that can run with reverse-proxies
+ or directly on application webservers. It can be used in conjunction with
+ OpenID-Connect, CAS and SAML systems as identity or service provider. It can
+ also be used as proxy between those federation systems.
+ .
+ It manages both authentication and authorization and provides headers for
+ accounting. So you can have a full AAA protection. Authorizations are built by
+ associating a regular expression and a rule. Regular expression is applied on
+ the requested URL and the rule calculates if the user is authorized.
+ .
+ Lemonldap::NG::Common contains common files used by other Lemonldap::NG
+ modules.
+
+Package: liblemonldap-ng-handler-perl
+Description-md5: c31967de31456a28e089d30c57912036
+Description-en: Lemonldap::NG handler common libraries
+ Lemonldap::NG is a complete Web-SSO system that can run with reverse-proxies
+ or directly on application webservers. It can be used in conjunction with
+ OpenID-Connect, CAS and SAML systems as identity or service provider. It can
+ also be used as proxy between those federation systems.
+ .
+ It manages both authentication and authorization and provides headers for
+ accounting. So you can have a full AAA protection. Authorizations are built by
+ associating a regular expression and a rule. Regular expression is applied on
+ the requested URL and the rule calculates if the user is authorized.
+ .
+ Lemonldap::NG::Handler provides Perl libraries used by web server handlers.
+
+Package: liblemonldap-ng-manager-perl
+Description-md5: ab72e3f536bf2e52dc3ca8f4623dfb67
+Description-en: Lemonldap::NG manager part
+ Lemonldap::NG is a complete Web-SSO system that can run with reverse-proxies
+ or directly on application webservers. It can be used in conjunction with
+ OpenID-Connect, CAS and SAML systems as identity or service provider. It can
+ also be used as proxy between those federation systems.
+ .
+ It manages both authentication and authorization and provides headers for
+ accounting. So you can have a full AAA protection. Authorizations are built by
+ associating a regular expression and a rule. Regular expression is applied on
+ the requested URL and the rule calculates if the user is authorized.
+ .
+ Lemonldap::NG::Manager provides the administration interface.
+
+Package: liblemonldap-ng-portal-perl
+Description-md5: f7206438910a77b0f25d8f246a2c7c9d
+Description-en: Lemonldap::NG authentication portal part
+ Lemonldap::NG is a complete Web-SSO system that can run with reverse-proxies
+ or directly on application webservers. It can be used in conjunction with
+ OpenID-Connect, CAS and SAML systems as identity or service provider. It can
+ also be used as proxy between those federation systems.
+ .
+ It manages both authentication and authorization and provides headers for
+ accounting. So you can have a full AAA protection. Authorizations are built by
+ associating a regular expression and a rule. Regular expression is applied on
+ the requested URL and the rule calculates if the user is authorized.
+ .
+ Lemonldap::NG::Portal provides the authentication portal.
+ .
+ You may have to install some suggested packages depending on plugins you
+ enabled. For example, libgd-perl is needed
+ if you want to use Captcha,...
+
+Package: liblemonldap-ng-ssoaas-apache-client-perl
+Description-md5: 70d590f71fbfc80087226d003846ef9f
+Description-en: Lemonldap::NG SSOaaS client for Apache
+ Lemonldap::NG is a complete Web-SSO system that provides a SSO-as-a-Service
+ system, natively usable with Nginx. Lemonldap::NG::SSOaaS::Apache::Client
+ permits one to enroll an Apache server into Lemonldap::NG's SSOaaS service.
 
 Package: legiond
 Description-md5: 7ee10ccfd19b5180997fa5a110b82ab0
@@ -437667,7 +437889,7 @@ Description-en: polymer chemistry modelling and mass spectrometry data simulatio
  This package ships the polymer chemistry data.
 
 Package: massxpert3-doc
-Description-md5: 3cd754890a511383b9c0b77fb78c68ef
+Description-md5: fb9ec7a328fd33208b21c2625e403736
 Description-en: polymer chemistry modelling and mass spectrometry data simulation (doc)
  MassXpert3 allows the user to perform the following tasks:
  .
@@ -437683,7 +437905,7 @@ Description-en: polymer chemistry modelling and mass spectrometry data simulatio
  monomer in the polymer sequence, cross-linking of monomers in the
  sequence, arbitrary mass searches...
  .
- This package ships the user manual in both PDF and HTML formats.
+ This package ships the user manual in PDF format.
 
 Package: elpa-mastodon
 Description-md5: 4000950657a7043180f26162d8ba1362
@@ -445367,6 +445589,15 @@ Description-en: Library for Meteorology tookit, implementing MARS language
  processing and semantics.
  MARS is the Meteorological Archive Retrieval System from ECMWF.
 
+Package: python3-metkit
+Description-md5: e9a0e1d9b46d3a88b9a3d8db6f8c9681
+Description-en: Python module for the MetKit MARS access library
+ MetKit is a toolkit from ECMWF for manipulating and describing
+ meteorological objects, implementing the MARS language and associated
+ processing and semantics.
+ .
+ This package provides the Python wrapper module.
+
 Package: python3-isodatetime
 Description-md5: 8018aa801f1d8068502e0d08b4dacfd5
 Description-en: Python3 parser and utilities for ISO 8601 date format
@@ -449436,6 +449667,50 @@ Description-en: administrative web interface for mlmmj, written in php
  This web based administrative tool for mlmmj written in php will help you
  to configure each mailing list individualy, through the web. You will be
  able with mlmmj-php-web-admin to set each individual tunable of the list.
+
+Package: libmlpack-dev
+Description-md5: 5660c8c90c61f0ce67048a9b1b536b58
+Description-en: intuitive, fast, scalable C++ machine learning library (development libs)
+ This package contains the mlpack Library development files.
+ .
+ Machine Learning Pack (mlpack) is an intuitive, fast, scalable C++
+ machine learning library, meant to be a machine learning analog to
+ LAPACK.  It aims to implement a wide array of machine learning
+ methods and function as a "swiss army knife" for machine learning
+ researchers.
+
+Package: mlpack-bin
+Description-md5: 233ebea4c1714a5a46500fae5ffe2f3e
+Description-en: intuitive, fast, scalable C++ machine learning library (binaries)
+ This package contains example binaries using the mlpack Library.
+ .
+ Machine Learning Pack (mlpack) is an intuitive, fast, scalable C++
+ machine learning library, meant to be a machine learning analog to
+ LAPACK.  It aims to implement a wide array of machine learning
+ methods and function as a “swiss army knife” for machine learning
+ researchers.
+
+Package: mlpack-doc
+Description-md5: d3fe3d2d1ccfd82055f0b7b13846bafc
+Description-en: intuitive, fast, scalable C++ machine learning library (documentation)
+ This package contains documentation for the mlpack Library.
+ .
+ Machine Learning Pack (mlpack) is an intuitive, fast, scalable C++
+ machine learning library, meant to be a machine learning analog to
+ LAPACK.  It aims to implement a wide array of machine learning
+ methods and function as a “swiss army knife” for machine learning
+ researchers.
+
+Package: python3-mlpack
+Description-md5: 4707785b90eb24554464596be079bbeb
+Description-en: intuitive, fast, scalable C++ machine learning library (Python bindings)
+ This package contains Python bindings for the mlpack Library.
+ .
+ Machine Learning Pack (mlpack) is an intuitive, fast, scalable C++
+ machine learning library, meant to be a machine learning analog to
+ LAPACK.  It aims to implement a wide array of machine learning
+ methods and function as a "swiss army knife" for machine learning
+ researchers.
 
 Package: libmlpcap-ocaml
 Description-md5: 40473b1e306e72013282dd7669cad853
@@ -459519,6 +459794,14 @@ Description-en: Peer-to-Peer VPN network daemon
  n2n is an open source VPN application which utilizes
  a Peer-to-peer architecture for network membership
  and routing.
+
+Package: python3-nabu
+Description-md5: ce8b5ce728232b9910a912b1400d7216
+Description-en: ESRF tomography processing software
+ Nabu can be used in several ways:
+  - As a Python library, by features like Backprojector, FlatField, etc
+  - As a standalone application with the command line interface
+  - From Tomwer (https://gitlab.esrf.fr/tomotools/tomwer/)
 
 Package: libnacl-dev
 Description-md5: e1cdd33a5a613a6864b25b58370820ed
@@ -494882,6 +495165,32 @@ Description-md5: 3b9b2c6e8069e2e57443af88b2533c3c
 Description-en: determine column width for a character (development)
  This module is implemented purely in OCaml and the width function
  follows the prototype of POSIX's wcwidth.
+ .
+ This package contains development files.
+
+Package: libcheckseum-ocaml
+Description-md5: 44c5d4f59b2d38d4ac04a8e1b91ae07e
+Description-en: Adler-32, CRC32 and CRC32-C implementation in C and OCaml (runtime)
+ Checkseum is a library to provide implementation of Adler-32, CRC32
+ and CRC32-C in C and OCaml.
+ .
+ This library use the linking trick to choose between the C
+ implementation (checkseum.c) or the OCaml implementation
+ (checkseum.ocaml). This library is on top of optint to get the best
+ representation of an int32.
+ .
+ This package contains the shared runtime libraries.
+
+Package: libcheckseum-ocaml-dev
+Description-md5: c10748587419b18decbc5afec1158a7c
+Description-en: Adler-32, CRC32 and CRC32-C implementation in C and OCaml (dev)
+ Checkseum is a library to provide implementation of Adler-32, CRC32
+ and CRC32-C in C and OCaml.
+ .
+ This library use the linking trick to choose between the C
+ implementation (checkseum.c) or the OCaml implementation
+ (checkseum.ocaml). This library is on top of optint to get the best
+ representation of an int32.
  .
  This package contains development files.
 
@@ -557445,6 +557754,18 @@ Description-en: pytest plugin that allows you to add environment variables
  the key and the environment variables as a line separated list of `KEY=VALUE`
  entries. The defined variables will be added to the environment before any
  tests are run.
+
+Package: python3-pytest-examples
+Description-md5: 914f8bd5422c7f0aa68d345dbfd59696
+Description-en: pytest plugin for testing examples in docstrings and markdown files
+ pytest plugin for testing Python code examples in docstrings and markdown
+ files.
+ .
+ pytest-examples can lint code examples using ruff and black, run code
+ examples, run code examples and check print statements are inlined correctly
+ in the code, etc.
+ .
+ This package installs the library for Python 3.
 
 Package: python3-pytest-expect
 Description-md5: 5344eef8e73d168c5f56408433993d7a
@@ -630463,6 +630784,61 @@ Description-en: Gadgets finder for ROP exploitation code
  potentially circumvent security measures which prevent the execution
  of injected code.
 
+Package: cl-actionlib
+Description-md5: 601f5fbee07273c84ba68ded79d8c98e
+Description-en: Robot OS actionlib library - LISP interface
+ This package is part of Robot OS (ROS). The actionlib stack provides
+ a standardized interface for interfacing with preemptable
+ tasks. Examples of this include moving the base to a target location,
+ performing a laser scan and returning the resulting point cloud,
+ detecting the handle of a door, etc.
+ .
+ This package contains the LISP binding.
+
+Package: libactionlib-dev
+Description-md5: 57534e7c38bfcca75f1a06d80fd26572
+Description-en: Robot OS actionlib library - development files
+ This package is part of Robot OS (ROS). The actionlib stack provides
+ a standardized interface for interfacing with preemptable
+ tasks. Examples of this include moving the base to a target location,
+ performing a laser scan and returning the resulting point cloud,
+ detecting the handle of a door, etc.
+ .
+ This package contains the development files.
+
+Package: libactionlib1d
+Description-md5: 12ff608516b002ec1c7e4b9768f274ba
+Description-en: Robot OS actionlib library
+ This package is part of Robot OS (ROS). The actionlib stack provides
+ a standardized interface for interfacing with preemptable
+ tasks. Examples of this include moving the base to a target location,
+ performing a laser scan and returning the resulting point cloud,
+ detecting the handle of a door, etc.
+ .
+ This package contains the library itself.
+
+Package: python3-actionlib
+Description-md5: 4acb40e752f26829cb945fe1625aa2d1
+Description-en: Robot OS actionlib library - Python 3 interface
+ This package is part of Robot OS (ROS). The actionlib stack provides
+ a standardized interface for interfacing with preemptable
+ tasks. Examples of this include moving the base to a target location,
+ performing a laser scan and returning the resulting point cloud,
+ detecting the handle of a door, etc.
+ .
+ This package contains the Python 3 binding.
+
+Package: python3-actionlib-tools
+Description-md5: 6a861f65902b8f6fe0527f6b5576a738
+Description-en: Robot OS actionlib library - Python 3 interface
+ This package is part of Robot OS (ROS). The actionlib stack provides
+ a standardized interface for interfacing with preemptable
+ tasks. Examples of this include moving the base to a target location,
+ performing a laser scan and returning the resulting point cloud,
+ detecting the handle of a door, etc.
+ .
+ This package contains the Python 3 binding and tools.
+
 Package: libangles-dev
 Description-md5: 8b309b8573024112b3d567c75b94fd13
 Description-en: Robot OS set of simple math utilities to work with angles
@@ -630500,6 +630876,97 @@ Description-en: Bloom is a release automation tool from Robot OS (Python 3)
  source packages, like debian's src-debs.
  .
  This package installs the library for Python 3.
+
+Package: cl-bond
+Description-md5: 8e7b6165eed5b18b89b6e5e05e50189e
+Description-en: Messages related to Robot OS bond_core - LISP
+ This package is part of Robot OS (ROS). This is the 'bond' process state
+ machine library LISP bindings.
+ .
+ Bond is a mechanism for checking when another process has
+ terminated. A bond allows two processes, A and B, to know when the
+ other has terminated, either cleanly or by crashing. The bond remains
+ connected until it is either broken explicitly or until a heartbeat
+ times out.
+
+Package: libbond-dev
+Description-md5: a18eb8c9decbc889017c97a94c6ebc64
+Description-en: Messages related to Robot OS bond_core - development
+ This package is part of Robot OS (ROS). This is the 'bond' process state
+ machine library development files.
+ .
+ Bond is a mechanism for checking when another process has
+ terminated. A bond allows two processes, A and B, to know when the
+ other has terminated, either cleanly or by crashing. The bond remains
+ connected until it is either broken explicitly or until a heartbeat
+ times out.
+
+Package: libbondcpp-dev
+Description-md5: 59458798afdf523c1431d7873e1b364b
+Description-en: Development files for Robot OS bondcpp library
+ This package is part of Robot OS (ROS). It is the 'bond' process state
+ machine library C++ implementation development files.
+ .
+ Bond is a mechanism for checking when another process has
+ terminated. A bond allows two processes, A and B, to know when the
+ other has terminated, either cleanly or by crashing. The bond remains
+ connected until it is either broken explicitly or until a heartbeat
+ times out.
+
+Package: libbondcpp1d
+Description-md5: ff947b345b3e3badfe95dbd8d43bb2de
+Description-en: Robot OS bondcpp library
+ This package is part of Robot OS (ROS). It is the 'bond' process state
+ machine library C++ implementation.
+ .
+ Bond is a mechanism for checking when another process has
+ terminated. A bond allows two processes, A and B, to know when the
+ other has terminated, either cleanly or by crashing. The bond remains
+ connected until it is either broken explicitly or until a heartbeat
+ times out.
+
+Package: libsmc-dev
+Description-md5: c048d6a7d62d8c6116a64d61bf3a6ddc
+Description-en: Robot OS 'bond' State Machine Compiler interface
+ The State Machine Compiler (SMC) from http://smc.sourceforge.net/
+ converts a language-independent description of a state machine
+ into the source code to support that state machine.
+ .
+ This package contains the libraries that a compiled state machine
+ depends on, but it does not contain the compiler itself.
+
+Package: python3-bond
+Description-md5: e04b1cf4511f2183837e37e51af829a3
+Description-en: Messages related to Robot OS bond_core - Python 3
+ This package is part of Robot OS (ROS). This is the 'bond' process state
+ machine library Python 3 bindings.
+ .
+ Bond is a mechanism for checking when another process has
+ terminated. A bond allows two processes, A and B, to know when the
+ other has terminated, either cleanly or by crashing. The bond remains
+ connected until it is either broken explicitly or until a heartbeat
+ times out.
+
+Package: python3-bondpy
+Description-md5: 8abddbfb45860468e37517db531cbb87
+Description-en: Python 3 implementation of bond
+ This package is part of Robot OS (ROS). It is the 'bond' process state
+ machine library Python 3 implementation.
+ .
+ Bond is a mechanism for checking when another process has terminated. A
+ bond allows two processes, A and B, to know when the other has terminated,
+ either cleanly or by crashing. The bond remains connected until it is either
+ broken explicitly or until a heartbeat times out. This package contains
+ the Python 3 package.
+
+Package: python3-smclib
+Description-md5: 34604ca8d479a9fcc5ffb661fec24c59
+Description-en: Robot OS 'bond' State Machine Compiler Python 3 package
+ The State Machine Compiler (SMC) from http://smc.sourceforge.net/
+ converts a language-independent description of a state machine
+ into the source code to support that state machine.
+ .
+ This package contains the Python 3 interface.
 
 Package: catkin
 Description-md5: 33ab274f6a426c47cf4494b0d3323c22
@@ -630594,6 +631061,62 @@ Description-en: Robot OS CMake Modules
   * FindTinyXML2.cmake
   * FindUUID.cmake
   * FindXenomai.cmake
+
+Package: collada-urdf-tools
+Description-md5: 8e1f2c0f8164c6ac209d5c39a13121c6
+Description-en: ROS collada_urdf tools
+ This package contains tools to convert between Unified Robot Description
+ Format (URDF) documents and COLLAborative Design Activity (COLLADA)
+ documents.
+ .
+ It implements robot-specific COLLADA extensions as defined by
+ http://openrave.programmingvision.com/index.php/Started:COLLADA
+ .
+ This package contains the tools.
+
+Package: libcollada-parser-dev
+Description-md5: 587624097f4ed5b93ddcda41c187acb9
+Description-en: Development files for ROS collada_parser library
+ This package contains a C++ parser for the Collada robot description format.
+ The parser reads a Collada XML robot description, and creates a C++ URDF
+ model. Although it is possible to directly use this parser when working with
+ Collada robot descriptions, the preferred user API is found in the urdf
+ package.
+ .
+ This package contains the development files for the library.
+
+Package: libcollada-parser1d
+Description-md5: ed3225756c6c38d3d7fdf4793e903afa
+Description-en: ROS collada_parser library
+ This package contains a C++ parser for the Collada robot description format.
+ The parser reads a Collada XML robot description, and creates a C++ URDF
+ model. Although it is possible to directly use this parser when working with
+ Collada robot descriptions, the preferred user API is found in the urdf
+ package.
+ .
+ This package contains the library.
+
+Package: libcollada-urdf-dev
+Description-md5: a2fa9d1c57828259841c412aa6ddba09
+Description-en: Development files for ROS collada_urdf library
+ This package contains a tool to convert Unified Robot Description Format
+ (URDF) documents into COLLAborative Design Activity (COLLADA) documents.
+ .
+ It implements robot-specific COLLADA extensions as defined by
+ http://openrave.programmingvision.com/index.php/Started:COLLADA
+ .
+ This package contains the development files for the library.
+
+Package: libcollada-urdf1d
+Description-md5: 36c3a240abcf9e0b1ea6793c37bbcf94
+Description-en: ROS collada_urdf library
+ This package contains a library to convert Unified Robot Description Format
+ (URDF) documents into COLLAborative Design Activity (COLLADA) documents.
+ .
+ It implements robot-specific COLLADA extensions as defined by
+ http://openrave.programmingvision.com/index.php/Started:COLLADA
+ .
+ This package contains the library.
 
 Package: cl-actionlib-msgs
 Description-md5: ec98494cd3b84f50bbb592bf8efb42bb
@@ -630963,6 +631486,142 @@ Description-en: Messages relating to Robot OS visualization, definitions
  .
  This package contains the message definitions.
 
+Package: libdiagnostic-aggregator-dev
+Description-md5: 60a1622aa4decf0908552aea913bd033
+Description-en: development files for diagnostic_aggregator (Robot OS)
+ The diagnostic_aggregator contains a ROS node, aggregator_node, that listens
+ to diagnostic_msgs/DiagnosticArray messages on the /diagnostics topic,
+ processes and categorizes the data, and republishes on /diagnostics_agg. The
+ aggregator_node loads "Analyzer" plugins to perform the diagnostics processing
+ and categorization. The configuration and setup for each diagnostic aggregator
+ is specific to each robot and can be determined by users or developers.
+ .
+ This package contains the development files for the library.
+
+Package: libdiagnostic-aggregator-tools
+Description-md5: e145c39f6dc4b8288d7986c049591e46
+Description-en: Robot OS diagnostic_aggregator tools
+ The diagnostic_aggregator contains a ROS node, aggregator_node, that listens
+ to diagnostic_msgs/DiagnosticArray messages on the /diagnostics topic,
+ processes and categorizes the data, and republishes on /diagnostics_agg. The
+ aggregator_node loads "Analyzer" plugins to perform the diagnostics processing
+ and categorization. The configuration and setup for each diagnostic aggregator
+ is specific to each robot and can be determined by users or developers.
+ .
+ This package contains the tools.
+
+Package: libdiagnostic-aggregator1d
+Description-md5: 9c6449190b2690392524644a569d6019
+Description-en: library for diagnostic_aggregator (Robot OS)
+ The diagnostic_aggregator contains a ROS node, aggregator_node, that listens
+ to diagnostic_msgs/DiagnosticArray messages on the /diagnostics topic,
+ processes and categorizes the data, and republishes on /diagnostics_agg. The
+ aggregator_node loads "Analyzer" plugins to perform the diagnostics processing
+ and categorization. The configuration and setup for each diagnostic aggregator
+ is specific to each robot and can be determined by users or developers.
+ .
+ This package contains the C library.
+
+Package: libdiagnostic-updater-dev
+Description-md5: 0d63be8b4ff485530a38a3f3bab6ef03
+Description-en: development files for diagnostic_updater (Robot OS)
+ This package is part of Robot OS (ROS). diagnostic_updater contains tools for
+ easily updating diagnostics. it is commonly used in device drivers to keep
+ track of the status of output topics, device status, etc.
+ .
+ This package contains the development files for the library.
+
+Package: libdiagnostic-updater0d
+Description-md5: 8d95fd32e576abce53305e2cb155b224
+Description-en: library for diagnostic_updater (Robot OS)
+ This package is part of Robot OS (ROS). diagnostic_updater contains tools for
+ easily updating diagnostics. it is commonly used in device drivers to keep
+ track of the status of output topics, device status, etc.
+ .
+ This package contains the shared library.
+
+Package: libself-test-dev
+Description-md5: 139fc763bab3ecd887fafdfc951e94be
+Description-en: development files for self_test (Robot OS)
+ This package is part of Robot OS (ROS). It uses the diagnostic_updater to
+ perform a self test on a driver, using a special service call.
+ .
+ This package contains the development files for the library.
+
+Package: libself-test-tools
+Description-md5: 493cd8eb745420ad56e204fd39e08869
+Description-en: Robot OS self_test tools
+ This package is part of Robot OS (ROS). It uses the diagnostic_updater to
+ perform a self test on a driver, using a special service call.
+ .
+ This package contains the tools.
+
+Package: python3-diagnostic-analysis
+Description-md5: 8be34a4fa2e057cd3074bcac8adf33b5
+Description-en: Python library diagnostic_analysis (Robot OS)
+ This package is part of Robot OS (ROS). The diagnostic_analysis package can
+ convert a log of diagnostics data into a series of CSV files. Robot logs are
+ recorded with rosbag, and can be processed offline using the scripts in this
+ package.
+
+Package: python3-diagnostic-common-diagnostics
+Description-md5: 2cb3f06c3a75186e830629dbd6d81425
+Description-en: Python library diagnostic_common_diagnostics (Robot OS)
+ This package is part of Robot OS (ROS). The diagnostic_common_diagnostics
+ package can convert a log of diagnostics data into a series of CSV files.
+ Robot logs are recorded with rosbag, and can be processed offline using the
+ scripts in this package.
+
+Package: python3-diagnostic-updater
+Description-md5: 55feef884f2fe8d2700dd72261e784a7
+Description-en: Python library diagnostic_updater (Robot OS)
+ This package is part of Robot OS (ROS). The diagnostic_updater package can
+ convert a log of diagnostics data into a series of CSV files. Robot logs are
+ recorded with rosbag, and can be processed offline using the scripts in this
+ package.
+
+Package: rosdiagnostic
+Description-md5: ff9c2f454b2b7e597a86b30e3b087e94
+Description-en: command line tool to print aggregated diagnostic (Robot OS)
+ This package is part of Robot OS (ROS). It contains a command to print
+ aggregated diagnostic contents to the command line.
+
+Package: cl-dynamic-reconfigure
+Description-md5: 17be6010828ca3ef3c3081d83530149b
+Description-en: Robot OS dynamic-reconfigure library - LISP bindings
+ This package is part of Robot OS (ROS), and contains the
+ dynamic_reconfigure package which provides a means to change node
+ parameters at any time without having to restart the node.
+ .
+ This package contains the LISP bindings.
+
+Package: libdynamic-reconfigure-config-init-mutex-dev
+Description-md5: 8e61c5eaae1a1c265937ec3e507f6d9f
+Description-en: Robot OS dynamic-reconfigure library - development files
+ This package is part of Robot OS (ROS), and contains the
+ dynamic_reconfigure package which provides a means to change node
+ parameters at any time without having to restart the node.
+ .
+ This package contains the development files.
+
+Package: libdynamic-reconfigure-config-init-mutex0d
+Description-md5: 3c3ecdcbbe3a28a75321038e10d58260
+Description-en: Robot OS dynamic-reconfigure library
+ This package is part of Robot OS (ROS), and contains the
+ dynamic_reconfigure package which provides a means to change node
+ parameters at any time without having to restart the node.
+ .
+ This package contains the library itself.
+
+Package: python3-dynamic-reconfigure
+Description-md5: 97d1616cfed834810ef40f8c69ef88cd
+Description-en: Robot OS dynamic-reconfigure library - Python 3 bindings
+ This package is part of Robot OS (ROS), and contains the
+ dynamic_reconfigure package which provides a means to change node
+ parameters at any time without having to restart the node.
+ .
+ This package contains the Python 3 bindings.
+
 Package: libeigen-stl-containers-dev
 Description-md5: 68bda6b9a3e9a4578e6162831440be2a
 Description-en: Robot OS wrapper for eigen
@@ -631021,6 +631680,796 @@ Description-en: Robot OS geometric_shapes package
  definitions of geometric shapes and bodies.
  .
  This package contains the library itself.
+
+Package: cl-tf
+Description-md5: dbaab638c11027dde78604e49cc774b7
+Description-en: Robot OS tf transform library -- LISP interface
+ tf is a package that lets the user keep track of multiple coordinate frames
+ over time. tf maintains the relationship between coordinate frames in a tree
+ structure buffered in time, and lets the user transform points, vectors, etc
+ between any two coordinate frames at any desired point in time.
+ .
+ This package contains the LISP bindings (messages and services) and
+ is part of Robot OS (ROS).
+
+Package: libtf-conversions-dev
+Description-md5: ccf564863807cae0ead80299104f9ac0
+Description-en: Robot OS conversion library between Eigen, KDL and tf - development files
+ This package contains a set of conversion functions to convert
+ common tf datatypes (point, vector, pose, etc) into semantically
+ identical datatypes used by other libraries. The conversion functions
+ make it easier for users of the transform library (tf) to work with
+ the datatype of their choice. Currently this package has support for
+ the Kinematics and Dynamics Library (KDL) and the Eigen matrix library.
+ .
+ This package contains the development files of tf-conversions library
+ and is part of Robot OS (ROS).
+
+Package: libtf-conversions0d
+Description-md5: 5f7578e6321a92de08ec17f0f2ace49b
+Description-en: Robot OS conversion library between tf and Eigen and KDL
+ This package contains a set of conversion functions to convert
+ common tf datatypes (point, vector, pose, etc) into semantically
+ identical datatypes used by other libraries. The conversion functions
+ make it easier for users of the transform library (tf) to work with
+ the datatype of their choice. Currently this package has support for
+ the Kinematics and Dynamics Library (KDL) and the Eigen matrix library.
+ .
+ This package contains the library itself and is part of Robot OS (ROS).
+
+Package: libtf-dev
+Description-md5: 284ff7bc657bbf693751c094e7aaed21
+Description-en: Robot OS tf transform library  - development files
+ tf is a package that lets the user keep track of multiple coordinate frames
+ over time. tf maintains the relationship between coordinate frames in a tree
+ structure buffered in time, and lets the user transform points, vectors, etc
+ between any two coordinate frames at any desired point in time.
+ .
+ This package contains the development files of tf library.
+
+Package: libtf1d
+Description-md5: c76d9696d43cd193fdb6bb8aeee5c30a
+Description-en: Robot OS tf transform library to keep track of multiple coordinate frames
+ tf is a package that lets the user keep track of multiple coordinate frames
+ over time. tf maintains the relationship between coordinate frames in a tree
+ structure buffered in time, and lets the user transform points, vectors, etc
+ between any two coordinate frames at any desired point in time.
+ .
+ This package contains the library itself.
+
+Package: python3-tf
+Description-md5: 9ebf16b5f4fa82b03895f8f82efa7adf
+Description-en: Robot OS tf transform library - Python 3
+ tf is a package that lets the user keep track of multiple coordinate frames
+ over time. tf maintains the relationship between coordinate frames in a tree
+ structure buffered in time, and lets the user transform points, vectors, etc
+ between any two coordinate frames at any desired point in time.
+ .
+ This package contains the Python 3 bindings and is part of Robot OS (ROS)
+
+Package: python3-tf-conversions
+Description-md5: 9f50c636fa86227e14ce9f75d5fd823f
+Description-en: Robot OS conversion library between Eigen, KDL and tf - Python 3 interface
+ This package contains a set of conversion functions to convert
+ common tf datatypes (point, vector, pose, etc) into semantically
+ identical datatypes used by other libraries. The conversion functions
+ make it easier for users of the transform library (tf) to work with
+ the datatype of their choice. Currently this package has support for
+ the Kinematics and Dynamics Library (KDL) and the Eigen matrix library.
+ .
+ This package contains the Python 3 bindings and is part of Robot OS (ROS).
+
+Package: tf-tools
+Description-md5: 3059bea0e4c703d87c7dfa7406e2ea1e
+Description-en: Set of utilities to operate with the Robot OS tf lib
+ This package is part of Robot OS (ROS), and contains transform
+ library tools. Although tf is mainly a code library meant to be used
+ within ROS nodes, it comes with a large set of command-line tools
+ that assist in the debugging and creation of tf coordinate
+ frames. These tools include: static_transform_publisher,
+ tf_change_notifier, tf_echo, tf_empty_listener tf_monitor, tf_remap
+ and view_frames_tf
+
+Package: cl-tf2-msgs
+Description-md5: 33be1a5297fdc6c1d0fcf88dae56dc66
+Description-en: Robot OS tf2 transform library messages - LISP
+ This package is part of Robot OS (ROS). tf2 is the second generation
+ of the transform library, which lets the user keep track of multiple
+ coordinate frames over time. tf2 maintains the relationship between
+ coordinate frames in a tree structure buffered in time, and lets the
+ user transform points, vectors, etc between any two coordinate frames
+ at any desired point in time.
+ .
+ This package contains the LISP binding (messages).
+
+Package: cl-tf2-srvs
+Description-md5: ce055d323642f6b177e259fdb5e4ff24
+Description-en: Robot OS tf2 transform library services - LISP
+ This package is part of Robot OS (ROS). tf2 is the second generation
+ of the transform library, which lets the user keep track of multiple
+ coordinate frames over time. tf2 maintains the relationship between
+ coordinate frames in a tree structure buffered in time, and lets the
+ user transform points, vectors, etc between any two coordinate frames
+ at any desired point in time.
+ .
+ This package contains the LISP binding (services).
+
+Package: libtf2-2d
+Description-md5: bbc07c7453443d07067cb84c89242943
+Description-en: Robot OS tf2 transform library
+ This package is part of Robot OS (ROS). tf2 is the second generation
+ of the transform library, which lets the user keep track of multiple
+ coordinate frames over time. tf2 maintains the relationship between
+ coordinate frames in a tree structure buffered in time, and lets the
+ user transform points, vectors, etc between any two coordinate frames
+ at any desired point in time.
+ .
+ This package contains the library itself.
+
+Package: libtf2-bullet-dev
+Description-md5: 871d83d71eff31b92040d09213da2f22
+Description-en: Robot OS tf2 transform library for Bullet - dev files
+ This package is part of Robot OS (ROS). tf2 is the second generation
+ of the transform library, which lets the user keep track of multiple
+ coordinate frames over time. tf2 maintains the relationship between
+ coordinate frames in a tree structure buffered in time, and lets the
+ user transform points, vectors, etc between any two coordinate frames
+ at any desired point in time.
+ .
+ This package contains the development files for libtf2 for Bullet.
+
+Package: libtf2-dev
+Description-md5: 6d269ef40b3ea61ddd89e093a56ffcf0
+Description-en: Robot OS tf2 transform library - development files
+ This package is part of Robot OS (ROS). tf2 is the second generation
+ of the transform library, which lets the user keep track of multiple
+ coordinate frames over time. tf2 maintains the relationship between
+ coordinate frames in a tree structure buffered in time, and lets the
+ user transform points, vectors, etc between any two coordinate frames
+ at any desired point in time.
+ .
+ This package contains the development files of the tf2 library.
+
+Package: libtf2-eigen-dev
+Description-md5: 3bc96c4227db8d8e5bd454aa74cc83de
+Description-en: Robot OS tf2 transform library for Eigen - dev files
+ This package is part of Robot OS (ROS). tf2 is the second generation
+ of the transform library, which lets the user keep track of multiple
+ coordinate frames over time. tf2 maintains the relationship between
+ coordinate frames in a tree structure buffered in time, and lets the
+ user transform points, vectors, etc between any two coordinate frames
+ at any desired point in time.
+ .
+ This package contains development files to convert between libtf2 and Eigen.
+
+Package: libtf2-geometry-msgs-dev
+Description-md5: 29ee4b5ad8add6e317825bd9b100b220
+Description-en: Robot OS geometry messages for tf2 transform library - dev files
+ This package is part of Robot OS (ROS). tf2 is the second generation
+ of the transform library, which lets the user keep track of multiple
+ coordinate frames over time. tf2 maintains the relationship between
+ coordinate frames in a tree structure buffered in time, and lets the
+ user transform points, vectors, etc between any two coordinate frames
+ at any desired point in time.
+ .
+ This package contains the development files to transform geometry messages
+ to tf2.
+
+Package: libtf2-kdl-dev
+Description-md5: b4eb0ffb6bcae107f707b66556db06ab
+Description-en: Robot OS tf2 transform library using Orocos-KDL - dev files
+ This package is part of Robot OS (ROS). tf2 is the second generation
+ of the transform library, which lets the user keep track of multiple
+ coordinate frames over time. tf2 maintains the relationship between
+ coordinate frames in a tree structure buffered in time, and lets the
+ user transform points, vectors, etc between any two coordinate frames
+ at any desired point in time.
+ .
+ This package contains the development files to convert between tf2 and
+ liborocos-kdl.
+
+Package: libtf2-msgs-dev
+Description-md5: 1b8572ee4961d36cf6646604e210bd6c
+Description-en: Robot OS messages for tf2 transform library - dev files
+ This package is part of Robot OS (ROS). tf2 is the second generation
+ of the transform library, which lets the user keep track of multiple
+ coordinate frames over time. tf2 maintains the relationship between
+ coordinate frames in a tree structure buffered in time, and lets the
+ user transform points, vectors, etc between any two coordinate frames
+ at any desired point in time.
+ .
+ This package contains the development files.
+
+Package: libtf2-ros-dev
+Description-md5: f4841fb153e15229879ae721b396ff27
+Description-en: Robot OS binding for tf2 transform library - dev files
+ This package is part of Robot OS (ROS). tf2 is the second generation
+ of the transform library, which lets the user keep track of multiple
+ coordinate frames over time. tf2 maintains the relationship between
+ coordinate frames in a tree structure buffered in time, and lets the
+ user transform points, vectors, etc between any two coordinate frames
+ at any desired point in time.
+ .
+ This package contains the development files of the ROS binding to tf2.
+
+Package: libtf2-ros1d
+Description-md5: 36cff32e62a17aae4b18a2cac18a1d87
+Description-en: Robot OS binding for tf2 transform library
+ This package is part of Robot OS (ROS). tf2 is the second generation
+ of the transform library, which lets the user keep track of multiple
+ coordinate frames over time. tf2 maintains the relationship between
+ coordinate frames in a tree structure buffered in time, and lets the
+ user transform points, vectors, etc between any two coordinate frames
+ at any desired point in time.
+ .
+ This package contains the ROS bindings to tf2.
+
+Package: libtf2-sensor-msgs-dev
+Description-md5: ed2018cc6f6c5716ff33a0cd8024005b
+Description-en: Small lib for ROS to transform sensor_msgs with tf2 - dev files
+ This package is part of Robot OS (ROS). tf2 is the second generation
+ of the transform library, which lets the user keep track of multiple
+ coordinate frames over time. tf2 maintains the relationship between
+ coordinate frames in a tree structure buffered in time, and lets the
+ user transform points, vectors, etc between any two coordinate frames
+ at any desired point in time.
+ .
+ This package contains utils to transform sensor_msgs with tf2.
+
+Package: python3-tf2
+Description-md5: b5ab03e8ae4ac4ff8dd28baa8ec50511
+Description-en: Robot OS tf2 transform library - Python 3
+ This package is part of Robot OS (ROS). tf2 is the second generation
+ of the transform library, which lets the user keep track of multiple
+ coordinate frames over time. tf2 maintains the relationship between
+ coordinate frames in a tree structure buffered in time, and lets the
+ user transform points, vectors, etc between any two coordinate frames
+ at any desired point in time.
+ .
+ This package contains the Python 3 binding.
+
+Package: python3-tf2-geometry-msgs
+Description-md5: aca4b8ad842c48dfd98ac9df5775c38c
+Description-en: Robot OS tf2 transform library for Bullet - Python 3
+ This package is part of Robot OS (ROS). tf2 is the second generation
+ of the transform library, which lets the user keep track of multiple
+ coordinate frames over time. tf2 maintains the relationship between
+ coordinate frames in a tree structure buffered in time, and lets the
+ user transform points, vectors, etc between any two coordinate frames
+ at any desired point in time.
+ .
+ This package contains the Python 3 code to transform geometry messages to tf2.
+
+Package: python3-tf2-kdl
+Description-md5: c45ba55b8313e385cfe4cfdfa7ff9458
+Description-en: Robot OS tf2 transform library using Orocos-KDL - Python 3
+ This package is part of Robot OS (ROS). tf2 is the second generation
+ of the transform library, which lets the user keep track of multiple
+ coordinate frames over time. tf2 maintains the relationship between
+ coordinate frames in a tree structure buffered in time, and lets the
+ user transform points, vectors, etc between any two coordinate frames
+ at any desired point in time.
+ .
+ This package contains the Python 3 code to convert betweenw tf2 and
+ liborocos-kdl.
+
+Package: python3-tf2-msgs
+Description-md5: abd0d1e3eb03240023f743f816c48420
+Description-en: Robot OS messages for tf2 transform library - Python 3
+ This package is part of Robot OS (ROS). tf2 is the second generation
+ of the transform library, which lets the user keep track of multiple
+ coordinate frames over time. tf2 maintains the relationship between
+ coordinate frames in a tree structure buffered in time, and lets the
+ user transform points, vectors, etc between any two coordinate frames
+ at any desired point in time.
+ .
+ This package contains the Python 3 code.
+
+Package: python3-tf2-ros
+Description-md5: 2cff1b52082fb6a5bce260d3efc5beaa
+Description-en: Robot OS binding for tf2 transform library - Python 3
+ This package is part of Robot OS (ROS). tf2 is the second generation
+ of the transform library, which lets the user keep track of multiple
+ coordinate frames over time. tf2 maintains the relationship between
+ coordinate frames in a tree structure buffered in time, and lets the
+ user transform points, vectors, etc between any two coordinate frames
+ at any desired point in time.
+ .
+ This package contains the ROS Python 3 binding to tf2.
+
+Package: python3-tf2-sensor-msgs
+Description-md5: 7b74c24ff71b6cb420d8dbe0c1c9fbf5
+Description-en: Robot OS sensor messages for tf2 transform library - Python 3
+ This package is part of Robot OS (ROS). tf2 is the second generation
+ of the transform library, which lets the user keep track of multiple
+ coordinate frames over time. tf2 maintains the relationship between
+ coordinate frames in a tree structure buffered in time, and lets the
+ user transform points, vectors, etc between any two coordinate frames
+ at any desired point in time.
+ .
+ This package contains the Python 3 code to transform sensor_msgs with tf2.
+
+Package: ros-tf2-msgs
+Description-md5: b3cbce7d66b7c1c578d7d4721b3b60e0
+Description-en: Robot OS messages for tf2 transform library - definitions
+ This package is part of Robot OS (ROS). tf2 is the second generation
+ of the transform library, which lets the user keep track of multiple
+ coordinate frames over time. tf2 maintains the relationship between
+ coordinate frames in a tree structure buffered in time, and lets the
+ user transform points, vectors, etc between any two coordinate frames
+ at any desired point in time.
+ .
+ This package contains the message definitions.
+
+Package: tf2-tools
+Description-md5: 03b6e2c9cb30a7ae8b0cf9b7960177bc
+Description-en: Robot OS tool for tf2 transform library second generation
+ This package is part of Robot OS (ROS). tf2 is the second generation
+ of the transform library, which lets the user keep track of multiple
+ coordinate frames over time. tf2 maintains the relationship between
+ coordinate frames in a tree structure buffered in time, and lets the
+ user transform points, vectors, etc between any two coordinate frames
+ at any desired point in time.
+
+Package: camera-calibration-parsers-tools
+Description-md5: f1bc4db631d62eb12db4abd5a9c36e02
+Description-en: Robot OS camera_calibration_parsers_tools package
+ This package is part of Robot OS (ROS). It provides tools for
+ reading and writing camera calibration parameters.
+ .
+ They are executables that use libcamera-calibration-parsers.
+
+Package: cl-polled-camera
+Description-md5: 1d727957e0975e2f1ead3ef95cd5016d
+Description-en: Robot OS polled_camera package - LISP
+ This package is part of Robot OS (ROS). It contains a LISP interface
+ for implementing a polled camera driver node and requesting images
+ from it. The package is currently for internal use as the API is
+ still under development.
+
+Package: image-transport-tools
+Description-md5: 87c3afdaf687d98668e005d6155d49d6
+Description-en: Robot OS image_transport package tools
+ This package is part of Robot OS (ROS). This library should always be
+ used to subscribe to and publish images. It (image_transport)
+ provides transparent support for transporting images in low-bandwidth
+ compressed formats. Examples (provided by separate plugin packages)
+ include JPEG/PNG compression and Theora streaming video.
+ .
+ This package provides the tools list_transports and republish.
+
+Package: libcamera-calibration-parsers-dev
+Description-md5: 5b628951e56b0f6b7794ebf2cdb0feca
+Description-en: Robot OS camera_calibration_parsers package - development
+ This package is part of Robot OS (ROS). It contains C++ headers for
+ reading and writing camera calibration parameters.
+
+Package: libcamera-calibration-parsers0t64
+Description-md5: 07bad23a5cd49280acdee617eabf37fe
+Description-en: Robot OS camera_calibration_parsers package
+ This package is part of Robot OS (ROS). The package provides
+ the library with routines for reading and writing camera
+ calibration parameters.
+
+Package: libcamera-info-manager-dev
+Description-md5: 77a14c6c0d27b61371891b29c5b48cc4
+Description-en: Robot OS camera_info_manager package - development
+ This package is part of Robot OS (ROS). It provides C++ header files
+ for camera calibration information: CameraInfo, SetCameraInfo service
+ requests, saving and restoring the camera calibration data.
+
+Package: libcamera-info-manager0t64
+Description-md5: 1fb0b7c9a6737dd511031a64af1cf0c6
+Description-en: Robot OS camera_info_manager package
+ This package is part of Robot OS (ROS). It provides a C++ interface
+ for camera calibration information: CameraInfo, SetCameraInfo service
+ requests, saving and restoring the camera calibration data.
+
+Package: libimage-transport-dev
+Description-md5: 60062d16b7fc2ca532a1a65a8fa0af97
+Description-en: Robot OS image_transport package - development
+ This package is part of Robot OS (ROS). It contains the C++ header
+ files for the image_transport transport library which should always
+ be used to subscribe to and publish images. It provides transparent
+ support for transporting images in low-bandwidth compressed
+ formats. Examples (provided by separate plugin packages) include
+ JPEG/PNG compression and Theora streaming video.
+
+Package: libimage-transport0t64
+Description-md5: 6eb999957b7c13c6e452da6d8ad5e7d6
+Description-en: Robot OS image_transport package
+ This package is part of Robot OS (ROS). This library should always be
+ used to subscribe to and publish images. It (image_transport)
+ provides transparent support for transporting images in low-bandwidth
+ compressed formats. Examples (provided by separate plugin packages)
+ include JPEG/PNG compression and Theora streaming video.
+
+Package: libpolled-camera-dev
+Description-md5: 60129b9b30ab198b8f35d5ce3c328119
+Description-en: Robot OS polled_camera package - development
+ This package is part of Robot OS (ROS). It contains the C++ header
+ files for implementing a polled camera driver node and requesting
+ images from it. The package is currently for internal use as the API
+ is still under development.
+
+Package: libpolled-camera0t64
+Description-md5: 825df1306296d69a86a31fc7019aa310
+Description-en: Robot OS polled_camera package
+ This package is part of Robot OS (ROS). It contains a service and C++
+ helper classes for implementing a polled camera driver node and
+ requesting images from it. The package is currently for internal use
+ as the API is still under development.
+
+Package: polled-camera-tool
+Description-md5: 23950b527abad097af0cd7d3c9f4cd90
+Description-en: Robot OS polled_camera package tool
+ This package is part of Robot OS (ROS). It contains an executable
+ implementing a polled camera driver node and to request images from it.
+ The package is currently for internal use as the API is still under
+ development.
+
+Package: python3-camera-calibration-parsers
+Description-md5: 55257ed5f5c2ed8e888fb2cd6d7dae1a
+Description-en: Robot OS camera_calibration_parsers Python 3 package
+ This package is part of Robot OS (ROS). It provides routines for
+ reading and writing camera calibration parameters.
+ .
+ This package contains the Python 3 wrapper.
+
+Package: python3-polled-camera
+Description-md5: 24a4b5c5d3f7c11cce41c90cfc2f4b3d
+Description-en: Robot OS polled_camera package - Python 3
+ This package is part of Robot OS (ROS). It contains a Python package
+ for implementing a polled camera driver node and requesting images
+ from it. The package is currently for internal use as the API is
+ still under development.
+ .
+ This package contains the Python 3 modules.
+
+Package: libdepth-image-proc-dev
+Description-md5: 0b0abdf53fd0cc21a6a5f9a2ddc64e92
+Description-en: Robot OS depth-image-proc package - development
+ This package is part of Robot OS (ROS). The package contains nodelets
+ for processing depth images such as those produced by OpenNI camera.
+ Functions include creating disparity images and point clouds, as well
+ as registering (reprojecting) a depth image into another camera frame.
+ .
+ It contains C++ headers for the libdepth-image-proc.
+
+Package: libdepth-image-proc0d
+Description-md5: 37edb921585fb1ef041b90f0fa797d9d
+Description-en: Robot OS depth-image-proc package
+ This package is part of Robot OS (ROS). The package contains nodelets
+ for processing depth images such as those produced by OpenNI camera.
+ Functions include creating disparity images and point clouds, as well
+ as registering (reprojecting) a depth image into another camera frame.
+
+Package: libimage-proc-dev
+Description-md5: 5c4a9d3d344485400d85c743f0fadc46
+Description-en: Robot OS mage-proc package - development
+ This package is part of Robot OS (ROS). The package provides
+ the library with routines for single image rectification and color
+ processing.
+ .
+ It contains C++ headers for the libimage-proc.
+
+Package: libimage-proc0d
+Description-md5: 9a3bd87dee488151374c843622b298f8
+Description-en: Robot OS Single image rectification and color processing
+ This package is part of Robot OS (ROS). The package provides
+ the library with routines for single image rectification and color
+ processing.
+
+Package: libimage-publisher-dev
+Description-md5: bd00622c0aeac150cd91a915bf619547
+Description-en: Robot OS image publishing - development
+ This package is part of Robot OS (ROS). The package provides
+ the library to publish an image stream from single image file
+ or avi motion file
+ .
+ It contains C++ headers for the libimage-publisher.
+
+Package: libimage-publisher0d
+Description-md5: 032eaad48f5ea24c0fa9f8f09861ac72
+Description-en: Robot OS image publishing
+ This package is part of Robot OS (ROS). The package provides
+ the library to publish an image stream from single image file
+ or avi motion file
+
+Package: libimage-rotate-dev
+Description-md5: d36b526039b1a8fdaff7834136f7d853
+Description-en: Robot OS image rotate - development
+ This package is part of Robot OS (ROS). The package provides
+ the library to that rotates an image stream in a way that
+ minimizes the angle between a vector in some arbitrary frame
+ and a vector in the camera frame.
+ .
+ It contains C++ headers for the libimage-rotate.
+
+Package: libimage-rotate0d
+Description-md5: 10ac24a15b727ecc6cfdea8275bfe7ef
+Description-en: Robot OS image rotate stream
+ This package is part of Robot OS (ROS). The package provides
+ the library to that rotates an image stream in a way that
+ minimizes the angle between a vector in some arbitrary frame
+ and a vector in the camera frame.
+
+Package: libimage-view-dev
+Description-md5: 3355c4e63bab345bfd138d6ce8a0a9e7
+Description-en: Robot OS image_view - development
+ This package is part of Robot OS (ROS). The package provides
+ the library with a viewer for ROS image topics. Includes a specialized viewer
+ for stereo + disparity images
+ .
+ It contains C++ headers for the libimage-view.
+
+Package: libimage-view0d
+Description-md5: c208cbb943cb7cde2efa391bcd2984da
+Description-en: Robot OS image_view package
+ This package is part of Robot OS (ROS). The package provides
+ the library with a viewer for ROS image topics. Includes a specialized viewer
+ for stereo + disparity images
+
+Package: libstereo-image-proc-dev
+Description-md5: de0cb57c22621e2fce6d09430b42bb25
+Description-en: Robot OS stereo-image-proc - development
+ This package is part of Robot OS (ROS). The package provides
+ the library for stereo and single image rectification and
+ disparity processing.
+ .
+ It contains C++ headers for the libstereo-image-proc.
+
+Package: libstereo-image-proc0d
+Description-md5: e2b158d500bc991e1a7d1b32eb9fb1e4
+Description-en: Robot OS stereo-image-proc package
+ This package is part of Robot OS (ROS). The package provides
+ the library for stereo and single image rectification and
+ disparity processing.
+
+Package: python3-camera-calibration
+Description-md5: 36ef426b40596617a869f5128461d1ad
+Description-en: Robot OS camera_calibration Python3 package
+ This package is part of Robot OS (ROS). It provides routines for
+ camera_calibration allows easy calibration of monocular or stereo
+ cameras using a checkerboard calibration target. Python3 version.
+
+Package: python3-image-proc
+Description-md5: 768fff809ea19d0d7cafc77973771b90
+Description-en: Robot OS image_proc Python 3 package
+ This package is part of Robot OS (ROS). The package provides
+ the library with routines for single image rectification and color
+ processing. Python 3 package.
+
+Package: python3-image-publisher
+Description-md5: ba744cf5f5b8aa3d98e1ca7c575477c5
+Description-en: Robot OS image_publisher Python 3 package
+ This package is part of Robot OS (ROS). The package provides
+ the library to publish an image stream from single image file
+ or avi motion file. Python 3 package.
+
+Package: python3-image-rotate
+Description-md5: 75149f9177242607cf5efcbdcd950320
+Description-en: Robot OS image_rotate Python 3 package
+ This package is part of Robot OS (ROS). The package provides
+ the library to that rotates an image stream in a way that
+ minimizes the angle between a vector in some arbitrary frame
+ and a vector in the camera frame. Python 3 package.
+
+Package: python3-image-view
+Description-md5: fa887803c034abeb015487c72a9d0724
+Description-en: Robot OS image_view Python 3 package
+ This package is part of Robot OS (ROS). The package provides
+ the library with a viewer for ROS image topics. Includes a specialized viewer
+ for stereo + disparity images. Python 3 package.
+
+Package: python3-stereo-image-proc
+Description-md5: 4421694a5cdecf8c7955295f42e54d6e
+Description-en: Robot OS stereo_image_proc Python 3 package
+ This package is part of Robot OS (ROS). The package provides
+ the library for stereo and single image rectification and
+ disparity processing. Python 3 package.
+
+Package: ros-camera-calibration
+Description-md5: 1047c477ce789cfb28537d1b12782c51
+Description-en: ROS camera_calibration nodes
+ This package is part of Robot OS (ROS). It provides routines for
+ camera_calibration allows easy calibration of monocular or stereo
+ cameras using a checkerboard calibration target. This package
+ constains ROS nodes.
+
+Package: ros-image-proc
+Description-md5: e5dda32a265c707eefaf9fd4b6bdec79
+Description-en: ROS image_proc node
+ This package is part of Robot OS (ROS). The package provides
+ the library with routines for single image rectification and color
+ processing. This package constains a ROS node.
+
+Package: ros-image-publisher
+Description-md5: 67f825a24292b6afff744d91c6deeea9
+Description-en: ROS image-publisher node
+ This package is part of Robot OS (ROS). The package provides
+ the library to publish an image stream from single image file
+ or avi motion file. Contains a ROS node.
+
+Package: ros-image-rotate
+Description-md5: 0e30a8fcc2c4b5b5a3455e200668670e
+Description-en: ROS image-rotate node
+ This package is part of Robot OS (ROS). The package provides
+ the library to that rotates an image stream in a way that
+ minimizes the angle between a vector in some arbitrary frame
+ and a vector in the camera frame. Contains a ROS node.
+
+Package: ros-image-view
+Description-md5: 7d3a0ed4f4fa03c1e90e851095860dbd
+Description-en: ROS image_view node
+ This package is part of Robot OS (ROS). The package provides
+ the library with a viewer for ROS image topics. Includes a specialized viewer
+ for stereo + disparity images. Contains ROS nodes.
+
+Package: ros-stereo-image-proc
+Description-md5: 2f6ef9bac8d6130ffd91dc27cd234ee0
+Description-en: ROS stereo_image_proc node
+ This package is part of Robot OS (ROS). The package provides
+ the library for stereo and single image rectification and
+ disparity processing. Contains a ROS node.
+
+Package: cl-theora-image-transport
+Description-md5: 8c85176d18be7f589d3d90c4eb9fd3cb
+Description-en: LISP code for theora_image_transport (Robot OS)
+ This package is part of Robot OS (ROS). Theora_image_transport provides a
+ plugin to image_transport for transparently sending an image stream encoded
+ with the Theora codec.
+ .
+ This package contains the generated LISP library.
+
+Package: python3-compressed-depth-image-transport
+Description-md5: 049e49c1e2ce42f332399a08ad6ad082
+Description-en: Python package for compressed_depth_image_transport (Robot OS)
+ This package is part of Robot OS (ROS). Compressed_depth_image_transport
+ provides a plugin to image_transport for transparently sending depth images
+ (raw, floating-point) using PNG compression.
+ .
+ This package contains the generated Python package.
+
+Package: python3-compressed-image-transport
+Description-md5: e3a9c356c25b4f61232138cd12086a1d
+Description-en: Python package for compressed_image_transport (Robot OS)
+ This package is part of Robot OS (ROS). Compressed_image_transport provides a
+ plugin to image_transport for transparently sending images encoded as JPEG or
+ PNG.
+ .
+ This package contains the generated Python package.
+
+Package: python3-theora-image-transport
+Description-md5: 2024b03c84497e06337352bfb6bbe870
+Description-en: Python package for theora_image_transport (Robot OS)
+ This package is part of Robot OS (ROS). Theora_image_transport provides a
+ plugin to image_transport for transparently sending an image stream encoded
+ with the Theora codec.
+ .
+ This package contains the generated Python package.
+
+Package: ros-compressed-depth-image-transport
+Description-md5: c355f86b5bca26f99c14f04f23acb3bd
+Description-en: plugins for compressed_depth_image_transport (Robot OS)
+ This package is part of Robot OS (ROS). Compressed_depth_image_transport
+ provides a plugin to image_transport for transparently sending depth images
+ (raw, floating-point) using PNG compression.
+ .
+ This package contains the plugins.
+
+Package: ros-compressed-depth-image-transport-dev
+Description-md5: f3221367c9d7d5feee6f0b93245a956c
+Description-en: development files for compressed_depth_image_transport (Robot OS)
+ This package is part of Robot OS (ROS). Compressed_depth_image_transport
+ provides a plugin to image_transport for transparently sending depth images
+ (raw, floating-point) using PNG compression.
+ .
+ This package contains the development files.
+
+Package: ros-compressed-image-transport
+Description-md5: cf15efb37ce918492d56ac373cf73b66
+Description-en: plugins for compressed_image_transport (Robot OS)
+ This package is part of Robot OS (ROS). Compressed_image_transport provides a
+ plugin to image_transport for transparently sending images encoded as JPEG or
+ PNG.
+ .
+ This package contains the plugins.
+
+Package: ros-compressed-image-transport-dev
+Description-md5: f10d5e0ae80cf68a513f0259f094f708
+Description-en: development files for compressed_image_transport (Robot OS)
+ This package is part of Robot OS (ROS). Compressed_image_transport provides a
+ plugin to image_transport for transparently sending images encoded as JPEG or
+ PNG.
+ .
+ This package contains the development files.
+
+Package: ros-theora-image-transport
+Description-md5: e20de7c63d1e4688510e4e1c6e7317bc
+Description-en: plugins for theora_image_transport (Robot OS)
+ This package is part of Robot OS (ROS). Theora_image_transport provides a
+ plugin to image_transport for transparently sending an image stream encoded
+ with the Theora codec.
+ .
+ This package contains the plugins.
+
+Package: ros-theora-image-transport-dev
+Description-md5: f6773f80e295f9ce88e4c777a45e2a86
+Description-en: development files for theora_image_transport (Robot OS)
+ This package is part of Robot OS (ROS). Theora_image_transport provides a
+ plugin to image_transport for transparently sending an image stream encoded
+ with the Theora codec.
+ .
+ This package contains the development files.
+
+Package: libinteractive-markers-dev
+Description-md5: 4c69b723f2043508780efb8b38c09e5c
+Description-en: Robot OS interactive_markers package - development files
+ This package is part of Robot OS (ROS). It is a 3D interactive marker
+ communication library for RViz and similar tools.
+ .
+ This package contains the development files.
+
+Package: libinteractive-markers2d
+Description-md5: 2be8a6fbc63703d85259d5ebefdd59bc
+Description-en: Robot OS interactive_markers package
+ This package is part of Robot OS (ROS). It is a 3D interactive marker
+ communication library for RViz and similar tools.
+ .
+ This package contains the library itself.
+
+Package: python3-interactive-markers
+Description-md5: 1b0ddc280c5baa41ace689a60ee06996
+Description-en: Robot OS interactive_markers - Python 3 package
+ This package is part of Robot OS (ROS). It is a 3D interactive marker
+ communication library for RViz and similar tools.
+ .
+ This package contains the Python 3 bindings.
+
+Package: joint-state-publisher
+Description-md5: 964bb3bf1da5d143f3c1632ac7bd0c8a
+Description-en: ROS joint_state_publisher
+ This package contains a tool for setting and publishing joint state values for
+ a given URDF. It publishes sensor_msgs/JointState messages for a robot. The
+ package reads the robot_description parameter, finds all of the non-fixed
+ joints and publishes a JointState message with all those joints defined.
+ .
+ It can be used in conjunction with the robot_state_publisher node to
+ also publish transforms for all joint states.
+
+Package: joint-state-publisher-gui
+Description-md5: d389ee2883e0336e86e7a2187bb43036
+Description-en: ROS joint_state_publisher_gui
+ This package contains a tool for setting and publishing joint state values for
+ a given URDF. It publishes sensor_msgs/JointState messages for a robot. The
+ package reads the robot_description parameter, finds all of the non-fixed
+ joints and publishes a JointState message with all those joints defined.
+ .
+ It can be used in conjunction with the robot_state_publisher node to
+ also publish transforms for all joint states.
+ .
+ This package contains the Qt GUI
+
+Package: libkdl-parser-dev
+Description-md5: 7d66190e2e21977dc49215aed9cb7c29
+Description-en: Development files for ROS kdl_parser library
+ The Kinematics and Dynamics Library (KDL) defines a tree structure to
+ represent the kinematic and dynamic parameters of a robot mechanism.
+ kdl_parser provides tools to construct a KDL tree from an XML robot
+ representation in URDF.
+ .
+ This package contains the development files for the library.
+
+Package: libkdl-parser1d
+Description-md5: cc50a7a8557c4454530c06a6f0aac6b0
+Description-en: ROS kdl_parser library
+ The Kinematics and Dynamics Library (KDL) defines a tree structure to
+ represent the kinematic and dynamic parameters of a robot mechanism.
+ kdl_parser provides tools to construct a KDL tree from an XML robot
+ representation in URDF.
+ .
+ This package contains the library.
 
 Package: ros-message-generation
 Description-md5: a4a4773259b03761a39ba683d1cbd518
@@ -631098,6 +632547,157 @@ Description-en: Definitions of move-base-related ROS Messages
  .
  It contains the navigation-related message definitions.
 
+Package: cl-nodelet
+Description-md5: 99b28dfe0403575ed825115e67d11ae4
+Description-en: Robot OS nodelet library - service files - LISP
+ This package is part of Robot OS (ROS). Nodelet is designed to
+ provide a way to run multiple algorithms in the same process with
+ zero copy transport between algorithms. The nodelet base class needed
+ for implementing a nodelet, and the NodeletLoader class used for
+ instantiating nodelets are provided.
+ .
+ This package contains the LISP interface.
+
+Package: libnodelet-dev
+Description-md5: 01e9be3fa27b0380ab5b5e6a92a55c48
+Description-en: Robot OS nodelet library - service header files
+ This package is part of Robot OS (ROS). Nodelet is designed to
+ provide a way to run multiple algorithms in the same process with
+ zero copy transport between algorithms. The nodelet base class needed
+ for implementing a nodelet, and the NodeletLoader class used for
+ instantiating nodelets are provided.
+ .
+ This package contains the development files for the service.
+
+Package: libnodelet-topic-tools-dev
+Description-md5: df4338cb9f7b7c45e0eba663fb94f865
+Description-en: Robot OS nodelet_topic_tools library - development files
+ This package is part of Robot OS (ROS). Nodelet is designed to
+ provide a way to run multiple algorithms in the same process with
+ zero copy transport between algorithms.
+ .
+ This package contains the development files for common nodelet tools
+ such as a mux, demux and throttle.
+
+Package: libnodeletlib-dev
+Description-md5: 08ab9dff71e26a346a0b89891fbafd7d
+Description-en: Robot OS nodelet library - development
+ This package is part of Robot OS (ROS). Nodelet is designed to
+ provide a way to run multiple algorithms in the same process with
+ zero copy transport between algorithms. The nodelet base class needed
+ for implementing a nodelet, and the NodeletLoader class used for
+ instantiating nodelets are provided.
+ .
+ This package contains the development files for the library.
+
+Package: libnodeletlib-tools
+Description-md5: 97778095baef37c8066fe4c9893fd69b
+Description-en: Robot OS nodelet library - tools
+ This package is part of Robot OS (ROS). Nodelet is designed to
+ provide a way to run multiple algorithms in the same process with
+ zero copy transport between algorithms. The nodelet base class needed
+ for implementing a nodelet, and the NodeletLoader class used for
+ instantiating nodelets are provided.
+ .
+ This package contains the tools.
+
+Package: libnodeletlib1d
+Description-md5: 25f6721defab9297d01b0d6bf7e1cddf
+Description-en: Robot OS nodelet library
+ This package is part of Robot OS (ROS). Nodelet is designed to
+ provide a way to run multiple algorithms in the same process with
+ zero copy transport between algorithms. The nodelet base class needed
+ for implementing a nodelet, and the NodeletLoader class used for
+ instantiating nodelets are provided.
+ .
+ This package contains the library.
+
+Package: python3-nodelet
+Description-md5: 9b5040f17f1e8b95f5eabe7ce335df10
+Description-en: Robot OS nodelet library - service files - Python 3
+ This package is part of Robot OS (ROS). Nodelet is designed to
+ provide a way to run multiple algorithms in the same process with
+ zero copy transport between algorithms. The nodelet base class needed
+ for implementing a nodelet, and the NodeletLoader class used for
+ instantiating nodelets are provided.
+ .
+ This package contains the Python 3 interface.
+
+Package: python3-nodelet-topic-tools
+Description-md5: cd72753c2e49fa2a30e6fcb80e11b68c
+Description-en: Robot OS nodelet_topic_tools library - Python 3 service files
+ This package is part of Robot OS (ROS). Nodelet is designed to
+ provide a way to run multiple algorithms in the same process with
+ zero copy transport between algorithms.
+ .
+ This package contains the generated Python 3 package for common
+ nodelet tools such as a mux, demux and throttle.
+
+Package: cl-opencv-apps
+Description-md5: d695a7e0cf326e9bf4c61794792f9dba
+Description-en: opencv_apps Robot OS package - LISP bindings
+ This package is part of Robot OS (ROS). It contains several ROS
+ packages for working providing OpenCV functionalities in a simplest
+ manner in ROS, i.e., running a launch file that corresponds to
+ the functionality.
+ .
+ The package contains implementations for edge detection, structural analysis,
+ people/face detection, motion analysis and object segmentation.
+ .
+ It contains the LISP bindings for the opencv_apps library.
+
+Package: libopencv-apps-dev
+Description-md5: f821b7074e3fe807152d944172d7276b
+Description-en: Opencv_apps Robot OS package - development files
+ This package is part of Robot OS (ROS). It contains several ROS
+ packages for working providing OpenCV functionalities in a simplest
+ manner in ROS, i.e., running a launch file that corresponds to
+ the functionality.
+ .
+ The package contains implementations for edge detection, structural analysis,
+ people/face detection, motion analysis and object segmentation.
+ .
+ It contains development files for the opencv_apps library.
+
+Package: libopencv-apps2d
+Description-md5: 30dec07808823e82c7e85e2010bf6c8b
+Description-en: opencv_apps Robot OS package - runtime files
+ This package is part of Robot OS (ROS). It contains several ROS
+ packages for working providing OpenCV functionalities in a simplest
+ manner in ROS, i.e., running a launch file that corresponds to
+ the functionality.
+ .
+ The package contains implementations for edge detection, structural analysis,
+ people/face detection, motion analysis and object segmentation.
+ .
+ It contains the opencv_apps library itself.
+
+Package: python3-opencv-apps
+Description-md5: 3531dc636d6bc96ac3eb16004bf289cb
+Description-en: opencv_apps Robot OS package - Python 3 bindings
+ This package is part of Robot OS (ROS). It contains several ROS
+ packages for working providing OpenCV functionalities in a simplest
+ manner in ROS, i.e., running a launch file that corresponds to
+ the functionality.
+ .
+ The package contains implementations for edge detection, structural analysis,
+ people/face detection, motion analysis and object segmentation.
+ .
+ It contains the Python 3 bindings for the opencv_apps library.
+
+Package: ros-opencv-apps
+Description-md5: 0c5a2f2f286a425c52a50fe3bfa90fea
+Description-en: opencv_apps Robot OS package - apps
+ This package is part of Robot OS (ROS). It contains several ROS
+ packages for working providing OpenCV functionalities in a simplest
+ manner in ROS, i.e., running a launch file that corresponds to
+ the functionality.
+ .
+ The package contains implementations for edge detection, structural analysis,
+ people/face detection, motion analysis and object segmentation.
+ .
+ It contains the nodes and the ROS stuff of the opencv-apps.
+
 Package: python3-osrf-pycommon
 Description-md5: 0671bfbe49338ecbd6cf330fa3c23d85
 Description-en: Commonly needed Python modules for software developers
@@ -631138,6 +632738,129 @@ Description-en: Definitions of PCL-related Robot OS Messages
  provide the glue between the Point Cloud Library and ROS.
  .
  This package contains the message definitions.
+
+Package: libpcl-conversions-dev
+Description-md5: 5743349ec89b945e7c189373f6805838
+Description-en: Robot OS library to convert from/to PCL data types
+ PCL (Point Cloud Library) ROS interface stack. PCL-ROS is the
+ preferred  bridge for 3D applications involving n-D Point Clouds
+ and 3D geometry processing in ROS.
+ .
+ This package provides development headers for converting between
+ PCL (Point Cloud Library) data types and ROS message types
+
+Package: libpcl-ros-dev
+Description-md5: c498355da6cd6278d40485c476916ea7
+Description-en: Bridge between Robot OS library (ROS) and PCL - development headers
+ PCL (Point Cloud Library) ROS interface stack. PCL-ROS is the
+ preferred  bridge for 3D applications involving n-D Point Clouds
+ and 3D geometry processing in ROS.
+ .
+ This package includes the development headers.
+
+Package: libpcl-ros-features0t64
+Description-md5: 2267af5cc94c6508c6250ce37b6f83ac
+Description-en: Bridge between Robot OS library (ROS) and PCL - features library
+ PCL (Point Cloud Library) ROS interface stack. PCL-ROS is the
+ preferred  bridge for 3D applications involving n-D Point Clouds
+ and 3D geometry processing in ROS.
+ .
+ This package includes the pcl-ros-features shared library.
+
+Package: libpcl-ros-filter1t64
+Description-md5: 4f775e2f77af707ce019a1458ecb9dd7
+Description-en: Bridge between Robot OS library (ROS) and PCL - filter library
+ PCL (Point Cloud Library) ROS interface stack. PCL-ROS is the
+ preferred  bridge for 3D applications involving n-D Point Clouds
+ and 3D geometry processing in ROS.
+ .
+ This package includes the pcl-ros-filter shared library.
+
+Package: libpcl-ros-filters0t64
+Description-md5: a4742dd41d30b0244d45d63663892f82
+Description-en: Bridge between Robot OS library (ROS) and PCL - filters library
+ PCL (Point Cloud Library) ROS interface stack. PCL-ROS is the
+ preferred  bridge for 3D applications involving n-D Point Clouds
+ and 3D geometry processing in ROS.
+ .
+ This package includes the pcl-ros-filters shared library.
+
+Package: libpcl-ros-io0t64
+Description-md5: 642043e2264137074896b0ec7fb1766a
+Description-en: Bridge between Robot OS library (ROS) and PCL - io library
+ PCL (Point Cloud Library) ROS interface stack. PCL-ROS is the
+ preferred  bridge for 3D applications involving n-D Point Clouds
+ and 3D geometry processing in ROS.
+ .
+ This package includes the pcl-ros-io shared library.
+
+Package: libpcl-ros-segmentation0t64
+Description-md5: ec1774673450a94773de7f058aaa0352
+Description-en: Bridge between Robot OS library (ROS) and PCL - segmentation library
+ PCL (Point Cloud Library) ROS interface stack. PCL-ROS is the
+ preferred  bridge for 3D applications involving n-D Point Clouds
+ and 3D geometry processing in ROS.
+ .
+ This package includes the pcl-ros-segmentation shared library.
+
+Package: libpcl-ros-surface0t64
+Description-md5: e3b757d4918e172fd580925d3fa4df6b
+Description-en: Bridge between Robot OS library (ROS) and PCL - surface library
+ PCL (Point Cloud Library) ROS interface stack. PCL-ROS is the
+ preferred  bridge for 3D applications involving n-D Point Clouds
+ and 3D geometry processing in ROS.
+ .
+ This package includes the pcl-ros-surface shared library.
+
+Package: libpcl-ros-tf1t64
+Description-md5: f7916910e8ac0f5892b5c3e884300c24
+Description-en: Bridge between Robot OS library (ROS) and PCL - tf library
+ PCL (Point Cloud Library) ROS interface stack. PCL-ROS is the
+ preferred  bridge for 3D applications involving n-D Point Clouds
+ and 3D geometry processing in ROS.
+ .
+ This package includes the pcl-ros-tf shared library.
+
+Package: pcl-ros-tools
+Description-md5: 2058e9f0b3a626776d6eb54cafb8d0a8
+Description-en: Bridge between Robot OS library (ROS) and PCL - tools
+ PCL (Point Cloud Library) ROS interface stack. PCL-ROS is the
+ preferred  bridge for 3D applications involving n-D Point Clouds
+ and 3D geometry processing in ROS.
+ .
+ This package includes the tools.
+
+Package: python3-pcl-ros
+Description-md5: 97e3e9b37f9102648837cc7c28ddc918
+Description-en: Bridge between Robot OS library (ROS) and PCL - Python module
+ PCL (Point Cloud Library) ROS interface stack. PCL-ROS is the
+ preferred  bridge for 3D applications involving n-D Point Clouds
+ and 3D geometry processing in ROS.
+ .
+ This package includes the Python module.
+
+Package: pluginlib-dev
+Description-md5: aad84e1e73cf7713813ac8cc469f6a52
+Description-en: ROS library for plugins
+ This package is part of Robot OS (ROS). This is the high-level ROS
+ plugin interface. It provides tools for writing and dynamically
+ loading plugins using the ROS build infrastructure. To work, these
+ tools require plugin providers to register their plugins in their
+ package.xml file.
+ .
+ This package installs the header only library.
+
+Package: pluginlib-tools
+Description-md5: 9f40852f5fdcc52c8967c4973045252b
+Description-en: ROS library for plugins
+ This package is part of Robot OS (ROS). This is the high-level ROS
+ plugin interface. It provides tools for writing and dynamically
+ loading plugins using the ROS build infrastructure. To work, these
+ tools require plugin providers to register their plugins in their
+ package.xml file.
+ .
+ This package installs pluginlib related tooling. Currently, this is
+ the list_plugins CLI.
 
 Package: librandom-numbers-dev
 Description-md5: 9c8b90c0c656deb46b0c6a16cda09d69
@@ -631198,6 +632921,50 @@ Description-en: Robot OS resource_retriever library - Python 3
  for any type of data. The resource retriever is based on the libcurl library.
  .
  This package contains the Python 3 binding.
+
+Package: libjoint-state-listener1d
+Description-md5: d7a37a00f4899f70b4e350ed21035a66
+Description-en: Robot OS robot_state_publisher listener library
+ This package is part of Robot OS (ROS). This package allows you to publish the
+ state of a robot to tf. Once the state gets published, it is available to all
+ components in the system that also use tf. The package takes the joint angles
+ of the robot as input and publishes the 3D poses of the robot links, using a
+ kinematic tree model of the robot.
+ .
+ This package contains the joint-state-listener library.
+
+Package: librobot-state-publisher-dev
+Description-md5: 116bafb2f6f32d509e9fb901a20516dc
+Description-en: development files for Robot OS robot_state_publisher library
+ This package is part of Robot OS (ROS). This package allows you to publish the
+ state of a robot to tf. Once the state gets published, it is available to all
+ components in the system that also use tf. The package takes the joint angles
+ of the robot as input and publishes the 3D poses of the robot links, using a
+ kinematic tree model of the robot.
+ .
+ This package contains the development files for the library.
+
+Package: librobot-state-publisher-solver1d
+Description-md5: ee7e96ae58fdd0ef6224145f5386c9e6
+Description-en: Robot OS robot_state_publisher solver library
+ This package is part of Robot OS (ROS). This package allows you to publish the
+ state of a robot to tf. Once the state gets published, it is available to all
+ components in the system that also use tf. The package takes the joint angles
+ of the robot as input and publishes the 3D poses of the robot links, using a
+ kinematic tree model of the robot.
+ .
+ This package contains the library.
+
+Package: ros-robot-state-publisher
+Description-md5: 91cc41df633b4dfad70a6afcc002b423
+Description-en: Robot OS robot_state_publisher
+ This package is part of Robot OS (ROS). This package allows you to publish the
+ state of a robot to tf. Once the state gets published, it is available to all
+ components in the system that also use tf. The package takes the joint angles
+ of the robot as input and publishes the 3D poses of the robot links, using a
+ kinematic tree model of the robot.
+ .
+ This package contains the tools.
 
 Package: libroslib-dev
 Description-md5: f2887c1e767377181e900b8dfad9eb21
@@ -631320,6 +633087,418 @@ Description-en: Common metapackage for all Robot OS client libraries
  the roslang package, which allows rosbuild and other tools to perform
  appropriate actions, such as msg- and srv-based code generation. The
  roslang package itself contains no actual code.
+
+Package: cl-roscpp-msg
+Description-md5: 64bb2a0a18a45e3a1cd74e3a128463c6
+Description-en: Header for roscpp messages, LISP
+ This package is part of Robot OS (ROS). roscpp is a C++
+ implementation of ROS. It provides a client library that enables C++
+ programmers to quickly interface with ROS topics, services, and
+ parameters.
+ .
+ roscpp is the most widely used ROS client library and is designed to be the
+ high-performance library for ROS. ROS console output library.
+ .
+ This package contains the generated LISP library.
+
+Package: cl-topic-tools
+Description-md5: ee5ee134089d6d5be3a3af1703337746
+Description-en: LISP library for working with Robot OS topics
+ This package is part of Robot OS (ROS). It contains the lisp
+ interface to the tools for directing, throttling, selecting, and
+ otherwise messing with ROS topics at a meta level.
+
+Package: libmessage-filters-dev
+Description-md5: 2f9598402431752c2612322ee62fd27f
+Description-en: Development files for Robot OS message-filters
+ This package is part of Robot OS (ROS). It contains the development
+ files for libmessage-filters, which implements a set of message
+ filters which take in messages and may output those messages at a
+ later time, based on the conditions that filter needs being met.
+
+Package: libmessage-filters1t64
+Description-md5: b5d162f206a36c73ad103ac9d49f0453
+Description-en: Library for Robot OS message-filters
+ This package is part of Robot OS (ROS). It implemtants a set of
+ message filters which take in messages and may output those messages
+ at a later time, based on the conditions that filter needs met.
+ .
+ This package contains the library.
+
+Package: librosbag-dev
+Description-md5: 6b316dca15f72846bc96ed05d504d6eb
+Description-en: Tools for recording from and playing back to Robot OS topics
+ This package is part of Robot OS (ROS). It is the development files
+ for the rosbag library, which provides APIs for reading/writing bags
+ (ROS message stores) in C++ and Python.
+
+Package: librosbag-storage-dev
+Description-md5: 1fcd552bbe2cc48056179c0370aa1ab4
+Description-en: Development files for librosbag_storage
+ This package is part of Robot OS (ROS). It is a set of tools for
+ recording from and playing back ROS messages without relying on the
+ ROS client library.
+ .
+ This package contains the development files for the library.
+
+Package: librosbag-storage4t64
+Description-md5: 815723fb80e815adde5d9ae229c5da00
+Description-en: Robot OS library for rosbag_storage
+ This package is part of Robot OS (ROS). It is a set of tools for
+ recording from and playing back ROS messages without relying on the
+ ROS client library.
+ .
+ This package contains the library.
+
+Package: librosbag4t64
+Description-md5: 5e9a032b1c09fcd35d83537c22d95418
+Description-en: Library for recording from and playing back to Robot OS topics
+ This package is part of Robot OS (ROS). It is the rosbag library,
+ which provides APIs for reading/writing bags (ROS message stores) in
+ C++ and Python. It is intended to be high performance and avoids
+ deserialization and reserialization of the messages.
+ .
+ The related rosbag package provides a command-line tool for working
+ with bags.
+
+Package: libroscpp-dev
+Description-md5: 798c067b31c50827ab4351b956613dfd
+Description-en: Robot OS development files for libroscpp
+ This package is part of Robot OS (ROS). roscpp is a C++
+ implementation of ROS. It provides a client library that enables C++
+ programmers to quickly interface with ROS topics, services, and
+ parameters.
+ .
+ roscpp is the most widely used ROS client library and is designed to be the
+ high-performance library for ROS. ROS console output library.
+ .
+ This package contains the development files for the library.
+
+Package: libroscpp-msg-dev
+Description-md5: ebc58ca9c23f700e090338e01d94d504
+Description-en: Robot OS header for roscpp messages
+ This package is part of Robot OS (ROS). roscpp is a C++ implementation of ROS.
+ It provides a client library that enables C++ programmers to quickly interface
+ with ROS topics, services, and
+ parameters.
+ .
+ roscpp is the most widely used ROS client library and is designed to be the
+ high-performance library for ROS. ROS console output library.
+ .
+ This package contains the generated C++ headers.
+
+Package: libroscpp4t64
+Description-md5: f864266471b77050274d683291571388
+Description-en: Robot OS client library
+ This package is part of Robot OS (ROS). roscpp is a C++
+ implementation of ROS. It provides a client library that enables C++
+ programmers to quickly interface with ROS topics, services, and
+ parameters.
+ .
+ roscpp is the most widely used ROS client library and is designed to be the
+ high-performance library for ROS. ROS console output library.
+ .
+ This package contains the library.
+
+Package: libroslz4-1t64
+Description-md5: d2bbf239a9f1db4579c63601f61a4762
+Description-en: library implementing lz4 for Robot OS
+ This package is part of Robot OS (ROS). This is the C++
+ implementation of the LZ4 streaming format. Large data streams are
+ split into blocks which are compressed using the very fast LZ4
+ compression algorithm.
+ .
+ This package contains the library.
+
+Package: libroslz4-dev
+Description-md5: 579659f3615f1f4e8207cbff78be6bf4
+Description-en: development files for libroslz4
+ This package is part of Robot OS (ROS). It contains the development
+ files for the ROS implementation of the LZ4 streaming format. Large
+ data streams are split into blocks which are compressed using the
+ very fast LZ4 compression algorithm.
+
+Package: librostest-dev
+Description-md5: 986f980a204f9f5f867bae6b618ad760
+Description-en: Development files for rostest (Robot OS)
+ This package is part of Robot OS (ROS). It contains the development
+ files for the rostest framework. It's an extension that enables
+ roslaunch files to be used as test fixtures. As a fully running
+ system has more complex behaviors than an individual ROS node,
+ this allows you to do full integration testing across multiple
+ nodes. It is compatible with xUnit frameworks.
+
+Package: libtopic-tools-dev
+Description-md5: 5b310e7e5ff114516bc14855859a9249
+Description-en: development files for libtopic-tools (Robot OS)
+ This package is part of Robot OS (ROS). It contains development files
+ for the libtopic-tools library, which provides tools for directing,
+ throttling, selecting, and otherwise messing with ROS topics at a
+ meta level.
+ .
+ This contains the development files
+
+Package: libtopic-tools2t64
+Description-md5: 6b25192d4f09de52d80f7ebe5ba8d2c7
+Description-en: library for messing with Robot OS topics
+ This package is part of Robot OS (ROS). Tools for directing,
+ throttling, selecting, and otherwise messing with ROS topics at a
+ meta level. None of the programs in this package actually know about
+ the topics whose streams they are altering; instead, these tools deal
+ with messages as generic binary blobs. This means they can be applied
+ to any ROS topic.
+ .
+ This package contains the library.
+
+Package: libxmlrpcpp-dev
+Description-md5: 50b267665f68a8fb66a6489534349c47
+Description-en: development files for Robot OS libxmlrpcpp
+ This package is part of Robot OS (ROS). It contains the development
+ files for the XmlRpc++ library, which is a C++ implementation of the XML-RPC
+ protocol. This version is heavily modified from the package available
+ on SourceForge in order to support roscpp's threading model. As such,
+ it's a maintained fork by OSRF.
+
+Package: libxmlrpcpp3t64
+Description-md5: 94d537a9740a053f48d936d01ba9b031
+Description-en: Robot OS version of xml-rpc protocol library
+ This package is part of Robot OS (ROS). It contains the XmlRpc++
+ library, which is a C++ implementation of the XML-RPC protocol. This
+ version is heavily modified from the package available on SourceForge
+ in order to support roscpp's threading model. As such, it's a
+ maintained fork by OSRF.
+
+Package: python3-message-filters
+Description-md5: a72f115dccb172630606730cc407752a
+Description-en: Python 3 library for Robot OS message-filters
+ This package is part of Robot OS (ROS). It implements a set of
+ message filters which take in messages and may output those messages
+ at a later time, based on the conditions that filter needs being met.
+ .
+ This package contains the Python 3 library.
+
+Package: python3-rosbag
+Description-md5: 63dee13e90a8ec748d0689ab68efcc15
+Description-en: Python 3 tools for recording from and playing back to Robot OS topics
+ This package is part of Robot OS (ROS). It provides a command-line
+ tool for working with bags (ROS messages stores). The corresponding
+ librosbag package provides corresponding C++ and Python APIs.
+ .
+ This package contains the Python 3 library.
+
+Package: python3-roscpp-msg
+Description-md5: a5da50b6544a01175729b00c54c36117
+Description-en: Header for roscpp messages, Python 3
+ This package is part of Robot OS (ROS). roscpp is a C++ implementation of ROS.
+ It provides a client library that enables C++ programmers to quickly interface
+ with ROS topics, services, and
+ parameters.
+ .
+ roscpp is the most widely used ROS client library and is designed to be the
+ high-performance library for ROS. ROS console output library.
+ .
+ This package contains the generated Python 3 package.
+
+Package: python3-rosgraph
+Description-md5: 0367ec3c87b3877da50c3e9e9da680c6
+Description-en: Tool to print information about the Robot OS computation graph - Python 3
+ This package is part of Robot OS (ROS). rosgraph contains the
+ rosgraph command-line tool, which prints information about the ROS
+ computation graph. It also provides an internal library that can be
+ used by graphical tools.
+ .
+ This package contains the Python 3 library.
+
+Package: python3-roslaunch
+Description-md5: 1fd3cfeb0a7771de4698a659b552e490
+Description-en: roslaunch tool for Robot OS - Python 3
+ This package is part of Robot OS (ROS). roslaunch is a tool for
+ easily launching multiple ROS nodes locally and remotely via SSH, as
+ well as setting parameters on the Parameter Server. It includes
+ options to automatically respawn processes that have already died.
+ roslaunch takes in one or more XML configuration files (with the
+ launch extension) that specify the parameters to set and nodes to
+ launch, as well as the machines that they should be run on.
+ .
+ This package contains the Python 3 library.
+
+Package: python3-roslz4
+Description-md5: 331560af9e5df8fe38ae530fc01bd23c
+Description-en: Python 3 library implementing lz4 for Robot OS
+ This package is part of Robot OS (ROS). This is the Python
+ implementation of the LZ4 streaming format. Large data streams are
+ split into blocks which are compressed using the very fast LZ4
+ compression algorithm.
+ .
+ This package contains the Python 3 library.
+
+Package: python3-rosmaster
+Description-md5: 48754b22aaf3d49193c67c321c17ffab
+Description-en: Robot OS Master implementation - Python 3
+ This package is part of Robot OS (ROS). The rosmaster package
+ implements the ROS Master. Most programs will not need to interact
+ with this package directly. The rosmaster is run automatically
+ whenever roscore is run and all communication with the Master happens
+ over XMLRPC APIs.
+ .
+ This package contains the Python 3 library.
+
+Package: python3-rosmsg
+Description-md5: f919b789b9a183600bf817be0da830bf
+Description-en: Command-line tools for displaying information about Robot OS - Python 3
+ This package is part of Robot OS (ROS). rosmsg is a command-line tool
+ for displaying information about ROS Message types. rossrv is a
+ command-line tool for displaying information about ROS Service types.
+ .
+ This package contains the Python 3 library.
+
+Package: python3-rosnode
+Description-md5: 7e7419e288132a623ea1a42a16a5fb0c
+Description-en: Tool for displaying debug information about Robot OS - Python 3
+ This package is part of Robot OS (ROS). rosnode is a command-line
+ tool for displaying debug information about ROS Nodes, including
+ publications, subscriptions and connections. It also contains an
+ experimental library for retrieving node information. This library is
+ intended for internal use only.
+ .
+ This package contains the Python 3 library.
+
+Package: python3-rosparam
+Description-md5: 44922c166ff3eb324f8c35a0fee79dba
+Description-en: Tool for getting and setting Robot OS Parameters - Python 3
+ This package is part of Robot OS (ROS). rosparam contains the
+ rosparam command-line tool for getting and setting ROS Parameters on
+ the parameter server using YAML-encoded files. It also contains an
+ experimental library for using YAML with the parameter server. This
+ library is intended for internal use only.
+ .
+ This package contains the Python 3 library.
+
+Package: python3-rospy
+Description-md5: b11d3c7248627508416efe19f16989d6
+Description-en: Python 3 client library for Robot OS
+ This package is part of Robot OS (ROS). The rospy client API enables
+ Python programmers to quickly interface with ROS topics, services,
+ and parameters. The design of rospy favors implementation speed
+ (i.e. developer time) over runtime performance so that algorithms can
+ be quickly prototyped and tested within ROS. It is also ideal for
+ non-critical-path code, such as configuration and initialization
+ code. Many of the ROS tools are written in rospy to take advantage of
+ the type introspection capabilities.
+ .
+ Many of the ROS tools, such as rostopic and rosservice, are built on
+ top of rospy.
+ .
+ This package contains the Python 3 library.
+
+Package: python3-rosservice
+Description-md5: 4a57c54b5128cb51bd1955e6cf0cbfdf
+Description-en: Command-line tool for listing and querying Robot OS services - Python 3
+ This package is part of Robot OS (ROS). rosservice contains the
+ rosservice command-line tool for listing and querying ROS
+ services. It also contains a Python library for retrieving
+ information about services and dynamically invoking them. The Python
+ library is experimental and is for internal-use only.
+ .
+ This package contains the Python 3 library.
+
+Package: python3-rostest
+Description-md5: 3aed52d323aa5fdb0c798f65adb36580
+Description-en: Test suite for Robot OS based on roslaunch - Python 3
+ This package is part of Robot OS (ROS). rostest is an extension to
+ roslaunch that enables roslaunch files to be used as test
+ fixtures. As a fully running system has more complex behaviors than
+ an individual ROS node, this allows you to do full integration
+ testing across multiple nodes. It is compatible with xUnit
+ frameworks.
+ .
+ This package contains the Python 3 library.
+
+Package: python3-rostopic
+Description-md5: e15129dd5880c96b1ded221e6185df53
+Description-en: Tool for displaying debug information about Robot OS Topics - Python 3
+ This package is part of Robot OS (ROS). This tool helps debugging by
+ showing debug information about ROS Topics, including publishers,
+ subscribers, publishing rate, and ROS Messages. It also contains an
+ experimental Python library for getting information about, and
+ interacting with, topics dynamically. This library is for internal use
+ only as the code API may change, though it does provide examples of
+ how to implement dynamic subscription and publication behaviors in
+ ROS.
+ .
+ This package contains the Python 3 library.
+
+Package: python3-roswtf
+Description-md5: d7fd33ba06d914e905eb7593ff3c4870
+Description-en: Tool for diagnosing issues with a running Robot OS system - Python 3
+ This package is part of Robot OS (ROS). roswtf looks for many, many
+ things, and the list is always growing. There are two categories of
+ things that it looks for: file-system issues and online/graph issues.
+ .
+ For file-system issues, roswtf looks at your environment variables, package
+ configurations, stack configurations, and more. It can also take in a
+ roslaunch file and attempt to find any potential configuration issues in it,
+ such as packages that haven't been built properly.
+ .
+ For online issues, roswtf examines the state of your current graph and tries
+ to find any potential issues. These issues might be unresponsive nodes,
+ missing connections between nodes, or potential machine-configuration issues
+ with roslaunch.
+ .
+ This package contains the Python 3 library.
+
+Package: python3-topic-tools
+Description-md5: fc0c46aa8951e6fef52bc701a5fb4600
+Description-en: Python 3 library for working with Robot OS topics
+ This package is part of Robot OS (ROS). It contains the Python
+ interface to the tools for directing, throttling, selecting, and
+ otherwise messing with ROS topics at a meta level.
+ .
+ This package contains the Python 3 library.
+
+Package: ros-roscpp-msg
+Description-md5: c7ed9c2fbe7f2858f2061cb95a54d8aa
+Description-en: Robot OS definitions of roscpp messages
+ This package is part of Robot OS (ROS). roscpp is a C++ implementation of ROS.
+ It provides a client library that enables C++ programmers to quickly interface
+ with ROS topics, services, and
+ parameters.
+ .
+ roscpp is the most widely used ROS client library and is designed to be the
+ high-performance library for ROS. ROS console output library.
+ .
+ This package contains the message definitions.
+
+Package: ros-topic-tools-srvs
+Description-md5: 6cf560ceb93d25b7f28d7c075eca32ef
+Description-en: service templates files for libtopic-tools (Robot OS)
+ This package is part of Robot OS (ROS). It contains development files
+ for the libtopic-tools library, which provides tools for directing,
+ throttling, selecting, and otherwise messing with ROS topics at a
+ meta level.
+ .
+ This contains the service files
+
+Package: rosout
+Description-md5: 9b3b21f28073a535790e063c30fae749
+Description-en: Robot OS system-wide logging mechanism
+ This package is part of Robot OS (ROS). rosout is the name of the
+ console log reporting mechanism in ROS. It can be thought of as
+ comprising several components:
+  * The `rosout` node for subscribing, logging, and republishing the
+    messages.
+  * The /rosout topic
+  * The /rosout_agg topic for subscribing to an aggregated feed
+
+Package: topic-tools
+Description-md5: 9d8940e909f6614d34ff6faf063cf9ee
+Description-en: Tools for messing with Robot OS topics
+ This package is part of Robot OS (ROS). It contains tools for directing,
+ throttling, selecting, and otherwise messing with ROS topics at a
+ meta level. None of the programs in this package actually know about
+ the topics whose streams they are altering; instead, these tools deal
+ with messages as generic binary blobs. This means they can be applied
+ to any ROS topic.
 
 Package: cl-rosgraph-msgs
 Description-md5: 957ebdcca945095b82897d2d762501a3
@@ -631599,6 +633778,32 @@ Description-en: Message definitions for Standard Robot OS Messages
  also contains the Empty type, which is useful for sending an empty
  signal.
 
+Package: liburdf-dev
+Description-md5: efe89c9f2d1019da8fbb219fdfd77562
+Description-en: Development files for ROS urdf library
+ The Unified Robot Description Format (URDF) for the Robot Operating System
+ (ROS) is an XML format for representing a robot model.
+ This library provides a C++ parser for the URDF.
+ .
+ This package contains the development files for the library.
+
+Package: liburdf-parser-plugin-dev
+Description-md5: 26ec6221f8edc32e2733ba7c154b02d5
+Description-en: Development files for ROS urdf_parser_plugin library
+ The Unified Robot Description Format (URDF) for the Robot Operating System
+ (ROS) is an XML format for representing a robot model.
+ .
+ This package contains a C++ base class for URDF parsers.
+
+Package: liburdf1d
+Description-md5: 2f0cdfed08a806930ff49d4715533732
+Description-en: ROS urdf library
+ The Unified Robot Description Format (URDF) for the Robot Operating System
+ (ROS) is an XML format for representing a robot model.
+ This library provides a C++ parser for the URDF.
+ .
+ This package contains the library.
+
 Package: vcstool
 Description-md5: f3d8db5018fd925fabbd37e1e8e3b789
 Description-en: Command line tool to make working with multiple repositories easier
@@ -631617,6 +633822,63 @@ Description-en: VCS/SCM Python source control library for svn, git, hg, and bzr 
  API is manipulating on-disk checkouts of source-controlled trees.
  .
  This package installs the library for Python 3.
+
+Package: libcv-bridge-dev
+Description-md5: 759aafa3eccff17d60a7bab270cfcb75
+Description-en: cv_bridge Robot OS package - development
+ This package is part of Robot OS (ROS). It contains development files for
+ CvBridge, which converts between ROS Image messages and OpenCV images.
+ .
+ This package contains the development files.
+
+Package: libcv-bridge2d
+Description-md5: 999c7ebb4db0a9b0cd19d1c98bd3ebcb
+Description-en: cv_bridge Robot OS package
+ This package is part of Robot OS (ROS). It contains the library for
+ CvBridge, which converts between ROS Image messages and OpenCV images.
+ .
+ This package contains the library itself.
+
+Package: libimage-geometry-dev
+Description-md5: 98529b19e7996bcf95778ef90df49c25
+Description-en: image_geometry Robot OS package - development
+ This package is part of Robot OS (ROS). It contains libraries for interpreting
+ images geometrically. It interfaces the calibration parameters in
+ sensor_msgs/CameraInfo messages with OpenCV functions such as
+ image rectification, much as cv_bridge interfaces ROS sensor_msgs/Image with
+ OpenCV data types.
+ .
+ This package contains the C++ development library.
+
+Package: libimage-geometry1d
+Description-md5: d64436dbebd8ff9dfbfe18dd031b946d
+Description-en: image_geometry Robot OS package - runtime
+ This package is part of Robot OS (ROS). It contains libraries for interpreting
+ images geometrically. It interfaces the calibration parameters in
+ sensor_msgs/CameraInfo messages with OpenCV functions such as
+ image rectification, much as cv_bridge interfaces ROS sensor_msgs/Image with
+ OpenCV data types.
+ .
+ This package contains the C++ library.
+
+Package: python3-cv-bridge
+Description-md5: ebab9b16328c84738737beb80aa50be6
+Description-en: cv_bridge ROS package - Python 3 bindings
+ This package is part of Robot OS (ROS). It contains the Python interface for
+ CvBridge, which converts between ROS Image messages and OpenCV images.
+ .
+ This package contains Python 3 code.
+
+Package: python3-image-geometry
+Description-md5: 8bb5f3f03e6e5da18f1109fa34959694
+Description-en: image_geometry Robot OS package - Python 3 bindings
+ This package is part of Robot OS (ROS). It contains libraries for interpreting
+ images geometrically. It interfaces the calibration parameters in
+ sensor_msgs/CameraInfo messages with OpenCV functions such as
+ image rectification, much as cv_bridge interfaces ROS sensor_msgs/Image with
+ OpenCV data types.
+ .
+ This package contains the Python 3 interface.
 
 Package: ament-cmake
 Description-md5: d507bff13cb36c5543ed37a6a42ef5aa
@@ -631697,6 +633959,37 @@ Description-en: ROS 2 test domain coordinator
  This package is part of ROS 2, the Robot Operating System.
  It provides the means to isolate concurrently running ROS 2
  test suites by providing locally unique ROS_DOMAIN_IDs.
+
+Package: libament-index-cpp-dev
+Description-md5: 57d613d7a8d434c8d4002893f8ee4005
+Description-en: Fast resource indexing for ROS 2 packages (C++ headers)
+ The ament build system is the most common way to build packages for ROS 2.
+ ament_index is a filesystem-based resource management system which is
+ designed to allow queries on installed ROS 2 packages without crawling
+ the filesystem.
+ .
+ This package installs the C++ development files and headers for the C++
+ client library.
+
+Package: libament-index-cpp0d
+Description-md5: b59ed2be1c9b5f2f1c0c71e6381db051
+Description-en: Fast resource indexing for ROS 2 packages (C++ library)
+ The ament build system is the most common way to build packages for ROS 2.
+ ament_index is a filesystem-based resource management system which is
+ designed to allow queries on installed ROS 2 packages without crawling
+ the filesystem.
+ .
+ This package installs the shared library for resource queries from C++.
+
+Package: python3-ament-index
+Description-md5: c1ded9316105ab3b61a8edf9d443dfb1
+Description-en: Fast resource indexing for ROS 2 packages (Python 3 module)
+ The ament build system is the most common way to build packages for ROS 2.
+ ament_index is a filesystem-based resource management system which is
+ designed to allow queries on installed ROS 2 packages without crawling
+ the filesystem.
+ .
+ This package installs the Python 3 module to query the resource index.
 
 Package: ament-cmake-clang-format
 Description-md5: 1ada2880ffebf402dc00357a735fb31d
@@ -647440,6 +649733,11 @@ Description-md5: 12325481d629eb510cc33ff07ea5466a
 Description-en: ANSI text styling - Rust source code
  Source code for Debianized Rust crate "anstyle"
 
+Package: librust-anstyle-hyperlink-dev
+Description-md5: 25a0c245a458bd2ab28bd7495f5792c2
+Description-en: ANSI escape code hyperlinks (OSC 8) - Rust source code
+ Source code for Debianized Rust crate "anstyle-hyperlink"
+
 Package: librust-anstyle-lossy-dev
 Description-md5: 0af8514aa260568499273f5d52c82227
 Description-en: Lossy conversion between ANSI Color Codes - Rust source code
@@ -647945,6 +650243,13 @@ Package: librust-assert2-macros-dev
 Description-md5: 8864899de23551a95bafe899e2be3f4c
 Description-en: Procedural macros for assert2 - Rust source code
  Source code for Debianized Rust crate "assert2-macros"
+
+Package: librust-assertables-dev
+Description-md5: 1a6856b4854d0f212d3394ce56ecf463
+Description-en: assert macros for testing, debug and QA - Rust source code
+ assert macros for better testing, debugging, quality assurance, and
+ runtime reliability
+ Source code for Debianized Rust crate "assertables"
 
 Package: librust-assign-dev
 Description-md5: 97cd3f34d10979834ce6b1614b35ca2b
@@ -650232,6 +652537,11 @@ Description-md5: 1d040da2930c06167bd6d6041b665e9d
 Description-en: Deserialization schemas for Cargo - Rust source code
  Source code for Debianized Rust crate "cargo-util-schemas"
 
+Package: librust-cargo-util-terminal-dev
+Description-md5: fedb2d5c6a901ef41359afefa606edd1
+Description-en: Cargo's terminal rendering - Rust source code
+ Source code for Debianized Rust crate "cargo-util-terminal"
+
 Package: cargo-vendor-filterer
 Description-md5: ea44f0f8d4d2e24584f002c172bc312f
 Description-en: `cargo vendor`, but with filtering for platforms and more
@@ -652149,6 +654459,16 @@ Description-en: Dashu arbitrary-precision number library - Rust source code
  .
  Source code for Debianized Rust crate "dashu-base"
 
+Package: librust-dashu-int-dev
+Description-md5: e4ac02a1f5a076b271503d95b4814bf2
+Description-en: Arbitrary-precision integer math library for Rust, balancing ergonomics and efficiency - Rust source code
+ Provides UBig and IBig (unsigned and signed), with small values inlined on the
+ stack. Efficient arithmetic, modular arithmetic, and number theory (pow, ilog,
+ gcd, gcd_ext); two's-complement bit operations; parsing and formatting in base
+ 2-36; optional serde, rand, num-traits, rkyv, and zeroize.
+ .
+ Source code for Debianized Rust crate "dashu-int"
+
 Package: librust-dasp-sample-dev
 Description-md5: 073cb00db05e6a92928834cd2cb3c7da
 Description-en: Abstraction for audio PCM DSP samples, along with useful conversions and operations - Rust source code
@@ -653366,6 +655686,11 @@ Description-en: du + rust = dust. Like du but more intuitive.
  larger ones. There is no need for a '-d' flag or a '-h' flag. The largest
  subdirectories will be colored. Optionally it can print its output in JSON
  format.
+
+Package: librust-dua-core-dev
+Description-md5: d1ced46ada2f80d01d95f9fe29b7283b
+Description-en: Fast parallel filesystem traversal iterators - Rust source code
+ Source code for Debianized Rust crate "dua-core"
 
 Package: librust-duct-dev
 Description-md5: 2235d81d7cc580e6020b9d038d6afd39
@@ -702028,29 +704353,29 @@ Description-en: Simple namespaced plugin facility (Python 3)
  This package installs the library for Python 3.
 
 Package: strawberry
-Description-md5: ca49d95c10dcc343b76ac55dcab5238d
+Description-md5: 4dfc752d7ba4a3a6f7b12bb9db3f1681
 Description-en: audio player and music collection organizer
  Strawberry is a music player aimed at music collectors and audiophiles.
  It is a fork of Clementine. The name is inspired by the band Strawbs.
  .
  Features:
   - Play and organize music
-  - Supports WAV, FLAC, WavPack, Ogg Vorbis, Speex, MPC, TrueAudio,
-  -   AIFF, MP4, MP3 and ASF
+  - Supports WAV, FLAC, WavPack, Ogg Vorbis, Speex,
+  -    MPC, TrueAudio, AIFF, MP4, MP3 and ASF
   - Audio CD playback
   - Native desktop notifications
-  - Playlist management
-  - Playlists in multiple formats
-  - Advanced audio and device configuration for bit-perfect playback on Linux
+  - Playlist management and playlists in multiple formats
+  - Smart and dynamic playlists
+  - Advanced audio output and device configuration for bit-perfect playback
   - Edit tags on audio files
   - Automatically retrieve tags from MusicBrainz
-  - Album cover art from Last.fm, Musicbrainz, Discogs, Musixmatch, Deezer,
-  -   Tidal, Qobuz and Spotify
+  - Album cover art from Last.fm, Musicbrainz, Discogs, Musixmatch,
+  - Deezer, Tidal, Qobuz and Spotify
   - Lyrics from multiple sources
   - Audio analyzer
   - Audio equalizer
-  - Transfer music to mass-storage USB players, MTP compatible devices
-  -   and iPod Nano/Classic
+  - Transfer music to mass-storage USB players,
+  - MTP compatible devices and iPod Nano/Classic
   - Scrobbler with support for Last.fm and ListenBrainz
   - Streaming support for Subsonic-compatible servers
   - Unofficial streaming support for Tidal and Qobuz

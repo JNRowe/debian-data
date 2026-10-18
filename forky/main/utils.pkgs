@@ -1061,8 +1061,8 @@ MD5sum: ccc9d033bf3c063225f5ba926a5718bc
 SHA256: fe39aa53e106fd131abef4a43a49f4f65f6ecf9eda7872b978ca4f7971426f59
 
 Package: apt-listchanges
-Version: 4.8+nmu3
-Installed-Size: 562
+Version: 4.8.1
+Installed-Size: 563
 Maintainer: Jonathan Kamens <jik@kamens.us>
 Architecture: all
 Depends: apt, python3-apt, python3-debconf, sensible-utils, ucf, debconf (>= 0.5) | debconf-2.0, python3:any
@@ -1076,10 +1076,10 @@ Tag: admin::package-management, implemented-in::python,
  use::viewing, works-with::logfile, works-with::software:package
 utils
 Priority: standard
-Filename: pool/main/a/apt-listchanges/apt-listchanges_4.8+nmu3_all.deb
-Size: 150992
-MD5sum: e37afed8dd9339050a8b1135d254b207
-SHA256: 5f4a2e596116856f36e8fb77406ad9e7a5c6b19a85ca070dacf627672be84224
+Filename: pool/main/a/apt-listchanges/apt-listchanges_4.8.1_all.deb
+Size: 151176
+MD5sum: f573c7aa7a7e6a8ab88ae95dd50e951e
+SHA256: 84f175c3e6007c8ed862c0f77d13697a5770c9c99cce84e045d095ea530e5d22
 
 Package: apt-listdifferences
 Version: 1.20230122
@@ -6309,43 +6309,66 @@ MD5sum: 3ac3ec72b25c4e0fe0b9403726ae9d96
 SHA256: 94efe98ccce7731ca53b6ca6892cacc3073688caad5d749ac80f503489f4d83e
 
 Package: ddccontrol
-Version: 3.3.0-1
-Installed-Size: 442
+Version: 3.4.0-1
+Installed-Size: 1226
 Maintainer: Barak A. Pearlmutter <bap@debian.org>
 Architecture: amd64
-Depends: ddccontrol-db, libc6 (>= 2.38), libddccontrol1 (>= 3.3.0)
+Depends: ddccontrol-db, libc6 (>= 2.38), libddccontrol1 (>= 3.4.0), libgcc-s1 (>= 4.2)
 Description: program to control monitor parameters
 Homepage: https://github.com/ddccontrol/ddccontrol
+Commands: ddccontrol, ddccontrol-scanmonitor
 Description-md5: 73e807fcbf61795d84a52bb8883e6296
+Static-Built-Using: librust-block-buffer-0.10-dev (= 0.10.4-1), librust-cfg-if-dev (= 1.0.4-1+b1), librust-ciborium-dev (= 0.2.2-3), librust-ciborium-io-dev (= 0.2.2-1+b1), librust-ciborium-ll-dev (= 0.2.2-2+b1), librust-cpufeatures-0.2-dev (= 0.2.17-1), librust-crunchy-dev (= 0.2.2-1+b2), librust-crypto-common-0.1-dev (= 0.1.7-2), librust-digest-0.10-dev (= 0.10.7-1), librust-encoding-rs-dev (= 0.8.35-1+b1), librust-generic-array-0.14-dev (= 0.14.9-2), librust-half-dev (= 2.7.1-2), librust-libc-dev (= 0.2.186-1), librust-proc-macro2-dev (= 1.0.107-1), librust-quote-dev (= 1.0.47-1), librust-roxmltree-dev (= 0.20.0-1+b1), librust-serde-core-dev (= 1.0.229-1), librust-serde-derive-dev (= 1.0.229-3), librust-serde-dev (= 1.0.229-1), librust-sha2-0.10-dev (= 0.10.9-2), librust-syn-dev (= 3.0.6-1), librust-typenum-dev (= 1.20.1-1), librust-unicode-ident-dev (= 1.0.24-1), librust-version-check-dev (= 0.9.5-1+b1), librust-zerocopy-derive-dev (= 0.8.26-4), librust-zerocopy-dev (= 0.8.26-4+b1)
 Tag: hardware::video, interface::commandline, role::program, scope::utility,
  use::configuring
 utils
 Priority: optional
-Filename: pool/main/d/ddccontrol/ddccontrol_3.3.0-1_amd64.deb
-Size: 80476
-MD5sum: f305847fca143c454d24f92658cb8bae
-SHA256: 1ef27d9b7fd84e2b0262d49d889cd0d3e45fea56dabd9e835aac28918fdcab5f
+Filename: pool/main/d/ddccontrol/ddccontrol_3.4.0-1_amd64.deb
+Size: 442480
+MD5sum: 7068a93a26d90ae0cf5861adcc6bef60
+SHA256: ef74517f0e6d4142093c66650cd31bdf9fd13a7bfe95b96a21fc5391957f4ffe
+
+Package: ddccontrol-dbgen
+Source: ddccontrol
+Version: 3.4.0-1
+Installed-Size: 937
+Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 4.2)
+Description: generator for the ddccontrol binary monitor database
+Multi-Arch: foreign
+Homepage: https://github.com/ddccontrol/ddccontrol
+Commands: ddccontrol-dbgen
+Description-md5: fb79c33fb96a3c7a17eb53ebe725f3d4
+Static-Built-Using: librust-block-buffer-0.10-dev (= 0.10.4-1), librust-cfg-if-dev (= 1.0.4-1+b1), librust-ciborium-dev (= 0.2.2-3), librust-ciborium-io-dev (= 0.2.2-1+b1), librust-ciborium-ll-dev (= 0.2.2-2+b1), librust-cpufeatures-0.2-dev (= 0.2.17-1), librust-crunchy-dev (= 0.2.2-1+b2), librust-crypto-common-0.1-dev (= 0.1.7-2), librust-digest-0.10-dev (= 0.10.7-1), librust-encoding-rs-dev (= 0.8.35-1+b1), librust-generic-array-0.14-dev (= 0.14.9-2), librust-half-dev (= 2.7.1-2), librust-libc-dev (= 0.2.186-1), librust-proc-macro2-dev (= 1.0.107-1), librust-quote-dev (= 1.0.47-1), librust-roxmltree-dev (= 0.20.0-1+b1), librust-serde-core-dev (= 1.0.229-1), librust-serde-derive-dev (= 1.0.229-3), librust-serde-dev (= 1.0.229-1), librust-sha2-0.10-dev (= 0.10.9-2), librust-syn-dev (= 3.0.6-1), librust-typenum-dev (= 1.20.1-1), librust-unicode-ident-dev (= 1.0.24-1), librust-version-check-dev (= 0.9.5-1+b1), librust-zerocopy-derive-dev (= 0.8.26-4), librust-zerocopy-dev (= 0.8.26-4+b1)
+utils
+Priority: optional
+Filename: pool/main/d/ddccontrol/ddccontrol-dbgen_3.4.0-1_amd64.deb
+Size: 415764
+MD5sum: cbb4f5563b84d559ad9489d3c43246a7
+SHA256: 2ed15e48f877cca9acdbcefe172ecde3ebb1e095a7fab53580a8a0a443999008
 
 Package: gddccontrol
 Source: ddccontrol
-Version: 3.3.0-1
-Installed-Size: 108
+Version: 3.4.0-1
+Installed-Size: 110
 Maintainer: Barak A. Pearlmutter <bap@debian.org>
 Architecture: amd64
-Depends: ddccontrol (= 3.3.0-1), libatk1.0-0t64 (>= 1.12.4), libc6 (>= 2.34), libcairo2 (>= 1.2.4), libddccontrol1 (>= 3.3.0), libglib2.0-0t64 (>= 2.32.0), libgtk-3-0t64 (>= 3.21.4), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0)
+Depends: ddccontrol (= 3.4.0-1), libatk1.0-0t64 (>= 1.12.4), libc6 (>= 2.34), libcairo2 (>= 1.2.4), libddccontrol1 (>= 3.4.0), libglib2.0-0t64 (>= 2.32.0), libgtk-3-0t64 (>= 3.21.4), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0)
 Enhances: ddccontrol
 Description: program to control monitor parameters (graphical interface)
 Homepage: https://github.com/ddccontrol/ddccontrol
+Commands: gddccontrol
 Description-md5: 230512d347910986616da4777d340cf3
 Tag: admin::configuring, implemented-in::c, interface::graphical,
  interface::x11, role::program, scope::utility, uitoolkit::gtk,
  use::configuring, x11::application
 utils
 Priority: optional
-Filename: pool/main/d/ddccontrol/gddccontrol_3.3.0-1_amd64.deb
-Size: 37604
-MD5sum: cdb6dd13b9585f71bdcce4735d500dd3
-SHA256: be9084635955ba9f112df5263aa109bdb85211d5ab92e71913036de88a6888de
+Filename: pool/main/d/ddccontrol/gddccontrol_3.4.0-1_amd64.deb
+Size: 39784
+MD5sum: 9de0f0d84a7656f9f479a0859aa791f1
+SHA256: 97983e315fe2ebd24e263c61eb0d1dc1c893222d18880ca0530c55b4244fa7d1
 
 Package: ddccontrol-db
 Version: 20260922-1
@@ -7354,9 +7377,9 @@ MD5sum: ee4c4a0d5e1b65e44ddc1048910339fa
 SHA256: 164e174cf1bd32b0a2bda3cd4f7e418b623abf94110e9854e16ab400573b2e61
 
 Package: dl-distro
-Version: 2.4.10-1
+Version: 2.4.10-2
 Installed-Size: 52
-Maintainer: Seyed Mohamad Amin Modaresi <modaresisofthard@proton.me>
+Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: all
 Depends: wget, gnupg, jq, minisign, signify-openbsd
 Description: Bash script for downloading and verifying OS images
@@ -7365,10 +7388,10 @@ Homepage: https://codeberg.org/bashuser30/dl-distro
 Description-md5: ddb6c79c96648d366dc755405d4ec630
 utils
 Priority: optional
-Filename: pool/main/d/dl-distro/dl-distro_2.4.10-1_all.deb
-Size: 13376
-MD5sum: 0e185233a86ab2ec9fccea27704c5b68
-SHA256: 78fbfb970c8531003978af85d9110f9506ad8f519879704bbccb45c66051605d
+Filename: pool/main/d/dl-distro/dl-distro_2.4.10-2_all.deb
+Size: 13460
+MD5sum: 2aa483345e53463936a9bb45d9e45d97
+SHA256: be395c9391a80eac9cf2f2748933d3007ca39bd6d97e430eb983c43a9190fbbe
 
 Package: dlocate
 Version: 1.18.1
@@ -22324,7 +22347,7 @@ SHA256: fc625c8aae6cfc8ab530e4c670a2fe03624daea69935c028fef0a0502e88a855
 
 Package: zipcmp
 Source: libzip
-Version: 1.12-1
+Version: 1.12.1-1
 Installed-Size: 53
 Maintainer: Debian Libzip Maintainers <libzip@tracker.debian.org>
 Architecture: amd64
@@ -22338,14 +22361,14 @@ Tag: implemented-in::c, interface::commandline, role::program,
  works-with::archive
 utils
 Priority: optional
-Filename: pool/main/libz/libzip/zipcmp_1.12-1_amd64.deb
-Size: 20912
-MD5sum: 87f989b85a0d78057613d3a2a35ec5f1
-SHA256: b8b143f22c5b2454481fdfb70be9b399b5330e75c5196623f9caf709e176c54a
+Filename: pool/main/libz/libzip/zipcmp_1.12.1-1_amd64.deb
+Size: 21072
+MD5sum: 6773c118fa30944fd13990ae1e075fe7
+SHA256: 6888d4d11e108a4aa5ff2628d1b7bea838fa0759fc728e1e6d6f7d1c3a514b05
 
 Package: zipmerge
 Source: libzip
-Version: 1.12-1
+Version: 1.12.1-1
 Installed-Size: 37
 Maintainer: Debian Libzip Maintainers <libzip@tracker.debian.org>
 Architecture: amd64
@@ -22358,14 +22381,14 @@ Tag: implemented-in::c, interface::commandline, role::program,
  scope::utility, works-with-format::zip, works-with::archive
 utils
 Priority: optional
-Filename: pool/main/libz/libzip/zipmerge_1.12-1_amd64.deb
-Size: 15236
-MD5sum: 22e3f2f2a66716fcf32ab0ac3316954a
-SHA256: db847624039af8cd30050ea25ba91b54029ceb38b0c7c9512bb9b41ca4673811
+Filename: pool/main/libz/libzip/zipmerge_1.12.1-1_amd64.deb
+Size: 15412
+MD5sum: d3eea2595ea8fcf197445909d78e13c9
+SHA256: 3543c240b998210d5d7723d0bc9d10d83c1af182f7e7f07a9e4ee6699864d452
 
 Package: ziptool
 Source: libzip
-Version: 1.12-1
+Version: 1.12.1-1
 Installed-Size: 63
 Maintainer: Debian Libzip Maintainers <libzip@tracker.debian.org>
 Architecture: amd64
@@ -22376,10 +22399,10 @@ Homepage: https://libzip.org
 Description-md5: af7dd666a1c58fb99a8fce3b92e989da
 utils
 Priority: optional
-Filename: pool/main/libz/libzip/ziptool_1.12-1_amd64.deb
-Size: 23252
-MD5sum: 00344b7dc1642b52c21834ace5a3905b
-SHA256: 39dc6425f1b15da1bbcbdc5423b47856106d1195a7e049efd3fe4c785ffc6063
+Filename: pool/main/libz/libzip/ziptool_1.12.1-1_amd64.deb
+Size: 23432
+MD5sum: 747196978bb78c9dd507c297d82ba596
+SHA256: 9e2effe0847a9b46d339b4243d2fa31854ceb91e554d6356a3bf54bc78cd408c
 
 Package: zstd
 Source: libzstd
@@ -24505,8 +24528,8 @@ SHA256: 283172a5536a3b8f6fa03c01024e3eb3cf890fb980d1fc27106881f38cf6678d
 
 Package: libmetkit-data
 Source: metkit
-Version: 1.20.2-1
-Installed-Size: 727
+Version: 1.21.2-1
+Installed-Size: 959
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: all
 Description: Data used by the ECMWF Metkit Library
@@ -24515,29 +24538,47 @@ Homepage: https://github.com/ecmwf/metkit
 Description-md5: e17aed0c2e16f83f05902006ac4a1168
 utils
 Priority: optional
-Filename: pool/main/m/metkit/libmetkit-data_1.20.2-1_all.deb
-Size: 95836
-MD5sum: fa1f62fa66a31a487480e8998387499b
-SHA256: b725c1d3334c3c059591167e94edc051846f78de2d1960a6e09682dc93a9335c
+Filename: pool/main/m/metkit/libmetkit-data_1.21.2-1_all.deb
+Size: 143888
+MD5sum: 5d58888bce89a154ff7efa3987b6c94f
+SHA256: 40f693b6d7a4a726d88955e7b0e39f516d9c959c10dcd39464c2930f037c90e1
 
 Package: libmetkit-utils
 Source: metkit
-Version: 1.20.2-1
-Installed-Size: 314
+Version: 1.21.2-1
+Installed-Size: 582
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libmetkit0d (= 1.20.2-1), libc6 (>= 2.34), libeccodes0 (>= 2.48.2), libeckit0d (>= 2.2.0), libgcc-s1 (>= 3.0), libproj25 (>= 4.8.0), libstdc++6 (>= 13.1), python3:any
-Recommends: libmetkit-dev (= 1.20.2-1)
+Depends: libmetkit0d (= 1.21.2-1), libc6 (>= 2.34), libeccodes0 (>= 2.49.0), libeckit0d (>= 2.4.0), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1), python3:any
+Recommends: libmetkit-dev (= 1.21.2-1)
 Description: Utilities for the MetKit MARS access library
 Multi-Arch: foreign
 Homepage: https://github.com/ecmwf/metkit
+Commands: bufr-sanity-check, compare-mars-requests, convert-mars-request, create-binary-files, grib-to-mtg2, grib-to-request, mars-archive-script, odb-to-request, parse-mars-request
 Description-md5: 18ec69375ccc709635f8cf67931673dc
 utils
 Priority: optional
-Filename: pool/main/m/metkit/libmetkit-utils_1.20.2-1_amd64.deb
-Size: 73996
-MD5sum: 5da9b3ac6c209f8a6ade5050865a8233
-SHA256: 5860dc2f40ff3f426d05c9cbde91a2bdd7d1839158da109913a6463b6f9d705c
+Filename: pool/main/m/metkit/libmetkit-utils_1.21.2-1_amd64.deb
+Size: 110312
+MD5sum: 54f57517bfb1d9acd63a3ba96ab55324
+SHA256: a0b70324278836be1d5aeb073977469695af8ad0264307201876ebec89a7d740
+
+Package: python3-metkit
+Source: metkit
+Version: 1.21.2-1
+Installed-Size: 5447
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libmetkit0d (>= 1.21.2), libc6 (>= 2.32), libeckit0d (>= 2.4.0), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 14), python3 (<< 3.15), python3 (>= 3.14~), python3-findlibs, python3-pydantic, python3-requests, python3-yaml, python3:any
+Description: Python module for the MetKit MARS access library
+Homepage: https://github.com/ecmwf/metkit
+Description-md5: e9a0e1d9b46d3a88b9a3d8db6f8c9681
+utils
+Priority: optional
+Filename: pool/main/m/metkit/python3-metkit_1.21.2-1_amd64.deb
+Size: 414344
+MD5sum: c9c8e03cceeb005f914515a774fbcb8b
+SHA256: eaad74581b294eac66b9b6f64b5c5c39d8f7800eaab0e681410e66786fd7c1ee
 
 Package: mfiutil
 Version: 1.0.15-rivoreo-r2~rc-20250214-e8c6289-2
@@ -30935,11 +30976,11 @@ MD5sum: 0dd27c136d6a41c53ade4c27c1361fa1
 SHA256: a4919f831e5dc1da7480bac4311984b39ddc73c3bbe0c4bcdeab83ed5a2ef4bd
 
 Package: qtpass
-Version: 1.8.1-1
-Installed-Size: 3208
+Version: 1.8.3-1
+Installed-Size: 3210
 Maintainer: Philip Rinn <rinni@debian.org>
 Architecture: amd64
-Depends: gnupg, libqt6svg6, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libqt6core6t64 (>= 6.10.2), libqt6gui6 (>= 6.9.1), libqt6network6 (>= 6.1.2), libqt6widgets6 (>= 6.3.0), libstdc++6 (>= 11)
+Depends: gnupg, libqt6svg6, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libqt6core6t64 (>= 6.11.2), libqt6gui6 (>= 6.9.1), libqt6network6 (>= 6.1.2), libqt6widgets6 (>= 6.3.0), libstdc++6 (>= 11)
 Recommends: pass, pass-otp, pwgen
 Suggests: git
 Description: GUI for password manager pass
@@ -30951,10 +30992,10 @@ Tag: implemented-in::c++, interface::graphical, interface::x11,
  x11::application
 utils
 Priority: optional
-Filename: pool/main/q/qtpass/qtpass_1.8.1-1_amd64.deb
-Size: 1303632
-MD5sum: 50de0cf479f29dffd9f36dfa181778f0
-SHA256: c571d493423269eb511701ad90fc9e99891caf6f1341b879d5b2c64d487ea6f2
+Filename: pool/main/q/qtpass/qtpass_1.8.3-1_amd64.deb
+Size: 1306388
+MD5sum: fb52f00c2b07c59856f97008a2e5d30f
+SHA256: 46b42b79b2f59b2ca4fce4d25ac137891cce79837e5e2a090db7e74939120c4c
 
 Package: qdoc-qt5
 Source: qttools-opensource-src
@@ -32533,6 +32574,179 @@ Size: 746092
 MD5sum: 75883dd4e0538901543ec012bd5383c0
 SHA256: 32ef9325a6fb79c75166e3f387cca7a45160ad02365e8ac90e854314cdeb3e9d
 
+Package: tf-tools
+Source: ros-geometry (1.13.4-2)
+Version: 1.13.4-2+b2
+Installed-Size: 503
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: graphviz, python3, python3-tf, libboost-thread1.92.0 (>= 1.92.0), libc6 (>= 2.34), libgcc-s1 (>= 3.0), liblog4cxx15 (>= 1.5.0), librosconsole3d (>= 1.14.4), libroscpp-serialization0d (>= 0.7.3), libroscpp4t64 (>= 1.17.4+ds), librostime1d (>= 0.7.3), libstdc++6 (>= 13.1), libtf1d (>= 1.13.4), libxmlrpcpp3t64 (>= 1.17.4+ds)
+Description: Set of utilities to operate with the Robot OS tf lib
+Homepage: https://wiki.ros.org/geometry
+Description-md5: 3059bea0e4c703d87c7dfa7406e2ea1e
+utils
+Priority: optional
+Filename: pool/main/r/ros-geometry/tf-tools_1.13.4-2+b2_amd64.deb
+Size: 105016
+MD5sum: c1a71b6248bf85db8472dbdf3b121d2f
+SHA256: 356aa209f8ac56ed3e093c36a1b4183f42137846fd58218e132e132b4fb7f0c7
+
+Package: ros-camera-calibration
+Source: ros-image-pipeline
+Version: 1.17.0-2
+Installed-Size: 51
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: python3, python3-camera-calibration, python3-message-filters, python3-sensor-msgs, python3-std-srvs
+Description: ROS camera_calibration nodes
+Homepage: https://wiki.ros.org/image_pipeline
+Description-md5: 1047c477ce789cfb28537d1b12782c51
+utils
+Priority: optional
+Filename: pool/main/r/ros-image-pipeline/ros-camera-calibration_1.17.0-2_all.deb
+Size: 11760
+MD5sum: ab840acb431e459eb85a6b50231f973a
+SHA256: 689590abc1d61b4964cd6d683af3bd8e619bdbc163c1b7e602449ce446a3b8bc
+
+Package: ros-image-proc
+Source: ros-image-pipeline (1.17.0-2)
+Version: 1.17.0-2+b6
+Installed-Size: 55
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: libimage-proc-dev (<< 1.16.0-3)
+Depends: libimage-proc0d (>= 1.17.0), libc6 (>= 2.34), libgcc-s1 (>= 3.0), liblog4cxx15 (>= 1.5.0), libnodeletlib1d (>= 1.11.1), librosconsole3d (>= 1.14.4), libroscpp4t64 (>= 1.17.4+ds), libstdc++6 (>= 13.1), libxmlrpcpp3t64 (>= 1.17.4+ds)
+Breaks: libimage-proc-dev (<< 1.16.0-3)
+Description: ROS image_proc node
+Homepage: https://wiki.ros.org/image_pipeline
+Description-md5: e5dda32a265c707eefaf9fd4b6bdec79
+utils
+Priority: optional
+Filename: pool/main/r/ros-image-pipeline/ros-image-proc_1.17.0-2+b6_amd64.deb
+Size: 15700
+MD5sum: fb74b50424a9346ae0c34b7fb3ead0d5
+SHA256: 32c216ad62d54191efb956e48b051b590e1f0eabefd8636ba8a558ab4c82b52c
+
+Package: ros-image-publisher
+Source: ros-image-pipeline (1.17.0-2)
+Version: 1.17.0-2+b6
+Installed-Size: 36
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libimage-publisher0d, libc6 (>= 2.34), libgcc-s1 (>= 3.0), liblog4cxx15 (>= 1.5.0), libnodeletlib1d (>= 1.11.1), librosconsole3d (>= 1.14.4), libroscpp4t64 (>= 1.17.4+ds), libstdc++6 (>= 13.1)
+Description: ROS image-publisher node
+Homepage: https://wiki.ros.org/image_pipeline
+Description-md5: 67f825a24292b6afff744d91c6deeea9
+utils
+Priority: optional
+Filename: pool/main/r/ros-image-pipeline/ros-image-publisher_1.17.0-2+b6_amd64.deb
+Size: 10132
+MD5sum: d5cc77978a21a22996f8427549a70ae0
+SHA256: f6c011719606a23c19b0f890a01bf2311733fdc8de6015f48528129a5fc7bda8
+
+Package: ros-image-rotate
+Source: ros-image-pipeline (1.17.0-2)
+Version: 1.17.0-2+b6
+Installed-Size: 36
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libimage-rotate0d, libc6 (>= 2.34), libgcc-s1 (>= 3.0), liblog4cxx15 (>= 1.5.0), libnodeletlib1d (>= 1.11.1), librosconsole3d (>= 1.14.4), libroscpp4t64 (>= 1.17.4+ds), libstdc++6 (>= 13.1)
+Description: ROS image-rotate node
+Homepage: https://wiki.ros.org/image_pipeline
+Description-md5: 0e30a8fcc2c4b5b5a3455e200668670e
+utils
+Priority: optional
+Filename: pool/main/r/ros-image-pipeline/ros-image-rotate_1.17.0-2+b6_amd64.deb
+Size: 10204
+MD5sum: 1fced85b5d1f28a9ca9e0411f39bcb9c
+SHA256: 522b86de3d727f3ede6970fd4e9bfef567c56f00c06cc835c328c00b0fcbd120
+
+Package: ros-image-view
+Source: ros-image-pipeline (1.17.0-2)
+Version: 1.17.0-2+b6
+Installed-Size: 896
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libimage-view0d, python3, python3-image-view, libc6 (>= 2.34), libcamera-calibration-parsers0t64 (>= 1.12.1), libcv-bridge2d (>= 1.16.2+ds), libgcc-s1 (>= 3.0), libimage-transport0t64 (>= 1.12.1), liblog4cxx15 (>= 1.5.0), libmessage-filters1t64 (>= 1.17.4+ds), libnodeletlib1d (>= 1.11.1), libopencv-core410 (>= 4.10.0+dfsg), libopencv-highgui410 (>= 4.10.0+dfsg), libopencv-imgcodecs410 (>= 4.10.0+dfsg), libopencv-videoio410 (>= 4.10.0+dfsg), librosconsole3d (>= 1.14.4), libroscpp-serialization0d (>= 0.7.3), libroscpp4t64 (>= 1.17.4+ds), librostime1d (>= 0.7.3), libstdc++6 (>= 13.1)
+Description: ROS image_view node
+Homepage: https://wiki.ros.org/image_pipeline
+Description-md5: 7d3a0ed4f4fa03c1e90e851095860dbd
+utils
+Priority: optional
+Filename: pool/main/r/ros-image-pipeline/ros-image-view_1.17.0-2+b6_amd64.deb
+Size: 196628
+MD5sum: c9faaec7843aaf6bdba4a3d9eceb19b1
+SHA256: 47f97e5e22f1dcc83aeca8fd0576b95b44bc8c017897a30c41cccdb8d2224484
+
+Package: ros-stereo-image-proc
+Source: ros-image-pipeline (1.17.0-2)
+Version: 1.17.0-2+b6
+Installed-Size: 64
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libstereo-image-proc0d, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libimage-proc0d (>= 1.17.0), liblog4cxx15 (>= 1.5.0), libnodeletlib1d (>= 1.11.1), librosconsole3d (>= 1.14.4), libroscpp4t64 (>= 1.17.4+ds), libstdc++6 (>= 13.1), libxmlrpcpp3t64 (>= 1.17.4+ds)
+Description: ROS stereo_image_proc node
+Homepage: https://wiki.ros.org/image_pipeline
+Description-md5: 2f6ef9bac8d6130ffd91dc27cd234ee0
+utils
+Priority: optional
+Filename: pool/main/r/ros-image-pipeline/ros-stereo-image-proc_1.17.0-2+b6_amd64.deb
+Size: 19004
+MD5sum: b194ea8414394964b00d9a8cb8c13d74
+SHA256: ed7bb458daa16cfd50dee0adf11d3dca7497eee589b6f7833079035456b5b1ae
+
+Package: joint-state-publisher
+Source: ros-joint-state-publisher
+Version: 1.15.2-1
+Installed-Size: 53
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: python3-rospy, python3-sensor-msgs, python3:any
+Recommends: joint-state-publisher-gui, ros-robot-state-publisher
+Description: ROS joint_state_publisher
+Homepage: https://wiki.ros.org/joint_state_publisher
+Description-md5: 964bb3bf1da5d143f3c1632ac7bd0c8a
+utils
+Priority: optional
+Filename: pool/main/r/ros-joint-state-publisher/joint-state-publisher_1.15.2-1_all.deb
+Size: 10392
+MD5sum: 622ba07ebf6ab36e07ab82945d59af4f
+SHA256: ad41defe843927ea510d09bfbbd37dbab7a5bce6cc8c81715330818c9c8a99c9
+
+Package: joint-state-publisher-gui
+Source: ros-joint-state-publisher
+Version: 1.15.2-1
+Installed-Size: 51
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: joint-state-publisher, python3-pyqt5, python3:any
+Description: ROS joint_state_publisher_gui
+Homepage: https://wiki.ros.org/joint_state_publisher
+Description-md5: d389ee2883e0336e86e7a2187bb43036
+utils
+Priority: optional
+Filename: pool/main/r/ros-joint-state-publisher/joint-state-publisher-gui_1.15.2-1_all.deb
+Size: 10000
+MD5sum: ac977fa3e63af68d08b00a6412d3dc32
+SHA256: f7aebc6c1318dc6ebda2d4b90be5b610c88466cd8862405bf123a82bc4e161e5
+
+Package: ros-opencv-apps
+Source: ros-opencv-apps (2.0.2-10)
+Version: 2.0.2-10+b6
+Installed-Size: 774
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), liblog4cxx15 (>= 1.5.0), libnodeletlib1d (>= 1.11.1), librosconsole3d (>= 1.14.4), libroscpp4t64 (>= 1.17.4+ds), libstdc++6 (>= 13.1)
+Description: opencv_apps Robot OS package - apps
+Homepage: https://wiki.ros.org/opencv_apps
+Description-md5: 0c5a2f2f286a425c52a50fe3bfa90fea
+utils
+Priority: optional
+Filename: pool/main/r/ros-opencv-apps/ros-opencv-apps_2.0.2-10+b6_amd64.deb
+Size: 28364
+MD5sum: 4662e3c5b6209afdf1ad417f0bd23bb8
+SHA256: 2af5be05e281ad9935b44d2aeba58673010067153129804bcaa5387382dadec1
+
 Package: rosbash
 Source: ros-ros
 Version: 1.15.10-1
@@ -32551,6 +32765,23 @@ Filename: pool/main/r/ros-ros/rosbash_1.15.10-1_all.deb
 Size: 22280
 MD5sum: 6045108de2b8848eeff0f775563da09f
 SHA256: 26a5f9f974dacfc54cca601c6d1c946f7d5c5ee2c383238b7b8cf06f7d2f636e
+
+Package: topic-tools
+Source: ros-ros-comm (1.17.4+ds-4)
+Version: 1.17.4+ds-4+b3
+Installed-Size: 658
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Depends: python3, libc6 (>= 2.38), libgcc-s1 (>= 3.0), liblog4cxx15 (>= 1.5.0), librosconsole3d (>= 1.14.4), libroscpp-serialization0d (>= 0.7.3), libroscpp4t64 (>= 1.17.4+ds), librostime1d (>= 0.7.3), libstdc++6 (>= 13.1), libtopic-tools2t64 (>= 1.17.4+ds), libxmlrpcpp3t64 (>= 1.17.4+ds)
+Description: Tools for messing with Robot OS topics
+Homepage: https://wiki.ros.org/ros_comm
+Description-md5: 9d8940e909f6614d34ff6faf063cf9ee
+utils
+Priority: optional
+Filename: pool/main/r/ros-ros-comm/topic-tools_1.17.4+ds-4+b3_amd64.deb
+Size: 126256
+MD5sum: 00b330d63c865e562cc4cc73511e3532
+SHA256: f4ff973eb0ec51c82fe32f5a0ccf63606b71f72c04974bbea28a17d06d08a6f0
 
 Package: rospack-tools
 Source: ros-rospack (2.6.4-2)
@@ -33303,21 +33534,21 @@ MD5sum: f471204fc4c63c6eee353686461d685f
 SHA256: c6b9faba1218748f8351f6c62f3a0fafeda32f79fcd0e168f1b4adb837d6f40c
 
 Package: rust-coreutils
-Version: 0.10.0-1
-Installed-Size: 18129
+Version: 0.12.0-1
+Installed-Size: 18382
 Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
 Architecture: amd64
-Depends: libc6 (>= 2.39), libgcc-s1 (>= 4.2), libselinux1 (>= 3.1~)
+Depends: libc6 (>= 2.43), libgcc-s1 (>= 4.2), libselinux1 (>= 3.1~), libssl3t64 (>= 3.0.0), libsystemd0 (>= 254)
 Description: Universal coreutils utils, written in Rust
 Multi-Arch: allowed
 Homepage: https://github.com/uutils/coreutils
 Description-md5: a1493c3903ec45d30f8f490cebb19663
 utils
 Priority: optional
-Filename: pool/main/r/rust-coreutils/rust-coreutils_0.10.0-1_amd64.deb
-Size: 4759760
-MD5sum: 3fecc1b4cb1d8a0011b41e31666db9a4
-SHA256: 3196c8566f398179dcad5750fdd7a14c3fd15f1207d183f0dc56e6a9d6aa55a8
+Filename: pool/main/r/rust-coreutils/rust-coreutils_0.12.0-1_amd64.deb
+Size: 4982588
+MD5sum: 30417728cb7f6df017d88c5da06d8656
+SHA256: 02489065182af2548ebe3b398f34809b3b8cbc0add3d65d46cade8f087a59873
 
 Package: cotp
 Source: rust-cotp
