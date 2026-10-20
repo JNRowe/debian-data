@@ -7099,23 +7099,44 @@ MD5sum: a9e097be45e5fafcf90e60120aee8ea5
 SHA256: 171dacf62540fa6b59dd6635386e2b3f2774d998c068f124230022aaee8939be
 
 Package: diffpdf
-Version: 2.1.3.1-2.1
-Installed-Size: 555
+Version: 1:1.1.1-1
+Installed-Size: 15
 Maintainer: Barak A. Pearlmutter <bap@debian.org>
-Architecture: amd64
-Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libgomp1 (>= 6), libpoppler-qt5-1t64 (>= 0.24.5), libqt5core5t64 (>= 5.15.1), libqt5gui5t64 (>= 5.2.0) | libqt5gui5-gles (>= 5.2.0), libqt5printsupport5t64 (>= 5.0.2), libqt5widgets5t64 (>= 5.2.0~alpha1), libstdc++6 (>= 5)
-Description: compare two PDF files textually or visually
-Homepage: http://www.qtrac.eu/diffpdf-foss.html
-Description-md5: 1ae07bf3d536852dd5ae20b7e5bbab0d
+Architecture: all
+Depends: disparpdf (>= 1:1.1.1-1)
+Description: compare two PDF files textually or visually -- transitional package
+Homepage: https://github.com/yuw/disparPDF
+Description-md5: 393f6c08d547628f7ac2f8480c077503
 Tag: implemented-in::c++, interface::commandline, interface::graphical,
  interface::x11, role::program, scope::utility, uitoolkit::qt,
  use::comparing, works-with-format::pdf, x11::application
 utils
 Priority: optional
-Filename: pool/main/d/diffpdf/diffpdf_2.1.3.1-2.1_amd64.deb
-Size: 138716
-MD5sum: 11fce427e22b1e21801d895d90449b05
-SHA256: 574dae032e78576900d1989be7b2475d70ae5cf4db5d67bf0b8f5fde2b9cedfe
+Filename: pool/main/d/diffpdf/diffpdf_1.1.1-1_all.deb
+Size: 7908
+MD5sum: 81a51d1ec83446e13200a46a8ff3cc1f
+SHA256: e019ad607298f1ab054c2cab5407a7cbec5e80324c1dadbea2ffd33382fe694e
+
+Package: disparpdf
+Source: diffpdf
+Version: 1:1.1.1-1
+Installed-Size: 787
+Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Architecture: amd64
+Replaces: diffpdf (<< 1:1.0.6-1~)
+Provides: diffpdf (= 1:1.1.1-1)
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libpoppler-qt6-3t64 (>= 21.11.0), libqpdf30 (>> 12.4.2~), libqt6core6t64 (>= 6.11.2), libqt6gui6 (>= 6.11.2), libqt6printsupport6 (>= 6.1.2), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 13.1)
+Breaks: diffpdf (<< 1:1.0.6-1~)
+Description: compare two PDF files textually or visually
+Homepage: https://github.com/yuw/disparPDF
+Commands: diffpdf, disparPDF, disparPDFc
+Description-md5: 9053345a9c7864d63b0c8ff7c7d9c1fa
+utils
+Priority: optional
+Filename: pool/main/d/diffpdf/disparpdf_1.1.1-1_amd64.deb
+Size: 278100
+MD5sum: 2b4c4186256fb69bcf960a68aad1a486
+SHA256: 5dfdb28f97ad950a6d52d0fa705f893cb3fc70fc748643a35badea536a9caf58
 
 Package: diffutils
 Version: 1:3.12-1
@@ -14116,10 +14137,10 @@ MD5sum: 43ecf32101c769ceba004789289d7723
 SHA256: 36f91931c44c384917ad2ebdb13d1a6a2cc540335fdaea619fc12058f5ca6320
 
 Package: gpu-screen-recorder-cli
-Source: gpu-screen-recorder (5.13.8-1)
-Version: 5.13.8-1+b1
-Installed-Size: 547
-Maintainer: Seyed Mohamad Amin Modaresi <modaresisofthard@proton.me>
+Source: gpu-screen-recorder
+Version: 5.13.8-2
+Installed-Size: 546
+Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: amd64
 Depends: libavcodec63 (>= 7:9.0.2), libavfilter12 (>= 7:9.0.2), libavformat63 (>= 7:9.0.2), libavutil61 (>= 7:9.0.2), libc6 (>= 2.38), libcap2 (>= 1:2.10), libdbus-1-3 (>= 1.12), libdrm2 (>= 2.4.112), libgcc-s1 (>= 3.0), libpipewire-0.3-0t64 (>= 0.3.6), libpulse0 (>= 0.99.1), libstdc++6 (>= 12), libswresample7 (>= 7:9.0.2), libva-drm2 (>= 1.1.0), libva2 (>= 2.2.0), libwayland-client0 (>= 1.20.0), libwayland-egl1 (>= 1.15.0), libx11-6, libxcomposite1 (>= 1:0.4.6), libxdamage1 (>= 1:1.1), libxfixes3, libxrandr2 (>= 2:1.5.0), ffmpeg
 Description: Shadowplay-like screen recorder (cli)
@@ -14127,10 +14148,10 @@ Homepage: https://git.dec05eba.com/gpu-screen-recorder/about
 Description-md5: 35e9e699c222ee98bd4e65c38c26b4df
 utils
 Priority: optional
-Filename: pool/main/g/gpu-screen-recorder/gpu-screen-recorder-cli_5.13.8-1+b1_amd64.deb
-Size: 207508
-MD5sum: 71f069eb09e60f74fb83bfa397704a80
-SHA256: 4dafa20a4e9040e8b3887fa8f0058447b037c8d5d5e7d4e7df8d7e25a8668dcf
+Filename: pool/main/g/gpu-screen-recorder/gpu-screen-recorder-cli_5.13.8-2_amd64.deb
+Size: 207332
+MD5sum: 82abbff6efcd67773dbcaad27ca8337c
+SHA256: 695bb807ef050fa600c54d29dd187ab9704c16693dd253e55667fb5fdc16b449
 
 Package: gpu-viewer
 Version: 3.35+ds-2
@@ -16027,11 +16048,11 @@ MD5sum: 4582f3b5baaaf47c306d78b127436d84
 SHA256: b4bcbad034cffb6cee891765fe88b958c8f721c5e8370a7f57751d536931a33f
 
 Package: ibus-libpinyin
-Version: 1.16.5-6
-Installed-Size: 123
+Version: 1.16.6-1
+Installed-Size: 125
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: all
-Depends: ibus-libpinyin-common (>= 1.16.5-6)
+Depends: ibus-libpinyin-common (>= 1.16.6-1)
 Suggests: ibus-libbopomofo
 Description: Intelligent Pinyin input method for IBus
 Homepage: https://github.com/libpinyin/ibus-libpinyin
@@ -16039,19 +16060,19 @@ Description-md5: ea0340a0343baa6eff96dee6e25321d7
 Tag: uitoolkit::gtk
 utils
 Priority: optional
-Filename: pool/main/i/ibus-libpinyin/ibus-libpinyin_1.16.5-6_all.deb
-Size: 106952
-MD5sum: f4a0b71ec4a6941e7516c3a444919b28
-SHA256: ad8a213e6ba12ecb4cc90255b727923281ce5f80aac6d0d85fc8e211f2e454ee
+Filename: pool/main/i/ibus-libpinyin/ibus-libpinyin_1.16.6-1_all.deb
+Size: 108984
+MD5sum: 4bbbdb5b5eba3b4e38f8df00a2a7dbd1
+SHA256: 1f80efba6dd668d21b7e1cb1bdfce0fee75b920352deeafbcba8dd0b887b9684
 
 Package: ibus-libpinyin-common
-Source: ibus-libpinyin (1.16.5-6)
-Version: 1.16.5-6+b1
-Installed-Size: 2781
+Source: ibus-libpinyin
+Version: 1.16.6-1
+Installed-Size: 2905
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
 Replaces: ibus-libpinyin (<< 1.16.5-4~)
-Depends: ibus, python3-gi, dconf-gsettings-backend | gsettings-backend, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.80.0), libibus-1.0-5 (>= 1.5.14), libjson-glib-1.0-0 (>= 1.5.2), liblua5.4-0 (>= 5.4.6), libnotify4 (>= 0.7.0), libopencc1.4 (>= 1.2.0), libpinyin15 (>= 2.10.2), libsoup-3.0-0 (>= 2.41.90), libsqlite3-0 (>= 3.6.11), libstdc++6 (>= 5.2)
+Depends: ibus, python3-gi, dconf-gsettings-backend | gsettings-backend, python3:any, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.80.0), libibus-1.0-5 (>= 1.5.14), libjson-glib-1.0-0 (>= 1.5.2), liblua5.4-0 (>= 5.4.6), libnotify4 (>= 0.7.0), libopencc1.4 (>= 1.2.0), libpinyin15 (>= 2.10.2), libsoup-3.0-0 (>= 2.41.90), libsqlite3-0 (>= 3.6.11), libstdc++6 (>= 13)
 Suggests: ibus-libpinyin
 Breaks: ibus-libpinyin (<< 1.16.5-4~)
 Description: Intelligent Pinyin engine based on libpinyin for IBus (common files)
@@ -16059,10 +16080,10 @@ Homepage: https://github.com/libpinyin/ibus-libpinyin
 Description-md5: 3e1df5201910970c7c2ed81dfffa2423
 utils
 Priority: optional
-Filename: pool/main/i/ibus-libpinyin/ibus-libpinyin-common_1.16.5-6+b1_amd64.deb
-Size: 796672
-MD5sum: 51aad65e240bccceb1e7f4f4f8359125
-SHA256: 0a785f2548f1fb48eacc6193bf8c36f69d286275fa0f1a12f0876f366e61e101
+Filename: pool/main/i/ibus-libpinyin/ibus-libpinyin-common_1.16.6-1_amd64.deb
+Size: 836732
+MD5sum: 7852fec4b2713de2c59459919f334bf8
+SHA256: 2d91cf74b6344b84e37b4faf42048404d01b06b30ceb4d99e5ed9e04ad38099b
 
 Package: ibus-libthai
 Version: 0.1.6-1
@@ -23526,12 +23547,12 @@ MD5sum: fd4905fc5a97f46f85fe8ee8485fbf20
 SHA256: e6996bbd76c2f4045473f4ff776aeb2430b9143dd934ff6eb2ea437cc0a8554c
 
 Package: m17n-lib-bin
-Source: m17n-lib (1.8.6-1)
-Version: 1.8.6-1+b3
-Installed-Size: 186
+Source: m17n-lib
+Version: 1.8.7-1
+Installed-Size: 185
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: libm17n-0 (= 1.8.6-1+b3), libc6 (>= 2.38), libgd3 (>= 2.1.0~alpha~), libx11-6, libxaw7 (>= 2:1.0.16), libxt6t64
+Depends: libm17n-0 (= 1.8.7-1), libc6 (>= 2.38), libgd3 (>= 2.1.0~alpha~), libx11-6, libxaw7 (>= 2:1.0.16), libxt6t64
 Suggests: m17n-docs
 Description: multilingual text processing library - utilities
 Multi-Arch: foreign
@@ -23541,18 +23562,18 @@ Tag: devel::i18n, devel::lang:c, devel::library, implemented-in::c,
  interface::commandline, role::devel-lib, role::program, scope::utility
 utils
 Priority: optional
-Filename: pool/main/m/m17n-lib/m17n-lib-bin_1.8.6-1+b3_amd64.deb
-Size: 51468
-MD5sum: 9208d9dace7519298036dfb4cfc8800f
-SHA256: 878ba28732ceebd306181ac3261ca3daa5c8fb685e636f2d4debfd285663a80f
+Filename: pool/main/m/m17n-lib/m17n-lib-bin_1.8.7-1_amd64.deb
+Size: 51160
+MD5sum: 3ffa29bf12d5d89ff1fbbae7ce32a163
+SHA256: 16385dbf0f8f5d9507c1668f6049dbdd05dd28f63bacb1eada44b402180082e1
 
 Package: m17n-lib-mimx
-Source: m17n-lib (1.8.6-1)
-Version: 1.8.6-1+b3
-Installed-Size: 51
+Source: m17n-lib
+Version: 1.8.7-1
+Installed-Size: 50
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: amd64
-Depends: anthy, ispell, libm17n-0 (= 1.8.6-1+b3), libanthy2 (>= 0.4), libc6 (>= 2.38)
+Depends: anthy, ispell, libm17n-0 (= 1.8.7-1), libanthy2 (>= 0.4), libc6 (>= 2.38)
 Suggests: m17n-docs
 Description: multilingual text processing library - binary modules
 Multi-Arch: same
@@ -23560,10 +23581,10 @@ Homepage: https://www.nongnu.org/m17n/
 Description-md5: c49e2e867912e1110e6670ec5d4dda67
 utils
 Priority: optional
-Filename: pool/main/m/m17n-lib/m17n-lib-mimx_1.8.6-1+b3_amd64.deb
-Size: 14332
-MD5sum: 94cd8d2987afb44241de14aca543a83d
-SHA256: 8421fcd0e5b492917f565841ac3101ae34f07bf9ecee3e8284ff08ab1b2c164f
+Filename: pool/main/m/m17n-lib/m17n-lib-mimx_1.8.7-1_amd64.deb
+Size: 14176
+MD5sum: 80934ea2053fe3a41eddf0683d62b300
+SHA256: 0ae76127185f1c32b8f82b0831e6f791f401fb759077101d55b3f330a10d4a1c
 
 Package: m4api
 Version: 0.3~0.9646fd-4
@@ -23638,8 +23659,8 @@ SHA256: 1641bd36fb9af73bbcb98b76070c3e1e9c0ba2b5e85a607e59304111dcb1ff0d
 
 Package: libmagics++-data
 Source: magics++
-Version: 4.16.3-2
-Installed-Size: 169970
+Version: 4.17.0-1
+Installed-Size: 169972
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: all
 Description: Data files needed for magics++ library
@@ -23648,46 +23669,47 @@ Homepage: https://confluence.ecmwf.int/display/MAGP/Magics
 Description-md5: 321cba5334173061fd108c281ef76d8f
 utils
 Priority: optional
-Filename: pool/main/m/magics++/libmagics++-data_4.16.3-2_all.deb
-Size: 32281920
-MD5sum: 4bc499cd7886f87996b57b90369bf6de
-SHA256: 894f2515140ab054d7a4e9dd0453684dd720fd16c8a91e2c5cd688b1d90fb6f8
+Filename: pool/main/m/magics++/libmagics++-data_4.17.0-1_all.deb
+Size: 32274652
+MD5sum: d86c3030a5413dbb6ed3a439182a3d4e
+SHA256: e14af036846604b9d46df5cb26b213e17f76d6b8fdd9934cdd461d2de37f2054
 
 Package: libmagics++-metview-dev
 Source: magics++
-Version: 4.16.3-2
-Installed-Size: 12746
+Version: 4.17.0-1
+Installed-Size: 12876
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libmagplus3v5 (= 4.16.3-2)
+Depends: libmagplus3v5 (= 4.17.0-1)
 Description: Libraries needed for building MetView
 Multi-Arch: same
 Homepage: https://confluence.ecmwf.int/display/MAGP/Magics
 Description-md5: 5cbee2a14ce45ca3e81843d73bd70d3e
 utils
 Priority: optional
-Filename: pool/main/m/magics++/libmagics++-metview-dev_4.16.3-2_amd64.deb
-Size: 944208
-MD5sum: 1141d3d31cf841501bf65c7e2d615e85
-SHA256: b9dc14c608affce7fcb1c27aacc9b57f3b65cf13fcdc4b489134aceb4213ef36
+Filename: pool/main/m/magics++/libmagics++-metview-dev_4.17.0-1_amd64.deb
+Size: 945472
+MD5sum: 0146e8a63cae8ca6372bb92ee53877bb
+SHA256: 64cbfbd2ec9b502572911ea962ec8f8866abe7e89b1627b5cdb99fa791aa062b
 
 Package: magics++
-Version: 4.16.3-2
+Version: 4.17.0-1
 Installed-Size: 181
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libmagplus3v5 (= 4.16.3-2), perl:any, libc6 (>= 2.34), libeckit0d (>= 2.1.1), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1), python3
+Depends: libmagplus3v5 (= 4.17.0-1), perl:any, libc6 (>= 2.34), libeckit0d (>= 2.4.0), libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1), python3
 Description: Executables for the magics++ library
 Multi-Arch: foreign
 Homepage: https://confluence.ecmwf.int/display/MAGP/Magics
+Commands: magics, magjson, magjsonx, magml, magmlx, mapgen_clip, metgram, metgram.sh, metgramx
 Description-md5: 9b068543ba030016602d8d95ac8a603d
 Tag: uitoolkit::qt
 utils
 Priority: optional
-Filename: pool/main/m/magics++/magics++_4.16.3-2_amd64.deb
-Size: 62096
-MD5sum: 0d0ae12d95bca01915631097afdd7510
-SHA256: a58f0d2a83c4b9e436cf89014d8c10c41c8791743bf5520a23e1a1a784f818ab
+Filename: pool/main/m/magics++/magics++_4.17.0-1_amd64.deb
+Size: 62288
+MD5sum: d60273ec496c295d13c2e881e60bfa23
+SHA256: a433c1dc58aa6779a7cdbc21cb8deecbd13849521ebfa35079d6ad6c1ee9c3ff
 
 Package: magnus
 Version: 1:1.0.3-5
@@ -25857,8 +25879,8 @@ MD5sum: 9bdb85a39dfbe2df05c43b551287b489
 SHA256: 9c48bfa1eb4d892220c84e38a43535a213bb3e6aa479c3d7d4c10828bc2181da
 
 Package: newpid
-Version: 14
-Installed-Size: 32
+Version: 15
+Installed-Size: 35
 Maintainer: Christoph Berg <myon@debian.org>
 Architecture: amd64
 Depends: libcap2-bin, libc6 (>= 2.34)
@@ -25866,10 +25888,10 @@ Description: run a command in a new PID namespace
 Description-md5: 385ff700e1d3e50af1bba6ed6f44ec74
 utils
 Priority: optional
-Filename: pool/main/n/newpid/newpid_14_amd64.deb
-Size: 8536
-MD5sum: 9f7cc284748a916b08e3b094b84e72b7
-SHA256: 962fc4455a29381f887e9ea7134fab900b8b493610e96e522063ee1c0bd0d019
+Filename: pool/main/n/newpid/newpid_15_amd64.deb
+Size: 11016
+MD5sum: a5ee362ce141e8e313b1653413209470
+SHA256: c1dc88c088a814754cb18edfa8c3b54f31d321db3c586bc0797d6b488660b5c4
 
 Package: whiptail
 Source: newt (0.52.25-2)
@@ -33667,23 +33689,23 @@ MD5sum: 3d84e607a9777f56f9acc4b3b176db01
 SHA256: 9bc79da1b7c414789e7f4d14e604efe717529d98869fb0c2e9695afeff6e5ea3
 
 Package: debian-repro-status
-Source: rust-debian-repro-status (0.4.0-2)
-Version: 0.4.0-2+b2
-Installed-Size: 5216
+Source: rust-debian-repro-status
+Version: 0.4.0-3
+Installed-Size: 5203
 Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
 Architecture: amd64
 Depends: libc6 (>= 2.39), libgcc-s1 (>= 4.2), libzstd1 (>= 1.5.5), ca-certificates
 Description: Check the reproducibility status of your installed Debian packages
 Homepage: https://github.com/kpcyrd/debian-repro-status
-Built-Using: rust-colored (= 3.1.1-1), rust-hyper-rustls (= 0.27.9+ds-1), rust-rebuilderd-common (= 0.28.0-1), rust-rustls (= 0.23.45+ds-1), rust-rustls-native-certs (= 0.8.4+ds-2), rust-rustls-pki-types (= 1.15.1+ds-1), rust-rustls-platform-verifier (= 0.6.2-1), rust-rustls-webpki (= 0.103.15+ds-1), rustc (= 1.96.1+dfsg1-2)
+Built-Using: rust-colored (= 3.1.1-1), rust-hyper-rustls (= 0.27.9+ds-1), rust-rebuilderd-common (= 0.28.0-1), rust-rustls (= 0.23.45+ds-1), rust-rustls-native-certs (= 0.8.4+ds-2), rust-rustls-pki-types (= 1.15.1+ds-1), rust-rustls-platform-verifier (= 0.6.2-1), rust-rustls-webpki (= 0.103.15+ds-1), rustc (= 1.97.1+dfsg1-1)
 Description-md5: 5163f9feb8675888ec9c576e6d774ff3
-Static-Built-Using: rust-anstream (= 0.6.21-1), rust-anstyle (= 1.0.14-2), rust-anstyle-parse (= 0.2.7-1), rust-anstyle-query (= 1.1.5-1), rust-anyhow (= 1.0.103-1), rust-async-compression (= 0.4.27-1), rust-atomic-waker (= 1.1.2-1), rust-base64 (= 0.22.1-3), rust-bitflags (= 2.13.2-1), rust-bytes (= 1.12.1-1), rust-cfg-if (= 1.0.4-1), rust-chrono (= 0.4.45-1), rust-clap (= 4.6.7-1), rust-clap-builder (= 4.6.7-1), rust-clap-lex (= 1.1.1-1), rust-colorchoice (= 1.0.5-1), rust-colored (= 3.1.1-1), rust-console (= 0.15.11-1), rust-dirs-next (= 2.0.0-2), rust-dirs-sys-next (= 0.1.2-1), rust-equivalent (= 1.0.2-1), rust-errno (= 0.3.14-1), rust-fnv (= 1.0.7-1), rust-form-urlencoded (= 1.2.2-1), rust-futures-channel (= 0.3.34-1), rust-futures-core (= 0.3.34-1), rust-futures-io (= 0.3.34-1), rust-futures-sink (= 0.3.34-1), rust-futures-task (= 0.3.34-1), rust-futures-util (= 0.3.34-1), rust-getrandom (= 0.4.2-3), rust-h2 (= 0.4.19-1), rust-hashbrown (= 0.16.1-2), rust-http (= 1.5.0-1), rust-http-body (= 1.0.1-1), rust-http-body-util (= 0.1.4-1), rust-httparse (= 1.10.1-1), rust-hyper (= 1.11.1-1), rust-hyper-rustls (= 0.27.9+ds-1), rust-hyper-util (= 0.1.19-1), rust-iana-time-zone (= 0.1.65-1), rust-idna (= 1.1.0-1), rust-idna-adapter (= 1.1.0-1), rust-idna-mapping (= 1.0.0-1), rust-indexmap (= 2.14.2-1), rust-indicatif (= 0.17.11-2), rust-ipnet (= 2.12.1-1), rust-iri-string (= 0.7.14-1), rust-is-terminal-polyfill (= 1.70.2-1), rust-itoa (= 1.0.18-1), rust-libc (= 0.2.186-1), rust-log (= 0.4.34-1), rust-memchr (= 2.8.3-1), rust-mio (= 1.2.0-1), rust-num-traits (= 0.2.19-2), rust-number-prefix (= 0.4.0-1), rust-once-cell (= 1.21.4-1), rust-openssl-probe (= 0.2.1-3), rust-percent-encoding (= 2.3.2-2), rust-pin-project-lite (= 0.2.17-1), rust-portable-atomic (= 1.15.0-2), rust-rebuilderd-common (= 0.28.0-1), rust-reqwest (= 0.13.4-1), rust-ring (= 0.17.14-5), rust-rustls (= 0.23.45+ds-1), rust-rustls-native-certs (= 0.8.4+ds-2), rust-rustls-pki-types (= 1.15.1+ds-1), rust-rustls-platform-verifier (= 0.6.2-1), rust-rustls-webpki (= 0.103.15+ds-1), rust-ryu (= 1.0.22-1), rust-serde (= 1.0.229-1), rust-serde-core (= 1.0.229-1), rust-serde-json (= 1.0.151-1), rust-serde-spanned (= 1.1.1-1), rust-serde-urlencoded (= 0.7.1-1), rust-signal-hook-registry (= 1.4.8-1), rust-slab (= 0.4.12-1), rust-smallvec (= 1.15.2-1), rust-socket2 (= 0.6.5-1), rust-socket2-0.5 (= 0.5.10-1), rust-strsim (= 0.11.1-1), rust-subtle (= 2.6.1-1), rust-sync-wrapper (= 1.0.2-1), rust-tinyvec (= 1.12.0-2), rust-tinyvec-macros (= 0.1.1-1), rust-tokio (= 1.53.1-1), rust-tokio-rustls (= 0.26.4-1), rust-tokio-util (= 0.7.19-2), rust-toml (= 1.1.6-1), rust-toml-datetime (= 1.1.1-2), rust-toml-parser (= 1.1.3-1), rust-toml-writer (= 1.1.2-1), rust-tower (= 0.5.3-1), rust-tower-http (= 0.6.8-2), rust-tower-layer (= 0.3.3-1), rust-tower-service (= 0.3.3-1), rust-tracing (= 0.1.44-1), rust-tracing-core (= 0.1.36-1), rust-try-lock (= 0.2.5-1), rust-unicode-bidi (= 0.3.18-1), rust-unicode-joining-type (= 1.0.0-1), rust-unicode-normalization (= 0.1.25-1), rust-unicode-width (= 0.2.2-1), rust-untrusted (= 0.9.0-2), rust-url (= 2.5.8-1), rust-utf8-iter (= 1.0.4-1), rust-utf8parse (= 0.2.2-1), rust-want (= 0.3.1+ds-1), rust-winnow (= 0.7.13-1), rust-zeroize (= 1.9.0-2), rust-zmij (= 1.0.21-1), rust-zstd (= 0.13.3-1), rust-zstd-safe (= 7.2.4-1), rust-zstd-sys (= 2.0.16-1), rustc (= 1.96.1+dfsg1-2)
+Static-Built-Using: rust-anstream (= 0.6.21-1), rust-anstyle (= 1.0.14-2), rust-anstyle-parse (= 0.2.7-1), rust-anstyle-query (= 1.1.5-1), rust-anyhow (= 1.0.103-1), rust-async-compression (= 0.4.27-1), rust-atomic-waker (= 1.1.2-1), rust-base64 (= 0.22.1-3), rust-bitflags (= 2.13.2-1), rust-bytes (= 1.12.1-1), rust-cfg-if (= 1.0.4-1), rust-chrono (= 0.4.45-1), rust-clap (= 4.6.7-1), rust-clap-builder (= 4.6.7-1), rust-clap-lex (= 1.1.1-1), rust-colorchoice (= 1.0.5-1), rust-colored (= 3.1.1-1), rust-console (= 0.15.11-1), rust-dirs-next (= 2.0.0-2), rust-dirs-sys-next (= 0.1.2-1), rust-equivalent (= 1.0.2-1), rust-errno (= 0.3.14-1), rust-fnv (= 1.0.7-1), rust-form-urlencoded (= 1.2.2-1), rust-futures-channel (= 0.3.34-1), rust-futures-core (= 0.3.34-1), rust-futures-io (= 0.3.34-1), rust-futures-sink (= 0.3.34-1), rust-futures-task (= 0.3.34-1), rust-futures-util (= 0.3.34-1), rust-getrandom (= 0.4.2-3), rust-h2 (= 0.4.19-1), rust-hashbrown (= 0.16.1-2), rust-http (= 1.5.0-1), rust-http-body (= 1.0.1-1), rust-http-body-util (= 0.1.5-1), rust-httparse (= 1.10.1-1), rust-hyper (= 1.11.1-1), rust-hyper-rustls (= 0.27.9+ds-1), rust-hyper-util (= 0.1.19-1), rust-iana-time-zone (= 0.1.65-1), rust-idna (= 1.1.0-1), rust-idna-adapter (= 1.1.0-1), rust-idna-mapping (= 1.0.0-1), rust-indexmap (= 2.14.2-1), rust-indicatif (= 0.17.11-2), rust-ipnet (= 2.12.2-1), rust-iri-string (= 0.7.14-1), rust-is-terminal-polyfill (= 1.70.2-1), rust-itoa (= 1.0.18-1), rust-libc (= 0.2.186-1), rust-log (= 0.4.34-1), rust-memchr (= 2.8.3-1), rust-mio (= 1.2.0-1), rust-num-traits (= 0.2.19-2), rust-number-prefix (= 0.4.0-1), rust-once-cell (= 1.21.4-1), rust-openssl-probe (= 0.2.1-3), rust-percent-encoding (= 2.3.2-2), rust-pin-project-lite (= 0.2.17-1), rust-portable-atomic (= 1.15.0-2), rust-rebuilderd-common (= 0.28.0-1), rust-reqwest (= 0.13.5-1), rust-ring (= 0.17.14-5), rust-rustls (= 0.23.45+ds-1), rust-rustls-native-certs (= 0.8.4+ds-2), rust-rustls-pki-types (= 1.15.1+ds-1), rust-rustls-platform-verifier (= 0.6.2-1), rust-rustls-webpki (= 0.103.15+ds-1), rust-ryu (= 1.0.22-1), rust-serde (= 1.0.229-1), rust-serde-core (= 1.0.229-1), rust-serde-json (= 1.0.151-1), rust-serde-spanned (= 1.1.1-1), rust-serde-urlencoded (= 0.7.1-1), rust-signal-hook-registry (= 1.4.8-1), rust-slab (= 0.4.12-1), rust-smallvec (= 1.16.2-1), rust-socket2 (= 0.6.5-1), rust-socket2-0.5 (= 0.5.10-1), rust-strsim (= 0.11.1-1), rust-subtle (= 2.6.1-1), rust-sync-wrapper (= 1.0.2-1), rust-tinyvec (= 1.13.3-1), rust-tokio (= 1.53.1-1), rust-tokio-rustls (= 0.26.4-1), rust-tokio-util (= 0.7.19-2), rust-toml (= 1.1.6-1), rust-toml-datetime (= 1.1.1-2), rust-toml-parser (= 1.1.3-1), rust-toml-writer (= 1.1.2-1), rust-tower (= 0.5.3-1), rust-tower-http (= 0.6.8-2), rust-tower-layer (= 0.3.3-1), rust-tower-service (= 0.3.3-1), rust-tracing (= 0.1.44-1), rust-tracing-core (= 0.1.36-2), rust-try-lock (= 0.2.5-1), rust-unicode-bidi (= 0.3.18-1), rust-unicode-joining-type (= 1.0.0-1), rust-unicode-normalization (= 0.1.25-1), rust-unicode-width (= 0.2.2-1), rust-untrusted (= 0.9.0-2), rust-url (= 2.5.8-1), rust-utf8-iter (= 1.0.4-1), rust-utf8parse (= 0.2.2-1), rust-want (= 0.3.1+ds-1), rust-winnow (= 0.7.13-1), rust-zeroize (= 1.9.0-2), rust-zmij (= 1.0.21-1), rust-zstd (= 0.13.3-1), rust-zstd-safe (= 7.2.4-1), rust-zstd-sys (= 2.0.16-1), rustc (= 1.97.1+dfsg1-1)
 utils
 Priority: optional
-Filename: pool/main/r/rust-debian-repro-status/debian-repro-status_0.4.0-2+b2_amd64.deb
-Size: 1778916
-MD5sum: 6cc43e6209439f86ffb76b202989c139
-SHA256: b88b83f3f33bcb6e352e5af3e34314c406f161960f99f0bf24f8df1993eea96c
+Filename: pool/main/r/rust-debian-repro-status/debian-repro-status_0.4.0-3_amd64.deb
+Size: 1771208
+MD5sum: e18984b09c2a1fa0d8e14cbce2fb4d6d
+SHA256: 3a0f9fa9db8abc94b3d27f198d192e7143a4d98ab30a291418abfa5f901e00a5
 
 Package: dfrs
 Source: rust-dfrs
@@ -41987,7 +42009,7 @@ MD5sum: f4611ea0de5b04509646dc37ef03be4f
 SHA256: 57479c172b8a57211530b221067903c6618f26fcb4437b6bcd84cbecc2994dbf
 
 Package: usbguard
-Version: 1.1.4+ds-9
+Version: 1.1.4+ds-10
 Installed-Size: 606
 Maintainer: Daniel Baumann <daniel@debian.org>
 Architecture: amd64
@@ -41999,10 +42021,10 @@ Description-md5: 623e4023fe8d0c14e7a0399cbf6fb164
 Tag: hardware::usb, security::privacy
 utils
 Priority: optional
-Filename: pool/main/u/usbguard/usbguard_1.1.4+ds-9_amd64.deb
-Size: 189360
-MD5sum: 1ae34b9aa1182c56ac4a12242ba1b871
-SHA256: fe44e8785346e15a7847c990ca8c6153ae6adcd2b1face375bc14aecc3e12add
+Filename: pool/main/u/usbguard/usbguard_1.1.4+ds-10_amd64.deb
+Size: 189456
+MD5sum: 45089171f354bbafb51cc295b867db45
+SHA256: 588be9d4c039acaae1d8c0b997f1f70afb6e50d4ea771994930dac82d5d75f59
 
 Package: usbguard-notifier
 Version: 0.1.0-4
