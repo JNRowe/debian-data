@@ -7507,6 +7507,54 @@ Description-en: Small and simple music player for GNOME
  .
  Amberol is a GNOME Circle app.
 
+Package: libxaiefal-dev
+Description-md5: bd00f3a62c890aa14d4aef96f5d55381
+Description-en: Xilinx AI Engine Runtime - Functional Abstraction Layer - headers
+ xaiefal is a Functional Abstraction Layer (FAL) that provides common userspace
+ APIs for runtime AIE resource management.
+ .
+ This package contains development headers for the FAL.
+
+Package: libxaiengine-dev
+Description-md5: 625d05002cb48a4dc847f1e909883499
+Description-en: Xilinx AI Engine Runtime - Userspace Driver - headers
+ libxaiengine provides a hardware access API to applications.
+ .
+ This package contains required headers for aiefal and applications that use AI
+ Engine.
+
+Package: libxaiengine3
+Description-md5: 42a079650a477b22e087ecdd2f0108a3
+Description-en: Xilinx AI Engine Runtime - Userspace Driver
+ libxaiengine provides a hardware access API to applications.
+ .
+ This package contains the libraries for aiefal and applications that use AI
+ Engine.
+
+Package: xaiefal-doc
+Description-md5: 86e897e0a473558a78d5d90635f5e3e9
+Description-en: Xilinx AI Engine Runtime - Functional Abstraction Layer - doc
+ xaiefal is a Functional Abstraction Layer (FAL) that provides common userspace
+ APIs for runtime AIE resource management.
+ .
+ This package contains the documentation for the FAL.
+
+Package: xaiefal-examples
+Description-md5: cf4b8e7fdf5c0beb9d684501d6de88df
+Description-en: Xilinx AI Engine Runtime - Functional Abstraction Layer - examples
+ xaiefal is a Functional Abstraction Layer (FAL) that provides common userspace
+ APIs for runtime AIE resource management.
+ .
+ This package contains example applications created with the FAL.
+
+Package: xaiefal-tests
+Description-md5: f8345598a249a112934ac36ec2330475
+Description-en: Xilinx AI Engine Runtime - Functional Abstraction Layer - tests
+ xaiefal is a Functional Abstraction Layer (FAL) that provides common userspace
+ APIs for runtime AIE resource management.
+ .
+ This package contains test applications created with the FAL.
+
 Package: amd-debug-tools
 Description-md5: c94a8405be945443e5e8633ae1705e4c
 Description-en: Debug tools for AMD Zen systems
@@ -23842,6 +23890,15 @@ Description-en: Tools used by Bazel to compile Java (data files)
  TurbineDirect, and JacocoCoverage.
  .
  This package contains the architecture-independent files.
+
+Package: bazel-lib
+Description-md5: 5e05632298e2c2c5c54c43c0faec655c
+Description-en: Common useful functions and rules for Bazel
+ bazel-lib (formerly aspect-bazel-lib) provides common Starlark helper
+ functions, macros, and rules for writing Bazel rules and BUILD files,
+ including copy_file, copy_to_bin, copy_directory, copy_to_directory,
+ expand_template, run_binary, params_file, directory_path, output_files,
+ write_source_files, bats_test, and path/string utilities.
 
 Package: bazel-platforms
 Description-md5: 99bda57e2a48201ff451e81f475b55b3
@@ -61461,14 +61518,6 @@ Description-en: simple, portable, and self-contained C++ stacktrace library
  file names, line numbers, and function names. It can also capture
  stack traces from thrown exceptions for debugging and crash diagnostics.
 
-Package: cpptraj
-Description-md5: 9d2417ddb42a5849ed570706339d82d5
-Description-en: fast, parallelized molecular dynamics trajectory data analysis
- CPPTRAJ is a program designed to process and analyze molecular dynamics
- trajectories and relevant data sets derived from their analysis. CPPTRAJ
- supports many popular MD software packages including Amber, CHARMM, Gromacs,
- and NAMD.
-
 Package: libcppunit-1.15-0
 Description-md5: dca7bb14a898276dca99f38b635142d2
 Description-en: Unit Testing Library for C++
@@ -77022,6 +77071,18 @@ Description-md5: 39c13f575d9c04bbf54263f7edf4be3f
 Description-en: Digital Forensics date and time library for Python 3
  dfDateTime, or Digital Forensics date and time, provides date and
  time objects to preserve accuracy and precision.
+
+Package: dfsg-author-check
+Description-md5: 66ef61790f8fde9b96b327e887f0de89
+Description-en: find copyright holders missing from debian/copyright
+ dfsg-author-check walks an unpacked Debian source package, picks out the
+ copyright attributions in its files and lists the holders that its
+ debian/copyright does not name, allowing for differences of spelling,
+ encoding and form.
+ .
+ The report ends with Files paragraphs, ready to edit and add to
+ debian/copyright. It can also be written as JSON or Markdown, for use by
+ other tools such as the DFSG team's NEW queue review.
 
 Package: dfu-programmer
 Description-md5: 1bfe4bfd67724121586a1a2711a8af46
@@ -111747,34 +111808,6 @@ Description-en: FFmpeg library with extra codecs (metapackage)
  that offers additional codec support. Application packages can depend
  on it if they require or suggest this variant in a robust manner.
 
-Package: libavcodec-extra62
-Description-md5: dc2604cfd9f06f9fba72ecf9ed4c453e
-Description-en: FFmpeg library with additional de/encoders for audio/video codecs
- FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
- mux, demux, stream, filter and play pretty much anything that humans and
- machines have created. It supports the most obscure ancient formats up to the
- cutting edge.
- .
- This library provides a generic encoding/decoding framework and
- contains multiple decoders and encoders for audio, video and subtitle streams,
- and several bitstream filters.
- .
- The shared architecture provides various services ranging from bit stream I/O
- to DSP optimizations, and makes it suitable for implementing robust and fast
- codecs as well as for experimentation.
- .
- This package replaces the libavcodec62 package and contains the
- following additional codecs:
- .
-  * ARIB STD-B24 Captions (Subtitle Decoder)
-  * OpenCORE Adaptive Multi-Rate (AMR) Narrow-Band (Encoder/Decoder)
-  * OpenCORE Adaptive Multi-Rate (AMR) Wide-Band (Decoder)
-  * Android VisualOn Adaptive Multi-Rate (AMR) Wide-Band (Encoder)
- .
- Because this package links against libraries that are licensed under
- Apache License 2.0, the resulting binaries are distributed under the
- GPL version 3 or later.
-
 Package: libavcodec-extra63
 Description-md5: 6d14ced9f9570509f52332bc05152526
 Description-en: FFmpeg library with additional de/encoders for audio/video codecs
@@ -111802,24 +111835,6 @@ Description-en: FFmpeg library with additional de/encoders for audio/video codec
  Because this package links against libraries that are licensed under
  Apache License 2.0, the resulting binaries are distributed under the
  GPL version 3 or later.
-
-Package: libavcodec62
-Description-md5: b6405aed870af39811ea887203c50393
-Description-en: FFmpeg library with de/encoders for audio/video codecs - runtime files
- FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
- mux, demux, stream, filter and play pretty much anything that humans and
- machines have created. It supports the most obscure ancient formats up to the
- cutting edge.
- .
- This library provides a generic encoding/decoding framework and
- contains multiple decoders and encoders for audio, video and subtitle streams,
- and several bitstream filters.
- .
- The shared architecture provides various services ranging from bit stream I/O
- to DSP optimizations, and makes it suitable for implementing robust and fast
- codecs as well as for experimentation.
- .
- This package contains the runtime files.
 
 Package: libavcodec63
 Description-md5: b6405aed870af39811ea887203c50393
@@ -111852,20 +111867,6 @@ Description-en: FFmpeg library for handling input and output devices - developme
  output devices, including Video4Linux2, VfW, DShow, and ALSA.
  .
  This package contains the development files.
-
-Package: libavdevice62
-Description-md5: ad40bf128a0d66f1d4aa3d3f40dd7bff
-Description-en: FFmpeg library for handling input and output devices - runtime files
- FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
- mux, demux, stream, filter and play pretty much anything that humans and
- machines have created. It supports the most obscure ancient formats up to the
- cutting edge.
- .
- This library provides a generic framework for grabbing from and rendering to
- many common multimedia input/output devices, and supports several input and
- output devices, including Video4Linux2, VfW, DShow, and ALSA.
- .
- This package contains the runtime files.
 
 Package: libavdevice63
 Description-md5: ad40bf128a0d66f1d4aa3d3f40dd7bff
@@ -111906,26 +111907,6 @@ Description-en: FFmpeg library with extra filters (metapackage)
  that offers additional filter support. Application packages can depend
  on it if they require or suggest this variant in a robust manner.
 
-Package: libavfilter-extra11
-Description-md5: e626b15fdbc50a9de44324b20d1d05ac
-Description-en: FFmpeg library with extra media filters - runtime files
- FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
- mux, demux, stream, filter and play pretty much anything that humans and
- machines have created. It supports the most obscure ancient formats up to the
- cutting edge.
- .
- This library provides a generic audio/video filtering framework containing
- several filters, sources and sinks.
- .
- This package replaces the libavfilter11 package and contains the
- following additional filters:
- .
-  * Optical Character Recognition (uses Tesseract)
- .
- Because this package links against libraries that are licensed under
- Apache License 2.0, the resulting binaries are distributed under the
- GPL version 3 or later.
-
 Package: libavfilter-extra12
 Description-md5: 9e6c21ff01c3cb26b243bbd40b2e1ac8
 Description-en: FFmpeg library with extra media filters - runtime files
@@ -111945,19 +111926,6 @@ Description-en: FFmpeg library with extra media filters - runtime files
  Because this package links against libraries that are licensed under
  Apache License 2.0, the resulting binaries are distributed under the
  GPL version 3 or later.
-
-Package: libavfilter11
-Description-md5: d830215e6285a7d6c06650a8f1d8ce9e
-Description-en: FFmpeg library containing media filters - runtime files
- FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
- mux, demux, stream, filter and play pretty much anything that humans and
- machines have created. It supports the most obscure ancient formats up to the
- cutting edge.
- .
- This library provides a generic audio/video filtering framework containing
- several filters, sources and sinks.
- .
- This package contains the runtime files.
 
 Package: libavfilter12
 Description-md5: d830215e6285a7d6c06650a8f1d8ce9e
@@ -111999,28 +111967,6 @@ Description-en: FFmpeg library with extra (de)muxers (metapackage)
  that offers additional (de)muxers support. Application packages can depend
  on it if they require or suggest this variant in a robust manner.
 
-Package: libavformat-extra62
-Description-md5: 12c3bc77f4c89bb08a20340b50d812a8
-Description-en: FFmpeg library with additional (de)muxers for multimedia containers
- FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
- mux, demux, stream, filter and play pretty much anything that humans and
- machines have created. It supports the most obscure ancient formats up to the
- cutting edge.
- .
- This library provides a generic framework for multiplexing and demultiplexing
- (muxing and demuxing) audio, video and subtitle streams. It encompasses
- multiple muxers and demuxers for multimedia container formats. It also
- supports several input and output protocols to access a media resource.
- .
- This package replaces the libavformat62 package and contains the
- following additional (de)muxers:
- .
-  * SMB protocol (using libsmbclient)
- .
- Because this package links against libraries that are licensed under
- Apache License 2.0 or GPL version 3, the resulting binaries are distributed
- under the GPL version 3 or later.
-
 Package: libavformat-extra63
 Description-md5: 814bb2a3fd602b0766272adc6dfdb865
 Description-en: FFmpeg library with additional (de)muxers for multimedia containers
@@ -112042,21 +111988,6 @@ Description-en: FFmpeg library with additional (de)muxers for multimedia contain
  Because this package links against libraries that are licensed under
  Apache License 2.0 or GPL version 3, the resulting binaries are distributed
  under the GPL version 3 or later.
-
-Package: libavformat62
-Description-md5: a477ad30c384813e506c2b5a98d770cc
-Description-en: FFmpeg library with (de)muxers for multimedia containers - runtime files
- FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
- mux, demux, stream, filter and play pretty much anything that humans and
- machines have created. It supports the most obscure ancient formats up to the
- cutting edge.
- .
- This library provides a generic framework for multiplexing and demultiplexing
- (muxing and demuxing) audio, video and subtitle streams. It encompasses
- multiple muxers and demuxers for multimedia container formats. It also
- supports several input and output protocols to access a media resource.
- .
- This package contains the runtime files.
 
 Package: libavformat63
 Description-md5: a477ad30c384813e506c2b5a98d770cc
@@ -112089,23 +112020,6 @@ Description-en: FFmpeg library with functions for simplifying programming - deve
  The goal for this library is to be modular, small, efficient and useful.
  .
  This package contains the development files.
-
-Package: libavutil60
-Description-md5: 770a5e363265c4557c507feffc8f58d8
-Description-en: FFmpeg library with functions for simplifying programming - runtime files
- FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
- mux, demux, stream, filter and play pretty much anything that humans and
- machines have created. It supports the most obscure ancient formats up to the
- cutting edge.
- .
- This library is a utility library to aid portable multimedia programming.
- It contains safe portable string functions, random number generators, data
- structures, additional mathematics functions, cryptography and multimedia
- related functionality (like enumerations for pixel and sample formats).
- It is not a library for code needed by both libavcodec and libavformat.
- The goal for this library is to be modular, small, efficient and useful.
- .
- This package contains the runtime files.
 
 Package: libavutil61
 Description-md5: 770a5e363265c4557c507feffc8f58d8
@@ -112152,35 +112066,6 @@ Description-en: FFmpeg library for audio resampling, rematrixing etc. - developm
     dedicated buffer or "plane").
  .
  This package contains the development files.
-
-Package: libswresample6
-Description-md5: a5f44d6a5d5b1cee3363537952d0e2cb
-Description-en: FFmpeg library for audio resampling, rematrixing etc. - runtime files
- FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
- mux, demux, stream, filter and play pretty much anything that humans and
- machines have created. It supports the most obscure ancient formats up to the
- cutting edge.
- .
- This library performs highly optimized audio resampling, rematrixing
- and sample format conversion operations.
- Specifically, this library performs the following conversions:
-  * Resampling is the process of changing the audio rate, for example from a
-    high sample rate of 44100Hz to 8000Hz. Audio conversion from high to low
-    sample rate is a lossy process. Several resampling options and algorithms
-    are available.
-  * Rematrixing is the process of changing the channel layout, for example from
-    stereo to mono. When the input channels cannot be mapped to the output
-    streams, the process is lossy, since it involves different gain factors
-    and mixing. Various other audio conversions (e.g. stretching and padding)
-    are enabled through dedicated options.
-  * Format conversion is the process of converting the type of samples, for
-    example from 16-bit signed samples to unsigned 8-bit or float samples.
-    It also handles packing conversion, when passing from packed layout (all
-    samples belonging to distinct channels interleaved in the same buffer), to
-    planar layout (all samples belonging to the same channel stored in a
-    dedicated buffer or "plane").
- .
- This package contains the runtime files.
 
 Package: libswresample7
 Description-md5: a5f44d6a5d5b1cee3363537952d0e2cb
@@ -112235,29 +112120,6 @@ Description-en: FFmpeg library for image scaling and various conversions - devel
  This package contains the development files.
 
 Package: libswscale10
-Description-md5: 5ab1f77fb1b78fa767ca99e4a7a7a9ea
-Description-en: FFmpeg library for image scaling and various conversions - runtime files
- FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
- mux, demux, stream, filter and play pretty much anything that humans and
- machines have created. It supports the most obscure ancient formats up to the
- cutting edge.
- .
- This library performs highly optimized image scaling and colorspace and pixel
- format conversion operations.
- Specifically, this library performs the following conversions:
-  * Rescaling is the process of changing the video size. Several rescaling
-    options and algorithms are available. This is usually a lossy process.
-  * Pixel format conversion is the process of converting the image format and
-    colorspace of the image, for example from planar YUV420P to RGB24 packed.
-    It also handles packing conversion, that is converts from packed layout
-    (all pixels belonging to distinct planes interleaved in the same buffer),
-    to planar layout (all samples belonging to the same plane stored in a
-    dedicated buffer or "plane"). This is usually a lossy process in case the
-    source and destination colorspaces differ.
- .
- This package contains the runtime files.
-
-Package: libswscale9
 Description-md5: 5ab1f77fb1b78fa767ca99e4a7a7a9ea
 Description-en: FFmpeg library for image scaling and various conversions - runtime files
  FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
@@ -181470,15 +181332,6 @@ Description-en: Groovy library that provides reports and metrics for Groovy code
  code with an Ant Task, applying a set of metrics, and
  generating an HTML or XML report of the results.
 
-Package: libgmetrics-groovy-java-doc
-Description-md5: ba94d60f74001cd86037c69f719cd0a8
-Description-en: Documentation for libgmetrics-groovy-java
- Documentation for GMetrics that is a library providing
- calculation and reporting of size and complexity metrics for
- Groovy source code, by scanning the code with an Ant Task,
- applying a set of metrics, and generating an HTML or XML
- report of the results.
-
 Package: gmic
 Description-md5: 93a8cff2a45238493290117e4f75696c
 Description-en: GREYC's Magic for Image Computing
@@ -183932,34 +183785,6 @@ Description-md5: adac73980d6f100530ab3369033acd09
 Description-en: disables the popup displayed during workspace switching (GNOME)
  This GNOME Shell extension disables the popup displayed during workspace
  switching.
-
-Package: gnome-shell-extension-easyscreencast
-Description-md5: d6f6b01c6c9ec5d41145ca9e14aafb71
-Description-en: GNOME Shell extension to simplify video recording
- This extension simplifies the use of the video recording function integrated
- in GNOME Shell, allows quickly to change the various settings of the desktop
- recording.
-
-Package: gnome-shell-extension-flypie
-Description-md5: 7fc0307e725109780717ec7b803b7e39
-Description-en: innovative marking menu via keyboard shortcuts
- Fly-Pie is an extension for GNOME Shell which lets you open marking menus via
- keyboard shortcuts. It is the first GNOME Shell extension with achievements!
- .
- You can use it to launch applications, simulate hotkeys, open URLs and much
- more. It features a continuous learning curve which lets you gradually lift-off
- from a grumpie menu rookie to a snappie menu pielot. (You got it? Like pilot,
- but with a cake). Once you opened a marking menu, you can seamlessly transition
- between three alternative selection modes:
- .
-  * Point-and-Click: Select items by clicking on them or anywhere in the
-    corresponding wedges.
-  * Marking-Mode: Select items by drawing gestures. To do this, click anywhere
-    and drag your mouse. Pausing or making a turn selects the currently
- dragged item.
-  * Turbo-Mode: You can also "draw" gestures while holding Ctrl, Shift, or
-    Alt without having to press your mouse button! This is especially useful
- when you opened the menu with a shortcut involving such a modifier.
 
 Package: gnome-shell-extension-freon
 Description-md5: 0afb87426bedc915603f94a381551ed2
@@ -190190,6 +190015,14 @@ Description-en: API Handler Testing for Golang Web framework
   - HttpRouter
   - Pat
   - beego
+
+Package: golang-github-approvals-go-approval-tests-dev
+Description-md5: 77cd229526a33048fa5bcf398e94f4dd
+Description-en: ApprovalTests for go
+ Golden master Verification Library.
+ .
+ ApprovalTests allows for easy testing of larger objects, strings and
+ anything else that can be saved to a file(images, sounds, csv, etc.)
 
 Package: golang-github-apptainer-container-key-client-dev
 Description-md5: 5f800949bafa405f38a26733a0600cd9
@@ -224871,6 +224704,12 @@ Description-en: Tools for managing the WCS of astronomical data (Python 3)
  .
  This package contains the Python 3 version of the package.
 
+Package: gweather-locations
+Description-md5: 795d9661c31ed6e8f23704e6195182f4
+Description-en: location data for libgweather
+ The GWeather locations database contains a list of locations
+ used by GNOME components through libgweather.
+
 Package: gwenview
 Description-md5: e8091ce1ef88f057296de2b62961da25
 Description-en: image viewer by KDE
@@ -226190,31 +226029,6 @@ Description-en: OpenType text shaping engine (shared library)
  engine) and the script-specific logic (aka shaping engine).
  .
  This package contains the shared libraries.
-
-Package: harlequin
-Description-md5: 9b8fa4f9a0e983789286f69889bcfc86
-Description-en: database client for the terminal
- Harlequin is a SQL IDE in your terminal. It supports connecting to for DuckDB,
- SQLite, Postgres (also supports Redshift), MySQL/MariaDB, and ODBC
- (supports MS SQL Server, Oracle, and others).
-
-Package: harlequin-odbc
-Description-md5: 548da8b1e5058fadcca1d982a4331f6b
-Description-en: database client for the terminal (ODBC adapter)
- Harlequin is a SQL IDE in your terminal. It supports connecting to for DuckDB,
- SQLite, Postgres (also supports Redshift), MySQL/MariaDB, and ODBC
- (supports MS SQL Server, Oracle, and others).
- .
- This package contains the ODBC adapter.
-
-Package: harlequin-postgres
-Description-md5: 65af2d08e731dc1bc7721d71a6b9caea
-Description-en: database client for the terminal (Postgres adapter)
- Harlequin is a SQL IDE in your terminal. It supports connecting to for DuckDB,
- SQLite, Postgres (also supports Redshift), MySQL/MariaDB, and ODBC
- (supports MS SQL Server, Oracle, and others).
- .
- This package contains the Postgres adapter.
 
 Package: harminv
 Description-md5: fd48a1976edca6557a44be013156ea97
@@ -283776,6 +283590,24 @@ Description-en: efficient phylogenetic software by maximum likelihood; v3
   - Polymorphism-aware models (PoMo)
     http://www.iqtree.org/doc/Polymorphism-Aware-Models
 
+Package: libiqtree-dev
+Description-md5: e39390692653a0bf03d0464063bfe4a9
+Description-en: efficient phylogenetic software by maximum likelihood (libdevel)
+ IQ-TREE is an efficient phylogenetic software by maximum likelihood.
+ This package provides the development files (unversioned library
+ symlink and the libiqtree_fun.h header) needed to compile programs
+ that link against the IQ-TREE shared library.
+
+Package: libiqtree3
+Description-md5: 20915edd02558bb3ed1bfac6ec240b05
+Description-en: efficient phylogenetic software by maximum likelihood (lib)
+ IQ-TREE is an efficient phylogenetic software by maximum likelihood.
+ This package provides the shared library (libiqtree.so.<SOVERSION>)
+ exposing the IQ-TREE C API (see main/libiqtree_fun.h) that can be
+ used by external programs such as python-cogent/piqtree to perform
+ phylogenetic inference without going through the command line
+ binary.
+
 Package: iraf
 Description-md5: 6c55b8d0405360237049c296582d2c11
 Description-en: Image Reduction and Analysis Facility
@@ -287037,15 +286869,6 @@ Description-en: Load testing and performance measurement application (main appli
  .
  This package contains the main application.
 
-Package: jmeter-apidoc
-Description-md5: 1980c4b6b4e14c7bdff962b8526f8dd4
-Description-en: Load testing and performance measurement application (API doc)
- Apache JMeter is a 100% pure Java desktop application designed to load test
- functional behavior and measure performance. It was originally designed for
- testing Web Applications but has since expanded to other test functions.
- .
- This package contains the API documentation.
-
 Package: jmeter-ftp
 Description-md5: 9ddcb877246ee044f2a66abc2bd910ae
 Description-en: Load testing and performance measurement application (ftp module)
@@ -287712,6 +287535,14 @@ Description-en: routines to integrate argparse with logging — Python 3
  with ‘logging’.
  .
  This package installs the Python version 3 ‘jaraco.logging’ library.
+
+Package: python3-jaraco.stream
+Description-md5: 1615e643d5891fcc26f3d124bd7802c0
+Description-en: routines for dealing with data streams — Python 3
+ jaraco.stream is a library of routines for dealing with data streams,
+ including a set of generators for loading GZip data on the fly.
+ .
+ This package installs the Python version 3 ‘jaraco.stream’ library.
 
 Package: python3-jaraco.text
 Description-md5: 3c57eff65aee350617ae0affeff109c6
@@ -353522,17 +353353,6 @@ Description-en: validator.nu HTML parser implementation in Java
  XHTML 1.x content with an XML parser and use SAX, DOM or XOM to interface with
  the parser.
 
-Package: libhtml5parser-java-doc
-Description-md5: 1a6faca4365368911989706002e46cdb
-Description-en: Documentation for libhtml5parser-java
- The Validator.nu HTML Parser is an implementation of the HTML5 parsing
- algorithm in Java for applications. The parser is designed to work as a
- drop-in replacement for the XML parser in applications that already support
- XHTML 1.x content with an XML parser and use SAX, DOM or XOM to interface with
- the parser.
- .
- This package contains the API documentation of libhtml5parser-java.
-
 Package: libhtmlcleaner-java
 Description-md5: 784696a687c29e3f73d4318639971044
 Description-en: Java HTML Parser library
@@ -373663,7 +373483,7 @@ Description-en: Perl modules for managing NetApp's NAS devices
  SSH without using passwords, but telnet access will always require a
  password.
 
-Package: libnetconf2-4
+Package: libnetconf2-5
 Description-md5: 8f810ddd9e413cc6e85d4b1ba992578a
 Description-en: library for IETF NETCONF protocol
  NETCONF library in C intended for building NETCONF clients and servers. NETCONF
@@ -373692,14 +373512,6 @@ Description-en: library for IETF NETCONF protocol (development)
  is the NETwork CONFiguration protocol introduced by IETF.
  .
  This package contains the development files.
-
-Package: libnetconf2-doc
-Description-md5: 5bb3c719248dba5db2218bce93a9db77
-Description-en: library for IETF NETCONF protocol (documentation)
- NETCONF library in C intended for building NETCONF clients and servers. NETCONF
- is the NETwork CONFiguration protocol introduced by IETF.
- .
- This package contains the documentation.
 
 Package: libnetdot-client-rest-perl
 Description-md5: fad2f6c29814467a80fbe082d3123703
@@ -377477,6 +377289,15 @@ Description-en: Development headers for A-bis interface
  libraries.
 
 Package: libosmoabis15
+Description-md5: 8146bd50c67f3eb0b2fd2bdba549b5dd
+Description-en: GSM A-bis handling
+ This library contains common/shared code regarding the A-bis interface between
+ the GSM Base transceiver station (BTS) and the GSM Base station controller BSC.
+ .
+ It also implements drivers for mISDN and DAHDI based E1 cards, as well as some
+ A-bis/IP dialects.
+
+Package: libosmoabis17
 Description-md5: 8146bd50c67f3eb0b2fd2bdba549b5dd
 Description-en: GSM A-bis handling
  This library contains common/shared code regarding the A-bis interface between
@@ -416785,14 +416606,24 @@ Description-en: Yet Another NFS - a Java NFS library
  server side implementation.
 
 Package: libyang-dev
-Description-md5: e195fd2f4eb1baf9a539b2c7c7333f9e
+Description-md5: 344472a30829d3c94221f6af2da78f1b
 Description-en: parser toolkit for IETF YANG data modeling language (development)
  YANG is a data modeling language for the definition of data sent over network
- management protocols (RFC 6020/7950). It can be used to model both configuration
- data as well as state data of network elements and is primarily used by larger
- network equipment like routers and switches.
+ management protocols (RFC 6020/7950). It can be used to model both
+ configuration data as well as state data of network elements and is primarily
+ used by larger network equipment like routers and switches.
  .
  This package contains the development files.
+
+Package: libyang-tools
+Description-md5: 28bed4558315c2da45a2219cfed9a2df
+Description-en: parser toolkit for IETF YANG data modeling language (tools)
+ YANG is a data modeling language for the definition of data sent over network
+ management protocols (RFC 6020/7950). It can be used to model both
+ configuration data as well as state data of network elements and is primarily
+ used by larger network equipment like routers and switches.
+ .
+ This package contains additional tools.
 
 Package: libyang3
 Description-md5: e5af2b726dd72ca12f90031fa161b6c3
@@ -416804,15 +416635,35 @@ Description-en: parser toolkit for IETF YANG data modeling language (library)
  .
  This package contains the shared library.
 
-Package: libyang3-tools
-Description-md5: e26f614ed5d6f6f919a72bc6e4fa6cef
-Description-en: parser toolkit for IETF YANG data modeling language (tools)
+Package: libyang5
+Description-md5: 54046b926a5c2009978ecb5b20aad930
+Description-en: parser toolkit for IETF YANG data modeling language (library)
  YANG is a data modeling language for the definition of data sent over network
- management protocols (RFC 6020/7950). It can be used to model both configuration
- data as well as state data of network elements and is primarily used by larger
- network equipment like routers and switches.
+ management protocols (RFC 6020/7950). It can be used to model both
+ configuration data as well as state data of network elements and is primarily
+ used by larger network equipment like routers and switches.
  .
- This package contains additional tools.
+ This package contains the shared library.
+
+Package: libyang-cpp-dev
+Description-md5: 70812117644de8fe2f29a09d12942392
+Description-en: parser toolkit for IETF YANG data modeling language (C++ development)
+ YANG is a data modeling language for the definition of data sent over network
+ management protocols (RFC 6020/7950). It can be used to model both
+ configuration data as well as state data of network elements and is primarily
+ used by larger network equipment like routers and switches.
+ .
+ This package contains the development files for the C++ bindings.
+
+Package: libyang-cpp10
+Description-md5: 9510f9aecdbdadb47deee730c0a72ebb
+Description-en: parser toolkit for IETF YANG data modeling language (C++ library)
+ YANG is a data modeling language for the definition of data sent over network
+ management protocols (RFC 6020/7950). It can be used to model both
+ configuration data as well as state data of network elements and is primarily
+ used by larger network equipment like routers and switches.
+ .
+ This package contains the shared library for the C++ bindings.
 
 Package: python3-libyang
 Description-md5: cea3c77d4dec17bf2b2c4421cc3ccbf1
@@ -444389,6 +444240,57 @@ Description-en: library for performing operations on matrices and vectors
  for matrices, vectors and other mathematical objects.
  Web site: ftp://ftpmaths.anu.edu.au/pub/meschach/meschach.html
 
+Package: meshlab
+Description-md5: 305fe5fc33ed80f8a4b3b1e8db350c58
+Description-en: System for processing and editing triangular meshes
+ This is an open source, portable, and extendible system for the
+ processing and editing of unstructured 3D triangular meshes.
+ The system is aimed to help the processing of the typical not-so-small
+ unstructured models arising in 3D scanning, providing a set of tools for
+ editing, cleaning, healing, inspecting, rendering and converting this kind
+ of meshes.
+ .
+ Meshlab can read and write files in a variety of formats. Supported formats
+ for meshes include:
+ .
+  - 3DS aka 3D-Studio File Format (read/write)
+  - ASC aka ascii triplets of points (read)
+  - BRE aka Breuckmann File Format (read)
+  - CTM aka OpenCTM compressed format (read/write)
+  - DAE aka COLLADA (read/write)
+  - DXF (write)
+  - E57 points cloud (read/write)
+  - FBX Autodesk Interchange Format(read)
+  - glTF/glb aka GL Transmission Format 2.0 (binary or ascii) (read)
+  - JSON (write)
+  - OBJ aka Alias Wavefront Object (read/write)
+  - OFF aka Object File Format (read/write)
+  - PDB aka Protein Data Bank(read)
+  - PLY aka Stanford Polygon File Format (read/write)
+  - PTX (read)
+  - QOBJ aka Quad Object (read)
+  - STL (read/write)
+  - TRI aka photogrammetric reconstructions (read)
+  - TXT aka generic ASCII point list or image list file (read)
+  - U3D/IDTF (write)
+  - VMI aka VCG Dump File Format (read)
+  - WRL aka VRML 2.0 (read/write)
+  - X3D aka X3D in XML encoding (read/write)
+  - X3DV aka X3D in VRML encoding (read)
+  - XYZ Point Cloud (with or without normal) (read/write)
+  - apts aka Expe's point set (ascii) (read)
+  - pts aka Expe's point set (binary) (read)
+ .
+ Project formats include:
+ .
+  - MLP aka MeshLab Project (read/write)
+  - MLB aka MeshLab Binary Project (read/write)
+  - ALN aka Align Project (read)
+  - OUT aka Bundler Output (read)
+  - NVM aka VisualSFM Output (read)
+ .
+ A variety of image formats are also supported.
+
 Package: gltfpack
 Description-md5: 8d950db402c66032f196ed5330361e61
 Description-en: glTF mesh file optimizer
@@ -457939,6 +457841,64 @@ Description-en: low-level rdp emulation for mupen64plus
  .
  A fast processor and graphics hardware which supports vertex and fragment
  shader is needed for this plugin.
+
+Package: murasaki
+Description-md5: 9fbbfa64297c484a9a25437e99fbe210
+Description-en: homology detection tool across multiple large genomes
+ Murasaki is a scalable and fast, language theory-based homology
+ detection tool across multiple large genomes. It enable whole-genome
+ scale multiple genome global alignments. Supports unlimited length
+ gapped-seed patterns and unique TF-IDF based filtering.
+ .
+ Murasaki is an anchor alignment software, which is
+  * exteremely fast (17 CPU hours for whole Human x Mouse genome (with
+    40 nodes: 52 wall minutes))
+  * scalable (Arbitrarily parallelizable across multiple nodes using MPI.
+    Even a single node with 16GB of ram can handle over 1Gbp of sequence.)
+  * unlimited pattern length
+  * repeat tolerant
+  * intelligent noise reduction
+
+Package: murasaki-common
+Description-md5: 83942f5e622632232421f3dab2bca8d2
+Description-en: homology detection tool across multiple large genomes (common files)
+ Murasaki is a scalable and fast, language theory-based homology
+ detection tool across multiple large genomes. It enable whole-genome
+ scale multiple genome global alignments. Supports unlimited length
+ gapped-seed patterns and unique TF-IDF based filtering.
+ .
+ Murasaki is an anchor alignment software, which is
+  * exteremely fast (17 CPU hours for whole Human x Mouse genome (with
+    40 nodes: 52 wall minutes))
+  * scalable (Arbitrarily parallelizable across multiple nodes using MPI.
+    Even a single node with 16GB of ram can handle over 1Gbp of sequence.)
+  * unlimited pattern length
+  * repeat tolerant
+  * intelligent noise reduction
+ .
+ This package contains all files that are common to the single core murasaki
+ package and the multi core murasaki-mpi package.
+
+Package: murasaki-mpi
+Description-md5: 84e98b9662e20d838ebe31e69f3bca4b
+Description-en: homology detection tool across multiple large genomes (MPI-version)
+ Murasaki is a scalable and fast, language theory-based homology
+ detection tool across multiple large genomes. It enable whole-genome
+ scale multiple genome global alignments. Supports unlimited length
+ gapped-seed patterns and unique TF-IDF based filtering.
+ .
+ Murasaki is an anchor alignment software, which is
+  * exteremely fast (17 CPU hours for whole Human x Mouse genome (with
+    40 nodes: 52 wall minutes))
+  * scalable (Arbitrarily parallelizable across multiple nodes using MPI.
+    Even a single node with 16GB of ram can handle over 1Gbp of sequence.)
+  * unlimited pattern length
+  * repeat tolerant
+  * intelligent noise reduction
+ .
+ This package provides the MPI-enabled binary for murasaki.  While this
+ will speed up operation on multi-processor machines it will slow down
+ on a single processor.
 
 Package: libmurphy-clojure
 Description-md5: 9a3d7664b0bf3630595cc750c5021f4f
@@ -478754,6 +478714,13 @@ Description-en: streaming JSON.parse and stringify
  contains anything in the output that was before the first match, and the
  'footer', is anything after the last match.
 
+Package: node-jspath
+Description-md5: 8540b8012fe8b69d80090e89d6cc3b50
+Description-en: DSL that enables you to navigate and find data within JSON documents
+ This package provides the jspath Node.js module.
+ .
+ Node.js is an event-based server-side JavaScript engine.
+
 Package: node-jsprim
 Description-md5: 1c2876011acc3a93ac1467cdc303174b
 Description-en: utilities for primitive JavaScript types
@@ -490109,16 +490076,6 @@ Description-en: daemon for displaying passive pop-up notifications
  work with a dialog box that they must close.  Passive popups can
  automatically disappear after a short period of time.
 
-Package: notification-position-reloaded
-Description-md5: 271eab874d9066c747a86f236a0dd48b
-Description-en: Configure the place where notifications are shown
- notification-position-reloaded is a small GNOME Shell extension that provides
- users the control over the GNOME system notifications position and the way
- they appear on screen, the display duration.
- .
- Please note that each user will need to enable the extension manually, for
- example using the gnome-extensions application.
-
 Package: python3-notifications-android-tv
 Description-md5: 61f46e9e94340a2d65e1e19b89438009
 Description-en: Python API to send notifications to Android TV and Fire TV devices
@@ -494954,6 +494911,48 @@ Description-en: basic OS interaction for OCaml (development)
  system and run command line programs.
  .
  Bos works equally well on POSIX and Windows operating systems.
+ .
+ This package contains development files.
+
+Package: libbstr-ocaml
+Description-md5: 7314ca36659fc86940be055c6e92764a
+Description-en: simple library for OCaml bigstrings (runtime)
+ This small set of libraries offers a homogeneous API between 2 types
+ and their derivations with the slice type.
+ .
+ The aim is to homogenize the 2 types bytes and bigstring and to
+ derive them with a slice type, giving the user all the levers needed
+ to manipulate byte sequences, whether in the form of a bigstring or
+ bytes. The slice view avoids copying when it comes to decoding a
+ packet and extracting a sub-part. The slice also applies to
+ bigstrings, whose Bigarray.Array1.sub is more expensive.
+ .
+ This set of libraries is a synthesis of astring (which offers a range
+ of useful functions as well as slice), cstruct (which offers a
+ similar API for bigstrings), bigstringaf (which offers some other
+ useful functions), the standard OCaml library and repr for
+ decoding/encoding these values into OCaml records/variants.
+ .
+ This package contains runtime files.
+
+Package: libbstr-ocaml-dev
+Description-md5: 7cd0812e2e4c5f6afa05514926ba1219
+Description-en: simple library for OCaml bigstrings (dev)
+ This small set of libraries offers a homogeneous API between 2 types
+ and their derivations with the slice type.
+ .
+ The aim is to homogenize the 2 types bytes and bigstring and to
+ derive them with a slice type, giving the user all the levers needed
+ to manipulate byte sequences, whether in the form of a bigstring or
+ bytes. The slice view avoids copying when it comes to decoding a
+ packet and extracting a sub-part. The slice also applies to
+ bigstrings, whose Bigarray.Array1.sub is more expensive.
+ .
+ This set of libraries is a synthesis of astring (which offers a range
+ of useful functions as well as slice), cstruct (which offers a
+ similar API for bigstrings), bigstringaf (which offers some other
+ useful functions), the standard OCaml library and repr for
+ decoding/encoding these values into OCaml records/variants.
  .
  This package contains development files.
 
@@ -508270,36 +508269,6 @@ Description-en: open-source framework for hearing aid signal processing research
  This package is primarily intended for researchers, developers and
  engineers working on hearing aid technologies and audio signal processing.
 
-Package: libopenmm-dev
-Description-md5: 25e69d74ba10a1b7460f8e3223ed4e40
-Description-en: C++ header files for the OpenMM library
- OpenMM is a software toolkit for performing molecular simulations on a range
- of high performance computing architectures. This package provides C++ header
- files for the development with that library.
-
-Package: libopenmm-plugins
-Description-md5: eb58805c9446811e133c03cab1b615fb
-Description-en: Plugins for the OpenMM library
- OpenMM is a software toolkit for performing molecular simulations on a range
- of high performance computing architectures. This package provides OpenMM
- plugins.
-
-Package: libopenmm8.1
-Description-md5: 801291977e5c1fde4c38382f84bd633c
-Description-en: High-performance molecular simulation library
- OpenMM is a software toolkit for performing molecular simulations on a range
- of high performance computing architectures. It is based on a layered
- architecture: the lower layers function as a reusable library that can be
- invoked by any application, while the upper layers form a complete environment
- for running molecular simulations.
-
-Package: python3-openmm
-Description-md5: 05222dad319a5457a88f80787dbc2e9a
-Description-en: Python bindings for the OpenMM molecular simulation package
- OpenMM is a software toolkit for performing molecular simulations on a range
- of high performance computing architectures. This package provides the
- Python application layer for the package.
-
 Package: openmolcas
 Description-md5: e8a0dd0656a437aaf4da8d1c4785403f
 Description-en: Quantum chemistry software package
@@ -510450,244 +510419,6 @@ Description-en: standard OpenStreetMap Mapnik stylesheet
  to download the necessary shapefiles.
  .
  This package does not provide a tileserver, or perform tile rendering.
-
-Package: libost-base-dev
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-base2.12
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-bindings-dev
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-bindings2.12
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-conop-dev
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-conop2.12
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-db-dev
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-db2.12
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-geom-dev
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-geom2.12
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-gfx-dev
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-gfx2.12
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-gui-dev
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-gui2.12
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-img-alg-dev
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-img-alg2.12
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-img-dev
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-img2.12
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-info-dev
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-info2.12
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-io-dev
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-io2.12
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-mol-alg-dev
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-mol-alg2.12
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-mol-dev
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-mol-mm-dev
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-mol-mm2.12
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-mol2.12
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-seq-alg-dev
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-seq-alg2.12
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-seq-dev
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: libost-seq2.12
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: openstructure
-Description-md5: dca57137a22804cb104324183b5003cd
-Description-en: Open-Source Computational Structural Biology Framework
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
-
-Package: python3-ost
-Description-md5: 9e9464d2fe8358febf528598cddb115f
-Description-en: Open-Source Computational Structural Biology Framework - Python 3 package
- OpenStructure aims to provide an open-source, modular, flexible, molecular
- modelling and visualization environment. It is targeted at interested method
- developers in the field of structural bioinformatics.
 
 Package: libosd-dev
 Description-md5: c8e8c491e7abda9c09069de691efd6e4
@@ -513720,6 +513451,17 @@ Description-en: Osmocom's Media Gateway Control Protocol client utilities - deve
  This package contains the client utilities - development files.
 
 Package: libosmo-mgcp-client14
+Description-md5: cc7cbe5ddc4fb7b6c3b66fb594648d07
+Description-en: Osmocom's Media Gateway Control Protocol client utilities
+ OsmoMGW, the Osmocom Media Gateway, is a Media Gateway for handling user
+ plane (voice) traffic in cellular networks.
+ .
+ OsmoMGW is the generalized version of an earlier much more special-purpose
+ implementation called osmo-bsc_mgcp.
+ .
+ This package contains the client utilities.
+
+Package: libosmo-mgcp-client16
 Description-md5: cc7cbe5ddc4fb7b6c3b66fb594648d07
 Description-en: Osmocom's Media Gateway Control Protocol client utilities
  OsmoMGW, the Osmocom Media Gateway, is a Media Gateway for handling user
@@ -547960,6 +547702,18 @@ Description-en: Portable SDK for UPnP Devices (ixml shared library)
  This package contains the runtime libraries for the Linux DOM2
  XML Parser (IXML).
 
+Package: libixml22
+Description-md5: 85cb52b64f320f475e8c95d1b15f8419
+Description-en: Portable SDK for UPnP Devices (ixml shared library)
+ The Portable SDK for UPnP Devices (libupnp) provides developers with an
+ API and open source code for building control points, devices, and
+ bridges that are compliant with Version 1.0 of the Universal Plug and
+ Play Device Architecture Specification - see http://www.upnp.org/ for
+ specifications.
+ .
+ This package contains the runtime libraries for the Linux DOM2
+ XML Parser (IXML).
+
 Package: libupnp-dev
 Description-md5: 5b00b83ba3f0b91f5cd6c227c7c56c18
 Description-en: Portable SDK for UPnP Devices, version 1.14 (development files)
@@ -547986,6 +547740,17 @@ Description-en: Documentation for the Portable SDK for UPnP Devices
  in /usr/share/doc/libupnp-dev/
 
 Package: libupnp17t64
+Description-md5: e86f06a1ce120fa0f28ec54f97980bce
+Description-en: Portable SDK for UPnP Devices (shared library)
+ The Portable SDK for UPnP Devices (libupnp) provides developers with an
+ API and open source code for building control points, devices, and
+ bridges that are compliant with Version 1.0 of the Universal Plug and
+ Play Device Architecture Specification - see http://www.upnp.org/ for
+ specifications.
+ .
+ This package contains the runtime library for uPnP.
+
+Package: libupnp22
 Description-md5: e86f06a1ce120fa0f28ec54f97980bce
 Description-en: Portable SDK for UPnP Devices (shared library)
  The Portable SDK for UPnP Devices (libupnp) provides developers with an
@@ -582734,22 +582499,6 @@ Description-en: Python bindings for the PCRE2 regular expression library
  This package contains Python bindings for PCRE2. PCRE2 is the revised API for
  the Perl-compatible regular expressions (PCRE) library created by Philip Hazel.
 
-Package: python3-pdbfixer
-Description-md5: de2ea7573d40aeeb33dde41eadef7ef0
-Description-en: Fix problems in Protein Data Bank files (Python 3)
- PDBFixer is an application for fixing problems in Protein Data Bank files in
- preparation for simulating them. It can automatically fix the following
- problems:
- .
-  - Add missing heavy atoms.
-  - Add missing hydrogen atoms.
-  - Build missing loops.
-  - Convert non-standard residues to their standard equivalents.
-  - Select a single position for atoms with multiple alternate positions listed.
-  - Delete unwanted chains from the model.
-  - Delete unwanted heterogens.
-  - Build a water box for explicit solvent simulations.
-
 Package: python3-pdoc
 Description-md5: fc1497004addd57943ef46e2c8a03c14
 Description-en: API Documentation for Python Projects
@@ -583377,6 +583126,22 @@ Description-en: execute binaries from Python packages in isolated environments
  .
  pipx runs with regular user permissions,
  never calling "sudo pip install".
+
+Package: python-piqtree-doc
+Description-md5: fe1b53c24f4e4c0135e92a55c5546375
+Description-en: Python interface for phylogenetic tree inference with IQ-TREE (Documentation)
+ piqtree provides a Python interface to IQ-TREE for phylogenetic analysis.
+ It allows phylogenetic trees to be inferred from sequence alignments
+ using the IQ-TREE maximum-likelihood framework.
+ .
+ This package installs the documentation for the library.
+
+Package: python3-piqtree
+Description-md5: afed89014e59228ba229cc33832a4cc7
+Description-en: Python interface for phylogenetic tree inference with IQ-TREE
+ piqtree provides a Python interface to IQ-TREE for phylogenetic analysis.
+ It allows phylogenetic trees to be inferred from sequence alignments
+ using the IQ-TREE maximum-likelihood framework.
 
 Package: python3-pixelmatch
 Description-md5: d6777eb74c060827aa844b034e281426
@@ -587432,6 +587197,15 @@ Description-en: 2D/3D geometry library for Python
  .
  This package provides the Python 3 module.
 
+Package: python3-rbloom
+Description-md5: bb9dbdc57f93250fbef838ea412a1703
+Description-en: Bloom filter library implemented in Rust (Python3 version)
+ A fast, simple and lightweight Bloom filter library for Python, implemented in
+ Rust. It's designed to be as pythonic as possible, mimicking the built-in set
+ type where it can, and works with any hashable object.
+ .
+ This package contains the Python 3 version of the library.
+
 Package: python-rcon-doc
 Description-md5: bc24669bba7555f2ae7289f73e887651
 Description-en: client implementation for RCON protocol (Documentation)
@@ -588361,13 +588135,19 @@ Description-en: Library to control Wi-Fi enabled ROMY vacuum cleaners
  under the dustbin.
 
 Package: python3-roundrobin
-Description-md5: 240f6897547ddb6e424662d7b3b828fd
-Description-en: collection of roundrobin utilities
- This is rather small collection of round robin utilities.
+Description-md5: 2799feee0ee8701eb9ffa7735bcc64b6
+Description-en: small collection of round-robin selectors
+ This package provides the roundrobin Python module, which implements these
+ round-robin selectors:
+ .
+  - basic(): plain round-robin (A, B, C, A, B, C, ...)
+  - weighted(): weighted round-robin (classic LVS-style)
+  - smooth(): smooth weighted round-robin (Nginx-style; avoids long clumps)
+  - smooth_stateful(): smooth weighted round-robin with runtime controls
+    (health checks / slow-start)
  .
  Some examples:
  .
-   ```
     >>> import roundrobin
     >>> get_roundrobin = roundrobin.basic(["A", "B", "C"])
     >>> ''.join([get_roundrobin() for _ in range(7)])
@@ -588380,7 +588160,6 @@ Description-en: collection of roundrobin utilities
     >>> get_weighted_smooth = roundrobin.smooth([("A", 5), ("B", 1), ("C", 1)])
     >>> ''.join([get_weighted_smooth() for _ in range(7)])
     'AABACAA'
-   ```
 
 Package: python3-rova
 Description-md5: 15e97120dc042a6ddd21b49efd35c3fb
@@ -653419,6 +653198,12 @@ Description-md5: a8abe4ff7e6e6fe1b2e5a9233af40718
 Description-en: Logging facility that routes Rust log messages to the browser's console - Rust source code
  Source code for Debianized Rust crate "console_log"
 
+Package: librust-console-subscriber-dev
+Description-md5: fead05f583c26babac159df60b181b5f
+Description-en: Telemetry collector for Tokio console - Rust source code
+ `tracing-subscriber::Layer` for collecting Tokio console telemetry.
+ Source code for Debianized Rust crate "console-subscriber"
+
 Package: librust-const-cstr-dev
 Description-md5: ba5be1c04816830f426c05cc3394c992
 Description-en: Create static C-compatible strings from Rust string literals - Rust source code
@@ -653449,6 +653234,11 @@ Package: librust-const-fn-dev
 Description-md5: 435868b774382212e904aaf1428304a8
 Description-en: Lightweight attribute for easy generation of const functions with conditional compilations - Rust source code
  Source code for Debianized Rust crate "const_fn"
+
+Package: librust-const-fnv1a-hash-dev
+Description-md5: 40ce9b8d1954febad697979d9158ea03
+Description-en: #![no_std] crate for performing FNV1A-16/32/64/128 hashing on Rust stable at compile time - Rust source code
+ Source code for Debianized Rust crate "const-fnv1a-hash"
 
 Package: librust-const-format-dev
 Description-md5: beb83397a4e3c69a43dbf474bb2b53ef
@@ -659622,6 +659412,16 @@ Package: librust-hurlfmt-dev
 Description-md5: 2b6364f508c99c167f76ca81f690edbf
 Description-en: Format Hurl files - Rust source code
  Source code for Debianized Rust crate "hurlfmt"
+
+Package: hussh
+Description-md5: 5a9fb8bdcdbdc72621b7c2c907cb21a1
+Description-en: Memory-safe SSH daemon for restricted TCP forwarding
+ A minimal SSH server that only implements TCP forwarding ("direct-tcpip"). It
+ is intended for use as a restricted SSH tunnel, proxy or jump host where
+ interactive login sessions and remote command execution are not required or
+ desired. Only public-key authentication is supported, password logins are never
+ accepted. An optional low-interaction honeypot mode can log or report
+ unsolicited password authentication attempts.
 
 Package: librust-hussh-rustcrypto-ssh-key-dev
 Description-md5: 31b2778c7fc50bd9d0ebcee9402cb3a4
@@ -671537,16 +671337,14 @@ Description-en: Implementations of string similarity metrics - Rust source code
  Source code for Debianized Rust crate "strsim"
 
 Package: librust-struct-patch-dev
-Description-md5: 5e475aeeeae8761007c9cf79ca89303c
+Description-md5: 50e34fc4cb2b2d6b490dd0adf4ae21ef
 Description-en: Library that helps you implement partial updates for structs - Rust source code
- This package contains the source for the Rust struct-patch crate, packaged by
- debcargo for use with cargo and dh-cargo.
+ Source code for Debianized Rust crate "struct-patch"
 
 Package: librust-struct-patch-derive-dev
-Description-md5: f08c5e66cf11aa83cfbbbb36653f2bd6
+Description-md5: e45edad0b2c7963e39c22670064d5892
 Description-en: Library that helps you implement partial updates for structs - Rust source code
- This package contains the source for the Rust struct-patch-derive crate,
- packaged by debcargo for use with cargo and dh-cargo.
+ Source code for Debianized Rust crate "struct-patch-derive"
 
 Package: librust-structmeta-dev
 Description-md5: 0ae22e2a3858b741d4be0a6a668b9142
@@ -672206,6 +672004,11 @@ Package: librust-system-deps-dev
 Description-md5: 132f06e5e7af1e41ee27dbcf5cb25edc
 Description-en: Discover and configure system dependencies from declarative dependencies in Cargo.toml - Rust source code
  Source code for Debianized Rust crate "system-deps"
+
+Package: librust-system-deps-meta-dev
+Description-md5: f8e44581f014ca0d3003e81ac70c3cc7
+Description-en: Discover and configure system dependencies from Cargo.toml - Rust source code
+ Source code for Debianized Rust crate "system-deps-meta"
 
 Package: librust-system-interface-dev
 Description-md5: 4369f740a3a2e620f71b8102ea8ff456
@@ -712505,7 +712308,7 @@ Description-en: YANG-based configuration and operational state data store [C dev
  .
  This package contains the C headers.
 
-Package: libsysrepo7
+Package: libsysrepo8
 Description-md5: d11378695b690fdc85f99658be290e49
 Description-en: YANG-based configuration and operational state data store [C library]
  Applications can use sysrepo to store their configuration modeled by provided
@@ -776949,28 +776752,6 @@ Description-en: New XML object model for Java
  are round-trippable and have well-defined XML infosets.) XOM manages
  your XML so you don't have to. With XOM, you can focus on the unique
  value of your application, and trust XOM to get the XML right.
-
-Package: libxom-java-doc
-Description-md5: 48c08460dd7d1351556c19a551e7dd9f
-Description-en: Documentation for the libxom-java package
- XOM(tm) is a new XML object model. It is an open source (LGPL),
- tree-based API for processing XML with Java that strives for correctness,
- simplicity, and performance, in that order.
- .
- XOM is designed to be easy to learn and easy to use. It works very
- straight-forwardly, and has a very shallow learning curve. Assuming
- you're already familiar with XML, you should be able to get up and
- running with XOM very quickly.
- .
- XOM is the only XML API that makes no compromises on correctness.
- XOM only accepts namespace well-formed XML documents, and only allows
- you to create namespace well-formed XML documents. (In fact, it's a
- little stricter than that: it actually guarantees that all documents
- are round-trippable and have well-defined XML infosets.) XOM manages
- your XML so you don't have to. With XOM, you can focus on the unique
- value of your application, and trust XOM to get the XML right.
- .
- This package includes the API documentation for libxom-java package.
 
 Package: xone-dkms
 Description-md5: 60359bbea8941d2ff810bdf1fc64e4ae
