@@ -4250,8 +4250,8 @@ Description-en: Advanced Intrusion Detection Environment - dynamic binary
  for inconsistencies.
 
 Package: aide-common
-Description-md5: 7a8490e442a29581e6cca1b191be3f62
-Description-en: Advanced Intrusion Detection Environment - Common files
+Description-md5: a3a58291fac3edcf2bcb92a66c6ff95f
+Description-en: Advanced Intrusion Detection Environment - Debian integration
  AIDE is an intrusion detection system that detects changes to files on
  the local system. It creates a database from the regular expression rules
  that it finds from the config file. Once this database is initialized
@@ -4261,8 +4261,8 @@ Description-en: Advanced Intrusion Detection Environment - Common files
  with relative ease. All of the usual file attributes can also be checked
  for inconsistencies.
  .
- This package contains base and configuration files that are needed to
- run the actual binaries.
+ This package contains base and configuration files that integrate aide
+ into a Debian system.
  .
  You will almost certainly want to tweak the configuration file in
  /etc/aide/aide.conf or drop your own config snippets into
@@ -21118,25 +21118,6 @@ Description-en: SOAP implementation in Java
  .
  This project is a follow-on to the Apache SOAP project.
 
-Package: libaxis-java-doc
-Description-md5: cf80abfb540610facf7fc7b5369b6e94
-Description-en: SOAP implementation in Java (documentation)
- Apache AXIS is an implementation of the SOAP ("Simple Object Access Protocol")
- submission to W3C.
- .
- From the draft W3C specification:
- .
- SOAP is a lightweight protocol for exchange of information in a decentralized,
- distributed environment. It is an XML based protocol that consists of three
- parts: an envelope that defines a framework for describing what is in a message
- and how to process it, a set of encoding rules for expressing instances of
- application-defined datatypes, and a convention for representing remote
- procedure calls and responses.
- .
- This project is a follow-on to the Apache SOAP project.
- .
- This package contains the Javadoc API documentation.
-
 Package: python3-axisregistry
 Description-md5: 539373e39ff91c99abdb1ad68f414aff
 Description-en: Access data from the Google Fonts variable fonts axis registry
@@ -22246,6 +22227,38 @@ Description-en: fast key-value DB in Go - development files for embedding
  the v1.x.
  .
  This package contains the Go library.
+
+Package: bagel
+Description-md5: 0fbd02ec85f9028f689d08ec8b757ea1
+Description-en: Computational Chemistry Package
+ BAGEL (Brilliantly Advanced General Electronic-structure Library) is a
+ computational chemistry package aimed at large-scale parallel
+ computations.  It specializes on highgly accurate methods and includes
+ density-fitting and relativistic effects for most of the methods it
+ implements.
+ .
+ It can compute energies and gradients for the following methods:
+  * Hartree-Fock (HF)
+  * Density-Functional Theory (DFT)
+  * Second-order Moeller-Plesset perturbation theory (MP2)
+  * Complete active space SCF (CASSCF)
+  * Complete active space second order perturbation theory (CASPT2)
+  * Extended multistate CASPT2 (XMS-CASPT2)
+ .
+ Additionally, it can compute energies for the following methods:
+  * Configuration-interaction singles (CIS)
+  * Full configuration-interaction (FCI)
+  * Multi-state internally contracted multireference configuration-interaction
+    (ic-MRCI)
+  * N-electron valence-state second order perturbation theory (NEVPT2)
+  * Active-space decomposition (ASD) for dimers and for multiple sites via
+    density matrix renormalization group (ASD-DMRG)
+ .
+ BAGEL is able to optimize stationary geometries and conical intersections and
+ to compute vibrational frequencies.
+ .
+ BAGEL does not include a disk interface, so computations need to fit in
+ memory.
 
 Package: baitfisher
 Description-md5: 4f8112acea1615fb8dd7625fdf2f7898
@@ -36896,7 +36909,7 @@ Description-en: Java scripting environment (BeanShell) Version 2
  dynamically interpreted Java, plus some useful stuff.
 
 Package: bsh-doc
-Description-md5: 185310e44d4c9d8cbde45a7662aad306
+Description-md5: af241f12ad873473e50deb1a6f152d29
 Description-en: Documentation for bsh
  BeanShell is a small, free, embeddable, Java source interpreter with object
  scripting language features, written in Java. BeanShell executes standard Java
@@ -36908,8 +36921,7 @@ Description-en: Documentation for bsh
  as a simple scripting engine for you applications.  In short: BeanShell is a
  dynamically interpreted Java, plus some useful stuff.
  .
- The documentation includes the javadoc API for bsh version 2 as well as
- the faq and manual in html-format.
+ The documentation includes the faq and manual in html-format.
 
 Package: bsh-src
 Description-md5: b7ff08ed9f7163110b2eba3e8aec8d91
@@ -92326,23 +92338,6 @@ Description-en: library to access configuration of software components
  .
  This package contains EasyConf java library (JAR).
 
-Package: libeasyconf-java-doc
-Description-md5: 96cd9dc8a753d63e797b7e8fbd00931d
-Description-en: library to access configuration of software components - Javadoc
- EasyConf is a library to access configuration of software components
- and applications.
- .
- EasyConf main features:
-   * XML files, typed property files (including lists, numbers, classes, etc),
-     or a combination of both
-   * multiple environments (development, integration, preproduction, production)
-   * aggregate several components: for example for portlets and portals
-   * support for ASP applications: each company/organization serviced may have
-     its own configuration
-   * provides access to the configuration using JMX
- .
- This package contains EasyConf API Javadoc documentation.
-
 Package: python3-easydict
 Description-md5: 061b7fac958e696779cd80de6e66b670
 Description-en: Javascript-like properties dot notation for Python dicts
@@ -112678,6 +112673,28 @@ Description-en: Unlock a LUKS volume on boot using a FIDO2 token
  It is intended for scenarios where a FIDO2 token has been enrolled
  into a LUKS volume using systemd-cryptenroll --fido2-device.
 
+Package: libfield-api-ecmwf-0d
+Description-md5: 470b8b52902f4ed9231c8a5c1387418b
+Description-en: Library to manage the transfer of data from CPUs to GPUs
+ Field API aims to ease the management and the transfer of data between
+ CPUs and GPUs for the Météo-France/ECMWF software.
+ .
+ It provides abstractions and wrappers around Fortran fields(arrays)
+ to hide data movement complexity.
+ .
+ This package provides the shared library.
+
+Package: libfield-api-ecmwf-dev
+Description-md5: 7c1e8c42a6ff793d48e81d3201923240
+Description-en: Manage the transfer of data from CPUs to GPUs - dev files
+ Field API aims to ease the management and the transfer of data between
+ CPUs and GPUs for the Météo-France/ECMWF software.
+ .
+ It provides abstractions and wrappers around Fortran fields(arrays)
+ to hide data movement complexity.
+ .
+ This package provides the development files (modules, static libraries)
+
 Package: field3d-doc
 Description-md5: 39e115e8381c81587e646e596696c517
 Description-en: documentation for Field3D
@@ -117839,15 +117856,6 @@ Description-en: fast type-safe C++ formatting library -- documentation
  than boost::format, boost::lexical_cast and even sprintf itself.
  .
  This package contains the documentation files.
-
-Package: libfmt10
-Description-md5: bf00d7b126b81746ed9bbb189e83fcc1
-Description-en: fast type-safe C++ formatting library -- library
- This library provides fast, type-safe, small, C++11-aware replacement of
- (s)printf and related machinery. In some cases it's noticeably faster
- than boost::format, boost::lexical_cast and even sprintf itself.
- .
- This package contains the shared library.
 
 Package: libfmt11
 Description-md5: bf00d7b126b81746ed9bbb189e83fcc1
@@ -135698,6 +135706,20 @@ Description-md5: c4e052d72c2adc350355e396b2fd9e47
 Description-en: implementation of overlay+shiftfs in FUSE for rootless containers
  This package provides an overlayfs FUSE implementation so that it can
  be used since Linux 4.18 by unprivileged users in an user namespace.
+
+Package: fuse-posixovl
+Description-md5: 8ad2e903e57718ce373f9c4b34d1d2f9
+Description-en: FUSE file system that provides POSIX functionality
+ With posixovl it is possible to mount FAT, VFAT, NTFS
+ file system so that it behaves like POSIX. File permissions,
+ symbolic links etc. are supported transparently. An extra file
+ stores the information and the file system itself stays unmodified.
+ It is a modern equivalent of the UMSDOS file system.
+ .
+ Typical use: Mount an USB FAT32 drive with posixovl and your
+ files retain their permission settings.
+ .
+ This package extends mount and provides option '-t posixovl'.
 
 Package: fusefat
 Description-md5: 8132b525ea97b6f8f3182b453ba7eaf4
@@ -174747,17 +174769,6 @@ Description-en: Computer Algebra System - console and graphical calculator
  This package contains the user-facing giac programs: xcas, icas, and pgiac;
  as well as the cas_help program for providing user-oriented help.
 
-Package: giada
-Description-md5: df2709dfded3b8dd4cad233cde9064ec
-Description-en: Hardcore Loop Machine
- free, minimal, hardcore audio tool for DJs, live performers and electronic
- musicians. Pick up your channel, fill it with samples or MIDI events and start
- the show by using this tiny piece of software as a loop machine, drum machine,
- sequencer, live sampler or yet as a plugin/effect host.
- .
- Giada aims to be a compact and portable virtual device for production use and
- live sets.
-
 Package: giara
 Description-md5: ef8d1f0d47d9fe15be0aa6d04c5df76b
 Description-en: Reddit client optimized for mobile devices
@@ -184485,6 +184496,14 @@ Description-md5: d246a5b6e8524bca0bd517951a95bb0f
 Description-en: simple and modern sound recorder for GNOME
  GNOME sound recorder is an utility to make simple audio recording from your
  GNOME desktop. It supports several formats like OGG, MP3 or FLAC.
+
+Package: gnome-split
+Description-md5: 6469b6814b9ab25cfe0215014d6ca258
+Description-en: GNOME Split - File splitter for GNOME desktop
+ Tool that allows you to split files and merge them back. It is written in Java
+ and uses a GTK+ user interface (thanks to the java-gnome project). The goal is
+ to offer a native implementation of similar projects which can handle multiple
+ file formats (e.g. Xtremsplit).
 
 Package: gnome-sudoku
 Description-md5: 36f1efc2746ddf39c8f11ff90893cc96
@@ -200013,23 +200032,6 @@ Description-md5: 33740d4b21084d201b69400cc1f0438d
 Description-en: Proton API library used by Go-based clients and tools (library)
  This repository holds Go Proton API, a Go library implementing a client
  and development server for (a subset of) the Proton REST API.
-
-Package: golang-github-henrybear327-proton-api-bridge-dev
-Description-md5: 04d94de461dc5e6b04868e78c54cf7b1
-Description-en: third-party, open-source Proton API bridge (library)
- proton-go-api provides the basic building blocks of API calls and error
- handling, such as 429 exponential back-off, but it is pretty much just a
- barebone interface to the Proton API. For example, the encryption and
- decryption of the Proton Drive file are not provided in this library.
- .
- This codebase, Proton API Bridge, bridges the gap, so software like rclone can
- be built on top of this quickly. This codebase handles the intricate tasks
- before and after calling Proton APIs, particularly the complex encryption
- scheme, allowing developers to implement features for other software on top of
- this codebase.
- .
- Currently, only Proton Drive APIs are bridged, as we are aiming to implement a
- backend for rclone.
 
 Package: golang-github-henvic-httpretty-dev
 Description-md5: 31dbffc9e9a010e2351d0b7f355e452f
@@ -272635,7 +272637,7 @@ Description-en: automated web site testing toolkit
  text, an XML DOM, or containers of forms, tables, and links.
 
 Package: libhttpunit-java-doc
-Description-md5: f4b5ad842e04e308e758f906735cfbe2
+Description-md5: 4f05b8b2a5fd31bcdcb61baf54529b14
 Description-en: documentation for libhttpunit-java
  Documentation for HttpUnit which is an automated web site testing toolkit.
  .
@@ -272644,7 +272646,7 @@ Description-en: documentation for libhttpunit-java
  redirection, and allows Java test code to examine returned pages either as
  text, an XML DOM, or containers of forms, tables, and links.
  .
- This package includes a small manual, the javadoc API, a tutorial and examples.
+ This package includes a small manual, a tutorial and examples.
 
 Package: python3-httpx
 Description-md5: 2c348a296dc97d170a59e6be9287a4b5
@@ -287925,26 +287927,6 @@ Description-en: java library for simple high-level encryption
     multi-processor/multi-core systems.
   * Open API for use with any JCE provider.
 
-Package: libjasypt-java-doc
-Description-md5: a1ca91448ba39f06811599105245adf0
-Description-en: Documentation - java library for simple high-level encryption
- Jasypt is a java library which allows the developer to add basic encryption
- capabilities to projects.
- .
- It provides :
-  * High-security, standards-based encryption techniques, both for
-    unidirectional and bidirectional encryption.
-  * Transparent integration with Hibernate.
-  * Suitable for integration into Spring-based applications and also
-    transparently integrable with Spring Security.
-  * Integrated capabilities for encrypting the configuration of
-    applications (i.e. datasources).
-  * Specific features for high-performance encryption in
-    multi-processor/multi-core systems.
-  * Open API for use with any JCE provider.
- .
- This package contains the API documentation of libjasypt-java.
-
 Package: libjatl-java
 Description-md5: e841bc990bc900437223ec11b1f39ba6
 Description-en: JATL - Java Anti-Template Language
@@ -288383,6 +288365,36 @@ Description-en: compute diffs and apply patches in Java
  operations between texts: computing diffs, applying patches,
  generating unified diffs or parsing them, generating diff output
  and so on.
+
+Package: libjava-gnome-java
+Description-md5: 962402b57c36fceb2d9b4ed74d211da7
+Description-en: Java-gnome language bindings project
+ These are the Java bindings for GTK+ and GNOME! Featuring a robust
+ engineering design, completely generated internals, a lovingly crafted
+ layer presenting the public API, and steadily increasing coverage of
+ the underlying libraries.
+ .
+ You can use java-gnome to develop sophisticated user interfaces for
+ Linux applications so that they richly integrate with the GNOME Desktop
+ while leveraging the power of the Java language and your expertise with
+ it.
+ .
+ This package contains the necessary JAR file.
+
+Package: libjava-gnome-jni
+Description-md5: b939f32b3f5cffa0604e14e01f7e7463
+Description-en: Java-gnome language bindings project JNI layer
+ These are the Java bindings for GTK+ and GNOME! Featuring a robust
+ engineering design, completely generated internals, a lovingly crafted
+ layer presenting the public API, and steadily increasing coverage of
+ the underlying libraries.
+ .
+ You can use java-gnome to develop sophisticated user interfaces for
+ Linux applications so that they richly integrate with the GNOME Desktop
+ while leveraging the power of the Java language and your expertise with
+ it.
+ .
+ This package contains the necessary JNI layer.
 
 Package: libjiu-java
 Description-md5: 923bb7b11e33fb1b01beb3c76141d044
@@ -289396,31 +289408,12 @@ Description-en: java based charts library
  .
  This package contains the library.
 
-Package: libjcharts-java-doc
-Description-md5: 0652b582bf4f1a0becfe2d51318173bd
-Description-en: java based charts library (API docs)
- jCharts is a 100% Java based charting utility that outputs a variety of
- charts. This package has been designed from the ground up by volunteers for
- displaying charts via Servlets, JSP's, and Swing apps.
- .
- This package contains the API documentation.
-
 Package: libjcifs-java
 Description-md5: dd070bd2b997f8ad13dd624d5d36315c
 Description-en: Java library for the CIFS/SMB networking protocol
  JCIFS is an Open Source client library that implements the CIFS/SMB
  networking protocol in 100% Java. CIFS is the standard file sharing
  protocol on the Microsoft Windows platform (e.g. Map Network Drive ...).
-
-Package: libjcifs-java-doc
-Description-md5: d4960509a0a0dd833f2dff741f192006
-Description-en: Documentation for libjcifs-java (CIFS/SMB library for Java)
- JCIFS is an Open Source client library that implements the CIFS/SMB
- networking protocol in 100% Java. CIFS is the standard file sharing
- protocol on the Microsoft Windows platform (e.g. Map Network Drive ...).
- .
- The documentation includes the javadoc API as well as
- the html manual and several examples.
 
 Package: jclassinfo
 Description-md5: 953ff6c148b87e74addabc76f2b0ef1c
@@ -371456,17 +371449,6 @@ Description-en: Java bindings for various native APIs
  These APIs support Java 5 and later. Some of these APIs overlap with APIs
  available in later Java versions.
 
-Package: libnative-platform-java-doc
-Description-md5: f7c71def87860676342787e1cf37d091
-Description-en: testing and specification framework for Java and Groovy - Docs
- A collection of cross-platform Java APIs for various native APIs.
- Supports OS X, Linux, Solaris and Windows.
- .
- These APIs support Java 5 and later. Some of these APIs overlap with APIs
- available in later Java versions.
- .
- This package contains Javadoc API for libnative-platform-java.
-
 Package: libnative-platform-jni
 Description-md5: d2edbb7a20b15d71881f9782c4dc8e81
 Description-en: Java bindings for various native APIs - JNI library
@@ -398544,6 +398526,25 @@ Description-en: module to create simple lightweight record-like structures
  constructor will croak if passed the wrong number of arguments, as will
  attempts to refer to fields that don't exist.
 
+Package: libstructures-dev
+Description-md5: a7ab39d0efc38a0edfde09450d7948f0
+Description-en: development files for libstructures
+ structures is a collection of C++ data structures used by the vg ecosystem.
+ It provides a suffix tree, a union-find implementation, min-max and
+ rank-pairing heaps, an immutable linked list, an updateable priority queue
+ and an overflow-resistant floating-point representation.
+ .
+ This package contains the C++ headers, the static library and the shared
+ library linker symlink.
+
+Package: libstructures1
+Description-md5: 781a53758cd6124ddcb49d26cce582a2
+Description-en: collection of C++ data structures for genome graphs
+ structures is a collection of C++ data structures used by the vg ecosystem.
+ It provides a suffix tree, a union-find implementation, min-max and
+ rank-pairing heaps, an immutable linked list, an updateable priority queue
+ and an overflow-resistant floating-point representation.
+
 Package: libstxxl-dev
 Description-md5: a744779e7a8787f613d0915361538a7e
 Description-en: Development libraries for STXXL
@@ -419362,101 +419363,101 @@ Description-en: CPU frequency and voltage scaling tools for Linux (libraries)
  .
  This package contains the shared library.
 
-Package: linux-base-7.2.11+deb14-amd64
-Description-md5: d4cfceec3200b50d608d9df3ae958621
-Description-en: Linux 7.2.11 for 64-bit PCs (base files)
- This package contains files for Linux 7.2.11 on PCs with AMD64, Intel 64
+Package: linux-base-7.2.12+deb14-amd64
+Description-md5: 1e459d288a7c04fab794df25ceff2d43
+Description-en: Linux 7.2.12 for 64-bit PCs (base files)
+ This package contains files for Linux 7.2.12 on PCs with AMD64, Intel 64
  or VIA Nano processors that are used for both installing the kernel and
  building additional modules.
 
-Package: linux-base-7.2.11+deb14-arm64
-Description-md5: b6355d4cc17fb4cd9c0321f1211e6d92
-Description-en: Linux 7.2.11 for 64-bit ARMv8 machines (base files)
- This package contains files for Linux 7.2.11 on 64-bit ARMv8 machines that
+Package: linux-base-7.2.12+deb14-arm64
+Description-md5: 991857d6e9d72aefe8f9713e4f914c3d
+Description-en: Linux 7.2.12 for 64-bit ARMv8 machines (base files)
+ This package contains files for Linux 7.2.12 on 64-bit ARMv8 machines that
  are used for both installing the kernel and building additional modules.
 
-Package: linux-base-7.2.11+deb14-arm64-16k
-Description-md5: 89872bded322a3961901255b6d70d665
-Description-en: Linux 7.2.11 for 64-bit ARMv8 machines with 16k pages (base files)
- This package contains files for Linux 7.2.11 on 64-bit ARMv8 machines with
+Package: linux-base-7.2.12+deb14-arm64-16k
+Description-md5: c8b656ecc5f605201e4770e6531f8b83
+Description-en: Linux 7.2.12 for 64-bit ARMv8 machines with 16k pages (base files)
+ This package contains files for Linux 7.2.12 on 64-bit ARMv8 machines with
  16k pages that are used for both installing the kernel and building
  additional modules.
 
-Package: linux-base-7.2.11+deb14-armmp
-Description-md5: 885feb523857817928fd7c6ee0d86b24
-Description-en: Linux 7.2.11 for ARMv7 multiplatform compatible SoCs (base files)
- This package contains files for Linux 7.2.11 on ARMv7 multiplatform
+Package: linux-base-7.2.12+deb14-armmp
+Description-md5: 4664d441d6a0ec990e4ee8fd6d317cd9
+Description-en: Linux 7.2.12 for ARMv7 multiplatform compatible SoCs (base files)
+ This package contains files for Linux 7.2.12 on ARMv7 multiplatform
  kernel.  See https://wiki.debian.org/DebianKernel/ARMMP for details of
  supported platforms that are used for both installing the kernel and
  building additional modules.
 
-Package: linux-base-7.2.11+deb14-armmp-lpae
-Description-md5: 62cac37c8793dee19afdccb369b861e5
-Description-en: Linux 7.2.11 for ARMv7 multiplatform compatible SoCs supporting LPAE (base files)
- This package contains files for Linux 7.2.11 on ARMv7 multiplatform kernel
+Package: linux-base-7.2.12+deb14-armmp-lpae
+Description-md5: 8e9c87de37fdffa5f8a024080889641d
+Description-en: Linux 7.2.12 for ARMv7 multiplatform compatible SoCs supporting LPAE (base files)
+ This package contains files for Linux 7.2.12 on ARMv7 multiplatform kernel
  supporting LPAE. See https://wiki.debian.org/DebianKernel/ARMMP for
  details of supported platforms.  that are used for both installing the
  kernel and building additional modules.
 
-Package: linux-base-7.2.11+deb14-cloud-amd64
-Description-md5: 67553b64e35474ca21a10fcc51d2247c
-Description-en: Linux 7.2.11 for x86-64 cloud (base files)
- This package contains files for Linux 7.2.11 on cloud platforms including
+Package: linux-base-7.2.12+deb14-cloud-amd64
+Description-md5: 534a33d7fcba5eeb55e8b001e41141f7
+Description-en: Linux 7.2.12 for x86-64 cloud (base files)
+ This package contains files for Linux 7.2.12 on cloud platforms including
  Amazon EC2, Microsoft Azure, and Google Compute Engine that are used for
  both installing the kernel and building additional modules.
 
-Package: linux-base-7.2.11+deb14-cloud-arm64
-Description-md5: f87789c8697c68206c9e8df8c51a4ad4
-Description-en: Linux 7.2.11 for arm64 cloud (base files)
- This package contains files for Linux 7.2.11 on cloud platforms supporting
+Package: linux-base-7.2.12+deb14-cloud-arm64
+Description-md5: daa29f39625fd9583fcddecb1f32ab63
+Description-en: Linux 7.2.12 for arm64 cloud (base files)
+ This package contains files for Linux 7.2.12 on cloud platforms supporting
  arm64 virtual machines that are used for both installing the kernel and
  building additional modules.
 
-Package: linux-base-7.2.11+deb14-loong64
-Description-md5: 643ffe58c0e9bf041dc55bc29e9cf997
-Description-en: Linux 7.2.11 for 64-bit LoongArch platforms (base files)
- This package contains files for Linux 7.2.11 on 64-bit LoongArch platforms
+Package: linux-base-7.2.12+deb14-loong64
+Description-md5: 2750210f5f4af8f691d435f6f17865fb
+Description-en: Linux 7.2.12 for 64-bit LoongArch platforms (base files)
+ This package contains files for Linux 7.2.12 on 64-bit LoongArch platforms
  that are used for both installing the kernel and building additional
  modules.
 
-Package: linux-base-7.2.11+deb14-powerpc64le
-Description-md5: 6903bbc247f3ceff7743b674588140be
-Description-en: Linux 7.2.11 for Little-endian 64-bit PowerPC with 4k pages (base files)
- This package contains files for Linux 7.2.11 on Little-endian 64-bit
+Package: linux-base-7.2.12+deb14-powerpc64le
+Description-md5: c5dcf98d7395b48e211779b82adcd356
+Description-en: Linux 7.2.12 for Little-endian 64-bit PowerPC with 4k pages (base files)
+ This package contains files for Linux 7.2.12 on Little-endian 64-bit
  PowerPC with 4k pages that are used for both installing the kernel and
  building additional modules.
 
-Package: linux-base-7.2.11+deb14-powerpc64le-64k
-Description-md5: 10ff89eba63f142166dc3eb3f3329c19
-Description-en: Linux 7.2.11 for Little-endian 64-bit PowerPC with 64k pages (base files)
- This package contains files for Linux 7.2.11 on Little-endian 64-bit
+Package: linux-base-7.2.12+deb14-powerpc64le-64k
+Description-md5: b60c639b642bdb14f6168c807dafbc4c
+Description-en: Linux 7.2.12 for Little-endian 64-bit PowerPC with 64k pages (base files)
+ This package contains files for Linux 7.2.12 on Little-endian 64-bit
  PowerPC with 64k pages that are used for both installing the kernel and
  building additional modules.
 
-Package: linux-base-7.2.11+deb14-riscv64
-Description-md5: f5fa9833d9e4f14d55e7ded6ab28c95b
-Description-en: Linux 7.2.11 for 64-bit RISC-V platforms (base files)
- This package contains files for Linux 7.2.11 on 64-bit RISC-V platforms
+Package: linux-base-7.2.12+deb14-riscv64
+Description-md5: c2e6fcfd3d5f906639bc964d733fab9a
+Description-en: Linux 7.2.12 for 64-bit RISC-V platforms (base files)
+ This package contains files for Linux 7.2.12 on 64-bit RISC-V platforms
  that are used for both installing the kernel and building additional
  modules.
 
-Package: linux-base-7.2.11+deb14-rt-amd64
-Description-md5: d4cfceec3200b50d608d9df3ae958621
-Description-en: Linux 7.2.11 for 64-bit PCs (base files)
- This package contains files for Linux 7.2.11 on PCs with AMD64, Intel 64
+Package: linux-base-7.2.12+deb14-rt-amd64
+Description-md5: 1e459d288a7c04fab794df25ceff2d43
+Description-en: Linux 7.2.12 for 64-bit PCs (base files)
+ This package contains files for Linux 7.2.12 on PCs with AMD64, Intel 64
  or VIA Nano processors that are used for both installing the kernel and
  building additional modules.
 
-Package: linux-base-7.2.11+deb14-rt-arm64
-Description-md5: b6355d4cc17fb4cd9c0321f1211e6d92
-Description-en: Linux 7.2.11 for 64-bit ARMv8 machines (base files)
- This package contains files for Linux 7.2.11 on 64-bit ARMv8 machines that
+Package: linux-base-7.2.12+deb14-rt-arm64
+Description-md5: 991857d6e9d72aefe8f9713e4f914c3d
+Description-en: Linux 7.2.12 for 64-bit ARMv8 machines (base files)
+ This package contains files for Linux 7.2.12 on 64-bit ARMv8 machines that
  are used for both installing the kernel and building additional modules.
 
-Package: linux-base-7.2.11+deb14-s390x
-Description-md5: 9546c89134fe1e1bfca39cd835df3b0c
-Description-en: Linux 7.2.11 for IBM zSeries (base files)
- This package contains files for Linux 7.2.11 on IBM zSeries that are used
+Package: linux-base-7.2.12+deb14-s390x
+Description-md5: 296461948fb76c7dae509209aee3c5b1
+Description-en: Linux 7.2.12 for IBM zSeries (base files)
+ This package contains files for Linux 7.2.12 on IBM zSeries that are used
  for both installing the kernel and building additional modules.
 
 Package: linux-base-armmp
@@ -419508,134 +419509,134 @@ Description-en: Linux for IBM zSeries (dummy package)
  This empty package is used to keep the installed versions of
  linux-headers-IBM zSeries and linux-image-IBM zSeries synchronised.
 
-Package: linux-binary-7.2.11+deb14-armmp
-Description-md5: ebc8ba4134e949cce6cfa1edad02767a
-Description-en: Linux 7.2.11 for ARMv7 multiplatform compatible SoCs (kernel image)
- This package contains the kernel image for Linux 7.2.11 on ARMv7
+Package: linux-binary-7.2.12+deb14-armmp
+Description-md5: 2c499348049252496eab3bdfa136712b
+Description-en: Linux 7.2.12 for ARMv7 multiplatform compatible SoCs (kernel image)
+ This package contains the kernel image for Linux 7.2.12 on ARMv7
  multiplatform kernel.  See https://wiki.debian.org/DebianKernel/ARMMP for
  details of supported platforms.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-armmp.
+ install linux-image-7.2.12+deb14-armmp.
 
-Package: linux-binary-7.2.11+deb14-armmp-lpae
-Description-md5: 5ebc52b92178588d30f20b251e4007f4
-Description-en: Linux 7.2.11 for ARMv7 multiplatform compatible SoCs supporting LPAE (kernel image)
- This package contains the kernel image for Linux 7.2.11 on ARMv7
+Package: linux-binary-7.2.12+deb14-armmp-lpae
+Description-md5: 9358529beeeb76f0f076aed6cecc10cd
+Description-en: Linux 7.2.12 for ARMv7 multiplatform compatible SoCs supporting LPAE (kernel image)
+ This package contains the kernel image for Linux 7.2.12 on ARMv7
  multiplatform kernel supporting LPAE. See
  https://wiki.debian.org/DebianKernel/ARMMP for details of supported
  platforms..
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-armmp-lpae.
+ install linux-image-7.2.12+deb14-armmp-lpae.
 
-Package: linux-binary-7.2.11+deb14-loong64
-Description-md5: 12865928ad87ce25716f71b66b54cc70
-Description-en: Linux 7.2.11 for 64-bit LoongArch platforms (kernel image)
- This package contains the kernel image for Linux 7.2.11 on 64-bit
+Package: linux-binary-7.2.12+deb14-loong64
+Description-md5: 6596d706b759d28b7f7e966a415ae5f6
+Description-en: Linux 7.2.12 for 64-bit LoongArch platforms (kernel image)
+ This package contains the kernel image for Linux 7.2.12 on 64-bit
  LoongArch platforms.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-loong64.
+ install linux-image-7.2.12+deb14-loong64.
 
-Package: linux-binary-7.2.11+deb14-powerpc64le
-Description-md5: 37cbbe11791de7173c3fc1ab0ef314ae
-Description-en: Linux 7.2.11 for Little-endian 64-bit PowerPC with 4k pages (kernel image)
- This package contains the kernel image for Linux 7.2.11 on Little-endian
+Package: linux-binary-7.2.12+deb14-powerpc64le
+Description-md5: 6d0be8990114bb2a883b4bd53ca40a83
+Description-en: Linux 7.2.12 for Little-endian 64-bit PowerPC with 4k pages (kernel image)
+ This package contains the kernel image for Linux 7.2.12 on Little-endian
  64-bit PowerPC with 4k pages.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-powerpc64le.
+ install linux-image-7.2.12+deb14-powerpc64le.
 
-Package: linux-binary-7.2.11+deb14-powerpc64le-64k
-Description-md5: 04d31fc0257a96f4215131f5dc77e841
-Description-en: Linux 7.2.11 for Little-endian 64-bit PowerPC with 64k pages (kernel image)
- This package contains the kernel image for Linux 7.2.11 on Little-endian
+Package: linux-binary-7.2.12+deb14-powerpc64le-64k
+Description-md5: 52d7207c5db5e7efd028f4f1e2b71b37
+Description-en: Linux 7.2.12 for Little-endian 64-bit PowerPC with 64k pages (kernel image)
+ This package contains the kernel image for Linux 7.2.12 on Little-endian
  64-bit PowerPC with 64k pages.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-powerpc64le-64k.
+ install linux-image-7.2.12+deb14-powerpc64le-64k.
 
-Package: linux-binary-7.2.11+deb14-riscv64
-Description-md5: 8da66bd3422943b889f01c2571a1082f
-Description-en: Linux 7.2.11 for 64-bit RISC-V platforms (kernel image)
- This package contains the kernel image for Linux 7.2.11 on 64-bit RISC-V
+Package: linux-binary-7.2.12+deb14-riscv64
+Description-md5: bf8909a9bdc2a127ea733c6c063274ef
+Description-en: Linux 7.2.12 for 64-bit RISC-V platforms (kernel image)
+ This package contains the kernel image for Linux 7.2.12 on 64-bit RISC-V
  platforms.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-riscv64.
+ install linux-image-7.2.12+deb14-riscv64.
 
-Package: linux-binary-7.2.11+deb14-s390x
-Description-md5: b7b9d387c8ac909d916a510b8cb879b8
-Description-en: Linux 7.2.11 for IBM zSeries (kernel image)
- This package contains the kernel image for Linux 7.2.11 on IBM zSeries.
+Package: linux-binary-7.2.12+deb14-s390x
+Description-md5: c92cc085d50d1e2bf9ac69b1120f5d87
+Description-en: Linux 7.2.12 for IBM zSeries (kernel image)
+ This package contains the kernel image for Linux 7.2.12 on IBM zSeries.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-s390x.
+ install linux-image-7.2.12+deb14-s390x.
 
-Package: linux-binary-unsigned-7.2.11+deb14-amd64
-Description-md5: 46e51fed4c6b4f18b749534a9edc65c4
-Description-en: Linux 7.2.11 for 64-bit PCs (unsigned kernel image)
- This package contains the unsigned kernel image for Linux 7.2.11 on PCs
+Package: linux-binary-unsigned-7.2.12+deb14-amd64
+Description-md5: 551d2b1ff0c8117b492c5e7f3fb77a6c
+Description-en: Linux 7.2.12 for 64-bit PCs (unsigned kernel image)
+ This package contains the unsigned kernel image for Linux 7.2.12 on PCs
  with AMD64, Intel 64 or VIA Nano processors.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-amd64.
+ install linux-image-7.2.12+deb14-amd64.
 
-Package: linux-binary-unsigned-7.2.11+deb14-arm64
-Description-md5: 412dc99711e66a20660cb93f464387f1
-Description-en: Linux 7.2.11 for 64-bit ARMv8 machines (unsigned kernel image)
- This package contains the unsigned kernel image for Linux 7.2.11 on 64-bit
+Package: linux-binary-unsigned-7.2.12+deb14-arm64
+Description-md5: d3f181a3ee62086dbc530ffe4f182feb
+Description-en: Linux 7.2.12 for 64-bit ARMv8 machines (unsigned kernel image)
+ This package contains the unsigned kernel image for Linux 7.2.12 on 64-bit
  ARMv8 machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-arm64.
+ install linux-image-7.2.12+deb14-arm64.
 
-Package: linux-binary-unsigned-7.2.11+deb14-arm64-16k
-Description-md5: 5632597a3d32e0c5544e65dfe5107277
-Description-en: Linux 7.2.11 for 64-bit ARMv8 machines with 16k pages (unsigned kernel image)
- This package contains the unsigned kernel image for Linux 7.2.11 on 64-bit
+Package: linux-binary-unsigned-7.2.12+deb14-arm64-16k
+Description-md5: fadefb276a9e196986be17becf8d2123
+Description-en: Linux 7.2.12 for 64-bit ARMv8 machines with 16k pages (unsigned kernel image)
+ This package contains the unsigned kernel image for Linux 7.2.12 on 64-bit
  ARMv8 machines with 16k pages.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-arm64-16k.
+ install linux-image-7.2.12+deb14-arm64-16k.
 
-Package: linux-binary-unsigned-7.2.11+deb14-cloud-amd64
-Description-md5: ae148dfa29171ba7e00d00cd99242396
-Description-en: Linux 7.2.11 for x86-64 cloud (unsigned kernel image)
- This package contains the unsigned kernel image for Linux 7.2.11 on cloud
+Package: linux-binary-unsigned-7.2.12+deb14-cloud-amd64
+Description-md5: f41464d343a36fc06dff857760a56a99
+Description-en: Linux 7.2.12 for x86-64 cloud (unsigned kernel image)
+ This package contains the unsigned kernel image for Linux 7.2.12 on cloud
  platforms including Amazon EC2, Microsoft Azure, and Google Compute
  Engine.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-cloud-amd64.
+ install linux-image-7.2.12+deb14-cloud-amd64.
 
-Package: linux-binary-unsigned-7.2.11+deb14-cloud-arm64
-Description-md5: 4df8360474f6ca387ffe9d4b1fa2e707
-Description-en: Linux 7.2.11 for arm64 cloud (unsigned kernel image)
- This package contains the unsigned kernel image for Linux 7.2.11 on cloud
+Package: linux-binary-unsigned-7.2.12+deb14-cloud-arm64
+Description-md5: c996652501720fd94e6042761e533435
+Description-en: Linux 7.2.12 for arm64 cloud (unsigned kernel image)
+ This package contains the unsigned kernel image for Linux 7.2.12 on cloud
  platforms supporting arm64 virtual machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-cloud-arm64.
+ install linux-image-7.2.12+deb14-cloud-arm64.
 
-Package: linux-binary-unsigned-7.2.11+deb14-rt-amd64
-Description-md5: c7d211c0c0b5ef72171acd236f6f1bea
-Description-en: Linux 7.2.11 for 64-bit PCs (unsigned kernel image)
- This package contains the unsigned kernel image for Linux 7.2.11 on PCs
+Package: linux-binary-unsigned-7.2.12+deb14-rt-amd64
+Description-md5: f53822daef0a4265373c5ac332f16e56
+Description-en: Linux 7.2.12 for 64-bit PCs (unsigned kernel image)
+ This package contains the unsigned kernel image for Linux 7.2.12 on PCs
  with AMD64, Intel 64 or VIA Nano processors.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-rt-amd64.
+ install linux-image-7.2.12+deb14-rt-amd64.
 
-Package: linux-binary-unsigned-7.2.11+deb14-rt-arm64
-Description-md5: fa7d75865efcbc004830c193481a507d
-Description-en: Linux 7.2.11 for 64-bit ARMv8 machines (unsigned kernel image)
- This package contains the unsigned kernel image for Linux 7.2.11 on 64-bit
+Package: linux-binary-unsigned-7.2.12+deb14-rt-arm64
+Description-md5: dd76a712cb0f15117b99cdafbd36e648
+Description-en: Linux 7.2.12 for 64-bit ARMv8 machines (unsigned kernel image)
+ This package contains the unsigned kernel image for Linux 7.2.12 on 64-bit
  ARMv8 machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-rt-arm64.
+ install linux-image-7.2.12+deb14-rt-arm64.
 
 Package: linux-bpf-dev
 Description-md5: ef487f2f846252f409f3ebb8ece1c714
@@ -419693,157 +419694,157 @@ Description-en: Linux kernel specific documentation for version 7.2
  notes and the like.  An index to the documentation is installed as
  /usr/share/doc/linux-doc-7.2/html/index.html.
 
-Package: linux-headers-7.2.11+deb14-amd64
-Description-md5: 3e66133f43affeef14ce49a9dc3adca0
-Description-en: Linux 7.2.11 for 64-bit PCs (module development)
+Package: linux-headers-7.2.12+deb14-amd64
+Description-md5: 998c1e0a41dd3d77433527fa2cf4152f
+Description-en: Linux 7.2.12 for 64-bit PCs (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.11+deb14-amd64, generally used for building out-of-tree
+ Linux kernel 7.2.12+deb14-amd64, generally used for building out-of-tree
  kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.11+deb14-amd64, and can be used for building
+ /usr/src/linux-headers-7.2.12+deb14-amd64, and can be used for building
  modules that load into the kernel provided by the
- linux-image-7.2.11+deb14-amd64 package.
+ linux-image-7.2.12+deb14-amd64 package.
 
-Package: linux-headers-7.2.11+deb14-arm64
-Description-md5: c5bab1444376473d9b9dcadb0ac006ea
-Description-en: Linux 7.2.11 for 64-bit ARMv8 machines (module development)
+Package: linux-headers-7.2.12+deb14-arm64
+Description-md5: 205dfa5ec058ece833fafff90fbcb815
+Description-en: Linux 7.2.12 for 64-bit ARMv8 machines (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.11+deb14-arm64, generally used for building out-of-tree
+ Linux kernel 7.2.12+deb14-arm64, generally used for building out-of-tree
  kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.11+deb14-arm64, and can be used for building
+ /usr/src/linux-headers-7.2.12+deb14-arm64, and can be used for building
  modules that load into the kernel provided by the
- linux-image-7.2.11+deb14-arm64 package.
+ linux-image-7.2.12+deb14-arm64 package.
 
-Package: linux-headers-7.2.11+deb14-arm64-16k
-Description-md5: 0c91ba2e12216b67880b39c5fe6c7a03
-Description-en: Linux 7.2.11 for 64-bit ARMv8 machines with 16k pages (module development)
+Package: linux-headers-7.2.12+deb14-arm64-16k
+Description-md5: 8c53d0009c8771766ede96b6476e4e72
+Description-en: Linux 7.2.12 for 64-bit ARMv8 machines with 16k pages (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.11+deb14-arm64-16k, generally used for building
+ Linux kernel 7.2.12+deb14-arm64-16k, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.11+deb14-arm64-16k, and can be used for
+ /usr/src/linux-headers-7.2.12+deb14-arm64-16k, and can be used for
  building modules that load into the kernel provided by the
- linux-image-7.2.11+deb14-arm64-16k package.
+ linux-image-7.2.12+deb14-arm64-16k package.
 
-Package: linux-headers-7.2.11+deb14-armmp
-Description-md5: 5a362d19f9a223689624180ec3d97133
-Description-en: Linux 7.2.11 for ARMv7 multiplatform compatible SoCs (module development)
+Package: linux-headers-7.2.12+deb14-armmp
+Description-md5: 06ff642f5e2aa362108e914792d1a432
+Description-en: Linux 7.2.12 for ARMv7 multiplatform compatible SoCs (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.11+deb14-armmp, generally used for building out-of-tree
+ Linux kernel 7.2.12+deb14-armmp, generally used for building out-of-tree
  kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.11+deb14-armmp, and can be used for building
+ /usr/src/linux-headers-7.2.12+deb14-armmp, and can be used for building
  modules that load into the kernel provided by the
- linux-image-7.2.11+deb14-armmp package.
+ linux-image-7.2.12+deb14-armmp package.
 
-Package: linux-headers-7.2.11+deb14-armmp-lpae
-Description-md5: ed253dcba316a0a8f4a3f3282f215edb
-Description-en: Linux 7.2.11 for ARMv7 multiplatform compatible SoCs supporting LPAE (module development)
+Package: linux-headers-7.2.12+deb14-armmp-lpae
+Description-md5: 806ff91a62926dc4e7641a1c8a790270
+Description-en: Linux 7.2.12 for ARMv7 multiplatform compatible SoCs supporting LPAE (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.11+deb14-armmp-lpae, generally used for building
+ Linux kernel 7.2.12+deb14-armmp-lpae, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.11+deb14-armmp-lpae, and can be used for
+ /usr/src/linux-headers-7.2.12+deb14-armmp-lpae, and can be used for
  building modules that load into the kernel provided by the
- linux-image-7.2.11+deb14-armmp-lpae package.
+ linux-image-7.2.12+deb14-armmp-lpae package.
 
-Package: linux-headers-7.2.11+deb14-cloud-amd64
-Description-md5: 1dda68b8ba33c5439f413243c14bbf93
-Description-en: Linux 7.2.11 for x86-64 cloud (module development)
+Package: linux-headers-7.2.12+deb14-cloud-amd64
+Description-md5: 6a9aee572cc5f131385bef0a87d625f4
+Description-en: Linux 7.2.12 for x86-64 cloud (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.11+deb14-cloud-amd64, generally used for building
+ Linux kernel 7.2.12+deb14-cloud-amd64, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.11+deb14-cloud-amd64, and can be used for
+ /usr/src/linux-headers-7.2.12+deb14-cloud-amd64, and can be used for
  building modules that load into the kernel provided by the
- linux-image-7.2.11+deb14-cloud-amd64 package.
+ linux-image-7.2.12+deb14-cloud-amd64 package.
 
-Package: linux-headers-7.2.11+deb14-cloud-arm64
-Description-md5: 742a14f0ed58fa625f2d1723a489e715
-Description-en: Linux 7.2.11 for arm64 cloud (module development)
+Package: linux-headers-7.2.12+deb14-cloud-arm64
+Description-md5: fd770347924bfafaceb48919fb44b506
+Description-en: Linux 7.2.12 for arm64 cloud (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.11+deb14-cloud-arm64, generally used for building
+ Linux kernel 7.2.12+deb14-cloud-arm64, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.11+deb14-cloud-arm64, and can be used for
+ /usr/src/linux-headers-7.2.12+deb14-cloud-arm64, and can be used for
  building modules that load into the kernel provided by the
- linux-image-7.2.11+deb14-cloud-arm64 package.
+ linux-image-7.2.12+deb14-cloud-arm64 package.
 
-Package: linux-headers-7.2.11+deb14-common
-Description-md5: ba0a432df61418fad9314b13ffd3f261
-Description-en: Common header files for Linux 7.2.11+deb14
+Package: linux-headers-7.2.12+deb14-common
+Description-md5: 24d6c315955f527f9e54841a7b3ac89c
+Description-en: Common header files for Linux 7.2.12+deb14
  This package provides the common kernel header files for Linux kernel
- version 7.2.11+deb14, generally used for building out-of-tree kernel
+ version 7.2.12+deb14, generally used for building out-of-tree kernel
  modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.11+deb14-common.
+ /usr/src/linux-headers-7.2.12+deb14-common.
  .
  To obtain a complete set of headers you also need to install the
- linux-headers-7.2.11+deb14-(flavour) package, matching the flavour of the
+ linux-headers-7.2.12+deb14-(flavour) package, matching the flavour of the
  kernel you intend the build for.
 
-Package: linux-headers-7.2.11+deb14-loong64
-Description-md5: 68df589ad2333229d6c638506e522c3e
-Description-en: Linux 7.2.11 for 64-bit LoongArch platforms (module development)
+Package: linux-headers-7.2.12+deb14-loong64
+Description-md5: df36e5eb6d7f456b5022d287af2d4a89
+Description-en: Linux 7.2.12 for 64-bit LoongArch platforms (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.11+deb14-loong64, generally used for building out-of-tree
+ Linux kernel 7.2.12+deb14-loong64, generally used for building out-of-tree
  kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.11+deb14-loong64, and can be used for building
+ /usr/src/linux-headers-7.2.12+deb14-loong64, and can be used for building
  modules that load into the kernel provided by the
- linux-image-7.2.11+deb14-loong64 package.
+ linux-image-7.2.12+deb14-loong64 package.
 
-Package: linux-headers-7.2.11+deb14-powerpc64le
-Description-md5: 0965a326613ff3468ce3c9aacb45b91e
-Description-en: Linux 7.2.11 for Little-endian 64-bit PowerPC with 4k pages (module development)
+Package: linux-headers-7.2.12+deb14-powerpc64le
+Description-md5: 82efb6afad9c241d2c7a1a291776ba02
+Description-en: Linux 7.2.12 for Little-endian 64-bit PowerPC with 4k pages (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.11+deb14-powerpc64le, generally used for building
+ Linux kernel 7.2.12+deb14-powerpc64le, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.11+deb14-powerpc64le, and can be used for
+ /usr/src/linux-headers-7.2.12+deb14-powerpc64le, and can be used for
  building modules that load into the kernel provided by the
- linux-image-7.2.11+deb14-powerpc64le package.
+ linux-image-7.2.12+deb14-powerpc64le package.
 
-Package: linux-headers-7.2.11+deb14-powerpc64le-64k
-Description-md5: 3577e17f331159cb989b084ba50bc986
-Description-en: Linux 7.2.11 for Little-endian 64-bit PowerPC with 64k pages (module development)
+Package: linux-headers-7.2.12+deb14-powerpc64le-64k
+Description-md5: 63cd6bd0ec9d7b3d41c816a78c1ff3ef
+Description-en: Linux 7.2.12 for Little-endian 64-bit PowerPC with 64k pages (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.11+deb14-powerpc64le-64k, generally used for building
+ Linux kernel 7.2.12+deb14-powerpc64le-64k, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.11+deb14-powerpc64le-64k, and can be used for
+ /usr/src/linux-headers-7.2.12+deb14-powerpc64le-64k, and can be used for
  building modules that load into the kernel provided by the
- linux-image-7.2.11+deb14-powerpc64le-64k package.
+ linux-image-7.2.12+deb14-powerpc64le-64k package.
 
-Package: linux-headers-7.2.11+deb14-riscv64
-Description-md5: 1b482f37c4eeac1ba622757a75af4370
-Description-en: Linux 7.2.11 for 64-bit RISC-V platforms (module development)
+Package: linux-headers-7.2.12+deb14-riscv64
+Description-md5: d98d4cf8f9b9050a554f8fdb47785254
+Description-en: Linux 7.2.12 for 64-bit RISC-V platforms (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.11+deb14-riscv64, generally used for building out-of-tree
+ Linux kernel 7.2.12+deb14-riscv64, generally used for building out-of-tree
  kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.11+deb14-riscv64, and can be used for building
+ /usr/src/linux-headers-7.2.12+deb14-riscv64, and can be used for building
  modules that load into the kernel provided by the
- linux-image-7.2.11+deb14-riscv64 package.
+ linux-image-7.2.12+deb14-riscv64 package.
 
-Package: linux-headers-7.2.11+deb14-rt-amd64
-Description-md5: 61934310bb7a29ea4707ad20caede10f
-Description-en: Linux 7.2.11 for 64-bit PCs (module development)
+Package: linux-headers-7.2.12+deb14-rt-amd64
+Description-md5: 75445ce69faa11d03016e84528ab9235
+Description-en: Linux 7.2.12 for 64-bit PCs (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.11+deb14-rt-amd64, generally used for building
+ Linux kernel 7.2.12+deb14-rt-amd64, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.11+deb14-rt-amd64, and can be used for building
+ /usr/src/linux-headers-7.2.12+deb14-rt-amd64, and can be used for building
  modules that load into the kernel provided by the
- linux-image-7.2.11+deb14-rt-amd64 package.
+ linux-image-7.2.12+deb14-rt-amd64 package.
 
-Package: linux-headers-7.2.11+deb14-rt-arm64
-Description-md5: e6f9fae7b926d29d62d914b2d98ede00
-Description-en: Linux 7.2.11 for 64-bit ARMv8 machines (module development)
+Package: linux-headers-7.2.12+deb14-rt-arm64
+Description-md5: 9d33903b2656d95fd1396a3727ac8af3
+Description-en: Linux 7.2.12 for 64-bit ARMv8 machines (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.11+deb14-rt-arm64, generally used for building
+ Linux kernel 7.2.12+deb14-rt-arm64, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.11+deb14-rt-arm64, and can be used for building
+ /usr/src/linux-headers-7.2.12+deb14-rt-arm64, and can be used for building
  modules that load into the kernel provided by the
- linux-image-7.2.11+deb14-rt-arm64 package.
+ linux-image-7.2.12+deb14-rt-arm64 package.
 
-Package: linux-headers-7.2.11+deb14-s390x
-Description-md5: 9e5b3bc9d1f83f6947eb1d65c5915d82
-Description-en: Linux 7.2.11 for IBM zSeries (module development)
+Package: linux-headers-7.2.12+deb14-s390x
+Description-md5: bbc0d2e1b6c30eb44da2896ad49c696a
+Description-en: Linux 7.2.12 for IBM zSeries (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.11+deb14-s390x, generally used for building out-of-tree
+ Linux kernel 7.2.12+deb14-s390x, generally used for building out-of-tree
  kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.11+deb14-s390x, and can be used for building
+ /usr/src/linux-headers-7.2.12+deb14-s390x, and can be used for building
  modules that load into the kernel provided by the
- linux-image-7.2.11+deb14-s390x package.
+ linux-image-7.2.12+deb14-s390x package.
 
 Package: linux-headers-armmp
 Description-md5: 8a845be4b24bac682bd58c219e9df427
@@ -419887,130 +419888,130 @@ Description-en: Linux for IBM zSeries (module development meta-package)
  This package depends on the architecture-specific header files for the
  latest Linux kernel s390x configuration.
 
-Package: linux-image-7.2.11+deb14-amd64-dbg
-Description-md5: 89dcaf852f3cfeb8079433d15bb5badc
-Description-en: Linux 7.2.11 for 64-bit PCs (debug symbols)
+Package: linux-image-7.2.12+deb14-amd64-dbg
+Description-md5: 618dcc050bfe3d874b415cff92bcb62a
+Description-en: Linux 7.2.12 for 64-bit PCs (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.11+deb14-amd64.
+ modules in linux-image-7.2.12+deb14-amd64.
 
-Package: linux-image-7.2.11+deb14-arm64-16k-dbg
-Description-md5: 9058f3112f0c2bb9b8e03d107582a176
-Description-en: Linux 7.2.11 for 64-bit ARMv8 machines with 16k pages (debug symbols)
+Package: linux-image-7.2.12+deb14-arm64-16k-dbg
+Description-md5: c93f4024891209008d01fa4c85dab1d1
+Description-en: Linux 7.2.12 for 64-bit ARMv8 machines with 16k pages (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.11+deb14-arm64-16k.
+ modules in linux-image-7.2.12+deb14-arm64-16k.
 
-Package: linux-image-7.2.11+deb14-arm64-dbg
-Description-md5: 767749ce95a3d499ffff54a814f2f7c2
-Description-en: Linux 7.2.11 for 64-bit ARMv8 machines (debug symbols)
+Package: linux-image-7.2.12+deb14-arm64-dbg
+Description-md5: d54cd033e631d5a7b386208343e1aaec
+Description-en: Linux 7.2.12 for 64-bit ARMv8 machines (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.11+deb14-arm64.
+ modules in linux-image-7.2.12+deb14-arm64.
 
-Package: linux-image-7.2.11+deb14-armmp
-Description-md5: 6c5e1f02c14c777c2f5ace9b5d47ae2f
-Description-en: Linux 7.2.11 for ARMv7 multiplatform compatible SoCs
- The Linux kernel 7.2.11 and modules for use on ARMv7 multiplatform kernel.
+Package: linux-image-7.2.12+deb14-armmp
+Description-md5: 5f7550391575b21591da2d3336280695
+Description-en: Linux 7.2.12 for ARMv7 multiplatform compatible SoCs
+ The Linux kernel 7.2.12 and modules for use on ARMv7 multiplatform kernel.
  See https://wiki.debian.org/DebianKernel/ARMMP for details of supported
  platforms.
 
-Package: linux-image-7.2.11+deb14-armmp-dbg
-Description-md5: 923a2587d174054ec5b44641e54f9c65
-Description-en: Linux 7.2.11 for ARMv7 multiplatform compatible SoCs (debug symbols)
+Package: linux-image-7.2.12+deb14-armmp-dbg
+Description-md5: 36fdd53db9ba64478f59bd5196129f88
+Description-en: Linux 7.2.12 for ARMv7 multiplatform compatible SoCs (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.11+deb14-armmp.
+ modules in linux-image-7.2.12+deb14-armmp.
 
-Package: linux-image-7.2.11+deb14-armmp-lpae
-Description-md5: f1df3a9bfefc267291e5a72873d9ff4e
-Description-en: Linux 7.2.11 for ARMv7 multiplatform compatible SoCs supporting LPAE
- The Linux kernel 7.2.11 and modules for use on ARMv7 multiplatform kernel
+Package: linux-image-7.2.12+deb14-armmp-lpae
+Description-md5: 8a06e5f81f4b4a9726e977361cac0d57
+Description-en: Linux 7.2.12 for ARMv7 multiplatform compatible SoCs supporting LPAE
+ The Linux kernel 7.2.12 and modules for use on ARMv7 multiplatform kernel
  supporting LPAE. See https://wiki.debian.org/DebianKernel/ARMMP for
  details of supported platforms..
 
-Package: linux-image-7.2.11+deb14-armmp-lpae-dbg
-Description-md5: 1cbb13cbd98ba97410fadaed7ad1343f
-Description-en: Linux 7.2.11 for ARMv7 multiplatform compatible SoCs supporting LPAE (debug symbols)
+Package: linux-image-7.2.12+deb14-armmp-lpae-dbg
+Description-md5: b6f320a57a40530e4c849b0ad0113aab
+Description-en: Linux 7.2.12 for ARMv7 multiplatform compatible SoCs supporting LPAE (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.11+deb14-armmp-lpae.
+ modules in linux-image-7.2.12+deb14-armmp-lpae.
 
-Package: linux-image-7.2.11+deb14-cloud-amd64-dbg
-Description-md5: 4f4e7fd7ab639515ccf717e69fd51aa6
-Description-en: Linux 7.2.11 for x86-64 cloud (debug symbols)
+Package: linux-image-7.2.12+deb14-cloud-amd64-dbg
+Description-md5: 67827ea7494dac64f3c547d3067de4a8
+Description-en: Linux 7.2.12 for x86-64 cloud (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.11+deb14-cloud-amd64.
+ modules in linux-image-7.2.12+deb14-cloud-amd64.
 
-Package: linux-image-7.2.11+deb14-cloud-arm64-dbg
-Description-md5: 3a3ae91f51ef877485a80172efd01983
-Description-en: Linux 7.2.11 for arm64 cloud (debug symbols)
+Package: linux-image-7.2.12+deb14-cloud-arm64-dbg
+Description-md5: f07230423ddcc86db76ab0be45635c8c
+Description-en: Linux 7.2.12 for arm64 cloud (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.11+deb14-cloud-arm64.
+ modules in linux-image-7.2.12+deb14-cloud-arm64.
 
-Package: linux-image-7.2.11+deb14-loong64
-Description-md5: 4faa5fa5e58cea1ee25621d1e03055e3
-Description-en: Linux 7.2.11 for 64-bit LoongArch platforms
- The Linux kernel 7.2.11 and modules for use on 64-bit LoongArch platforms.
+Package: linux-image-7.2.12+deb14-loong64
+Description-md5: a77329a5215ce325174940c813205019
+Description-en: Linux 7.2.12 for 64-bit LoongArch platforms
+ The Linux kernel 7.2.12 and modules for use on 64-bit LoongArch platforms.
 
-Package: linux-image-7.2.11+deb14-loong64-dbg
-Description-md5: 2ecff8945a975d611128132bad7db348
-Description-en: Linux 7.2.11 for 64-bit LoongArch platforms (debug symbols)
+Package: linux-image-7.2.12+deb14-loong64-dbg
+Description-md5: a6f6d2f4e05c9c24249e249bd29865da
+Description-en: Linux 7.2.12 for 64-bit LoongArch platforms (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.11+deb14-loong64.
+ modules in linux-image-7.2.12+deb14-loong64.
 
-Package: linux-image-7.2.11+deb14-powerpc64le
-Description-md5: 75843a0cc8b23ec497d0b35799409a87
-Description-en: Linux 7.2.11 for Little-endian 64-bit PowerPC with 4k pages
- The Linux kernel 7.2.11 and modules for use on Little-endian 64-bit
+Package: linux-image-7.2.12+deb14-powerpc64le
+Description-md5: a0869a445266681bba86b07cf3c96783
+Description-en: Linux 7.2.12 for Little-endian 64-bit PowerPC with 4k pages
+ The Linux kernel 7.2.12 and modules for use on Little-endian 64-bit
  PowerPC with 4k pages.
 
-Package: linux-image-7.2.11+deb14-powerpc64le-64k
-Description-md5: 674c2ced2ca861d297182d236b05eb0b
-Description-en: Linux 7.2.11 for Little-endian 64-bit PowerPC with 64k pages
- The Linux kernel 7.2.11 and modules for use on Little-endian 64-bit
+Package: linux-image-7.2.12+deb14-powerpc64le-64k
+Description-md5: ef795946f08fbe68c8f4bee3aa4cea48
+Description-en: Linux 7.2.12 for Little-endian 64-bit PowerPC with 64k pages
+ The Linux kernel 7.2.12 and modules for use on Little-endian 64-bit
  PowerPC with 64k pages.
 
-Package: linux-image-7.2.11+deb14-powerpc64le-64k-dbg
-Description-md5: 5aa951c971388da785018ac288efc25c
-Description-en: Linux 7.2.11 for Little-endian 64-bit PowerPC with 64k pages (debug symbols)
+Package: linux-image-7.2.12+deb14-powerpc64le-64k-dbg
+Description-md5: c37cfbba7f4c93d45704beee79df6745
+Description-en: Linux 7.2.12 for Little-endian 64-bit PowerPC with 64k pages (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.11+deb14-powerpc64le-64k.
+ modules in linux-image-7.2.12+deb14-powerpc64le-64k.
 
-Package: linux-image-7.2.11+deb14-powerpc64le-dbg
-Description-md5: edbf8a3728d4dfbb0b35015e643f21c3
-Description-en: Linux 7.2.11 for Little-endian 64-bit PowerPC with 4k pages (debug symbols)
+Package: linux-image-7.2.12+deb14-powerpc64le-dbg
+Description-md5: c8a71333752f66f969810dfbaaa376b9
+Description-en: Linux 7.2.12 for Little-endian 64-bit PowerPC with 4k pages (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.11+deb14-powerpc64le.
+ modules in linux-image-7.2.12+deb14-powerpc64le.
 
-Package: linux-image-7.2.11+deb14-riscv64
-Description-md5: e1365ec0b9bc54290afbb2793f18830f
-Description-en: Linux 7.2.11 for 64-bit RISC-V platforms
- The Linux kernel 7.2.11 and modules for use on 64-bit RISC-V platforms.
+Package: linux-image-7.2.12+deb14-riscv64
+Description-md5: d111d901acb62055de3b1df4be00fbb2
+Description-en: Linux 7.2.12 for 64-bit RISC-V platforms
+ The Linux kernel 7.2.12 and modules for use on 64-bit RISC-V platforms.
 
-Package: linux-image-7.2.11+deb14-riscv64-dbg
-Description-md5: 1e56d9c59982a23a9ac878ef15f17f3a
-Description-en: Linux 7.2.11 for 64-bit RISC-V platforms (debug symbols)
+Package: linux-image-7.2.12+deb14-riscv64-dbg
+Description-md5: 959519d65d8af1c57b2b0a770b2de600
+Description-en: Linux 7.2.12 for 64-bit RISC-V platforms (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.11+deb14-riscv64.
+ modules in linux-image-7.2.12+deb14-riscv64.
 
-Package: linux-image-7.2.11+deb14-rt-amd64-dbg
-Description-md5: f4285a28024dcbe694cd6dc67486b164
-Description-en: Linux 7.2.11 for 64-bit PCs (debug symbols)
+Package: linux-image-7.2.12+deb14-rt-amd64-dbg
+Description-md5: 58cd3af8d44957982de6e964150f2f87
+Description-en: Linux 7.2.12 for 64-bit PCs (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.11+deb14-rt-amd64.
+ modules in linux-image-7.2.12+deb14-rt-amd64.
 
-Package: linux-image-7.2.11+deb14-rt-arm64-dbg
-Description-md5: 3b4cc7c2875c88aa65500a8085adf2ea
-Description-en: Linux 7.2.11 for 64-bit ARMv8 machines (debug symbols)
+Package: linux-image-7.2.12+deb14-rt-arm64-dbg
+Description-md5: 6640f9f0b5ca56ac2fd66341dcf682c6
+Description-en: Linux 7.2.12 for 64-bit ARMv8 machines (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.11+deb14-rt-arm64.
+ modules in linux-image-7.2.12+deb14-rt-arm64.
 
-Package: linux-image-7.2.11+deb14-s390x
-Description-md5: b034094fc6b816acc2d78e2020e406a6
-Description-en: Linux 7.2.11 for IBM zSeries
- The Linux kernel 7.2.11 and modules for use on IBM zSeries.
+Package: linux-image-7.2.12+deb14-s390x
+Description-md5: d1464e07952d2b986e2715c80775260d
+Description-en: Linux 7.2.12 for IBM zSeries
+ The Linux kernel 7.2.12 and modules for use on IBM zSeries.
 
-Package: linux-image-7.2.11+deb14-s390x-dbg
-Description-md5: baa373e72fae72960af2ab3279813966
-Description-en: Linux 7.2.11 for IBM zSeries (debug symbols)
+Package: linux-image-7.2.12+deb14-s390x-dbg
+Description-md5: ad391732a182668f4bcd7697298864e7
+Description-en: Linux 7.2.12 for IBM zSeries (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.11+deb14-s390x.
+ modules in linux-image-7.2.12+deb14-s390x.
 
 Package: linux-image-armmp
 Description-md5: 6e23c7da79075220d673bf3c62982c44
@@ -420100,9 +420101,9 @@ Description-en: Linux for IBM zSeries (debug symbols meta-package)
  This package depends on the detached debugging symbols for the latest
  Linux kernel s390x configuration.
 
-Package: linux-kbuild-7.2.11+deb14
-Description-md5: 146956519b1ed47d2779d1d9bf393100
-Description-en: Kbuild infrastructure for Linux 7.2.11+deb14
+Package: linux-kbuild-7.2.12+deb14
+Description-md5: c8a96dd74c5a6c40085052c3f782c19a
+Description-en: Kbuild infrastructure for Linux 7.2.12+deb14
  This package provides the kbuild infrastructure for the headers packages
  for Linux kernel version 7.2.
 
@@ -420333,132 +420334,132 @@ Description-en: miscellaneous tools from the Linux source tree
  Create profile of thermal zones * tmon: Monitor and test thermal
  management
 
-Package: linux-modules-7.2.11+deb14-amd64
-Description-md5: 790dac623ae6d90a846a43f466e317b9
-Description-en: Linux 7.2.11 for 64-bit PCs (modules)
- This contains the kernel modules for Linux 7.2.11 on PCs with AMD64, Intel
+Package: linux-modules-7.2.12+deb14-amd64
+Description-md5: 96249e8591549df5ad0725394a0951c2
+Description-en: Linux 7.2.12 for 64-bit PCs (modules)
+ This contains the kernel modules for Linux 7.2.12 on PCs with AMD64, Intel
  64 or VIA Nano processors.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-amd64.
+ install linux-image-7.2.12+deb14-amd64.
 
-Package: linux-modules-7.2.11+deb14-arm64
-Description-md5: 1fcadfae27f091cba25b84860bf57a3b
-Description-en: Linux 7.2.11 for 64-bit ARMv8 machines (modules)
- This contains the kernel modules for Linux 7.2.11 on 64-bit ARMv8
+Package: linux-modules-7.2.12+deb14-arm64
+Description-md5: 4a86a3b071c61df4510c8271f0ed421e
+Description-en: Linux 7.2.12 for 64-bit ARMv8 machines (modules)
+ This contains the kernel modules for Linux 7.2.12 on 64-bit ARMv8
  machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-arm64.
+ install linux-image-7.2.12+deb14-arm64.
 
-Package: linux-modules-7.2.11+deb14-arm64-16k
-Description-md5: 9f509649b2058863a11686e7d1b9e548
-Description-en: Linux 7.2.11 for 64-bit ARMv8 machines with 16k pages (modules)
- This contains the kernel modules for Linux 7.2.11 on 64-bit ARMv8 machines
+Package: linux-modules-7.2.12+deb14-arm64-16k
+Description-md5: 964ddb18459b00017d178acc284107bd
+Description-en: Linux 7.2.12 for 64-bit ARMv8 machines with 16k pages (modules)
+ This contains the kernel modules for Linux 7.2.12 on 64-bit ARMv8 machines
  with 16k pages.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-arm64-16k.
+ install linux-image-7.2.12+deb14-arm64-16k.
 
-Package: linux-modules-7.2.11+deb14-armmp
-Description-md5: 506c71549d329f432fa0777becc77c6f
-Description-en: Linux 7.2.11 for ARMv7 multiplatform compatible SoCs (modules)
- This contains the kernel modules for Linux 7.2.11 on ARMv7 multiplatform
+Package: linux-modules-7.2.12+deb14-armmp
+Description-md5: b975f794d1c787aa15711a0b6e498061
+Description-en: Linux 7.2.12 for ARMv7 multiplatform compatible SoCs (modules)
+ This contains the kernel modules for Linux 7.2.12 on ARMv7 multiplatform
  kernel.  See https://wiki.debian.org/DebianKernel/ARMMP for details of
  supported platforms.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-armmp.
+ install linux-image-7.2.12+deb14-armmp.
 
-Package: linux-modules-7.2.11+deb14-armmp-lpae
-Description-md5: 4eb99ce950d7082b4df1d99ac3af82e0
-Description-en: Linux 7.2.11 for ARMv7 multiplatform compatible SoCs supporting LPAE (modules)
- This contains the kernel modules for Linux 7.2.11 on ARMv7 multiplatform
+Package: linux-modules-7.2.12+deb14-armmp-lpae
+Description-md5: e74946a11c29087cd54e57bfd72de327
+Description-en: Linux 7.2.12 for ARMv7 multiplatform compatible SoCs supporting LPAE (modules)
+ This contains the kernel modules for Linux 7.2.12 on ARMv7 multiplatform
  kernel supporting LPAE. See https://wiki.debian.org/DebianKernel/ARMMP for
  details of supported platforms..
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-armmp-lpae.
+ install linux-image-7.2.12+deb14-armmp-lpae.
 
-Package: linux-modules-7.2.11+deb14-cloud-amd64
-Description-md5: 575ea5c3aeec429dabafb3a6b7b94e08
-Description-en: Linux 7.2.11 for x86-64 cloud (modules)
- This contains the kernel modules for Linux 7.2.11 on cloud platforms
+Package: linux-modules-7.2.12+deb14-cloud-amd64
+Description-md5: aa954ad15715132d006c22353ed00060
+Description-en: Linux 7.2.12 for x86-64 cloud (modules)
+ This contains the kernel modules for Linux 7.2.12 on cloud platforms
  including Amazon EC2, Microsoft Azure, and Google Compute Engine.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-cloud-amd64.
+ install linux-image-7.2.12+deb14-cloud-amd64.
 
-Package: linux-modules-7.2.11+deb14-cloud-arm64
-Description-md5: 6a8755277dd0b1e694f0eb66a198f850
-Description-en: Linux 7.2.11 for arm64 cloud (modules)
- This contains the kernel modules for Linux 7.2.11 on cloud platforms
+Package: linux-modules-7.2.12+deb14-cloud-arm64
+Description-md5: 40359a84f7018b54544e65e78ac6299e
+Description-en: Linux 7.2.12 for arm64 cloud (modules)
+ This contains the kernel modules for Linux 7.2.12 on cloud platforms
  supporting arm64 virtual machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-cloud-arm64.
+ install linux-image-7.2.12+deb14-cloud-arm64.
 
-Package: linux-modules-7.2.11+deb14-loong64
-Description-md5: 0bdde959294afa826fbd3cd3844897f1
-Description-en: Linux 7.2.11 for 64-bit LoongArch platforms (modules)
- This contains the kernel modules for Linux 7.2.11 on 64-bit LoongArch
+Package: linux-modules-7.2.12+deb14-loong64
+Description-md5: ddbd35b3a5b00611661c673587efb681
+Description-en: Linux 7.2.12 for 64-bit LoongArch platforms (modules)
+ This contains the kernel modules for Linux 7.2.12 on 64-bit LoongArch
  platforms.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-loong64.
+ install linux-image-7.2.12+deb14-loong64.
 
-Package: linux-modules-7.2.11+deb14-powerpc64le
-Description-md5: cfe57428035278b340d33d20cbb41271
-Description-en: Linux 7.2.11 for Little-endian 64-bit PowerPC with 4k pages (modules)
- This contains the kernel modules for Linux 7.2.11 on Little-endian 64-bit
+Package: linux-modules-7.2.12+deb14-powerpc64le
+Description-md5: 357b70b6b5664f40b958bc81c00e8eed
+Description-en: Linux 7.2.12 for Little-endian 64-bit PowerPC with 4k pages (modules)
+ This contains the kernel modules for Linux 7.2.12 on Little-endian 64-bit
  PowerPC with 4k pages.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-powerpc64le.
+ install linux-image-7.2.12+deb14-powerpc64le.
 
-Package: linux-modules-7.2.11+deb14-powerpc64le-64k
-Description-md5: c4d03fefb0365503e0b007f7493f0c05
-Description-en: Linux 7.2.11 for Little-endian 64-bit PowerPC with 64k pages (modules)
- This contains the kernel modules for Linux 7.2.11 on Little-endian 64-bit
+Package: linux-modules-7.2.12+deb14-powerpc64le-64k
+Description-md5: 64bf545bfa5a88526883a9a043568e90
+Description-en: Linux 7.2.12 for Little-endian 64-bit PowerPC with 64k pages (modules)
+ This contains the kernel modules for Linux 7.2.12 on Little-endian 64-bit
  PowerPC with 64k pages.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-powerpc64le-64k.
+ install linux-image-7.2.12+deb14-powerpc64le-64k.
 
-Package: linux-modules-7.2.11+deb14-riscv64
-Description-md5: 7c2fc109368598057cb17b85fac6edf0
-Description-en: Linux 7.2.11 for 64-bit RISC-V platforms (modules)
- This contains the kernel modules for Linux 7.2.11 on 64-bit RISC-V
+Package: linux-modules-7.2.12+deb14-riscv64
+Description-md5: 96d3ab35d7f152b6c0ee5556aa378cf2
+Description-en: Linux 7.2.12 for 64-bit RISC-V platforms (modules)
+ This contains the kernel modules for Linux 7.2.12 on 64-bit RISC-V
  platforms.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-riscv64.
+ install linux-image-7.2.12+deb14-riscv64.
 
-Package: linux-modules-7.2.11+deb14-rt-amd64
-Description-md5: b94ba8918be89134b26b91487a6cfccd
-Description-en: Linux 7.2.11 for 64-bit PCs (modules)
- This contains the kernel modules for Linux 7.2.11 on PCs with AMD64, Intel
+Package: linux-modules-7.2.12+deb14-rt-amd64
+Description-md5: 548dbddc38745a92c5526a52a1c83330
+Description-en: Linux 7.2.12 for 64-bit PCs (modules)
+ This contains the kernel modules for Linux 7.2.12 on PCs with AMD64, Intel
  64 or VIA Nano processors.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-rt-amd64.
+ install linux-image-7.2.12+deb14-rt-amd64.
 
-Package: linux-modules-7.2.11+deb14-rt-arm64
-Description-md5: 1cd0beade9ae2457efe031eb30bac5a3
-Description-en: Linux 7.2.11 for 64-bit ARMv8 machines (modules)
- This contains the kernel modules for Linux 7.2.11 on 64-bit ARMv8
+Package: linux-modules-7.2.12+deb14-rt-arm64
+Description-md5: 52be859181c8e09f8a949a5c528e98dc
+Description-en: Linux 7.2.12 for 64-bit ARMv8 machines (modules)
+ This contains the kernel modules for Linux 7.2.12 on 64-bit ARMv8
  machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-rt-arm64.
+ install linux-image-7.2.12+deb14-rt-arm64.
 
-Package: linux-modules-7.2.11+deb14-s390x
-Description-md5: 4779838f9b1b0e5212e1933fa990ab17
-Description-en: Linux 7.2.11 for IBM zSeries (modules)
- This contains the kernel modules for Linux 7.2.11 on IBM zSeries.
+Package: linux-modules-7.2.12+deb14-s390x
+Description-md5: 68af1e43ca4f9af0e1fa2761cfeb3c10
+Description-en: Linux 7.2.12 for IBM zSeries (modules)
+ This contains the kernel modules for Linux 7.2.12 on IBM zSeries.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-s390x.
+ install linux-image-7.2.12+deb14-s390x.
 
 Package: linux-perf
 Description-md5: 66624a7d9f3cd31d269d28992a5cfa64
@@ -420706,32 +420707,32 @@ Description-en: Linux for 64-bit PCs (dummy package)
  This empty package is used to keep the installed versions of
  linux-headers-64-bit PCs and linux-image-64-bit PCs synchronised.
 
-Package: linux-binary-7.2.11+deb14-amd64
-Description-md5: 4996961e7a97db56aeb35b6acd5cb028
-Description-en: Linux 7.2.11 for 64-bit PCs (kernel image)
- This package contains the kernel image for Linux 7.2.11 on PCs with AMD64,
+Package: linux-binary-7.2.12+deb14-amd64
+Description-md5: d8096ce2a1a6bb50ed843170ea875ad7
+Description-en: Linux 7.2.12 for 64-bit PCs (kernel image)
+ This package contains the kernel image for Linux 7.2.12 on PCs with AMD64,
  Intel 64 or VIA Nano processors.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-amd64.
+ install linux-image-7.2.12+deb14-amd64.
 
-Package: linux-binary-7.2.11+deb14-cloud-amd64
-Description-md5: 1b56b959b272f74b25e2de2d56a28821
-Description-en: Linux 7.2.11 for x86-64 cloud (kernel image)
- This package contains the kernel image for Linux 7.2.11 on cloud platforms
+Package: linux-binary-7.2.12+deb14-cloud-amd64
+Description-md5: 69945ec4bb4507e97e4cdbd7c8e5d8eb
+Description-en: Linux 7.2.12 for x86-64 cloud (kernel image)
+ This package contains the kernel image for Linux 7.2.12 on cloud platforms
  including Amazon EC2, Microsoft Azure, and Google Compute Engine.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-cloud-amd64.
+ install linux-image-7.2.12+deb14-cloud-amd64.
 
-Package: linux-binary-7.2.11+deb14-rt-amd64
-Description-md5: f8662740284eadb9dcb1485548f9e869
-Description-en: Linux 7.2.11 for 64-bit PCs (kernel image)
- This package contains the kernel image for Linux 7.2.11 on PCs with AMD64,
+Package: linux-binary-7.2.12+deb14-rt-amd64
+Description-md5: 6890c4fcba0ae028bcc8e486fd71f777
+Description-en: Linux 7.2.12 for 64-bit PCs (kernel image)
+ This package contains the kernel image for Linux 7.2.12 on PCs with AMD64,
  Intel 64 or VIA Nano processors.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-rt-amd64.
+ install linux-image-7.2.12+deb14-rt-amd64.
 
 Package: linux-headers-amd64
 Description-md5: e6cd01c3f051de3860a1b10938a309d7
@@ -420751,22 +420752,22 @@ Description-en: Linux for 64-bit PCs (module development meta-package)
  This package depends on the architecture-specific header files for the
  latest Linux kernel rt-amd64 configuration.
 
-Package: linux-image-7.2.11+deb14-amd64
-Description-md5: ef0c972fe2cc435d9eb5c223df5d4bf7
-Description-en: Linux 7.2.11 for 64-bit PCs
- The Linux kernel 7.2.11 and modules for use on PCs with AMD64, Intel 64 or
+Package: linux-image-7.2.12+deb14-amd64
+Description-md5: 21cb99b10aa963c3d5e3179b61ed6d3d
+Description-en: Linux 7.2.12 for 64-bit PCs
+ The Linux kernel 7.2.12 and modules for use on PCs with AMD64, Intel 64 or
  VIA Nano processors.
 
-Package: linux-image-7.2.11+deb14-cloud-amd64
-Description-md5: ad33bbc7a000ae60967bd826d0a6c49a
-Description-en: Linux 7.2.11 for x86-64 cloud
- The Linux kernel 7.2.11 and modules for use on cloud platforms including
+Package: linux-image-7.2.12+deb14-cloud-amd64
+Description-md5: e404cafc465ab7d563b8753a56a9ad24
+Description-en: Linux 7.2.12 for x86-64 cloud
+ The Linux kernel 7.2.12 and modules for use on cloud platforms including
  Amazon EC2, Microsoft Azure, and Google Compute Engine.
 
-Package: linux-image-7.2.11+deb14-rt-amd64
-Description-md5: 30761017e3090894e26cd93e9be56152
-Description-en: Linux 7.2.11 for 64-bit PCs, PREEMPT_RT
- The Linux kernel 7.2.11 and modules for use on PCs with AMD64, Intel 64 or
+Package: linux-image-7.2.12+deb14-rt-amd64
+Description-md5: 6df5ebcc13477487cf2e2db2246cd1a0
+Description-en: Linux 7.2.12 for 64-bit PCs, PREEMPT_RT
+ The Linux kernel 7.2.12 and modules for use on PCs with AMD64, Intel 64 or
  VIA Nano processors.
  .
  This kernel is configured with PREEMPT_RT real time support.
@@ -420835,41 +420836,41 @@ Description-en: Linux for 64-bit ARMv8 machines (dummy package)
  linux-headers-64-bit ARMv8 machines and linux-image-64-bit ARMv8 machines
  synchronised.
 
-Package: linux-binary-7.2.11+deb14-arm64
-Description-md5: 9aa7d54ec7215d7e5d8310cd63434886
-Description-en: Linux 7.2.11 for 64-bit ARMv8 machines (kernel image)
- This package contains the kernel image for Linux 7.2.11 on 64-bit ARMv8
+Package: linux-binary-7.2.12+deb14-arm64
+Description-md5: b2844559191cd36cdbe18568713ac6c9
+Description-en: Linux 7.2.12 for 64-bit ARMv8 machines (kernel image)
+ This package contains the kernel image for Linux 7.2.12 on 64-bit ARMv8
  machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-arm64.
+ install linux-image-7.2.12+deb14-arm64.
 
-Package: linux-binary-7.2.11+deb14-arm64-16k
-Description-md5: d8f73304641d9b2252909754c9ebbacc
-Description-en: Linux 7.2.11 for 64-bit ARMv8 machines with 16k pages (kernel image)
- This package contains the kernel image for Linux 7.2.11 on 64-bit ARMv8
+Package: linux-binary-7.2.12+deb14-arm64-16k
+Description-md5: 3091175880750564a852cd165a0c72a5
+Description-en: Linux 7.2.12 for 64-bit ARMv8 machines with 16k pages (kernel image)
+ This package contains the kernel image for Linux 7.2.12 on 64-bit ARMv8
  machines with 16k pages.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-arm64-16k.
+ install linux-image-7.2.12+deb14-arm64-16k.
 
-Package: linux-binary-7.2.11+deb14-cloud-arm64
-Description-md5: 1a6c3fce2f8aaf3ab8498dfe5812b3f5
-Description-en: Linux 7.2.11 for arm64 cloud (kernel image)
- This package contains the kernel image for Linux 7.2.11 on cloud platforms
+Package: linux-binary-7.2.12+deb14-cloud-arm64
+Description-md5: 44684a36d553ac14a34d40fe6afb32c1
+Description-en: Linux 7.2.12 for arm64 cloud (kernel image)
+ This package contains the kernel image for Linux 7.2.12 on cloud platforms
  supporting arm64 virtual machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-cloud-arm64.
+ install linux-image-7.2.12+deb14-cloud-arm64.
 
-Package: linux-binary-7.2.11+deb14-rt-arm64
-Description-md5: 8bcbae4756649a1b7dbb84fc9e4891ba
-Description-en: Linux 7.2.11 for 64-bit ARMv8 machines (kernel image)
- This package contains the kernel image for Linux 7.2.11 on 64-bit ARMv8
+Package: linux-binary-7.2.12+deb14-rt-arm64
+Description-md5: e97d37e0d3851513f9fd2decc02174ca
+Description-en: Linux 7.2.12 for 64-bit ARMv8 machines (kernel image)
+ This package contains the kernel image for Linux 7.2.12 on 64-bit ARMv8
  machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.11+deb14-rt-arm64.
+ install linux-image-7.2.12+deb14-rt-arm64.
 
 Package: linux-headers-arm64
 Description-md5: 231f90302db24abcd69d22b4af8a1008
@@ -420895,27 +420896,27 @@ Description-en: Linux for 64-bit ARMv8 machines (module development meta-package
  This package depends on the architecture-specific header files for the
  latest Linux kernel rt-arm64 configuration.
 
-Package: linux-image-7.2.11+deb14-arm64
-Description-md5: 2895c0ec6ecc49c2b9ab3c7c26422cbc
-Description-en: Linux 7.2.11 for 64-bit ARMv8 machines
- The Linux kernel 7.2.11 and modules for use on 64-bit ARMv8 machines.
+Package: linux-image-7.2.12+deb14-arm64
+Description-md5: 5996b4f44add5a18473620552c31a091
+Description-en: Linux 7.2.12 for 64-bit ARMv8 machines
+ The Linux kernel 7.2.12 and modules for use on 64-bit ARMv8 machines.
 
-Package: linux-image-7.2.11+deb14-arm64-16k
-Description-md5: 7950d853417fc3fa317146bacee7d1d6
-Description-en: Linux 7.2.11 for 64-bit ARMv8 machines with 16k pages
- The Linux kernel 7.2.11 and modules for use on 64-bit ARMv8 machines with
+Package: linux-image-7.2.12+deb14-arm64-16k
+Description-md5: 4cf2daee6fbcf71d83de52c9a305e353
+Description-en: Linux 7.2.12 for 64-bit ARMv8 machines with 16k pages
+ The Linux kernel 7.2.12 and modules for use on 64-bit ARMv8 machines with
  16k pages.
 
-Package: linux-image-7.2.11+deb14-cloud-arm64
-Description-md5: ffcabe30a5ed2035c11a1e335a406f18
-Description-en: Linux 7.2.11 for arm64 cloud
- The Linux kernel 7.2.11 and modules for use on cloud platforms supporting
+Package: linux-image-7.2.12+deb14-cloud-arm64
+Description-md5: 7f3334684b69555a2242f621856fb5de
+Description-en: Linux 7.2.12 for arm64 cloud
+ The Linux kernel 7.2.12 and modules for use on cloud platforms supporting
  arm64 virtual machines.
 
-Package: linux-image-7.2.11+deb14-rt-arm64
-Description-md5: 9ab63518b4510938979005b7b17a9f73
-Description-en: Linux 7.2.11 for 64-bit ARMv8 machines, PREEMPT_RT
- The Linux kernel 7.2.11 and modules for use on 64-bit ARMv8 machines.
+Package: linux-image-7.2.12+deb14-rt-arm64
+Description-md5: 11455db8e40e3f28ebef14aae9400ff5
+Description-en: Linux 7.2.12 for 64-bit ARMv8 machines, PREEMPT_RT
+ The Linux kernel 7.2.12 and modules for use on 64-bit ARMv8 machines.
  .
  This kernel is configured with PREEMPT_RT real time support.
 
@@ -428380,23 +428381,6 @@ Description-en: BSD lpr/lpd line printer spooling system
  If you install magicfilter or apsfilter (along with ghostscript),
  lpr will be able to automatically handle special file types
  (such as Postscript and PDF files).
-
-Package: lprint
-Description-md5: 21d0b30d4056f7ba6a49b512578220df
-Description-en: Label Printer
- LPrint implements printing for a variety of common label and receipt printers
- connected via network or USB. Features include:
- .
-  * A single executable handles spooling, status, and server functionality
-  * Multiple printer support
-  * Each printer implements an IPP Everywhere™ print service and is compatible
-    with the driverless printing support in iOS, macOS, and Linux clients
-  * Each printer can support options such as label modes, tear-off offsets,
-    media tracking, media top offset, print darkness, resolution, roll
-    selection, and speed
-  * Each printer can print “raw”, Apple/PWG Raster, and/or PNG files
-  * Each printer automatically recovers from out-of-media, power loss, and
-    disconnected/bad cable issues
 
 Package: lprng
 Description-md5: 47d742863c1b0d7c17930026e04f3553
@@ -447700,6 +447684,74 @@ Description-en: Simple GOG Linux client
  .
  A GOG account is required to use this software.
 
+Package: libminijail-dev
+Description-md5: 7b58168bd81f968658020c78d53d4164
+Description-en: sandboxing and containment library - development files
+ Minijail is a sandboxing and containment tool used in ChromeOS and Android.
+ The library lets a program sandbox itself: enter new namespaces, drop
+ capabilities, change user, and install a seccomp-bpf filter, either
+ programmatically or from a policy file.
+ .
+ This package contains the headers and the pkg-config file needed to build
+ programs against libminijail.
+
+Package: libminijail1
+Description-md5: 60cbe3b3a488427fad61e4ffdbaae7b5
+Description-en: sandboxing and containment library
+ Minijail is a sandboxing and containment tool used in ChromeOS and Android.
+ The library lets a program sandbox itself: enter new namespaces, drop
+ capabilities, change user, and install a seccomp-bpf filter, either
+ programmatically or from a policy file.
+ .
+ This package contains the shared library.
+
+Package: librust-minijail-dev
+Description-md5: 110dd81ae5293389085a4740fec980e2
+Description-en: safe Rust interface to libminijail - Rust source code
+ Minijail is a sandboxing and containment tool used in ChromeOS and Android.
+ .
+ This package contains the source of the minijail Rust crate, a safe wrapper
+ around libminijail used by crosvm, for use with Debian's packaging of Rust
+ crates. It is built from the minijail source rather than crates.io, where
+ the crate is not published.
+
+Package: librust-minijail-sys-dev
+Description-md5: c31b32c0b018518d40588afb4e846e77
+Description-en: raw Rust bindings to libminijail - Rust source code
+ Minijail is a sandboxing and containment tool used in ChromeOS and Android.
+ .
+ This package contains the source of the minijail-sys Rust crate, the
+ bindgen-generated FFI bindings to the system libminijail, for use with
+ Debian's packaging of Rust crates. It is built from the minijail source
+ rather than crates.io, where the crate is not published.
+
+Package: minijail
+Description-md5: 6e5b06f4e0d7363355cef8b7156f1863
+Description-en: utility to run a program inside a sandbox
+ Minijail is a sandboxing and containment tool used in ChromeOS and Android.
+ It launches a program with a restricted view of the system: it can enter new
+ namespaces (mount, PID, network, user, IPC), pivot_root into a chosen
+ filesystem, drop capabilities and switch user, and apply a seccomp-bpf filter
+ that limits the program to a declared set of system calls.
+ .
+ Minijail is intended for sandboxing known binaries, to reduce the damage a
+ compromised service can do. It is not designed to safely run malicious code.
+ .
+ This package contains the minijail0 command line tool.
+
+Package: python3-minijail
+Description-md5: b5547bc00ece8b20cdc76b8937ff9518
+Description-en: seccomp policy tools for minijail
+ Minijail is a sandboxing and containment tool used in ChromeOS and Android.
+ .
+ This package contains the Python seccomp policy tools and the minijail
+ Python module they are built on:
+  - compile_seccomp_policy compiles a minijail .policy file into a BPF
+    program, as crosvm does at build time for its device sandboxes;
+  - generate_seccomp_policy drafts a policy from strace or audit logs;
+  - generate_constants_json produces the per-architecture syscall and
+    constant tables that the compiler takes as input.
+
 Package: minijks
 Description-md5: 1c6cc44b45c50be62dd4006dba95bcfd
 Description-en: Simple Go replacement for the Java keystore tool (program)
@@ -451370,25 +451422,6 @@ Description-en: JavaServer Faces 2.2 Java EE web framework - API
  Servlet 2.5.
  .
  This package contains only API of JSF 2.2 spec.
-
-Package: libjsf-java-doc
-Description-md5: 7fd880ee9e828a49be09aceca9b0946b
-Description-en: Documentation for libjsf-api-java
- Documentation for JavaServer Faces (JSF) 2.2, that is a Java-based Web
- application framework intended to simplify development integration of
- web-based user interfaces.
- .
- JSF hides complexity to maximize developer productivity and provides a
- component model, page templating, Ajax support, client device independence,
- clean separation of roles, better MVC handling for webapps, and world-class
- IDE integration from every available Java IDE.
- .
- JSF also provides a easy integration with popular enterprise technologies,
- including Hibernate, Spring, Seam, Jasper Reports and others. JSF 2.2 is
- compatible with JavaEE 5 application servers or any server implementing
- Servlet 2.5.
- .
- This package contains a manual and Javadoc files for JSF 2.2 API spec.
 
 Package: libmojo-executor-java
 Description-md5: 51e7a511b27f7cb184f07a6843ed369c
@@ -456200,88 +456233,6 @@ Description-md5: b9132ce87255117b383dae4f3167e262
 Description-en: Utility functions help output the messages
  This Emacs addon provides various functions for controlling the
  message output, such as (un)silence, inhibit, adding color, etc.
-
-Package: libmshr-dev
-Description-md5: 030d0d5edf8a0ebdc16a43e2117ceaac
-Description-en: Shared links and header files for mshr
- mshr generates simplicial DOLFIN meshes in 2D and 3D from geometries
- described by Constructive Solid Geometry (CSG) or from surface files,
- utilizing CGAL and Tetgen as mesh generation backends.
- .
- This package contains the development files, and also the
- utility program mshrable.
-
-Package: libmshr-dev-common
-Description-md5: 025640f976ad77260e91edcf0c1dc2f4
-Description-en: Shared links and header files for mshr
- mshr generates simplicial DOLFIN meshes in 2D and 3D from geometries
- described by Constructive Solid Geometry (CSG) or from surface files,
- utilizing CGAL and Tetgen as mesh generation backends.
- .
- This package contains the common headers and development files.
-
-Package: libmshr2019.2
-Description-md5: 98e1c2d6b1d51adfc8932768e0d1f845
-Description-en: Shared libraries for mshr
- mshr generates simplicial DOLFIN meshes in 2D and 3D from geometries
- described by Constructive Solid Geometry (CSG) or from surface files,
- utilizing CGAL and Tetgen as mesh generation backends.
- .
- This package contains the shared libraries.
-
-Package: libmshr64-2019.2
-Description-md5: 0f5043b117636dfc84b0acc6ca6ed610
-Description-en: Shared libraries for mshr with 64-bit indexing
- mshr generates simplicial DOLFIN meshes in 2D and 3D from geometries
- described by Constructive Solid Geometry (CSG) or from surface files,
- utilizing CGAL and Tetgen as mesh generation backends.
- .
- This package contains the shared libraries with support for
- 64-bit indexing (libdolfin64 and PETSc-64).
-
-Package: libmshr64-dev
-Description-md5: 41614ce468f586fe0c16604da0bef628
-Description-en: Shared links and header files for mshr with 64-bit indexing
- mshr generates simplicial DOLFIN meshes in 2D and 3D from geometries
- described by Constructive Solid Geometry (CSG) or from surface files,
- utilizing CGAL and Tetgen as mesh generation backends.
- .
- This package contains the development files with support for
- 64-bit indexing (libdolfin64 and PETSc-64).
-
-Package: python3-mshr
-Description-md5: 76912d872897702c76172855fa129e51
-Description-en: Python 3 interface for mshr
- mshr generates simplicial DOLFIN meshes in 2D and 3D from geometries
- described by Constructive Solid Geometry (CSG) or from surface files,
- utilizing CGAL and Tetgen as mesh generation backends.
- .
- This package contains the common Python 3 interface for mshr, and examples
- and demo programs.
- .
- This is the base package depending on specific mshr builds. By
- default mshr is built against dolfin using the preferred version of PETSc in
- /usr/lib/petsc (with 32-bit indexing), but the alternative version
- (64-bit PETSc) can be selected by setting the environment variable PETSC_DIR.
-
-Package: python3-mshr-real
-Description-md5: bce92847d387beeec25f2224ea1a2c63
-Description-en: Python 3 interface for mshr
- mshr generates simplicial DOLFIN meshes in 2D and 3D from geometries
- described by Constructive Solid Geometry (CSG) or from surface files,
- utilizing CGAL and Tetgen as mesh generation backends.
- .
- This package contains the Python 3 interface for mshr.
-
-Package: python3-mshr64-real
-Description-md5: 16585e7ff271b0e8279513f3cebd026a
-Description-en: Python 3 interface for mshr with 64-bit indexing
- mshr generates simplicial DOLFIN meshes in 2D and 3D from geometries
- described by Constructive Solid Geometry (CSG) or from surface files,
- utilizing CGAL and Tetgen as mesh generation backends.
- .
- This package contains the Python 3 interface for mshr with support for
- 64-bit indexing (libdolfin64 and PETSc-64).
 
 Package: msi-keyboard
 Description-md5: 01e9b52dde28839308d0f6d1a0fb7442
@@ -486954,6 +486905,16 @@ Description-en: transform SVG files into React components
  .
  Node.js is an event-based server-side JavaScript engine.
 
+Package: node-svgtofont
+Description-md5: 4272ef04631785f60f6eb84f39a2afaf
+Description-en: converts SVG icons to TTF/EOT/WOFF/WOFF2/SVG font formats
+ svgtofont reads a collection of SVG vector icons and bundles them into
+ multi-format web font files (TTF, EOT, WOFF, WOFF2, and SVG).
+ .
+ It automatically generates corresponding style sheets, helper templates,
+ and preview pages to streamline the integration of custom icon fonts
+ into web applications and frontend projects.
+
 Package: node-swup
 Description-md5: c4f276a3e54718ebc8b7448afa67996b
 Description-en: Versatile and extensible page transition library
@@ -491958,6 +491919,22 @@ Description-en: new transport-independent RPC library - development files
   * Event channels.
  .
  This package provides development files.
+
+Package: libntirpc15.2
+Description-md5: 99e9068973771fe00ebab2713a6aa784
+Description-en: new transport-independent RPC library
+ Port of Sun's transport-independent RPC library to Linux. The library
+ is intended as a replacement for the RPC code in the GNU C library,
+ providing among others support for RPC (and in turn, NFS) over IPv6.
+ .
+ Changes introduced in the ntirpc library include:
+  * Bi-directional operation.
+  * Full-duplex operation on the TCP (vc) transport.
+  * Thread-safe operating modes:
+    * new locking primitives and lock callouts (interface change).
+    * stateless send/recv on the TCP transport (interface change).
+  * Flexible server integration support.
+  * Event channels.
 
 Package: libntirpc7.2
 Description-md5: 99e9068973771fe00ebab2713a6aa784
@@ -509839,34 +509816,6 @@ Description-en: Smart card utilities (PKCS#11 module)
  .
  This package contains the pkcs11 module.
 
-Package: openscad
-Description-md5: 3c8e504bb46e7536b6d63f034d87d42d
-Description-en: script file based graphical CAD environment
- OpenSCAD is a software for creating solid 3D CAD objects. It focuses on CAD
- aspects rather than artistic ones.
- .
- OpenSCAD is not an interactive modeller. Instead it is something like a
- 3D-compiler that reads in a script file that describes the object and renders
- the 3D model from this script. This gives the designer full control over the
- modelling process and enables him to easily change any step in the modelling
- process or make designes that are defined by configurable parameters.
-
-Package: openscad-testing
-Description-md5: c94853fcbdb474f2130fc7f72b14c9b7
-Description-en: script file based graphical CAD environment (test suite)
- OpenSCAD is a software for creating solid 3D CAD objects. It focuses on CAD
- aspects rather than artistic ones.
- .
- This package contains all programs required to run the test suites.
-
-Package: openscad-testing-data
-Description-md5: 4b06367d2d66f15a3fce27da710c8390
-Description-en: script file based graphical CAD environment (test suite data)
- OpenSCAD is a software for creating solid 3D CAD objects. It focuses on CAD
- aspects rather than artistic ones.
- .
- This package contains the data required to run the test suites.
-
 Package: openscad-mcad
 Description-md5: 1a6c24f0c4ffefaf553ced54ca763cb5
 Description-en: library for the OpenSCAD 3D modeling software
@@ -510840,6 +510789,24 @@ Description-en: Tools and scripts for building Openstack packages in Debian
  .
  Even if this package is maintained in order to build OpenStack packages, it is
  of a general purpose, and it can be used for building any package.
+
+Package: python3-pkgos
+Description-md5: 9d583d5bf082622d9de45ef01193ab73
+Description-en: OpenStack packaging CLI for the osbpo.debian.net repository
+ The pkgos command is the Python based companion of the openstack-pkg-tools
+ shell scripts, using the OpenStack libraries: oslo.config for the option
+ handling (including reading /etc/pkgos/pkgos.conf as a configuration source)
+ and cliff for the output formatting, which brings the --format and --column
+ options of the OpenStack clients.
+ .
+ It currently provides the rmadison command, which is like rmadison(1), but
+ querying the osbpo.debian.net repository: for one or more Debian packages,
+ it shows the version published in every supported
+ <distribution>-<OpenStack-release>-backports and -backports-nochange suite,
+ including the historical ones and, as they appear, the future ones.
+ .
+ The index files of every selected suite are fetched concurrently, so that
+ even a query spanning all of the osbpo suites completes quickly.
 
 Package: python3-trove
 Description-md5: a8e9bc6ff1c82fe8506becbba0e04f5d
@@ -513443,14 +513410,6 @@ Description-en: Java OSGi API - annotation module
  .
  On top of OSGi Core it provides additional services to help dynamic
  components.
-
-Package: libosgi-annotation-java-doc
-Description-md5: e1c13bb2ffde3caece5c0437f75edc4a
-Description-en: Javadoc for Java OSGi API - annotation module
- OSGi, for Open Services Gateway initiative framework, is a module system and
- service platform for the Java programming language.
- .
- This package contains Javadoc HTML documentation for libosgi-annotation-java.
 
 Package: libosgi-compendium-java
 Description-md5: 01c5e14456164cb06cfb7f7d9929ce96
@@ -518000,26 +517959,6 @@ Description-en: Papirus open source icon theme for Linux
   - Papirus
   - Papirus-Dark
   - Papirus-Light
-
-Package: libpappl-dev
-Description-md5: 671c058cd510b52bec440384cea572c1
-Description-en: C-based framework/library for developing CUPS Printer Applications - Headers
- PAPPL is a simple C-based framework/library for developing CUPS Printer
- Applications, which are the recommended replacement for printer drivers. It
- was specifically developed to support LPrint and a future Gutenprint Printer
- Application but is sufficiently general purpose to support any kind of printer
- or driver that can be used on desktops, servers, and in embedded environments.
- .
- This package contains the static library, headers and documentation.
-
-Package: libpappl1t64
-Description-md5: 5cd1404b7d91480ce336cbff786b2412
-Description-en: C-based framework/library for developing CUPS Printer Applications
- PAPPL is a simple C-based framework/library for developing CUPS Printer
- Applications, which are the recommended replacement for printer drivers. It
- was specifically developed to support LPrint and a future Gutenprint Printer
- Application but is sufficiently general purpose to support any kind of printer
- or driver that can be used on desktops, servers, and in embedded environments.
 
 Package: paprefs
 Description-md5: 42f00216f7a81cc0e4548a67a7dd6802
@@ -525813,6 +525752,15 @@ Description-en: PostgreSQL Languages AST and statements prettifier (Python 3)
  usually called an abstract syntax tree.
  .
  This package installs the library for Python 3.
+
+Package: pglistener
+Description-md5: e18753b4cce05aad1d331adf47c55585
+Description-en: Postgres listener
+ pglistener is a daemon that generates files from Postgres database.
+ .
+ It is a tool that listens for notifies from a Postgres database
+ and then calls out to a number of hooks which do everything from updating
+ plain files to updating accounts in RT.
 
 Package: pgloader
 Description-md5: c3276f31c13a9fa328d545c55fb29249
@@ -539556,7 +539504,7 @@ Description-en: Extensible editor for structured binary data (development header
  .
  This package contains the development files for the libpoke library.
 
-Package: libpoke1
+Package: libpoke2
 Description-md5: 0a4048147779826683e2a1ef967ee070
 Description-en: Extensible editor for structured binary data (library)
  GNU poke is an interactive, extensible editor for binary data.  Not
@@ -544141,6 +544089,14 @@ Description-md5: 2a902cba700e50b5fa9f01c4d1a3edbf
 Description-en: Utility to create core dumps based on performance triggers
  ProcDump provides a convenient way for Linux developers to create core
  dumps of their application based on performance triggers.
+
+Package: procenv
+Description-md5: 8a2f139bc3a8b86766c5fd181e306833
+Description-en: Utility to show process environment
+ This package contains a command-line tool that displays as much
+ detail about itself and its environment as possible. It can be
+ used as a test tool, to understand the type of environment a
+ process runs in, and for comparing system environments.
 
 Package: libprocess-cpp-dev
 Description-md5: b72d3b4079378acfb95d05b2def065b2
@@ -581595,6 +581551,18 @@ Description-en: Bindings to the libopus low-delay audio codec
  necessary for handling audio in various network conditions, including variable
  bit rate and packet loss concealment.
 
+Package: python3-opuslib-next
+Description-md5: 3482daa45462fcaba468395919d71e16
+Description-en: Python bindings for the Opus audio codec
+ This library encodes PCM audio as Opus packets and decodes Opus packets back
+ to PCM, with support for integer and floating-point samples. It provides
+ encoder and decoder interfaces for single streams, multistream audio and
+ projection-based channel mapping. Codec controls allow adjustment of bitrate,
+ encoding complexity and in-band forward error correction.
+ .
+ This is a maintained fork of opuslib, retaining its API under the distinct
+ module name opuslib_next.
+
 Package: python-oracledb-doc
 Description-md5: e8077e888bc42d593d4c2a552716e8c1
 Description-en: Python driver for Oracle Database (documentation)
@@ -597906,7 +597874,7 @@ Description-en: Tensors and Dynamic neural networks in Python (Test Binaries)
  .
  This is the CPU-only version of PyTorch (Test Binaries).
 
-Package: libtorch2.12
+Package: libtorch2.14
 Description-md5: 2af9ff00ffc5dab05134d4e047aa0a15
 Description-en: Tensors and Dynamic neural networks in Python (Shared Objects)
  PyTorch is a Python package that provides two high-level features:
@@ -648281,10 +648249,10 @@ Description-en: Toml parser in ruby, for ruby
  parsing expressions.
 
 Package: ruby-tomlrb
-Description-md5: 09f2170a2aafe6d1ccabcb12cd0f7996
-Description-en: Racc based TOML parser library for Ruby
- A Racc based TOML (Tom's Obvious, Minimal Language) Ruby parser supporting the
- 0.4.0 version of the spec.
+Description-md5: f1831ad778cfedd606057f3725e7fe0c
+Description-en: pure-Ruby TOML 1.1 and 1.0 parser
+ A pure-Ruby parser for TOML (Tom's Obvious, Minimal Language) supporting
+ versions 1.1 and 1.0 of the spec.
  .
  TOML aims to be a minimal configuration file format that's easy to read due to
  obvious semantics. TOML is designed to map unambiguously to a hash table.
@@ -653497,6 +653465,16 @@ Package: librust-clru-dev
 Description-md5: 5ed6e58bbb1362a1027bf259c71de814
 Description-en: LRU cache implementation with constant time operations and weighted semantic - Rust source code
  Source code for Debianized Rust crate "clru"
+
+Package: librust-clubcard-dev
+Description-md5: 20c17ae0654e3b557a05b318d7caa0dd
+Description-en: Exact membership query filter for static sets - Rust source code
+ Source code for Debianized Rust crate "clubcard"
+
+Package: librust-clubcard-crlite-dev
+Description-md5: 0fd2e8e39da64b4e305ee707cc4be457
+Description-en: Instantiation of Clubcard for use in CRLite - Rust source code
+ Source code for Debianized Rust crate "clubcard-crlite"
 
 Package: librust-cmac-dev
 Description-md5: b72316a5a5681d638af534030a82c466
@@ -659554,6 +659532,11 @@ Package: librust-heed-types-dev
 Description-md5: c800d4a31ea816ece2b55cf0ce195f62
 Description-en: Types used with the fully typed LMDB wrapper, heed - Rust source code
  Source code for Debianized Rust crate "heed-types"
+
+Package: librust-hegeltest-macros-dev
+Description-md5: 61d28bb88425a109e361a3e468649270
+Description-en: Procedural macros for Hegel - Rust source code
+ Source code for Debianized Rust crate "hegeltest-macros"
 
 Package: librust-hex+serde-dev
 Description-md5: e81eb1262beaf345a4c78ebfb1da9d92
@@ -690484,6 +690467,21 @@ Description-en: variant of Nethack (X11 window port)
  friendly place).
  .
  This package provides the X11 window port of Slash'EM
+
+Package: slashtime
+Description-md5: a5ffd780639eac0a77b06d310483c0a0
+Description-en: Display the time in various places
+ A small program which displays the time in various places. It has a compact
+ display of locations along with supporting information such as the date and
+ the abbreviated code used to name that timezone.
+ .
+ Time data displayed will be as accurate as the system's zoneinfo data is used.
+ Somewhat unusually, Slashtime shows the offset from the current location, not
+ from UTC. When running you can change the center point by double-clicking on
+ another city.
+ .
+ There is a meeting planner built into Slashtime. You can specify a date and
+ time and see what the corresponding time in other locations will be.
 
 Package: slat
 Description-md5: 76bfe94fffef085ca7d94e19f70b29e0
@@ -744749,6 +744747,12 @@ Description-en: Open ABI and FFI for Machine Learning Systems (python)
    production.
  .
  Apache TVM FFI Python package.
+
+Package: tvnamer
+Description-md5: 04c7f612dd2f965dde9c3f578ad8a2df
+Description-en: utility to rename TV show episode files
+ Automatically names downloaded/recorded TV episodes, by parsing filenames and
+ retrieving episode names from TheTVDB.com.
 
 Package: tvoe
 Description-md5: eea15daf7f4572425212e73bb8ddb00c

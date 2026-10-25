@@ -300,15 +300,14 @@ MD5sum: 78ab3966d28cf17cdc76ace41ba4cfc2
 SHA256: 918dc9aa345cc8ebf484e63317ca3e6ada147b5ffce934e0b1be23d499d48554
 
 Package: aide
-Version: 0.19.4-1
+Version: 0.19.5-1
 Installed-Size: 328
 Maintainer: Aide Maintainers <aide@packages.debian.org>
 Architecture: amd64
 Replaces: aide-dynamic, aide-xen
 Provides: aide-binary
 Depends: libacl1 (>= 2.2.23), libaudit1 (>= 1:2.2.1), libc6 (>= 2.38), libcap2 (>= 1:2.10), libext2fs2t64 (>= 1.46.2), libnettle8t64 (>= 3.8), libpcre2-8-0 (>= 10.47), libselinux1 (>= 3.1~), zlib1g (>= 1:1.1.4)
-Recommends: aide-common (= 0.19.4-1)
-Suggests: figlet, procps
+Recommends: aide-common (= 0.19.5-1)
 Description: Advanced Intrusion Detection Environment - dynamic binary
 Homepage: https://aide.github.io
 Description-md5: 1d70ba920a3b80bc791be197bf18814c
@@ -317,48 +316,49 @@ Tag: implemented-in::c, interface::commandline, role::program,
  works-with::file, works-with::mail
 admin
 Priority: optional
-Filename: pool/main/a/aide/aide_0.19.4-1_amd64.deb
-Size: 144716
-MD5sum: 286517e47ddfdf0cecc75f724f609dcd
-SHA256: 0b3780faa80c323e9e53eb74c3fc3dc01a73b046bced4f8110ee13e0ba1e782e
+Filename: pool/main/a/aide/aide_0.19.5-1_amd64.deb
+Size: 145316
+MD5sum: eef4a78acdb3ad08d89688f30e50a10d
+SHA256: fa947865df8987ab4116b4f98d9c457f909fb7c6bfe481578c0ee7253df8593f
 
 Package: aide-common
 Source: aide
-Version: 0.19.4-1
-Installed-Size: 531
+Version: 0.19.5-1
+Installed-Size: 529
 Maintainer: Aide Maintainers <aide@packages.debian.org>
 Architecture: all
-Depends: aide (>= 0.17), liblockfile1, ucf (>= 2.0020), debconf (>= 0.5) | debconf-2.0, systemd | systemd-standalone-sysusers | systemd-sysusers, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles
+Depends: aide (>= 0.17), liblockfile1, ucf (>= 2.0020), procps, systemd-sysv, debconf (>= 0.5) | debconf-2.0, systemd | systemd-standalone-sysusers | systemd-sysusers
 Recommends: bsd-mailx | mailx | s-nail, cron | cron-daemon
-Description: Advanced Intrusion Detection Environment - Common files
+Suggests: figlet
+Description: Advanced Intrusion Detection Environment - Debian integration
 Homepage: https://aide.github.io
-Description-md5: 7a8490e442a29581e6cca1b191be3f62
+Description-md5: a3a58291fac3edcf2bcb92a66c6ff95f
 Tag: role::app-data, role::program, security::ids
 admin
 Priority: optional
-Filename: pool/main/a/aide/aide-common_0.19.4-1_all.deb
-Size: 117508
-MD5sum: 2e3bf780ee97dff4deb006f825102c42
-SHA256: 5773e80f0088735e98688af5c1ddbe572f22c37e2a2a37230e482ae353bacc0b
+Filename: pool/main/a/aide/aide-common_0.19.5-1_all.deb
+Size: 117720
+MD5sum: 722508f8ebf6a538dcd237b665375684
+SHA256: 23ec3141a2c47702f429314d9cb68aa4a97f26600bddf9fda3d4bc7488ed6661
 
 Package: aide-dynamic
 Source: aide
-Version: 0.19.4-1
+Version: 0.19.5-1
 Installed-Size: 45
 Maintainer: Aide Maintainers <aide@packages.debian.org>
 Architecture: amd64
 Depends: aide (>= 0.17.3-5~)
-Recommends: aide-common (= 0.19.4-1)
+Recommends: aide-common (= 0.19.5-1)
 Description: Advanced Intrusion Detection Environment - transitional package
 Homepage: https://aide.github.io
 Description-md5: 8bf4f7566feb77cc67df60020394eaeb
 Tag: implemented-in::c, role::program, security::ids
 admin
 Priority: optional
-Filename: pool/main/a/aide/aide-dynamic_0.19.4-1_amd64.deb
-Size: 29332
-MD5sum: 8dd02bfcf02f07d5c5a1bc857c11fa7a
-SHA256: 733c08badb69be3e3e72e14e24708463ececf803d307e219b846b9f24703c795
+Filename: pool/main/a/aide/aide-dynamic_0.19.5-1_amd64.deb
+Size: 29760
+MD5sum: f1e6a6b05dcfd56bfef5f8164bcde8b5
+SHA256: ddd96e1eb0ba5621ee20806fb8decfdab7e7ea45e87178277740991d2fbf15a7
 
 Package: alien
 Version: 8.95.9-1
@@ -2689,8 +2689,9 @@ MD5sum: 863cddc5fcc51d3fbfd333818b1787ad
 SHA256: 6f3bf0597b5d0cb0d7f117ded5dd9d261a5c26c44d6fd1b4fa53d312852046ab
 
 Package: brltty
-Version: 6.9.1+repack-2
-Installed-Size: 9282
+Source: brltty (6.9.1+repack-2)
+Version: 6.9.1+repack-2+b1
+Installed-Size: 9283
 Maintainer: Debian Accessibility Team <pkg-a11y-devel@alioth-lists.debian.net>
 Architecture: amd64
 Replaces: libbrlapi1 (<< 3.7.2-7.1)
@@ -2706,36 +2707,36 @@ Tag: accessibility::input, accessibility::screen-reader, implemented-in::c,
  uitoolkit::ncurses, use::driver
 admin
 Priority: optional
-Filename: pool/main/b/brltty/brltty_6.9.1+repack-2_amd64.deb
-Size: 1650708
-MD5sum: 9b40a2f55b6742b142409bcc6f3160fa
-SHA256: 576e9175a5081e35db9dc0b49122be5f5b4e8b744ff3e231f51b0e94ae36620e
+Filename: pool/main/b/brltty/brltty_6.9.1+repack-2+b1_amd64.deb
+Size: 1651264
+MD5sum: 8dc86ef84fd6d82317a3e78a0a63b0b5
+SHA256: 78d997bd9270b1eddd193b86ef572ce5cbf39e6d7cc1a6a9af60a30dc9553cf8
 
 Package: brltty-espeak
-Source: brltty
-Version: 6.9.1+repack-2
-Installed-Size: 110
+Source: brltty (6.9.1+repack-2)
+Version: 6.9.1+repack-2+b1
+Installed-Size: 111
 Maintainer: Debian Accessibility Team <pkg-a11y-devel@alioth-lists.debian.net>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libespeak-ng1 (>= 1.52.0+dfsg), brltty (= 6.9.1+repack-2)
+Depends: libc6 (>= 2.38), libespeak-ng1 (>= 1.52.0+dfsg), brltty (= 6.9.1+repack-2+b1)
 Description: Access software for a blind person - espeak driver
 Homepage: https://brltty.com
 Description-md5: 12128acd3d15ad48324d1b92f13bb467
 Tag: accessibility::speech, role::shared-lib, use::driver
 admin
 Priority: optional
-Filename: pool/main/b/brltty/brltty-espeak_6.9.1+repack-2_amd64.deb
-Size: 76852
-MD5sum: 8a09252ab65cfd9a4f95dd245417bb20
-SHA256: 8a344b9276dd9ab9a6271d61abe850a54a76f4cfed329abc0331a6af022a7e98
+Filename: pool/main/b/brltty/brltty-espeak_6.9.1+repack-2+b1_amd64.deb
+Size: 77152
+MD5sum: fefb7651a9e0974d5d911b57a37367de
+SHA256: c8a8313bddde6a2bcf7f5e549b32c964369c0a80e70339d7f64204149c133a31
 
 Package: brltty-flite
-Source: brltty
-Version: 6.9.1+repack-2
-Installed-Size: 95
+Source: brltty (6.9.1+repack-2)
+Version: 6.9.1+repack-2+b1
+Installed-Size: 96
 Maintainer: Debian Accessibility Team <pkg-a11y-devel@alioth-lists.debian.net>
 Architecture: amd64
-Depends: libc6 (>= 2.14), libflite1 (>= 1.4-release-9~), brltty (= 6.9.1+repack-2)
+Depends: libc6 (>= 2.14), libflite1 (>= 1.4-release-9~), brltty (= 6.9.1+repack-2+b1)
 Description: Access software for a blind person - Flite speech driver
 Homepage: https://brltty.com
 Description-md5: 2e07054b3b97962c487b79ded37eb57b
@@ -2743,18 +2744,18 @@ Tag: accessibility::screen-reader, accessibility::speech, role::shared-lib,
  use::driver
 admin
 Priority: optional
-Filename: pool/main/b/brltty/brltty-flite_6.9.1+repack-2_amd64.deb
-Size: 76008
-MD5sum: 26b5c87d7e38db35c299d4b08d71ec4d
-SHA256: 77315192a2142f5e9e6a8d971dd1739a5a5be9d4a9477d05f9ba600771d3c24f
+Filename: pool/main/b/brltty/brltty-flite_6.9.1+repack-2+b1_amd64.deb
+Size: 76300
+MD5sum: 9f9d0ede5d24bbe8e1c974503d91c3cd
+SHA256: 45bc8b7e54d84bed370520be1b9d1d0f1d486566474c06e1b7bea48151ee240a
 
 Package: brltty-speechd
-Source: brltty
-Version: 6.9.1+repack-2
-Installed-Size: 95
+Source: brltty (6.9.1+repack-2)
+Version: 6.9.1+repack-2+b1
+Installed-Size: 96
 Maintainer: Debian Accessibility Team <pkg-a11y-devel@alioth-lists.debian.net>
 Architecture: amd64
-Depends: libc6 (>= 2.14), libspeechd2 (>= 0.7.1), brltty (= 6.9.1+repack-2)
+Depends: libc6 (>= 2.14), libspeechd2 (>= 0.7.1), brltty (= 6.9.1+repack-2+b1)
 Recommends: speech-dispatcher
 Description: Access software for a blind person - Speech Dispatcher driver
 Homepage: https://brltty.com
@@ -2762,18 +2763,18 @@ Description-md5: b90b3fdef13512fbc1fa9b477812709a
 Tag: accessibility::speech, role::shared-lib, use::driver
 admin
 Priority: optional
-Filename: pool/main/b/brltty/brltty-speechd_6.9.1+repack-2_amd64.deb
-Size: 76872
-MD5sum: 13e8a2903357ccc81d9bdd9a20bee748
-SHA256: aa18564d46583dd252ea78aede8247dc096e1e385f8a848b9ec3dad6e47e6887
+Filename: pool/main/b/brltty/brltty-speechd_6.9.1+repack-2+b1_amd64.deb
+Size: 77168
+MD5sum: 8d680cd010cf0649d0352763cee69c85
+SHA256: 94381bce96f3835e422ea7a61a8609ed3517f806614a77433373f2ea2db74f42
 
 Package: brltty-x11
-Source: brltty
-Version: 6.9.1+repack-2
-Installed-Size: 165
+Source: brltty (6.9.1+repack-2)
+Version: 6.9.1+repack-2+b1
+Installed-Size: 166
 Maintainer: Debian Accessibility Team <pkg-a11y-devel@alioth-lists.debian.net>
 Architecture: amd64
-Depends: libatspi2.0-0t64 (>= 2.9.90), libc6 (>= 2.38), libdbus-1-3 (>= 1.10), libx11-6 (>= 2:1.7.0), libxaw7 (>= 2:1.0.16), libxfixes3, libxt6t64, brltty (= 6.9.1+repack-2)
+Depends: libatspi2.0-0t64 (>= 2.9.90), libc6 (>= 2.38), libdbus-1-3 (>= 1.10), libx11-6 (>= 2:1.7.0), libxaw7 (>= 2:1.0.16), libxfixes3, libxt6t64, brltty (= 6.9.1+repack-2+b1)
 Recommends: xbrlapi
 Description: Access software for a blind person using a braille display - X11 drivers
 Homepage: https://brltty.com
@@ -2781,15 +2782,15 @@ Description-md5: 3f30d80e7a87ea3ecbcc6f909e8a1667
 Tag: accessibility::screen-reader, role::program
 admin
 Priority: optional
-Filename: pool/main/b/brltty/brltty-x11_6.9.1+repack-2_amd64.deb
-Size: 98656
-MD5sum: e09c3cc726124cfae101afc470db0541
-SHA256: a61dd7e9cb9edf0b5f4caae99f2fbd390e150806883c9933cdd4c6798ccbb3be
+Filename: pool/main/b/brltty/brltty-x11_6.9.1+repack-2+b1_amd64.deb
+Size: 98924
+MD5sum: e6c71937426c59d07f4f1df361c6f1b9
+SHA256: 88d9be3b927cb7a21815a8b63acb81a0814089975cac4f57861a7347c35e8c61
 
 Package: xbrlapi
-Source: brltty
-Version: 6.9.1+repack-2
-Installed-Size: 292
+Source: brltty (6.9.1+repack-2)
+Version: 6.9.1+repack-2+b1
+Installed-Size: 293
 Maintainer: Debian Accessibility Team <pkg-a11y-devel@alioth-lists.debian.net>
 Architecture: amd64
 Depends: libbrlapi0.8 (>= 6.9.1+repack), libc6 (>= 2.38), libicu78 (>= 78.1-1~), libx11-6, libxfixes3, libxtst6 (>= 2:1.2.5)
@@ -2800,10 +2801,10 @@ Description-md5: 53f480ad337051c6a36a0d285d13603c
 Tag: accessibility::input, interface::daemon, role::program
 admin
 Priority: optional
-Filename: pool/main/b/brltty/xbrlapi_6.9.1+repack-2_amd64.deb
-Size: 152480
-MD5sum: f352acd7a59ebfdedfdd0fdcae485ade
-SHA256: ef2cf126af91a3e49b2b186f72383b0bd703e59138f31012eada2341b8d769a7
+Filename: pool/main/b/brltty/xbrlapi_6.9.1+repack-2+b1_amd64.deb
+Size: 152848
+MD5sum: d1e20c826fb262c0504623a9d62e6c41
+SHA256: 47c6aa4393920f7d914ab8ba723247b23bd4e0ff0135c98cb49d21c269cc0763
 
 Package: btrfs-assistant
 Version: 2.2-1.1
@@ -4370,28 +4371,28 @@ MD5sum: c416c3fd5ac02ffd5b2c2976fd59274a
 SHA256: cf8ddcfc39a02fd82c0d2efc7d4cbaa265a2e968ddb867b2c145d64d5f35b4f9
 
 Package: cockpit
-Version: 368-1
+Version: 370-1
 Installed-Size: 52
 Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: cockpit-bridge (>= 368-1), cockpit-ws (>= 368-1), cockpit-system (>= 368-1)
-Recommends: cockpit-storaged (>= 368-1), cockpit-networkmanager (>= 368-1), cockpit-packagekit (>= 368-1)
-Suggests: cockpit-doc (>= 368-1), cockpit-sosreport (>= 368-1), xdg-utils
+Depends: cockpit-bridge (>= 370-1), cockpit-ws (>= 370-1), cockpit-system (>= 370-1)
+Recommends: cockpit-storaged (>= 370-1), cockpit-networkmanager (>= 370-1), cockpit-packagekit (>= 370-1)
+Suggests: cockpit-doc (>= 370-1), cockpit-sosreport (>= 370-1), xdg-utils
 Description: Web Console for Linux servers
 Multi-Arch: foreign
 Homepage: https://cockpit-project.org/
 Description-md5: 24b0aa0c07779dcba10e15ca9244d9e9
 admin
 Priority: optional
-Filename: pool/main/c/cockpit/cockpit_368-1_all.deb
-Size: 20500
-MD5sum: b58003bc38d344bbe8ab5c60718de7d4
-SHA256: 410bf82c09623843720fdcbc1b5511015bad3f0a78b75f0041fc6fcd7927aeed
+Filename: pool/main/c/cockpit/cockpit_370-1_all.deb
+Size: 20508
+MD5sum: 5d07e4528727f2460f3158bf1465969c
+SHA256: ac7507d256353167e674f93f8f9f81dae63146ce282bb8a86329ab0e75790696
 
 Package: cockpit-bridge
 Source: cockpit
-Version: 368-1
-Installed-Size: 901
+Version: 370-1
+Installed-Size: 902
 Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
 Architecture: all
 Replaces: cockpit-pcp (<< 236)
@@ -4405,72 +4406,72 @@ Homepage: https://cockpit-project.org/
 Description-md5: 34419f40043aa83e9a0fb5968fe56ce7
 admin
 Priority: optional
-Filename: pool/main/c/cockpit/cockpit-bridge_368-1_all.deb
-Size: 432812
-MD5sum: a6f794e1a5974e93c11c7196d0553ff3
-SHA256: 31a82225f80643af6d8b9739b38019f4187a3f3bb103a2e6e8bda9d5ec20b4ad
+Filename: pool/main/c/cockpit/cockpit-bridge_370-1_all.deb
+Size: 434388
+MD5sum: 9bd47748e319c73950348e112e23a8c7
+SHA256: 2a5fca8c4699548feb643515196684c4bc3fca648287bf2afb1ee7f089e9f250
 
 Package: cockpit-networkmanager
 Source: cockpit
-Version: 368-1
-Installed-Size: 962
+Version: 370-1
+Installed-Size: 968
 Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: cockpit-bridge (>= 368-1), network-manager (>= 1.6)
+Depends: cockpit-bridge (>= 370-1), network-manager (>= 1.6)
 Description: Cockpit user interface for networking
 Multi-Arch: foreign
 Homepage: https://cockpit-project.org/
 Description-md5: d453350593dcc4aba8e5cd9e282c9e7c
 admin
 Priority: optional
-Filename: pool/main/c/cockpit/cockpit-networkmanager_368-1_all.deb
-Size: 929496
-MD5sum: 088dc3bc9da4eac4b2b81e95dc2cba54
-SHA256: e87fba56c9278e17eeb0155a8b7b7da972129d37afacd8a8cec15be60ffc4e30
+Filename: pool/main/c/cockpit/cockpit-networkmanager_370-1_all.deb
+Size: 934324
+MD5sum: 73b58be621ac0a431e752c94f917772c
+SHA256: 13c6291fc7b1699833a621dec78bd032c25ffd1f2558e132c666e0513852a9c3
 
 Package: cockpit-packagekit
 Source: cockpit
-Version: 368-1
-Installed-Size: 1044
+Version: 370-1
+Installed-Size: 1059
 Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: cockpit-bridge (>= 368-1), packagekit, python3
+Depends: cockpit-bridge (>= 370-1), packagekit, python3
 Description: Cockpit user interface for apps and package updates
 Multi-Arch: foreign
 Homepage: https://cockpit-project.org/
 Description-md5: 78e1cc24dd1b7a3c1e724e0fb54d4968
 admin
 Priority: optional
-Filename: pool/main/c/cockpit/cockpit-packagekit_368-1_all.deb
-Size: 985756
-MD5sum: 6a2e726e8f438003ae63db1a79d59034
-SHA256: d977c238e054e4d2f157399a80bed88fd2b843533e0e61c4e2442bf6c2f44a28
+Filename: pool/main/c/cockpit/cockpit-packagekit_370-1_all.deb
+Size: 1001764
+MD5sum: 9b63d0595604e9347447cf4e94647a61
+SHA256: 4d0311b618b3a90df811bc1c2474238c74ba2f55f565f436c7b1eb68168bba5c
 
 Package: cockpit-sosreport
 Source: cockpit
-Version: 368-1
-Installed-Size: 520
+Version: 370-1
+Installed-Size: 522
 Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: cockpit-bridge (>= 368-1), sos | sosreport
+Depends: cockpit-bridge (>= 370-1), sos | sosreport
 Description: Cockpit user interface for diagnostic reports
 Multi-Arch: foreign
 Homepage: https://cockpit-project.org/
 Description-md5: 4758fe190de68c7b853346fee5745606
 admin
 Priority: optional
-Filename: pool/main/c/cockpit/cockpit-sosreport_368-1_all.deb
-Size: 470408
-MD5sum: d8d12c34ed231a4dfb15d352444d6d30
-SHA256: db7a57fdf339c20bc71f8faa01d62a38db6fab7bc547cf2c709c4a27244f8b89
+Filename: pool/main/c/cockpit/cockpit-sosreport_370-1_all.deb
+Size: 472364
+MD5sum: ac7407c05f3012365b3b5ebf5f5f7899
+SHA256: 9f3ab4b16fda215bf4827326465887e0ef89f28b329d52dfe9fb4cd5d58e4f37
 
 Package: cockpit-storaged
 Source: cockpit
-Version: 368-1
-Installed-Size: 948
+Version: 370-1
+Installed-Size: 950
 Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: udisks2 (>= 2.9), udisks2 (>= 2.10) | libblockdev-mdraid2, cockpit-bridge (>= 368-1), python3, python3-dbus
+Depends: udisks2 (>= 2.9), udisks2 (>= 2.10) | libblockdev-mdraid2, cockpit-bridge (>= 370-1), python3, python3-dbus
 Suggests: udisks2-btrfs, udisks2-lvm2, mdadm
 Description: Cockpit user interface for storage
 Multi-Arch: foreign
@@ -4478,19 +4479,19 @@ Homepage: https://cockpit-project.org/
 Description-md5: 3fc77fbcc6a21be7bbf8ead3678a681e
 admin
 Priority: optional
-Filename: pool/main/c/cockpit/cockpit-storaged_368-1_all.deb
-Size: 923256
-MD5sum: 760c67098bbf52b8ea8fd79927116e9b
-SHA256: 365d920c100efd9719995fda2580d8bed4dc3fe9a850850ce390e9b2fa80f86a
+Filename: pool/main/c/cockpit/cockpit-storaged_370-1_all.deb
+Size: 926712
+MD5sum: 039eb981bb6b250c70bd3b7732e51180
+SHA256: 4fa9d9c4dc2753511bef9cdd516e48e8ef4a228e6b8616b056dff240132d0983
 
 Package: cockpit-system
 Source: cockpit
-Version: 368-1
-Installed-Size: 3444
+Version: 370-1
+Installed-Size: 3455
 Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
 Architecture: all
 Provides: cockpit-shell, cockpit-systemd, cockpit-tuned, cockpit-users
-Depends: cockpit-bridge (>= 368-1), libpwquality-tools, openssl
+Depends: cockpit-bridge (>= 370-1), libpwquality-tools, openssl
 Recommends: sudo | pkexec | policykit-1
 Suggests: lastlog2
 Description: Cockpit admin interface for a system
@@ -4499,15 +4500,15 @@ Homepage: https://cockpit-project.org/
 Description-md5: 305239ce7fcb5c6043156a1e54c69f73
 admin
 Priority: optional
-Filename: pool/main/c/cockpit/cockpit-system_368-1_all.deb
-Size: 3339788
-MD5sum: 32414df16976f8761b8853295ba7c881
-SHA256: f8fa4b9fdbbddb05541a6e2b564f747a0be401125aaf77171a61e22281772094
+Filename: pool/main/c/cockpit/cockpit-system_370-1_all.deb
+Size: 3347536
+MD5sum: ff02645de6a1d674838683a29ed620be
+SHA256: f945ba6a2179a8d9780e15545a85ada33794f9624d4864286f17801c7df1aa6f
 
 Package: cockpit-ws
 Source: cockpit
-Version: 368-1
-Installed-Size: 2119
+Version: 370-1
+Installed-Size: 2122
 Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: cockpit-tests (<< 331)
@@ -4519,10 +4520,10 @@ Homepage: https://cockpit-project.org/
 Description-md5: 01211c5252a674e6e584970d6d858b16
 admin
 Priority: optional
-Filename: pool/main/c/cockpit/cockpit-ws_368-1_amd64.deb
-Size: 1068164
-MD5sum: 863ad8fcfdd85bc268da7331f58221cd
-SHA256: 04a88bd6caeb0ad9d7ed5ac91cd7bc840e30e3ef10ca9d362b88e1092224c31f
+Filename: pool/main/c/cockpit/cockpit-ws_370-1_amd64.deb
+Size: 1068404
+MD5sum: 1980461f395582a2313b704a4ad3b883
+SHA256: d12425a0d481972ab3af4eb927abea9f71df5368e6e83063970fd1a1b910fc7e
 
 Package: cockpit-files
 Version: 45-1
@@ -4542,8 +4543,8 @@ MD5sum: 1c4574156fbe673d780df42e676ab2c3
 SHA256: 7526e38f1bdcc749b3c5eb5ee7094d3aeae30ccebec70b1c2b905b2ab20394cf
 
 Package: cockpit-machines
-Version: 357-1
-Installed-Size: 1025
+Version: 359-1
+Installed-Size: 1016
 Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
 Architecture: all
 Depends: cockpit-bridge (>= 215), libvirt-daemon-system, libvirt-clients | libvirt-bin, libvirt-dbus, virt-install (>= 3.0.0) | virtinst (>= 3.0.0)
@@ -4554,14 +4555,14 @@ Homepage: https://github.com/cockpit-project/cockpit-machines
 Description-md5: 8df4c11e840a3161801680033725df15
 admin
 Priority: optional
-Filename: pool/main/c/cockpit-machines/cockpit-machines_357-1_all.deb
-Size: 996532
-MD5sum: 43f41e640680b0409a4d5b6cd9249ed9
-SHA256: bfb7cc5763dd534f53b243ada5fc932443d0cd5a216f98aa6f7760640168237a
+Filename: pool/main/c/cockpit-machines/cockpit-machines_359-1_all.deb
+Size: 990092
+MD5sum: 1d7c81645a19382aca483025dcc38e24
+SHA256: bdba43aed286193cca09761ae050901571dbc4ee170c1dcbfe8031a2e633e2a8
 
 Package: cockpit-podman
-Version: 131-1
-Installed-Size: 669
+Version: 132-1
+Installed-Size: 674
 Maintainer: Martin Pitt <mpitt@debian.org>
 Architecture: all
 Depends: cockpit-bridge, podman (>= 2.0.4)
@@ -4571,10 +4572,10 @@ Homepage: https://github.com/cockpit-project/cockpit-podman
 Description-md5: bd8bea62609a52119a9f55b9e9e77daf
 admin
 Priority: optional
-Filename: pool/main/c/cockpit-podman/cockpit-podman_131-1_all.deb
-Size: 625904
-MD5sum: 6e3dcf469c0fdeba562b9862070b971c
-SHA256: 00f7cc6b235422de8a50378c1dd378f8fd698d3b6616f6d5c9102ca7000ccb62
+Filename: pool/main/c/cockpit-podman/cockpit-podman_132-1_all.deb
+Size: 629648
+MD5sum: d6cb65d2ebf51ec5920eae37697f9490
+SHA256: 550554d649b1c97391e5eff79a0d80a47b2944fe960df6546cfcb6d219519965
 
 Package: collectl
 Version: 4.3.20.2-1
@@ -5113,11 +5114,11 @@ SHA256: cd6e253c0d7ae666cb192cf0e1da34b58a05d55ef283f77ec5ddee49483fabfc
 
 Package: cracklib-runtime
 Source: cracklib2 (2.9.6-5.3)
-Version: 2.9.6-5.3+b1
+Version: 2.9.6-5.3+b2
 Installed-Size: 584
 Maintainer: Jan Dittberner <jandd@debian.org>
 Architecture: amd64
-Depends: file, libcrack2 (>= 2.9.6-5.3+b1), libc6 (>= 2.34)
+Depends: file, libcrack2 (>= 2.9.6-5.3+b2), libc6 (>= 2.34)
 Recommends: wamerican | wordlist
 Description: runtime support for password checker library cracklib2
 Multi-Arch: foreign
@@ -5128,10 +5129,10 @@ Tag: implemented-in::c, implemented-in::shell, interface::commandline,
  works-with::dictionary
 admin
 Priority: optional
-Filename: pool/main/c/cracklib2/cracklib-runtime_2.9.6-5.3+b1_amd64.deb
-Size: 142968
-MD5sum: 993d688eb840f55ede365000b94aed60
-SHA256: c0c6109f5c9cc7824203e61af97db2b9f43814eb47ad584bd6e975860a3a1948
+Filename: pool/main/c/cracklib2/cracklib-runtime_2.9.6-5.3+b2_amd64.deb
+Size: 143068
+MD5sum: 01323eb7ee2a4d1541b1d4e80c860afc
+SHA256: ccdd0bff98467ae78e2072ce92c2046a8d2c40cb7d752a5cce45c1bb24287fe4
 
 Package: criu
 Version: 4.2.1-1
@@ -6327,7 +6328,7 @@ SHA256: f56ce16abc3488eb8fae56095a581b6c44edc4c9c04c962fa8582249bfe1d265
 
 Package: deltarpm
 Source: deltarpm (3.6.5+dfsg-3)
-Version: 3.6.5+dfsg-3+b1
+Version: 3.6.5+dfsg-3+b2
 Installed-Size: 536
 Maintainer: RPM packaging team <team+pkg-rpm@tracker.debian.org>
 Architecture: amd64
@@ -6339,10 +6340,10 @@ Commands: applydeltaiso, applydeltarpm, combinedeltarpm, drpmsync, fragiso, make
 Description-md5: cbf6db0ebfccf5299ac652acf3d1a1be
 admin
 Priority: optional
-Filename: pool/main/d/deltarpm/deltarpm_3.6.5+dfsg-3+b1_amd64.deb
-Size: 126308
-MD5sum: 48ab8429cd4589f91d04c8c48ea28d24
-SHA256: 8bc9af1a589b57c566b218581e55222c768dea086a6a1a3c96273cf089548c1c
+Filename: pool/main/d/deltarpm/deltarpm_3.6.5+dfsg-3+b2_amd64.deb
+Size: 126264
+MD5sum: 8d3d37a95d21fcd5727154024303b9f6
+SHA256: fb9486189efdf18f831ff3a36daa868b4fe4ea136fdac1134f172535ce742189
 
 Package: depthcharge-tools
 Version: 0.6.2-5
@@ -12731,21 +12732,21 @@ MD5sum: a239759dbe39585afd8ea4919685adeb
 SHA256: fd6ba3b73c25d6a3b396a4e2ceb71a6049ac4825bb5c017a9d27c5758b3cda2e
 
 Package: icingaweb2-module-director
-Version: 1.11.9-2
-Installed-Size: 8073
+Version: 1.12.1-1
+Installed-Size: 11847
 Maintainer: David Kunz <david.kunz@dknet.ch>
 Architecture: all
-Depends: icinga-php-library, icingaweb2, icingaweb2-module-incubator, icingaweb2-module-reactbundle, php, php-common, php-curl, php-iconv, php-posix, debconf (>= 0.5) | debconf-2.0, systemd | systemd-standalone-sysusers | systemd-sysusers, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles
+Depends: icinga-php-library, icingaweb2, icingaweb2-module-incubator, icingaweb2-module-reactbundle, php, php-common, php-curl, php-iconv, php-posix, debconf (>= 0.5) | debconf-2.0, systemd | systemd-standalone-sysusers | systemd-sysusers
 Enhances: icingaweb2
 Description: simple and responsive web interface for Icinga - director module
 Homepage: https://github.com/Icinga/icingaweb2-module-director
 Description-md5: a788c6f09090c096fb6b877cd994d700
 admin
 Priority: optional
-Filename: pool/main/i/icingaweb2-module-director/icingaweb2-module-director_1.11.9-2_all.deb
-Size: 3074060
-MD5sum: 6935bd23d5d0c1288468e5f68c7de53b
-SHA256: f0645501c763c9006d13c937cb45e2ff715bc654fc2e5a138264a3eb84b01bfc
+Filename: pool/main/i/icingaweb2-module-director/icingaweb2-module-director_1.12.1-1_all.deb
+Size: 6339396
+MD5sum: d8dc39d750288e2cf37f155e0824112f
+SHA256: 766a93173a4b86aa91a2f3c1d8653e39d605403717515bf94c5e4a26e60897df
 
 Package: icingaweb2-module-eventdb
 Version: 1.3.0-9
@@ -12969,21 +12970,21 @@ MD5sum: 96919e412f2e0a0c297af13513093ebe
 SHA256: 2757172297ce5fd931cf387e95d146cdec956a2a65b09cf54556b7507b47cb57
 
 Package: icingaweb2-module-toplevelview
-Version: 1.1.0-1
-Installed-Size: 1726
+Version: 1.2.0-1
+Installed-Size: 1861
 Maintainer: David Kunz <david.kunz@dknet.ch>
 Architecture: all
-Depends: icinga-php-library, icingadb-web, icingaweb2, libjs-codemirror, nodejs, php-yaml, debconf (>= 0.5) | debconf-2.0
+Depends: icinga-php-library, icingadb, icingadb-web, icingaweb2, libjs-codemirror, nodejs, php-yaml, debconf (>= 0.5) | debconf-2.0
 Enhances: icingaweb2, icingaweb2-module-icingadb
 Description: simple and responsive web interface for Icinga - top level view
 Homepage: https://github.com/Icinga/icingaweb2-module-toplevelview
 Description-md5: c26b8a9a21540fc11bbc41fc76223783
 admin
 Priority: optional
-Filename: pool/main/i/icingaweb2-module-toplevelview/icingaweb2-module-toplevelview_1.1.0-1_all.deb
-Size: 1400540
-MD5sum: 6df84994458bbfbed01e097feb15bd4f
-SHA256: e6e9e586ab7c1ae051a9a506e9b1f76c63823ed54cb3f80dd88d1824674d1723
+Filename: pool/main/i/icingaweb2-module-toplevelview/icingaweb2-module-toplevelview_1.2.0-1_all.deb
+Size: 1410900
+MD5sum: f10e651ce200271f9c54b8873d987104
+SHA256: f6be70c35aab1718ddbcaaf6b395279a344a3895050a5461b4aa0101f021e24a
 
 Package: icingaweb2-module-x509
 Version: 1:1.4.0-1
@@ -13529,11 +13530,11 @@ SHA256: 22ead2b91d92b070ba9f37eecc3ba7972b3f56ecf7b5bf2d82ee4e18712acbe6
 
 Package: iotop
 Source: iotop (0.6-42-ga14256a-0.3)
-Version: 0.6-42-ga14256a-0.3+b3
-Installed-Size: 108
+Version: 0.6-42-ga14256a-0.3+b4
+Installed-Size: 122
 Maintainer: Paul Wise <pabs@debian.org>
 Architecture: amd64
-Depends: python3 (<< 3.15), python3 (>= 3.14~), python3:any
+Depends: python3 (<< 3.16), python3 (>= 3.14~), python3:any
 Description: simple top-like I/O monitor
 Homepage: http://guichaz.free.fr/iotop/
 Description-md5: c4f12688909987c39522befde2f1ee20
@@ -13541,10 +13542,10 @@ Tag: admin::monitoring, implemented-in::python, interface::text-mode,
  role::program, scope::utility, use::monitor
 admin
 Priority: optional
-Filename: pool/main/i/iotop/iotop_0.6-42-ga14256a-0.3+b3_amd64.deb
-Size: 24020
-MD5sum: 03fd899cbc67fcfa706679a62bf235a6
-SHA256: 58fc2831af44f5930927df892df68f55c922f0b16679fe469e2ea46ceb435712
+Filename: pool/main/i/iotop/iotop_0.6-42-ga14256a-0.3+b4_amd64.deb
+Size: 24144
+MD5sum: 585e95f2c849be3bfac8bd084240cc97
+SHA256: 382a52394545b134285fe9acde14c6e122679c77caa12e1931ed2d7cb9c33960
 
 Package: iotop-c
 Version: 1.31-1
@@ -14288,12 +14289,12 @@ MD5sum: 4e12fe0e959129d91697e02d22e88936
 SHA256: fb537f7bc1e987fbfecd69a4e85c2f1ad472d49fcc4495234d654a73eec74f47
 
 Package: libcap-ng-utils
-Source: libcap-ng
-Version: 0.9.6-1
-Installed-Size: 138
+Source: libcap-ng (0.9.6-1)
+Version: 0.9.6-1+b1
+Installed-Size: 139
 Maintainer: Håvard F. Aasen <havard.f.aasen@pfft.no>
 Architecture: amd64
-Depends: libcap-ng0 (= 0.9.6-1), libc6 (>= 2.38)
+Depends: libcap-ng0 (= 0.9.6-1+b1), libc6 (>= 2.38)
 Description: Utilities for analysing and setting file capabilities
 Homepage: https://people.redhat.com/sgrubb/libcap-ng
 Commands: filecap, netcap, pscap
@@ -14301,10 +14302,10 @@ Description-md5: fbe5ccdbf5d2f02cbe089add9ba015da
 Tag: implemented-in::c, role::program
 admin
 Priority: optional
-Filename: pool/main/libc/libcap-ng/libcap-ng-utils_0.9.6-1_amd64.deb
-Size: 47852
-MD5sum: fe260bef228686634529f1d458c8eb57
-SHA256: e7e457435b9ee30006f9b645b0c2848d8f6973f9bfffcac4c5685c21668ed085
+Filename: pool/main/libc/libcap-ng/libcap-ng-utils_0.9.6-1+b1_amd64.deb
+Size: 48112
+MD5sum: faa9b49a21623fa61d3d07592e47c811
+SHA256: 8e6c972441e75d9a43b6f2e6d5effc01bca6dd2052d309a2cb77930ada6a6246
 
 Package: cgroup-tools
 Source: libcgroup
@@ -14890,9 +14891,9 @@ MD5sum: 134ff6e41aca47edb903fdee3b13b0bd
 SHA256: 8bd313163dc6774380a83814b02ebf2c702084fa860b1814984079b3105f5456
 
 Package: selinux-utils
-Source: libselinux
-Version: 3.11-2.1
-Installed-Size: 553
+Source: libselinux (3.11-2.1)
+Version: 3.11-2.1+b1
+Installed-Size: 554
 Maintainer: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libpcre2-8-0 (>= 10.47), libselinux1 (>= 3.5), libsepol2 (>= 3.11)
@@ -14904,10 +14905,10 @@ Tag: admin::configuring, admin::user-management, role::program,
  scope::utility, security::TODO
 admin
 Priority: optional
-Filename: pool/main/libs/libselinux/selinux-utils_3.11-2.1_amd64.deb
-Size: 74904
-MD5sum: 5c41f17baa9d6172748b592613a04729
-SHA256: 6c5ce16c357ea143b8cc72980b32272c5c2d3cfcf327906f5d3f00f40a6fc880
+Filename: pool/main/libs/libselinux/selinux-utils_3.11-2.1+b1_amd64.deb
+Size: 75224
+MD5sum: cf24d477ad7384ee0dd4dac729fecd9b
+SHA256: 9cda8ccc7bab860cbbd8645e67096f22baad91fd0dc9223ef89ebc65d2c7d1b8
 
 Package: semanage-utils
 Source: libsemanage
@@ -15704,7 +15705,7 @@ SHA256: 4c69ebc5216ea91400cbc1109596ccc4760ec067a3d25ef852f7ac257d767b19
 
 Package: hyperv-daemons
 Source: linux
-Version: 7.2.11-1
+Version: 7.2.12-1
 Installed-Size: 480
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
@@ -15714,14 +15715,14 @@ Homepage: https://www.kernel.org/
 Description-md5: 58917e0b17ef6adea3e3091118057457
 admin
 Priority: optional
-Filename: pool/main/l/linux/hyperv-daemons_7.2.11-1_amd64.deb
-Size: 380560
-MD5sum: 66c59e4becd307974679e630450a608e
-SHA256: 0b36b215cae788cff8600f0e51faba101abdba74ce8dc3d634230a272f0bd0de
+Filename: pool/main/l/linux/hyperv-daemons_7.2.12-1_amd64.deb
+Size: 380824
+MD5sum: 51cdc0e47235473603722e739510fbd3
+SHA256: a88ca67175262776f82e40f64a990ddc2da3f80cd68b43081d0017279e3135b4
 
 Package: intel-sdsi
 Source: linux
-Version: 7.2.11-1
+Version: 7.2.12-1
 Installed-Size: 387
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
@@ -15731,14 +15732,14 @@ Homepage: https://www.kernel.org/
 Description-md5: a3073b24bc2ab88b6668c0b7642a18f5
 admin
 Priority: optional
-Filename: pool/main/l/linux/intel-sdsi_7.2.11-1_amd64.deb
-Size: 364260
-MD5sum: 609d548cae28384752ed1c6a4a84ba07
-SHA256: db1f824b94ba34a08425683eb62bbfe020d1475569c85bf9ea6114d142e031df
+Filename: pool/main/l/linux/intel-sdsi_7.2.12-1_amd64.deb
+Size: 364556
+MD5sum: a6f1a63636edccf313c9d8361912a640
+SHA256: 0e50e848782d7118e99de9a1578d5d9a8103d34fcd3185d7f422737bc55cb177
 
 Package: linux-cpupower
 Source: linux
-Version: 7.2.11-1
+Version: 7.2.12-1
 Installed-Size: 966
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
@@ -15748,14 +15749,14 @@ Homepage: https://www.kernel.org/
 Description-md5: e32c8b4931e9356e0f0adbe447a967fc
 admin
 Priority: optional
-Filename: pool/main/l/linux/linux-cpupower_7.2.11-1_amd64.deb
-Size: 556308
-MD5sum: 75f36f619c2c218b419d9b076c1b9bd7
-SHA256: 6c7af895ad55158bc270a691bf0cb064a91fe5ffd3d097fb583b087f76074bae
+Filename: pool/main/l/linux/linux-cpupower_7.2.12-1_amd64.deb
+Size: 556620
+MD5sum: 190d129957927b6d7617c845b125a27a
+SHA256: 6e9bda2c0b67302241ee4139b11074a38a207e1264a533fa683e7653921d23a1
 
 Package: linux-misc-tools
 Source: linux
-Version: 7.2.11-1
+Version: 7.2.12-1
 Installed-Size: 480
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
@@ -15765,14 +15766,14 @@ Homepage: https://www.kernel.org/
 Description-md5: 005eab2e323119ce8359c8a3ec1c8e16
 admin
 Priority: optional
-Filename: pool/main/l/linux/linux-misc-tools_7.2.11-1_amd64.deb
-Size: 393992
-MD5sum: 8623b83fad5a1a337c8beab250fb4af3
-SHA256: 1462f6052838701f1e081232a3f5559c607c76b6a9c8d3259c2dce6c317f712e
+Filename: pool/main/l/linux/linux-misc-tools_7.2.12-1_amd64.deb
+Size: 394292
+MD5sum: f70b95bb9b22b6fb05da0fddb2608455
+SHA256: f503cc318aea21d70768a291c985c7592664b4d0ca8cb5db728c9c1a776e4d25
 
 Package: usbip
-Source: linux (7.2.11-1)
-Version: 2.0+7.2.11-1
+Source: linux (7.2.12-1)
+Version: 2.0+7.2.12-1
 Installed-Size: 520
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
@@ -15783,10 +15784,10 @@ Description-md5: 84110e083527a27b37417dcab69e5ab7
 Tag: implemented-in::c, role::program
 admin
 Priority: optional
-Filename: pool/main/l/linux/usbip_2.0+7.2.11-1_amd64.deb
-Size: 401836
-MD5sum: 9fd18a0283b41b2805bd77d14ebecc31
-SHA256: 89c4f62bdbbb8f575a1ca9b684341381163112f40ed588a0e610e7769bfed023
+Filename: pool/main/l/linux/usbip_2.0+7.2.12-1_amd64.deb
+Size: 402080
+MD5sum: 1d93d3df30c939da831ab2afc87d6650
+SHA256: 304de60fba973c00e2db6862dea6b5f984f5f998a48cad2cbd8ea4ecdcc34610
 
 Package: linux-vulnerability-mitigation
 Version: 20260629.1-2
@@ -16742,6 +16743,22 @@ Filename: pool/main/m/mingetty/mingetty_1.08-7_amd64.deb
 Size: 9428
 MD5sum: 7188cf719f63814e38be2b9fd3b8b917
 SHA256: 28f4da335969c5b3b5b15ca1bafc31c808e1348cd5b603e4187bbc365e065376
+
+Package: minijail
+Version: 2026.05.18+git20261016.8787d1a-2
+Installed-Size: 547
+Maintainer: Yunseong Kim <ysk@kzalloc.com>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libcap2 (>= 1:2.10)
+Description: utility to run a program inside a sandbox
+Homepage: https://google.github.io/minijail/
+Description-md5: 6e5b06f4e0d7363355cef8b7156f1863
+admin
+Priority: optional
+Filename: pool/main/m/minijail/minijail_2026.05.18+git20261016.8787d1a-2_amd64.deb
+Size: 105616
+MD5sum: 4ec0932eae69c306c37d2a197295e63a
+SHA256: be9e782a257dc0e8d1a0d7eccfa41e87e5ffacebda86b3d925bece93b42b9ab4
 
 Package: mkosi
 Version: 27.1-1
@@ -22831,8 +22848,8 @@ MD5sum: 00bacb0a201631c6a5fe902a6ae3d969
 SHA256: 00389af4dcdb4ba1af03dc530619209ea2df3ca59e6e4a16d27d3acb400735db
 
 Package: runit-services
-Version: 0.12.2
-Installed-Size: 428
+Version: 0.12.3
+Installed-Size: 429
 Maintainer: Lorenzo Puliti <plorenzo@disroot.org>
 Architecture: all
 Provides: mini-httpd-run
@@ -22845,10 +22862,10 @@ Homepage: https://salsa.debian.org/debian/runit-services
 Description-md5: 2eea38e236e810482cf416349a275373
 admin
 Priority: optional
-Filename: pool/main/r/runit-services/runit-services_0.12.2_all.deb
-Size: 26660
-MD5sum: 3b5be22bbb7f16ea75d172864e547a75
-SHA256: e5044fee69a06ef6bc9b6c96df724f7e38245197962c7f950b6ab6aeb9f343cf
+Filename: pool/main/r/runit-services/runit-services_0.12.3_all.deb
+Size: 26756
+MD5sum: d293c14020bc165a39c04009deb19d6f
+SHA256: b2da0277eda1763865668b6564534e98b2cf31f61ee5c7679d447a65d5661de7
 
 Package: runoverssh
 Version: 3.0.3-2
@@ -23852,7 +23869,7 @@ SHA256: 11e1554b21eab0fc2165511f92f0264373f432dfefadb7a7c7a527c3bde3d2c8
 
 Package: libpam-slurm
 Source: slurm-wlm
-Version: 26.05.4-1
+Version: 26.05.5-1
 Installed-Size: 106
 Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
 Architecture: amd64
@@ -23863,14 +23880,14 @@ Description-md5: 035a8fde10a3e36e6768e0962da94426
 Tag: role::shared-lib, security::authentication
 admin
 Priority: optional
-Filename: pool/main/s/slurm-wlm/libpam-slurm_26.05.4-1_amd64.deb
-Size: 22604
-MD5sum: be52cc48315927100da4c86e14685625
-SHA256: fa20cbf6fedd1537d9e0bd3f53da25780a8fe04cab165fe6ec07c0d2e478e9e5
+Filename: pool/main/s/slurm-wlm/libpam-slurm_26.05.5-1_amd64.deb
+Size: 22720
+MD5sum: c0ce5b383339a3edb9b18972da6b881a
+SHA256: 583dabcf54eb83fe16ce43297a4ac81de8573f24c79c508cab47e792fd176bbb
 
 Package: libpam-slurm-adopt
 Source: slurm-wlm
-Version: 26.05.4-1
+Version: 26.05.5-1
 Installed-Size: 116
 Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
 Architecture: amd64
@@ -23880,35 +23897,35 @@ Homepage: https://slurm.schedmd.com
 Description-md5: b2879f460905c22e7d0452e9df8102d0
 admin
 Priority: optional
-Filename: pool/main/s/slurm-wlm/libpam-slurm-adopt_26.05.4-1_amd64.deb
-Size: 24660
-MD5sum: 08200e3fb7257796d5eecbcec7d54c89
-SHA256: 87c2840535b3aefd458a1db2066efd7e883178e70c3b3c11966ab3ebb94ea8b0
+Filename: pool/main/s/slurm-wlm/libpam-slurm-adopt_26.05.5-1_amd64.deb
+Size: 24748
+MD5sum: 3f8a2a4818e22bdffc72dfd60aa9dc2f
+SHA256: 27ed45d613583fa0a0800d433435b0bae5a0aef0c69ac9c761288ab7b48513bf
 
 Package: sackd
 Source: slurm-wlm
-Version: 26.05.4-1
+Version: 26.05.5-1
 Installed-Size: 126
 Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), slurm-wlm-basic-plugins (= 26.05.4-1)
+Depends: libc6 (>= 2.38), slurm-wlm-basic-plugins (= 26.05.5-1)
 Description: Slurm auth and cred kiosk daemon
 Homepage: https://slurm.schedmd.com
 Description-md5: 85dae07e8cf1ae3ffe4cac84106dca83
 admin
 Priority: optional
-Filename: pool/main/s/slurm-wlm/sackd_26.05.4-1_amd64.deb
-Size: 27488
-MD5sum: 63d07d3d190547146b4e0ce781ce26e7
-SHA256: 8a5284210a9ebdfffcc037d97cbe313b0f3908ce3ee2edf8af4d757bb69cdd79
+Filename: pool/main/s/slurm-wlm/sackd_26.05.5-1_amd64.deb
+Size: 27636
+MD5sum: 4579f9a0cc03e70025b2da1d0c9a3e19
+SHA256: ad2f899b7ff86b5739a68a1a4a79109971a513c19ddf6ece5336d91f23103e81
 
 Package: slurm-client
 Source: slurm-wlm
-Version: 26.05.4-1
-Installed-Size: 2311
+Version: 26.05.5-1
+Installed-Size: 2315
 Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), liblua5.1-0 (>= 5.1.3), libreadline8t64 (>= 6.0), slurm-wlm-basic-plugins (= 26.05.4-1), ucf
+Depends: libc6 (>= 2.38), liblua5.1-0 (>= 5.1.3), libreadline8t64 (>= 6.0), slurm-wlm-basic-plugins (= 26.05.5-1), ucf
 Recommends: munge
 Description: Slurm client side commands
 Homepage: https://slurm.schedmd.com
@@ -23916,14 +23933,14 @@ Description-md5: adef5647f57454f084982d9520a1e78d
 Tag: uitoolkit::ncurses
 admin
 Priority: optional
-Filename: pool/main/s/slurm-wlm/slurm-client_26.05.4-1_amd64.deb
-Size: 898688
-MD5sum: 883aeb8d98df2588b7227d9bb7b3c5a2
-SHA256: b75f99ec14557b610829e0aab0de536be4db7dc85524650f5036bb81c4d5d97e
+Filename: pool/main/s/slurm-wlm/slurm-client_26.05.5-1_amd64.deb
+Size: 901700
+MD5sum: a57f4e6499dddd6a89a37ffb04b7aef6
+SHA256: 33c54d937262d472475d3a26f0c0e7ef575c38090255ad46be0213401021863a
 
 Package: slurm-client-emulator
 Source: slurm-wlm
-Version: 26.05.4-1
+Version: 26.05.5-1
 Installed-Size: 1502
 Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
 Architecture: amd64
@@ -23934,319 +23951,319 @@ Description-md5: 9e1200b9e10ad3efa6879b4acca3a494
 Tag: uitoolkit::ncurses
 admin
 Priority: optional
-Filename: pool/main/s/slurm-wlm/slurm-client-emulator_26.05.4-1_amd64.deb
-Size: 411188
-MD5sum: 488f1c534e97e646babe01a74c5863f6
-SHA256: 55504a8fd1fb4730c06ede350542608982da88037a8d47a504d46bde8bdbbc15
+Filename: pool/main/s/slurm-wlm/slurm-client-emulator_26.05.5-1_amd64.deb
+Size: 410832
+MD5sum: 425b645cf366c3eab1274df235c49904
+SHA256: 27c45b041424749f952ce1eebf6d6c839748da619422904a1df8691c41424ea3
 
 Package: slurm-wlm
-Version: 26.05.4-1
+Version: 26.05.5-1
 Installed-Size: 184
 Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
 Architecture: amd64
-Depends: slurmd (= 26.05.4-1), slurmctld (= 26.05.4-1), slurm-client (= 26.05.4-1)
+Depends: slurmd (= 26.05.5-1), slurmctld (= 26.05.5-1), slurm-client (= 26.05.5-1)
 Description: Slurm Workload Manager
 Homepage: https://slurm.schedmd.com
 Description-md5: 399ac2cb1117840799562988613d20ad
 admin
 Priority: optional
-Filename: pool/main/s/slurm-wlm/slurm-wlm_26.05.4-1_amd64.deb
-Size: 116640
-MD5sum: 12d6141e78ec13cb1ce573007f98272a
-SHA256: b0b3abe09f162a480a105562f7b50359d9bd774811c19e1f1351743d2cbf2b2c
+Filename: pool/main/s/slurm-wlm/slurm-wlm_26.05.5-1_amd64.deb
+Size: 116764
+MD5sum: a6aa0ba7ccfbd2fed88551c352beb8c1
+SHA256: 42fcd9bc1cf6961fdc5ff01c02ea93fe3a0c846be665e7ad709891fe28c5bb37
 
 Package: slurm-wlm-basic-plugins
 Source: slurm-wlm
-Version: 26.05.4-1
-Installed-Size: 12695
+Version: 26.05.5-1
+Installed-Size: 12585
 Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libdbus-1-3 (>= 1.12), libhttp-parser2.9 (>= 2.7.1), libibmad5 (>= 1.3.11), libjson-c5 (>= 0.15), libjwt2 (>= 1.10.1), liblua5.1-0 (>= 5.1.3), liblz4-1 (>= 0.0~r130), libmunge2 (>= 0.5.8), libnuma1 (>= 2.0.11), libyaml-0-2, systemd | systemd-standalone-sysusers | systemd-sysusers, systemd | adduser, libpmix2t64
-Recommends: slurm-wlm-plugins (= 26.05.4-1)
+Depends: libc6 (>= 2.38), libdbus-1-3 (>= 1.12), libhttp-parser2.9 (>= 2.7.1), libibmad5 (>= 1.3.11), libjson-c5 (>= 0.15), libjwt2 (>= 1.10.1), libllhttp9.4 (>= 9.3.0), liblua5.1-0 (>= 5.1.3), liblz4-1 (>= 0.0~r130), libmunge2 (>= 0.5.8), libnuma1 (>= 2.0.11), libyaml-0-2, systemd | systemd-standalone-sysusers | systemd-sysusers, systemd | adduser
+Recommends: slurm-wlm-plugins (= 26.05.5-1)
 Description: Slurm basic plugins
 Homepage: https://slurm.schedmd.com
 Description-md5: c72a31e5e1676a1de0cc863aa2004a4f
 admin
 Priority: optional
-Filename: pool/main/s/slurm-wlm/slurm-wlm-basic-plugins_26.05.4-1_amd64.deb
-Size: 2277256
-MD5sum: 2558818b10e5454759312c056ae515b6
-SHA256: 0459dd697d7a6340a992ebe9052604c26ae6af21881d4f3d3a0eae88fe8f6706
+Filename: pool/main/s/slurm-wlm/slurm-wlm-basic-plugins_26.05.5-1_amd64.deb
+Size: 2209376
+MD5sum: 7b2dfb18b6a597b723223c69da857b8f
+SHA256: d2f5485a7e06e037dc357976b062f1fe9f15c2ecbee2aeab957e503c89448d3e
 
 Package: slurm-wlm-elasticsearch-plugin
 Source: slurm-wlm
-Version: 26.05.4-1
+Version: 26.05.5-1
 Installed-Size: 111
 Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
 Architecture: amd64
 Replaces: slurm-wlm-basic-plugins (<< 24.11.5-4)
-Depends: libc6 (>= 2.14), libcurl4t64 (>= 7.16.2), slurm-wlm-basic-plugins (= 26.05.4-1)
+Depends: libc6 (>= 2.14), libcurl4t64 (>= 7.16.2), slurm-wlm-basic-plugins (= 26.05.5-1)
 Breaks: slurm-wlm-basic-plugins (<< 24.11.5-4)
 Description: Slurm Elasticsearch job-completion plugin
 Homepage: https://slurm.schedmd.com
 Description-md5: 45fa7419e0b8a561d11ea762d312aeff
 admin
 Priority: optional
-Filename: pool/main/s/slurm-wlm/slurm-wlm-elasticsearch-plugin_26.05.4-1_amd64.deb
-Size: 25752
-MD5sum: 38b61748f8d65ef842ac6edeea750aa2
-SHA256: 556913943b15f13d7437f79774bb07833701004304bafb113667784e8cb8722f
+Filename: pool/main/s/slurm-wlm/slurm-wlm-elasticsearch-plugin_26.05.5-1_amd64.deb
+Size: 25852
+MD5sum: fdd25ba7c16f8a1932680ab8987e4376
+SHA256: 6fd16b1effc25c73dc9152bab18a661bc49e1268d54bd0bf4311771ffbad33f9
 
 Package: slurm-wlm-emulator
 Source: slurm-wlm
-Version: 26.05.4-1
+Version: 26.05.5-1
 Installed-Size: 2058
 Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libhwloc15 (>= 2.14.0), libnuma1 (>= 2.0.11), libpam0g (>= 0.99.7.1), slurmctld (= 26.05.4-1), slurmd (= 26.05.4-1)
+Depends: libc6 (>= 2.38), libhwloc15 (>= 2.15.0), libnuma1 (>= 2.0.11), libpam0g (>= 0.99.7.1), slurmctld (= 26.05.5-1), slurmd (= 26.05.5-1)
 Description: Slurm emulator
 Homepage: https://slurm.schedmd.com
 Description-md5: 6e35deaac9a681e49040df99cac4901b
 admin
 Priority: optional
-Filename: pool/main/s/slurm-wlm/slurm-wlm-emulator_26.05.4-1_amd64.deb
-Size: 718772
-MD5sum: 49684d8e6b92b27a3e242c1ef581e4ac
-SHA256: 9411af84866710bd7db9fbd8d9db76ad411690c88fc9bbf93356821b3115dc60
+Filename: pool/main/s/slurm-wlm/slurm-wlm-emulator_26.05.5-1_amd64.deb
+Size: 720200
+MD5sum: 7c0930b59726e8ba4ed3333f3f445d80
+SHA256: ec1843d309fe23bf9d4847ca2227ae3a8142030833aa97612764c0c181f3fb60
 
 Package: slurm-wlm-hdf5-plugin
 Source: slurm-wlm
-Version: 26.05.4-1
+Version: 26.05.5-1
 Installed-Size: 165
 Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
 Architecture: amd64
 Replaces: slurm-client (<< 24.11.5-4), slurm-wlm-basic-plugins (<< 24.11.5-4)
-Depends: libc6 (>= 2.38), libhdf5-320 (>= 2.1.0), libhdf5-hl-320 (>= 1.8.13), slurm-wlm-basic-plugins (= 26.05.4-1)
+Depends: libc6 (>= 2.38), libhdf5-320 (>= 2.1.0), libhdf5-hl-320 (>= 1.8.13), slurm-wlm-basic-plugins (= 26.05.5-1)
 Breaks: slurm-client (<< 24.11.5-4), slurm-wlm-basic-plugins (<< 24.11.5-4)
 Description: Slurm HDF5 plugin
 Homepage: https://slurm.schedmd.com
 Description-md5: a8bbdd24e4e112c35314584a6ef5a3eb
 admin
 Priority: optional
-Filename: pool/main/s/slurm-wlm/slurm-wlm-hdf5-plugin_26.05.4-1_amd64.deb
-Size: 40112
-MD5sum: aab43a2e2bfd8ff0172bdc0a5b87a891
-SHA256: 396b0a92deb9fb3ac3b0f6136a16da6c8909412dac2e7366370e94c5ac6ff38d
+Filename: pool/main/s/slurm-wlm/slurm-wlm-hdf5-plugin_26.05.5-1_amd64.deb
+Size: 40292
+MD5sum: 67d4280fa4eef98627769b7ae6e2e556
+SHA256: ad1d6b48d548e1d033fbc8d97789170bb8fb2454098ad37396fcc0c1a9cca569
 
 Package: slurm-wlm-influxdb-plugin
 Source: slurm-wlm
-Version: 26.05.4-1
+Version: 26.05.5-1
 Installed-Size: 115
 Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
 Architecture: amd64
 Replaces: slurm-wlm-basic-plugins (<< 24.11.5-4)
-Depends: libc6 (>= 2.14), libcurl4t64 (>= 7.16.2), slurm-wlm-basic-plugins (= 26.05.4-1)
+Depends: libc6 (>= 2.14), libcurl4t64 (>= 7.16.2), slurm-wlm-basic-plugins (= 26.05.5-1)
 Breaks: slurm-wlm-basic-plugins (<< 24.11.5-4)
 Description: Slurm InfluxDB plugin
 Homepage: https://slurm.schedmd.com
 Description-md5: 1a9e9429c768146072d5430d71ef6945
 admin
 Priority: optional
-Filename: pool/main/s/slurm-wlm/slurm-wlm-influxdb-plugin_26.05.4-1_amd64.deb
-Size: 24752
-MD5sum: 23fac3b3b2b765f413e7fe9a73fd3d68
-SHA256: 10d376d18db6c1f89ff6624cfde452e523ffcd3299146dbb039276152e4fc75f
+Filename: pool/main/s/slurm-wlm/slurm-wlm-influxdb-plugin_26.05.5-1_amd64.deb
+Size: 24856
+MD5sum: 0ea51ffd898d9dcd4f472182c65ed6cb
+SHA256: fc148d4f38a5d3306fa6d375ad71f55ea4eff81faa9981d2c1855af0b226fdc4
 
 Package: slurm-wlm-ipmi-plugins
 Source: slurm-wlm
-Version: 26.05.4-1
+Version: 26.05.5-1
 Installed-Size: 150
 Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
 Architecture: amd64
 Replaces: slurm-wlm-basic-plugins (<< 24.11.5-4)
-Depends: libc6 (>= 2.38), libfreeipmi17 (>= 1.4.4), libipmimonitoring6 (>= 1.1.5), slurm-wlm-basic-plugins (= 26.05.4-1)
+Depends: libc6 (>= 2.38), libfreeipmi17 (>= 1.4.4), libipmimonitoring6 (>= 1.1.5), slurm-wlm-basic-plugins (= 26.05.5-1)
 Breaks: slurm-wlm-basic-plugins (<< 24.11.5-4)
 Description: Slurm IPMI plugins
 Homepage: https://slurm.schedmd.com
 Description-md5: 7de77f0497421507e54ec7a07828bdb5
 admin
 Priority: optional
-Filename: pool/main/s/slurm-wlm/slurm-wlm-ipmi-plugins_26.05.4-1_amd64.deb
-Size: 35048
-MD5sum: 710dc2e45c2c18c8d800fe9bfe6affaf
-SHA256: 52497dd1ee0107be7800256013d0ec7c940a7b1670c88848a451818cd9a8acae
+Filename: pool/main/s/slurm-wlm/slurm-wlm-ipmi-plugins_26.05.5-1_amd64.deb
+Size: 35192
+MD5sum: 2945bfc2ce9278faa64c5288fcefc3a1
+SHA256: 121deb33ad427f6a94d9d22e92b08b039e4492675b347dfbcf75caa8194200f2
 
 Package: slurm-wlm-jwt-plugin
 Source: slurm-wlm
-Version: 26.05.4-1
+Version: 26.05.5-1
 Installed-Size: 123
 Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
 Architecture: amd64
 Replaces: slurm-wlm-basic-plugins (<< 24.11.5-4)
-Depends: libc6 (>= 2.33), libjwt2 (>= 1.9.0), slurm-wlm-basic-plugins (= 26.05.4-1)
+Depends: libc6 (>= 2.33), libjwt2 (>= 1.9.0), slurm-wlm-basic-plugins (= 26.05.5-1)
 Breaks: slurm-wlm-basic-plugins (<< 24.11.5-4)
 Description: Slurm JWT authentication plugins
 Homepage: https://slurm.schedmd.com
 Description-md5: 6ff906b649b8b5d759b20956c55222ee
 admin
 Priority: optional
-Filename: pool/main/s/slurm-wlm/slurm-wlm-jwt-plugin_26.05.4-1_amd64.deb
-Size: 28336
-MD5sum: 267aefac23d6489a9b65390459be4a0c
-SHA256: 403dbdd3765610f70a210ba7f76c03889825060e4bf276aabf2db1c248942b2b
+Filename: pool/main/s/slurm-wlm/slurm-wlm-jwt-plugin_26.05.5-1_amd64.deb
+Size: 28456
+MD5sum: 52bdea670d3f205fa059d9782cba5d3a
+SHA256: ced2d9c3a704bcf5446a0c23a2d4e67e12bd0ee0e75873a9592badf384a2e5c3
 
 Package: slurm-wlm-kafka-plugin
 Source: slurm-wlm
-Version: 26.05.4-1
+Version: 26.05.5-1
 Installed-Size: 123
 Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), librdkafka1 (>= 1.2.1), slurm-wlm-basic-plugins (= 26.05.4-1)
+Depends: libc6 (>= 2.38), librdkafka1 (>= 1.2.1), slurm-wlm-basic-plugins (= 26.05.5-1)
 Description: Slurm Kafka job-completion plugin
 Homepage: https://slurm.schedmd.com
 Description-md5: 4d5935e6d180641fc8584af3eb429036
 admin
 Priority: optional
-Filename: pool/main/s/slurm-wlm/slurm-wlm-kafka-plugin_26.05.4-1_amd64.deb
-Size: 27084
-MD5sum: 521f3fe64a3fc2bc1f593506e854b633
-SHA256: 77999c6eb9502fd590e2e08fa9e02bc0ba5bba9897be3a50b1902324a50ba3e8
+Filename: pool/main/s/slurm-wlm/slurm-wlm-kafka-plugin_26.05.5-1_amd64.deb
+Size: 27232
+MD5sum: 9eceff9937c5cb6a7c05367fad999c82
+SHA256: e09dd7a92cd6dddf09d11123bac5ce983a0fe897e15a6593d5d5f56dff5030df
 
 Package: slurm-wlm-mysql-plugin
 Source: slurm-wlm
-Version: 26.05.4-1
-Installed-Size: 672
+Version: 26.05.5-1
+Installed-Size: 676
 Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
 Architecture: amd64
 Replaces: slurm-wlm-basic-plugins (<< 24.11.5-4)
-Depends: libc6 (>= 2.38), libmariadb3 (>= 3.0.0), slurm-wlm-basic-plugins (= 26.05.4-1)
+Depends: libc6 (>= 2.38), libmariadb3 (>= 3.0.0), slurm-wlm-basic-plugins (= 26.05.5-1)
 Breaks: slurm-wlm-basic-plugins (<< 24.11.5-4)
 Description: Slurm MySQL plugins
 Homepage: https://slurm.schedmd.com
 Description-md5: 7b151d92ec0cd067c873fe539d0006b1
 admin
 Priority: optional
-Filename: pool/main/s/slurm-wlm/slurm-wlm-mysql-plugin_26.05.4-1_amd64.deb
-Size: 210576
-MD5sum: ee15a4e6bdb5974bbec50997c67e9343
-SHA256: 1a152cfbfad138194b91c34ca45efaaf0667a0f02009532e888e75f11562f096
+Filename: pool/main/s/slurm-wlm/slurm-wlm-mysql-plugin_26.05.5-1_amd64.deb
+Size: 210876
+MD5sum: 3dd9788c9c0cef7e2aff971b9b8ac724
+SHA256: cfe2da01face1d5375dbb3754e32118097612953e2fbf3a5293d6ef5f3559734
 
 Package: slurm-wlm-plugins
 Source: slurm-wlm
-Version: 26.05.4-1
+Version: 26.05.5-1
 Installed-Size: 78
 Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
 Architecture: amd64
-Depends: slurm-wlm-basic-plugins (= 26.05.4-1), slurm-wlm-elasticsearch-plugin (= 26.05.4-1), slurm-wlm-hdf5-plugin (= 26.05.4-1), slurm-wlm-influxdb-plugin (= 26.05.4-1), slurm-wlm-ipmi-plugins (= 26.05.4-1), slurm-wlm-jwt-plugin (= 26.05.4-1), slurm-wlm-mysql-plugin (= 26.05.4-1), slurm-wlm-rsmi-plugin (= 26.05.4-1)
+Depends: slurm-wlm-basic-plugins (= 26.05.5-1), slurm-wlm-elasticsearch-plugin (= 26.05.5-1), slurm-wlm-hdf5-plugin (= 26.05.5-1), slurm-wlm-influxdb-plugin (= 26.05.5-1), slurm-wlm-ipmi-plugins (= 26.05.5-1), slurm-wlm-jwt-plugin (= 26.05.5-1), slurm-wlm-mysql-plugin (= 26.05.5-1), slurm-wlm-rsmi-plugin (= 26.05.5-1)
 Description: Slurm free plugins (metapackage)
 Homepage: https://slurm.schedmd.com
 Description-md5: d026317f09e940bbb9894c558582c42f
 admin
 Priority: optional
-Filename: pool/main/s/slurm-wlm/slurm-wlm-plugins_26.05.4-1_amd64.deb
-Size: 16164
-MD5sum: 8842a2af108f84b860aeae56afeb1522
-SHA256: 9baeacfd3126df2a0d915b48003e7ee7b1ae25638396897b1175bd728b47097b
+Filename: pool/main/s/slurm-wlm/slurm-wlm-plugins_26.05.5-1_amd64.deb
+Size: 16280
+MD5sum: 88392ff803456fd0f3168619ca933867
+SHA256: ee610903061b38e75c2fec4de172a94bb6e65111d37731a8828a3467d23bf58d
 
 Package: slurm-wlm-plugins-dev
 Source: slurm-wlm
-Version: 26.05.4-1
+Version: 26.05.5-1
 Installed-Size: 78
 Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
 Architecture: amd64
-Depends: slurm-wlm-basic-plugins-dev (= 26.05.4-1), slurm-wlm-elasticsearch-plugin-dev (= 26.05.4-1), slurm-wlm-hdf5-plugin-dev (= 26.05.4-1), slurm-wlm-influxdb-plugin-dev (= 26.05.4-1), slurm-wlm-ipmi-plugins-dev (= 26.05.4-1), slurm-wlm-jwt-plugin-dev (= 26.05.4-1), slurm-wlm-mysql-plugin-dev (= 26.05.4-1), slurm-wlm-rsmi-plugin-dev (= 26.05.4-1)
+Depends: slurm-wlm-basic-plugins-dev (= 26.05.5-1), slurm-wlm-elasticsearch-plugin-dev (= 26.05.5-1), slurm-wlm-hdf5-plugin-dev (= 26.05.5-1), slurm-wlm-influxdb-plugin-dev (= 26.05.5-1), slurm-wlm-ipmi-plugins-dev (= 26.05.5-1), slurm-wlm-jwt-plugin-dev (= 26.05.5-1), slurm-wlm-mysql-plugin-dev (= 26.05.5-1), slurm-wlm-rsmi-plugin-dev (= 26.05.5-1)
 Description: Slurm free plugins development files (metapackage)
 Homepage: https://slurm.schedmd.com
 Description-md5: 26a932e3c3df5b59ea4f849e9bfb8f73
 admin
 Priority: optional
-Filename: pool/main/s/slurm-wlm/slurm-wlm-plugins-dev_26.05.4-1_amd64.deb
-Size: 16192
-MD5sum: 9db6e163974c43e262f0fc24cd39f125
-SHA256: 1162528052142f51a5bd76be41887948c35f428fd891ae83e35e506f5523cb67
+Filename: pool/main/s/slurm-wlm/slurm-wlm-plugins-dev_26.05.5-1_amd64.deb
+Size: 16316
+MD5sum: 9ae09aeca1a122fdf302e46ecc03d36f
+SHA256: f14669e44fee74d29e1588522a24116bee1d977fba160ad0bc19e9df4540c32b
 
 Package: slurm-wlm-rsmi-plugin
 Source: slurm-wlm
-Version: 26.05.4-1
+Version: 26.05.5-1
 Installed-Size: 119
 Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libnuma1 (>= 2.0.11), librocm-smi-dev, slurm-wlm-basic-plugins (= 26.05.4-1)
+Depends: libc6 (>= 2.38), libnuma1 (>= 2.0.11), librocm-smi-dev, slurm-wlm-basic-plugins (= 26.05.5-1)
 Description: Slurm RSMI plugin
 Homepage: https://slurm.schedmd.com
 Description-md5: bc5cac3e07406058eb620354151ce026
 admin
 Priority: optional
-Filename: pool/main/s/slurm-wlm/slurm-wlm-rsmi-plugin_26.05.4-1_amd64.deb
-Size: 27780
-MD5sum: a61959a1a661b7f40ca9737726e3fab3
-SHA256: 0bd85dce6051e8265b9efcfe4bcbc050cf1d5dd01384402acecf1b2532fd23ee
+Filename: pool/main/s/slurm-wlm/slurm-wlm-rsmi-plugin_26.05.5-1_amd64.deb
+Size: 27880
+MD5sum: 4426f43baafe585901167d0483e752bb
+SHA256: 1563e2f0d1a24e009a07e692a67acfa6d3e2cef15976c9d326992e27a7c21a21
 
 Package: slurm-wlm-torque
 Source: slurm-wlm
-Version: 26.05.4-1
+Version: 26.05.5-1
 Installed-Size: 196
 Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
 Architecture: all
-Depends: libslurm-perl (>= 26.05.4-1), libslurmdb-perl (>= 26.05.4-1), perl:any, libswitch-perl, slurm-client (>= 26.05.4-1)
+Depends: libslurm-perl (>= 26.05.5-1), libslurmdb-perl (>= 26.05.5-1), perl:any, libswitch-perl, slurm-client (>= 26.05.5-1)
 Conflicts: gridengine-client
 Description: Torque compatibility wrappers for Slurm
 Homepage: https://slurm.schedmd.com
 Description-md5: a2c9009e8d15f1e6e248602bb43281a2
 admin
 Priority: optional
-Filename: pool/main/s/slurm-wlm/slurm-wlm-torque_26.05.4-1_all.deb
-Size: 48560
-MD5sum: 7f7084fd4e9d5d36aad5d7238dc64858
-SHA256: 14d4ba3629943c9e168e0e48f67cf3cc231dbc38bf740c09b8c82e885858bd55
+Filename: pool/main/s/slurm-wlm/slurm-wlm-torque_26.05.5-1_all.deb
+Size: 48656
+MD5sum: 4c4814086f11900700f47127853da6d1
+SHA256: beba0b8fd12a306fc2944174d23e049c01f7d6787809df0213d9789e6369a83d
 
 Package: slurmctld
 Source: slurm-wlm
-Version: 26.05.4-1
+Version: 26.05.5-1
 Installed-Size: 1535
 Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), slurm-client (= 26.05.4-1), slurm-wlm-basic-plugins (= 26.05.4-1), ucf
+Depends: libc6 (>= 2.38), slurm-client (= 26.05.5-1), slurm-wlm-basic-plugins (= 26.05.5-1), ucf
 Recommends: munge
 Description: Slurm central management daemon
 Homepage: https://slurm.schedmd.com
 Description-md5: e04abc7871bdeee2cc83ef6ed8923c45
 admin
 Priority: optional
-Filename: pool/main/s/slurm-wlm/slurmctld_26.05.4-1_amd64.deb
-Size: 557336
-MD5sum: 18efa23cdf9dbc5d4df62efad5d12f16
-SHA256: 0c7faeeb8c9a8294cb466fe2377c6195124ad993d8d079f372acae890984bda4
+Filename: pool/main/s/slurm-wlm/slurmctld_26.05.5-1_amd64.deb
+Size: 558008
+MD5sum: df3a77c63b142cad594694cd2bcfc792
+SHA256: 2296dca7a90407248006e3209d78709b6a5e04f5cd3f8601fec8410bb4a3c5a8
 
 Package: slurmd
 Source: slurm-wlm
-Version: 26.05.4-1
+Version: 26.05.5-1
 Installed-Size: 847
 Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), libhwloc15 (>= 2.14.0), libnuma1 (>= 2.0.11), libpam0g (>= 0.99.7.1), slurm-wlm-basic-plugins (= 26.05.4-1), ucf
+Depends: libc6 (>= 2.38), libhwloc15 (>= 2.15.0), libnuma1 (>= 2.0.11), libpam0g (>= 0.99.7.1), slurm-wlm-basic-plugins (= 26.05.5-1), ucf
 Recommends: munge
 Description: Slurm compute node daemon
 Homepage: https://slurm.schedmd.com
 Description-md5: c0b71b00caae130250a7d5fa4f22251c
 admin
 Priority: optional
-Filename: pool/main/s/slurm-wlm/slurmd_26.05.4-1_amd64.deb
-Size: 270984
-MD5sum: e73f57128524c64727a434ceecfb7827
-SHA256: b01214f1de174904b69b266941fa672fa04b9efebef670a2870b7611bb5797ea
+Filename: pool/main/s/slurm-wlm/slurmd_26.05.5-1_amd64.deb
+Size: 271476
+MD5sum: 90d3fc93481479efd1f736fb04b5e63b
+SHA256: 8b841a1fe2cf71b5d5dbaedf370a7b93dc4ec25208c14bac9bb993e3f929c9c1
 
 Package: slurmdbd
 Source: slurm-wlm
-Version: 26.05.4-1
-Installed-Size: 275
+Version: 26.05.5-1
+Installed-Size: 279
 Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.38), slurm-wlm-basic-plugins (= 26.05.4-1), slurm-wlm-mysql-plugin (= 26.05.4-1), ucf
+Depends: libc6 (>= 2.38), slurm-wlm-basic-plugins (= 26.05.5-1), slurm-wlm-mysql-plugin (= 26.05.5-1), ucf
 Recommends: munge
 Description: Secure enterprise-wide interface to a database for Slurm
 Homepage: https://slurm.schedmd.com
 Description-md5: 12414cec2d4629f45386e342015ae60c
 admin
 Priority: optional
-Filename: pool/main/s/slurm-wlm/slurmdbd_26.05.4-1_amd64.deb
-Size: 72120
-MD5sum: 354bb7ea1d2174458eb39f53ffd6c332
-SHA256: ee02184cc1de1d2faff149424520f54bbf1a9eece8c82e067bad4c0b56b74128
+Filename: pool/main/s/slurm-wlm/slurmdbd_26.05.5-1_amd64.deb
+Size: 72420
+MD5sum: 08c021590cf55366abb07a847d8deee4
+SHA256: 28dfc1a801e9a6d27a32e247e8d7ac656896b7551c509b8e35dd9f9c61065d1f
 
 Package: slurmrestd
 Source: slurm-wlm
-Version: 26.05.4-1
+Version: 26.05.5-1
 Installed-Size: 173
 Maintainer: Debian HPC Team <debian-hpc@lists.debian.org>
 Architecture: amd64
@@ -24256,17 +24273,17 @@ Homepage: https://slurm.schedmd.com
 Description-md5: 10e4b84c8772a200af93d44178fa9381
 admin
 Priority: optional
-Filename: pool/main/s/slurm-wlm/slurmrestd_26.05.4-1_amd64.deb
-Size: 49568
-MD5sum: 8540e6eb7d0c42fceea8777f0f25e872
-SHA256: 90a862809d3ed1494fd987094909c30b9f9db92f5aad6747533351982d21ffbb
+Filename: pool/main/s/slurm-wlm/slurmrestd_26.05.5-1_amd64.deb
+Size: 49584
+MD5sum: 851c9f3a7b1467083f569fd08d44b1ef
+SHA256: aa3ea40a3c55fc4fca060e017fc11d29d86465d507b1d40abfab6b726eea04c9
 
 Package: smbldap-tools
-Version: 0.9.11-3
-Installed-Size: 622
+Version: 0.9.11-4
+Installed-Size: 608
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: all
-Depends: libcrypt-smbhash-perl, libio-socket-ssl-perl, libnet-ldap-perl, libunicode-maputf8-perl, perl:any
+Depends: libcrypt-smbhash-perl, libio-socket-ssl-perl, libnet-ldap-perl, libunicode-maputf8-perl, procps, perl:any
 Description: Scripts to manage Unix and Samba accounts stored on LDAP
 Homepage: https://github.com/fumiyas/smbldap-tools
 Description-md5: 44251639870203fd6cb106e66edd09b5
@@ -24275,10 +24292,10 @@ Tag: admin::user-management, implemented-in::perl, interface::commandline,
  scope::utility, security::authentication, works-with::db
 admin
 Priority: optional
-Filename: pool/main/s/smbldap-tools/smbldap-tools_0.9.11-3_all.deb
-Size: 316000
-MD5sum: e546a2b24f1723f03407d88dad685901
-SHA256: 5e8180671ad678e361598b39e58eab377d8b05d42cf7ed689ba8ac7607ca3bc2
+Filename: pool/main/s/smbldap-tools/smbldap-tools_0.9.11-4_all.deb
+Size: 301212
+MD5sum: 923619f75b54419aa4c6aedbcfb3634b
+SHA256: 86db65ab75831d74c74b6cb0ca44cd478eaf99684702f688131749ed936ea14f
 
 Package: smemstat
 Version: 0.02.13-1
@@ -27003,7 +27020,7 @@ SHA256: 1becb19a018bc1bba59dc738510c4ef63cd08afe0a651449689808c7b1fd8296
 
 Package: tlsh-tools
 Source: tlsh (5.0.0+ds-1)
-Version: 5.0.0+ds-1+b2
+Version: 5.0.0+ds-1+b3
 Installed-Size: 46
 Maintainer: Debian Security Tools <team+pkg-security@tracker.debian.org>
 Architecture: amd64
@@ -27013,10 +27030,10 @@ Homepage: https://github.com/trendmicro/tlsh
 Description-md5: fd961a1d0ee125655162004151bfc300
 admin
 Priority: optional
-Filename: pool/main/t/tlsh/tlsh-tools_5.0.0+ds-1+b2_amd64.deb
-Size: 13948
-MD5sum: beeafc23d2b0bd315da0880c7ee9d69d
-SHA256: 9c1a96dc23f0339e18596fb22890dffaf3b287fff11a3ed9c5a0c56eea951c14
+Filename: pool/main/t/tlsh/tlsh-tools_5.0.0+ds-1+b3_amd64.deb
+Size: 13956
+MD5sum: 02317db67fa2211aaf4ed5bfb33ab92f
+SHA256: 57d1d76f7c62bed722987aa4b24bb70e34b0fb99392ac0ebda1cf4d96161ea2a
 
 Package: tmate-ssh-server
 Version: 2.3.0-68-gd7334ee4-2
