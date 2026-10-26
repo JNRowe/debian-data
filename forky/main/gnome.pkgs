@@ -2812,6 +2812,43 @@ Size: 10136
 MD5sum: 819173c80e88a4fe2d361674b1340610
 SHA256: e5abc514ac20a822e5769c58d224b99a4d79eed866a5ffe21d4279a1e51840ef
 
+Package: gnome-extensions-app
+Version: 51~alpha-3
+Installed-Size: 859
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: gnome-shell (<< 51~), gnome-shell-common (<< 51~), gnome-shell-extension-prefs (<< 51~)
+Depends: gir1.2-adw-1, gir1.2-gtk-4.0, gjs (>= 1.88.0), dconf-gsettings-backend | gsettings-backend, libc6 (>= 2.4), libglib2.0-0t64 (>= 2.80.0), libgtk-4-1 (>= 4.12.0)
+Recommends: gnome-browser-connector
+Breaks: gnome-shell (<< 51~), gnome-shell-common (<< 51~), gnome-shell-extension-prefs (<< 51~)
+Description: graphical tool to enable / disable GNOME Shell extensions
+Homepage: https://gitlab.gnome.org/GNOME/gnome-extensions-app
+Commands: gnome-extensions-app
+Description-md5: e6f59bf519edaf9b410d30059bfd3ce6
+gnome
+Priority: optional
+Filename: pool/main/g/gnome-extensions-app/gnome-extensions-app_51~alpha-3_amd64.deb
+Size: 106432
+MD5sum: 8985ef3988623d5d49c6a4710810ba10
+SHA256: 1d1342743aa461c966e1f052d31cbe98280e80e4a4fd26fad180bd4ba98f9c95
+
+Package: gnome-shell-extension-prefs
+Source: gnome-extensions-app
+Version: 51~alpha-3
+Installed-Size: 33
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: gnome-extensions-app
+Description: graphical tool to enable / disable GNOME Shell extensions - transitional
+Homepage: https://gitlab.gnome.org/GNOME/gnome-extensions-app
+Description-md5: 1f9e9901e39bb965ef95246bff34f6ed
+gnome
+Priority: optional
+Filename: pool/main/g/gnome-extensions-app/gnome-shell-extension-prefs_51~alpha-3_all.deb
+Size: 8912
+MD5sum: 4d0665efac78bb41a39a36d0268a7914
+SHA256: 040a6991bbf35fc466e33c32280a35395a8f5108fefcdf20adfb5425b803b1c9
+
 Package: gnome-extra-icons
 Version: 1.1-6
 Installed-Size: 4922
@@ -3654,25 +3691,6 @@ Size: 920644
 MD5sum: b6565c7015bf9fe35340523891947575
 SHA256: e3c3c9fb82e383bb0abb6b3892be77bb2e1e8908d1c3668ba5945c927ffa7109
 
-Package: gnome-shell-extension-prefs
-Source: gnome-shell
-Version: 50.5-1
-Installed-Size: 73
-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Architecture: amd64
-Provides: gnome-extensions-app
-Depends: gir1.2-adw-1, gir1.2-gtk-4.0, gjs (>= 1.87.1), gnome-shell (= 50.5-1)
-Recommends: gnome-browser-connector
-Description: tool to enable / disable GNOME Shell extensions
-Homepage: https://gitlab.gnome.org/GNOME/gnome-shell
-Description-md5: b750b0280408e85a2232c9f629868acf
-gnome
-Priority: optional
-Filename: pool/main/g/gnome-shell/gnome-shell-extension-prefs_50.5-1_amd64.deb
-Size: 26564
-MD5sum: 899bd2f5261e22fac7f7270154060416
-SHA256: 520e1b0edc82c85331459a9c10c03d9bed623540c593f1e5aca9832ce46f08d0
-
 Package: gnome-shell-extension-appindicator
 Version: 66-1
 Installed-Size: 349
@@ -3691,11 +3709,11 @@ MD5sum: 07165d8052173105e0946de7fb557fbc
 SHA256: 4abe3d7bad856f9898e1a52521df5e05a9f33fc6a946f38d1a0109ed2e52b727
 
 Package: gnome-shell-extension-autohidetopbar
-Version: 1:126-1
-Installed-Size: 150
+Version: 1:127-1
+Installed-Size: 152
 Maintainer: Tobias Frost <tobi@debian.org>
 Architecture: all
-Depends: gnome-shell (>= 45~), gnome-shell (<< 51~)
+Depends: gnome-shell (>= 45~), gnome-shell (<< 52~)
 Recommends: gnome-shell-extension-prefs
 Description: GNOME shell automatic topbar hider
 Homepage: https://gitlab.gnome.org/tuxor1337/hidetopbar
@@ -3703,10 +3721,10 @@ Description-md5: 113428feba60880e221b0cdf36fe3c52
 Tag: role::plugin
 gnome
 Priority: optional
-Filename: pool/main/g/gnome-shell-extension-autohidetopbar/gnome-shell-extension-autohidetopbar_126-1_all.deb
-Size: 22252
-MD5sum: d2b122402fca0732e2ca59396d6182a0
-SHA256: 1ecae98c0e8dd1ed32fa6ca6bf575a0965b2eea3102a192010d0aaa1fa3d09bf
+Filename: pool/main/g/gnome-shell-extension-autohidetopbar/gnome-shell-extension-autohidetopbar_127-1_all.deb
+Size: 22840
+MD5sum: 3e2f9080022e0eff43a4e4353c1fede5
+SHA256: a73d9ef6a129652b39ebf2bc5208bd72ad9134b314a9b168fa07367f26fdb574
 
 Package: gnome-shell-extension-blur-my-shell
 Version: 74-1
@@ -3847,8 +3865,8 @@ MD5sum: 91df3eb87d9ebfa40f855f1cd9284fa0
 SHA256: aae888b7ffeb209ee818046cd6b66352a448570da2f0ee8ec05f8f1f906ccd82
 
 Package: gnome-shell-extension-gsconnect
-Version: 73-1
-Installed-Size: 1698
+Version: 74-1
+Installed-Size: 1699
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: all
 Depends: gir1.2-gdkpixbuf-2.0, gir1.2-glib-2.0, gir1.2-gtk-3.0, gjs, gnome-shell (<< 52~), gnome-shell (>= 46~), libglib2.0-bin, python3, dconf-gsettings-backend | gsettings-backend
@@ -3859,18 +3877,18 @@ Homepage: https://github.com/andyholmes/gnome-shell-extension-gsconnect
 Description-md5: 46cf17a53cc54c84d70ed3faf35daf34
 gnome
 Priority: optional
-Filename: pool/main/g/gnome-shell-extension-gsconnect/gnome-shell-extension-gsconnect_73-1_all.deb
-Size: 312140
-MD5sum: 0332082e89075f1e7148e9472acfaef1
-SHA256: 489ef9b3d92953a34112a1e1513d6feed1f34cf07290f9c2e7ce48ed315c6d82
+Filename: pool/main/g/gnome-shell-extension-gsconnect/gnome-shell-extension-gsconnect_74-1_all.deb
+Size: 312196
+MD5sum: 9230f376b2152ef41414055cb7ea9c50
+SHA256: dcd259232b0fe3c75cb87230b0cf27ce525004e5960c6f7b520655eab162056d
 
 Package: gnome-shell-extension-gsconnect-browsers
 Source: gnome-shell-extension-gsconnect
-Version: 73-1
+Version: 74-1
 Installed-Size: 24
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: gnome-shell-extension-gsconnect (= 73-1)
+Depends: gnome-shell-extension-gsconnect (= 74-1)
 Suggests: firefox-esr | firefox | chromium-browser | chromium
 Enhances: gnome-shell-extension-gsconnect
 Description: Browser support of KDE Connect implementation for GNOME Shell
@@ -3878,10 +3896,10 @@ Homepage: https://github.com/andyholmes/gnome-shell-extension-gsconnect
 Description-md5: fa0ee3984a3193012e23996b06c4f775
 gnome
 Priority: optional
-Filename: pool/main/g/gnome-shell-extension-gsconnect/gnome-shell-extension-gsconnect-browsers_73-1_all.deb
-Size: 4616
-MD5sum: ed4cb30026efef829332dd3b4a2a4f22
-SHA256: 5b5c2deafd4dcbb21e7b1bd0ea803ffeee1fd53172e652556be9e88e1479adfa
+Filename: pool/main/g/gnome-shell-extension-gsconnect/gnome-shell-extension-gsconnect-browsers_74-1_all.deb
+Size: 4636
+MD5sum: 0eb2283570bc8c36b670ff9df3a7472d
+SHA256: ef7b9403cdb473b272cf669107f7cb25bad783983bd06bb48e37b3debdc80436
 
 Package: gnome-shell-extension-hibernate-status
 Version: 1.16~rc1+20260407-4
@@ -4736,15 +4754,14 @@ MD5sum: d16a9e9b2f971acf63d8d108a189563b
 SHA256: f4fa0fa7b875b2cf450bc546d745332d6a54a1bf7b08d0aaabb8f1a630b65de1
 
 Package: gnome-sound-recorder
-Version: 43~beta-5
-Installed-Size: 710
+Version: 43~beta-6
+Installed-Size: 709
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: all
-Replaces: gnome-media (<< 3.4.0-2~)
-Depends: gir1.2-adw-1 (>= 1.2~alpha), gir1.2-gdkpixbuf-2.0, gir1.2-glib-2.0, gir1.2-gst-plugins-bad-1.0, gir1.2-gst-plugins-base-1.0, gir1.2-gstreamer-1.0, gir1.2-gtk-4.0 (>= 4.4.0), gir1.2-pango-1.0, gjs, gstreamer1.0-plugins-base, gstreamer1.0-plugins-good (>= 1.18.0), dconf-gsettings-backend | gsettings-backend
-Breaks: gnome-media (<< 3.4.0-2~)
+Depends: gir1.2-adw-1, gir1.2-gdkpixbuf-2.0, gir1.2-glib-2.0, gir1.2-gst-plugins-bad-1.0, gir1.2-gst-plugins-base-1.0, gir1.2-gstreamer-1.0, gir1.2-gtk-4.0, gir1.2-pango-1.0, gjs, gstreamer1.0-plugins-base, gstreamer1.0-plugins-good, dconf-gsettings-backend | gsettings-backend
 Description: simple and modern sound recorder for GNOME
 Homepage: https://wiki.gnome.org/Design/Apps/SoundRecorder
+Commands: gnome-sound-recorder
 Description-md5: d246a5b6e8524bca0bd517951a95bb0f
 Tag: implemented-in::ecmascript, interface::graphical, interface::x11,
  role::program, sound::recorder, uitoolkit::gtk, use::storing,
@@ -4753,10 +4770,10 @@ Tag: implemented-in::ecmascript, interface::graphical, interface::x11,
  x11::application
 gnome
 Priority: optional
-Filename: pool/main/g/gnome-sound-recorder/gnome-sound-recorder_43~beta-5_all.deb
-Size: 102712
-MD5sum: 61b952281417f228cf55329a34e81e14
-SHA256: 4b5c29bb65cce3391f61c7f064f76a54d2c523d3862afe60a5884404da8216c6
+Filename: pool/main/g/gnome-sound-recorder/gnome-sound-recorder_43~beta-6_all.deb
+Size: 101596
+MD5sum: 8a8f70802f4bf4871524550f54169df8
+SHA256: 833c39985e953029d182e2111e2495a2614e153eb1f5aaf9f38c1c1c6eadd481
 
 Package: gnome-split
 Version: 1.2-5
