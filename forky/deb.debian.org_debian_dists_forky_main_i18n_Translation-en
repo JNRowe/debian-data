@@ -51112,6 +51112,15 @@ Description-en: GNOME (Nautilus) MenuProvider extension for ClamTk
  This package contains a nautilus plugin to allow right click support for easy
  virus scanning with ClamTk and thus ClamAV in GNOME.
 
+Package: clang-extract
+Description-md5: 65afe12d63134bb783ee3f9f6b3e1b8c
+Description-en: Tool to extract code from source files using clang and LLVM infrastructure
+ clang-extract is a tool to extracts specific functions and their minimal
+ dependencies from a large C codebase. It's used for livepatching
+ to allow developers to rebuild and patch only the needed parts of the
+ code without recompiling everything. clang-extract also shows some
+ instructions of how to generate a simple code extraction.
+
 Package: clanlib-doc
 Description-md5: 92abe223b62ae08598d6faf8098cfe05
 Description-en: Reference documentation and tutorials for ClanLib
@@ -65705,62 +65714,6 @@ Description-en: Java implementation of mathematical curves defined over a set of
  a set of control points. The API is written in Java. The curves supported
  are: Bezier, B-Spline, Cardinal Spline, Catmull-Rom Spline, Lagrange, Natural
  Cubic Spline, and NURBS.
-
-Package: python-custodian-doc
-Description-md5: 16e43abd093a1b30c8a3fca411c6f227
-Description-en: flexible just-in-time job management framework in Python (doc)
- Custodian is a simple, robust and flexible just-in-time (JIT) job
- management framework written in Python. Using custodian, you can
- create wrappers that perform error checking, job management and error
- recovery. It has a simple plugin framework that allows you to develop
- specific job management workflows for different applications.
- .
- Error recovery is an important aspect of many high-throughput projects
- that generate data on a large scale. When you are running on the order
- of hundreds of thousands of jobs, even an error-rate of 1% would mean
- thousands of errored jobs that would be impossible to deal with on a
- case-by-case basis.
- .
- The specific use case for custodian is for long running jobs, with
- potentially random errors. For example, there may be a script that
- takes several days to run on a server, with a 1% chance of some IO
- error causing the job to fail. Using custodian, one can develop a
- mechanism to gracefully recover from the error, and restart the job
- with modified parameters if necessary.
- .
- The current version of Custodian also comes with several sub-packages
- for error handling for Vienna Ab Initio Simulation Package (VASP),
- NwChem, QChem, FEFF, Lobster and CP2K calculations.
- .
- This is the documentation package.
-
-Package: python3-custodian
-Description-md5: 68dfad2dc0e6b399db14226534bdf1b2
-Description-en: flexible just-in-time job management framework in Python
- Custodian is a simple, robust and flexible just-in-time (JIT) job
- management framework written in Python. Using custodian, you can
- create wrappers that perform error checking, job management and error
- recovery. It has a simple plugin framework that allows you to develop
- specific job management workflows for different applications.
- .
- Error recovery is an important aspect of many high-throughput projects
- that generate data on a large scale. When you are running on the order
- of hundreds of thousands of jobs, even an error-rate of 1% would mean
- thousands of errored jobs that would be impossible to deal with on a
- case-by-case basis.
- .
- The specific use case for custodian is for long running jobs, with
- potentially random errors. For example, there may be a script that
- takes several days to run on a server, with a 1% chance of some IO
- error causing the job to fail. Using custodian, one can develop a
- mechanism to gracefully recover from the error, and restart the job
- with modified parameters if necessary.
- .
- The current version of Custodian also comes with several sub-packages
- for error handling for Vienna Ab Initio Simulation Package (VASP),
- NwChem, QChem, FEFF, Lobster and CP2K calculations.
- .
- This package installs the library for Python 3.
 
 Package: python3-customidenticon
 Description-md5: de533ec5e0ffb09f8bb519c21c80fa17
@@ -96681,6 +96634,12 @@ Description-en: user-contributed modules for ejabberd (metapackage)
  .
  This is a pure metapackage.
 
+Package: ejabberd-mod-autoreload
+Description-md5: 262cfd9061e912e91809d881499a4358
+Description-en: ejabberd module to reload configuration when files change
+ This module monitors ejabberd configuration and certificate files and
+ reloads the configuration when watched files change.
+
 Package: ejabberd-mod-cron
 Description-md5: f5f6f02fdae5c6c8464923d769abec64
 Description-en: ejabberd module to execute scheduled commands
@@ -96729,12 +96688,11 @@ Description-en: ejabberd module to gather statistics and publish them via statsd
  statsd/grafite.
  Note that statsd/grafite must be set up separately.
 
-Package: ejabberd-mod-irc
-Description-md5: cf967b3e86dc0e5ffefb9835ae66365e
-Description-en: ejabberd module providing an IRC transport
- This module adds an IRC transport to ejabberd that can be used to join channels
- on IRC servers.
- Note that an IRC server must be provided separately.
+Package: ejabberd-mod-http-redirect
+Description-md5: 84bed3e07564bb9ca6af04a695ea3c9f
+Description-en: ejabberd module to redirect HTTP requests to a configured URI
+ This module redirects browser requests handled by ejabberd's HTTP server to
+ a configured URI.
 
 Package: ejabberd-mod-isolation
 Description-md5: b08c14c85f1698bd1d5078fb0a32efdc
@@ -96786,6 +96744,12 @@ Description-en: ejabberd module to serve MUC logs on the web
  allow your users to view the MUC logs.  It is a small modification of
  mod_http_fileserver, customized for log serving.
 
+Package: ejabberd-mod-muc-webchat-url
+Description-md5: d15e6b89ad8da135eee9ee28990e2b95
+Description-en: ejabberd module to show web chat URLs in MUC room information
+ This module adds a web chat URL to the service discovery information for
+ multi-user chat rooms.
+
 Package: ejabberd-mod-post-log
 Description-md5: 0ea0e8df4648e0a00a52bab35dc7aa4c
 Description-en: ejabberd module to log all messages to an HTTP API
@@ -96820,6 +96784,12 @@ Description-en: ejabberd module to log XMPP s2s connections
  been connected with.
  Simply activate the module in ejabberd.yml after installation, see the included
  README.txt for further information.
+
+Package: ejabberd-mod-s3-upload
+Description-md5: 6c826f28476bef142f19eca9641bc7ab
+Description-en: ejabberd module to provide HTTP upload to S3-compatible storage
+ This module implements XEP-0363 HTTP file upload using S3-compatible
+ object storage.
 
 Package: ejabberd-mod-shcommands
 Description-md5: 5a7a26f97136409a577eb108ea268f2d
@@ -96868,6 +96838,25 @@ Description-en: ejabberd module to calculate and gather statistics actively
  ejabberd Web Admin and two ejabberd commands to view the information.
  Simply activate the module in ejabberd.yml after installation, see the included
  README.txt for further information.
+
+Package: ejabberd-mod-tombstones
+Description-md5: 3e35ea493f43e7fa5b6933512edc242c
+Description-en: ejabberd module to keep tombstones of removed accounts and rooms
+ This module keeps tombstones for removed accounts and rooms. It prevents
+ registration of an account or creation of a room while its tombstone exists.
+
+Package: ejabberd-mod-unified-push
+Description-md5: cf402564860f7d050b3c74dbd0e03958
+Description-en: ejabberd module implementing the UnifiedPush distributor protocol
+ This module adds UnifiedPush support compatible with Conversations,
+ allowing ejabberd to act as a UnifiedPush distributor.
+
+Package: ejabberd-mod-webadmin-config
+Description-md5: 77295268fd29a6b69c3b20d479158626
+Description-en: ejabberd module to view and reload configuration in Web Admin
+ This module adds a Web Admin page to view the running configuration and
+ reload it, including configuration from included files and contributed
+ modules.
 
 Package: ejabberd-mod-webpresence
 Description-md5: 27e56b01f709bf952d6eb06e9b8e5478
@@ -119450,13 +119439,6 @@ Description-en: sans serif font family designed for on-screen readability
  .
  This package contains the variable font.
 
-Package: fonts-cascadia-code
-Description-md5: 6e1f1a95f34e1837bf83ec657f070709
-Description-en: monospaced font designed to enhance appearance of Windows Terminal
- Cascadia Code is a monospaced font shipped by Microsoft. It includes
- programming ligatures and is intended for use in terminal applications
- as well as text editors.
-
 Package: fonts-century-catalogue
 Description-md5: 265fc10474b2108a1493327e70e5e1e2
 Description-en: century-style font revival
@@ -120691,12 +120673,6 @@ Description-en: typewrite like sans-serif font
  .
  Almost all of the Latin-1 range is represented (omitting only superscript
  numerals, fractions, and the pilcrow).
-
-Package: fonts-kacst-one
-Description-md5: a65185b91bc3d8f45a9c53093befe7c8
-Description-en: TrueType font designed for Arabic language
- This package provides a TrueType font designed for Arabic by the
- King Abdulaziz City for Science and Technology (KACST), Saudi Arabia.
 
 Package: fonts-kalapi
 Description-md5: 097eb4d926df5fe1260717dc12f9bef6
@@ -186190,6 +186166,224 @@ Description-en: command-line tools for the iPod family of portable music players
  of songs and playlists on an Apple iPod.  The original iPod, iPod Mini,
  and iPod Shuffle players are all supported.
 
+Package: gnuradio
+Description-md5: 7ddcd2ec394dcefbac5267b9552f12c3
+Description-en: GNU Radio Software Radio Toolkit
+ GNU Radio provides signal processing blocks to implement software
+ radios. It can be used with readily-available low-cost external RF
+ hardware to create software-defined radios, or without hardware in a
+ simulation-like environment. It is widely used in hobbyist, academic
+ and commercial environments to support both wireless communications
+ research and real-world radio systems.
+ .
+ GNU Radio applications are primarily written using the Python
+ programming language, while the supplied performance-critical signal
+ processing path is implemented in C++ using processor floating-point
+ extensions, where available. Thus, the developer is able to implement
+ real-time, high-throughput radio systems in a simple-to-use,
+ rapid-application-development environment.
+ .
+ While not primarily a simulation tool, GNU Radio does support
+ development of signal processing algorithms using pre-recorded or
+ generated data, avoiding the need for actual RF hardware.
+ .
+ This package contains the gnuradio-companion, a graphical tool for
+ creating signal flow graphs and generating flow-graph source code.
+ Also included are a variety of tools and utility programs.
+
+Package: gnuradio-dev
+Description-md5: 5bb8c3545aecb809389b9c38779dfbca
+Description-en: GNU Software Defined Radio toolkit development
+ Header files for the GNU Radio software defined radio system.
+ Since GNU Radio is a framework for development of SDR
+ applications, you are likely to need this installed.
+ .
+ Part of the main gnuradio build.
+
+Package: gnuradio-doc
+Description-md5: 22ee057ba99e69902805afee82426a18
+Description-en: GNU Software Defined Radio toolkit documentation
+ Documentation for the GNU Radio software defined radio system
+ in html and PDF form.
+ .
+ HTML docs start file:///usr/share/doc/gnuradio-doc/html/index.html
+ .
+ PDF docs in file:///usr/share/doc/gnuradio-doc/refman.pdf.gz
+ .
+ Part of the main gnuradio build.
+
+Package: libgnuradio-analog3.10.12
+Description-md5: 3d88ee6c337e47267fede2494cb9f2e4
+Description-en: gnuradio analog functions
+ Library for handling analog signal processing functions.
+ These functions are also in gnuradio-core.
+ Part of the main gnuradio build.
+
+Package: libgnuradio-audio3.10.12
+Description-md5: f5bb32c4a24d434c08d8a973aa860840
+Description-en: gnuradio audio functions
+ This is the gr-audio library, used to connect to audio sources
+ (mic-in) and sinks (speaker-out) ports on a computer. The underlying
+ hardware driver is system and OS dependent and this module should
+ automatically discover the correct one to use.  Part of the main
+ gnuradio build.
+
+Package: libgnuradio-blocks3.10.12
+Description-md5: c2df21cc192bf1b929366d6340f78189
+Description-en: gnuradio blocks functions
+ Some non-signal processing blocks.
+ These functions are also in gnuradio-core.
+ Part of the main gnuradio build.
+
+Package: libgnuradio-channels3.10.12
+Description-md5: 9eb2ac8d51d697df58640b28e607df3c
+Description-en: gnuradio channels functions
+ Some channel oriented processing blocks.
+ These functions are also in gnuradio-core.
+ Part of the main gnuradio build.
+
+Package: libgnuradio-digital3.10.12
+Description-md5: 42026ba96232d8ed9bce33531e9feae8
+Description-en: gnuradio digital communications functions
+ All the functions for doing digital modulation and demodulation,
+ including bpsk, qpsk, gmsk and ofdm signals.
+ Part of the main gnuradio build.
+
+Package: libgnuradio-dtv3.10.12
+Description-md5: d8a125d35c8f558167b79c2abf61062b
+Description-en: gnuradio digital TV signal processing blocks
+ ATSC support, gr-atsc ported to a new framework, as well as
+ DVB-S2, DVB-T, DVB-T2 digital video broadcast standards.
+ Part of the main gnuradio build.
+
+Package: libgnuradio-fec3.10.12
+Description-md5: 4603e05c76586caedc5c05d4c7fcfe9b
+Description-en: gnuradio forward error correction support
+ Handle forward error correction processing in gnuradio.
+ Implements the GNU Radio FEC API, supporting encoders and
+ decoders for no-op dummmy, repetition, and convolutional classes.
+ Part of the main gnuradio build.
+
+Package: libgnuradio-fft3.10.12
+Description-md5: 544f2ac48e471aa4593f6909f337d7da
+Description-en: gnuradio fast Fourier transform functions
+ Library for Fourier transform techniques used in gnuradio.
+ Uses single precision FFT from libfftw3-single3.
+ Part of the main gnuradio build.
+
+Package: libgnuradio-filter3.10.12
+Description-md5: 0f2aeac43193cf5b5151505285675492
+Description-en: gnuradio filter functions
+ Library of filter blocks used in gnuradio. Implements
+ FIR, IIR and FFT filters, as well as Polyphase filterbank and
+ PFB arbitrary resampler methods.
+ Part of the main gnuradio build.
+
+Package: libgnuradio-iio3.10.12
+Description-md5: 06045448fd28862166b114aa4a4422f3
+Description-en: IIO blocks for GnuRadio
+ Libiio is a library that has been conceived to ease the development of
+ applications interfacing Industrial Input/Output (IIO) devices through
+ the IIO subsystem of the Linux kernel.
+ .
+ The IIO blocks for GnuRadio can be used to create flowgraphs that interface
+ IIO devices through libiio.
+ .
+ Part of the main gnuradio build.
+
+Package: libgnuradio-network3.10.12
+Description-md5: 0c35e9fa3188431e10e3c732ed374377
+Description-en: gnuradio network library
+ Library of  blocks that implement UDP and TCP source and
+ sink blocks supporting both IPv4 and IPv6.
+ Part of the main gnuradio build.
+
+Package: libgnuradio-pdu3.10.12
+Description-md5: e60a0657b0dcf6c1619f76d881d29549
+Description-en: gnuradio streaming protocol library
+ Protocol Data Units library provides signal processing
+ blocks that operate on Protocol Data Unit format messages. Many
+ such blocks are analogs of streaming API functionality.
+ Part of the main gnuradio build.
+
+Package: libgnuradio-pmt3.10.12
+Description-md5: 653aedd1567eba8b157188969da4c76b
+Description-en: gnuradio pmt container library
+ Polymorphic Types are opaque data types that are designed as generic
+ containers of data that can be safely passed around between blocks
+ and threads in GNU Radio.
+ Part of the main gnuradio build.
+
+Package: libgnuradio-qtgui3.10.12
+Description-md5: 78840934166cde690f3708cac44c0689
+Description-en: gnuradio Qt graphical user interface functions
+ QT-based graphical sinks for gnuradio applications.
+ Implements opengl, raster and native plotting methods, and
+ supports a QT Style Sheet (QSS) file to adjust the look.
+ Part of the main gnuradio build.
+
+Package: libgnuradio-runtime3.10.12
+Description-md5: e73009f780eee5fc595dc4da8d24cf71
+Description-en: gnuradio core runtime
+ Top level component library. Defines core blocks. Handles
+ settings for logging, performance counters, and control port.
+ Part of the main gnuradio build.
+
+Package: libgnuradio-soapy3.10.12
+Description-md5: eb287e97d9393a929f10abdbcbc71636
+Description-en: gnuradio SoapySDR support
+ Soapy hardware drivers using the SoapySDR driver framework.
+ Part of the main gnuradio build.
+
+Package: libgnuradio-trellis3.10.12
+Description-md5: 93ea87d97d5bf7a5d6272bbfd279ded5
+Description-en: gnuradio trellis modulation functions
+ Library for trellis coding modulation, including the Viterbi
+ Algorithm, Concatenated Coding and Turbo Decoding
+ based upon finite state machine (FSM) class.
+ Part of the main gnuradio build.
+
+Package: libgnuradio-uhd3.10.12
+Description-md5: 99e0943e04dc3702c287f7beab797428
+Description-en: gnuradio universal hardware driver functions
+ The gnuradio interface to the UHD library to connect to and send and
+ receive data between to the Ettus Research, LLC product line -
+ including the USRP family of software radio peripheral devices.
+ Part of the main gnuradio build.
+
+Package: libgnuradio-video-sdl3.10.12
+Description-md5: 81449e40176027f155aef2502ecffd77
+Description-en: gnuradio video functions
+ Library for handling SDL (Simple DirectMedia Layer) video data.
+ Implements input and output blocks.
+ Part of the main gnuradio build.
+
+Package: libgnuradio-vocoder3.10.12
+Description-md5: 58d0150c5fe739990bdb32a77526f016
+Description-en: gnuradio vocoder functions
+ Library of vocoder blocks, including ulaw, alaw, gsm and codec2.
+ Debian uses external libraries for gsm and codec2.
+ .
+ Part of the main gnuradio build.
+
+Package: libgnuradio-wavelet3.10.12
+Description-md5: 1c51b1d67b8ca0587a908ff0217bc021
+Description-en: gnuradio wavelet functions
+ Library of Daubechies wavelet function blocks.
+ wvps computes the Wavelet Power Spectrum from
+ a set of wavelet coefficients.
+ .
+ Part of the main gnuradio build.
+
+Package: libgnuradio-zeromq3.10.12
+Description-md5: fad8379800018fcef6de6233eaff6ed5
+Description-en: gnuradio zeromq functions
+ 0MQ messaging library support. Provide network socket
+ endpoints for gnuradio data and message streams.
+ PUB/SUB, PUSH/PULL, REP/REQ models supported.
+ .
+ Part of the main gnuradio build.
+
 Package: gnurobbo
 Description-md5: 797d18c35275ee4573897948c4097a84
 Description-en: logic game ported from ATARI XE/XL
@@ -202792,16 +202986,6 @@ Description-en: Go wrapper around the sysctl interface (library)
  or filtering them by a pattern. It can also apply settings from a
  configuration file, similar to `sysctl -p`.
 
-Package: golang-github-lpabon-godbc-dev
-Description-md5: 319b4b49db5006bd74a0ec8c7ec178d8
-Description-en: Design-by-contract library for Go
- Design-by-contract is an approach for designing software where the
- programmer defines a formal, precise and verifiable interface
- specification for software components.
- .
- The godbc library implements the design-by-contract methodology using
- pre- and post-condition assertion methods.
-
 Package: golang-github-lucas-clemente-quic-go-dev
 Description-md5: 2262a51a605f12b42ed6d5fbf5d0f285
 Description-en: QUIC golang library
@@ -203919,14 +204103,6 @@ Description-en: generates ED25519 private keys in the OpenSSH private key format
        _ = ioutil.WriteFile("id_ed25519", privateKey, 0600)
        _ = ioutil.WriteFile("id_ed25519.pub", authorizedKey, 0644)
    }
-
-Package: golang-github-mimuret-golang-iij-dpf-dev
-Description-md5: b3a31ca60ab93754fa0a4f22391bf5e5
-Description-en: IIJ DNS Platform Service API for Go (library)
- Go library to interface with IIJ DNS Platform Service API.
- .
- It allows Go developer to interface both IIJ Managed DNS Service
- as well as IIJ DNS Traffic Management Service.
 
 Package: golang-github-minio-crc64nvme-dev
 Description-md5: 75bbb5b1dc96938b8646b5b4f4354743
@@ -207312,13 +207488,6 @@ Description-md5: e2b1526d71398ee1c361a82bd650cbd6
 Description-en: Go library to perform actions repetitively
  A simple, stateless, functional mechanism to perform actions repetitively
  until successful.
-
-Package: golang-github-rickb777-date-dev
-Description-md5: eadd2b6baeb2f599e75dfb4c41054928
-Description-en: Go package for working with dates (library)
- This package introduces a light-weight Date type that is storage-efficient
- and convenient for calendrical calculations and date parsing and
- formatting (including years outside the [0,9999] interval).
 
 Package: golang-github-rickb777-plural-dev
 Description-md5: b5a56dc290f700169e954eb7eb29a348
@@ -213997,6 +214166,15 @@ Description-en: EditorConfig support in Go
    * Storing and querying all properties equally
    * Minimising pointers and maps to store data
 
+Package: golang-mvdan-gofumpt-dev
+Description-md5: 1b46cdd218de16d3bf2a652f2e60cd1f
+Description-en: stricter gofmt (library)
+ Enforce a stricter format than gofmt, while being backwards
+ compatible.
+ .
+ The tool is a modified fork of gofmt, so it can be used as a drop-in
+ replacement.
+
 Package: golang-mvdan-sh-dev
 Description-md5: 1f745d59cb18f10ccb0582351c146077
 Description-en: shell parser, formatter, and interpreter (library)
@@ -215144,6 +215322,15 @@ Description-en: modern, full-featured gopher daemon
   * selector rewriting
   * session tracking, throttling, and statistics
   * tls/ssl and proxy support
+
+Package: gopls
+Description-md5: 749faeba3b11444876eb862c4cfce0c3
+Description-en: language server for the Go language
+ gopls (pronounced: "go please") is the official language server for the Go
+ language.
+ .
+ The Language Server Protocol allows any text editor to be extended with
+ IDE-like features.
 
 Package: libjs-gordon
 Description-md5: 0cddce78e908e8994ad81b7f17f7d427
@@ -216604,6 +216791,32 @@ Description-en: Wrapper for the OpenCL FFT library clFFT (Python 3)
  .
  This package installs the library for Python 3.
 
+Package: gr-fosphor
+Description-md5: 22a6b9110834daf9bb3248036c0083bc
+Description-en: gnuradio fosphor block (GPU spectrum display)
+ This implements a GNU Radio sink consisting of a GL display window
+ that provides a Real Time Spectrum Analyzer (RTSA)-like spectrum
+ visualization using OpenCL and OpenGL acceleration.
+ .
+ To use the fosphor blocks in Python, import it as :
+ .
+ from gnuradio import fosphor
+ .
+ See the Doxygen documentation for details about the blocks available
+ in this package. A quick listing of the details can be found in Python
+ after importing by using:
+ .
+ help(fosphor)
+
+Package: libgnuradio-fosphor3.9.0
+Description-md5: 614c73b6f47df0c22ec4d72415499cec
+Description-en: gnuradio fosphor block (GPU spectrum display) (library)
+ This implements a GNU Radio sink consisting of a GL display window
+ that provides a Real Time Spectrum Analyzer (RTSA)-like spectrum
+ visualization using OpenCL and OpenGL acceleration.
+ .
+ This package provides a shared library.
+
 Package: fonts-gr-framework
 Description-md5: 76aa2a05346fa2aec3813c1134608bde
 Description-en: Bundled Font of Graphical Kernel System (GKS) and OpenGL
@@ -216789,6 +217002,181 @@ Description-en: Library of Graphical Kernel System (GKS) and OpenGL
  scenes.
  .
  This package contains runtime library for GR.
+
+Package: gr-funcube
+Description-md5: 95b4539533d6bcde52cd347ce237f0fc
+Description-en: Funcube Dongle controller for GNU Radio
+ Support hardware for software radio using the fcdproplus
+ which provides sampled RF IQ data as a USB audio stereo
+ data stream. Control is done over USB HID protocol.
+ .
+ Both the Funcube Dongle and Funcube Dongle Pro+ are supported
+ by this package.
+ .
+ This package provides a Python library as well as
+ a gnuradio companion source object.
+
+Package: libgnuradio-funcube3.10.0
+Description-md5: 3aee1116acdbacf6e8a4bef6121f456a
+Description-en: Funcube Dongle controller for GNU Radio (runtime)
+ Support hardware for software radio using the fcdproplus
+ which provides sampled RF IQ data as a USB audio stereo
+ data stream. Control is done over USB HID protocol.
+ .
+ Both the Funcube Dongle and Funcube Diongle Pro+ are supported
+ by this package.
+ .
+ This package provides a shared library.
+
+Package: gr-hpsdr
+Description-md5: d4862883866ce872d364b748eed36383
+Description-en: gnuradio interface module for OpenHPSDR protocol 1
+ Hardware supported includes OpenHPSDR Hermes / Metis and Red Pitaya
+ using the OpenHpsdr protocol.
+ .
+ hermesNB sources decimated downconverted 48K-to-384K receiver complex
+ stream(s), and sinks one 48k sample rate transmit complex stream.
+ .
+ hermesWB sources raw ADC samples as a vector of floats, with
+ vlen=16384. Each individual vector contains time contiguous
+ samples. However there are large time gaps between vectors. This is
+ how HPSDR produces raw samples, it is due to Ethernet interface rate
+ limitations between HPSDR and the host computer.
+ .
+ The modules are compatible with version 3.8 of gnuradio and versions of
+ Hermes firmware 1.8 through at 3.2. (known as OpenHPSDR protocol
+ 1). It is not compatible with the new OpenHPSDR protocol 2.
+ .
+ This package contains the header files and grc block definitions.
+
+Package: libgnuradio-hpsdr1.0.0
+Description-md5: 0b550515bae63a80b0b5f6de34b16b49
+Description-en: gnuradio library for OpenHPSDR protocol 1
+ Hardware supported includes OpenHPSDR Hermes / Metis and Red Pitaya
+ using the OpenHpsdr protocol.
+ .
+ The modules are compatible with version 3.8 of gnuradio and versions of
+ Hermes firmware 1.8 through 3.2. (known as OpenHPSDR protocol 1). It
+ is not compatible with the new OpenHPSDR protocol 2.
+ .
+ This package contains the shared library.
+
+Package: gr-iqbal
+Description-md5: d1941592a7b1ef5f4224711566fb3e9c
+Description-en: GNU Radio Blind IQ imbalance estimator and correction
+ The general idea is to suppress symmetrical images caused by IQ
+ imbalance in the RX path of quadrature receivers.
+ It's composed of two subblocks:
+ .
+ "IQ Bal Fix": This applies the actual correction. to a complex
+ stream. The correction parameters are only magnitude/phase and the
+ actual correction algo is the same as applied in hardware in the USRP.
+ You can either specify the correction parameters manually on the
+ block, or send them via 'messages'.
+ .
+ "IQ Bal Optimize": This blocks tries to blindly detect the imbalance
+ by minimizing the correlation between the left and right part of the
+ spectrum. See the code for the "how it does it". The general idea is
+ inspired from papers found on the internet and the way some SDR
+ software achieve the same things (sdr# for eg, although there are
+ significant differences in the actual implementation).
+
+Package: libgnuradio-iqbalance3.9.0
+Description-md5: f3fa21c85b7648b2254e19f56b652c7b
+Description-en: GNU Radio Blind IQ imbalance estimator and correction (shared library)
+ The general idea is to suppress symmetrical images caused by IQ
+ imbalance in the RX path of quadrature receivers.
+ It's composed of two subblocks: "IQ Bal Fix" and "IQ Bal Optimize".
+ .
+ This package provides a shared library for gr-iqbal.
+
+Package: gr-rds
+Description-md5: 381f2d5bc7ea9a68ee3ab929814a53b8
+Description-en: GNU Radio FM RDS/TMC Transceiver
+ A Radio Data System - Traffic Message Channel (RDS-TMC) block
+ for GNU Radio.
+ .
+ Radio Data System (RDS) is a communications protocol standard for
+ embedding  small amounts of digital information in conventional
+ FM radio broadcasts.
+ .
+ gr-rds provides GNU Radio Companion flowgraphs to handle RDS data.
+
+Package: libgnuradio-rds1
+Description-md5: 720b1d3ef91dd3dca79a151a90f49fec
+Description-en: GNU Radio FM RDS/TMC Transceiver (library)
+ A Radio Data System - Traffic Message Channel (RDS-TMC) block
+ for GNU Radio.
+ .
+ Radio Data System (RDS) is a communications protocol standard for
+ embedding  small amounts of digital information in conventional
+ FM radio broadcasts.
+ .
+ This package provides a shared library.
+
+Package: gr-satellites
+Description-md5: c4cba52cc86945f8b21a0fd06acf0af8
+Description-en: Collection of satellite telemetry signal decoders
+ This GNU Radio out-of-tree module can be used to decode frames
+ transmitted from most Amateur satellites in orbit, performing
+ demodulation, forward error correction, etc. Decoded frames can be
+ saved to a file or displayed in hex format. For some satellites the
+ telemetry format definition is included in gr-satellites, so the
+ decoded telemetry frames can be printed out as human-readable values
+ such as bus voltages and currents. Additionally, some satellites
+ transmit files such as JPEG images. gr-satellites can be used to
+ reassemble these files and even display the images in real-time as
+ they are being received.
+ .
+ It supports most popular protocols, such as AX.25, the GOMspace
+ NanoCom U482C and AX100 modems, an important part of the CCSDS stack,
+ the AO-40 protocol used in the FUNcube satellites, and several ad-hoc
+ protocols used in other satellites.
+ .
+ This package contains the header files and grc block definitions,
+ and a set of satellite telemetry decoding scripts.
+
+Package: gr-satellites-doc
+Description-md5: 49ba4641ac7cc3cabdde2c496c199a62
+Description-en: Documentation of gr-satellite telemetry signal decoders
+ This GNU Radio out-of-tree module can be used to decode frames
+ transmitted from most Amateur satellites in orbit, performing
+ demodulation, forward error correction, etc. Decoded frames can be
+ saved to a file or displayed in hex format. For some satellites the
+ telemetry format definition is included in gr-satellites, so the
+ decoded telemetry frames can be printed out as human-readable values
+ such as bus voltages and currents. Additionally, some satellites
+ transmit files such as JPEG images. gr-satellites can be used to
+ reassemble these files and even display the images in real-time as
+ they are being received.
+ .
+ It supports most popular protocols, such as AX.25, the GOMspace
+ NanoCom U482C and AX100 modems, an important part of the CCSDS stack,
+ the AO-40 protocol used in the FUNcube satellites, and several ad-hoc
+ protocols used in other satellites.
+ .
+ This package contains the HTML documentation.
+
+Package: libgnuradio-satellites5.8.0
+Description-md5: 6dead797c65cee5e03cb685bbdbaa04b
+Description-en: library of satellite telemetry signal decoders
+ This GNU Radio out-of-tree module can be used to decode frames
+ transmitted from most Amateur satellites in orbit, performing
+ demodulation, forward error correction, etc. Decoded frames can be
+ saved to a file or displayed in hex format. For some satellites the
+ telemetry format definition is included in gr-satellites, so the
+ decoded telemetry frames can be printed out as human-readable values
+ such as bus voltages and currents. Additionally, some satellites
+ transmit files such as JPEG images. gr-satellites can be used to
+ reassemble these files and even display the images in real-time as
+ they are being received.
+ .
+ It supports most popular protocols, such as AX.25, the GOMspace
+ NanoCom U482C and AX100 modems, an important part of the CCSDS stack,
+ the AO-40 protocol used in the FUNcube satellites, and several ad-hoc
+ protocols used in other satellites.
+ .
+ This package contains the shared library.
 
 Package: grabc
 Description-md5: 24ba57c1fca546f8f8410efdf7a8f845
@@ -290531,17 +290919,6 @@ Description-en: JFree projects Demos programs
   * JFree PDF
   * Orson Charts
 
-Package: libjfree-demos-java-doc
-Description-md5: 588dc96fae518b8a426275474b9f1698
-Description-en: JFree projects Demos programs Documentation
- Contains a collection of demos from JFree projects, including:
-  * JFreeChart
-  * JFreeSVG
-  * JFree PDF
-  * Orson Charts
- .
- This package contains the API documentation of libjfree-demos-java.
-
 Package: libjfreepdf-java
 Description-md5: 6edc7068b1f2b3aae9aaa47b199c9615
 Description-en: Java library generating PDF from Graphics2D
@@ -294730,6 +295107,14 @@ Description-md5: dafa4198cbea8c6e6ef9d5bfc82954ef
 Description-en: Document for JUnit
  This package provide documents and examples for JUnit which is a simple
  framework for writing and running automated tests.
+
+Package: libjunit-pioneer-java
+Description-md5: 1ce31d2d0bb1b1c672d5e2753d26f1fb
+Description-en: JUnit 5 extension pack
+ JUnit Pioneer provides extensions for JUnit 5 and its Jupiter API. It does
+ not limit itself to proven ideas with wide application but is purposely open
+ to experimentation. It aims to spin off successful and cohesive portions into
+ sibling projects or back into the JUnit 5 code base.
 
 Package: junit2html
 Description-md5: ac200454fafaa2743b30af3f230e51fc
@@ -331250,17 +331635,6 @@ Description-en: File upload capability to your servlets and web applications
  can parse that request, and make the results available in a manner easily
  used by the caller.
 
-Package: libcommons-fileupload-java-doc
-Description-md5: a4f0bfe5d80ca19aed74b668a444c27e
-Description-en: Javadoc API documentation for Commons FileUploads
- FileUpload parses HTTP requests which conform to RFC 1867, "Form-based File
- Upload in HTML". That is, if an HTTP request is submitted using the POST
- method, and with a content type of "multipart/form-data", then FileUpload
- can parse that request, and make the results available in a manner easily
- used by the caller.
- .
- This package contains Javadoc API documentation for Commons FileUpload.
-
 Package: libcommons-fileupload2-java
 Description-md5: d5117f9b37e17f160feacffbb119df33
 Description-en: file upload capability to your servlets and web applications
@@ -350551,6 +350925,27 @@ Description-en: mechanism-switch gssapi library
  (e.g., those provided by MIT Kerberos), depending on the requested
  mechanism, to do the work.
 
+Package: libgssw-dev
+Description-md5: afe065aea07bdc37681e157e2c14cf52
+Description-en: development files for libgssw
+ GSSW is a generalization of the striped Smith-Waterman algorithm to graphs.
+ It is used by the vg toolkit for partial order alignment and supports affine
+ gap penalties, traceback across graph nodes, pinned alignments and a bonus
+ for full-length alignments.
+ .
+ This package contains the C header, the static library and the shared
+ library linker symlink.
+
+Package: libgssw1
+Description-md5: 4ab7a912f842847ee421f75e6ebea343
+Description-en: graph SIMD Smith-Waterman C library
+ GSSW is a generalization of the striped Smith-Waterman algorithm to graphs.
+ It is used by the vg toolkit for partial order alignment and supports affine
+ gap penalties, traceback across graph nodes, pinned alignments and a bonus
+ for full-length alignments.
+ .
+ This package contains the shared library.
+
 Package: libgtextutils-dev
 Description-md5: a16a583fde213098a3e6a6c7f06d523f
 Description-en: Gordon Text_utils library (development files)
@@ -351750,19 +352145,6 @@ Description-en: Hierarchical Data Format library -- runtime package
  .
  This package includes some basic utilities to view, pack, unpack,
  HDF files.
-
-Package: libhdf4-0
-Description-md5: 48fb8007dc5d08d9f3eb8e5f504a4935
-Description-en: Hierarchical Data Format library
- HDF is a multi-object file format for storing and transferring
- graphical and numerical data mainly used in scientific computing. HDF
- supports several different data models, including multidimensional
- arrays, raster images, and tables. Each defines a specific aggregate
- data type and provides an API for reading, writing, and organizing the
- data and metadata. New data models can be added by the HDF developers
- or users.
- .
- This package contains the HDF run-time libraries.
 
 Package: libhdf4-11
 Description-md5: 48fb8007dc5d08d9f3eb8e5f504a4935
@@ -357725,13 +358107,6 @@ Description-en: Chart library for Java
    * Gantt charts
    * wind plots, meter charts and symbol charts
    * wafer map charts
-
-Package: libjfreechart-java-doc
-Description-md5: d938f58690f1d5a10a566475f13523ed
-Description-en: Chart library for Java - documentation
- JFreeChart is a free Java class library for generating charts.
- .
- This package provides the javadoc documentation.
 
 Package: libjg-dev
 Description-md5: a563dc635dffe4af6626f5b9344be5cd
@@ -396050,6 +396425,36 @@ Description-en: dependency solver using a satisfiability algorithm (Python3 bind
     resolving package dependencies.
  .
  This package contains the Python (v3) bindings for the libsolv library.
+
+Package: libsonlib-dev
+Description-md5: df3f4f4905f1f0829e4e2e0e066aaff5
+Description-en: compact C/Python library for sequence analysis in bioinformatics (dev)
+ SonLib is a small general purpose library for C and Python for sequence
+ analysis with focus on bioinformatics.
+ .
+ For basic data-structures in C it contains:
+ .
+  * array lists (automatically resizing)
+  * hashes
+  * sets (backed by hashes)
+  * sorted sets (backed by an AVL tree)
+  * containers (for putting primitives into the above data-structures)
+  * better string functions
+  * simple exception mechanism
+  * logging functions
+ .
+ For bioinformatic data-structures it contains:
+ .
+  * Fasta I/O functions
+  * MAF I/O functions
+  * Newick tree I/O functions
+
+Package: libsonlib1
+Description-md5: 7ee745f43275e4185949825ade6e99ec
+Description-en: compact C/Python library for sequence analysis in bioinformatics
+ SonLib is a small general purpose library for C and Python for sequence
+ analysis with focus on bioinformatics. This package provides the shared
+ library.
 
 Package: libsoptions-java
 Description-md5: 1c261f9427edd5efc72bfd6e8f0c5497
@@ -461039,6 +461444,16 @@ Description-en: consensus caller for nanopore sequencing data
  modifications, call SNPs and indels with respect to a reference genome
  and more.
 
+Package: nanopub
+Description-md5: 3633dc6e6ae028c7b209bde8bf005665
+Description-en: CLI tool to sign nanopublications
+ nanopub-cli is a command-line tool
+ to check, sign, and publish nanopublications.
+ .
+ A nanopublication is a small knowledge graph snippet
+ with metadata that is treated
+ as an independent (scientific) publication.
+
 Package: nanostat
 Description-md5: fbad1370cf6948ea26fb47aeeb5e4a03
 Description-en: statistics on long biological sequences
@@ -479991,6 +480406,14 @@ Description-en: library for fast, lightweight web components
  lit-html, LitElement, and reactive-element for use in browser-based web
  applications and server-side rendering workflows.
 
+Package: node-lit-ntml
+Description-md5: 8eefa84f74c2651d62fa08cb8674bafc
+Description-en: HTML template literal rendering for Node.js
+ Tagged template literals are rendered as HTML documents or fragments.
+ Interpolated values can include arrays and functions, with asynchronous
+ rendering also resolving promises. Synchronous variants are available
+ for content that does not require asynchronous processing.
+
 Package: livescript
 Description-md5: 99e893292de3bda94c3aeca3ed0376f1
 Description-en: language which compiles to JavaScript
@@ -481514,6 +481937,13 @@ Description-en: Command-line option parser for Node.js
   * shorthands
  .
  Node.js is an event-based server-side javascript engine.
+
+Package: node-normalize-diacritics
+Description-md5: dcb31e683692db4c50f995b2f70d86b6
+Description-en: accent and diacritic normalization for strings
+ This library replaces accented characters with their unaccented equivalents
+ and maps characters such as ligatures to corresponding letter sequences.
+ It provides synchronous and asynchronous functions for normalizing strings.
 
 Package: node-normalize-git-url
 Description-md5: 1b1c962f5fbfb4577b5f8515533f1acd
@@ -515168,6 +515598,176 @@ Description-en: Square, futuristic font family
  Its intuitive strokes ensure legibility at small sizes and quick
  glances, while angled cuts add charisma to big headlines.
 
+Package: libjs-oxigraph
+Description-md5: de19e50d49c54e96faa82c24ac475f8e
+Description-en: Oxigraph SPARQL database - JavaScript bindings for browsers
+ Oxigraph is a graph database written in Rust
+ implementing the SPARQL standard.
+ .
+ Oxigraph for JavaScript is an API on top of Oxigraph,
+ offering a simple in-memory store
+ with SPARQL 1.1 Query and SPARQL 1.1 Update capabilities.
+ The store is also able to load RDF
+ serialized in Turtle, TriG, N-Triples, N-Quads and RDF/XML.
+ .
+ Oxigraph implements the RDF/JS datamodel specification.
+ .
+ This package provides Oxigraph for JavaScript
+ compiled with WebAssembly usable with Node.js -
+ an event-based server-side JavaScript engine.
+
+Package: librust-oxigraph-dev
+Description-md5: 871c69461d17c64b261a2426e76a6999
+Description-en: SPARQL database and RDF toolkit - Rust source code
+ Oxigraph is a graph database library
+ implementing the SPARQL standard.
+ Its goal is to provide a compliant, safe
+ and fast on-disk graph database.
+ It also provides a set of utility functions
+ for reading, writing, and processing RDF files.
+ .
+ Oxigraph implements the following specifications:
+  * SPARQL 1.1 Query, SPARQL 1.1 Update, and SPARQL 1.1 Federated Query.
+  * Turtle, TriG, N-Triples, N-Quads, and RDF XML
+    RDF serialization formats for both data ingestion and retrieval.
+  * SPARQL Query Results XML Format,
+    SPARQL 1.1 Query Results JSON Format
+    and [SPARQL 1.1 Query Results CSV and TSV Formats.
+ .
+ Support for RDF 1.2 and SPARQL 1.2 is also available
+ behind the rdf-12 feature.
+ .
+ This package contains the source for the Rust crate oxigraph,
+ for use with cargo.
+
+Package: librust-oxrdf-dev
+Description-md5: c8793d7b9cf18985e4dbec147c0cbd1d
+Description-en: data structures related to RDF - Rust source code
+ OxRDF is a simple library
+ providing datastructures encoding RDF 1.1 concepts.
+ It is intended to be a basic building block
+ of other crates like Oxigraph or Spargebra.
+ .
+ Oxjsonld is a parser and serializer for the JSON-LD format.
+ .
+ OxRDF I/O is a set of parsers and serializers for RDF.
+ .
+ OxRdfXml is a parser and serializer for RDF/XML.
+ .
+ Oxttl is a set of parsers and serializers
+ for Turtle, TriG, N-Triples, N-Quads and N3.
+ .
+ Support for RDF 1.2 is available
+ behind the rdf-12 feature,
+ except for the language N3 in Oxttl.
+ .
+ This package contains the source
+ for the Rust crates oxjsonld, oxrdf, oxrdfio, oxrdfxml and oxttl,
+ for use with cargo.
+
+Package: librust-oxrocksdb-sys-dev
+Description-md5: bf8d77d1e33bff2fceef42856116ad47
+Description-en: Rust bindings for RocksDB for Oxigraph - Rust source code
+ oxrocksdb-sys provides RocksDB bindings for Oxigraph.
+ .
+ Oxigraph is a graph database library
+ implementing the SPARQL standard.
+ .
+ This package contains the source for the Rust crate oxrocksdb-sys,
+ for use with cargo.
+
+Package: librust-oxsdatatypes-dev
+Description-md5: 52e8ba83649824dfa5583606841e71f6
+Description-en: some XSD datatypes for SPARQL implementations - Rust source code
+ oxsdatatypes is an implementation
+ of some XML Schema Definition Language Datatypes.
+ Its main aim is to ease the implementation of SPARQL and XPath.
+ .
+ This package contains the source for the Rust crate oxsdatatypes,
+ for use with cargo.
+
+Package: librust-sparesults-dev
+Description-md5: 91f53d9bdc1ff0ea0f22b2fce8138686
+Description-en: SPARQL query results formats parsers and serializers - Rust source code
+ Sparesults is a set of parsers and serializers
+ for SPARQL query results formats.
+ It is intended to be a building piece
+ for SPARQL client and server implementations in Rust like Oxigraph.
+ .
+ It supports SPARQL Query Results XML Format (Second Edition),
+ SPARQL 1.1 Query Results JSON Format
+ and SPARQL 1.1 Query Results CSV and TSV Formats.
+ .
+ Support for SPARQL 1.2 is also available
+ behind the sparql-12 feature.
+ .
+ This package contains the source for the Rust crate sparesults,
+ for use with cargo.
+
+Package: librust-spargebra-dev
+Description-md5: 5d84d0de0da6c16187e78e46085d2225
+Description-en: SPARQL parser - Rust source code
+ Spargebra is a SPARQL parser.
+ It supports both SPARQL 1.1 Query and SPARQL 1.1 Update.
+ This crate is intended to be a building piece
+ for SPARQL implementations in Rust like Oxigraph.
+ .
+ sparopt is a work in progress SPARQL Query optimizer.
+ .
+ Support for SPARQL 1.2 is also available
+ behind the sparql-12 feature.
+ .
+ This package contains the source
+ for the Rust crates spargebra and sparopt,
+ for use with cargo.
+
+Package: node-oxigraph
+Description-md5: b520d3b49c6a8277ae491dc39ac68e74
+Description-en: Oxigraph SPARQL database - JavaScript bindings for Node.js
+ Oxigraph is a graph database written in Rust
+ implementing the SPARQL standard.
+ .
+ Oxigraph for JavaScript is an API on top of Oxigraph,
+ offering a simple in-memory store
+ with SPARQL 1.1 Query and SPARQL 1.1 Update capabilities.
+ The store is also able to load RDF
+ serialized in Turtle, TriG, N-Triples, N-Quads and RDF/XML.
+ .
+ Oxigraph implements the RDF/JS datamodel specification.
+ .
+ This package provides Oxigraph for JavaScript
+ compiled with WebAssembly,
+ directly usable in modern web browsers that supports WeakRef.
+
+Package: oxigraph
+Description-md5: 2b388bec760e553ed4f6c1c0d97a647b
+Description-en: RDF graph CLI tool and SPARQL HTTP server
+ Oxigraph CLI is a graph database
+ implementing the SPARQL standard.
+ It is packaged as a command-line tool
+ allowing to manipulate RDF files and query them using SPARQL,
+ and also allows to spawn a HTTP server on top of the database.
+ .
+ Oxigraph implements the following specifications:
+  * SPARQL 1.1 Query,
+    SPARQL 1.1 Update, and
+    SPARQL 1.1 Federated Query.
+  * Turtle, TriG, N-Triples, N-Quads, and RDF/XML
+    RDF serialization formats for both data ingestion and retrieval.
+  * SPARQL Query Results XML Format,
+    SPARQL 1.1 Query Results JSON Format and
+    SPARQL 1.1 Query Results CSV and TSV Formats.
+  * SPARQL 1.1 Protocol and
+    SPARQL 1.1 Graph Store HTTP Protocol.
+ .
+ SPARQL is an RDF query language -
+ that is, a semantic query language for databases -
+ able to retrieve and manipulate data
+ stored in Resource Description Framework (RDF) format.
+ .
+ Resource Description Framework (RDF) is a standard model
+ for data interchange on the Web.
+
 Package: oxref
 Description-md5: 5680beed26bda09d6f78efc6f8f48aaa
 Description-en: cross reference utility
@@ -515180,6 +515780,27 @@ Description-en: cross reference utility
  Oxref does not interpret the object files and libraries itself, but calls
  objdump(1) to do so. The output produced by objdump is then filtered by
  oxref, generating the cross reference listing.
+
+Package: oxrq
+Description-md5: 8f6b09e7f75da7dc2a9fdf92c10ceb51
+Description-en: CLI tool for running SPARQL queries over RDF data
+ OxRQ is a simple command-line tool (oxrq) for running SPARQL queries
+ over a stream of RDF data or a set of RDF files.
+ It uses Oxigraph for all functionality.
+ .
+ This tool is primarily made for working with "one-off" queries
+ over a set of RDF source files on the command-line.
+ It can be used to query, edit and/or create new RDF data using SPARQL.
+ .
+ (It is loosely inspired by the workflow of AWK,
+ and in some ways aims to be an alternative
+ to the venerable rasqal and rapper tools.)
+ .
+ Resource Description Framework (RDF) is a standard model
+ for data interchange on the Web.
+ .
+ SPARQL is an semantic query language for databases,
+ able to retrieve and manipulate data stored in RDF format.
 
 Package: kde-style-oxygen-qt6
 Description-md5: 20b932e0a9e746ae01883e50975a8fba
@@ -553571,79 +554192,6 @@ Description-en: Wrapper around various text markups, implemented in Python 3
  .
  It is also possible to implement custom markups (inherited from AbstractMarkup
  class).
-
-Package: python-pymatgen-doc
-Description-md5: e90f3cae13838185d92b7ecb802efc86
-Description-en: Python Materials Genomics for materials analysis (documentation)
- Pymatgen (Python Materials Genomics) is a robust, open-source Python
- library for materials analysis. These are some of the main features:
- .
- 1.Highly flexible classes for the representation of Element, Site,
- Molecule, Structure objects.
- .
- 2. Extensive input/output support, including support for VASP
- (http://cms.mpi.univie.ac.at/vasp/), ABINIT (http://www.abinit.org/),
- CIF, Gaussian, XYZ, and many other file formats.
- .
- 3. Powerful analysis tools, including generation of phase diagrams,
- Pourbaix diagrams, diffusion analyses, reactions, etc.
- .
- 4. Electronic structure analyses, such as density of states and band
- structure.
- .
- 5. Integration with the Materials Project REST API, Crystallography
- Open Database.
- .
- This is the documentation package for pymatgen.
-
-Package: python3-pymatgen
-Description-md5: 20ba6580b3ad09e3d4ad93366958b7b2
-Description-en: Python Materials Genomics for materials analysis
- Pymatgen (Python Materials Genomics) is a robust, open-source Python
- library for materials analysis. These are some of the main features:
- .
- 1.Highly flexible classes for the representation of Element, Site,
- Molecule, Structure objects.
- .
- 2. Extensive input/output support, including support for VASP
- (http://cms.mpi.univie.ac.at/vasp/), ABINIT (http://www.abinit.org/),
- CIF, Gaussian, XYZ, and many other file formats.
- .
- 3. Powerful analysis tools, including generation of phase diagrams,
- Pourbaix diagrams, diffusion analyses, reactions, etc.
- .
- 4. Electronic structure analyses, such as density of states and band
- structure.
- .
- 5. Integration with the Materials Project REST API, Crystallography
- Open Database.
- .
- This package provides the pymtgen module for Python 3.
-
-Package: python3-pymatgen-core
-Description-md5: 73632459455b29d490efa1f7ea42b807
-Description-en: Python Materials Genomics for materials analysis
- Pymatgen (Python Materials Genomics) is a robust, open-source Python
- library for materials analysis. These are some of the main features:
- .
- 1.Highly flexible classes for the representation of Element, Site,
- Molecule, Structure objects.
- .
- 2. Extensive input/output support, including support for VASP
- (http://cms.mpi.univie.ac.at/vasp/), ABINIT (http://www.abinit.org/),
- CIF, Gaussian, XYZ, and many other file formats.
- .
- 3. Powerful analysis tools, including generation of phase diagrams,
- Pourbaix diagrams, diffusion analyses, reactions, etc.
- .
- 4. Electronic structure analyses, such as density of states and band
- structure.
- .
- 5. Integration with the Materials Project REST API, Crystallography
- Open Database.
- .
- This package provides the pymatgen-core module for Python 3,
- containing core functionality used by pymatgen.
 
 Package: pymatgen-core-test-files
 Description-md5: 1b0eecb57b2cfc2e0c4d84db4518495d
@@ -654082,6 +654630,11 @@ Description-en: Trustworthy, encrypted, command-line TOTP/HOTP authenticator app
   * import functionality
   * a user-friendly command-line interface.
 
+Package: librust-count-instructions-dev
+Description-md5: 0cd982e9f05e2dccffc759bdb6cff25d
+Description-en: Counts the instructions executed within a single function - Rust source code
+ Source code for Debianized Rust crate "count_instructions"
+
 Package: librust-counter-dev
 Description-md5: 40190dd2f4fe055d2329e128a8d99cad
 Description-en: Simple package to count generic iterables - Rust source code
@@ -656997,8 +657550,8 @@ Description-en: Fastest Bloom filter in Rust - Rust source code
  Source code for Debianized Rust crate "fastbloom"
 
 Package: librust-faster-hex-dev
-Description-md5: 1b362f6efcc14cc1ac017910448d9f9e
-Description-en: Fast hex encoding - Rust source code
+Description-md5: 5a51df5f9e311f194daddb5f4656c707
+Description-en: Fast, checked hex encoding and decoding with SIMD and no_std support - Rust source code
  Source code for Debianized Rust crate "faster-hex"
 
 Package: librust-fasteval-dev
@@ -658498,6 +659051,11 @@ Description-md5: 7d32b2899d328ee8a77dfa1913e6e719
 Description-en: Duplicate of `gix-packetline` with the `blocking-io` feature pre-selected - Rust source code
  Source code for Debianized Rust crate "gix-packetline-blocking"
 
+Package: librust-gix-parallel-dev
+Description-md5: d404285c305ecf5d84e9a89a0a3f13d2
+Description-en: Serial and parallel helpers for gitoxide - Rust source code
+ Source code for Debianized Rust crate "gix-parallel"
+
 Package: librust-gix-path-dev
 Description-md5: 673be3f875459fde6b5fc36fe54e37d0
 Description-en: The gitoxide project dealing paths and their conversions - Rust source code
@@ -658514,8 +659072,8 @@ Description-en: Handle prompts in the terminal - Rust source code
  Source code for Debianized Rust crate "gix-prompt"
 
 Package: librust-gix-protocol-dev
-Description-md5: 4dfd9c1d5ab6cf99b1ce859b45acb70d
-Description-en: The gitoxide project for implementing git protocols - Rust source code
+Description-md5: ce0f3de3e97936e7b90f3e070dd84ec0
+Description-en: Implement git protocols - Rust source code
  Source code for Debianized Rust crate "gix-protocol"
 
 Package: librust-gix-quote-dev
@@ -658594,8 +659152,8 @@ Description-en: Parse and serialize git URLs - Rust source code
  Source code for Debianized Rust crate "gix-url"
 
 Package: librust-gix-utils-dev
-Description-md5: cb0675d7a5b3062e197d09ab7b667c68
-Description-en: Crate with `gitoxide` utilities that don't need feature toggles - Rust source code
+Description-md5: 6ea1e284881797326c4f23d42673c4a6
+Description-en: Utilities shared by the gitoxide crates - Rust source code
  Source code for Debianized Rust crate "gix-utils"
 
 Package: librust-gix-validate-dev
@@ -660035,6 +660593,11 @@ Description-md5: 856e96785eb53f1bf8de9144ebbdd9a1
 Description-en: Human sort (natural sort) implementation - Rust source code
  This package contains the source for the Rust human-sort crate, packaged by
  debcargo for use with cargo and dh-cargo.
+
+Package: librust-humanize-duration-dev
+Description-md5: 32210f4772f23fba6f9635018fb68c29
+Description-en: Convert time Duration to human readable format - Rust source code
+ Source code for Debianized Rust crate "humanize-duration"
 
 Package: librust-humansize-dev
 Description-md5: 2416d9dc2e4891e8f6789b5f153fe141
@@ -661855,6 +662418,11 @@ Description-md5: aac27acc49e88e66177f4cf018ad6dac
 Description-en: Video frame processing and bitmap conversion for Wayland capture
  Source code for Debianized Rust crate "lamco-video"
 
+Package: librust-lamexfat-dev
+Description-md5: a8d79997655d6cf2eb1d799399257718
+Description-en: no_std read-only exFAT reader for UEFI bootloaders (removable media)
+ Source code for Debianized Rust crate "lamexfat"
+
 Package: librust-lamfat-dev
 Description-md5: 21b8048ef562252cba40f44b75fe3155
 Description-en: no_std read/write FAT12/16/32 filesystem library (republish of fatfs)
@@ -661899,6 +662467,11 @@ Package: librust-lamfold-udf-dev
 Description-md5: dab278df5b6f542945d3f77fd65c23d0
 Description-en: no_std read-only UDF frontend for the lamfold media-filesystem stack
  Source code for Debianized Rust crate "lamfold-udf"
+
+Package: librust-lamlvm-dev
+Description-md5: 903d8a5dc6ee7bdafef86d7b6ee27231
+Description-en: read-only no_std LVM2 reader for UEFI bootloaders; maintained fork of rust-lvm2
+ Source code for Debianized Rust crate "lamlvm"
 
 Package: librust-lamxfs-dev
 Description-md5: 7c7a57674a0cfe55972fee758ac1cecb
@@ -666482,6 +667055,11 @@ Description-en: Additional trait for Read and Write to read and write Plain Old 
  This package contains the source for the Rust podio crate, packaged by debcargo
  for use with cargo and dh-cargo.
 
+Package: librust-poison-guard-dev
+Description-md5: 90dfcd0d64fd6253cab0e0a892d9accb
+Description-en: Utilities for maintaining sane state in the presence of panics and failures - Rust source code
+ Source code for Debianized Rust crate "poison-guard"
+
 Package: librust-polling-dev
 Description-md5: 83984bc10f1c0e2b5af891c76131d150
 Description-en: Portable interface to epoll, kqueue, event ports, and IOCP - Rust source code
@@ -667421,6 +667999,11 @@ Description-md5: 03c9ec0fb8516e9c932a3c10897eac6c
 Description-en: Lightweight color management - Rust source code
  Source code for Debianized Rust crate "qcms"
 
+Package: librust-qmetaobject-impl-dev
+Description-md5: 259365d39faa00fa6f59c8c8a1361988
+Description-en: Custom derive for the qmetaobject crate - Rust source code
+ Source code for Debianized Rust crate "qmetaobject_impl"
+
 Package: librust-qmk-via-api-dev
 Description-md5: 3fb4f31890936d401f024567114bd669
 Description-en: VIA api implementation for QMK-based keyboards - Rust source code
@@ -667473,6 +668056,11 @@ Description-md5: 999485eac9ac09dc32f7549bceea4fe7
 Description-en: Collection of approximate quantile algorithms - Rust source code
  This package contains the source for the Rust quantiles crate, packaged by
  debcargo for use with cargo and dh-cargo.
+
+Package: librust-querystring-dev
+Description-md5: 1a599a1cf40c47434adb894847597be8
+Description-en: Simple querystring library for rust - Rust source code
+ Source code for Debianized Rust crate "querystring"
 
 Package: librust-quick-error-dev
 Description-md5: 53095e455e1c6239bed2aff2b58616ff
@@ -668163,6 +668751,11 @@ Description-md5: bee6e5442101bfc8bcbebfd46fc285fd
 Description-en: Fold an iterator without an initial value - Rust source code
  This package contains the source for the Rust reduce crate, packaged by
  debcargo for use with cargo and dh-cargo.
+
+Package: librust-reedline-dev
+Description-md5: 73ba33eca40e9610ff23f180e5e287b7
+Description-en: Readline-like crate for CLI text input - Rust source code
+ Source code for Debianized Rust crate "reedline"
 
 Package: librust-ref-cast-dev
 Description-md5: 4d9502b7ee2dafde1dd37ea093c16453
@@ -673564,6 +674157,11 @@ Description-en: Send and receive Serde encodable types over the network using To
  libraries.
  .
  Source code for Debianized Rust crate "tokio-serde"
+
+Package: librust-tokio-serial-dev
+Description-md5: ea6e1e8fe909cd39db9cd7fc7c1d952a
+Description-en: Serial port implementation for tokio - Rust source code
+ Source code for Debianized Rust crate "tokio-serial"
 
 Package: librust-tokio-socks-dev
 Description-md5: efd1d501d591b21baf6af3965cf1129e
@@ -732980,7 +733578,7 @@ Description-en: Go language support for Thrift
  .
  This package provides the Go language support for Thrift.
 
-Package: libthrift-0.23.0
+Package: libthrift-0.24.0
 Description-md5: 8be7a4bd1b401251d0b6bf259fce5c4d
 Description-en: Thrift C++ library
  Thrift is a software framework for the development of reliable and
@@ -744501,6 +745099,24 @@ Description-en: simple interprocess messaging system (turnstile suss backend int
  first log in and does not end until all their login sessions have finished.
  .
  See the dbus description for more information about D-Bus in general.
+
+Package: turtlefmt
+Description-md5: ba79d41abe30e4c5e0fdf6351efca0a8
+Description-en: auto formatter for RDF Turtle
+ turtlefmt is an auto formatter for RDF Turtle.
+ .
+ For now, it...
+  * validates that the file is valid
+  * maintains consistent indentation and line jumps
+  * normalises string and IRI escapes
+    to reduce their number as much as possible
+  * enforces the use of `"` instead of `'` in literals
+  * uses literals short notation for booleans, integers, decimals and doubles
+    when it keeps the lexical representation unchanged
+  * uses `a` for `rdf:type` where possible
+ .
+ Resource Description Framework (RDF) is a standard model
+ for data interchange on the Web.
 
 Package: tutka
 Description-md5: a030555aeddac862e6cfbffc6f0a360e
