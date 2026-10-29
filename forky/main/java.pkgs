@@ -11392,21 +11392,21 @@ SHA256: bb3e27a12a431197249e937036358718fb8e121ef0cb178a4ee86f7982ecea30
 
 Package: libjackson2-dataformat-xml-java
 Source: jackson-dataformat-xml
-Version: 2.18.11-1
-Installed-Size: 170
+Version: 2.22.4-1
+Installed-Size: 171
 Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: libjackson2-annotations-java (>= 2.18.11), libjackson2-core-java (>= 2.18.11), libjackson2-databind-java, libstax2-api-java
+Depends: libjackson2-annotations-java (>= 2.22), libjackson2-core-java (>= 2.22.4), libjackson2-databind-java, libstax2-api-java
 Description: fast and powerful JSON library for Java -- XML dataformat
 Homepage: https://github.com/FasterXML/jackson-dataformat-xml
 Description-md5: 26393674e098295fd68e9dcf2319f596
 Tag: devel::lang:java, devel::library, implemented-in::java, role::devel-lib
 java
 Priority: optional
-Filename: pool/main/j/jackson-dataformat-xml/libjackson2-dataformat-xml-java_2.18.11-1_all.deb
-Size: 134208
-MD5sum: 32678a05c9ad3852802ba80ff410e99a
-SHA256: dfd301cc797041b4b6b6108281955b08743c0ed267031b9ad8d436368fb4626f
+Filename: pool/main/j/jackson-dataformat-xml/libjackson2-dataformat-xml-java_2.22.4-1_all.deb
+Size: 136044
+MD5sum: ef961eed627deae311f0a0e1fb321bbc
+SHA256: 3e57d7e687d970ff75ff04aea60c466d0324d3d5d251c08ff35d158c787be472
 
 Package: libjackson2-dataformat-yaml
 Source: jackson-dataformat-yaml
@@ -11465,90 +11465,110 @@ Size: 99820
 MD5sum: c0401cd263a10d4e53d93597315baba0
 SHA256: 41596b01b1cd0c19b7d1f34bff8f16516d8be0ecd88bb9fc714a6e069cd6f45d
 
+Package: libjackson2-dataformat-yaml-java
+Source: jackson-dataformats-text
+Version: 2.22.4-1
+Installed-Size: 98
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Replaces: libjackson2-dataformat-yaml (<< 2.18.11~)
+Provides: libjackson2-dataformat-yaml (= 2.22.4-1)
+Depends: libjackson2-core-java (>= 2.22.4), libjackson2-databind-java, libyaml-snake-java (>= 2.5)
+Breaks: libjackson2-dataformat-yaml (<< 2.18.11~)
+Description: fast and powerful JSON library for Java -- YAML dataformat
+Homepage: https://github.com/FasterXML/jackson-dataformats-text
+Description-md5: c6edf6498e1aac08ebda410ae9cc2a35
+java
+Priority: optional
+Filename: pool/main/j/jackson-dataformats-text/libjackson2-dataformat-yaml-java_2.22.4-1_all.deb
+Size: 61936
+MD5sum: be07070507f564df88dd4609620cb4db
+SHA256: 3ed7119f79a9bacf3c4711c0fbf9bdcf32ded2beb1c3585fa026ae2eaa13d93b
+
 Package: libjackson2-datatype-joda-java
 Source: jackson-datatype-joda
-Version: 2.18.11-1
-Installed-Size: 119
+Version: 2.22.4-1
+Installed-Size: 120
 Maintainer: Debian Java maintainers <pkg-java-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: libjackson2-annotations-java (>= 2.18.11), libjackson2-core-java (>= 2.18.11), libjackson2-databind-java, libjoda-time-java (>= 2.14.4)
+Depends: libjackson2-annotations-java (>= 2.22), libjackson2-core-java (>= 2.22.4), libjackson2-databind-java, libjoda-time-java (>= 2.14.4)
 Description: fast and powerful JSON library for Java -- Joda datatypes
 Homepage: https://github.com/FasterXML/jackson-datatype-joda
 Description-md5: 962d262f5bec7c84954cc47c25f3215d
 java
 Priority: optional
-Filename: pool/main/j/jackson-datatype-joda/libjackson2-datatype-joda-java_2.18.11-1_all.deb
-Size: 84008
-MD5sum: 93a0b612f8782fb2ae780d9dea2935a4
-SHA256: a856e1b3ecd37321b483088186c6a570f082bdc49eb043fc8a73e8e718f408fa
+Filename: pool/main/j/jackson-datatype-joda/libjackson2-datatype-joda-java_2.22.4-1_all.deb
+Size: 84560
+MD5sum: b563e84207f3bdd53a1ecbfddf4246c1
+SHA256: 59a3e4e6f0d7713366c6614e8524e6ae1ff78ffa47e4c25247662b535aa811b5
 
 Package: libjackson2-jaxrs-providers-java
 Source: jackson-jaxrs-providers
-Version: 2.18.11-1
+Version: 2.22.4-1
 Installed-Size: 215
 Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: libjackson2-core-java (>= 2.18.11), libjackson2-databind-java, libjackson2-dataformat-cbor (>= 2.7.8), libjackson2-dataformat-smile (>= 2.7.8), libjackson2-dataformat-xml-java, libjackson2-dataformat-yaml (>= 2.8.11), libjackson2-module-jaxb-annotations-java (>= 2.8.10), libstax2-api-java, libwoodstox-java
+Depends: libjackson2-core-java (>= 2.22.4), libjackson2-databind-java, libjackson2-dataformat-cbor-java (>= 2.22.4), libjackson2-dataformat-smile-java (>= 2.22.4), libjackson2-dataformat-xml-java, libjackson2-dataformat-yaml-java (>= 2.22.4), libjackson2-module-jaxb-annotations-java (>= 2.22.4), libstax2-api-java, libwoodstox-java
 Description: Jackson JAX-RS providers
 Homepage: http://wiki.fasterxml.com/JacksonHome
 Description-md5: 998917ce301b00a9bee88fa38623571f
 java
 Priority: optional
-Filename: pool/main/j/jackson-jaxrs-providers/libjackson2-jaxrs-providers-java_2.18.11-1_all.deb
-Size: 84748
-MD5sum: 2a1317bb3d806d445d42d6d69fdb82ce
-SHA256: 907b1ef0aef28092c9fbf68b19e1037754fa9ad6a31712e21353336d94ab91f3
+Filename: pool/main/j/jackson-jaxrs-providers/libjackson2-jaxrs-providers-java_2.22.4-1_all.deb
+Size: 84700
+MD5sum: 62cb627103b3cd735ac932ea31ae7bc5
+SHA256: 4ac8ecb6d110ca3ce6b497293dcab8dc60f511c1b3b311bad82dc3bb98de3088
 
 Package: libjackson2-jr-java
 Source: jackson-jr
-Version: 2.18.11-1
-Installed-Size: 140
+Version: 2.22.4-1
+Installed-Size: 148
 Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: libjackson2-core-java (>= 2.18.11)
+Depends: libjackson2-core-java (>= 2.22.4)
 Description: JSON library for Java -- standalone data-binding module
 Homepage: https://github.com/FasterXML/jackson-jr
 Description-md5: a4b13bef6b1c6a63d092946515b777c2
 java
 Priority: optional
-Filename: pool/main/j/jackson-jr/libjackson2-jr-java_2.18.11-1_all.deb
-Size: 103132
-MD5sum: 06cdc28c790fdfb59645c3a0b97f240a
-SHA256: 313c9039e8f7d3300b5f5fe423210dbd1dd239233502bac37b3578ebf57f7861
+Filename: pool/main/j/jackson-jr/libjackson2-jr-java_2.22.4-1_all.deb
+Size: 107912
+MD5sum: ce70084d8147603d5d36f7f3f62389a4
+SHA256: 2e8796cebb963a09ac035d67095d15cb7bc98711bf5e74a49bad11661bdb4dfc
 
 Package: libjackson2-module-jaxb-annotations-java
 Source: jackson-modules-base
-Version: 2.18.11-2
+Version: 2.22.4-1
 Installed-Size: 73
 Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: libjackson2-annotations-java (>= 2.18.11), libjackson2-core-java (>= 2.18.11), libjackson2-databind-java, libjakarta-activation-java, libjaxb-api-java (>= 2.3.1)
+Depends: libjackson2-annotations-java (>= 2.22), libjackson2-core-java (>= 2.22.4), libjackson2-databind-java, libjakarta-activation-java, libjaxb-api-java (>= 2.3.1)
 Description: Fast and powerful JSON library for Java -- JAXB annotations
 Homepage: https://github.com/FasterXML/jackson-modules-base
 Description-md5: 94fe9da6d2c3422d40cd037c8a6186d5
 java
 Priority: optional
-Filename: pool/main/j/jackson-modules-base/libjackson2-module-jaxb-annotations-java_2.18.11-2_all.deb
-Size: 36232
-MD5sum: 45902d0fcbad74ea5c0777d769e2c155
-SHA256: bdc6e345736a74ef586316056b57a0873b52975526feaff07ea8635132c0866c
+Filename: pool/main/j/jackson-modules-base/libjackson2-module-jaxb-annotations-java_2.22.4-1_all.deb
+Size: 36520
+MD5sum: d67ba90d4f89c00607ad71b61e2c38e0
+SHA256: 931254cedac94dd3339bbf0c2b6607982f1ac378551349f2fb41537d9fe52d44
 
 Package: libjackson2-modules-java8-java
 Source: jackson-modules-java8
-Version: 2.18.11-1
-Installed-Size: 237
+Version: 2.22.4-1
+Installed-Size: 240
 Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: libjackson2-annotations-java (>= 2.18.11), libjackson2-core-java (>= 2.18.11), libjackson2-databind-java
+Depends: libjackson2-annotations-java (>= 2.22), libjackson2-core-java (>= 2.22.4), libjackson2-databind-java
 Description: Jackson support modules for Java 8
 Homepage: https://github.com/FasterXML/jackson-modules-java8
 Description-md5: 02219b6bd172b0f2574cd5c3d1c6ea8f
 java
 Priority: optional
-Filename: pool/main/j/jackson-modules-java8/libjackson2-modules-java8-java_2.18.11-1_all.deb
-Size: 164004
-MD5sum: 5ef2e1bed181c89b27ad44fb521b8295
-SHA256: 855258a06e32d32af87713b91d48b6c6a92a0191d1934d207305551431fc1ff1
+Filename: pool/main/j/jackson-modules-java8/libjackson2-modules-java8-java_2.22.4-1_all.deb
+Size: 168148
+MD5sum: ad00ddc5ab6e600c4f6b0ab89b58370b
+SHA256: ad7ad493f11506142ee13c9db8b1f82d13c6c4c4547af7ff9566d030946a5402
 
 Package: libjacksum-sugar-java
 Source: jacksum-sugar
@@ -17577,7 +17597,7 @@ SHA256: 214fceef96ca981d00137dabbe610f9f3c467f4820e86bb03cbed4d228725ee5
 
 Package: libhmsbeagle-java
 Source: libhmsbeagle
-Version: 4.0.1+dfsg-5
+Version: 4.0.1+dfsg-6
 Installed-Size: 38
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
 Architecture: amd64
@@ -17588,10 +17608,10 @@ Homepage: https://github.com/beagle-dev/beagle-lib
 Description-md5: 19e3721dbbb7bb8a6b2e6402430b80ec
 java
 Priority: optional
-Filename: pool/main/libh/libhmsbeagle/libhmsbeagle-java_4.0.1+dfsg-5_amd64.deb
-Size: 28840
-MD5sum: 5139cdb48001fc5eb0906c159bde2557
-SHA256: a54fda569d3753dd3c5cec118ef5ee0ecaa7f90465b3dbfb0d16f491bcace4d4
+Filename: pool/main/libh/libhmsbeagle/libhmsbeagle-java_4.0.1+dfsg-6_amd64.deb
+Size: 28472
+MD5sum: a2dfb0b30b2c91f902302194f8cb413c
+SHA256: 6e079b7f6d4a609c141adb89de95eb06d65efb940eda139f2887c78723f0ee0f
 
 Package: libhtml5parser-java
 Version: 1.4+r20260908-1
@@ -28263,6 +28283,25 @@ Filename: pool/main/s/simple-xml/libsimple-xml-java_2.7.1-4_all.deb
 Size: 376304
 MD5sum: 59d622fe2ea1126ca3b81897cd2c0921
 SHA256: dfec9c517418df27e39f4b56fa91b6ddc48b81b094e69b4a7e62458ea4afd670
+
+Package: libsisu-build-api-java
+Source: sisu-build-api
+Version: 0.0.7-6
+Installed-Size: 32
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Replaces: libplexus-build-api-java (<< 1.0~)
+Depends: libplexus-utils2-java (>= 3.4.2)
+Breaks: libplexus-build-api-java (<< 1.0~)
+Description: Incremental build API for Plexus components
+Homepage: https://github.com/sonatype/sisu-build-api
+Description-md5: e7ca906de427f3435670667ae9517b6d
+java
+Priority: optional
+Filename: pool/main/s/sisu-build-api/libsisu-build-api-java_0.0.7-6_all.deb
+Size: 9892
+MD5sum: dfda354c641c5a4c2fb900914f6d550a
+SHA256: 90cce8e67e0bd605f6dfe116a741fdb1d1eb58e1d8fbbb21a95346817cf3628b
 
 Package: libsisu-inject-java
 Source: sisu-inject
