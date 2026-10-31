@@ -1680,21 +1680,21 @@ SHA256: 2e6f3f09f73d4ebbbb78aa0f0b5a635a9d5a7c2f6b641ccd671c3a21ff2497f0
 
 Package: libbcel-java
 Source: bcel
-Version: 6.10.0-1
-Installed-Size: 763
+Version: 6.13.0-1
+Installed-Size: 781
 Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: libcommons-lang3-java, libcommons-parent-java (>= 56)
+Depends: libcommons-io-java (>= 2.22.0), libcommons-lang3-java, libcommons-parent-java (>= 56)
 Description: Analyze, create, and manipulate (binary) Java class files
 Homepage: http://commons.apache.org/bcel/
 Description-md5: 130e464457303867bf0628be20236a5f
 Tag: devel::lang:java, devel::library, role::devel-lib, role::shared-lib
 java
 Priority: optional
-Filename: pool/main/b/bcel/libbcel-java_6.10.0-1_all.deb
-Size: 673828
-MD5sum: 9c69c6fa6531cdf0d63c36f4c01d584d
-SHA256: e6afc48837dece63628226ef6ac151720e4680a75cde344de6c8be2c68fe9f90
+Filename: pool/main/b/bcel/libbcel-java_6.13.0-1_all.deb
+Size: 690068
+MD5sum: 69ca1ef142962a119dc376f3f0246b4b
+SHA256: 7bef9449f67ef7fe24045915b20b3db68f51cd345c13793e0a1c41c6016f0e3c
 
 Package: libbeansbinding-java
 Source: beansbinding
@@ -2755,20 +2755,20 @@ SHA256: dad62fde6e862f8549d9a66edfdedc5149685b9608c5496cb6a3fb33ff3b2e70
 
 Package: libcheshire-clojure
 Source: cheshire-clojure
-Version: 5.11.0-4
+Version: 5.11.0-5
 Installed-Size: 75
 Maintainer: Debian Clojure Maintainers <team+clojure@tracker.debian.org>
 Architecture: all
-Depends: libclojure-java, libjackson2-core-java, libjackson2-dataformat-cbor, libjackson2-dataformat-smile, libtigris-clojure
+Depends: libclojure-java, libjackson2-core-java, libjackson2-dataformat-cbor-java, libjackson2-dataformat-smile-java, libtigris-clojure
 Description: fast JSON encoding for Clojure
 Homepage: https://github.com/dakrone/cheshire
 Description-md5: 46805d80144f12b6cea30f661eb133d1
 java
 Priority: optional
-Filename: pool/main/c/cheshire-clojure/libcheshire-clojure_5.11.0-4_all.deb
-Size: 35160
-MD5sum: ea78a5f1bdb832d57f9f964c3456cc53
-SHA256: bbec8ed05dfef3e8076ae1500e77ee939c80af43976c9205694502a945f8362a
+Filename: pool/main/c/cheshire-clojure/libcheshire-clojure_5.11.0-5_all.deb
+Size: 35128
+MD5sum: 8e057c6d40e73a6c7cfdae859c4201cb
+SHA256: d9402669d46f6e5a574e4c271862f153439b97ab8c7dacc68f3d139363206ed6
 
 Package: libciftools-java
 Source: ciftools-java
@@ -4703,6 +4703,23 @@ Filename: pool/main/e/ecj/libecj-java_3.16.0-3_all.deb
 Size: 1803712
 MD5sum: 0e52556a999d77f54b63591b0d9c5a46
 SHA256: df5b8c8896b5e47bb18d572c5a0ff1b5da9f6b5b06c4a01ab43085e1d4029f6e
+
+Package: libeclipse-cdt-java
+Source: eclipse-cdt
+Version: 9.9.0-6
+Installed-Size: 5711
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: libosgi-compendium-java
+Description: C/C++ Development Tools for Eclipse (Java libraries)
+Homepage: http://www.eclipse.org/cdt/
+Description-md5: 3007904bde228a8660a75aafb0a9b3fa
+java
+Priority: optional
+Filename: pool/main/e/eclipse-cdt/libeclipse-cdt-java_9.9.0-6_all.deb
+Size: 5235944
+MD5sum: a1c327eccbf484f1ce273b485d80e46a
+SHA256: 83d165dcf53061e13d008a497f2fc516de77e64787cc34ae0c888d6a66c5dbcc
 
 Package: libeclipse-collections-java
 Source: eclipse-collections
@@ -6975,6 +6992,39 @@ Size: 48536
 MD5sum: 5544709fc6a8ad2221f92f36ceb8f2e2
 SHA256: e5fd60fcfba1b3963c580d0b31a211b284c8e6e877fd29172260201c568a80f7
 
+Package: libeclipse-remote-core-java
+Source: eclipse-remote (2.1.0-2)
+Version: 2.1.0+eclipse2.1.0-2
+Installed-Size: 164
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Description: Eclipse Remote Services API
+Homepage: https://git.eclipse.org/c/ptp/org.eclipse.remote.git/
+Description-md5: 685109e789a63e6be07ce82ccab651ea
+java
+Priority: optional
+Filename: pool/main/e/eclipse-remote/libeclipse-remote-core-java_2.1.0+eclipse2.1.0-2_all.deb
+Size: 122544
+MD5sum: 8ec089a1e434242f5cbcd9881a530fb8
+SHA256: b86bb862a8adbd3756c20e2a3c0818995e969d794f620727e41cd90c2dcd72e7
+
+Package: libeclipse-remote-ui-java
+Source: eclipse-remote (2.1.0-2)
+Version: 2.0.0+eclipse2.1.0-2
+Installed-Size: 174
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: libeclipse-remote-core-java
+Description: Eclipse Remote Services UI API
+Homepage: https://git.eclipse.org/c/ptp/org.eclipse.remote.git/
+Description-md5: 6b5db8ce3459502d8223caff87ac54e7
+java
+Priority: optional
+Filename: pool/main/e/eclipse-remote/libeclipse-remote-ui-java_2.0.0+eclipse2.1.0-2_all.deb
+Size: 127448
+MD5sum: 4faa74ec2aaaed4795bf9c8b65a19683
+SHA256: 09b20117438dd767af694d1fe67565fca168061e958716ab51f4fe5a19e893bd
+
 Package: libeclipse-swtchart-java
 Source: eclipse-swtchart
 Version: 0.14.0-1
@@ -8600,6 +8650,23 @@ Size: 3535272
 MD5sum: 64791adf03dc1cfcbb2cdaf9c5b5060a
 SHA256: 7f41263b8f3d24d1ffd28a35954913fcc9e9b95c483c284ed0be56d41517b81c
 
+Package: libflexmark-java
+Source: flexmark-java
+Version: 0.64.8+ds-1
+Installed-Size: 1713
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: libautolink-java (>= 0.10.0), libjetbrains-annotations-java
+Description: CommonMark (Markdown) parser and HTML renderer for Java
+Homepage: https://github.com/vsch/flexmark-java
+Description-md5: 3d4ccf8d635191c529da5253d835b9bf
+java
+Priority: optional
+Filename: pool/main/f/flexmark-java/libflexmark-java_0.64.8+ds-1_all.deb
+Size: 1271716
+MD5sum: c3820147544ced10ed8d8dddf4462667
+SHA256: f1d9bbe1c3bdd994bb28fbc3d0770c9af53ff23f0590794bc0bfbd2ad666e063
+
 Package: libflute-java
 Source: flute
 Version: 1:1.1.6-5
@@ -10073,8 +10140,8 @@ MD5sum: c777880b4b0878bb849864cdf5fe4182
 SHA256: aa1aa01bf96f7e0f945e222e0f9d293512a9705f89587072935a8db03dbad535
 
 Package: groovy
-Version: 2.4.21-12
-Installed-Size: 28578
+Version: 2.4.21-13
+Installed-Size: 28770
 Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
 Architecture: all
 Depends: antlr, default-jre-headless (>= 2:1.7) | java7-runtime-headless, ivy, junit4, libasm-java (>= 6.0~alpha-2~), libbsf-java, libcommons-cli-java, libcommons-logging-java, libjansi-java, libjline2-java (>= 2.14.6-6~), libjsp-api-java, libqdox-java, libservlet-api-java, libxstream-java
@@ -10088,10 +10155,10 @@ Tag: devel::TODO, devel::compiler, devel::lang:java, devel::library,
  role::shared-lib, works-with::software:source
 java
 Priority: optional
-Filename: pool/main/g/groovy/groovy_2.4.21-12_all.deb
-Size: 12769388
-MD5sum: e9895a216e8c3914ced526d0b72cfe31
-SHA256: 9344c4de245ae5dc2934027fc5a4ef90ab1ab75c46de76763e22642ab33e8acc
+Filename: pool/main/g/groovy/groovy_2.4.21-13_all.deb
+Size: 12699444
+MD5sum: 2628ae62b327b47ddbb485dc28143aa6
+SHA256: 774102cf1f87d4b317838e1129175b682abb3cb93deae541c42296d267e3023f
 
 Package: libgroovycsv-java
 Source: groovycsv
@@ -13259,7 +13326,7 @@ SHA256: 1ba0d6823574be6d3b61f70f7a1e2a1084d71f3d23d56e961437781f34b7aa6e
 
 Package: libjbibtex-java
 Source: jbibtex
-Version: 1.0.20-2
+Version: 1.0.20-3
 Installed-Size: 99
 Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
 Architecture: all
@@ -13268,10 +13335,10 @@ Homepage: https://github.com/jbibtex/jbibtex
 Description-md5: 99930e157fc8127d5667b91832d7d706
 java
 Priority: optional
-Filename: pool/main/j/jbibtex/libjbibtex-java_1.0.20-2_all.deb
-Size: 74596
-MD5sum: 5ad9a6298a2b36dfb5f7fa357cc609ac
-SHA256: c40ac715d34249077c1f27efaf3ee9c654d9a16ad3ac8b56aa12c424e2617935
+Filename: pool/main/j/jbibtex/libjbibtex-java_1.0.20-3_all.deb
+Size: 74748
+MD5sum: 51a104a860de862bd30a2efe2f3fe9fe
+SHA256: 221356bd488bc241d54ff9d97cad3d780a7517495ae3f79690df4cea214b2a80
 
 Package: libjboss-bridger-java
 Source: jboss-bridger
@@ -23042,20 +23109,21 @@ SHA256: c2ef9f93ddd89ab63351438f02a6176db27795aed1fc13f3842af4b2f547c769
 
 Package: libmaven-plugin-testing-java
 Source: maven-plugin-testing
-Version: 3.3.0-2
-Installed-Size: 158
+Version: 3.5.1-1
+Installed-Size: 113
 Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
 Architecture: all
-Depends: junit4 (>= 4.13.2), libcommons-io-java (>= 2.11.0), libeasymock-java, libmaven-invoker-java (>= 3.0.0), libmaven3-core-java (>= 3.8.6), libplexus-archiver-java (>= 4.2.7)
+Depends: libmaven-parent-java (>= 43), libmockito-java, libplexus-testing-java (>= 2.1.0), libplexus-utils2-java (>= 3.4.2)
+Recommends: junit4 (>= 4.13.2), junit5, libplexus-archiver-java (>= 4.6.1)
 Description: Maven Plugin Testing
 Homepage: http://maven.apache.org/plugin-testing/
 Description-md5: b84a3d1b76b0423f13f103778be0a77f
 java
 Priority: optional
-Filename: pool/main/m/maven-plugin-testing/libmaven-plugin-testing-java_3.3.0-2_all.deb
-Size: 78416
-MD5sum: ecc60cb8d448aaa3aafe09218bedd342
-SHA256: 8ad73cbc3074cd9c745735a4d258f6fd46893c9a16455a76a4dcee041baa639c
+Filename: pool/main/m/maven-plugin-testing/libmaven-plugin-testing-java_3.5.1-1_all.deb
+Size: 65192
+MD5sum: 4ea755072bdd01a5681cb12e5185295a
+SHA256: 6a94b86a2cd4314bce81c815ed3b1ac0ba1e691e995835ad0e5e006dddedb313
 
 Package: libmaven-plugin-tools-java
 Source: maven-plugin-tools
@@ -24532,26 +24600,26 @@ SHA256: 68fda546a15b9c8edad7f4fb4728c83c512f77012354fc5aa9f37134b34755c4
 
 Package: libopencv-java
 Source: opencv (4.10.0+dfsg-9)
-Version: 4.10.0+dfsg-9+b1
+Version: 4.10.0+dfsg-9+b2
 Installed-Size: 1131
 Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libopencv4.5-java
-Depends: libopencv410-jni (>= 4.10.0+dfsg-9+b1)
+Depends: libopencv410-jni (>= 4.10.0+dfsg-9+b2)
 Breaks: libopencv4.5-java
 Description: Java bindings for the computer vision library
 Homepage: https://opencv.org
 Description-md5: 3ec3c157401d8e95562d4ddb20dd6782
 java
 Priority: optional
-Filename: pool/main/o/opencv/libopencv-java_4.10.0+dfsg-9+b1_amd64.deb
-Size: 1060568
-MD5sum: e74ef2cf99ce8fb6d3ee7ac7b49c17ea
-SHA256: 2650f79b57ec73b39fc985c920fdbfb19a1a10884aea0f720e6e6c9f9342fe6d
+Filename: pool/main/o/opencv/libopencv-java_4.10.0+dfsg-9+b2_amd64.deb
+Size: 1060580
+MD5sum: 2d3be0e9eb5975fee346e8abcb8264ca
+SHA256: 8a707fb37372e148f7f90723e5e4be650482da10bdba4fda050d27da9c73e12d
 
 Package: libopencv410-jni
 Source: opencv (4.10.0+dfsg-9)
-Version: 4.10.0+dfsg-9+b1
+Version: 4.10.0+dfsg-9+b2
 Installed-Size: 2556
 Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
@@ -24561,10 +24629,10 @@ Homepage: https://opencv.org
 Description-md5: 3e8bfd86bff143c280bb78e8c95073c6
 java
 Priority: optional
-Filename: pool/main/o/opencv/libopencv410-jni_4.10.0+dfsg-9+b1_amd64.deb
-Size: 477828
-MD5sum: 1bffcf95ef9a6ba82691956b01f6d430
-SHA256: ddd614650b82761adc9fcd30168f4e2383a859422ea0657f6aab1b9dc3f0023d
+Filename: pool/main/o/opencv/libopencv410-jni_4.10.0+dfsg-9+b2_amd64.deb
+Size: 477192
+MD5sum: 2ccf6d0c415e73ee459d31cd8f86cd9f
+SHA256: 99bb0b62f2f1f966580ebd978d16855d4c126cc8edc31256ba3b812ae64ff850
 
 Package: libopenhft-affinity-java
 Source: openhft-affinity
