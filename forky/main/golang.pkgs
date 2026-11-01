@@ -1431,21 +1431,21 @@ SHA256: c720d9b79c4740234fa1b9a915509d16fc4b9d2982b5c99231177b626de9adc6
 
 Package: golang-bazil-fuse-dev
 Source: golang-bazil-fuse
-Version: 0.0~git20160811.0.371fbbd-4
-Installed-Size: 328
+Version: 0.0~git20230120.62a210f-1
+Installed-Size: 421
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
-Depends: golang-golang-x-net-dev, golang-golang-x-sys-dev
+Depends: golang-github-dvyukov-go-fuzz-dev, golang-github-tv42-httpunix-dev, golang-golang-x-sys-dev
 Description: FUSE library for Go
 Multi-Arch: foreign
 Homepage: https://bazil.org/fuse/
 Description-md5: 68cf51c709b8a5c72f84979ed02bdec5
 golang
 Priority: optional
-Filename: pool/main/g/golang-bazil-fuse/golang-bazil-fuse-dev_0.0~git20160811.0.371fbbd-4_all.deb
-Size: 59792
-MD5sum: fa3f6bbcfed0e91b38aed0bcaeb5c7e3
-SHA256: f87452f325f6dac4a26b1597e3e32c2a582feb00188a7ca5f4048e2d2b66c570
+Filename: pool/main/g/golang-bazil-fuse/golang-bazil-fuse-dev_0.0~git20230120.62a210f-1_all.deb
+Size: 75948
+MD5sum: e5e0c6267f581643246ba05b1097fd9a
+SHA256: 692392aa19cf6b21883736642ca5de35095124ae20cd549e69a5dcf9141ac8ac
 
 Package: golang-bitbucket-creachadair-shell-dev
 Source: golang-bitbucket-creachadair-shell
@@ -8326,7 +8326,7 @@ SHA256: 0d1a0df5b2b039d0f3dbceb509b5d0dabea56f914cb435c875f1e41674582d95
 
 Package: golang-github-cloudflare-circl-dev
 Source: golang-github-cloudflare-circl
-Version: 1.6.5-2
+Version: 1.6.5-3
 Installed-Size: 50818
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
@@ -8337,10 +8337,10 @@ Homepage: https://github.com/cloudflare/circl
 Description-md5: 6d34360357f475f04fc81a2f1a97823b
 golang
 Priority: optional
-Filename: pool/main/g/golang-github-cloudflare-circl/golang-github-cloudflare-circl-dev_1.6.5-2_all.deb
-Size: 47670292
-MD5sum: 9c9a051ff8e8da4d2df170a23693339d
-SHA256: cbfa4e708a563e7522fc40493d4489001a6973066b51f52a1a6e3d41cd0a9507
+Filename: pool/main/g/golang-github-cloudflare-circl/golang-github-cloudflare-circl-dev_1.6.5-3_all.deb
+Size: 47672064
+MD5sum: f8c5399dbfeb9d0a54975b5c9b25f545
+SHA256: e92f81a9f6dc79eff0f39d175361665b4e923d240e379bb1456eecda302be560
 
 Package: golang-github-cloudflare-go-metrics-dev
 Source: golang-github-cloudflare-go-metrics
@@ -10419,6 +10419,23 @@ Size: 36740
 MD5sum: a169881f70d8bdf809294471a2a93731
 SHA256: c1e238a418d7e2f4eef66d5386a77feb1e6f976b39155cccca0ed13a3e3be3b9
 
+Package: golang-github-deitch-magic-dev
+Source: golang-github-deitch-magic
+Version: 1.0.0-1
+Installed-Size: 35
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: all
+Description: native Go implementation of the magic file format (library)
+Multi-Arch: foreign
+Homepage: https://github.com/deitch/magic
+Description-md5: 17d1144f7bff332d30a65000a6d1ed92
+golang
+Priority: optional
+Filename: pool/main/g/golang-github-deitch-magic/golang-github-deitch-magic-dev_1.0.0-1_all.deb
+Size: 5544
+MD5sum: 6d525907044d7e3d397e1af9e5b9a0a3
+SHA256: 4c7ad5ca5f0d06352e519c1cf3773be2cccc5a131f529fabc8a36b9f57357ae1
+
 Package: golang-github-delthas-go-libnp-dev
 Source: golang-github-delthas-go-libnp
 Version: 0.2.0-1
@@ -11675,6 +11692,44 @@ Filename: pool/main/g/golang-github-dvsekhvalnov-jose2go/golang-github-dvsekhval
 Size: 59564
 MD5sum: 50c3662cc2b531dea92c18d35288b851
 SHA256: f8fb6db0b9ca8cd27f1e2d06c6523327448b375e3ba8f524cfffcac504d433fc
+
+Package: go-fuzz
+Source: golang-github-dvyukov-go-fuzz
+Version: 0.0~git20240924.e577bee+ds2-2
+Installed-Size: 19330
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34)
+Description: Randomized testing for Go (executable)
+Homepage: https://github.com/dvyukov/go-fuzz
+Built-Using: golang-1.27 (= 1.27.2-1), golang-github-elazarl-go-bindata-assetfs (= 1.0.0-1.1), golang-github-stephens2424-writerset (= 1.0.2-1), golang-golang-x-mod (= 0.42.0-1), golang-golang-x-sync (= 0.24.0-1), golang-golang-x-tools (= 1:0.52.0+ds-1)
+Commands: go-fuzz, go-fuzz-build
+Description-md5: ec38be3ea7bf6e7e9b67ae1b6fe1a732
+Static-Built-Using: golang-1.27 (= 1.27.2-1), golang-github-elazarl-go-bindata-assetfs (= 1.0.0-1.1), golang-github-stephens2424-writerset (= 1.0.2-1), golang-golang-x-mod (= 0.42.0-1), golang-golang-x-sync (= 0.24.0-1), golang-golang-x-tools (= 1:0.52.0+ds-1)
+golang
+Priority: optional
+Filename: pool/main/g/golang-github-dvyukov-go-fuzz/go-fuzz_0.0~git20240924.e577bee+ds2-2_amd64.deb
+Size: 6190520
+MD5sum: 61274f9e38a285174add7e8055371839
+SHA256: c7762afebbd4236362e5e28b0a8e4eb83418d94e737c70243c9c2f4acecb45a8
+
+Package: golang-github-dvyukov-go-fuzz-dev
+Source: golang-github-dvyukov-go-fuzz
+Version: 0.0~git20240924.e577bee+ds2-2
+Installed-Size: 242
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: all
+Depends: golang-github-elazarl-go-bindata-assetfs-dev, golang-github-stephens2424-writerset-dev, golang-golang-x-tools-dev, libjs-bootstrap, libjs-jquery
+Description: Randomized testing for Go (library)
+Multi-Arch: foreign
+Homepage: https://github.com/dvyukov/go-fuzz
+Description-md5: 1e9dd6e9fce681a14f48fa8be84b1b3d
+golang
+Priority: optional
+Filename: pool/main/g/golang-github-dvyukov-go-fuzz/golang-github-dvyukov-go-fuzz-dev_0.0~git20240924.e577bee+ds2-2_all.deb
+Size: 55200
+MD5sum: 891db919843673247da35c62262fd162
+SHA256: 4e26dccce64bf3efdb4fbe20f0e5e202cda42f0659985d4aef01c5e2c9b21d0c
 
 Package: golang-github-dylanmei-iso8601-dev
 Source: golang-github-dylanmei-iso8601
@@ -16720,8 +16775,8 @@ SHA256: 88379d193d57facd97f9d90fdafa865a5cba40b79cb8ec02c8490634c3d2a0e2
 
 Package: golang-github-google-goterm-dev
 Source: golang-github-google-goterm
-Version: 0.0~git20200907.555d40f-3
-Installed-Size: 80
+Version: 0.0~git20200907.555d40f-4
+Installed-Size: 81
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
 Description: Go Terminal library with PTY support and colors
@@ -16730,10 +16785,10 @@ Homepage: https://github.com/google/goterm
 Description-md5: 498b24a6d10c849b69b2525404470b8c
 golang
 Priority: optional
-Filename: pool/main/g/golang-github-google-goterm/golang-github-google-goterm-dev_0.0~git20200907.555d40f-3_all.deb
-Size: 16948
-MD5sum: d6fe228396de415d9a53aaa0174aa331
-SHA256: 6deab7521c48dc20f6ab1b1f746af86a61d2f596be2168678341f2639bdcc5f1
+Filename: pool/main/g/golang-github-google-goterm/golang-github-google-goterm-dev_0.0~git20200907.555d40f-4_all.deb
+Size: 17432
+MD5sum: 61a4cf61d454977de63a2ae9e33c844b
+SHA256: 9612a933d88a90596ff8013e1eadf7d5c1eb440e8c9e3187e99c3d6e61c36c86
 
 Package: golang-github-google-gousb-dev
 Source: golang-github-google-gousb
@@ -18068,6 +18123,24 @@ Filename: pool/main/g/golang-github-harenber-ptc-go/golang-github-harenber-ptc-g
 Size: 12860
 MD5sum: ffc74bfd61fb674e50f7e12ea5a3efc4
 SHA256: 0b6b869e742b912d5b99dee805fb39b6e064b80ba7e979218e703e92eb6b9386
+
+Package: golang-github-hashicorp-aws-sdk-go-base-v2-dev
+Source: golang-github-hashicorp-aws-sdk-go-base
+Version: 2.0.0~beta74-1
+Installed-Size: 579
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: all
+Depends: golang-github-aws-aws-sdk-go-v2-dev, golang-github-aws-smithy-go-dev, golang-github-google-go-cmp-dev, golang-github-hashicorp-go-hclog-dev (>= 1.6.3), golang-github-hashicorp-go-multierror-dev, golang-github-hashicorp-terraform-plugin-log-dev, golang-github-mitchellh-go-homedir-dev, golang-golang-x-net-dev, golang-golang-x-text-dev, golang-opentelemetry-contrib-dev, golang-opentelemetry-otel-dev
+Description: shared AWS client configuration for HashiCorp tools
+Multi-Arch: foreign
+Homepage: https://github.com/hashicorp/aws-sdk-go-base
+Description-md5: b18ef01ff363724be32c88c4fac500f1
+golang
+Priority: optional
+Filename: pool/main/g/golang-github-hashicorp-aws-sdk-go-base/golang-github-hashicorp-aws-sdk-go-base-v2-dev_2.0.0~beta74-1_all.deb
+Size: 74176
+MD5sum: 8c0462dd5a0428d5e2f1c89879452f91
+SHA256: e23e2fbb8340991a3bbe11253eaa402c4d868ec232a1d39cf1fce6c7b870adcc
 
 Package: golang-github-hashicorp-cli-dev
 Source: golang-github-hashicorp-cli
@@ -22203,8 +22276,8 @@ SHA256: c7cb7db042448bdea2ac6dfbbcc236cfd8d3811193c22f0ba9f4bbeb2eca04b6
 
 Package: golang-github-klauspost-compress-dev
 Source: golang-github-klauspost-compress
-Version: 1.20.0+ds1-1
-Installed-Size: 46972
+Version: 1.20.3+ds1-1
+Installed-Size: 47435
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
 Depends: golang-github-cespare-xxhash-dev (>= 2.1.0~)
@@ -22214,10 +22287,10 @@ Homepage: https://github.com/klauspost/compress
 Description-md5: 60c88612292cf08354b92b7b751f1fcf
 golang
 Priority: optional
-Filename: pool/main/g/golang-github-klauspost-compress/golang-github-klauspost-compress-dev_1.20.0+ds1-1_all.deb
-Size: 33432924
-MD5sum: 76cb2626496f365a86fa68394e249d2d
-SHA256: 4ed82ce551fbe21065424c1305c8f6d5b69e64b922deaf7b09f51042f090df1c
+Filename: pool/main/g/golang-github-klauspost-compress/golang-github-klauspost-compress-dev_1.20.3+ds1-1_all.deb
+Size: 33699432
+MD5sum: 469843c46f4f1551a7791fd587402d1f
+SHA256: da49311c76d0a2245aba436304243bdf65d7f386918d27fd8bb45ea7e9369b9a
 
 Package: golang-github-klauspost-cpuid-dev
 Source: golang-github-klauspost-cpuid
@@ -22343,6 +22416,23 @@ Filename: pool/main/g/golang-github-knqyf263-go-apk-version/golang-github-knqyf2
 Size: 8696
 MD5sum: 8ac866821591005773f3ef5c3d60b0ff
 SHA256: 065474a458712ee7747852d2f53f2e28306e550b4a22cb74f0388b58ad5fdf22
+
+Package: golang-github-knqyf263-go-deb-version-dev
+Source: golang-github-knqyf263-go-deb-version
+Version: 0.0~git20241115.6f4aee6-1
+Installed-Size: 34
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: all
+Description: golang library for parsing deb package versions
+Multi-Arch: foreign
+Homepage: https://github.com/knqyf263/go-deb-version
+Description-md5: a285b3737fb916466d77b9655fecfaf7
+golang
+Priority: optional
+Filename: pool/main/g/golang-github-knqyf263-go-deb-version/golang-github-knqyf263-go-deb-version-dev_0.0~git20241115.6f4aee6-1_all.deb
+Size: 6896
+MD5sum: 8504b23af98772d937249c972f2d47d3
+SHA256: a1bab381d7e32ce401ea34b60b56003ef18c8eb95165437a53c08b9d8cb0875f
 
 Package: golang-github-knqyf263-go-rpm-version-dev
 Source: golang-github-knqyf263-go-rpm-version
@@ -30178,7 +30268,7 @@ SHA256: 5d5bd4cf0f93f8b3310eba99ce478ab11be3036ebc51ea2d4584cfe1308eee58
 
 Package: golang-github-protonmail-gopenpgp-dev
 Source: golang-github-protonmail-gopenpgp
-Version: 2.11.0-2
+Version: 2.11.1-1
 Installed-Size: 551
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
@@ -30190,10 +30280,10 @@ Homepage: https://github.com/ProtonMail/gopenpgp
 Description-md5: dff44561dd9dfdbb63111f7425db0fdd
 golang
 Priority: optional
-Filename: pool/main/g/golang-github-protonmail-gopenpgp/golang-github-protonmail-gopenpgp-dev_2.11.0-2_all.deb
-Size: 148880
-MD5sum: de1d9253562d33df0bcda5e64b952ee4
-SHA256: ae6ff598c69e9f9d6d753cb1e728ca2b039290adbd1257396f5bc12c7926be9d
+Filename: pool/main/g/golang-github-protonmail-gopenpgp/golang-github-protonmail-gopenpgp-dev_2.11.1-1_all.deb
+Size: 148952
+MD5sum: ce09d8855a2d3c73e6c0d13412cf49b7
+SHA256: 3bc13dbc4c4ce559aa8d772323367e6f9c0bd0df5ea3ca3ed1692aca65b26538
 
 Package: golang-github-protonmail-gopenpgp-v3-dev
 Source: golang-github-protonmail-gopenpgp-v3
@@ -30458,24 +30548,6 @@ Filename: pool/main/g/golang-github-rakyll-statik/golang-statik_0.1.1-5+b20_amd6
 Size: 749268
 MD5sum: b87d884d2e321faf1020263757ff9f6a
 SHA256: 228213b078a3112bc5adb9be3050be89619a8e571039c957973392bcd934a446
-
-Package: golang-github-rclone-ftp-dev
-Source: golang-github-rclone-ftp
-Version: 1.0.0-220913-160-1
-Installed-Size: 100
-Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
-Architecture: all
-Depends: golang-github-hashicorp-go-multierror-dev, golang-github-stretchr-testify-dev
-Description: FTP client package for Go (library)
-Multi-Arch: foreign
-Homepage: https://github.com/rclone/ftp
-Description-md5: d9c6334c170b1fa963be08a73c2209d6
-golang
-Priority: optional
-Filename: pool/main/g/golang-github-rclone-ftp/golang-github-rclone-ftp-dev_1.0.0-220913-160-1_all.deb
-Size: 22352
-MD5sum: 224a13fc41161b7c1fa4bbb4f7db2848
-SHA256: 752ff351c21627b6721ade93cfda04ba5de13fd676e95b10c49d092e15269e56
 
 Package: golang-github-rcrowley-go-metrics-dev
 Source: golang-github-rcrowley-go-metrics
@@ -36548,8 +36620,8 @@ SHA256: 9f720ab1f892d7b9cc13e84547763ef91de6610da1998a34b79e7dbf7f76c11a
 
 Package: golang-github-walles-twin-dev
 Source: golang-github-walles-twin
-Version: 0.9.3-1
-Installed-Size: 377
+Version: 0.9.6-1
+Installed-Size: 407
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
 Depends: golang-github-gotestyourself-gotest.tools-dev, golang-github-rivo-uniseg-dev, golang-golang-x-sys-dev, golang-golang-x-term-dev
@@ -36559,10 +36631,10 @@ Homepage: https://github.com/walles/twin
 Description-md5: 6acd77ce61fed4aa3e05863228586b60
 golang
 Priority: optional
-Filename: pool/main/g/golang-github-walles-twin/golang-github-walles-twin-dev_0.9.3-1_all.deb
-Size: 261384
-MD5sum: 4f9d65c7725c29365a290503fa9f721e
-SHA256: ca32decf4940b92a75568f4b1e78eda3eca0875110c687400dfd836d574bc6a5
+Filename: pool/main/g/golang-github-walles-twin/golang-github-walles-twin-dev_0.9.6-1_all.deb
+Size: 267392
+MD5sum: 883af4e9d0c627cc844bb437f6afde91
+SHA256: 803aec92bf4c10a0a2291095417cf176bb0334c2a00d4161d20fe898cc63d113
 
 Package: golang-github-wasilibs-wazero-helpers-dev
 Source: golang-github-wasilibs-wazero-helpers
@@ -37998,19 +38070,20 @@ SHA256: 4d51952633365559c2e748cd375cffd9902ad6d50868d1f983493e2e000af2e2
 
 Package: golang-github-ziutek-mymysql-dev
 Source: golang-github-ziutek-mymysql
-Version: 1.5.4+git20170206.23.0582bcf-2
-Installed-Size: 249
-Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Version: 1.5.4+git20230707.37ecf16-1
+Installed-Size: 259
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
 Description: MySQL Client API
+Multi-Arch: foreign
 Homepage: https://github.com/ziutek/mymysql
 Description-md5: ad22d0c25d464d244aea4b7b11a2797a
 golang
 Priority: optional
-Filename: pool/main/g/golang-github-ziutek-mymysql/golang-github-ziutek-mymysql-dev_1.5.4+git20170206.23.0582bcf-2_all.deb
-Size: 46780
-MD5sum: 7e019ca0d4d74419b4176c44773146cc
-SHA256: c3ce7cd9356b436ecd1e098f32d88546ef7b36ce2e48caa1f038280084a14882
+Filename: pool/main/g/golang-github-ziutek-mymysql/golang-github-ziutek-mymysql-dev_1.5.4+git20230707.37ecf16-1_all.deb
+Size: 49924
+MD5sum: d109dc782a895a6df9848eae31d18c28
+SHA256: b587e2756f363a2f069d73c52faf798c4310627cec6ea2774c711a95ed066957
 
 Package: golang-github-ziutek-telnet-dev
 Source: golang-github-ziutek-telnet
@@ -38943,8 +39016,8 @@ MD5sum: 457552a9822c303502604a43b3bb02c9
 SHA256: b31cbf28a4a4de6207cf8955f151c98fc78e3572e93cf05cbfe2fe7a5c837f7f
 
 Package: golang-golang-x-tools
-Version: 1:0.49.0+ds-1
-Installed-Size: 223495
+Version: 1:0.52.0+ds-3
+Installed-Size: 231957
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
 Depends: libjs-jquery, libjs-jquery-ui, libc6 (>= 2.34)
@@ -38952,20 +39025,21 @@ Recommends: golang-doc
 Conflicts: modernize
 Description: supplementary Go tools
 Homepage: https://golang.org/x/tools
-Built-Using: golang-1.26 (= 1.26.5-1), golang-github-yuin-goldmark (= 1.8.2-2), golang-golang-x-mod (= 0.40.0-1), golang-golang-x-net (= 1:0.58.0-1), golang-golang-x-sync (= 0.22.0-1)
+Built-Using: golang-1.27 (= 1.27.3-1), golang-github-yuin-goldmark (= 1.8.2-2), golang-golang-x-mod (= 0.42.0-1), golang-golang-x-net (= 1:0.61.0-1), golang-golang-x-sync (= 0.24.0-1)
+Commands: benchcmp, callgraph, compilebench, digraph, file2fuzz, fiximports, go-contrib-init, godex, goimports, golang-bisect, golang-bundle, golang-deadcode, golang-defers, golang-eg, golang-fieldalignment, golang-findcall, golang-ifaceassert, golang-lostcancel, golang-nilness, golang-nodecount, golang-play, golang-shadow, golang-stress, golang-stringintconv, golang-unmarshal, golang-unusedresult, gomodindex, gomvpkg, gonew, gopackages, gotype, goyacc, html2article, inline, linecount, modernize, present, present2md, reflectvaluecompare, splitdwarf, ssadump, stringer, toolstash
 Description-md5: e34084d88c06480ee1c22d1df714cb85
-Static-Built-Using: golang-1.26 (= 1.26.5-1), golang-github-yuin-goldmark (= 1.8.2-2), golang-golang-x-mod (= 0.40.0-1), golang-golang-x-net (= 1:0.58.0-1), golang-golang-x-sync (= 0.22.0-1)
+Static-Built-Using: golang-1.27 (= 1.27.3-1), golang-github-yuin-goldmark (= 1.8.2-2), golang-golang-x-mod (= 0.42.0-1), golang-golang-x-net (= 1:0.61.0-1), golang-golang-x-sync (= 0.24.0-1)
 golang
 Priority: optional
-Filename: pool/main/g/golang-golang-x-tools/golang-golang-x-tools_0.49.0+ds-1_amd64.deb
-Size: 46369844
-MD5sum: 2add84e19de38ed2833fde9d490b2b9f
-SHA256: b27964b815563f7c1230bca7dbcd0d0e4d739dc962260d9c37695a4668214075
+Filename: pool/main/g/golang-golang-x-tools/golang-golang-x-tools_0.52.0+ds-3_amd64.deb
+Size: 46772116
+MD5sum: 54ab0fd2cc624429b090f2c6beb6866f
+SHA256: 5431c5078d2dec77ed9330732b25e1c02e8c4a697afe79cb7ea7acb3f55b6291
 
 Package: golang-golang-x-tools-dev
 Source: golang-golang-x-tools
-Version: 1:0.49.0+ds-1
-Installed-Size: 8626
+Version: 1:0.52.0+ds-3
+Installed-Size: 8762
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
 Depends: golang-github-yuin-goldmark-dev (>= 1.4.13), golang-golang-x-mod-dev (>= 0.19.0), golang-golang-x-net-dev (>= 1:0.27.0), golang-golang-x-sync-dev (>= 0.7.0)
@@ -38976,14 +39050,14 @@ Homepage: https://golang.org/x/tools
 Description-md5: 848b14f59fde001d69fac7c7123ed46c
 golang
 Priority: optional
-Filename: pool/main/g/golang-golang-x-tools/golang-golang-x-tools-dev_0.49.0+ds-1_all.deb
-Size: 1481548
-MD5sum: 95ac3d0c134d01865ead358d3c11d52e
-SHA256: b1fa4aeeb093b311993eeb6b1df09b2a717b60944fad29cf327a2b7b38514383
+Filename: pool/main/g/golang-golang-x-tools/golang-golang-x-tools-dev_0.52.0+ds-3_all.deb
+Size: 1501872
+MD5sum: 058409a967a59e9da3c24763230e9395
+SHA256: c1906f71f4a39a745c480bfce6d35db7b76188045d9e892a39c46d436f5ec01d
 
 Package: golang-golang-x-vuln-dev
 Source: golang-golang-x-vuln
-Version: 1.7.0-1
+Version: 1.9.0-1
 Installed-Size: 12177
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
@@ -38994,29 +39068,30 @@ Homepage: https://github.com/golang/vuln
 Description-md5: aa1b36e437a98187abfc4fa7cd360bbc
 golang
 Priority: optional
-Filename: pool/main/g/golang-golang-x-vuln/golang-golang-x-vuln-dev_1.7.0-1_all.deb
-Size: 4813740
-MD5sum: 02fbba0a9abd6dd501d26ed13a0f27b5
-SHA256: 85dc76d91bd73997ec9e5fd8fe5c44cea5d3aa24b9fdda0251d6252ee69931b6
+Filename: pool/main/g/golang-golang-x-vuln/golang-golang-x-vuln-dev_1.9.0-1_all.deb
+Size: 4814188
+MD5sum: e0e0822dfee954a68b27cff7ac390cad
+SHA256: 093be0149e8f07b37204ff1fbfb74363f9eda48712c8bfaa2d207e75daceb9e1
 
 Package: govulncheck
 Source: golang-golang-x-vuln
-Version: 1.7.0-1
-Installed-Size: 10016
+Version: 1.9.0-1
+Installed-Size: 10473
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34)
 Description: CLI for detecting vulnerabilities in Go packages
 Homepage: https://github.com/golang/vuln
-Built-Using: golang-1.26 (= 1.26.7-1), golang-golang-x-mod (= 0.40.0-1), golang-golang-x-sync (= 0.22.0-1), golang-golang-x-tools (= 1:0.49.0+ds-1)
+Built-Using: golang-1.27 (= 1.27.2-1), golang-golang-x-mod (= 0.42.0-1), golang-golang-x-sync (= 0.24.0-1), golang-golang-x-tools (= 1:0.52.0+ds-1)
+Commands: govulncheck
 Description-md5: 5dcfe2ff6a2d5eb6e3c251e4e4c10cc0
-Static-Built-Using: golang-1.26 (= 1.26.7-1), golang-golang-x-mod (= 0.40.0-1), golang-golang-x-sync (= 0.22.0-1), golang-golang-x-tools (= 1:0.49.0+ds-1)
+Static-Built-Using: golang-1.27 (= 1.27.2-1), golang-golang-x-mod (= 0.42.0-1), golang-golang-x-sync (= 0.24.0-1), golang-golang-x-tools (= 1:0.52.0+ds-1)
 golang
 Priority: optional
-Filename: pool/main/g/golang-golang-x-vuln/govulncheck_1.7.0-1_amd64.deb
-Size: 3318108
-MD5sum: 44c39a86b08ee0236216d5584eb23c52
-SHA256: 39f4c210d8b4240ca642218aa0784981a087481d3923ffbf8cb694c5bbddbc29
+Filename: pool/main/g/golang-golang-x-vuln/govulncheck_1.9.0-1_amd64.deb
+Size: 3508732
+MD5sum: e3ba04d428f23aa483e0996ed9a3a160
+SHA256: 7558c6bec296e53c73d8c36962876efb54e310eb48a23915978df598a4db8513
 
 Package: golang-golang-x-x11-dev
 Source: golang-golang-x-x11
@@ -40268,41 +40343,41 @@ SHA256: 28307ac22b5af44bd587093fa48a84aab259aa8c773a77caed1bf0f02c54c2b6
 
 Package: go-staticcheck
 Source: golang-honnef-go-tools
-Version: 2026.2.1-2
-Installed-Size: 11509
+Version: 2026.2.2-1
+Installed-Size: 11525
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.34)
 Description: advanced Go linter
 Homepage: https://github.com/dominikh/go-tools
-Built-Using: golang-1.27 (= 1.27.1-2), golang-golang-x-exp (= 0.0~git20260820.ca53665-1), golang-golang-x-mod (= 0.40.0-1), golang-golang-x-sync (= 0.22.0-1), golang-golang-x-tools (= 1:0.49.0+ds-1), golang-toml (= 1.6.0-1)
+Built-Using: golang-1.27 (= 1.27.2-1), golang-golang-x-exp (= 0.0~git20261009.ca0d7ba-1), golang-golang-x-mod (= 0.42.0-1), golang-golang-x-sync (= 0.24.0-1), golang-golang-x-tools (= 1:0.52.0+ds-1), golang-toml (= 1.6.0-1)
 Commands: go-staticcheck
 Description-md5: ed4eaeb46a99f09cf48cfe5f83a7b892
-Static-Built-Using: golang-1.27 (= 1.27.1-2), golang-golang-x-exp (= 0.0~git20260820.ca53665-1), golang-golang-x-mod (= 0.40.0-1), golang-golang-x-sync (= 0.22.0-1), golang-golang-x-tools (= 1:0.49.0+ds-1), golang-toml (= 1.6.0-1)
+Static-Built-Using: golang-1.27 (= 1.27.2-1), golang-golang-x-exp (= 0.0~git20261009.ca0d7ba-1), golang-golang-x-mod (= 0.42.0-1), golang-golang-x-sync (= 0.24.0-1), golang-golang-x-tools (= 1:0.52.0+ds-1), golang-toml (= 1.6.0-1)
 golang
 Priority: optional
-Filename: pool/main/g/golang-honnef-go-tools/go-staticcheck_2026.2.1-2_amd64.deb
-Size: 3778208
-MD5sum: fbc431daa950ebecc3e34a4c16609e2d
-SHA256: 861049c6579fa0c7b0d274cf80c0d2be4390519a95893b8c363f93ad7c581643
+Filename: pool/main/g/golang-honnef-go-tools/go-staticcheck_2026.2.2-1_amd64.deb
+Size: 3787552
+MD5sum: 52d568c021e7e31e080cf6ca01c85eb9
+SHA256: ccd43607a2c32114cb1169ee0b5a3793f496b8ff2666c162eabdb51af0c51de9
 
 Package: golang-honnef-go-tools-dev
 Source: golang-honnef-go-tools
-Version: 2026.2.1-2
-Installed-Size: 4155
+Version: 2026.2.2-1
+Installed-Size: 4167
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
-Depends: golang-github-burntsushi-toml-dev (>= 1.4.0-1~), golang-golang-x-exp-dev (>= 0.0~git20250911.df92998), golang-golang-x-sys-dev (>= 0.38.0), golang-golang-x-tools-dev (>= 1:0.42.0)
+Depends: golang-github-burntsushi-toml-dev (>= 1.4.0-1~), golang-golang-x-exp-dev (>= 0.0~git20250911.df92998), golang-golang-x-sys-dev (>= 0.38.0), golang-golang-x-tools-dev (>= 1:0.52.0+ds~)
 Description: libraries for advanced Go linter
 Multi-Arch: foreign
 Homepage: https://github.com/dominikh/go-tools
 Description-md5: 236c82d684956e0a4c0978b4b9ea9f5d
 golang
 Priority: optional
-Filename: pool/main/g/golang-honnef-go-tools/golang-honnef-go-tools-dev_2026.2.1-2_all.deb
-Size: 557604
-MD5sum: f78f58c27491564da949b1989ba203c5
-SHA256: b70e8af80f03d98da574474c666e2bd95d5285edfb8a5595977e202f33e86fd3
+Filename: pool/main/g/golang-honnef-go-tools/golang-honnef-go-tools-dev_2026.2.2-1_all.deb
+Size: 560312
+MD5sum: 374703e998c2ce99d1afc687253ef9af
+SHA256: 41c4180871247a2514933b0c2c35276a3a9da1350a11b64c8de6994ffb406382
 
 Package: golang-github-dhowett-go-plist-dev
 Source: golang-howett-plist
@@ -41664,22 +41739,24 @@ Size: 5760
 MD5sum: 9206a1d0c0a1d482856ba88bfbc18775
 SHA256: 50241949b85bd755be9b0f7c3f5b9485f6668d8116dc50c2d399033fda5be8ed
 
-Package: golang-sourcehut-rjarry-go-opt-dev
+Package: golang-sourcehut-rjarry-go-opt-v2-dev
 Source: golang-sourcehut-rjarry-go-opt
-Version: 2.2.0-1
-Installed-Size: 69
+Version: 2.2.1-1
+Installed-Size: 70
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
+Replaces: golang-sourcehut-rjarry-go-opt-dev
+Conflicts: golang-sourcehut-rjarry-go-opt-dev
 Description: Parse command line arguments based on tag annotations on struct fields (library)
 Multi-Arch: foreign
 Homepage: https://git.sr.ht/~rjarry/go-opt
 Description-md5: 05ea0d4d8ee7ba095afcc32590007a96
 golang
 Priority: optional
-Filename: pool/main/g/golang-sourcehut-rjarry-go-opt/golang-sourcehut-rjarry-go-opt-dev_2.2.0-1_all.deb
-Size: 15560
-MD5sum: 872f901a0f7a0d34e222d253eba4f357
-SHA256: b5a103931bfbe1bb4a57fd09e52ce5f659024177762108818ffde314e3d2ac25
+Filename: pool/main/g/golang-sourcehut-rjarry-go-opt/golang-sourcehut-rjarry-go-opt-v2-dev_2.2.1-1_all.deb
+Size: 15640
+MD5sum: 60e4a11d313b8c1334a2c547b9190159
+SHA256: fee219566e08f54104d2891a05fa3f8a6b810e0192213a71f5746acf48a7daf1
 
 Package: golang-sourcehut-rockorager-go-jmap-dev
 Source: golang-sourcehut-rockorager-go-jmap
