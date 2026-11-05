@@ -51,6 +51,41 @@ Filename: pool/updates/main/a/aide/aide-dynamic_0.19.1-2+deb13u5_all.deb
 Size: 35644
 SHA256: 2783ef14b3701974073f3d93adba853a0d14a9403ef46b98bb05b94c9c22455c
 
+Package: apt
+Version: 3.0.4
+Installed-Size: 4481
+Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: amd64
+Replaces: apt-transport-https (<< 1.5~alpha4~), apt-utils (<< 1.3~exp2~)
+Provides: apt-transport-https (= 3.0.4)
+Depends: base-passwd (>= 3.6.1) | adduser, sqv (>= 1.3.0), libapt-pkg7.0 (>= 3.0.4), debian-archive-keyring, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libseccomp2 (>= 2.4.2), libssl3t64 (>= 3.0.0), libstdc++6 (>= 13.1), libsystemd0
+Suggests: apt-doc, aptitude | synaptic | wajig, dpkg-dev (>= 1.17.2), gnupg | gnupg2 | gnupg1, powermgmt-base
+Conflicts: apt-verify, libnettle8 (<< 3.9.1-2.2~)
+Breaks: apt-transport-https (<< 1.5~alpha4~), apt-utils (<< 1.3~exp2~), aptitude (<< 0.8.10)
+Description: commandline package manager
+Description-md5: 6b534aaa75feaadaa911a5a6e81b66b2
+Recommends: ca-certificates
+admin
+Priority: required
+Filename: pool/updates/main/a/apt/apt_3.0.4_amd64.deb
+Size: 1453228
+SHA256: 15c2030e0fb46580af4f1b4cc303f4bd26da781b004e99763bc9eff7cf8e19b8
+
+Package: apt-utils
+Source: apt
+Version: 3.0.4
+Installed-Size: 1087
+Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: amd64
+Depends: apt (= 3.0.4), libapt-pkg7.0 (>= 2.9.27+exp1), libc6 (>= 2.34), libdb5.3t64, libgcc-s1 (>= 3.0), libstdc++6 (>= 13.1)
+Description: package management related utility programs
+Description-md5: fa857c8c2c53eb52dff83bc833688abf
+admin
+Priority: important
+Filename: pool/updates/main/a/apt/apt-utils_3.0.4_amd64.deb
+Size: 336868
+SHA256: a77b3af564bb5143e7babb6aa6b098c6426be56b3811623748afc700a0af0e8c
+
 Package: bubblewrap
 Version: 0.12.0-1~deb13u1
 Installed-Size: 142
@@ -1277,6 +1312,42 @@ Filename: pool/updates/main/p/packagekit/packagekit_1.3.1-1+deb13u1_amd64.deb
 Size: 663500
 SHA256: 15c450dfb327ec86615894eb678c61fec0507949b02631422b35e8280bee9163
 
+Package: puppet
+Source: puppet-agent
+Version: 8.10.0-5+deb13u1
+Installed-Size: 35
+Maintainer: Puppet Package Maintainers <pkg-puppet-devel@alioth-lists.debian.net>
+Architecture: all
+Depends: puppet-agent
+Description: transitional dummy package
+Homepage: https://github.com/puppetlabs/puppet
+Description-md5: 1f317b04f78374dba7d1e14def0b7f80
+admin
+Priority: optional
+Filename: pool/updates/main/p/puppet-agent/puppet_8.10.0-5+deb13u1_all.deb
+Size: 11040
+SHA256: 8e36ecb4b65f1a0e79183a9fe7b3b1d7514ff31b639821d20a1899cc18bbda40
+
+Package: puppet-agent
+Version: 8.10.0-5+deb13u1
+Installed-Size: 7101
+Maintainer: Puppet Package Maintainers <pkg-puppet-devel@alioth-lists.debian.net>
+Architecture: all
+Replaces: puppet (<< 7.16.0), puppet-common (<< 4.5.1-1)
+Depends: adduser, libruby (>= 3.3), ruby, ruby-augeas, ruby-shadow, debconf (>= 0.5) | debconf-2.0, ruby-concurrent (>= 1.0), ruby-deep-merge (>= 1.0), facter (>= 4.3.0), facter (<< 5), ruby-fast-gettext (>= 2.1), ruby-fast-gettext (<< 4), ruby-getoptlong (>= 0), ruby-locale (>= 2.1), ruby-multi-json (>= 1.13), ruby-puppet-resource-api (>= 1.5), ruby-scanf (>= 1.0), ruby-semantic-puppet (>= 1.0)
+Suggests: hiera-eyaml, ruby-hocon, ruby-msgpack
+Breaks: puppet (<< 7.16.0), puppet-common (<< 4.5.1-1), puppet-master (<< 7.9.3), puppet-master-passenger (<< 7.9.3), puppetserver (<< 8)
+Description: configuration management system, agent
+Homepage: https://github.com/puppetlabs/puppet
+Description-md5: 9c11faacf3d08afaeacee81d1e4a7435
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: augeas-tools, debconf-utils, lsb-release, ruby-selinux
+admin
+Priority: optional
+Filename: pool/updates/main/p/puppet-agent/puppet-agent_8.10.0-5+deb13u1_all.deb
+Size: 1235124
+SHA256: 5db18e513059c6d550f7a5310e5de81f37f3a6cec61951fda9f92d3d009c422f
+
 Package: libpam-slurm
 Source: slurm-wlm
 Version: 24.11.5-4+deb13u1
@@ -1821,12 +1892,12 @@ SHA256: cdd90fb6b114dd7223df2bff9735d13905205ac1c4ff1e24f2d1b53aeb2e2585
 
 Package: xen-utils-4.20
 Source: xen
-Version: 4.20.4+39-gf1e1321c87-0+deb13u1
+Version: 4.20.4+63-g7abfd2bce2-0+deb13u1
 Installed-Size: 10594
 Maintainer: Debian Xen Team <pkg-xen-devel@lists.alioth.debian.org>
 Architecture: amd64
 Provides: xen-utils
-Depends: libc6 (>= 2.38), libncurses6 (>= 6), libtinfo6 (>= 6), libxencall1 (>= 4.20.4+39-gf1e1321c87), libxendevicemodel1 (>= 4.20.4+39-gf1e1321c87), libxenevtchn1 (>= 4.20.4+39-gf1e1321c87), libxenforeignmemory1 (>= 4.20.4+39-gf1e1321c87), libxengnttab1 (>= 4.20.4+39-gf1e1321c87), libxenmisc4.20 (>= 4.20.4+39-gf1e1321c87), libxenstore4 (>= 4.16.0), libxentoollog1 (>= 4.20.4+39-gf1e1321c87), libyajl2 (>= 2.0.4), python3:any, python3 (<< 3.14), python3 (>= 3.13~), xen-utils-common (>= 4.20.4+39-gf1e1321c87-0+deb13u1)
+Depends: libc6 (>= 2.38), libncurses6 (>= 6), libtinfo6 (>= 6), libxencall1 (>= 4.20.4+63-g7abfd2bce2), libxendevicemodel1 (>= 4.20.4+63-g7abfd2bce2), libxenevtchn1 (>= 4.20.4+63-g7abfd2bce2), libxenforeignmemory1 (>= 4.20.4+63-g7abfd2bce2), libxengnttab1 (>= 4.20.4+63-g7abfd2bce2), libxenmisc4.20 (>= 4.20.4+63-g7abfd2bce2), libxenstore4 (>= 4.16.0), libxentoollog1 (>= 4.20.4+63-g7abfd2bce2), libyajl2 (>= 2.0.4), python3:any, python3 (<< 3.14), python3 (>= 3.13~), xen-utils-common (>= 4.20.4+63-g7abfd2bce2-0+deb13u1)
 Suggests: qemu-utils, seabios, ovmf
 Description: Xen administrative tools
 Homepage: https://xenproject.org/
@@ -1834,13 +1905,13 @@ Description-md5: b44459d6cc56c07cbe6b5cb86d00a952
 Recommends: bridge-utils, xen-hypervisor-4.20, qemu-system-xen, grub-xen-host
 admin
 Priority: optional
-Filename: pool/updates/main/x/xen/xen-utils-4.20_4.20.4+39-gf1e1321c87-0+deb13u1_amd64.deb
-Size: 1581812
-SHA256: ca535bbeca3d24125dc2dbc7f643210ee22829b65ea59ea0a1029a08144efe63
+Filename: pool/updates/main/x/xen/xen-utils-4.20_4.20.4+63-g7abfd2bce2-0+deb13u1_amd64.deb
+Size: 1582780
+SHA256: 8eb355e9c0bc57e3e323f2e7d1a97a002855ed3b365072b0049bd777b2947987
 
 Package: xenstore-utils
 Source: xen
-Version: 4.20.4+39-gf1e1321c87-0+deb13u1
+Version: 4.20.4+63-g7abfd2bce2-0+deb13u1
 Installed-Size: 109
 Maintainer: Debian Xen Team <pkg-xen-devel@lists.alioth.debian.org>
 Architecture: amd64
@@ -1851,7 +1922,7 @@ Homepage: https://xenproject.org/
 Description-md5: 8a3900f30ba765bd8ee37129496e0d79
 admin
 Priority: optional
-Filename: pool/updates/main/x/xen/xenstore-utils_4.20.4+39-gf1e1321c87-0+deb13u1_amd64.deb
-Size: 48092
-SHA256: a4e84c0566f07ff294a63fc749d39a72bd016031a31236bada5e792afa8a8f76
+Filename: pool/updates/main/x/xen/xenstore-utils_4.20.4+63-g7abfd2bce2-0+deb13u1_amd64.deb
+Size: 48156
+SHA256: c9a2c062d724375c9d3c70587477c60167bdf12a895e5dbf2549929b59bc5a29
 

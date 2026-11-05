@@ -51,6 +51,40 @@ Filename: pool/updates/main/a/aide/aide-dynamic_0.18.3-1+deb12u5_all.deb
 Size: 33460
 SHA256: 253d1f9f09ac4d49f0e71aa8a9711751d6578ea12b41c2e0793e0c3a69d4f214
 
+Package: apt
+Version: 2.6.2
+Installed-Size: 4232
+Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: amd64
+Replaces: apt-transport-https (<< 1.5~alpha4~), apt-utils (<< 1.3~exp2~)
+Provides: apt-transport-https (= 2.6.2)
+Depends: adduser, gpgv | gpgv2 | gpgv1, libapt-pkg6.0 (>= 2.6.2), debian-archive-keyring, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libgnutls30 (>= 3.7.5), libseccomp2 (>= 2.4.2), libstdc++6 (>= 11), libsystemd0
+Suggests: apt-doc, aptitude | synaptic | wajig, dpkg-dev (>= 1.17.2), gnupg | gnupg2 | gnupg1, powermgmt-base
+Breaks: apt-transport-https (<< 1.5~alpha4~), apt-utils (<< 1.3~exp2~), aptitude (<< 0.8.10)
+Description: commandline package manager
+Description-md5: 9fb97a88cb7383934ef963352b53b4a7
+Recommends: ca-certificates
+admin
+Priority: required
+Filename: pool/updates/main/a/apt/apt_2.6.2_amd64.deb
+Size: 1373116
+SHA256: 796fc7fe18866f5b1fb27a115d7339e549d71b7ddbc15b8d6fc4226c243e96d1
+
+Package: apt-utils
+Source: apt
+Version: 2.6.2
+Installed-Size: 1037
+Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: amd64
+Depends: apt (= 2.6.2), libapt-pkg6.0 (>= 2.6.2), libc6 (>= 2.34), libdb5.3, libgcc-s1 (>= 3.0), libstdc++6 (>= 11)
+Description: package management related utility programs
+Description-md5: fa0295dc4e40dbbea6c84f614c570636
+admin
+Priority: important
+Filename: pool/updates/main/a/apt/apt-utils_2.6.2_amd64.deb
+Size: 309596
+SHA256: f4696888c71fee249947f6fe36c55aefc16c255c6e6671250d877bfe76e0cc7d
+
 Package: atop
 Version: 2.8.1-1+deb12u1
 Installed-Size: 533
@@ -2815,12 +2849,12 @@ SHA256: 7b53300cbdd8f158a661fe1c5f43e1ffab71791a2267efa663f545a340bed0dc
 
 Package: xen-utils-4.17
 Source: xen
-Version: 4.17.7-0+deb12u1
+Version: 4.17.7+13-g2445b30a44-0+deb12u1
 Installed-Size: 9687
 Maintainer: Debian Xen Team <pkg-xen-devel@lists.alioth.debian.org>
 Architecture: amd64
 Provides: xen-utils
-Depends: libc6 (>= 2.35), libncurses6 (>= 6), libtinfo6 (>= 6), libxencall1 (>= 4.17.7), libxenevtchn1 (>= 4.17.7), libxenforeignmemory1 (>= 4.17.7), libxengnttab1 (>= 4.17.7), libxenmisc4.17 (>= 4.17.7), libxenstore4 (>= 4.16.0), libxentoollog1 (>= 4.17.7), libyajl2 (>= 2.0.4), python3:any, python3 (<< 3.12), python3 (>= 3.11~), xen-utils-common (>= 4.17.7-0+deb12u1)
+Depends: libc6 (>= 2.35), libncurses6 (>= 6), libtinfo6 (>= 6), libxencall1 (>= 4.17.7+13-g2445b30a44), libxenevtchn1 (>= 4.17.7+13-g2445b30a44), libxenforeignmemory1 (>= 4.17.7+13-g2445b30a44), libxengnttab1 (>= 4.17.7+13-g2445b30a44), libxenmisc4.17 (>= 4.17.7+13-g2445b30a44), libxenstore4 (>= 4.16.0), libxentoollog1 (>= 4.17.7+13-g2445b30a44), libyajl2 (>= 2.0.4), python3:any, python3 (<< 3.12), python3 (>= 3.11~), xen-utils-common (>= 4.17.7+13-g2445b30a44-0+deb12u1)
 Suggests: qemu-utils, seabios, ovmf
 Description: Xen administrative tools
 Homepage: https://xenproject.org/
@@ -2828,13 +2862,13 @@ Description-md5: b44459d6cc56c07cbe6b5cb86d00a952
 Recommends: bridge-utils, xen-hypervisor-4.17, qemu-system-xen (>> 1:7.0+dfsg-6~), grub-xen-host
 admin
 Priority: optional
-Filename: pool/updates/main/x/xen/xen-utils-4.17_4.17.7-0+deb12u1_amd64.deb
-Size: 1372612
-SHA256: d3ec614326484c60df33c71972e85a224321e388fbdb8dbfc4da1c1cf253c63e
+Filename: pool/updates/main/x/xen/xen-utils-4.17_4.17.7+13-g2445b30a44-0+deb12u1_amd64.deb
+Size: 1372500
+SHA256: 1c928e408738cab624ee1d0ce2a824b0e9bc8874e91d635208f346940fb6d47c
 
 Package: xenstore-utils
 Source: xen
-Version: 4.17.7-0+deb12u1
+Version: 4.17.7+13-g2445b30a44-0+deb12u1
 Installed-Size: 111
 Maintainer: Debian Xen Team <pkg-xen-devel@lists.alioth.debian.org>
 Architecture: amd64
@@ -2847,7 +2881,7 @@ Homepage: https://xenproject.org/
 Description-md5: 8a3900f30ba765bd8ee37129496e0d79
 admin
 Priority: optional
-Filename: pool/updates/main/x/xen/xenstore-utils_4.17.7-0+deb12u1_amd64.deb
-Size: 49968
-SHA256: 4d1bb51887f82199f55f4953983de16a01b56b480bce30bf6ec6b91794a4f5ab
+Filename: pool/updates/main/x/xen/xenstore-utils_4.17.7+13-g2445b30a44-0+deb12u1_amd64.deb
+Size: 50316
+SHA256: f12f1d73fe949d8cb2574fd7a2d6b6f40b165ccf1a6a58cbb5336c03777afe14
 
