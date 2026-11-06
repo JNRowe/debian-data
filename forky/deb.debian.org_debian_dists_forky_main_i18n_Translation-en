@@ -24557,19 +24557,6 @@ Description-en: generate compilation database for Clang tooling
  For any other build system that does not support this, Bear can be used
  instead to intercept the invocation of the compiler.
 
-Package: libear
-Description-md5: af135fcdba59a3222ffef6dec154da24
-Description-en: generate compilation database for Clang tooling (wrapper library)
- Bear records the flags passed to the compiler for each translation unit and
- stores them in a JSON file. This file can be used by Clang's tooling interface
- and programs like clang-check to process a translation unit.
- .
- cmake supports the generation of JSON compilation databases out of the box.
- For any other build system that does not support this, Bear can be used
- instead to intercept the invocation of the compiler.
- .
- This is the required library for wrapping system calls.
-
 Package: libbearssl-dev
 Description-md5: 3f58dad325db10b0ce921ad1ff4eb611
 Description-en: BearSSL - development files
@@ -65737,6 +65724,16 @@ Description-en: simple demodulation and spectrum display program
  applications (packaged separately) provide network interfaces to
  RFSPACE USB devices.
 
+Package: libcutest-dev
+Description-md5: 251697dc616195f89291ac5f39cc93b2
+Description-en: C unit testing framework (development files)
+ CuTest is a small unit testing framework for C.  It consists of a
+ single C source file and header and provides assertions, test suites,
+ and a simple test runner, making it easy to add unit tests to C
+ projects.
+ .
+ This package contains the CuTest header and static library.
+
 Package: cutesv
 Description-md5: 9edbac2d955018599acd19a7f6e81744
 Description-en: comprehensive discovery of structural variations of genomic sequences
@@ -72334,6 +72331,16 @@ Description-md5: 7afa1491197a843c2e94ffefdf3d8a62
 Description-en: Legacy Simplified Chinese documentation from the Debian Edu project
  The Simplified Chinese version of the Audacity, Rosegarden and ITIL manuals are
  included in this package. Though outdated, still useful in parts.
+ .
+ Debian Edu is a Debian project to make the best distribution for educational
+ purposes. Skolelinux is the name of the Debian Pure Blend which is produced
+ by the Debian Edu project.
+
+Package: debian-edu-doc-lo
+Description-md5: d5b230c5af761383636249e3a442d7ce
+Description-en: Laotian documentation from the Debian Edu project
+ The Laotian version of the manuals for the Trixie and Bookworm based
+ releases of the Debian Edu / Skolelinux project is included in this package.
  .
  Debian Edu is a Debian project to make the best distribution for educational
  purposes. Skolelinux is the name of the Debian Pure Blend which is produced
@@ -182452,16 +182459,6 @@ Description-en: Various applets for the GNOME panel - data files
  This package contains data files (pixmaps, icons, documentations) needed by
  the gnome-applets package.
 
-Package: gnome-audio
-Description-md5: e834ac5c4f069d1165c6a47143d20c9b
-Description-en: Audio files for GNOME
- GNOME is the "GNU Network Object Model Environment"
- .
- It is a project to build a complete, user-friendly desktop based
- entirely on free software.
- .
- This package contains a collection of sounds for use with GNOME.
-
 Package: gir1.2-gnomeautoar-0.1
 Description-md5: d207d4fe8a98ac7a673ca9bb5263356b
 Description-en: GObject introspection data for GnomeAutoar
@@ -199987,6 +199984,18 @@ Description-en: Minimal environment variable parser for Go (library)
  The parser supports JSON strings which allows for cross-language/platform
  encoding of arbitrarily complex data.
 
+Package: golang-github-hashicorp-go-getter-dev
+Description-md5: 3b5b95ce848bac62cf10bddbb4dfeeba
+Description-en: download files and directories from a URL (library)
+ go-getter is a Go library for downloading files and directories from a wide
+ range of sources using a single URL string as input. It supports local files,
+ HTTP, Git, Mercurial, Amazon S3 and Google Cloud Storage, and can
+ transparently decompress tar, gzip, bzip2, xz, zstd and zip archives.
+ .
+ A detector layer rewrites shorthand inputs such as "github.com/user/repo" or
+ "./foo" into proper URLs, and downloads can be checksum-verified via a URL
+ query parameter.
+
 Package: golang-github-hashicorp-go-hclog-dev
 Description-md5: 406f066f302fcfa99cd23c4b7b013fa4
 Description-en: common logging package for HashiCorp tools
@@ -207735,6 +207744,30 @@ Package: golang-github-remyoudompheng-go-liblzma-dev
 Description-md5: 653bab6ba401d69055454083b5bb565b
 Description-en: Go bindings for XZ Utils/liblzma
  Provides Go bindings for XZ Utils/liblzma
+
+Package: golang-github-renekroon-ttlcache-dev
+Description-md5: 53771f748a0ba8b11e3c284cc4655913
+Description-en: In-memory string-interface{} map with expiration for Golang
+ TTLCache is a simple key/value cache in golang with the following functions:
+ .
+   - Thread-safe
+   - Individual expiring time or global expiring time, you can choose
+   - Auto-Extending expiration on Get
+   - DNS style TTL, see SkipTtlExtensionOnHit(bool)
+   - Fast and memory efficient
+   - Can trigger callback on key expiration
+ .
+ Project TTLCache was forked from wunderlist/ttlcache to add extra functions
+ not available in the original scope. The main differences are:
+ .
+   - An item can store any kind of object, previously, only strings could be
+     saved
+   - Optionally, you can add callbacks to: check if a value should expire, be
+     notified if a value expires, and be notified when new values are added
+     to the cache
+   - The expiration can be either global or per item
+   - Can exist items without expiration time
+   - Expirations and callbacks are realtime
 
 Package: golang-github-restic-chunker-dev
 Description-md5: d8bfa9fcf8073c667f72e9dd528fbe02
@@ -226522,6 +226555,19 @@ Description-en: Haskell package version tracker
  available in Debian with those available on Hackage and elsewhere.
  .
  The data is currently displayed at https://hackage-tracker.debian.net.
+
+Package: hackermail
+Description-md5: df81c688a300e721c9b07b60498ad392
+Description-en: mails management tool for hackers collaborating via mailing lists
+ HacKerMaiL (hkml) is a mails management tool for hackers who collaborate
+ using mailing lists.  It requires no complicated setup but just git.  Using
+ it, you can fetch mailing list archives, read mails in those, and post
+ replies or new mails.
+ .
+ It supports public-inbox managed mailing list archives, such as the Linux
+ kernel mailing lists hosted on lore.kernel.org, as well as manually exported
+ mbox files.  It also provides helpers for applying patches from mails,
+ tagging, monitoring and formatting patch series.
 
 Package: hackrf
 Description-md5: 474c7c304ff86117a342c8358bab5117
@@ -287455,44 +287501,6 @@ Description-en: fast and powerful JSON library for Java -- data binding
  This package contains general purpose data-binding functionality for data
  formats other than JSON.
 
-Package: libjackson2-dataformat-cbor
-Description-md5: e1cf52097f09b59e62028ccbcf1b5bb7
-Description-en: Jackson data format module for RfC7049 Concise Binary Object Representation
- The Jackson Data Processor is a multi-purpose Java library for processing
- JSON. Jackson aims to be the best possible combination of fast, correct,
- lightweight, and ergonomic for developers. It offers three alternative methods
- for processing JSON:
- .
-  * Streaming API inspired by StAX
-  * Tree Model
-  * Data Binding converts JSON to and from POJOs
- .
- In addition to the core library, there are numerous extension that provide
- additional functionality such as additional data formats beyond JSON,
- additional data types or JVM languages.
- .
- This package contains an extension for reading and writing "Concise
- Binary Object Representation (CBOR)" as specified in RfC7049.
-
-Package: libjackson2-dataformat-smile
-Description-md5: d27cf20ff7a4d4e075708261e8ec619e
-Description-en: fast and powerful JSON library for Java -- Smile dataformat
- The Jackson Data Processor is a multi-purpose Java library for processing
- JSON. Jackson aims to be the best possible combination of fast, correct,
- lightweight, and ergonomic for developers. It offers three alternative methods
- for processing JSON:
- .
-  * Streaming API inspired by StAX
-  * Tree Model
-  * Data Binding converts JSON to and from POJOs
- .
- In addition to the core library, there are numerous extension that provide
- additional functionality such as additional data formats beyond JSON,
- additional data types or JVM languages.
- .
- This package contains an extension for reading and writing Smile-("binary
- JSON")-encoded data.
-
 Package: libjackson2-dataformat-xml-java
 Description-md5: 26393674e098295fd68e9dcf2319f596
 Description-en: fast and powerful JSON library for Java -- XML dataformat
@@ -287500,24 +287508,6 @@ Description-en: fast and powerful JSON library for Java -- XML dataformat
  POJOs (Plain Old Java Objects) as XML and deserializing XML as POJOs. Support
  was implemented on top of Stax API (javax.xml.stream) by implementing core
  Jackson Streaming API types like JsonGenerator, JsonParser and JsonFactory.
-
-Package: libjackson2-dataformat-yaml
-Description-md5: f70a95d3b18c98f7cd962f4509ad31a5
-Description-en: fast and powerful JSON library for Java -- YAML dataformat
- The Jackson Data Processor is a multi-purpose Java library for processing
- JSON. Jackson aims to be the best possible combination of fast, correct,
- lightweight, and ergonomic for developers. It offers three alternative methods
- for processing JSON:
- .
-  * Streaming API inspired by StAX
-  * Tree Model
-  * Data Binding converts JSON to and from POJOs
- .
- In addition to the core library, there are numerous extension that provide
- additional functionality such as additional data formats beyond JSON,
- additional data types or JVM languages.
- .
- This package contains an extension for reading and writing YAML-encoded data
 
 Package: libjackson2-dataformat-cbor-java
 Description-md5: 3843c20fcfc3c4fb4f26be211e9cc759
@@ -287689,6 +287679,24 @@ Description-en: fast and powerful JSON library for Java -- data binding
  .
  This package contains general purpose data-binding functionality for data
  formats other than JSON.
+
+Package: libjackson3-dataformat-yaml-java
+Description-md5: c6edf6498e1aac08ebda410ae9cc2a35
+Description-en: fast and powerful JSON library for Java -- YAML dataformat
+ The Jackson Data Processor is a multi-purpose Java library for processing
+ JSON. Jackson aims to be the best possible combination of fast, correct,
+ lightweight, and ergonomic for developers. It offers three alternative methods
+ for processing JSON:
+ .
+  * Streaming API inspired by StAX
+  * Tree Model
+  * Data Binding converts JSON to and from POJOs
+ .
+ In addition to the core library, there are numerous extension that provide
+ additional functionality such as additional data formats beyond JSON,
+ additional data types or JVM languages.
+ .
+ This package contains an extension for reading and writing YAML encoded data.
 
 Package: libjacksum-sugar-java
 Description-md5: 63c5ac91983498187dd8720b543e61c3
@@ -321265,13 +321273,6 @@ Description-md5: ee9910c7e4a57b17da8e87634cf11420
 Description-en: container for functions for the iperl program
  App::REPL module contains functions that the iperl program automatically
  imports into any package it enters, for interactive convenience.
-
-Package: perl-stacktrace
-Description-md5: 418f511c86cbd21c133ace531860d912
-Description-en: Create stack traces of a running perl processes
- perl-stacktrace prints Perl stack traces of Perl threads for a given
- Perl process. For each Perl frame, the full file name and line number
- are printed.
 
 Package: libapp-termcast-perl
 Description-md5: 51d707958523484790d17dbd85ea862e
@@ -358486,27 +358487,6 @@ Description-en: lightweight and fast library using XML
  an alternative to DOM and SAX, although it integrates well with both
  DOM and SAX.
 
-Package: libje-perl
-Description-md5: 6e3575dc0a1f1c2a5c3f4086bfab89f2
-Description-en: Pure-Perl ECMAScript (JavaScript) Engine
- JE is a pure-Perl ECMAScript (JavaScript) engine.
- .
- Advantages:
-  - Compatible with Data::Dump::Streamer, so the runtime environment can be
-    serialised
-  - The parser can be extended/customised to support extra (or fewer) language
-    features (not yet complete)
-  - All JavaScript datatypes can be manipulated directly from Perl (they all
-    have overloaded operators)
- .
- Weaknesses:
-  - It's slow
-  - It uses lots of memory.
-  - It leaks memory (to be fixed).
- .
- This is still an alpha release, but it fully implements ECMAScript v3, except
- for a few seldom-used features like -0.
-
 Package: libjemmy2-java
 Description-md5: 2f03095680fe79c561f1eae96ac747fe
 Description-en: Java library for automated Java GUI testing
@@ -359261,14 +359241,6 @@ Description-en: Java Plugin Framework: plug-in infrastructure library for Java p
  not used. Plug-ins are added to the registry at application start-up or
  while the application is running but they are not loaded until they are
  called.
-
-Package: libjpfcodegen-java
-Description-md5: f59af66d45cad70b3a719390643c1e98
-Description-en: tool for generating classes from JPF plug-ins
- JPF Code Generator is a handy little tool that generates classes for
- accessing the attributes and extensions of JPF plug-ins from plugin.xml
- files. This has the advantage of providing a strongly typed access to the
- plug-in and simplyfies working with plug-ins.
 
 Package: libjregex-java
 Description-md5: c5d9d5f12b1ab2d51a85e84eeb2c457e
@@ -360661,33 +360633,6 @@ Description-en: base library for XMPP based instant messaging and presence
  dependencies used by various JXMPP Components.
  .
  jxmpp-strings-testframework: A framework to test "XMPP Strings".
-
-Package: libjxp-java
-Description-md5: 83a08b24ee17047c878cb5850cbbf8c1
-Description-en: Java template engine/script processor
- Jxp (Java scripted page) is a script-processor that process JSP-like files.
- It contains a parser to parse the script file into an abstract syntax tree
- and a tree processor (JxpProcessor) that will process the syntax tree to
- execute the code using reflection API to produce output. The main uses of Jxp
- are:
- .
-   * as a script language engine to increase flexibility in the user
-     application
-   * as a template engine to produce dynamic text output
- .
- Some of the main features of Jxp include:
- .
-   * Java as script/template language. Why learn another one? ;)
-   * Run JSP-like code outside of servlet container
-   * support common java language 1.4 constructs (partial 1.5 syntax support
-     on jdk 1.4)
-   * support common JSP constructs including import directive, declaration, EL
-     etc (taglib not supported, yet)
-   * practical template sources management framework
-   * support caching of parsed syntax tree to eliminate reparse of template
-   * a servlet implementation to enable web-scripting
-   * extensible processing context for defining built-in function on the
-     scripts
 
 Package: libkainjow-mustache-dev
 Description-md5: 2a1e4d9fe7364621d53b107b700b3a91
@@ -368659,26 +368604,6 @@ Description-en: memory backed multimap
  scale to extremely large problem sizes, limited only by available disk
  space. Although performance is much slower than an in-memory structure,
  it is virtually guaranteed to be able to complete the compute.
-
-Package: libmms-dev
-Description-md5: 62bfa1d7651879a27e6bbeac3d60d0ce
-Description-en: MMS stream protocol library - development files
- LibMMS is a common library for parsing mms:// and mmsh:// type network
- streams.  These are commonly used to stream Windows Media Video content
- over the web.  LibMMS itself is only for receiving MMS stream, it
- doesn't handle sending at all.
- .
- This package holds the development files.
-
-Package: libmms0
-Description-md5: f0d8b772e6cf9505dde2b805a2408997
-Description-en: MMS stream protocol library - shared library
- LibMMS is a common library for parsing mms:// and mmsh:// type network
- streams.  These are commonly used to stream Windows Media Video content
- over the web.  LibMMS itself is only for receiving MMS stream, it
- doesn't handle sending at all.
- .
- This package holds the shared library.
 
 Package: libmnemonicsetter-java
 Description-md5: 36647495f146bcdd10a1620c972ccf5d
@@ -377271,36 +377196,6 @@ Description-en: parallel programming library
  Omp is a simple parallel programming library that mimics OpenMP
  syntax.
 
-Package: libonemind-commons-invoke-java
-Description-md5: 06505aaa8e3c818b091bac971aba280e
-Description-en: Java invocation framework library
- The OneMind commons-invoke framework is a complimentary framework to the
- reflection. While reflection allow discovery/invocation of the java object
- through JVM kernel, the invocation framework allows programmatic help for
- method lookup and invocation.
-
-Package: libonemind-commons-java-java
-Description-md5: f72e20a3184b9e75cb0b00e92c4c090d
-Description-en: common java library used to support other developments
- The OneMind commons-java library contains java utilities and mini-frameworks
- that are created to support other developments. It contains the following
- packages:
- .
-   * org.onemind.commons.java.criterion - for representing logical constraints
-   * org.onemind.commons.java.datastructure - some datastructure classes
-   * org.onemind.commons.java.event - event/event firer interface and a simple
-     listener list implementation
-   * org.onemind.commons.java.html.css - css attribute constants for css
-     related programming, and a simple css generation framework
-   * org.onemind.commons.java.io - FileUtils
-   * org.onemind.commons.java.lang - Null, Enum, ConfigurationException and
-     ReflectUtils
-   * org.onemind.commons.java.servlet - ServletUtils
-   * org.onemind.commons.java.sql - sql metadata representation, sql type
-     mapper and utils
-   * org.onemind.commons.java.util - more utilities classes
-   * org.onemind.commons.java.xml - utilities for xml parsing
-
 Package: libonig-dev
 Description-md5: 25507f219fbf50e51f393e5fb2482030
 Description-en: regular expressions library — development files
@@ -384573,26 +384468,6 @@ Description-en: Python bindings for libpwquality
  pronounceability.
  .
  This package contains the Python bindings.
-
-Package: python-libpysal-doc
-Description-md5: 8b6abc336ee1f0fab345ad1b3038d37c
-Description-en: Improved Python libpaysal module from (common documentation)
- Module has the libpysal.cg responsible for Computational Geometry,
- as well as the libpysal.io which allows input and output as well
- as libpysal.weights capable of processing Space Weights.
- .
- This package contains HTML documentation, incorporates instructions on how
- to install and configure and use this module Python libpaysal.
-
-Package: python3-libpysal
-Description-md5: a17700c846f11da333bd7de2b1c6d5c2
-Description-en: Library of spatial analysis functions
- Module has the libpysal.cg responsible for Computational Geometry,
- as well as the libpysal.io which allows input and output as well
- as libpysal.weights capable of processing Space Weights.
- .
- The module also comes with libpysal.examples, ie built-in example
- datasets, making it very efficient.
 
 Package: libpyzy-1.0-0v5
 Description-md5: 759302988bd5715f90ab45ee9e6d9859
@@ -391977,19 +391852,6 @@ Description-md5: 763fd867050ca169c1118d2d6e992640
 Description-en: simple client for interacting with RESTful HTTP/HTTPS resources
  REST::Client provides an easy to use interface for interacting with RESTful
  HTTP/HTTPS resources through an intuitive API.
-
-Package: libreswan
-Description-md5: 85f11a75b91fd863b98f3e219668ec8a
-Description-en: Internet Key Exchange daemon
- Libreswan is an IPsec implementation for Linux. It has support for most
- of the extensions (RFC + IETF drafts) related to IPsec, including
- IKEv2, X.509 Digital Certificates, NAT Traversal, and many others.
- .
- Libreswan has been forked from Openswan 2.6.38, which was forked from
- FreeS/WAN 1.99.
- .
- The Libreswan IKE daemon is named pluto. It was inherited from the FreeS/WAN
- project, but provides improved X.509 certificate support and other features.
 
 Package: libtls-dev
 Description-md5: 29fd28a058c80253ef6ba5fecba291cf
@@ -437565,43 +437427,6 @@ Description-en: tile caching server - tools
  offering the essential features (and more!) expected from a tile caching
  solution.
 
-Package: python-mapclassify-doc
-Description-md5: c027e6544a1b0ffc783c6faea581c2e2
-Description-en: Classification Schemes for Choropleth Maps (common documentation)
- Library that provides tools for classifying geographic data on maps.
- It allows you to divide a spatial dataset into different classes or
- ranges, making it easier to visualize and analyze this data on maps.
- .
- This library is especially useful for grouping and categorizing geographic
- information, helping to identify patterns and trends in data.
- .
- It supports multiple classification methods such as Jenks Natural Breaks,
- Equal Interval and Quantile, among others, allowing users to choose the
- best approach for their specific analysis. Additionally, the library is
- integrated with other popular geographic data analysis tools, making it
- easy to incorporate their functionality into existing workflows.
- .
- This package contains HTML documentation, incorporates instructions on how
- to install and configure and use this module with mapclassify.
-
-Package: python3-mapclassify
-Description-md5: fddb4c93c6e56e080f55a8729cbfe931
-Description-en: Classification Schemes for Choropleth Maps
- Library that provides tools for classifying geographic data on maps.
- It allows you to divide a spatial dataset into different classes or
- ranges, making it easier to visualize and analyze this data on maps.
- .
- This library is especially useful for grouping and categorizing geographic
- information, helping to identify patterns and trends in data.
- .
- It supports multiple classification methods such as Jenks Natural Breaks,
- Equal Interval and Quantile, among others, allowing users to choose the
- best approach for their specific analysis. Additionally, the library is
- integrated with other popular geographic data analysis tools, making it
- easy to incorporate their functionality into existing workflows.
- .
- This package provides the Python 3.x module
-
 Package: mapcode
 Description-md5: ef1f8cda89d4aca457fd8c71f8222e05
 Description-en: Convert geo coordinates to/from mapcodes
@@ -447767,6 +447592,21 @@ Description-en: translate MIDI file to CSV
  multi-track sequence).  A CSV file in the format created by midicsv may be
  converted back into a standard MIDI file with the csvmidi program.
 
+Package: midiminder
+Description-md5: 42fef5a6b3ada24430326ab612b6d868
+Description-en: MIDI connection minder & viewer
+ Keeps track of connections between MIDI ports (hardware & software alike).
+ If those connections are lost because the hardware disconnects, or the
+ software exits, this service will re-make the connections once the ports
+ return to the system.
+ .
+ A configuration of connections can also be stored in a file, and loaded
+ at any time, causing the ports to be reconnected according to easy-to-write
+ rules.
+ .
+ Includes the utility command, midiwala, which provides a clear view of the
+ ports and connections, and can make and break connections easily.
+
 Package: midish
 Description-md5: 8290fb16e238e99faeb7db4a246ae1b4
 Description-en: shell-like MIDI sequencer/filter
@@ -455866,7 +455706,7 @@ Description-en: Libmpv wrapper for QtQuick2 and QML development
  .
  This package contains the files necessary for development.
 
-Package: libmpvqt3
+Package: libmpvqt4
 Description-md5: 109cb948e75f1e343b92465de86ac57d
 Description-en: Libmpv wrapper for QtQuick2 and QML
  MpvQt is a libmpv wrapper for QtQuick2 and QML
@@ -481526,6 +481366,13 @@ Description-en: Map `visit` over an array of objects
  /usr/share/doc/node-map-visit/README.md for more info.
  .
  Node.js is an event-based server-side JavaScript engine.
+
+Package: node-mapbox-jsonlint-lines-primitives
+Description-md5: b9ae80b8447f016d5dc6a61b8ae9a340
+Description-en: JSON parser with line number annotations
+ This JSON parser attaches line number information to parsed objects and
+ primitive values. Its error reports identify invalid JSON input, including
+ the location of syntax errors.
 
 Package: node-marijn-buildtool
 Description-md5: 8afe9566123409649504318477a16911
@@ -514811,34 +514658,6 @@ Description-en: Command line tool for working with OpenStreetMap data
  and GeoJSON geometries for easy conversion into many GIS formats and it can
  assemble multipolygons from ways and relations.
 
-Package: python-osmnx-doc
-Description-md5: 5c2b79887b6eeffcfb6fee5546e3623e
-Description-en: tool to study street networks from OpenStreetMap -- doc
- OSMnx retrieves, models, analyzes, and visualizes street networks
- from OpenStreetMap (OSM).
- .
- OSMnx is a Python package that lets you download spatial geometries
- and model, project, visualize, and analyze street networks from
- OpenStreetMap's APIs. Users can download and model walkable, drivable,
- or bikable urban networks with a single line of Python code, and then
- easily analyze and visualize them.
- .
- This package contains documentation for OSMnx.
-
-Package: python3-osmnx
-Description-md5: 17bdfc22b4609b0fe46a5bed872f83df
-Description-en: tool to study street networks from OpenStreetMap -- Python3
- OSMnx retrieves, models, analyzes, and visualizes street networks
- from OpenStreetMap (OSM).
- .
- OSMnx is a Python package that lets you download spatial geometries
- and model, project, visualize, and analyze street networks from
- OpenStreetMap's APIs. Users can download and model walkable, drivable,
- or bikable urban networks with a single line of Python code, and then
- easily analyze and visualize them.
- .
- This package contains the Python 3 version of OSMnx.
-
 Package: osmo
 Description-md5: 5c5b27d85c5a365939379323a1f30993
 Description-en: personal organizer for GTK+
@@ -541855,13 +541674,6 @@ Description-en: PolicyKit-qt6-1 development files
  .
  This package contains the development libraries and headers for the Qt 6
  version.
-
-Package: pollen
-Description-md5: e82e0d796160a300116ea3ec9e3e4bf5
-Description-en: Entropy-as-a-Service web server
- Pollen is an Entropy-as-a-Service web server, providing random seeds.
- This can be performed over both cleartext http and encrypted
- https TLS connections.
 
 Package: pollinate
 Description-md5: eff6822748707d1918e5af33c749eb2f
@@ -574605,24 +574417,6 @@ Description-en: Python 3 bindings and utilities for GeoJSON
  .
  This is the Python 3 version of the library
 
-Package: python3-geopandas
-Description-md5: 7915f3a9bc68354c563139f895e789dc
-Description-en: Python3 tools for geographic data
- GeoPandas is a project to add support for geographic data to
- pandas objects.  It currently implements
- `GeoSeries` and `GeoDataFrame` types which are subclasses of
- `pandas.Series` and `pandas.DataFrame` respectively.  GeoPandas
- objects can act on shapely  geometry objects and perform geometric operations.
- .
- GeoPandas geometry operations are cartesian.  The coordinate reference
- system (crs) can be stored as an attribute on an object, and is
- automatically set when loading from a file.  Objects may be
- transformed to new coordinate systems with the `to_crs()` method.
- There is currently no enforcement of like coordinates for operations,
- but that may change in the future.
- .
- This package contains the Python 3 version of the library.
-
 Package: python3-georss-client
 Description-md5: 3b0edcbb3904e3630b347d7612cc042d
 Description-en: Python GeoRSS client library
@@ -580882,24 +580676,6 @@ Description-en: tool to write load tests in Python
  .
  This package contains the Python 3.x module and CLI.
 
-Package: python-momepy-doc
-Description-md5: edc90c93b99bc09bdd765f64dc80cf29
-Description-en: Urban Morphology Measuring Toolkit - doc
- Momepy is a library for quantitative analysis of urban form - urban
- morphometrics. It is part of PySAL (Python Spatial Analysis Library) and is
- built on top of GeoPandas, other PySAL modules, and networkX.
- .
- This package contains the documentation.
-
-Package: python3-momepy
-Description-md5: 08a1edf5f7826f149316462dc18fccf7
-Description-en: Urban Morphology Measuring Toolkit - Python 3.x
- Momepy is a library for quantitative analysis of urban form - urban
- morphometrics. It is part of PySAL (Python Spatial Analysis Library) and is
- built on top of GeoPandas, other PySAL modules, and networkX.
- .
- This package contains the Python 3.x module.
-
 Package: python3-momonga
 Description-md5: 293d3437ac32c5a742708d3adcab80ae
 Description-en: Route B communicator for low-voltage smart electric energy meters
@@ -583337,6 +583113,17 @@ Description-en: Test utilities for OpenTelemetry unit tests
  project and provides no stability or quality guarantees. Should not be used
  for anything other than writing or running tests for the OpenTelemetry Python
  project (github.com/open-telemetry/opentelemetry-python).
+
+Package: python-opentelemetry-contrib-doc
+Description-md5: 77086b3a4bf2aa33dcab854a1e44de62
+Description-en: OpenTelemetry Python Contrib documentation
+ OpenTelemetry is an observability framework – an API, SDK, and tools that are
+ designed to aid in the generation and collection of application telemetry
+ data such as metrics, logs, and traces.
+ .
+ This package contains the API reference of the OpenTelemetry Python Contrib
+ packages that are available in Debian: the base instrumentation package,
+ the instrumentations and the AWS X-Ray propagator.
 
 Package: python3-opentelemetry-instrumentation
 Description-md5: 38e3839d0b64226c8b35f97982d712b9
@@ -597246,6 +597033,19 @@ Description-en: XML/HTML Generation DSL (Python 3)
  .
  This package provides the Python 3 version of Wither.
 
+Package: python3-wkb-wkt-converter
+Description-md5: 42b1ae0ca8ebc16ac69e8ab2da83aff8
+Description-en: converter between WKT and WKB geometry formats
+ This library converts geospatial geometries between Well-Known Text (WKT)
+ and Well-Known Binary (WKB), including their extended forms EWKT and EWKB.
+ It supports all seven OGC geometry types, including geometry collections,
+ as well as empty geometries and Z and M coordinate dimensions.
+ .
+ Conversion functions accept binary or hexadecimal WKB and can preserve,
+ remove or override spatial reference identifiers (SRIDs), or return them
+ separately from the geometry. Both byte orders and ISO WKB dimension
+ encodings are supported for input.
+
 Package: python3-wn
 Description-md5: 6a3d3b54f6c48708160d6d6b373c88d4
 Description-en: Modern, interlingual wordnet interface (Python 3)
@@ -604215,6 +604015,40 @@ Description-en: Material Design-inspired stylesheet for PySide6, PySide2, PyQt5 
  This is another stylesheet for PySide6, PySide2, PyQt5 and PyQt6,
  which looks like Material Design (close enough), with custom dark and
  light themes.
+
+Package: libqtqmlmodels-dev
+Description-md5: 2bd08d3c61023a53aa25593edfed2847
+Description-en: Additional list-type data models for QML apps
+ This package adds 2 C++ data models to the qml back end, for use by
+ QML applications.
+ .
+ QQmlObjectListModel : a much nicer way to expose C++ list to QML than
+ the quick & dirty QList<QObject*> property. Supports all the strong
+ model features of QAbstractListModel while having the simple and well
+ know API of QList.
+ .
+ QQmlVariantListModel : a dead-simple way to create a dynamic C++ list
+ of any type and expose it to QML, much better than using a QVariantList
+ property.
+ .
+ This package contains the development files.
+
+Package: libqtqmlmodels0
+Description-md5: 506beb85814cdf9d7a7e41b52037faf6
+Description-en: Additional list-type data models for QML apps
+ This package adds 2 C++ data models to the qml back end, for use by
+ QML applications.
+ .
+ QQmlObjectListModel : a much nicer way to expose C++ list to QML than
+ the quick & dirty QList<QObject*> property. Supports all the strong
+ model features of QAbstractListModel while having the simple and well
+ know API of QList.
+ .
+ QQmlVariantListModel : a dead-simple way to create a dynamic C++ list
+ of any type and expose it to QML, much better than using a QVariantList
+ property.
+ .
+ This package is the library itself.
 
 Package: python3-qt-reactor
 Description-md5: 474853da2687c9c7ed5a31a5f5bcee0c
@@ -627913,6 +627747,31 @@ Description-en: Emacs Lisp regexp mistake finder
  arguments to skip-chars-forward, skip-chars-backward,
  skip-syntax-forward and skip-syntax-backward.
 
+Package: relion
+Description-md5: a54d8123a50edf0f9102f8a3c05de97f
+Description-en: toolkit for 3D reconstructions in cryo-electron microscopy
+ RELION (for REgularised LIkelihood OptimisatioN) is a stand-alone
+ computer program for Maximum A Posteriori refinement of (multiple) 3D
+ reconstructions or 2D class averages in cryo-electron microscopy.
+ .
+ RELION provides a GUI, several command-line tools in parallel (MPI) and serial
+ versions, optionally with CUDA/GPU support.
+ .
+ relion provides the serial and parallel (MPI) command-line tools without
+ CUDA/GPU support.
+
+Package: relion-gui
+Description-md5: 17b4d8288a7b95c56b60109e77e4b7c3
+Description-en: toolkit for 3D reconstructions in cryo-electron microscopy (gui apps)
+ RELION (for REgularised LIkelihood OptimisatioN) is a stand-alone
+ computer program for Maximum A Posteriori refinement of (multiple) 3D
+ reconstructions or 2D class averages in cryo-electron microscopy.
+ .
+ RELION provides a GUI, several command-line tools in parallel (MPI) and serial
+ versions, optionally with CUDA/GPU support.
+ .
+ relion-gui provides the graphical user interface without CUDA/GPU support.
+
 Package: libreload4j-java
 Description-md5: 7793f63ce123a79e208c6be929d87e60
 Description-en: Drop-in replacement for Apache log4j 1.2 Java logging framework
@@ -643237,14 +643096,13 @@ Description-en: Simple REST client for Google Cloud Storage JSON API V1
  a separate modern client that is easier to use.
 
 Package: ruby-google-cloud-core
-Description-md5: 0e5f3ea09b785e04982d45c08d7f129c
-Description-en: Internal shared library for google-cloud-ruby
- This google-cloud-core library contains shared types, such as error classes,
- for the google-cloud project. google-cloud-core is the internal shared library
- for google-cloud-ruby.
+Description-md5: bdae95bad9346ed407b048d993c94877
+Description-en: internal shared library for google-cloud-ruby
+ This package provides the configuration, credentials, and Google::Cloud
+ entry point shared by the other google-cloud Ruby libraries. It does not
+ call a Google API by itself.
  .
- Google provides official support for Ruby versions that are actively supported
- by Ruby Core.
+ Upstream supports the library on Ruby 3.2 and newer.
 
 Package: ruby-google-cloud-env
 Description-md5: f1ba04b5a3cb900f4aba6fa535669013
@@ -643275,13 +643133,15 @@ Description-en: API Client library for Stackdriver Logging
  Upstream supports the library on Ruby 3.2 and newer.
 
 Package: ruby-google-cloud-logging-v2
-Description-md5: 6884259260d81b75c1dcaf3244f7796b
-Description-en: Writes log entries and manages your Cloud Logging configuration
- The Cloud Logging API lets you programmatically read and write log entries,
- set up exclusions, create logs-based metrics, and manage export sinks. Note
- that google-cloud-logging-v2 is a version-specific client library. For most
- uses, we recommend installing the main client library google-cloud-logging
- instead. See the readme for more details.
+Description-md5: 72efdd26397b00492672f11b0478ebbc
+Description-en: versioned client for the Cloud Logging V2 API
+ LoggingService reads and writes log entries. ConfigService manages
+ sinks used to route log entries. MetricsService manages logs-based
+ metrics.
+ .
+ ruby-google-cloud-logging is the higher-level client.
+ .
+ Upstream supports the library on Ruby 3.2 and newer.
 
 Package: ruby-google-logging-utils
 Description-md5: 2046891753c007b0eca117f3eded5fea
@@ -653574,6 +653434,11 @@ Description-md5: bf98d78d5b68275d217679a4f84bfb22
 Description-en: Rust crate to convert binary data to an ASCII text format and back - Rust source code
  Source code for Debianized Rust crate "binstring"
 
+Package: librust-bip39-dev
+Description-md5: a702844b27fe60aedb1532e89b9a279d
+Description-en: BIP-39 Bitcoin mnemonic codes - Rust source code
+ Source code for Debianized Rust crate "bip39"
+
 Package: librust-biquad-dev
 Description-md5: 5dc277696a90701e5a7ec8f60a1913fd
 Description-en: Digital second order IIR filtrers, also known as biquads - Rust source code
@@ -659341,6 +659206,29 @@ Description-en: ML-DSA (Module-Lattice-Based Digital Signature Standard) - Rust 
  a full description of the target functionality.
  Source code for Debianized Rust crate "fips204"
 
+Package: librust-fips205-dev
+Description-md5: ba650d6237995b14f522fe710ecc5896
+Description-en: SLH-DSA (Stateless Hash-Based Digital Signature Standard) - Rust source code
+ FIPS 205 Stateless Hash-Based Digital Signature Standard (SLH-DSA)
+ written in pure Rust for server, desktop, browser and embedded
+ applications.
+ .
+ This crate implements the FIPS 205 standard in pure Rust with minimal
+ and mainstream dependencies, and without any unsafe code. All twelve
+ security parameter sets are fully functional and tested. Key
+ generation and signing are constant-time: every branch, loop bound and
+ memory index depends only on public data, and each signature makes the
+ same number of hash calls for its parameter set, whatever the key,
+ message or randomness. The crate does not require the standard library
+ (it is `#![no_std]`), makes no heap allocations (no `alloc` needed),
+ and exposes the `RNG`, so it suits the full range of applications from
+ server down to bare metal. The API is stabilized, and the code is
+ heavily biased towards safety and correctness.
+ .
+ See <https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.205.pdf> for a
+ full description of the target functionality.
+ Source code for Debianized Rust crate "fips205"
+
 Package: librust-fix-getters-rules-dev
 Description-md5: 5964a565b4152b8b1ec6d7dc80ad8f39
 Description-en: Fix get functions name by removing the get prefix when applicable - Rust source code
@@ -659585,8 +659473,8 @@ Description-en: Client library for the Android Debug Bridge (adb) - Rust source 
  Source code for Debianized Rust crate "forensic-adb"
 
 Package: librust-fork-dev
-Description-md5: c87c9de2aeed2695620b7239da6d7de3
-Description-en: Creating a new process detached from the controlling terminal (daemon) - Rust source code
+Description-md5: 6df139c73836d5d660135d9a9c586dbe
+Description-en: Create a detached daemon process - Rust source code
  Source code for Debianized Rust crate "fork"
 
 Package: librust-form-urlencoded-dev
@@ -664551,12 +664439,6 @@ Description-md5: b81292b2926d1fcd15592d2fcfe5211c
 Description-en: Rust bindings for libsodium using libsodium-sys-stable - Rust source code
  Source code for Debianized Rust crate "libsodium-rs"
 
-Package: librust-libsodium-sys-dev
-Description-md5: 64299619e615ac3e8abb164bd972b7a3
-Description-en: FFI binding to libsodium - Rust source code
- This package contains the source for the Rust libsodium-sys crate, packaged by
- debcargo for use with cargo and dh-cargo.
-
 Package: librust-libsodium-sys-stable-dev
 Description-md5: e113ad4bc7c1244834e4c32ab2773f57
 Description-en: Maintained FFI bindings for libsodium stable - Rust source code
@@ -667576,10 +667458,9 @@ Description-en: Traits and implementations for parsing command-line arguments - 
  debcargo for use with cargo and dh-cargo.
 
 Package: librust-parse-datetime-dev
-Description-md5: a01ea18d281546b970889ec7ef27e06d
-Description-en: Parsing human-readable time strings and converting them to a DateTime - Rust source code
- This package contains the source for the Rust parse_datetime crate, packaged by
- debcargo for use with cargo and dh-cargo.
+Description-md5: ca07906381e06a65c420433ca74c6ab1
+Description-en: Parsing human-readable time strings and converting them to a Zoned datetime - Rust source code
+ Source code for Debianized Rust crate "parse_datetime"
 
 Package: librust-parse-display-dev
 Description-md5: b5c612b6595fe05fc406242fa5b44ef7
@@ -667590,6 +667471,11 @@ Package: librust-parse-display-derive-dev
 Description-md5: 6c5d385a2f0e7af6f21d925b6d13b7eb
 Description-en: Procedural macro to implement Display and FromStr using common settings - Rust source code
  Source code for Debianized Rust crate "parse-display-derive"
+
+Package: librust-parse-duration-dev
+Description-md5: 0dcf751e018f7e39058115736a1c0b1c
+Description-en: Parses a duration from a string - Rust source code
+ Source code for Debianized Rust crate "parse_duration"
 
 Package: librust-parse-size-dev
 Description-md5: bf77dc226e896ec765ed7581e68b789a
@@ -673558,6 +673444,11 @@ Description-en: Retain mapping information when concatenating source files - Rus
  This package contains the source for the Rust sourcefile crate, packaged by
  debcargo for use with cargo and dh-cargo.
 
+Package: librust-sourceview5-dev
+Description-md5: 2d82eaaca9d47833609480ae0cc776d1
+Description-en: Rust bindings for GtkSourceView 5 - Rust source code
+ Source code for Debianized Rust crate "sourceview5"
+
 Package: librust-sourceview5-sys-dev
 Description-md5: cfa180e4db967ae16e98543ed6f45355
 Description-en: FFI bindings for GtkSourceView 5 - Rust source code
@@ -675371,12 +675262,6 @@ Package: librust-threecpio-dev
 Description-md5: 6eddce5292bb35b8f60e0909af7341c1
 Description-en: Manage initrd cpio archives - Rust source code
  Source code for Debianized Rust crate "threecpio"
-
-Package: librust-thrussh-libsodium-dev
-Description-md5: cd8de6d6d212f731756773b03acbe92d
-Description-en: Straightforward bindings to libsodium - Rust source code
- This package contains the source for the Rust thrussh-libsodium crate, packaged
- by debcargo for use with cargo and dh-cargo.
 
 Package: librust-tiff-dev
 Description-md5: 59d3bdf6c9613696948cf99ff132541e
@@ -749623,32 +749508,32 @@ Description-en: Data files for Ucto
  University, The Netherlands).
 
 Package: libucx-dev
-Description-md5: e2f87be68e4cfcf1b0f06888acc40657
+Description-md5: 3dbb896b9f10539a553be0eb98791f93
 Description-en: Header files for UCX library
  Unified Communication X (UCX) provides an optimized communication layer
  for Message Passing (MPI), PGAS/OpenSHMEM libraries and RPC/data-centric
  applications.
- UCX utilizes high-speed networks for inter-node communication,i
+ UCX utilizes high-speed networks for inter-node communication,
  and shared memory mechanisms for efficient intra-node communication.
  This package provides development files for UCX.
 
 Package: libucx0
-Description-md5: 83e9e3f7c1645625f6431aab28b6c3d7
+Description-md5: ac58edde8c41202bf48666484b491049
 Description-en: Unified Communication X libraries
  Unified Communication X (UCX) provides an optimized communication layer
  for Message Passing (MPI), PGAS/OpenSHMEM libraries and RPC/data-centric
  applications.
- UCX utilizes high-speed networks for inter-node communication,i
+ UCX utilizes high-speed networks for inter-node communication,
  and shared memory mechanisms for efficient intra-node communication.
  This package provides shared libraries for UCX.
 
 Package: ucx-utils
-Description-md5: 052e583e5ec1d0808dc620d8e0fbe4d0
+Description-md5: dc67ef5d365a0ef81acceda550ab0c39
 Description-en: Utilities for the UCX messaging library
  Unified Communication X (UCX) provides an optimized communication layer
  for Message Passing (MPI), PGAS/OpenSHMEM libraries and RPC/data-centric
  applications.
- UCX utilizes high-speed networks for inter-node communication,i
+ UCX utilizes high-speed networks for inter-node communication,
  and shared memory mechanisms for efficient intra-node communication.
  This package provides utilities for the UCX frameworks.
 
@@ -752853,9 +752738,9 @@ Description-en: Notifies user when long-running terminal commands complete via l
  be pulled into a bash login shell via /etc/profile.d
 
 Package: python3-unearth
-Description-md5: ba01891d446dd111cc20625e310b6d85
-Description-en: utility to fetch and download python packages
- This package provides a utility to fetch and download python packages.
+Description-md5: 14eaf216d1c872d40e727a5e0f9c79dc
+Description-en: utility to fetch and download Python packages
+ This package provides a utility to fetch and download Python packages.
  It exists as the last piece to complete the puzzle of a package manager,
  and provide low-level functionalities that are needed to resolve
  and install packages.

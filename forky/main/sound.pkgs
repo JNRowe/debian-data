@@ -5280,24 +5280,25 @@ MD5sum: 37f276e08b9e85eaf3423761dde7347d
 SHA256: aae4a46930229f0bc192aaf53f718e59379880324c4c0120173d1b9e42fade09
 
 Package: id3
-Version: 1.1.2-5
-Installed-Size: 45
+Version: 1.1.3-1
+Installed-Size: 2142
 Maintainer: Peter Pentchev <roam@debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.34)
 Description: Editor for ID3 tags
 Multi-Arch: foreign
 Homepage: https://devel.ringlet.net/audio/id3/
+Built-Using: golang-1.27 (= 1.27.3-1), golang-github-jessevdk-go-flags (= 1.6.1-1), golang-golang-x-sys (= 0.49.0+dfsg-2), golang-logrus (= 1.9.3-2)
 Commands: id3
 Description-md5: d91cc8db52621a037ad1e9e1950543b5
+Static-Built-Using: golang-1.27 (= 1.27.3-1), golang-github-jessevdk-go-flags (= 1.6.1-1), golang-golang-x-sys (= 0.49.0+dfsg-2), golang-logrus (= 1.9.3-2)
 Tag: interface::commandline, role::program, scope::utility, use::editing,
  use::organizing, works-with-format::mp3, works-with::audio
 sound
 Priority: optional
-Filename: pool/main/i/id3/id3_1.1.2-5_amd64.deb
-Size: 12380
-MD5sum: 2623cf5e528863a02ec3eb8e27b25e97
-SHA256: 0e9d1740bc5dc95802712ca3d6df073143c67379e27daead43b3bb8f329d4cfb
+Filename: pool/main/i/id3/id3_1.1.3-1_amd64.deb
+Size: 801360
+MD5sum: d94abb55e78037956d8d3cfc0363ebe4
+SHA256: dcb51cac54226ed6e5577cc25c3037a451bbb92ebefac83018c035c7df31ee58
 
 Package: libid3-tools
 Source: id3lib3.8.3
@@ -5496,36 +5497,37 @@ SHA256: 9c57f02dcff7b8b540666075fdc748e97be52b0a3b73f35351dce940b666557d
 
 Package: jackd1
 Source: jack-audio-connection-kit
-Version: 1:0.126.0-6
+Version: 1:0.126.0-7
 Installed-Size: 336
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
 Replaces: jack-daemon
 Provides: jack-daemon
-Depends: debconf (>= 0.5) | debconf-2.0, libjack0 (= 1:0.126.0-6), libasound2t64 (>= 1.0.16), libc6 (>= 2.38), libjack-jackd2-0 (>= 1.9.10+20150825) | libjack-0.125, libsamplerate0 (>= 0.1.7)
+Depends: debconf (>= 0.5) | debconf-2.0, libjack0 (= 1:0.126.0-7), libasound2t64 (>= 1.0.16), libc6 (>= 2.38), libjack-jackd2-0 (>= 1.9.10+20150825) | libjack-0.125, libsamplerate0 (>= 0.1.7)
 Recommends: jackd1-firewire, libpam-modules, qjackctl
 Suggests: jack-tools, meterbridge
 Conflicts: jack-daemon
 Description: JACK Audio Connection Kit (server and example clients)
 Homepage: https://jackaudio.org/
+Commands: jackd
 Description-md5: d236af7f48ea4bfa984ea4189cd1b635
 Tag: interface::daemon, role::program, works-with::audio
 sound
 Priority: optional
-Filename: pool/main/j/jack-audio-connection-kit/jackd1_0.126.0-6_amd64.deb
-Size: 94328
-MD5sum: 1afd0c616eb716539336c8393a1fff41
-SHA256: 739d6fa38b21159f713acf5e52ca7b538b8138e73bbf9f16c3b6c9616f55ff7f
+Filename: pool/main/j/jack-audio-connection-kit/jackd1_0.126.0-7_amd64.deb
+Size: 96820
+MD5sum: aab7b05200861c19c0ac5fff3a2e76e1
+SHA256: 4eb5f8bb2977f61d414abc588a81eaa779f262bf8b20e96680693f0272677013
 
 Package: jackd1-firewire
 Source: jack-audio-connection-kit
-Version: 1:0.126.0-6
+Version: 1:0.126.0-7
 Installed-Size: 53
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Architecture: amd64
 Replaces: jackd-firewire
 Provides: jackd-firewire
-Depends: jackd1 (= 1:0.126.0-6), libc6 (>= 2.4), libffado2 (>= 2.5.0), libjack-jackd2-0 (>= 1.9.10+20150825) | libjack-0.125, libjack0 (>= 1:0.125.0)
+Depends: jackd1 (= 1:0.126.0-7), libc6 (>= 2.4), libffado2 (>= 2.5.0), libjack-jackd2-0 (>= 1.9.10+20150825) | libjack-0.125, libjack0 (>= 1:0.125.0)
 Conflicts: jackd-firewire
 Description: JACK Audio Connection Kit (FFADO backend)
 Homepage: https://jackaudio.org/
@@ -5533,10 +5535,10 @@ Description-md5: c3f26cc90d191e69646780df881bf7f5
 Tag: role::shared-lib
 sound
 Priority: optional
-Filename: pool/main/j/jack-audio-connection-kit/jackd1-firewire_0.126.0-6_amd64.deb
-Size: 15108
-MD5sum: 11b9d235b75b1011da6113e1f88c18ad
-SHA256: bb3f4100ef43d4562cbf7eabb426f879547e98957d4e0cb1b1b3e1ac926a888c
+Filename: pool/main/j/jack-audio-connection-kit/jackd1-firewire_0.126.0-7_amd64.deb
+Size: 15396
+MD5sum: 3b5de9787b6c0278484a28dd41738e72
+SHA256: 29c84fc1cc56f63a2afe7d0a0067071fcd08269281da0e70ca42cb9f4d703334
 
 Package: jack-capture
 Version: 0.9.73-6
@@ -7012,6 +7014,23 @@ Size: 45428
 MD5sum: 370a18d3b32816e664d25b7a84c6ccf0
 SHA256: 0dcf5811cc30f4a67624eebfdd39f673917cdff8a3e37d23a62cfc686edddfa4
 
+Package: midiminder
+Version: 1.0.2-1
+Installed-Size: 1248
+Maintainer: John Horigan <john@glyphic.com>
+Architecture: amd64
+Depends: systemd | systemd-standalone-sysusers | systemd-sysusers, libasound2t64 (>= 1.1.1), libc6 (>= 2.38), libfmt11 (>= 11.1.1+ds1), libgcc-s1 (>= 3.0), libicu78 (>= 78.1-1~), libstdc++6 (>= 14)
+Description: MIDI connection minder & viewer
+Multi-Arch: foreign
+Homepage: https://electric.kitchen/midiminder/
+Description-md5: 42fef5a6b3ada24430326ab612b6d868
+sound
+Priority: optional
+Filename: pool/main/m/midiminder/midiminder_1.0.2-1_amd64.deb
+Size: 310304
+MD5sum: 04ef3d84a79a0ce5a41395daef55798d
+SHA256: 57588e2ec8d3376e3a9732646ef3fe5454f14c08e8d7bbc870eb6b2d6085adf3
+
 Package: midish
 Version: 1.4.0-1
 Installed-Size: 490
@@ -7429,20 +7448,20 @@ MD5sum: 1fc74827466df7e58008257ff176ea62
 SHA256: 17998fae22a65cd89e1a8384dd596d7ddb5162c2f19d999b97eee2a25ef1ba1c
 
 Package: mopidy-mpd
-Version: 4.0.1-1
-Installed-Size: 200
+Version: 4.1.0-1
+Installed-Size: 205
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Architecture: all
-Depends: mopidy (>= 4.0.0), python3-gi, python3-pykka (>= 4.1), python3:any
+Depends: mopidy (>= 4.0.2), python3-gi, python3-pykka (>= 4.1), python3-rich, python3:any
 Description: Mopidy extension for controlling Mopidy from MPD clients
 Homepage: https://mopidy.com/
 Description-md5: dc6a197427f1f35dc3d698b20d4bf0e1
 sound
 Priority: optional
-Filename: pool/main/m/mopidy-mpd/mopidy-mpd_4.0.1-1_all.deb
-Size: 41972
-MD5sum: d0daa11e217d044372b0e0f70ad5d05e
-SHA256: 08b20b878ccf012b9320c993d0448aa3a5da8e80441afa1516442835a26acc40
+Filename: pool/main/m/mopidy-mpd/mopidy-mpd_4.1.0-1_all.deb
+Size: 42972
+MD5sum: 4a5cbd89164d2dcee909d58e8bdc5cd5
+SHA256: 2f0ff3882787b6b4d0851a64b8705cf4c123e33f5cc5e9d5577dbf542741e725
 
 Package: mopidy-mpris
 Version: 4.0.0-1
