@@ -7267,6 +7267,79 @@ Size: 1495892
 MD5sum: 6fe574a1b635866b2b92b3622739844d
 SHA256: a76e8d4d5b404b3de964850907503f90bf92ce9aa2cc537117cc1e6461f12c82
 
+Package: freeipa-client
+Source: freeipa (4.13.1-1)
+Version: 4.13.1-1+b1
+Installed-Size: 294
+Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
+Architecture: amd64
+Depends: bind9-utils, certmonger (>= 0.79.14), curl, bind9-dnsutils, freeipa-common (= 4.13.1-1), krb5-user, libnss3-tools, libnss-sss, libpam-sss, libsasl2-modules-gssapi-mit, libsss-sudo, oddjob-mkhomedir, python3-dnspython, python3-ipaclient (= 4.13.1-1), python3-gssapi, python3-ldap, python3-sss, sssd (>= 2.8.0), python3:any, libc6 (>= 2.34), libcom-err2 (>= 1.43.9), libcurl4t64 (>= 7.16.2), libini-config8 (>= 0.7.0), libjansson4 (>= 2.14), libk5crypto3 (>= 1.20), libkrb5-3 (>= 1.13~alpha1+dfsg), libldap2 (>= 2.6.2), libpopt0 (>= 1.14), libssl3t64 (>= 3.0.0)
+Recommends: chrony, sssd-passkey
+Suggests: libnss-myhostname, libpam-krb5
+Description: FreeIPA centralized identity framework -- client
+Homepage: http://www.freeipa.org
+Description-md5: 1aa0c0a3f974364e79585d72db619762
+net
+Priority: optional
+Filename: pool/main/f/freeipa/freeipa-client_4.13.1-1+b1_amd64.deb
+Size: 106892
+MD5sum: 5fa169ef9ddfb36f286e82ff51c13d54
+SHA256: 6c675380785351ecf8161cb44d467f87ca523f3a7c116b8ecc3ea93c85d5ae87
+
+Package: freeipa-client-epn
+Source: freeipa (4.13.1-1)
+Version: 4.13.1-1+b1
+Installed-Size: 53
+Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
+Architecture: amd64
+Replaces: freeipa-server (<< 4.8.10-2)
+Depends: freeipa-client (= 4.13.1-1+b1), python3:any
+Breaks: freeipa-server (<< 4.8.10-2)
+Description: FreeIPA centralized identity framework -- tools for configuring Expiring Password Notification
+Homepage: http://www.freeipa.org
+Description-md5: e86c1026ebb3af2bf07192883a773749
+net
+Priority: optional
+Filename: pool/main/f/freeipa/freeipa-client-epn_4.13.1-1+b1_amd64.deb
+Size: 14736
+MD5sum: 854a37cd8ce72f5f1f6ea29d73d13a85
+SHA256: 47e41c7db70a22c384a16bf2027b6347c24b5abcce8531a1311c632fde146c64
+
+Package: freeipa-client-samba
+Source: freeipa (4.13.1-1)
+Version: 4.13.1-1+b1
+Installed-Size: 32
+Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
+Architecture: amd64
+Depends: cifs-utils, freeipa-client (= 4.13.1-1+b1), python3-samba, samba-common-bin, smbclient, tdb-tools, winbind, python3:any
+Description: FreeIPA centralized identity framework -- Samba client
+Multi-Arch: same
+Homepage: http://www.freeipa.org
+Description-md5: c96b7178885d6e724e0833a8eaf878ea
+net
+Priority: optional
+Filename: pool/main/f/freeipa/freeipa-client-samba_4.13.1-1+b1_amd64.deb
+Size: 10820
+MD5sum: 4720dc86b5d3b2e2f4867e2649fda61f
+SHA256: da7fd5cfa4d0338f3283d4f368fbca900f4aad0375a8411817aff77ff2fd6b4c
+
+Package: freeipa-common
+Source: freeipa
+Version: 4.13.1-1
+Installed-Size: 4584
+Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
+Architecture: all
+Description: FreeIPA centralized identity framework -- common files
+Multi-Arch: foreign
+Homepage: http://www.freeipa.org
+Description-md5: 94d7150bfe2c2b72eb5182a3b5ebf3f8
+net
+Priority: optional
+Filename: pool/main/f/freeipa/freeipa-common_4.13.1-1_all.deb
+Size: 643356
+MD5sum: 725a30de47eab956952c2e17dd3d9037
+SHA256: 2916e247950970c278efa950ccc593aa3217dbbabc476c7876b2fe86dfd18190
+
 Package: freeipa-healthcheck
 Version: 0.16-2
 Installed-Size: 246
@@ -10623,8 +10696,8 @@ MD5sum: 8ef128b2896923a87fe7331c682ccf0f
 SHA256: c198675e3301b9983da3e10c27d298387e06b2eccde587ea25297258b5072e10
 
 Package: ikvswitch
-Version: 1.0.5
-Installed-Size: 70
+Version: 1.0.7
+Installed-Size: 90
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
 Depends: bridge-utils, iproute2, iptables, net-tools, openipmi, openstack-debian-images, qemu-kvm | qemu-system-any, qemu-utils, shim-signed
@@ -10633,10 +10706,10 @@ Homepage: https://salsa.debian.org/openstack-team/debian/ikvswitch
 Description-md5: 54f4280a745eed4750847888dcf03277
 net
 Priority: optional
-Filename: pool/main/i/ikvswitch/ikvswitch_1.0.5_all.deb
-Size: 17352
-MD5sum: f1e1d17eec0c7b901822f51e86d73019
-SHA256: 4a6afc493bb34402ee9561363b3b083a9fe5c629cef5474fb1347c8560243264
+Filename: pool/main/i/ikvswitch/ikvswitch_1.0.7_all.deb
+Size: 24532
+MD5sum: abf2559be8831f210dd60efc2c07f3b0
+SHA256: d14b69055538e8b2019881c144965cbc304da6d1a31da713aba0720a84bd43ca
 
 Package: inadyn
 Source: inadyn (2.11.0-1)
@@ -11576,11 +11649,11 @@ SHA256: 8de796533772d154e49aed474a6c7bdc5f4ed2e3ebabb011043119f44d74106b
 
 Package: ironic-api
 Source: ironic
-Version: 1:39.0.0-6
+Version: 1:39.0.0-7
 Installed-Size: 173
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: adduser, debconf, ironic-common (= 1:39.0.0-6), python3-keystoneclient, python3-openstackclient, python3-pastescript, q-text-as-data, uwsgi-plugin-python3, debconf (>= 0.5) | debconf-2.0
+Depends: adduser, debconf, ironic-common (= 1:39.0.0-7), python3-keystoneclient, python3-openstackclient, python3-pastescript, q-text-as-data, uwsgi-plugin-python3, debconf (>= 0.5) | debconf-2.0
 Description: bare metal hypervisor API for OpenStack - API server
 Homepage: https://github.com/openstack/ironic
 Description-md5: b97fce6888e562e8174eaa8b9c8b73cc
@@ -11588,18 +11661,18 @@ Tag: admin::virtualization, implemented-in::python, role::program,
  suite::openstack, system::cloud, system::virtual
 net
 Priority: optional
-Filename: pool/main/i/ironic/ironic-api_39.0.0-6_all.deb
-Size: 28920
-MD5sum: 070a6a784ac616d9dc56c136ff7bb769
-SHA256: 6d7675a2f15447ef58626693d22b73f171c2c29577ced4f1f719a173ef37f680
+Filename: pool/main/i/ironic/ironic-api_39.0.0-7_all.deb
+Size: 29048
+MD5sum: 683144121de27e3fa862f7e08b97a8b3
+SHA256: 411712147be45ce0e6e683aac1f7bd1d16883384a300e4fc78d8abebae37902d
 
 Package: ironic-common
 Source: ironic
-Version: 1:39.0.0-6
+Version: 1:39.0.0-7
 Installed-Size: 867
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: adduser, dbconfig-common, ipmitool, python3-ironic (= 1:39.0.0-6), sqlite3, sudo, debconf (>= 0.5) | debconf-2.0, python3:any
+Depends: adduser, dbconfig-common, ipmitool, python3-ironic (= 1:39.0.0-7), sqlite3, sudo, debconf (>= 0.5) | debconf-2.0, python3:any
 Description: bare metal hypervisor API for OpenStack - common files
 Homepage: https://github.com/openstack/ironic
 Description-md5: d19392ba04cd41c030e7f63a59b6c2a0
@@ -11607,18 +11680,18 @@ Tag: admin::virtualization, implemented-in::python, role::app-data,
  suite::openstack, system::cloud, system::virtual
 net
 Priority: optional
-Filename: pool/main/i/ironic/ironic-common_39.0.0-6_all.deb
-Size: 184784
-MD5sum: ec6656482a1939fc8781bf4d0b4abf4b
-SHA256: 40f37e4d22b0973a5e10da101916e2ba8d9745871b58df9573a6fc97e1e6ec07
+Filename: pool/main/i/ironic/ironic-common_39.0.0-7_all.deb
+Size: 184848
+MD5sum: 4151645c048fbf466994ff3ef9905ff4
+SHA256: 35e116d8ba342c113d74b28d2e6b2e19ab1f35f7ddfdd6e874c8f4ad64dd9311
 
 Package: ironic-conductor
 Source: ironic
-Version: 1:39.0.0-6
+Version: 1:39.0.0-7
 Installed-Size: 36
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
-Depends: ipmitool, ipxe, ironic-common (= 1:39.0.0-6), open-iscsi, pxelinux, qemu-utils, tftpd-hpa
+Depends: ipmitool, ipxe, ironic-common (= 1:39.0.0-7), open-iscsi, pxelinux, qemu-utils, tftpd-hpa
 Suggests: syslinux, syslinux-common
 Description: bare metal hypervisor API for OpenStack - conductor
 Homepage: https://github.com/openstack/ironic
@@ -11627,15 +11700,15 @@ Tag: admin::virtualization, implemented-in::python, role::program,
  suite::openstack, system::cloud, system::virtual
 net
 Priority: optional
-Filename: pool/main/i/ironic/ironic-conductor_39.0.0-6_all.deb
-Size: 11536
-MD5sum: f3d08be044847344f8e8c6fb7603a48a
-SHA256: fecf9f20f99495cb3797ecb7c8a838b0aa5f2892c2c3f1747eb00a94c7543384
+Filename: pool/main/i/ironic/ironic-conductor_39.0.0-7_all.deb
+Size: 11656
+MD5sum: df29cfac81dd2fd39c5466b59b38dc36
+SHA256: c33ea3c91295802a033508897fa0d543dc8494e87eadd29fc4d989cf83db77e9
 
 Package: ironic-doc
 Source: ironic
-Version: 1:39.0.0-6
-Installed-Size: 53053
+Version: 1:39.0.0-7
+Installed-Size: 53062
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
 Depends: fonts-font-awesome-legacy | fonts-font-awesome, libjs-jquery (>= 3.6.0), libjs-sphinxdoc (>= 9.0)
@@ -11647,14 +11720,14 @@ Tag: admin::virtualization, implemented-in::python, role::documentation,
  system::virtual
 net
 Priority: optional
-Filename: pool/main/i/ironic/ironic-doc_39.0.0-6_all.deb
-Size: 2869048
-MD5sum: 9ee67c941aea84f151379a5dab6cedfd
-SHA256: 3f50c4b513c67f97c0bd44da32ebce1c6a9a24a22b16509d85e717a73009d472
+Filename: pool/main/i/ironic/ironic-doc_39.0.0-7_all.deb
+Size: 2870836
+MD5sum: 9c64b4cd6ac81a2592d763057d318008
+SHA256: 3a031ba725a87c3cb73fca9e3674b03ebdfe440f0c6bddb457d4405012837e70
 
 Package: ironic-novncproxy
 Source: ironic
-Version: 1:39.0.0-6
+Version: 1:39.0.0-7
 Installed-Size: 36
 Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
 Architecture: all
@@ -11665,10 +11738,10 @@ Homepage: https://github.com/openstack/ironic
 Description-md5: d955ad3c73e9da1bf382ee604025965e
 net
 Priority: optional
-Filename: pool/main/i/ironic/ironic-novncproxy_39.0.0-6_all.deb
-Size: 11480
-MD5sum: 378a4f43cc76b131065e7acdb1514b11
-SHA256: 1c8b1e44ea05b0f799f60a1dbec5f620c2bb01262e28f5c1677f91d75305a8bb
+Filename: pool/main/i/ironic/ironic-novncproxy_39.0.0-7_all.deb
+Size: 11592
+MD5sum: 661bc08ea3943169bb8b525c117c6f4f
+SHA256: 011ea8c0037886aceb7b1fbb65982b561e90d7ae44f9841eef13f269ae17cd49
 
 Package: ironic-python-agent
 Version: 13.0.0-2
@@ -18605,8 +18678,8 @@ SHA256: 14d26db7242e1ad6cb327948457d3fc6da49015fbbd8547d61f2f798b7e5aeaf
 
 Package: ftp-ssl
 Source: netkit-ftp-ssl
-Version: 0.17.34+really0.17-3
-Installed-Size: 148
+Version: 0.17.34+really0.17-4
+Installed-Size: 153
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: amd64
 Replaces: ftp (<= 0.17-31)
@@ -18620,10 +18693,10 @@ Tag: interface::text-mode, network::client, protocol::ftp, protocol::ssl,
  use::downloading, works-with::file
 net
 Priority: optional
-Filename: pool/main/n/netkit-ftp-ssl/ftp-ssl_0.17.34+really0.17-3_amd64.deb
-Size: 62280
-MD5sum: 355394c43c07e1e7ac329f5ca045c3d2
-SHA256: f327b72083431c714d97da12b02d9055a6211cb3ee9e373cc6b6e6009ff1f1eb
+Filename: pool/main/n/netkit-ftp-ssl/ftp-ssl_0.17.34+really0.17-4_amd64.deb
+Size: 64484
+MD5sum: f7d9a916ca9c0c47502dbde16d3ba53c
+SHA256: 504b6bdc1b9f7e3ddeb422d9151f72dfc477bb7ced79bf538c62e0131797cc64
 
 Package: talk
 Source: netkit-ntalk
@@ -34485,64 +34558,61 @@ SHA256: 06574a20dd0115915df8477e55be352097e398dc07202056e4a3a765018905b8
 
 Package: wide-dhcpv6-client
 Source: wide-dhcpv6
-Version: 20080615-24
-Installed-Size: 250
-Maintainer: Roger Shimizu <rosh@debian.org>
+Version: 20080615-25
+Installed-Size: 267
+Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: amd64
-Depends: lsb-base, sharutils, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38)
-Pre-Depends: init-system-helpers (>= 1.54~)
+Depends: sharutils, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38)
 Description: DHCPv6 client for automatic IPv6 hosts configuration
 Homepage: https://wide-dhcpv6.sourceforge.net/
-Description-md5: ebab3deaa1f1da5d3883339c1d127de0
+Description-md5: 039efd07358bd28e3f987130e910053c
 Tag: implemented-in::c, interface::daemon, network::client,
  network::configuration, protocol::ipv6, role::program, use::configuring
 net
 Priority: optional
-Filename: pool/main/w/wide-dhcpv6/wide-dhcpv6-client_20080615-24_amd64.deb
-Size: 92440
-MD5sum: 3d65fe08d0b5df949e9f672d06a79da9
-SHA256: acdc07289fa42307bc613a8a6c99e2f271737c0db5398ed26c947424affc4ab2
+Filename: pool/main/w/wide-dhcpv6/wide-dhcpv6-client_20080615-25_amd64.deb
+Size: 96984
+MD5sum: bc5b88028ab2449c67228d6b90d5a6f5
+SHA256: a47cfffbe4a419e71496ba2ca8d925579d4b5b18870b76cf6d5801289ffd006c
 
 Package: wide-dhcpv6-relay
 Source: wide-dhcpv6
-Version: 20080615-24
-Installed-Size: 107
-Maintainer: Roger Shimizu <rosh@debian.org>
+Version: 20080615-25
+Installed-Size: 120
+Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: amd64
-Depends: lsb-base, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38)
-Pre-Depends: init-system-helpers (>= 1.54~)
+Depends: debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38)
 Description: DHCPv6 relay for automatic IPv6 hosts configuration
 Homepage: https://wide-dhcpv6.sourceforge.net/
-Description-md5: 90c1ab4590972c6adb7bc27bc7ca2609
+Description-md5: 2d14e5c3fcd0817ab16ce15a6715b4dc
 Tag: interface::daemon, network::configuration, network::server,
  protocol::dhcp, protocol::ipv6, role::program, use::configuring,
  use::proxying
 net
 Priority: optional
-Filename: pool/main/w/wide-dhcpv6/wide-dhcpv6-relay_20080615-24_amd64.deb
-Size: 39852
-MD5sum: 0a5971b96c4d1a0b082d741bb66d5b21
-SHA256: 96a3419f43d8d457ebe1977ac4878bc861bb0da5f244f69d6c79cbdfab8a758a
+Filename: pool/main/w/wide-dhcpv6/wide-dhcpv6-relay_20080615-25_amd64.deb
+Size: 42332
+MD5sum: e7e325c7d2bbb9a3f0618b2b1534a063
+SHA256: 8bfb3b5b6f0766e2dc3e8468b5ef70617045a9ff717bf2cf73248dd7fa1d8f47
 
 Package: wide-dhcpv6-server
 Source: wide-dhcpv6
-Version: 20080615-24
-Installed-Size: 211
-Maintainer: Roger Shimizu <rosh@debian.org>
+Version: 20080615-25
+Installed-Size: 224
+Maintainer: Debian QA Group <packages@qa.debian.org>
 Architecture: amd64
-Depends: lsb-base, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38)
-Pre-Depends: init-system-helpers (>= 1.54~)
+Depends: debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38)
 Description: DHCPv6 server for automatic IPv6 hosts configuration
 Homepage: https://wide-dhcpv6.sourceforge.net/
-Description-md5: fce4154eb8741327fc5336feca531eec
+Description-md5: d3d0ad7022866719952a74adfec31aaa
 Tag: interface::daemon, network::configuration, network::server,
  protocol::dhcp, protocol::ipv6, role::program, use::configuring
 net
 Priority: optional
-Filename: pool/main/w/wide-dhcpv6/wide-dhcpv6-server_20080615-24_amd64.deb
-Size: 81196
-MD5sum: 60b85e36adaef41cdeef7c582a06167f
-SHA256: c35474d775b78570f02344f799acec9115f24c0ff07c0b7f85a4bdf44f58dfaf
+Filename: pool/main/w/wide-dhcpv6/wide-dhcpv6-server_20080615-25_amd64.deb
+Size: 85652
+MD5sum: b52642bc1d45708a5554985d293feff9
+SHA256: 3ebcb0ed039b7a2cc8089dbc22bfb5b3a534ea26c73d7d1835c9dfb04f30826f
 
 Package: wifite
 Version: 2.8.2-2
