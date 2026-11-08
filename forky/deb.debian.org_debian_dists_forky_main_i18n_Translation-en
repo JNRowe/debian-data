@@ -29029,6 +29029,32 @@ Description-en: Library for accessing BleBox smart home devices
  local Wi-Fi network, ensuring that home automation tasks can be performed
  reliably.
 
+Package: blender
+Description-md5: 90b4f36fda45432800e6a278de5b06b4
+Description-en: Very fast and versatile 3D modeller/renderer
+ Blender is an integrated 3d suite for modelling, animation, rendering,
+ post-production, interactive creation and playback (games). Blender has its
+ own particular user interface, which is implemented entirely in OpenGL and
+ designed with speed in mind. Python bindings are available for scripting;
+ import/export features for popular file formats like 3D Studio and Wavefront
+ Obj are implemented as scripts by the community. Stills, animations, models
+ for games or other third party engines and interactive content in the form of
+ a standalone binary are common products of Blender use.
+
+Package: blender-data
+Description-md5: cf40bbb7bd8bb0c71e9c32489ca7949e
+Description-en: Very fast and versatile 3D modeller/renderer - data package
+ Blender is an integrated 3d suite for modelling, animation, rendering,
+ post-production, interactive creation and playback (games). Blender has its
+ own particular user interface, which is implemented entirely in OpenGL and
+ designed with speed in mind. Python bindings are available for scripting;
+ import/export features for popular file formats like 3D Studio and Wavefront
+ Obj are implemented as scripts by the community. Stills, animations, models
+ for games or other third party engines and interactive content in the form of
+ a standalone binary are common products of Blender use.
+ .
+ This package contains documentation, libraries and images for blender.
+
 Package: blender-doc
 Description-md5: 78a8903fde992a7dab2946abad4a688b
 Description-en: Blender Manual by the Blender Foundation
@@ -31896,1062 +31922,6 @@ Description-md5: 291b7b41e69786a8fcfc27aad61aa9f8
 Description-en: C++ single header/module, macro-free unit testing framework
  Boost μt is an easy-to-integrate single header/module C++20 TDD/BDD unit
  testing framework.
-
-Package: libboost-atomic1.90-dev
-Description-md5: 1aa2477e97733797bec0d32670d4e90e
-Description-en: atomic data types, operations, and memory ordering constraints
- This package forms part of the Boost C++ Libraries collection.
- .
- Boost.Atomic is a library that provides atomic data types and
- operations on these data types, as well as memory ordering
- constraints required for coordinating multiple threads through atomic
- variables. It implements the interface as defined by the C++11
- standard, but makes this feature available for platforms lacking
- system/compiler support for this particular C++11 feature.
- .
- Users of this library should already be familiar with concurrency in
- general, as well as elementary concepts such as "mutual exclusion".
- .
- The implementation makes use of processor-specific instructions where
- possible (via inline assembler, platform libraries or compiler
- intrinsics), and falls back to "emulating" atomic operations through
- locking.
-
-Package: libboost-atomic1.90.0
-Description-md5: 1aa2477e97733797bec0d32670d4e90e
-Description-en: atomic data types, operations, and memory ordering constraints
- This package forms part of the Boost C++ Libraries collection.
- .
- Boost.Atomic is a library that provides atomic data types and
- operations on these data types, as well as memory ordering
- constraints required for coordinating multiple threads through atomic
- variables. It implements the interface as defined by the C++11
- standard, but makes this feature available for platforms lacking
- system/compiler support for this particular C++11 feature.
- .
- Users of this library should already be familiar with concurrency in
- general, as well as elementary concepts such as "mutual exclusion".
- .
- The implementation makes use of processor-specific instructions where
- possible (via inline assembler, platform libraries or compiler
- intrinsics), and falls back to "emulating" atomic operations through
- locking.
-
-Package: libboost-charconv1.90-dev
-Description-md5: 9136cdfc4b893b1f02c61392d490454e
-Description-en: high quality implementation of <charconv> in C++11
- converts character buffers to numbers, and numbers to character buffers.
- It is a small library of two overloaded functions to do the heavy lifting,
- plus several supporting enums, structures, templates, and constants, with a
- particular focus on performance and consistency across the supported
- development environments.
- .
- It is a locale-independent, non-allocating1, non-throwing and only requires a
- minimum of C++ 11. It provides functionality similar to that found in
- std::printf or std::strtod with substantial performance increases. This library
- can also be used in place of the standard library <charconv> if unavailable
- with your toolchain. Currently only GCC 11+ and MSVC 19.24+ support both
- integer and floating-point conversions in their implementation of <charconv>.
- .
- The package contains the development files.
-
-Package: libboost-charconv1.90.0
-Description-md5: 2f6d6584ebcdded5e9e7607dd3dfb111
-Description-en: high quality implementation of <charconv> in C++11
- converts character buffers to numbers, and numbers to character buffers.
- It is a small library of two overloaded functions to do the heavy lifting,
- plus several supporting enums, structures, templates, and constants, with a
- particular focus on performance and consistency across the supported
- development environments.
- .
- It is a locale-independent, non-allocating1, non-throwing and only requires a
- minimum of C++ 11. It provides functionality similar to that found in
- std::printf or std::strtod with substantial performance increases. This library
- can also be used in place of the standard library <charconv> if unavailable
- with your toolchain. Currently only GCC 11+ and MSVC 19.24+ support both
- integer and floating-point conversions in their implementation of <charconv>.
-
-Package: libboost-chrono1.90-dev
-Description-md5: 885c86b3701dab9982f79d2dcc83515c
-Description-en: C++ representation of time duration, time point, and clocks
- This package forms part of the Boost C++ Libraries collection.
- .
- The Boost.Chrono library provides:
- .
-  * A means to represent time durations: managed by the generic
- duration class . Examples of time durations include days, minutes,
- seconds and nanoseconds, which can be represented with a fixed number
- of clock ticks per unit. All of these units of time duration are
- united with a generic interface by the duration facility.
-  * A type for representing points in time: time_point. A time_point
- represents an epoch plus or minus a duration. The library leaves
- epochs unspecified. A time_point is associated with a clock.
-  * Several clocks, some of which may not be available on a
- particular platform: system_clock, steady_clock and
- high_resolution_clock. A clock is a pairing of a time_point and
- duration, and a function which returns a time_point representing now.
- .
- To make the timing facilities more generally useful, Boost.Chrono
- provides a number of clocks that are thin wrappers around the
- operating system's time APIs, thereby allowing the extraction of wall
- clock time, user CPU time, system CPU time spent by the process:
- .
-  * process_real_cpu_clock, captures wall clock CPU time spent by the
- current process.
-  * process_user_cpu_clock, captures user-CPU time
- spent by the current process.
-  * process_system_cpu_clock, captures
- system-CPU time spent by the current process.
-  * A tuple-like class
- process_cpu_clock, that captures real, user-CPU, and system-CPU
- process times together.
-  * A thread_clock thread steady clock giving
- the time spent by the current thread (when supported by a platform).
- .
- Lastly, Boost.Chrono includes typeof registration for duration and
- time_point to permit using emulated auto with C++03 compilers.
-
-Package: libboost-chrono1.90.0
-Description-md5: 48bd785e2e56a406e6dbf1b5ba8ce77e
-Description-en: C++ representation of time duration, time point, and clocks
- This package forms part of the Boost C++ Libraries collection.
- .
- The Boost.Chrono library provides:
- .
-  * A means to represent time durations: managed by the generic duration
-    class.Examples of time durations include days, minutes, seconds and
-    nanoseconds, which can be represented with a fixed number of clock
-    ticks per unit. All of these units of time duration are united with
-    a generic interface by the duration facility.
-  * A type for representing points in time: time_point. A time_point
-    represents an epoch plus or minus a duration. The library leaves
-    epochs unspecified. A time_point is associated with a clock.
-  * Several clocks, some of which may not be available on a particular
-    platform: system_clock, steady_clock and high_resolution_clock. A
-    clock is a pairing of a time_point and duration, and a function
-    which returns a time_point representing now.
- .
- To make the timing facilities more generally useful, Boost.Chrono
- provides a number of clocks that are thin wrappers around the
- operating system's time APIs, thereby allowing the extraction of wall
- clock time, user CPU time, system CPU time spent by the process:
- .
-  * process_real_cpu_clock, captures wall clock CPU time spent by the
-    current process.
-  * process_user_cpu_clock, captures user-CPU time spent by the current
-    process.
-  * process_system_cpu_clock, captures system-CPU time spent by the
-    current process.
-  * a tuple-like class process_cpu_clock, that captures real, user-CPU,
-    and system-CPU process times together.
-  * a thread_clock thread steady clock giving the time spent by the
-    current thread (when supported by a platform).
- .
- Lastly, Boost.Chrono includes typeof registration for duration and
- time_point to permit using emulated auto with C++03 compilers.
-
-Package: libboost-container1.90-dev
-Description-md5: 41cba76db235acb1c7483636f7771fe0
-Description-en: C++ library that implements several well-known containers - dev files
- This package forms part of the Boost C++ Libraries collection.
- .
- Boost.Container library implements several well-known containers,
- including STL containers. The aim of the library is to offers
- advanced features not present in standard containers or to offer the
- latest standard draft features for compilers that don't comply with
- the latest C++ standard.
- .
- In short, what does Boost.Container offer?
- .
-  * Move semantics are implemented, including move emulation
-    for pre-C++11 compilers.
-  * New advanced features (e.g. placement insertion,
-    recursive containers) are present.
-  * Containers support stateful allocators and are compatible with
-    Boost.Interprocess (they can be safely placed in shared memory).
-  * The library offers new useful containers:
-    * flat_map, flat_set, flat_multimap and flat_multiset: drop-in
-      replacements for standard associative containers but more
-      memory friendly and with faster searches.
-    * stable_vector: a std::list and std::vector hybrid container:
-      vector-like random-access iterators and list-like iterator
-      stability in insertions and erasures.
-    * slist: the classic pre-standard singly linked list implementation
-      offering constant-time size(). Note that C++11 forward_list has no size().
-
-Package: libboost-container1.90.0
-Description-md5: 4cc3eab0b1f3ec7475cebab0f0d54594
-Description-en: C++ library that implements several well-known containers
- This package forms part of the Boost C++ Libraries collection.
- .
- Boost.Container library implements several well-known containers,
- including STL containers. The aim of the library is to offers
- advanced features not present in standard containers or to offer the
- latest standard draft features for compilers that don't comply with
- the latest C++ standard.
- .
- In short, what does Boost.Container offer?
- .
-  * Move semantics are implemented, including move emulation
-    for pre-C++11 compilers.
-  * New advanced features (e.g. placement insertion,
-    recursive containers) are present.
-  * Containers support stateful allocators and are compatible with
-    Boost.Interprocess (they can be safely placed in shared memory).
-  * The library offers new useful containers:
-    * flat_map, flat_set, flat_multimap and flat_multiset: drop-in
-      replacements for standard associative containers but more
-      memory friendly and with faster searches.
-    * stable_vector: a std::list and std::vector hybrid container:
-      vector-like random-access iterators and list-like iterator
-      stability in insertions and erasures.
-    * slist: the classic pre-standard singly linked list implementation
-      offering constant-time size(). Note that C++11 forward_list has no size().
-
-Package: libboost-context1.90-dev
-Description-md5: 509bcb267a10afdee403415de2d077bd
-Description-en: provides a sort of cooperative multitasking on a single thread
- This package forms part of the Boost C++ Libraries collection.
- .
- Boost.Context is a foundational library that provides a sort of
- cooperative multitasking on a single thread. By providing an
- abstraction of the current execution state in the current thread,
- including the stack (with local variables) and stack pointer, all
- registers and CPU flags, and the instruction pointer, a fcontext_t
- instance represents a specific point in the application's execution
- path. This is useful for building higher-level abstractions, like
- coroutines, cooperative threads (userland threads) or an equivalent
- to C# keyword yield in C++.
-
-Package: libboost-context1.90.0
-Description-md5: 509bcb267a10afdee403415de2d077bd
-Description-en: provides a sort of cooperative multitasking on a single thread
- This package forms part of the Boost C++ Libraries collection.
- .
- Boost.Context is a foundational library that provides a sort of
- cooperative multitasking on a single thread. By providing an
- abstraction of the current execution state in the current thread,
- including the stack (with local variables) and stack pointer, all
- registers and CPU flags, and the instruction pointer, a fcontext_t
- instance represents a specific point in the application's execution
- path. This is useful for building higher-level abstractions, like
- coroutines, cooperative threads (userland threads) or an equivalent
- to C# keyword yield in C++.
-
-Package: libboost-contract1.90-dev
-Description-md5: bf0d7e4539ed6d34f89ea7c9286b60e4
-Description-en: Contract library for C++ - dev files
- This package forms part of the Boost C++ Libraries collection.
- .
- All contract programming features are supported: Subcontracting,
- class invariants, postconditions (with old and return values),
- preconditions, customizable actions on assertion failure (e.g.,
- terminate or throw), optional compilation and checking of assertions,
- etc.
-
-Package: libboost-contract1.90.0
-Description-md5: cbd95e0aa2c452e909d5fb8cd5d45bc3
-Description-en: Contract library for C++
- This package forms part of the Boost C++ Libraries collection.
- .
- All contract programming features are supported: Subcontracting,
- class invariants, postconditions (with old and return values),
- preconditions, customizable actions on assertion failure (e.g.,
- terminate or throw), optional compilation and checking of assertions,
- etc.
-
-Package: libboost-coroutine1.90-dev
-Description-md5: 86838fff80fef6efdf92ff95491207e4
-Description-en: provides a sort of cooperative multitasking on a single thread
- This package forms part of the Boost C++ Libraries collection.
- .
- Boost.Coroutine provides templates for generalized subroutines which
- allow multiple entry points for suspending and resuming execution at
- certain locations. It preserves the local state of execution and
- allows re-entering subroutines more than once (useful if state must
- be kept across function calls).
- .
- Coroutines can be viewed as a language-level construct providing a
- special kind of control flow.
- .
- In contrast to threads, which are pre-emptive, coroutine switches are
- cooperative (programmer controls when a switch will happen). The
- kernel is not involved in the coroutine switches.
- .
- The implementation uses Boost.Context for context switching.
-
-Package: libboost-coroutine1.90.0
-Description-md5: 86838fff80fef6efdf92ff95491207e4
-Description-en: provides a sort of cooperative multitasking on a single thread
- This package forms part of the Boost C++ Libraries collection.
- .
- Boost.Coroutine provides templates for generalized subroutines which
- allow multiple entry points for suspending and resuming execution at
- certain locations. It preserves the local state of execution and
- allows re-entering subroutines more than once (useful if state must
- be kept across function calls).
- .
- Coroutines can be viewed as a language-level construct providing a
- special kind of control flow.
- .
- In contrast to threads, which are pre-emptive, coroutine switches are
- cooperative (programmer controls when a switch will happen). The
- kernel is not involved in the coroutine switches.
- .
- The implementation uses Boost.Context for context switching.
-
-Package: libboost-date-time1.90-dev
-Description-md5: fca468edfa68f3723647bff7a2ed63c3
-Description-en: set of date-time libraries based on generic programming concepts
- This package forms part of the Boost C++ Libraries collection.
- .
- These libraries are intended to make programming with dates and times
- almost as simple and natural as programming with strings and integers.
-
-Package: libboost-date-time1.90.0
-Description-md5: fca468edfa68f3723647bff7a2ed63c3
-Description-en: set of date-time libraries based on generic programming concepts
- This package forms part of the Boost C++ Libraries collection.
- .
- These libraries are intended to make programming with dates and times
- almost as simple and natural as programming with strings and integers.
-
-Package: libboost-exception1.90-dev
-Description-md5: 384c2c28f8227e2f185f0778df8c37fc
-Description-en: library to help write exceptions and handlers
- This package forms part of the Boost C++ Libraries collection.
- .
- The purpose of Boost Exception is to ease the design of exception
- class hierarchies and to help write exception handling and error
- reporting code.
-
-Package: libboost-fiber1.90-dev
-Description-md5: f7f6013704ff4580caf3394917e3c295
-Description-en: cooperatively-scheduled micro-/userland-threads
- This package forms part of the Boost C++ Libraries collection.
- .
- Boost.Fiber provides a framework for micro-/userland-threads (fibers)
- scheduled cooperatively.  The API contains classes and functions to
- manage and synchronize fibers similarly to standard thread support
- library.
- .
- Each fiber has its own stack.
- .
- A fiber can save the current execution state, including all registers
- and CPU flags, the instruction pointer, and the stack pointer and
- later restore this state. The idea is to have multiple execution
- paths running on a single thread using cooperative scheduling (versus
- threads, which are preemptively scheduled). The running fiber decides
- explicitly when it should yield to allow another fiber to run
- (context switching). Boost.Fiber internally uses execution_context
- from Boost.Context; the classes in this library manage, schedule and,
- when needed, synchronize those execution contexts. A context switch
- between threads usually costs thousands of CPU cycles on x86,
- compared to a fiber switch with less than a hundred cycles. A fiber
- runs on a single thread at any point in time.
-
-Package: libboost-fiber1.90.0
-Description-md5: f7f6013704ff4580caf3394917e3c295
-Description-en: cooperatively-scheduled micro-/userland-threads
- This package forms part of the Boost C++ Libraries collection.
- .
- Boost.Fiber provides a framework for micro-/userland-threads (fibers)
- scheduled cooperatively.  The API contains classes and functions to
- manage and synchronize fibers similarly to standard thread support
- library.
- .
- Each fiber has its own stack.
- .
- A fiber can save the current execution state, including all registers
- and CPU flags, the instruction pointer, and the stack pointer and
- later restore this state. The idea is to have multiple execution
- paths running on a single thread using cooperative scheduling (versus
- threads, which are preemptively scheduled). The running fiber decides
- explicitly when it should yield to allow another fiber to run
- (context switching). Boost.Fiber internally uses execution_context
- from Boost.Context; the classes in this library manage, schedule and,
- when needed, synchronize those execution contexts. A context switch
- between threads usually costs thousands of CPU cycles on x86,
- compared to a fiber switch with less than a hundred cycles. A fiber
- runs on a single thread at any point in time.
-
-Package: libboost-filesystem1.90-dev
-Description-md5: 2491b00e1306a35046eca365dc71ba1d
-Description-en: filesystem operations (portable paths, iteration over directories, etc) in C++
- This package forms part of the Boost C++ Libraries collection.
- .
- The Boost Filesystem Library provides portable facilities to query and
- manipulate paths, files, and directories.  The goal is to
- facilitate portable script-like operations from within C++ programs.
-
-Package: libboost-filesystem1.90.0
-Description-md5: 2491b00e1306a35046eca365dc71ba1d
-Description-en: filesystem operations (portable paths, iteration over directories, etc) in C++
- This package forms part of the Boost C++ Libraries collection.
- .
- The Boost Filesystem Library provides portable facilities to query and
- manipulate paths, files, and directories.  The goal is to
- facilitate portable script-like operations from within C++ programs.
-
-Package: libboost-graph-parallel1.90-dev
-Description-md5: 4f57c2a6e2a339b83d9c59b83812e4c6
-Description-en: generic graph components and algorithms in C++
- This package forms part of the Boost C++ Libraries collection.
- .
- The Parallel Boost Graph Library is an extension to the Boost Graph Library
- (BGL) for parallel and distributed computing. It offers distributed graphs
- and graph algorithms to exploit coarse-grained parallelism along with
- parallel algorithms that exploit fine-grained parallelism, while retaining
- the same interfaces as the (sequential) BGL. Code written using the sequential
- BGL should be easy to parallelize with the parallel BGL.
-
-Package: libboost-graph-parallel1.90.0
-Description-md5: 4f57c2a6e2a339b83d9c59b83812e4c6
-Description-en: generic graph components and algorithms in C++
- This package forms part of the Boost C++ Libraries collection.
- .
- The Parallel Boost Graph Library is an extension to the Boost Graph Library
- (BGL) for parallel and distributed computing. It offers distributed graphs
- and graph algorithms to exploit coarse-grained parallelism along with
- parallel algorithms that exploit fine-grained parallelism, while retaining
- the same interfaces as the (sequential) BGL. Code written using the sequential
- BGL should be easy to parallelize with the parallel BGL.
-
-Package: libboost-graph1.90-dev
-Description-md5: 6dc872164cdff9808536697108f9eecd
-Description-en: generic graph components and algorithms in C++
- This package forms part of the Boost C++ Libraries collection.
- .
- Graphs are mathematical abstractions that are useful for solving
- many types of problems in computer science. Consequently, these
- abstractions must also be represented in computer programs. A
- standardized generic interface for traversing graphs is of utmost
- importance to encourage reuse of graph algorithms and data structures.
-
-Package: libboost-graph1.90.0
-Description-md5: 6dc872164cdff9808536697108f9eecd
-Description-en: generic graph components and algorithms in C++
- This package forms part of the Boost C++ Libraries collection.
- .
- Graphs are mathematical abstractions that are useful for solving
- many types of problems in computer science. Consequently, these
- abstractions must also be represented in computer programs. A
- standardized generic interface for traversing graphs is of utmost
- importance to encourage reuse of graph algorithms and data structures.
-
-Package: libboost-iostreams1.90-dev
-Description-md5: c5f42432b54f040f1daea1900a535e47
-Description-en: Boost.Iostreams Library development files
- This package forms part of the Boost C++ Libraries collection.
- .
- Boost.Iostreams are a collection of concepts and a set of templates
- which turn models of these concepts into C++ standard library streams
- and stream buffers.
-
-Package: libboost-iostreams1.90.0
-Description-md5: 3c388d3a296c3c5ceb93d6073902d96e
-Description-en: Boost.Iostreams Library
- This package forms part of the Boost C++ Libraries collection.
- .
- Boost.Iostreams are a collection of concepts and a set of templates
- which turn models of these concepts into C++ standard library streams
- and stream buffers.
-
-Package: libboost-json1.90-dev
-Description-md5: 8c42e611a8780e1908b6e82825870214
-Description-en: C++ containers and algorithms that implement JSON
- This library focuses on a common and popular use-case: parsing
- and serializing to and from a container called value which holds
- JSON types.
- .
- Any value which you build can be serialized and then deserialized,
- guaranteeing that the result will be equal to the original value.
- Whatever JSON output you produce with this library will be readable
- by most common JSON implementations in any language.
-
-Package: libboost-json1.90.0
-Description-md5: 8c42e611a8780e1908b6e82825870214
-Description-en: C++ containers and algorithms that implement JSON
- This library focuses on a common and popular use-case: parsing
- and serializing to and from a container called value which holds
- JSON types.
- .
- Any value which you build can be serialized and then deserialized,
- guaranteeing that the result will be equal to the original value.
- Whatever JSON output you produce with this library will be readable
- by most common JSON implementations in any language.
-
-Package: libboost-locale1.90-dev
-Description-md5: 38eb5c1dcd3b37527a010d985b7c8018
-Description-en: C++ facilities for localization
- This package forms part of the Boost C++ Libraries collection.
- .
- Boost.Locale gives powerful tools for development of cross platform
- localized software - the software that talks to user in its language.
- .
-  * Correct case conversion, case folding and normalization.
-  * Collation (sorting), including support for 4 Unicode collation
- levels.
-  * Date, time, timezone and calendar manipulations, formatting
- and parsing, including transparent support for calendars other than
- Gregorian.
-  * Boundary analysis for characters, words, sentences and
- line-breaks.
-  * Number formatting, spelling and parsing.
-  * Monetary formatting and parsing.
-  * Powerful message formatting (string translation) including
- support for plural forms, using GNU catalogs.
-  * Character set conversion.
-  * Transparent support for 8-bit character sets like Latin1
-  * Support for char and wchar_t
-  * Experimental support for C++0x char16_t and char32_t strings and streams.
-
-Package: libboost-locale1.90.0
-Description-md5: 38eb5c1dcd3b37527a010d985b7c8018
-Description-en: C++ facilities for localization
- This package forms part of the Boost C++ Libraries collection.
- .
- Boost.Locale gives powerful tools for development of cross platform
- localized software - the software that talks to user in its language.
- .
-  * Correct case conversion, case folding and normalization.
-  * Collation (sorting), including support for 4 Unicode collation
- levels.
-  * Date, time, timezone and calendar manipulations, formatting
- and parsing, including transparent support for calendars other than
- Gregorian.
-  * Boundary analysis for characters, words, sentences and
- line-breaks.
-  * Number formatting, spelling and parsing.
-  * Monetary formatting and parsing.
-  * Powerful message formatting (string translation) including
- support for plural forms, using GNU catalogs.
-  * Character set conversion.
-  * Transparent support for 8-bit character sets like Latin1
-  * Support for char and wchar_t
-  * Experimental support for C++0x char16_t and char32_t strings and streams.
-
-Package: libboost-log1.90-dev
-Description-md5: 35804ca45b526f128dc2dc545fd3dbf6
-Description-en: C++ logging library
- This package forms part of the Boost C++ Libraries collection.
- .
- This library aims to make logging significantly easier for the
- application developer. It provides a wide range of out-of-the-box
- tools along with public interfaces for extending the library. The
- main goals of the library are:
- .
-  * Simplicity. A small example code snippet should be enough to get
- the feel of the library and be ready to use its basic features.
-  * Extensibility. A user should be able to extend functionality of the
- library for collecting and storing information into logs.
-  * Performance. The library should have as little performance impact on
- the user's application as possible.
-
-Package: libboost-log1.90.0
-Description-md5: 35804ca45b526f128dc2dc545fd3dbf6
-Description-en: C++ logging library
- This package forms part of the Boost C++ Libraries collection.
- .
- This library aims to make logging significantly easier for the
- application developer. It provides a wide range of out-of-the-box
- tools along with public interfaces for extending the library. The
- main goals of the library are:
- .
-  * Simplicity. A small example code snippet should be enough to get
- the feel of the library and be ready to use its basic features.
-  * Extensibility. A user should be able to extend functionality of the
- library for collecting and storing information into logs.
-  * Performance. The library should have as little performance impact on
- the user's application as possible.
-
-Package: libboost-math1.90-dev
-Description-md5: ef3334f7fe3b30cab4c2d25557dbaaa3
-Description-en: Boost.Math Library development files
- This package forms part of the Boost C++ Libraries collection.
- .
- This library is divided into three interconnected parts:
-  * Statistical Distributions: Provides a reasonably comprehensive set of
-    statistical distributions, upon which higher level statistical tests
-    can be built.
-  * Mathematical Special Functions: Provides a small number of high quality
-    special functions, initially these were concentrated on functions used in
-    statistical applications along with those in the Technical Report on
-    C++ Library Extensions.
-  * Implementation Toolkit: Provides many of the tools required to implement
-    mathematical special functions.
-
-Package: libboost-math1.90.0
-Description-md5: 23f6f4e3877dda6577301cc1999a87b1
-Description-en: Boost.Math Library
- This package forms part of the Boost C++ Libraries collection.
- .
- This library is divided into three interconnected parts:
-  * Statistical Distributions: Provides a reasonably comprehensive set of
-    statistical distributions, upon which higher level statistical tests
-    can be built.
-  * Mathematical Special Functions: Provides a small number of high quality
-    special functions, initially these were concentrated on functions used in
-    statistical applications along with those in the Technical Report on
-    C++ Library Extensions.
-  * Implementation Toolkit: Provides many of the tools required to implement
-    mathematical special functions.
-
-Package: libboost-mpi-python1.90-dev
-Description-md5: f4aa2213bbcbac6016ed67ed252a2cb4
-Description-en: C++ interface to the Message Passing Interface (MPI), Python Bindings
- This package forms part of the Boost C++ Libraries collection.
- .
- The Boost.MPI library provides a C++ interface to MPI that
- supports modern C++ development styles, including complete support for
- user-defined data types and C++ Standard Library types, arbitrary function
- objects for collective algorithms, and the use of modern C++ library
- techniques to maintain maximal efficiency.
- .
- This package provides Python Bindings to the C++ interface.
-
-Package: libboost-mpi-python1.90.0
-Description-md5: 3aacb014fd455aab00e9bc4e91c51677
-Description-en: C++ interface to the Message Passing Interface (MPI), Python Bindings
- This package forms part of the Boost C++ Libraries collection.
- .
- The Boost.MPI library provides a C++ interface to MPI that
- supports modern C++ development styles, including complete support for
- user-defined data types and C++ Standard Library types, arbitrary function
- objects for collective algorithms, and the use of modern C++ library
- techniques to maintain maximal efficiency.
- .
- This package provides Python Bindings to the C++ interface.
- .
- One of the python interpreter packages is required to use the bindings.
-
-Package: libboost-mpi1.90-dev
-Description-md5: 6766b51a84b1e0bf3fc6b1ccf0d4bbf2
-Description-en: C++ interface to the Message Passing Interface (MPI)
- This package forms part of the Boost C++ Libraries collection.
- .
- The Boost.MPI library provides a C++ interface to MPI that
- supports modern C++ development styles, including complete support for
- user-defined data types and C++ Standard Library types, arbitrary function
- objects for collective algorithms, and the use of modern C++ library
- techniques to maintain maximal efficiency.
-
-Package: libboost-mpi1.90.0
-Description-md5: 6766b51a84b1e0bf3fc6b1ccf0d4bbf2
-Description-en: C++ interface to the Message Passing Interface (MPI)
- This package forms part of the Boost C++ Libraries collection.
- .
- The Boost.MPI library provides a C++ interface to MPI that
- supports modern C++ development styles, including complete support for
- user-defined data types and C++ Standard Library types, arbitrary function
- objects for collective algorithms, and the use of modern C++ library
- techniques to maintain maximal efficiency.
-
-Package: libboost-nowide1.90-dev
-Description-md5: b9afa86bce7e3278c8490ff95c937693
-Description-en: Standard library functions with UTF-8 API on Windows development files
- This package forms part of the Boost C++ Libraries collection.
- .
- The library provides an implementation of standard C and C++
- library functions which are UTF-8 aware on Windows without
- requiring to use the Wipe API.
- .
- On POSIX platforms, where UTF-8 is already commonly used, the
- calls in Nowide just alias to their standard counterparts.
-
-Package: libboost-nowide1.90.0
-Description-md5: 3af43843053722a5bec4ac1ad1187bcf
-Description-en: Standard library functions with UTF-8 API on Windows
- This package forms part of the Boost C++ Libraries collection.
- .
- The library provides an implementation of standard C and C++
- library functions which are UTF-8 aware on Windows without
- requiring to use the Wipe API.
- .
- On POSIX platforms, where UTF-8 is already commonly used, the
- calls in Nowide just alias to their standard counterparts.
-
-Package: libboost-numpy1.90-dev
-Description-md5: 0cd697d06e4f050674a72a97968e8c0c
-Description-en: Boost.Python NumPy extensions development files
- This package forms part of the Boost C++ Libraries collection.
- .
- The Boost Python library enables exporting a C++ library to Python.
- The NumPy extensions lets the C++ code interact with NumPy types.
- .
- This package allows development of a Python interface for all current
- versions of Python in Debian.  Code using this library will need also
- one of the Python development packages.
-
-Package: libboost-numpy1.90.0
-Description-md5: f9652c47c704cb13fd7973b1d9eed5c1
-Description-en: Boost.Python NumPy extensions
- This package forms part of the Boost C++ Libraries collection.
- .
- The Boost Python library enables exporting a C++ library to Python.
- The NumPy extensions lets the C++ code interact with NumPy types.
- .
- One of the python interpreter packages is required to use the
- created extensions.
-
-Package: libboost-process1.90-dev
-Description-md5: 1e9bbcd111ea7177c6609325cbecc1a6
-Description-en: library to create processes in a portable way
- Boost.process is a library for comfortable management of processes,
- first released with boost 1.64.0.
- .
- The package contains the development files.
-
-Package: libboost-process1.90.0
-Description-md5: 1d710a52e33218aaf330cb12be677b83
-Description-en: library to create processes in a portable way
- Boost.process is a library for comfortable management of processes,
- first released with boost 1.64.0.
-
-Package: libboost-program-options1.90-dev
-Description-md5: 9ab9e15257fa51221c16c7f0a9e40597
-Description-en: program options library for C++
- This package forms part of the Boost C++ Libraries collection.
- .
- Library to let program developers obtain program options, that is
- (name, value) pairs from the user, via conventional methods such as
- command line and config file.
-
-Package: libboost-program-options1.90.0
-Description-md5: 9ab9e15257fa51221c16c7f0a9e40597
-Description-en: program options library for C++
- This package forms part of the Boost C++ Libraries collection.
- .
- Library to let program developers obtain program options, that is
- (name, value) pairs from the user, via conventional methods such as
- command line and config file.
-
-Package: libboost-python1.90-dev
-Description-md5: 4073b19bab34408d8c56b2db9718bb71
-Description-en: Boost.Python Library development files
- This package forms part of the Boost C++ Libraries collection.
- .
- The Boost Python Library is used to quickly and easily export a C++
- library to Python such that the Python interface is very similar to
- the C++ interface. It is designed to be minimally intrusive on your
- C++ design. In most cases, you should not have to alter your C++
- classes in any way in order to use them with Boost.Python.  The
- system should simply "reflect" your C++ classes and functions into
- Python. The major features of Boost.Python include support for:
- Subclassing extension types in Python, Overriding virtual functions
- in Python, Member function Overloading, Automatic wrapping of
- numeric operators among others.
- .
- This package allows development of a Python interface for all current
- versions of Python in Debian.  Code using this library will need also
- one of the Python development packages.
-
-Package: libboost-python1.90.0
-Description-md5: 1fd3f0310a5498412ebe02c4766ff0b1
-Description-en: Boost.Python Library
- This package forms part of the Boost C++ Libraries collection.
- .
- The Boost Python Library is used to quickly and easily export a C++
- library to Python such that the Python interface is very similar to
- the C++ interface. It is designed to be minimally intrusive on your
- C++ design. In most cases, you should not have to alter your C++
- classes in any way in order to use them with Boost.Python.  The
- system should simply "reflect" your C++ classes and functions into
- Python. The major features of Boost.Python include support for:
- Subclassing extension types in Python, Overriding virtual functions
- in Python, Member function Overloading, Automatic wrapping of
- numeric operators among others.
- .
- One of the python interpreter packages is required to use the
- created extensions.
-
-Package: libboost-random1.90-dev
-Description-md5: 7ed20e15c02905e3feecfa31084222f4
-Description-en: Boost Random Number Library
- This package forms part of the Boost C++ Libraries collection.
- .
- The Boost Random Number Library (Boost.Random for short) provides a
- variety of generators and distributions to produce random numbers
- having useful properties, such as uniform distribution.
-
-Package: libboost-random1.90.0
-Description-md5: 7ed20e15c02905e3feecfa31084222f4
-Description-en: Boost Random Number Library
- This package forms part of the Boost C++ Libraries collection.
- .
- The Boost Random Number Library (Boost.Random for short) provides a
- variety of generators and distributions to produce random numbers
- having useful properties, such as uniform distribution.
-
-Package: libboost-regex1.90-dev
-Description-md5: 798250c772fac56d605e432dcc6fe14f
-Description-en: regular expression library for C++
- This package forms part of the Boost C++ Libraries collection.
- .
- Regular expressions are a form of pattern-matching that are often
- used in text processing; many users will be familiar with the Unix
- utilities grep, sed and awk, and the programming language perl, each
- of which make extensive use of regular expressions. Traditionally C++
- users have been limited to the POSIX C APIs for manipulating regular
- expressions, and while regex does provide these APIs, they do not
- represent the best way to use the library. For example regex can cope
- with wide character strings, or search and replace operations (in a
- manner analogous to either sed or perl), something that traditional C
- libraries can not do.
-
-Package: libboost-regex1.90.0
-Description-md5: 798250c772fac56d605e432dcc6fe14f
-Description-en: regular expression library for C++
- This package forms part of the Boost C++ Libraries collection.
- .
- Regular expressions are a form of pattern-matching that are often
- used in text processing; many users will be familiar with the Unix
- utilities grep, sed and awk, and the programming language perl, each
- of which make extensive use of regular expressions. Traditionally C++
- users have been limited to the POSIX C APIs for manipulating regular
- expressions, and while regex does provide these APIs, they do not
- represent the best way to use the library. For example regex can cope
- with wide character strings, or search and replace operations (in a
- manner analogous to either sed or perl), something that traditional C
- libraries can not do.
-
-Package: libboost-serialization1.90-dev
-Description-md5: 94da985e07c2397fc71a3f86ec4da7dd
-Description-en: serialization library for C++
- This package forms part of the Boost C++ Libraries collection,
- containing the following functionalities:
- .
-  * proper restoration of pointers to shared data
-  * serialization of STL containers and other commonly used templates
-  * data portability - streams of bytes created on one platform should
-    be readable on any other
-  * archive interface must be rich enough to permit the creation of an
-    archive that presents serialized data as XML in a useful manner
- .
- Here, "serialization" means the reversible deconstruction of an
- arbitrary set of C++ data structures to a sequence of bytes.
- archive: to refer to a specific rendering of this stream of bytes.
-
-Package: libboost-serialization1.90.0
-Description-md5: 94da985e07c2397fc71a3f86ec4da7dd
-Description-en: serialization library for C++
- This package forms part of the Boost C++ Libraries collection,
- containing the following functionalities:
- .
-  * proper restoration of pointers to shared data
-  * serialization of STL containers and other commonly used templates
-  * data portability - streams of bytes created on one platform should
-    be readable on any other
-  * archive interface must be rich enough to permit the creation of an
-    archive that presents serialized data as XML in a useful manner
- .
- Here, "serialization" means the reversible deconstruction of an
- arbitrary set of C++ data structures to a sequence of bytes.
- archive: to refer to a specific rendering of this stream of bytes.
-
-Package: libboost-stacktrace1.90-dev
-Description-md5: 54146e5655935cff00889b9b265f7df3
-Description-en: library to capture and print stack traces - development files
- This package forms part of the Boost C++ Libraries collection.
- .
- Boost.Stacktrace library is a simple C++03 library that provides
- information about call sequence in a human-readable form.
-
-Package: libboost-stacktrace1.90.0
-Description-md5: 111fa2da3db5649074e55bfb276b056e
-Description-en: library to capture and print stack traces
- This package forms part of the Boost C++ Libraries collection.
- .
- Boost.Stacktrace library is a simple C++03 library that provides
- information about call sequence in a human-readable form.
-
-Package: libboost-test1.90-dev
-Description-md5: 73a9e2027ebac32df5b898db3154448b
-Description-en: components for writing and executing test suites
- This package forms part of the Boost C++ Libraries collection.  The
- library contains several components.
- .
-  * Basic execution, error detection, and reporting facility.
-  * Facilities to monitor program execution and produce error reports.
-  * Unit test framework to simplify writing test cases.
-
-Package: libboost-test1.90.0
-Description-md5: 73a9e2027ebac32df5b898db3154448b
-Description-en: components for writing and executing test suites
- This package forms part of the Boost C++ Libraries collection.  The
- library contains several components.
- .
-  * Basic execution, error detection, and reporting facility.
-  * Facilities to monitor program execution and produce error reports.
-  * Unit test framework to simplify writing test cases.
-
-Package: libboost-thread1.90-dev
-Description-md5: d19954bb99722597efd2b9b392158287
-Description-en: portable C++ multi-threading
- This package forms part of the Boost C++ Libraries collection.
- .
- Toolkit for writing C++ programs that execute as multiple,
- asynchronous, independent, threads-of-execution. Each thread has its
- own machine state including program instruction counter and
- registers.
-
-Package: libboost-thread1.90.0
-Description-md5: d19954bb99722597efd2b9b392158287
-Description-en: portable C++ multi-threading
- This package forms part of the Boost C++ Libraries collection.
- .
- Toolkit for writing C++ programs that execute as multiple,
- asynchronous, independent, threads-of-execution. Each thread has its
- own machine state including program instruction counter and
- registers.
-
-Package: libboost-timer1.90-dev
-Description-md5: 3800da07b3dc08efcf3c762480b53231
-Description-en: C++ wall clock and CPU process timers
- This package forms part of the Boost C++ Libraries collection.
- .
- Portable C++ timer classes that answer the question "How long does my
- C++ code take to run?" with as little as one #include and one
- additional line of code.
- .
- Class cpu_timer measures wall clock time, user CPU process time, and
- system CPU process time. Class auto_cpu_timer is a refinement of
- cpu_timer that automatically reports the elapsed times when an
- auto_cpu_timer object is destroyed.
-
-Package: libboost-timer1.90.0
-Description-md5: 3800da07b3dc08efcf3c762480b53231
-Description-en: C++ wall clock and CPU process timers
- This package forms part of the Boost C++ Libraries collection.
- .
- Portable C++ timer classes that answer the question "How long does my
- C++ code take to run?" with as little as one #include and one
- additional line of code.
- .
- Class cpu_timer measures wall clock time, user CPU process time, and
- system CPU process time. Class auto_cpu_timer is a refinement of
- cpu_timer that automatically reports the elapsed times when an
- auto_cpu_timer object is destroyed.
-
-Package: libboost-type-erasure1.90-dev
-Description-md5: c5bcc1bc341ce6b96d3a0f9a07fb2221
-Description-en: C++ runtime polymorphism based on concepts
- This package forms part of the Boost C++ Libraries collection.
- .
- C++ has two distinct kinds of polymorphism, virtual functions and templates,
- each of which has its own advantages and disadvantages.  The Boost.TypeErasure
- library combines the superior abstraction capabilities of templates, with the
- runtime flexibility of virtual functions.
-
-Package: libboost-type-erasure1.90.0
-Description-md5: c5bcc1bc341ce6b96d3a0f9a07fb2221
-Description-en: C++ runtime polymorphism based on concepts
- This package forms part of the Boost C++ Libraries collection.
- .
- C++ has two distinct kinds of polymorphism, virtual functions and templates,
- each of which has its own advantages and disadvantages.  The Boost.TypeErasure
- library combines the superior abstraction capabilities of templates, with the
- runtime flexibility of virtual functions.
-
-Package: libboost-url1.90-dev
-Description-md5: 35fe57ff170f6ab465e37db29c2609d9
-Description-en: C++ library that implements "URL"
- C++ library which provides containers and algorithms which model a "URL,"
- the Uniform Resource Identifier (URI) specification (henceforth referred to
- as rfc3986).
- .
- A URL is a compact sequence of characters that identifies an abstract or
- physical resource.
- .
- This library understands the grammars related to URLs and provides
- functionality to validate, parse, examine, and modify urls, and apply
- normalization or resolution algorithms.
-
-Package: libboost-url1.90.0
-Description-md5: 35fe57ff170f6ab465e37db29c2609d9
-Description-en: C++ library that implements "URL"
- C++ library which provides containers and algorithms which model a "URL,"
- the Uniform Resource Identifier (URI) specification (henceforth referred to
- as rfc3986).
- .
- A URL is a compact sequence of characters that identifies an abstract or
- physical resource.
- .
- This library understands the grammars related to URLs and provides
- functionality to validate, parse, examine, and modify urls, and apply
- normalization or resolution algorithms.
-
-Package: libboost-wave1.90-dev
-Description-md5: 793667709ca25994c0a09d26633460ba
-Description-en: C99/C++ preprocessor library
- This package forms part of the Boost C++ Libraries collection.
- .
- The Wave C++ preprocessor library is a Standards conformant
- implementation of the mandated C99/C++ preprocessor functionality
- packed behind a simple to use interface, which integrates well with
- the well known idioms of the Standard Template Library (STL).
-
-Package: libboost-wave1.90.0
-Description-md5: 793667709ca25994c0a09d26633460ba
-Description-en: C99/C++ preprocessor library
- This package forms part of the Boost C++ Libraries collection.
- .
- The Wave C++ preprocessor library is a Standards conformant
- implementation of the mandated C99/C++ preprocessor functionality
- packed behind a simple to use interface, which integrates well with
- the well known idioms of the Standard Template Library (STL).
-
-Package: libboost1.90-all-dev
-Description-md5: abd1c54975e8940f5fbd0921c61d01f1
-Description-en: Boost C++ Libraries development files (ALL)
- The Boost web site provides free, peer-reviewed, portable C++ source
- libraries. The emphasis is on libraries which work well with the C++
- Standard Library. One goal is to establish "existing practice" and
- provide reference implementations so that the Boost libraries are
- suitable for eventual standardization. Some of the libraries have
- already been proposed for inclusion in the C++ Standards Committee's
- upcoming C++ Standard Library Technical Report.
- .
- This metapackage provides the complete Boost development environment,
- including all separately-packaged libraries.
-
-Package: libboost1.90-dev
-Description-md5: 5a4757456b06ec2c205f53eaa244f371
-Description-en: Boost C++ Libraries development files
- The Boost web site provides free, peer-reviewed, portable C++ source
- libraries. The emphasis is on libraries which work well with the C++
- Standard Library. One goal is to establish "existing practice" and
- provide reference implementations so that the Boost libraries are
- suitable for eventual standardization. Some of the libraries have
- already been proposed for inclusion in the C++ Standards Committee's
- upcoming C++ Standard Library Technical Report.
- .
- This package provides headers for all Boost libraries.
- .
- Extended precision arithmetic package libmpfrc++-dev or libntl-dev is
- required to use the Boost.Multiprecision wrapping of the respective
- library.
-
-Package: libboost1.90-doc
-Description-md5: 0047dca3fe8d493c8010ac9a1b558493
-Description-en: Boost.org libraries documentation placeholder
- This package originally provided documentation, but has since fallen
- into disrepair and presently provides no documentation.  Please
- use documentation at www.boost.org.
-
-Package: libboost1.90-tools-dev
-Description-md5: b20d39e2efe0c14e144ce9d2c5d01d38
-Description-en: Boost C++ Libraries development tools
- The Boost web site provides free, peer-reviewed, portable C++ source
- libraries. The emphasis is on libraries which work well with the C++
- Standard Library. One goal is to establish "existing practice" and
- provide reference implementations so that the Boost libraries are
- suitable for eventual standardization. Some of the libraries have
- already been proposed for inclusion in the C++ Standards Committee's
- upcoming C++ Standard Library Technical Report.
- .
- This package provides the auxiliary tools bjam, Boost.Build, bcp,
- inspect, boostbook and quickbook.
 
 Package: libboost-atomic1.92-dev
 Description-md5: 1aa2477e97733797bec0d32670d4e90e
@@ -90328,6 +89298,12 @@ Description-en: Duplicate file finder
  files.  It attempts to be usably fast and uses the SHA family of message
  digests as a part of the comparisons.
 
+Package: libdujour-version-check-clojure
+Description-md5: e63cd40055fefdf35099bbe1a064b63d
+Description-en: up-to-date version checking for Clojure
+ dujour-version-check provides a simple way to perform version checks against
+ an update server URL.
+
 Package: duktape
 Description-md5: 92a374760d722cfc6b8b5bae97f4d710
 Description-en: embeddable Javascript engine
@@ -92752,7 +91728,7 @@ Description-en: Embeddable Common-Lisp: development files
  .
  This package contains the development files.
 
-Package: libecl24.5
+Package: libecl26.5
 Description-md5: e16c3c22fb80012cb6587fcb5c5ed00a
 Description-en: Embeddable Common-Lisp: shared library
  ECL stands for Embeddable Common-Lisp. The ECL project is an
@@ -103946,7 +102922,7 @@ Description-en: small and non-interactive scripting language (development files)
  .
  This package contains static and header files.
 
-Package: libexecline2.9
+Package: libexecline2.10
 Description-md5: 32477948d3b372fb6969284e8dfaebde
 Description-en: small and non-interactive scripting language (shared library)
  Execline is a (non-interactive) scripting language, like sh; but its
@@ -173908,6 +172884,19 @@ Description-en: Gfarm file system runtime library
  This package provides the shared library required for accessing
  files via Gfarm.
 
+Package: gfarm2fs
+Description-md5: c4765b0a58340d3c4bb8b3cbaff4dada
+Description-en: FUSE program to mount the Gfarm file system
+ gfarm2fs is a FUSE client to provide access to the Gfarm file system.
+ .
+ The Gfarm file system is designed to turn commodity PCs into nodes of
+ a distributed storage network, implementing the Grid Datafarm
+ architecture for global petascale data-intensive computing. It solves
+ performance and reliability problems in NFS and AFS by means of
+ multiple file replicas, and not only prevents performance degradation
+ due to access concentration, but also supports fault tolerance and
+ disaster recovery.
+
 Package: gfaz
 Description-md5: 03c196ac57372622735deab09740a106
 Description-en: GFA compression tool based on 2-mer reordering
@@ -173921,6 +172910,34 @@ Description-en: GFA compression tool based on 2-mer reordering
  compressed container without decompressing to GFA.
  .
  This package contains the gfaz command line tool.
+
+Package: gfaz-examples
+Description-md5: c21ed72ad53ac42d6d54f27bc95f5534
+Description-en: GFA compression tool based on 2-mer reordering - examples and tests
+ GFAz compresses Graphical Fragment Assembly (GFA) files by reordering
+ segments and encoding paths with a learned grammar on top of Zstandard.
+ .
+ This package contains the upstream test suite and example data.  After
+ installing it, the suite can be run with the run-unit-test script in
+ /usr/share/doc/gfaz-examples.
+
+Package: libgfaz-dev
+Description-md5: 8f1619e5965226df805c6786db189920
+Description-en: GFA compression tool based on 2-mer reordering - development files
+ GFAz compresses Graphical Fragment Assembly (GFA) files by reordering
+ segments and encoding paths with a learned grammar on top of Zstandard.
+ .
+ This package contains the header files, the unversioned shared library
+ links and the static libraries needed to build applications against GFAz.
+
+Package: libgfaz0
+Description-md5: d32b55d1b113aa819707f0c404d91ced
+Description-en: GFA compression tool based on 2-mer reordering - shared libraries
+ GFAz compresses Graphical Fragment Assembly (GFA) files by reordering
+ segments and encoding paths with a learned grammar on top of Zstandard.
+ .
+ This package contains the shared libraries used by the gfaz command line
+ tool and the Python bindings.
 
 Package: python3-gfaz
 Description-md5: 82612a9117224bd38a5f3eaa2a630bde
@@ -190516,6 +189533,15 @@ Description-en: Go library for parsing and verifying versions and version constr
         * Semantic Versioning like versioning
         * Accept more than 3 numbers (e.g. 2.3.1.4)
 
+Package: golang-github-aquasecurity-jfather-dev
+Description-md5: 7253f89636861f59d45df131bb9794ac
+Description-en: Parse JSON with line numbers and more!
+ This is a JSON parsing module that provides additional information during
+ the unmarshalling process, such as line numbers, columns etc.
+ .
+ You should not use this package unless you need the line/column metadata,
+ as unmarshalling is typically much slower than the encoding/json package.
+
 Package: golang-github-aquasecurity-table-dev
 Description-md5: 13bc91840325350a87c2c5a1ca8f2d8d
 Description-en: tables for terminals, in Go (library)
@@ -197536,6 +196562,13 @@ Description-en: highly extensible Git implementation in Go. (library)
  .
  This package contains the snapshot of the v6 version.
 
+Package: golang-github-go-gorp-gorp-v3-dev
+Description-md5: e3e5cc6ed3f23271d594d2633b1600a4
+Description-en: Go Relational Persistence, an ORM-ish library for Go
+ Given some Go structs and a database, gorp should remove a fair amount of
+ boilerplate busy-work from your code. It binds struct fields to table
+ columns and supports embedded structs.
+
 Package: golang-github-go-ini-ini-dev
 Description-md5: b80f08cc0ddb7c17b38f9c4f6c131a78
 Description-en: Go package for control of INI file
@@ -203380,6 +202413,17 @@ Description-en: Go package to generate text from regex definitions
  which is in turn needed by the Prometheus monitoring system for its
  OpenAPI endpoint support.
 
+Package: golang-github-lufia-plan9stats-dev
+Description-md5: ef27aeaa1f96502e3a585c11e035cd33
+Description-en: retrieve statistics of a Plan 9 system (library)
+ This Go module retrieves system statistics (CPU, memory, storage, network
+ interfaces and other kernel counters) from a Plan 9 operating system by
+ reading the files exposed under its /dev and /proc hierarchies.
+ .
+ It is part of the Go module dependency graph of gopsutil and, through it, of
+ software packaged for Debian; the Plan 9 code itself is not built on other
+ platforms.
+
 Package: golang-github-lunixbochs-struc-dev
 Description-md5: a6bcde419345a143cf081fb11e5d21fc
 Description-en: Better binary packing library for golang
@@ -207287,6 +206331,29 @@ Description-en: idiomatic Go validation package (Library)
   * error code and message translation support.
   * provide a rich set of validation rules right out of box.
   * extremely easy to create and use custom validation rules.
+
+Package: golang-github-pocketbase-pocketbase-dev
+Description-md5: 6b264478fa53bbeb5faaba5b80b7b29d
+Description-en: Open Source realtime backend in 1 file (library)
+ PocketBase is a lightweight micro-backend that combines an embedded
+ SQLite database with real-time subscriptions, built-in user and file
+ management, an intuitive administrative dashboard UI, and a simple
+ REST-ish API.
+ .
+ This package contains the source code and development files needed to
+ build the self-contained go application for the standalone pocketbase
+ executable server.
+
+Package: pocketbase
+Description-md5: 51ec5d0c367da47aa5a49a1e97b607f8
+Description-en: Open Source realtime backend in 1 file (program)
+ PocketBase is a lightweight micro-backend that combines an embedded
+ SQLite database with real-time subscriptions, built-in user and file
+ management and a simple REST-ish API.
+ .
+ This package provides the standalone pocketbase executable server. It
+ can be used as a self-contained web application backend or embedded
+ directly into Go applications.
 
 Package: golang-github-pocketbase-tygoja-dev
 Description-md5: 083cfdf5aadefa0b318c6b210162ab42
@@ -227140,13 +226207,21 @@ Description-en: Documentation files for the HarfBuzz library
  This package contains the HTML documentation for the HarfBuzz library.
 
 Package: libharfbuzz-gobject0
-Description-md5: 602225f3070fe796ecfe3186301b5887
-Description-en: OpenType text shaping engine ICU backend (GObject library)
+Description-md5: 76222188fef4531b78c90ec6558da1bb
+Description-en: OpenType text shaping engine (GObject library)
  HarfBuzz is an implementation of the OpenType Layout engine (aka layout
  engine) and the script-specific logic (aka shaping engine).
  .
  This package contains the GObject library, providing wrapper GObject type
  bindings for all HarfBuzz objects and enums.
+
+Package: libharfbuzz-gpu0
+Description-md5: f1f18e04f7dfb06d27bb2c71424c6d0e
+Description-en: OpenType text shaping engine (GPU rasterization library)
+ HarfBuzz is an implementation of the OpenType Layout engine (aka layout
+ engine) and the script-specific logic (aka shaping engine).
+ .
+ This package contains the library for GPU text rasterization.
 
 Package: libharfbuzz-icu0
 Description-md5: d96c32b3b2f8939f63da61e3c683d71f
@@ -227156,6 +226231,15 @@ Description-en: OpenType text shaping engine ICU backend
  .
  This package contains the ICU backend.
 
+Package: libharfbuzz-raster0
+Description-md5: a257de3fc41ba60fd40eca9374332b5d
+Description-en: OpenType text shaping engine (raster library)
+ HarfBuzz is an implementation of the OpenType Layout engine (aka layout
+ engine) and the script-specific logic (aka shaping engine).
+ .
+ This package contains the library for rasterizing glyphs to
+ A8 / BGRA32 images.
+
 Package: libharfbuzz-subset0
 Description-md5: 906074fc68a899e18b6e25ef76cf5985
 Description-en: OpenType text shaping engine (subset library)
@@ -227164,6 +226248,14 @@ Description-en: OpenType text shaping engine (subset library)
  .
  This package contains the library for subsetting fonts. Subsetting reduces
  codepoint coverage of font files and removes unnecessary data.
+
+Package: libharfbuzz-vector0
+Description-md5: 8919160c132a05326e171e5e7faadce7
+Description-en: OpenType text shaping engine (vector library)
+ HarfBuzz is an implementation of the OpenType Layout engine (aka layout
+ engine) and the script-specific logic (aka shaping engine).
+ .
+ This package contains the library for vector output of glyph outlines.
 
 Package: libharfbuzz0b
 Description-md5: c01a2a5a6349f465ee349884ac4d8667
@@ -269121,6 +268213,16 @@ Description-en: Documentation for libhessian-java
  With Hessian, providing a web service is as simple as creating a servlet and
  using a service is as simple as a JDK Proxy interface.
 
+Package: heudiconv
+Description-md5: 1c97e589188a732262069fcb46088fb7
+Description-en: DICOM converter with support for structure heuristics
+ This is a flexible dicom converter for organizing brain imaging data into
+ structured directory layouts. It allows for flexible directory layouts and
+ naming schemes through customizable heuristics implementations.
+ It only converts the necessary dicoms, not everything in a directory.
+ It tracks the provenance of the conversion from dicom to nifti in w3c
+ prov format.
+
 Package: hevea
 Description-md5: e6697fa60641efc6a5cd5d7c4bafc4bc
 Description-en: translates from LaTeX to HTML, info, or text
@@ -277957,50 +277059,6 @@ Description-en: IEM's spatialization suite - VST3 plugins
  shapers, delay and reverb effects and analysis tools.
  .
  This package provides the plugins so they can be used by VST3 hosts.
-
-Package: ifcopenshell
-Description-md5: 79fae1e43aae79968093ff7977eace4e
-Description-en: Library for working with Industry Foundation Classes (IFC) data
- Complete parsing support is provided for IFC2x3 TC1, IFC4 Add2 TC1, IFC4x1,
- IFC4x2, and IFC4x3 Add2. Extensive geometric support is implemented for the
- IFC releases IFC2x3 TC1 and IFC4 Add2 TC1. Extending with support for arbitrary
- IFC schemas is possible at compile-time when using C++ and at run-time when
- using Python.
- .
- Main package with binaries.
-
-Package: libifcopenshell-dev
-Description-md5: e7bfeccc47f6b88d6f59f229aec0ff50
-Description-en: Library for working with Industry Foundation Classes (IFC) data
- Complete parsing support is provided for IFC2x3 TC1, IFC4 Add2 TC1, IFC4x1,
- IFC4x2, and IFC4x3 Add2. Extensive geometric support is implemented for the
- IFC releases IFC2x3 TC1 and IFC4 Add2 TC1. Extending with support for arbitrary
- IFC schemas is possible at compile-time when using C++ and at run-time when
- using Python.
- .
- Development files for the ifcopenshell library.
-
-Package: libifcopenshell0.8.1
-Description-md5: 48b2a2f8985c3c3ed0defbe450c3240a
-Description-en: Library for working with Industry Foundation Classes (IFC) data
- Complete parsing support is provided for IFC2x3 TC1, IFC4 Add2 TC1, IFC4x1,
- IFC4x2, and IFC4x3 Add2. Extensive geometric support is implemented for the
- IFC releases IFC2x3 TC1 and IFC4 Add2 TC1. Extending with support for arbitrary
- IFC schemas is possible at compile-time when using C++ and at run-time when
- using Python.
- .
- Shared library for the ifcopenshell library.
-
-Package: python3-ifcopenshell
-Description-md5: c8027b29e935b6679488935bee3e4a50
-Description-en: Library for working with Industry Foundation Classes (IFC) data
- Complete parsing support is provided for IFC2x3 TC1, IFC4 Add2 TC1, IFC4x1,
- IFC4x2, and IFC4x3 Add2. Extensive geometric support is implemented for the
- IFC releases IFC2x3 TC1 and IFC4 Add2 TC1. Extending with support for arbitrary
- IFC schemas is possible at compile-time when using C++ and at run-time when
- using Python.
- .
- Python bindings for the ifcopenshell library.
 
 Package: ifeffit
 Description-md5: 910f116c8e14fa8d361b031b45896347
@@ -293021,18 +292079,6 @@ Description-en: library to apply SQL-like syntax to Java objects
  to search, order and group ANY Java objects and should be applied when you
  want to perform SQL-like queries on a collection of Java Objects.
 
-Package: journal-brief
-Description-md5: 9f603118a7e0fc71c83e1564a73ab7fd
-Description-en: Show interesting new systemd journal entries
- This program can be used to show entries from the systemd
- journal with configurable, flexible filters. Cursor files
- are used to keep information about when journal-brief was
- run for the last time and starts from there. journal-brief
- can output to stdout or send via SMTP.
- .
- journal-brief can, for example, be used to send out e-mail
- after a systemd timer was run, imitating cron's behavior.
-
 Package: jove
 Description-md5: ed081bc1e782be068e1730b0f76d3fd4
 Description-en: Jonathan's Own Version of Emacs - a compact, powerful editor
@@ -304753,36 +303799,6 @@ Package: libkf5guiaddons5
 Description-md5: 87a62b14d8e5947fac2e986637819f8b
 Description-en: additional addons for QtGui
  Qt widgets for colours, fonts and text
-
-Package: khal
-Description-md5: 23274b848f808abe34fa1bdf5275dfff
-Description-en: Standards based CLI and terminal calendar program
- Khal is a standards based CLI and terminal calendar program,
- able to synchronize with CalDAV servers through vdirsyncer.
- .
- Features:
-  - khal can read and write events/icalendars to vdir,
-    so vdirsyncer can be used to synchronize calendars
-    with a variety of other programs,
-    for example CalDAV servers.
-  - fast and easy way to add new events
-  - ikhal (interactive khal) lets you browse and edit calendars and events
-
-Package: khal-doc
-Description-md5: 62997025f7c352ef610368c69fc57327
-Description-en: Standards based CLI and terminal calendar program - documentation
- Khal is a standards based CLI and terminal calendar program,
- able to synchronize with CalDAV servers through vdirsyncer.
- .
- Features:
-  - khal can read and write events/icalendars to vdir,
-    so vdirsyncer can be used to synchronize calendars
-    with a variety of other programs,
-    for example CalDAV servers.
-  - fast and easy way to add new events
-  - ikhal (interactive khal) lets you browse and edit calendars and events
- .
- This package contains the documentation for khal.
 
 Package: elpa-khalel
 Description-md5: aeee9f23422bc55b240963c0dfca2e7e
@@ -397911,16 +396927,6 @@ Description-en: modular Java/J2EE application framework - Web
  This package provide org.springframework.web.jar : web application context,
  multipart resolver, HTTP-based remoting support.
 
-Package: libspring-web-portlet-java
-Description-md5: 183e283ccb55f87c4165b7897f492e02
-Description-en: modular Java/J2EE application framework - Portlet MVC
- Spring is a layered Java/J2EE application framework offering a lot of freedom
- to Java developers yet providing well documented and easy-to-use solutions for
- common practices in the industry.
- .
- This package provide org.springframework.web.portlet.jar : integrate JSR 286
- and JSR 168 API with Spring.
-
 Package: libspring-web-servlet-java
 Description-md5: b1976f777be57a7e9e3f6bfc8a408d84
 Description-en: modular Java/J2EE application framework - Web Portlet
@@ -469885,6 +468891,24 @@ Description-en: Analysis of structural and functional neuroimaging data (compile
  functional neuroimaging data.
  .
  This package provides architecture-dependent builds of the libraries.
+
+Package: python-nipype-doc
+Description-md5: 45d6c134c86ccf68722773c768d93278
+Description-en: Neuroimaging data analysis pipelines in Python3 -- documentation
+ Nipype interfaces Python to other neuroimaging packages and creates
+ an API for specifying a full analysis pipeline in Python.  Currently,
+ it has interfaces for SPM, FSL, AFNI, Freesurfer, but could be
+ extended for other packages (such as lipsia).
+ .
+ This package contains Nipype examples and documentation in various formats.
+
+Package: python3-nipype
+Description-md5: b95e40b42c4b22b030e9c3ba07fb69fb
+Description-en: Neuroimaging data analysis pipelines in Python3
+ Nipype interfaces Python to other neuroimaging packages and creates
+ an API for specifying a full analysis pipeline in Python.  Currently,
+ it has interfaces for SPM, FSL, AFNI, Freesurfer, but could be
+ extended for other packages (such as lipsia).
 
 Package: niri-companion
 Description-md5: 254d06dda8dbef9d1ad6b9ee78ddd6a7
@@ -550993,6 +550017,13 @@ Description-en: Tool to generate documentation from Puppet code and extensions
  in Puppet and Ruby. Strings processes code and YARD-style code comments to
  create documentation in HTML, Markdown, or JSON formats.
 
+Package: libpuppetlabs-http-client-clojure
+Description-md5: d78246d3cad487f3b16677c5b652f447
+Description-en: Clojure wrapper around libhttpasyncclient-java
+ puppetlabs-http-client is a wrapper around the Apache HttpAsyncClient
+ library providing some extra functionality for configuring SSL in a way
+ compatible with Puppet.
+
 Package: libpuppetlabs-i18n-clojure
 Description-md5: aca3e7a3a91eb4de3391475f2a7413b5
 Description-en: Clojure i18n library
@@ -551000,6 +550031,13 @@ Description-en: Clojure i18n library
  localization facilities and automates managing messages and resource bundles.
  The tooling for translators uses GNU gettext so that translators can work with
  PO files which are widely used and for which a huge amount of tooling exists.
+
+Package: libpuppetlabs-ring-middleware-clojure
+Description-md5: 63a035b0e006d7d35adea62e032cfac5
+Description-en: common Ring middleware for Puppet projects
+ This is a Ring middleware meant for use with the Trapperkeeper Jetty9
+ webservice. The package also contains common Ring middleware between Puppet
+ projects and helpers to be used with it.
 
 Package: libpd-dev
 Description-md5: c1e7d7047f98be5ca9c25b705cdf731c
@@ -551759,23 +550797,6 @@ Description-en: Python 3 binding for LMDB Lightning Memory-Mapped Database
  is not limited to the size of physical RAM).
  .
  This package contains the 'lmdb' Python 3 extension module.
-
-Package: python3-macaroonbakery
-Description-md5: 5ced88dfc8f0fd32d4253191774eaecf
-Description-en: Higher-level macaroon operations for Python 3
- Macaroons, like cookies, are a form of bearer credential.  Unlike opaque
- tokens, macaroons embed caveats that define specific authorization
- requirements for the target service, the service that issued the root
- macaroon and which is capable of verifying the integrity of macaroons it
- receives.
- .
- Macaroons allow for delegation and attenuation of authorization.  They are
- simple and fast to verify, and decouple authorization policy from the
- enforcement of that policy.
- .
- The macaroonbakery library builds on pymacaroons to allow working with
- macaroons at a higher level, such as by automatically gathering discharge
- macaroons for third-party caveats from their corresponding services.
 
 Package: python3-py-madvr2
 Description-md5: a9bc864a221fb40271cdd662ad894f7c
@@ -556203,18 +555224,6 @@ Description-en: Library for interacting with Nuki locks and openers
  such as doorbell rings. Integration with the Nuki Bridge's HTTP API enables
  control and status fetching from the smart lock and opener devices.
 
-Package: python3-pynwb
-Description-md5: d33851500de0606fcac83e5655df9ac1
-Description-en: Python library for working with Neurodata in the NWB format
- PyNWB is a Python package for working with NWB files. It provides a
- high-level API for efficiently working with Neurodata stored in the
- NWB format.
- .
- Neurodata Without Borders: Neurophysiology (NWB:N) is a project to
- develop a unified data format for cellular-based neurophysiology
- data, focused on the dynamics of groups of neurons measured under a
- large range of experimental conditions.
-
 Package: python3-pynx584
 Description-md5: 9e318c575cb3ffb8f85e038da33676ed
 Description-en: Interface library and server for NX584 alarm panels
@@ -556834,20 +555843,6 @@ Description-en: Library to interact with a Probe Plus BLE device
  from Probe Plus devices over a wireless network, improving the reach and
  functionality of IoT solutions within local networks, such as monitoring
  environments or managing Wi-Fi-enabled operations.
-
-Package: pyprof2calltree
-Description-md5: 4e756b5212d471a9f7defc0d381fdb17
-Description-en: visualise Python cProfile data with this kcachegrind converter
- Pyprof2calltree converts cProfile data into a format that is
- consumable by kcachegrind and qcachegrind for graphical calltree
- analysis.  This combination provides similar capabilities to Snakeviz
- or RunSnakeRun.
- .
- Pyprof2calltree is an adaptation of lsprofcalltree.py, written by David
- Allouche, Jp Calderone, Itamar Shtull-Trauring, and Johan Dahlin.  It
- has been adapted to behave more like scripts in the kcachegrind-converters
- package.  One of the authors' objectives is for pyprof2calltree to
- eventually become part of the official upstream kdesdk package.
 
 Package: python3-pyproject-api
 Description-md5: b3c24c7a03ed2fea819b3f6018aa45ff
@@ -561845,14 +560840,6 @@ Description-en: Generator-based operators for asynchronous iteration
  It can be seen as an asynchronous version of itertools, although some aspects
  are slightly different. All the provided operators return a unified interface
  called a stream. A stream is an enhanced asynchronous iterable.
-
-Package: python3-aioswitcher
-Description-md5: a1c167206437de7a8e7cf9f39222c6b1
-Description-en: Switcher Python Integration
- This package provides integration with the Switcher API. I can handle many
- devices, such as: Switcher V2, Switcher Mini, Switcher Touch (V3),
- Switcher V4, Switcher Power Plug, Switcher Breeze, Switcher Runner, Switcher
- Runner Mini, Switcher Runner S11.
 
 Package: python3-aiotractive
 Description-md5: 33efc523045887650adafe42ede026bf
@@ -567249,17 +566236,6 @@ Description-en: cog content generation tool
  the original file. The file can contain whatever text you like around the
  Python code. It will usually be source code.
 
-Package: python-cogent-doc
-Description-md5: c500b1c82c580b2eec9f3cdab53c4831
-Description-en: docs for python3-cogent3
- PyCogent is a software library for genomic biology.
- .
- It is distinguished by many unique built-in capabilities (such as true codon
- alignment) and the frequent addition of entirely new methods for the analysis
- of genomic data.
- .
- This package contains documentation and examples.
-
 Package: python3-cogent3
 Description-md5: 7f66bef045873462e2411adbafa6b365
 Description-en: framework for genomic biology
@@ -571901,6 +570877,19 @@ Description-en: Dithered image combination for Python
  the drizzlepac code computes the mapping by using a Python
  callback. Switching to using an array allowed the code to be greatly
  simplified.
+
+Package: python3-dronecan
+Description-md5: 7116d632ee6b29bc7b060585cfc6c2ad
+Description-en: Python implementation of the DroneCAN protocol
+ DroneCAN is a CAN bus protocol used by ArduPilot, PX4 and peripheral
+ devices. This library provides the Python protocol stack, a DSDL message
+ definition parser, message serialization and CAN interface drivers.
+ .
+ Standard and vendor-specific DSDL definitions are included. The
+ dronecan-bridge command forwards frames between CAN interfaces. Native
+ Linux SocketCAN and recorded CAN files can be used without additional
+ Python libraries; serial adapters, python-can backends and MAVLink CAN
+ tunnels use optional dependencies.
 
 Package: python3-dropbox
 Description-md5: 9aabb05cdcbd12af8e9085e8e8ddb76d
@@ -577280,17 +576269,6 @@ Description-en: client library for ISEO Argo Bluetooth locks
  The client can unlock devices, read their state and access logs, and manage
  lock users and gateway registration.
 
-Package: python3-ismartgate
-Description-md5: 3cfe9d2e8daa8c667ebe0345e0dd7d34
-Description-en: Python API for iSmartGate and GogoGate2 devices
- This package provides an asynchronous Python library for communicating with
- iSmartGate and GogoGate2 garage door and gate controllers.  It can retrieve
- device and door information and issue commands to open or close configured
- doors.
- .
- Command-line tools for querying and controlling supported devices are also
- included.
-
 Package: python3-iso3166
 Description-md5: a849363965b93098861984c4e34fe98a
 Description-en: Standalone ISO 3166-1 country definitions (Python 3)
@@ -578048,15 +577026,6 @@ Description-en: minimalist kanboard Python client (Python 3)
   * Super simple installation
  .
  This package installs the library for Python 3.
-
-Package: python3-kaptan
-Description-md5: 024bd5164492a395e3f59f4b57adcaa4
-Description-en: Python 3 configuration manager in various formats
- Configuration manager that allows users to transparently access
- configuration data stored in various formats (INI, JSON, YAML, dict,
- file).
- .
- This is the Python 3 package
 
 Package: python3-kasa
 Description-md5: 626214642895d8daa9e507071d56a8c4
@@ -580612,31 +579581,6 @@ Description-en: Static site generator (documentation)
  configuration file.
  .
  This package contains the HTML documentation.
-
-Package: python3-ml-collections
-Description-md5: 575c41ee60f92715bdeb74c2477999cb
-Description-en: collections designed for ML usecases
- The package provices two classes called ConfigDict and FrozenConfigDict that
- are "dict-like" data structures with dot access to nested elements. Together,
- they are supposed to be used as a main way of expressing configurations of
- experiments and models.
- .
- Features:
-  * Dot-based access to fields.
-  * Locking mechanism to prevent spelling mistakes.
-  * Lazy computation.
-  * FrozenConfigDict() class which is immutable and hashable.
-  * Type safety.
-  * "Did you mean" functionality.
-  * Human readable printing (with valid references and cycles), using
-    valid YAML format.
-  * Fields can be passed as keyword arguments using the ** operator.
- .
- There are two exceptions to the strong type-safety of the ConfigDict.
- int values can be passed in to fields of type float. In such a case, the
- value is type-converted to a float before being stored. Similarly,
- all string types (including Unicode strings) can be stored in fields
- of type str or unicode.
 
 Package: python-pdbx-doc
 Description-md5: d5d47e01b7552037249b072c3ec4dff8
@@ -625418,6 +624362,13 @@ Description-en: spam-catcher using a collaborative filtering network
  identified and reported by a Reporting Agent, can be blocked out by the
  rest of the Filtering Agents on the network.
 
+Package: librbac-client-clojure
+Description-md5: 461a8d49c6e395b7575b754a65b6a41f
+Description-en: lightweight API clients for PE services
+ This package contains a Clojure library designed to hold lightweight API
+ clients for PE services. The clients are meant to provide alternate versions
+ of the trapperkeeper services.
+
 Package: rbdoom3bfg
 Description-md5: bb57ef0e203b415599251f97b9568c25
 Description-en: Doom3 BFG edition game engine
@@ -628938,20 +627889,6 @@ Description-en: Reproject astronomical images with Python 3
  to/from HEALPIX projections.
  .
  This package contains the Python 3 version of the package.
-
-Package: reprotest
-Description-md5: 72eafe04323c1b04988b407a2fd08e34
-Description-en: Build software and check it for reproducibility
- reprotest builds the same source code twice in different environments, and
- then checks the binaries produced by each build for differences. If any are
- found, then diffoscope (or if unavailable then diff) is used to display them
- in detail for later analysis.
- .
- It supports different types of environment such as a "null" environment (i.e.
- doing the builds directly in /tmp) or various other virtual servers, for
- example schroot, ssh, qemu, and several others.
- .
- reprotest is developed as part of the “reproducible builds” Debian project.
 
 Package: python3-reprounzip
 Description-md5: 3f644358e7b08ea9a5fa8089bd2b263b
@@ -651596,6 +650533,32 @@ Description-en: POSIX-compliant shell script for running shell commands and scri
   - set custom bash flags
   - save ssh output to a custom file
 
+Package: python3-runtype
+Description-md5: b0f5495198edafd7d790ba27fd4b7af0
+Description-en: collection of run-time type utilities for Python
+ - Provides a smarter alternative to "isinstance" and "issubclass", with
+   support for the "typing" module, and type constraints.
+ .
+ - Adds run-time type validation to the built-in dataclass.
+   - Improves dataclass ergonomics.
+   - Supports most mypy constructs, like "typing" and forward-references
+     ("foo: 'Bar'").
+   - Supports automatic value casting, Pydantic-style. (Optional, off by
+     default)
+   - Supports types with constraints. (e.g. "String(max_length=10)")
+   - Supports optional sampling for faster validation of big lists and dicts.
+   - Twice faster than Pydantic-v1 with pure Python
+ .
+ - Provides fast multiple-dispatch for functions and methods, via a decorator.
+   - Dispatch on multiple arguments
+   - Full specificity resolution
+   - Supports mypy, by utilizing the "@overload" decorator
+   - Inspired by Julia.
+ .
+ - Provides a set of classes to implement your own type-system.
+   - Supports generics, constraints, phantom types
+   - Used by runtype itself, to emulate the Python type-system.
+
 Package: ruptime
 Description-md5: fcb4028ac44926d477d07b935acababd
 Description-en: poor man's ruptime
@@ -652956,6 +651919,13 @@ Package: librust-async-walkdir-dev
 Description-md5: 1525cb2f0a3f78f728733a3ae126428c
 Description-en: Asynchronous directory traversal for Rust - Rust source code
  Source code for Debianized Rust crate "async-walkdir"
+
+Package: librust-async-wsocket-dev
+Description-md5: 9914134c35b0dca18305b783732768ad
+Description-en: WebSocket convenience library - Rust source code
+ Convenience library for using websockets in native environments!
+ In Debian, we disabled the WASM environments for this package.
+ Source code for Debianized Rust crate "async-wsocket"
 
 Package: librust-async-zip-dev
 Description-md5: aa28b138ed90bc4dac9f0cca8df7481f
@@ -656445,10 +655415,9 @@ Description-en: Adds String based inflections for Rust - Rust source code
  Source code for Debianized Rust crate "cruet"
 
 Package: librust-crunchy-dev
-Description-md5: 721928dc85ed0500d0c41eea1b3e29dc
+Description-md5: 818504528ccedfc50076951606a3d880
 Description-en: Crunchy unroller: deterministically unroll constant loops - Rust source code
- This package contains the source for the Rust crunchy crate, packaged by
- debcargo for use with cargo and dh-cargo.
+ Source code for Debianized Rust crate "crunchy"
 
 Package: librust-crypto-bigint-dev
 Description-md5: 71b41eb893227949cba5fd94c58e0bd6
@@ -664680,6 +663649,11 @@ Description-md5: d72401eb9325740a15c18b08314da30c
 Description-en: Raw FFI Bindings for the libseccomp Library - Rust source code
  Source code for Debianized Rust crate "libseccomp-sys"
 
+Package: librust-libsensors-sys-dev
+Description-md5: f980518e64e874e830be343e42b48546
+Description-en: Rust bindings to libsensors - Rust source code
+ Source code for Debianized Rust crate "libsensors-sys"
+
 Package: librust-libshumate-dev
 Description-md5: 62379ecd6f69c83baf55dd4034962da7
 Description-en: Rust bindings for libshumate - Rust source code
@@ -672428,6 +671402,12 @@ Package: librust-sendfd-dev
 Description-md5: 2709f6c05495245232fe5fe24199736a
 Description-en: Send file descriptors along with data over UNIX domain sockets - Rust source code
  Source code for Debianized Rust crate "sendfd"
+
+Package: librust-sensors-dev
+Description-md5: a2b35f0177f2ffc200ccb89831d7389b
+Description-en: Rust-friendly interface to lm-sensors - Rust source code
+ This package contains the source for the Rust sensors crate, packaged by
+ debcargo for use with cargo and dh-cargo.
 
 Package: librust-separator-dev
 Description-md5: 4e0716294209d36901f9e77413eb195c
@@ -682165,6 +681145,19 @@ Description-en: Tools to manipulate signatures on UEFI binaries and drivers
  This package installs tools which can cryptographically sign EFI binaries and
  drivers.
 
+Package: libsbt-compiler-interface-java
+Description-md5: 1e7611fc1cee3e55a27c7ab47f8d702c
+Description-en: sbt/zinc compiler interface (xsbti.compile)
+ The compiler-interface is the stable, pure-Java boundary (package
+ xsbti.compile) between the zinc incremental compiler and any Scala
+ compiler. It defines the CompilerInterface, the analysis callback,
+ virtual files and the incremental-compilation options.
+ .
+ This package provides org.scala-sbt:compiler-interface. It is a pure-Java
+ building block of the sbt toolchain, built from the committed (hand-written
+ and Contraband-generated) Java sources of zinc, and depends only on
+ org.scala-sbt:util-interface.
+
 Package: sbt-ivy
 Description-md5: f31fde78c31e8b315894884214aff8db
 Description-en: agile dependency manager (sbt fork)
@@ -684318,12 +683311,17 @@ Description-en: a Python3 interface for the Scotch graph partitioning library (d
  This is the documentation package.
 
 Package: python3-scotchpy
-Description-md5: 7a9a371afc0fc0bb3923d37ef8380297
+Description-md5: 1cd4859b63b6d43ccf4ce5e21999c00d
 Description-en: a Python3 interface for the Scotch graph partitioning library
  ScotchPy provides a Python3 interface for the Scotch graph
  partitioning library
  .
  This package installs the library for Python 3.
+ .
+ scotchpy uses default numpy integers, which must match the scotch
+ INTSIZE. That is 64-bit int on 64-bit architectures, such that
+ libscotch-64i-dev must be used.
+ Default libscotch-dev is used on 32-bit architectures.
 
 Package: scottfree
 Description-md5: a6d185290b2fa81d538b24edf706a487
@@ -692360,7 +691358,7 @@ Description-en: Boot image creation tools for qualcomm boards
   - skales-dtbTool:   Clone of dtbTool from Android (creates a QCDT image).
   - skales-mkbootimg: Creates a boot.img for fastboot.
 
-Package: libskarnet2.15
+Package: libskarnet2.16
 Description-md5: 2c9bf95082267dbab8cd3dc4e15abcba
 Description-en: library used for building software at skarnet.org
  skalibs is a package centralizing the free software / open source C
@@ -740714,6 +739712,21 @@ Description-en: data files for TORCS
  .
  This package includes all data files for the game including cars and tracks.
 
+Package: tordnsel
+Description-md5: ea27a9db886f5671008292638a48e99d
+Description-en: DNS-based list of Tor exit nodes
+ TorDNSEL answers, over DNS and HTTP, the question "which Tor exit nodes
+ will connect to me?". Rather than listing every Tor relay, it lists only
+ the exits whose exit policy permits connections to a given destination,
+ and it can test exits actively to find the addresses they really exit
+ from.
+ .
+ It is an authoritative DNS server for a DNSBL-style zone (over UDP and
+ TCP) that also answers the Tor Project's form of exit list query, with an
+ optional HTTP interface compatible with check.torproject.org's /api/ip and
+ /torbulkexitlist and optional Prometheus metrics. It needs a local Tor
+ client with a control port.
+
 Package: python3-torf
 Description-md5: 54bced310051732751f11dee419b76ca
 Description-en: Python library for creating and parsing torrent files
@@ -742463,6 +741476,14 @@ Description-en: Non-blocking I/O cross-platform TCP network library
  .
  This package provides the trantor library itself
 
+Package: libtrapperkeeper-authorization-clojure
+Description-md5: 22164f207a06a17bebc462621dccca35
+Description-en: authorization service for use with the trapperkeeper service framework
+ This project provides an authorization service for use with the trapperkeeper
+ service framework. It aims to port Puppet's auth.conf feature to Clojure and
+ the trapperkeeper framework, with a different way to express authorization
+ rules.
+
 Package: libtrapperkeeper-clojure
 Description-md5: c5bec8675cc9b89e08c2cf9b95f993da
 Description-en: framework for configuring, composing and running Clojure services
@@ -742470,12 +741491,55 @@ Description-en: framework for configuring, composing and running Clojure service
  services. It acts as a sort of "binder" for Ring applications and other
  modular bits of Clojure code.
 
+Package: libtrapperkeeper-comidi-metrics-clojure
+Description-md5: 4a7eaf38e88dc8cd94fa9ed2bc215cc2
+Description-en: ring middleware to automatically track metrics for requests
+ trapperkeeper-comidi-metrics is a library that provides Ring middleware to
+ automatically track metrics for requests to all of your comidi HTTP routes.
+
 Package: libtrapperkeeper-filesystem-watcher-clojure
 Description-md5: f6c69c1ab0a04c6a130492b1d19224c5
 Description-en: Trapperkeeper filesystem watcher service
  This library includes a Trapperkeeper service which provides an API for
  watching paths on the filesystem for changes and doing something when they
  change.
+
+Package: libtrapperkeeper-metrics-clojure
+Description-md5: 186e3309b26ffc5103d81513b5e645d3
+Description-en: Trapperkeeper Metrics Service
+ trapperkeeper-metrics is a library intended to help make it easier to track
+ metrics in other Trapperkeeper applications. It includes:
+ .
+  * a TK service that manages the life cycle of your metrics registry
+  * config-driven control of metrics and metrics reporting
+  * other miscellaneous utility functions for working with metrics
+
+Package: libtrapperkeeper-scheduler-clojure
+Description-md5: 3de8f52205875d97d6e9ce879f0ea065
+Description-en: Trapperkeeper service for scheduling background tasks
+ Trapperkeeper-scheduler is a Trapperkeeper service that provides a simple API
+ for scheduling potentially recurring background tasks. Other Trapperkeeper
+ services may specify a dependency on the Scheduler service and then use its
+ functions to schedule and cancel jobs to be run on background.
+
+Package: libtrapperkeeper-status-clojure
+Description-md5: d28b00e316b7d3e49d5bbc4fdc9e5b0e
+Description-en: status monitoring for trapperkeeper services
+ The Trapperkeeper Status Service is a Trapperkeeper service that provides a
+ web endpoint for getting status information for a Trapperkeeper-based
+ application.
+ .
+ Other Trapperkeeper services may register a status callback function with
+ the Status Service, returning any kind of status information that is relevant
+ to the consuming service. The Status Service will make this information
+ available via HTTP, in a consistent, consolidated format. This makes it
+ possible for users to automate monitoring and other tasks around the system.
+
+Package: libtrapperkeeper-webserver-clojure
+Description-md5: 4d9770944f9440104454bc15d5093752
+Description-en: trapperkeeper webserver implementation
+ A jetty-based webserver implementation for use with the
+ org.openvoxproject/trapperkeeper service framework.
 
 Package: trash-cli
 Description-md5: 1f885fc35096fe4e2f18369f9b37b925
