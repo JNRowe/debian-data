@@ -3564,6 +3564,23 @@ Size: 105216
 MD5sum: 809a7200d739aa0b607df5fc261c7136
 SHA256: d27933c17516eaa5b9d1c0cb378c202f9aa104e749deeb60b7e7621db2eb99dd
 
+Package: canu
+Version: 2.3+dfsg-2
+Installed-Size: 43485
+Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libbz2-1.0, libc6 (>= 2.38), libcurl4t64 (>= 7.18.0), libgcc-s1 (>= 4.2), libgomp1 (>= 6), liblzma5 (>= 5.1.1alpha+20120614), libsnappy1v5 (>= 1.3.1), libstdc++6 (>= 11), zlib1g (>= 1:1.1.4), perl:any, libfilesys-df-perl, mhap, gnu-which, samtools, gnuplot-nox | gnuplot
+Suggests: nanopolish
+Description: single molecule sequence assembler for genomes
+Homepage: https://canu.readthedocs.org/en/latest/
+Description-md5: dfb92004d9d7cddcbf07a6673e65c897
+science
+Priority: optional
+Filename: pool/main/c/canu/canu_2.3+dfsg-2_amd64.deb
+Size: 4258680
+MD5sum: bf4a0460c325a69da4d845be6f44dc3b
+SHA256: f7d38f99d5db2d9fbddba1334f6f545042fccbb4c28da493d0e466952986fa02
+
 Package: casacore-tools
 Source: casacore (3.8.2-2)
 Version: 3.8.2-2+b1
@@ -4329,6 +4346,26 @@ Filename: pool/main/c/cif2hkl/cif2hkl_1.4.7+ds1-2_amd64.deb
 Size: 914268
 MD5sum: e2bc06a485ba5648e59980cd44cb353d
 SHA256: 8c6e7d7ecd0d5038218671a95e65a9abf81e98be83b464da2c9e18fd631b99f1
+
+Package: circlator
+Version: 1.5.6-14
+Installed-Size: 10531
+Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
+Architecture: all
+Depends: fastaq, python3-openpyxl, python3-packaging, python3-pymummer, python3-pysam, python3:any, prodigal, bwa, mummer, samtools, canu
+Recommends: spades
+Description: circularize genome assemblies
+Homepage: https://sanger-pathogens.github.io/circlator/
+Description-md5: cf235cf3121c5ca347cea31d93662299
+Tag: biology::nucleic-acids, field::biology, field::biology:bioinformatics,
+ implemented-in::python, role::program, science::calculation,
+ works-with::biological-sequence, works-with::file
+science
+Priority: optional
+Filename: pool/main/c/circlator/circlator_1.5.6-14_all.deb
+Size: 4472412
+MD5sum: a6c1ed96687ef2298e6c30dcc7fb62f7
+SHA256: cb5ce6407c9dee006de4d70e47454145d27ec7dd276f8a45c9aab0401ac41306
 
 Package: circos
 Version: 0.69.9+dfsg-3
@@ -5411,34 +5448,37 @@ MD5sum: b94c68dc3447eb1ebb947a8a5f35e263
 SHA256: 7d0ece362aa1ee6ba8036478b53df8a782d48c2ddc96244fcc1a29f63524fe16
 
 Package: cwltest
-Version: 2.6.20251216093331-1
-Installed-Size: 180
+Version: 2.7.20261106145043-1
+Installed-Size: 184
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
 Architecture: all
-Depends: python3-defusedxml, python3-junit.xml, python3-pytest, python3-schema-salad, python3:any, python3-rdflib, python3-ruamel.yaml
-Suggests: cwl-runner
+Depends: python3-defusedxml, python3-junit.xml, python3-rdflib, python3-ruamel.yaml, python3-schema-salad, python3:any
+Recommends: python3-pytest
+Suggests: cwl-runner | cwltool | toil
 Description: Common Workflow Language testing framework
 Homepage: https://www.commonwl.org
+Commands: cwltest
 Description-md5: f8de12f6de3b174115c4e6454ab9242b
 science
 Priority: optional
-Filename: pool/main/c/cwltest/cwltest_2.6.20251216093331-1_all.deb
-Size: 28876
-MD5sum: 0e300288e43c1a769a93fcdb45f52b40
-SHA256: be20b2937db513c5cc2579aebb7e342916b4dcc59f8dac6b1e0e1f8cb98b78a8
+Filename: pool/main/c/cwltest/cwltest_2.7.20261106145043-1_all.deb
+Size: 29840
+MD5sum: 5cbc5ab4bfd5123785bfeecb62d65272
+SHA256: deb00973cff3428a7c1bf14feada895fbef18fb54974a4845a8e114cde4748aa
 
 Package: cwltool
-Version: 3.2.20260413085819-1
-Installed-Size: 6065
+Version: 3.3.20261106131234-1
+Installed-Size: 6129
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
 Architecture: all
 Provides: cwl-runner
-Depends: python3-argcomplete, python3-coloredlogs, python3-cwl-utils (>= 0.41), python3-mypy-extensions, python3-prov, python3-psutil, python3-pydot, python3-pygments, python3-pyparsing, python3-rdflib, python3-requests, python3-rich-argparse, python3-ruamel.yaml, python3-schema-salad (>= 8.9), python3-spython, python3-typing-extensions, python3:any, python3-arcp
+Depends: python3-arcp, python3-argcomplete, python3-cwl-utils (>= 0.44), python3-mypy-extensions, python3-coloredlogs, python3-prov, python3-psutil, python3-pydot, python3-pygments, python3-pyparsing, python3-rdflib, python3-requests, python3-rich-argparse, python3-ruamel.yaml, python3-schema-salad (>= 8.10), python3-spython, python3-typing-extensions, python3:any
 Recommends: nodejs, python3-galaxy-tool-util
-Suggests: podman | docker.io | singularity-container, cwltool-doc
+Suggests: cwltool-doc, podman | docker.io | singularity-container
 Breaks: toil (<< 5.12.0)
 Description: Common Workflow Language reference implementation
 Homepage: https://cwltool.readthedocs.io/
+Commands: cwltool
 Description-md5: 764364acbad5f207e5f6438f00c333c4
 Tag: admin::automation, admin::virtualization, field::astronomy,
  field::biology, field::biology:bioinformatics,
@@ -5450,29 +5490,29 @@ Tag: admin::automation, admin::virtualization, field::astronomy,
  works-with::software:package
 science
 Priority: optional
-Filename: pool/main/c/cwltool/cwltool_3.2.20260413085819-1_all.deb
-Size: 523624
-MD5sum: 6a0a827d1f1260b4613cef3ded2b816c
-SHA256: 5853582e1501641573bcee7a603568f1518973017bfdda6f01eea11e2e1ca815
+Filename: pool/main/c/cwltool/cwltool_3.3.20261106131234-1_all.deb
+Size: 533784
+MD5sum: 39154de9a92dab2da756ee21b1eea7a0
+SHA256: 125d138ae307bf87377d8cd173819bf5453a78e42349723586c1d99f3f863b9c
 
 Package: cwltool-doc
 Source: cwltool
-Version: 3.2.20260413085819-1
-Installed-Size: 3186
+Version: 3.3.20261106131234-1
+Installed-Size: 3227
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
 Architecture: all
-Depends: libjs-jquery (>= 3.6.0), libjs-sphinxdoc (>= 8.2), sphinx-rtd-theme-common (>= 3.1.0+dfsg)
+Depends: libjs-jquery (>= 3.6.0), libjs-sphinxdoc (>= 9.0), sphinx-rtd-theme-common (>= 3.1.0+dfsg)
 Description: Common Workflow Language reference implementation -- docs
 Multi-Arch: foreign
 Homepage: https://cwltool.readthedocs.io/
-Built-Using: sphinx (= 8.2.3-12)
+Built-Using: sphinx (= 9.2.0-1)
 Description-md5: f6c3675b19635a810ab17954082b4637
 science
 Priority: optional
-Filename: pool/main/c/cwltool/cwltool-doc_3.2.20260413085819-1_all.deb
-Size: 337648
-MD5sum: f4d6db4b66312bcffd653cf91d285253
-SHA256: a823401caa151e487bcd2ccf4a5ae28c6795418d48db858a540b6d2754affa55
+Filename: pool/main/c/cwltool/cwltool-doc_3.3.20261106131234-1_all.deb
+Size: 339180
+MD5sum: 38d87a5c3d5074c53f84de1588bee32f
+SHA256: 879c3c1fbfb9c9211f7f39c8007d284d0627870b63958298d911ef937bed6335
 
 Package: python3-cyvcf2
 Source: cyvcf2 (0.34.0-1)
@@ -15647,6 +15687,41 @@ Filename: pool/main/m/minc-tools/minc-tools_2.3.00+dfsg-17_amd64.deb
 Size: 387812
 MD5sum: 359442359c9604bccd071b46f9f729c4
 SHA256: 8fdd00034105c16ecbb286297b1edf00374a12a56b5136dea8b3975cf5e2826e
+
+Package: mindthegap
+Version: 2.3.0-6
+Installed-Size: 1029
+Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libgatbcore3 (>= 1.4.2), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libhdf5-320 (>= 1.14.3), libstdc++6 (>= 13.1)
+Description: performs detection and assembly of DNA insertion variants in NGS read datasets
+Homepage: https://github.com/GATB/MindTheGap
+Commands: MindTheGap
+Description-md5: 5d07b44122645144d6449f79c6fd6d87
+science
+Priority: optional
+Filename: pool/main/m/mindthegap/mindthegap_2.3.0-6_amd64.deb
+Size: 249452
+MD5sum: 006178a07963ebd90e41b9b22d09ec91
+SHA256: 9cc233f32f7a8013acf4409736220c9aaeeb256da07a31e34338b54971083acd
+
+Package: mindthegap-examples
+Source: mindthegap
+Version: 2.3.0-6
+Installed-Size: 730
+Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
+Architecture: all
+Depends: bsdextrautils, python3:any
+Recommends: mindthegap
+Description: optional scripts and example resources for mindthegap
+Homepage: https://github.com/GATB/MindTheGap
+Description-md5: 96e8212c0c82386e29033f5b1866577d
+science
+Priority: optional
+Filename: pool/main/m/mindthegap/mindthegap-examples_2.3.0-6_all.deb
+Size: 648056
+MD5sum: a43e04bab1d009f274d82ff73e21c9c8
+SHA256: 7718bda61bc812250c124cefb303f030cd6d7d9054f56da561b4946ad4cfad5c
 
 Package: minia
 Source: minia (3.2.6-5)
@@ -27005,21 +27080,21 @@ SHA256: a47ebb5d6e760a66efdc82504342a62606b473ab905cf593abbb272a5a14c0c2
 
 Package: ucx-utils
 Source: ucx
-Version: 1.23.0~rc2-1
+Version: 1.23.2-1
 Installed-Size: 1013
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libucx0 (= 1.23.0~rc2-1), libc6 (>= 2.38), libfuse3-4 (>= 3.17.2), libgcc-s1 (>= 3.0), libgomp1 (>= 4.9), libstdc++6 (>= 14)
+Depends: libucx0 (= 1.23.2-1), libc6 (>= 2.38), libfuse3-4 (>= 3.17.2), libgcc-s1 (>= 3.0), libgomp1 (>= 4.9), libstdc++6 (>= 14)
 Description: Utilities for the UCX messaging library
-Homepage: https://www.openucx.org
+Homepage: https://github.com/openucx/ucx
 Commands: io_demo, ucx_info, ucx_perftest, ucx_perftest_daemon, ucx_read_profile, ucx_vfs
 Description-md5: dc67ef5d365a0ef81acceda550ab0c39
 science
 Priority: optional
-Filename: pool/main/u/ucx/ucx-utils_1.23.0~rc2-1_amd64.deb
-Size: 267204
-MD5sum: 26207735b09d05c0ec4da10361fa1472
-SHA256: 59b254ccb2d89198b30a61655372892460c3650672e0ccb4e71d76b7f743d778
+Filename: pool/main/u/ucx/ucx-utils_1.23.2-1_amd64.deb
+Size: 267616
+MD5sum: 35bb14378b19036781824314ddb6d69d
+SHA256: b5eb3c3dc28e2653d208021487e7059075f7e128d1a173d718e72669af48b970
 
 Package: unihedron-device-manager
 Source: udm
