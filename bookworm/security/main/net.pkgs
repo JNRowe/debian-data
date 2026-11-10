@@ -2193,6 +2193,102 @@ Filename: pool/updates/main/n/ntpsec/sntp_4.2.8p15+dfsg-2~1.2.2+dfsg1-1+deb12u1_
 Size: 22136
 SHA256: ccb12f7b3c06511264f2ef6af2d6dfd6a3a01f36f05fdbe9a97e6bb74682e485
 
+Package: octavia-agent
+Source: octavia
+Version: 11.0.0-2+deb12u1
+Installed-Size: 69
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: acl, adduser, anacron, apparmor, at, cron, cryptsetup, curl, dbconfig-common, dbus, debconf, dirmngr, dmeventd, ethtool, gawk, gpg, gpg-agent, haproxy, haveged, ifenslave, ifupdown, iptables, iputils-ping, iputils-tracepath, ipvsadm, keepalived, net-tools, netbase, netcat-openbsd, octavia-common (= 11.0.0-2+deb12u1), pollinate, psmisc, python3-openstackclient, q-text-as-data, rsyslog, socat, uuid-runtime, vlan, lsb-base (>= 3.0-6)
+Description: OpenStack Load Balancer as a Service - Agent
+Homepage: https://github.com/openstack/octavia
+Description-md5: 1a4ef094fcf0a0c028479730b735f532
+net
+Priority: optional
+Filename: pool/updates/main/o/octavia/octavia-agent_11.0.0-2+deb12u1_all.deb
+Size: 12404
+SHA256: 9f49f73e8a58f593fbe7a259ea8f0084089e361825bdc7abc9454e159998a3dc
+
+Package: octavia-common
+Source: octavia
+Version: 11.0.0-2+deb12u1
+Installed-Size: 276
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: adduser, dbconfig-common, debconf, python3-octavia (= 11.0.0-2+deb12u1), debconf (>= 0.5) | debconf-2.0
+Description: OpenStack Load Balancer as a Service - Common files
+Homepage: https://github.com/openstack/octavia
+Description-md5: 99b5ec01a97a2f68d21f19628baa085b
+net
+Priority: optional
+Filename: pool/updates/main/o/octavia/octavia-common_11.0.0-2+deb12u1_all.deb
+Size: 51028
+SHA256: 85a0a9c2579f4b282f29e6655f0a89040e2e0bde3c0959de7a1b7648b5131991
+
+Package: octavia-driver-agent
+Source: octavia
+Version: 11.0.0-2+deb12u1
+Installed-Size: 32
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: octavia-common (= 11.0.0-2+deb12u1), lsb-base (>= 3.0-6)
+Description: OpenStack Load Balancer as a Service - Driver Agent
+Homepage: https://github.com/openstack/octavia
+Description-md5: b32addb8c9e19f3a3e2773ab530515c0
+net
+Priority: optional
+Filename: pool/updates/main/o/octavia/octavia-driver-agent_11.0.0-2+deb12u1_all.deb
+Size: 8972
+SHA256: ff4e79fa09a9faf343774d98049d80eb2c6937e29fbf74be33ee62fbd28f313f
+
+Package: octavia-health-manager
+Source: octavia
+Version: 11.0.0-2+deb12u1
+Installed-Size: 136
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: adduser, octavia-common (= 11.0.0-2+deb12u1), debconf (>= 0.5) | debconf-2.0, lsb-base (>= 3.0-6)
+Description: OpenStack Load Balancer Service - Health manager
+Homepage: https://github.com/openstack/octavia
+Description-md5: 44375783f00df1e5c6c7f2e434840f74
+net
+Priority: optional
+Filename: pool/updates/main/o/octavia/octavia-health-manager_11.0.0-2+deb12u1_all.deb
+Size: 21096
+SHA256: 08b07de466015347088404b8096060f440e5dc562f4faf5afd2915ede9777782
+
+Package: octavia-housekeeping
+Source: octavia
+Version: 11.0.0-2+deb12u1
+Installed-Size: 32
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: octavia-common (= 11.0.0-2+deb12u1), lsb-base (>= 3.0-6)
+Description: OpenStack Load Balancer Service - Housekeeping manager
+Homepage: https://github.com/openstack/octavia
+Description-md5: f1bf520b18022fec56c202a2a1ca39d2
+net
+Priority: optional
+Filename: pool/updates/main/o/octavia/octavia-housekeeping_11.0.0-2+deb12u1_all.deb
+Size: 8960
+SHA256: 885518420d432114e031d6532866bba42fdb20410e7351ccc7de3bc3336ccd0f
+
+Package: octavia-worker
+Source: octavia
+Version: 11.0.0-2+deb12u1
+Installed-Size: 32
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: octavia-common (= 11.0.0-2+deb12u1), lsb-base (>= 3.0-6)
+Description: OpenStack Load Balancer Service - Worker
+Homepage: https://github.com/openstack/octavia
+Description-md5: c562d16c2f21a02ed0ddd90318ddba5e
+net
+Priority: optional
+Filename: pool/updates/main/o/octavia/octavia-worker_11.0.0-2+deb12u1_all.deb
+Size: 8924
+SHA256: c9fccb4ffcfbb388adfa23899cee2a78c73682193b6549c2392293b45a1ce751
+
 Package: iscsiuio
 Source: open-iscsi
 Version: 2.1.8-1+deb12u1
@@ -2974,11 +3070,11 @@ Size: 14930220
 SHA256: b88e03a102134e3dbc1ba563e6f678eec29a500a933c00c68c71b45b778cd5b0
 
 Package: rsync
-Version: 3.2.7-1+deb12u5
-Installed-Size: 793
-Maintainer: Paul Slootman <paul@debian.org>
+Version: 3.5.0+ds1-0+deb12u1
+Installed-Size: 937
+Maintainer: Samuel Henrique <samueloph@debian.org>
 Architecture: amd64
-Depends: lsb-base, libacl1 (>= 2.2.23), libc6 (>= 2.34), liblz4-1 (>= 0.0~r130), libpopt0 (>= 1.14), libssl3 (>= 3.0.0), libxxhash0 (>= 0.8.0), libzstd1 (>= 1.5.2), zlib1g (>= 1:1.1.4)
+Depends: libacl1 (>= 2.2.23), libc6 (>= 2.34), liblz4-1 (>= 0.0~r130), libpopt0 (>= 1.14), libssl3 (>= 3.0.0), libxxhash0 (>= 0.8.0), libzstd1 (>= 1.5.2), zlib1g (>= 1:1.1.4)
 Suggests: openssh-client, openssh-server, python3, python3-braceexpand
 Description: fast, versatile, remote (and local) file-copying tool
 Homepage: https://rsync.samba.org/
@@ -2987,9 +3083,9 @@ Multi-Arch: foreign
 Pre-Depends: init-system-helpers (>= 1.54~)
 net
 Priority: optional
-Filename: pool/updates/main/r/rsync/rsync_3.2.7-1+deb12u5_amd64.deb
-Size: 424536
-SHA256: 7dbc5cb82b8d70c61747819a3ebe397bc4c5f274f266184e557860f1b7a6cafa
+Filename: pool/updates/main/r/rsync/rsync_3.5.0+ds1-0+deb12u1_amd64.deb
+Size: 498456
+SHA256: 26ea59ef1c3d05595e9637002ace6f4e00181638b438ecad0f1cf1659ebb67ed
 
 Package: rtpengine
 Version: 10.5.3.5-1+deb12u1
@@ -3828,6 +3924,70 @@ Priority: optional
 Filename: pool/updates/main/u/unbound/unbound-host_1.17.1-2+deb12u3_amd64.deb
 Size: 201064
 SHA256: 91b48b4167f696929a878da3cf55feb3508711fa8039087451eeae4731fb5601
+
+Package: watcher-api
+Source: watcher
+Version: 9.0.0-2+deb12u1
+Installed-Size: 149
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: adduser, debconf, python3-keystoneclient, python3-openstackclient, q-text-as-data, watcher-common (= 9.0.0-2+deb12u1), debconf (>= 0.5) | debconf-2.0, lsb-base (>= 3.0-6)
+Description: OpenStack Cloud Optimization as a Service - API server
+Homepage: https://github.com/openstack/watcher
+Description-md5: 8d69cd513f338877cde03aead419f3ba
+net
+Priority: optional
+Filename: pool/updates/main/w/watcher/watcher-api_9.0.0-2+deb12u1_all.deb
+Size: 23844
+SHA256: 5c5a7d9436f4af258365bcb0f2386a8c70a9ef9b842dad86063a0ece68ffe986
+
+Package: watcher-applier
+Source: watcher
+Version: 9.0.0-2+deb12u1
+Installed-Size: 30
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: watcher-common (= 9.0.0-2+deb12u1), lsb-base (>= 3.0-6)
+Description: OpenStack Cloud Optimization as a Service - Applier
+Homepage: https://github.com/openstack/watcher
+Description-md5: f04b574b7613006cf1d9cce18e6a5a2b
+net
+Priority: optional
+Filename: pool/updates/main/w/watcher/watcher-applier_9.0.0-2+deb12u1_all.deb
+Size: 7672
+SHA256: 89ca8e2df9b4c2c1f3c5b691d6ec90b22bcf3668ff52d179fee0baf5236dc762
+
+Package: watcher-common
+Source: watcher
+Version: 9.0.0-2+deb12u1
+Installed-Size: 200
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: adduser, dbconfig-common, debconf, python3-watcher (= 9.0.0-2+deb12u1), sqlite3, debconf (>= 0.5) | debconf-2.0
+Description: OpenStack Cloud Optimization as a Service - common files
+Homepage: https://github.com/openstack/watcher
+Description-md5: bdf77067f4d8da3b13bc29b026778453
+net
+Priority: optional
+Filename: pool/updates/main/w/watcher/watcher-common_9.0.0-2+deb12u1_all.deb
+Size: 37868
+SHA256: d377c3617c16cfe4801f809a2e1acce0ccdcb5f72025f02d2e642bb8b999642e
+
+Package: watcher-decision-engine
+Source: watcher
+Version: 9.0.0-2+deb12u1
+Installed-Size: 30
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: watcher-common (= 9.0.0-2+deb12u1), lsb-base (>= 3.0-6)
+Description: OpenStack Cloud Optimization as a Service - Decision Engine
+Homepage: https://github.com/openstack/watcher
+Description-md5: 5264d25f321d430ad92e66939f0fb7bd
+net
+Priority: optional
+Filename: pool/updates/main/w/watcher/watcher-decision-engine_9.0.0-2+deb12u1_all.deb
+Size: 7704
+SHA256: c5a2488dd05de58b542159243a97382560229e8102abcc160b4dca7f07ba590b
 
 Package: tshark
 Source: wireshark

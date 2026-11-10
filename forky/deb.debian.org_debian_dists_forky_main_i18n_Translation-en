@@ -67980,8 +67980,8 @@ Description-en: Dart implementation of Sass (JavaScript library for Node.js)
  separately as dart-sass, so this package needs no Node.js binary shims.
 
 Package: dart-kernel-compiler
-Description-md5: 3a90c11c8b7d1ecc3df1b1eefb8972a1
-Description-en: Dart kernel compiler
+Description-md5: 985e006eb90dd911ca30e657a2c09937
+Description-en: Dart compiler front end
  The compile_platform tool: the compiler front end that turns a Dart libraries
  specification into the kernel file that the VM and the AOT snapshotter
  consume.
@@ -74603,22 +74603,6 @@ Description-en: additional tools for dehydrated Letsencrypt client
    * dehydrated-cron: run dehydrated automatically via cron
    * dehydrated-hook: customizable entry points at every step of dehydrated
    * dehydrated-nsupdate: DNS01 verification support
-
-Package: deja-dup
-Description-md5: 7827688436e49fcda140429bdf3c0b9e
-Description-en: Backup utility
- Déjà Dup is a simple backup tool. It hides the complexity of backing up the
- Right Way (encrypted, off-site, and regular) and uses Restic as the
- backend.
- .
- Features:
-  * Support for local, remote, or cloud backup locations such as Nextcloud
-  * Securely encrypts and compresses your data
-  * Incrementally backs up, letting you restore from any particular backup
-  * Schedules regular backups
-  * Integrates well into your GNOME desktop
- .
- Déjà Dup is a GNOME Circle app.
 
 Package: dejagnu
 Description-md5: 641b5a9db687ec0ef1d5efaa06180677
@@ -116448,6 +116432,22 @@ Description-en: Flutter engine command line tools
  They are not meant to be run by hand, the Flutter tool looks for them by
  absolute path.
 
+Package: flutter-patched-sdk
+Description-md5: 7eebd8582b7dee87765a9cdf31a403ae
+Description-en: Dart kernel platform for Flutter
+ The kernel files a Flutter application is compiled against: the dart:ui
+ platform library and the outline of the Dart core libraries.
+ .
+ The Flutter tool passes them to the Dart kernel compiler as its platform.
+
+Package: flutter-tester
+Description-md5: abcba679bcf7d5fc865f94ffd76e781c
+Description-en: Headless Flutter runtime for tests
+ A Flutter embedder without a window: it runs a test application and reports
+ the result through the standard test protocol.
+ .
+ The Flutter test runner starts it for the host as the device under test.
+
 Package: libflutter-engine-embedder
 Description-md5: 2723538e0bb4d51350746993097717b3
 Description-en: Flutter engine library for custom embedders
@@ -116488,6 +116488,16 @@ Description-en: Flutter GTK embedder library (profile build)
  .
  Upstream does not give this library a versioned SONAME, so it is installed in
  a directory of its own and does not replace the release build at run time.
+
+Package: sky-engine
+Description-md5: 82689d644b971e84f03bde627632511e
+Description-en: Flutter's dart:ui as a Dart package
+ The sky_engine package tells a Dart tool which dart:ui library a Flutter
+ application is compiled against, and carries the Dart core libraries as the
+ Flutter engine sees them.
+ .
+ It is what makes a Flutter code base resolvable outside of the Flutter tool,
+ for instance when a Dart analyser is pointed at it.
 
 Package: python3-flux-led
 Description-md5: dd62d61e8fe49bd285c2574afc23f8af
@@ -170174,24 +170184,9 @@ Description-md5: a017715d14b0ea15a9ece44dfb8752aa
 Description-en: Bookmarks plugin for gedit - transitional package
  This is a transitional package. It can safely be removed.
 
-Package: gedit-plugin-bracket-completion
-Description-md5: e71b7c40e53ccf1bc3b71a9ac0c08e1b
-Description-en: Bracket Completion plugin for gedit - transitional package
- This is a transitional package. It can safely be removed.
-
-Package: gedit-plugin-character-map
-Description-md5: 00be9bf56fc614a51ad7527148194eba
-Description-en: Character Map plugin for gedit - transitional package
- This is a transitional package. It can safely be removed.
-
 Package: gedit-plugin-code-comment
 Description-md5: 75fdacb7fe6fd7a61f8d6323cc24dc72
 Description-en: Code Comment plugin for gedit - transitional package
- This is a transitional package. It can safely be removed.
-
-Package: gedit-plugin-color-picker
-Description-md5: 0d3c3fa9db85449d07e64c337233b9e3
-Description-en: Color Picker plugin for gedit - transitional package
  This is a transitional package. It can safely be removed.
 
 Package: gedit-plugin-draw-spaces
@@ -170199,29 +170194,9 @@ Description-md5: b652f361cb67d33496144b62145014dc
 Description-en: Draw Spaces plugin for gedit - transitional package
  This is a transitional package. It can safely be removed.
 
-Package: gedit-plugin-join-lines
-Description-md5: e8118a5b48cef7cc99cb9f8fdee12219
-Description-en: Join/Split Lines plugin for gedit - transitional package
- This is a transitional package. It can safely be removed.
-
-Package: gedit-plugin-multi-edit
-Description-md5: 0c557765df5316728b9bd892f35574e6
-Description-en: Multi Edit plugin for gedit - transitional package
- This is a transitional package. It can safely be removed.
-
-Package: gedit-plugin-session-saver
-Description-md5: bff80657d948f00059c5aec7d3c35a28
-Description-en: Session Saver plugin for gedit - transitional package
- This is a transitional package. It can safely be removed.
-
 Package: gedit-plugin-smart-spaces
 Description-md5: 0d984761ffbaa6b6b45256244cb9eae4
 Description-en: Smart Spaces plugin for gedit - transitional package
- This is a transitional package. It can safely be removed.
-
-Package: gedit-plugin-terminal
-Description-md5: b1a4f8f8e9c456d23e8df401a3b9f67a
-Description-en: Terminal plugin for gedit - transitional package
  This is a transitional package. It can safely be removed.
 
 Package: gedit-plugin-word-completion
@@ -170232,11 +170207,6 @@ Description-en: Word Completion plugin for gedit - transitional package
 Package: gedit-plugins
 Description-md5: 450007ce6092829c2616602c131cb7e7
 Description-en: set of plugins for gedit - transitional package
- This is a transitional package. It can safely be removed.
-
-Package: gedit-plugins-common
-Description-md5: 0d67f6a36e1cf8fc5c51baa3d9e390e4
-Description-en: common files for gedit-plugins - transitional package
  This is a transitional package. It can safely be removed.
 
 Package: gedit-source-code-browser-plugin
@@ -172639,19 +172609,22 @@ Description-en: websocket library for the gevent networking library (Python 3)
  This package contains the Python 3 module.
 
 Package: python3-geventhttpclient
-Description-md5: c4a69a9a0d8a6941e7b07e40984fa4db
+Description-md5: 71733736a7da026bea5d7c3366f81b9c
 Description-en: high performance, concurrent HTTP client library for Python using gevent
- geventhttpclient uses a fast http parser, written in C, originating from
- nginx, extracted and modified by Joyent.
+ geventhttpclient uses a fast HTTP parser written in C, llhttp from the
+ Node.js project.
  .
  geventhttpclient has been specifically designed for high concurrency,
  streaming and support HTTP 1.1 persistent connections. More generally it is
- designed for efficiently pulling from REST APIs and streaming APIs
- like Twitter's.
+ designed for efficiently pulling from REST APIs and streaming APIs.
  .
  Safe SSL support is provided by default. geventhttpclient depends on
  the certifi CA Bundle. This is the same CA Bundle which ships with the
  Requests codebase, and is derived from Mozilla Firefox's canonical set.
+ .
+ It also offers drop-in interfaces compatible with requests, httpx and
+ http.client, covering common HTTP usage such as cookie management, form data
+ encoding and decoding of compressed data.
 
 Package: gir1.2-gexiv2-0.16
 Description-md5: 557460c3f61388f7b58cf71018302220
@@ -189510,6 +189483,35 @@ Description-en: development files for Singularity Image Format (SIF)
  Image Format (SIF) that makes it easy to create complete and
  encapsulated container environments stored in a single file.
 
+Package: golang-github-aquasecurity-bolt-fixtures-dev
+Description-md5: 8a01a49cdfb4ecab1975e936aa4a9154
+Description-en: Test fixtures for BoltDB (library)
+ This Go library loads YAML fixtures into a BoltDB (bbolt) database file for
+ tests. Each fixture describes buckets, nested buckets and key/value pairs,
+ and Load writes them, so tests run against a real database instead of a
+ mock.
+
+Package: golang-github-aquasecurity-go-gem-version-dev
+Description-md5: 9025e41a4e4c23f525d9465153303645
+Description-en: library for parsing RubyGems versions and version constraints
+ go-gem-version is a library for parsing RubyGems versions and version
+ constraints, and verifying versions against a set of constraints.
+ go-gem-version can sort a collection of versions properly, handles
+ prerelease versions, etc.
+ .
+ Versions used with go-gem-version must follow RubyGems versioning policy.
+
+Package: golang-github-aquasecurity-go-npm-version-dev
+Description-md5: 27c74c4258cb0811c77fbb2e4a116d56
+Description-en: library for parsing npm versions and version constraints
+ go-npm-version is a library for parsing npm versions and version
+ constraints, and verifying versions against a set of constraints.
+ go-npm-version can sort a collection of versions properly, handles
+ prerelease versions, etc.
+ .
+ Versions used with go-npm-version must follow Semantic Versioning.
+ Constraints used with go-npm-version must follow npm rules.
+
 Package: golang-github-aquasecurity-go-pep440-version-dev
 Description-md5: 304ccd043389b210a01d41b6ba2f81a3
 Description-en: parsing PEP 440 compliant Python versions (library)
@@ -189532,6 +189534,15 @@ Description-en: Go library for parsing and verifying versions and version constr
   * version (/pkg/version)
         * Semantic Versioning like versioning
         * Accept more than 3 numbers (e.g. 2.3.1.4)
+
+Package: golang-github-aquasecurity-iamgo-dev
+Description-md5: dc1d0cac43d3e614b5d9191ca2f627d8
+Description-en: Go package for parsing/assembling AWS IAM policy documents
+ iamgo is a Go package for parsing/assembling AWS IAM policy documents, as
+ the official SDK does not seem to fully support this.
+ .
+ It handles the multiple possible types for various IAM elements and hides
+ this complexity from the consumer.
 
 Package: golang-github-aquasecurity-jfather-dev
 Description-md5: 7253f89636861f59d45df131bb9794ac
@@ -189557,6 +189568,15 @@ Description-en: tables for terminals, in Go (library)
   - Intelligently wrap/pad/measure ANSI coloured input
   - Support for double-width unicode characters
   - Load data from CSV files
+
+Package: golang-github-aquasecurity-trivy-java-db-dev
+Description-md5: 6bdcf08d14e86173ebd88692e4a9817d
+Description-en: parses all indexes from maven repository (library)
+ trivy-java-db parses all indexes from maven repository and stores
+ ArtifactID, GroupID, Version and sha1 for jar files to SQlite DB.
+ .
+ The DB is used in Trivy to discover information about jars without GAV
+ inside them.
 
 Package: golang-github-araddon-dateparse-dev
 Description-md5: 69e4579d1e850408329b87820d46634a
@@ -190211,20 +190231,6 @@ Description-en: Sign in users or apps with Microsoft Accounts or Azure AD identi
  to call Microsoft APIs such as Microsoft Graph or your own APIs registered with
  the Microsoft identity platform. It is built using industry standard OAuth2 and
  OpenID Connect protocols.
-
-Package: golang-github-backblaze-blazer-dev
-Description-md5: ea3efe4ebcd670d812088db1efae437d
-Description-en: Go library for Backblaze's B2
- Blazer is a Golang client library for Backblaze's B2 object storage
- service.  It is designed for simple integration with existing applications
- that may already be using S3 and Google Cloud Storage, by exporting only
- a few standard Go types.
- .
- It implements and satisfies the B2 integration checklist
- (https://www.backblaze.com/b2/docs/integration_checklist.html),
- automatically handling error recovery, reauthentication, and other
- low-level aspects, making it suitable to upload very large files, or
- over multi-day time scales.
 
 Package: golang-github-bahlo-generic-list-go-dev
 Description-md5: 0173f317e2515ceb068d003b3a640afd
@@ -191245,6 +191251,15 @@ Description-md5: a787927e18d3aa59358b65c14367db8d
 Description-en: Go library for providing a terminal spinner/progress indicator with options
  golang-github-briandowns-spinner-dev is a simple library to add a spinner or
  progress indicator to any terminal application.
+
+Package: golang-github-brunoscheufler-aws-ecs-metadata-go-dev
+Description-md5: ea0e7c66b8ecfc5cd4bf331bae86ca59
+Description-en: Retrieve AWS ECS Task metadata (library)
+ A minimal Go library to fetch Elastic Container Service (ECS) Task
+ metadata from services running in containers provisioned by AWS Fargate.
+ .
+ Based on the Fargate platform version, different versions of the Task
+ Metadata Endpoint are available (v3 for Fargate 1.3.0+, v4 for 1.4.0+).
 
 Package: golang-github-bruth-assert-dev
 Description-md5: 9d83d71246c26937ca376ec8be6f31f8
@@ -200934,6 +200949,15 @@ Description-en: Comprehensive error handling for Go (library)
  package facilitates more robust and maintainable Go applications by improving
  the visibility and traceability of errors.
 
+Package: golang-github-josephburnett-jd-v2-dev
+Description-md5: 731da5a5fa6792b93f5a391ce39b8c41
+Description-en: JSON diff and patch (library)
+ jd is a commandline utility and Go library for diffing and patching JSON and
+ YAML values. It supports a native jd format (similar to unified format) as
+ well as JSON Merge Patch (RFC 7386) and a subset of JSON Patch (RFC 6902).
+ .
+ This package contains the Go library (module github.com/josephburnett/jd/v2).
+
 Package: golang-github-josharian-intern-dev
 Description-md5: 6cf59ab8e0f898d2078dad0e953c06b1
 Description-en: Intern string golang library
@@ -201707,6 +201731,15 @@ Description-md5: bbcc6d80101418dc9718776d2fc19c8a
 Description-en: golang library for parsing rpm package versions
  go-rpm-version is golang library for parsing and comparing rpm versions.
 
+Package: golang-github-knqyf263-nested-dev
+Description-md5: e39da7e6dff8746948a1a3494e06123a
+Description-en: Golang library for easier way to handle the nested data structure
+ nested is a golang library that this provides functionality to easily handle
+ nested data structures.
+ .
+ This library provides functions for set, get and delete data, and converting
+ and getting data into integer and etc.
+
 Package: golang-github-kolo-xmlrpc-dev
 Description-md5: 804504b9825ec26c7ce6232d57c7493f
 Description-en: Implementation of the XMLRPC client protocol in Go
@@ -201993,12 +202026,6 @@ Description-en: semantic version parsing and comparison package (library)
  This Go package implements parsing and comparison of semantic version
  (semver) strings, as defined by the Semantic Versioning 2.0.0
  specification (https://semver.org/).
-
-Package: golang-github-launchdarkly-go-server-sdk-dev
-Description-md5: d1eb75f9dd598ff023bd35a729dc92cb
-Description-en: LaunchDarkly Server-side SDK for Go (library)
- This package contains a library LaunchDarkly Server-side
- SDK for Go.
 
 Package: golang-github-launchdarkly-go-server-sdk-evaluation-dev
 Description-md5: 7f2cdfa3af332d8fde312ef6c1058d68
@@ -202726,12 +202753,55 @@ Description-en: Fast resizable golang semaphore primitive (library)
   * allows change semaphore limit after creation;
   * faster than channel based semaphores.
 
+Package: golang-github-masahiro331-go-disk-dev
+Description-md5: 54236ce0fa7efab6e39008d32c02e41d
+Description-en: simple disk parser, supported Master Boot Record and GUID Partition Table
+ This Go library reads the partition table of a disk image: a Master Boot
+ Record, a GUID Partition Table, or a disk that holds a filesystem with no
+ table. It returns each partition as an io.SectionReader with its name, size
+ and bootable flag, ready for a filesystem parser.
+
+Package: golang-github-masahiro331-go-ebs-file-dev
+Description-md5: af29ae182fdcf5caaf45f10842244d89
+Description-en: Abstracting AWS Elastic block store with io.ReadSeeker (library)
+ This Go library opens an AWS EBS snapshot as a file. It lists the snapshot's
+ blocks through the EBS direct APIs and fetches them on demand, with an
+ optional block cache, so the snapshot reads like a disk image of its full
+ size. A partition or filesystem parser can then read the disk without
+ creating a volume from the snapshot.
+
+Package: golang-github-masahiro331-go-ext4-filesystem-dev
+Description-md5: 5122641dd595dc027ba5c3513b74a2f3
+Description-en: ext4 filesystem stream parser (library)
+ This Go library reads ext4 filesystems from an image or a block device given
+ as an io.SectionReader, following extents to find the file data. Its
+ FileSystem implements io/fs.FS, so files and directories can be opened,
+ listed and read with the standard library's fs functions, without mounting
+ the filesystem.
+
 Package: golang-github-masahiro331-go-mvn-version-dev
 Description-md5: 3697f018364a20306c7b0009b4481690
 Description-en: Go library for parsing maven(java) package versions
  go-mvn-version is a library for parsing and comparing versions of maven.
  The implementation is based on this specification.
  (https://maven.apache.org/pom.html#Version_Order_Specification)
+
+Package: golang-github-masahiro331-go-vmdk-parser-dev
+Description-md5: 9980c7268ed7fbfbd0403567b39a97bb
+Description-en: VMDK parser for Virtual Machine Image (library)
+ This Go library reads VMware VMDK virtual disk images. It parses the sparse
+ extent header and the embedded disk descriptor, and supports the
+ monolithicSparse and streamOptimized (zlib-compressed grains) types. Open
+ returns an io.SectionReader over the virtual disk, so a filesystem parser can
+ read the guest disk straight from the image.
+
+Package: golang-github-masahiro331-go-xfs-filesystem-dev
+Description-md5: d24dc185f73cfd13154e6f6ec84d1570
+Description-en: Go library for parsing xfs(FileSystem)
+ This Go library reads XFS filesystems from an image or a block device given
+ as an io.SectionReader. Its FileSystem implements io/fs.FS, so files and
+ directories can be opened, listed and read with the standard library's fs
+ functions, without mounting the filesystem.
 
 Package: golang-github-masterminds-goutils-dev
 Description-md5: 7b540b8f7804136859cfab38b5c01d81
@@ -209907,6 +209977,20 @@ Package: golang-github-twin-whois-dev
 Description-md5: 2a131cea6f9dfe6ce33168cbecf48b73
 Description-en: WHOIS client (Go library)
  Lightweight Go library for retrieving WHOIS information on a domain.
+
+Package: golang-github-twitchtv-twirp-dev
+Description-md5: f7af16aa9fc5ecb1dd5aae41f1c57925
+Description-en: framework for service-to-service communication emphasizing simplicity (library)
+ Twirp is a framework for service-to-service communication emphasizing
+ simplicity and minimalism. It generates routing and serialization from API
+ definition files and lets you focus on your application's logic instead of
+ thinking about folderol like HTTP methods and paths and JSON.
+ .
+ Twirp is similar to gRPC, but without the custom HTTP server and transport
+ implementations: it runs on the standard library's
+ extremely-well-tested-and-high-performance net/http Server. It can run on
+ HTTP 1.1, not just http/2, and supports JSON serialization for easy
+ debugging.
 
 Package: golang-github-twmb-murmur3-dev
 Description-md5: 172330dac750c6e97cd8139ce84ee2ef
@@ -288575,8 +288659,8 @@ Description-en: Java morphing film-make program for pixel picture-input
  possible.
 
 Package: libjavaparser-java
-Description-md5: 68d738ae24a4d91dcbb97f111079fc1e
-Description-en: Java library for parsing Java 7
+Description-md5: baf606e1ed278f5a2c8de0e32d28465a
+Description-en: Java library for parsing Java source files
  The library features abstract syntax tree (AST) generation and supports
  the visitor pattern. The AST records the source code structure, javadoc
  and comments. It is also possible to change the AST nodes or create new
@@ -288587,7 +288671,16 @@ Description-en: Java library for parsing Java 7
   * good performance
   * easy to use
   * AST can be modified
-  * AST can be created from scratc
+  * AST can be created from scratch
+
+Package: libjavaparser-symbol-solver-java
+Description-md5: 97454943f88e06f68f266fc6e5eb3e79
+Description-en: Symbol solver for JavaParser
+ JavaSymbolSolver analyzes the abstract syntax tree generated by JavaParser
+ and finds the relation between an element and its declaration. For a
+ variable name it can tell for example whether it refers to a parameter of
+ a method, and provide information about its type and its position in the
+ AST.
 
 Package: libjavapoet-java
 Description-md5: c49b917f202c3580e84a4dc93d542e42
@@ -382774,6 +382867,13 @@ Description-en: utility to extract a name from a PPI Document
  the package statement may be "wrong", but they still need the document parsed
  under the guise of having a name (for purposes such as POD).
 
+Package: libppix-editortools-perl
+Description-md5: 1ca9ae8202a21cfb6c6fa30e94209844
+Description-en: set of tools for editors to use for manipulating Perl via PPI
+ PPIx::EditorTools is a set of tools designed to be used by IDEs and Editors
+ to manipulate Perl code. It provides base classes and utility methods for
+ manipulating Perl via PPI.
+
 Package: libppix-quotelike-perl
 Description-md5: d3077502829fc3b1fef390c3e3d0b9f9
 Description-en: module to parse Perl string literals and string-literal-like things
@@ -424279,8 +424379,8 @@ Description-en: Self-imposed discipline and productivity enforcer
  password.
 
 Package: python3-locust
-Description-md5: 911e441f2a6793c9ab945f6dce380f04
-Description-en: Developer friendly load testing framework
+Description-md5: d41a3e5aa8a0a72decf6cd44d3d4e05c
+Description-en: Developer-friendly load testing framework
  Locust is an easy to use, scriptable and scalable performance testing tool. You
  define the behaviour of your users in regular Python code, instead of using a
  clunky UI or domain specific language. This makes Locust infinitely expandable
@@ -442130,6 +442230,18 @@ Description-en: Mckoi SQL Database (MckoiSQLDB)
  A full SQL database system with JDBC driver that can be embedded in a Java
  application or operate as a stand-alone server with clients connecting
  via TCP/IP.
+
+Package: libmcl-ocaml-dev
+Description-md5: 23b8ea41c6e07b7475ab664c33b2ec21
+Description-en: library providing bindings between mcl and OCaml
+ The MCL package is an implementation of the MCL algorithm, and offers
+ utilities for manipulating sparse matrices (the essential data
+ structure in the MCL algorithm) and conducting cluster experiments.
+ .
+ This library provides bindings between mcl and OCaml.
+ .
+ It is used by pplacer for the "guppy mcl" subcommand and the "--mcl"
+ option of "guppy compress".
 
 Package: mcl
 Description-md5: 5ade6456c0a34cadb40315ab8fedf0bb
@@ -476180,6 +476292,18 @@ Description-en: Create multipart/form-data streams module for Node.js
  specification.
  .
  Node.js is an event-based server-side javascript engine.
+
+Package: node-formatjs
+Description-md5: 373c940569ce8fa15ad55701c5e865cc
+Description-en: JavaScript internationalization polyfills and locale utilities
+ FormatJS implements internationalization APIs for formatting durations,
+ selecting plural forms, handling locale identifiers and listing supported
+ internationalization values. It includes polyfills for Intl.DurationFormat,
+ Intl.PluralRules, Intl.Locale, Intl.getCanonicalLocales and
+ Intl.supportedValuesOf.
+ .
+ Locale matching, decimal arithmetic and memoization utilities are also
+ included.
 
 Package: node-formidable
 Description-md5: f36530b4343c55ac476e6050d120cabd
@@ -543287,6 +543411,19 @@ Description-en: Parma Polyhedra Library (development binaries)
  .
  This package provides the ppl-config binary.
 
+Package: pplacer
+Description-md5: b2b7dbc06a8fe255205980648d76b102
+Description-en: phylogenetic placement and downstream analysis
+ Pplacer places reads on a phylogenetic tree. guppy (Grand Unified
+ Phylogenetic Placement Yanalyzer) yanalyzes them. rppr is a helpful tool
+ for working with reference packages.
+ .
+ Pplacer places query sequences on a fixed reference phylogenetic tree to
+ maximize phylogenetic likelihood or posterior probability according to a
+ reference alignment. Pplacer is designed to be fast, to give useful
+ information about uncertainty, and to offer advanced visualization and
+ downstream analysis.
+
 Package: python-ppl-doc
 Description-md5: 3da4948a5ea5520712290eaf768472a1
 Description-en: Python interface to PPL -- documentation
@@ -600502,6 +600639,17 @@ Description-en: HTTP library for the QDjango framework
  .
  This package contains the HTTP library.
 
+Package: nbdkit-plugin-qdl
+Description-md5: 532853accf23437d6995fcfae6e28474
+Description-en: qdl plugin for nbdkit
+ This package provides an nbdkit plugin for accessing storage on Qualcomm
+ processors in Emergency Download Mode (EDL).
+ .
+ The plugin uploads a Firehose programmer to the device and exposes one of
+ its physical partitions (LUNs) as a Network Block Device (NBD). The LUN can
+ then be partitioned, imaged or mounted on the host using standard block
+ device tools.
+
 Package: qdl
 Description-md5: 8a678e041beec5c6bebbf4fdbc03d043
 Description-en: tool to communicate with Qualcomm EDL USB devices
@@ -610983,7 +611131,7 @@ Description-en: Create templates for Thunderbird
  Quicktext performs both simple and complex tasks.
 
 Package: libquicktree-dev
-Description-md5: be9205bb231d182f5660cff0aa1ca314
+Description-md5: b988ba80eecb9397cab7098d85d78d49
 Description-en: Neighbor-Joining algorithm for phylogenies (development)
  QuickTree is an efficient implementation of the Neighbor-Joining
  algorithm (PMID: 3447015), capable of reconstructing phylogenies from
@@ -610999,8 +611147,18 @@ Description-en: Neighbor-Joining algorithm for phylogenies (development)
  The tress are written to stdout, in the Newick/New-Hampshire format
  use by PHYLIP and many other programs
  .
- This package contains some header files from quicktree that are used
- by other packages.
+ This package contains the header files and the static library from
+ quicktree that are used by other packages, as well as the libquicktree.so
+ linker symlink.
+
+Package: libquicktree2
+Description-md5: 3533754b3025a24c74b93477540c31db
+Description-en: Neighbor-Joining algorithm for phylogenies (shared library)
+ QuickTree is an efficient implementation of the Neighbor-Joining
+ algorithm (PMID: 3447015), capable of reconstructing phylogenies from
+ huge alignments in time less than the age of the universe.
+ .
+ This package contains the shared library libquicktree.so.2.
 
 Package: quicktree
 Description-md5: ee91e2e60e1d2fcf01f233db09d1a540
@@ -624286,7 +624444,7 @@ Description-en: raylib - development files
  .
  This package contains header files for developing with raylib.
 
-Package: libraylib600
+Package: libraylib620
 Description-md5: c917b18ca6f6d73c07772927c935b18b
 Description-en: simple and easy-to-use library to enjoy videogames programming
  raylib is a simple and easy-to-use library to enjoy videogames programming.
@@ -628686,32 +628844,6 @@ Description-en: Web frontend for relational databases
  RestfulDB is developed with off-the-shelf usage in mind, but nevertheless
  it provides the means to override the default interpretations of underlying
  database's schema and data.
-
-Package: restic
-Description-md5: 306158c67df1c70aca079d38e0afc1e3
-Description-en: backup program with multiple revisions, encryption and more
- restic is a program that does backups right and was designed with the following
- principles in mind:
-    - Easy: Doing backups should be a frictionless process, otherwise you might
- be tempted to skip it.  Restic should be easy to configure and use, so
- that, in the event of a data loss, you can just restore it. Likewise,
- restoring data should not be complicated.
-    - Fast: Backing up your data with restic should only be limited by your
- network or hard disk bandwidth so that you can backup your files every day.
- Nobody does backups if it takes too much time. Restoring backups should
- only transfer data that is needed for the files that are to be restored, so
- that this process is also fast.
-    - Verifiable: Much more important than backup is restore, so restic enables
- you to easily verify that all data can be restored.
-    - Secure: Restic uses cryptography to guarantee confidentiality and
- integrity of your data. The location the backup data is stored is assumed
- not to be a trusted environment (e.g. a shared space where others like
- system administrators are able to access your backups). Restic is
- built to secure your data against such attackers.
-    - Efficient: With the growth of data, additional snapshots should only take
- the storage of the actual increment. Even more, duplicate data should be
- de-duplicated before it is actually written to the storage back end to save
- precious backup space.
 
 Package: restic-rest-server
 Description-md5: 1dd7ad59a559b156a5d2430c61c25a09
@@ -650258,6 +650390,43 @@ Description-en: integration of Debian Ruby packages with Rubygems
  plain Rubygems and with Bundler. This also allows one to use Debian Ruby
  packages to satisfy dependencies in Rails 3 applications.
 
+Package: rudof
+Description-md5: 745d4a94eaf150aa0fb6a1c0d2e3b98b
+Description-en: RDF and knowledge graphs processing tool - CLI tool
+ rudof is a Rust library and command-line tool
+ that implements ShEx, SHACL and DCTAP
+ and other technologies in the RDF ecosystem.
+ .
+ It can be used to validate RDF data
+ represented with different syntaxes
+ like Turtle, NTriples, to name a few,
+ as well as RDF data available through SPARQL endpoints
+ like Wikidata.
+ rudof can also be used to convert
+ between different RDF data validation technologies
+ (like ShEx, SHACL, or DCTAP),
+ and to generate UML like visualizations and HTML views.
+ .
+ Resource Description Framework (RDF) is a standard model
+ for data interchange on the Web.
+ .
+ Shape Expressions (ShEx) is a data modelling language
+ for defining schemas for RDF graphs.
+ .
+ Shapes Constraint Language (SHACL) is a data modelling language
+ for describing constraints for RDF graphs.
+ SHACL is a W3C recommendation.
+ .
+ Dublin Core Tabular Application Profiles (DCTAP) is a simple model
+ for defining an application profiles
+ i.e. metadata usage for a specific application.
+ .
+ Also covered is a draft implementation
+ of PG-Schema with Property Constraints extension.
+ .
+ This package provides the command-line tools
+ rudof and rudof_generate.
+
 Package: python3-ruff
 Description-md5: 2be4a6e595c596eb6925a18546c9f9a4
 Description-en: Fast linter for Python, written in Rust
@@ -651159,6 +651328,18 @@ Description-md5: c4a0ca2d2f231ed94b12559a933faa29
 Description-en: FFI bindings to aom - Rust source code
  Source code for Debianized Rust crate "aom-sys"
 
+Package: librust-apache-avro-derive-dev
+Description-md5: 473b12df395c5536b24fa09112cc3752
+Description-en: derives Avro schemas from Rust structs and enums
+ Apache Avro is a schema-based data serialization format. Its schemas describe
+ the types and structure of records exchanged between applications or stored
+ in files.
+ .
+ This procedural macro implements schema generation for Rust structs and
+ enums through the AvroSchema derive. Attributes control names, namespaces,
+ aliases, defaults and other schema properties. It is normally used through
+ the derive feature of the apache-avro library.
+
 Package: librust-apache-avro-test-helper-dev
 Description-md5: e595a1859786791a4facae417aa7de03
 Description-en: Shared test utilities for Apache Avro's Rust implementation
@@ -651914,6 +652095,11 @@ Package: librust-async-tungstenite-dev
 Description-md5: b1f39d0a75d2777a4eb03b93b16cd32a
 Description-en: Async binding for Tungstenite, the Lightweight stream-based WebSocket implementation - Rust source code
  Source code for Debianized Rust crate "async-tungstenite"
+
+Package: librust-async-utility-dev
+Description-md5: b6214a8e055857491b2c8fcfeed92d95
+Description-en: Collection of async utilities - Rust source code
+ Source code for Debianized Rust crate "async-utility"
 
 Package: librust-async-walkdir-dev
 Description-md5: 1525cb2f0a3f78f728733a3ae126428c
@@ -653479,8 +653665,8 @@ Description-en: Caching structures and simplified function memoization - Rust so
  Source code for Debianized Rust crate "cached_proc_macro"
 
 Package: librust-cached-proc-macro-types-dev
-Description-md5: 04dd25b65325dc532fc905f4d60dbb41
-Description-en: Generic cache implementations and simplified function memoization - Rust source code
+Description-md5: a9a15cdc525c7dd438bad18ae542d659
+Description-en: Types used by the cached proc-macro crate - Rust source code
  Source code for Debianized Rust crate "cached_proc_macro_types"
 
 Package: librust-cachedir-dev
@@ -660786,6 +660972,18 @@ Description-md5: d21f38070a32c7a2811660fdafe8f4e0
 Description-en: Format u8 slices like an hex editor - Rust source code
  Source code for Debianized Rust crate "hexplay"
 
+Package: hexyl
+Description-md5: 9818dcdf2ac74d4cae8052c71ed89706
+Description-en: Command-line hex viewer with colored output
+ hexyl is a simple hex viewer for the terminal. It uses colored output to
+ distinguish different categories of bytes (NULL bytes, printable ASCII
+ characters, ASCII whitespace characters, other ASCII characters and non-ASCII).
+
+Package: librust-hexyl-dev
+Description-md5: fb2d7380a823a77f64579542c2b61711
+Description-en: Command-line hex viewer - Rust source code
+ Source code for Debianized Rust crate "hexyl"
+
 Package: librust-hickory-client-dev
 Description-md5: a8107a0204c4cc33aa5db97d7e70549f
 Description-en: Hickory DNS is a safe and secure DNS library - Rust source code
@@ -662588,6 +662786,11 @@ Package: librust-jsonschema-dev
 Description-md5: 1a9bc74ec8caa483724c0799b2fb5179
 Description-en: JSON schema validaton library - Rust source code
  Source code for Debianized Rust crate "jsonschema"
+
+Package: librust-jsonschema-regex-dev
+Description-md5: a887c9df2911c00caf0476bbf0f5887d
+Description-en: ECMA 262 regex translation for the jsonschema crate - Rust source code
+ Source code for Debianized Rust crate "jsonschema-regex"
 
 Package: librust-jsonschema-value-dev
 Description-md5: 248d8d86a04cebe3dfb3077ac4aea2c4
@@ -665311,6 +665514,11 @@ Description-md5: e8f251b26b6ea677c3d3014b90588107
 Description-en: FASTX parsing and k-mer methods - Rust source code
  Source code for Debianized Rust crate "needletail"
 
+Package: librust-negentropy-dev
+Description-md5: 7f0a2d9542c64f3b156568e8c2b399f7
+Description-en: negentropy set-reconciliation protocol - Rust source code
+ Source code for Debianized Rust crate "negentropy"
+
 Package: librust-neli-dev
 Description-md5: 3519f69afb9751403c686c72e5a36b59
 Description-en: Type safe netlink library written in Rust - Rust source code
@@ -667565,6 +667773,11 @@ Description-en: Small Rust library that allows users to reinterpret data of cert
  This package contains the source for the Rust plain crate, packaged by debcargo
  for use with cargo and dh-cargo.
 
+Package: librust-planus-dev
+Description-md5: c0e386672fcf2115f46b8470fa5bbeda
+Description-en: Alternative compiler for flatbuffers, an efficient cross platform serialization library - Rust source code
+ Source code for Debianized Rust crate "planus"
+
 Package: librust-platform-dirs-dev
 Description-md5: a7815cbbfd403da1a576c5624e84b515
 Description-en: Obtain platform-dependant standard directory paths - Rust source code
@@ -667702,6 +667915,20 @@ Package: librust-poison-guard-dev
 Description-md5: 90dfcd0d64fd6253cab0e0a892d9accb
 Description-en: Utilities for maintaining sane state in the presence of panics and failures - Rust source code
  Source code for Debianized Rust crate "poison-guard"
+
+Package: librust-polars-arrow-format-dev
+Description-md5: e7005e68be6abe33002f1bafdce02e3e
+Description-en: Rust bindings for Apache Arrow IPC and Flight data - Rust source code
+ Apache Arrow defines a column-oriented memory format for tabular data and
+ protocols for exchanging that data between applications.
+ .
+ This crate provides generated Rust types for Arrow's interprocess
+ communication (IPC) format, using Planus for FlatBuffers serialization.
+ The flight-data feature provides Protocol Buffers messages for Arrow Flight
+ using Prost.
+ .
+ It is maintained as part of the Polars ecosystem.
+ Source code for Debianized Rust crate "polars-arrow-format"
 
 Package: librust-polling-dev
 Description-md5: 83984bc10f1c0e2b5af891c76131d150
@@ -669977,6 +670204,11 @@ Description-md5: 8c2a9d5fc8cfa56631c75a1f2fff9ec7
 Description-en: Derive macro for #[derive(RlpEncodable, RlpDecodable)] - Rust source code
  This package contains the source for the Rust rlp-derive crate, packaged by
  debcargo for use with cargo and dh-cargo.
+
+Package: librust-rmcp-macros-dev
+Description-md5: f917824c0e73fd9e6391bc6d1b09934c
+Description-en: Rust SDK for Model Context Protocol macros library - Rust source code
+ Source code for Debianized Rust crate "rmcp-macros"
 
 Package: librust-rmp-dev
 Description-md5: 38b1cd160378ca853fca78a4d58edebf
@@ -673996,6 +674228,11 @@ Description-md5: 0a064bb7e4e7032c398ce91736a47f6e
 Description-en: Elastic tabstops - Rust source code
  Source code for Debianized Rust crate "tabwriter"
 
+Package: librust-taffy-dev
+Description-md5: 7acbda140994b2079582bbfd464819d1
+Description-en: Flexible UI layout library - Rust source code
+ Source code for Debianized Rust crate "taffy"
+
 Package: librust-tagptr-dev
 Description-md5: 3115443bf41100e4401b769adf906b4e
 Description-en: Strongly typed atomic and non-atomic tagged pointers - Rust source code
@@ -676803,6 +677040,11 @@ Description-md5: d762540b6133b59fc7494175603ad6ef
 Description-en: Cmd app to convert images into vector graphics
  vtracer converts raster images into vector graphics, producing SVG output from
  PNG and other image inputs.
+
+Package: librust-vulcano-number-dev
+Description-md5: 1d0c9b6662a63a4b50e79ac0bb4f0da0
+Description-en: Handling numbers - Rust source code
+ Source code for Debianized Rust crate "vulcano-number"
 
 Package: librust-wadl-dev
 Description-md5: 51430761a987b78505c7d0f9aee6891a
@@ -682234,6 +682476,16 @@ Description-en: Scheme 9 from Empty Space R4RS Scheme interpreter
  the implementation of Scheme (in a language other than Scheme).  A
  free online textbook describing the system is also available.
 
+Package: schism
+Description-md5: 1e66d5e86c11251a589c716a6a34790d
+Description-en: ImpulseTracker clone aiming at providing the same look&feel
+ This is an editor for "tracked" music, i.e. audio samples of instruments
+ pitch shifted according to the note data.
+ .
+ The Impulse Tracker is one of the most popular "tracker" programs at
+ present, and Schism Tracker attempts to follow their UI layout wherever
+ possible in order to make it easy for existing users to switch.
+
 Package: schleuder
 Description-md5: 10c30b3ed1579adac3137dc67104944b
 Description-en: encrypting mailing list manager with remailing-capabilities
@@ -685907,6 +686159,16 @@ Description-en: Simple Emacs-Perl InterAction
   * variable- and function-name completion.
   * eldoc support to echo function arguments in the minibuffer
   * functions to simplify POD browsing with Emacs-w3m
+
+Package: sepp
+Description-md5: ee8cff3bcce79567ca21f881eed92802
+Description-en: phylogeny with ensembles of Hidden Markov Models
+ The tool SEPP implementing these methods uses ensembles of Hidden Markov
+ Models (HMMs) in different ways, each focusing on a different problem.
+ .
+ SEPP stands for "SATe-enabled Phylogenetic Placement", and addresses the
+ problem of phylogenetic placement of short reads into reference
+ alignments and trees.
 
 Package: seqan-needle
 Description-md5: 2cad19d928273c533843b7a22b5cef0c
@@ -693158,6 +693420,16 @@ Description-en: Compiler for SLUDGE adventure games
  This package contains the command line SLUDGE compiler and is mainly
  intended as build dependency for SLUDGE game packages. Developers can
  use the Project Manager included in the Dev Kit for compiling games.
+
+Package: sludge-devkit
+Description-md5: 0f694693bbee1cc1750a5c47522669d0
+Description-en: Development tools for creating SLUDGE adventure games
+ SLUDGE is an open source adventure game engine. It combines a scripting
+ language with IDE tools.
+ .
+ This package contains the development kit needed to create SLUDGE games:
+ the Project Manager, which also compiles games, the Floor Maker, the
+ Z-Buffer Maker, the Sprite Bank Editor and the Translation Editor.
 
 Package: sludge-doc
 Description-md5: 6723c9d3b37acb41fdeea91cf2a99f9a
@@ -736848,6 +737120,60 @@ Description-en: Minimalistic initramfs implementation (core tools)
  that may be used to create working initramfs images, while not
  replacing the initramfs implementation used on the current system.
 
+Package: libtinyalsa-dev
+Description-md5: a4bd30fb6c642133a0515d8470457534
+Description-en: small library to interface with ALSA (development files)
+ The TinyALSA library is a lightweight, bare metal version of the ALSA library.
+ .
+ The aims are:
+ .
+  * Provide a basic pcm and mixer API.
+  * If it's not absolutely needed, don't add it to the API.
+  * Avoid supporting complex and unnecessary operations, that could be dealt
+    with at a higher level.
+  * Provide comprehensive documentation.
+ .
+ This package provides files necessary to develop programs using the library.
+
+Package: libtinyalsa2
+Description-md5: d1812600d81963ed76d500aeede170cd
+Description-en: small library to interface with ALSA (runtime library)
+ The TinyALSA library is a lightweight, bare metal version of the ALSA library.
+ .
+ The aims are:
+ .
+  * Provide a basic pcm and mixer API.
+  * If it's not absolutely needed, don't add it to the API.
+  * Avoid supporting complex and unnecessary operations, that could be dealt
+    with at a higher level.
+  * Provide comprehensive documentation.
+ .
+ This package provides the runtime library.
+
+Package: tinyalsa
+Description-md5: 91c3ffc547f664701c992118cf802f87
+Description-en: utilities to interface with ALSA
+ TinyALSA is a lightweight interface to ALSA in the Linux kernel.
+ .
+ The aims are:
+ .
+  * Provide a basic pcm and mixer API.
+  * If it's not absolutely needed, don't add it to the API.
+  * Avoid supporting complex and unnecessary operations, that could be dealt
+    with at a higher level.
+  * Provide comprehensive documentation.
+
+Package: tinyalsa-tests
+Description-md5: 7b2f337338fe069eaabe34e051650886
+Description-en: small library to interface with ALSA (test suite)
+ The TinyALSA library is a lightweight, bare metal version of the ALSA library.
+ .
+ This package provides the gtest-based test suite used to exercise
+ libtinyalsa2 against real ALSA hardware (a generic card at index 0 and,
+ for the loopback-specific tests, a snd-aloop virtual card at index 2). It
+ is intended to be run via autopkgtest or manually on suitable hardware;
+ most tests will fail, not skip, if no ALSA hardware is present.
+
 Package: python3-tinyarray
 Description-md5: cf45424848eb6a1bec05708698ba5d1e
 Description-en: Arrays of numbers, optimized for small sizes
@@ -737333,6 +737659,21 @@ Description-en: X11 PostScript Type 1 font for the Phonetic Alphabet
  Window system.  It contains the pfb and afm files.  The installed X
  font has the silipa encoding (see
  http://www.sil.org/computing/fonts/encore-ipa.html).
+
+Package: tipp
+Description-md5: 1ea2d505d5dd56ad184833f9b2e0a47f
+Description-en: tool for Taxonomic Identification and Phylogenetic Profiling
+ TIPP is a modification of SEPP for classifying query sequences (i.e. reads)
+ using phylogenetic placement.
+ .
+ TIPP inserts each read into a taxonomic tree and uses the insertion location
+ to identify the taxonomic lineage of the read. The novel idea behind TIPP is
+ that rather than using the single best alignment and placement for taxonomic
+ identification, it uses a collection of alignments and placements and
+ considers statistical support for each alignment and placement.
+ .
+ TIPP can also be used for abundance estimation by computing an abundance
+ profile on the reads binned to marker genes in a reference dataset.
 
 Package: tipp10
 Description-md5: ee01e93f65e339e7530deaf918199c2d
@@ -740771,22 +741112,6 @@ Description-en: Enhanced wiki and issue tracking system for software development
  wiki pages. A timeline shows all current and past project events in order,
  making the acquisition of an overview of the project and tracking progress
  very easy. The roadmap shows the road ahead, listing the upcoming milestones.
-
-Package: trac-accountmanager
-Description-md5: 3f6cccbb3990fcf081d6f35ce67bd2fa
-Description-en: account management plugin for Trac
- Offers several features for managing user accounts on Trac:
-  - allow users to register new accounts
-  - login via an HTML form instead of using HTTP authentication
-  - allow existing users to change their passwords or delete their accounts
-
-Package: trac-httpauth
-Description-md5: 9f43969b1f62922a0beca48ea30c55e3
-Description-en: Force HTTP authentication from within Trac
- Allows you to protect certain paths with HTTP authentication,
- while the AccountManagerPlugin is used to check passwords.
- Primarily this is meant to be used with the XmlRpcPlugin so
- it will work while using AccountManager's form-based logins.
 
 Package: trac-roadmap
 Description-md5: 84c1f9f9291dd73fe1a4a610d1ce3167

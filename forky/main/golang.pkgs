@@ -1042,39 +1042,39 @@ MD5sum: 0bdebdedef800300fd76d523f722de2e
 SHA256: c5c9d11668c5d0c08e964592a33c17a0918bcae0a1824904791644ce41663dfa
 
 Package: go-rpmdb
-Source: go-rpmdb (0.0~git20210911.73bd0ce-3)
-Version: 0.0~git20210911.73bd0ce-3+b19
-Installed-Size: 2683
+Version: 0.1.1-1
+Installed-Size: 6282
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
+Depends: libc6 (>= 2.34)
 Description: Package enumeration tool in a RPM DB
 Homepage: https://github.com/knqyf263/go-rpmdb
-Built-Using: golang-1.26 (= 1.26.2-1), golang-github-go-restruct-restruct (= 1.2.0-alpha-1), golang-github-pkg-errors (= 0.9.1-3), golang-golang-x-xerrors (= 0.0~git20231012.104605a-1)
+Built-Using: golang-1.27 (= 1.27.3-1), golang-github-cznic-mathutil (= 1.7.1-1), golang-github-dustin-go-humanize (= 1.0.1-1), golang-github-google-uuid (= 1.6.0-1), golang-github-hashicorp-errwrap (= 1.1.0-1), golang-github-hashicorp-go-multierror (= 1.1.1-2), golang-github-remyoudompheng-bigfft (= 0.0+git20230129.24d4a6f-1), golang-golang-x-exp (= 0.0~git20261009.ca0d7ba-1), golang-golang-x-sys (= 0.49.0+dfsg-2), golang-golang-x-xerrors (= 0.0~git20240903.7835f81-1), golang-modernc-libc (= 1.66.10-3), golang-modernc-memory (= 1.12.1+dfsg-2), golang-modernc-sqlite (= 1.40.0+dfsg-2)
 Description-md5: 443f553ff5ef2916170767563a5d1af2
 golang
 Priority: optional
-Filename: pool/main/g/go-rpmdb/go-rpmdb_0.0~git20210911.73bd0ce-3+b19_amd64.deb
-Size: 927052
-MD5sum: 657d2972776e1a0a860a08f7d49a433c
-SHA256: 70582c83327bafe2291e0ba31127d48a14af9e74db772abbbff15d3fdba04b38
+Filename: pool/main/g/go-rpmdb/go-rpmdb_0.1.1-1_amd64.deb
+Size: 2256000
+MD5sum: 1707b32afbcf99362b9042ec978e3730
+SHA256: 8ad6809f846804cb7771c06a962b83eb36d8628ca0f089e26d10e9d78b4d4cd9
 
 Package: golang-github-knqyf263-go-rpmdb-dev
 Source: go-rpmdb
-Version: 0.0~git20210911.73bd0ce-3
-Installed-Size: 212793
+Version: 0.1.1-1
+Installed-Size: 241735
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
-Depends: golang-github-stretchr-testify-dev, golang-golang-x-xerrors-dev, golang-github-go-restruct-restruct-dev
+Depends: golang-github-stretchr-testify-dev, golang-golang-x-xerrors-dev, golang-modernc-sqlite-dev, golang-github-hashicorp-go-multierror-dev
 Description: RPM DB library for go
 Multi-Arch: foreign
 Homepage: https://github.com/knqyf263/go-rpmdb
 Description-md5: b3b5887178ad5ba1d7bb48b1ed713d70
 golang
 Priority: optional
-Filename: pool/main/g/go-rpmdb/golang-github-knqyf263-go-rpmdb-dev_0.0~git20210911.73bd0ce-3_all.deb
-Size: 36615652
-MD5sum: 3acf21bf75d17f56eb3350e15403e64e
-SHA256: e7d2c9a00bb0e9197ccf36e2597e18bbe2163cbfc5d0a75cf3ee6d49a0a7ecc6
+Filename: pool/main/g/go-rpmdb/golang-github-knqyf263-go-rpmdb-dev_0.1.1-1_all.deb
+Size: 41396376
+MD5sum: 943c254aad9678ca5d5cf937cb101b2b
+SHA256: 795f6f929d620c5f4fe85506f6e2e674a5164e442bc1d1737245417abe975f84
 
 Package: golang-github-github-go-spdx-dev
 Source: go-spdx
@@ -4415,10 +4415,64 @@ Size: 41612
 MD5sum: 4b1da0fdeb94800c7fc0bd1c6d8e04ea
 SHA256: 01b8233688b5eb47d3fcd66ca35fa0c2141954f4498c05e085f8a51beb9de6c6
 
+Package: golang-github-aquasecurity-bolt-fixtures-dev
+Source: golang-github-aquasecurity-bolt-fixtures
+Version: 0.0~git20200903.d34e7f9-2
+Installed-Size: 28
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: all
+Depends: golang-github-coreos-bbolt-dev, golang-github-goccy-go-yaml-dev
+Description: Test fixtures for BoltDB (library)
+Multi-Arch: foreign
+Homepage: https://github.com/aquasecurity/bolt-fixtures
+Description-md5: 8a01a49cdfb4ecab1975e936aa4a9154
+golang
+Priority: optional
+Filename: pool/main/g/golang-github-aquasecurity-bolt-fixtures/golang-github-aquasecurity-bolt-fixtures-dev_0.0~git20200903.d34e7f9-2_all.deb
+Size: 6356
+MD5sum: 9fd5c395f05b4c3680255f0c7b5b794c
+SHA256: b09c56716ee25d023a2d87785ec7ea384b0cd9826806c34e6629f0becec3550e
+
+Package: golang-github-aquasecurity-go-gem-version-dev
+Source: golang-github-aquasecurity-go-gem-version
+Version: 0.0~git20201115.8eed6fe-2
+Installed-Size: 45
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: all
+Depends: golang-github-aquasecurity-go-version-dev, golang-golang-x-xerrors-dev
+Description: library for parsing RubyGems versions and version constraints
+Multi-Arch: foreign
+Homepage: https://github.com/aquasecurity/go-gem-version
+Description-md5: 9025e41a4e4c23f525d9465153303645
+golang
+Priority: optional
+Filename: pool/main/g/golang-github-aquasecurity-go-gem-version/golang-github-aquasecurity-go-gem-version-dev_0.0~git20201115.8eed6fe-2_all.deb
+Size: 8536
+MD5sum: bad3df1c0969ebe03147b1cc0126bfb6
+SHA256: caf8d65e4ea3d64a72f5f4264ff74ac54d28ca7a200045becc965226648febea
+
+Package: golang-github-aquasecurity-go-npm-version-dev
+Source: golang-github-aquasecurity-go-npm-version
+Version: 0.0.2+git20261005.1f16ed7-1
+Installed-Size: 52
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: all
+Depends: golang-github-aquasecurity-go-version-dev, golang-golang-x-xerrors-dev
+Description: library for parsing npm versions and version constraints
+Multi-Arch: foreign
+Homepage: https://github.com/aquasecurity/go-npm-version
+Description-md5: 27c74c4258cb0811c77fbb2e4a116d56
+golang
+Priority: optional
+Filename: pool/main/g/golang-github-aquasecurity-go-npm-version/golang-github-aquasecurity-go-npm-version-dev_0.0.2+git20261005.1f16ed7-1_all.deb
+Size: 10716
+MD5sum: 5757632720199ffae24615e6b08f5056
+SHA256: 1cabeffd23a847e6895124f6722762500bfa93cc31e0bf174bbee969c75a3dd0
+
 Package: golang-github-aquasecurity-go-pep440-version-dev
 Source: golang-github-aquasecurity-go-pep440-version
-Version: 0.0.1-1
-Installed-Size: 58
+Version: 0.0.1+git20260224.f9bba28-1
+Installed-Size: 63
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
 Depends: golang-github-aquasecurity-go-version-dev, golang-golang-x-xerrors-dev
@@ -4428,15 +4482,15 @@ Homepage: https://github.com/aquasecurity/go-pep440-version
 Description-md5: 304ccd043389b210a01d41b6ba2f81a3
 golang
 Priority: optional
-Filename: pool/main/g/golang-github-aquasecurity-go-pep440-version/golang-github-aquasecurity-go-pep440-version-dev_0.0.1-1_all.deb
-Size: 11364
-MD5sum: 936704444aeb69b6b4da167ab790ed8d
-SHA256: 53df83453f08369fdeaed18d5c18ccc392183e465bf24ac32c1eb3388761cfa4
+Filename: pool/main/g/golang-github-aquasecurity-go-pep440-version/golang-github-aquasecurity-go-pep440-version-dev_0.0.1+git20260224.f9bba28-1_all.deb
+Size: 12432
+MD5sum: 2ac31cfe92c960e7e992f0636b6f4822
+SHA256: 040ab5c1a0225b68730b538530783360138652f6c56c08af93c1689b177a2e7a
 
 Package: golang-github-aquasecurity-go-version-dev
 Source: golang-github-aquasecurity-go-version
-Version: 0.0~git20210121.637058c-2
-Installed-Size: 115
+Version: 0.0.1-1
+Installed-Size: 113
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
 Depends: golang-github-stretchr-testify-dev, golang-github-urfave-cli-v2-dev, golang-golang-x-xerrors-dev
@@ -4446,10 +4500,28 @@ Homepage: https://github.com/aquasecurity/go-version
 Description-md5: aa2e0a7c2110f8542225d44b09abcf52
 golang
 Priority: optional
-Filename: pool/main/g/golang-github-aquasecurity-go-version/golang-github-aquasecurity-go-version-dev_0.0~git20210121.637058c-2_all.deb
-Size: 15448
-MD5sum: 0469ee5a0d3de87aa753ada5de1e6f6f
-SHA256: 8cb8b97b5966f1d5cec1d0af8f76cbb17754e6d16ed512e09d1abefe471d21b1
+Filename: pool/main/g/golang-github-aquasecurity-go-version/golang-github-aquasecurity-go-version-dev_0.0.1-1_all.deb
+Size: 15680
+MD5sum: 3ff7e77653679a97144c4ffb7782fab6
+SHA256: 4374d6c9566f2506050493337c891621f4b23f4bfce4a17c8caa5b1312f980b6
+
+Package: golang-github-aquasecurity-iamgo-dev
+Source: golang-github-aquasecurity-iamgo
+Version: 0.0.10-1
+Installed-Size: 48
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: all
+Depends: golang-github-aquasecurity-jfather-dev
+Description: Go package for parsing/assembling AWS IAM policy documents
+Multi-Arch: foreign
+Homepage: https://github.com/aquasecurity/iamgo
+Description-md5: dc1d0cac43d3e614b5d9191ca2f627d8
+golang
+Priority: optional
+Filename: pool/main/g/golang-github-aquasecurity-iamgo/golang-github-aquasecurity-iamgo-dev_0.0.10-1_all.deb
+Size: 7800
+MD5sum: 4ad794f7583e6868f6ffec4dd1e58d40
+SHA256: 0008fca27e288f3c1adcff864a0efca21f541a3b8f6f0cee67879421693a8d7b
 
 Package: golang-github-aquasecurity-jfather-dev
 Source: golang-github-aquasecurity-jfather
@@ -4485,6 +4557,24 @@ Filename: pool/main/g/golang-github-aquasecurity-table/golang-github-aquasecurit
 Size: 17340
 MD5sum: 8f2d95107be826ab0a146637f741aea0
 SHA256: e7c5d7ef85b8329f39283269deb0d60eec13dc4d0a15c5173a36339aab3b0b57
+
+Package: golang-github-aquasecurity-trivy-java-db-dev
+Source: golang-github-aquasecurity-trivy-java-db
+Version: 0.0~git20240109.184bd74-1
+Installed-Size: 88
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: all
+Depends: golang-github-cheggaaa-pb.v3-dev, golang-github-hashicorp-go-retryablehttp-dev, golang-github-puerkitobio-goquery-dev, golang-github-stretchr-testify-dev, golang-golang-x-sync-dev, golang-golang-x-xerrors-dev, golang-k8s-utils-dev
+Description: parses all indexes from maven repository (library)
+Multi-Arch: foreign
+Homepage: https://github.com/aquasecurity/trivy-java-db
+Description-md5: 6bdcf08d14e86173ebd88692e4a9817d
+golang
+Priority: optional
+Filename: pool/main/g/golang-github-aquasecurity-trivy-java-db/golang-github-aquasecurity-trivy-java-db-dev_0.0~git20240109.184bd74-1_all.deb
+Size: 16956
+MD5sum: ce100edecef192d41b191babb8b1000a
+SHA256: 22566566b20992cde32e0889c61b4f62bee34b93dd26c8ffd267647618d0c322
 
 Package: golang-github-araddon-dateparse-dev
 Source: golang-github-araddon-dateparse
@@ -5431,23 +5521,6 @@ Filename: pool/main/g/golang-github-azuread-microsoft-authentication-library-for
 Size: 92192
 MD5sum: 210db13afd676e9d0c9ec84535c146c5
 SHA256: 4d92989c968706dcde052745a3aa6143cadcf73c89c9abdbe91e1814929f54b5
-
-Package: golang-github-backblaze-blazer-dev
-Source: golang-github-backblaze-blazer
-Version: 0.6.1-4
-Installed-Size: 312
-Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
-Architecture: all
-Depends: golang-golang-x-net-dev
-Description: Go library for Backblaze's B2
-Homepage: https://github.com/Backblaze/blazer
-Description-md5: ea3efe4ebcd670d812088db1efae437d
-golang
-Priority: optional
-Filename: pool/main/g/golang-github-backblaze-blazer/golang-github-backblaze-blazer-dev_0.6.1-4_all.deb
-Size: 58336
-MD5sum: 9df41c16cca7c0f471775370ae6b4e3b
-SHA256: 2951dea03f2c50e45741880fc51aed65abd8982b4580817790b7bd74f19a9d8e
 
 Package: golang-github-bahlo-generic-list-go-dev
 Source: golang-github-bahlo-generic-list-go
@@ -6762,6 +6835,23 @@ Filename: pool/main/g/golang-github-briandowns-spinner/golang-github-briandowns-
 Size: 11008
 MD5sum: c8e400747eafdfc13df091a465c01f4a
 SHA256: 5b9bb134e4b789fe5df3a0ed9fc956f2ad7e0158ff00a5108a5c6afbc3f2e61b
+
+Package: golang-github-brunoscheufler-aws-ecs-metadata-go-dev
+Source: golang-github-brunoscheufler-aws-ecs-metadata-go
+Version: 0.0~git20221221.67e37ae-1
+Installed-Size: 40
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: all
+Description: Retrieve AWS ECS Task metadata (library)
+Multi-Arch: foreign
+Homepage: https://github.com/brunoscheufler/aws-ecs-metadata-go
+Description-md5: ea0e7c66b8ecfc5cd4bf331bae86ca59
+golang
+Priority: optional
+Filename: pool/main/g/golang-github-brunoscheufler-aws-ecs-metadata-go/golang-github-brunoscheufler-aws-ecs-metadata-go-dev_0.0~git20221221.67e37ae-1_all.deb
+Size: 7184
+MD5sum: 2b2b4a16682f4cb00201ba53377ad81c
+SHA256: 9ade79f1f0cb3e0a890f78958c4b47a6250ec8b7e250331f664ab3f9b018ce65
 
 Package: golang-github-bruth-assert-dev
 Source: golang-github-bruth-assert
@@ -15678,8 +15768,8 @@ SHA256: 6f5b53d9dcd57a4b1be403aee3346ce7aa2a2c3aee458a4b0cd21fbaf8d046b2
 
 Package: golang-github-goccy-go-json-dev
 Source: golang-github-goccy-go-json
-Version: 0.11.2-1
-Installed-Size: 2885
+Version: 0.12.0-1
+Installed-Size: 5508
 Maintainer: Daniel Baumann <daniel@debian.org>
 Architecture: all
 Description: JSON encoder/decoder compatible with encoding/json (Go library)
@@ -15688,10 +15778,10 @@ Homepage: https://github.com/goccy/go-json
 Description-md5: c5de5d6d9c2ce80fa5ff377d78d100a7
 golang
 Priority: optional
-Filename: pool/main/g/golang-github-goccy-go-json/golang-github-goccy-go-json-dev_0.11.2-1_all.deb
-Size: 345716
-MD5sum: 3723e96f219410b88eef0428c27a56c3
-SHA256: a67320596c0303bd932c12d52a759d7908348fc7a73ef245a789247f0dfceabe
+Filename: pool/main/g/golang-github-goccy-go-json/golang-github-goccy-go-json-dev_0.12.0-1_all.deb
+Size: 759788
+MD5sum: bf9a8272f6f965d3c0b72db0d38ba52c
+SHA256: 4a10fb2827492e9cc699b270c189d859ac993278bf0ae0f6ebb76ef415e5bfc6
 
 Package: golang-github-goccy-go-yaml-dev
 Source: golang-github-goccy-go-yaml
@@ -21274,6 +21364,24 @@ Size: 25284
 MD5sum: 27863e61f16cfb899fcc5274730cf440
 SHA256: f7ec58b5c6827d5abc06fda39c2de360ee5411a7a8d58a317f5b57b834af68bc
 
+Package: golang-github-josephburnett-jd-v2-dev
+Source: golang-github-josephburnett-jd
+Version: 2.3.0+ds-1
+Installed-Size: 252
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: all
+Depends: golang-github-go-openapi-jsonpointer-dev, golang-golang-x-exp-dev, golang-gopkg-yaml.v3-dev
+Description: JSON diff and patch (library)
+Multi-Arch: foreign
+Homepage: https://github.com/josephburnett/jd
+Description-md5: 731da5a5fa6792b93f5a391ce39b8c41
+golang
+Priority: optional
+Filename: pool/main/g/golang-github-josephburnett-jd/golang-github-josephburnett-jd-v2-dev_2.3.0+ds-1_all.deb
+Size: 43056
+MD5sum: 1c9608525f9c3c6d998724e409586ce8
+SHA256: 7a521a21b3b936f17e2f128ce2d2d210b63e8924ee1c42e24abd005873f64f45
+
 Package: golang-github-josharian-intern-dev
 Source: golang-github-josharian-intern
 Version: 1.0.0-3
@@ -22541,6 +22649,23 @@ Size: 14852
 MD5sum: ff62c7fa0c85ad8c43ea5d132d0d7dd0
 SHA256: bf9f7045f832201e261350377583fbc719313eec3ed899869c0fbf645de56bba
 
+Package: golang-github-knqyf263-nested-dev
+Source: golang-github-knqyf263-nested
+Version: 0.0.1-4
+Installed-Size: 35
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: all
+Description: Golang library for easier way to handle the nested data structure
+Multi-Arch: foreign
+Homepage: https://github.com/knqyf263/nested
+Description-md5: e39da7e6dff8746948a1a3494e06123a
+golang
+Priority: optional
+Filename: pool/main/g/golang-github-knqyf263-nested/golang-github-knqyf263-nested-dev_0.0.1-4_all.deb
+Size: 5456
+MD5sum: 9002bf28ded04fd77f4eff35bb40cf8e
+SHA256: ebbc7f17353e554ea8e1f4737fd7ad1156897e334802ad29f4692834fa196ce9
+
 Package: golang-github-kolo-xmlrpc-dev
 Source: golang-github-kolo-xmlrpc
 Version: 0.0~git20220921.a4b6fa1-1
@@ -23007,23 +23132,6 @@ Filename: pool/main/g/golang-github-launchdarkly-go-semver/golang-github-launchd
 Size: 10156
 MD5sum: e373422a5c660bc2366837202eabf34c
 SHA256: decd7f0caadc37a2e64d5398f816aa40ed2b395643c19076a999cc836fd55acf
-
-Package: golang-github-launchdarkly-go-server-sdk-dev
-Source: golang-github-launchdarkly-go-server-sdk
-Version: 6.1.0-1
-Installed-Size: 1032
-Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
-Architecture: all
-Description: LaunchDarkly Server-side SDK for Go (library)
-Multi-Arch: foreign
-Homepage: https://github.com/launchdarkly/go-server-sdk
-Description-md5: d1eb75f9dd598ff023bd35a729dc92cb
-golang
-Priority: optional
-Filename: pool/main/g/golang-github-launchdarkly-go-server-sdk/golang-github-launchdarkly-go-server-sdk-dev_6.1.0-1_all.deb
-Size: 170876
-MD5sum: ab13dc830213bf18a15291653a96d54f
-SHA256: 9001e999d8ef30b700673cced6f21c3a18df5c53e9e14c93f3086debae1593a7
 
 Package: golang-github-launchdarkly-go-server-sdk-evaluation-dev
 Source: golang-github-launchdarkly-go-server-sdk-evaluation
@@ -24105,10 +24213,64 @@ Size: 6448
 MD5sum: d59df803b553ae8a6c5692fc2ac4e769
 SHA256: d97869132f03421f0b177c075a5d71d79a2972c4442bee62889537b97146d0ee
 
+Package: golang-github-masahiro331-go-disk-dev
+Source: golang-github-masahiro331-go-disk
+Version: 0.1.2+git20260423.f7a470e-1
+Installed-Size: 57368
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: all
+Depends: golang-github-masahiro331-go-xfs-filesystem-dev, golang-golang-x-xerrors-dev
+Description: simple disk parser, supported Master Boot Record and GUID Partition Table
+Multi-Arch: foreign
+Homepage: https://github.com/masahiro331/go-disk
+Description-md5: 54236ce0fa7efab6e39008d32c02e41d
+golang
+Priority: optional
+Filename: pool/main/g/golang-github-masahiro331-go-disk/golang-github-masahiro331-go-disk-dev_0.1.2+git20260423.f7a470e-1_all.deb
+Size: 22088
+MD5sum: a3538fe282b7ce75f61b08eb02a17ea6
+SHA256: 1aaee2b9cc799ea93eaa33d763569a5dc38cbaf79434cced5ced1d0cd94327e5
+
+Package: golang-github-masahiro331-go-ebs-file-dev
+Source: golang-github-masahiro331-go-ebs-file
+Version: 0.1.1+git20260422.9d24e29-2
+Installed-Size: 35
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: all
+Depends: golang-github-aws-aws-sdk-go-v2-dev
+Description: Abstracting AWS Elastic block store with io.ReadSeeker (library)
+Multi-Arch: foreign
+Homepage: https://github.com/masahiro331/go-ebs-file
+Description-md5: af29ae182fdcf5caaf45f10842244d89
+golang
+Priority: optional
+Filename: pool/main/g/golang-github-masahiro331-go-ebs-file/golang-github-masahiro331-go-ebs-file-dev_0.1.1+git20260422.9d24e29-2_all.deb
+Size: 8176
+MD5sum: a2daf9dad470a55d7e4bca6064c94418
+SHA256: 2be3c8c71818835bf39871ad47b1f0d53a31f4684ea8a4f7a72c0a408b3415fc
+
+Package: golang-github-masahiro331-go-ext4-filesystem-dev
+Source: golang-github-masahiro331-go-ext4-filesystem
+Version: 0.1.3+git20260423.fe51f5b-2
+Installed-Size: 150
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: all
+Depends: golang-github-lunixbochs-struc-dev, golang-go.uber-zap-dev, golang-golang-x-xerrors-dev
+Description: ext4 filesystem stream parser (library)
+Multi-Arch: foreign
+Homepage: https://github.com/masahiro331/go-ext4-filesystem
+Description-md5: 5122641dd595dc027ba5c3513b74a2f3
+golang
+Priority: optional
+Filename: pool/main/g/golang-github-masahiro331-go-ext4-filesystem/golang-github-masahiro331-go-ext4-filesystem-dev_0.1.3+git20260423.fe51f5b-2_all.deb
+Size: 26884
+MD5sum: 8fed4b3a1130d3a95596bb695cda030f
+SHA256: 2acc57261a06ef0d15bbd42241008565b947eb4e685e6c775326b56e59a9e2fc
+
 Package: golang-github-masahiro331-go-mvn-version-dev
 Source: golang-github-masahiro331-go-mvn-version
-Version: 0.0~git20210429.d3157d6-2
-Installed-Size: 55
+Version: 0.0~git20260119.d21fcd2-1
+Installed-Size: 56
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
 Depends: golang-github-hashicorp-go-multierror-dev, golang-github-stretchr-testify-dev, golang-golang-x-xerrors-dev
@@ -24118,10 +24280,46 @@ Homepage: https://github.com/masahiro331/go-mvn-version
 Description-md5: 3697f018364a20306c7b0009b4481690
 golang
 Priority: optional
-Filename: pool/main/g/golang-github-masahiro331-go-mvn-version/golang-github-masahiro331-go-mvn-version-dev_0.0~git20210429.d3157d6-2_all.deb
-Size: 9872
-MD5sum: df7d83b90e3863f4188dc0e846858419
-SHA256: d4ec6780ef99bc6dce46ed8b44919656e06a33fd606d895706b1711653dfaa9b
+Filename: pool/main/g/golang-github-masahiro331-go-mvn-version/golang-github-masahiro331-go-mvn-version-dev_0.0~git20260119.d21fcd2-1_all.deb
+Size: 10124
+MD5sum: 47a7cf96ac184fec0dcd8971bc924fcf
+SHA256: 40e06ffc2fb15d290818acee34ed921c0e8af3b1a64fbb9de0ba8ffc70df7671
+
+Package: golang-github-masahiro331-go-vmdk-parser-dev
+Source: golang-github-masahiro331-go-vmdk-parser
+Version: 0.1.3+git20260423.08305fa-2
+Installed-Size: 245
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: all
+Depends: golang-golang-x-xerrors-dev
+Description: VMDK parser for Virtual Machine Image (library)
+Multi-Arch: foreign
+Homepage: https://github.com/masahiro331/go-vmdk-parser
+Description-md5: 9980c7268ed7fbfbd0403567b39a97bb
+golang
+Priority: optional
+Filename: pool/main/g/golang-github-masahiro331-go-vmdk-parser/golang-github-masahiro331-go-vmdk-parser-dev_0.1.3+git20260423.08305fa-2_all.deb
+Size: 10200
+MD5sum: 6b27230dd7fa619a7304349119191a1e
+SHA256: 385c27b5471a25cddefb46f8984cdfb14e5fc7ceea8d5eb0c961aee8e14382b6
+
+Package: golang-github-masahiro331-go-xfs-filesystem-dev
+Source: golang-github-masahiro331-go-xfs-filesystem
+Version: 0.1.8+git20260422.d21e5e4+ds-2
+Installed-Size: 20572
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: all
+Depends: golang-go.uber-zap-dev, golang-golang-x-xerrors-dev
+Description: Go library for parsing xfs(FileSystem)
+Multi-Arch: foreign
+Homepage: https://github.com/masahiro331/go-xfs-filesystem
+Description-md5: d24dc185f73cfd13154e6f6ec84d1570
+golang
+Priority: optional
+Filename: pool/main/g/golang-github-masahiro331-go-xfs-filesystem/golang-github-masahiro331-go-xfs-filesystem-dev_0.1.8+git20260422.d21e5e4+ds-2_all.deb
+Size: 74516
+MD5sum: 247ba1e8e41f5da1739bfc3cbe601ae4
+SHA256: d69df634cb1f34026d6b67ba9ade7c8fc9d6464925b0956bd88c759ba75e39b5
 
 Package: golang-github-masterminds-goutils-dev
 Source: golang-github-masterminds-goutils
@@ -27614,8 +27812,8 @@ SHA256: ee526f236f72a16991bbfa8e916ecf530e1b47c7143cf58f4e7111d3465eaba3
 
 Package: golang-github-oklog-ulid-dev
 Source: golang-github-oklog-ulid
-Version: 2.0.2+ds-2
-Installed-Size: 56
+Version: 2.1.2-1
+Installed-Size: 60
 Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
 Architecture: all
 Description: ULID generation library for Golang
@@ -27623,10 +27821,10 @@ Homepage: https://github.com/oklog/ulid
 Description-md5: fb88635d502dd379b29986107bab670a
 golang
 Priority: optional
-Filename: pool/main/g/golang-github-oklog-ulid/golang-github-oklog-ulid-dev_2.0.2+ds-2_all.deb
-Size: 12172
-MD5sum: c99597ccebea3d3539e4a7710130ccf4
-SHA256: 720c31690a454901eecdf66f6d83e5500b6abe0fe1f6fad27a198c61c9a781c0
+Filename: pool/main/g/golang-github-oklog-ulid/golang-github-oklog-ulid-dev_2.1.2-1_all.deb
+Size: 13312
+MD5sum: 12eef2ea43e1620c951fe0549c2bea7a
+SHA256: 1bb314521c8afc55f0e59c84782ce99fe7d54d84d688a8e4566a8fe648678efe
 
 Package: golang-github-okzk-sdnotify-dev
 Source: golang-github-okzk-sdnotify
@@ -31527,20 +31725,20 @@ SHA256: a6e5f21329ce7e5709020c1599f02a79f3ac849d88f7ef0a17db518b9c3c7085
 
 Package: golang-github-samber-lo-dev
 Source: golang-github-samber-lo
-Version: 1.38.1-1
-Installed-Size: 138
+Version: 1.53.0-1
+Installed-Size: 738
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
-Depends: golang-github-thoas-go-funk-dev, golang-golang-x-exp-dev
+Depends: golang-golang-x-text-dev
 Description: Lodash-style Go library based on Go generics
 Homepage: https://github.com/samber/lo
 Description-md5: 03866319a93f19aea3add69272dae3d9
 golang
 Priority: optional
-Filename: pool/main/g/golang-github-samber-lo/golang-github-samber-lo-dev_1.38.1-1_all.deb
-Size: 38936
-MD5sum: ea8cb1ba3f2eba57c28fbf1f34943d2e
-SHA256: 994e2cbe3f4d290786aa225e382e01f64d5b148bcdba5f1f59fec78932963ea0
+Filename: pool/main/g/golang-github-samber-lo/golang-github-samber-lo-dev_1.53.0-1_all.deb
+Size: 95208
+MD5sum: d209dfff8226d6349fe4e14d7f53b4fa
+SHA256: 82ac821bf48f4e33e307aa2ac93ba91d51a064deae6b5eb0ed9316f77e1f4205
 
 Package: golang-github-samber-slog-common-dev
 Source: golang-github-samber-slog-common
@@ -35506,6 +35704,24 @@ Filename: pool/main/g/golang-github-twin-whois/golang-github-twin-whois-dev_1.3.
 Size: 5200
 MD5sum: 4140e4caf9b3ec575b3099924299576a
 SHA256: 23b503f8861f2d147e9de6cbbc5cdd513dd0dd8018af67839ab998ffc5ebf5d6
+
+Package: golang-github-twitchtv-twirp-dev
+Source: golang-github-twitchtv-twirp
+Version: 8.1.3+ds-1
+Installed-Size: 907
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: all
+Depends: golang-github-pkg-errors-dev, golang-google-protobuf-dev
+Description: framework for service-to-service communication emphasizing simplicity (library)
+Multi-Arch: foreign
+Homepage: https://github.com/twitchtv/twirp
+Description-md5: f7af16aa9fc5ecb1dd5aae41f1c57925
+golang
+Priority: optional
+Filename: pool/main/g/golang-github-twitchtv-twirp/golang-github-twitchtv-twirp-dev_8.1.3+ds-1_all.deb
+Size: 68792
+MD5sum: 716e7bd929dc7e4a58b85a2ad5ea451d
+SHA256: 5fc0c7e2f918054fe5c57e051b589fcbe300dc631521d4deb2b5fe3a9b758c32
 
 Package: golang-github-twpayne-go-expect-dev
 Source: golang-github-twpayne-go-expect
@@ -42950,8 +43166,8 @@ SHA256: f98c7de9661bc6d1472485783ea6c2ecb0d3c691d6fe838740facd19e8a496e3
 
 Package: golang-github-prometheus-prometheus-dev
 Source: prometheus
-Version: 3.5.3+ds1-6
-Installed-Size: 20704
+Version: 3.5.3+ds1-7
+Installed-Size: 20703
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
 Depends: golang-github-alecthomas-units-dev, golang-github-aws-aws-sdk-go-dev, golang-github-bboreham-go-loser-dev, golang-github-cespare-xxhash-dev, golang-github-dennwc-varint-dev, golang-github-digitalocean-godo-dev, golang-github-docker-docker-dev (>= 28.5), golang-github-edsrzf-mmap-go-dev, golang-github-facette-natsort-dev, golang-github-fsnotify-fsnotify-dev, golang-github-go-kit-log-dev, golang-github-go-openapi-strfmt-dev, golang-github-go-zookeeper-zk-dev, golang-github-gogo-protobuf-dev, golang-github-golang-snappy-dev, golang-github-google-go-cmp-dev, golang-github-google-pprof-dev, golang-github-google-uuid-dev, golang-github-gophercloud-gophercloud-dev (>= 0.19.0), golang-github-grafana-regexp-dev, golang-github-grpc-ecosystem-grpc-gateway-dev, golang-github-hetznercloud-hcloud-go-dev (>= 2.0.0), golang-github-ionos-cloud-sdk-go-dev, golang-github-json-iterator-go-dev, golang-github-kimmachinegun-automemlimit-dev, golang-github-klauspost-compress-dev, golang-github-kolo-xmlrpc-dev, golang-github-linode-linodego-dev, golang-github-miekg-dns-dev, golang-github-munnerz-goautoneg-dev, golang-github-mwitkow-go-conntrack-dev, golang-github-oklog-run-dev, golang-github-oklog-ulid-dev, golang-github-opentracing-contrib-go-stdlib-dev, golang-github-opentracing-opentracing-go-dev, golang-github-ovh-go-ovh-dev (>= 1.9.0), golang-github-prometheus-alertmanager-dev (>= 0.33.1-5~), golang-github-prometheus-client-golang-dev (>= 1.19.0), golang-github-prometheus-client-model-dev, golang-github-prometheus-common-dev (>= 0.66.0), golang-github-prometheus-exporter-toolkit-dev, golang-github-scaleway-scaleway-sdk-go-dev, golang-github-stretchr-testify-dev, golang-github-vultr-govultr-dev, golang-go.uber-atomic-dev, golang-go.uber-multierr-dev, golang-golang-x-exp-dev, golang-golang-x-net-dev, golang-golang-x-oauth2-google-dev, golang-golang-x-sync-dev, golang-golang-x-sys-dev, golang-golang-x-time-dev, golang-google-api-dev, golang-google-genproto-dev, golang-google-grpc-dev, golang-google-protobuf-dev, golang-gopkg-alecthomas-kingpin.v2-dev, golang-gopkg-yaml.v2-dev, golang-gopkg-yaml.v3-dev, golang-grpc-gateway, golang-k8s-api-dev, golang-k8s-apimachinery-dev, golang-k8s-client-go-dev (>= 0.33.0), golang-k8s-kube-openapi-dev (>= 0.0~git20260721.d427ff9-1~), golang-opentelemetry-contrib-dev (>= 0.56), golang-opentelemetry-otel-dev (>= 1.46.0~), golang-uber-automaxprocs-dev, golang-uber-goleak-dev
@@ -42961,10 +43177,10 @@ Homepage: https://prometheus.io/
 Description-md5: c56e732d8b17af90f195f132a307dd11
 golang
 Priority: optional
-Filename: pool/main/p/prometheus/golang-github-prometheus-prometheus-dev_3.5.3+ds1-6_all.deb
-Size: 1719396
-MD5sum: 6ce5b5e1dbaf246de8902963ac5977fe
-SHA256: 62c9cceec329c170207824248f0df7a8f913edb4c521f5c13b956052163fb3a7
+Filename: pool/main/p/prometheus/golang-github-prometheus-prometheus-dev_3.5.3+ds1-7_all.deb
+Size: 1718816
+MD5sum: 5ddc350af344e722659015c241ddfc4f
+SHA256: f0e3cbd7de626cad97f48958e4e37af506bd69a4dcff50d142a7efb6402bc07a
 
 Package: prometheus-mqtt-exporter
 Source: prometheus-mqtt-exporter (0.1.7-1)

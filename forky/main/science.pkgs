@@ -11117,13 +11117,14 @@ MD5sum: 975148a40cbd27862203ae10a1a7eefe
 SHA256: 5ee11d2e7d9ab643c5dc61b015a4e55dbc747a7010f0136c6d3d9352a02005e2
 
 Package: imagej
-Version: 1.54g-1
-Installed-Size: 253
+Version: 1.54r-1
+Installed-Size: 273
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
 Architecture: all
-Depends: default-jre | java6-runtime, procps, libij-java
+Depends: default-jre | java6-runtime, libij-java, procps
 Description: Image processing program with a focus on microscopy images
-Homepage: https://imagej.nih.gov/ij
+Homepage: https://imagej.net/ij/
+Commands: imagej
 Description-md5: d64a1d4b24bcb1fe82817a5a62d85a46
 Tag: field::medicine, implemented-in::java, interface::graphical,
  interface::x11, role::program, use::analysing, use::editing,
@@ -11132,10 +11133,10 @@ Tag: field::medicine, implemented-in::java, interface::graphical,
  works-with::image:raster, x11::application
 science
 Priority: optional
-Filename: pool/main/i/imagej/imagej_1.54g-1_all.deb
-Size: 111372
-MD5sum: 272ac08407d4c032af61a555f083d9b5
-SHA256: b7a2d881a7d9d3e8ab9e89d2394623deb9a3d07fcea9bd3af7db69a02189d088
+Filename: pool/main/i/imagej/imagej_1.54r-1_all.deb
+Size: 118684
+MD5sum: 3cb7288aa19893b7477943d1d6cefe6f
+SHA256: f367d2fada523f12b7677874f031bce4e5dc83c3aa3e86b4eef0e32ec290c34e
 
 Package: imview
 Source: imview (1.1.9h-4)
@@ -19996,6 +19997,23 @@ Size: 45062928
 MD5sum: 4f535c46ad2815a91bf52814de05f634
 SHA256: d6388cbe2529bd8548bc377f9bc6567c2fd1a9f1f97867fd3ee92d74cee1971f
 
+Package: pplacer
+Version: 1.1~alpha19-9
+Installed-Size: 20541
+Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.42), libgsl28 (>= 2.8+dfsg), libsqlite3-0 (>= 3.25.0), libtingea0 (>= 21-361), zlib1g (>= 1:1.1.4)
+Description: phylogenetic placement and downstream analysis
+Homepage: https://github.com/matsen/pplacer
+Commands: guppy, pplacer, rppr
+Description-md5: b2b7dbc06a8fe255205980648d76b102
+science
+Priority: optional
+Filename: pool/main/p/pplacer/pplacer_1.1~alpha19-9_amd64.deb
+Size: 3399620
+MD5sum: f0a10749f34e86d1f6f5a9596fb0f225
+SHA256: ec55aa74f94be2a6c73fd9c26645c76570c32095eedcc85225d1e901be96e540
+
 Package: praat
 Version: 7.0.02+dfsg-1
 Installed-Size: 93021
@@ -22376,21 +22394,22 @@ MD5sum: c1b0e6df350bbe135b21bed742328e84
 SHA256: 5beb456d436fb37b57308d4588df86a1a28fb800bbbff2059b8f9fd5103f179b
 
 Package: quicktree
-Version: 2.5-6
-Installed-Size: 57
+Version: 2.5-7
+Installed-Size: 61
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.34)
+Depends: libc6 (>= 2.38)
 Suggests: hmmer | hmmer2
 Description: Neighbor-Joining algorithm for phylogenies
 Homepage: https://github.com/khowe/quicktree/
+Commands: quicktree
 Description-md5: ee91e2e60e1d2fcf01f233db09d1a540
 science
 Priority: optional
-Filename: pool/main/q/quicktree/quicktree_2.5-6_amd64.deb
-Size: 21584
-MD5sum: ea4e0d74acbf147659283eee2a3b568d
-SHA256: ed42073d9869d0ef0a1ed5645da11a453d89660ed04e3c4d7dace6c2ab9dce28
+Filename: pool/main/q/quicktree/quicktree_2.5-7_amd64.deb
+Size: 22340
+MD5sum: 0eb7b28d2f733d42cbac50e08f6aa3bd
+SHA256: 8c22f1ab7abadef1a9a277b4cbfa8a1535d04464aa2671b937e6712c47e78756
 
 Package: quorum
 Version: 1.1.2-2
@@ -23123,6 +23142,26 @@ Size: 56180
 MD5sum: 445a96d0852c270a0c0a4d549932b397
 SHA256: 4ad8a690b077e865d6cde80d39ed76a0eb6d1afc6df019051d9f3a91500cbd0b
 
+Package: rudof
+Version: 0.3.13+ds-1.1
+Installed-Size: 34933
+Maintainer: Jonas Smedegaard <dr@jones.dk>
+Architecture: amd64
+Depends: ca-certificates, libc6 (>= 2.39), libgcc-s1 (>= 4.2)
+Suggests: bash-completion
+Description: RDF and knowledge graphs processing tool - CLI tool
+Homepage: https://rudof-project.github.io/rudof/
+Built-Using: oxigraph (= 0.5.12+ds-1), rust-colored (= 3.1.1-1), rust-hashbag (= 0.1.12-3), rust-hyper-rustls (= 0.27.9+ds-1), rust-json-event-parser (= 0.2.3+ds-1), rust-lazy-regex (= 3.6.1+20260729+ds-3), rust-nix (= 0.30.1-3), rust-nom-locate (= 5.0.0+ds-3), rust-option-ext (= 0.2.0-1), rust-oxhttp (= 0.3.3+ds-1), rust-oxilangtag (= 0.1.6+ds-1), rust-oxiri (= 0.2.11-2), rust-peg (= 0.8.5-1), rust-rustemo (= 0.9.1+ds-5), rust-rustls (= 0.23.45+ds-1), rust-rustls-native-certs (= 0.8.4+ds-2), rust-rustls-pki-types (= 1.15.1+ds-1), rust-rustls-platform-verifier (= 0.6.2-1), rust-rustls-webpki (= 0.103.15+ds-1), rustc (= 1.97.1+dfsg1-1)
+Commands: rudof, rudof_generate
+Description-md5: 745d4a94eaf150aa0fb6a1c0d2e3b98b
+Static-Built-Using: oxigraph (= 0.5.12+ds-1), rust-aho-corasick (= 1.1.4-2), rust-ansi-str (= 0.9.0-2), rust-ansitok (= 0.3.0-2), rust-anstream (= 0.6.21-1), rust-anstyle (= 1.0.14-2), rust-anstyle-parse (= 0.2.7-1), rust-anstyle-query (= 1.1.5-1), rust-anyhow (= 1.0.103-1), rust-arraydeque (= 0.5.1-2), rust-arrayvec (= 0.7.8-1), rust-atoi (= 2.0.0-1), rust-atomic-waker (= 1.1.2-1), rust-base64 (= 0.22.1-3), rust-bit-set (= 0.8.0-1), rust-bit-vec (= 0.8.0-2), rust-bitflags (= 2.13.2-1), rust-block-buffer (= 0.12.0-1), rust-bumpalo (= 3.16.0-1), rust-bytecount (= 0.6.9-2), rust-byteorder (= 1.5.0-1), rust-bytes (= 1.12.1-1), rust-calamine (= 0.34.0+dfsg-1), rust-cfg-if (= 1.0.4-1), rust-chacha20 (= 0.10.2-1), rust-chrono (= 0.4.45-1), rust-clap (= 4.6.7-1), rust-clap-builder (= 4.6.7-1), rust-clap-complete (= 4.6.11-1), rust-clap-complete-command (= 0.6.1-1), rust-clap-complete-fig (= 4.5.2-1), rust-clap-lex (= 1.1.1-1), rust-cobs (= 0.2.3-1), rust-codepage (= 0.1.2-1), rust-codesnake (= 0.3.0-1), rust-colorchoice (= 1.0.5-1), rust-colored (= 3.1.1-1), rust-const-format (= 0.2.34-1), rust-const-oid (= 0.10.2-1), rust-cpufeatures (= 0.3.1-1), rust-cpufeatures-0.2 (= 0.2.17-1), rust-crc32fast (= 1.5.2-1), rust-crossbeam-deque (= 0.8.8-1), rust-crossbeam-epoch (= 0.9.21-1), rust-crossbeam-utils (= 0.8.23-1), rust-crossterm (= 0.29.0-3), rust-crypto-common (= 0.2.2-1), rust-csv (= 1.4.0-1), rust-csv-core (= 0.1.13-1), rust-ctrlc (= 3.5.2-1), rust-dashmap (= 6.2.1-1), rust-deranged (= 0.5.9-1), rust-derive-more (= 2.1.1-1), rust-digest (= 0.11.3-4), rust-dirs (= 6.0.0-2), rust-dirs-sys (= 0.5.0-2), rust-either (= 1.18.0-1), rust-encoding-rs (= 0.8.35-1), rust-endian-type (= 0.1.2-2), rust-equivalent (= 1.0.3-1), rust-errno (= 0.3.14-1), rust-fancy-regex (= 0.11.0-3), rust-fast-float2 (= 0.2.4-1), rust-fastrand (= 2.3.0-2), rust-fd-lock (= 3.0.13-2), rust-fixedbitset (= 0.4.2-1), rust-flate2 (= 1.1.9-2), rust-fnv (= 1.0.7-1), rust-foldhash (= 0.2.0-2), rust-form-urlencoded (= 1.2.2-1), rust-futures (= 0.3.34-1), rust-futures-channel (= 0.3.34-1), rust-futures-core (= 0.3.34-1), rust-futures-executor (= 0.3.34-1), rust-futures-io (= 0.3.34-1), rust-futures-sink (= 0.3.34-1), rust-futures-task (= 0.3.34-1), rust-futures-util (= 0.3.34-1), rust-getrandom (= 0.4.2-3), rust-hash32 (= 0.3.1-2), rust-hashbag (= 0.1.12-3), rust-hashbrown (= 0.16.1-2), rust-hashbrown-0.14 (= 0.14.5-2), rust-hashlink (= 0.11.0-1), rust-heapless (= 0.8.0-2), rust-hex (= 0.4.3-3), rust-http (= 1.5.0-1), rust-http-body (= 1.0.1-1), rust-http-body-util (= 0.1.5-1), rust-httparse (= 1.10.1-1), rust-hybrid-array (= 0.4.13-1), rust-hyper (= 1.11.1-1), rust-hyper-rustls (= 0.27.9+ds-1), rust-hyper-util (= 0.1.19-1), rust-iana-time-zone (= 0.1.65-1), rust-idna (= 1.1.0-1), rust-idna-adapter (= 1.1.0-1), rust-idna-mapping (= 1.0.0-1), rust-include-dir (= 0.7.3-1), rust-indexmap (= 2.14.2-1), rust-ipnet (= 2.12.2-1), rust-iri-string (= 0.7.14-1), rust-is-ci (= 1.2.0-1), rust-is-terminal (= 0.4.17-1), rust-is-terminal-polyfill (= 1.70.2-1), rust-itertools (= 0.14.0-2), rust-itoa (= 1.0.18-1), rust-json-event-parser (= 0.2.3+ds-1), rust-lazy-regex (= 3.6.1+20260729+ds-3), rust-lazy-static (= 1.5.0-3), rust-libc (= 0.2.186-1), rust-linux-raw-sys (= 0.12.1-1), rust-lock-api (= 0.4.14-1), rust-log (= 0.4.34-1), rust-matchers (= 0.2.0-1), rust-md-5 (= 0.11.0-2), rust-memchr (= 2.8.3-1), rust-memo-map (= 0.3.1-1), rust-minijinja (= 2.19.0-1), rust-minimal-lexical (= 0.2.1-2), rust-mio (= 1.2.0-1), rust-nibble-vec (= 0.1.0-1), rust-nix (= 0.30.1-3), rust-nom (= 8.0.0-2), rust-nom-7 (= 7.1.3-3), rust-nom-locate (= 5.0.0+ds-3), rust-nu-ansi-term (= 0.50.3-1), rust-num-conv (= 0.2.2-1), rust-num-traits (= 0.2.19-2), rust-once-cell (= 1.21.4-1), rust-openssl-probe (= 0.2.1-3), rust-option-ext (= 0.2.0-1), rust-oxhttp (= 0.3.3+ds-1), rust-oxilangtag (= 0.1.6+ds-1), rust-oxiri (= 0.2.11-2), rust-papergrid (= 0.18.0-1), rust-parking-lot (= 0.12.5-1), rust-parking-lot-core (= 0.9.12-1), rust-peg (= 0.8.5-1), rust-percent-encoding (= 2.3.2-2), rust-petgraph (= 0.6.4-1), rust-pin-project-lite (= 0.2.17-1), rust-portable-atomic (= 1.15.0-2), rust-postcard (= 1.1.3-2), rust-powerfmt (= 0.2.0-1), rust-ppv-lite86 (= 0.2.21-2), rust-pretty (= 0.12.5-1), rust-proptest (= 1.11.0-2), rust-quick-xml (= 0.38.4-1), rust-radix-trie (= 0.2.1-1), rust-rand (= 0.10.3+ds-1), rust-rand-chacha (= 0.10.0-2), rust-rand-core (= 0.10.1-1), rust-rand-xorshift (= 0.5.0-3), rust-rayon (= 1.12.0-1), rust-rayon-core (= 1.13.0-1), rust-regex (= 1.13.1-1), rust-regex-automata (= 0.4.18-1), rust-regex-syntax (= 0.8.11+dfsg-1), rust-reqwest (= 0.13.5-1), rust-ring (= 0.17.14-5), rust-rust-decimal (= 1.42.0-2), rust-rustc-hash (= 2.1.2-2), rust-rustemo (= 0.9.1+ds-5), rust-rustix (= 1.1.4+dfsg-1), rust-rustls (= 0.23.45+ds-1), rust-rustls-native-certs (= 0.8.4+ds-2), rust-rustls-pki-types (= 1.15.1+ds-1), rust-rustls-platform-verifier (= 0.6.2-1), rust-rustls-webpki (= 0.103.15+ds-1), rust-rustyline (= 17.0.2-4), rust-ryu (= 1.0.22-1), rust-ryu-js (= 1.0.2-1), rust-scopeguard (= 1.2.0-1), rust-semver (= 1.0.28-1), rust-serde (= 1.0.229-1), rust-serde-core (= 1.0.229-1), rust-serde-json (= 1.0.154-1), rust-serde-spanned (= 1.1.1-1), rust-sha1 (= 0.11.0-1), rust-sha2 (= 0.11.0-1), rust-sharded-slab (= 0.1.4-2), rust-shlex (= 1.3.0-1), rust-signal-hook (= 0.4.4-1), rust-signal-hook-mio (= 0.3.0-1), rust-signal-hook-registry (= 1.4.8-1), rust-simd-adler32 (= 0.3.9-1), rust-siphasher (= 1.0.4-1), rust-slab (= 0.4.12-1), rust-smallvec (= 1.16.2-1), rust-socket2 (= 0.6.5-1), rust-socket2-0.5 (= 0.5.10-1), rust-stable-deref-trait (= 1.2.1-1), rust-strsim (= 0.11.1-1), rust-subtle (= 2.6.1-1), rust-supports-color (= 3.0.2-1), rust-sync-wrapper (= 1.0.2-1), rust-tabled (= 0.21.0-1), rust-tempfile (= 3.27.0-1), rust-term-size (= 0.3.1-2), rust-termtree (= 0.5.1-1), rust-thiserror (= 2.0.21-1), rust-thread-local (= 1.1.10-1), rust-time (= 0.3.55-1), rust-time-core (= 0.1.9-1), rust-tinyvec (= 1.13.3-1), rust-tokio (= 1.53.2-1), rust-tokio-rustls (= 0.26.4-1), rust-toml (= 1.1.6-1), rust-toml-datetime (= 1.1.1-2), rust-toml-parser (= 1.1.3-1), rust-toml-writer (= 1.1.2-1), rust-tower (= 0.5.3-1), rust-tower-http (= 0.6.8-2), rust-tower-layer (= 0.3.3-1), rust-tower-service (= 0.3.3-1), rust-tracing (= 0.1.44-1), rust-tracing-core (= 0.1.36-2), rust-tracing-log (= 0.2.0-3), rust-tracing-subscriber (= 0.3.23-1), rust-try-lock (= 0.2.5-1), rust-typed-arena (= 2.0.2-1), rust-typenum (= 1.20.1-1), rust-unarray (= 0.1.4-2), rust-unicode-bidi (= 0.3.18-1), rust-unicode-joining-type (= 1.0.0-1), rust-unicode-normalization (= 0.1.25-1), rust-unicode-segmentation (= 1.13.3-1), rust-unicode-width (= 0.2.2-1), rust-untrusted (= 0.9.0-2), rust-url (= 2.5.8-1), rust-utf8-iter (= 1.0.4-1), rust-utf8parse (= 0.2.2-1), rust-vte (= 0.15.0-1), rust-want (= 0.3.1+ds-1), rust-winnow (= 0.7.13-1), rust-yaml-rust2 (= 0.11.0+ds-1), rust-yansi (= 1.0.1-1), rust-zerocopy (= 0.8.26-4), rust-zeroize (= 1.9.0-2), rust-zip (= 5.1.1+dfsg-1), rust-zlib-rs (= 0.6.2-3), rust-zmij (= 1.0.23-1), rust-zopfli (= 0.8.4-1), rustc (= 1.97.1+dfsg1-1)
+science
+Priority: optional
+Filename: pool/main/r/rudof/rudof_0.3.13+ds-1.1_amd64.deb
+Size: 9115208
+MD5sum: 0bc1f1d067ffa91d8de2fad3746bfdf4
+SHA256: 1d7d4b4911c28ea7144a3ed49e879c2024faf2f8d82097627bbf16b53491486e
+
 Package: runcircos-gui
 Source: runcircos-gui (0.0+git20200528.82dda8c-1)
 Version: 0.0+git20200528.82dda8c-1+b1
@@ -23680,6 +23719,22 @@ Filename: pool/main/s/sentencepiece/sentencepiece_0.2.2-1+b2_amd64.deb
 Size: 85700
 MD5sum: 922c0569c6b996ac776c7b3f71f701ae
 SHA256: 3c35ea42b64af28e2c710ab517bdb40f2fa2ef668e001917bc53368ab4b11213
+
+Package: sepp
+Version: 4.5.5+dfsg-3
+Installed-Size: 395
+Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
+Architecture: amd64
+Depends: python3-dendropy, python3:any, default-jre, hmmer, pplacer, libjenkins-json-java, libgoogle-gson-java, libjson-java, ncbi-blast+
+Description: phylogeny with ensembles of Hidden Markov Models
+Homepage: https://github.com/smirarab/sepp/
+Description-md5: ee8cff3bcce79567ca21f881eed92802
+science
+Priority: optional
+Filename: pool/main/s/sepp/sepp_4.5.5+dfsg-3_amd64.deb
+Size: 165156
+MD5sum: 494bb0f28d8e8c9ee28ea4d0d6844762
+SHA256: 012bae341b82ab23021e0ea10164b3ffb6c85ae923e2673cc0c3a119b81a0adc
 
 Package: seqan-needle
 Version: 1.0.3+ds-1
@@ -26015,6 +26070,22 @@ Filename: pool/main/t/tiny-dnn/tiny-dnn_1.0.0a3+ds-6_all.deb
 Size: 113816
 MD5sum: f1e24924af969d6b55326ca057472dd0
 SHA256: 578818e8de5dab85c39e728e6f10209627b2e5f5cc39160bba9acca44f1a867b
+
+Package: tipp
+Version: 1.0+dfsg-5
+Installed-Size: 222
+Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
+Architecture: amd64
+Depends: python3-dendropy, python3:any, sepp (>= 4.5.1+really4.5.1+dfsg-1~), default-jre, libjenkins-json-java, libgoogle-gson-java, libjson-java, ncbi-blast+
+Description: tool for Taxonomic Identification and Phylogenetic Profiling
+Homepage: https://github.com/TeraTrees/TIPP
+Description-md5: 1ea2d505d5dd56ad184833f9b2e0a47f
+science
+Priority: optional
+Filename: pool/main/t/tipp/tipp_1.0+dfsg-5_amd64.deb
+Size: 131108
+MD5sum: b5174d3e7c49395a1db55aaaa44815c5
+SHA256: 653e52e9d8515ea14285f1233c5d4524171f2bfaba2b0ba9183e8496d062b383
 
 Package: tippecanoe
 Version: 2.79.0-1
