@@ -2406,6 +2406,37 @@ Filename: pool/updates/main/n/netatalk/timelord_4.2.3~ds-1+deb13u2_amd64.deb
 Size: 23196
 SHA256: bea523c1e321e929ab037d3361bfadaead23a84aaed37efb903637fa328565cd
 
+Package: network-manager-iodine
+Version: 1.2.0-3.3+deb13u1
+Installed-Size: 155
+Maintainer: Guido Günther <agx@sigxcpu.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34), libglib2.0-0t64 (>= 2.80.0), libnm0 (>= 1.2.0), iodine, adduser
+Description: network management framework (iodine plugin core)
+Homepage: https://honk.sigxcpu.org/piki/projects/network-manager-iodine
+Description-md5: 6ae890d206a4e62ca2a3af16dbd0068a
+net
+Priority: optional
+Filename: pool/updates/main/n/network-manager-iodine/network-manager-iodine_1.2.0-3.3+deb13u1_amd64.deb
+Size: 23044
+SHA256: 56f560a16d1cd3214b60738176e7bf25697b0645ee013f268127979d09180287
+
+Package: network-manager-iodine-gnome
+Source: network-manager-iodine
+Version: 1.2.0-3.3+deb13u1
+Installed-Size: 70
+Maintainer: Guido Günther <agx@sigxcpu.org>
+Architecture: amd64
+Depends: libc6 (>= 2.34), libglib2.0-0t64 (>= 2.80.0), libgtk-3-0t64 (>= 3.0.0), libnm0 (>= 1.2.0), libnma0 (>= 1.1.90), libsecret-1-0 (>= 0.7), network-manager-iodine (= 1.2.0-3.3+deb13u1)
+Description: network management framework (iodine plugin GNOME GUI)
+Homepage: https://honk.sigxcpu.org/piki/projects/network-manager-iodine
+Description-md5: 5b8d8861e58b3d20f3ba888a95d87d6b
+net
+Priority: optional
+Filename: pool/updates/main/n/network-manager-iodine/network-manager-iodine-gnome_1.2.0-3.3+deb13u1_amd64.deb
+Size: 13872
+SHA256: 681d772adcfe0cca09841db94a06d12b5058d2431155a261d5c1cc4cb2a37e04
+
 Package: network-manager-l2tp
 Version: 1.20.20-2+deb13u1
 Installed-Size: 820
@@ -3319,21 +3350,21 @@ Size: 2182076
 SHA256: 22472b167e57fcb4b174408dd1a23fa4ce80719964d532ada9461c883fcb2584
 
 Package: pdns-recursor
-Version: 5.2.13-0+deb13u1
-Installed-Size: 17015
+Version: 5.4.9-1~deb13u1
+Installed-Size: 22690
 Maintainer: pdns-recursor packagers <pdns-recursor@packages.debian.org>
 Architecture: amd64
-Depends: adduser, dns-root-data, publicsuffix, libboost-context1.83.0 (>= 1.83.0), libboost-filesystem1.83.0 (>= 1.83.0), libc6 (>= 2.39), libcap2 (>= 1:2.10), libcurl4t64 (>= 7.16.2), libfstrm0 (>= 0.4.0), libgcc-s1 (>= 4.2), libluajit-5.1-2 (>= 2.1.0~beta3+dfsg-5.3) | libluajit-5.1-2 (>= 2.1.0+openresty), libsnmp40t64 (>= 5.9.4+dfsg), libsodium23 (>= 0.6.1), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libsystemd0
+Depends: dns-root-data, publicsuffix, systemd | systemd-standalone-sysusers | systemd-sysusers, libboost-context1.83.0 (>= 1.83.0), libboost-filesystem1.83.0 (>= 1.83.0), libc6 (>= 2.39), libcap2 (>= 1:2.10), libcurl4t64 (>= 7.16.2), libfstrm0 (>= 0.4.0), libgcc-s1 (>= 4.2), libgnutls30t64 (>= 3.8.1), libluajit-5.1-2 (>= 2.0.4) | libluajit-5.1-2 (>= 2.1.0+openresty), libsnmp40t64 (>= 5.9.4+dfsg), libsodium23 (>= 0.6.1), libssl3t64 (>= 3.0.0), libstdc++6 (>= 14), libsystemd0
 Description: PowerDNS Recursor
 Homepage: https://www.powerdns.com/
-Built-Using: rustc (= 1.85.0+dfsg3-1)
+Built-Using: rust-hyper-rustls (= 0.27.5-2), rust-rustls (= 0.23.26+ds-1), rust-rustls-pki-types (= 1.11.0-2), rust-rustls-webpki (= 0.102.8-5), rustc (= 1.85.1+dfsg1-1+deb13u1)
 Description-md5: f3a31cef06b361a15135f2262ae08934
-Static-Built-Using: rust-base64 (= 0.22.1-1), rust-cxx (= 1.0.141-1), rust-equivalent (= 1.0.1-1), rust-foldhash (= 0.1.4-1), rust-hashbrown (= 0.14.5-5), rust-indexmap (= 2.7.0-1), rust-ipnet (= 2.11.0-1), rust-itoa (= 1.0.14-1), rust-link-cplusplus (= 1.0.10-1), rust-once-cell (= 1.20.2-1), rust-ryu (= 1.0.19-1), rust-serde (= 1.0.217-1), rust-serde-yaml (= 0.9.34-1), rust-unsafe-libyaml (= 0.2.11-1), rustc (= 1.85.0+dfsg3-1)
+Static-Built-Using: rust-base64 (= 0.22.1-1), rust-bytes (= 1.9.0-1), rust-cfg-if (= 1.0.0-1), rust-cxx (= 1.0.141-1), rust-equivalent (= 1.0.1-1), rust-fnv (= 1.0.7-1), rust-foldhash (= 0.1.4-1), rust-form-urlencoded (= 1.2.1-1), rust-futures-channel (= 0.3.31-1), rust-futures-core (= 0.3.31-1), rust-futures-task (= 0.3.31-3), rust-futures-util (= 0.3.31-1), rust-getrandom (= 0.2.15-1), rust-hashbrown (= 0.14.5-5), rust-http (= 1.2.0-1), rust-http-body (= 1.0.1-1), rust-http-body-util (= 0.1.2-1), rust-httparse (= 1.8.0-1), rust-httpdate (= 1.0.2-1), rust-hyper (= 1.5.2-1), rust-hyper-rustls (= 0.27.5-2), rust-hyper-util (= 0.1.10-1), rust-indexmap (= 2.7.0-1), rust-ipnet (= 2.11.0-1), rust-itoa (= 1.0.14-1), rust-libc (= 0.2.169-1), rust-link-cplusplus (= 1.0.10-1), rust-log (= 0.4.26-1), rust-mio (= 1.0.2-3), rust-once-cell (= 1.20.2-1), rust-percent-encoding (= 2.3.1-1), rust-pin-project-lite (= 0.2.13-1), rust-pin-utils (= 0.1.0-1), rust-ring (= 0.17.14-2), rust-rustls (= 0.23.26+ds-1), rust-rustls-pki-types (= 1.11.0-2), rust-rustls-webpki (= 0.102.8-5), rust-ryu (= 1.0.19-1), rust-serde (= 1.0.217-1), rust-serde-yaml (= 0.9.34-1), rust-smallvec (= 1.13.2-1), rust-socket2 (= 0.5.8-1), rust-subtle (= 2.6.1-1), rust-tokio (= 1.43.1-1), rust-tokio-rustls (= 0.26.1-2), rust-tower-service (= 0.3.3-1), rust-tracing (= 0.1.40-1), rust-tracing-core (= 0.1.32-1), rust-try-lock (= 0.2.5-1), rust-unsafe-libyaml (= 0.2.11-1), rust-untrusted (= 0.9.0-2), rust-want (= 0.3.0-1), rust-zeroize (= 1.8.1-1), rustc (= 1.85.1+dfsg1-1+deb13u1)
 net
 Priority: optional
-Filename: pool/updates/main/p/pdns-recursor/pdns-recursor_5.2.13-0+deb13u1_amd64.deb
-Size: 4398516
-SHA256: a3aeef62bd10f552c1b22e28cc6a23c64e42b04c3e063388c3807c985c295128
+Filename: pool/updates/main/p/pdns-recursor/pdns-recursor_5.4.9-1~deb13u1_amd64.deb
+Size: 6716596
+SHA256: 7d08f43c1305c306b168e5a717bbc72a5588cfa352d940948d2eff544edd3e7e
 
 Package: prosody
 Version: 13.0.1-1+deb131u
