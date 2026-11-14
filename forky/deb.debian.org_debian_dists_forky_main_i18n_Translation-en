@@ -34537,17 +34537,6 @@ Description-en: traffic monitor for BPF expression/iptables rule/custom script
  For even bigger flexibility bpfmon supports getting the
  counters from a custom script.
 
-Package: bpftop
-Description-md5: e692e0b647689c5b2b219164a367941e
-Description-en: Provides a dynamic real-time view of running eBPF programs
- It presents average runtime, events per second, and estimated total
- CPU percentage measurements for each program. This tool minimizes
- overhead by enabling performance statistics only while it is active.
- .
- A standout feature of this tool is its ability to display the statistics
- in time series graphs. This approach can uncover patterns and trends
- that could be missed otherwise.
-
 Package: bpftrace
 Description-md5: 77220d45de965013d79717740b8659e5
 Description-en: high-level tracing language for Linux eBPF
@@ -36396,8 +36385,8 @@ Description-en: Nostalgia bucklespring keyboard sound - transitional package
  package per key event source. It can safely be removed.
 
 Package: bucklespring-data
-Description-md5: 39efa95bfea118b4738e165c10085090
-Description-en: Nostalgia bucklespring keyboard sound - sound files
+Description-md5: 97c7e6c79aedd445fec69c67169f4776
+Description-en: Nostalgia bucklespring keyboard sound - Model M clips
  Bucklespring emulates the sound of an old IBM Model-M space saver
  bucklespring keyboard while typing.
  .
@@ -36407,7 +36396,54 @@ Description-en: Nostalgia bucklespring keyboard sound - sound files
  played back while simulating the proper distance and direction for a
  realistic 3D sound palette of pure nostalgic bliss.
  .
- This package contains the keyboard sound files.
+ This package contains the IBM Model M recordings the program began with,
+ the clip set named "bucklespring". It is the set used when none is asked
+ for, and the one the other sets borrow from for keys they do not cover, so
+ every flavour needs it.
+ .
+ The alternative clip sets are in bucklespring-data-vain,
+ bucklespring-data-sequential and bucklespring-data-synth.
+
+Package: bucklespring-data-sequential
+Description-md5: 36db8eb976483d52e1ba023949a40c59
+Description-en: Nostalgia bucklespring keyboard sound - SequentialDesign's clips
+ Bucklespring emulates the sound of an old IBM Model-M space saver
+ bucklespring keyboard while typing.
+ .
+ This package contains the clip set named "sequential": a keyboard recorded
+ by SequentialDesign with two to four takes of every key, one of them chosen
+ at random for each press.
+ .
+ Select it with "buckle --clips=sequential" or from the preferences window.
+
+Package: bucklespring-data-synth
+Description-md5: 13d7eace3157e5289c04e948b4c9bd24
+Description-en: Nostalgia bucklespring keyboard sound - synthesised clips
+ Bucklespring emulates the sound of an old IBM Model-M space saver
+ bucklespring keyboard while typing.
+ .
+ This package contains the clip sets which are not recordings of a
+ keyboard: "piano", a pentatonic scale rising from left to right across the
+ keyboard; "drums", a kick, snare, hat or tom per key; and "slapstick",
+ boings and slide whistles.  The three are made by tools/make-clips.py in
+ the source, so any of them can be remade or altered.
+ .
+ It also contains "beeper", a single beep for a Model M with its PC speaker
+ wired up, which is a recording rather than synthesised.
+ .
+ Select one with "buckle --clips=piano" or from the preferences window.
+
+Package: bucklespring-data-vain
+Description-md5: 2d8bc36077996c253e3d7f52e8816d3a
+Description-en: Nostalgia bucklespring keyboard sound - vain's clips
+ Bucklespring emulates the sound of an old IBM Model-M space saver
+ bucklespring keyboard while typing.
+ .
+ This package contains the clip set named "vain-qwertz": a full QWERTZ
+ layout recorded by vain, with two to four takes of every key, one of them
+ chosen at random for each press.
+ .
+ Select it with "buckle --clips=vain-qwertz" or from the preferences window.
 
 Package: bucklespring-libinput
 Description-md5: a940580fc45455d00926b86e886b968c
@@ -43749,6 +43785,44 @@ Description-en: API documentation for the CDS HEALPix library in Java
  .
  This package contains the Javadoc API.
 
+Package: cdsetool
+Description-md5: d951e0ba0ac105e65cb95024770e2b26
+Description-en: Tools & CLI for interacting with CDSE product APIs - CLI
+ CDSETool provides Python Tools and Command line Interface (CLI)
+ programs for downloading Copernicus data from the Copernicus Data
+ Space Ecosystem.
+ .
+ Features:
+  * query
+  * querying by shapes
+  * querying by lists of parameters
+  * querying by dates
+  * listing search terms
+  * authenticating
+  * concurrently downloading features
+  * sequentially downloading features
+ .
+ This package provides the CLI program.
+
+Package: python3-cdsetool
+Description-md5: bfc2098a0d4243c617191d50f2d822f8
+Description-en: Tools & CLI for interacting with CDSE product APIs - Python
+ CDSETool provides Python Tools and Command line Interface (CLI)
+ programs for downloading Copernicus data from the Copernicus Data
+ Space Ecosystem.
+ .
+ Features:
+  * query
+  * querying by shapes
+  * querying by lists of parameters
+  * querying by dates
+  * listing search terms
+  * authenticating
+  * concurrently downloading features
+  * sequentially downloading features
+ .
+ This package provides the Python package.
+
 Package: cdtool
 Description-md5: 958b66f86ad886922b8d6bb1322a4481
 Description-en: text-based audio CD player and CD-ROM control commands
@@ -45079,6 +45153,14 @@ Description-en: Utility to create and sign CAs and certificates
    * External certs can be imported and managed by Certipy
    * Maintains signing hierarchy
  * Persists certificates to files with appropriate permissions
+
+Package: python3-certipy-ad
+Description-md5: 36f74e0538d4bfe0c50fad986687a284
+Description-en: Tool for Active Directory Certificate Services enumeration and abuse
+ Powerful offensive and defensive toolkit for enumerating and abusing
+ Active Directory Certificate Services (AD CS). Helps red teamers, penetration
+ testers, and defenders assess AD CS misconfigurations - including full support
+ for identifying and exploiting all known ESC1-ESC17 attack paths.
 
 Package: certmonger
 Description-md5: 738d6b1394e6e31874aba5badb793710
@@ -103081,16 +103163,6 @@ Description-en: Exec Maven Plugin
   * exec:exec, execute programs and Java programs in a separate process
   * exec:java, execute Java programs in the same VM.
 
-Package: libmaven-exec-plugin-java
-Description-md5: 94a9fdd6036111504f362d171b148276
-Description-en: Exec Maven Plugin (transitional package)
- Maven plugin to allow execution of system and Java programs.
- It provides two goals to help execute system and Java programs:
-  * exec:exec, execute programs and Java programs in a separate process
-  * exec:java, execute Java programs in the same VM.
- .
- This is a dummy transitional package. It may be safely removed.
-
 Package: elpa-exec-path-from-shell
 Description-md5: 93743a6630e32a5266c57246cc43862c
 Description-en: get environment variables such as $PATH from the shell
@@ -115743,6 +115815,15 @@ Description-md5: 5ab464879228e6a652cf4b7e346bd285
 Description-en: Manage Flatpak permissions
  Flatseal is a graphical utility to review and modify permissions from your
  Flatpak applications.
+
+Package: libflatten-maven-plugin-java
+Description-md5: 99aa6d818b327bd9375c50a696819e85
+Description-en: Maven plugin generating a flattened version of the POM
+ The Flatten Maven Plugin generates a flattened version of the pom.xml that
+ Maven installs and deploys instead of the original. The flattened POM only
+ contains the elements required by the users of the artifact: the build and
+ development specific elements are removed, the variables are resolved, and
+ the parent relationship is resolved, flattened and removed.
 
 Package: libflatzebra-0.2
 Description-md5: e208a42ec5d5aaf499449e25820422cf
@@ -207859,6 +207940,17 @@ Description-en: Development web server
  .
  See https://godoc.org/rsc.io/devweb.
 
+Package: golang-github-rsc-script-dev
+Description-md5: c1218886c5834ccfe72177ec1d6fd6a6
+Description-en: Script engine, especially good for tests (library)
+ A small, customizable, platform-agnostic scripting language.
+ .
+ Scripts are run by an Engine configured with a set of available commands and
+ conditions that guard those commands. Each script has an associated working
+ directory and environment, along with a buffer containing the stdout and stderr
+ output of a prior command, tracked in a State that commands
+ can inspect and modify.
+
 Package: golang-github-rubenv-sql-migrate-dev
 Description-md5: 656c1d990777266d2458ce0b6bd1b299
 Description-en: SQL schema migration tool for Go (library)
@@ -210311,11 +210403,6 @@ Description-en: proxy to upgrade grpc-gateway streaming endpoints to use websock
  over websockets.
  .
  On the wire this uses newline-delimited json encoding of the messages.
-
-Package: golang-github-tmc-scp-dev
-Description-md5: ebb37d69e352e6666c8462079577b525
-Description-en: basic implementation of scp for go
- provides a simple interface to copying files over a go.crypto/ssh session
 
 Package: golang-github-tobischo-argon2-dev
 Description-md5: 6a1c9f75a1eda9c9201306e1d45677fb
@@ -220268,6 +220355,21 @@ Description-en: Retrieve PV information from the Growatt server
  to inverters, storage, and the general status of PV systems. It also allows
  updating certain settings related to plants and inverters, within provided
  parameters.
+
+Package: growl-for-linux
+Description-md5: b1368b57d137bc2480564ee57142d173
+Description-en: Pluggable notification system which supports GNTP
+ Growl For Linux is a linux-compatible notification system of Growl.
+ Growl is a notification system for Mac OS X. It uses GNTP (Growl
+ Notification Transport Protocol) for notification.
+ .
+ Growl For Linux provides four kind of display styles - balloon, fog,
+ libnotify and nico2.
+ The display style is implemented as a plugin, so you can add a new
+ display style if you want.
+ .
+ And more, Growl For Linux supports subscriber which will interact
+ with other software. Currently Growl For Linux supports Rhythmbox.
 
 Package: growlight
 Description-md5: 95b766ad05c389bc6bf27ff8e7697ec9
@@ -276137,12 +276239,12 @@ Description-en: Vietnamese Input Method Engine for IBus using Unikey Engine
  to process keyevents.
 
 Package: ibus-zhuyin
-Description-md5: c4e727caf7d0f62cc45224c9ac1e9cbc
-Description-en: IBus Traditional ZhuYin Input Method
- This traditional Chinese zhuyin input method is designed for old school users.
- .
- There is no intelligent phonetic matching mechanism.
- You have to select which word you want everytime.
+Description-md5: c53ac5abf69dde02c3b294ac1be446e0
+Description-en: Traditional Zhuyin input method for IBus
+ This input method uses Zhuyin (Bopomofo) to enter Traditional Chinese
+ by selecting characters individually. It supports the standard, Eten
+ and Hsu keyboard layouts, phrase suggestions, incremental matching,
+ and an on-screen punctuation keyboard.
 
 Package: ibutils
 Description-md5: 31c3cd12ef2e32510739cbe398755b48
@@ -314000,6 +314102,15 @@ Description-en: Merges overlapping "long" DNA reads into a consensus sequences
  is less than a thousand or so.
  The merging is not always accurate. In particular, if the reads come
  from huge tandem repeats, wrong parts of the reads may get merged.
+
+Package: lambda-align
+Description-md5: 824d9e146ca55261f5f66d6d34b3901a
+Description-en: Local Aligner for Massive Biological DatA
+ Lambda is a local biosequence aligner optimized for many query sequences
+ and searches in protein space. It is compatible to the de facto standard tool
+ BLAST, but often outperforms the best currently available alternatives at
+ reproducing BLAST’s results and is the fastest compared with the current
+ state of the art at comparable levels of sensitivity.
 
 Package: lambda-align2
 Description-md5: 7c5b15838dc1b5d4d89a6850f2bae716
@@ -360765,24 +360876,6 @@ Description-en: CDDB library for KDE Platform (development)
  .
  This package is part of the KDE multimedia module.
 
-Package: libkcompactdisc-dev
-Description-md5: 539d0306eed14eeb7d28116aa92fbcae
-Description-en: CD drive library for KDE Platform (development)
- The KDE Compact Disc library provides an API for applications using
- the KDE Platform to interface with the CD drives for audio CDs.
- .
- This package contains the development files for libKCompactDisc.
- .
- This package is part of the KDE multimedia module.
-
-Package: libkcompactdisc6-5
-Description-md5: fd3a25429cb93cb1d7ca336f3ede63da
-Description-en: CD drive library for KDE Platform (runtime)
- The KDE Compact Disc library provides an API for applications using
- the KDE Platform to interface with the CD drives for audio CDs.
- .
- This package is part of the KDE multimedia module.
-
 Package: libkdcrawqt6-5
 Description-md5: 4059d65a18f2fea278d6caf61339fcd4
 Description-en: RAW picture decoding library qt6
@@ -361025,6 +361118,33 @@ Description-en: Perl module to define new keywords in pure Perl
  this, it is needed to write a module and call Keyword::Simple::define in
  the import method. Any keywords defined this way will be available in
  the lexical scope that's currently being compiled.
+
+Package: libkff-dev
+Description-md5: 108fbd5d54fb894df084021a15d2bdf2
+Description-en: C++ library to read and write kff k-mer files - development files
+ The Kmer File Format (kff) is a binary container for sets of kmers and
+ their associated data, organised in typed sections: global values,
+ raw or minimizer sequences, indexes and a footer.
+ .
+ This library provides a low level API to read and write every kff
+ section type and a high level API that enumerates kmers hiding the
+ section structure.
+ .
+ This package contains the header and the linker symlink needed to
+ build against libkff.
+
+Package: libkff1
+Description-md5: ed85e7c37af0521f9e42dc059095055a
+Description-en: C++ library to read and write kff k-mer files
+ The Kmer File Format (kff) is a binary container for sets of kmers and
+ their associated data, organised in typed sections: global values,
+ raw or minimizer sequences, indexes and a footer.
+ .
+ This library provides a low level API to read and write every kff
+ section type and a high level API that enumerates kmers hiding the
+ section structure.
+ .
+ This package contains the shared library.
 
 Package: libkgapi-data
 Description-md5: 9a9fe56ee9d1ed10699969e2f79360b5
@@ -384416,6 +384536,26 @@ Description-en: Python bindings for libpwquality
  pronounceability.
  .
  This package contains the Python bindings.
+
+Package: python-libpysal-doc
+Description-md5: 8b6abc336ee1f0fab345ad1b3038d37c
+Description-en: Improved Python libpaysal module from (common documentation)
+ Module has the libpysal.cg responsible for Computational Geometry,
+ as well as the libpysal.io which allows input and output as well
+ as libpysal.weights capable of processing Space Weights.
+ .
+ This package contains HTML documentation, incorporates instructions on how
+ to install and configure and use this module Python libpaysal.
+
+Package: python3-libpysal
+Description-md5: a17700c846f11da333bd7de2b1c6d5c2
+Description-en: Library of spatial analysis functions
+ Module has the libpysal.cg responsible for Computational Geometry,
+ as well as the libpysal.io which allows input and output as well
+ as libpysal.weights capable of processing Space Weights.
+ .
+ The module also comes with libpysal.examples, ie built-in example
+ datasets, making it very efficient.
 
 Package: libpyzy-1.0-0v5
 Description-md5: 759302988bd5715f90ab45ee9e6d9859
@@ -437421,6 +437561,43 @@ Description-en: tile caching server - tools
  offering the essential features (and more!) expected from a tile caching
  solution.
 
+Package: python-mapclassify-doc
+Description-md5: c027e6544a1b0ffc783c6faea581c2e2
+Description-en: Classification Schemes for Choropleth Maps (common documentation)
+ Library that provides tools for classifying geographic data on maps.
+ It allows you to divide a spatial dataset into different classes or
+ ranges, making it easier to visualize and analyze this data on maps.
+ .
+ This library is especially useful for grouping and categorizing geographic
+ information, helping to identify patterns and trends in data.
+ .
+ It supports multiple classification methods such as Jenks Natural Breaks,
+ Equal Interval and Quantile, among others, allowing users to choose the
+ best approach for their specific analysis. Additionally, the library is
+ integrated with other popular geographic data analysis tools, making it
+ easy to incorporate their functionality into existing workflows.
+ .
+ This package contains HTML documentation, incorporates instructions on how
+ to install and configure and use this module with mapclassify.
+
+Package: python3-mapclassify
+Description-md5: fddb4c93c6e56e080f55a8729cbfe931
+Description-en: Classification Schemes for Choropleth Maps
+ Library that provides tools for classifying geographic data on maps.
+ It allows you to divide a spatial dataset into different classes or
+ ranges, making it easier to visualize and analyze this data on maps.
+ .
+ This library is especially useful for grouping and categorizing geographic
+ information, helping to identify patterns and trends in data.
+ .
+ It supports multiple classification methods such as Jenks Natural Breaks,
+ Equal Interval and Quantile, among others, allowing users to choose the
+ best approach for their specific analysis. Additionally, the library is
+ integrated with other popular geographic data analysis tools, making it
+ easy to incorporate their functionality into existing workflows.
+ .
+ This package provides the Python 3.x module
+
 Package: mapcode
 Description-md5: ef1f8cda89d4aca457fd8c71f8222e05
 Description-en: Convert geo coordinates to/from mapcodes
@@ -441038,29 +441215,6 @@ Description-en: Maven File Management API
  The Maven File Management API provides an API to collect files from a given
  directory using several include/exclude rules.
 
-Package: libmaven-file-management-java-doc
-Description-md5: 9038bcee8c4e52f4a41d71ea3883798b
-Description-en: Documentation for Maven File Management API
- Maven is a software project management and comprehension tool. Based on the
- concept of a project object model (POM), Maven can manage a project's build,
- reporting and documentation from a central piece of information.
- .
- Maven's primary goal is to allow a developer to comprehend the complete
- state of a development effort in the shortest period of time. In order to
- attain this goal there are several areas of concern that Maven attempts
- to deal with:
- .
-    * Making the build process easy
-    * Providing a uniform build system
-    * Providing quality project information
-    * Providing guidelines for best practices development
-    * Allowing transparent migration to new features
- .
- The Maven File Management API provides an API to collect files from a given
- directory using several include/exclude rules.
- .
- This package contains the API documentation of libmaven-file-management-java.
-
 Package: libmaven-filtering-java
 Description-md5: 7adb0ae6c841a338cd86c73e45d2190b
 Description-en: Maven Filtering
@@ -441394,22 +441548,23 @@ Description-en: Maven resources plugin
  directory.
 
 Package: libmaven-scm-java
-Description-md5: c0a45b47d64253f7778cb66e89c6eb9d
+Description-md5: 32fc248536ae94e310288df1cd1af418
 Description-en: Maven SCM - Common API for SCM operations (Core API)
- Maven SCM supports Maven 2.x plugins and other tools by providing them
- with a common API for doing SCM operations. Maven SCM supports the main
- SCMs such as Subversion, Git, Mercurial, Bazaar, CVS, Perforce and more.
+ Maven SCM supports Maven plugins (for example maven-release-plugin) and
+ other tools by providing them with a common API for source code management
+ operations.
  .
  This package contains the core API (maven-scm-api and maven-scm-managers).
 
 Package: libmaven-scm-providers-java
-Description-md5: 4b4bb411ce2be4da71c4f10d65f4e069
+Description-md5: a4aab61fd2058b9a2e06fc324d7808fe
 Description-en: Maven SCM - Common API for SCM operations (Providers)
- Maven SCM supports Maven 2.x plugins and other tools by providing them
- with a common API for doing SCM operations. Maven SCM supports the main
- SCMs such as Subversion, Git, Mercurial, Bazaar, CVS, Perforce and more.
+ Maven SCM supports Maven plugins (for example maven-release-plugin) and
+ other tools by providing them with a common API for source code management
+ operations.
  .
- This package contains the providers (maven-scm-provider-*).
+ This package contains the providers for Git, Subversion, Mercurial and
+ local repositories (maven-scm-provider-*).
 
 Package: libmaven-script-interpreter-java
 Description-md5: 59798a5524454883494b3bd8690da943
@@ -446226,6 +446381,16 @@ Description-en: file-synchronization tool for Unix and Windows with GTK+ interfa
  handling of the replicas and its private structures.
  .
  This package adds the optional GTK+ interface.
+
+Package: metabat
+Description-md5: 52a2d8f94d83c2e34f9c1421dfe0b201
+Description-en: robust statistical framework for reconstructing genomes from metagenomic data
+ MetaBAT integrates empirical probabilistic distances of genome abundance
+ and tetranucleotide frequency for accurate metagenome binning. MetaBAT
+ outperforms alternative methods in accuracy and computational efficiency
+ on both synthetic and real metagenome datasets. It automatically forms
+ hundreds of high quality genome bins on a very large assembly consisting
+ millions of contigs in a matter of hours on a single node.
 
 Package: metacam
 Description-md5: 1415344d68dd93d75d91009fe57a50c5
@@ -452254,14 +452419,6 @@ Description-en: tools for manipulating machine owner keys
  This program provides the means to enroll and erase the machine owner
  keys (MOK) stored in the database of shim.
 
-Package: mold
-Description-md5: 7b4a7f6ecb8a58aa3dd9407ac4a6f299
-Description-en: Drop-in linker
- mold is a faster drop-in replacement for existing Unix linkers.
- It is several times faster than the LLVM lld linker.
- mold is designed to increase developer productivity by reducing
- build time, especially in rapid debug-edit-rebuild cycles.
-
 Package: molds
 Description-md5: e4dd2cae798824b2fe9bbef772b35774
 Description-en: Semi-empirical electronic structure and molecular dynamics
@@ -455797,6 +455954,43 @@ Description-en: Manage incremental data snapshots with make/rsync
  since they are not preserved by the versions stored in git.
  .
  To use gitkeeper you will need to install the suggested perl packages too.
+
+Package: mrbayes
+Description-md5: 3042004cf4140cc8d89cbd6d7860f485
+Description-en: Bayesian Inference of Phylogeny
+ Bayesian inference of phylogeny is based upon a quantity called the posterior
+ probability distribution of trees, which is the probability of a tree
+ conditioned on the observations. The conditioning is accomplished using
+ Bayes's theorem. The posterior probability distribution of trees is
+ impossible to calculate analytically; instead, MrBayes uses a simulation
+ technique called Markov chain Monte Carlo (or MCMC) to approximate the
+ posterior probabilities of trees.
+
+Package: mrbayes-doc
+Description-md5: f027424b222134607eb60ccf725f268e
+Description-en: Bayesian Inference of Phylogeny - manual
+ Bayesian inference of phylogeny is based upon a quantity called the posterior
+ probability distribution of trees, which is the probability of a tree
+ conditioned on the observations. The conditioning is accomplished using
+ Bayes's theorem. The posterior probability distribution of trees is
+ impossible to calculate analytically; instead, MrBayes uses a simulation
+ technique called Markov chain Monte Carlo (or MCMC) to approximate the
+ posterior probabilities of trees.
+ .
+ This package provides the manual for MrBayes.
+
+Package: mrbayes-mpi
+Description-md5: d4667b242cc8f99f098ff96397619072
+Description-en: Bayesian Inference of Phylogeny - mpi version
+ Bayesian inference of phylogeny is based upon a quantity called the posterior
+ probability distribution of trees, which is the probability of a tree
+ conditioned on the observations. The conditioning is accomplished using
+ Bayes's theorem. The posterior probability distribution of trees is
+ impossible to calculate analytically; instead, MrBayes uses a simulation
+ technique called Markov chain Monte Carlo (or MCMC) to approximate the
+ posterior probabilities of trees.
+ .
+ This package offers a binary compiled for parallel computation with MPI.
 
 Package: mrboom
 Description-md5: ea9f8b4f179d62b9a550e10d41bae6b1
@@ -471722,6 +471916,15 @@ Description-en: Schema and plugins for first-class math support in ProseMirror
  .
  Node.js is an event-based server-side JavaScript engine.
 
+Package: node-bidi-js
+Description-md5: f70f25c0590d4bfe8d423eb1ff3b42fa
+Description-en: JavaScript implementation of the Unicode Bidirectional Algorithm
+ This library resolves the display order of mixed left-to-right and
+ right-to-left text using version 13.0.0 of the Unicode Bidirectional
+ Algorithm. It calculates character embedding levels and reordering
+ segments, identifies mirrored characters and paired brackets, and exposes
+ Unicode bidirectional character types.
+
 Package: node-big-integer
 Description-md5: 78ef45516fade49e0141145cc0dbe446
 Description-en: arbitrary length integer library for JavaScript
@@ -482361,6 +482564,18 @@ Description-en: pipe streams with centralized error handling
  .
  Node.js is an event-based server-side JavaScript engine.
 
+Package: node-murmurhash-js
+Description-md5: 5ef10b71d7a0c192b8a405f9186b5666
+Description-en: JavaScript implementation of MurmurHash algorithms
+ MurmurHash is a family of non-cryptographic hash functions for hash-based
+ lookup. These functions convert strings into numeric hash values for use in
+ hash tables. They are not intended for cryptographic purposes.
+ .
+ This module implements two versions of the algorithm, MurmurHash2 and
+ MurmurHash3. Both accept an ASCII string and an initial integer seed and
+ produce an unsigned 32-bit hash value. MurmurHash3 is the default exported
+ function.
+
 Package: node-music-library-index
 Description-md5: 0dcdfe8baf742549b1dcb3f58104d548
 Description-en: build a searchable object model given track metadata objects - Node.js module
@@ -485065,7 +485280,7 @@ Description-en: Node.js module for promises (CommonJS/Promises/A,B,D)
  Node.js is an event-based server-side JavaScript engine.
 
 Package: node-qrcode
-Description-md5: 3dc9b08685c4411cd1d4285d971b789f
+Description-md5: 19d8e6c8fc2a0a8690b4eb5886671bbf
 Description-en: QR code generator for Node.js and browsers
  This library encodes text and binary data as QR codes, with support for
  numeric, alphanumeric, byte and Kanji encoding modes. It automatically
@@ -485074,7 +485289,7 @@ Description-en: QR code generator for Node.js and browsers
  .
  QR codes can be rendered as PNG or SVG images, drawn on a canvas, or
  displayed in a terminal. A command-line utility can generate images and
- terminal output.
+ terminal output. The command-line utility is installed as node-qrcode.
 
 Package: node-qrcode-generator
 Description-md5: e01f8862753d9c0c495ade9220868a78
@@ -502478,6 +502693,16 @@ Description-en: miscellaneous tools for Octave
  cells (map), a match filter that resembles the filter in Python
  (match) and many more.
 
+Package: octave-mplapack
+Description-md5: fb3d00a34ce6b565ab416333cc69226e
+Description-en: multiple-precision linear algebra for GNU Octave
+ This Octave add-on provides native multiple-precision real and complex
+ scalars and dense matrices, with selected BLAS and LAPACK operations
+ backed by the MPLAPACK MPFR interface.
+ .
+ Its arithmetic uses the packaged MPFR and MPC backends and does not replace
+ Octave's system BLAS or LAPACK.
+
 Package: octave-msh
 Description-md5: 9e7468085607dac6c61e77345d218ff3
 Description-en: create and manage meshes for FE or FV solvers in Octave
@@ -512517,71 +512742,6 @@ Description-en: sound set for use with the OpenTTD game
  charge, which make it possible to play OpenTTD without requiring the user to
  pay for the original Transport Tycoon Deluxe game for its sound set.
 
-Package: libopenturns-dev
-Description-md5: 3837ca75f87543fa90c482c2636a4887
-Description-en: headers and development libraries for OpenTURNS
- OpenTURNS is a powerful and generic tool to treat and quantify
- uncertainties in numerical simulations in design, optimization and
- control. It allows both sensitivity and reliability analysis studies:
-  * defining the outputs of interest and decision criterion;
-  * quantify and model the source of uncertainties;
-  * propagate uncertainties and/or analyse sensitivity and
-  * rank the sources of uncertainty
- .
- Targeted users are all engineers who want to introduce the
- probabilistic dimension in their so far deterministic studies.
- .
- This package contains development files needed to build OpenTURNS applications.
-
-Package: libopenturns0.28
-Description-md5: 07b004be9c64714f05783e44ad0efa7e
-Description-en: dynamic libraries for OpenTURNS
- OpenTURNS is a powerful and generic tool to treat and quantify
- uncertainties in numerical simulations in design, optimization and
- control. It allows both sensitivity and reliability analysis studies:
-  * define the outputs of interest and decision criteria;
-  * quantify and model the source of uncertainties;
-  * propagate uncertainties and/or analyse sensitivity
-  * rank the sources of uncertainty
- .
- Targeted users are all engineers who want to introduce the
- probabilistic dimension in their so far deterministic studies.
- .
- This package provides the dynamic libraries.
-
-Package: openturns-common
-Description-md5: 88b7fb2a4dbd12663b0748b0b036e84e
-Description-en: generic tool to treat and quantify uncertainties (common files)
- OpenTURNS is a powerful and generic tool to treat and quantify
- uncertainties in numerical simulations in design, optimization and
- control. It allows both sensitivity and reliability analysis studies:
-  * defining the outputs of interest and decision criterion;
-  * quantify and model the source of uncertainties;
-  * propagate uncertainties and/or analyse sensitivity and
-  * rank the sources of uncertainty
- .
- Targeted users are all engineers who want to introduce the
- probabilistic dimension in their so far deterministic studies.
- .
- This package contains the configuration file for the versioned library
- package.
-
-Package: python3-openturns
-Description-md5: 8b25f3dcaf8ac5517420c1b6bb95981f
-Description-en: Python3 front-end of OpenTURNS (aka TUI)
- OpenTURNS is a powerful and generic tool to treat and quantify
- uncertainties in numerical simulations in design, optimization and
- control. It allows both sensitivity and reliability analysis studies:
-  * defining the outputs of interest and decision criterion;
-  * quantify and model the source of uncertainties;
-  * propagate uncertainties and/or analyse sensitivity and
-  * rank the sources of uncertainty
- .
- Targeted users are all engineers who want to introduce the
- probabilistic dimension in their so far deterministic studies.
- .
- This package provides the Python3 bindings to the library.
-
 Package: opentype-sanitizer
 Description-md5: 100d5c08a0748925a02ee806be5ff51d
 Description-en: tools to validate and sanitize OTF/TTF/WOFF/WOFF2 font files
@@ -514859,6 +515019,34 @@ Description-en: Command line tool for working with OpenStreetMap data
  data filtering and conversion functions. Osmium can create WKT, WKB, OGR, GEOS
  and GeoJSON geometries for easy conversion into many GIS formats and it can
  assemble multipolygons from ways and relations.
+
+Package: python-osmnx-doc
+Description-md5: 5c2b79887b6eeffcfb6fee5546e3623e
+Description-en: tool to study street networks from OpenStreetMap -- doc
+ OSMnx retrieves, models, analyzes, and visualizes street networks
+ from OpenStreetMap (OSM).
+ .
+ OSMnx is a Python package that lets you download spatial geometries
+ and model, project, visualize, and analyze street networks from
+ OpenStreetMap's APIs. Users can download and model walkable, drivable,
+ or bikable urban networks with a single line of Python code, and then
+ easily analyze and visualize them.
+ .
+ This package contains documentation for OSMnx.
+
+Package: python3-osmnx
+Description-md5: 17bdfc22b4609b0fe46a5bed872f83df
+Description-en: tool to study street networks from OpenStreetMap -- Python3
+ OSMnx retrieves, models, analyzes, and visualizes street networks
+ from OpenStreetMap (OSM).
+ .
+ OSMnx is a Python package that lets you download spatial geometries
+ and model, project, visualize, and analyze street networks from
+ OpenStreetMap's APIs. Users can download and model walkable, drivable,
+ or bikable urban networks with a single line of Python code, and then
+ easily analyze and visualize them.
+ .
+ This package contains the Python 3 version of OSMnx.
 
 Package: osmo
 Description-md5: 5c5b27d85c5a365939379323a1f30993
@@ -519051,184 +519239,6 @@ Description-en: PaperWM-like scollable tiling window management for Sway/i3wm
  for Sway/i3wm.  If you like Sway/i3wm's commitments to stability, avoiding
  scope creep etc. but dislike the window management model, papersway might be
  of interest.
-
-Package: openpaperwork-core
-Description-md5: 7e7f562cc48802b6f919e27c62e18432
-Description-en: OpenPaperwork plugins manager - core plugins manager
- The core manages Plugins, Callbacks and Interfaces. This package also provide
- some basic plugins that may be used in any kind of application.
- .
- This package contains only core plugins. The GUI is included in paperwork-gtk
- package.
-
-Package: openpaperwork-core-doc
-Description-md5: 06b1acb4f0093888809e9c418f210883
-Description-en: OpenPaperwork plugins manager - core plugins manager documentation
- The core manages Plugins, Callbacks and Interfaces. This package also provide
- some basic plugins that may be used in any kind of application.
- .
- This package contains the documentation
-
-Package: openpaperwork-gtk
-Description-md5: 6e0e7716561cacf73fb936e17591e4d3
-Description-en: OpenPaperwork Glib/GTK plugins manager
- This package extends the openpaperwork-core with GLib/GTK plugins that may be
- used in any GUI application.
- .
- This package contains only Glib/GTK plugins. The GUI is included in
- paperwork-gtk package.
-
-Package: openpaperwork-gtk-doc
-Description-md5: ffa79bbbfa2cbeff40ad2bb0cceab2b3
-Description-en: OpenPaperwork Glib/GTK plugins manager - documentation
- This package extends the openpaperwork-core with GLib/GTK plugins that may be
- used in any GUI application.
- .
- This package contains the documentation
-
-Package: paperwork-backend
-Description-md5: c97754e1411c569bb8acdd7c39725f58
-Description-en: Personal document manager
- This is the backend part of Paperwork. It manages: The work directory / Access
- to the documents, Indexing, Searching, Suggestions, Import, Export.
- .
- Paperwork is a personal document manager. It manages scanned documents and
- PDFs.
- It's designed to be easy and fast to use. The idea behind Paperwork
- is "scan & forget": You can just scan a new document and
- forget about it until the day you need it again.
- In other words, let the machine do most of the work for you.
-
-Package: paperwork-backend-doc
-Description-md5: 8863a01d709d3a1abc023bc628c6d82f
-Description-en: Paperwork is a personal document manager - backend documentation
- This is the backend part of Paperwork. It manages: The work directory / Access
- to the documents, Indexing, Searching, Suggestions, Import, Export.
- .
- Paperwork is a personal document manager. It manages scanned documents and
- PDFs.
- It's designed to be easy and fast to use. The idea behind Paperwork
- is "scan & forget": You can just scan a new document and
- forget about it until the day you need it again.
- In other words, let the machine do most of the work for you.
- .
- This package contains the documentation
-
-Package: paperwork-gtk
-Description-md5: e5c492f08f1e05b965079e826981f8c2
-Description-en: Paperwork is a personal document manager - GTK3 frontend
- This is the GTK3 frontend part of Paperwork. It manages: The work directory /
- Access to the documents, Indexing, Searching, Suggestions, Import, Export.
- .
- Paperwork is a personal document manager. It manages scanned documents and
- PDFs.
- It's designed to be easy and fast to use. The idea behind Paperwork
- is "scan & forget": You can just scan a new document and
- forget about it until the day you need it again.
- In other words, let the machine do most of the work for you.
- .
- This package does not include localization files and dependencies. If you wish
- to install paperwork in your language, check the corresponding
- paperwork-gtk-l10n-* packages.
-
-Package: paperwork-gtk-l10n-de
-Description-md5: 6d349ca45758eba89133f3c4e5c84c04
-Description-en: Gui for paperwork-backend - German localization
- This is the GTK3 frontend part of Paperwork. It manages: The work directory /
- Access to the documents, Indexing, Searching, Suggestions, Import, Export.
- .
- Paperwork is a personal document manager. It manages scanned documents and
- PDFs.
- It's designed to be easy and fast to use. The idea behind Paperwork
- is "scan & forget": You can just scan a new document and
- forget about it until the day you need it again.
- In other words, let the machine do most of the work for you.
- .
- This package installs German localized dependencies.
-
-Package: paperwork-gtk-l10n-en
-Description-md5: 1f81b091c9307c8d9cce0718e4d9ee56
-Description-en: Gui for paperwork-backend - English localization
- This is the GTK3 frontend part of Paperwork. It manages: The work directory /
- Access to the documents, Indexing, Searching, Suggestions, Import, Export.
- .
- Paperwork is a personal document manager. It manages scanned documents and
- PDFs.
- It's designed to be easy and fast to use. The idea behind Paperwork
- is "scan & forget": You can just scan a new document and
- forget about it until the day you need it again.
- In other words, let the machine do most of the work for you.
- .
- This metapackage installs English localized dependencies.
-
-Package: paperwork-gtk-l10n-es
-Description-md5: b1499f807971826ab06586a168e69413
-Description-en: Gui for paperwork-backend - Spanish localization
- This is the GTK3 frontend part of Paperwork. It manages: The work directory /
- Access to the documents, Indexing, Searching, Suggestions, Import, Export.
- .
- Paperwork is a personal document manager. It manages scanned documents and
- PDFs.
- It's designed to be easy and fast to use. The idea behind Paperwork
- is "scan & forget": You can just scan a new document and
- forget about it until the day you need it again.
- In other words, let the machine do most of the work for you.
- .
- This package installs Spanish localized dependencies.
-
-Package: paperwork-gtk-l10n-fr
-Description-md5: 84b1e62df5298e923a8d1abfe6963526
-Description-en: Gui for paperwork-backend - French localization
- This is the GTK3 frontend part of Paperwork. It manages: The work directory /
- Access to the documents, Indexing, Searching, Suggestions, Import, Export.
- .
- Paperwork is a personal document manager. It manages scanned documents and
- PDFs.
- It's designed to be easy and fast to use. The idea behind Paperwork
- is "scan & forget": You can just scan a new document and
- forget about it until the day you need it again.
- In other words, let the machine do most of the work for you.
- .
- This package installs French localized dependencies.
-
-Package: paperwork-gtk-l10n-oc
-Description-md5: de63ea2adc024b0402632d207c53f6c7
-Description-en: Gui for paperwork-backend - Occitan localization
- This is the GTK3 frontend part of Paperwork. It manages: The work directory /
- Access to the documents, Indexing, Searching, Suggestions, Import, Export.
- .
- Paperwork is a personal document manager. It manages scanned documents and
- PDFs.
- It's designed to be easy and fast to use. The idea behind Paperwork
- is "scan & forget": You can just scan a new document and
- forget about it until the day you need it again.
- In other words, let the machine do most of the work for you.
- .
- This package installs Occitan localized dependencies.
-
-Package: paperwork-gtk-l10n-uk
-Description-md5: fe893509ef5670171c21171807fbd200
-Description-en: Gui for paperwork-backend - Ukrainian localization
- This is the GTK3 frontend part of Paperwork. It manages: The work directory /
- Access to the documents, Indexing, Searching, Suggestions, Import, Export.
- .
- Paperwork is a personal document manager. It manages scanned documents and
- PDFs.
- It's designed to be easy and fast to use. The idea behind Paperwork
- is "scan & forget": You can just scan a new document and
- forget about it until the day you need it again.
- In other words, let the machine do most of the work for you.
- .
- This package installs Ukrainian localized dependencies.
-
-Package: paperwork-shell
-Description-md5: 0b0d7874683169f0e8d2861e0e3d95fe
-Description-en: Paperwork is a personal document manager - command line utils
- Paperwork-shell provides 2 commands:
- * paperwork-cli: Human-friendly command line interface. For instance, it
-   can be useful if you want to use Paperwork through SSH.
- * paperwork-json: Designed to be used in scripts. Results can be parsed in
-   shell scripts using jq.
 
 Package: libpapi-dev
 Description-md5: ad8c33eae9baf7e2a45dc255ff4527ee
@@ -526127,76 +526137,6 @@ Description-en: efficient mapping of short reads with periodic spaced seeds
  providing full sensitivity for alignments within 4 mismatches for 50bp SOLID
  reads and 9 mismatches for 100bp Illumina reads.
 
-Package: libpersalys-dev
-Description-md5: 9eccf9a0a92fb4d27c16f30e64679731
-Description-en: GUI for uncertainty treatment (development files)
- Persalys is a graphical user interface for OpenTURNS, dedicated to the
- treatment of uncertainty and the management of variabilities. The software is
- a tool between the computer simulation, probabilistic analyses and the data
- sciences. The interface is available in French or in English.
- .
- Persalys allows one to:
-  - create mathematical models: analytical, coupling with an external model
-  (finite elements, ...), FMU;
-  - analyse the variability of one's parameters thanks to many methods and
-  visualisation tools;
-  - statistically analyse one's measuring data, infer probability distributions
-  or create metamodels.
- .
- This package contains the development files.
-
-Package: libpersalys0
-Description-md5: f2f0de45f0d51d4a7bcaa36827144220
-Description-en: GUI for uncertainty treatment (shared libraries)
- Persalys is a graphical user interface for OpenTURNS, dedicated to the
- treatment of uncertainty and the management of variabilities. The software is
- a tool between the computer simulation, probabilistic analyses and the data
- sciences. The interface is available in French or in English.
- .
- Persalys allows one to:
-  - create mathematical models: analytical, coupling with an external model
-  (finite elements, ...), FMU;
-  - analyse the variability of one's parameters thanks to many methods and
-  visualisation tools;
-  - statistically analyse one's measuring data, infer probability distributions
-  or create metamodels.
- .
- This package contains the shared libraries.
-
-Package: persalys
-Description-md5: 8f0e03f016627f3329187c5c9a128b1a
-Description-en: GUI for uncertainty treatment and variabilities management
- Persalys is a graphical user interface for OpenTURNS, dedicated to the
- treatment of uncertainty and the management of variabilities. The software is
- a tool between the computer simulation, probabilistic analyses and the data
- sciences. The interface is available in French or in English.
- .
- Persalys allows one to:
-  - create mathematical models: analytical, coupling with an external model
-  (finite elements, ...), FMU;
-  - analyse the variability of one's parameters thanks to many methods and
-  visualisation tools;
-  - statistically analyse one's measuring data, infer probability distributions
-  or create metamodels.
-
-Package: python3-persalys
-Description-md5: 030b49071f37cfca9fbc65b00a582656
-Description-en: GUI for uncertainty treatment (Python bindings)
- Persalys is a graphical user interface for OpenTURNS, dedicated to the
- treatment of uncertainty and the management of variabilities. The software is
- a tool between the computer simulation, probabilistic analyses and the data
- sciences. The interface is available in French or in English.
- .
- Persalys allows one to:
-  - create mathematical models: analytical, coupling with an external model
-  (finite elements, ...), FMU;
-  - analyse the variability of one's parameters thanks to many methods and
-  visualisation tools;
-  - statistically analyse one's measuring data, infer probability distributions
-  or create metamodels.
- .
- This package contains the Python3 bindings.
-
 Package: persepolis
 Description-md5: 36d266d9c3e9173c7b684e90ca84de93
 Description-en: Graphical download manager
@@ -528438,27 +528378,6 @@ Description-en: daemon to proxy WebDAV request to the Spice virtio channel
  .
  This package contains a daemon to proxy WebDAV request to the Spice virtio
  channel.
-
-Package: phoenix
-Description-md5: 562c3da8a1ac85eb56860c1b3d7cbb49
-Description-en: Firefox and Firefox ESR configurations for improved privacy
- Phoenix is a suite of configurations and advanced modifications for Mozilla
- Firefox and FireFox ESR, designed to put the user first with a focus on
- privacy, security, freedom, & usability.
- .
- Some elementary features:
- .
-  * Enables HTTPS-First
-  * Explicitly blocks insecure downloads
-  * Clears browsing history on exit by default
-  * Clears form data on exit by default
-  * Clears cache on exit by default
-  * Clears active logins (sessions) on exit by default
- .
- THIS PACKAGE CLEARS YOUR SEARCH HISTORY.
- THE CONSEQUENCES OF LOSING BROWSER DATA ARE THE RESPONSIBILITY OF THE USER.
- YOU MUST READ THE WIKI BEFORE INSTALLING THIS.
- https://codeberg.org/celenity/Phoenix/wiki
 
 Package: firm-phoenix-ware
 Description-md5: 6d0b4551d71df3c7e6e085de23346b8b
@@ -538411,26 +538330,6 @@ Description-en: Class loading utilities for the Plexus framework
   * Various dependency injection techniques including constructor injection,
    setter injection, and private field injection.
 
-Package: libplexus-cli-java
-Description-md5: e7776fc412c960ce1bcb6fb97a0af129
-Description-en: Easily create CLIs with Plexus components
- The Plexus project provides a full software stack for creating and
- executing software projects. Based on the Plexus container, the applications
- can utilise component-oriented programming to build modular, reusable
- components that can easily be assembled and reused.
- .
- This package provides a facility for creating CLIs with Plexus.
-
-Package: libplexus-cli-java-doc
-Description-md5: 38948b4e16ce6b3f2abdadb54a298a75
-Description-en: Documentation for Plexus CLI
- The Plexus project provides a full software stack for creating and
- executing software projects. Based on the Plexus container, the applications
- can utilise component-oriented programming to build modular, reusable
- components that can easily be assembled and reused.
- .
- This package contains the API documentation of libplexus-cli-java.
-
 Package: libplexus-compiler-java
 Description-md5: cab89c52692850e6656d11896c9440e9
 Description-en: Plexus compiler system
@@ -538605,29 +538504,6 @@ Description-en: utilities for the Plexus framework
   * Component dependencies, and
   * Various dependency injection techniques including constructor injection,
    setter injection, and private field injection.
-
-Package: libplexus-utils2-java-doc
-Description-md5: 0189c240ce6417688e86acb66bbeee59
-Description-en: utilities for the Plexus framework - documentation
- The Plexus project provides a full software stack for creating and executing
- software projects. Based on the Plexus container, the applications can
- utilise component-oriented programming to build modular, reusable components
- that can easily be assembled and reused.
- .
- While Plexus is similar to other inversion-of-control (IoC) or dependency
- injection frameworks such as the Spring Framework, it is a full-fledged
- container that supports many more features such as:
- .
-  * Component lifecycles
-  * Component instantiation strategies
-  * Nested containers
-  * Component configuration
-  * Auto-wiring
-  * Component dependencies, and
-  * Various dependency injection techniques including constructor injection,
-   setter injection, and private field injection.
- .
- This package provides the API documentation for libplexus-utils2-java.
 
 Package: libplexus-velocity-java
 Description-md5: 55c1e6c627fac0ace7f0247cd6a36ee7
@@ -541463,6 +541339,42 @@ Description-en: OMEMO plugin for Poezio
  .
  It only supports OMEMO in the eu.siacs.conversations.axolotl
  namespace.
+
+Package: python-pointpats-doc
+Description-md5: 8bea4e2175beccd99f988a94fbb13ddb
+Description-en: statistical analysis of planar point patterns (common documentation)
+ The main objective of this module is to provide methods and functions for
+ analyzing spatial patterns in point data. This includes the detection and
+ characterization of different types of patterns, such as clusters, scatters
+ or random patterns.
+ .
+ The project is integrated with the PySAL library, which is a broader library
+ for spatial analysis in Python. This means that PointPatterns can be used in
+ conjunction with other tools available in the PySAL ecosystem.
+ .
+ One of the main features of the module is to provide methods to calculate
+ descriptive statistics, detect spatial clusters, perform orbit analysis
+ and even perform statistical tests to evaluate the significance of observed
+ patterns.
+ .
+ This package installs the common documentation package.
+
+Package: python3-pointpats
+Description-md5: ca5b9f1a64b98195ae667e1ccedece17
+Description-en: statistical analysis of planar point patterns
+ The main objective of this module is to provide methods and functions for
+ analyzing spatial patterns in point data. This includes the detection and
+ characterization of different types of patterns, such as clusters, scatters
+ or random patterns.
+ .
+ The project is integrated with the PySAL library, which is a broader library
+ for spatial analysis in Python. This means that PointPatterns can be used in
+ conjunction with other tools available in the PySAL ecosystem.
+ .
+ One of the main features of the module is to provide methods to calculate
+ descriptive statistics, detect spatial clusters, perform orbit analysis
+ and even perform statistical tests to evaluate the significance of observed
+ patterns.
 
 Package: elpa-poke
 Description-md5: 5c85f5affe62b3660bf46a4e8206a179
@@ -574692,6 +574604,24 @@ Description-en: Python 3 bindings and utilities for GeoJSON
  .
  This is the Python 3 version of the library
 
+Package: python3-geopandas
+Description-md5: 7915f3a9bc68354c563139f895e789dc
+Description-en: Python3 tools for geographic data
+ GeoPandas is a project to add support for geographic data to
+ pandas objects.  It currently implements
+ `GeoSeries` and `GeoDataFrame` types which are subclasses of
+ `pandas.Series` and `pandas.DataFrame` respectively.  GeoPandas
+ objects can act on shapely  geometry objects and perform geometric operations.
+ .
+ GeoPandas geometry operations are cartesian.  The coordinate reference
+ system (crs) can be stored as an attribute on an object, and is
+ automatically set when loading from a file.  Objects may be
+ transformed to new coordinate systems with the `to_crs()` method.
+ There is currently no enforcement of like coordinates for operations,
+ but that may change in the future.
+ .
+ This package contains the Python 3 version of the library.
+
 Package: python3-georss-client
 Description-md5: 3b0edcbb3904e3630b347d7612cc042d
 Description-en: Python GeoRSS client library
@@ -580952,6 +580882,24 @@ Description-en: tool to write load tests in Python
  .
  This package contains the Python 3.x module and CLI.
 
+Package: python-momepy-doc
+Description-md5: edc90c93b99bc09bdd765f64dc80cf29
+Description-en: Urban Morphology Measuring Toolkit - doc
+ Momepy is a library for quantitative analysis of urban form - urban
+ morphometrics. It is part of PySAL (Python Spatial Analysis Library) and is
+ built on top of GeoPandas, other PySAL modules, and networkX.
+ .
+ This package contains the documentation.
+
+Package: python3-momepy
+Description-md5: 08a1edf5f7826f149316462dc18fccf7
+Description-en: Urban Morphology Measuring Toolkit - Python 3.x
+ Momepy is a library for quantitative analysis of urban form - urban
+ morphometrics. It is part of PySAL (Python Spatial Analysis Library) and is
+ built on top of GeoPandas, other PySAL modules, and networkX.
+ .
+ This package contains the Python 3.x module.
+
 Package: python3-momonga
 Description-md5: 293d3437ac32c5a742708d3adcab80ae
 Description-en: Route B communicator for low-voltage smart electric energy meters
@@ -582425,15 +582373,6 @@ Description-en: OpenStack Observability Client - Python 3.x
  .
  This package contains the Python 3.x module.
 
-Package: python3-ocp
-Description-md5: 911ab2f53969155c0ee466a9a50b3ab3
-Description-en: Python wrapper for OCCT generated using pywrap
- Goals:
-  * Provide thin bindings to OCCT.
-  * Wrap all OCCT modules (if practical).
-  * React quickly to new OCCT releases.
-  * Cater primarily for the CadQuery project.
-
 Package: python3-ocpp
 Description-md5: d9766939ebc5f6f07b5592b573e521f6
 Description-en: Python implementation of the Open Charge Point Protocol (OCPP).
@@ -582896,12 +582835,6 @@ Description-en: Validates OpenAPI Specs against 2.0, 3.0 and 3.1 standards (Pyth
  .
  This package installs the library for Python 3 and a command line validation
  tool.
-
-Package: python3-opencascade-pywrap
-Description-md5: 94cfd0bb38d22ae8a71fb8e6b6051a47
-Description-en: Headers for Opencascade Python wrappers
- This package builds headers for Opencascade Python wrappers from the
- Opencascade headers themselves. It is not really useful by itself.
 
 Package: python3-opendata-transport
 Description-md5: a3974402276f2f3b4f49b2e6ecb9359b
@@ -609479,29 +609412,6 @@ Description-en: Qt 5 declarative private development files
  .
  Use at your own risk.
 
-Package: libqt5quick5-gles
-Description-md5: 70395f664bd188ac9751f21120d0d22c
-Description-en: Qt 5 Quick library — OpenGL ES variant
- Qt is a cross-platform C++ application framework. Qt's primary feature
- is its rich set of widgets that provide standard GUI functionality.
- .
- Qt Quick is a collection of technologies that are designed to help
- developers create the kind of intuitive, modern, fluid user interfaces
- that are increasingly used on mobile phones, media players, set-top
- boxes and other portable devices.
- .
- This package provides a version of Qt Quick library built against OpenGL
- ES, for use on embedded/mobile devices.
-
-Package: libqt5quickparticles5-gles
-Description-md5: 4831f260b13683231de1e649d4262600
-Description-en: Qt 5 Quick particles module — OpenGL ES variant
- Qt is a cross-platform C++ application framework. Qt's primary feature
- is its rich set of widgets that provide standard GUI functionality.
- .
- This package provides a version of the Qt Quick Particles support library
- built against OpenGL ES, for use on embedded/mobile devices.
-
 Package: qtea-src
 Description-md5: c6640b5c3e37b3e4ffd38513dae9304e
 Description-en: Quality Tea Frontend, Qt-based Jolly Good emulator frontend
@@ -616334,10 +616244,10 @@ Description-en: GNU R clustering graphics
  panels according to their merit level.
 
 Package: r-cran-gdtools
-Description-md5: 6c9fb8231b8744ccc627f0ea191a3d10
+Description-md5: ef68ba4879308e177b4d34c14f78aee3
 Description-en: Font Metrics and Font Management Utilities for R Graphics
- Compute text metrics (width, ascent, descent) using 'Cairo'
- and 'FreeType', independently of the active graphic device. Font lookup
+ Compute text metrics (width, ascent, descent) from font files
+ with 'FreeType', independently of the active graphic device. Font lookup
  is delegated to 'systemfonts'. Additional utilities let users register
  'Google Fonts' or bundled 'Liberation' fonts, check font availability,
  and assemble 'htmlDependency' objects so that fonts are correctly embedded
@@ -622902,6 +622812,15 @@ Description-en: GNU R package for financial engineering -- timeSeries
  Diethelm Wuertz and others.
  .
  timeDate provides functions for financial time series objects.
+
+Package: r-cran-tinytable
+Description-md5: 1f47032c85f84d169be7c4b7d6c99965
+Description-en: GNU R package for creation of highly customized tables
+ This simple and dependency-free package converts data frames to
+ 'HTML', 'LaTeX', 'Markdown', 'Word', 'PNG', 'PDF', or 'Typst' tables.
+ The user interface is minimalist and easy to learn. The syntax is concise.
+ 'HTML' tables can be customized using the flexible 'Bootstrap' framework,
+ and 'LaTeX' code with the 'tabularray' package.
 
 Package: r-cran-tinytest
 Description-md5: 2a20c7e1b156b1a22d2fc5ac5b24750b
@@ -653899,16 +653818,6 @@ Description-md5: 7fd5d1f46b2561c878275525efd1825d
 Description-en: The Python bisect module - Rust source code
  Source code for Debianized Rust crate "bisection"
 
-Package: librust-bisync-dev
-Description-md5: 54ac05ac1afb0a935dfb0b209ba107ba
-Description-en: Write async-generic code - Rust source code
- Source code for Debianized Rust crate "bisync"
-
-Package: librust-bisync-macros-dev
-Description-md5: 8af2bce86ca7855d760491f06a27e638
-Description-en: Macro implementations for the bisync crate - Rust source code
- Source code for Debianized Rust crate "bisync_macros"
-
 Package: librust-bit-dev
 Description-md5: ef1bdc0195b00a61b95fadc0d83a84e4
 Description-en: Library which provides helpers to manipulate bits and bit ranges - Rust source code
@@ -661549,6 +661458,16 @@ Description-md5: 4e8d82d4f219d3a582b2b6e6dbbad0a1
 Description-en: FFI bindings to libgstbase-1.0 - Rust source code
  Source code for Debianized Rust crate "gstreamer-base-sys"
 
+Package: librust-gstreamer-check-dev
+Description-md5: 4121b0a31e1f1adc9a711158a627f6da
+Description-en: Rust bindings for GStreamer Check library - Rust source code
+ Source code for Debianized Rust crate "gstreamer-check"
+
+Package: librust-gstreamer-check-sys-dev
+Description-md5: 1de57b31731deec476eef219c67795ec
+Description-en: FFI bindings to libgstcheck-1.0 - Rust source code
+ Source code for Debianized Rust crate "gstreamer-check-sys"
+
 Package: librust-gstreamer-gl-dev
 Description-md5: ae337f9db5106ae92edf58dcc604c442
 Description-en: Rust bindings for GStreamer GL library - Rust source code
@@ -661638,12 +661557,6 @@ Package: librust-gtk-0.18-dev
 Description-md5: 54f914dd94a436a0e84ee1a996ba51eb
 Description-en: Rust bindings for the GTK+ 3 library - Rust source code
  Source code for Debianized Rust crate "gtk"
-
-Package: librust-gtk-rs-lgpl-docs-dev
-Description-md5: 998032fb39200e4cf83f931cd6a633c4
-Description-en: LGPL-licensed docs for Gtk-rs crates - Rust source code
- This package contains the source for the Rust gtk-rs-lgpl-docs crate, packaged
- by debcargo for use with cargo and dh-cargo.
 
 Package: librust-gtk-sys-0.18-dev
 Description-md5: b5e3a39913e635b16528358124c5568c
@@ -662103,17 +662016,6 @@ Description-en: Safe and secure low-level DNS library - Rust source code
  Hickory DNS crates.
  .
  Source code for Debianized Rust crate "hickory-proto"
-
-Package: librust-hickory-recursor-dev
-Description-md5: 52c52ee3378ecd226156ef341916701a
-Description-en: *WARNING* This library is experimental - Rust source code
- Hickory DNS Recursor is a safe and secure DNS recursive resolver with DNSSEC
- support.  Hickory DNS is based on the Tokio and Futures libraries, which
- means  it should be easily integrated into other software that also use those
- libraries. This library can be used as in the server and binary for performing
- recursive lookups.
- .
- Source code for Debianized Rust crate "hickory-recursor"
 
 Package: librust-hickory-resolver-dev
 Description-md5: d59821e92b18c7eb68e7840b98740351
@@ -675297,8 +675199,8 @@ Description-en: Send log messages to syslog - Rust source code
  Source code for Debianized Rust crate "syslog"
 
 Package: librust-system-deps-dev
-Description-md5: 132f06e5e7af1e41ee27dbcf5cb25edc
-Description-en: Discover and configure system dependencies from declarative dependencies in Cargo.toml - Rust source code
+Description-md5: 7e61c176836d902f3fea698ee0c48824
+Description-en: Discover and configure system dependencies from Cargo.toml - Rust source code
  Source code for Debianized Rust crate "system-deps"
 
 Package: librust-system-deps-meta-dev
@@ -678141,6 +678043,16 @@ Description-md5: c5968e7ec5c7fc8ffccb24a3fa8343b9
 Description-en: Proc macro for generating VTE state changes - Rust source code
  This package contains the source for the Rust vte_generate_state_changes crate,
  packaged by debcargo for use with cargo and dh-cargo.
+
+Package: librust-vte4-dev
+Description-md5: dfe3ab284fa664878e03a26bbfe3c01b
+Description-en: Rust bindings for the VTE Gtk4 library - Rust source code
+ Source code for Debianized Rust crate "vte4"
+
+Package: librust-vte4-sys-dev
+Description-md5: a83dd62065db1a02ee9da68709cf0482
+Description-en: FFI bindings to vte-2.91-gtk4 - Rust source code
+ Source code for Debianized Rust crate "vte4-sys"
 
 Package: librust-vtparse-dev
 Description-md5: ca14db120c43202bc032fd821269e95f
@@ -704570,34 +704482,6 @@ Description-en: tool for ssh server & client auditing
   * supports Python 3.8 - 3.13;
   * no dependencies;
 
-Package: ssh-contact
-Description-md5: 8401197a5caf087ece3430e8bbda57aa
-Description-en: establish SSH connections to your IM contacts using Telepathy (metapackage)
- SSH-Contact is a client/service tool that makes easy to connect your telepathy
- IM contacts via SSH. No need to care about dynamic IP, NAT, port forwarding
- or firewalls anymore; if you can chat with a friend, you can also SSH him.
- .
- This package is a metapackage that depends on both ssh-contact-client and
- ssh-contact-service.
-
-Package: ssh-contact-client
-Description-md5: ac854df3bc7c75a21fcc062182c837b4
-Description-en: establish SSH connections to your IM contacts using Telepathy (client)
- SSH-Contact is a client/service tool that makes easy to connect your telepathy
- IM contacts via SSH. No need to care about dynamic IP, NAT, port forwarding
- or firewalls anymore; if you can chat with a friend, you can also SSH him.
- .
- This package contains the client side of ssh-contact.
-
-Package: ssh-contact-service
-Description-md5: 556e54b811752082ad1e3921caffe06d
-Description-en: establish SSH connections to your IM contacts using Telepathy (server)
- SSH-Contact is a client/service tool that makes easy to connect your telepathy
- IM contacts via SSH. No need to care about dynamic IP, NAT, port forwarding
- or firewalls anymore; if you can chat with a friend, you can also SSH him.
- .
- This package contains the server side of ssh-contact.
-
 Package: ssh-cron
 Description-md5: 0613279cb3b562bc494bf27259f2a302
 Description-en: cron daemon allowing ssh keys with passphrases to be used
@@ -722212,58 +722096,6 @@ Description-en: Telepathy framework - GLib library
  differences between protocols to provide a unified interface for
  applications.
 
-Package: gir1.2-telepathylogger-0.2
-Description-md5: 9d322246efc6be61a33d36f696cd71ec
-Description-en: Telepathy logger service - introspection
- This package contains the introspection data for Telepathy logger.
- .
- Telepathy is a D-Bus framework for unifying real time communication,
- including instant messaging, voice calls and video calls. It abstracts
- differences between protocols to provide a unified interface for
- applications.
-
-Package: libtelepathy-logger-dev
-Description-md5: 7423195bf5dc867605a3c6aa1b016cad
-Description-en: Telepathy logger service -- utility library (headers)
- This package contains development files for the Telepathy logger utility
- library
- .
- Telepathy is a D-Bus framework for unifying real time communication,
- including instant messaging, voice calls and video calls. It abstracts
- differences between protocols to provide a unified interface for
- applications.
-
-Package: libtelepathy-logger-doc
-Description-md5: f4e7b201a3b235288c458398442ffb10
-Description-en: Telepathy logger service -- documentation
- This package contains HTML documentation for the Telepathy logger utility
- library.
- .
- Telepathy is a D-Bus framework for unifying real time communication,
- including instant messaging, voice calls and video calls. It abstracts
- differences between protocols to provide a unified interface for
- applications.
-
-Package: libtelepathy-logger3
-Description-md5: 2cfae4fc7dd895b9280f68c4b8dd2025
-Description-en: Telepathy logger service - utility library
- This package contains a utility library to access Telepathy log files
- .
- Telepathy is a D-Bus framework for unifying real time communication,
- including instant messaging, voice calls and video calls. It abstracts
- differences between protocols to provide a unified interface for
- applications.
-
-Package: telepathy-logger
-Description-md5: 33ed7f7be4047686973cac37c0f0a576
-Description-en: Telepathy logger service - Daemon
- This package contains the Telepathy Logger daemon.
- .
- Telepathy is a D-Bus framework for unifying real time communication,
- including instant messaging, voice calls and video calls. It abstracts
- differences between protocols to provide a unified interface for
- applications.
-
 Package: libmission-control-plugins-dev
 Description-md5: 0115beafbafd4cd8fe1e1d8f4a8a84b8
 Description-en: management daemon for Telepathy (headers for plugins)
@@ -722381,23 +722213,6 @@ Description-en: Telepathy/Farsight integration - Qt 6 library
  including instant messaging, voice calls and video calls. It abstracts
  differences between protocols to provide a unified interface for
  applications.
-
-Package: telepathy-rakia
-Description-md5: ed4b9c78433468372e33a77c11014a6b
-Description-en: SIP connection manager for the Telepathy framework
- telepathy-rakia is a SIP connection manager for the Telepathy framework
- (http://telepathy.freedesktop.org) based on the SofiaSIP-stack.
-
-Package: telepathy-specification
-Description-md5: 1a27f44eeaa97387ae7b2f5232a7ccdd
-Description-en: Telepathy D-Bus specification
- Telepathy is a D-Bus framework for unifying real time communication,
- including instant messaging, voice calls and video calls. It abstracts
- differences between protocols to provide a unified interface for
- applications.
- .
- The specification can be browsed with the devhelp documentation
- browser, or with a regular web browser.
 
 Package: tellico
 Description-md5: 22ffde7807119bca596c7c395f92e7a0
@@ -755567,9 +755382,15 @@ Description-en: urjtag architecture-independent files
  It describes how to talk JTAG, IEEE 1149.1, to various chips.
 
 Package: python3-url-normalize
-Description-md5: c353c291423e49394f70a5167ac6df49
+Description-md5: f8e0e400de66093d56beaa629bb912ec
 Description-en: URL normalization for Python
- URI Normalization function:
+ url-normalize normalizes URL spelling consistently, for storage, comparison
+ and display: url_normalize() returns normalized URLs, url_humanize() readable
+ display URLs. The url-normalize command provides both from the shell.
+ Normalization works on the URL text only: it doesn't fetch pages or follow
+ redirects.
+ .
+ Normalization rules:
  .
   * Take care of IDN domains.
   * Always provide the URI scheme in lowercase characters.
@@ -755581,8 +755402,9 @@ Description-en: URL normalization for Python
     default is desired.
   * For schemes that define an empty path to be equivalent to a path of "/", use
     "/".
-  * For schemes that define a port, use an empty port if the default is desired
-  * All portions of the URI must be utf-8 encoded NFC from Unicode strings
+  * For schemes that define a port, use an empty port if the default is
+    desired.
+  * All portions of the URI must be UTF-8 encoded NFC from Unicode strings.
 
 Package: urlextractor
 Description-md5: 690164e3033295d9811deb321e5cc9d4
@@ -759735,6 +759557,46 @@ Description-en: Versatile text-based file-manager (yascreen)
   * Internal text/hex file viewer and hex editor
   * Automount feature
   * Extensive user-defined external support/utils!
+
+Package: vg
+Description-md5: aa716bf1d6e03589adbce53037024686
+Description-en: tools for working with genome variation graphs
+ variation graph data structures, interchange formats, alignment, genotyping,
+ and variant calling methods
+ .
+ Variation graphs provide a succinct encoding of the sequences of many genomes.
+ A variation graph (in particular as implemented in vg) is composed of:
+ .
+  - nodes, which are labeled by sequences and ids
+  - edges, which connect two nodes via either of their respective ends
+  - paths, describe genomes, sequence alignments, and annotations (such as gene
+   models and transcripts) as walks through nodes connected by edges
+ .
+ This model is similar to a number of sequence graphs that have been used in
+ assembly and multiple sequence alignment. Paths provide coordinate systems
+ relative to genomes encoded in the graph, allowing stable mappings to be
+ produced even if the structure of the graph is changed.
+
+Package: vg-docs
+Description-md5: 7a8f531e2a5e5f890a38c22d735d0853
+Description-en: tools for working with genome variation graphs -- docs
+ variation graph data structures, interchange formats, alignment, genotyping,
+ and variant calling methods
+ .
+ Variation graphs provide a succinct encoding of the sequences of many genomes.
+ A variation graph (in particular as implemented in vg) is composed of:
+ .
+  - nodes, which are labeled by sequences and ids
+  - edges, which connect two nodes via either of their respective ends
+  - paths, describe genomes, sequence alignments, and annotations (such as gene
+   models and transcripts) as walks through nodes connected by edges
+ .
+ This model is similar to a number of sequence graphs that have been used in
+ assembly and multiple sequence alignment. Paths provide coordinate systems
+ relative to genomes encoded in the graph, allowing stable mappings to be
+ produced even if the structure of the graph is changed.
+ .
+ This package provides the documentation
 
 Package: vgabios
 Description-md5: afe312b1cc9d36b15e3ed6b3fcaa8c64
@@ -774733,6 +774595,18 @@ Description-en: Xarray reader for radarsat constellation mission (RCM) SAFE file
  Luts are decoded from xml files following ESA Sentinel-1 Product
  Specification.
 
+Package: python3-xarray-safe-s1
+Description-md5: 8b2173b4c0e960d760f8c11d82890497
+Description-en: Xarray Sentinel1 Python SAFE files reader
+ safe_s1 rely on xarray.open_rasterio and rasterio to read
+ digital_number from SAFE product to return an xarray-datatree.
+ .
+ Luts are decoded from xml files following ESA Sentinel-1 Product
+ Specification.
+ .
+ safe_s1.metadata.Sentinel1reader is the main class and contains
+ a xarray-datatree with the useful data.
+
 Package: python3-xarray-sentinel
 Description-md5: dcf3038cd502856e7454da335c3e11d7
 Description-en: Easily access SAR data products of the Copernicus Sentinel-1 satellite mission
@@ -782776,6 +782650,28 @@ Description-en: Xilinx Runtime (XRT) - runtime -- XOCL kernel driver
  userspace and kernel driver components.
  .
  This package contains the XOCL DKMS kernel drivers.
+
+Package: python3-xsar
+Description-md5: da8f95ade78167fb1286ff659f29ee64
+Description-en: Python xarray reader to use Level-1 GRD Synthetic Aperture Radar products
+ XSAR is a distributed Level 1 Synthetic Aperture Radar (SAR) file reader
+ designed to write efficient distributed processing algorithms with xarray
+ and dask.
+ .
+ It currently handles Level-1 Sentinel-1 and Radarsat-2 data in SAFE format,
+ as found on scihub or PEPS.
+ .
+ XSAR rely on `xarray.open_rasterio`, rasterio and GDAL to read digital_number
+ from SAFE product to return an `xarray.Dataset` object with dask chunks.
+ LUTs are decoded from XML files and applied to digital_number, following
+ official ESA thermal de-noising document and ESA Sentinel-1 Product
+ Specification.
+ .
+ End user can directly use for example sigma0 variable, or the de-noised
+ sigma0 computed from digital_number and by applying relevant LUTs.
+ .
+ Since XSAR rely on dask, it have a small memory footprint: variables are
+ read from file and computed only if needed.
 
 Package: xscavenger
 Description-md5: febdea9497bd56d1d26718a25e4481c6

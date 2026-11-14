@@ -25354,6 +25354,18 @@ Description-en: Core Perl modules
  Other packages should not depend on `perl-modules-5.36' directly, they
  should use `perl' (which depends on `perl-modules-5.36') instead.
 
+Package: postgresql-15-repack
+Description-md5: 6f64bd8eaf8153ee6ad6aec429137c85
+Description-en: reorganize tables in PostgreSQL databases with minimal locks
+ pg_repack is a PostgreSQL extension which lets you remove bloat from tables
+ and indexes, and optionally restore the physical order of clustered indexes.
+ Unlike CLUSTER and VACUUM FULL it works online, without holding an exclusive
+ lock on the processed tables during processing. pg_repack is efficient to
+ boot, with performance comparable to using CLUSTER directly.
+ .
+ This package contains the pg_repack program and the server extension for
+ PostgreSQL 15.
+
 Package: postgresql-15-pgextwlist
 Description-md5: f58aff65967bfc3eddc04bdae86e695b
 Description-en: PostgreSQL Extension Whitelisting
@@ -26424,6 +26436,134 @@ Description-en: development files for PostgreSQL 15 server-side programming
  PostgreSQL source-code tree.
  .
  PostgreSQL is an object-relational SQL database management system.
+
+Package: postgresql
+Description-md5: bdff2d6e5b2a1dd00e72b3ed8729d9ac
+Description-en: object-relational SQL database (supported version)
+ This metapackage always depends on the currently supported PostgreSQL
+ database server version.
+ .
+ PostgreSQL is a fully featured object-relational database management
+ system.  It supports a large part of the SQL standard and is designed
+ to be extensible by users in many aspects.  Some of the features are:
+ ACID transactions, foreign keys, views, sequences, subqueries,
+ triggers, user-defined types and functions, outer joins, multiversion
+ concurrency control.  Graphical user interfaces and bindings for many
+ programming languages are available as well.
+
+Package: postgresql-all
+Description-md5: 9a0aaba975f82ef14ff2e821d8683975
+Description-en: metapackage depending on all PostgreSQL server packages
+ This metapackage depends on all PostgreSQL server packages, in all
+ supported versions (excluding documentation and debug symbols). It
+ exists to facilitate depending on the server packages in test
+ environments.
+ .
+ PostgreSQL is a fully featured object-relational database management
+ system.  It supports a large part of the SQL standard and is designed
+ to be extensible by users in many aspects.  Some of the features are:
+ ACID transactions, foreign keys, views, sequences, subqueries,
+ triggers, user-defined types and functions, outer joins, multiversion
+ concurrency control.  Graphical user interfaces and bindings for many
+ programming languages are available as well.
+
+Package: postgresql-client
+Description-md5: d46431edbfde0d6360f2c20aed4a288c
+Description-en: front-end programs for PostgreSQL (supported version)
+ This metapackage always depends on the currently supported database
+ client package for PostgreSQL.
+ .
+ PostgreSQL is a fully featured object-relational database management
+ system.  It supports a large part of the SQL standard and is designed
+ to be extensible by users in many aspects.  Some of the features are:
+ ACID transactions, foreign keys, views, sequences, subqueries,
+ triggers, user-defined types and functions, outer joins, multiversion
+ concurrency control.  Graphical user interfaces and bindings for many
+ programming languages are available as well.
+
+Package: postgresql-client-common
+Description-md5: d5f4a87e9a06590d824a9f706fa1a755
+Description-en: manager for multiple PostgreSQL client versions
+ The postgresql-client-common package provides a structure under which
+ multiple versions of PostgreSQL client programs may be installed at
+ the same time. It provides a wrapper which selects the right version
+ for the particular cluster you want to access (with a command line
+ option, an environment variable, /etc/postgresql-common/user_clusters,
+ or ~/.postgresqlrc).
+ .
+ PostgreSQL is a fully featured object-relational database management
+ system. It supports a large part of the SQL standard and is designed
+ to be extensible by users in many aspects. Its features include ACID
+ transactions, foreign keys, views, sequences, subqueries, triggers,
+ outer joins, multiversion concurrency control, and user-defined types
+ and functions.
+
+Package: postgresql-common
+Description-md5: 1baa00ede83212202318224f2d18d771
+Description-en: PostgreSQL database-cluster manager
+ The postgresql-common package provides a structure under which
+ multiple versions of PostgreSQL may be installed and/or multiple
+ clusters maintained at one time.
+ .
+ The commands provided are pg_conftool, pg_createcluster, pg_ctlcluster,
+ pg_dropcluster, pg_lsclusters, pg_renamecluster, pg_upgradecluster,
+ pg_virtualenv.
+ .
+ PostgreSQL is a fully featured object-relational database management
+ system. It supports a large part of the SQL standard and is designed
+ to be extensible by users in many aspects. Its features include ACID
+ transactions, foreign keys, views, sequences, subqueries, triggers,
+ outer joins, multiversion concurrency control, and user-defined types
+ and functions.
+
+Package: postgresql-contrib
+Description-md5: 1548dd7748148521c6b13b8290f451b4
+Description-en: additional facilities for PostgreSQL (supported version)
+ This metapackage always depends on the currently supported PostgreSQL
+ database contrib package.
+ .
+ PostgreSQL is a fully featured object-relational database management
+ system.  It supports a large part of the SQL standard and is designed
+ to be extensible by users in many aspects.  Some of the features are:
+ ACID transactions, foreign keys, views, sequences, subqueries,
+ triggers, user-defined types and functions, outer joins, multiversion
+ concurrency control.  Graphical user interfaces and bindings for many
+ programming languages are available as well.
+
+Package: postgresql-doc
+Description-md5: 065f6c25df2011c353e26faea6c8ad7c
+Description-en: documentation for the PostgreSQL database management system
+ This metapackage always depends on the currently supported PostgreSQL
+ database documentation package.
+ .
+ PostgreSQL is a fully featured object-relational database management
+ system.  It supports a large part of the SQL standard and is designed
+ to be extensible by users in many aspects.  Some of the features are:
+ ACID transactions, foreign keys, views, sequences, subqueries,
+ triggers, user-defined types and functions, outer joins, multiversion
+ concurrency control.  Graphical user interfaces and bindings for many
+ programming languages are available as well.
+
+Package: postgresql-server-dev-all
+Description-md5: 27ac3f69789728b5b5444cc5ee5cf4dc
+Description-en: extension build tool for multiple PostgreSQL versions
+ The postgresql-server-dev-all package provides the pg_buildext script for
+ simplifying packaging of a PostgreSQL extension supporting multiple major
+ versions of the product, and dh_make_pgxs which builds a template debian/
+ source package directory based on pg_buildext.
+ .
+ PostgreSQL is a fully featured object-relational database management
+ system. It supports a large part of the SQL standard and is designed
+ to be extensible by users in many aspects. Its features include ACID
+ transactions, foreign keys, views, sequences, subqueries, triggers,
+ outer joins, multiversion concurrency control, and user-defined types
+ and functions.
+
+Package: postgresql-15-rum
+Description-md5: b7dba2c6afb67ab874f4efb53b54803d
+Description-en: PostgreSQL RUM access method
+ This PostgreSQL extension provides the RUM access method, an inverted index
+ with additional information in posting lists.
 
 Package: python3-django-postorius
 Description-md5: 016171c4fe953e390f5bf45b1ec10ef6

@@ -526,6 +526,22 @@ Filename: pool/updates/main/m/mariadb/mariadb-test-data_10.11.19-0+deb12u1_all.d
 Size: 19496536
 SHA256: 8907f63c378df2fbfb180403988570835b9178f068e9d844d036058e576641f5
 
+Package: postgresql-15-repack
+Source: pg-repack
+Version: 1.4.8-1+deb12u1
+Installed-Size: 244
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Architecture: amd64
+Depends: postgresql-15 (>> 15.20), libc6 (>= 2.34), libpq5 (>= 8.3~rc1-1~), postgresql-15-jit-llvm (>= 14)
+Description: reorganize tables in PostgreSQL databases with minimal locks
+Homepage: https://github.com/reorg/pg_repack
+Description-md5: 6f64bd8eaf8153ee6ad6aec429137c85
+database
+Priority: optional
+Filename: pool/updates/main/p/pg-repack/postgresql-15-repack_1.4.8-1+deb12u1_amd64.deb
+Size: 106008
+SHA256: 28aa60c1fafca3f496e21b2bc7b0fbf54204837295b34b291d56b0aff46c1f23
+
 Package: pgpool2
 Version: 4.3.5-1+deb12u1
 Installed-Size: 6200
@@ -562,8 +578,8 @@ Size: 159932
 SHA256: c2a6c0839f3754f5a57ef322993df647443bcd8dab92a823255172326f176f1d
 
 Package: postgresql-15
-Version: 15.19-0+deb12u1
-Installed-Size: 53101
+Version: 15.20-0+deb12u1
+Installed-Size: 54254
 Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
 Architecture: amd64
 Provides: postgresql-15-jit-llvm (= 14), postgresql-contrib-15
@@ -576,18 +592,18 @@ Postgresql-Catversion: 202209061
 Recommends: sysstat
 database
 Priority: optional
-Filename: pool/updates/main/p/postgresql-15/postgresql-15_15.19-0+deb12u1_amd64.deb
-Size: 16964884
-SHA256: eac4cbeeac193abcc2cd243c29edf6c68345bed07d01d3ba81a13d0f02cfff71
+Filename: pool/updates/main/p/postgresql-15/postgresql-15_15.20-0+deb12u1_amd64.deb
+Size: 17091392
+SHA256: 8566850f295c2cb5034ff5dd5b40caf97eea81b75a841c8d1f691c05ab8815db
 
 Package: postgresql-client-15
 Source: postgresql-15
-Version: 15.19-0+deb12u1
-Installed-Size: 8307
+Version: 15.20-0+deb12u1
+Installed-Size: 8615
 Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
 Architecture: amd64
 Provides: postgresql-client
-Depends: libpq5 (>= 15.19), postgresql-client-common (>= 182~), sensible-utils, libc6 (>= 2.34), liblz4-1 (>= 0.0~r127), libreadline8 (>= 6.0), libssl3 (>= 3.0.0), libzstd1 (>= 1.5.2), zlib1g (>= 1:1.1.4)
+Depends: libpq5 (>= 15.20), postgresql-client-common (>= 182~), sensible-utils, libc6 (>= 2.34), liblz4-1 (>= 0.0~r127), libreadline8 (>= 6.0), libssl3 (>= 3.0.0), libzstd1 (>= 1.5.2), zlib1g (>= 1:1.1.4)
 Suggests: postgresql-15, postgresql-doc-15
 Description: front-end programs for PostgreSQL 15
 Homepage: http://www.postgresql.org/
@@ -595,60 +611,190 @@ Description-md5: dfa598d2d49fa0efc749db97056d87b3
 Multi-Arch: foreign
 database
 Priority: optional
-Filename: pool/updates/main/p/postgresql-15/postgresql-client-15_15.19-0+deb12u1_amd64.deb
-Size: 1758784
-SHA256: 73eea2d8ca54ecf025b820832712e4852b50f57b83b3216fe6061884761c8d0d
+Filename: pool/updates/main/p/postgresql-15/postgresql-client-15_15.20-0+deb12u1_amd64.deb
+Size: 1778868
+SHA256: 779332f35a5adc7c97376a7bb6dd8a6a6b48f594953f01eecfaead2eab09dab1
 
 Package: postgresql-plperl-15
 Source: postgresql-15
-Version: 15.19-0+deb12u1
-Installed-Size: 392
+Version: 15.20-0+deb12u1
+Installed-Size: 423
 Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
 Architecture: amd64
 Provides: postgresql-plperl
-Depends: perl, postgresql-15 (= 15.19-0+deb12u1), libc6 (>= 2.34), libperl5.36 (>= 5.36.0)
+Depends: perl, postgresql-15 (= 15.20-0+deb12u1), libc6 (>= 2.34), libperl5.36 (>= 5.36.0)
 Description: PL/Perl procedural language for PostgreSQL 15
 Homepage: http://www.postgresql.org/
 Description-md5: 18ddc53b40c99b420c85550d381182d3
 database
 Priority: optional
-Filename: pool/updates/main/p/postgresql-15/postgresql-plperl-15_15.19-0+deb12u1_amd64.deb
-Size: 101456
-SHA256: ae34c3b96617247dce879b1c061db2ba7849a76374b13dd639feb7e9bc621ab8
+Filename: pool/updates/main/p/postgresql-15/postgresql-plperl-15_15.20-0+deb12u1_amd64.deb
+Size: 109424
+SHA256: 114b636b7491d8e247b17d71b45ee6e7f5783c4c8de95c857376ee18ff2fd936
 
 Package: postgresql-plpython3-15
 Source: postgresql-15
-Version: 15.19-0+deb12u1
-Installed-Size: 542
+Version: 15.20-0+deb12u1
+Installed-Size: 553
 Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
 Architecture: amd64
 Provides: postgresql-plpython3
-Depends: postgresql-15 (= 15.19-0+deb12u1), libc6 (>= 2.14), libpython3.11 (>= 3.11.0)
+Depends: postgresql-15 (= 15.20-0+deb12u1), libc6 (>= 2.14), libpython3.11 (>= 3.11.0)
 Description: PL/Python 3 procedural language for PostgreSQL 15
 Homepage: http://www.postgresql.org/
 Description-md5: 4ede3cd472c9c48ccd5b6bda7ae6f8b8
 database
 Priority: optional
-Filename: pool/updates/main/p/postgresql-15/postgresql-plpython3-15_15.19-0+deb12u1_amd64.deb
-Size: 124624
-SHA256: ba45268a1b216287e537c063bbc6209fc2f5e97b7bc0d5194ca37e2b9a37e4f5
+Filename: pool/updates/main/p/postgresql-15/postgresql-plpython3-15_15.20-0+deb12u1_amd64.deb
+Size: 125992
+SHA256: 4166bca6927259542402e083ea4a7bace292f4f14472e5bc88c12a78f859a65b
 
 Package: postgresql-pltcl-15
 Source: postgresql-15
-Version: 15.19-0+deb12u1
-Installed-Size: 208
+Version: 15.20-0+deb12u1
+Installed-Size: 213
 Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
 Architecture: amd64
 Provides: postgresql-pltcl
-Depends: postgresql-15 (= 15.19-0+deb12u1), libc6 (>= 2.4), libtcl8.6 (>= 8.6.0)
+Depends: postgresql-15 (= 15.20-0+deb12u1), libc6 (>= 2.4), libtcl8.6 (>= 8.6.0)
 Description: PL/Tcl procedural language for PostgreSQL 15
 Homepage: http://www.postgresql.org/
 Description-md5: 458f9588e99dab7623d492623fec4c0c
 database
 Priority: optional
-Filename: pool/updates/main/p/postgresql-15/postgresql-pltcl-15_15.19-0+deb12u1_amd64.deb
-Size: 52620
-SHA256: 577b6895292d3e3e9df15f61aa80af96f85fc10bd036b587ddcac03409c33f6c
+Filename: pool/updates/main/p/postgresql-15/postgresql-pltcl-15_15.20-0+deb12u1_amd64.deb
+Size: 53408
+SHA256: 36bfacbf5919a727faa6fc8bb4b6e94e360f8585b9e237d05f53d740d6e00fac
+
+Package: postgresql
+Source: postgresql-common (248+deb12u2)
+Version: 15+248+deb12u2
+Installed-Size: 16
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Architecture: all
+Depends: postgresql-15
+Suggests: postgresql-doc
+Description: object-relational SQL database (supported version)
+Description-md5: bdff2d6e5b2a1dd00e72b3ed8729d9ac
+database
+Priority: optional
+Filename: pool/updates/main/p/postgresql-common/postgresql_15+248+deb12u2_all.deb
+Size: 10332
+SHA256: 8e02308bbc6d1077ae16ef06e274100f19ec80e23160233c73b8d407b948b220
+
+Package: postgresql-all
+Source: postgresql-common
+Version: 248+deb12u2
+Installed-Size: 16
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Architecture: all
+Depends: libecpg-dev, libpq-dev, postgresql-common (= 248+deb12u2), postgresql-server-dev-all, postgresql-contrib-15, postgresql-plperl-15, postgresql-plpython3-15, postgresql-pltcl-15
+Description: metapackage depending on all PostgreSQL server packages
+Description-md5: 9a0aaba975f82ef14ff2e821d8683975
+database
+Priority: optional
+Filename: pool/updates/main/p/postgresql-common/postgresql-all_248+deb12u2_all.deb
+Size: 10424
+SHA256: 4940a86935e2b5b5b966fc66cf1b9732fc12e63d5c13980b0bcb66d77faafa16
+
+Package: postgresql-client
+Source: postgresql-common (248+deb12u2)
+Version: 15+248+deb12u2
+Installed-Size: 16
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Architecture: all
+Depends: postgresql-client-15
+Description: front-end programs for PostgreSQL (supported version)
+Description-md5: d46431edbfde0d6360f2c20aed4a288c
+Multi-Arch: foreign
+database
+Priority: optional
+Filename: pool/updates/main/p/postgresql-common/postgresql-client_15+248+deb12u2_all.deb
+Size: 10340
+SHA256: 0f7a67a2689ba4d8426ce645401d376660acc0bd1f9b41e7fb2cfca44884ccf9
+
+Package: postgresql-client-common
+Source: postgresql-common
+Version: 248+deb12u2
+Installed-Size: 130
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Architecture: all
+Depends: netbase, perl:any
+Description: manager for multiple PostgreSQL client versions
+Description-md5: d5f4a87e9a06590d824a9f706fa1a755
+Multi-Arch: foreign
+database
+Priority: optional
+Filename: pool/updates/main/p/postgresql-common/postgresql-client-common_248+deb12u2_all.deb
+Size: 35284
+SHA256: 4b2bf1863945e8a49382e594562a24e3d9cbeb3dcff2db3cf283834f4364f3d2
+
+Package: postgresql-common
+Version: 248+deb12u2
+Installed-Size: 660
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Architecture: all
+Replaces: pgdg-keyring, postgresql-server-dev-all (<< 204)
+Depends: adduser, debconf (>= 0.5.00) | debconf-2.0, libjson-perl, lsb-base (>= 3.0-3), postgresql-client-common (= 248+deb12u2), ssl-cert (>= 1.0.11), ucf, perl:any
+Conflicts: pgdg-keyring
+Breaks: postgresql-9.1 (<< 9.1.1-3~), postgresql-server-dev-all (<< 204)
+Description: PostgreSQL database-cluster manager
+Description-md5: 1baa00ede83212202318224f2d18d771
+Multi-Arch: foreign
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: e2fsprogs, logrotate
+database
+Priority: optional
+Filename: pool/updates/main/p/postgresql-common/postgresql-common_248+deb12u2_all.deb
+Size: 179624
+SHA256: 9de1528901ced8eb62a616835b96947238df3f501175a7a91f13da6f2ffa73df
+
+Package: postgresql-contrib
+Source: postgresql-common (248+deb12u2)
+Version: 15+248+deb12u2
+Installed-Size: 16
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Architecture: all
+Depends: postgresql-contrib-15
+Description: additional facilities for PostgreSQL (supported version)
+Description-md5: 1548dd7748148521c6b13b8290f451b4
+database
+Priority: optional
+Filename: pool/updates/main/p/postgresql-common/postgresql-contrib_15+248+deb12u2_all.deb
+Size: 10344
+SHA256: 82ef646fd1b5d0d44f7340c2f3742368d4a39d4c1c51dd1f10c9b2b47edd8980
+
+Package: postgresql-server-dev-all
+Source: postgresql-common
+Version: 248+deb12u2
+Installed-Size: 60
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Architecture: amd64
+Depends: make:any, postgresql-common (= 248+deb12u2), postgresql-server-dev-15
+Description: extension build tool for multiple PostgreSQL versions
+Description-md5: 27ac3f69789728b5b5444cc5ee5cf4dc
+Multi-Arch: same
+database
+Priority: optional
+Filename: pool/updates/main/p/postgresql-common/postgresql-server-dev-all_248+deb12u2_amd64.deb
+Size: 20608
+SHA256: 56d922a8a812296aea768a63f1d1bc9fddff49ca5a0bbd8ee9364463e4726bf4
+
+Package: postgresql-15-rum
+Source: postgresql-rum
+Version: 1.3.13-1+deb12u1
+Installed-Size: 852
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Architecture: amd64
+Depends: postgresql-15 (>> 15.20), postgresql-15-jit-llvm (>= 14), libc6 (>= 2.29)
+Description: PostgreSQL RUM access method
+Homepage: https://github.com/postgrespro/rum
+Description-md5: b7dba2c6afb67ab874f4efb53b54803d
+database
+Priority: optional
+Filename: pool/updates/main/p/postgresql-rum/postgresql-15-rum_1.3.13-1+deb12u1_amd64.deb
+Size: 342996
+SHA256: 3aa0306e4a97df98748f38bc21cc659acd74ab2fa8d32aaab5ba5a83c7f354e8
 
 Package: redis
 Version: 5:7.0.15-1~deb12u10
