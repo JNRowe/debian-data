@@ -37518,20 +37518,6 @@ Description-en: Implementation of the WPS brute force attack, written in C
  and cpu performance, correct handling of endianness, and a more robust set of
  options.
 
-Package: bumblebee
-Description-md5: 603c350e38f498eb44849c8eb81822e8
-Description-en: NVIDIA Optimus support for Linux
- Bumblebee is an effort to make NVIDIA Optimus enabled laptops work in
- GNU/Linux systems. These laptops are built in such a way that the NVIDIA
- graphics card can be used on demand so that battery life is improved and
- temperature is kept low.
- .
- It disables the discrete graphics card if no client is detected, and starts
- an X server making use of NVIDIA card if requested then let software GL
- implementations (such as VirtualGL) copy frames to the visible display that
- runs on the integrated graphics. The ability to use discrete graphics
- depends on the driver: open source nouveau and proprietary nvidia.
-
 Package: bumblebee-status
 Description-md5: a2746be4272b1b9619881593964e53d4
 Description-en: Modular, themeable status line generator for the i3 window manager
@@ -64724,6 +64710,62 @@ Description-en: Java implementation of mathematical curves defined over a set of
  a set of control points. The API is written in Java. The curves supported
  are: Bezier, B-Spline, Cardinal Spline, Catmull-Rom Spline, Lagrange, Natural
  Cubic Spline, and NURBS.
+
+Package: python-custodian-doc
+Description-md5: 16e43abd093a1b30c8a3fca411c6f227
+Description-en: flexible just-in-time job management framework in Python (doc)
+ Custodian is a simple, robust and flexible just-in-time (JIT) job
+ management framework written in Python. Using custodian, you can
+ create wrappers that perform error checking, job management and error
+ recovery. It has a simple plugin framework that allows you to develop
+ specific job management workflows for different applications.
+ .
+ Error recovery is an important aspect of many high-throughput projects
+ that generate data on a large scale. When you are running on the order
+ of hundreds of thousands of jobs, even an error-rate of 1% would mean
+ thousands of errored jobs that would be impossible to deal with on a
+ case-by-case basis.
+ .
+ The specific use case for custodian is for long running jobs, with
+ potentially random errors. For example, there may be a script that
+ takes several days to run on a server, with a 1% chance of some IO
+ error causing the job to fail. Using custodian, one can develop a
+ mechanism to gracefully recover from the error, and restart the job
+ with modified parameters if necessary.
+ .
+ The current version of Custodian also comes with several sub-packages
+ for error handling for Vienna Ab Initio Simulation Package (VASP),
+ NwChem, QChem, FEFF, Lobster and CP2K calculations.
+ .
+ This is the documentation package.
+
+Package: python3-custodian
+Description-md5: 68dfad2dc0e6b399db14226534bdf1b2
+Description-en: flexible just-in-time job management framework in Python
+ Custodian is a simple, robust and flexible just-in-time (JIT) job
+ management framework written in Python. Using custodian, you can
+ create wrappers that perform error checking, job management and error
+ recovery. It has a simple plugin framework that allows you to develop
+ specific job management workflows for different applications.
+ .
+ Error recovery is an important aspect of many high-throughput projects
+ that generate data on a large scale. When you are running on the order
+ of hundreds of thousands of jobs, even an error-rate of 1% would mean
+ thousands of errored jobs that would be impossible to deal with on a
+ case-by-case basis.
+ .
+ The specific use case for custodian is for long running jobs, with
+ potentially random errors. For example, there may be a script that
+ takes several days to run on a server, with a 1% chance of some IO
+ error causing the job to fail. Using custodian, one can develop a
+ mechanism to gracefully recover from the error, and restart the job
+ with modified parameters if necessary.
+ .
+ The current version of Custodian also comes with several sub-packages
+ for error handling for Vienna Ab Initio Simulation Package (VASP),
+ NwChem, QChem, FEFF, Lobster and CP2K calculations.
+ .
+ This package installs the library for Python 3.
 
 Package: python3-customidenticon
 Description-md5: de533ec5e0ffb09f8bb519c21c80fa17
@@ -196021,6 +196063,12 @@ Description-en: Linux UEFI library written in pure Go (library)
     and tianocore.
   * Virtual filesystem support for easier testing.
 
+Package: golang-github-foxcpp-go-mockdns-dev
+Description-md5: 318f4e6053ddc8a4e3b3d1ff791df6c2
+Description-en: mock DNS server and resolver for Go tests
+ Boilerplate for testing code that performs DNS lookups. Provides a
+ mock resolver and helpers to redirect net.Lookup* calls during tests.
+
 Package: gojay
 Description-md5: c732291d9527386302110a3ac3be9325
 Description-en: Fast JSON code generator in golang
@@ -202552,6 +202600,22 @@ Description-en: Implementation of various JWx technologies (library)
     follows a standard convention
   * Extra utilities
 
+Package: golang-github-lestrrat-go-jwx-v4-dev
+Description-md5: 2d298d04b900b90f1ecda65149bb5f98
+Description-en: tools for various JOSE JWE/JWK/JWS/JWT operations (library)
+ Go module implementing various JWx (JWA/JWE/JWK/JWS/JWT, otherwise known
+ as JOSE) technologies.
+ .
+ This package contains the Go library.
+
+Package: jwx
+Description-md5: 823d6ac0851723173b54fcf07feb8e7a
+Description-en: tools for various JOSE JWE/JWK/JWS/JWT operations (program)
+ Go module implementing various JWx (JWA/JWE/JWK/JWS/JWT, otherwise
+ known as JOSE) technologies.
+ .
+ This package contains the 'jwx' binary'.
+
 Package: golang-github-lestrrat-go-option-dev
 Description-md5: 0281099fc9d7503a50fbceafc4fd50c6
 Description-en: Implementation of the "Optional Parameters Pattern" (library)
@@ -202566,6 +202630,23 @@ Description-en: Implementation of the "Optional Parameters Pattern" (library)
  parameters
  .
    obj.Method(mandatory1, mandatory2, optional1, optional2, optional3)
+
+Package: golang-github-lestrrat-go-option-v3-dev
+Description-md5: f540ccb5b57919bd742f310f11d27d49
+Description-en: Implementation of the "Optional Parameters Pattern" (library)
+ Base object for the "Optional Parameters Pattern".
+ .
+ The beauty of this pattern is that you can achieve a method that can
+ take the following simple calling style
+ .
+   obj.Method(mandatory1, mandatory2)
+ .
+ or the following, if you want to modify its behavior with optional
+ parameters
+ .
+   obj.Method(mandatory1, mandatory2, optional1, optional2, optional3)
+ .
+ This is the v3 branch of the Go library.
 
 Package: golang-github-lestrrat-go-pdebug-dev
 Description-md5: d610ab4d559b214d665bab6957f3fe16
@@ -485516,6 +485597,23 @@ Description-md5: 2e91d6d845d6eb67dc66eb56ee0291bb
 Description-en: Redux.js module to serialize ImmutableJS data
  node-redux-devtools-serialize serialize unserializable data and parse it back.
 
+Package: node-reflect-metadata
+Description-md5: 4d538c589b9333aab6892e1b1909e4b3
+Description-en: polyfill for the ECMAScript Metadata Reflection API
+ reflect-metadata provides a prototype implementation and polyfill for an
+ ECMAScript Metadata Reflection API. It extends the global Reflect object
+ with methods such as Reflect.metadata, Reflect.defineMetadata,
+ Reflect.getMetadata, and Reflect.hasMetadata to declaratively or
+ imperatively attach and introspect metadata on classes, methods, and
+ properties.
+ .
+ It is widely used by TypeScript and JavaScript projects that rely on
+ decorator metadata (via TypeScript's --experimentalDecorators and
+ --emitDecoratorMetadata options) for dependency injection, runtime type
+ assertions, and reflection.
+ .
+ Node.js is an event-based server-side JavaScript engine.
+
 Package: libjs-regenerate
 Description-md5: de72ce69ea4e3d2e2c21fa0572b07efe
 Description-en: Unicode-aware regular expression generator (JavaScript library)
@@ -528277,6 +528375,16 @@ Description-en: Universal Input Method support for stevia
  This is a dependency package to allow for Asian scripts
  input using uim for e.g. Japanese and Chinese.
 
+Package: phosh-session-services
+Description-md5: 7ec118ae7f5bf1ba73791c98b6640eb6
+Description-en: Services for Phosh's user session
+ Additional, non-essential, but recommended services for Phosh's user session.
+ It contains
+ .
+  * phosh-syncbus: A DBus interface to syncthing
+  * phosh-os-updater: OS Update Notifier
+  * phosh-push-distributor: A UnifiedPush distributor
+
 Package: phosh-tour
 Description-md5: cedf60ab96c4142431f7080dfeedd614
 Description-en: Short introduction to phosh on smartphones
@@ -545080,50 +545188,6 @@ Description-en: compelling tile-placement puzzle game
  colourblind mode, glowing, pulsating, retro graphics and synth-inspired
  sound effects.
 
-Package: primus
-Description-md5: 86cd26e1866a08575cea3e262f2dbb68
-Description-en: client-side GPU offloading for NVIDIA Optimus
- Primus is a shared library that provides OpenGL and GLX APIs and implements
- low-overhead local-only client-side OpenGL offloading via GLX forking,
- similar to VirtualGL. It intercepts GLX calls and redirects GL rendering
- to a secondary X display, presumably driven by a faster GPU. On swapping
- buffers, rendered contents are read back using a PBO and copied onto
- the drawable it was supposed to be rendered on in the first place.
- .
- Primus is currently intended to be used alongside Bumblebee and provides a
- drop-in replacement for optirun (i.e. "primusrun").
-
-Package: primus-libs
-Description-md5: b71ee40c3470c4f6e2ff4d610f5fa30e
-Description-en: shared libraries for primus
- Primus is a shared library that provides OpenGL and GLX APIs and implements
- low-overhead local-only client-side OpenGL offloading via GLX forking,
- similar to VirtualGL. It intercepts GLX calls and redirects GL rendering
- to a secondary X display, presumably driven by a faster GPU. On swapping
- buffers, rendered contents are read back using a PBO and copied onto
- the drawable it was supposed to be rendered on in the first place.
- .
- This package contains the libraries for primus which are loaded when running
- primusrun.
-
-Package: libprimus-vk1
-Description-md5: 9cc616059b790cb11afff2f1a5f393d2
-Description-en: vulkan layer library for the primus-vk layer
- This library implements the primus-vk layer. It decides which GPU
- the individual Vulkan API calls should go against and does the image
- copying.
-
-Package: primus-vk
-Description-md5: f31384e21e05aff86907e8c0495ecc4f
-Description-en: Vulkan layer for GPU offloading
- Typically you want to display an image rendered on a more powerful
- GPU on a display managed by an internal GPU. The layer in this package will
- direct rendering commands to a dedicated, more powerful GPU an when such an
- image is displayed it will be copied to the integrated CPU for displaying.
- .
- The user can activate offloading for individual applications by launching
- them with the "pvkrun" program.
-
 Package: princeprocessor
 Description-md5: fd9803bf86509a6610a29964cdd39c21
 Description-en: standalone password candidate generator using the PRINCE algorithm
@@ -554808,6 +554872,79 @@ Description-en: Wrapper around various text markups, implemented in Python 3
  .
  It is also possible to implement custom markups (inherited from AbstractMarkup
  class).
+
+Package: python-pymatgen-doc
+Description-md5: e90f3cae13838185d92b7ecb802efc86
+Description-en: Python Materials Genomics for materials analysis (documentation)
+ Pymatgen (Python Materials Genomics) is a robust, open-source Python
+ library for materials analysis. These are some of the main features:
+ .
+ 1.Highly flexible classes for the representation of Element, Site,
+ Molecule, Structure objects.
+ .
+ 2. Extensive input/output support, including support for VASP
+ (http://cms.mpi.univie.ac.at/vasp/), ABINIT (http://www.abinit.org/),
+ CIF, Gaussian, XYZ, and many other file formats.
+ .
+ 3. Powerful analysis tools, including generation of phase diagrams,
+ Pourbaix diagrams, diffusion analyses, reactions, etc.
+ .
+ 4. Electronic structure analyses, such as density of states and band
+ structure.
+ .
+ 5. Integration with the Materials Project REST API, Crystallography
+ Open Database.
+ .
+ This is the documentation package for pymatgen.
+
+Package: python3-pymatgen
+Description-md5: 20ba6580b3ad09e3d4ad93366958b7b2
+Description-en: Python Materials Genomics for materials analysis
+ Pymatgen (Python Materials Genomics) is a robust, open-source Python
+ library for materials analysis. These are some of the main features:
+ .
+ 1.Highly flexible classes for the representation of Element, Site,
+ Molecule, Structure objects.
+ .
+ 2. Extensive input/output support, including support for VASP
+ (http://cms.mpi.univie.ac.at/vasp/), ABINIT (http://www.abinit.org/),
+ CIF, Gaussian, XYZ, and many other file formats.
+ .
+ 3. Powerful analysis tools, including generation of phase diagrams,
+ Pourbaix diagrams, diffusion analyses, reactions, etc.
+ .
+ 4. Electronic structure analyses, such as density of states and band
+ structure.
+ .
+ 5. Integration with the Materials Project REST API, Crystallography
+ Open Database.
+ .
+ This package provides the pymtgen module for Python 3.
+
+Package: python3-pymatgen-core
+Description-md5: 73632459455b29d490efa1f7ea42b807
+Description-en: Python Materials Genomics for materials analysis
+ Pymatgen (Python Materials Genomics) is a robust, open-source Python
+ library for materials analysis. These are some of the main features:
+ .
+ 1.Highly flexible classes for the representation of Element, Site,
+ Molecule, Structure objects.
+ .
+ 2. Extensive input/output support, including support for VASP
+ (http://cms.mpi.univie.ac.at/vasp/), ABINIT (http://www.abinit.org/),
+ CIF, Gaussian, XYZ, and many other file formats.
+ .
+ 3. Powerful analysis tools, including generation of phase diagrams,
+ Pourbaix diagrams, diffusion analyses, reactions, etc.
+ .
+ 4. Electronic structure analyses, such as density of states and band
+ structure.
+ .
+ 5. Integration with the Materials Project REST API, Crystallography
+ Open Database.
+ .
+ This package provides the pymatgen-core module for Python 3,
+ containing core functionality used by pymatgen.
 
 Package: pymatgen-core-test-files
 Description-md5: 1b0eecb57b2cfc2e0c4d84db4518495d
@@ -579906,6 +580043,14 @@ Description-en: Spying framework for Python
  when(os.path).exists('/foo').thenReturn(True)
  .
  This package contains the Python3 library.
+
+Package: python3-mockupdb
+Description-md5: d4170f6b4b78335e6a365885c179023c
+Description-en: MongoDB Wire Protocol server library - Python 3.x
+ Mock server for testing MongoDB clients and creating MongoDB Wire Protocol
+ servers.
+ .
+ This package contains the Python 3.x module.
 
 Package: python-model-bakery-doc
 Description-md5: 208d9e58b187c7cfdfe2ea7647c89e14
@@ -612353,6 +612498,15 @@ Description-en: tximportData
  The quantifiers were Cufflinks, RSEM, kallisto, Salmon and Sailfish.
  alevin example output is also included. Forr details on version numbers,
  sample information, and details on calls, see the package vignette.
+
+Package: r-bioc-ucsc.utils
+Description-md5: e46393c8c8d2bd70d1b4b1962f624a21
+Description-en: Low-level utilities to retrieve data from the UCSC Genome Browser
+ A set of low-level utilities to retrieve data from the UCSC Genome Browser.
+ Most functions in the package access the data via the UCSC REST API but some
+ of them query the UCSC MySQL server directly. Note that the primary purpose
+ of the package is to support higher-level functionalities implemented in
+ downstream packages like GenomeInfoDb or txdbmaker.
 
 Package: r-bioc-wrench
 Description-md5: c8042bec2856fd176ae1468955269fdf
@@ -653422,6 +653576,11 @@ Description-md5: 084ec9ffb6694d61cc3fe7750524cc7d
 Description-en: Memory compact Slab-based B-tree implementation - Rust source code
  Source code for Debianized Rust crate "btree-slab"
 
+Package: librust-btreecap-dev
+Description-md5: 566a6936b064c4c3c156b8f99e4e586f
+Description-en: BTree with configurable capacity limits and overflow policies - Rust source code
+ Source code for Debianized Rust crate "btreecap"
+
 Package: librust-buf-list-dev
 Description-md5: 56df8f25206946cad4e5b0038935499b
 Description-en: List of buffers that implements the bytes::Buf trait - Rust source code
@@ -665954,6 +666113,21 @@ Package: librust-nostr-dev
 Description-md5: 30042ac372d79ec34208c2fb6365d62a
 Description-en: Nostr protocol - Rust source code
  Source code for Debianized Rust crate "nostr"
+
+Package: librust-nostr-blossom-dev
+Description-md5: d15c38e37e5cf5b7664fab5a5a1762e7
+Description-en: Interacting with the Blossom protocol - Rust source code
+ Source code for Debianized Rust crate "nostr-blossom"
+
+Package: librust-nostr-database-dev
+Description-md5: cffe89e18d27daba7327ab5438f551d5
+Description-en: Events database trait for nostr apps - Rust source code
+ Source code for Debianized Rust crate "nostr-database"
+
+Package: librust-nostr-gossip-dev
+Description-md5: 669cc170c0400e2aac4e2ddd6deb76b3
+Description-en: Nostr gossip traits - Rust source code
+ Source code for Debianized Rust crate "nostr-gossip"
 
 Package: librust-notify-dev
 Description-md5: ac670886ae132f2b03be346722baba0e
@@ -684409,6 +684583,33 @@ Description-en: Software-defined Debian
  Software-defined Debian (sd-debian) is a next-generation declarative framework
  to deterministically define a Debian system with all its packages,
  configuration, and data.
+
+Package: sd-debian-hook-apt
+Description-md5: 44a376f9067e9717798dfb89bd502d65
+Description-en: Software-defined Debian (apt hook)
+ Software-defined Debian (sd-debian) is a next-generation declarative framework
+ to deterministically define a Debian system with all its packages,
+ configuration, and data.
+ .
+ This package contains the apt hook.
+
+Package: sd-debian-hook-dpkg
+Description-md5: ae70ec22298f0e00450852e6a6a7c93e
+Description-en: Software-defined Debian (dpkg hook)
+ Software-defined Debian (sd-debian) is a next-generation declarative framework
+ to deterministically define a Debian system with all its packages,
+ configuration, and data.
+ .
+ This package contains the dpkg hook.
+
+Package: sd-debian
+Description-md5: d6282a3a7ad452e8e26b8c9932b5c990
+Description-en: Software-defined Debian (metapackage)
+ Software-defined Debian (sd-debian) is a next-generation declarative framework
+ to deterministically define a Debian system with all its packages,
+ configuration, and data.
+ .
+ This package provides the metapackages.
 
 Package: sd-mux-ctrl
 Description-md5: 23b94eded833a472c8d339b0906d5d1d
@@ -788556,14 +788757,6 @@ Description-en: Command line utility to use zonefs file system
  zone configuration information obtained directly from the
  device to populate the mount point with files representing
  the device zones.
-
-Package: zonemaster-cli
-Description-md5: 9fe5aafc959abe4a3b254749763b6708
-Description-en: run Zonemaster tests from the command line
- Zonemaster is a utility for DNS validation of the quality of a DNS
- delegation.
- .
- This package contains the Zonemaster CLI utility.
 
 Package: zoneminder
 Description-md5: 29f69a7c7c0c0df78845ae5f4f2dcf64
