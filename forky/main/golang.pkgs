@@ -124,20 +124,40 @@ SHA256: ea071bc5a2358778bfe5b83fbaea6b68e1f4e0b21b54131e6404d8d08ab3ac72
 
 Package: golang-github-dgraph-io-badger-dev
 Source: badger
-Version: 4.8.0-2
-Installed-Size: 1088
+Version: 4.8.0-4
+Installed-Size: 23
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
+Depends: golang-github-dgraph-io-badger-v4-dev (= 4.8.0-4)
+Description: fast key-value DB in Go (transitional package)
+Homepage: https://github.com/dgraph-io/badger
+Description-md5: 6ef435121c38c9d3bd38de379782e496
+golang
+Priority: optional
+Filename: pool/main/b/badger/golang-github-dgraph-io-badger-dev_4.8.0-4_all.deb
+Size: 16080
+MD5sum: 6ce6072119302f855d2c808601084dbd
+SHA256: b75e7d2cfde9bcae991b34453418e65f96b9f288c265345b21fadd0c6565696f
+
+Package: golang-github-dgraph-io-badger-v4-dev
+Source: badger
+Version: 4.8.0-4
+Installed-Size: 1089
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: all
+Replaces: golang-github-dgraph-io-badger-dev (<< 4.8.0-4)
 Depends: golang-github-cespare-xxhash-dev, golang-github-datadog-zstd-dev, golang-github-dgraph-io-ristretto-dev (>= 2.0), golang-github-dgryski-go-farm-dev, golang-github-dustin-go-humanize-dev, golang-github-golang-protobuf-1-5-dev, golang-github-google-flatbuffers-dev, golang-github-klauspost-compress-dev, golang-github-pkg-errors-dev, golang-github-spf13-cobra-dev, golang-github-stretchr-testify-dev (>= 1.4.0), golang-go.opencensus-dev, golang-golang-x-net-dev, golang-golang-x-sys-dev, golang-opentelemetry-contrib-dev, golang-opentelemetry-otel-dev, golang-snappy-go-dev
+Breaks: golang-github-dgraph-io-badger-dev (<< 4.8.0-4)
 Description: fast key-value DB in Go - development files for embedding
+Multi-Arch: foreign
 Homepage: https://github.com/dgraph-io/badger
 Description-md5: 087ad4b904bd2c0044fd609e19972e82
 golang
 Priority: optional
-Filename: pool/main/b/badger/golang-github-dgraph-io-badger-dev_4.8.0-2_all.deb
-Size: 219420
-MD5sum: e8b4bbbeff49e76028cd6fa7b25b1c7f
-SHA256: 06e65863e7565918b14f1ba1ba7ea88e3b1b9318db1bcb63cb13fba49c47c063
+Filename: pool/main/b/badger/golang-github-dgraph-io-badger-v4-dev_4.8.0-4_all.deb
+Size: 218968
+MD5sum: 436b6a3cff56a9699f3493269aa95b5f
+SHA256: a23613c921fe0656098885925c4761eb327b451c8f673ffe667db99e38c7aa78
 
 Package: balloon
 Source: balloon (1.1.1-2)
@@ -16901,21 +16921,21 @@ SHA256: 808f470f7f24bd9431583e7cf68ae177776ef01bda70af122dec49b0a2c96cc4
 
 Package: golang-github-google-go-pkcs11-dev
 Source: golang-github-google-go-pkcs11
-Version: 0.3.0+dfsg-3
+Version: 0.3.0+dfsg-4
 Installed-Size: 86
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
-Architecture: all
+Architecture: amd64
 Depends: libnss3-dev, pkgconf
 Description: Go package for loading PKCS #11 modules (library)
-Multi-Arch: foreign
+Multi-Arch: same
 Homepage: https://github.com/google/go-pkcs11
 Description-md5: 89eaae23e3421f9be483fda3f4ff2c38
 golang
 Priority: optional
-Filename: pool/main/g/golang-github-google-go-pkcs11/golang-github-google-go-pkcs11-dev_0.3.0+dfsg-3_all.deb
-Size: 17732
-MD5sum: 14872ea33058ddaf02cdeb423bddaed1
-SHA256: e54c8ad9546e497e422c764cf3e55f6b663594270618a1c2fd6a8a617f9bd210
+Filename: pool/main/g/golang-github-google-go-pkcs11/golang-github-google-go-pkcs11-dev_0.3.0+dfsg-4_amd64.deb
+Size: 17800
+MD5sum: 640077920f43293b3f8c0ed842d61b11
+SHA256: 5b76bf7878c241c7b4ea54439a2f86de92f370013db84cf1e742959493f22cfc
 
 Package: golang-github-google-go-querystring-dev
 Source: golang-github-google-go-querystring
@@ -20038,21 +20058,21 @@ SHA256: 4de7168a26b178d485718bdc4f118818340df54974f0dc2a049784c20c315358
 
 Package: golang-github-invopop-jsonschema-dev
 Source: golang-github-invopop-jsonschema
-Version: 0.13.0-2
-Installed-Size: 194
+Version: 0.14.0-1
+Installed-Size: 202
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
-Depends: golang-github-stretchr-testify-dev, golang-github-wk8-go-ordered-map-dev
+Depends: golang-github-pb33f-ordered-map-v2-dev, golang-github-stretchr-testify-dev
 Description: Generate JSON Schemas from Go types (library)
 Multi-Arch: foreign
 Homepage: https://github.com/invopop/jsonschema
 Description-md5: d430618017c9773439cdebfba8bfa838
 golang
 Priority: optional
-Filename: pool/main/g/golang-github-invopop-jsonschema/golang-github-invopop-jsonschema-dev_0.13.0-2_all.deb
-Size: 27360
-MD5sum: 0402929a0a745859a6e9e1c5351ca76b
-SHA256: 2c04c4c952802dd766fe70815cfd1aa862a1beed266515db71561905221844a7
+Filename: pool/main/g/golang-github-invopop-jsonschema/golang-github-invopop-jsonschema-dev_0.14.0-1_all.deb
+Size: 29284
+MD5sum: 445bc4197f82cd779158836d5875f3f8
+SHA256: 5a968332728a610468d2ad8432b0448549371911271d4b506e92b0f5d2674626
 
 Package: golang-github-invopop-yaml-dev
 Source: golang-github-invopop-yaml
@@ -27357,6 +27377,40 @@ Filename: pool/main/g/golang-github-ncabatoff-go-seq/golang-github-ncabatoff-go-
 Size: 4792
 MD5sum: 7dd5f46213961fcc96c6da2497b69329
 SHA256: cbbe229f8165727cf77052bc261055a16df73aa1756c9e7697aa2bbc9b5db58f
+
+Package: golang-github-ncruces-sort-dev
+Source: golang-github-ncruces-sort
+Version: 1.0.0-1
+Installed-Size: 36
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: all
+Description: Sorting algorithms implemented in Go (library)
+Multi-Arch: foreign
+Homepage: https://github.com/ncruces/sort
+Description-md5: 5bdfcb7964dea74c157f006a93c4716a
+golang
+Priority: optional
+Filename: pool/main/g/golang-github-ncruces-sort/golang-github-ncruces-sort-dev_1.0.0-1_all.deb
+Size: 5932
+MD5sum: 909956f63aa9ff47253a8021680dcdc9
+SHA256: 3568af6f794e2e1450ca2cc57f6cb9e846623c7b3f1cfda0c1ef46c6a9996ba2
+
+Package: golang-github-ncruces-wbt-dev
+Source: golang-github-ncruces-wbt
+Version: 1.0.0-1
+Installed-Size: 60
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Architecture: all
+Description: Immutable weight-balanced trees in Go (library)
+Multi-Arch: foreign
+Homepage: https://github.com/ncruces/wbt
+Description-md5: 000f90f59ed38983ea352c2ecb2549fb
+golang
+Priority: optional
+Filename: pool/main/g/golang-github-ncruces-wbt/golang-github-ncruces-wbt-dev_1.0.0-1_all.deb
+Size: 9964
+MD5sum: fa559571e44117b51cf78ce11321f8e4
+SHA256: 87466e0ca0912b26f683de0ade40c72ee707dd7b61473803803597dbf0f0a81e
 
 Package: golang-github-ncw-swift-dev
 Source: golang-github-ncw-swift
@@ -44105,8 +44159,8 @@ SHA256: 0d8ea2a072f2e99d3c73ba8645b28b8d3e9d0d6fc094f438c97bc5a14aa1ae35
 
 Package: golang-github-syncthing-syncthing-dev
 Source: syncthing
-Version: 1.29.5~ds1-5
-Installed-Size: 13031
+Version: 1.29.5~ds1-5.1
+Installed-Size: 12997
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: all
 Depends: golang-github-alecthomas-kong-dev (>= 0.2.17), golang-github-aws-aws-sdk-go-dev, golang-github-audriusbutkevicius-recli-dev, golang-github-calmh-xdr-dev, golang-github-ccding-go-stun-dev (>= 0.1.2), golang-github-chmduquesne-rollinghash-dev (>= 4.0.0), golang-github-getsentry-raven-go-dev, golang-github-go-ldap-ldap-dev (>= 3.2.3), golang-github-gobwas-glob-dev (>= 0.2.1), golang-github-greatroar-blobloom-dev (>= 0.7.0), golang-github-hashicorp-golang-lru-v2-dev, golang-github-jackpal-gateway-dev, golang-github-jackpal-go-nat-pmp-dev, golang-github-julienschmidt-httprouter-dev, golang-github-kballard-go-shellquote-dev, golang-github-maruel-panicparse-dev, golang-github-maxmind-geoipupdate-dev, golang-github-miscreant-miscreant.go-dev, golang-github-oschwald-geoip2-golang-dev, golang-github-pierrec-lz4-dev, golang-github-pkg-errors-dev, golang-github-prometheus-client-golang-dev (>= 0.9.0), golang-github-puzpuzpuz-xsync-dev (>= 4.4.0), golang-github-quic-go-quic-go-dev (>= 0.38.2), golang-github-rabbitmq-amqp091-go-dev, golang-github-rcrowley-go-metrics-dev, golang-github-shirou-gopsutil-dev (>= 3.21.12), golang-github-syncthing-notify-dev, golang-github-syndtr-goleveldb-dev, golang-github-thejerf-suture-dev (>= 4.0.1), golang-github-urfave-cli-dev, golang-github-vitrun-qart-dev, golang-github-willabides-kongplete-dev, golang-golang-x-crypto-dev, golang-golang-x-net-dev, golang-golang-x-sys-dev, golang-golang-x-text-dev, golang-golang-x-time-dev, golang-golang-x-tools-dev, golang-google-protobuf-dev, golang-k8s-sigs-yaml-dev, golang-uber-automaxprocs-dev
@@ -44115,10 +44169,10 @@ Homepage: https://www.syncthing.net/
 Description-md5: 8d718994a481203d5a3107fc16e62fe3
 golang
 Priority: optional
-Filename: pool/main/s/syncthing/golang-github-syncthing-syncthing-dev_1.29.5~ds1-5_all.deb
-Size: 4136776
-MD5sum: 21abd17836f92df8b82e7c39fc813055
-SHA256: ab0ff694855594a07a786b278ab978c8be3a92af023b4173e92cfdd069edfccd
+Filename: pool/main/s/syncthing/golang-github-syncthing-syncthing-dev_1.29.5~ds1-5.1_all.deb
+Size: 4120620
+MD5sum: ecbcaaf686d3d73a8f5522a8cf18d1b7
+SHA256: 93ce416f2b5da05cba749e7a8f1663f1e50504c233afbd4ab886716d83fefce4
 
 Package: tfk8s
 Source: tfk8s (0.1.10-2)

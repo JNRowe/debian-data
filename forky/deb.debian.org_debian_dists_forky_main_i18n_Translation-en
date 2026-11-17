@@ -22174,6 +22174,16 @@ Description-en: fast key-value DB in Go - command-line tools
  the v1.x.
 
 Package: golang-github-dgraph-io-badger-dev
+Description-md5: 6ef435121c38c9d3bd38de379782e496
+Description-en: fast key-value DB in Go (transitional package)
+ This is a transitional package to ease upgrades to
+ golang-github-dgraph-io-badger-v4-dev. Upstream declares the module as
+ github.com/dgraph-io/badger/v4, so the library now installs at that path
+ and the binary package carries the matching suffix.
+ .
+ It can safely be removed once nothing build-depends on the old name.
+
+Package: golang-github-dgraph-io-badger-v4-dev
 Description-md5: 087ad4b904bd2c0044fd609e19972e82
 Description-en: fast key-value DB in Go - development files for embedding
  BadgerDB is an embeddable, persistent and fast key-value (KV)
@@ -37518,6 +37528,20 @@ Description-en: Implementation of the WPS brute force attack, written in C
  and cpu performance, correct handling of endianness, and a more robust set of
  options.
 
+Package: bumblebee
+Description-md5: 603c350e38f498eb44849c8eb81822e8
+Description-en: NVIDIA Optimus support for Linux
+ Bumblebee is an effort to make NVIDIA Optimus enabled laptops work in
+ GNU/Linux systems. These laptops are built in such a way that the NVIDIA
+ graphics card can be used on demand so that battery life is improved and
+ temperature is kept low.
+ .
+ It disables the discrete graphics card if no client is detected, and starts
+ an X server making use of NVIDIA card if requested then let software GL
+ implementations (such as VirtualGL) copy frames to the visible display that
+ runs on the integrated graphics. The ability to use discrete graphics
+ depends on the driver: open source nouveau and proprietary nvidia.
+
 Package: bumblebee-status
 Description-md5: a2746be4272b1b9619881593964e53d4
 Description-en: Modular, themeable status line generator for the i3 window manager
@@ -46771,6 +46795,20 @@ Description-en: Python 3 interface for libchemps2-3t64
  .
  This package installs the library for Python 3.
 
+Package: python3-cherrypy-foundation
+Description-md5: d9f50e52e93cd4cb894b8246d9d159c3
+Description-en: Common utilities and integrations for building CherryPy web applications
+ This project provides a collection of reusable utilities that simplify
+ building web applications with CherryPy. It offers built-in integrations
+ with SQLAlchemy for database access, Jinja2 for templating, WTForms for
+ form handling, and Bootstrap for UI components, helping streamline
+ application development.
+
+Package: python3-cherrypy-foundation-doc
+Description-md5: fd09d29b2dd0f37f6bc404708d83a918
+Description-en: Documentation for cherrypy-foundation
+ This package contains the HTML documentation for cherrypy-foundation.
+
 Package: python-cherrypy3-doc
 Description-md5: 48a9d223b1d7218a13d9eddc7ea9dd87
 Description-en: Documentation for CherryPy web framework
@@ -50910,27 +50948,6 @@ Description-en: extremely efficient phylogenetic tree reconstruction
  algorithm by J. Evans, L. Sheneman, and J. Foster from the Initiative
  for Bioinformatics and Evolutionary Studies (IBEST) at the University of
  Idaho.
-
-Package: clearsilver-dev
-Description-md5: f4cf156c070f7222d1b2c8c25d352567
-Description-en: headers and static library for clearsilver
- Clearsilver is a fast, powerful, and language-neutral HTML template system.
- In both static content sites and dynamic HTML applications, it
- provides a separation between presentation code and application logic which
- makes working with your project easier.
- .
- This package contains the C headers, the static library and the cstest binary
- for developers.
-
-Package: libclearsilver-perl
-Description-md5: be59004dd0fdccb51b297f6ec4089169
-Description-en: Perl bindings for clearsilver
- Clearsilver is a fast, powerful, and language-neutral HTML template system.
- In both static content sites and dynamic HTML applications, it
- provides a separation between presentation code and application logic which
- makes working with your project easier.
- .
- This package contains the perl package ClearSilver.
 
 Package: clementine
 Description-md5: e194c11c413c82b36dbde39650ae34e9
@@ -90061,6 +90078,16 @@ Description-en: backup tool using MiniDV camcorders
  To bring the data on tape, you have to use an additional utility, called
  dvconnect, which is included in libdv-bin.
 
+Package: dvbcut
+Description-md5: 1962513073dfac978dc8e5e8592c9bbb
+Description-en: Qt application for cutting parts out of DVB streams
+ DVBcut is a Qt application that allows you to select certain parts of an
+ MPEG transport stream (as received via Digital Video Broadcasting, DVB) and
+ save these parts into a single MPEG output file. It follows a `keyhole
+ surgery'' approach where the input video and audio data is mostly kept
+ unchanged, and only very few frames at the beginning and/or end of the
+ selected range are re-encoded in order to obtain a valid MPEG file.
+
 Package: dvblast
 Description-md5: 3dfb83d4f9116578511b84bc2a09590e
 Description-en: Simple and powerful dvb-streaming application
@@ -105198,14 +105225,6 @@ Description-md5: be8013fed806e7b3dd3ee7168dfd91d6
 Description-en: Fast Audio Playlist Generator
  FAPG is a tool to generate list of audio files (Wav, MP3, Ogg, etc)
  in various formats (M3U, PLS, XSPF, HTML, etc).
-
-Package: fapolicyd
-Description-md5: 407c0caebe7f4104e4e230b89cde1aa6
-Description-en: File Access Policy Daemon
- Fapolicyd is a userspace daemon that determines access rights to files
- based on a trust database and file or process attributes.
- .
- It can be used to either blacklist or whitelist file access and execution.
 
 Package: far2l
 Description-md5: fd8d55176438501289fe4d2e97ae993f
@@ -138211,38 +138230,6 @@ Description-en: coding theory library for GAP (arch-dep files)
  This Debian package contains the architecture-dependent files for the
  gap-guava Debian package.
 
-Package: gap-hap
-Description-md5: aad2c55adc49f0235b68579fe76d071e
-Description-en: GAP HAP - Homological Algebra Programming
- GAP is a system for computational discrete algebra, with particular emphasis
- on Computational Group Theory. GAP provides a programming language, a library
- of thousands of functions implementing algebraic algorithms written in the GAP
- language as well as large data libraries of algebraic objects. GAP is used in
- research and teaching for studying groups and their representations, rings,
- vector spaces, algebras, combinatorial structures, and more.
- .
- HAP is a package for some calculations in elementary algebraic topology and
- the cohomology of groups. The initial focus of the library was on computations
- related to the cohomology of finite and infinite groups, with particular
- emphasis on integral coefficients. The focus has since broadened to include
- Steenrod algebras of finite groups, Bredon homology, cohomology of simplicial
- groups, and general computations in algebraic topology relating to finite
- CW-complexes, covering spaces, knots, knotted surfaces, and topics such as
- persistent homology arising in topological data analysis.
-
-Package: gap-hapcryst
-Description-md5: 13e9da300a67f2cf9464d5a46445fc52
-Description-en: GAP HAPcryst - A HAP extension for crystallographic groups
- GAP is a system for computational discrete algebra, with particular emphasis
- on Computational Group Theory. GAP provides a programming language, a library
- of thousands of functions implementing algebraic algorithms written in the GAP
- language as well as large data libraries of algebraic objects. GAP is used in
- research and teaching for studying groups and their representations, rings,
- vector spaces, algebras, combinatorial structures, and more.
- .
- This is an extension to the HAP package by Graham Ellis. It implements
- geometric methods for the calculation of resolutions of Bieberbach groups.
-
 Package: gap-io
 Description-md5: aa88ef4366830f577a7abbdf340344ed
 Description-en: low level C library IO bindings for GAP
@@ -138318,19 +138305,6 @@ Description-en: GAP Polycyclic - Computation with polycyclic groups
  .
  GAP Polycyclic is a package for computation with polycyclic groups, by Bettina
  Eick, Max Horn and Werner Nickel.
-
-Package: gap-polymaking
-Description-md5: 23b1ed087c67c55957af4a7ffc66da72
-Description-en: GAP polymaking - Interfacing the geometry software polymake
- GAP is a system for computational discrete algebra, with particular emphasis
- on Computational Group Theory. GAP provides a programming language, a library
- of thousands of functions implementing algebraic algorithms written in the GAP
- language as well as large data libraries of algebraic objects. GAP is used in
- research and teaching for studying groups and their representations, rings,
- vector spaces, algebras, combinatorial structures, and more.
- .
- This package provides a very basic interface to the polymake program by
- Ewgenij Gawrilow, Michael Joswig et al.
 
 Package: gap-primgrp
 Description-md5: d5ad1a5c90a4de5a39358692b8b0a70f
@@ -205096,6 +205070,22 @@ Description-en: sequence go values to allow sorting them (library)
  functions, and maps with non-string keys. Pointers can be ordered if
  their underlying types can be ordered.
 
+Package: golang-github-ncruces-sort-dev
+Description-md5: 5bdfcb7964dea74c157f006a93c4716a
+Description-en: Sorting algorithms implemented in Go (library)
+ Educational Go implementations of classic sorting algorithms
+ (Quicksort, Heapsort, Shellsort), focusing on clarity and simplicity
+ rather than peak performance. Useful as a learning resource and as
+ a dependency of related ncruces Go packages.
+
+Package: golang-github-ncruces-wbt-dev
+Description-md5: 000f90f59ed38983ea352c2ecb2549fb
+Description-en: Immutable weight-balanced trees in Go (library)
+ Persistent (immutable) weight-balanced trees for Go, including
+ join-based algorithms and order statistics. Useful when persistence
+ matters; otherwise a conventional B-tree may perform better.
+ Dependency of related ncruces Go packages (e.g. go-sqlite3).
+
 Package: golang-github-ncw-swift-dev
 Description-md5: ec0f27dd69742a0db70df47237501f5c
 Description-en: Go language interface to Swift / Openstack / Rackspace cloud files
@@ -267712,6 +267702,16 @@ Description-en: Hierarchical Data Modeling Framework
  data models, reading and writing data to different storage backends,
  and representing data with Python object.
 
+Package: hdmf-common-schema
+Description-md5: 7f6d38ce2590e13cd8d15af6043f9bcd
+Description-en: HDMF Common data format
+ The HDMF Common specification defines a collection of common, reusable
+ data structures that build the foundation for the modeling of advanced
+ data formats, e.g., the Neurodata Without Borders (NWB)
+ neurophysiology data standard. The HDMF Common schema is integrated
+ with HDMF, which provides advanced APIs for reading, writing, and
+ using HDMF-common data types.
+
 Package: hdparm
 Description-md5: 10cd5d89570f5496e89b163ae03a66e5
 Description-en: tune hard disk parameters for high performance
@@ -277635,33 +277635,6 @@ Description-en: IEM's spatialization suite - VST3 plugins
  shapers, delay and reverb effects and analysis tools.
  .
  This package provides the plugins so they can be used by VST3 hosts.
-
-Package: ifeffit
-Description-md5: 910f116c8e14fa8d361b031b45896347
-Description-en: Interactive XAFS analysis program
- IFEFFIT is an interactive program for XAFS analysis. It combines the
- high-quality analysis algorithms of AUTOBK and FEFFIT with graphical display
- of XAFS data and general data manipulation.
- .
- IFEFFIT comes as a command-line program, but the underlying functionality is
- available as a programming library. The IFEFFIT library can be used from C,
- Fortran, Tcl, and Perl.
-
-Package: ifeffit-doc
-Description-md5: 23588aa725d1361238e782379bbed9bc
-Description-en: IFEFFIT examples and documentation
- This package contains all the available documentation for IFEFFIT and
- its component programs.  Example files for EXAFS data analysis are also
- provided as tutorials.
-
-Package: libifeffit-perl
-Description-md5: e6edcbfcf9214ca2748ec5d9024356e5
-Description-en: Perl extensions for IFEFFIT
- IFEFFIT is an interactive program for XAFS analysis. It combines the
- high-quality analysis algorithms of AUTOBK and FEFFIT with graphical display
- of XAFS data and general data manipulation.
- .
- This package provides an interface to IFEFFIT from Perl.
 
 Package: ifenslave
 Description-md5: c263566b05a180a13996b83ed18ae543
@@ -290637,6 +290610,16 @@ Description-en: JRC morphological and image processing library
  .
  This package contains the shared library.
 
+Package: libmiallib2
+Description-md5: b7bd283625f499e4453aa7f0ab0b6a2b
+Description-en: JRC morphological and image processing library
+ Miallib is a C library including image processing and
+ mathematical morphology algorithms used by Join Research Center
+ in their Big Data Analytics Platform, with binding for Python
+ provided.
+ .
+ This package contains the shared library.
+
 Package: libjep-java
 Description-md5: 48fa7ed9fe1d548e64f20334292791cd
 Description-en: Java Expression Parser
@@ -292869,6 +292852,17 @@ Description-en: JPEG XL Image Coding System - "JXL" (command line utility)
  This package installs the command line utilities.
 
 Package: libjxl0.11
+Description-md5: 944b209f63240a6ed87a3f696edc166e
+Description-en: JPEG XL Image Coding System - "JXL" (shared libraries)
+ The JPEG XL Image Coding System (ISO/IEC 18181) is a lossy and
+ lossless image compression format. It has a rich feature set and is
+ particularly optimized for responsive web environments, so that
+ content renders well on a wide range of devices. Moreover, it includes
+ several features that help transition from the legacy JPEG format.
+ .
+ This package installs shared libraries.
+
+Package: libjxl0.13
 Description-md5: 944b209f63240a6ed87a3f696edc166e
 Description-en: JPEG XL Image Coding System - "JXL" (shared libraries)
  The JPEG XL Image Coding System (ISO/IEC 18181) is a lossy and
@@ -295944,17 +295938,6 @@ Description-en: Python seamlessly integrated with Java
  experimentation and rapid application development, and it can
  interact with Java packages or with running Java applications.
 
-Package: jython-doc
-Description-md5: c962bf50c611a5ef15704e3db84eb289
-Description-en: Jython documentation including API docs
- Official documentation for Jython, an implementation of Python
- seamlessly integrated with Java.  This includes detailed Jython usage
- information as well as the API documentation for the Jython classes.
- .
- This package only contains documentation specific to Jython; for general
- Python documentation including a Python language reference and tutorial,
- see Python web site : http://docs.python.org/.
-
 Package: jzip
 Description-md5: 1fd33c5751e02ad525634c02d1c4954a
 Description-en: Text mode interpreter for Z-Code adventures
@@ -296642,449 +296625,6 @@ Description-en: data files for Kalzium
  KDE periodic table application.
  .
  This package is part of the KDE education module.
-
-Package: kamailio
-Description-md5: 552e5cc2b6068908fa4d5a47f64b90b9
-Description-en: very fast, dynamic and configurable SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, kamailio can handle thousands requests
- per second even on low-budget hardware. It can be configured to act
- as a SIP proxy, application server, session border controller,
- or call load balancer to handle a set of media servers.
- .
- A C Shell like scripting language provides full control over the server's
- behaviour. It's easy to integrate Kamailio with 3rd party API's and
- applications using HTTP, AMQP, database drivers, LDAP, Radius and many other
- solutions. In addition there is support for scripting using Lua, Python, Perl,
- Javascript.
- .
- Kamailio's modular architecture allows only required functionality to be
- loaded. There are over 100 modules available: WebSockets for WebRTC,
- authentication, multiple databases - both traditional SQL databases as well as
- no-SQL, message bus systems like Rabbit MQ, instant messaging, a presence
- agent, integration with REST-ful APIs using HTTP and JSON or XML, radius
- authentication, record routing, an SMS gateway, a XMPP/jabber gateway, a
- transaction and dialog module, OSP module, statistics support,
- registrar and user location services, SNMP, SIMPLE Presence and much more.
- .
- This package contains the main Kamailio binary along with the principal
- modules and support binaries.
-
-Package: kamailio-authblockchain-modules
-Description-md5: 88021bffd161251a2df992fd88a73f3b
-Description-en: Blockchain related modules for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides auth_web3 and auth_arnacon modules.
-
-Package: kamailio-autheph-modules
-Description-md5: e80feac6503dfc23b0b8833138f225df
-Description-en: authentication using ephemeral credentials for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides the ephemeral authentication module for Kamailio,
- enabling authentication using a Restful HTTP API.
-
-Package: kamailio-cnxcc-modules
-Description-md5: 3d59c0d88b6e3024f973200765504fc0
-Description-en: cnxcc modules for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides the cnxcc call charging control module for Kamailio.
-
-Package: kamailio-cpl-modules
-Description-md5: acc08d42c21651499c8ae0c0e2615207
-Description-en: CPL module (CPL interpreter engine) for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides a CPL (Call Processing Language) interpreter for
- Kamailio, turning Kamailio into a CPL server (storage and interpreter).
-
-Package: kamailio-erlang-modules
-Description-md5: 81dd7fccd6b7b252e7247bc36e64f9ee
-Description-en: Erlang modules for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This Kamailio module provides interaction with the Erlang node from the
- Kamailio SIP routing scripts. The module allows sending, receiving Erlang
- messages and RPC calls between each other.
-
-Package: kamailio-extra-modules
-Description-md5: c7ee54b7b1b07069b42bf5197a49e898
-Description-en: Extra modules for the Kamailio SIP Server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides a set of modules for compression of SIP attachments,
- UUID usage, JSON data structure support, JWT (JSON Web Token), HTTP restful
- API asynchronous access and a few more functions:
- gzcompress uuid evapi jansson janssonrpcc jwt nghttp2 http_async_client
-
-Package: kamailio-geoip2-modules
-Description-md5: bb2968f9479079a613c83dc80911f1d5
-Description-en: geoip2 module for the Kamailio SIP Server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides the geoip2 module, an extension enabling
- real-time queries against the Max Mind GeoIP2 database within the Kamailio
- configuration file.
-
-Package: kamailio-ims-modules
-Description-md5: 9f40af666cd6a9dd0fe3d4272bd00ce0
-Description-en: IMS module for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package contains various Diameter interfaces and modules for Kamailio
- to run as an IMS core.
-
-Package: kamailio-json-modules
-Description-md5: 096739f186c290e3b7f40d8d29087d16
-Description-en: Json parser and Json-RPC modules for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides a JSON parser for use in the Kamailio
- configuration file and the JSON-RPC client over netstrings.
-
-Package: kamailio-kafka-modules
-Description-md5: 6f44290ff565783723f0191e7cb54dd4
-Description-en: Kafka module for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides an embedded kafka producer using librdkafka.
-
-Package: kamailio-kazoo-modules
-Description-md5: 8d9132d1dc3d008b539e3a8adf13ed13
-Description-en: kazoo modules for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides the Kazoo application server integration module for
- Kamailio.
-
-Package: kamailio-ldap-modules
-Description-md5: a1f37e4d883caccb2b182a8e04087683
-Description-en: LDAP modules for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides the ldap and h350 modules for Kamailio, enabling LDAP
- queries from the Kamailio routing scripts and storage of SIP account data in
- an LDAP directory.
-
-Package: kamailio-lua-modules
-Description-md5: e78678d1eea14c5a28d0b5756a863786
-Description-en: app_lua module for Kamailio Lua support
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides the app_lua module, an extension allowing to
- execute embedded Lua applications within the configuration file as
- well as writing the entire configuration file in Lua.
-
-Package: kamailio-lwsc-modules
-Description-md5: 651a0529537101bebec504571b00408a
-Description-en: Libwebsockets module for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package contains the lwcs module, which provides a client-side WebSockets
- API through libwebsockets.
-
-Package: kamailio-memcached-modules
-Description-md5: 8a1b5b6a49b64c3f266fd53f56497b9b
-Description-en: interface to the memcached server, for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides the memcached module, an interface to the memcached
- server, a high-performance, distributed memory object caching system.
-
-Package: kamailio-microhttpd-modules
-Description-md5: f414917140b7589791acfc739ce72745
-Description-en: Microhttpd module for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides an embedded HTTP server using libmicrohttpd.
-
-Package: kamailio-mongodb-modules
-Description-md5: 58f5fcbe5e3436900cb006c7801b2a3b
-Description-en: mongodb modules for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides the mongodb database driver and non-db connector for
- Kamailio.
-
-Package: kamailio-mqtt-modules
-Description-md5: 54a4a3f05924c755b672e6ab7fb71880
-Description-en: MQTT modules for the Kamailio SIP Server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- MQTT module allows bidirectional publish/subscribe communication by
- connecting Kamailio to a MQTT Broker.
- .
- Messages can be published from any point in the routing script. Also
- the subscriptions can be fully controlled by scripting commands.
-
-Package: kamailio-mysql-modules
-Description-md5: e5dd14628ca6789f21ca41a164f8564a
-Description-en: MySQL database connectivity module for Kamailio
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides the MySQL database driver for Kamailio.
-
-Package: kamailio-nats-modules
-Description-md5: 98fadf1e6efe7d33f5087da03212f3e6
-Description-en: Nats module for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package contains the nats module, which provides a NATS consumer for
- Kamailio. NATS is a real time distributed messaging platform, more details
- about it can be found at nats.io.
-
-Package: kamailio-outbound-modules
-Description-md5: 6a892d18e646b713f338695829b44b4e
-Description-en: SIP Outbound module for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package contains the "outbound" module implementing SIP outbound extension.
-
-Package: kamailio-perl-modules
-Description-md5: cfe9d19e4e30f4e71986827ded62b2ab
-Description-en: Perl extensions and database driver for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides an interface for Kamailio to write Perl extensions and
- the perlvdb database driver for Kamailio.
-
-Package: kamailio-phonenum-modules
-Description-md5: 28e6546f656f4fa8735fbba63db8bf4a
-Description-en: phonenum modules for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides real-time queries against the libphonenumber to be
- performed directly from the Kamailio configuration and routing scripts.
-
-Package: kamailio-postgres-modules
-Description-md5: 8352e89f5d321aac333965c2b466bead
-Description-en: PostgreSQL database connectivity module for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides the PostgreSQL database driver for Kamailio.
-
-Package: kamailio-presence-modules
-Description-md5: c1834ec77d4cce2de4cb832201049c17
-Description-en: SIP presence modules for Kamailio
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides several Kamailio modules for implementing a presence
- server and presence user agent for rich presence, registrar-based presence,
- external triggered presence with SIMPLE and XCAP support, as well as a
- set of other SIP event packages..
-
-Package: kamailio-python3-modules
-Description-md5: 5bd97b896aa3add6a41b618dc7ba976b
-Description-en: app_python3 module for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides the app_python3 module, an extension allowing to
- execute embedded Python applications within the Kamailio SIP routing script.
-
-Package: kamailio-rabbitmq-modules
-Description-md5: 291676c921cf99398a1ab3d788565fb9
-Description-en: RabbitMQ and AMQP integration modules for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides the RabbitMQ module for Kamailio, enabling AMQP
- integration into the SIP routing scripts for third party service
- support.
-
-Package: kamailio-radius-modules
-Description-md5: 5aa030dd29538d295aa0cf0940e5b5d0
-Description-en: RADIUS modules for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides a set of RADIUS modules for Kamailio, for
- authentication, peering, group membership and messages URIs checking against a
- RADIUS server.
-
-Package: kamailio-redis-modules
-Description-md5: 2a2e0163eb31c5413dfc1f2ff9e82735
-Description-en: Redis database connectivity module for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides the Redis NOSQL database driver for Kamailio.
-
-Package: kamailio-ruby-modules
-Description-md5: 9950deeb75bcae73dad9ccfb78da8bc5
-Description-en: app_ruby module for Kamailio Ruby support
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides the app_ruby module, an extension allowing to
- execute embedded Ruby applications within the Kamailio SIP routing script.
-
-Package: kamailio-sctp-modules
-Description-md5: 23c1bcafb8b49b3df80140f632fd9d8d
-Description-en: SCTP SIP transport module for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides the SCTP SIP transport module for Kamailio.
-
-Package: kamailio-secsipid-modules
-Description-md5: 22714923bc20b2934a0ebc9c7f654a58
-Description-en: secsipid module for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package contains the secsipid module, witch provides
- STIR and SHAKEN (RFC8224, RFC8588).
-
-Package: kamailio-snmpstats-modules
-Description-md5: 3f19e2de7dc27a4ef75f936a91e17402
-Description-en: SNMP AgentX subagent module for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides the snmpstats module for Kamailio. This module acts
- as an AgentX subagent which connects to a master agent. The Kamailio MIBS are
- included.
-
-Package: kamailio-sqlite-modules
-Description-md5: b4f67430b14343d98efac6caaf86fe43
-Description-en: SQLite database connectivity module for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides the SQLite database driver for Kamailio.
-
-Package: kamailio-systemd-modules
-Description-md5: b03a3ec6dcec09ef8291bc5e46f57fcf
-Description-en: systemd logging modules for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides logging to systemd journal directly from the
- Kamailio configuration and routing scripts.
-
-Package: kamailio-tls-modules
-Description-md5: 36c06a49af2355c47ed5760d80991cd8
-Description-en: TLS support for the Kamailio SIP server (authentication, transport)
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides TLS support for encrypted and authenticated
- SIP connections as well as generic TLS support for many Kamailio modules.
-
-Package: kamailio-unixodbc-modules
-Description-md5: 1f7c22f422b0111b09d4f9a872f73763
-Description-en: unixODBC database connectivity module for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides the unixODBC database driver for Kamailio.
-
-Package: kamailio-utils-modules
-Description-md5: 10e039d68b43f9d332fe6e38049edc47
-Description-en: Utility functions for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides a set of utility functions for Kamailio, as well
- as modules for restful HTTP API access using the CURL library in the
- http_client module.
-
-Package: kamailio-websocket-modules
-Description-md5: 14a90490fa55b64ad6cd540ad4dd34b8
-Description-en: WebSocket module for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package contains the module implementing WebSocket transport layer
- for use in SIP over WebSockets, in combination with WebRTC media sessions..
-
-Package: kamailio-xml-modules
-Description-md5: c27d5c0af319dff182dc09dd0da739cb
-Description-en: XML based extensions for Kamailio's Management Interface
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides:
- - the XMLRPC transport implementations for Kamailio's
- Management and Control Interface.
- - xmlops module for XPath operations in configuration file
-
-Package: kamailio-xmpp-modules
-Description-md5: 5ef95e7d723676af349f49fed944b7b3
-Description-en: XMPP gateway module for the Kamailio SIP server
- Kamailio is a very fast and flexible SIP (RFC3261)
- server. Written entirely in C, Kamailio can handle thousands calls
- per second even on low-budget hardware.
- .
- This package provides the SIP to XMPP IM translator module for Kamailio.
 
 Package: kamcli
 Description-md5: 765fa512a88c519abcd75e724f46c9d1
@@ -329039,14 +328579,6 @@ Description-en: module to initialize FormBuilder applications from YAML files
  useful if you need to define validation callbacks, as if often desired
  in CGI::FormBuilder applications.
 
-Package: libcgi-github-webhook-perl
-Description-md5: d9f0bd7da88e9a0a53299fb9dc14836c
-Description-en: Easily write CGI-based GitHub webhooks in Perl
- CGI::Github::Webhook provides an easy way to write CGI-based GitHub
- webhooks in Perl. In most cases three statements already
- suffice: Configure a script to trigger, a shared secret and a log
- file and you're ready to go.
-
 Package: libcgi-pm-perl
 Description-md5: 3077f45e936eba46506263966da1bbd7
 Description-en: module for Common Gateway Interface applications
@@ -348552,6 +348084,31 @@ Description-en: toolkit for developing bioinformatic related software
   * Access annotation in GenBank flat files
  .
  This package contains the dynamic library.
+
+Package: libgenome-model-tools-music-perl
+Description-md5: 3a939008fa17ab5dffcc9af75ead9b4d
+Description-en: module for finding mutations of significance in cancer
+ The MuSiC suite is a set of tools aimed at discovering the significance of
+ somatic mutations found within a given cohort of cancer samples, and with
+ respect to a variety of external data sources.
+
+Package: libgenome-perl
+Description-md5: 18bda494cfa2beedc0b5313c8ad702c8
+Description-en: pipelines, tools, and data management for genomics
+ This is the base namespace module for the Genome software tree.
+ .
+ That tree has several primary components:
+ .
+ Genome::Model: a data modeling pipeline management system for genomics
+ .
+ Genome::Model::Tools a tree of >1000 tools and tool wrappers for genomics
+ .
+ Genome::* a variety of sample tracking classes with an RDBMS back-end
+ .
+ Only the tools system is currently released.
+ .
+ See genome for a complete inventory of all tool packages, and for
+ command-line access to those tools.
 
 Package: libgeo-coder-googlev3-perl
 Description-md5: bb3af2acbe7968d4b415861a05288de3
@@ -379403,14 +378960,6 @@ Description-en: Java library to access method parameter names at runtime
  languages like Groovy & JRuby, web action frameworks like Waffle and VRaptor
  and the compelling Grails as well as SOAP and REST designs could also benefit.
 
-Package: libparanamer-java-doc
-Description-md5: ca5f621661c69aeb0114087f88d870aa
-Description-en: Java library to access method parameter names at runtime -- docs
- Paranamer is a library that allows the parameter names of non-private methods
- and constructors to be accessed at runtime.
- .
- This package contains the Javadoc API documentation for libparanamer-java.
-
 Package: libparanamer-maven-plugin-java
 Description-md5: a3b3bb6a276277dc83d98531dd9ffcb5
 Description-en: Paranamer Maven Plugin
@@ -381282,14 +380831,6 @@ Description-en: Perl module to create detached PGP signatures
  temporary files are required for signature generation (but are for
  signature verification).
 
-Package: libpgplot-perl
-Description-md5: 0bcad72bb03a82fdbdd15f1eaf307200
-Description-en: perl interface to the pgplot plotting library
- The PGPLOT module provides a perl interface to the pgplot libraries used for
- plotting and visualizing scientific data. It is particularly popular for
- plotting astronomical data. Compared to using pgplot from C or FORTRAN,
- these Perl bindings allow for a faster, more interactive development.
-
 Package: libphdi-dev
 Description-md5: aa150d144492fb40d20acc9684c2919c
 Description-en: Parallels Hard Disk image (PHDI) format access library -- development files
@@ -381764,6 +381305,16 @@ Description-en: GPU-accelerated video/image rendering primitives (development fi
  This package contains the development files.
 
 Package: libplacebo360
+Description-md5: 6e6253382a0be31062c18fbf3b6b6b29
+Description-en: GPU-accelerated video/image rendering primitives (shared library)
+ The library provides useful GPU-accelerated image processing primitives based
+ on GLSL. It includes shader routines for decoding and transforming colors,
+ tone mapping, dithering, and for various algorithms that sample from images,
+ such as debanding and scaling.
+ .
+ This package contains the shared library.
+
+Package: libplacebo387
 Description-md5: 6e6253382a0be31062c18fbf3b6b6b29
 Description-en: GPU-accelerated video/image rendering primitives (shared library)
  The library provides useful GPU-accelerated image processing primitives based
@@ -509253,90 +508804,6 @@ Description-en: Java runtime based on OpenJDK (regression test support)
  This package contains all the binary files needed to run the
  OpenJDK autopkg tests.
 
-Package: openjdk-27-dbg
-Description-md5: d73cb0a41450fd194ce774f2b26510b8
-Description-en: Java runtime based on OpenJDK (debugging symbols)
- OpenJDK is a development environment for building applications,
- applets, and components using the Java programming language.
- .
- This package contains the debugging symbols.
-
-Package: openjdk-27-demo
-Description-md5: 8c587e17f25fb354ef51e27e56507756
-Description-en: Java runtime based on OpenJDK (demos and examples)
- OpenJDK Java runtime
-
-Package: openjdk-27-doc
-Description-md5: 4689d9c1e14d405d15f0710639599643
-Description-en: OpenJDK Development Kit (JDK) documentation
- OpenJDK is a development environment for building applications,
- applets, and components using the Java programming language.
- .
- This package contains the API documentation.
-
-Package: openjdk-27-jdk
-Description-md5: b9e7f4837238c34971e4a8b72ab7d045
-Description-en: OpenJDK Development Kit (JDK)
- OpenJDK is a development environment for building applications,
- applets, and components using the Java programming language.
-
-Package: openjdk-27-jdk-headless
-Description-md5: 494a52f34d707a832270d6d51a78f511
-Description-en: OpenJDK Development Kit (JDK) (headless)
- OpenJDK is a development environment for building applications,
- applets, and components using the Java programming language.
-
-Package: openjdk-27-jre
-Description-md5: 13097853553de1ab39cc189225a9cbaa
-Description-en: OpenJDK Java runtime, using Hotspot JIT
- Full Java runtime environment - needed for executing Java GUI and Webstart
- programs, using Hotspot JIT.
-
-Package: openjdk-27-jre
-Description-md5: 5bad8f597e182fdf0635f3b9fccbce1a
-Description-en: OpenJDK Java runtime, using Hotspot Zero
- Full Java runtime environment - needed for executing Java GUI and Webstart
- programs, using Hotspot Zero.
-
-Package: openjdk-27-jre-headless
-Description-md5: 125494d786a73a442968635c3a21c714
-Description-en: OpenJDK Java runtime, using Hotspot Zero (headless)
- Minimal Java runtime - needed for executing non GUI Java programs,
- using Hotspot Zero.
-
-Package: openjdk-27-jre-headless
-Description-md5: 62c2c9689e617c48cc4480926d2ca785
-Description-en: OpenJDK Java runtime, using Hotspot JIT (headless)
- Minimal Java runtime - needed for executing non GUI Java programs,
- using Hotspot JIT.
-
-Package: openjdk-27-jre-zero
-Description-md5: c714861c802c9808def07d5329c6ed78
-Description-en: Alternative JVM for OpenJDK, using Zero
- The package provides an alternative runtime using the Zero VM. Built on
- architectures in addition to the Hotspot VM as a debugging aid for those
- architectures which don't have a Hotspot VM.
- .
- The VM is started with the option `-zero'. See the README.Debian for details.
-
-Package: openjdk-27-source
-Description-md5: 5e4d8bbb398daa24b05478a4a3be42bf
-Description-en: OpenJDK Development Kit (JDK) source files
- OpenJDK is a development environment for building applications,
- applets, and components using the Java programming language.
- .
- This package contains the Java programming language source files
- (src.zip) for all classes that make up the Java core API.
-
-Package: openjdk-27-testsupport
-Description-md5: 90b36dc9c28e2e8bfec904dc5995bd4c
-Description-en: Java runtime based on OpenJDK (regression test support)
- OpenJDK is a development environment for building applications,
- applets, and components using the Java programming language.
- .
- This package contains all the binary files needed to run the
- OpenJDK autopkg tests.
-
 Package: openjdk-28-dbg
 Description-md5: d73cb0a41450fd194ce774f2b26510b8
 Description-en: Java runtime based on OpenJDK (debugging symbols)
@@ -515883,6 +515350,92 @@ Description-en: wrapper for the OpenStreetMap Overpass API (Python 3)
  .
  This package contains the Python 3 version of overpass and its command-line
  tool.
+
+Package: ovn-central
+Description-md5: 5cc48d8c2c2dca5663a2e42178ed14c4
+Description-en: OVN central components
+ OVN, the Open Virtual Network, is a system to support virtual network
+ abstraction. OVN complements the existing capabilities of OVS to add native
+ support for virtual network abstractions, such as virtual L2 and L3 overlays
+ and security groups.
+ .
+ ovn-central provides the userspace daemons, utilities and
+ databases for OVN that is run at a central location.
+
+Package: ovn-common
+Description-md5: 84b8e78bdbcd7c9e230195cff8664ecf
+Description-en: OVN common components
+ OVN, the Open Virtual Network, is a system to support virtual network
+ abstraction. OVN complements the existing capabilities of OVS to add native
+ support for virtual network abstractions, such as virtual L2 and L3 overlays
+ and security groups.
+ .
+ ovn-common provides components required by other OVN packages.
+
+Package: ovn-controller-vtep
+Description-md5: 321675504e13731af66880fe7e902ead
+Description-en: OVN vtep controller
+ ovn-controller-vtep is the local controller daemon in OVN, the Open Virtual
+ Network, for VTEP enabled physical switches. It connects up to the OVN
+ Southbound database over the OVSDB protocol, and down to the VTEP database
+ over the OVSDB protocol.
+ .
+ ovn-controller-vtep provides the ovn-controller-vtep binary for controlling
+ vtep gateways.
+
+Package: ovn-doc
+Description-md5: 5d9314c4dbce49af1fc81539f5c26499
+Description-en: OVN documentation
+ OVN, the Open Virtual Network, is a system to support virtual network
+ abstraction.  OVN complements the existing capabilities of OVS to add
+ native support for virtual network abstractions, such as virtual L2 and L3
+ overlays and security groups.
+ .
+ This package provides documentation for configuration and use
+ of OVN.
+
+Package: ovn-docker
+Description-md5: 79920f3b11526b699266eb2c6f47af5f
+Description-en: OVN Docker drivers
+ OVN, the Open Virtual Network, is a system to support virtual network
+ abstraction.  OVN complements the existing capabilities of OVS to add
+ native support for virtual network abstractions, such as virtual L2 and L3
+ overlays and security groups.
+ .
+ ovn-docker provides the docker drivers for OVN.
+
+Package: ovn-host
+Description-md5: dec3348dabde40372a2d4189bfddad30
+Description-en: OVN host components
+ OVN, the Open Virtual Network, is a system to support virtual network
+ abstraction.  OVN complements the existing capabilities of OVS to add
+ native support for virtual network abstractions, such as virtual L2 and L3
+ overlays and security groups.
+ .
+ ovn-host provides the userspace components and utilities for
+ OVN that can be run on every host/hypervisor.
+
+Package: ovn-ic
+Description-md5: 23bb002db1c80d152aa81ff8db12e7bf
+Description-en: Open Virtual Network interconnection controller
+ OVN IC, the Open Virtual Network interconnection controller, is a
+ centralized daemon which communicates with global interconnection
+ databases to configure and exchange data with local OVN databases for
+ interconnection with other OVN deployments.
+ .
+ This package provides the ovn-ic daemon which should be run alongside
+ ovn-central services in each OVN deployment zone.
+
+Package: ovn-ic-db
+Description-md5: e1756c7a1817eee8f875d6750f9b4a45
+Description-en: Open Virtual Network interconnection controller databases
+ OVN IC, the Open Virtual Network interconnection controller, is a
+ centralized daemon which communicates with global interconnection
+ databases to configure and exchange data with local OVN databases for
+ interconnection with other OVN deployments.
+ .
+ This package provides the global OVN IC southbound and northbound
+ OVSDB databases.
 
 Package: ovn-bgp-agent
 Description-md5: 069f83af6949bccd1914e2dd504e2322
@@ -525420,14 +524973,14 @@ Description-md5: 493158c7ca91f27f024cd9c2d9d421aa
 Description-en: Perl library: development files
  Files for developing applications which embed a Perl interpreter.
 
-Package: libperl5.42
-Description-md5: 0b35291f310829d8e9601ace1d9bac34
+Package: libperl5.44
+Description-md5: d0fb62bf9322d6edb79f6612df606912
 Description-en: shared Perl library
  This package contains the shared Perl library, used by applications
  which embed a Perl interpreter.
  .
  It also contains the architecture-dependent parts of the standard
- library (and depends on perl-modules-5.42 which contains the
+ library (and depends on perl-modules-5.44 which contains the
  architecture-independent parts).
 
 Package: perl
@@ -525446,13 +524999,13 @@ Description-en: Larry Wall's Practical Extraction and Report Language
  interfaces to C and C++ for custom extension development.
 
 Package: perl-base
-Description-md5: 7001a47831793bcacf36015bf62a108f
+Description-md5: a86e7a721c6eb8ff0a42b609dee91782
 Description-en: minimal Perl system
  Perl is a scripting language used in many system scripts and utilities.
  .
  This package provides a Perl interpreter and the small subset of the
  standard run-time library required to perform basic tasks. For a full
- Perl installation, install "perl" (and its dependencies, "perl-modules-5.42"
+ Perl installation, install "perl" (and its dependencies, "perl-modules-5.44"
  and "perl-doc").
 
 Package: perl-debug
@@ -525475,16 +525028,16 @@ Description-en: Perl documentation
  Perl manual pages, POD documentation and the `perldoc' program.  If you are
  writing Perl programs, you almost certainly need this.
 
-Package: perl-modules-5.42
-Description-md5: 6fa77491447a77e3fc5749182dc51a68
+Package: perl-modules-5.44
+Description-md5: b528b0a4971508d4a26104802f9a2245
 Description-en: Core Perl modules
  Architecture independent Perl modules.  These modules are part of Perl and
  required if the `perl' package is installed.
  .
  Note that this package only exists to save archive space and should be
  considered an internal implementation detail of the `perl' package.
- Other packages should not depend on `perl-modules-5.42' directly, they
- should use `perl' (which depends on `perl-modules-5.42') instead.
+ Other packages should not depend on `perl-modules-5.44' directly, they
+ should use `perl' (which depends on `perl-modules-5.44') instead.
 
 Package: perl-byacc
 Description-md5: 1aca904a8d70af00698621d6e745057f
@@ -541522,56 +541075,6 @@ Description-en: Python library to encode/decode polylines
  See also: <https://developers.google.com/maps/documentation/utilities/p-
  olylinealgorithm>
 
-Package: libpolymake-dev
-Description-md5: b22abf1005eeb32d0168e9c8a7ad4992
-Description-en: Tool for algorithmic discrete geometry -- development package
- Polymake started out as a tool for the algorithmic treatment of convex
- polyhedra. By now it also deals with finite simplicial complexes,
- tight spans of finite metric spaces, polyhedral surfaces, and other
- discrete mathematical objects.
- .
- This package contains shared library symlinks.
-
-Package: libpolymake-dev-common
-Description-md5: cdce7cffe84208fee2db82e1fac587c9
-Description-en: Tool for algorithmic discrete geometry -- common dev package
- Polymake started out as a tool for the algorithmic treatment of convex
- polyhedra. By now it also deals with finite simplicial complexes,
- tight spans of finite metric spaces, polyhedral surfaces, and other
- discrete mathematical objects.
- .
- This package contains common header files.
-
-Package: libpolymake4.15
-Description-md5: bab29e1d36a27516ec3e107e360f035a
-Description-en: Tool for algorithmic discrete geometry -- library package
- Polymake started out as a tool for the algorithmic treatment of convex
- polyhedra. By now it also deals with finite simplicial complexes,
- tight spans of finite metric spaces, polyhedral surfaces, and other
- discrete mathematical objects.
- .
- This package contains shared libraries.
-
-Package: polymake
-Description-md5: 1faec0a266251431c0136db85985a6f3
-Description-en: Tool for algorithmic discrete geometry
- Polymake started out as a tool for the algorithmic treatment of convex
- polyhedra. By now it also deals with finite simplicial complexes,
- tight spans of finite metric spaces, polyhedral surfaces, and other
- discrete mathematical objects.
- .
- This package contains the core module and the application modules.
-
-Package: polymake-common
-Description-md5: 9fc9af3cee3db7e3cb1cdafe712ed933
-Description-en: Tool for algorithmic discrete geometry -- shared files
- Polymake started out as a tool for the algorithmic treatment of convex
- polyhedra. By now it also deals with finite simplicial complexes,
- tight spans of finite metric spaces, polyhedral surfaces, and other
- discrete mathematical objects.
- .
- This package contains architecture independent material.
-
 Package: polyphone
 Description-md5: 6bce6b3492a308ae4a5892129dd4730f
 Description-en: cross-platform SoundFont editor
@@ -543729,7 +543232,7 @@ Description-en: Parma Polyhedra Library (development)
  C and C++ interfaces.
 
 Package: libppl-doc
-Description-md5: e029bc6a5a70f3c124b8771f1c1acfb5
+Description-md5: bad526ee10fa257249a3862b063b3e34
 Description-en: Parma Polyhedra Library: Documentation
  The Parma Polyhedra Library (PPL) is a C++ library for the
  manipulation of (not necessarily closed) convex polyhedra and other
@@ -543741,7 +543244,8 @@ Description-en: Parma Polyhedra Library: Documentation
  limitation to the dimension of anything), written in standard C++,
  exception-safe, rather efficient and thoroughly documented.
  .
- This package provides the documentation.
+ This package provides the user manuals for the C++, C and Prolog
+ interfaces.
 
 Package: libppl-swi
 Description-md5: 4c97f42e74e4bb86b89de5582d8bbbdd
@@ -545187,6 +544691,50 @@ Description-en: compelling tile-placement puzzle game
  the high scores, a comprehensive tutorial with animated examples, a
  colourblind mode, glowing, pulsating, retro graphics and synth-inspired
  sound effects.
+
+Package: primus
+Description-md5: 86cd26e1866a08575cea3e262f2dbb68
+Description-en: client-side GPU offloading for NVIDIA Optimus
+ Primus is a shared library that provides OpenGL and GLX APIs and implements
+ low-overhead local-only client-side OpenGL offloading via GLX forking,
+ similar to VirtualGL. It intercepts GLX calls and redirects GL rendering
+ to a secondary X display, presumably driven by a faster GPU. On swapping
+ buffers, rendered contents are read back using a PBO and copied onto
+ the drawable it was supposed to be rendered on in the first place.
+ .
+ Primus is currently intended to be used alongside Bumblebee and provides a
+ drop-in replacement for optirun (i.e. "primusrun").
+
+Package: primus-libs
+Description-md5: b71ee40c3470c4f6e2ff4d610f5fa30e
+Description-en: shared libraries for primus
+ Primus is a shared library that provides OpenGL and GLX APIs and implements
+ low-overhead local-only client-side OpenGL offloading via GLX forking,
+ similar to VirtualGL. It intercepts GLX calls and redirects GL rendering
+ to a secondary X display, presumably driven by a faster GPU. On swapping
+ buffers, rendered contents are read back using a PBO and copied onto
+ the drawable it was supposed to be rendered on in the first place.
+ .
+ This package contains the libraries for primus which are loaded when running
+ primusrun.
+
+Package: libprimus-vk1
+Description-md5: 9cc616059b790cb11afff2f1a5f393d2
+Description-en: vulkan layer library for the primus-vk layer
+ This library implements the primus-vk layer. It decides which GPU
+ the individual Vulkan API calls should go against and does the image
+ copying.
+
+Package: primus-vk
+Description-md5: f31384e21e05aff86907e8c0495ecc4f
+Description-en: Vulkan layer for GPU offloading
+ Typically you want to display an image rendered on a more powerful
+ GPU on a display managed by an internal GPU. The layer in this package will
+ direct rendering commands to a dedicated, more powerful GPU an when such an
+ image is displayed it will be copied to the integrated CPU for displaying.
+ .
+ The user can activate offloading for individual applications by launching
+ them with the "pvkrun" program.
 
 Package: princeprocessor
 Description-md5: fd9803bf86509a6610a29964cdd39c21
@@ -548412,6 +547960,34 @@ Description-en: Psensor server for monitoring hardware sensors remotely
  It is also possible to connect to Psensor server with a browser, a simple
  Web page is displaying the information.
 
+Package: libpseudo
+Description-md5: f41b1741419145eeaea38b6e58e00fd6
+Description-en: advanced tool for simulating superuser privileges
+ The pseudo utility offers a way to run commands in a virtualized "root"
+ environment, allowing ordinary users to run commands which give the
+ illusion of creating device nodes, changing file ownership, and otherwise doing
+ things necessary for creating distribution packages or filesystems.
+ .
+ Pseudo has a lot of similarities to fakeroot but is a new implementation
+ that improves on the problems seen using fakeroot. Pseudo is now
+ extensively used by Poky as a replacement to fakeroot but can also be
+ used standalone in many other use cases.
+ .
+ This package contains the LD_PRELOAD libraries.
+
+Package: pseudo
+Description-md5: e8ca5be20058441e3c154ed0d7778bc0
+Description-en: advanced tool for simulating superuser privileges
+ The pseudo utility offers a way to run commands in a virtualized "root"
+ environment, allowing ordinary users to run commands which give the
+ illusion of creating device nodes, changing file ownership, and otherwise doing
+ things necessary for creating distribution packages or filesystems.
+ .
+ Pseudo has a lot of similarities to fakeroot but is a new implementation
+ that improves on the problems seen using fakeroot. Pseudo is now
+ extensively used by Poky as a replacement to fakeroot but can also be
+ used standalone in many other use cases.
+
 Package: psfex
 Description-md5: 074bbc17893606c2b25d989a20a6296e
 Description-en: Point Spread Function model extractor
@@ -549673,18 +549249,6 @@ Description-en: command-line HTML processor
  Inspired by jq (http://stedolan.github.io/jq/), pup aims to be
  a fast and flexible way of exploring HTML from the terminal.
 
-Package: libixml11t64
-Description-md5: 85cb52b64f320f475e8c95d1b15f8419
-Description-en: Portable SDK for UPnP Devices (ixml shared library)
- The Portable SDK for UPnP Devices (libupnp) provides developers with an
- API and open source code for building control points, devices, and
- bridges that are compliant with Version 1.0 of the Universal Plug and
- Play Device Architecture Specification - see http://www.upnp.org/ for
- specifications.
- .
- This package contains the runtime libraries for the Linux DOM2
- XML Parser (IXML).
-
 Package: libixml22
 Description-md5: 85cb52b64f320f475e8c95d1b15f8419
 Description-en: Portable SDK for UPnP Devices (ixml shared library)
@@ -549721,17 +549285,6 @@ Description-en: Documentation for the Portable SDK for UPnP Devices
  .
  This package contains the HTML documentation for the libupnp library
  in /usr/share/doc/libupnp-dev/
-
-Package: libupnp17t64
-Description-md5: e86f06a1ce120fa0f28ec54f97980bce
-Description-en: Portable SDK for UPnP Devices (shared library)
- The Portable SDK for UPnP Devices (libupnp) provides developers with an
- API and open source code for building control points, devices, and
- bridges that are compliant with Version 1.0 of the Universal Plug and
- Play Device Architecture Specification - see http://www.upnp.org/ for
- specifications.
- .
- This package contains the runtime library for uPnP.
 
 Package: libupnp22
 Description-md5: e86f06a1ce120fa0f28ec54f97980bce
@@ -595943,6 +595496,25 @@ Description-en: Python 3 library for navigating WADL files
  .
  This package provides wadllib for Python 3.x.
 
+Package: python3-waflib
+Description-md5: d812707799426ca1c89c8334c030525e
+Description-en: Python framework for configuring, building and installing software
+ Waf is a build system written in Python. It supports automatic dependency
+ tracking, parallel builds, configuration checks and extensible build tasks
+ for many programming languages and toolchains.
+ .
+ This package provides the waflib Python 3 library, including its standard
+ tools and contributed extensions.
+
+Package: waf
+Description-md5: 24d0822e87f3f2b2849a6732c5a6e6f7
+Description-en: tool for configuring, building and installing software
+ Waf is a build system written in Python. It supports automatic dependency
+ tracking, parallel builds, configuration checks and extensible build tasks
+ for many programming languages and toolchains.
+ .
+ This package provides the waf command, using the Python waflib library.
+
 Package: python3-waiting
 Description-md5: 67209ac20c95be324641920276cfc830
 Description-en: Python module for waiting for events to happen (Python 3 version)
@@ -599211,11 +598783,10 @@ Description-en: Python3 bindings for libudev
  and PySide.
 
 Package: python3-pyunitsystem
-Description-md5: d9eb9a6f7cb0eaaa8e19eece8a56a9f6
-Description-en: dummy unit system
- # pyunitsystem
- .
- dummy low level  unit system
+Description-md5: b01d7966a375c1fb0485ceaba66d5050
+Description-en: Python module to describe and convert measurement units
+ pyunitsystem is a Python module that provides utilities to describe,
+ convert and format quantities and units.
 
 Package: pyupgrade
 Description-md5: 638aae7078943364e1a45a4b44039168
@@ -600105,6 +599676,15 @@ Description-en: CLI tool to manage qBittorrent
   * Import torrents with state from Deluge and rTorrent
   * Manage categories and tags
   * Compare torrents between instances
+
+Package: qblike
+Description-md5: 8ee923f19293f4e0a266c633208972ac
+Description-en: QBasic compatible interpreter and compiler including IDE
+ This is a QBasic 1.1 compatible programming environment.
+ .
+ It is a clean-room reimplementation: it contains no Microsoft code. It was
+ written from the language documentation and from the observable behavior of
+ QBasic.
 
 Package: qbootctl
 Description-md5: 33833bd79d0f809ef0fb96edaa7cf570
@@ -631016,6 +630596,15 @@ Description-en: Daemon to use a Hardware TRNG
  entropy that is accessible as a device or fifo, is required to use this
  package. It will take advantage of the RDRAND and RDSEED instructions
  included in some Intel & AMD CPUs.
+
+Package: rng-tools5
+Description-md5: e347b8cb419a8a579e0744cf6d5e90e1
+Description-en: Daemon to use a Hardware TRNG (transitional package)
+ Package to ease upgrading from older rng-tools5 package to the new
+ rng-tools package.
+ .
+ This package can be purged at anytime once the rng-tools package
+ has been installed.
 
 Package: rng-tools-debian
 Description-md5: 79886e724d12d4e9ccd765b7cd54dd0d
@@ -666129,6 +665718,11 @@ Description-md5: 669cc170c0400e2aac4e2ddd6deb76b3
 Description-en: Nostr gossip traits - Rust source code
  Source code for Debianized Rust crate "nostr-gossip"
 
+Package: librust-nostr-memory-dev
+Description-md5: d20bd6c081febcd6ef134830710066b9
+Description-en: Nostr in-memory events database implementation - Rust source code
+ Source code for Debianized Rust crate "nostr-memory"
+
 Package: librust-notify-dev
 Description-md5: ac670886ae132f2b03be346722baba0e
 Description-en: Cross-platform filesystem notification library - Rust source code
@@ -678529,7 +678123,7 @@ Description-en: Rust package manager, documentation
  .
  This package contains the documentation.
 
-Package: libstd-rust-1.97
+Package: libstd-rust-1.98
 Description-md5: 389c19dd2d0c1e29221148ed6870c4a9
 Description-en: Rust standard libraries
  Rust is a curly-brace, block-structured expression language.  It
@@ -685690,15 +685284,6 @@ Description-en: Secure SIP Identity Extensions - C headers files
  .
  This package contains headers ans static libs
 
-Package: libsecsipid1t64
-Description-md5: 79e7816f829d0968f696bafb763b6d8f
-Description-en: Secure SIP Identity Extensions - library
- Secure SIP/Telephony Identity Extensions Overview Applications
- and libraries implementing STIR and SHAKEN (RFC8224, RFC8588), used in
- SIP/VoIP services.
- .
- This package contains shared libs
-
 Package: libsecsipid2
 Description-md5: 79e7816f829d0968f696bafb763b6d8f
 Description-en: Secure SIP Identity Extensions - library
@@ -687777,6 +687362,40 @@ Description-md5: 5a75630915e85aa203a9f7c82c737da4
 Description-en: programs to help use subuids
  These programs help unprivileged users to create uid and gid mappings in
  user namespaces.
+
+Package: libshadowsocks-libev-dev
+Description-md5: 9d6938f4d40d631aca3c7f78e1d50516
+Description-en: lightweight and secure socks5 proxy (development files)
+ Shadowsocks-libev is a lightweight and secure socks5 proxy for
+ embedded devices and low end boxes.
+ .
+ Shadowsocks-libev was inspired by Shadowsocks (in Python). It's rewritten
+ in pure C and only depends on libev, mbedTLS and a few other tiny
+ libraries.
+ .
+ This package provides C header files for the libraries.
+
+Package: libshadowsocks-libev2
+Description-md5: e6b55cb0f590a4efb2f0cf771d4bbead
+Description-en: lightweight and secure socks5 proxy (shared library)
+ Shadowsocks-libev is a lightweight and secure socks5 proxy for
+ embedded devices and low end boxes.
+ .
+ Shadowsocks-libev was inspired by Shadowsocks (in Python). It's rewritten
+ in pure C and only depends on libev, mbedTLS and a few other tiny
+ libraries.
+ .
+ This package provides shared libraries.
+
+Package: shadowsocks-libev
+Description-md5: e8784518bf0b02b51920bab00c38344d
+Description-en: lightweight and secure socks5 proxy
+ Shadowsocks-libev is a lightweight and secure socks5 proxy for
+ embedded devices and low end boxes.
+ .
+ Shadowsocks-libev was inspired by Shadowsocks (in Python). It's rewritten
+ in pure C and only depends on libev, mbedTLS and a few other tiny
+ libraries.
 
 Package: libshairplay-dev
 Description-md5: ff2af8bcda873262a2102c445a1906e6
@@ -690005,22 +689624,6 @@ Description-en: Python3 interface to the SILO Scientific I/O library
  other useful objects to address various scientific computing application
  needs. Although the Silo library is a serial library, it has some key features
  which enable it to be applied quite effectively and scalable in parallel.
-
-Package: silverjuke
-Description-md5: 477fa194e200869c8e15b0083dd16ddc
-Description-en: jukebox, karaoke, and kiosk mode mp3 player
- Silverjuke is an easy to use jukebox solution implemented in wxWidgets.
- Some of the features are:
-  * Wide range of supported audio formats (MP1, MP2, MP3, MPC, MP+,
-    Ogg-Vorbis, FLAC, Monkey's Audio, WavPack, WAV, AIFF, MOD),
-    more formats can be implemented using modules
-  * Internal sound processing with 32 bit (for crossfading, autovolume,
-    jingles, smart shuffle, VST effect plugings)
-  * Kiosk mode, supports touchscreens
-  * Track information can be edited (ID3-tags)
-  * Support for playlists (M3U, PLS, CUE)
-  * Fully skinnable
-  * Powerful search
 
 Package: silversearcher-ag
 Description-md5: 7e05c140881957705e93da8afc9c6868
@@ -786040,13 +785643,13 @@ Description-en: Validate YANG modules and convert them to different formats
  and convert YANG to different formats.
 
 Package: yuview
-Description-md5: 4de2eb3667f933153153e0aac719bf7e
-Description-en: QT based YUV player with an advanced analytic toolset
+Description-md5: 8dbeb691060dc2999071e88e1b1ae31f
+Description-en: Qt-based YUV player with an advanced analytic toolset
  YUView is a YUV image player and analysis tool.
  However, it can do so much more:
   * simple navigation/zooming in the video
   * support for a wide variety of YUV formats using various subsamplings
-    and bit depts
+    and bit depths
   * support for raw RGB files, image files and image sequences
   * direct decoding of raw h.265/HEVC bitstreams with visualization of
     internals like prediction modes and motion vectors and many more

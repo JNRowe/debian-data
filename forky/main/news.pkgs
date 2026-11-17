@@ -36,12 +36,12 @@ SHA256: 91980d26c48c579b657f91aa9f65e6434828199ea25b10aede62f02330038d97
 
 Package: inn
 Source: inn (1:1.7.2q-52)
-Version: 1:1.7.2q-52+b1
-Installed-Size: 2167
+Version: 1:1.7.2q-52+b2
+Installed-Size: 2191
 Maintainer: Marco d'Itri <md@linux.it>
 Architecture: amd64
 Provides: inews, news-transport-system
-Depends: libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libperl5.42 (>= 5.42.0), libsystemd0, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, cron | cron-daemon, default-mta | mail-transport-agent, bsd-mailx | mailx, time, perl, perlapi-5.42.2
+Depends: libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libperl5.44 (>= 5.44.0), libsystemd0, cron | cron-daemon, default-mta | mail-transport-agent, bsd-mailx | mailx, time, perl, perlapi-5.44.0
 Suggests: gnupg1
 Conflicts: inn2, inn2-dev, inn2-inews, news-transport-system
 Description: News transport system `InterNetNews' by the ISC and Rich Salz
@@ -50,39 +50,40 @@ Tag: implemented-in::c, interface::daemon, network::server, protocol::nntp,
  role::program
 news
 Priority: optional
-Filename: pool/main/i/inn/inn_1.7.2q-52+b1_amd64.deb
-Size: 696572
-MD5sum: 0a638f787d254b1aa4595524d295ff28
-SHA256: 446d70f24219a84fab8bd4d949cdbe5c720f0d885ca490d9d0a9e2b756b87d1a
+Filename: pool/main/i/inn/inn_1.7.2q-52+b2_amd64.deb
+Size: 704520
+MD5sum: 8fd6ec00508a4ffab450a12719ef34b3
+SHA256: 9c1ae68753a1568604187611db215a2dd6bb8799de2328c74246dabb3261e92c
 
 Package: inn2
 Source: inn2 (2.7.4-1)
-Version: 2.7.4-1+b2
-Installed-Size: 3723
+Version: 2.7.4-1+b3
+Installed-Size: 3764
 Maintainer: Marco d'Itri <md@linux.it>
 Architecture: amd64
 Replaces: inn
 Provides: news-transport-system
-Depends: perl:any, perlapi-5.42.2, cron | cron-daemon, default-mta | mail-transport-agent, time, procps, libmime-tools-perl, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, libc6 (>= 2.38), libcanlock3 (>= 3.3.0), libcrypt1 (>= 1:4.1.0), libdb5.3t64, libpam0g (>= 0.99.7.1), libperl5.42 (>= 5.42.0), libpython3.14 (>= 3.14.1), libsasl2-2 (>= 2.1.28+dfsg1), libsqlite3-0 (>= 3.20.0), libssl3t64 (>= 3.0.0), libsystemd0, zlib1g (>= 1:1.1.4)
-Pre-Depends: inn2-inews (= 2.7.4-1+b2)
+Depends: perl:any, perlapi-5.44.0, cron | cron-daemon, default-mta | mail-transport-agent, time, procps, libmime-tools-perl, libc6 (>= 2.38), libcanlock3 (>= 3.3.0), libcrypt1 (>= 1:4.1.0), libdb5.3t64, libpam0g (>= 0.99.7.1), libperl5.44 (>= 5.44.0), libpython3.14 (>= 3.14.1), libsasl2-2 (>= 2.1.28+dfsg1), libsqlite3-0 (>= 3.20.0), libssl3t64 (>= 3.0.0), libsystemd0, zlib1g (>= 1:1.1.4)
+Pre-Depends: inn2-inews (= 2.7.4-1+b3)
 Recommends: libdbd-sqlite3-perl
 Suggests: gnupg1, wget, libgd-perl, libkrb5-3 (>= 1.6.dfsg.2)
 Conflicts: inn
 Description: 'InterNetNews' news server
 Homepage: https://www.eyrie.org/~eagle/software/inn/
+Commands: ctlinnd, innstat
 Description-md5: 63e9cfa94e4a7e41032459586c02d0fb
 Tag: implemented-in::c, interface::daemon, network::server, protocol::nntp,
  role::program
 news
 Priority: optional
-Filename: pool/main/i/inn2/inn2_2.7.4-1+b2_amd64.deb
-Size: 1265224
-MD5sum: d60a3816659cece956f721baf1e8f0a9
-SHA256: 0dc2043d6a38e2fbde070a2116dbdce1b8738972daa07705b1e0d5bc26945c8d
+Filename: pool/main/i/inn2/inn2_2.7.4-1+b3_amd64.deb
+Size: 1284644
+MD5sum: cd8ec18cdffabc0a67fac38c0dda4d44
+SHA256: 4c3a481e80c660daf4a83fea824cfb7bff3d8d6b4be30d2d9f561c6b289afd52
 
 Package: inn2-inews
 Source: inn2 (2.7.4-1)
-Version: 2.7.4-1+b2
+Version: 2.7.4-1+b3
 Installed-Size: 356
 Maintainer: Marco d'Itri <md@linux.it>
 Architecture: amd64
@@ -92,15 +93,16 @@ Suggests: libkrb5-3 (>= 1.6.dfsg.2)
 Conflicts: inn
 Description: NNTP client news injector, from InterNetNews (INN)
 Homepage: https://www.eyrie.org/~eagle/software/inn/
+Commands: inews, rnews
 Description-md5: a5db9d905d5a55d55a233c52b39dad00
 Tag: implemented-in::c, interface::commandline, network::client,
  protocol::nntp, role::program
 news
 Priority: optional
-Filename: pool/main/i/inn2/inn2-inews_2.7.4-1+b2_amd64.deb
-Size: 136764
-MD5sum: d3975d8cc826228cdb514c9aa3be7f35
-SHA256: 7190b62c332d8695b0066d2a28e8dc9a58f92fdcb4380e0f79d64ef69dd400c2
+Filename: pool/main/i/inn2/inn2-inews_2.7.4-1+b3_amd64.deb
+Size: 140052
+MD5sum: 16de44c05954b02a49e1b72a60c20763
+SHA256: 73c4baba94ffdb660a232c5beae359515f92418e18ee7cae6643cd002ac536e1
 
 Package: innduct
 Version: 2.3

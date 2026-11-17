@@ -15,6 +15,24 @@ Size: 26304
 MD5sum: 2a5eec5157c89c87c174bbc59c9a06f6
 SHA256: 0a0b3667a6de85a850ba1a0778aec334e0970dcaab2a03b31d0630f1978933c7
 
+Package: bumblebee-nvidia
+Source: bumblebee
+Version: 3.2.1-32
+Installed-Size: 16
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Architecture: amd64
+Depends: bumblebee (= 3.2.1-32), glx-alternative-nvidia (>= 0.6.92), nvidia-driver | nvidia-tesla-535-driver | nvidia-driver-any
+Recommends: nvidia-primus-vk-wrapper
+Description: NVIDIA Optimus support using the proprietary NVIDIA driver
+Homepage: https://launchpad.net/~bumblebee
+Description-md5: 1590560d4120c0dce5a765cdd8ec59b7
+contrib/utils
+Priority: optional
+Filename: pool/contrib/b/bumblebee/bumblebee-nvidia_3.2.1-32_amd64.deb
+Size: 4584
+MD5sum: 59ef18117eff05260ef7a6431bd112d3
+SHA256: 7bc7af0d551e2674638104658241461dfb75ae64a851fbd3e3adb301d49d2b36
+
 Package: josm-installer
 Version: 0.0.9+svn19637
 Installed-Size: 320
@@ -84,6 +102,58 @@ Filename: pool/contrib/n/nvidia-persistenced/nvidia-persistenced_550.163.01-1_am
 Size: 27720
 MD5sum: 69b1579ae238ebf7b589fef44106dace
 SHA256: a88e0567f0762fa1ccd02daa7e3779d6927141b7ce62c4bbbaae9205e2de332c
+
+Package: nvitop
+Version: 1.5.2-1
+Installed-Size: 835
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Architecture: all
+Depends: python3-psutil, python3-pynvml, python3:any
+Description: Interactive NVIDIA-GPU process viewer and beyond
+Homepage: https://github.com/XuehaiPan/nvitop
+Description-md5: 07407aea3bf2c319ecbce26984f1e0fe
+contrib/utils
+Priority: optional
+Filename: pool/contrib/n/nvitop/nvitop_1.5.2-1_all.deb
+Size: 124088
+MD5sum: 01e523186b18519167a221db47e4a7a4
+SHA256: a6b768014aba5972f4b1974791b89cfe63117399826ed2dd36c566b32d2860cb
+
+Package: primus-nvidia
+Source: primus (0~20150328-19)
+Version: 0~20150328-19+b2
+Installed-Size: 10
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Architecture: amd64
+Depends: nvidia-driver-libs | nvidia-tesla-535-driver-libs | nvidia-driver-libs-any | bumblebee-nvidia, primus (= 0~20150328-19+b2)
+Recommends: nvidia-primus-vk-wrapper
+Description: NVIDIA Primus support using the proprietary NVIDIA driver
+Homepage: https://github.com/amonakov/primus
+Description-md5: 47ebdd2f5f4085bfde25afb56ffc6f5a
+contrib/utils
+Priority: optional
+Filename: pool/contrib/p/primus/primus-nvidia_0~20150328-19+b2_amd64.deb
+Size: 3020
+MD5sum: 9a7bec0427ca842ec8c1d01c71dfee47
+SHA256: 10bf98d2f574ef5bb55d9c73511ca49fd231f250c54a01dba782fc25e7ae4eba
+
+Package: primus-vk-nvidia
+Source: primus-vk (1.6.4-4)
+Version: 1.6.4-4+b2
+Installed-Size: 10
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Architecture: amd64
+Depends: primus-vk (= 1.6.4-4), nvidia-primus-vk-wrapper
+Conflicts: primus-vk-nvidia-i386
+Description: NVIDIA Optimus support for Vulkan applications
+Homepage: https://github.com/felixdoerre/primus_vk
+Description-md5: 8b6b25b6894037f56819bf3bc0d80e41
+contrib/utils
+Priority: optional
+Filename: pool/contrib/p/primus-vk/primus-vk-nvidia_1.6.4-4+b2_amd64.deb
+Size: 2932
+MD5sum: fb1b47418b3b94e7518ca9b11d664753
+SHA256: 83dd3b4c6daafd2b22ca02c1f3fc2a5637315d5af5b36785b040116e67e4f1e2
 
 Package: wnn7egg
 Version: 1.02-11

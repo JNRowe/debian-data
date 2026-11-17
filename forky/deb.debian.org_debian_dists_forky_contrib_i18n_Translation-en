@@ -460,6 +460,13 @@ Description-en: metapackage for virtualbox-savvy projects
  section to the regular boinc package. This also meant this binary
  package to be redistributed in the contrib section of Debian.
 
+Package: bumblebee-nvidia
+Description-md5: 1590560d4120c0dce5a765cdd8ec59b7
+Description-en: NVIDIA Optimus support using the proprietary NVIDIA driver
+ This metapackage ensures that the proprietary NVIDIA driver is installed in a
+ way such that 3D acceleration does not break. It does so by configuring the
+ OpenGL library path to use the Mesa graphics library.
+
 Package: fonts-cardo
 Description-md5: 91c9dcb45d63e6906a19538ca7cff830
 Description-en: font for scholarly use in classical and medieval languages
@@ -1803,6 +1810,13 @@ Description-en: Firmware loader for Qualcomm Gobi USB chipsets
  be loaded before they can be used as modems. gobi-loader adds a udev rule that
  will trigger loading of the firmware and make the modem usable.
 
+Package: gpustat
+Description-md5: ead43ed93b6051d1032b832df813e981
+Description-en: pretty nvidia device monitor
+ Just less than nvidia-smi?
+ .
+ NOTE: This works with NVIDIA Graphics Devices only, no AMD support as of now.
+
 Package: hannah-foo2zjs
 Description-md5: 17bd5e201d7e7be1fb42ba47260c88bd
 Description-en: Graphical firmware downloader for the foo2zjs package
@@ -1813,6 +1827,15 @@ Description-en: Graphical firmware downloader for the foo2zjs package
  With this software you can potentially install non-free software, so
  beware of that.
 
+Package: hashcat-nvidia
+Description-md5: 730caa533877aab600d795aef8db42c8
+Description-en: Installs hashcat and its dependencies for users with NVIDIA GPU
+ Hashcat is an advanced CPU/GPU-based password recovery utility supporting
+ seven unique modes of attack for over 100 optimized hashing algorithms.
+ .
+ This metapackage makes it easy to install the required dependencies
+ when you want to use hashcat with your NVIDIA GPU (via OpenCL).
+
 Package: hipify-clang
 Description-md5: 8f72447e867761c277436126d1cbbfa2
 Description-en: CUDA to HIP source-to-source translation tool
@@ -1820,21 +1843,6 @@ Description-en: CUDA to HIP source-to-source translation tool
  libclang and operates on an abstract syntax tree. It can therefore translate
  code containing complex C++ constructs, but it requires input sources to be
  fully compilable.
-
-Package: horae
-Description-md5: 05d8479ad180769d9adf3591fc732120
-Description-en: interactive graphical processing and analysis of EXAFS data
- ATHENA is an interactive graphical utility for processing EXAFS data. It
- handles most of the common data handling chores of interest, including
- deglitching, aligning, merging, background removal, and Fourier transforms.
- .
- ARTEMIS is an interactive graphical utility for fitting EXAFS data using
- theoretical standards from FEFF and sophisticated data modelling along with
- flexible data visualization and statistical analysis.
- .
- HEPHAESTUS is a souped up periodic table for the x-ray absorption
- spectroscopist. It provides a number of utilities involving tables of
- absorption coefficients and other chemical data.
 
 Package: hts-voice-nitech-jp-atr503-m001
 Description-md5: 48d0be37845caa6955d6a5f8ce672ba7
@@ -2059,30 +2067,6 @@ Description-en: Perl DBI driver for Oracle
  only, download the RPM package from the Oracle web page and install it
  using Alien. Detailed instructions for this are available at
  <https://deb.li/dbdoracle>
-
-Package: libdemeter-perl
-Description-md5: 61bcaabdcd578f132064042eed689bdf
-Description-en: comprehensive XAS data analysis system using Feff and Ifeffit or Larch
- Demeter provides an object oriented interface to the EXAFS data analysis
- capabilities of the popular and powerful Ifeffit package and its successor
- Larch. Given that the Ifeffit and Larch APIs involve streams of text
- commands, this package is, at heart, a code generator. Many methods of this
- package return text. All actual interaction with Ifeffit or Larch is handled
- through a single method, dispose, which is described below. The internal
- structure of this package involves accumulating text in a scalar variable
- through successive calls to the various code generating methods. This text is
- then disposed to Ifeffit, to Larch, to a file, or elsewhere. The outward
- looking methods organize all of the complicated interactions of your data
- with Ifeffit or Larch.
- .
- This package is aimed at many targets. It can be the back-end of a graphical
- data analysis program, providing the glue between the on-screen
- representation of the fit and the actual command executed by Ifeffit or
- Larch. It can be used for one-off data analysis chores -- indeed most of the
- examples that come with the package can be reworked into useful one-off
- scripts. It can also be the back-end to sophisticated data analysis chores
- such as high-throughout data processing and analysis or complex physical
- modeling.
 
 Package: libdvd-pkg
 Description-md5: 69ffcc3dc82cec634c830f1c06c90f5e
@@ -2399,6 +2383,17 @@ Description-en: deprecated X configuration tool for non-free NVIDIA drivers
  files, primarily for systems that use the non-free drivers provided by
  NVIDIA.  It automatically changes the configuration to use the NVIDIA
  driver and can add additional options given on the command line.
+
+Package: nvitop
+Description-md5: 07407aea3bf2c319ecbce26984f1e0fe
+Description-en: Interactive NVIDIA-GPU process viewer and beyond
+ nvitop is an interactive NVIDIA device and process monitoring tool. It has a
+ colorful and informative interface that continuously updates the status of the
+ devices and processes. As a resource monitor, it includes many features and
+ options, such as tree-view, environment variable viewing, process filtering,
+ process metrics monitoring, etc. Beyond that, the package also ships a CUDA
+ device selection tool nvisel for deep learning researchers. It also provides
+ handy APIs that allow developers to write their own monitoring tools.
 
 Package: libfdkaac-ocaml
 Description-md5: bb2f9e8c4bbbe0171677f3112ec84bc4
@@ -2754,6 +2749,36 @@ Description-en: port of the 1997 classic game POSTAL 1
  To make this package useful, you will need the original game data.
  You can install them by using the game-data-packager package.
 
+Package: primus-nvidia
+Description-md5: 47ebdd2f5f4085bfde25afb56ffc6f5a
+Description-en: NVIDIA Primus support using the proprietary NVIDIA driver
+ This metapackage ensures that the proprietary NVIDIA driver is installed in a
+ way such that 3D acceleration does not break. It does so by configuring the
+ OpenGL library path to use the Mesa graphics library.
+
+Package: nvidia-primus-vk-common
+Description-md5: 1de48695d37b053918704fd873985909
+Description-en: thin wrapper for the NVIDIA binary Vulkan ICD (common files)
+ This package disables the original NVIDIA binary Vulkan driver and registers
+ the thin wrapper from nvidia-primus-vk-wrapper to ensure that the NVIDIA
+ driver is usable with bumblebee.
+
+Package: nvidia-primus-vk-wrapper
+Description-md5: b56d29bdf2a2c1ac493d1c61f63daef4
+Description-en: thin wrapper for using the NVIDIA binary Vulkan ICD with bumblebee
+ This library is a thin wrapper around the Vulkan API functions of the
+ nvidia Vulkan driver. The Vulkan driver misbehaves for example by reading the
+ DISPLAY environment variable and connecting to that display server. This
+ library works around that misbehaviour, so the driver can be used with
+ bumblebee.
+
+Package: primus-vk-nvidia
+Description-md5: 8b6b25b6894037f56819bf3bc0d80e41
+Description-en: NVIDIA Optimus support for Vulkan applications
+ This metapackage depends on all packages necessary to run
+ OpenGL and Vulkan applications on a dedicated graphics card
+ on systems with Nvidia + Intel Optimus hardware.
+
 Package: prismlauncher
 Description-md5: 7f9b4a97aa92ffdb5e5ed2be104d1aad
 Description-en: FOSS Minecraft launcher supporting multiple instances and accounts
@@ -2795,6 +2820,15 @@ Description-en: Python interface to Oracle Database (Python 3)
  You can use cx_Oracle with Oracle 11.2, 12, 18 and 19 client libraries.
  .
  This package installs the library for Python 3.
+
+Package: python3-pynvml
+Description-md5: a70729a5f02f7f1635513991a7e8a017
+Description-en: Python3 bindings to the NVIDIA Management Library
+ Provides a Python interface to GPU management and monitoring functions.
+ .
+ This is a wrapper around the NVML library.
+ For information about the NVML library, see the NVML developer page
+ http://developer.nvidia.com/nvidia-management-library-nvml
 
 Package: python-seqcluster-doc
 Description-md5: 7e4181b00560032b27cb4dc4b37a49ce

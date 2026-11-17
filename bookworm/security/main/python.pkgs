@@ -279,6 +279,73 @@ Filename: pool/updates/main/g/glance/python3-glance_25.1.0-2+deb12u5_all.deb
 Size: 452928
 SHA256: d0ab349dd23eca8bbb4b008a16c4f5af9f4a3f07fc9e79290de7a26d9fbadaf5
 
+Package: gnocchi-api
+Source: gnocchi
+Version: 4.4.2-2+deb12u1
+Installed-Size: 151
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: adduser, debconf, gnocchi-common (= 4.4.2-2+deb12u1), lsb-base, python3-keystoneclient, python3-openstackclient, python3-pastescript, q-text-as-data, uwsgi-plugin-python3, debconf (>= 0.5) | debconf-2.0
+Description: Metric as a Service - API daemon
+Homepage: https://gnocchi.xyz/
+Description-md5: e7c870b77ca712a5618255b3e2532740
+python
+Priority: optional
+Filename: pool/updates/main/g/gnocchi/gnocchi-api_4.4.2-2+deb12u1_all.deb
+Size: 23024
+SHA256: ff106b9c94fea822630e517a5940c754b2582bd4403373590f3db7acfe0c9645
+
+Package: gnocchi-common
+Source: gnocchi
+Version: 4.4.2-2+deb12u1
+Installed-Size: 170
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: adduser, dbconfig-common, debconf, python3-gnocchi (= 4.4.2-2+deb12u1), debconf (>= 0.5) | debconf-2.0
+Description: Metric as a Service - common files
+Homepage: https://gnocchi.xyz/
+Description-md5: 1bd56e577a579993460d9e1bb5621308
+python
+Priority: optional
+Filename: pool/updates/main/g/gnocchi/gnocchi-common_4.4.2-2+deb12u1_all.deb
+Size: 28240
+SHA256: 7149088c88e18de97fd3039f1b9714501f5fc285bc9b4569d7d77453cba8582f
+
+Package: gnocchi-metricd
+Source: gnocchi
+Version: 4.4.2-2+deb12u1
+Installed-Size: 28
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: gnocchi-common (= 4.4.2-2+deb12u1), lsb-base
+Description: Metric as a Service - metric daemon
+Homepage: https://gnocchi.xyz/
+Description-md5: 0e7f1b702365aa5a9abad215e79c0cc1
+python
+Priority: optional
+Filename: pool/updates/main/g/gnocchi/gnocchi-metricd_4.4.2-2+deb12u1_all.deb
+Size: 6036
+SHA256: 9de0d01774aa49eecf813edd4fa7000706d64991d0aade60b011ac280a8c7fa2
+
+Package: python3-gnocchi
+Source: gnocchi
+Version: 4.4.2-2+deb12u1
+Installed-Size: 1402
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Replaces: python-gnocchi
+Depends: alembic, python3-boto3, python3-botocore (>= 1.5), python3-cachetools, python3-cotyledon (>= 1.5.0), python3-daiquiri, python3-future (>= 0.15), python3-iso8601, python3-jsonpatch, python3-keystoneclient (>= 1:1.6.0), python3-keystonemiddleware (>= 4.0.0), python3-lz4 (>= 0.9.0), python3-monotonic, python3-numpy, python3-oslo.config (>= 1:3.22.0), python3-oslo.db (>= 4.29.0), python3-oslo.middleware (>= 3.22.0), python3-oslo.policy, python3-oslosphinx (>= 2.2.0.0), python3-paste, python3-pastedeploy, python3-pbr, python3-pecan, python3-prettytable, python3-protobuf, python3-psycopg2, python3-pymysql, python3-pyparsing (>= 2.2.0), python3-pytimeparse, python3-redis, python3-six, python3-snappy, python3-sqlalchemy, python3-sqlalchemy-utils (>= 0.32.14), python3-stevedore, python3-swiftclient (>= 3.1.0), python3-tenacity (>= 4.6.0), python3-tooz (>= 1.38), python3-ujson, python3-voluptuous, python3-webob, python3-werkzeug, python3-yaml, python3:any
+Suggests: gnocchi-doc
+Breaks: python-gnocchi
+Description: Metric as a Service - Python 3.x
+Homepage: https://gnocchi.xyz/
+Description-md5: f898d5b98b49ec3ae1dfc5bc70f4a687
+python
+Priority: optional
+Filename: pool/updates/main/g/gnocchi/python3-gnocchi_4.4.2-2+deb12u1_all.deb
+Size: 172932
+SHA256: 44bd3b2bd48b8a230cf522ae28b31d6a84bb3390ca1395bb45962d054bad36e8
+
 Package: python3-ironic
 Source: ironic
 Version: 1:21.4.4-0+deb12u2
@@ -1550,6 +1617,23 @@ Priority: optional
 Filename: pool/updates/main/w/watcher/python3-watcher_9.0.0-2+deb12u1_all.deb
 Size: 300524
 SHA256: 18b49705466743ec086951a63f5100aadb1b8f64652c888e95fe1ed8273627db
+
+Package: python3-zaqar
+Source: zaqar
+Version: 15.0.0-1+deb12u1
+Installed-Size: 2093
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Architecture: all
+Depends: alembic, python3-autobahn (>= 22.3.2), python3-babel, python3-cryptography (>= 2.7), python3-falcon (>= 3.0.0), python3-futurist, python3-iso8601, python3-jsonschema, python3-keystonemiddleware, python3-memcache, python3-msgpack, python3-oslo.cache, python3-oslo.config, python3-oslo.context, python3-oslo.db, python3-oslo.i18n, python3-oslo.log, python3-oslo.messaging, python3-oslo.policy (>= 3.6.0), python3-oslo.reports, python3-oslo.serialization, python3-oslo.upgradecheck (>= 1.3.0), python3-oslo.utils, python3-osprofiler, python3-pbr, python3-pymongo, python3-requests, python3-sqlalchemy, python3-stevedore, python3-swiftclient, python3-webob, python3-alembic, python3:any
+Conflicts: python-zaqar
+Description: OpenStack Queueing as a Service - Python libraries
+Homepage: https://github.com/openstack/zaqar/
+Description-md5: 47f9ba436a6a9217c881bd5371d5e330
+python
+Priority: optional
+Filename: pool/updates/main/z/zaqar/python3-zaqar_15.0.0-1+deb12u1_all.deb
+Size: 207928
+SHA256: b66057f739b0e3ec58c12140c8aaad20116be53f17512ff5ab3ac232fe5a1405
 
 Package: python3-zbar
 Source: zbar
