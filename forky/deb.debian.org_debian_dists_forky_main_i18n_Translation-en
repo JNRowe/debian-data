@@ -36,6 +36,40 @@ Description-en: Real-time strategy game of ancient warfare (common data files)
  This package contains the data files (configuration and tools) required by
  0 A.D.
 
+Package: 0c-ime
+Description-md5: 909f62b1872f237465a3c6fe0d77967c
+Description-en: Zhuyin (Bopomofo) input method engine
+ 0c-ime (靈犀注音) is a Traditional Chinese Zhuyin input method.  This package
+ contains the shared engine, the update helper and the MCP command-line tool
+ used by the desktop shells, and the neural inference worker scripts.
+ .
+ Neural candidate selection and punctuation are optional; without the
+ separately packaged models the statistical engine is used.
+
+Package: 0c-ime-tools
+Description-md5: 12b475513478c43e3ac73af4f62ec524
+Description-en: dictionary compile tools for the 0c-ime Zhuyin input method
+ This package contains the tools that compile the 0c-ime dictionary.  They are
+ only needed to build the 0c-ime-data package.
+
+Package: fcitx5-0c
+Description-md5: 59c3d2e8a8c1154d7ce20b75a5f386d7
+Description-en: Fcitx5 input method engine for 0c-ime
+ This package provides the Fcitx5 addon and input method definition for the
+ 0c-ime Zhuyin input method.
+
+Package: ibus-0c
+Description-md5: 9d5dfff53e986d5b86b8e09ccba256ae
+Description-en: IBus input method engine for 0c-ime
+ This package provides the IBus component and engine binary for the 0c-ime
+ Zhuyin input method.
+
+Package: 0c-ime-data
+Description-md5: 71087be837a8aa722dfd9632c6dc2cfd
+Description-en: dictionary data for the 0c-ime Zhuyin input method
+ This package contains the compiled dictionary used by 0c-ime and the list that
+ pairs it with the neural models.
+
 Package: lib0install-solver-ocaml
 Description-md5: 465bf898bf589fe3d72bb78fc78e96d3
 Description-en: package dependency solver (runtime)
@@ -16430,150 +16464,6 @@ Description-en: ASTC image compression and decompression library
  .
  This package provides the runtime library for ASTC support.
 
-Package: asterisk
-Description-md5: 0d5a19208822100a8940b0e2a15d49ea
-Description-en: Open Source Private Branch Exchange (PBX)
- Asterisk is an Open Source PBX and telephony toolkit.
- It is, in a sense, middleware
- between Internet and telephony channels on the bottom,
- and Internet and telephony applications at the top.
- .
- Asterisk can be used with Voice over IP standards
- (SIP, H.323, IAX and more),
- or the Public Switched Telephone Network (PSTN)
- through supported hardware.
- .
- Supported hardware:
- .
-  * All Wildcard (tm) ISDN PRI cards from Digium
-  * HFC-S/HFC-4S-based ISDN BRI cards
-    (Junghanns.NET, beroNet, Digium etc.)
-  * All TDM (FXO/FXS) cards from Digium
-  * Various clones of Digium cards such as those by OpenVox
-  * Xorcom Astribank USB telephony adapter
-  * Voicetronix OpenPCI, OpenLine and OpenSwitch cards
-  * CAPI-compatible ISDN cards
-    (using the add-on package chan-capi)
-  * Tormenta T1/E1 card
-  * QuickNet Internet PhoneJack and LineJack
- .
- This is the main package
- that includes the Asterisk daemon
- and most channel drivers and applications.
-
-Package: asterisk-config
-Description-md5: e6341811f25f903eb6ed725a945b19f5
-Description-en: Configuration files for Asterisk
- Asterisk is an Open Source PBX and telephony toolkit.
- .
- This package contains the default configuration files of Asterisk.
- .
- With program asterisk-config-custom in the asterisk package,
- you can create an asterisk-config replacement package.
-
-Package: asterisk-dahdi
-Description-md5: 73c1e6c431561d79ef7e49d91d2f0024
-Description-en: DAHDI devices support for the Asterisk PBX
- Asterisk is an Open Source PBX and telephony toolkit.
- .
- This package includes the DAHDI channel driver (chan_dahdi.so)
- and a number of other Asterisk modules that require DAHDI support.
- They will not be useful without kernel-level DAHDI support.
- .
- For more information about the Asterisk PBX,
- have a look at the Asterisk package.
-
-Package: asterisk-dev
-Description-md5: d7f6cd2e1ace792a2598dd28d1200ab6
-Description-en: Development files for Asterisk
- Asterisk is an Open Source PBX and telephony toolkit.
- .
- This package contains the include files
- used if you wish to compile a package
- which requires Asterisk's source file headers.
-
-Package: asterisk-doc
-Description-md5: 9f71ad2d5582b19ac0ba59b93ee430f9
-Description-en: Source code documentation for Asterisk
- Asterisk is an Open Source PBX and telephony toolkit.
- .
- This package contains the documentation
- for configuring an Asterisk system.
-
-Package: asterisk-mobile
-Description-md5: 9af5b755acba6fb502bd5c4b7ff414b5
-Description-en: Bluetooth phone support for the Asterisk PBX
- Asterisk is an Open Source PBX and telephony toolkit.
- .
- This package provides support
- for connecting Bluetooth devices to the Asterisk PBX.
- It allows you to:
-   * Send and receive PSTN calls and SMS messages
-     over a Bluetooth phone.
-   * Use a Bluetooth handset as a local phone
-     connected to your PBX.
- .
- For more information about the Asterisk PBX,
- have a look at the Asterisk package.
-
-Package: asterisk-modules
-Description-md5: 83091bc74d06184148fcba87ab3e676f
-Description-en: loadable modules for the Asterisk PBX
- Asterisk is an Open Source PBX and telephony toolkit.
- .
- This package includes most of the Asterisk loadable modules.
- There is normally no need to explicitly install it.
-
-Package: asterisk-mp3
-Description-md5: a8b7fcd5ca383240900347228ea7d3d3
-Description-en: MP3 playback support for the Asterisk PBX
- Asterisk is an Open Source PBX and telephony toolkit.
- .
- This package provides support
- for playing MP3-encoded files in Asterisk.
- .
- For more information about the Asterisk PBX,
- have a look at the Asterisk package.
-
-Package: asterisk-mysql
-Description-md5: b4e04ad174e2e515b790e93ae02fb236
-Description-en: MySQL database protocol support for the Asterisk PBX
- Asterisk is an Open Source PBX and telephony toolkit.
- .
- This package provides support for using a MySQL database
- to store configuration, call detail records,
- and also provides generic access to it from the dialplan.
- .
- For more information about the Asterisk PBX,
- have a look at the Asterisk package.
-
-Package: asterisk-ooh323
-Description-md5: f76cdd460d16207dcf81055573c61b7d
-Description-en: H.323 protocol support for the Asterisk PBX - ooH323c
- Asterisk is an Open Source PBX and telephony toolkit.
- .
- This channel driver (chan_ooh323c) provides support
- for the H.323 protocol for Asterisk.
- This is an independent implementation
- that does not depend on OpenH323,
- but may be less functional than the original chan_h323.
- .
- For more information about the Asterisk PBX,
- have a look at the Asterisk package.
-
-Package: asterisk-tests
-Description-md5: 5bc70ce8ad925fa9cd857d8b59105af6
-Description-en: internal test modules of the Asterisk PBX
- Asterisk is an Open Source PBX and telephony toolkit.
- .
- This package provides modules
- that run various functionality tests.
- You would normally not install this package
- unless you test a build of Asterisk.
- .
- For more information about the Asterisk PBX,
- have a look at the Asterisk package.
-
 Package: asterisk-core-sounds-en
 Description-md5: b7bbb9ba060616fa0fa5dc0a6a92c879
 Description-en: asterisk PBX sound files - US English
@@ -16816,18 +16706,6 @@ Description-en: asterisk PBX sound files - ru-ru/wav
  Asterisk includes a set of standard sound files in various formats.
  This package contains the core part of that collection in Russian
  (provided by Maxim Topal) in WAV format (8Khz, mono).
-
-Package: asterisk-espeak
-Description-md5: 1c95aef9393ef961171fa3c024e3bdf7
-Description-en: eSpeak module for Asterisk
- Module for the Asterisk open source PBX which allows you to use the
- eSpeak voice synthesis engine to render text to speech.
-
-Package: asterisk-flite
-Description-md5: b9be22e6118306efe62c81bb71b89039
-Description-en: flite module for Asterisk
- Module for the Asterisk open source PBX which allows you to use the
- flite voice synthesis engine to render text to speech.
 
 Package: asterisk-moh-opsound-g722
 Description-md5: 1b0e15375eb1fcce22dd805cc8f3bf0f
@@ -87958,6 +87836,14 @@ Description-en: Small utility to dump info about DRM devices
  drm-info dumps information about available drm device like available
  devices, planes, encoders, crtcs and connectors and their DRM
  properties.
+
+Package: python3-drmaa
+Description-md5: 064a05537fc1e445c922ab1c844b28e1
+Description-en: interface to DRMAA-compliant distributed resource management systems
+ This is a Python implementation of the Distributed Resource Management (DRM)
+ Application API (DRMAA). It provides all high-level functionality necessary
+ to consign a job to a DRM system (e.g. Sun Gridengine), including common
+ operations on jobs, such as termination or suspension.
 
 Package: python3-drms
 Description-md5: 72c8b222890d128b22090ad4344bc7a6
@@ -219307,6 +219193,193 @@ Description-en: PostScript manual for gri, a language for scientific graphics
  This is the Gri manual in PDF format suitable for printing or viewing
  on-screen.  The compressed file is located at /usr/share/doc/gri/gri.pdf.gz
 
+Package: gridengine-client
+Description-md5: 53498ca1a6859f13dd4042c1f0a68669
+Description-en: Utilities for Grid Engine queue management
+ Grid Engine is software that facilitates "distributed resource
+ management" (DRM).  Far more than just simple load-balancing tools or
+ batch scheduling mechanisms, DRM software typically provides the
+ following key features across large sets of distributed resources:
+ .
+   * Policy based allocation of distributed resources (CPU time,
+     software licenses, etc.)
+   * Batch queuing & scheduling
+   * Support diverse server hardware, OS and architectures
+   * Load balancing & remote job execution
+   * Detailed job accounting statistics
+   * Fine-grained user specifiable resources
+   * Suspend/resume/migrate jobs
+   * Tools for reporting Job/Host/Cluster status
+   * Job Arrays
+   * Integration & control of parallel jobs
+ .
+ This package contains the Grid Engine user utilities.
+
+Package: gridengine-common
+Description-md5: c872b80b4810c7a2b08cd2febf99decd
+Description-en: Distributed resource management - common files
+ Grid Engine is software that facilitates "distributed resource
+ management" (DRM).  Far more than just simple load-balancing tools or
+ batch scheduling mechanisms, DRM software typically provides the
+ following key features across large sets of distributed resources:
+ .
+   * Policy based allocation of distributed resources (CPU time,
+     software licenses, etc.)
+   * Batch queuing & scheduling
+   * Support diverse server hardware, OS and architectures
+   * Load balancing & remote job execution
+   * Detailed job accounting statistics
+   * Fine-grained user specifiable resources
+   * Suspend/resume/migrate jobs
+   * Tools for reporting Job/Host/Cluster status
+   * Job Arrays
+   * Integration & control of parallel jobs
+ .
+ This package contains required shared files and the basic configuration.
+
+Package: gridengine-dev
+Description-md5: fe6702234296bccedf5fb737e6e0d025
+Description-en: Distributed resource management - development files
+ Grid Engine is software that facilitates "distributed resource
+ management" (DRM).  Far more than just simple load-balancing tools or
+ batch scheduling mechanisms, DRM software typically provides the
+ following key features across large sets of distributed resources:
+ .
+   * Policy based allocation of distributed resources (CPU time,
+     software licenses, etc.)
+   * Batch queuing & scheduling
+   * Support diverse server hardware, OS and architectures
+   * Load balancing & remote job execution
+   * Detailed job accounting statistics
+   * Fine-grained user specifiable resources
+   * Suspend/resume/migrate jobs
+   * Tools for reporting Job/Host/Cluster status
+   * Job Arrays
+   * Integration & control of parallel jobs
+ .
+ This package contains development files for interacting with
+ the Grid Engine database and job submission verifier.
+
+Package: gridengine-drmaa-dev
+Description-md5: 82baba8c373bfa06b4bfa008d3a9f7b5
+Description-en: Distributed resource management Application API library - development files
+ DRMAA (Distributed Resource Management Application API) is a specification
+ developed by a working group in the Global Grid Forum (GGF).  The intention
+ is to provide an API specification for the submission and control of jobs
+ to one or more Distributed Resource Management (DRM) systems.
+ .
+ This package contains the development files for the library which provides
+ the Grid Engine implementation of the DRMAA specification.
+
+Package: gridengine-drmaa1.0
+Description-md5: 8fec391cd48f75fff0bdd902c418aa83
+Description-en: Distributed resource management Application API library
+ DRMAA (Distributed Resource Management Application API) is a specification
+ developed by a working group in the Global Grid Forum (GGF).  The intention
+ is to provide an API specification for the submission and control of jobs
+ to one or more Distributed Resource Management (DRM) systems.
+ .
+ This package contains the library which provides the Grid Engine
+ implementation of the DRMAA specification.
+
+Package: gridengine-exec
+Description-md5: 6eadea8f174d60413282e34894dc3efc
+Description-en: Distributed resource management - Execution Server
+ Grid Engine is software that facilitates "distributed resource
+ management" (DRM).  Far more than just simple load-balancing tools or
+ batch scheduling mechanisms, DRM software typically provides the
+ following key features across large sets of distributed resources:
+ .
+   * Policy based allocation of distributed resources (CPU time,
+     software licenses, etc.)
+   * Batch queuing & scheduling
+   * Support diverse server hardware, OS and architectures
+   * Load balancing & remote job execution
+   * Detailed job accounting statistics
+   * Fine-grained user specifiable resources
+   * Suspend/resume/migrate jobs
+   * Tools for reporting Job/Host/Cluster status
+   * Job Arrays
+   * Integration & control of parallel jobs
+ .
+ This package contains the Grid Engine execution server.
+
+Package: gridengine-master
+Description-md5: 68e4d6273a227ee167642634bb3a4218
+Description-en: Distributed resource management - Master Server
+ Grid Engine is software that facilitates "distributed resource
+ management" (DRM).  Far more than just simple load-balancing tools or
+ batch scheduling mechanisms, DRM software typically provides the
+ following key features across large sets of distributed resources:
+ .
+   * Policy based allocation of distributed resources (CPU time,
+     software licenses, etc.)
+   * Batch queuing & scheduling
+   * Support diverse server hardware, OS and architectures
+   * Load balancing & remote job execution
+   * Detailed job accounting statistics
+   * Fine-grained user specifiable resources
+   * Suspend/resume/migrate jobs
+   * Tools for reporting Job/Host/Cluster status
+   * Job Arrays
+   * Integration & control of parallel jobs
+ .
+ This package contains the Grid Engine master server.
+
+Package: gridengine-qmon
+Description-md5: 67a81db98416bbd0fcc967799f0b0817
+Description-en: Graphical utilities for Grid Engine queue management
+ Grid Engine is software that facilitates "distributed resource
+ management" (DRM).  Far more than just simple load-balancing tools or
+ batch scheduling mechanisms, DRM software typically provides the
+ following key features across large sets of distributed resources:
+ .
+   * Policy based allocation of distributed resources (CPU time,
+     software licenses, etc.)
+   * Batch queuing & scheduling
+   * Support diverse server hardware, OS and architectures
+   * Load balancing & remote job execution
+   * Detailed job accounting statistics
+   * Fine-grained user specifiable resources
+   * Suspend/resume/migrate jobs
+   * Tools for reporting Job/Host/Cluster status
+   * Job Arrays
+   * Integration & control of parallel jobs
+ .
+ This package contains the graphical Grid Engine administration frontend.
+
+Package: libdrmaa1.0-java
+Description-md5: 4b8598ff514ba3e463662e5e08e265ab
+Description-en: Distributed resource management Application API library - Java bindings
+ DRMAA (Distributed Resource Management Application API) is a specification
+ developed by a working group in the Global Grid Forum (GGF).  The intention
+ is to provide an API specification for the submission and control of jobs
+ to one or more Distributed Resource Management (DRM) systems.
+ .
+ This package contains the Java bindings for the Grid Engine implementation of
+ the DRMAA specification.
+
+Package: libdrmaa1.0-java-doc
+Description-md5: 6997a4fc2dbef63315273e9da7486211
+Description-en: Distributed resource management Application API library - Java bindings docs
+ DRMAA (Distributed Resource Management Application API) is a specification
+ developed by a working group in the Global Grid Forum (GGF).  The intention
+ is to provide an API specification for the submission and control of jobs
+ to one or more Distributed Resource Management (DRM) systems.
+ .
+ This package contains Javadocs for the Grid Engine Java binding.
+
+Package: libdrmaa1.0-ruby
+Description-md5: 08b901136656dd01b7f6ec87a240f528
+Description-en: Distributed resource management Application API library - Ruby bindings
+ DRMAA (Distributed Resource Management Application API) is a specification
+ developed by a working group in the Global Grid Forum (GGF).  The intention
+ is to provide an API specification for the submission and control of jobs
+ to one or more Distributed Resource Management (DRM) systems.
+ .
+ This package contains the Ruby bindings for the Grid Engine implementation of
+ the DRMAA specification.
+
 Package: gridlock.app
 Description-md5: 8e1c173bfceadc409b9772f45ee117d0
 Description-en: Collection of grid-based board games for GNUstep
@@ -290600,16 +290673,6 @@ Description-en: JRC morphological and image processing library - Development fil
  This package contains the files needed to develop a software that
  will use the Miallib (headers, static objects, configuration script).
 
-Package: libmiallib1
-Description-md5: b7bd283625f499e4453aa7f0ab0b6a2b
-Description-en: JRC morphological and image processing library
- Miallib is a C library including image processing and
- mathematical morphology algorithms used by Join Research Center
- in their Big Data Analytics Platform, with binding for Python
- provided.
- .
- This package contains the shared library.
-
 Package: libmiallib2
 Description-md5: b7bd283625f499e4453aa7f0ab0b6a2b
 Description-en: JRC morphological and image processing library
@@ -303842,6 +303905,36 @@ Package: libkf5guiaddons5
 Description-md5: 87a62b14d8e5947fac2e986637819f8b
 Description-en: additional addons for QtGui
  Qt widgets for colours, fonts and text
+
+Package: khal
+Description-md5: 23274b848f808abe34fa1bdf5275dfff
+Description-en: Standards based CLI and terminal calendar program
+ Khal is a standards based CLI and terminal calendar program,
+ able to synchronize with CalDAV servers through vdirsyncer.
+ .
+ Features:
+  - khal can read and write events/icalendars to vdir,
+    so vdirsyncer can be used to synchronize calendars
+    with a variety of other programs,
+    for example CalDAV servers.
+  - fast and easy way to add new events
+  - ikhal (interactive khal) lets you browse and edit calendars and events
+
+Package: khal-doc
+Description-md5: 62997025f7c352ef610368c69fc57327
+Description-en: Standards based CLI and terminal calendar program - documentation
+ Khal is a standards based CLI and terminal calendar program,
+ able to synchronize with CalDAV servers through vdirsyncer.
+ .
+ Features:
+  - khal can read and write events/icalendars to vdir,
+    so vdirsyncer can be used to synchronize calendars
+    with a variety of other programs,
+    for example CalDAV servers.
+  - fast and easy way to add new events
+  - ikhal (interactive khal) lets you browse and edit calendars and events
+ .
+ This package contains the documentation for khal.
 
 Package: elpa-khalel
 Description-md5: aeee9f23422bc55b240963c0dfca2e7e
@@ -336961,10 +337054,11 @@ Description-en: collection of helpers for DBIx::Class
  simplify the common case stuff.
 
 Package: libdbix-class-htmlwidget-perl
-Description-md5: 8fbf02f43f52fd95f81ae3d08be22d9a
+Description-md5: c9b4507428707d64e9518e4bb5db416a
 Description-en: DBIx::Class::HTMLWidget perl module
- Something like Class::DBI::FromForm / Class::DBI::FromCGI but using
- HTML::Widget for form creation and validation and DBIx::Class as a ORM.
+ DBIx::Class::HTMLWidget is something like Class::DBI::FromForm /
+ Class::DBI::FromCGI but using HTML::Widget for form creation and validation
+ and DBIx::Class as a ORM.
  .
  You'll need a working DBIx::Class setup and some knowledge of
  HTML::Widget and Catalyst.
@@ -338508,10 +338602,10 @@ Description-en: emulation of Win32::SerialPort for Linux/POSIX
  Device::SerialPort.
 
 Package: libdevice-usb-pcsensor-hidtemper-perl
-Description-md5: 5ca80cdd5bdcb008276de72073690698
+Description-md5: 7105482d5b920c1330c43672c241c01f
 Description-en: Perl module to interface to the HidTEMPer thermometers
- This module is a simplified interface to the HidTEMPer thermometers created by
- PCSensor.
+ Device::USB::PCSensor::HidTEMPer is a simplified interface to the HidTEMPer
+ thermometers created by PCSensor.
 
 Package: libdevice-usb-perl
 Description-md5: 12ca21679f2f17b6ae8c597c7afa1d99
@@ -419470,101 +419564,101 @@ Description-en: CPU frequency and voltage scaling tools for Linux (libraries)
  .
  This package contains the shared library.
 
-Package: linux-base-7.2.15+deb14-amd64
-Description-md5: d621cb3aca53c822f57bef57c0bbdf73
-Description-en: Linux 7.2.15 for 64-bit PCs (base files)
- This package contains files for Linux 7.2.15 on PCs with AMD64, Intel 64
- or VIA Nano processors that are used for both installing the kernel and
+Package: linux-base-7.3.4+deb14-amd64
+Description-md5: e9f363e6d7156346f529d0037cba8b3c
+Description-en: Linux 7.3.4 for 64-bit PCs (base files)
+ This package contains files for Linux 7.3.4 on PCs with AMD64, Intel 64 or
+ VIA Nano processors that are used for both installing the kernel and
  building additional modules.
 
-Package: linux-base-7.2.15+deb14-arm64
-Description-md5: ab29c4a1715ab230bbc4d329a4982356
-Description-en: Linux 7.2.15 for 64-bit ARMv8 machines (base files)
- This package contains files for Linux 7.2.15 on 64-bit ARMv8 machines that
+Package: linux-base-7.3.4+deb14-arm64
+Description-md5: 0228f3545098b98446e2c8e1b399f77c
+Description-en: Linux 7.3.4 for 64-bit ARMv8 machines (base files)
+ This package contains files for Linux 7.3.4 on 64-bit ARMv8 machines that
  are used for both installing the kernel and building additional modules.
 
-Package: linux-base-7.2.15+deb14-arm64-16k
-Description-md5: c0e58eaa36fb935f27efe7ba473eee1b
-Description-en: Linux 7.2.15 for 64-bit ARMv8 machines with 16k pages (base files)
- This package contains files for Linux 7.2.15 on 64-bit ARMv8 machines with
+Package: linux-base-7.3.4+deb14-arm64-16k
+Description-md5: e2d1a652028ccff7fe56ca844c450e1d
+Description-en: Linux 7.3.4 for 64-bit ARMv8 machines with 16k pages (base files)
+ This package contains files for Linux 7.3.4 on 64-bit ARMv8 machines with
  16k pages that are used for both installing the kernel and building
  additional modules.
 
-Package: linux-base-7.2.15+deb14-armmp
-Description-md5: ccd66b72e810ec1a2fa3e19374b03e83
-Description-en: Linux 7.2.15 for ARMv7 multiplatform compatible SoCs (base files)
- This package contains files for Linux 7.2.15 on ARMv7 multiplatform
- kernel.  See https://wiki.debian.org/DebianKernel/ARMMP for details of
- supported platforms that are used for both installing the kernel and
- building additional modules.
+Package: linux-base-7.3.4+deb14-armmp
+Description-md5: a29fd1054389f2e05b65b6bf17d7c55e
+Description-en: Linux 7.3.4 for ARMv7 multiplatform compatible SoCs (base files)
+ This package contains files for Linux 7.3.4 on ARMv7 multiplatform kernel.
+ See https://wiki.debian.org/DebianKernel/ARMMP for details of supported
+ platforms that are used for both installing the kernel and building
+ additional modules.
 
-Package: linux-base-7.2.15+deb14-armmp-lpae
-Description-md5: 5216a1cbbd21c6b445719329759195b2
-Description-en: Linux 7.2.15 for ARMv7 multiplatform compatible SoCs supporting LPAE (base files)
- This package contains files for Linux 7.2.15 on ARMv7 multiplatform kernel
+Package: linux-base-7.3.4+deb14-armmp-lpae
+Description-md5: 1fc68682a6e9d087840d4d1c1ae52a5f
+Description-en: Linux 7.3.4 for ARMv7 multiplatform compatible SoCs supporting LPAE (base files)
+ This package contains files for Linux 7.3.4 on ARMv7 multiplatform kernel
  supporting LPAE. See https://wiki.debian.org/DebianKernel/ARMMP for
  details of supported platforms.  that are used for both installing the
  kernel and building additional modules.
 
-Package: linux-base-7.2.15+deb14-cloud-amd64
-Description-md5: 7334b3575252a1dfe0d0e6e78000d1f0
-Description-en: Linux 7.2.15 for x86-64 cloud (base files)
- This package contains files for Linux 7.2.15 on cloud platforms including
+Package: linux-base-7.3.4+deb14-cloud-amd64
+Description-md5: 751994dc692b6a501a3f7f9984fc8ca9
+Description-en: Linux 7.3.4 for x86-64 cloud (base files)
+ This package contains files for Linux 7.3.4 on cloud platforms including
  Amazon EC2, Microsoft Azure, and Google Compute Engine that are used for
  both installing the kernel and building additional modules.
 
-Package: linux-base-7.2.15+deb14-cloud-arm64
-Description-md5: 2a83777b15e49295037e44b04b6b22cb
-Description-en: Linux 7.2.15 for arm64 cloud (base files)
- This package contains files for Linux 7.2.15 on cloud platforms supporting
+Package: linux-base-7.3.4+deb14-cloud-arm64
+Description-md5: 353e400f42c57b29944ca1890fa42605
+Description-en: Linux 7.3.4 for arm64 cloud (base files)
+ This package contains files for Linux 7.3.4 on cloud platforms supporting
  arm64 virtual machines that are used for both installing the kernel and
  building additional modules.
 
-Package: linux-base-7.2.15+deb14-loong64
-Description-md5: 898d9fe449b0fc8f40a1fe0d839fff36
-Description-en: Linux 7.2.15 for 64-bit LoongArch platforms (base files)
- This package contains files for Linux 7.2.15 on 64-bit LoongArch platforms
+Package: linux-base-7.3.4+deb14-loong64
+Description-md5: d5e8d1d9c9fb45d7bde5897c1bd6b097
+Description-en: Linux 7.3.4 for 64-bit LoongArch platforms (base files)
+ This package contains files for Linux 7.3.4 on 64-bit LoongArch platforms
  that are used for both installing the kernel and building additional
  modules.
 
-Package: linux-base-7.2.15+deb14-powerpc64le
-Description-md5: 4232328cc666f80354693d0da99d2715
-Description-en: Linux 7.2.15 for Little-endian 64-bit PowerPC with 4k pages (base files)
- This package contains files for Linux 7.2.15 on Little-endian 64-bit
+Package: linux-base-7.3.4+deb14-powerpc64le
+Description-md5: 87a956257a0909f5172e33b2c49c3052
+Description-en: Linux 7.3.4 for Little-endian 64-bit PowerPC with 4k pages (base files)
+ This package contains files for Linux 7.3.4 on Little-endian 64-bit
  PowerPC with 4k pages that are used for both installing the kernel and
  building additional modules.
 
-Package: linux-base-7.2.15+deb14-powerpc64le-64k
-Description-md5: 0fefd6d304c7768b1ab1277b0d96536c
-Description-en: Linux 7.2.15 for Little-endian 64-bit PowerPC with 64k pages (base files)
- This package contains files for Linux 7.2.15 on Little-endian 64-bit
+Package: linux-base-7.3.4+deb14-powerpc64le-64k
+Description-md5: d11207b822d31ea310aca08368180fe6
+Description-en: Linux 7.3.4 for Little-endian 64-bit PowerPC with 64k pages (base files)
+ This package contains files for Linux 7.3.4 on Little-endian 64-bit
  PowerPC with 64k pages that are used for both installing the kernel and
  building additional modules.
 
-Package: linux-base-7.2.15+deb14-riscv64
-Description-md5: 487a0726392c934063db80f1c2f12f00
-Description-en: Linux 7.2.15 for 64-bit RISC-V platforms (base files)
- This package contains files for Linux 7.2.15 on 64-bit RISC-V platforms
+Package: linux-base-7.3.4+deb14-riscv64
+Description-md5: 30be408399172544763124cd1af63642
+Description-en: Linux 7.3.4 for 64-bit RISC-V platforms (base files)
+ This package contains files for Linux 7.3.4 on 64-bit RISC-V platforms
  that are used for both installing the kernel and building additional
  modules.
 
-Package: linux-base-7.2.15+deb14-rt-amd64
-Description-md5: d621cb3aca53c822f57bef57c0bbdf73
-Description-en: Linux 7.2.15 for 64-bit PCs (base files)
- This package contains files for Linux 7.2.15 on PCs with AMD64, Intel 64
- or VIA Nano processors that are used for both installing the kernel and
+Package: linux-base-7.3.4+deb14-rt-amd64
+Description-md5: e9f363e6d7156346f529d0037cba8b3c
+Description-en: Linux 7.3.4 for 64-bit PCs (base files)
+ This package contains files for Linux 7.3.4 on PCs with AMD64, Intel 64 or
+ VIA Nano processors that are used for both installing the kernel and
  building additional modules.
 
-Package: linux-base-7.2.15+deb14-rt-arm64
-Description-md5: ab29c4a1715ab230bbc4d329a4982356
-Description-en: Linux 7.2.15 for 64-bit ARMv8 machines (base files)
- This package contains files for Linux 7.2.15 on 64-bit ARMv8 machines that
+Package: linux-base-7.3.4+deb14-rt-arm64
+Description-md5: 0228f3545098b98446e2c8e1b399f77c
+Description-en: Linux 7.3.4 for 64-bit ARMv8 machines (base files)
+ This package contains files for Linux 7.3.4 on 64-bit ARMv8 machines that
  are used for both installing the kernel and building additional modules.
 
-Package: linux-base-7.2.15+deb14-s390x
-Description-md5: 1edbafdb3249d53289b8184543d54018
-Description-en: Linux 7.2.15 for IBM zSeries (base files)
- This package contains files for Linux 7.2.15 on IBM zSeries that are used
+Package: linux-base-7.3.4+deb14-s390x
+Description-md5: e2487b82eee9fff61799ff8d7c72b667
+Description-en: Linux 7.3.4 for IBM zSeries (base files)
+ This package contains files for Linux 7.3.4 on IBM zSeries that are used
  for both installing the kernel and building additional modules.
 
 Package: linux-base-armmp
@@ -419616,134 +419710,134 @@ Description-en: Linux for IBM zSeries (dummy package)
  This empty package is used to keep the installed versions of
  linux-headers-IBM zSeries and linux-image-IBM zSeries synchronised.
 
-Package: linux-binary-7.2.15+deb14-armmp
-Description-md5: f7f8849ee0621acc774a6bb122c9b51d
-Description-en: Linux 7.2.15 for ARMv7 multiplatform compatible SoCs (kernel image)
- This package contains the kernel image for Linux 7.2.15 on ARMv7
+Package: linux-binary-7.3.4+deb14-armmp
+Description-md5: d3802b09ef0891a919657ea8550528a4
+Description-en: Linux 7.3.4 for ARMv7 multiplatform compatible SoCs (kernel image)
+ This package contains the kernel image for Linux 7.3.4 on ARMv7
  multiplatform kernel.  See https://wiki.debian.org/DebianKernel/ARMMP for
  details of supported platforms.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-armmp.
+ install linux-image-7.3.4+deb14-armmp.
 
-Package: linux-binary-7.2.15+deb14-armmp-lpae
-Description-md5: 18d877041fee4e7514dae7349f7110e4
-Description-en: Linux 7.2.15 for ARMv7 multiplatform compatible SoCs supporting LPAE (kernel image)
- This package contains the kernel image for Linux 7.2.15 on ARMv7
+Package: linux-binary-7.3.4+deb14-armmp-lpae
+Description-md5: 73e6db30bd84989cbba46c1f1355f621
+Description-en: Linux 7.3.4 for ARMv7 multiplatform compatible SoCs supporting LPAE (kernel image)
+ This package contains the kernel image for Linux 7.3.4 on ARMv7
  multiplatform kernel supporting LPAE. See
  https://wiki.debian.org/DebianKernel/ARMMP for details of supported
  platforms..
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-armmp-lpae.
+ install linux-image-7.3.4+deb14-armmp-lpae.
 
-Package: linux-binary-7.2.15+deb14-loong64
-Description-md5: e10f1859c9daab78e7a43da1382a3c70
-Description-en: Linux 7.2.15 for 64-bit LoongArch platforms (kernel image)
- This package contains the kernel image for Linux 7.2.15 on 64-bit
- LoongArch platforms.
- .
- This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-loong64.
-
-Package: linux-binary-7.2.15+deb14-powerpc64le
-Description-md5: 0ae4c9364536edc3a1f76b466257fe1f
-Description-en: Linux 7.2.15 for Little-endian 64-bit PowerPC with 4k pages (kernel image)
- This package contains the kernel image for Linux 7.2.15 on Little-endian
- 64-bit PowerPC with 4k pages.
- .
- This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-powerpc64le.
-
-Package: linux-binary-7.2.15+deb14-powerpc64le-64k
-Description-md5: 91476918f653693f66b206b1426f7071
-Description-en: Linux 7.2.15 for Little-endian 64-bit PowerPC with 64k pages (kernel image)
- This package contains the kernel image for Linux 7.2.15 on Little-endian
- 64-bit PowerPC with 64k pages.
- .
- This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-powerpc64le-64k.
-
-Package: linux-binary-7.2.15+deb14-riscv64
-Description-md5: 814548e2466ce77e0ab30dc73d95b033
-Description-en: Linux 7.2.15 for 64-bit RISC-V platforms (kernel image)
- This package contains the kernel image for Linux 7.2.15 on 64-bit RISC-V
+Package: linux-binary-7.3.4+deb14-loong64
+Description-md5: 665fd7259ac0792b5998b9c099a72357
+Description-en: Linux 7.3.4 for 64-bit LoongArch platforms (kernel image)
+ This package contains the kernel image for Linux 7.3.4 on 64-bit LoongArch
  platforms.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-riscv64.
+ install linux-image-7.3.4+deb14-loong64.
 
-Package: linux-binary-7.2.15+deb14-s390x
-Description-md5: 7ca27e9fa8bf3ac11343e09bec427663
-Description-en: Linux 7.2.15 for IBM zSeries (kernel image)
- This package contains the kernel image for Linux 7.2.15 on IBM zSeries.
+Package: linux-binary-7.3.4+deb14-powerpc64le
+Description-md5: 6494e8a02b4a586dd222e1fc48d212e3
+Description-en: Linux 7.3.4 for Little-endian 64-bit PowerPC with 4k pages (kernel image)
+ This package contains the kernel image for Linux 7.3.4 on Little-endian
+ 64-bit PowerPC with 4k pages.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-s390x.
+ install linux-image-7.3.4+deb14-powerpc64le.
 
-Package: linux-binary-unsigned-7.2.15+deb14-amd64
-Description-md5: 1127a9cd49f9a6243920df6a5f903916
-Description-en: Linux 7.2.15 for 64-bit PCs (unsigned kernel image)
- This package contains the unsigned kernel image for Linux 7.2.15 on PCs
+Package: linux-binary-7.3.4+deb14-powerpc64le-64k
+Description-md5: f8cea06a2e4b4318992b685a3236bc28
+Description-en: Linux 7.3.4 for Little-endian 64-bit PowerPC with 64k pages (kernel image)
+ This package contains the kernel image for Linux 7.3.4 on Little-endian
+ 64-bit PowerPC with 64k pages.
+ .
+ This does not provide a complete kernel installation.  You should normally
+ install linux-image-7.3.4+deb14-powerpc64le-64k.
+
+Package: linux-binary-7.3.4+deb14-riscv64
+Description-md5: 3d28ccf5e3052ace3c28f3710306487b
+Description-en: Linux 7.3.4 for 64-bit RISC-V platforms (kernel image)
+ This package contains the kernel image for Linux 7.3.4 on 64-bit RISC-V
+ platforms.
+ .
+ This does not provide a complete kernel installation.  You should normally
+ install linux-image-7.3.4+deb14-riscv64.
+
+Package: linux-binary-7.3.4+deb14-s390x
+Description-md5: 3087eec17b8f1b11241e95e050404312
+Description-en: Linux 7.3.4 for IBM zSeries (kernel image)
+ This package contains the kernel image for Linux 7.3.4 on IBM zSeries.
+ .
+ This does not provide a complete kernel installation.  You should normally
+ install linux-image-7.3.4+deb14-s390x.
+
+Package: linux-binary-unsigned-7.3.4+deb14-amd64
+Description-md5: f0fe236309baa97766d1793b45297341
+Description-en: Linux 7.3.4 for 64-bit PCs (unsigned kernel image)
+ This package contains the unsigned kernel image for Linux 7.3.4 on PCs
  with AMD64, Intel 64 or VIA Nano processors.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-amd64.
+ install linux-image-7.3.4+deb14-amd64.
 
-Package: linux-binary-unsigned-7.2.15+deb14-arm64
-Description-md5: 123eb9e248ec61aba15992251b1c9866
-Description-en: Linux 7.2.15 for 64-bit ARMv8 machines (unsigned kernel image)
- This package contains the unsigned kernel image for Linux 7.2.15 on 64-bit
+Package: linux-binary-unsigned-7.3.4+deb14-arm64
+Description-md5: e6888420ab89e8ff0e62f75cb2fb773e
+Description-en: Linux 7.3.4 for 64-bit ARMv8 machines (unsigned kernel image)
+ This package contains the unsigned kernel image for Linux 7.3.4 on 64-bit
  ARMv8 machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-arm64.
+ install linux-image-7.3.4+deb14-arm64.
 
-Package: linux-binary-unsigned-7.2.15+deb14-arm64-16k
-Description-md5: b52195c6cf73ca53c79b21f1653d4eaa
-Description-en: Linux 7.2.15 for 64-bit ARMv8 machines with 16k pages (unsigned kernel image)
- This package contains the unsigned kernel image for Linux 7.2.15 on 64-bit
+Package: linux-binary-unsigned-7.3.4+deb14-arm64-16k
+Description-md5: be5079573b4588ea68d127ca18227b96
+Description-en: Linux 7.3.4 for 64-bit ARMv8 machines with 16k pages (unsigned kernel image)
+ This package contains the unsigned kernel image for Linux 7.3.4 on 64-bit
  ARMv8 machines with 16k pages.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-arm64-16k.
+ install linux-image-7.3.4+deb14-arm64-16k.
 
-Package: linux-binary-unsigned-7.2.15+deb14-cloud-amd64
-Description-md5: 52db57906fb08cb5bc871c543c354f8f
-Description-en: Linux 7.2.15 for x86-64 cloud (unsigned kernel image)
- This package contains the unsigned kernel image for Linux 7.2.15 on cloud
+Package: linux-binary-unsigned-7.3.4+deb14-cloud-amd64
+Description-md5: 54d686dc4e60dba62093658c238183bc
+Description-en: Linux 7.3.4 for x86-64 cloud (unsigned kernel image)
+ This package contains the unsigned kernel image for Linux 7.3.4 on cloud
  platforms including Amazon EC2, Microsoft Azure, and Google Compute
  Engine.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-cloud-amd64.
+ install linux-image-7.3.4+deb14-cloud-amd64.
 
-Package: linux-binary-unsigned-7.2.15+deb14-cloud-arm64
-Description-md5: e57288e77697ba292f7d7859549da546
-Description-en: Linux 7.2.15 for arm64 cloud (unsigned kernel image)
- This package contains the unsigned kernel image for Linux 7.2.15 on cloud
+Package: linux-binary-unsigned-7.3.4+deb14-cloud-arm64
+Description-md5: 90539f50fbc31cc507a27f1ea2590e09
+Description-en: Linux 7.3.4 for arm64 cloud (unsigned kernel image)
+ This package contains the unsigned kernel image for Linux 7.3.4 on cloud
  platforms supporting arm64 virtual machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-cloud-arm64.
+ install linux-image-7.3.4+deb14-cloud-arm64.
 
-Package: linux-binary-unsigned-7.2.15+deb14-rt-amd64
-Description-md5: 9b0d6d128ea4ca9031e270bad3e29a66
-Description-en: Linux 7.2.15 for 64-bit PCs (unsigned kernel image)
- This package contains the unsigned kernel image for Linux 7.2.15 on PCs
+Package: linux-binary-unsigned-7.3.4+deb14-rt-amd64
+Description-md5: f944f6149d6aea789c2c63553de7d62f
+Description-en: Linux 7.3.4 for 64-bit PCs (unsigned kernel image)
+ This package contains the unsigned kernel image for Linux 7.3.4 on PCs
  with AMD64, Intel 64 or VIA Nano processors.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-rt-amd64.
+ install linux-image-7.3.4+deb14-rt-amd64.
 
-Package: linux-binary-unsigned-7.2.15+deb14-rt-arm64
-Description-md5: f2f1c7d7890ef868d802a2640f97f518
-Description-en: Linux 7.2.15 for 64-bit ARMv8 machines (unsigned kernel image)
- This package contains the unsigned kernel image for Linux 7.2.15 on 64-bit
+Package: linux-binary-unsigned-7.3.4+deb14-rt-arm64
+Description-md5: ec04bee449fe7604fab708a7b1844d86
+Description-en: Linux 7.3.4 for 64-bit ARMv8 machines (unsigned kernel image)
+ This package contains the unsigned kernel image for Linux 7.3.4 on 64-bit
  ARMv8 machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-rt-arm64.
+ install linux-image-7.3.4+deb14-rt-arm64.
 
 Package: linux-bpf-dev
 Description-md5: ef487f2f846252f409f3ebb8ece1c714
@@ -419751,9 +419845,9 @@ Description-en: Headers for BPF development
  The vmlinux.h header is provided to allow userspace to build BPF CO-RE
  programs targeting the packaged kernel.
 
-Package: linux-config-7.2
-Description-md5: fdbcf1be86e8375d192f53d7fa0444ca
-Description-en: Debian kernel configurations for Linux 7.2
+Package: linux-config-7.3
+Description-md5: c74fdd54739928c2a2dcf4c45c1b3001
+Description-en: Debian kernel configurations for Linux 7.3
  This package contains the configuration files used to build the official
  Debian kernel files, but without references to Debian's signing
  certificates.
@@ -419792,166 +419886,166 @@ Description-en: Linux kernel specific documentation (meta-package)
  This package depends on the package containing the documentation for the
  latest Linux kernel.
 
-Package: linux-doc-7.2
-Description-md5: 8a0a9a1bb9c570eb946e63917edcccc6
-Description-en: Linux kernel specific documentation for version 7.2
+Package: linux-doc-7.3
+Description-md5: f12892b7c64c364b94b0a608fd62a48c
+Description-en: Linux kernel specific documentation for version 7.3
  This package provides the various README files and HTML documentation for
- the Linux kernel version 7.2.  Plenty of information, including the
+ the Linux kernel version 7.3.  Plenty of information, including the
  descriptions of various kernel subsystems, filesystems, driver-specific
  notes and the like.  An index to the documentation is installed as
- /usr/share/doc/linux-doc-7.2/html/index.html.
+ /usr/share/doc/linux-doc-7.3/html/index.html.
 
-Package: linux-headers-7.2.15+deb14-amd64
-Description-md5: 84cc8aa9813c605806291b03b7873a02
-Description-en: Linux 7.2.15 for 64-bit PCs (module development)
+Package: linux-headers-7.3.4+deb14-amd64
+Description-md5: 91bed39d24efbbec198b4073881d89be
+Description-en: Linux 7.3.4 for 64-bit PCs (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.15+deb14-amd64, generally used for building out-of-tree
+ Linux kernel 7.3.4+deb14-amd64, generally used for building out-of-tree
  kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.15+deb14-amd64, and can be used for building
+ /usr/src/linux-headers-7.3.4+deb14-amd64, and can be used for building
  modules that load into the kernel provided by the
- linux-image-7.2.15+deb14-amd64 package.
+ linux-image-7.3.4+deb14-amd64 package.
 
-Package: linux-headers-7.2.15+deb14-arm64
-Description-md5: 1f9ae9ea25f25d9cfa40200f21fc533b
-Description-en: Linux 7.2.15 for 64-bit ARMv8 machines (module development)
+Package: linux-headers-7.3.4+deb14-arm64
+Description-md5: b65c2ba4ec924ee8df91737f052d1f8a
+Description-en: Linux 7.3.4 for 64-bit ARMv8 machines (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.15+deb14-arm64, generally used for building out-of-tree
+ Linux kernel 7.3.4+deb14-arm64, generally used for building out-of-tree
  kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.15+deb14-arm64, and can be used for building
+ /usr/src/linux-headers-7.3.4+deb14-arm64, and can be used for building
  modules that load into the kernel provided by the
- linux-image-7.2.15+deb14-arm64 package.
+ linux-image-7.3.4+deb14-arm64 package.
 
-Package: linux-headers-7.2.15+deb14-arm64-16k
-Description-md5: 994a70000d1113962b35e3d7695c394e
-Description-en: Linux 7.2.15 for 64-bit ARMv8 machines with 16k pages (module development)
+Package: linux-headers-7.3.4+deb14-arm64-16k
+Description-md5: 0addbb0b1a2067fc4182d3d4acdcabdd
+Description-en: Linux 7.3.4 for 64-bit ARMv8 machines with 16k pages (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.15+deb14-arm64-16k, generally used for building
+ Linux kernel 7.3.4+deb14-arm64-16k, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.15+deb14-arm64-16k, and can be used for
- building modules that load into the kernel provided by the
- linux-image-7.2.15+deb14-arm64-16k package.
+ /usr/src/linux-headers-7.3.4+deb14-arm64-16k, and can be used for building
+ modules that load into the kernel provided by the
+ linux-image-7.3.4+deb14-arm64-16k package.
 
-Package: linux-headers-7.2.15+deb14-armmp
-Description-md5: 2a772844b0a208038b263a12553f5b49
-Description-en: Linux 7.2.15 for ARMv7 multiplatform compatible SoCs (module development)
+Package: linux-headers-7.3.4+deb14-armmp
+Description-md5: cb695df01ee44b504c7222b54775fc3f
+Description-en: Linux 7.3.4 for ARMv7 multiplatform compatible SoCs (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.15+deb14-armmp, generally used for building out-of-tree
+ Linux kernel 7.3.4+deb14-armmp, generally used for building out-of-tree
  kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.15+deb14-armmp, and can be used for building
+ /usr/src/linux-headers-7.3.4+deb14-armmp, and can be used for building
  modules that load into the kernel provided by the
- linux-image-7.2.15+deb14-armmp package.
+ linux-image-7.3.4+deb14-armmp package.
 
-Package: linux-headers-7.2.15+deb14-armmp-lpae
-Description-md5: 101248096f6ef12ec55a9d62254dd74e
-Description-en: Linux 7.2.15 for ARMv7 multiplatform compatible SoCs supporting LPAE (module development)
+Package: linux-headers-7.3.4+deb14-armmp-lpae
+Description-md5: 128cb015b48452db6f0a4f031d2598cf
+Description-en: Linux 7.3.4 for ARMv7 multiplatform compatible SoCs supporting LPAE (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.15+deb14-armmp-lpae, generally used for building
+ Linux kernel 7.3.4+deb14-armmp-lpae, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.15+deb14-armmp-lpae, and can be used for
+ /usr/src/linux-headers-7.3.4+deb14-armmp-lpae, and can be used for
  building modules that load into the kernel provided by the
- linux-image-7.2.15+deb14-armmp-lpae package.
+ linux-image-7.3.4+deb14-armmp-lpae package.
 
-Package: linux-headers-7.2.15+deb14-cloud-amd64
-Description-md5: 44d5f71986272e67866c2b8c249f1af8
-Description-en: Linux 7.2.15 for x86-64 cloud (module development)
+Package: linux-headers-7.3.4+deb14-cloud-amd64
+Description-md5: 8da01505b7fa3dae488cc7e2c805353a
+Description-en: Linux 7.3.4 for x86-64 cloud (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.15+deb14-cloud-amd64, generally used for building
+ Linux kernel 7.3.4+deb14-cloud-amd64, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.15+deb14-cloud-amd64, and can be used for
+ /usr/src/linux-headers-7.3.4+deb14-cloud-amd64, and can be used for
  building modules that load into the kernel provided by the
- linux-image-7.2.15+deb14-cloud-amd64 package.
+ linux-image-7.3.4+deb14-cloud-amd64 package.
 
-Package: linux-headers-7.2.15+deb14-cloud-arm64
-Description-md5: c410b8c76ba8551adc4b6b4bdd1a06d0
-Description-en: Linux 7.2.15 for arm64 cloud (module development)
+Package: linux-headers-7.3.4+deb14-cloud-arm64
+Description-md5: 7dc16bde59b3a9b5bae4914c39bfc745
+Description-en: Linux 7.3.4 for arm64 cloud (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.15+deb14-cloud-arm64, generally used for building
+ Linux kernel 7.3.4+deb14-cloud-arm64, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.15+deb14-cloud-arm64, and can be used for
+ /usr/src/linux-headers-7.3.4+deb14-cloud-arm64, and can be used for
  building modules that load into the kernel provided by the
- linux-image-7.2.15+deb14-cloud-arm64 package.
+ linux-image-7.3.4+deb14-cloud-arm64 package.
 
-Package: linux-headers-7.2.15+deb14-common
-Description-md5: 63c13e82e67db1a6c0d441cdb929a32b
-Description-en: Common header files for Linux 7.2.15+deb14
+Package: linux-headers-7.3.4+deb14-common
+Description-md5: a4d840934c4e87bff23516ff3b4149f7
+Description-en: Common header files for Linux 7.3.4+deb14
  This package provides the common kernel header files for Linux kernel
- version 7.2.15+deb14, generally used for building out-of-tree kernel
+ version 7.3.4+deb14, generally used for building out-of-tree kernel
  modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.15+deb14-common.
+ /usr/src/linux-headers-7.3.4+deb14-common.
  .
  To obtain a complete set of headers you also need to install the
- linux-headers-7.2.15+deb14-(flavour) package, matching the flavour of the
+ linux-headers-7.3.4+deb14-(flavour) package, matching the flavour of the
  kernel you intend the build for.
 
-Package: linux-headers-7.2.15+deb14-loong64
-Description-md5: 1fcfa3ac9eb34c91a26ea788f9d4dd2e
-Description-en: Linux 7.2.15 for 64-bit LoongArch platforms (module development)
+Package: linux-headers-7.3.4+deb14-loong64
+Description-md5: 249bf6fe436781e89d1b2f9d1f6f5159
+Description-en: Linux 7.3.4 for 64-bit LoongArch platforms (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.15+deb14-loong64, generally used for building out-of-tree
+ Linux kernel 7.3.4+deb14-loong64, generally used for building out-of-tree
  kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.15+deb14-loong64, and can be used for building
+ /usr/src/linux-headers-7.3.4+deb14-loong64, and can be used for building
  modules that load into the kernel provided by the
- linux-image-7.2.15+deb14-loong64 package.
+ linux-image-7.3.4+deb14-loong64 package.
 
-Package: linux-headers-7.2.15+deb14-powerpc64le
-Description-md5: cdb7841dd5cae725575d12269dff5bba
-Description-en: Linux 7.2.15 for Little-endian 64-bit PowerPC with 4k pages (module development)
+Package: linux-headers-7.3.4+deb14-powerpc64le
+Description-md5: bca81f2674115b0df8ae49862c7e9e5b
+Description-en: Linux 7.3.4 for Little-endian 64-bit PowerPC with 4k pages (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.15+deb14-powerpc64le, generally used for building
+ Linux kernel 7.3.4+deb14-powerpc64le, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.15+deb14-powerpc64le, and can be used for
+ /usr/src/linux-headers-7.3.4+deb14-powerpc64le, and can be used for
  building modules that load into the kernel provided by the
- linux-image-7.2.15+deb14-powerpc64le package.
+ linux-image-7.3.4+deb14-powerpc64le package.
 
-Package: linux-headers-7.2.15+deb14-powerpc64le-64k
-Description-md5: 7ec6bf7dbea6c22cf3f844260cb5d974
-Description-en: Linux 7.2.15 for Little-endian 64-bit PowerPC with 64k pages (module development)
+Package: linux-headers-7.3.4+deb14-powerpc64le-64k
+Description-md5: 78ae0b633044769e13744b8cdd987439
+Description-en: Linux 7.3.4 for Little-endian 64-bit PowerPC with 64k pages (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.15+deb14-powerpc64le-64k, generally used for building
+ Linux kernel 7.3.4+deb14-powerpc64le-64k, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.15+deb14-powerpc64le-64k, and can be used for
+ /usr/src/linux-headers-7.3.4+deb14-powerpc64le-64k, and can be used for
  building modules that load into the kernel provided by the
- linux-image-7.2.15+deb14-powerpc64le-64k package.
+ linux-image-7.3.4+deb14-powerpc64le-64k package.
 
-Package: linux-headers-7.2.15+deb14-riscv64
-Description-md5: d3ea779fb666afdb85a6c31652edd6f1
-Description-en: Linux 7.2.15 for 64-bit RISC-V platforms (module development)
+Package: linux-headers-7.3.4+deb14-riscv64
+Description-md5: a724af670d8561d9e0c699e725a30e94
+Description-en: Linux 7.3.4 for 64-bit RISC-V platforms (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.15+deb14-riscv64, generally used for building out-of-tree
+ Linux kernel 7.3.4+deb14-riscv64, generally used for building out-of-tree
  kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.15+deb14-riscv64, and can be used for building
+ /usr/src/linux-headers-7.3.4+deb14-riscv64, and can be used for building
  modules that load into the kernel provided by the
- linux-image-7.2.15+deb14-riscv64 package.
+ linux-image-7.3.4+deb14-riscv64 package.
 
-Package: linux-headers-7.2.15+deb14-rt-amd64
-Description-md5: f21ab458ed7da50a3b4994214c8dfde9
-Description-en: Linux 7.2.15 for 64-bit PCs (module development)
+Package: linux-headers-7.3.4+deb14-rt-amd64
+Description-md5: 5c50d553a3be84149ef650a5b1c9d712
+Description-en: Linux 7.3.4 for 64-bit PCs (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.15+deb14-rt-amd64, generally used for building
- out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.15+deb14-rt-amd64, and can be used for building
- modules that load into the kernel provided by the
- linux-image-7.2.15+deb14-rt-amd64 package.
-
-Package: linux-headers-7.2.15+deb14-rt-arm64
-Description-md5: 3d5c335260abdad8c37562c74a61369e
-Description-en: Linux 7.2.15 for 64-bit ARMv8 machines (module development)
- This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.15+deb14-rt-arm64, generally used for building
- out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.15+deb14-rt-arm64, and can be used for building
- modules that load into the kernel provided by the
- linux-image-7.2.15+deb14-rt-arm64 package.
-
-Package: linux-headers-7.2.15+deb14-s390x
-Description-md5: d9c2b8f67e6c3c3625ca4612629dbff9
-Description-en: Linux 7.2.15 for IBM zSeries (module development)
- This package provides the architecture-specific kernel header files for
- Linux kernel 7.2.15+deb14-s390x, generally used for building out-of-tree
+ Linux kernel 7.3.4+deb14-rt-amd64, generally used for building out-of-tree
  kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.2.15+deb14-s390x, and can be used for building
+ /usr/src/linux-headers-7.3.4+deb14-rt-amd64, and can be used for building
  modules that load into the kernel provided by the
- linux-image-7.2.15+deb14-s390x package.
+ linux-image-7.3.4+deb14-rt-amd64 package.
+
+Package: linux-headers-7.3.4+deb14-rt-arm64
+Description-md5: 6106e4a3d6824c8051f68b30940a259a
+Description-en: Linux 7.3.4 for 64-bit ARMv8 machines (module development)
+ This package provides the architecture-specific kernel header files for
+ Linux kernel 7.3.4+deb14-rt-arm64, generally used for building out-of-tree
+ kernel modules.  These files are going to be installed into
+ /usr/src/linux-headers-7.3.4+deb14-rt-arm64, and can be used for building
+ modules that load into the kernel provided by the
+ linux-image-7.3.4+deb14-rt-arm64 package.
+
+Package: linux-headers-7.3.4+deb14-s390x
+Description-md5: 62b0bbe7ae7b4bdcf1743ed9c110ae98
+Description-en: Linux 7.3.4 for IBM zSeries (module development)
+ This package provides the architecture-specific kernel header files for
+ Linux kernel 7.3.4+deb14-s390x, generally used for building out-of-tree
+ kernel modules.  These files are going to be installed into
+ /usr/src/linux-headers-7.3.4+deb14-s390x, and can be used for building
+ modules that load into the kernel provided by the
+ linux-image-7.3.4+deb14-s390x package.
 
 Package: linux-headers-armmp
 Description-md5: 8a845be4b24bac682bd58c219e9df427
@@ -419995,130 +420089,130 @@ Description-en: Linux for IBM zSeries (module development meta-package)
  This package depends on the architecture-specific header files for the
  latest Linux kernel s390x configuration.
 
-Package: linux-image-7.2.15+deb14-amd64-dbg
-Description-md5: 668a69cb22e8a2192cd13ccd859643b9
-Description-en: Linux 7.2.15 for 64-bit PCs (debug symbols)
+Package: linux-image-7.3.4+deb14-amd64-dbg
+Description-md5: 0b386f8122c5e010865be6712a17eaef
+Description-en: Linux 7.3.4 for 64-bit PCs (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.15+deb14-amd64.
+ modules in linux-image-7.3.4+deb14-amd64.
 
-Package: linux-image-7.2.15+deb14-arm64-16k-dbg
-Description-md5: 9f88af1cee5213d35b274de5042e320c
-Description-en: Linux 7.2.15 for 64-bit ARMv8 machines with 16k pages (debug symbols)
+Package: linux-image-7.3.4+deb14-arm64-16k-dbg
+Description-md5: ddfd91aaf7e1f4afb2b47beb8a81a06e
+Description-en: Linux 7.3.4 for 64-bit ARMv8 machines with 16k pages (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.15+deb14-arm64-16k.
+ modules in linux-image-7.3.4+deb14-arm64-16k.
 
-Package: linux-image-7.2.15+deb14-arm64-dbg
-Description-md5: 1e6d50811baf7845d7477883a34a87fd
-Description-en: Linux 7.2.15 for 64-bit ARMv8 machines (debug symbols)
+Package: linux-image-7.3.4+deb14-arm64-dbg
+Description-md5: 9c2f4fe032ff769f9e803bd559ff4abf
+Description-en: Linux 7.3.4 for 64-bit ARMv8 machines (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.15+deb14-arm64.
+ modules in linux-image-7.3.4+deb14-arm64.
 
-Package: linux-image-7.2.15+deb14-armmp
-Description-md5: f79e4ec791eefa6b6aaef2a3883ebbcb
-Description-en: Linux 7.2.15 for ARMv7 multiplatform compatible SoCs
- The Linux kernel 7.2.15 and modules for use on ARMv7 multiplatform kernel.
+Package: linux-image-7.3.4+deb14-armmp
+Description-md5: 731dbb5bcfdacd86d0f0916f1b8fd7f4
+Description-en: Linux 7.3.4 for ARMv7 multiplatform compatible SoCs
+ The Linux kernel 7.3.4 and modules for use on ARMv7 multiplatform kernel.
  See https://wiki.debian.org/DebianKernel/ARMMP for details of supported
  platforms.
 
-Package: linux-image-7.2.15+deb14-armmp-dbg
-Description-md5: 1ed5913e0cb023f79ef8f29f26f2547b
-Description-en: Linux 7.2.15 for ARMv7 multiplatform compatible SoCs (debug symbols)
+Package: linux-image-7.3.4+deb14-armmp-dbg
+Description-md5: b3eb03ea5da3f325574207497947e53a
+Description-en: Linux 7.3.4 for ARMv7 multiplatform compatible SoCs (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.15+deb14-armmp.
+ modules in linux-image-7.3.4+deb14-armmp.
 
-Package: linux-image-7.2.15+deb14-armmp-lpae
-Description-md5: 56b14c6bdb1a0894a2144b7bb04be81a
-Description-en: Linux 7.2.15 for ARMv7 multiplatform compatible SoCs supporting LPAE
- The Linux kernel 7.2.15 and modules for use on ARMv7 multiplatform kernel
+Package: linux-image-7.3.4+deb14-armmp-lpae
+Description-md5: da2170c2122fc00df4901256aa2c87c5
+Description-en: Linux 7.3.4 for ARMv7 multiplatform compatible SoCs supporting LPAE
+ The Linux kernel 7.3.4 and modules for use on ARMv7 multiplatform kernel
  supporting LPAE. See https://wiki.debian.org/DebianKernel/ARMMP for
  details of supported platforms..
 
-Package: linux-image-7.2.15+deb14-armmp-lpae-dbg
-Description-md5: 997efbf604ee925090b7114d588b5320
-Description-en: Linux 7.2.15 for ARMv7 multiplatform compatible SoCs supporting LPAE (debug symbols)
+Package: linux-image-7.3.4+deb14-armmp-lpae-dbg
+Description-md5: 23d9ad378444629a96c5ef12f255f8d9
+Description-en: Linux 7.3.4 for ARMv7 multiplatform compatible SoCs supporting LPAE (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.15+deb14-armmp-lpae.
+ modules in linux-image-7.3.4+deb14-armmp-lpae.
 
-Package: linux-image-7.2.15+deb14-cloud-amd64-dbg
-Description-md5: 263677766a888c1784e1a42a3eaeccc5
-Description-en: Linux 7.2.15 for x86-64 cloud (debug symbols)
+Package: linux-image-7.3.4+deb14-cloud-amd64-dbg
+Description-md5: c8e61d9817074a70437f44d5a5f09711
+Description-en: Linux 7.3.4 for x86-64 cloud (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.15+deb14-cloud-amd64.
+ modules in linux-image-7.3.4+deb14-cloud-amd64.
 
-Package: linux-image-7.2.15+deb14-cloud-arm64-dbg
-Description-md5: ecdef4d6be0a938d6d06b4c26d61b0e4
-Description-en: Linux 7.2.15 for arm64 cloud (debug symbols)
+Package: linux-image-7.3.4+deb14-cloud-arm64-dbg
+Description-md5: caa3d7f4d81527424c95bf6fea1334f7
+Description-en: Linux 7.3.4 for arm64 cloud (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.15+deb14-cloud-arm64.
+ modules in linux-image-7.3.4+deb14-cloud-arm64.
 
-Package: linux-image-7.2.15+deb14-loong64
-Description-md5: ebec3e1c9cdd2c9fa0e005badd3fa9e1
-Description-en: Linux 7.2.15 for 64-bit LoongArch platforms
- The Linux kernel 7.2.15 and modules for use on 64-bit LoongArch platforms.
+Package: linux-image-7.3.4+deb14-loong64
+Description-md5: 1a2cebe65058d922898272755eb2e6f4
+Description-en: Linux 7.3.4 for 64-bit LoongArch platforms
+ The Linux kernel 7.3.4 and modules for use on 64-bit LoongArch platforms.
 
-Package: linux-image-7.2.15+deb14-loong64-dbg
-Description-md5: 4c4f5d3280e3b5238fe1ddc401ae5081
-Description-en: Linux 7.2.15 for 64-bit LoongArch platforms (debug symbols)
+Package: linux-image-7.3.4+deb14-loong64-dbg
+Description-md5: ba0c5f7659d28ea86f2a9bb7b39e2852
+Description-en: Linux 7.3.4 for 64-bit LoongArch platforms (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.15+deb14-loong64.
+ modules in linux-image-7.3.4+deb14-loong64.
 
-Package: linux-image-7.2.15+deb14-powerpc64le
-Description-md5: 0878263a9af4ed6f08e72417414c1be3
-Description-en: Linux 7.2.15 for Little-endian 64-bit PowerPC with 4k pages
- The Linux kernel 7.2.15 and modules for use on Little-endian 64-bit
- PowerPC with 4k pages.
+Package: linux-image-7.3.4+deb14-powerpc64le
+Description-md5: 483dc27eae19947622f49d1ede83d061
+Description-en: Linux 7.3.4 for Little-endian 64-bit PowerPC with 4k pages
+ The Linux kernel 7.3.4 and modules for use on Little-endian 64-bit PowerPC
+ with 4k pages.
 
-Package: linux-image-7.2.15+deb14-powerpc64le-64k
-Description-md5: d17df0cabe91537745eb071ddc6e11d7
-Description-en: Linux 7.2.15 for Little-endian 64-bit PowerPC with 64k pages
- The Linux kernel 7.2.15 and modules for use on Little-endian 64-bit
- PowerPC with 64k pages.
+Package: linux-image-7.3.4+deb14-powerpc64le-64k
+Description-md5: c9c3ada4c2058f4d5b0300632fabcfe8
+Description-en: Linux 7.3.4 for Little-endian 64-bit PowerPC with 64k pages
+ The Linux kernel 7.3.4 and modules for use on Little-endian 64-bit PowerPC
+ with 64k pages.
 
-Package: linux-image-7.2.15+deb14-powerpc64le-64k-dbg
-Description-md5: 9d3aabf9e18e5d573cceef4e4a09237e
-Description-en: Linux 7.2.15 for Little-endian 64-bit PowerPC with 64k pages (debug symbols)
+Package: linux-image-7.3.4+deb14-powerpc64le-64k-dbg
+Description-md5: e23f8aab8db28de33849e9a72407730e
+Description-en: Linux 7.3.4 for Little-endian 64-bit PowerPC with 64k pages (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.15+deb14-powerpc64le-64k.
+ modules in linux-image-7.3.4+deb14-powerpc64le-64k.
 
-Package: linux-image-7.2.15+deb14-powerpc64le-dbg
-Description-md5: 166806a84a4d650f5a79d90c02e36aeb
-Description-en: Linux 7.2.15 for Little-endian 64-bit PowerPC with 4k pages (debug symbols)
+Package: linux-image-7.3.4+deb14-powerpc64le-dbg
+Description-md5: a17934d7989e7a27b178d358193bdaad
+Description-en: Linux 7.3.4 for Little-endian 64-bit PowerPC with 4k pages (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.15+deb14-powerpc64le.
+ modules in linux-image-7.3.4+deb14-powerpc64le.
 
-Package: linux-image-7.2.15+deb14-riscv64
-Description-md5: 2ab78e4edc8cc7c45442c18a105ef0f6
-Description-en: Linux 7.2.15 for 64-bit RISC-V platforms
- The Linux kernel 7.2.15 and modules for use on 64-bit RISC-V platforms.
+Package: linux-image-7.3.4+deb14-riscv64
+Description-md5: 0d62439acb92c8f202ccb1340b75b753
+Description-en: Linux 7.3.4 for 64-bit RISC-V platforms
+ The Linux kernel 7.3.4 and modules for use on 64-bit RISC-V platforms.
 
-Package: linux-image-7.2.15+deb14-riscv64-dbg
-Description-md5: 5b52e568963cbcaf85566f74697d9f80
-Description-en: Linux 7.2.15 for 64-bit RISC-V platforms (debug symbols)
+Package: linux-image-7.3.4+deb14-riscv64-dbg
+Description-md5: 426ef03e18e4bbd54196b262401018d4
+Description-en: Linux 7.3.4 for 64-bit RISC-V platforms (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.15+deb14-riscv64.
+ modules in linux-image-7.3.4+deb14-riscv64.
 
-Package: linux-image-7.2.15+deb14-rt-amd64-dbg
-Description-md5: 5bb5dd29e2bc288ef31470855ceb89e6
-Description-en: Linux 7.2.15 for 64-bit PCs (debug symbols)
+Package: linux-image-7.3.4+deb14-rt-amd64-dbg
+Description-md5: 57151004773f1a5b7c8c78187c48be83
+Description-en: Linux 7.3.4 for 64-bit PCs (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.15+deb14-rt-amd64.
+ modules in linux-image-7.3.4+deb14-rt-amd64.
 
-Package: linux-image-7.2.15+deb14-rt-arm64-dbg
-Description-md5: 5e55830c8f87ba1d8db42662d950207c
-Description-en: Linux 7.2.15 for 64-bit ARMv8 machines (debug symbols)
+Package: linux-image-7.3.4+deb14-rt-arm64-dbg
+Description-md5: fbe6b57b85ee87ae6bc9540377f7f45b
+Description-en: Linux 7.3.4 for 64-bit ARMv8 machines (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.15+deb14-rt-arm64.
+ modules in linux-image-7.3.4+deb14-rt-arm64.
 
-Package: linux-image-7.2.15+deb14-s390x
-Description-md5: ea7d479161e8ad8507952c17fa1db24c
-Description-en: Linux 7.2.15 for IBM zSeries
- The Linux kernel 7.2.15 and modules for use on IBM zSeries.
+Package: linux-image-7.3.4+deb14-s390x
+Description-md5: ff083b8efad65e46d70f0e3849f16db0
+Description-en: Linux 7.3.4 for IBM zSeries
+ The Linux kernel 7.3.4 and modules for use on IBM zSeries.
 
-Package: linux-image-7.2.15+deb14-s390x-dbg
-Description-md5: 5d9a07d6f72e8640bb86a0454028b40c
-Description-en: Linux 7.2.15 for IBM zSeries (debug symbols)
+Package: linux-image-7.3.4+deb14-s390x-dbg
+Description-md5: 372ad947e31609e247b11fe2e95f5414
+Description-en: Linux 7.3.4 for IBM zSeries (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.2.15+deb14-s390x.
+ modules in linux-image-7.3.4+deb14-s390x.
 
 Package: linux-image-armmp
 Description-md5: 6e23c7da79075220d673bf3c62982c44
@@ -420208,11 +420302,11 @@ Description-en: Linux for IBM zSeries (debug symbols meta-package)
  This package depends on the detached debugging symbols for the latest
  Linux kernel s390x configuration.
 
-Package: linux-kbuild-7.2.15+deb14
-Description-md5: 315d7301f2a2c8b5d495e5d104479834
-Description-en: Kbuild infrastructure for Linux 7.2.15+deb14
+Package: linux-kbuild-7.3.4+deb14
+Description-md5: 2f0e96de99b0c45671c6e3f5fcd9da79
+Description-en: Kbuild infrastructure for Linux 7.3.4+deb14
  This package provides the kbuild infrastructure for the headers packages
- for Linux kernel version 7.2.
+ for Linux kernel version 7.3.
 
 Package: linux-libc-dev
 Description-md5: b95630af34c5b0ac63c5a6f7cf44ced6
@@ -420441,132 +420535,174 @@ Description-en: miscellaneous tools from the Linux source tree
  Create profile of thermal zones * tmon: Monitor and test thermal
  management
 
-Package: linux-modules-7.2.15+deb14-amd64
-Description-md5: c8623469f54cfd68326b0801f75b5db6
-Description-en: Linux 7.2.15 for 64-bit PCs (modules)
- This contains the kernel modules for Linux 7.2.15 on PCs with AMD64, Intel
+Package: linux-modules-7.3.4+deb14-amd64
+Description-md5: 126fd8bf4c770450f89ae0b43a4e335b
+Description-en: Linux 7.3.4 for 64-bit PCs (modules)
+ This contains the kernel modules for Linux 7.3.4 on PCs with AMD64, Intel
  64 or VIA Nano processors.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-amd64.
+ install linux-image-7.3.4+deb14-amd64.
 
-Package: linux-modules-7.2.15+deb14-arm64
-Description-md5: 1aea9a3ce22d9af4dc6a6cfcab4dde71
-Description-en: Linux 7.2.15 for 64-bit ARMv8 machines (modules)
- This contains the kernel modules for Linux 7.2.15 on 64-bit ARMv8
- machines.
+Package: linux-modules-7.3.4+deb14-arm64
+Description-md5: d587b97633e3c4d324ee7430f98d92fa
+Description-en: Linux 7.3.4 for 64-bit ARMv8 machines (modules)
+ This contains the kernel modules for Linux 7.3.4 on 64-bit ARMv8 machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-arm64.
+ install linux-image-7.3.4+deb14-arm64.
 
-Package: linux-modules-7.2.15+deb14-arm64-16k
-Description-md5: 15f6f79ecd9760ff71929a6dfd46af22
-Description-en: Linux 7.2.15 for 64-bit ARMv8 machines with 16k pages (modules)
- This contains the kernel modules for Linux 7.2.15 on 64-bit ARMv8 machines
+Package: linux-modules-7.3.4+deb14-arm64-16k
+Description-md5: 0f9e6cfded8cb901e821f4ff9c24598d
+Description-en: Linux 7.3.4 for 64-bit ARMv8 machines with 16k pages (modules)
+ This contains the kernel modules for Linux 7.3.4 on 64-bit ARMv8 machines
  with 16k pages.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-arm64-16k.
+ install linux-image-7.3.4+deb14-arm64-16k.
 
-Package: linux-modules-7.2.15+deb14-armmp
-Description-md5: 0ffef9da3001e45959cdda59735f718f
-Description-en: Linux 7.2.15 for ARMv7 multiplatform compatible SoCs (modules)
- This contains the kernel modules for Linux 7.2.15 on ARMv7 multiplatform
+Package: linux-modules-7.3.4+deb14-armmp
+Description-md5: b9789f126c1b63a46d0fc075e5b88e49
+Description-en: Linux 7.3.4 for ARMv7 multiplatform compatible SoCs (modules)
+ This contains the kernel modules for Linux 7.3.4 on ARMv7 multiplatform
  kernel.  See https://wiki.debian.org/DebianKernel/ARMMP for details of
  supported platforms.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-armmp.
+ install linux-image-7.3.4+deb14-armmp.
 
-Package: linux-modules-7.2.15+deb14-armmp-lpae
-Description-md5: 0b827e1557c8a629acf4cbb73e48763a
-Description-en: Linux 7.2.15 for ARMv7 multiplatform compatible SoCs supporting LPAE (modules)
- This contains the kernel modules for Linux 7.2.15 on ARMv7 multiplatform
+Package: linux-modules-7.3.4+deb14-armmp-lpae
+Description-md5: f92f70a5060c96aaf6e170fc1dec4b5c
+Description-en: Linux 7.3.4 for ARMv7 multiplatform compatible SoCs supporting LPAE (modules)
+ This contains the kernel modules for Linux 7.3.4 on ARMv7 multiplatform
  kernel supporting LPAE. See https://wiki.debian.org/DebianKernel/ARMMP for
  details of supported platforms..
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-armmp-lpae.
+ install linux-image-7.3.4+deb14-armmp-lpae.
 
-Package: linux-modules-7.2.15+deb14-cloud-amd64
-Description-md5: 693dcd83ff999c94f226ba93ce08ddf8
-Description-en: Linux 7.2.15 for x86-64 cloud (modules)
- This contains the kernel modules for Linux 7.2.15 on cloud platforms
+Package: linux-modules-7.3.4+deb14-cloud-amd64
+Description-md5: 1f99ef9b870dafd83d054a731f40f35a
+Description-en: Linux 7.3.4 for x86-64 cloud (modules)
+ This contains the kernel modules for Linux 7.3.4 on cloud platforms
  including Amazon EC2, Microsoft Azure, and Google Compute Engine.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-cloud-amd64.
+ install linux-image-7.3.4+deb14-cloud-amd64.
 
-Package: linux-modules-7.2.15+deb14-cloud-arm64
-Description-md5: 6cfa5d1a377ff1adc05f4e215537c022
-Description-en: Linux 7.2.15 for arm64 cloud (modules)
- This contains the kernel modules for Linux 7.2.15 on cloud platforms
+Package: linux-modules-7.3.4+deb14-cloud-arm64
+Description-md5: f720e96d5d03f74ac05ab135978ea0d3
+Description-en: Linux 7.3.4 for arm64 cloud (modules)
+ This contains the kernel modules for Linux 7.3.4 on cloud platforms
  supporting arm64 virtual machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-cloud-arm64.
+ install linux-image-7.3.4+deb14-cloud-arm64.
 
-Package: linux-modules-7.2.15+deb14-loong64
-Description-md5: 9cd8d9f69997ccc02c13892ed5a7a91e
-Description-en: Linux 7.2.15 for 64-bit LoongArch platforms (modules)
- This contains the kernel modules for Linux 7.2.15 on 64-bit LoongArch
+Package: linux-modules-7.3.4+deb14-loong64
+Description-md5: 29e0923137d0a4e40e6673b61fdf1fde
+Description-en: Linux 7.3.4 for 64-bit LoongArch platforms (modules)
+ This contains the kernel modules for Linux 7.3.4 on 64-bit LoongArch
  platforms.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-loong64.
+ install linux-image-7.3.4+deb14-loong64.
 
-Package: linux-modules-7.2.15+deb14-powerpc64le
-Description-md5: 51d658baacd3a40f8ee96527237ec444
-Description-en: Linux 7.2.15 for Little-endian 64-bit PowerPC with 4k pages (modules)
- This contains the kernel modules for Linux 7.2.15 on Little-endian 64-bit
+Package: linux-modules-7.3.4+deb14-powerpc64le
+Description-md5: 391e7adbda0bc08f5ab15f7d376f77f2
+Description-en: Linux 7.3.4 for Little-endian 64-bit PowerPC with 4k pages (modules)
+ This contains the kernel modules for Linux 7.3.4 on Little-endian 64-bit
  PowerPC with 4k pages.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-powerpc64le.
+ install linux-image-7.3.4+deb14-powerpc64le.
 
-Package: linux-modules-7.2.15+deb14-powerpc64le-64k
-Description-md5: 851e5da83bdd447d8b421e7ee5831977
-Description-en: Linux 7.2.15 for Little-endian 64-bit PowerPC with 64k pages (modules)
- This contains the kernel modules for Linux 7.2.15 on Little-endian 64-bit
+Package: linux-modules-7.3.4+deb14-powerpc64le-64k
+Description-md5: 920d1e095d3bdfbedcffa1e7f6c8cffc
+Description-en: Linux 7.3.4 for Little-endian 64-bit PowerPC with 64k pages (modules)
+ This contains the kernel modules for Linux 7.3.4 on Little-endian 64-bit
  PowerPC with 64k pages.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-powerpc64le-64k.
+ install linux-image-7.3.4+deb14-powerpc64le-64k.
 
-Package: linux-modules-7.2.15+deb14-riscv64
-Description-md5: f94700aec026ae4bd9e2aed5cd05e89e
-Description-en: Linux 7.2.15 for 64-bit RISC-V platforms (modules)
- This contains the kernel modules for Linux 7.2.15 on 64-bit RISC-V
+Package: linux-modules-7.3.4+deb14-riscv64
+Description-md5: 5ba896f9741fbf5fa252731cf6c4089a
+Description-en: Linux 7.3.4 for 64-bit RISC-V platforms (modules)
+ This contains the kernel modules for Linux 7.3.4 on 64-bit RISC-V
  platforms.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-riscv64.
+ install linux-image-7.3.4+deb14-riscv64.
 
-Package: linux-modules-7.2.15+deb14-rt-amd64
-Description-md5: ff17d7f8b7a2f08080f4e276d922e12e
-Description-en: Linux 7.2.15 for 64-bit PCs (modules)
- This contains the kernel modules for Linux 7.2.15 on PCs with AMD64, Intel
+Package: linux-modules-7.3.4+deb14-rt-amd64
+Description-md5: 6d08cfbfaf474cf7fb44c32c7047d6a0
+Description-en: Linux 7.3.4 for 64-bit PCs (modules)
+ This contains the kernel modules for Linux 7.3.4 on PCs with AMD64, Intel
  64 or VIA Nano processors.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-rt-amd64.
+ install linux-image-7.3.4+deb14-rt-amd64.
 
-Package: linux-modules-7.2.15+deb14-rt-arm64
-Description-md5: a94e5d57b33c56f72d92e906574b911c
-Description-en: Linux 7.2.15 for 64-bit ARMv8 machines (modules)
- This contains the kernel modules for Linux 7.2.15 on 64-bit ARMv8
- machines.
+Package: linux-modules-7.3.4+deb14-rt-arm64
+Description-md5: 09da99e18f0eca4368032de9bbbd4b7e
+Description-en: Linux 7.3.4 for 64-bit ARMv8 machines (modules)
+ This contains the kernel modules for Linux 7.3.4 on 64-bit ARMv8 machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-rt-arm64.
+ install linux-image-7.3.4+deb14-rt-arm64.
 
-Package: linux-modules-7.2.15+deb14-s390x
-Description-md5: 143a3fc2e4673f01bcda618f832aacae
-Description-en: Linux 7.2.15 for IBM zSeries (modules)
- This contains the kernel modules for Linux 7.2.15 on IBM zSeries.
+Package: linux-modules-7.3.4+deb14-s390x
+Description-md5: cf26c0d78f1bb0d7bd1bce2e1963d3fc
+Description-en: Linux 7.3.4 for IBM zSeries (modules)
+ This contains the kernel modules for Linux 7.3.4 on IBM zSeries.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-s390x.
+ install linux-image-7.3.4+deb14-s390x.
+
+Package: linux-modules-armmp
+Description-md5: ef752b262ae2448cbd086c175fde3111
+Description-en: Linux modules for ARMv7 multiplatform compatible SoCs (meta-package)
+ This package depends on the latest Linux modules for use on ARMv7
+ multiplatform kernel.  See https://wiki.debian.org/DebianKernel/ARMMP for
+ details of supported platforms.
+
+Package: linux-modules-armmp-lpae
+Description-md5: e35a9fcfde20862d8bd4835b6686a160
+Description-en: Linux modules for ARMv7 multiplatform compatible SoCs supporting LPAE (meta-package)
+ This package depends on the latest Linux modules for use on ARMv7
+ multiplatform kernel supporting LPAE. See
+ https://wiki.debian.org/DebianKernel/ARMMP for details of supported
+ platforms..
+
+Package: linux-modules-loong64
+Description-md5: 624d7030d3631987ae46c8fdcc144a28
+Description-en: Linux modules for 64-bit LoongArch platforms (meta-package)
+ This package depends on the latest Linux modules for use on 64-bit
+ LoongArch platforms.
+
+Package: linux-modules-powerpc64le
+Description-md5: b34ad6a0989c1ae3d120db4bd2aac588
+Description-en: Linux modules for Little-endian 64-bit PowerPC with 4k pages (meta-package)
+ This package depends on the latest Linux modules for use on Little-endian
+ 64-bit PowerPC with 4k pages.
+
+Package: linux-modules-powerpc64le-64k
+Description-md5: 2395e80557fc2f803d029872fc020df4
+Description-en: Linux modules for Little-endian 64-bit PowerPC with 64k pages (meta-package)
+ This package depends on the latest Linux modules for use on Little-endian
+ 64-bit PowerPC with 64k pages.
+
+Package: linux-modules-riscv64
+Description-md5: dde69ff16c10101109d3a9b0f4eaa7db
+Description-en: Linux modules for 64-bit RISC-V platforms (meta-package)
+ This package depends on the latest Linux modules for use on 64-bit RISC-V
+ platforms.
+
+Package: linux-modules-s390x
+Description-md5: a115a555a059ff1717d7ecf222a4af90
+Description-en: Linux modules for IBM zSeries (meta-package)
+ This package depends on the latest Linux modules for use on IBM zSeries.
 
 Package: linux-perf
 Description-md5: 66624a7d9f3cd31d269d28992a5cfa64
@@ -420591,10 +420727,10 @@ Description-en: Linux kernel source (meta-package)
  This package depends on packages containing the sources of the latest
  Linux kernel.
 
-Package: linux-source-7.2
-Description-md5: d59b3e9298ed1c60e098733598906b53
-Description-en: Linux kernel source for version 7.2 with Debian patches
- This package provides source code for the Linux kernel version 7.2. This
+Package: linux-source-7.3
+Description-md5: b43c0d5c9300292a7af0ef6d81f4347f
+Description-en: Linux kernel source for version 7.3 with Debian patches
+ This package provides source code for the Linux kernel version 7.3. This
  source closely tracks official Linux kernel releases.  Debian's
  modifications to that source consist of security fixes, bug fixes, and
  features that have already been (or are believed to be) accepted by the
@@ -420800,32 +420936,32 @@ Description-en: Linux for 64-bit PCs (dummy package)
  This empty package is used to keep the installed versions of
  linux-headers-64-bit PCs and linux-image-64-bit PCs synchronised.
 
-Package: linux-binary-7.2.15+deb14-amd64
-Description-md5: 23196d56d8aa8b2884a4dae055eb2650
-Description-en: Linux 7.2.15 for 64-bit PCs (kernel image)
- This package contains the kernel image for Linux 7.2.15 on PCs with AMD64,
+Package: linux-binary-7.3.4+deb14-amd64
+Description-md5: 8d359c5231cc56310244e1be8daef6c6
+Description-en: Linux 7.3.4 for 64-bit PCs (kernel image)
+ This package contains the kernel image for Linux 7.3.4 on PCs with AMD64,
  Intel 64 or VIA Nano processors.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-amd64.
+ install linux-image-7.3.4+deb14-amd64.
 
-Package: linux-binary-7.2.15+deb14-cloud-amd64
-Description-md5: 1181e5ce0c0d8575a86463096c886b57
-Description-en: Linux 7.2.15 for x86-64 cloud (kernel image)
- This package contains the kernel image for Linux 7.2.15 on cloud platforms
+Package: linux-binary-7.3.4+deb14-cloud-amd64
+Description-md5: e25c4880784758ee95f0da70d81b675e
+Description-en: Linux 7.3.4 for x86-64 cloud (kernel image)
+ This package contains the kernel image for Linux 7.3.4 on cloud platforms
  including Amazon EC2, Microsoft Azure, and Google Compute Engine.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-cloud-amd64.
+ install linux-image-7.3.4+deb14-cloud-amd64.
 
-Package: linux-binary-7.2.15+deb14-rt-amd64
-Description-md5: 4739b9702437d43b4fedca204c678143
-Description-en: Linux 7.2.15 for 64-bit PCs (kernel image)
- This package contains the kernel image for Linux 7.2.15 on PCs with AMD64,
+Package: linux-binary-7.3.4+deb14-rt-amd64
+Description-md5: f7890958f01a706e10f9577968414ebe
+Description-en: Linux 7.3.4 for 64-bit PCs (kernel image)
+ This package contains the kernel image for Linux 7.3.4 on PCs with AMD64,
  Intel 64 or VIA Nano processors.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-rt-amd64.
+ install linux-image-7.3.4+deb14-rt-amd64.
 
 Package: linux-headers-amd64
 Description-md5: e6cd01c3f051de3860a1b10938a309d7
@@ -420845,22 +420981,22 @@ Description-en: Linux for 64-bit PCs (module development meta-package)
  This package depends on the architecture-specific header files for the
  latest Linux kernel rt-amd64 configuration.
 
-Package: linux-image-7.2.15+deb14-amd64
-Description-md5: c18822eff7a91b0c9c50d8a49863b658
-Description-en: Linux 7.2.15 for 64-bit PCs
- The Linux kernel 7.2.15 and modules for use on PCs with AMD64, Intel 64 or
+Package: linux-image-7.3.4+deb14-amd64
+Description-md5: e950ee05311fa2a9e0091a8feccfbdbd
+Description-en: Linux 7.3.4 for 64-bit PCs
+ The Linux kernel 7.3.4 and modules for use on PCs with AMD64, Intel 64 or
  VIA Nano processors.
 
-Package: linux-image-7.2.15+deb14-cloud-amd64
-Description-md5: aecf5edc13b7662caf4c33856c197861
-Description-en: Linux 7.2.15 for x86-64 cloud
- The Linux kernel 7.2.15 and modules for use on cloud platforms including
+Package: linux-image-7.3.4+deb14-cloud-amd64
+Description-md5: 26d79fb76e093d621356f790141f8719
+Description-en: Linux 7.3.4 for x86-64 cloud
+ The Linux kernel 7.3.4 and modules for use on cloud platforms including
  Amazon EC2, Microsoft Azure, and Google Compute Engine.
 
-Package: linux-image-7.2.15+deb14-rt-amd64
-Description-md5: 872ce2d152abcc2c21f9b939c849e794
-Description-en: Linux 7.2.15 for 64-bit PCs, PREEMPT_RT
- The Linux kernel 7.2.15 and modules for use on PCs with AMD64, Intel 64 or
+Package: linux-image-7.3.4+deb14-rt-amd64
+Description-md5: 8b7b82ce9dfa4d880c6b5a9cbb7613c7
+Description-en: Linux 7.3.4 for 64-bit PCs, PREEMPT_RT
+ The Linux kernel 7.3.4 and modules for use on PCs with AMD64, Intel 64 or
  VIA Nano processors.
  .
  This kernel is configured with PREEMPT_RT real time support.
@@ -420902,6 +421038,25 @@ Description-en: Linux for 64-bit PCs (debug symbols meta-package)
  This package depends on the detached debugging symbols for the latest
  Linux kernel rt-amd64 configuration.
 
+Package: linux-modules-amd64
+Description-md5: 28bbbc3b122dc63a56b1e02fceec9a02
+Description-en: Linux modules for 64-bit PCs (meta-package)
+ This package depends on the latest Linux modules for use on PCs with
+ AMD64, Intel 64 or VIA Nano processors.
+
+Package: linux-modules-cloud-amd64
+Description-md5: 262d7bf98a5dbd23361d9097dab14b3e
+Description-en: Linux modules for x86-64 cloud (meta-package)
+ This package depends on the latest Linux modules for use on cloud
+ platforms including Amazon EC2, Microsoft Azure, and Google Compute
+ Engine.
+
+Package: linux-modules-rt-amd64
+Description-md5: 28bbbc3b122dc63a56b1e02fceec9a02
+Description-en: Linux modules for 64-bit PCs (meta-package)
+ This package depends on the latest Linux modules for use on PCs with
+ AMD64, Intel 64 or VIA Nano processors.
+
 Package: linux-base-arm64
 Description-md5: fd17d75c4a562c7107ddba3f0795584a
 Description-en: Linux for 64-bit ARMv8 machines (dummy package)
@@ -420929,41 +421084,41 @@ Description-en: Linux for 64-bit ARMv8 machines (dummy package)
  linux-headers-64-bit ARMv8 machines and linux-image-64-bit ARMv8 machines
  synchronised.
 
-Package: linux-binary-7.2.15+deb14-arm64
-Description-md5: 7892820c86d85d0e47dc70b5c29e8d8d
-Description-en: Linux 7.2.15 for 64-bit ARMv8 machines (kernel image)
- This package contains the kernel image for Linux 7.2.15 on 64-bit ARMv8
+Package: linux-binary-7.3.4+deb14-arm64
+Description-md5: 10c895e7f44a81a580ef570bcbc4e8f0
+Description-en: Linux 7.3.4 for 64-bit ARMv8 machines (kernel image)
+ This package contains the kernel image for Linux 7.3.4 on 64-bit ARMv8
  machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-arm64.
+ install linux-image-7.3.4+deb14-arm64.
 
-Package: linux-binary-7.2.15+deb14-arm64-16k
-Description-md5: 0b5f498956846fab49e0424eedc718ff
-Description-en: Linux 7.2.15 for 64-bit ARMv8 machines with 16k pages (kernel image)
- This package contains the kernel image for Linux 7.2.15 on 64-bit ARMv8
+Package: linux-binary-7.3.4+deb14-arm64-16k
+Description-md5: 84ee3df0f4172c1297a813d022a904d1
+Description-en: Linux 7.3.4 for 64-bit ARMv8 machines with 16k pages (kernel image)
+ This package contains the kernel image for Linux 7.3.4 on 64-bit ARMv8
  machines with 16k pages.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-arm64-16k.
+ install linux-image-7.3.4+deb14-arm64-16k.
 
-Package: linux-binary-7.2.15+deb14-cloud-arm64
-Description-md5: 81e3c36eab88921e8fcb4728d6458663
-Description-en: Linux 7.2.15 for arm64 cloud (kernel image)
- This package contains the kernel image for Linux 7.2.15 on cloud platforms
+Package: linux-binary-7.3.4+deb14-cloud-arm64
+Description-md5: 493434322b5d014b15d23c65e542e9dd
+Description-en: Linux 7.3.4 for arm64 cloud (kernel image)
+ This package contains the kernel image for Linux 7.3.4 on cloud platforms
  supporting arm64 virtual machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-cloud-arm64.
+ install linux-image-7.3.4+deb14-cloud-arm64.
 
-Package: linux-binary-7.2.15+deb14-rt-arm64
-Description-md5: ec64a6ba95230a632969a95169d6facd
-Description-en: Linux 7.2.15 for 64-bit ARMv8 machines (kernel image)
- This package contains the kernel image for Linux 7.2.15 on 64-bit ARMv8
+Package: linux-binary-7.3.4+deb14-rt-arm64
+Description-md5: c44ca32a03f1be2b86c7cf896c2617f2
+Description-en: Linux 7.3.4 for 64-bit ARMv8 machines (kernel image)
+ This package contains the kernel image for Linux 7.3.4 on 64-bit ARMv8
  machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.2.15+deb14-rt-arm64.
+ install linux-image-7.3.4+deb14-rt-arm64.
 
 Package: linux-headers-arm64
 Description-md5: 231f90302db24abcd69d22b4af8a1008
@@ -420989,27 +421144,27 @@ Description-en: Linux for 64-bit ARMv8 machines (module development meta-package
  This package depends on the architecture-specific header files for the
  latest Linux kernel rt-arm64 configuration.
 
-Package: linux-image-7.2.15+deb14-arm64
-Description-md5: b05c9eb86d4f88113cdf31c3b2b468b8
-Description-en: Linux 7.2.15 for 64-bit ARMv8 machines
- The Linux kernel 7.2.15 and modules for use on 64-bit ARMv8 machines.
+Package: linux-image-7.3.4+deb14-arm64
+Description-md5: 6b30eeb875ba3a198c972781b9997024
+Description-en: Linux 7.3.4 for 64-bit ARMv8 machines
+ The Linux kernel 7.3.4 and modules for use on 64-bit ARMv8 machines.
 
-Package: linux-image-7.2.15+deb14-arm64-16k
-Description-md5: c34734fa19d733a9870e0ac33c4597b0
-Description-en: Linux 7.2.15 for 64-bit ARMv8 machines with 16k pages
- The Linux kernel 7.2.15 and modules for use on 64-bit ARMv8 machines with
+Package: linux-image-7.3.4+deb14-arm64-16k
+Description-md5: 9779c92e4f3fb5bde14a6e64b5a6a40e
+Description-en: Linux 7.3.4 for 64-bit ARMv8 machines with 16k pages
+ The Linux kernel 7.3.4 and modules for use on 64-bit ARMv8 machines with
  16k pages.
 
-Package: linux-image-7.2.15+deb14-cloud-arm64
-Description-md5: a3cb641873ed56073c179f078b79c398
-Description-en: Linux 7.2.15 for arm64 cloud
- The Linux kernel 7.2.15 and modules for use on cloud platforms supporting
+Package: linux-image-7.3.4+deb14-cloud-arm64
+Description-md5: ee59e09ab84ff64e20114c93a631485a
+Description-en: Linux 7.3.4 for arm64 cloud
+ The Linux kernel 7.3.4 and modules for use on cloud platforms supporting
  arm64 virtual machines.
 
-Package: linux-image-7.2.15+deb14-rt-arm64
-Description-md5: b96db44919eb8b2dcd6204213eab67d1
-Description-en: Linux 7.2.15 for 64-bit ARMv8 machines, PREEMPT_RT
- The Linux kernel 7.2.15 and modules for use on 64-bit ARMv8 machines.
+Package: linux-image-7.3.4+deb14-rt-arm64
+Description-md5: b40a4dd3ee8c9ec49097821c7f6faeaa
+Description-en: Linux 7.3.4 for 64-bit ARMv8 machines, PREEMPT_RT
+ The Linux kernel 7.3.4 and modules for use on 64-bit ARMv8 machines.
  .
  This kernel is configured with PREEMPT_RT real time support.
 
@@ -421060,6 +421215,30 @@ Description-md5: 6b2fceeb9ba5cf092c3fd528a4125707
 Description-en: Linux for 64-bit ARMv8 machines (debug symbols meta-package)
  This package depends on the detached debugging symbols for the latest
  Linux kernel rt-arm64 configuration.
+
+Package: linux-modules-arm64
+Description-md5: 8725864ac68a350d7ce62d6d790224fe
+Description-en: Linux modules for 64-bit ARMv8 machines (meta-package)
+ This package depends on the latest Linux modules for use on 64-bit ARMv8
+ machines.
+
+Package: linux-modules-arm64-16k
+Description-md5: d73f3ec900b2007d3a70e6615f8e1df4
+Description-en: Linux modules for 64-bit ARMv8 machines with 16k pages (meta-package)
+ This package depends on the latest Linux modules for use on 64-bit ARMv8
+ machines with 16k pages.
+
+Package: linux-modules-cloud-arm64
+Description-md5: b7adbd426fa375ab39ef8cdb9207de19
+Description-en: Linux modules for arm64 cloud (meta-package)
+ This package depends on the latest Linux modules for use on cloud
+ platforms supporting arm64 virtual machines.
+
+Package: linux-modules-rt-arm64
+Description-md5: 8725864ac68a350d7ce62d6d790224fe
+Description-en: Linux modules for 64-bit ARMv8 machines (meta-package)
+ This package depends on the latest Linux modules for use on 64-bit ARMv8
+ machines.
 
 Package: linux-voice-assistant
 Description-md5: 4b3be90f9a7d2e0b252caff937ef9d60
@@ -423456,21 +423635,6 @@ Description-en: LLVM C++ Standard library (WASI)
  .
  This package provides a version for the 32-bit WebAssembly System Interface.
 
-Package: libc++1
-Description-md5: 3e11b80d657dd5ed05ee027e3cba65ca
-Description-en: LLVM C++ Standard library
- libc++ is another implementation of the C++ standard library.
- .
- Features and Goals
- .
-   * Correctness as defined by the C++ standards.
-   * Fast execution.
-   * Minimal memory use.
-   * Fast compile times.
-   * ABI compatibility with gcc's libstdc++ for some low-level features such
-     as exception objects, rtti and memory allocation.
-   * Extensive unit tests.
-
 Package: libc++abi-22-dev
 Description-md5: 364169ef5dcd81ea07cbcba49d061676
 Description-en: LLVM low level support for a standard C++ library (development files)
@@ -423494,17 +423658,6 @@ Description-en: LLVM low level support for a standard C++ library (WASI)
    * Provide a portable sublayer to ease the porting of libc++
  .
  This package provides a version for the 32-bit WebAssembly System Interface.
-
-Package: libc++abi1
-Description-md5: 6a197f8a8ae8385e801b369ea97886ce
-Description-en: LLVM low level support for a standard C++ library
- libc++abi is another implementation of low level support for a standard C++
- library.
- .
- Features and Goals
- .
-   * Correctness as defined by the C++ standards.
-   * Provide a portable sublayer to ease the porting of libc++
 
 Package: libclang-22-dev
 Description-md5: 2913d96deb7536b7b59b7b10e996a469
@@ -423780,13 +423933,6 @@ Description-en: LLVM OpenMP runtime - Documentation
  .
  This package contains the documentation of this package.
 
-Package: libomp5
-Description-md5: e28f50eb4beb8e316b69da2c1c0194c3
-Description-en: LLVM OpenMP runtime
- The runtime is the part of the OpenMP implementation that your code is
- linked against, and that manages the multiple threads in an OpenMP program
- while it is executing.
-
 Package: libpolly-22-dev
 Description-md5: 840a80a0b2b70b4ddca3d4d6f53126e7
 Description-en: High-level loop and data-locality optimizer
@@ -423940,17 +424086,6 @@ Description-en: Modular compiler and toolchain technologies, tools
  .
  This package provides tools for testing.
 
-Package: llvm-libunwind1
-Description-md5: eb120532210ba0a1aa18eb3464ed08dc
-Description-en: LLVM unwinder, not compatible with glibc
- llvm-libunwind is the LLVM unwinder, with platform support for DWARF
- unwind info, SjLj, and ARM EHABI. Using it for packaging work inside
- Debian is not recommended, incompatible with glibc.
- .
- The low level libunwind API was designed to work either in-process (aka local)
- or to operate on another process (aka remote), but only the local path has
- been implemented. Remote unwinding remains as future work.
-
 Package: mlir-22-tools
 Description-md5: d0b5aeb3d29bd335ae224dda484fdc7a
 Description-en: Multi-Level Intermediate Representation tools
@@ -423974,6 +424109,655 @@ Description-en: Clang Python Bindings
  This binding package provides access to the Clang compiler and libraries.
 
 Package: python3-lldb-22
+Description-md5: 0185ffb3cdaadce7edcc313c1e68ae92
+Description-en: Next generation, high-performance debugger, python3 lib
+ LLDB is a next generation, high-performance debugger. It is built as a set of
+ reusable components which highly leverage existing libraries in the larger LLVM
+ Project, such as the Clang expression parser and LLVM disassembler.
+ .
+ This binding package provides access to lldb.
+
+Package: bolt-23
+Description-md5: a5816535f62942b4fcded9b86fb66840
+Description-en: Post-link optimizer
+ It achieves the improvements by optimizing application's code layout based on
+ execution profile gathered by sampling profiler.
+
+Package: clang-23
+Description-md5: c364160e44345420df0f2e97b3082b69
+Description-en: C, C++ and Objective-C compiler
+ Clang project is a C, C++, Objective C and Objective C++ front-end
+ based on the LLVM compiler. Its goal is to offer a replacement to the
+ GNU Compiler Collection (GCC).
+ .
+ Clang implements all of the ISO C++ 1998, 11, 14 and 17 standards and also
+ provides most of the support of C++20.
+
+Package: clang-23-doc
+Description-md5: 6bf5242bfe6f159fd907beb982f2315f
+Description-en: C, C++ and Objective-C compiler - Documentation
+ Clang project is a C, C++, Objective C and Objective C++ front-end
+ based on the LLVM compiler. Its goal is to offer a replacement to the
+ GNU Compiler Collection (GCC).
+ .
+ Clang implements all of the ISO C++ 1998, 11, 14 and 17 standards and also
+ provides most of the support of C++20.
+ .
+ This package contains the documentation.
+
+Package: clang-23-examples
+Description-md5: c2fd51cc2d722b8e5b1c1549d931bc06
+Description-en: Clang examples
+ Clang project is a C, C++, Objective C and Objective C++ front-end
+ based on the LLVM compiler. Its goal is to offer a replacement to the
+ GNU Compiler Collection (GCC).
+ .
+ Clang implements all of the ISO C++ 1998, 11, 14 and 17 standards and also
+ provides most of the support of C++20.
+ .
+ This package contains the Clang examples.
+
+Package: clang-format-23
+Description-md5: 5fdb7838fa336de9de2703cb644c12e4
+Description-en: Tool to format C/C++/Obj-C code
+ Clang-format is both a library and a stand-alone tool with the goal of
+ automatically reformatting C++ sources files according to configurable
+ style guides. To do so, clang-format uses Clang's Lexer to transform an
+ input file into a token stream and then changes all the whitespace around
+ those tokens. The goal is for clang-format to both serve both as a user
+ tool (ideally with powerful IDE integrations) and part of other
+ refactoring tools, e.g. to do a reformatting of all the lines changed
+ during a renaming.
+ .
+ This package also provides vim and emacs plugins.
+
+Package: clang-tidy-23
+Description-md5: 239d974b460ce0b6a914aa94c05888ad
+Description-en: clang-based C++ linter tool
+ Provide an extensible framework for diagnosing and fixing typical programming
+ errors, like style violations, interface misuse, or bugs that can be deduced
+ via static analysis. clang-tidy is modular and provides a convenient interface
+ for writing new checks.
+
+Package: clang-tools-23
+Description-md5: 0ac52908e51dad320be3476963296f5f
+Description-en: clang-based tools for C/C++ developments
+ Clang project is a C, C++, Objective C and Objective C++ front-end
+ based on the LLVM compiler. Its goal is to offer a replacement to the
+ GNU Compiler Collection (GCC).
+ .
+ Clang implements all of the ISO C++ 1998, 11, 14 and 17 standards and also
+ provides most of the support of C++20.
+ .
+ This package contains some clang-based tools like scan-build, etc.
+
+Package: clangd-23
+Description-md5: 9ae9ea58c7af3228199dd96c36ecd0bb
+Description-en: Language server that provides IDE-like features to editors
+ clangd understands your C++ code and adds smart features to your editor:
+  - code completion
+  - compile errors
+  - go-to-definition
+  - and more.
+ .
+ clangd is a language server that implements the Language Server Protocol;
+ it can work with many editors through a plugin.
+
+Package: flang-23
+Description-md5: bd017b88c85853e1292c78015b1d62a8
+Description-en: Fortran compiler
+ Ground-up implementation of a Fortran front end written in
+ modern C++.
+ .
+ While it is capable of generating executables for a number
+ of examples, some functionalities are still missing.
+
+Package: libbolt-23-dev
+Description-md5: a5816535f62942b4fcded9b86fb66840
+Description-en: Post-link optimizer
+ It achieves the improvements by optimizing application's code layout based on
+ execution profile gathered by sampling profiler.
+
+Package: libc++-23-dev
+Description-md5: 8cd44d2ae4969ab1c95a30917ddc69e7
+Description-en: LLVM C++ Standard library (development files)
+ libc++ is another implementation of the C++ standard library
+ .
+ Features and Goals
+ .
+   * Correctness as defined by the C++ standards.
+   * Fast execution.
+   * Minimal memory use.
+   * Fast compile times.
+   * ABI compatibility with gcc's libstdc++ for some low-level features such
+     as exception objects, rtti and memory allocation.
+   * Extensive unit tests.
+
+Package: libc++-23-dev-wasm32
+Description-md5: 21e20e19acf2a499a9e194408e3990d7
+Description-en: LLVM C++ Standard library (WASI)
+ libc++ is another implementation of the C++ standard library
+ .
+ Features and Goals
+ .
+   * Correctness as defined by the C++ standards.
+   * Fast execution.
+   * Minimal memory use.
+   * Fast compile times.
+   * ABI compatibility with gcc's libstdc++ for some low-level features such
+     as exception objects, rtti and memory allocation.
+   * Extensive unit tests.
+ .
+ This package provides a version for the 32-bit WebAssembly System Interface.
+
+Package: libc++1
+Description-md5: 3e11b80d657dd5ed05ee027e3cba65ca
+Description-en: LLVM C++ Standard library
+ libc++ is another implementation of the C++ standard library.
+ .
+ Features and Goals
+ .
+   * Correctness as defined by the C++ standards.
+   * Fast execution.
+   * Minimal memory use.
+   * Fast compile times.
+   * ABI compatibility with gcc's libstdc++ for some low-level features such
+     as exception objects, rtti and memory allocation.
+   * Extensive unit tests.
+
+Package: libc++abi-23-dev
+Description-md5: 364169ef5dcd81ea07cbcba49d061676
+Description-en: LLVM low level support for a standard C++ library (development files)
+ libc++abi is another implementation of low level support for a standard C++
+ library.
+ .
+ Features and Goals
+ .
+   * Correctness as defined by the C++ standards.
+   * Provide a portable sublayer to ease the porting of libc++
+
+Package: libc++abi-23-dev-wasm32
+Description-md5: 9a34398f2ed6518894f52de69f57d517
+Description-en: LLVM low level support for a standard C++ library (WASI)
+ libc++abi is another implementation of low level support for a standard C++
+ library.
+ .
+ Features and Goals
+ .
+   * Correctness as defined by the C++ standards.
+   * Provide a portable sublayer to ease the porting of libc++
+ .
+ This package provides a version for the 32-bit WebAssembly System Interface.
+
+Package: libc++abi1
+Description-md5: 6a197f8a8ae8385e801b369ea97886ce
+Description-en: LLVM low level support for a standard C++ library
+ libc++abi is another implementation of low level support for a standard C++
+ library.
+ .
+ Features and Goals
+ .
+   * Correctness as defined by the C++ standards.
+   * Provide a portable sublayer to ease the porting of libc++
+
+Package: libclang-23-dev
+Description-md5: bae7e0956ac1050bb76e4dd55519db95
+Description-en: Clang library - Development package
+ Clang project is a C, C++, Objective C and Objective C++ front-end
+ based on the LLVM compiler. Its goal is to offer a replacement to the
+ GNU Compiler Collection (GCC).
+ .
+ Clang implements all of the ISO C++ 1998, 11, 14 and 17 standards and also
+ provides most of the support of C++20.
+ .
+ This package contains the Clang headers to develop extensions over
+ libclang1-23.
+
+Package: libclang-common-23-dev
+Description-md5: c70051d53e23270c29353f55183e81aa
+Description-en: Clang library - Common development package
+ Clang project is a C, C++, Objective C and Objective C++ front-end
+ based on the LLVM compiler. Its goal is to offer a replacement to the
+ GNU Compiler Collection (GCC).
+ .
+ Clang implements all of the ISO C++ 1998, 11, 14 and 17 standards and also
+ provides most of the support of C++20.
+ .
+ This package contains the Clang generic headers.
+
+Package: libclang-cpp23
+Description-md5: 8acc7c5b41666c14f1ef5e79310225e6
+Description-en: C++ interface to the Clang library
+ Clang project is a C, C++, Objective C and Objective C++ front-end
+ based on the LLVM compiler. Its goal is to offer a replacement to the
+ GNU Compiler Collection (GCC).
+ .
+ Clang implements all of the ISO C++ 1998, 11, 14 and 17 standards and also
+ provides most of the support of C++20.
+ .
+ This package contains the Clang C++ library.
+ .
+ The C++ Interface to Clang provides an API that exposes
+ facilities for parsing source code into an abstract syntax tree (AST),
+ loading already-parsed ASTs, traversing the AST, associating physical source
+ locations with elements within the AST, and other facilities that support
+ Clang-based development tools.
+
+Package: libclang-cpp23-dev
+Description-md5: f5afea2f6b71ba0705e995aaab21eef9
+Description-en: C++ interface to the Clang library
+ Clang project is a C, C++, Objective C and Objective C++ front-end
+ based on the LLVM compiler. Its goal is to offer a replacement to the
+ GNU Compiler Collection (GCC).
+ .
+ Clang implements all of the ISO C++ 1998, 11, 14 and 17 standards and also
+ provides most of the support of C++20.
+ .
+ This package contains the Clang C++ library.
+ .
+ The C++ Interface to Clang provides an API that exposes
+ facilities for parsing source code into an abstract syntax tree (AST),
+ loading already-parsed ASTs, traversing the AST, associating physical source
+ locations with elements within the AST, and other facilities that support
+ Clang-based development tools.
+ .
+ This package contains symlinks without a version number, which needed by
+ linker at build time.
+
+Package: libclang-rt-23-dev
+Description-md5: 2aaff3e893bfd063ceaf38e310dc3055
+Description-en: Compiler-rt - development package
+ This package provides various libraries:
+ .
+   * builtins - Simple libraries that provide implementation of the
+     low-level target-specific hooks required by code generation
+     and other runtime components.
+   * sanitizer runtimes - AddressSanitizer, ThreadSanitizer,
+     UndefinedBehaviorSanitizer, MemorySanitizer, LeakSanitizer
+     DataFlowSanitizer, etc
+   * profile - Library which is used to collect coverage information.
+
+Package: libclang-rt-23-dev-wasm32
+Description-md5: 0a3a8bf20b284a6b0fb9f63d5541c217
+Description-en: Compiler-rt - wasm32 builtins
+ Provides the compiler-rt builtins for WebAssembly 32 bits
+
+Package: libclang-rt-23-dev-wasm64
+Description-md5: f6fba666aadae95050bf103b52358363
+Description-en: Compiler-rt - wasm64 builtins
+ Provides the compiler-rt builtins for WebAssembly 64 bits
+
+Package: libclang-rt-23-dev-win
+Description-md5: 3b8b2cd8160ba15aca1c19bf79c9c97c
+Description-en: Compiler-rt - Windows builtins
+ Provides the compiler-rt builtins for Windows
+
+Package: libclang1-23
+Description-md5: 6fbabc5fd121a4ff6b254de59627b6de
+Description-en: C interface to the Clang library
+ Clang project is a C, C++, Objective C and Objective C++ front-end
+ based on the LLVM compiler. Its goal is to offer a replacement to the
+ GNU Compiler Collection (GCC).
+ .
+ Clang implements all of the ISO C++ 1998, 11, 14 and 17 standards and also
+ provides most of the support of C++20.
+ .
+ This package contains the Clang library.
+ .
+ The C Interface to Clang provides a relatively small API that exposes
+ facilities for parsing source code into an abstract syntax tree (AST),
+ loading already-parsed ASTs, traversing the AST, associating physical source
+ locations with elements within the AST, and other facilities that support
+ Clang-based development tools.
+
+Package: libclc-23
+Description-md5: 73bf1c1e61845108c59b363de4fd901a
+Description-en: OpenCL C language implementation - platform support
+ libclc is an open implementation of the OpenCL C programming language,
+ as specified by the OpenCL 1.1 Specification.
+ .
+ This package contains support for the amdgcn (AMD GPU), PTX and r600
+ platforms.
+
+Package: libclc-23-dev
+Description-md5: af42cc63b204a8c47b782398389a6170
+Description-en: OpenCL C language implementation - development files
+ libclc is an open implementation of the OpenCL C programming language,
+ as specified by the OpenCL 1.1 Specification.
+ .
+ This package contains development header files.
+
+Package: libflang-23-dev
+Description-md5: 3328d45b650afee35fe8b6da0b9b1e49
+Description-en: Flang library - Development package
+ Ground-up implementation of a Fortran front end written in
+ modern C++.
+ .
+ While it is capable of generating executables for a number
+ of examples, some functionalities are still missing.
+ .
+ This package contains the flang libraries and headers.
+
+Package: libfuzzer-23-dev
+Description-md5: d2b5f770c9ccea229ea9aaced2ed1250
+Description-en: Library for coverage-guided fuzz testing
+ LibFuzzer is a library for in-process, coverage-guided, evolutionary fuzzing
+ of other libraries.
+ .
+ LibFuzzer is similar in concept to American Fuzzy Lop (AFL), but it performs
+ all of its fuzzing inside a single process. This in-process fuzzing can be
+ more restrictive and fragile, but is potentially much faster as there is no
+ overhead for process start-up.
+ .
+ The fuzzer is linked with the library under test, and feeds fuzzed inputs to
+ the library via a specific fuzzing entrypoint (aka 'target function'); the
+ fuzzer then tracks which areas of the code are reached, and generates mutations
+ on the corpus of input data in order to maximize the code coverage. The code
+ coverage information for libFuzzer is provided by LLVM's SanitizerCoverage
+ instrumentation.
+ .
+ This is a dependency package: it does not ship a libFuzzer.a of its own
+ anymore. The fuzzer runtime built by upstream (libclang_rt.fuzzer*.a) and
+ the FuzzedDataProvider.h header are part of the compiler-rt resource
+ directory, shipped by libclang-rt-23-dev, and clang links them itself when
+ -fsanitize=fuzzer is used. Installing this package pulls in everything
+ needed for that.
+
+Package: liblld-23
+Description-md5: edabea654ba7a6bd671515adc0fffdd2
+Description-en: LLVM-based linker, library
+ LLD is a new, high-performance linker. It is built as a set of reusable
+ components which highly leverage existing libraries in the larger LLVM
+ Project.
+ .
+ This package contains the LLD runtime library.
+
+Package: liblld-23-dev
+Description-md5: d5f91d89aa80d28cd4d98b74563f075b
+Description-en: LLVM-based linker, header files
+ LLD is a new, high-performance linker. It is built as a set of reusable
+ components which highly leverage existing libraries in the larger LLVM
+ Project.
+ .
+ This package provides the header files to build extension over lld.
+
+Package: liblldb-23
+Description-md5: 88542bb8337de28344a74df10ce94f4e
+Description-en: Next generation, high-performance debugger, library
+ LLDB is a next generation, high-performance debugger. It is built as a set of
+ reusable components which highly leverage existing libraries in the larger LLVM
+ Project, such as the Clang expression parser and LLVM disassembler.
+ .
+ This package contains the LLDB runtime library.
+
+Package: liblldb-23-dev
+Description-md5: 8f3dc7f570ba958d1f7496e3e5195498
+Description-en: Next generation, high-performance debugger, header files
+ LLDB is a next generation, high-performance debugger. It is built as a set of
+ reusable components which highly leverage existing libraries in the larger LLVM
+ Project, such as the Clang expression parser and LLVM disassembler.
+ .
+ This package provides the header files to build extension over lldb.
+
+Package: libllvm23
+Description-md5: a8854f4edf76a8c14ce34dc209bd1d11
+Description-en: Modular compiler and toolchain technologies, runtime library
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ This package contains the LLVM runtime library.
+
+Package: libllvmlibc-23-dev
+Description-md5: b678725717171e9f1656f9727ef63f83
+Description-en: LLVM C Library - dev package
+ Implementation of the C standard library targeting C17 and above.
+ .
+ This is an experimental project. Don't use in production.
+
+Package: libmlir-23
+Description-md5: b2671453793175bc5bd7c93d05c96c40
+Description-en: Multi-Level Intermediate Representation library
+ Novel approach to building reusable and extensible compiler infrastructure.
+ MLIR aims to address software fragmentation, improve compilation for
+ heterogeneous hardware, significantly reduce the cost of building domain
+ specific compilers, and aid in connecting existing compilers together.
+
+Package: libmlir-23-dev
+Description-md5: b2671453793175bc5bd7c93d05c96c40
+Description-en: Multi-Level Intermediate Representation library
+ Novel approach to building reusable and extensible compiler infrastructure.
+ MLIR aims to address software fragmentation, improve compilation for
+ heterogeneous hardware, significantly reduce the cost of building domain
+ specific compilers, and aid in connecting existing compilers together.
+
+Package: liboffload-23
+Description-md5: 841bdc20a27b40722e37c7b2d0838a75
+Description-en: Offload Library
+ The offload library facilitates efficient task distribution by offloading
+ specific computational tasks from the CPU to alternative hardware accelerators
+ such as GPUs or FPGAs.
+
+Package: liboffload-23-dev
+Description-md5: 0335a80bacd1f17cc3caa43cce0c4820
+Description-en: Offload Library - Development Package
+ The offload library facilitates efficient task distribution by offloading
+ specific computational tasks from the CPU to alternative hardware accelerators
+ such as GPUs or FPGAs.
+ .
+ This development package includes headers and other resources needed for
+ building applications that utilize the offload runtime.
+
+Package: libomp-23-dev
+Description-md5: 6f692a0e089a2d4587b533b4f246db62
+Description-en: LLVM OpenMP runtime - dev package
+ The runtime is the part of the OpenMP implementation that your code is
+ linked against, and that manages the multiple threads in an OpenMP program
+ while it is executing.
+
+Package: libomp-23-doc
+Description-md5: 55ecafb377674896611f496b3a8a1433
+Description-en: LLVM OpenMP runtime - Documentation
+ The runtime is the part of the OpenMP implementation that your code is
+ linked against, and that manages the multiple threads in an OpenMP program
+ while it is executing.
+ .
+ This package contains the documentation of this package.
+
+Package: libomp5
+Description-md5: e28f50eb4beb8e316b69da2c1c0194c3
+Description-en: LLVM OpenMP runtime
+ The runtime is the part of the OpenMP implementation that your code is
+ linked against, and that manages the multiple threads in an OpenMP program
+ while it is executing.
+
+Package: libpolly-23-dev
+Description-md5: 840a80a0b2b70b4ddca3d4d6f53126e7
+Description-en: High-level loop and data-locality optimizer
+ Uses an abstract mathematical representation based on integer polyhedra
+ to analyze and optimize the memory access pattern of a program
+
+Package: libunwind-23-dev
+Description-md5: eb120532210ba0a1aa18eb3464ed08dc
+Description-en: LLVM unwinder, not compatible with glibc
+ llvm-libunwind is the LLVM unwinder, with platform support for DWARF
+ unwind info, SjLj, and ARM EHABI. Using it for packaging work inside
+ Debian is not recommended, incompatible with glibc.
+ .
+ The low level libunwind API was designed to work either in-process (aka local)
+ or to operate on another process (aka remote), but only the local path has
+ been implemented. Remote unwinding remains as future work.
+
+Package: lld-23
+Description-md5: 39b52f07f105b329dd7852cce89ebb7d
+Description-en: LLVM-based linker
+ LLD is a new, high-performance linker. It is built as a set of reusable
+ components which highly leverage existing libraries in the larger LLVM
+ Project.
+
+Package: lldb-23
+Description-md5: 45d52d0209cd7953d2f2bc4d1a99170f
+Description-en: Next generation, high-performance debugger
+ LLDB is a next generation, high-performance debugger. It is built as a set of
+ reusable components which highly leverage existing libraries in the larger LLVM
+ Project, such as the Clang expression parser and LLVM disassembler.
+
+Package: llvm-23
+Description-md5: 07d463911771b9679a5f0131f40992d4
+Description-en: Modular compiler and toolchain technologies
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ LLVM uses a single, language-independent virtual instruction set both
+ as an offline code representation (to communicate code between
+ compiler phases and to run-time systems) and as the compiler internal
+ representation (to analyze and transform programs). This persistent
+ code representation allows a common set of sophisticated compiler
+ techniques to be applied at compile-time, link-time, install-time,
+ run-time, or "idle-time" (between program runs).
+ .
+ The strengths of the LLVM infrastructure are its extremely
+ simple design (which makes it easy to understand and use),
+ source-language independence, powerful mid-level optimizer, automated
+ compiler debugging support, extensibility, and its stability and
+ reliability. LLVM is currently being used to host a wide variety of
+ academic research projects and commercial projects. LLVM includes C
+ and C++ front-ends, a front-end for a Forth-like language (Stacker),
+ a young scheme front-end, and Java support is in development. LLVM can
+ generate code for X96, SparcV10, PowerPC or many other architectures.
+
+Package: llvm-23-dev
+Description-md5: 29f654aa391c01f742a2023c872d7a49
+Description-en: Modular compiler and toolchain technologies, libraries and headers
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ LLVM uses a single, language-independent virtual instruction set both
+ as an offline code representation (to communicate code between
+ compiler phases and to run-time systems) and as the compiler internal
+ representation (to analyze and transform programs). This persistent
+ code representation allows a common set of sophisticated compiler
+ techniques to be applied at compile-time, link-time, install-time,
+ run-time, or "idle-time" (between program runs).
+ .
+ This package provides the libraries and headers to develop applications
+ using llvm.
+
+Package: llvm-23-doc
+Description-md5: 19896d0a63f9911e3a7a7b85ecfac407
+Description-en: Modular compiler and toolchain technologies, documentation
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ LLVM uses a single, language-independent virtual instruction set both
+ as an offline code representation (to communicate code between
+ compiler phases and to run-time systems) and as the compiler internal
+ representation (to analyze and transform programs). This persistent
+ code representation allows a common set of sophisticated compiler
+ techniques to be applied at compile-time, link-time, install-time,
+ run-time, or "idle-time" (between program runs).
+ .
+ This package contains all documentation (extensive).
+
+Package: llvm-23-examples
+Description-md5: 61fee537b751bf39ce1ac5bf27ca3806
+Description-en: Modular compiler and toolchain technologies, examples
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ LLVM uses a single, language-independent virtual instruction set both
+ as an offline code representation (to communicate code between
+ compiler phases and to run-time systems) and as the compiler internal
+ representation (to analyze and transform programs). This persistent
+ code representation allows a common set of sophisticated compiler
+ techniques to be applied at compile-time, link-time, install-time,
+ run-time, or "idle-time" (between program runs).
+ .
+ This package contains examples for using LLVM, both in developing
+ extensions to LLVM and in using it to compile code.
+
+Package: llvm-23-linker-tools
+Description-md5: 34d6480db2d150315f7bca6065772d03
+Description-en: Modular compiler and toolchain technologies - Plugins
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ This package contains the LLVMgold and LLVMPolly linker plugins.
+
+Package: llvm-23-runtime
+Description-md5: a2e425ebfc2fcd56b539f44a28559b4a
+Description-en: Modular compiler and toolchain technologies, IR interpreter
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ LLVM uses a single, language-independent virtual instruction set both
+ as an offline code representation (to communicate code between
+ compiler phases and to run-time systems) and as the compiler internal
+ representation (to analyze and transform programs). This persistent
+ code representation allows a common set of sophisticated compiler
+ techniques to be applied at compile-time, link-time, install-time,
+ run-time, or "idle-time" (between program runs).
+ .
+ This package provides the minimal required to execute programs in LLVM
+ format.
+
+Package: llvm-23-tools
+Description-md5: 709eba32627c3c079585c05fc5963fe8
+Description-en: Modular compiler and toolchain technologies, tools
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ LLVM uses a single, language-independent virtual instruction set both
+ as an offline code representation (to communicate code between
+ compiler phases and to run-time systems) and as the compiler internal
+ representation (to analyze and transform programs). This persistent
+ code representation allows a common set of sophisticated compiler
+ techniques to be applied at compile-time, link-time, install-time,
+ run-time, or "idle-time" (between program runs).
+ .
+ This package provides tools for testing.
+
+Package: llvm-libunwind1
+Description-md5: eb120532210ba0a1aa18eb3464ed08dc
+Description-en: LLVM unwinder, not compatible with glibc
+ llvm-libunwind is the LLVM unwinder, with platform support for DWARF
+ unwind info, SjLj, and ARM EHABI. Using it for packaging work inside
+ Debian is not recommended, incompatible with glibc.
+ .
+ The low level libunwind API was designed to work either in-process (aka local)
+ or to operate on another process (aka remote), but only the local path has
+ been implemented. Remote unwinding remains as future work.
+
+Package: mlir-23-tools
+Description-md5: d0b5aeb3d29bd335ae224dda484fdc7a
+Description-en: Multi-Level Intermediate Representation tools
+ Novel approach to building reusable and extensible compiler infrastructure.
+ MLIR aims to address software fragmentation, improve compilation for
+ heterogeneous hardware, significantly reduce the cost of building domain
+ specific compilers, and aid in connecting existing compilers together.
+ .
+ This package provides tools.
+
+Package: python3-clang-23
+Description-md5: 2c9b6237594ba364f2afb9b0458f2f14
+Description-en: Clang Python Bindings
+ Clang project is a C, C++, Objective C and Objective C++ front-end
+ based on the LLVM compiler. Its goal is to offer a replacement to the
+ GNU Compiler Collection (GCC).
+ .
+ Clang implements all of the ISO C++ 1998, 11, 14 and 17 standards and also
+ provides most of the support of C++20.
+ .
+ This binding package provides access to the Clang compiler and libraries.
+
+Package: python3-lldb-23
 Description-md5: 0185ffb3cdaadce7edcc313c1e68ae92
 Description-en: Next generation, high-performance debugger, python3 lib
  LLDB is a next generation, high-performance debugger. It is built as a set of
@@ -436985,6 +437769,27 @@ Description-en: Parseable specifications of mapnik - Node.js module
  .
  Node.js is an event-based server-side javascript engine.
 
+Package: mapsembler2
+Description-md5: a2484fb65a6be17eb178830b19618b72
+Description-en: bioinformatics targeted assembly software
+ Mapsembler2 is a targeted assembly software.
+ It takes as input a set of NGS raw reads (fasta or fastq, gzipped or not)
+ and a set of input sequences (starters).
+ .
+ It first determines if each starter is read-coherent, e.g. whether reads
+ confirm the presence of each starter in the original sequence.
+ Then for each read-coherent starter, Mapsembler2 outputs its sequence
+ neighborhood as a linear sequence or as a graph, depending on the user choice.
+ .
+ Mapsembler2 may be used for (not limited to):
+  - Validate an assembled sequence (input as starter), e.g. from a de
+    Bruijn graph assembly where read-coherence was not enforced.
+  - Checks if a gene (input as starter) has an homolog in a set of reads
+  - Checks if a known enzyme is present in a metagenomic NGS read set.
+  - Enrich unmappable reads by extending them, possibly making them mappable
+  - Checks what happens at the extremities of a contig
+  - Remove contaminants or symbiont reads from a read set
+
 Package: cgi-mapserver
 Description-md5: 84edf36c492ddf586b6901d8fd342142
 Description-en: CGI executable for MapServer
@@ -443437,19 +444242,6 @@ Description-en: implementation and policy checker, reporter and fixer for media 
  .
  This package contains the command-line utiltiy.
 
-Package: mediaconch-gui
-Description-md5: 5dcf3746c799a717b8a9e9e5c1bf9e93
-Description-en: implementation and policy checker, reporter and fixer for media files
- MediaConch is an extensible, open source software project consisting of an
- implementation checker, policy checker, reporter, and fixer that targets
- preservation-level audiovisual files (specifically Matroska, Linear Pulse Code
- Modulation (LPCM) and FF Video Codec 1 (FFV1)) for use in memory institutions,
- providing detailed and batch-level conformance checking via an adaptable and
- flexible application program interface accessible by the command line, a
- graphical user interface, or a web-based shell.
- .
- This package contains the GUI application.
-
 Package: libjs-mediaelement
 Description-md5: 51b6a2ed13b7891fbc439027a7a7b4a8
 Description-en: HTML5 <audio> or <video> player with Flash and Silverlight shims
@@ -444887,6 +445679,29 @@ Description-en: library for performing operations on matrices and vectors
  and objects. Meschach has a number of self-contained data structures
  for matrices, vectors and other mathematical objects.
  Web site: ftp://ftpmaths.anu.edu.au/pub/meschach/meschach.html
+
+Package: meshcore-cli
+Description-md5: b5fceb36264f7fae7d9e0ac6eb735b4d
+Description-en: CLI interface to MeshCore companion app over BLE, TCP or Serial
+ meshcore-cli is a tool that connects to your companion radio node
+ (meshcore client) over BLE, TCP or Serial and lets you interact with
+ it from a terminal using a command line interface.
+ .
+ You can send commands as parameters to the meshcore-cli command (from your
+ shell) either interactively or through a script.
+ .
+ There is also an interactive mode (this is the default when no command is
+ passed). In interactive mode you can enter a contact (another client a
+ repeater, a sensor or a room) and interact with it. For clients, interaction
+ consists in sending/receiving messages. For repeaters, rooms or sensors it
+ will directly give you the remote cli (you can still send messages to rooms
+ using double quote prefix or msg command).
+ .
+ By default meshcore-cli interacts with companion radios (through BLE,
+ Serial or TCP). A serial repeater mode has been introduced, which is
+ triggered using -r, which mainly adds line editing, history and completion
+ to the serial interface, adds time syncing through clock sync and let you
+ download/upload regions specs from a file.
 
 Package: meshlab
 Description-md5: 305fe5fc33ed80f8a4b3b1e8db350c58
@@ -451247,9 +452062,9 @@ Description-en: Data Model toolkit in use by the Maven 2 Project
  Modello is used to build the maven system.
 
 Package: libmodello-maven-plugin-java
-Description-md5: aa19150c09565d32e25407f329a0cd49
+Description-md5: 11372e18bba2c5532140adc10c4871c0
 Description-en: Modello Maven Plugin enables the use of Modello in Maven builds
- Modello is a Data Model toolkit in use by the Maven 2 Project.
+ Modello is a Data Model toolkit in use by the Maven Project.
  .
  This package provides a Maven plugin to enable the use of Modello in Maven
  builds.
@@ -506349,6 +507164,22 @@ Description-en: thin wrapper for clang
  OpenCL-oriented API and is capable of compiling OpenCL C kernels
  to SPIR-V modules.
 
+Package: libopencl-clang-22-dev
+Description-md5: a3778115ad90d0947318a4ca025d1360
+Description-en: thin wrapper for clang -- development files
+ Opencl-clang is a thin wrapper library around clang. It has an
+ OpenCL-oriented API and is capable of compiling OpenCL C kernels
+ to SPIR-V modules.
+ .
+ This package includes files needed for development.
+
+Package: libopencl-clang22.1
+Description-md5: 99773d47de61dea15893c5e8d11f91fe
+Description-en: thin wrapper for clang
+ Opencl-clang is a thin wrapper library around clang. It has an
+ OpenCL-oriented API and is capable of compiling OpenCL C kernels
+ to SPIR-V modules.
+
 Package: openclipart
 Description-md5: 072611e96db6eed945e4f9d401d4eb8b
 Description-en: Open Clip Art Library
@@ -537646,25 +538477,11 @@ Description-en: utilities for the Plexus framework
    setter injection, and private field injection.
 
 Package: libplexus-velocity-java
-Description-md5: 55c1e6c627fac0ace7f0247cd6a36ee7
+Description-md5: 9fb51504c223c8f4e44675addf7a87e0
 Description-en: Plexus component interface to velocity
- The Plexus project provides a full software stack for creating and executing
- software projects. Based on the Plexus container, the applications can
- utilise component-oriented programming to build modular, reusable components
- that can easily be assembled and reused.
- .
- While Plexus is similar to other inversion-of-control (IoC) or dependency
- injection frameworks such as the Spring Framework, it is a full-fledged
- container that supports many more features such as:
- .
-     * Component lifecycles
-     * Component instantiation strategies
-     * Nested containers
-     * Component configuration
-     * Auto-wiring
-     * Component dependencies, and
-     * Various dependency injection techniques including constructor injection,
-       setter injection, and private field injection.
+ Plexus Velocity provides a ready-configured Apache Velocity engine as an
+ injectable JSR 330 component, so a Maven plugin can render a template without
+ setting up Velocity itself.
 
 Package: libplexus-xml-java
 Description-md5: 914258166e24318d49158770100acab2
@@ -579079,6 +579896,22 @@ Description-en: Python dict with a merge() method
  .
  Themergedict module comes with a ConfigDict that will
  extend/update lists/sets/dicts.
+
+Package: python3-meshcore
+Description-md5: 0c3d14675554720b7dbaa63c2ac9415c
+Description-en: Python library for interacting with MeshCore companion radio nodes
+ MeshCore is a LoRa-based mesh networking system for long-range, low-power
+ radio communication. This library provides Python bindings for communicating
+ with MeshCore companion radio devices over serial, Bluetooth Low Energy (BLE),
+ and TCP connections.
+ .
+ The library offers an asynchronous command-response API for device
+ configuration, messaging, and telemetry, as well as an event-driven
+ publish-subscribe system for real-time notifications. It abstracts the
+ underlying transport protocol, allowing applications to interact with
+ MeshCore hardware regardless of the connection type.
+ .
+ This package installs the library for Python 3.
 
 Package: meshio-tools
 Description-md5: 167b900873bb1d71a101a8885d194e3c
@@ -665718,6 +666551,11 @@ Description-md5: 669cc170c0400e2aac4e2ddd6deb76b3
 Description-en: Nostr gossip traits - Rust source code
  Source code for Debianized Rust crate "nostr-gossip"
 
+Package: librust-nostr-gossip-memory-dev
+Description-md5: 649bbe9e03dc3c31e6aacc7061132f53
+Description-en: In-memory gossip database - Rust source code
+ Source code for Debianized Rust crate "nostr-gossip-memory"
+
 Package: librust-nostr-memory-dev
 Description-md5: d20bd6c081febcd6ef134830710066b9
 Description-en: Nostr in-memory events database implementation - Rust source code
@@ -700941,6 +701779,33 @@ Description-en: bi-directional translator for LLVM/SPIRV
  and SPIR-V.
  .
  This package includes the llvm-spirv-21 binary.
+
+Package: libllvmspirvlib-22-dev
+Description-md5: fcddd340f01c10dfca707c1e80606070
+Description-en: bi-directional translator for LLVM/SPIRV -- development files
+ SPIRV-LLVM-translator is a LLVM/SPIRV bi-directional translator. This
+ package includes a library and a tool for translation between LLVM IR
+ and SPIR-V.
+ .
+ This package includes static libs and headers for development.
+
+Package: libllvmspirvlib22.1
+Description-md5: 4658473b768e76c3b2f17ecbd52f8807
+Description-en: bi-directional translator for LLVM/SPIRV -- shared library
+ SPIRV-LLVM-translator is a LLVM/SPIRV bi-directional translator. This
+ package includes a library and a tool for translation between LLVM IR
+ and SPIR-V.
+ .
+ This package includes the shared library.
+
+Package: llvm-spirv-22
+Description-md5: 10063532cf29401eeab4091b715f0430
+Description-en: bi-directional translator for LLVM/SPIRV
+ SPIRV-LLVM-translator is a LLVM/SPIRV bi-directional translator. This
+ package includes a library and a tool for translation between LLVM IR
+ and SPIR-V.
+ .
+ This package includes the llvm-spirv-22 binary.
 
 Package: libspirv-reflect-dev
 Description-md5: 21aefe434d4214c1abc5b198ca29636b
@@ -757849,15 +758714,14 @@ Description-en: Java-based template engine for web application
  (JSPs) or PHP.
 
 Package: libvelocity-tools-java
-Description-md5: c008c94395cb9a860da97a81901b50f2
+Description-md5: 1bf26fe5267772bc27dd7057760cabf1
 Description-en: collection of useful tools for Velocity template engine
  The VelocityTools project is a collection of useful Java classes (aka tools),
  as well as infrastructure to easily, automatically and transparently
  make these tools available to Velocity templates.
  .
- Project include easy integration of Velocity into the view-layer of
- web applications (via the VelocityViewTag and
- VelocityViewServlet) and integration with Struts 1.x applications.
+ It also integrates Velocity into the view layer of web applications,
+ with the VelocityViewServlet and the VelocityViewTag JSP tag.
 
 Package: velvet
 Description-md5: a5956a7ea4ec700abd1d8ef9244b6fe8
