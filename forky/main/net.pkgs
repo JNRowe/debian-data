@@ -6339,6 +6339,25 @@ Size: 21736
 MD5sum: 9f45ca56c6c735d3b545c87090dd5059
 SHA256: 7237a7563f7a5ecf693e30dfb390f2e8cafbfe251e0264ccd7245ff77ec9ef63
 
+Package: eoip
+Version: 2.4-1
+Installed-Size: 52
+Maintainer: Boian Bonev <bbonev@ipacct.com>
+Architecture: amd64
+Depends: libc6 (>= 2.34)
+Recommends: eoip-dkms (= 2.4-1)
+Description: MikroTik compatible EoIP tunnel management tool
+Multi-Arch: foreign
+Homepage: https://github.com/bbonev/eoip
+Commands: eoip
+Description-md5: 43f059364131124a2a3a8a39b1c68ca1
+net
+Priority: optional
+Filename: pool/main/e/eoip/eoip_2.4-1_amd64.deb
+Size: 20476
+MD5sum: 2c4fcc344421ee65c95d5964b7b695f3
+SHA256: ae206e1c67730abbea5808277a730fb4c9b383f9bb279d01b6688353a8d70ab6
+
 Package: epic4
 Source: epic4 (1:3.0-2.2)
 Version: 1:3.0-2.2+b2
@@ -6951,6 +6970,41 @@ Filename: pool/main/f/filtergen/filtergen_0.12.8-3_amd64.deb
 Size: 56772
 MD5sum: 9b859994304b1f43fd29620f67840c69
 SHA256: 050db99516d36c6c6546c7c2522f19f1264d98e51611bd4c7a5682d98a930b37
+
+Package: fireperf-client
+Source: fireperf
+Version: 0.3.0+20261020-1
+Installed-Size: 199
+Maintainer: Daniel Baumann <daniel@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libncursesw6 (>= 6), libtinfo6 (>= 6), liburing2 (>= 2.3)
+Description: Network bandwidth measuring tool (client)
+Homepage: https://git.ipfire.org/?p=fireperf.git
+Commands: fireperf
+Description-md5: d5d61637284a60c64aea408f79c46c96
+net
+Priority: optional
+Filename: pool/main/f/fireperf/fireperf-client_0.3.0+20261020-1_amd64.deb
+Size: 83060
+MD5sum: 60909b079d6da3029b40737fc47184b0
+SHA256: 295a2170a7c3cc214e3c1287096293f3ae9c3984407dc78966a0911c371306d7
+
+Package: fireperf-server
+Source: fireperf
+Version: 0.3.0+20261020-1
+Installed-Size: 18
+Maintainer: Daniel Baumann <daniel@debian.org>
+Architecture: amd64
+Depends: fireperf-client
+Description: Network bandwidth measuring tool (server)
+Homepage: https://git.ipfire.org/?p=fireperf.git
+Description-md5: 69408ae4c31552b9aca20b6a09c7af35
+net
+Priority: optional
+Filename: pool/main/f/fireperf/fireperf-server_0.3.0+20261020-1_amd64.deb
+Size: 3524
+MD5sum: 6a51398b67056cff565d7c2fc847d20f
+SHA256: a80dd4dd5bdd6cb9eb84d2ce2900c384dc14d97b26db27569b47cedd2e738076
 
 Package: firewalk
 Source: firewalk (5.0-6)
@@ -16158,8 +16212,8 @@ MD5sum: bce22095307f36667e3f8c9dbb2c4512
 SHA256: 3977d1efe3181e0bc6d857ec2adf955294318cd2e4768139d0ec81155292d572
 
 Package: monitoring-plugins
-Version: 2.4.0-5
-Installed-Size: 34
+Version: 3.0.3+ds-2
+Installed-Size: 38
 Maintainer: Debian Nagios Maintainer Group <pkg-nagios-devel@lists.alioth.debian.org>
 Architecture: all
 Provides: nagios-plugins
@@ -16171,20 +16225,20 @@ Description-md5: b40d74d84d0014181bbf82cd9cb4e665
 Tag: admin::monitoring, role::metapackage, role::program
 net
 Priority: optional
-Filename: pool/main/m/monitoring-plugins/monitoring-plugins_2.4.0-5_all.deb
-Size: 10960
-MD5sum: 22945004ff4f7ec8364c0bcaf2881dbe
-SHA256: faf01b22f7458285444dae020111093d50eaa2f179a44d9899d0f30a76474a12
+Filename: pool/main/m/monitoring-plugins/monitoring-plugins_3.0.3+ds-2_all.deb
+Size: 9904
+MD5sum: 53fd4686b3fba2c2bb6d8eb77893cfea
+SHA256: 40ac53fa62db3b7883ca7eb7db4c31a9345744b81aa54a5c38e044687df25c57
 
 Package: monitoring-plugins-basic
 Source: monitoring-plugins
-Version: 2.4.0-5
-Installed-Size: 1801
+Version: 3.0.3+ds-2
+Installed-Size: 2592
 Maintainer: Debian Nagios Maintainer Group <pkg-nagios-devel@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: monitoring-plugins-standard (<< 2.4.0-3~)
 Provides: nagios-plugins-basic
-Depends: iputils-ping, monitoring-plugins-common, procps, ucf, libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libssl3t64 (>= 3.0.0), libsystemd0, liburiparser1 (>= 0.6.0)
+Depends: iputils-ping, monitoring-plugins-common, procps, ucf, perl:any, libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libssl3t64 (>= 3.0.0), libsystemd0, liburiparser1 (>= 0.6.0)
 Recommends: libcap2-bin
 Suggests: icinga2
 Breaks: monitoring-plugins-standard (<< 2.4.0-3~)
@@ -16196,18 +16250,18 @@ Tag: admin::monitoring, devel::lang:perl, devel::library, implemented-in::c,
  role::plugin, role::program, use::monitor
 net
 Priority: optional
-Filename: pool/main/m/monitoring-plugins/monitoring-plugins-basic_2.4.0-5_amd64.deb
-Size: 289856
-MD5sum: a514aa549dc915f6a91469580cc4bf01
-SHA256: b42b8130067410a10615617fda84a7cd67e7a3eabba1bd51e6e1dbb4ff32804b
+Filename: pool/main/m/monitoring-plugins/monitoring-plugins-basic_3.0.3+ds-2_amd64.deb
+Size: 352100
+MD5sum: 7514615bab32ae55e5a1c1ec34491c7e
+SHA256: 2b22a1ec200f6f19a689ce20849eac73ca34e9777628423daba2010ab8447ab4
 
 Package: monitoring-plugins-common
 Source: monitoring-plugins
-Version: 2.4.0-5
-Installed-Size: 131
+Version: 3.0.3+ds-2
+Installed-Size: 147
 Maintainer: Debian Nagios Maintainer Group <pkg-nagios-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: ucf, libc6 (>= 2.38), libssl3t64 (>= 3.0.0)
+Depends: ucf, libc6 (>= 2.38)
 Suggests: icinga2
 Description: Common files for plugins for nagios compatible monitoring
 Homepage: https://www.monitoring-plugins.org
@@ -16215,20 +16269,20 @@ Description-md5: 47e82c7672ca4e789fe190e2cfb690cd
 Tag: admin::monitoring, role::app-data, role::program
 net
 Priority: optional
-Filename: pool/main/m/monitoring-plugins/monitoring-plugins-common_2.4.0-5_amd64.deb
-Size: 37964
-MD5sum: 2c2a30de7f082f6a970f02f2c0dde79f
-SHA256: 778f5b3c925bcb4b02a6f740c912978af1d0964dd7b7d64103b42e1d524561b0
+Filename: pool/main/m/monitoring-plugins/monitoring-plugins-common_3.0.3+ds-2_amd64.deb
+Size: 39296
+MD5sum: 89933de0001209cbfbc8e0965915e0bc
+SHA256: 3002d0317a7f5f64827374834a5cbc15f7627aba064f1fd93a00180218e24ac4
 
 Package: monitoring-plugins-standard
 Source: monitoring-plugins
-Version: 2.4.0-5
-Installed-Size: 861
+Version: 3.0.3+ds-2
+Installed-Size: 1317
 Maintainer: Debian Nagios Maintainer Group <pkg-nagios-devel@lists.alioth.debian.org>
 Architecture: amd64
 Provides: nagios-plugins-standard
-Depends: monitoring-plugins-basic, ucf, libc6 (>= 2.38), libssl3t64 (>= 3.0.0)
-Recommends: bind9-host | host, dnsutils, libnet-snmp-perl, rpcbind, smbclient, snmp, sudo, libdbi1t64 (>= 0.9.0), libldap2 (>= 2.6.2), libmariadb3 (>= 3.0.0), libpq5, libradcli4 (>= 1.2.11)
+Depends: monitoring-plugins-basic, ucf, perl:any, libc6 (>= 2.38)
+Recommends: bind9-host | host, dnsutils, libnet-snmp-perl, rpcbind, smbclient, snmp, sudo, libdbi1t64 (>= 0.9.0), libldap2 (>= 2.6.2), libmariadb3 (>= 3.0.0), libpq5, libradcli4 (>= 1.2.11), libsnmp45 (>= 5.9.5.2+dfsg), libssl3t64 (>= 3.0.0)
 Suggests: fping, icinga2, postfix | sendmail-bin | exim4-daemon-heavy | exim4-daemon-light, qstat
 Description: Plugins for nagios compatible monitoring systems (standard)
 Homepage: https://www.monitoring-plugins.org
@@ -16238,10 +16292,10 @@ Tag: admin::monitoring, devel::lang:perl, devel::library, implemented-in::c,
  role::plugin, role::program, use::monitor
 net
 Priority: optional
-Filename: pool/main/m/monitoring-plugins/monitoring-plugins-standard_2.4.0-5_amd64.deb
-Size: 140404
-MD5sum: a82f51339482629147ebaaa2cbb7cf06
-SHA256: 9582238afbed4e4a12c1832525adb348b0af5fbc3d35bbfd0cd98f27ff534d9f
+Filename: pool/main/m/monitoring-plugins/monitoring-plugins-standard_3.0.3+ds-2_amd64.deb
+Size: 189076
+MD5sum: 033a2364af94acda71ec70c56c83710e
+SHA256: 58f6b45906a10976cc20e6a0ce3e19c0032eda3770a49913e966c654eec6a8af
 
 Package: monitoring-plugins-check-logfiles
 Version: 4.2-1
@@ -18716,6 +18770,40 @@ Filename: pool/main/n/network-manager/network-manager-tui_1.58.1-1+b1_amd64.deb
 Size: 235172
 MD5sum: e6b3f9c9ef92b599814f0e99e1c0882c
 SHA256: b5fd3a8c985fd486707b5a7105647acfd865a648274c434f0031640f5ee26852
+
+Package: network-manager-iodine
+Version: 1.4.0-1
+Installed-Size: 256
+Maintainer: Guido Günther <agx@sigxcpu.org>
+Architecture: amd64
+Depends: iodine, systemd | systemd-standalone-sysusers | systemd-sysusers, libc6 (>= 2.34), libglib2.0-0t64 (>= 2.80.0), libnm0 (>= 1.2.0)
+Description: network management framework (iodine plugin core)
+Homepage: https://honk.sigxcpu.org/piki/projects/network-manager-iodine
+Description-md5: dd1714048188ebd239b1e29c4884c28e
+net
+Priority: optional
+Filename: pool/main/n/network-manager-iodine/network-manager-iodine_1.4.0-1_amd64.deb
+Size: 35136
+MD5sum: a0dee661ecceb4e3f64860ecc0db5e1b
+SHA256: 932226e30543680f2540e326fcb3fb10a97cc65fff6831ba45dc300c091de702
+
+Package: network-manager-iodine-gnome
+Source: network-manager-iodine
+Version: 1.4.0-1
+Installed-Size: 87
+Maintainer: Guido Günther <agx@sigxcpu.org>
+Architecture: amd64
+Depends: network-manager-iodine (= 1.4.0-1), libc6 (>= 2.34), libglib2.0-0t64 (>= 2.80.0), libgtk-4-1 (>= 4.0.0), libnm0 (>= 1.2.0), libnma-gtk4-0 (>= 1.8.34), libsecret-1-0 (>= 0.7)
+Description: network management framework (iodine plugin GNOME GUI)
+Homepage: https://honk.sigxcpu.org/piki/projects/network-manager-iodine
+Description-md5: 5d476395e006606467e3606eb9c333ef
+Tag: uitoolkit::gtk
+net
+Priority: optional
+Filename: pool/main/n/network-manager-iodine/network-manager-iodine-gnome_1.4.0-1_amd64.deb
+Size: 15008
+MD5sum: 3e34ae1847978c45cb0f9bdae26926bd
+SHA256: c1e36c82f20748f4a9e062d8141116f7851e3754c88f6eea9a4f21b605f5b94f
 
 Package: network-manager-l2tp
 Source: network-manager-l2tp (1.52.6-1)
@@ -25434,8 +25522,8 @@ MD5sum: 3a6e9c08ae5f70e7088392d843b2f271
 SHA256: bbb6ad090f76762257a7737561e25d19611a8ab848dc2a517baa7837f71ac33f
 
 Package: prometheus-pgbackrest-exporter
-Version: 0.23.0+ds1-1
-Installed-Size: 12292
+Version: 0.25.0+ds1-1
+Installed-Size: 12980
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
 Architecture: amd64
 Depends: postgresql-common, libc6 (>= 2.34)
@@ -25443,13 +25531,13 @@ Enhances: pgbackrest
 Description: Prometheus exporter for pgBackRest (program)
 Homepage: https://github.com/woblerr/pgbackrest_exporter
 Description-md5: def90a2320a7d6b5d297bf71c2eaa9ab
-Static-Built-Using: golang-1.26 (= 1.26.1-1), golang-github-alecthomas-units (= 0.0~git20240927.0f3dac3-1), golang-github-beorn7-perks (= 1.0.1-3), golang-github-cespare-xxhash (= 2.3.0-1), golang-github-coreos-go-systemd (= 22.6.0-1), golang-github-go-kit-log (= 0.2.1-1), golang-github-go-logfmt-logfmt (= 0.5.0-2), golang-github-golang-jwt-jwt-v5 (= 5.3.1-1), golang-github-google-uuid (= 1.6.0-1), golang-github-jpillora-backoff (= 1.0.0-1.1), golang-github-mdlayher-socket (= 0.5.1-1), golang-github-mdlayher-vsock (= 1.2.1-2), golang-github-munnerz-goautoneg (= 0.0~git20191010.a7dc8b6-2), golang-github-mwitkow-go-conntrack (= 0.0~git20190716.2f06839-4), golang-github-prometheus-client-golang (= 1.23.2-2), golang-github-prometheus-client-model (= 0.6.2-1), golang-github-prometheus-common (= 0.67.4-1), golang-github-prometheus-exporter-toolkit (= 0.15.0-1), golang-github-prometheus-procfs (= 0.19.2-1), golang-go.crypto (= 1:0.47.0-1), golang-golang-x-net (= 1:0.27.0-2), golang-golang-x-oauth2 (= 0.27.0-1), golang-golang-x-sync (= 0.19.0-1), golang-golang-x-sys (= 0.38.0-1), golang-golang-x-text (= 0.31.0-1), golang-golang-x-time (= 0.14.0-1), golang-google-protobuf (= 1.36.7-1), golang-gopkg-alecthomas-kingpin.v2 (= 2.2.6-4), golang-yaml.v2 (= 2.4.3-1)
+Static-Built-Using: golang-1.27 (= 1.27.4-1), golang-github-alecthomas-units (= 0.0~git20240927.0f3dac3-2), golang-github-beorn7-perks (= 1.0.1-3), golang-github-cespare-xxhash-v2 (= 2.3.0-4), golang-github-coreos-go-systemd (= 22.6.0-1), golang-github-go-kit-log (= 0.2.1-2), golang-github-go-logfmt-logfmt (= 0.5.0-2), golang-github-golang-jwt-jwt-v5 (= 5.3.1-1), golang-github-google-uuid (= 1.6.0-1), golang-github-jpillora-backoff (= 1.0.0-1.1), golang-github-mdlayher-socket (= 0.8.0-1), golang-github-mdlayher-vsock (= 1.4.0-1), golang-github-munnerz-goautoneg (= 0.0~git20191010.a7dc8b6-2), golang-github-mwitkow-go-conntrack (= 0.0~git20190716.2f06839-4), golang-github-prometheus-client-golang (= 1.23.2-5), golang-github-prometheus-client-model (= 0.6.2-2), golang-github-prometheus-common (= 0.69.0-1), golang-github-prometheus-exporter-toolkit (= 0.17.1-1), golang-github-prometheus-procfs (= 0.21.1-1), golang-github-xhit-go-str2duration (= 2.1.0-2), golang-go.crypto (= 1:0.58.0-1), golang-golang-x-net (= 1:0.62.0-1), golang-golang-x-oauth2 (= 0.38.0-1), golang-golang-x-sync (= 0.25.0-1), golang-golang-x-sys (= 0.50.0+dfsg-1), golang-golang-x-text (= 0.44.0-1), golang-golang-x-time (= 0.16.0-1), golang-google-protobuf (= 1.36.10-2), golang-gopkg-alecthomas-kingpin.v2 (= 2.4.0-1), golang-yaml.v2 (= 2.4.4-1)
 net
 Priority: optional
-Filename: pool/main/p/prometheus-pgbackrest-exporter/prometheus-pgbackrest-exporter_0.23.0+ds1-1_amd64.deb
-Size: 3719028
-MD5sum: ba4d7c2521da049abc1684efa5405203
-SHA256: bd7683b6255b05c274910b2eb13d62827085f742b355a232f1a5ff946bfe4bbc
+Filename: pool/main/p/prometheus-pgbackrest-exporter/prometheus-pgbackrest-exporter_0.25.0+ds1-1_amd64.deb
+Size: 3962176
+MD5sum: 8f2e08bfa5f70e487d2e8e6ce3dd59da
+SHA256: 6eea4462b284bea12310149763e90d52e737d5e6096e4487fa3f19a40b3fa812
 
 Package: prometheus-pgbouncer-exporter
 Version: 1:0.12.0-1
@@ -26612,7 +26700,7 @@ MD5sum: 35bd0b0e37545307d33664a11a00f66a
 SHA256: 1226ce4b01773d1724c433607113c1a54a43a5bde52500e15d6cc5b85b042446
 
 Package: radsecproxy
-Version: 1.11.4-1
+Version: 1.11.5-1
 Installed-Size: 339
 Maintainer: Sven Hartge <sven@svenhartge.de>
 Architecture: amd64
@@ -26625,10 +26713,10 @@ Description-md5: 29c8b16ab5ef6fbfc97624ba02df3402
 Tag: protocol::radius, role::program, use::proxying
 net
 Priority: optional
-Filename: pool/main/r/radsecproxy/radsecproxy_1.11.4-1_amd64.deb
-Size: 124496
-MD5sum: 68057b315001ade775684e12358fdca5
-SHA256: 2c5850d886e7f8ec531671bd467141cfd19ed796e5ea0733de3064003b338ca6
+Filename: pool/main/r/radsecproxy/radsecproxy_1.11.5-1_amd64.deb
+Size: 124848
+MD5sum: 7b2a7c5036f5929aeaf61fecdc095243
+SHA256: ecd487418d75d3b3bb0a5938875bc3e95417d2c3da602ff084e3a0ab553cd1c1
 
 Package: radvd
 Source: radvd (1:2.20-1)
