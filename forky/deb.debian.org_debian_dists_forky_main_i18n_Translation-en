@@ -50818,6 +50818,27 @@ Description-en: extremely efficient phylogenetic tree reconstruction
  for Bioinformatics and Evolutionary Studies (IBEST) at the University of
  Idaho.
 
+Package: clearsilver-dev
+Description-md5: f4cf156c070f7222d1b2c8c25d352567
+Description-en: headers and static library for clearsilver
+ Clearsilver is a fast, powerful, and language-neutral HTML template system.
+ In both static content sites and dynamic HTML applications, it
+ provides a separation between presentation code and application logic which
+ makes working with your project easier.
+ .
+ This package contains the C headers, the static library and the cstest binary
+ for developers.
+
+Package: libclearsilver-perl
+Description-md5: be59004dd0fdccb51b297f6ec4089169
+Description-en: Perl bindings for clearsilver
+ Clearsilver is a fast, powerful, and language-neutral HTML template system.
+ In both static content sites and dynamic HTML applications, it
+ provides a separation between presentation code and application logic which
+ makes working with your project easier.
+ .
+ This package contains the perl package ClearSilver.
+
 Package: clementine
 Description-md5: e194c11c413c82b36dbde39650ae34e9
 Description-en: modern music player and library organizer
@@ -68001,7 +68022,7 @@ Description-en: Versions and version constraints implementing pub's versioning p
  very similar to vanilla semver, with a few corner cases.
 
 Package: dart-sass
-Description-md5: 43a883f3fa05932d50e943e99bdbbbcb
+Description-md5: e898ce866a7a2149b012c871a1859497
 Description-en: Dart implementation of Sass (native compiler)
  Sass is a stylesheet language that is compiled to CSS.  It allows one to
  use variables, nested rules, mixins, functions and more, all with a fully
@@ -68012,22 +68033,45 @@ Description-en: Dart implementation of Sass (native compiler)
  native executable, installed as /usr/bin/dart-sass.  It needs neither the
  Dart SDK nor Node.js at run time.
  .
- The generic command name /usr/bin/sass and its manual page are provided as
- symlinks, and the virtual package "sass" is provided as well.  ruby-sass
- 3.7.4-7 and later ship no command line tool, so no other package claims
- those names; see README.Debian.
+ This package exists only on the architectures the Dart SDK is ported to
+ (amd64, arm64, armhf, riscv64).  The arch:all package sass provides the
+ generic command name /usr/bin/sass on top of it.
 
 Package: node-sass
-Description-md5: 45aee35f02631957c298614affc6582a
-Description-en: Dart implementation of Sass (JavaScript library for Node.js)
+Description-md5: 843b1c3fdf46678c049243af11b92c64
+Description-en: Dart implementation of Sass (JavaScript build for Node.js)
  Sass is a stylesheet language that is compiled to CSS.  It allows one to
  use variables, nested rules, mixins, functions and more, all with a fully
  CSS-compatible syntax.
  .
- This package contains the dart2js build of Dart Sass as a Node.js module,
+ This package contains the dart2js build of Dart Sass: the Node.js module,
  installed as "sass" under /usr/share/nodejs for use by JavaScript tooling
- such as webpack's sass-loader.  The command line compiler is shipped
- separately as dart-sass, so this package needs no Node.js binary shims.
+ such as webpack's sass-loader, and the command line compiler,
+ /usr/share/nodejs/sass/sass.js, which the arch:all package sass runs on the
+ architectures where the native compiler cannot be built.
+ .
+ Both builds are compiled from the same Dart sources and accept the same
+ options.  The one feature only the native build has is the --embedded
+ protocol; sass --version also says which build it is.
+
+Package: sass
+Description-md5: b418eaab4a59fc17c7e20c2f278ea697
+Description-en: command line Sass compiler
+ Sass is a stylesheet language that is compiled to CSS.  It allows one to
+ use variables, nested rules, mixins, functions and more, all with a fully
+ CSS-compatible syntax.
+ .
+ This package provides the generic command name /usr/bin/sass and its manual
+ page.  The compiler behind it is one of the two builds of Dart Sass, the
+ reference implementation of the language: dart-sass, a self-contained native
+ executable, or node-sass, the dart2js build that runs on Node.js.  The
+ wrapper runs the native compiler when it is installed and the JavaScript
+ build otherwise.
+ .
+ The native build exists only on the architectures the Dart SDK is ported to
+ (amd64, arm64, armhf, riscv64).  On the others this package pulls in
+ node-sass, so the command works everywhere at the cost of a Node.js
+ dependency and some speed.  See README.Debian.
 
 Package: dart-kernel-compiler
 Description-md5: 985e006eb90dd911ca30e657a2c09937
@@ -166749,30 +166793,6 @@ Description-en: meta-build system for ninja
  originally, part of the Chromium source tree, and has since been
  extracted into its own standalone repo.
 
-Package: generator-scripting-language
-Description-md5: 5a179059900204995bfc9ec6467ff829
-Description-en: Generator Scripting Language code generator
- GSL/4.1 is a code construction tool.  It will generate code in all
- languages and for all purposes.  If this sounds too good to be true,
- welcome to 1996, when we invented these techniques.  Magic is simply
- technology that is twenty years ahead of its time. In addition to
- code construction, GSL has been used to generate database schema
- definitions, user interfaces, reports, system administration tools
- and much more.
-
-Package: generator-scripting-language-examples
-Description-md5: 7ef0b275b5917668f88f21def15261fc
-Description-en: Examples for the Generator Scripting Language code generator
- GSL/4.1 is a code construction tool.  It will generate code in all
- languages and for all purposes.  If this sounds too good to be true,
- welcome to 1996, when we invented these techniques.  Magic is simply
- technology that is twenty years ahead of its time. In addition to
- code construction, GSL has been used to generate database schema
- definitions, user interfaces, reports, system administration tools
- and much more.
- .
- This package contains examples to get started with gsl.
-
 Package: libgeners-dev
 Description-md5: 1d2e692998c9d512716d749435757ef2
 Description-en: generic serialization library for C++ (development package)
@@ -171844,7 +171864,7 @@ Description-en: Lightweight scientific plotting library (development files)
  .
  This package contains the development files.
 
-Package: libcpgplot0
+Package: libcpgplot2
 Description-md5: d641ec08761518baca1c80faea1683f6
 Description-en: CPGPLOT replacement shared lib based on giza
  Giza is a lightweight scientific plotting library built on top of cairo that
@@ -171853,7 +171873,7 @@ Description-en: CPGPLOT replacement shared lib based on giza
  .
  This package provides a free replacement for the CPGPLOT shared lib.
 
-Package: libgiza0
+Package: libgiza2
 Description-md5: 26336d1a829393c58994ed28fa9acfbd
 Description-en: Lightweight scientific plotting library (shared library)
  Giza is a lightweight scientific plotting library built on top of cairo that
@@ -171862,7 +171882,7 @@ Description-en: Lightweight scientific plotting library (shared library)
  .
  This package contains the shared library.
 
-Package: libpgplot0
+Package: libpgplot2
 Description-md5: f1cb3323ff5ab1ee705431ac5eb3ce25
 Description-en: PGPLOT replacement shared lib based on giza
  Giza is a lightweight scientific plotting library built on top of cairo that
@@ -185454,14 +185474,6 @@ Description-en: API Handler Testing for Golang Web framework
   - HttpRouter
   - Pat
   - beego
-
-Package: golang-github-approvals-go-approval-tests-dev
-Description-md5: 77cd229526a33048fa5bcf398e94f4dd
-Description-en: ApprovalTests for go
- Golden master Verification Library.
- .
- ApprovalTests allows for easy testing of larger objects, strings and
- anything else that can be saved to a file(images, sounds, csv, etc.)
 
 Package: golang-github-apptainer-container-key-client-dev
 Description-md5: 5f800949bafa405f38a26733a0600cd9
@@ -273588,6 +273600,77 @@ Description-en: IEM's spatialization suite - VST3 plugins
  .
  This package provides the plugins so they can be used by VST3 hosts.
 
+Package: ifcopenshell
+Description-md5: 79fae1e43aae79968093ff7977eace4e
+Description-en: Library for working with Industry Foundation Classes (IFC) data
+ Complete parsing support is provided for IFC2x3 TC1, IFC4 Add2 TC1, IFC4x1,
+ IFC4x2, and IFC4x3 Add2. Extensive geometric support is implemented for the
+ IFC releases IFC2x3 TC1 and IFC4 Add2 TC1. Extending with support for arbitrary
+ IFC schemas is possible at compile-time when using C++ and at run-time when
+ using Python.
+ .
+ Main package with binaries.
+
+Package: libifcopenshell-dev
+Description-md5: e7bfeccc47f6b88d6f59f229aec0ff50
+Description-en: Library for working with Industry Foundation Classes (IFC) data
+ Complete parsing support is provided for IFC2x3 TC1, IFC4 Add2 TC1, IFC4x1,
+ IFC4x2, and IFC4x3 Add2. Extensive geometric support is implemented for the
+ IFC releases IFC2x3 TC1 and IFC4 Add2 TC1. Extending with support for arbitrary
+ IFC schemas is possible at compile-time when using C++ and at run-time when
+ using Python.
+ .
+ Development files for the ifcopenshell library.
+
+Package: libifcopenshell0.9
+Description-md5: 48b2a2f8985c3c3ed0defbe450c3240a
+Description-en: Library for working with Industry Foundation Classes (IFC) data
+ Complete parsing support is provided for IFC2x3 TC1, IFC4 Add2 TC1, IFC4x1,
+ IFC4x2, and IFC4x3 Add2. Extensive geometric support is implemented for the
+ IFC releases IFC2x3 TC1 and IFC4 Add2 TC1. Extending with support for arbitrary
+ IFC schemas is possible at compile-time when using C++ and at run-time when
+ using Python.
+ .
+ Shared library for the ifcopenshell library.
+
+Package: python3-ifcopenshell
+Description-md5: c8027b29e935b6679488935bee3e4a50
+Description-en: Library for working with Industry Foundation Classes (IFC) data
+ Complete parsing support is provided for IFC2x3 TC1, IFC4 Add2 TC1, IFC4x1,
+ IFC4x2, and IFC4x3 Add2. Extensive geometric support is implemented for the
+ IFC releases IFC2x3 TC1 and IFC4 Add2 TC1. Extending with support for arbitrary
+ IFC schemas is possible at compile-time when using C++ and at run-time when
+ using Python.
+ .
+ Python bindings for the ifcopenshell library.
+
+Package: ifeffit
+Description-md5: 910f116c8e14fa8d361b031b45896347
+Description-en: Interactive XAFS analysis program
+ IFEFFIT is an interactive program for XAFS analysis. It combines the
+ high-quality analysis algorithms of AUTOBK and FEFFIT with graphical display
+ of XAFS data and general data manipulation.
+ .
+ IFEFFIT comes as a command-line program, but the underlying functionality is
+ available as a programming library. The IFEFFIT library can be used from C,
+ Fortran, Tcl, and Perl.
+
+Package: ifeffit-doc
+Description-md5: 23588aa725d1361238e782379bbed9bc
+Description-en: IFEFFIT examples and documentation
+ This package contains all the available documentation for IFEFFIT and
+ its component programs.  Example files for EXAFS data analysis are also
+ provided as tutorials.
+
+Package: libifeffit-perl
+Description-md5: e6edcbfcf9214ca2748ec5d9024356e5
+Description-en: Perl extensions for IFEFFIT
+ IFEFFIT is an interactive program for XAFS analysis. It combines the
+ high-quality analysis algorithms of AUTOBK and FEFFIT with graphical display
+ of XAFS data and general data manipulation.
+ .
+ This package provides an interface to IFEFFIT from Perl.
+
 Package: ifenslave
 Description-md5: c263566b05a180a13996b83ed18ae543
 Description-en: configure network interfaces for parallel routing (bonding)
@@ -297807,22 +297890,6 @@ Description-en: set of QtQuick components targeted for mobile use - platform
  Android and Windows.
  .
  This package contains the kirigami platform library.
-
-Package: libkirigamipolyfill6
-Description-md5: 5beff170bed7978c168df5aaf061ab8b
-Description-en: set of QtQuick components targeted for mobile use - polyfill
- Kirigami is a set of QtQuick components at the moment targeted for
- mobile use (in the future desktop as well) targeting both Plasma
- Mobile and Android. A set of high level components to make the
- creation of applications that look and feel great on mobile as well
- as desktop devices and follow the Kirigami Human Interface
- Guidelines. The target of these components is anybody that wants to
- do an application using QtQuick as its main UI, especially if
- targeting a mobile platform, without adding many dependencies. They
- work on a variety of platforms, such as Plasma Mobile, Desktop Linux,
- Android and Windows.
- .
- This package contains the kirigami polyfill library.
 
 Package: libkirigamiprimitives6
 Description-md5: 6212f13f9fd24063f9daf66570894526
@@ -376857,6 +376924,14 @@ Description-en: Perl module to create detached PGP signatures
  temporary files are required for signature generation (but are for
  signature verification).
 
+Package: libpgplot-perl
+Description-md5: 0bcad72bb03a82fdbdd15f1eaf307200
+Description-en: perl interface to the pgplot plotting library
+ The PGPLOT module provides a perl interface to the pgplot libraries used for
+ plotting and visualizing scientific data. It is particularly popular for
+ plotting astronomical data. Compared to using pgplot from C or FORTRAN,
+ these Perl bindings allow for a faster, more interactive development.
+
 Package: libphdi-dev
 Description-md5: aa150d144492fb40d20acc9684c2919c
 Description-en: Parallels Hard Disk image (PHDI) format access library -- development files
@@ -387556,6 +387631,22 @@ Description-en: parsers and format conversion utilities used by (e.g.) profphd
   * RG:Utils::Conv_hssp2saf
   * RG:Utils::Copf
   * RG:Utils::Hssp_filter
+
+Package: dh-rime
+Description-md5: 483277b2cf9199f8adc0723724e1ebda
+Description-en: Rime Input Method Engine - debhelper support
+ RIME is the acronym of Rime Input Method Engine.
+ .
+ RIME is a lightweight, extensible input method engine supporting various input
+ schematas including glyph-based input methods, romanization-based input methods
+ as well as those for Chinese dialects. It has the ability to compose phrases
+ and sentences intelligently and provide very accurate traditional Chinese
+ output. RIME's cross-platform core library is written in C++, and can work
+ consistently on different platforms with OS-specific wrappers.
+ .
+ This package provides a debhelper buildsystem and sequence for compiling
+ Rime schemas and dictionaries. Generated files are written to a separate
+ build directory and installed using the package's existing dh_install files.
 
 Package: librime-bin
 Description-md5: 670bc074a8b52a9a9d489d4814a250b2
@@ -422978,6 +423069,19 @@ Description-en: Lomiri Transfer Indicator - Buteo plugin
  This package provides a plugin for Lomiri Indicator Transfer informing about
  transfer activities of the Buteo Sync Framework daemon.
 
+Package: lomiri-keepassrx-app
+Description-md5: 5954e177cf0af5c4cc5571dffd35a7ff
+Description-en: Password manager compatible with KeePass for Lomiri
+ KeePassRX is a password manager compatible with KeePass (.kdbx / .kdb)
+ databases. Read-only access to entries, groups, TOTP/Steam codes, key
+ files and attachments.
+ .
+ This app is built for Ubuntu Touch's shell Lomiri. Ubuntu Touch is
+ a mobile OS developed by the UBports Foundation. Lomiri is its operating
+ environment optimized for touch based human-machine interaction, but
+ also supports convergence (i.e. switching between tablet/phone and
+ desktop mode).
+
 Package: lomiri-keyboard
 Description-md5: 8e6bf90311b4e89e0b83a27c25a84bb7
 Description-en: Lomiri on-screen keyboard
@@ -447910,26 +448014,6 @@ Description-en: Apache2 module to get MIME info from filesystem extended attribu
   - user.mime_encoding: set the MIME encoding of a file (e.g. gzip).
   - user.apache_handler: set the apache handler of a file explicitly.
 
-Package: libapache2-mod-qos
-Description-md5: 400a8d30ea4ebdb2cc235b07fd997909
-Description-en: quality of service module for the apache2
- This is a quality of service module (QoS) for the Apache web server
- implementing control mechanisms that can provide different priority
- to different HTTP requests.
- .
- It may be used to determine which requests should be served and which
- shouldn't in order to avoid resource oversubscription. The module
- collects different attributes such as the request URL, HTTP request
- and response headers, the IP source address, the HTTP response code,
- history data (user session and on per source IP address basis), the
- number of concurrent requests to the server (total or requests having
- similar attributes), the number of concurrent TCP connections (total
- or from a single source IP), and so forth.
- .
- Counteractive measures to enforce the defined rules are: request
- blocking, dynamic timeout adjustment, request delay, response
- throttling, and dropping of TCP connections.
-
 Package: libapache2-mod-vhost-ldap
 Description-md5: be61ef3709d6e9442e1c42b2b2bcc1e4
 Description-en: Apache 2 module for Virtual Hosting from LDAP
@@ -462349,6 +462433,17 @@ Description-en: Java NIO client/server socket framework
  development of network applications such as protocol servers and clients.
  It greatly simplifies and streamlines network programming such as TCP and UDP
  socket server.
+
+Package: libnetty-jni-util-dev
+Description-md5: ea6ea466917de03efe0e9b15ec2efd12
+Description-en: Helper functions for the JNI code of Netty
+ Netty is an asynchronous event-driven network application framework for
+ rapid development of maintainable high performance protocol servers and
+ clients.
+ .
+ netty-jni-util provides the helper functions used by Netty and its
+ subprojects that use JNI. They are distributed as C sources to be compiled
+ into the JNI libraries using them.
 
 Package: libnetty-reactive-streams-java
 Description-md5: d1ddacef426c94c6118c08ef7d6bc188
@@ -509979,7 +510074,7 @@ Description-en: Transitional package
  This is a transitional dummy package. It can safely be removed once
  no other packages depend on it.
 
-Package: liborthancframework1.13.0
+Package: liborthancframework1.13.1
 Description-md5: 392aa2993031dd44d8b8826b01ed8365
 Description-en: Orthanc Framework library
  The Orthanc Framework is a shared library publishing C++ classes
@@ -545845,6 +545940,17 @@ Description-en: Puppet module for PowerDNS
  split into several files and put in /etc/powerdns/pdns.d. This makes it easy
  to read which bits of the configuration are currently modified.
 
+Package: puppet-module-aodh
+Description-md5: 2943c81e0d0b42481c94f33e88620f00
+Description-en: Puppet module for OpenStack Aodh
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ This module manages both the installation and configuration of OpenStack
+ Aodh.
+
 Package: puppet-module-arioch-redis
 Description-md5: 824c1585eabf07c984f2b33937ab473c
 Description-en: Puppet module for Redis
@@ -545854,6 +545960,17 @@ Description-en: Puppet module for Redis
  along with obviously discrete elements like packages, services, and files.
  .
  This module manages both the installation and configuration of Redis.
+
+Package: puppet-module-barbican
+Description-md5: 2aceff52446ab0b79a3eb19262de4aab
+Description-en: Puppet module for OpenStack Barbican
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ This module manages both the installation and configuration of OpenStack
+ Barbican.
 
 Package: puppet-module-camptocamp-augeas
 Description-md5: cbe183acf91b2a0b185be07a0e05567e
@@ -545909,6 +546026,39 @@ Description-en: Puppet module for Systemd configuration
  .
  This module manages both the installation and configuration of Systemd.
 
+Package: puppet-module-ceilometer
+Description-md5: 253bf13574e6265a76d20ce5c81e242a
+Description-en: Puppet module for OpenStack Ceilometer
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ This module manages both the installation and configuration of OpenStack
+ Ceilometer.
+
+Package: puppet-module-ceph
+Description-md5: d014bf895829f0375de37c9871ef83ad
+Description-en: Puppet module for Ceph
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ This module manages both the installation and configuration of the Ceph
+ distributed storage system.
+
+Package: puppet-module-cinder
+Description-md5: d6a88eed3817ba29f511d7a256f1d0ef
+Description-en: Puppet module for OpenStack Cinder
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ This module manages both the installation and configuration of OpenStack
+ Cinder.
+
 Package: puppet-module-cirrax-gitolite
 Description-md5: 30756384a038cf31a7640740dbcaf87b
 Description-en: puppet module to configure gitolite
@@ -545916,6 +546066,17 @@ Description-en: puppet module to configure gitolite
  by gitolite.
  .
  It should be used together with puppet.
+
+Package: puppet-module-cloudkitty
+Description-md5: 4c347c51fbc7e158a75a54fa9841bb44
+Description-en: Puppet module for OpenStack CloudKitty
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ This module manages both the installation and configuration of OpenStack
+ CloudKitty rating engine.
 
 Package: puppet-module-cristifalcas-etcd
 Description-md5: f57504726d799cab7c2305335e8debb4
@@ -545928,6 +546089,17 @@ Description-en: Puppet resource for managing an Etcd cluster
  This Puppet module provides all what's needed to setup an Etcd cluster,
  including resources like etcd keys and such.
 
+Package: puppet-module-debian-archvsync
+Description-md5: 16e125f3ea80a4549df307272374a1f0
+Description-en: Puppet module for maintaining a Debian FTP mirror
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ This module manages both the installation and configuration of a Debian mirror
+ using the ftpsync method.
+
 Package: puppet-module-deric-zookeeper
 Description-md5: 31358e67ea2f7f8565aa29aa29c63f8a
 Description-en: Puppet module for Zookeeper
@@ -545937,6 +546109,17 @@ Description-en: Puppet module for Zookeeper
  along with obviously discrete elements like packages, services, and files.
  .
  This module manages both the installation and configuration of Zookeeper.
+
+Package: puppet-module-designate
+Description-md5: f3e49edbea169540ad7bb0c6d19cad92
+Description-en: Puppet module for OpenStack Designate
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ This module manages both the installation and configuration of OpenStack
+ Designate.
 
 Package: puppet-module-duritong-sysctl
 Description-md5: f173606fb508012210c41af53ef308a6
@@ -545949,6 +546132,17 @@ Description-en: Puppet module for Duriting-sysctl
  This module manages both the installation and configuration of OpenStack
  Duriting-sysctl.
 
+Package: puppet-module-etcddiscovery
+Description-md5: 96f329319b477ea5d404c4f9591a2ecf
+Description-en: Puppet module for Etcd-discovery service
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ This module manages both the installation and configuration of OpenStack
+ Etcd-discovery.
+
 Package: puppet-module-extlib
 Description-md5: 2675f9224cf27f032537b225c7eb0412
 Description-en: Puppet module for Extlib
@@ -545959,6 +546153,39 @@ Description-en: Puppet module for Extlib
  .
  This module contains extlib: functions and facts that are out of scope for
  stdlib. Some of them are even intrinsically tied to stdlib..
+
+Package: puppet-module-gnocchi
+Description-md5: e9de2d2275cb19c4d25c6acde46cd33f
+Description-en: Puppet module for OpenStack Gnocchi
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ This module manages both the installation and configuration of OpenStack
+ Gnocchi.
+
+Package: puppet-module-heat
+Description-md5: d2bf527f41f98b73398a67486d9bcdf9
+Description-en: Puppet module for OpenStack Heat
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ This module manages both the installation and configuration of OpenStack
+ Heat.
+
+Package: puppet-module-horizon
+Description-md5: 825fdb2a9e79c01f52cf706f25bdb17d
+Description-en: Puppet module for OpenStack Horizon
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ This module manages both the installation and configuration of OpenStack
+ Horizon.
 
 Package: puppet-module-icann-quagga
 Description-md5: 57aa9d95448ba5c804b5a535b84a03a1
@@ -546006,6 +546233,60 @@ Description-en: Puppet module for Joshuabaird IPAclient
  This module used to be known as stbenjam/puppet-ipaclient, but is now being
  maintained at joshuabaird/puppet-ipaclient.
 
+Package: puppet-module-keystone
+Description-md5: e78efe455bd513060e6e853e4ca90351
+Description-en: Puppet module for OpenStack Keystone
+ Puppet lets you centrally manage every important aspect of your system
+ using a cross-platform specification language that manages all the
+ separate elements normally aggregated in different files, like users,
+ cron jobs, and hosts, along with obviously discrete elements like
+ packages, services, and files.
+ .
+ This module manages both the installation and configuration of OpenStack
+ Keystone.
+
+Package: puppet-module-magnum
+Description-md5: 76c6faba58274f8e1c9e9f57ff5de322
+Description-en: Puppet module for OpenStack Magnum
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ This module manages both the installation and configuration of OpenStack
+ Magnum.
+ .
+ Magnum is an OpenStack project which offers container orchestration engines
+ for deploying and managing containers as first class resources in OpenStack.
+ It features:
+  * Abstractions for bays, containers, nodes, pods, replication controllers,
+    and services
+  * Integration with Kubernetes and Docker for backend container technology
+  * Integration with Keystone for multi-tenant security
+  * Integration with Neutron for Kubernetes multi-tenancy network security
+
+Package: puppet-module-mistral
+Description-md5: 5c3d756f769977e74bf224cc018d9892
+Description-en: Puppet module for OpenStack Mistral
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ This module manages both the installation and configuration of OpenStack
+ Mistral.
+
+Package: puppet-module-murano
+Description-md5: dcefd365bb36ac64ee58e42d19172698
+Description-en: Puppet module for OpenStack Murano
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ This module manages both the installation and configuration of OpenStack
+ Murano.
+
 Package: puppet-module-nanliu-staging
 Description-md5: fbeb111ee6e1f532a321efd2f3d685b5
 Description-en: Puppet module for the management of staging directory
@@ -546016,6 +546297,17 @@ Description-en: Puppet module for the management of staging directory
  .
  This module manages staging directory, along with download/extraction of
  compressed files.
+
+Package: puppet-module-neutron
+Description-md5: d819ec6e5c1f1c939159a1a1ee693176
+Description-en: Puppet module for OpenStack Neutron
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ This module manages both the installation and configuration of OpenStack
+ Neutron.
 
 Package: puppet-module-openstack-extras
 Description-md5: 9f41da9dda9c7010ef132122ca605526
@@ -546028,6 +546320,48 @@ Description-en: add useful utilities for composing and deploying OpenStack
  This module is used to add useful utilities for composing and deploying
  OpenStack.
 
+Package: puppet-module-openstacklib
+Description-md5: c5a57340e7d8868d6198ed66921de8a5
+Description-en: exposes common functionality between Openstack modules as a library
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ This module is used to expose common functionality between Openstack modules as
+ a library that can be utilized to avoid code duplication.
+
+Package: puppet-module-oslo
+Description-md5: 8bb458e37b2bfa1c6244105a6e2d51d0
+Description-en: Puppet module for OpenStack oslo lib using components
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ This module manages the configuration of components using OpenStack Oslo.
+
+Package: puppet-module-ovn
+Description-md5: 8f678dbb7012b93546a90f4aef7f1718
+Description-en: Puppet module for OpenStack OVN
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ This module manages both the installation and configuration of OpenStack OVN.
+
+Package: puppet-module-panko
+Description-md5: c44dce9ee464eaffa5e46b15d272ea58
+Description-en: Puppet module for OpenStack Panko
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ This module manages both the installation and configuration of OpenStack
+ Panko.
+
 Package: puppet-module-pcfens-filebeat
 Description-md5: 0eee0b38e00f6dde712878ed3b6bfbaa
 Description-en: Puppet module for Filebeat configuration
@@ -546037,6 +546371,21 @@ Description-en: Puppet module for Filebeat configuration
  along with obviously discrete elements like packages, services, and files.
  .
  This module manages both the installation and configuration of Filebeat.
+
+Package: puppet-module-placement
+Description-md5: 219997f1e040b0f2af8ad95fac6c2b5b
+Description-en: Puppet module for OpenStack Placement
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ This module manages both the installation and configuration of OpenStack
+ Placement.
+ .
+ OpenStack Placement provides an HTTP service for managing, selecting, and
+ claiming providers of classes of inventory representing available resources
+ in a cloud.
 
 Package: puppet-module-puppet
 Description-md5: 1689d7445d62333ccbfbe5dc842b82d2
@@ -546060,6 +546409,19 @@ Description-en: Puppet module for mcollective to handle and install clusters
  The mcollective module handles installing and configuring mcollective across a
  range of operating systems and distributions. Where possible it follows the
  standards laid down by the MCollective Standard Deployment guide.
+
+Package: puppet-module-puppetlabs-apache
+Description-md5: d15a341c464bf412ec814a85026fce80
+Description-en: Puppet module for Apache
+ Puppet lets you centrally manage every important aspect of your system
+ using a cross-platform specification language that manages all the
+ separate elements normally aggregated in different files, like users,
+ cron jobs, and hosts, along with obviously discrete elements like
+ packages, services, and files.
+ .
+ This module includes the ability to configure and manage a range of
+ different virtual host setups, as well as a streamlined way to install
+ and configure Apache modules.
 
 Package: puppet-module-puppetlabs-apt
 Description-md5: ebcb57394212327967648cd00c1f5f85
@@ -546243,6 +546605,18 @@ Description-en: Puppet module for ntp
  .
  The ntp module installs, configures, and manages the ntp service.
 
+Package: puppet-module-puppetlabs-postgresql
+Description-md5: 50f54cb7eaef5c576e8367361ff09127
+Description-en: Puppet module for PostgreSQL database
+ Puppet lets you centrally manage every important aspect of your system
+ using a cross-platform specification language that manages all the
+ separate elements normally aggregated in different files, like users,
+ cron jobs, and hosts, along with obviously discrete elements like
+ packages, services, and files.
+ .
+ The PostgreSQL module allows you to easily manage postgres databases
+ with Puppet.
+
 Package: puppet-module-puppetlabs-rabbitmq
 Description-md5: 69ed5c695c35cadfb952cf1f5c5155f4
 Description-en: Puppet module for rabbitmq, manage everything from vhosts to exchanges
@@ -546315,6 +546689,23 @@ Description-en: use Puppet to easily deploy content from your version control sy
  .
  The vcsrepo module lets you use Puppet to easily deploy content from your
  version control system (VCS).
+
+Package: puppet-module-rally
+Description-md5: f058bc21e8948fa0da563acf3c3c44c2
+Description-en: Puppet module for OpenStack Rally
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ Rally is a Benchmark-as-a-Service project for OpenStack.
+ .
+ Rally is intended to provide the community with a benchmarking tool that is
+ capable of performing specific, complicated and reproducible test cases on
+ real deployment scenarios.
+ .
+ This module manages both the installation and configuration of OpenStack
+ Rally.
 
 Package: puppet-module-richardc-datacat
 Description-md5: e13c61817b45734f6cf33642d614eca1
@@ -546393,6 +546784,22 @@ Description-en: Puppet module for Monit
  the init system that each supported OS configures by default. The init type to
  use can be also set per service.
 
+Package: puppet-module-tempest
+Description-md5: 5cc392ea58b809260354dbfa61d82ae6
+Description-en: Puppet module for OpenStack Tempest
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ This module manages both the installation and configuration of OpenStack
+ Tempest.
+ .
+ Tempest is a set of integration tests to be run against a live Openstack
+ cluster in order to make sure that all components are working as expected.
+ Tempest will start and stop virtual machine in order to check that your
+ cloud is working as expected.
+
 Package: puppet-module-theforeman-dns
 Description-md5: 213ef402188e4e431b95fe90f5e8eb9e
 Description-en: Puppet module for ISC bind
@@ -546403,6 +546810,28 @@ Description-en: Puppet module for ISC bind
  .
  Installs and manages an ISC BIND DNS server with basic zones, primarily for
  The Foreman.
+
+Package: puppet-module-vigie
+Description-md5: 8eba0a9e12c3d9cd4c4dc741a2ea70c9
+Description-en: Puppet module for OpenStack Vigie
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ This module manages both the installation and configuration of OpenStack
+ Vigie.
+
+Package: puppet-module-vmms
+Description-md5: 477cff22b2a866854031e531a6c41d60
+Description-en: Puppet module for OpenStack VMMS
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ This module manages both the installation and configuration of OpenStack
+ VMMS.
 
 Package: puppet-module-voxpupuli-alternatives
 Description-md5: 25724bb78578b271ed5ffb2ef11a51ad
@@ -546508,6 +546937,18 @@ Description-en: generate ssh keys for any user using ssh-keygen
  along with obviously discrete elements like packages, services, and files.
  .
  This module helps generating ssh keys using Puppet.
+
+Package: puppet-module-vswitch
+Description-md5: 214666f724644a52d074fda2255851a1
+Description-en: provides puppet things for vSwitches
+ Puppet lets you centrally manage every important aspect of your system using a
+ cross-platform specification language that manages all the separate elements
+ normally aggregated in different files, like users, cron jobs, and hosts,
+ along with obviously discrete elements like packages, services, and files.
+ .
+ This module provides things for vSwitches. At the moment OVS is the only one
+ supported. It's based upon types and providers so it may support more than just
+ OVS or one vSwitch type in the future.
 
 Package: puppet-strings
 Description-md5: 92d7f35424adb0780b3725c619d98e86
@@ -547386,6 +547827,20 @@ Description-en: Library for {de,}serializing Python classes to and from JSON and
  control how a class is (de-)serialized.
  .
  This package installs the library for Python 3.
+
+Package: python3-py-tree-sitter
+Description-md5: b9fcd7ba6f57bf0dc94039d4a9337dc3
+Description-en: Python bindings to the tree-sitter parsing library (Python 3)
+ This module provides Python bindings to the tree-sitter parsing library.
+ .
+ This package installs the library for Python 3.
+
+Package: python3-py-tree-sitter-doc
+Description-md5: 0646f89e051e25ef52c7d77e04b07472
+Description-en: Python bindings to the tree-sitter parsing library (common documentation)
+ This module provides Python bindings to the tree-sitter parsing library.
+ .
+ This is the common documentation package.
 
 Package: python3-ubjson
 Description-md5: 6d3125208c2284aa1d0ba0e99d42948a
@@ -551659,6 +552114,18 @@ Description-en: Library for interacting with Nuki locks and openers
  pressed. The library also supports handling events generated by Nuki devices,
  such as doorbell rings. Integration with the Nuki Bridge's HTTP API enables
  control and status fetching from the smart lock and opener devices.
+
+Package: python3-pynwb
+Description-md5: d33851500de0606fcac83e5655df9ac1
+Description-en: Python library for working with Neurodata in the NWB format
+ PyNWB is a Python package for working with NWB files. It provides a
+ high-level API for efficiently working with Neurodata stored in the
+ NWB format.
+ .
+ Neurodata Without Borders: Neurophysiology (NWB:N) is a project to
+ develop a unified data format for cellular-based neurophysiology
+ data, focused on the dynamics of groups of neurons measured under a
+ large range of experimental conditions.
 
 Package: python3-pynx584
 Description-md5: 9e318c575cb3ffb8f85e038da33676ed
@@ -585247,12 +585714,11 @@ Description-en: Rate limited wrapper for Python 3's thread safe queues
  to require blocking the main thread.
 
 Package: python3-raydriver
-Description-md5: 46f52a1baa5bb0fc384ab7ccce55e7c4
+Description-md5: ffda6b08dfd0d31e9399748f6f34ec75
 Description-en: Rust-native machine drivers for Rayforge
  raydriver provides machine-control drivers implemented in Rust and exposed
- to Python through PyO3. It currently includes a GRBL serial driver with
- flow control, status polling, command queuing, job streaming, recovery,
- cancellation, settings, work-coordinate access, and probing support.
+ to Python through PyO3. It supports GRBL, Marlin, and Smoothieware devices,
+ with local serial and network transports as well as remote daemon access.
  .
  This package provides the Python 3 module and the raydriver command-line
  program.
@@ -636538,6 +637004,13 @@ Description-en: message protocol for representing results from Cucumber
   - Gherkin is decoupled from the Cucumber execution component
   - Enables the future support other formats such as Markdown and Excel
 
+Package: ruby-cucumber-query
+Description-md5: 12fb531336fe5a27bc3f81f6fcfc0060
+Description-en: Cucumber query module
+ The different message types in cucumber-messages have references to each
+ other using id fields. It's a bit similar to rows in a relational database,
+ with primary and foreign keys.
+
 Package: ruby-cucumber-tag-expressions
 Description-md5: 0816b597c0d1f554ca55c4e356aced3a
 Description-en: simple query language for tags
@@ -650964,6 +651437,11 @@ Description-en: Rust wrapper around Clipper2
  A safe, idiomatic Rust API for 2D polygon clipping and offsetting on top of
  Clipper2.
 
+Package: librust-clipper2-rs-dev
+Description-md5: d810118e58c5977bc17cef94fab64b0a
+Description-en: Polygon clipping, offsetting and triangulation library - Rust source code
+ Source code for Debianized Rust crate "clipper2-rs"
+
 Package: librust-clipper2c-sys-dev
 Description-md5: db270cd3a19f22ad0674921e50358258
 Description-en: Rust FFI bindings to Clipper2's C wrapper
@@ -654996,6 +655474,11 @@ Package: librust-flagset-dev
 Description-md5: 6580204bb4702cfe862dcdccdde8dd1e
 Description-en: Enumeration-based bit flags - Rust source code
  Source code for Debianized Rust crate "flagset"
+
+Package: librust-flaky-test-impl-dev
+Description-md5: bef8d7613471b80b8f286c3909c32ac1
+Description-en: Implementation detail of the `flaky_test` macro - Rust source code
+ Source code for Debianized Rust crate "flaky_test_impl"
 
 Package: librust-flate2-dev
 Description-md5: 83f16bdadcfecf17f15c0955669e8fab
@@ -661290,6 +661773,11 @@ Description-en: microformats parser - Rust source code
  microformats microformats-types,
  for use with cargo.
 
+Package: librust-micromap-dev
+Description-md5: f71b111db97b5c97c1772cb0fd19803c
+Description-en: Fastest alternative to HashMap, for maps smaller than 20 keys - Rust source code
+ Source code for Debianized Rust crate "micromap"
+
 Package: librust-miette-dev
 Description-md5: d7c10510251cdd789b83e4a7bcccd6d6
 Description-en: fancy diagnostic reporting library and protocol
@@ -661936,6 +662424,11 @@ Description-md5: 860df4e736569a7a58e4020debd9e848
 Description-en: Low-level Rust bindings for the Nettle cryptographic library - Rust source code
  Source code for Debianized Rust crate "nettle-sys"
 
+Package: librust-network-interface-dev
+Description-md5: 86bacdc581dd96a67ea57f2d2ab5b77c
+Description-en: Retrieve the system's network interfaces - Rust source code
+ Source code for Debianized Rust crate "network-interface"
+
 Package: librust-never-dev
 Description-md5: 2dd69cfd0b06e642a1dc7d997049709c
 Description-en: Stable version of the unstable never type (!) - Rust source code
@@ -662463,6 +662956,11 @@ Description-md5: be15eaf2d680dc20a562ad52a069b85c
 Description-en: Numerically consistent `Eq`, `Ord` and `Hash` implementations for various `num` types (`u32`, `f64`, `num_bigint::BigInt`, etc.) - Rust source code
  Source code for Debianized Rust crate "num-order"
 
+Package: librust-num-prime-dev
+Description-md5: 1be615d818e90a98d0462fee1a04d256
+Description-en: Primality tests and factorization - Rust source code
+ Source code for Debianized Rust crate "num-prime"
+
 Package: librust-num-rational-dev
 Description-md5: 23f22f3d94901485d2b67a3b935461d4
 Description-en: Rational numbers implementation for Rust - Rust source code
@@ -662693,10 +663191,9 @@ Description-en: Secret Service provider - Rust source code
  Source code for Debianized Rust crate "oo7"
 
 Package: librust-oorandom-dev
-Description-md5: 50fdb7d47ff71c8be44df5031ca0d055
+Description-md5: d15afa3f4277b430bfffa7a70b3aebde
 Description-en: Tiny, robust PRNG implementation - Rust source code
- This package contains the source for the Rust oorandom crate, packaged by
- debcargo for use with cargo and dh-cargo.
+ Source code for Debianized Rust crate "oorandom"
 
 Package: librust-opam-file-rs-dev
 Description-md5: 935e9378970861123035043ee978a116
@@ -739296,6 +739793,681 @@ Description-en: Java SSH library
  are no dependencies on any JCE provider, as all crypto functionality is
  included.
 
+Package: libtrilinos-amesos2-17.0
+Description-md5: 25ff7db1c75a65dd8b01ec2985ffd52a
+Description-en: next generation direct sparse solver package - runtime files
+ Amesos2 is a package for solving sparse linear systems using direct solvers.
+ It differs from Amesos in that it is templated on the scalar and index types.
+ KLU2 is the only native solver.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-amesos2-dev
+Description-md5: 39a23ed3f04d52b3ed3fdfc6aea61718
+Description-en: next generation direct sparse solver package - development files
+ Amesos2 is a package for solving sparse linear systems using direct solvers.
+ It differs from Amesos in that it is templated on the scalar and index types.
+ KLU2 is the only native solver.
+ .
+ This package provides headers.
+
+Package: libtrilinos-anasazi-17.0
+Description-md5: c8716b04d6c68195db1d18505c6c8cc5
+Description-en: large-scale eigenvalue algorithms - runtime files
+ Anasazi is an extensible and interoperable framework for large-scale
+ eigenvalue algorithms. The motivation for this framework is to provide a
+ generic interface to a collection of algorithms for solving large-scale
+ eigenvalue problems. Anasazi is interoperable because both the matrix and
+ vectors (defining the eigenspace) are considered to be opaque objects -- only
+ knowledge of the matrix and vectors via elementary operations is necessary.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-anasazi-dev
+Description-md5: c197134c6b9ee41d314b1667af00b418
+Description-en: large-scale eigenvalue algorithms - development files
+ Anasazi is an extensible and interoperable framework for large-scale
+ eigenvalue algorithms. The motivation for this framework is to provide a
+ generic interface to a collection of algorithms for solving large-scale
+ eigenvalue problems. Anasazi is interoperable because both the matrix and
+ vectors (defining the eigenspace) are considered to be opaque objects -- only
+ knowledge of the matrix and vectors via elementary operations is necessary.
+ .
+ This package provides headers.
+
+Package: libtrilinos-belos-17.0
+Description-md5: a626c1ed63fbc92794142bc07f6bed71
+Description-en: iterative linear solvers - runtime files
+ Belos provides next-generation iterative linear solvers and a powerful linear
+ solver developer framework. This framework includes abstract interfaces to
+ linear algebra using traits mechanisms, abstract interfaces to
+ orthogonalization, abstract interfaces to iteration kernels, powerful solver
+ managers, and a basic linear problem class.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-belos-dev
+Description-md5: e0533b482a721888c8c7525207f4a2a8
+Description-en: iterative linear solvers - development files
+ Belos provides next-generation iterative linear solvers and a powerful linear
+ solver developer framework. This framework includes abstract interfaces to
+ linear algebra using traits mechanisms, abstract interfaces to
+ orthogonalization, abstract interfaces to iteration kernels, powerful solver
+ managers, and a basic linear problem class.
+ .
+ This package provides headers.
+
+Package: libtrilinos-galeri-17.0
+Description-md5: 30e8a69aca2e319dbcfc0dc5dd684a31
+Description-en: generation of distributed linear systems - runtime files
+ The Trilinos package Galeri contains a suite of utilities and classes to
+ generate a variety of (distributed) linear systems. Galeri's functionalities
+ are very close to that of the MATLAB's gallery() function.
+ Several well-known finite element and finite difference matrices can be
+ generated using only a few simple code lines.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-galeri-dev
+Description-md5: c600c80aebfeff2cd907bbeccf18b497
+Description-en: generation of distributed linear systems - development files
+ The Trilinos package Galeri contains a suite of utilities and classes to
+ generate a variety of (distributed) linear systems. Galeri's functionalities
+ are very close to that of the MATLAB's gallery() function.
+ Several well-known finite element and finite difference matrices can be
+ generated using only a few simple code lines.
+ .
+ This package provides headers.
+
+Package: libtrilinos-ifpack2-17.0
+Description-md5: 0fec478c269aa8bcdf3a1c3288f8467a
+Description-en: next generation algebraic preconditioners - runtime files
+ Ifpack2 provides incomplete factorizations, relaxations, and domain
+ decomposition operators for linear algebra objects (sparse matrices,
+ operators, and dense vectors and multivectors) provided by the Tpetra package.
+ You may use these operators however you wish: for example as preconditioners
+ in an iterative solver, or as smoothers for algebraic multigrid.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-ifpack2-dev
+Description-md5: b364924c4a6a0739087aa07eab934422
+Description-en: next generation algebraic preconditioners - development files
+ Ifpack2 provides incomplete factorizations, relaxations, and domain
+ decomposition operators for linear algebra objects (sparse matrices,
+ operators, and dense vectors and multivectors) provided by the Tpetra package.
+ You may use these operators however you wish: for example as preconditioners
+ in an iterative solver, or as smoothers for algebraic multigrid.
+ .
+ This package provides headers.
+
+Package: libtrilinos-intrepid2-17.0
+Description-md5: f50e9a51c57c2f6bc1c4b6136615dcd8
+Description-en: next generation compatible discretizations of PDEs - runtime files
+ Intrepid2 is an extension of Intrepid, a library of interoperable tools for
+ compatible discretizations of Partial Differential Equations (PDEs). Intrepid2
+ utilizes Kokkos dynamic rank views as the default multidimensional array type,
+ which enables the use of Intrepid2 on heterogeneous architectures.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-intrepid2-dev
+Description-md5: 0acd449f3fcf8b8faa2a0136766d90cc
+Description-en: next generation compatible discretizations of PDEs - development files
+ Intrepid2 is an extension of Intrepid, a library of interoperable tools for
+ compatible discretizations of Partial Differential Equations (PDEs). Intrepid2
+ utilizes Kokkos dynamic rank views as the default multidimensional array type,
+ which enables the use of Intrepid2 on heterogeneous architectures.
+ .
+ This package provides headers.
+
+Package: libtrilinos-kokkos-17.0
+Description-md5: b16d4305e8001b6f3f9e125266bea0a8
+Description-en: Trilinos Kokkos programming model - runtime files
+ Kokkos implements a programming model in C++ for writing performance portable
+ applications targeting all major HPC platforms. For that purpose it provides
+ abstractions for both parallel execution of code and data management.
+ Kokkos is designed to target complex node architectures with N-level memory
+ hierarchies and multiple types of execution resources. It currently can use
+ OpenMP, Pthreads and CUDA as backend programming models.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-kokkos-dev
+Description-md5: 7463616d8e9cef7c865cfa168b783178
+Description-en: Trilinos Kokkos programming model - development files
+ Kokkos implements a programming model in C++ for writing performance portable
+ applications targeting all major HPC platforms. For that purpose it provides
+ abstractions for both parallel execution of code and data management.
+ Kokkos is designed to target complex node architectures with N-level memory
+ hierarchies and multiple types of execution resources. It currently can use
+ OpenMP, Pthreads and CUDA as backend programming models.
+ .
+ This package provides headers.
+
+Package: libtrilinos-kokkos-kernels-17.0
+Description-md5: 75eaedb213964c7524d00bc1aaf9e78b
+Description-en: Kokkos local computational kernels - runtime files
+ KokkosKernels implements local computational kernels for linear algebra and
+ graph operations, using the Kokkos shared-memory parallel programming model.
+ "Local" means not using MPI, or running within a single MPI process without
+ knowing about MPI.  "Computational kernels" are coarse-grained operations;
+ they take a lot of work and make sense to parallelize inside using Kokkos.
+ KokkosKernels can be the building block of a parallel linear algebra library
+ like Tpetra that uses MPI and threads for parallelism, or it can be used
+ stand-alone in your application.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-kokkos-kernels-dev
+Description-md5: b00711f74cacd4dbc89b16b5f3f6641b
+Description-en: Kokkos local computational kernels - development files
+ KokkosKernels implements local computational kernels for linear algebra and
+ graph operations, using the Kokkos shared-memory parallel programming model.
+ "Local" means not using MPI, or running within a single MPI process without
+ knowing about MPI.  "Computational kernels" are coarse-grained operations;
+ they take a lot of work and make sense to parallelize inside using Kokkos.
+ KokkosKernels can be the building block of a parallel linear algebra library
+ like Tpetra that uses MPI and threads for parallelism, or it can be used
+ stand-alone in your application.
+ .
+ This package provides headers.
+
+Package: libtrilinos-muelu-17.0
+Description-md5: 1b6fe2ab7b4dd2e7cfb06338396aaeac
+Description-en: next generation multilevel preconditioner capabilities - runtime files
+ MueLu is designed to solve large sparse linear systems of equations arising
+ from PDE discretizations. MueLu provides easy-to-use multigrid solvers and
+ preconditioners based on smoothed aggregation algorithms. As a multigrid
+ framework, MueLu supports the design of highly application specific multigrid
+ preconditioners.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-muelu-dev
+Description-md5: 9221d98ba564f8f9b614d89f488fd696
+Description-en: next generation multilevel preconditioner capabilities - development files
+ MueLu is designed to solve large sparse linear systems of equations arising
+ from PDE discretizations. MueLu provides easy-to-use multigrid solvers and
+ preconditioners based on smoothed aggregation algorithms. As a multigrid
+ framework, MueLu supports the design of highly application specific multigrid
+ preconditioners.
+ .
+ This package provides headers.
+
+Package: libtrilinos-nox-17.0
+Description-md5: 84147d2c99a7e04b6197c942303b5678
+Description-en: robust solution of nonlinear equations - runtime files
+ NOX robustly solves and analyzes large-scale systems of nonlinear equations.
+ NOX is short for Nonlinear Object-Oriented Solutions, and its objective is to
+ enable the robust and efficient solution of the equation: F(x)=0 using
+ globalized Newton methods such as line search and trust region methods. NOX is
+ designed to work with any linear algebra package and to be easily customized.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-nox-dev
+Description-md5: 3be07aaf1ac4c22c689acb481744e879
+Description-en: robust solution of nonlinear equations - development files
+ NOX robustly solves and analyzes large-scale systems of nonlinear equations.
+ NOX is short for Nonlinear Object-Oriented Solutions, and its objective is to
+ enable the robust and efficient solution of the equation: F(x)=0 using
+ globalized Newton methods such as line search and trust region methods. NOX is
+ designed to work with any linear algebra package and to be easily customized.
+ .
+ This package provides headers.
+
+Package: libtrilinos-pamgen-17.0
+Description-md5: 24018a956741af0bdb06d842369e49c6
+Description-en: hexahedral and quadrilateral mesh generator - runtime files
+ PAMGEN creates hexahedral or quadrilateral (in 2D) finite element meshes of
+ simple shapes (cubes and cylinders) in parallel. When linked to an application
+ as a library, it allows each process of a parallel simulation to generate its
+ finite element domain representation at execution time.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-pamgen-dev
+Description-md5: 1f786598522477efc1028205fa8db7fb
+Description-en: hexahedral and quadrilateral mesh generator - development files
+ PAMGEN creates hexahedral or quadrilateral (in 2D) finite element meshes of
+ simple shapes (cubes and cylinders) in parallel. When linked to an application
+ as a library, it allows each process of a parallel simulation to generate its
+ finite element domain representation at execution time.
+ .
+ This package provides headers.
+
+Package: libtrilinos-phalanx-17.0
+Description-md5: 8d4d86ab36bd7b99e17022143208692b
+Description-en: local field evaluation kernel - runtime files
+ Phalanx is a local field evaluation kernel specifically designed for general
+ partial differential equation solvers. The main goal of Phalanx is to
+ decompose a complex problem into a number of simpler problems with managed
+ dependencies to support rapid development and extensibility of the PDE code.
+ Through the use of template metaprogramming concepts, Phalanx supports
+ arbitrary user defined data types and evaluation types. This allows for
+ unprecedented flexibility for direct integration with user applications and
+ provides extensive support for embedded technology such as automatic
+ differentiation for sensitivity analysis and uncertainty quantification.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-phalanx-dev
+Description-md5: 4f8febbd813e494837b35ba6c4c1b2ba
+Description-en: local field evaluation kernel - development files
+ Phalanx is a local field evaluation kernel specifically designed for general
+ partial differential equation solvers. The main goal of Phalanx is to
+ decompose a complex problem into a number of simpler problems with managed
+ dependencies to support rapid development and extensibility of the PDE code.
+ Through the use of template metaprogramming concepts, Phalanx supports
+ arbitrary user defined data types and evaluation types. This allows for
+ unprecedented flexibility for direct integration with user applications and
+ provides extensive support for embedded technology such as automatic
+ differentiation for sensitivity analysis and uncertainty quantification.
+ .
+ This package provides headers.
+
+Package: libtrilinos-piro-17.0
+Description-md5: 2c5df5f06241cb98823c1f208ac99c84
+Description-en: embedded nonlinear analysis package - runtime files
+ Piro is the top-level, unifying package of the Embedded Nonlinear Analysis
+ Capability area. The main purpose of the package is to provide driver classes
+ for the common uses of Trilinos nonlinear analysis tools. These drivers all
+ can be constructed similarly, with a ModelEvaluator and a ParameterList, to
+ make it simple to switch between different types of analysis. They also all
+ inherit from the same base classes (reponse-only model evaluators) so that the
+ resulting analysis can in turn driven by non-intrusive analysis routines.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-piro-dev
+Description-md5: 5dc71fdbeabb7048ad197e19eeda32cf
+Description-en: embedded nonlinear analysis package - development files
+ Piro is the top-level, unifying package of the Embedded Nonlinear Analysis
+ Capability area. The main purpose of the package is to provide driver classes
+ for the common uses of Trilinos nonlinear analysis tools. These drivers all
+ can be constructed similarly, with a ModelEvaluator and a ParameterList, to
+ make it simple to switch between different types of analysis. They also all
+ inherit from the same base classes (reponse-only model evaluators) so that the
+ resulting analysis can in turn driven by non-intrusive analysis routines.
+ .
+ This package provides headers.
+
+Package: libtrilinos-rol-17.0
+Description-md5: bcbc9028cbefb8d1da09705428984a4d
+Description-en: rapid optimization library - runtime files
+ The Rapid Optimization Library (ROL) is a package for large-scale optimization.
+ It is used for the solution of optimal design, optimal control and inverse
+ problems in large-scale engineering applications. Other uses include mesh
+ optimization and image processing.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-rol-dev
+Description-md5: dac6390a334d4f761568374eb76fde57
+Description-en: rapid optimization library - development files
+ The Rapid Optimization Library (ROL) is a package for large-scale optimization.
+ It is used for the solution of optimal design, optimal control and inverse
+ problems in large-scale engineering applications. Other uses include mesh
+ optimization and image processing.
+ .
+ This package provides headers.
+
+Package: libtrilinos-rtop-17.0
+Description-md5: c7e1a0d26c9ab3d057077e5d2e582efe
+Description-en: reductions/transformation operators - runtime files
+ RTOp (reduction/transformation operators) provides the basic mechanism for
+ implementing vector operations in a flexible and efficient manner.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-rtop-dev
+Description-md5: 5490932295cf870f789caf4abe84d7f0
+Description-en: reductions/transformation operators - development files
+ RTOp (reduction/transformation operators) provides the basic mechanism for
+ implementing vector operations in a flexible and efficient manner.
+ .
+ This package provides headers.
+
+Package: libtrilinos-sacado-17.0
+Description-md5: e573e2f11ad50b059ceb99385bbb5c23
+Description-en: automatic differentiation for C++ applications - runtime files
+ Sacado is a set of automatic differentiation tools for C++ applications. It
+ provides templated classes for forward, reverse and Taylor mode automatic
+ differentiation.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-sacado-dev
+Description-md5: 56d0237e5c1b1696541f989564c1f0d9
+Description-en: automatic differentiation for C++ applications - development files
+ Sacado is a set of automatic differentiation tools for C++ applications. It
+ provides templated classes for forward, reverse and Taylor mode automatic
+ differentiation.
+ .
+ This package provides headers.
+
+Package: libtrilinos-shards-17.0
+Description-md5: cff1a471a7cb51a5d01b6a6647559b25
+Description-en: interoperability tools for PDE solving - runtime files
+ The purpose of Shards is to provide a suite of common tools for numerical and
+ topological data that facilitate interoperability between typical software
+ modules used to solve Partial Differential Equations (PDEs) by finite element,
+ finite volume and finite difference methods. Shards comprises of two
+ categories of tools: methods to manage and access information about cell
+ topologies used in mesh-based methods for PDEs, and methods to work with
+ multi-dimensional arrays used to store numerical data in corresponding
+ computer codes.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-shards-dev
+Description-md5: ee813cac43e8768045ae70c76d7f1866
+Description-en: interoperability tools for PDE solving - development files
+ The purpose of Shards is to provide a suite of common tools for numerical and
+ topological data that facilitate interoperability between typical software
+ modules used to solve Partial Differential Equations (PDEs) by finite element,
+ finite volume and finite difference methods. Shards comprises of two
+ categories of tools: methods to manage and access information about cell
+ topologies used in mesh-based methods for PDEs, and methods to work with
+ multi-dimensional arrays used to store numerical data in corresponding
+ computer codes.
+ .
+ This package provides headers.
+
+Package: libtrilinos-shylu-17.0
+Description-md5: 7f6152a0c3aea1ee1ae965f3a301d521
+Description-en: solving sparse linear systems - runtime files
+ ShyLU is a package for solving sparse linear systems. It can be used either as
+ a preconditioner, or as a solver. Currently, it is recommended as an Ifpack
+ preconditioner. ShyLU uses a hybrid direct/iterative approach based on Schur
+ complements. The goal is to provide robustness similar to sparse direct
+ solvers, but memory usage more similar to preconditioned iterative solvers.
+ ShyLU was designed as a node-level solver. It can use both MPI and threads in
+ several ways. ShyLU was designed (a) to solve difficult but medium-size
+ problems, and (b) to be used as a subdomain solver or smoother for very large
+ problems within an iterative scheme. It is a purely algebraic method so can be
+ used as a black-box solver. ShyLU has been particularly successful in
+ electrical circuit simulation (Xyce).
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-shylu-dev
+Description-md5: 54d90b1a297502815d17c44f8c375264
+Description-en: solving sparse linear systems - development files
+ ShyLU is a package for solving sparse linear systems. It can be used either as
+ a preconditioner, or as a solver. Currently, it is recommended as an Ifpack
+ preconditioner. ShyLU uses a hybrid direct/iterative approach based on Schur
+ complements. The goal is to provide robustness similar to sparse direct
+ solvers, but memory usage more similar to preconditioned iterative solvers.
+ ShyLU was designed as a node-level solver. It can use both MPI and threads in
+ several ways. ShyLU was designed (a) to solve difficult but medium-size
+ problems, and (b) to be used as a subdomain solver or smoother for very large
+ problems within an iterative scheme. It is a purely algebraic method so can be
+ used as a black-box solver. ShyLU has been particularly successful in
+ electrical circuit simulation (Xyce).
+ .
+ This package provides headers.
+
+Package: libtrilinos-stokhos-17.0
+Description-md5: dd98bcdc88721f7d7fc9bc9bb57188dd
+Description-en: Trilinos uncertainty quantification package - runtime files
+ Stokhos is a package for intrusive stochastic Galerkin uncertainty
+ quantification methods. It provides methods for computing well-known intrusive
+ stochastic Galerkin projections such as Polynomial Chaos and Generalized
+ Polynomial Chaos, interfaces for forming the resulting nonlinear systems, and
+ linear solver methods for solving block stochastic Galerkin linear systems.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-stokhos-dev
+Description-md5: ff529238927cc41f9b7e5fcce45137bd
+Description-en: Trilinos uncertainty quantification package - development files
+ Stokhos is a package for intrusive stochastic Galerkin uncertainty
+ quantification methods. It provides methods for computing well-known intrusive
+ stochastic Galerkin projections such as Polynomial Chaos and Generalized
+ Polynomial Chaos, interfaces for forming the resulting nonlinear systems, and
+ linear solver methods for solving block stochastic Galerkin linear systems.
+ .
+ This package provides headers.
+
+Package: libtrilinos-stratimikos-17.0
+Description-md5: 9b9a424ee10589fa507414119216b8bb
+Description-en: wrappers for linear solvers and preconditioners - runtime files
+ The package Stratimikos contains a unified set of Thyra-based wrappers to
+ linear solver and preconditioner capabilities in Trilinos.  The Stratimikos
+ package is also a place where unified testing of linear solvers and
+ preconditioners can be performed.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-stratimikos-dev
+Description-md5: e7900158a91dfe49314fc9ea96eb6ad8
+Description-en: wrappers for linear solvers and preconditioners - development files
+ The package Stratimikos contains a unified set of Thyra-based wrappers to
+ linear solver and preconditioner capabilities in Trilinos.  The Stratimikos
+ package is also a place where unified testing of linear solvers and
+ preconditioners can be performed.
+ .
+ This package provides headers.
+
+Package: libtrilinos-teko-17.0
+Description-md5: d2659146cd5356db3094f0fba942f099
+Description-en: block preconditioners - runtime files
+ Teko is a package for development and implementation of block preconditioners.
+ This includes support for manipulation and setup of block operators.
+ Furthermore tools exist to support decomposition of a fully coupled operator.
+ Additionally, facilities that allow the construction of approximate inverse
+ operators using the full complement of available preconditioners and solvers
+ are available in Teko. Finally, a small number of generic block
+ preconditioners has been implemented in Teko, including block Jacobi, and
+ block Gauss-Seidel. For the Navier-Stokes equation, Teko has implementations
+ of SIMPLE, PCD and LSC. For details on these methods see Stabilization and
+ Scalable Block Preconditioning for the Navier-Stokes Equations and the
+ references therein.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-teko-dev
+Description-md5: 921acfd60d71ef7184635bbf99c3157b
+Description-en: block preconditioners - development files
+ Teko is a package for development and implementation of block preconditioners.
+ This includes support for manipulation and setup of block operators.
+ Furthermore tools exist to support decomposition of a fully coupled operator.
+ Additionally, facilities that allow the construction of approximate inverse
+ operators using the full complement of available preconditioners and solvers
+ are available in Teko. Finally, a small number of generic block
+ preconditioners has been implemented in Teko, including block Jacobi, and
+ block Gauss-Seidel. For the Navier-Stokes equation, Teko has implementations
+ of SIMPLE, PCD and LSC. For details on these methods see Stabilization and
+ Scalable Block Preconditioning for the Navier-Stokes Equations and the
+ references therein.
+ .
+ This package provides headers.
+
+Package: libtrilinos-teuchos-17.0
+Description-md5: 02f6f14f418b4563934bfa0a5f63b3a1
+Description-en: common tools for Trilinos - runtime files
+ Teuchos provides a suite of common tools for Trilinos for developers to use.
+ These tools include BLAS/LAPACK wrappers, smart pointers, parameter lists, XML
+ parsers, etc.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-teuchos-dev
+Description-md5: dcc5a072b2721884114cb85c671ecc3b
+Description-en: common tools for Trilinos - development files
+ Teuchos provides a suite of common tools for Trilinos for developers to use.
+ These tools include BLAS/LAPACK wrappers, smart pointers, parameter lists, XML
+ parsers, etc.
+ .
+ This package provides headers.
+
+Package: libtrilinos-thyra-17.0
+Description-md5: 63514e2c64fc7c346b4900926c0aeacb
+Description-en: interoperability layer for numerical software - runtime files
+ The Thyra package contains a set of interfaces and supporting code that
+ defines basic interoperability mechanisms between different types of numerical
+ software. The foundation of all of these interfaces are the mathematical
+ concepts of vectors, vector spaces, and linear operators. All other interfaces
+ and support software is built on the basic operator/vector interfaces.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-thyra-dev
+Description-md5: 8858666565ef8d7dbf22dee6f50a0554
+Description-en: interoperability layer for numerical software - development files
+ The Thyra package contains a set of interfaces and supporting code that
+ defines basic interoperability mechanisms between different types of numerical
+ software. The foundation of all of these interfaces are the mathematical
+ concepts of vectors, vector spaces, and linear operators. All other interfaces
+ and support software is built on the basic operator/vector interfaces.
+ .
+ This package provides headers.
+
+Package: libtrilinos-tpetra-17.0
+Description-md5: 62f003ec14216ff6e3e970700d8cf549
+Description-en: templated numerical linear algebra package - runtime files
+ Next-generation, templated version of Petra, taking advantage of the newer
+ advanced features of C++.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-tpetra-dev
+Description-md5: 6cd5b85e2ad9cd2e56cec22fd4411426
+Description-en: templated numerical linear algebra package - development files
+ Next-generation, templated version of Petra, taking advantage of the newer
+ advanced features of C++.
+ .
+ This package provides headers.
+
+Package: libtrilinos-trilinoscouplings-17.0
+Description-md5: 15e0ee09bdc616e68b98c0bbaf4bf8c8
+Description-en: combining Trilinos packages - runtime files
+ TrilinosCouplings provides a location for multiple Trilinos packages to be
+ combined for testing integrated package capabilities.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-trilinoscouplings-dev
+Description-md5: 0603f27fba6ce7a863de5d383748309f
+Description-en: combining Trilinos packages - development files
+ TrilinosCouplings provides a location for multiple Trilinos packages to be
+ combined for testing integrated package capabilities.
+ .
+ This package provides headers.
+
+Package: libtrilinos-trilinosss-17.0
+Description-md5: 41f57ad99dc5722a8557c5c10a1c08cd
+Description-en: suitesparse with adaptations for Amesos - runtime files
+ A suite of sparse matrix algorithms with adaptations for Amesos.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-trilinosss-dev
+Description-md5: 3a3fe5ef0103631aaf997506bb243af6
+Description-en: suitesparse with adaptations for Amesos - development files
+ A suite of sparse matrix algorithms with adaptations for Amesos.
+ .
+ This package provides headers.
+
+Package: libtrilinos-xpetra-17.0
+Description-md5: 69fe700c08df14ddb5bcebd7e24f5108
+Description-en: conversion between Epetra and Teuchos objects - runtime files
+ Xpetra a lightweight wrapper to both Epetra and Tpetra. The Xpetra syntax
+ mirrors that of Tpetra. Xpetra enables algorithm developers to write to a
+ single interface but be able to use either Epetra or Tpetra. Xpetra can also be
+ introduced into existing code to allow for gradual migration.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-xpetra-dev
+Description-md5: e95e00a4a6aba8bd9257424084673d01
+Description-en: conversion between Epetra and Teuchos objects - development files
+ Xpetra a lightweight wrapper to both Epetra and Tpetra. The Xpetra syntax
+ mirrors that of Tpetra. Xpetra enables algorithm developers to write to a
+ single interface but be able to use either Epetra or Tpetra. Xpetra can also be
+ introduced into existing code to allow for gradual migration.
+ .
+ This package provides headers.
+
+Package: libtrilinos-zoltan-17.0
+Description-md5: 185fbc84a1ace421cb4bdc14dc861ae4
+Description-en: parallel dynamic load balancing - runtime files
+ Zoltan is a toolkit of parallel services for dynamic, unstructured, and/or
+ adaptive simulations. Zoltan provides parallel dynamic load balancing and
+ related services for a wide variety of applications, including finite element
+ methods, matrix operations, particle methods, and crash simulations. Zoltan
+ also provides parallel graph coloring, matrix ordering, unstructured
+ communication tools, and distributed data directories.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-zoltan-dev
+Description-md5: cc4152717f75cefe235f6db599405f4f
+Description-en: parallel dynamic load balancing - development files
+ Zoltan is a toolkit of parallel services for dynamic, unstructured, and/or
+ adaptive simulations. Zoltan provides parallel dynamic load balancing and
+ related services for a wide variety of applications, including finite element
+ methods, matrix operations, particle methods, and crash simulations. Zoltan
+ also provides parallel graph coloring, matrix ordering, unstructured
+ communication tools, and distributed data directories.
+ .
+ This package provides headers.
+
+Package: libtrilinos-zoltan2-17.0
+Description-md5: 8c46c722aa1a58352f3583ccf4195e7b
+Description-en: Trilinos next generation load balancing package - runtime files
+ Zoltan2 is a package for load balancing and combinatorial scientific
+ computing. It may be viewed as a successor to the popular Zoltan and Isorropia
+ packages.
+ .
+ This package contains the dynamic libraries.
+
+Package: libtrilinos-zoltan2-dev
+Description-md5: a59bf49e83ee7d261c5db17f7f3667f5
+Description-en: Trilinos next generation load balancing package - development files
+ Zoltan2 is a package for load balancing and combinatorial scientific
+ computing. It may be viewed as a successor to the popular Zoltan and Isorropia
+ packages.
+ .
+ This package provides headers.
+
+Package: trilinos-all-dev
+Description-md5: 0283f81dd4eccfc62ec33075ee62607f
+Description-en: object-oriented framework for large-scale problems - development files (ALL)
+ The Trilinos Project is an effort to develop algorithms and enabling
+ technologies within an object-oriented software framework for the
+ solution of large-scale, complex multi-physics engineering and
+ scientific problems. A unique design feature of Trilinos is its
+ focus on packages.
+ .
+ This package depends on all Trilinos development packages.
+
+Package: trilinos-dev
+Description-md5: 1014135df0e0494b17d84c18d56d3bdb
+Description-en: object-oriented framework for large-scale problems - development files
+ The Trilinos Project is an effort to develop algorithms and enabling
+ technologies within an object-oriented software framework for the
+ solution of large-scale, complex multi-physics engineering and
+ scientific problems. A unique design feature of Trilinos is its
+ focus on packages.
+ .
+ This package contains the development header and some makefile templates.
+
+Package: trilinos-doc
+Description-md5: c82b0e9d648ffadfe6253c904200a1e1
+Description-en: object-oriented framework for large-scale problems - documentation
+ The Trilinos Project is an effort to develop algorithms and enabling
+ technologies within an object-oriented software framework for the
+ solution of large-scale, complex multi-physics engineering and
+ scientific problems. A unique design feature of Trilinos is its
+ focus on packages.
+ .
+ This is documentation for the Trilinos libraries in HTML format.
+ Some pages point to header files provided in the corresponding -dev package,
+ so it is suggested to install the latter as well.
+
 Package: golang-github-google-trillian-dev
 Description-md5: 772319edb58bbe4614d5d9c6b8a9d571
 Description-en: transparent scalable and cryptographically verifiable data store (library)
@@ -774559,7 +775731,7 @@ Description-en: send keyboard input to multiple X11 windows
  in a config file.
 
 Package: xlbiff
-Description-md5: e37d1eb270dd99445648df9aee42fd88
+Description-md5: 337c0996907de6833cf114377b6d24b4
 Description-en: mail notification pop-up with configurable message scans
  Xlbiff presents enough information to tell you: Is this new mail worth
  reading right now?  And it stops distracting you once you decide.
@@ -774575,10 +775747,10 @@ Description-en: mail notification pop-up with configurable message scans
  default xlbiff displays the From, Subject and beginning of the
  message content.  Xlbiff can also beep or play a custom sound.
  .
- Clicking the left mouse button anywhere in the window causes it to
- vanish.  It will also vanish if the mailbox becomes empty.  Xlbiff
- stays out of your way when there is no new mail and pops up only
- when something requests your attention.
+ Clicking the left mouse button anywhere in the window causes it
+ to vanish.  It will also vanish if the mailbox becomes empty.
+ Xlbiff stays out of your way when there is no new mail and pops
+ up only when something requests your attention.
  .
  Included with xlbiff is mailbox-preview, a command-line program
  that peeks at an IMAP mailbox and uses scan to display a summary,
@@ -775100,6 +776272,14 @@ Description-en: Maven XMLBeans Plugin
  .
  The plugin produces two sets of output files referred to as
  generated sources and generated classes.
+
+Package: xmlcopyeditor
+Description-md5: d9849df641d50b4016fc33a623e25f26
+Description-en: fast, free, validating XML editor
+ XML Copy Editor is an XML editor focusing on editing document markup
+ languages like DITA, DocBook, WordprocessingML. It features DTD/XML
+ Schema/RELAX NG validation, XSLT, XPath, pretty-printing, syntax
+ highlighting, folding, tag completion/locking, and a spelling/style check.
 
 Package: xmldiff
 Description-md5: 8b94011505002d34745df87f28dc545a
