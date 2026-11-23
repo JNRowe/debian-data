@@ -39093,46 +39093,6 @@ Description-en: library for cairo nickle bindings
  library using the nickle FFI mechanism. It exposes most of the cairo
  API, although support for fonts is limited to the toy font API.
 
-Package: libcairo-ocaml
-Description-md5: 79085065a08b6c8d01ce5299b9ad01ae
-Description-en: OCaml bindings for Cairo (runtime)
- Cairo is a multi-platform library providing anti-aliased
- vector-based rendering for multiple target backends. Paths consist
- of line segments and cubic splines and can be rendered at any width
- with various join and cap styles. All colors may be specified with
- optional translucence (opacity/alpha) and combined using the
- extended Porter/Duff compositing algebra as found in the X Render
- Extension.
- .
- Cairo exports a stateful rendering API similar in spirit to the path
- construction, text, and painting operators of PostScript, (with the
- significant addition of translucence in the imaging model). When
- complete, the API is intended to support the complete imaging model of
- PDF 1.4.
- .
- This package contains only the shared runtime stub libraries.
-
-Package: libcairo-ocaml-dev
-Description-md5: 52446b21850ea80840bf88ddb0e9e147
-Description-en: OCaml bindings for Cairo
- Cairo is a multi-platform library providing anti-aliased
- vector-based rendering for multiple target backends. Paths consist
- of line segments and cubic splines and can be rendered at any width
- with various join and cap styles. All colors may be specified with
- optional translucence (opacity/alpha) and combined using the
- extended Porter/Duff compositing algebra as found in the X Render
- Extension.
- .
- Cairo exports a stateful rendering API similar in spirit to the path
- construction, text, and painting operators of PostScript, (with the
- significant addition of translucence in the imaging model). When
- complete, the API is intended to support the complete imaging model of
- PDF 1.4.
- .
- This package contains all the development stuff you need to use Cairo in
- your OCaml programs. The following backends are supported: PostScript,
- PDF, PNG, In-memory images and X11.
-
 Package: python-cairocffi-doc
 Description-md5: 39696228dee918c18dec67a66f00232e
 Description-en: cffi-based cairo bindings for Python - Documentation
@@ -97349,6 +97309,31 @@ Description-en: Emacs JSON-RPC library
  This library was originally extracted from eglot.el, an Emacs LSP
  client, which you should see for an example usage.
 
+Package: elpa-keychain-environment
+Description-md5: 9680c79a772ebc741aff8254a65adc32
+Description-en: load keychain environment variables
+ Keychain is a script that manages ssh-agent and gpg-agent.  It is
+ typically run from the shell's initialization file.  It allows your
+ shells and cron jobs to share a single ssh-agent and/or gpg-agent.
+ .
+ When keychain is run, it checks for running agent, otherwise it
+ starts them.  It saves the agents' environment variables to files
+ inside ~/.keychain/, so that subsequent shells can source these
+ files.
+ .
+ When Emacs is started under X11 and not directly from a terminal
+ these variables are not set.  This library looks for these files
+ created by keychain and then sets Emacs' environment variables
+ accordingly.  It does not actually run keychain, so you still
+ have to run that from a login shell first.
+ .
+ To use run the function `keychain-refresh-environment' in your
+ init file.  If keychain has not been run yet when you start Emacs
+ you can also later call that function interactively.
+ .
+ Keychain's manpage can be read online at
+ https://github.com/danielrobbins/keychain/blob/master/keychain.pod.
+
 Package: elpa-keymap-popup
 Description-md5: 4bfc85ebac530fdea4f8fb3385e57742
 Description-en: macro that defines keymap with descriptions and popup for display
@@ -116853,13 +116838,14 @@ Description-en: Free Music Instrument Tuner
  are optional so that the interface can also be very simple.
 
 Package: libfmt-dev
-Description-md5: 7963a4ca548a609af43ee9bd78ee3acd
+Description-md5: a06d125a1574e1a61cd7f6c1014ea7d4
 Description-en: fast type-safe C++ formatting library -- development files
  This library provides fast, type-safe, small, C++11-aware replacement of
  (s)printf and related machinery. In some cases it's noticeably faster
  than boost::format, boost::lexical_cast and even sprintf itself.
  .
- This package contains the development files, include the static library.
+ This package contains the development files: headers, CMake configuration
+ files and the pkg-config file.
 
 Package: libfmt-doc
 Description-md5: 12a6951caa7ccaad9a47a377aca918c0
@@ -116871,6 +116857,15 @@ Description-en: fast type-safe C++ formatting library -- documentation
  This package contains the documentation files.
 
 Package: libfmt11
+Description-md5: bf00d7b126b81746ed9bbb189e83fcc1
+Description-en: fast type-safe C++ formatting library -- library
+ This library provides fast, type-safe, small, C++11-aware replacement of
+ (s)printf and related machinery. In some cases it's noticeably faster
+ than boost::format, boost::lexical_cast and even sprintf itself.
+ .
+ This package contains the shared library.
+
+Package: libfmt12
 Description-md5: bf00d7b126b81746ed9bbb189e83fcc1
 Description-en: fast type-safe C++ formatting library -- library
  This library provides fast, type-safe, small, C++11-aware replacement of
@@ -166793,6 +166788,30 @@ Description-en: meta-build system for ninja
  originally, part of the Chromium source tree, and has since been
  extracted into its own standalone repo.
 
+Package: generator-scripting-language
+Description-md5: 5a179059900204995bfc9ec6467ff829
+Description-en: Generator Scripting Language code generator
+ GSL/4.1 is a code construction tool.  It will generate code in all
+ languages and for all purposes.  If this sounds too good to be true,
+ welcome to 1996, when we invented these techniques.  Magic is simply
+ technology that is twenty years ahead of its time. In addition to
+ code construction, GSL has been used to generate database schema
+ definitions, user interfaces, reports, system administration tools
+ and much more.
+
+Package: generator-scripting-language-examples
+Description-md5: 7ef0b275b5917668f88f21def15261fc
+Description-en: Examples for the Generator Scripting Language code generator
+ GSL/4.1 is a code construction tool.  It will generate code in all
+ languages and for all purposes.  If this sounds too good to be true,
+ welcome to 1996, when we invented these techniques.  Magic is simply
+ technology that is twenty years ahead of its time. In addition to
+ code construction, GSL has been used to generate database schema
+ definitions, user interfaces, reports, system administration tools
+ and much more.
+ .
+ This package contains examples to get started with gsl.
+
 Package: libgeners-dev
 Description-md5: 1d2e692998c9d512716d749435757ef2
 Description-en: generic serialization library for C++ (development package)
@@ -167884,32 +167903,6 @@ Description-en: GEOgraphic coordinates TRANslator (runtime library)
  .
  This package contains the runtime library used by GEOTRANZ to do all
  conversions.
-
-Package: gerbera
-Description-md5: d3a4a05b1b9119d17bca6783c9b00fef
-Description-en: UPnP MediaServer
- Gerbera is an UPnP MediaServer with a nice web user interface based on
- MediaTomb. It allows you to stream your digital media through your home
- network and listen to/watch it on a variety of UPnP compatible devices.
- .
- Gerbera implements the UPnP MediaServer V 1.0 specification that can be found
- on http://www.upnp.org/. The current implementation focuses on parts that are
- required by the specification, however Gerbera's functionality is extended to
- cover the optional parts of the spec as well.
-
-Package: gerbera-doc
-Description-md5: 501132f2902ba7e3aa03e064d98f6662
-Description-en: UPnP MediaServer - documentation
- Gerbera is an UPnP MediaServer with a nice web user interface based on
- MediaTomb. It allows you to stream your digital media through your home
- network and listen to/watch it on a variety of UPnP compatible devices.
- .
- Gerbera implements the UPnP MediaServer V 1.0 specification that can be found
- on http://www.upnp.org/. The current implementation focuses on parts that are
- required by the specification, however Gerbera's functionality is extended to
- cover the optional parts of the spec as well.
- .
- This package contains the documentation for Gerbera.
 
 Package: gereal
 Description-md5: 60418713ee9143e30dc5c563a69ac033
@@ -189079,6 +189072,13 @@ Description-en: Configuration files and manpages for github.com/containers repos
  other container projects.
 
 Package: golang-github-containers-image-dev
+Description-md5: 8de9edc4bb0575480d5e379da4611522
+Description-en: golang library to work with containers' images (transitional package)
+ This is a transitional package to ease upgrades to
+ golang-github-containers-image-v5-dev. It can safely be removed once
+ no packages in the archive depend on it.
+
+Package: golang-github-containers-image-v5-dev
 Description-md5: 43d69f69cfd668e8d0515620d3600bea
 Description-en: golang library to work with containers' images
  This library aims at working in various way with containers' images and
@@ -203149,30 +203149,6 @@ Package: golang-github-remyoudompheng-go-liblzma-dev
 Description-md5: 653bab6ba401d69055454083b5bb565b
 Description-en: Go bindings for XZ Utils/liblzma
  Provides Go bindings for XZ Utils/liblzma
-
-Package: golang-github-renekroon-ttlcache-dev
-Description-md5: 53771f748a0ba8b11e3c284cc4655913
-Description-en: In-memory string-interface{} map with expiration for Golang
- TTLCache is a simple key/value cache in golang with the following functions:
- .
-   - Thread-safe
-   - Individual expiring time or global expiring time, you can choose
-   - Auto-Extending expiration on Get
-   - DNS style TTL, see SkipTtlExtensionOnHit(bool)
-   - Fast and memory efficient
-   - Can trigger callback on key expiration
- .
- Project TTLCache was forked from wunderlist/ttlcache to add extra functions
- not available in the original scope. The main differences are:
- .
-   - An item can store any kind of object, previously, only strings could be
-     saved
-   - Optionally, you can add callbacks to: check if a value should expire, be
-     notified if a value expires, and be notified when new values are added
-     to the cache
-   - The expiration can be either global or per item
-   - Can exist items without expiration time
-   - Expirations and callbacks are realtime
 
 Package: golang-github-restic-chunker-dev
 Description-md5: d8bfa9fcf8073c667f72e9dd528fbe02
@@ -278963,6 +278939,51 @@ Description-en: Open Inventor runtime environment
  .
  Recommended packages are needed only to view help files.
 
+Package: invesalius
+Description-md5: 821349267c7fd811dea4f995630c2a40
+Description-en: 3D medical imaging reconstruction software
+ InVesalius generates 3D medical imaging reconstructions based on a sequence of
+ 2D DICOM files acquired with CT or MRI equipments. InVesalius is
+ internationalized (currently available in English, Portuguese, French,
+ Spanish, Turkish, Italian, Czesh, Japanese, Catalan, Korean, Romanian and
+ German) and provides several tools:
+  * DICOM support including: (a) ACR-NEMA version 1 and 2; (b) DICOM
+    version 3.0 (including various encodings of JPEG -lossless and lossy-, RLE)
+  * Image manipulation features (zoom, pan, rotation, brightness/contrast,
+    etc)
+  * Segmentation based on 2D slices
+  * Pre-defined threshold ranges according to tissue of interest
+  * Segmentation based on watershed
+  * Region growing segmentation
+  * Edition tools (similar to Paint Brush) based on 2D slices
+  * Semi-automatic segmentation based on Watershed
+  * 3D surface creation
+  * 3D surface connectivity tools
+  * 3D surface exportation (including: binary STL, OBJ, VRML, Inventor)
+  * High-quality volume rendering projection
+  * Pre-defined volume rendering presets
+  * Volume rendering crop plane
+  * Picture exportation (including: BMP, TIFF, JPG, PostScript, POV-Ray)
+  * Minimum, Maximum or Mean Intensity Projection, Maximum Intensity Difference
+    Accumulation and Contour based visualizations
+
+Package: invesalius-bin
+Description-md5: 57304da02acc6c104179b2b8a697654f
+Description-en: Implementation of MIDA and contour based visualizations
+ InVesalius generates 3D medical imaging reconstructions based on a sequence of
+ 2D DICOM files acquired with CT or MRI equipments.
+ .
+ This package contains a compiled implementation of MIDA and some contour based
+ visualizations
+
+Package: invesalius-examples
+Description-md5: 33b06a19f32b7da3eeab791da567270b
+Description-en: examples for 3D medical imaging reconstruction software
+ InVesalius generates 3D medical imaging reconstructions based on a sequence of
+ 2D DICOM files acquired with CT or MRI equipments.
+ .
+ This package contains a sample file to open in InVesalius.
+
 Package: invidtui
 Description-md5: 18820ba44fa3ce19d40d6d3c6d04fd81
 Description-en: TUI based Invidious client
@@ -291842,17 +291863,6 @@ Description-en: Simple backoff algorithm
  attempts, where it communicates with entities like sockets or other network
  services.
 
-Package: justbuild
-Description-md5: cb6ebf5b0a1fff2fb71ad0d0f0ce49b8
-Description-en: Generic build system
- Justbuild is a generic build system supporting multi-repository builds. A
- peculiarity of the tool is the separation between global names and physical
- location on the one hand, and logical paths used for actions and installation
- on the other hand (sometimes referred to as "staging"). The language-specific
- information to translate high-level concepts (libraries, binaries) into
- individual compile action is taken from user-defined rules described by
- functional expressions.
-
 Package: libjutils-java
 Description-md5: 12795945f7082a201771bcab70cb0b0a
 Description-en: Common utilities for Java Game Technology Group projects
@@ -292708,6 +292718,449 @@ Description-en: data files for Kalzium
  KDE periodic table application.
  .
  This package is part of the KDE education module.
+
+Package: kamailio
+Description-md5: 552e5cc2b6068908fa4d5a47f64b90b9
+Description-en: very fast, dynamic and configurable SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, kamailio can handle thousands requests
+ per second even on low-budget hardware. It can be configured to act
+ as a SIP proxy, application server, session border controller,
+ or call load balancer to handle a set of media servers.
+ .
+ A C Shell like scripting language provides full control over the server's
+ behaviour. It's easy to integrate Kamailio with 3rd party API's and
+ applications using HTTP, AMQP, database drivers, LDAP, Radius and many other
+ solutions. In addition there is support for scripting using Lua, Python, Perl,
+ Javascript.
+ .
+ Kamailio's modular architecture allows only required functionality to be
+ loaded. There are over 100 modules available: WebSockets for WebRTC,
+ authentication, multiple databases - both traditional SQL databases as well as
+ no-SQL, message bus systems like Rabbit MQ, instant messaging, a presence
+ agent, integration with REST-ful APIs using HTTP and JSON or XML, radius
+ authentication, record routing, an SMS gateway, a XMPP/jabber gateway, a
+ transaction and dialog module, OSP module, statistics support,
+ registrar and user location services, SNMP, SIMPLE Presence and much more.
+ .
+ This package contains the main Kamailio binary along with the principal
+ modules and support binaries.
+
+Package: kamailio-authblockchain-modules
+Description-md5: 88021bffd161251a2df992fd88a73f3b
+Description-en: Blockchain related modules for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides auth_web3 and auth_arnacon modules.
+
+Package: kamailio-autheph-modules
+Description-md5: e80feac6503dfc23b0b8833138f225df
+Description-en: authentication using ephemeral credentials for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides the ephemeral authentication module for Kamailio,
+ enabling authentication using a Restful HTTP API.
+
+Package: kamailio-cnxcc-modules
+Description-md5: 3d59c0d88b6e3024f973200765504fc0
+Description-en: cnxcc modules for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides the cnxcc call charging control module for Kamailio.
+
+Package: kamailio-cpl-modules
+Description-md5: acc08d42c21651499c8ae0c0e2615207
+Description-en: CPL module (CPL interpreter engine) for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides a CPL (Call Processing Language) interpreter for
+ Kamailio, turning Kamailio into a CPL server (storage and interpreter).
+
+Package: kamailio-erlang-modules
+Description-md5: 81dd7fccd6b7b252e7247bc36e64f9ee
+Description-en: Erlang modules for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This Kamailio module provides interaction with the Erlang node from the
+ Kamailio SIP routing scripts. The module allows sending, receiving Erlang
+ messages and RPC calls between each other.
+
+Package: kamailio-extra-modules
+Description-md5: c7ee54b7b1b07069b42bf5197a49e898
+Description-en: Extra modules for the Kamailio SIP Server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides a set of modules for compression of SIP attachments,
+ UUID usage, JSON data structure support, JWT (JSON Web Token), HTTP restful
+ API asynchronous access and a few more functions:
+ gzcompress uuid evapi jansson janssonrpcc jwt nghttp2 http_async_client
+
+Package: kamailio-geoip2-modules
+Description-md5: bb2968f9479079a613c83dc80911f1d5
+Description-en: geoip2 module for the Kamailio SIP Server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides the geoip2 module, an extension enabling
+ real-time queries against the Max Mind GeoIP2 database within the Kamailio
+ configuration file.
+
+Package: kamailio-ims-modules
+Description-md5: 9f40af666cd6a9dd0fe3d4272bd00ce0
+Description-en: IMS module for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package contains various Diameter interfaces and modules for Kamailio
+ to run as an IMS core.
+
+Package: kamailio-json-modules
+Description-md5: 096739f186c290e3b7f40d8d29087d16
+Description-en: Json parser and Json-RPC modules for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides a JSON parser for use in the Kamailio
+ configuration file and the JSON-RPC client over netstrings.
+
+Package: kamailio-kafka-modules
+Description-md5: 6f44290ff565783723f0191e7cb54dd4
+Description-en: Kafka module for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides an embedded kafka producer using librdkafka.
+
+Package: kamailio-kazoo-modules
+Description-md5: 8d9132d1dc3d008b539e3a8adf13ed13
+Description-en: kazoo modules for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides the Kazoo application server integration module for
+ Kamailio.
+
+Package: kamailio-ldap-modules
+Description-md5: a1f37e4d883caccb2b182a8e04087683
+Description-en: LDAP modules for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides the ldap and h350 modules for Kamailio, enabling LDAP
+ queries from the Kamailio routing scripts and storage of SIP account data in
+ an LDAP directory.
+
+Package: kamailio-lua-modules
+Description-md5: e78678d1eea14c5a28d0b5756a863786
+Description-en: app_lua module for Kamailio Lua support
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides the app_lua module, an extension allowing to
+ execute embedded Lua applications within the configuration file as
+ well as writing the entire configuration file in Lua.
+
+Package: kamailio-lwsc-modules
+Description-md5: 651a0529537101bebec504571b00408a
+Description-en: Libwebsockets module for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package contains the lwcs module, which provides a client-side WebSockets
+ API through libwebsockets.
+
+Package: kamailio-memcached-modules
+Description-md5: 8a1b5b6a49b64c3f266fd53f56497b9b
+Description-en: interface to the memcached server, for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides the memcached module, an interface to the memcached
+ server, a high-performance, distributed memory object caching system.
+
+Package: kamailio-microhttpd-modules
+Description-md5: f414917140b7589791acfc739ce72745
+Description-en: Microhttpd module for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides an embedded HTTP server using libmicrohttpd.
+
+Package: kamailio-mongodb-modules
+Description-md5: 58f5fcbe5e3436900cb006c7801b2a3b
+Description-en: mongodb modules for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides the mongodb database driver and non-db connector for
+ Kamailio.
+
+Package: kamailio-mqtt-modules
+Description-md5: 54a4a3f05924c755b672e6ab7fb71880
+Description-en: MQTT modules for the Kamailio SIP Server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ MQTT module allows bidirectional publish/subscribe communication by
+ connecting Kamailio to a MQTT Broker.
+ .
+ Messages can be published from any point in the routing script. Also
+ the subscriptions can be fully controlled by scripting commands.
+
+Package: kamailio-mysql-modules
+Description-md5: e5dd14628ca6789f21ca41a164f8564a
+Description-en: MySQL database connectivity module for Kamailio
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides the MySQL database driver for Kamailio.
+
+Package: kamailio-nats-modules
+Description-md5: 98fadf1e6efe7d33f5087da03212f3e6
+Description-en: Nats module for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package contains the nats module, which provides a NATS consumer for
+ Kamailio. NATS is a real time distributed messaging platform, more details
+ about it can be found at nats.io.
+
+Package: kamailio-outbound-modules
+Description-md5: 6a892d18e646b713f338695829b44b4e
+Description-en: SIP Outbound module for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package contains the "outbound" module implementing SIP outbound extension.
+
+Package: kamailio-perl-modules
+Description-md5: cfe9d19e4e30f4e71986827ded62b2ab
+Description-en: Perl extensions and database driver for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides an interface for Kamailio to write Perl extensions and
+ the perlvdb database driver for Kamailio.
+
+Package: kamailio-phonenum-modules
+Description-md5: 28e6546f656f4fa8735fbba63db8bf4a
+Description-en: phonenum modules for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides real-time queries against the libphonenumber to be
+ performed directly from the Kamailio configuration and routing scripts.
+
+Package: kamailio-postgres-modules
+Description-md5: 8352e89f5d321aac333965c2b466bead
+Description-en: PostgreSQL database connectivity module for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides the PostgreSQL database driver for Kamailio.
+
+Package: kamailio-presence-modules
+Description-md5: c1834ec77d4cce2de4cb832201049c17
+Description-en: SIP presence modules for Kamailio
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides several Kamailio modules for implementing a presence
+ server and presence user agent for rich presence, registrar-based presence,
+ external triggered presence with SIMPLE and XCAP support, as well as a
+ set of other SIP event packages..
+
+Package: kamailio-python3-modules
+Description-md5: 5bd97b896aa3add6a41b618dc7ba976b
+Description-en: app_python3 module for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides the app_python3 module, an extension allowing to
+ execute embedded Python applications within the Kamailio SIP routing script.
+
+Package: kamailio-rabbitmq-modules
+Description-md5: 291676c921cf99398a1ab3d788565fb9
+Description-en: RabbitMQ and AMQP integration modules for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides the RabbitMQ module for Kamailio, enabling AMQP
+ integration into the SIP routing scripts for third party service
+ support.
+
+Package: kamailio-radius-modules
+Description-md5: 5aa030dd29538d295aa0cf0940e5b5d0
+Description-en: RADIUS modules for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides a set of RADIUS modules for Kamailio, for
+ authentication, peering, group membership and messages URIs checking against a
+ RADIUS server.
+
+Package: kamailio-redis-modules
+Description-md5: 2a2e0163eb31c5413dfc1f2ff9e82735
+Description-en: Redis database connectivity module for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides the Redis NOSQL database driver for Kamailio.
+
+Package: kamailio-ruby-modules
+Description-md5: 9950deeb75bcae73dad9ccfb78da8bc5
+Description-en: app_ruby module for Kamailio Ruby support
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides the app_ruby module, an extension allowing to
+ execute embedded Ruby applications within the Kamailio SIP routing script.
+
+Package: kamailio-sctp-modules
+Description-md5: 23c1bcafb8b49b3df80140f632fd9d8d
+Description-en: SCTP SIP transport module for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides the SCTP SIP transport module for Kamailio.
+
+Package: kamailio-secsipid-modules
+Description-md5: 22714923bc20b2934a0ebc9c7f654a58
+Description-en: secsipid module for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package contains the secsipid module, witch provides
+ STIR and SHAKEN (RFC8224, RFC8588).
+
+Package: kamailio-snmpstats-modules
+Description-md5: 3f19e2de7dc27a4ef75f936a91e17402
+Description-en: SNMP AgentX subagent module for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides the snmpstats module for Kamailio. This module acts
+ as an AgentX subagent which connects to a master agent. The Kamailio MIBS are
+ included.
+
+Package: kamailio-sqlite-modules
+Description-md5: b4f67430b14343d98efac6caaf86fe43
+Description-en: SQLite database connectivity module for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides the SQLite database driver for Kamailio.
+
+Package: kamailio-systemd-modules
+Description-md5: b03a3ec6dcec09ef8291bc5e46f57fcf
+Description-en: systemd logging modules for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides logging to systemd journal directly from the
+ Kamailio configuration and routing scripts.
+
+Package: kamailio-tls-modules
+Description-md5: 36c06a49af2355c47ed5760d80991cd8
+Description-en: TLS support for the Kamailio SIP server (authentication, transport)
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides TLS support for encrypted and authenticated
+ SIP connections as well as generic TLS support for many Kamailio modules.
+
+Package: kamailio-unixodbc-modules
+Description-md5: 1f7c22f422b0111b09d4f9a872f73763
+Description-en: unixODBC database connectivity module for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides the unixODBC database driver for Kamailio.
+
+Package: kamailio-utils-modules
+Description-md5: 10e039d68b43f9d332fe6e38049edc47
+Description-en: Utility functions for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides a set of utility functions for Kamailio, as well
+ as modules for restful HTTP API access using the CURL library in the
+ http_client module.
+
+Package: kamailio-websocket-modules
+Description-md5: 14a90490fa55b64ad6cd540ad4dd34b8
+Description-en: WebSocket module for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package contains the module implementing WebSocket transport layer
+ for use in SIP over WebSockets, in combination with WebRTC media sessions..
+
+Package: kamailio-xml-modules
+Description-md5: c27d5c0af319dff182dc09dd0da739cb
+Description-en: XML based extensions for Kamailio's Management Interface
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides:
+ - the XMLRPC transport implementations for Kamailio's
+ Management and Control Interface.
+ - xmlops module for XPath operations in configuration file
+
+Package: kamailio-xmpp-modules
+Description-md5: 5ef95e7d723676af349f49fed944b7b3
+Description-en: XMPP gateway module for the Kamailio SIP server
+ Kamailio is a very fast and flexible SIP (RFC3261)
+ server. Written entirely in C, Kamailio can handle thousands calls
+ per second even on low-budget hardware.
+ .
+ This package provides the SIP to XMPP IM translator module for Kamailio.
 
 Package: kamcli
 Description-md5: 765fa512a88c519abcd75e724f46c9d1
@@ -377783,7 +378236,7 @@ Description-md5: a15d5f4558d300bd70c5c317ba2f78ee
 Description-en: Plasma Runtime components
  Plasma library and runtime components based upon KF6 and Qt 6.
 
-Package: libplist++-2.0-4
+Package: libplist++-2.0-12
 Description-md5: 73d0296a4e76c1d57a3f4ef06aaefd79
 Description-en: C++ Library for handling Apple binary and XML property lists
  libplist is a library for reading and writing the Apple binary and XML
@@ -377801,7 +378254,7 @@ Description-en: C++ library for handling Apple binary and XML property lists - d
  .
  This package contains the development files of the liplist++ library.
 
-Package: libplist-2.0-4
+Package: libplist-2.0-12
 Description-md5: 025ff093cbf9bf08e17d0248380c6438
 Description-en: Library for handling Apple binary and XML property lists
  libplist is a library for reading and writing the Apple binary and XML
@@ -461222,7 +461675,7 @@ Description-en: Documentation for NetCDF
  This package contains documentation for the NetCDF library in a
  variety of formats.
 
-Package: libnetcdf-c++4-1
+Package: libnetcdf-c++4-3
 Description-md5: 8c7bac660c8619174f9e2bab867f280a
 Description-en: C++ interface for scientific data access to large binary data
  NetCDF (network Common Data Form) is an interface for scientific
@@ -477480,6 +477933,13 @@ Description-en: Lua parser in JavaScript
  well.
  .
  Node.js is an event-based server-side JavaScript engine.
+
+Package: node-lucide
+Description-md5: d8a77ab23a55676f0ffe1e52e536301e
+Description-en: Flexible icon set with open source icons (Node.js library)
+ Lucide is a community-based fork of Feather Icons, providing a large
+ collection of simple and clean vector icons as reusable components
+ and modules for JavaScript applications.
 
 Package: libjs-lunr
 Description-md5: 59b2f4a6b016f997304fe5a338989797
@@ -513713,55 +514173,6 @@ Description-en: library for massively parallel optimisation (shared library)
  .
  This package contains the shared library.
 
-Package: libcf-ocaml
-Description-md5: 1d355184879247df4bd43d0dd3df0b24
-Description-en: OCaml library with miscellaneous utility functions
- The pagoda core foundation OCaml library provides various modules. Some of
- the highlighted features include:
-   - Functional streams and stream processors (extended).
-   - Functional bootstrapped skew-binomial heap.
-   - Functional red-black binary tree (associative array).
-   - Functional sets and maps based on red-black binary tree.
-   - Functional real-time catenable deque.
-   - Functional LL(x) parsing using state-exception monad.
-   - Functional lazy deterministic finite automaton (DFA).
-   - Functional lexical analyzer (using lazy DFA and monadic parser).
-   - Functional substring list manipulation (message buffer chains).
-   - Gregorian calendar date manipulation.
-   - Standard time manipulation.
-   - System time in Temps Atomique Internationale (TAI).
-   - Unicode transcoding.
-   - Extended socket interface (supports IPv6 and UDP w/multicast).
-   - Universal resource identifier (URI) manipulation.
-   - I/O event multiplexing (with Unix.select).
- .
- This package contains only the shared runtime stub libraries.
-
-Package: libcf-ocaml-dev
-Description-md5: a1c3b3d6591f6c9cdb4b2036f7568439
-Description-en: OCaml library with miscellaneous utility functions
- The pagoda core foundation OCaml library provides various modules. Some of
- the highlighted features include:
-   - Functional streams and stream processors (extended).
-   - Functional bootstrapped skew-binomial heap.
-   - Functional red-black binary tree (associative array).
-   - Functional sets and maps based on red-black binary tree.
-   - Functional real-time catenable deque.
-   - Functional LL(x) parsing using state-exception monad.
-   - Functional lazy deterministic finite automaton (DFA).
-   - Functional lexical analyzer (using lazy DFA and monadic parser).
-   - Functional substring list manipulation (message buffer chains).
-   - Gregorian calendar date manipulation.
-   - Standard time manipulation.
-   - System time in Temps Atomique Internationale (TAI).
-   - Unicode transcoding.
-   - Extended socket interface (supports IPv6 and UDP w/multicast).
-   - Universal resource identifier (URI) manipulation.
-   - I/O event multiplexing (with Unix.select).
- .
- This package contains all the development stuff you need to use ocaml-mad
- in your programs.
-
 Package: libpaho-mqtt-dev
 Description-md5: 84a5de0c45c719f0b0c180d285be41d9
 Description-en: Eclipse Paho MQTT C client - development files
@@ -526732,13 +527143,6 @@ Description-md5: e6aaba19a4306958e19cedd63fdbbf39
 Description-en: Common interfaces and classes for URI representation and interaction
  This package contains an interface to represents URI objects according to
  RFC 3986.
-
-Package: php-log
-Description-md5: 47509651d4ac28f521750fe39a94afbc
-Description-en: Logging Framework
- The Log package provides an abstracted logging framework. It includes output
- handlers for log files, databases, syslog, email, Firebug, and the console. It
- also provides composite and subject-observer logging mechanisms.
 
 Package: php-lorenzo-pinky
 Description-md5: 9749a31f054369e3761e5beea0d23ef2
@@ -541865,7 +542269,7 @@ Description-en: Microbial (bacterial and archaeal) gene finding program
  it needs to on its own.
 
 Package: profanity
-Description-md5: 9c90fdf3e0d5ba2a493d74ad88918aa9
+Description-md5: 1b2cd9a2d6602fe2013cf6927604b932
 Description-en: console based XMPP client
  Profanity is a console based instant messaging client for XMPP (Jabber)
  protocol based chat. It is inspired by popular IRC client IRSSI.
@@ -541878,11 +542282,12 @@ Description-en: console based XMPP client
   * Roster management
   * Flexible resource and priority settings
   * Desktop notifications
-  * Plugins in Python and C
+  * Plugins in Lua
   * Support for colorthemes
+  * Spellcheck
 
 Package: profanity-light
-Description-md5: 52241db1a1d75df9ae99eb5cb63c55a9
+Description-md5: 44a0217da4879c360fc4c27703ac778e
 Description-en: console based XMPP client, light version
  Profanity is a console based instant messaging client for XMPP (Jabber)
  protocol based chat. It is inspired by popular IRC client IRSSI.
@@ -541894,7 +542299,6 @@ Description-en: console based XMPP client, light version
   * PGP, OMEMO, and OTR encryption
   * Roster management
   * Flexible resource and priority settings
-  * Plugins in C
   * Support for colorthemes
  .
  This version does not depend on X11 libraries nor Python. If you like
@@ -567788,6 +568192,26 @@ Description-en: Python module for delimiter-separated-value files (Python 3)
  .
  This package installs the library for Python 3.
 
+Package: python-dtcwt-doc
+Description-md5: 1acdff6c54e8b82aacb1a018de5747d0
+Description-en: documentation for dtcwt
+ The dtcwt library provides a Python implementation of the 1, 2 and 3-D
+ dual-tree complex wavelet transform along with some associated algorithms. It
+ contains a pure CPU implementation which makes use of NumPy along with an
+ accelerated GPU implementation using OpenCL.
+ .
+ This package provides the documentation.
+
+Package: python3-dtcwt
+Description-md5: 2cf54df74a6e4d475c08d6953a30fbc0
+Description-en: Dual-Tree Complex Wavelet Transform library for Python 3
+ The dtcwt library provides a Python implementation of the 1, 2 and 3-D
+ dual-tree complex wavelet transform along with some associated algorithms. It
+ contains a pure CPU implementation which makes use of NumPy along with an
+ accelerated GPU implementation using OpenCL.
+ .
+ This package provides the modules for Python 3.
+
 Package: python3-duet
 Description-md5: df09ad9b58579be42dcd7dbc227019d5
 Description-en: Duet is a simple future-based async library for Python
@@ -592781,22 +593205,6 @@ Description-en: noise suppression and automatic gain processing for speech audio
  audio from the caller and passing cleaned audio back for later speech
  handling.
 
-Package: python3-websocketd
-Description-md5: a2249dde0da0f12cdb7759dc10904254
-Description-en: python module for creating a http server which uses WebSockets
- This module uses the network module to create a server, and implements http(s)
- and WebSockets over those connections.  With only 6 lines of code you have a
- working system.  You only have to add what you want your server to do.
-
-Package: python3-websocketd-doc
-Description-md5: ad2245ed5d2779b0b2db7ecf66c88892
-Description-en: API documentation for python3-websocketd
- This module uses the network module to create a server, and implements http(s)
- and WebSockets over those connections.  With only 6 lines of code you have a
- working system.  You only have to add what you want your server to do.
- .
- This package contains the API documentation.
-
 Package: python3-websockets
 Description-md5: 03d4167229868aa289f6f4f6aabf74fb
 Description-en: implementation of the WebSocket Protocol (RFC 6455 & 7692)
@@ -612047,6 +612455,15 @@ Description-en: Spherical Trigonometry
  Spherical trigonometry for geographic applications. That is, compute distances
  and related measures for angular (longitude/latitude) locations.
 
+Package: r-cran-gert
+Description-md5: b807641ed7e82f399ecdffd92780ca3d
+Description-en: Simple Git Client for R
+ Simple git client for R based on 'libgit2' <https://libgit2.org> with support
+ for SSH and HTTPS remotes. All functions in 'gert' use basic R data types
+ (such as vectors and data-frames) for their arguments and return values.
+ User credentials are shared with command line 'git' through the git-credential
+ store and ssh keys stored on disk or ssh-agent.
+
 Package: r-cran-getopt
 Description-md5: 32a7e52d15c9afc1f3cdef8874cce5dd
 Description-en: GNU R package providing command-line parsing functionality
@@ -613852,15 +614269,12 @@ Description-en: GNU R multinomial logit models, with or without random effects
  should be treated with caution if the group sizes are small.
 
 Package: r-cran-mclust
-Description-md5: e56f1c7d370a5db80c95f51e7ae8591d
-Description-en: Gaussian Mixture Modelling for Model-Based Clustering
- This GNU R package supports Gaussian Mixture Modelling for Model-Based
- Clustering, Classification, and Density Estimation.
- .
- Gaussian finite mixture models fitted via EM algorithm for model-based
- clustering, classification, and density estimation, including Bayesian
- regularization, dimension reduction for visualisation, and
- resampling-based inference.
+Description-md5: a637d0bee971b6688a8489d28fa10ece
+Description-en: Gaussian Mixture Modelling for Model-Based Clustering, Classification, and Density Estimation
+ Gaussian finite mixture models fitted via EM algorithm for
+ model-based clustering, classification, and density estimation,
+ including Bayesian regularization, dimension reduction for visualisation,
+ and resampling-based inference.
 
 Package: r-cran-mclustcomp
 Description-md5: 55771c8441ef2b5a2e95d585e3fb0d22
@@ -655475,6 +655889,11 @@ Description-md5: 6580204bb4702cfe862dcdccdde8dd1e
 Description-en: Enumeration-based bit flags - Rust source code
  Source code for Debianized Rust crate "flagset"
 
+Package: librust-flaky-test-dev
+Description-md5: 582f60029a9ef0ca25aff9c30f525b68
+Description-en: Atttribute macro for running a flaky test multiple times - Rust source code
+ Source code for Debianized Rust crate "flaky_test"
+
 Package: librust-flaky-test-impl-dev
 Description-md5: bef8d7613471b80b8f286c3909c32ac1
 Description-en: Implementation detail of the `flaky_test` macro - Rust source code
@@ -657019,8 +657438,8 @@ Description-en: core types of gpu-descriptor Rust library - Rust source code
  Source code for Debianized Rust crate "gpu-descriptor-types"
 
 Package: librust-granit-parser-dev
-Description-md5: 70422fa8018f55666c5b5e317f00e34b
-Description-en: YAML parser with comment and style support, written in pure Rust - Rust source code
+Description-md5: e0eea0e6c3bee4e1183ac6b7c4bbb4ae
+Description-en: YAML parser with comment, tag and style support, written in pure Rust - Rust source code
  Source code for Debianized Rust crate "granit-parser"
 
 Package: librust-graphene-rs-dev
@@ -661408,6 +661827,11 @@ Package: librust-magma-dev
 Description-md5: 853ca52bdededa42ddeed9db8676f00b
 Description-en: Magma (GOST R 34.12-2015) block cipher - Rust source code
  Source code for Debianized Rust crate "magma"
+
+Package: librust-magma-gpu-dev
+Description-md5: d45c670f9af664f29cbf30790e426c32
+Description-en: Experimental crate to enable microkernel-gpu - Rust source code
+ Source code for Debianized Rust crate "magma-gpu"
 
 Package: librust-magnet-uri-dev
 Description-md5: cff5f6e85c66b1effac209a33d75b25f
@@ -675105,8 +675529,8 @@ Description-en: D-Bus & GVariant encoding & decoding - Rust source code
  Source code for Debianized Rust crate "zvariant"
 
 Package: librust-zvariant-derive-dev
-Description-md5: 0f0fdacfeeb65e92bfeaf7c261f54bc3
-Description-en: D-Bus & GVariant encoding & decoding - Rust source code
+Description-md5: 8a9bf97a794f45436e426eb4d9c1f8df
+Description-en: D-Bus & GVariant encoding & decoding (deprecated: merged into zbus) - Rust source code
  Source code for Debianized Rust crate "zvariant_derive"
 
 Package: librust-zvariant-derive-2-dev
@@ -678606,6 +679030,62 @@ Description-en: XML library for Scala 2.12 (scala-xml_2.12)
  scala-2.12 compiler. Scala libraries are not binary-compatible across minor
  versions, so a per-series build (here _2.12) is needed. Built from source with
  no sbt, compiled directly with the Scala 2.12 compiler.
+
+Package: scala3
+Description-md5: 36802d67450301965ae69827a34230c6
+Description-en: compiler and interactive shell for the Scala 3 language
+ Scala is a programming language that scales with you: from small
+ scripts to large multiplatform applications. Scala 3 adds enums, given
+ instances and using clauses, extension methods, opaque type aliases,
+ union and intersection types, and a new metaprogramming system based on
+ inline and quotes.
+ .
+ This package provides the Scala 3 compiler (scalac-3) with its
+ staging and TASTy inspector libraries, the interactive shell (REPL,
+ started by scala-3 with no program to run), a minimal program runner
+ (scala-3) and the compiler bridge used by sbt and other build tools
+ (scala3-sbt-bridge). The scaladoc tool is in scala3-scaladoc; its
+ command, scaladoc-3, is in this package and names scala3-scaladoc when
+ that is not installed. It can be
+ installed together with the Scala 2.12 (scala) and Scala 2.13
+ (scala-2.13) packages; /usr/bin/scalac and /usr/bin/scala are managed
+ by update-alternatives.
+ .
+ It is built from source with no sbt, by a two-pass self-hosting build.
+
+Package: scala3-library
+Description-md5: 1c3796a71fe7f06747e174d1ea3bd65d
+Description-en: Scala 3 standard library
+ Scala is a programming language that scales with you: from small
+ scripts to large multiplatform applications. Scala 3 adds enums, given
+ instances and using clauses, extension methods, opaque type aliases,
+ union and intersection types, and a new metaprogramming system based on
+ inline and quotes.
+ .
+ This package contains the Scala 3 standard library
+ (org.scala-lang:scala-library 3.x, binary compatible with Scala 2.13)
+ needed to run programs built with Scala 3. It can be installed together
+ with scala-library (Scala 2.12) and scala-library-2.13.
+
+Package: scala3-scaladoc
+Description-md5: 037f74f59bb71f4b7545ac5ba765e515
+Description-en: API documentation and static site generator for Scala 3
+ Scala is a programming language that scales with you: from small
+ scripts to large multiplatform applications. Scala 3 adds enums, given
+ instances and using clauses, extension methods, opaque type aliases,
+ union and intersection types, and a new metaprogramming system based on
+ inline and quotes.
+ .
+ This package provides scaladoc for Scala 3 (scaladoc-3), which
+ generates HTML API documentation from compiled Scala 3 code (TASTy
+ files) and renders static documentation sites written in Markdown with
+ Liquid templates. /usr/bin/scaladoc is managed by update-alternatives,
+ together with /usr/bin/scala.
+ .
+ The pages it generates load nothing from other sites: the scripts of the
+ type hierarchy graph (d3, graphlib-dot, dagre-d3) are copied into the
+ generated site, and there is no button to run code snippets in Scastie;
+ type-signature search (Inkuire) is not included.
 
 Package: t1-cyrillic
 Description-md5: defa546a04a820edb471b1be2e125fab
@@ -695596,6 +696076,23 @@ Description-en: Very fast C++ logging library
  .
  This is the compiled version of the library.
 
+Package: libspdlog1.17
+Description-md5: b2d503aa303f67bc884a02e53e082428
+Description-en: Very fast C++ logging library
+ Features: Very fast - performance is the primary goal; Headers only; No
+ dependencies - just copy and use; call style using the excellent cppformat
+ library; ostream call style is supported too; Optional extremely fast
+ asynchronous mode - using lockfree queues and other tricks to reach millions
+ of calls/sec; Custom formatting; Multi/Single threaded loggers; Easily
+ extendable with custom log targets (just implement a single function in the
+ sink interface). Severity based filtering - threshold levels can be modified
+ in runtime as well as in compile time.
+ .
+ Various log targets:
+ Rotating log files, Daily log files, Console logging, Linux syslog.
+ .
+ This is the compiled version of the library.
+
 Package: python3-speaklater
 Description-md5: 3d3836f45501ba34fcb309bd013a9eef
 Description-en: lazy string useful for translations for Python 3
@@ -704093,6 +704590,40 @@ Description-en: audio player and music collection organizer
   - Scrobbler with support for Last.fm and ListenBrainz
   - Streaming support for Subsonic-compatible servers
   - Unofficial streaming support for Tidal and Qobuz
+
+Package: strawberry-graphql
+Description-md5: 8032230798a771a1947e3cdfe8cd7726
+Description-en: Python GraphQL library for creating GraphQL APIs
+ Strawberry is a developer friendly Python based GraphQL library for creating
+ GraphQL APIs, designed for modern development inspired by dataclasses. One of
+ its goals is to provide a great developer experience for both GraphQL
+ beginners and advanced users.
+ .
+ Strawberry is also a code-first GraphQL server library that uses Python type
+ annotations to define GraphQL types. This allows you to focus more on how you
+ can integrate one ore more DBs into your workflow and less on the
+ idiosyncrasies of GraphQL itself.
+ .
+ Have a lock at the suggested packages in case you want to install this
+ package. You will probably need one or more packages additionally to get your
+ setup working!
+ .
+ This package contains the Python 3 version.
+
+Package: strawberry-graphql-django
+Description-md5: e4a9b5a61864ae32c4dcc67b198daa58
+Description-en: Strawberry GraphQL Django extension
+ Strawberry is a developer friendly Python based GraphQL library for creating
+ GraphQL APIs, designed for modern development inspired by dataclasses. One of
+ its goals is to provide a great developer experience for both GraphQL
+ beginners and advanced users.
+ .
+ Strawberry is also a code-first GraphQL server library that uses Python type
+ annotations to define GraphQL types. This allows you to focus more on how
+ you can integrate one or more DBs into your workflow and less on the
+ idiosyncrasies of GraphQL itself.
+ .
+ This package provides the Django integration of strawberry-graphql.
 
 Package: strcase-dev
 Description-md5: a5adff79e508618f6ac0ad6f0b41d947
@@ -738178,6 +738709,29 @@ Description-en: Enhanced wiki and issue tracking system for software development
  making the acquisition of an overview of the project and tracking progress
  very easy. The roadmap shows the road ahead, listing the upcoming milestones.
 
+Package: trac-accountmanager
+Description-md5: 3f6cccbb3990fcf081d6f35ce67bd2fa
+Description-en: account management plugin for Trac
+ Offers several features for managing user accounts on Trac:
+  - allow users to register new accounts
+  - login via an HTML form instead of using HTTP authentication
+  - allow existing users to change their passwords or delete their accounts
+
+Package: trac-customfieldadmin
+Description-md5: f4acf6d666ee1230ae26123042117708
+Description-en: panel for administrating custom ticket fields in Trac
+ This Trac plugin is a web admin panel for administrating custom
+ fields - adding, modifying and deleting them without editing
+ the trac.ini file directly.
+
+Package: trac-httpauth
+Description-md5: 9f43969b1f62922a0beca48ea30c55e3
+Description-en: Force HTTP authentication from within Trac
+ Allows you to protect certain paths with HTTP authentication,
+ while the AccountManagerPlugin is used to check passwords.
+ Primarily this is meant to be used with the XmlRpcPlugin so
+ it will work while using AccountManager's form-based logins.
+
 Package: trac-roadmap
 Description-md5: 84c1f9f9291dd73fe1a4a610d1ce3167
 Description-en: enhances the Trac roadmap with sorting and filtering
@@ -765626,51 +766180,6 @@ Description-en: Tools for manipulating Windows Imaging files
  This package contains a free implementation of the ImageX utility
  that is used to create WIM files on Windows.
 
-Package: flydraw
-Description-md5: aa058a16abd6cbeedce7c237076a8669
-Description-en: command-line drawing tool
- flydraw is a drawing tool based on an interpreter which parses a
- language featuring rich graphic primitives; it uses libgd to output
- GIF, JPEG, or PNG files.
-
-Package: wims
-Description-md5: 0d669d4703fcf31fdf92745b0aaaf7b6
-Description-en: server for educational content: courses, exercises, and exams
- The WWW Interactive Multipurpose Server is an educational platform
- originally developed for mathematics but now also supporting subjects such
- as physics, chemistry, biology, and languages.
- .
- WIMS features a rich set of resources and exercises either for
- autodidactical use or for training classes, including:
- .
-  * exercises with automatic feedback and correction, allowing the
-    learners to work at their own pace;
-  * interactive exercises with randomly assigned data, allowing the
-    learners to work on the same type of exercise but with different
-    data and as often as they wish;
-  * exercises with an automatic scoring system, which enhances learner
-    motivation;
-  * user-friendly graphics and calculation tools;
-  * courses and documents with hyperlinks to the exercise pool;
-    examples in the courses can be made random, so the student can get
-    more than one instance of an illustration for tricky concepts;
-  * support for exams with pre-published contents. As each individual
-    exam will have randomly chosen data, training is possible but
-    writing each response in advance is not.
- .
- This package contains the WIMS FastCGI server, serving Open Exercise
- Format (OEF) documents. OEF is a very high-level language which
- allows authors to focus on pedagogical issues.
-
-Package: wims-modules
-Description-md5: c46c46b321afcfbed570917daa97c949
-Description-en: transitional package; this package can be discarded later
- wims-modules is a transitional package, which allows one to install
- wims (>= 4.31b+dfsg1-1) over previous versions.
- .
- This package will disappear from testing when forky will become the
- stable debian version.
-
 Package: wims-lti
 Description-md5: 53fe6676135b3fad3d8509a7a66ac4ab
 Description-en: gateway server that links LMSs to WIMS servers, using LTI
@@ -785364,6 +785873,12 @@ Description-md5: 0dcb233a96d91ba2454397b7ee626b1a
 Description-en: various ZIM command-line tools
  ZIM tools is a collection of various command-line utilities for
  interacting and working with the ZIM file format.
+
+Package: zimfw
+Description-md5: b55dc753395699f48f9b8389a4de9af2
+Description-en: zsh configuration framework with blazing speed and modular extensions
+ Zim Framework is a Zsh configuration framework that bundles a plugin manager,
+ useful modules and a wide variety of themes, without compromising on speed.
 
 Package: libzimg-dev
 Description-md5: cfa77a686e5d5de659dcf6a0c4a14a80
