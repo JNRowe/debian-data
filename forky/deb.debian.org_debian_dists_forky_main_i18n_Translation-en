@@ -4737,17 +4737,6 @@ Description-en: Client for the Home Connect API
  receiving event updates from Home Connect so changes reported by appliances
  can be processed without repeatedly polling the service.
 
-Package: python3-aiohttp-asyncmdnsresolver
-Description-md5: 58086f023279cd475c8a0137ca47afa7
-Description-en: Async resolver for aiohttp supporting mDNS queries
- This library offers asynchronous resolution of multicast DNS (mDNS) queries
- for use with aiohttp. It facilitates network operations within local networks
- that use mDNS for resolving hostnames, such as those common in smart home
- devices and Wi-Fi networks. By integrating with aiohttp, the library ensures
- inter-device communication through mDNS, enhancing connectivity and
- interaction within local network environments without relying on traditional
- DNS resolution techniques.
-
 Package: python3-aiohttp-cors
 Description-md5: 515e94b5a4d27fe8a07e76f0302fb5ff
 Description-en: Cross Origin Resource Sharing (CORS) support for aiohttp
@@ -8475,6 +8464,12 @@ Description-en: Security-Policy Linux for Android - Development files
  This library provides an API for setting, checking sepolicy.
  .
  This package provides the development files.
+
+Package: libnist-sip-aosp-java
+Description-md5: 140a611b14a396a907ed13e02f0cd527
+Description-en: Parser and Stack API
+ Contains a protocol stack/library that helps to build and test SIP
+ applications and servers.
 
 Package: librappor-aosp-java
 Description-md5: fa556340646dc3321bed3edbe7aa8f25
@@ -19513,6 +19508,29 @@ Description-en: automatic as-installed testing for Debian packages
  .
  For generating tests of well-known source packages such as Perl and Ruby
  libraries you should install the autodep8 package.
+
+Package: autopkgtest-helper
+Description-md5: 8d20a6a77e5b79c592085d2b0537f25f
+Description-en: shell library helper for autopkgtest
+ A POSIX shell library for debian/tests scripts.
+ .
+ Available functions support:
+ - test flows start a service, run the code under test against it,
+   and clean up afterwards.
+ - a fake CA to generate certificates
+ .
+ The core provides a temporary working root with guaranteed teardown (also
+ on failure and on signals), background daemon management, readiness
+ polling instead of sleeping, free-port selection, throw-away CA and server
+ certificates, and reversible changes to system files.  Log files of the
+ daemons are printed and saved as autopkgtest artifacts when a test fails.
+ .
+ The library is meant to be used for testing other software that depends on
+ a service, not for testing the services themselves.
+ .
+ This is meant to be a team effort, feel free to open MRs on salsa for
+ new functions and consider joining the team by subscribing to the
+ package on tracker.d.o.
 
 Package: autopostgresqlbackup
 Description-md5: dcd99edb882742617b6d27f2116096aa
@@ -79686,14 +79704,6 @@ Description-en: package for tracking dirty fields on a Django model instance (Py
  .
  This is the Python 3 version of the package.
 
-Package: python3-django-distill
-Description-md5: 1277cd7ac2d3baa24b23c96d98280c3f
-Description-en: Static site generator and publisher for Django
- Django-distill extends existing Django sites with the ability to export
- fully functional static sites. It is suitable for sites such as blogs that have
- a mostly static front end but you still want to use a CMS to manage the
- content.
-
 Package: python3-django-downloadview
 Description-md5: 9a4a618ff4df998d873abcb8f01ba0a8
 Description-en: efficient static file serving with Django (Python3 version)
@@ -90284,6 +90294,111 @@ Description-en: DistoX data download utility
  .
  The DistoX is a cave survey instrument designed by Beat
  Heeb.
+
+Package: dxvk
+Description-md5: 589a226c5c8b5e3f13573c32941716e1
+Description-en: Vulkan-based translation layer for Direct3D 8/9/10/11
+ DXVK is a Vulkan-based translation layer for Direct3D 8/9/10/11 which
+ allows running 3D applications on Linux using Wine.
+ .
+ DXVK aims to provide support for D3D11, feature level 12_1, and
+ D3D10, feature level 10_1.
+ .
+ This package contains the dxvk-setup script that configures
+ or removes DXVK from a Wine prefix.
+
+Package: dxvk-wine32
+Description-md5: 737650ea0b2e74d5d4ab54e209423e40
+Description-en: Vulkan-based translation layer for Direct3D 8/9/10/11 - wine32 build
+ DXVK is a Vulkan-based translation layer for Direct3D 8/9/10/11 which
+ allows running 3D applications on Linux using Wine.
+ .
+ DXVK aims to provide support for D3D11, feature level 12_1, and
+ D3D10, feature level 10_1.
+ .
+ This package contains the wine32 build.
+
+Package: dxvk-wine32-development
+Description-md5: bfe8ebc058cce6653c20fea6f85a4246
+Description-en: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: dxvk-wine64
+Description-md5: f3192c3530648878c382dca1645339dc
+Description-en: Vulkan-based translation layer for Direct3D 8/9/10/11 - wine64 build
+ DXVK is a Vulkan-based translation layer for Direct3D 8/9/10/11 which
+ allows running 3D applications on Linux using Wine.
+ .
+ DXVK aims to provide support for D3D11, feature level 12_1, and
+ D3D10, feature level 10_1.
+ .
+ This package contains the wine64 build.
+
+Package: dxvk-wine64-development
+Description-md5: bfe8ebc058cce6653c20fea6f85a4246
+Description-en: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: libdxvk-d3d10core0
+Description-md5: 09915be8e41a1f9e326c3c2e830c1df7
+Description-en: Vulkan-based translation layer for Direct3D 10
+ DXVK Native is a Vulkan-based translation layer for Direct3D 8/9/10/11 which
+ allows Direct3D applications originating on Windows to be compiled
+ natively for Linux.
+ .
+ This package contains DXVK's implementation of the Direct3D 10 API.
+
+Package: libdxvk-d3d11-0
+Description-md5: 215ea2374073683192454277e87672ec
+Description-en: Vulkan-based translation layer for Direct3D 11
+ DXVK Native is a Vulkan-based translation layer for Direct3D 8/9/10/11 which
+ allows Direct3D applications originating on Windows to be compiled
+ natively for Linux.
+ .
+ This package contains DXVK's implementation of the Direct3D 11 API.
+
+Package: libdxvk-d3d8-0
+Description-md5: d236fa370b096d0357479fcf0df8d0c6
+Description-en: Vulkan-based translation layer for Direct3D 8
+ DXVK Native is a Vulkan-based translation layer for Direct3D 8/9/10/11 which
+ allows Direct3D applications originating on Windows to be compiled
+ natively for Linux.
+ .
+ This package contains DXVK's implementation of the Direct3D 8 API.
+
+Package: libdxvk-d3d9-0
+Description-md5: 35b73ad6879bed4fc119e502c2356e0a
+Description-en: Vulkan-based translation layer for Direct3D 9
+ DXVK Native is a Vulkan-based translation layer for Direct3D 8/9/10/11 which
+ allows Direct3D applications originating on Windows to be compiled
+ natively for Linux.
+ .
+ This package contains DXVK's implementation of the Direct3D 9 API.
+
+Package: libdxvk-dxgi0
+Description-md5: a660dd1eee9ba83f4c8963dc6accb79a
+Description-en: Vulkan-based translation layer for Direct3D 8/9/10/11 - graphics infrastructure
+ DXVK Native is a Vulkan-based translation layer for Direct3D 8/9/10/11 which
+ allows Direct3D applications originating on Windows to be compiled
+ natively for Linux.
+ .
+ This package contains DXVK's implementation of Microsoft's
+ DirectX Graphics Infrastructure (DXGI) API, a layer shared
+ by Direct3D 10 and 11.
+
+Package: libdxvk-native-dev
+Description-md5: 1424e4aa39209a89c45e779987d73034
+Description-en: Vulkan-based translation layer for Direct3D 8/9/10/11 - development files
+ DXVK Native is a Vulkan-based translation layer for Direct3D 8/9/10/11 which
+ allows Direct3D applications originating on Windows to be compiled
+ natively for Linux.
+ .
+ DXVK aims to provide support for D3D11, feature level 11_1, and
+ D3D10, feature level 10_1.
+ .
+ This package contains the development headers necessary to compile
+ applications that use the Direct3D APIs, including a minimal subset
+ of required Windows header definitions.
 
 Package: python3-dyda
 Description-md5: 48e1ed39e89bc8fdeecbb671782e21f5
@@ -110058,6 +110173,16 @@ Description-en: unified language for form-compilers (Python 3)
  output.
  .
  This package installs the library for Python 3.
+
+Package: python3-fenicsx-compat
+Description-md5: 2a455ef7faf0bf8f9c15ff23c8787dfd
+Description-en: Cross-version compatibility helpers for DOLFINx (Python 3)
+ Centralizes workarounds for breaking API changes across dolfinx
+ versions (back to release 0.10), previously
+ duplicated across dolfinx-adjoint, io4dolfinx, and scifem.
+ .
+ This package installs the library for Python 3.
+ Pure Python, no compiled extensions.
 
 Package: fenicsx-performance-tests
 Description-md5: b1cff18bdd7dbf5473a07a1571ccbbb8
@@ -170739,6 +170864,21 @@ Description-en: rclone-based git annex special remote
  Note: although Amazon Cloud Drive support is implemented, it is broken ATM
  see https://github.com/DanielDent/git-annex-remote-rclone/issues/22 .
 
+Package: git-assembler
+Description-md5: 47e23a7868ad405dd2ee24b14ef6f2f8
+Description-en: update git branches using high-level instructions
+ git-assembler performs automatic merge and rebase operations on git
+ branches following a simple declarative script kept in the repository.
+ Like "make", but for branches.
+ .
+ It can be used to conveniently follow remote branches (such as pull
+ requests), test multiple patches together or work on interdependent
+ feature branches, rebuilding the resulting branches whenever the
+ branches they depend on change. Unlike topgit, it does not enforce any
+ particular workflow.
+ .
+ Once installed, it can also be invoked as "git assembler".
+
 Package: elpa-git-auto-commit-mode
 Description-md5: eedd597afb41db25abe07d78e505846a
 Description-en: Emacs Minor mode to automatically commit and push with git
@@ -185136,13 +185276,6 @@ Description-en: Stuff that's missing in Go stdlib, or hasn't made it into its ow
  .
  This package provides Go source code for the missinggo.
 
-Package: golang-github-anacrolix-sync-dev
-Description-md5: ee46f146b3c025553c632681f54153af
-Description-en: sync clone to help with diagnosing deadlocks (Go library)
- Go sync clone to help with diagnosing deadlocks.
- .
- This package contains the Go development library.
-
 Package: golang-github-anacrolix-tagflag-dev
 Description-md5: 7800c8d58cc863be6efcfac175156241
 Description-en: declarative flag parsing for Go using struct tags
@@ -185467,6 +185600,14 @@ Description-en: API Handler Testing for Golang Web framework
   - HttpRouter
   - Pat
   - beego
+
+Package: golang-github-approvals-go-approval-tests-dev
+Description-md5: 77cd229526a33048fa5bcf398e94f4dd
+Description-en: ApprovalTests for go
+ Golden master Verification Library.
+ .
+ ApprovalTests allows for easy testing of larger objects, strings and
+ anything else that can be saved to a file(images, sounds, csv, etc.)
 
 Package: golang-github-apptainer-container-key-client-dev
 Description-md5: 5f800949bafa405f38a26733a0600cd9
@@ -187580,6 +187721,13 @@ Description-en: library of DRBGs recommended in NIST SP-800-90A (Go library)
  This package contains the Go development library.
 
 Package: golang-github-casbin-casbin-dev
+Description-md5: 16c7380e35e8a7ddecbb94478dff277e
+Description-en: Authorization library (transitional dummy package)
+ This is a transitional dummy package to ease upgrades to
+ golang-github-casbin-casbin-v3-dev. It can safely be removed
+ once no packages depend on it.
+
+Package: golang-github-casbin-casbin-v3-dev
 Description-md5: cc5762913e261b6803ff5e5f4510046a
 Description-en: Authorization library that supports access control models like ACL, RBAC, ABAC
  Casbin is a powerful and efficient open-source access control library
@@ -201334,6 +201482,19 @@ Description-en: native implementation of the excellent XXHash hashing algorithm
  hashing algorithm. This package used to contain a cgo version, but it was
  removed.
 
+Package: golang-github-oneregex-revera-dev
+Description-md5: 0449957020bd4ffcec2426da17ab12ad
+Description-en: A POSIX.1-2024 ERE engine
+ One POSIX regex engine in Go, Rust, Zig, C, C++ and TypeScript, cross-
+ checked for one behavior and backed by machine-checked Lean semantics
+ and proofs.
+ .
+ Revera is a clean-room implementation of the POSIX.1-2024 Extended
+ Regular Expression language. The engine is written once, in Vego, a
+ strict Go subset built for mechanical translation. A compiler exports
+ it as Vego IR, and printers turn that IR into the Rust, Zig, C++, C
+ and TypeScript engines.
+
 Package: ginkgo
 Description-md5: 946f901aa5a106ee3776df7ac04d0bed
 Description-en: BDD Testing Framework for Go
@@ -203099,6 +203260,13 @@ Description-en: Go reference implementation of real client IP algorithms
  incorrectly, resulting in security vulnerabilities.
 
 Package: golang-github-redis-go-redis-dev
+Description-md5: a1246eb762dd89aa7cea407a4aac5140
+Description-en: Go library for the Redis client (transitional dummy package)
+ This is a transitional dummy package to ease upgrades to
+ golang-github-redis-go-redis-v9-dev. It can safely be removed
+ once no packages depend on it.
+
+Package: golang-github-redis-go-redis-v9-dev
 Description-md5: 864dd5d01312409321131967309220dc
 Description-en: type-safe redis client for go (v9)
  This package contains go-redis which is the official Redis client library
@@ -203149,6 +203317,30 @@ Package: golang-github-remyoudompheng-go-liblzma-dev
 Description-md5: 653bab6ba401d69055454083b5bb565b
 Description-en: Go bindings for XZ Utils/liblzma
  Provides Go bindings for XZ Utils/liblzma
+
+Package: golang-github-renekroon-ttlcache-dev
+Description-md5: 53771f748a0ba8b11e3c284cc4655913
+Description-en: In-memory string-interface{} map with expiration for Golang
+ TTLCache is a simple key/value cache in golang with the following functions:
+ .
+   - Thread-safe
+   - Individual expiring time or global expiring time, you can choose
+   - Auto-Extending expiration on Get
+   - DNS style TTL, see SkipTtlExtensionOnHit(bool)
+   - Fast and memory efficient
+   - Can trigger callback on key expiration
+ .
+ Project TTLCache was forked from wunderlist/ttlcache to add extra functions
+ not available in the original scope. The main differences are:
+ .
+   - An item can store any kind of object, previously, only strings could be
+     saved
+   - Optionally, you can add callbacks to: check if a value should expire, be
+     notified if a value expires, and be notified when new values are added
+     to the cache
+   - The expiration can be either global or per item
+   - Can exist items without expiration time
+   - Expirations and callbacks are realtime
 
 Package: golang-github-restic-chunker-dev
 Description-md5: d8bfa9fcf8073c667f72e9dd528fbe02
@@ -208088,11 +208280,6 @@ Description-md5: bbec3f8f2095dd84d76507b70f227a0f
 Description-en: XXH3 algorithm in Go
  This package is a port of the xxh3 (Extremely fast hash algorithm)
  library to Go.
-
-Package: golang-github-zitadel-logging-dev
-Description-md5: bec82dd7f0969659938b5414fde66e78
-Description-en: Logging extension library
- Golang logging extension library used by other zitadel projects.
 
 Package: golang-github-zitadel-oidc-dev
 Description-md5: c21e1df084bbf8c76d81c4d801866caf
@@ -383076,24 +383263,6 @@ Description-en: Reliable Event Logging Protocol (RELP) library
  provide ample opportunity to extend the protocol without affecting existing
  applications.
 
-Package: librem-ec-acpi-dkms
-Description-md5: 8981461d395396c2851b60372b429b73
-Description-en: dkms driver sources for EC ACPI in Purism Librem devices
- The driver librem_ec_acpi provides Linux kernel support
- for the ACPI embedded controller of the following devices:
-  * Purism Librem 14 laptop
- .
- Advanced Configuration and Power Interface (ACPI) is a protocol
- to discover and configure computer hardware components,
- to perform power management
- e.g. putting unused hardware components to sleep,
- to perform auto configuration
- e.g. Plug and Play and hot swapping,
- and to perform status monitoring.
- .
- This package provides sources for the librem_ec_acpi kernel module,
- for use with the Dynamic Kernel Module Support (dkms) framework.
-
 Package: fonts-opensymbol
 Description-md5: c976ef54f80faf44d726a46723d3fbd0
 Description-en: OpenSymbol TrueType font
@@ -402020,6 +402189,23 @@ Description-en: Perl module to use tied scalars as timers
  user, scalars tied to the module simply increase their value by one
  every second.
 
+Package: libtime-str-perl
+Description-md5: a7bef543fd7d95e381864397259528df
+Description-en: Perl module to parse and format date/time strings
+ Time::Str parses date/time strings in many standard formats into Unix
+ timestamps or into their components, and formats Unix timestamps back
+ into strings. Supported formats include ISO 8601, RFC 3339, RFC 2822,
+ HTTP dates, SQL timestamps, ASN.1 times, the Common Log Format and
+ several formats printed by Unix tools. A permissive parser handles
+ many common real-world representations that are not ambiguous.
+ .
+ Timezone abbreviations are returned unresolved, and a timezone object
+ can be supplied to resolve local times. The distribution also contains
+ the helper modules Time::TZif and Time::TZif::POSIX for reading
+ timezone data, and Time::LeapSecond.
+ .
+ A C implementation is used when available, with a pure Perl fallback.
+
 Package: libtime-tiny-perl
 Description-md5: 9377af7baf6b80492db99f1e864ba719
 Description-en: time object, with as little code as possible
@@ -416052,101 +416238,101 @@ Description-en: CPU frequency and voltage scaling tools for Linux (libraries)
  .
  This package contains the shared library.
 
-Package: linux-base-7.3.4+deb14-amd64
-Description-md5: e9f363e6d7156346f529d0037cba8b3c
-Description-en: Linux 7.3.4 for 64-bit PCs (base files)
- This package contains files for Linux 7.3.4 on PCs with AMD64, Intel 64 or
+Package: linux-base-7.3.5+deb14-amd64
+Description-md5: 72a3a51b118dbebda04444a780766234
+Description-en: Linux 7.3.5 for 64-bit PCs (base files)
+ This package contains files for Linux 7.3.5 on PCs with AMD64, Intel 64 or
  VIA Nano processors that are used for both installing the kernel and
  building additional modules.
 
-Package: linux-base-7.3.4+deb14-arm64
-Description-md5: 0228f3545098b98446e2c8e1b399f77c
-Description-en: Linux 7.3.4 for 64-bit ARMv8 machines (base files)
- This package contains files for Linux 7.3.4 on 64-bit ARMv8 machines that
+Package: linux-base-7.3.5+deb14-arm64
+Description-md5: 26bb11708b12af8c75fa166c5ad39e4d
+Description-en: Linux 7.3.5 for 64-bit ARMv8 machines (base files)
+ This package contains files for Linux 7.3.5 on 64-bit ARMv8 machines that
  are used for both installing the kernel and building additional modules.
 
-Package: linux-base-7.3.4+deb14-arm64-16k
-Description-md5: e2d1a652028ccff7fe56ca844c450e1d
-Description-en: Linux 7.3.4 for 64-bit ARMv8 machines with 16k pages (base files)
- This package contains files for Linux 7.3.4 on 64-bit ARMv8 machines with
+Package: linux-base-7.3.5+deb14-arm64-16k
+Description-md5: 32604e49276d0d6453107bf59f526983
+Description-en: Linux 7.3.5 for 64-bit ARMv8 machines with 16k pages (base files)
+ This package contains files for Linux 7.3.5 on 64-bit ARMv8 machines with
  16k pages that are used for both installing the kernel and building
  additional modules.
 
-Package: linux-base-7.3.4+deb14-armmp
-Description-md5: a29fd1054389f2e05b65b6bf17d7c55e
-Description-en: Linux 7.3.4 for ARMv7 multiplatform compatible SoCs (base files)
- This package contains files for Linux 7.3.4 on ARMv7 multiplatform kernel.
+Package: linux-base-7.3.5+deb14-armmp
+Description-md5: 0f82b3d6717bd14115ee3aa86ba4498a
+Description-en: Linux 7.3.5 for ARMv7 multiplatform compatible SoCs (base files)
+ This package contains files for Linux 7.3.5 on ARMv7 multiplatform kernel.
  See https://wiki.debian.org/DebianKernel/ARMMP for details of supported
  platforms that are used for both installing the kernel and building
  additional modules.
 
-Package: linux-base-7.3.4+deb14-armmp-lpae
-Description-md5: 1fc68682a6e9d087840d4d1c1ae52a5f
-Description-en: Linux 7.3.4 for ARMv7 multiplatform compatible SoCs supporting LPAE (base files)
- This package contains files for Linux 7.3.4 on ARMv7 multiplatform kernel
+Package: linux-base-7.3.5+deb14-armmp-lpae
+Description-md5: 9cdcd405b7522a9099fc71a3ff1078e4
+Description-en: Linux 7.3.5 for ARMv7 multiplatform compatible SoCs supporting LPAE (base files)
+ This package contains files for Linux 7.3.5 on ARMv7 multiplatform kernel
  supporting LPAE. See https://wiki.debian.org/DebianKernel/ARMMP for
  details of supported platforms.  that are used for both installing the
  kernel and building additional modules.
 
-Package: linux-base-7.3.4+deb14-cloud-amd64
-Description-md5: 751994dc692b6a501a3f7f9984fc8ca9
-Description-en: Linux 7.3.4 for x86-64 cloud (base files)
- This package contains files for Linux 7.3.4 on cloud platforms including
+Package: linux-base-7.3.5+deb14-cloud-amd64
+Description-md5: 273147d36113d201f7a97af8e4f1f02c
+Description-en: Linux 7.3.5 for x86-64 cloud (base files)
+ This package contains files for Linux 7.3.5 on cloud platforms including
  Amazon EC2, Microsoft Azure, and Google Compute Engine that are used for
  both installing the kernel and building additional modules.
 
-Package: linux-base-7.3.4+deb14-cloud-arm64
-Description-md5: 353e400f42c57b29944ca1890fa42605
-Description-en: Linux 7.3.4 for arm64 cloud (base files)
- This package contains files for Linux 7.3.4 on cloud platforms supporting
+Package: linux-base-7.3.5+deb14-cloud-arm64
+Description-md5: 9dfb4395cc2fe22756c21f69e70c0a65
+Description-en: Linux 7.3.5 for arm64 cloud (base files)
+ This package contains files for Linux 7.3.5 on cloud platforms supporting
  arm64 virtual machines that are used for both installing the kernel and
  building additional modules.
 
-Package: linux-base-7.3.4+deb14-loong64
-Description-md5: d5e8d1d9c9fb45d7bde5897c1bd6b097
-Description-en: Linux 7.3.4 for 64-bit LoongArch platforms (base files)
- This package contains files for Linux 7.3.4 on 64-bit LoongArch platforms
+Package: linux-base-7.3.5+deb14-loong64
+Description-md5: 368410442d0cc7683d7ff5a1d51b44b0
+Description-en: Linux 7.3.5 for 64-bit LoongArch platforms (base files)
+ This package contains files for Linux 7.3.5 on 64-bit LoongArch platforms
  that are used for both installing the kernel and building additional
  modules.
 
-Package: linux-base-7.3.4+deb14-powerpc64le
-Description-md5: 87a956257a0909f5172e33b2c49c3052
-Description-en: Linux 7.3.4 for Little-endian 64-bit PowerPC with 4k pages (base files)
- This package contains files for Linux 7.3.4 on Little-endian 64-bit
+Package: linux-base-7.3.5+deb14-powerpc64le
+Description-md5: 7e0ef262b650e79329ea78a261b7d5bd
+Description-en: Linux 7.3.5 for Little-endian 64-bit PowerPC with 4k pages (base files)
+ This package contains files for Linux 7.3.5 on Little-endian 64-bit
  PowerPC with 4k pages that are used for both installing the kernel and
  building additional modules.
 
-Package: linux-base-7.3.4+deb14-powerpc64le-64k
-Description-md5: d11207b822d31ea310aca08368180fe6
-Description-en: Linux 7.3.4 for Little-endian 64-bit PowerPC with 64k pages (base files)
- This package contains files for Linux 7.3.4 on Little-endian 64-bit
+Package: linux-base-7.3.5+deb14-powerpc64le-64k
+Description-md5: 771185aae201a60e666ce07d6d6ad5b7
+Description-en: Linux 7.3.5 for Little-endian 64-bit PowerPC with 64k pages (base files)
+ This package contains files for Linux 7.3.5 on Little-endian 64-bit
  PowerPC with 64k pages that are used for both installing the kernel and
  building additional modules.
 
-Package: linux-base-7.3.4+deb14-riscv64
-Description-md5: 30be408399172544763124cd1af63642
-Description-en: Linux 7.3.4 for 64-bit RISC-V platforms (base files)
- This package contains files for Linux 7.3.4 on 64-bit RISC-V platforms
+Package: linux-base-7.3.5+deb14-riscv64
+Description-md5: 722310ef99c7442f4c43a51da1de159e
+Description-en: Linux 7.3.5 for 64-bit RISC-V platforms (base files)
+ This package contains files for Linux 7.3.5 on 64-bit RISC-V platforms
  that are used for both installing the kernel and building additional
  modules.
 
-Package: linux-base-7.3.4+deb14-rt-amd64
-Description-md5: e9f363e6d7156346f529d0037cba8b3c
-Description-en: Linux 7.3.4 for 64-bit PCs (base files)
- This package contains files for Linux 7.3.4 on PCs with AMD64, Intel 64 or
+Package: linux-base-7.3.5+deb14-rt-amd64
+Description-md5: 72a3a51b118dbebda04444a780766234
+Description-en: Linux 7.3.5 for 64-bit PCs (base files)
+ This package contains files for Linux 7.3.5 on PCs with AMD64, Intel 64 or
  VIA Nano processors that are used for both installing the kernel and
  building additional modules.
 
-Package: linux-base-7.3.4+deb14-rt-arm64
-Description-md5: 0228f3545098b98446e2c8e1b399f77c
-Description-en: Linux 7.3.4 for 64-bit ARMv8 machines (base files)
- This package contains files for Linux 7.3.4 on 64-bit ARMv8 machines that
+Package: linux-base-7.3.5+deb14-rt-arm64
+Description-md5: 26bb11708b12af8c75fa166c5ad39e4d
+Description-en: Linux 7.3.5 for 64-bit ARMv8 machines (base files)
+ This package contains files for Linux 7.3.5 on 64-bit ARMv8 machines that
  are used for both installing the kernel and building additional modules.
 
-Package: linux-base-7.3.4+deb14-s390x
-Description-md5: e2487b82eee9fff61799ff8d7c72b667
-Description-en: Linux 7.3.4 for IBM zSeries (base files)
- This package contains files for Linux 7.3.4 on IBM zSeries that are used
+Package: linux-base-7.3.5+deb14-s390x
+Description-md5: e7a5ff521a211bedf442e3997b19980e
+Description-en: Linux 7.3.5 for IBM zSeries (base files)
+ This package contains files for Linux 7.3.5 on IBM zSeries that are used
  for both installing the kernel and building additional modules.
 
 Package: linux-base-armmp
@@ -416198,134 +416384,134 @@ Description-en: Linux for IBM zSeries (dummy package)
  This empty package is used to keep the installed versions of
  linux-headers-IBM zSeries and linux-image-IBM zSeries synchronised.
 
-Package: linux-binary-7.3.4+deb14-armmp
-Description-md5: d3802b09ef0891a919657ea8550528a4
-Description-en: Linux 7.3.4 for ARMv7 multiplatform compatible SoCs (kernel image)
- This package contains the kernel image for Linux 7.3.4 on ARMv7
+Package: linux-binary-7.3.5+deb14-armmp
+Description-md5: 98cf95f009e1f9029478d10a743d6b6e
+Description-en: Linux 7.3.5 for ARMv7 multiplatform compatible SoCs (kernel image)
+ This package contains the kernel image for Linux 7.3.5 on ARMv7
  multiplatform kernel.  See https://wiki.debian.org/DebianKernel/ARMMP for
  details of supported platforms.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-armmp.
+ install linux-image-7.3.5+deb14-armmp.
 
-Package: linux-binary-7.3.4+deb14-armmp-lpae
-Description-md5: 73e6db30bd84989cbba46c1f1355f621
-Description-en: Linux 7.3.4 for ARMv7 multiplatform compatible SoCs supporting LPAE (kernel image)
- This package contains the kernel image for Linux 7.3.4 on ARMv7
+Package: linux-binary-7.3.5+deb14-armmp-lpae
+Description-md5: f25c234e796c1206ec10ca1508a12c0e
+Description-en: Linux 7.3.5 for ARMv7 multiplatform compatible SoCs supporting LPAE (kernel image)
+ This package contains the kernel image for Linux 7.3.5 on ARMv7
  multiplatform kernel supporting LPAE. See
  https://wiki.debian.org/DebianKernel/ARMMP for details of supported
  platforms..
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-armmp-lpae.
+ install linux-image-7.3.5+deb14-armmp-lpae.
 
-Package: linux-binary-7.3.4+deb14-loong64
-Description-md5: 665fd7259ac0792b5998b9c099a72357
-Description-en: Linux 7.3.4 for 64-bit LoongArch platforms (kernel image)
- This package contains the kernel image for Linux 7.3.4 on 64-bit LoongArch
+Package: linux-binary-7.3.5+deb14-loong64
+Description-md5: de27df65e6cd59614b3739ab14cea943
+Description-en: Linux 7.3.5 for 64-bit LoongArch platforms (kernel image)
+ This package contains the kernel image for Linux 7.3.5 on 64-bit LoongArch
  platforms.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-loong64.
+ install linux-image-7.3.5+deb14-loong64.
 
-Package: linux-binary-7.3.4+deb14-powerpc64le
-Description-md5: 6494e8a02b4a586dd222e1fc48d212e3
-Description-en: Linux 7.3.4 for Little-endian 64-bit PowerPC with 4k pages (kernel image)
- This package contains the kernel image for Linux 7.3.4 on Little-endian
+Package: linux-binary-7.3.5+deb14-powerpc64le
+Description-md5: 964ec78078855452064d2a510d1b9aa1
+Description-en: Linux 7.3.5 for Little-endian 64-bit PowerPC with 4k pages (kernel image)
+ This package contains the kernel image for Linux 7.3.5 on Little-endian
  64-bit PowerPC with 4k pages.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-powerpc64le.
+ install linux-image-7.3.5+deb14-powerpc64le.
 
-Package: linux-binary-7.3.4+deb14-powerpc64le-64k
-Description-md5: f8cea06a2e4b4318992b685a3236bc28
-Description-en: Linux 7.3.4 for Little-endian 64-bit PowerPC with 64k pages (kernel image)
- This package contains the kernel image for Linux 7.3.4 on Little-endian
+Package: linux-binary-7.3.5+deb14-powerpc64le-64k
+Description-md5: f2f5b28d8e5bdcace68335387d9bb6f0
+Description-en: Linux 7.3.5 for Little-endian 64-bit PowerPC with 64k pages (kernel image)
+ This package contains the kernel image for Linux 7.3.5 on Little-endian
  64-bit PowerPC with 64k pages.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-powerpc64le-64k.
+ install linux-image-7.3.5+deb14-powerpc64le-64k.
 
-Package: linux-binary-7.3.4+deb14-riscv64
-Description-md5: 3d28ccf5e3052ace3c28f3710306487b
-Description-en: Linux 7.3.4 for 64-bit RISC-V platforms (kernel image)
- This package contains the kernel image for Linux 7.3.4 on 64-bit RISC-V
+Package: linux-binary-7.3.5+deb14-riscv64
+Description-md5: 2330e9d59fc5c3822d43e5944400dd3b
+Description-en: Linux 7.3.5 for 64-bit RISC-V platforms (kernel image)
+ This package contains the kernel image for Linux 7.3.5 on 64-bit RISC-V
  platforms.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-riscv64.
+ install linux-image-7.3.5+deb14-riscv64.
 
-Package: linux-binary-7.3.4+deb14-s390x
-Description-md5: 3087eec17b8f1b11241e95e050404312
-Description-en: Linux 7.3.4 for IBM zSeries (kernel image)
- This package contains the kernel image for Linux 7.3.4 on IBM zSeries.
+Package: linux-binary-7.3.5+deb14-s390x
+Description-md5: 3c7c3f064d83690d8745c5342b0b72cf
+Description-en: Linux 7.3.5 for IBM zSeries (kernel image)
+ This package contains the kernel image for Linux 7.3.5 on IBM zSeries.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-s390x.
+ install linux-image-7.3.5+deb14-s390x.
 
-Package: linux-binary-unsigned-7.3.4+deb14-amd64
-Description-md5: f0fe236309baa97766d1793b45297341
-Description-en: Linux 7.3.4 for 64-bit PCs (unsigned kernel image)
- This package contains the unsigned kernel image for Linux 7.3.4 on PCs
+Package: linux-binary-unsigned-7.3.5+deb14-amd64
+Description-md5: 7ea41f1cae8da9a610a417a6615040e3
+Description-en: Linux 7.3.5 for 64-bit PCs (unsigned kernel image)
+ This package contains the unsigned kernel image for Linux 7.3.5 on PCs
  with AMD64, Intel 64 or VIA Nano processors.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-amd64.
+ install linux-image-7.3.5+deb14-amd64.
 
-Package: linux-binary-unsigned-7.3.4+deb14-arm64
-Description-md5: e6888420ab89e8ff0e62f75cb2fb773e
-Description-en: Linux 7.3.4 for 64-bit ARMv8 machines (unsigned kernel image)
- This package contains the unsigned kernel image for Linux 7.3.4 on 64-bit
+Package: linux-binary-unsigned-7.3.5+deb14-arm64
+Description-md5: de067f7effc4a3572a837f2ec7a08f3d
+Description-en: Linux 7.3.5 for 64-bit ARMv8 machines (unsigned kernel image)
+ This package contains the unsigned kernel image for Linux 7.3.5 on 64-bit
  ARMv8 machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-arm64.
+ install linux-image-7.3.5+deb14-arm64.
 
-Package: linux-binary-unsigned-7.3.4+deb14-arm64-16k
-Description-md5: be5079573b4588ea68d127ca18227b96
-Description-en: Linux 7.3.4 for 64-bit ARMv8 machines with 16k pages (unsigned kernel image)
- This package contains the unsigned kernel image for Linux 7.3.4 on 64-bit
+Package: linux-binary-unsigned-7.3.5+deb14-arm64-16k
+Description-md5: 83d3be541ff9e9ae153dd59040d56987
+Description-en: Linux 7.3.5 for 64-bit ARMv8 machines with 16k pages (unsigned kernel image)
+ This package contains the unsigned kernel image for Linux 7.3.5 on 64-bit
  ARMv8 machines with 16k pages.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-arm64-16k.
+ install linux-image-7.3.5+deb14-arm64-16k.
 
-Package: linux-binary-unsigned-7.3.4+deb14-cloud-amd64
-Description-md5: 54d686dc4e60dba62093658c238183bc
-Description-en: Linux 7.3.4 for x86-64 cloud (unsigned kernel image)
- This package contains the unsigned kernel image for Linux 7.3.4 on cloud
+Package: linux-binary-unsigned-7.3.5+deb14-cloud-amd64
+Description-md5: a3fa8ca891322f5e95a4410d481c914d
+Description-en: Linux 7.3.5 for x86-64 cloud (unsigned kernel image)
+ This package contains the unsigned kernel image for Linux 7.3.5 on cloud
  platforms including Amazon EC2, Microsoft Azure, and Google Compute
  Engine.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-cloud-amd64.
+ install linux-image-7.3.5+deb14-cloud-amd64.
 
-Package: linux-binary-unsigned-7.3.4+deb14-cloud-arm64
-Description-md5: 90539f50fbc31cc507a27f1ea2590e09
-Description-en: Linux 7.3.4 for arm64 cloud (unsigned kernel image)
- This package contains the unsigned kernel image for Linux 7.3.4 on cloud
+Package: linux-binary-unsigned-7.3.5+deb14-cloud-arm64
+Description-md5: bec83d6fe0f0d3d5f064183560b31387
+Description-en: Linux 7.3.5 for arm64 cloud (unsigned kernel image)
+ This package contains the unsigned kernel image for Linux 7.3.5 on cloud
  platforms supporting arm64 virtual machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-cloud-arm64.
+ install linux-image-7.3.5+deb14-cloud-arm64.
 
-Package: linux-binary-unsigned-7.3.4+deb14-rt-amd64
-Description-md5: f944f6149d6aea789c2c63553de7d62f
-Description-en: Linux 7.3.4 for 64-bit PCs (unsigned kernel image)
- This package contains the unsigned kernel image for Linux 7.3.4 on PCs
+Package: linux-binary-unsigned-7.3.5+deb14-rt-amd64
+Description-md5: 1b3fc4b39d98ac2b8979cbfb44595efa
+Description-en: Linux 7.3.5 for 64-bit PCs (unsigned kernel image)
+ This package contains the unsigned kernel image for Linux 7.3.5 on PCs
  with AMD64, Intel 64 or VIA Nano processors.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-rt-amd64.
+ install linux-image-7.3.5+deb14-rt-amd64.
 
-Package: linux-binary-unsigned-7.3.4+deb14-rt-arm64
-Description-md5: ec04bee449fe7604fab708a7b1844d86
-Description-en: Linux 7.3.4 for 64-bit ARMv8 machines (unsigned kernel image)
- This package contains the unsigned kernel image for Linux 7.3.4 on 64-bit
+Package: linux-binary-unsigned-7.3.5+deb14-rt-arm64
+Description-md5: c1c45b506959b5cd5c195b9647a855a6
+Description-en: Linux 7.3.5 for 64-bit ARMv8 machines (unsigned kernel image)
+ This package contains the unsigned kernel image for Linux 7.3.5 on 64-bit
  ARMv8 machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-rt-arm64.
+ install linux-image-7.3.5+deb14-rt-arm64.
 
 Package: linux-bpf-dev
 Description-md5: ef487f2f846252f409f3ebb8ece1c714
@@ -416383,157 +416569,157 @@ Description-en: Linux kernel specific documentation for version 7.3
  notes and the like.  An index to the documentation is installed as
  /usr/share/doc/linux-doc-7.3/html/index.html.
 
-Package: linux-headers-7.3.4+deb14-amd64
-Description-md5: 91bed39d24efbbec198b4073881d89be
-Description-en: Linux 7.3.4 for 64-bit PCs (module development)
+Package: linux-headers-7.3.5+deb14-amd64
+Description-md5: 3a84e8739abf19e27083e4459008de27
+Description-en: Linux 7.3.5 for 64-bit PCs (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.3.4+deb14-amd64, generally used for building out-of-tree
+ Linux kernel 7.3.5+deb14-amd64, generally used for building out-of-tree
  kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.3.4+deb14-amd64, and can be used for building
+ /usr/src/linux-headers-7.3.5+deb14-amd64, and can be used for building
  modules that load into the kernel provided by the
- linux-image-7.3.4+deb14-amd64 package.
+ linux-image-7.3.5+deb14-amd64 package.
 
-Package: linux-headers-7.3.4+deb14-arm64
-Description-md5: b65c2ba4ec924ee8df91737f052d1f8a
-Description-en: Linux 7.3.4 for 64-bit ARMv8 machines (module development)
+Package: linux-headers-7.3.5+deb14-arm64
+Description-md5: 430a59bade2fe574266017b1d760227b
+Description-en: Linux 7.3.5 for 64-bit ARMv8 machines (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.3.4+deb14-arm64, generally used for building out-of-tree
+ Linux kernel 7.3.5+deb14-arm64, generally used for building out-of-tree
  kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.3.4+deb14-arm64, and can be used for building
+ /usr/src/linux-headers-7.3.5+deb14-arm64, and can be used for building
  modules that load into the kernel provided by the
- linux-image-7.3.4+deb14-arm64 package.
+ linux-image-7.3.5+deb14-arm64 package.
 
-Package: linux-headers-7.3.4+deb14-arm64-16k
-Description-md5: 0addbb0b1a2067fc4182d3d4acdcabdd
-Description-en: Linux 7.3.4 for 64-bit ARMv8 machines with 16k pages (module development)
+Package: linux-headers-7.3.5+deb14-arm64-16k
+Description-md5: 84a2c000845ba40d1ec40bfe2ad44dc8
+Description-en: Linux 7.3.5 for 64-bit ARMv8 machines with 16k pages (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.3.4+deb14-arm64-16k, generally used for building
+ Linux kernel 7.3.5+deb14-arm64-16k, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.3.4+deb14-arm64-16k, and can be used for building
+ /usr/src/linux-headers-7.3.5+deb14-arm64-16k, and can be used for building
  modules that load into the kernel provided by the
- linux-image-7.3.4+deb14-arm64-16k package.
+ linux-image-7.3.5+deb14-arm64-16k package.
 
-Package: linux-headers-7.3.4+deb14-armmp
-Description-md5: cb695df01ee44b504c7222b54775fc3f
-Description-en: Linux 7.3.4 for ARMv7 multiplatform compatible SoCs (module development)
+Package: linux-headers-7.3.5+deb14-armmp
+Description-md5: f21352ec17b43ccf9b1a7a795b525236
+Description-en: Linux 7.3.5 for ARMv7 multiplatform compatible SoCs (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.3.4+deb14-armmp, generally used for building out-of-tree
+ Linux kernel 7.3.5+deb14-armmp, generally used for building out-of-tree
  kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.3.4+deb14-armmp, and can be used for building
+ /usr/src/linux-headers-7.3.5+deb14-armmp, and can be used for building
  modules that load into the kernel provided by the
- linux-image-7.3.4+deb14-armmp package.
+ linux-image-7.3.5+deb14-armmp package.
 
-Package: linux-headers-7.3.4+deb14-armmp-lpae
-Description-md5: 128cb015b48452db6f0a4f031d2598cf
-Description-en: Linux 7.3.4 for ARMv7 multiplatform compatible SoCs supporting LPAE (module development)
+Package: linux-headers-7.3.5+deb14-armmp-lpae
+Description-md5: 2b2c1d44d9b30bd6a489a1126c4abd47
+Description-en: Linux 7.3.5 for ARMv7 multiplatform compatible SoCs supporting LPAE (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.3.4+deb14-armmp-lpae, generally used for building
+ Linux kernel 7.3.5+deb14-armmp-lpae, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.3.4+deb14-armmp-lpae, and can be used for
+ /usr/src/linux-headers-7.3.5+deb14-armmp-lpae, and can be used for
  building modules that load into the kernel provided by the
- linux-image-7.3.4+deb14-armmp-lpae package.
+ linux-image-7.3.5+deb14-armmp-lpae package.
 
-Package: linux-headers-7.3.4+deb14-cloud-amd64
-Description-md5: 8da01505b7fa3dae488cc7e2c805353a
-Description-en: Linux 7.3.4 for x86-64 cloud (module development)
+Package: linux-headers-7.3.5+deb14-cloud-amd64
+Description-md5: 768d85faa8726bc8c9f3863ef0693958
+Description-en: Linux 7.3.5 for x86-64 cloud (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.3.4+deb14-cloud-amd64, generally used for building
+ Linux kernel 7.3.5+deb14-cloud-amd64, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.3.4+deb14-cloud-amd64, and can be used for
+ /usr/src/linux-headers-7.3.5+deb14-cloud-amd64, and can be used for
  building modules that load into the kernel provided by the
- linux-image-7.3.4+deb14-cloud-amd64 package.
+ linux-image-7.3.5+deb14-cloud-amd64 package.
 
-Package: linux-headers-7.3.4+deb14-cloud-arm64
-Description-md5: 7dc16bde59b3a9b5bae4914c39bfc745
-Description-en: Linux 7.3.4 for arm64 cloud (module development)
+Package: linux-headers-7.3.5+deb14-cloud-arm64
+Description-md5: f58b3d5ac5f7de4d6ee9200361097042
+Description-en: Linux 7.3.5 for arm64 cloud (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.3.4+deb14-cloud-arm64, generally used for building
+ Linux kernel 7.3.5+deb14-cloud-arm64, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.3.4+deb14-cloud-arm64, and can be used for
+ /usr/src/linux-headers-7.3.5+deb14-cloud-arm64, and can be used for
  building modules that load into the kernel provided by the
- linux-image-7.3.4+deb14-cloud-arm64 package.
+ linux-image-7.3.5+deb14-cloud-arm64 package.
 
-Package: linux-headers-7.3.4+deb14-common
-Description-md5: a4d840934c4e87bff23516ff3b4149f7
-Description-en: Common header files for Linux 7.3.4+deb14
+Package: linux-headers-7.3.5+deb14-common
+Description-md5: 92eccc57f7aff7700829f626713fc87f
+Description-en: Common header files for Linux 7.3.5+deb14
  This package provides the common kernel header files for Linux kernel
- version 7.3.4+deb14, generally used for building out-of-tree kernel
+ version 7.3.5+deb14, generally used for building out-of-tree kernel
  modules.  These files are going to be installed into
- /usr/src/linux-headers-7.3.4+deb14-common.
+ /usr/src/linux-headers-7.3.5+deb14-common.
  .
  To obtain a complete set of headers you also need to install the
- linux-headers-7.3.4+deb14-(flavour) package, matching the flavour of the
+ linux-headers-7.3.5+deb14-(flavour) package, matching the flavour of the
  kernel you intend the build for.
 
-Package: linux-headers-7.3.4+deb14-loong64
-Description-md5: 249bf6fe436781e89d1b2f9d1f6f5159
-Description-en: Linux 7.3.4 for 64-bit LoongArch platforms (module development)
+Package: linux-headers-7.3.5+deb14-loong64
+Description-md5: 5c3ea2094fddd06e21f7f0623a01d00f
+Description-en: Linux 7.3.5 for 64-bit LoongArch platforms (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.3.4+deb14-loong64, generally used for building out-of-tree
+ Linux kernel 7.3.5+deb14-loong64, generally used for building out-of-tree
  kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.3.4+deb14-loong64, and can be used for building
+ /usr/src/linux-headers-7.3.5+deb14-loong64, and can be used for building
  modules that load into the kernel provided by the
- linux-image-7.3.4+deb14-loong64 package.
+ linux-image-7.3.5+deb14-loong64 package.
 
-Package: linux-headers-7.3.4+deb14-powerpc64le
-Description-md5: bca81f2674115b0df8ae49862c7e9e5b
-Description-en: Linux 7.3.4 for Little-endian 64-bit PowerPC with 4k pages (module development)
+Package: linux-headers-7.3.5+deb14-powerpc64le
+Description-md5: c26fecaa1ab6911cce1913c3351ce564
+Description-en: Linux 7.3.5 for Little-endian 64-bit PowerPC with 4k pages (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.3.4+deb14-powerpc64le, generally used for building
+ Linux kernel 7.3.5+deb14-powerpc64le, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.3.4+deb14-powerpc64le, and can be used for
+ /usr/src/linux-headers-7.3.5+deb14-powerpc64le, and can be used for
  building modules that load into the kernel provided by the
- linux-image-7.3.4+deb14-powerpc64le package.
+ linux-image-7.3.5+deb14-powerpc64le package.
 
-Package: linux-headers-7.3.4+deb14-powerpc64le-64k
-Description-md5: 78ae0b633044769e13744b8cdd987439
-Description-en: Linux 7.3.4 for Little-endian 64-bit PowerPC with 64k pages (module development)
+Package: linux-headers-7.3.5+deb14-powerpc64le-64k
+Description-md5: 230bd06af85bc54d5049725f060bd394
+Description-en: Linux 7.3.5 for Little-endian 64-bit PowerPC with 64k pages (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.3.4+deb14-powerpc64le-64k, generally used for building
+ Linux kernel 7.3.5+deb14-powerpc64le-64k, generally used for building
  out-of-tree kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.3.4+deb14-powerpc64le-64k, and can be used for
+ /usr/src/linux-headers-7.3.5+deb14-powerpc64le-64k, and can be used for
  building modules that load into the kernel provided by the
- linux-image-7.3.4+deb14-powerpc64le-64k package.
+ linux-image-7.3.5+deb14-powerpc64le-64k package.
 
-Package: linux-headers-7.3.4+deb14-riscv64
-Description-md5: a724af670d8561d9e0c699e725a30e94
-Description-en: Linux 7.3.4 for 64-bit RISC-V platforms (module development)
+Package: linux-headers-7.3.5+deb14-riscv64
+Description-md5: f253194c98b3ad6932fb919ab2c1743c
+Description-en: Linux 7.3.5 for 64-bit RISC-V platforms (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.3.4+deb14-riscv64, generally used for building out-of-tree
+ Linux kernel 7.3.5+deb14-riscv64, generally used for building out-of-tree
  kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.3.4+deb14-riscv64, and can be used for building
+ /usr/src/linux-headers-7.3.5+deb14-riscv64, and can be used for building
  modules that load into the kernel provided by the
- linux-image-7.3.4+deb14-riscv64 package.
+ linux-image-7.3.5+deb14-riscv64 package.
 
-Package: linux-headers-7.3.4+deb14-rt-amd64
-Description-md5: 5c50d553a3be84149ef650a5b1c9d712
-Description-en: Linux 7.3.4 for 64-bit PCs (module development)
+Package: linux-headers-7.3.5+deb14-rt-amd64
+Description-md5: e05c3bcb34f6942d082bc797bfc2ab6f
+Description-en: Linux 7.3.5 for 64-bit PCs (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.3.4+deb14-rt-amd64, generally used for building out-of-tree
+ Linux kernel 7.3.5+deb14-rt-amd64, generally used for building out-of-tree
  kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.3.4+deb14-rt-amd64, and can be used for building
+ /usr/src/linux-headers-7.3.5+deb14-rt-amd64, and can be used for building
  modules that load into the kernel provided by the
- linux-image-7.3.4+deb14-rt-amd64 package.
+ linux-image-7.3.5+deb14-rt-amd64 package.
 
-Package: linux-headers-7.3.4+deb14-rt-arm64
-Description-md5: 6106e4a3d6824c8051f68b30940a259a
-Description-en: Linux 7.3.4 for 64-bit ARMv8 machines (module development)
+Package: linux-headers-7.3.5+deb14-rt-arm64
+Description-md5: 3cfe5f5e525db1b55f73df93a16faf17
+Description-en: Linux 7.3.5 for 64-bit ARMv8 machines (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.3.4+deb14-rt-arm64, generally used for building out-of-tree
+ Linux kernel 7.3.5+deb14-rt-arm64, generally used for building out-of-tree
  kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.3.4+deb14-rt-arm64, and can be used for building
+ /usr/src/linux-headers-7.3.5+deb14-rt-arm64, and can be used for building
  modules that load into the kernel provided by the
- linux-image-7.3.4+deb14-rt-arm64 package.
+ linux-image-7.3.5+deb14-rt-arm64 package.
 
-Package: linux-headers-7.3.4+deb14-s390x
-Description-md5: 62b0bbe7ae7b4bdcf1743ed9c110ae98
-Description-en: Linux 7.3.4 for IBM zSeries (module development)
+Package: linux-headers-7.3.5+deb14-s390x
+Description-md5: c852fc7eacb67e189cddc85d214ff765
+Description-en: Linux 7.3.5 for IBM zSeries (module development)
  This package provides the architecture-specific kernel header files for
- Linux kernel 7.3.4+deb14-s390x, generally used for building out-of-tree
+ Linux kernel 7.3.5+deb14-s390x, generally used for building out-of-tree
  kernel modules.  These files are going to be installed into
- /usr/src/linux-headers-7.3.4+deb14-s390x, and can be used for building
+ /usr/src/linux-headers-7.3.5+deb14-s390x, and can be used for building
  modules that load into the kernel provided by the
- linux-image-7.3.4+deb14-s390x package.
+ linux-image-7.3.5+deb14-s390x package.
 
 Package: linux-headers-armmp
 Description-md5: 8a845be4b24bac682bd58c219e9df427
@@ -416577,130 +416763,130 @@ Description-en: Linux for IBM zSeries (module development meta-package)
  This package depends on the architecture-specific header files for the
  latest Linux kernel s390x configuration.
 
-Package: linux-image-7.3.4+deb14-amd64-dbg
-Description-md5: 0b386f8122c5e010865be6712a17eaef
-Description-en: Linux 7.3.4 for 64-bit PCs (debug symbols)
+Package: linux-image-7.3.5+deb14-amd64-dbg
+Description-md5: 25d1f46860540289bdd613bf3d5a107c
+Description-en: Linux 7.3.5 for 64-bit PCs (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.3.4+deb14-amd64.
+ modules in linux-image-7.3.5+deb14-amd64.
 
-Package: linux-image-7.3.4+deb14-arm64-16k-dbg
-Description-md5: ddfd91aaf7e1f4afb2b47beb8a81a06e
-Description-en: Linux 7.3.4 for 64-bit ARMv8 machines with 16k pages (debug symbols)
+Package: linux-image-7.3.5+deb14-arm64-16k-dbg
+Description-md5: 768e6168352b8a30ec4a5a5eb23d5bfb
+Description-en: Linux 7.3.5 for 64-bit ARMv8 machines with 16k pages (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.3.4+deb14-arm64-16k.
+ modules in linux-image-7.3.5+deb14-arm64-16k.
 
-Package: linux-image-7.3.4+deb14-arm64-dbg
-Description-md5: 9c2f4fe032ff769f9e803bd559ff4abf
-Description-en: Linux 7.3.4 for 64-bit ARMv8 machines (debug symbols)
+Package: linux-image-7.3.5+deb14-arm64-dbg
+Description-md5: 926fe0932064252e4f7a757aebf70aa9
+Description-en: Linux 7.3.5 for 64-bit ARMv8 machines (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.3.4+deb14-arm64.
+ modules in linux-image-7.3.5+deb14-arm64.
 
-Package: linux-image-7.3.4+deb14-armmp
-Description-md5: 731dbb5bcfdacd86d0f0916f1b8fd7f4
-Description-en: Linux 7.3.4 for ARMv7 multiplatform compatible SoCs
- The Linux kernel 7.3.4 and modules for use on ARMv7 multiplatform kernel.
+Package: linux-image-7.3.5+deb14-armmp
+Description-md5: 80d2d3faaebc4892ed907d4833b22afc
+Description-en: Linux 7.3.5 for ARMv7 multiplatform compatible SoCs
+ The Linux kernel 7.3.5 and modules for use on ARMv7 multiplatform kernel.
  See https://wiki.debian.org/DebianKernel/ARMMP for details of supported
  platforms.
 
-Package: linux-image-7.3.4+deb14-armmp-dbg
-Description-md5: b3eb03ea5da3f325574207497947e53a
-Description-en: Linux 7.3.4 for ARMv7 multiplatform compatible SoCs (debug symbols)
+Package: linux-image-7.3.5+deb14-armmp-dbg
+Description-md5: c4ab2fc389a36df834f2d5f3a61df8c2
+Description-en: Linux 7.3.5 for ARMv7 multiplatform compatible SoCs (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.3.4+deb14-armmp.
+ modules in linux-image-7.3.5+deb14-armmp.
 
-Package: linux-image-7.3.4+deb14-armmp-lpae
-Description-md5: da2170c2122fc00df4901256aa2c87c5
-Description-en: Linux 7.3.4 for ARMv7 multiplatform compatible SoCs supporting LPAE
- The Linux kernel 7.3.4 and modules for use on ARMv7 multiplatform kernel
+Package: linux-image-7.3.5+deb14-armmp-lpae
+Description-md5: 61deebb885b56e073b641ab0ba34b561
+Description-en: Linux 7.3.5 for ARMv7 multiplatform compatible SoCs supporting LPAE
+ The Linux kernel 7.3.5 and modules for use on ARMv7 multiplatform kernel
  supporting LPAE. See https://wiki.debian.org/DebianKernel/ARMMP for
  details of supported platforms..
 
-Package: linux-image-7.3.4+deb14-armmp-lpae-dbg
-Description-md5: 23d9ad378444629a96c5ef12f255f8d9
-Description-en: Linux 7.3.4 for ARMv7 multiplatform compatible SoCs supporting LPAE (debug symbols)
+Package: linux-image-7.3.5+deb14-armmp-lpae-dbg
+Description-md5: 7b7fbcb25802281d9103f679d3134aee
+Description-en: Linux 7.3.5 for ARMv7 multiplatform compatible SoCs supporting LPAE (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.3.4+deb14-armmp-lpae.
+ modules in linux-image-7.3.5+deb14-armmp-lpae.
 
-Package: linux-image-7.3.4+deb14-cloud-amd64-dbg
-Description-md5: c8e61d9817074a70437f44d5a5f09711
-Description-en: Linux 7.3.4 for x86-64 cloud (debug symbols)
+Package: linux-image-7.3.5+deb14-cloud-amd64-dbg
+Description-md5: 26e5c3cccc8aee86f6636c190a7c3226
+Description-en: Linux 7.3.5 for x86-64 cloud (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.3.4+deb14-cloud-amd64.
+ modules in linux-image-7.3.5+deb14-cloud-amd64.
 
-Package: linux-image-7.3.4+deb14-cloud-arm64-dbg
-Description-md5: caa3d7f4d81527424c95bf6fea1334f7
-Description-en: Linux 7.3.4 for arm64 cloud (debug symbols)
+Package: linux-image-7.3.5+deb14-cloud-arm64-dbg
+Description-md5: 5c4e9ad3389e934d14c88d063f75c753
+Description-en: Linux 7.3.5 for arm64 cloud (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.3.4+deb14-cloud-arm64.
+ modules in linux-image-7.3.5+deb14-cloud-arm64.
 
-Package: linux-image-7.3.4+deb14-loong64
-Description-md5: 1a2cebe65058d922898272755eb2e6f4
-Description-en: Linux 7.3.4 for 64-bit LoongArch platforms
- The Linux kernel 7.3.4 and modules for use on 64-bit LoongArch platforms.
+Package: linux-image-7.3.5+deb14-loong64
+Description-md5: 2187004a6174f49e9d861225a17d71f8
+Description-en: Linux 7.3.5 for 64-bit LoongArch platforms
+ The Linux kernel 7.3.5 and modules for use on 64-bit LoongArch platforms.
 
-Package: linux-image-7.3.4+deb14-loong64-dbg
-Description-md5: ba0c5f7659d28ea86f2a9bb7b39e2852
-Description-en: Linux 7.3.4 for 64-bit LoongArch platforms (debug symbols)
+Package: linux-image-7.3.5+deb14-loong64-dbg
+Description-md5: c2880c49ab357b1bf9c183cce600d06a
+Description-en: Linux 7.3.5 for 64-bit LoongArch platforms (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.3.4+deb14-loong64.
+ modules in linux-image-7.3.5+deb14-loong64.
 
-Package: linux-image-7.3.4+deb14-powerpc64le
-Description-md5: 483dc27eae19947622f49d1ede83d061
-Description-en: Linux 7.3.4 for Little-endian 64-bit PowerPC with 4k pages
- The Linux kernel 7.3.4 and modules for use on Little-endian 64-bit PowerPC
+Package: linux-image-7.3.5+deb14-powerpc64le
+Description-md5: 1ed76be0213fc33ed5622d5d70ecda2a
+Description-en: Linux 7.3.5 for Little-endian 64-bit PowerPC with 4k pages
+ The Linux kernel 7.3.5 and modules for use on Little-endian 64-bit PowerPC
  with 4k pages.
 
-Package: linux-image-7.3.4+deb14-powerpc64le-64k
-Description-md5: c9c3ada4c2058f4d5b0300632fabcfe8
-Description-en: Linux 7.3.4 for Little-endian 64-bit PowerPC with 64k pages
- The Linux kernel 7.3.4 and modules for use on Little-endian 64-bit PowerPC
+Package: linux-image-7.3.5+deb14-powerpc64le-64k
+Description-md5: cf7f3c460d4575c3b5c3f05807c117ba
+Description-en: Linux 7.3.5 for Little-endian 64-bit PowerPC with 64k pages
+ The Linux kernel 7.3.5 and modules for use on Little-endian 64-bit PowerPC
  with 64k pages.
 
-Package: linux-image-7.3.4+deb14-powerpc64le-64k-dbg
-Description-md5: e23f8aab8db28de33849e9a72407730e
-Description-en: Linux 7.3.4 for Little-endian 64-bit PowerPC with 64k pages (debug symbols)
+Package: linux-image-7.3.5+deb14-powerpc64le-64k-dbg
+Description-md5: bd3c0680475ee322700534c88819e17c
+Description-en: Linux 7.3.5 for Little-endian 64-bit PowerPC with 64k pages (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.3.4+deb14-powerpc64le-64k.
+ modules in linux-image-7.3.5+deb14-powerpc64le-64k.
 
-Package: linux-image-7.3.4+deb14-powerpc64le-dbg
-Description-md5: a17934d7989e7a27b178d358193bdaad
-Description-en: Linux 7.3.4 for Little-endian 64-bit PowerPC with 4k pages (debug symbols)
+Package: linux-image-7.3.5+deb14-powerpc64le-dbg
+Description-md5: a42617682915a216ee50db6ba7322368
+Description-en: Linux 7.3.5 for Little-endian 64-bit PowerPC with 4k pages (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.3.4+deb14-powerpc64le.
+ modules in linux-image-7.3.5+deb14-powerpc64le.
 
-Package: linux-image-7.3.4+deb14-riscv64
-Description-md5: 0d62439acb92c8f202ccb1340b75b753
-Description-en: Linux 7.3.4 for 64-bit RISC-V platforms
- The Linux kernel 7.3.4 and modules for use on 64-bit RISC-V platforms.
+Package: linux-image-7.3.5+deb14-riscv64
+Description-md5: e9d4fe1f833c0d0edfd6da903c564c4d
+Description-en: Linux 7.3.5 for 64-bit RISC-V platforms
+ The Linux kernel 7.3.5 and modules for use on 64-bit RISC-V platforms.
 
-Package: linux-image-7.3.4+deb14-riscv64-dbg
-Description-md5: 426ef03e18e4bbd54196b262401018d4
-Description-en: Linux 7.3.4 for 64-bit RISC-V platforms (debug symbols)
+Package: linux-image-7.3.5+deb14-riscv64-dbg
+Description-md5: a926e74c188fd56dd466eb98f37b7498
+Description-en: Linux 7.3.5 for 64-bit RISC-V platforms (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.3.4+deb14-riscv64.
+ modules in linux-image-7.3.5+deb14-riscv64.
 
-Package: linux-image-7.3.4+deb14-rt-amd64-dbg
-Description-md5: 57151004773f1a5b7c8c78187c48be83
-Description-en: Linux 7.3.4 for 64-bit PCs (debug symbols)
+Package: linux-image-7.3.5+deb14-rt-amd64-dbg
+Description-md5: 183abf488c9d45954717369fee79cc0c
+Description-en: Linux 7.3.5 for 64-bit PCs (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.3.4+deb14-rt-amd64.
+ modules in linux-image-7.3.5+deb14-rt-amd64.
 
-Package: linux-image-7.3.4+deb14-rt-arm64-dbg
-Description-md5: fbe6b57b85ee87ae6bc9540377f7f45b
-Description-en: Linux 7.3.4 for 64-bit ARMv8 machines (debug symbols)
+Package: linux-image-7.3.5+deb14-rt-arm64-dbg
+Description-md5: 3f64afdffaa7ffe865dfd4474631f032
+Description-en: Linux 7.3.5 for 64-bit ARMv8 machines (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.3.4+deb14-rt-arm64.
+ modules in linux-image-7.3.5+deb14-rt-arm64.
 
-Package: linux-image-7.3.4+deb14-s390x
-Description-md5: ff083b8efad65e46d70f0e3849f16db0
-Description-en: Linux 7.3.4 for IBM zSeries
- The Linux kernel 7.3.4 and modules for use on IBM zSeries.
+Package: linux-image-7.3.5+deb14-s390x
+Description-md5: 2c5ed38bf81474de871272c20c8aafb4
+Description-en: Linux 7.3.5 for IBM zSeries
+ The Linux kernel 7.3.5 and modules for use on IBM zSeries.
 
-Package: linux-image-7.3.4+deb14-s390x-dbg
-Description-md5: 372ad947e31609e247b11fe2e95f5414
-Description-en: Linux 7.3.4 for IBM zSeries (debug symbols)
+Package: linux-image-7.3.5+deb14-s390x-dbg
+Description-md5: e04680ab51d345d1a43097c179bbcb7a
+Description-en: Linux 7.3.5 for IBM zSeries (debug symbols)
  This package provides the detached debug symbols for the Linux kernel and
- modules in linux-image-7.3.4+deb14-s390x.
+ modules in linux-image-7.3.5+deb14-s390x.
 
 Package: linux-image-armmp
 Description-md5: 6e23c7da79075220d673bf3c62982c44
@@ -416790,9 +416976,9 @@ Description-en: Linux for IBM zSeries (debug symbols meta-package)
  This package depends on the detached debugging symbols for the latest
  Linux kernel s390x configuration.
 
-Package: linux-kbuild-7.3.4+deb14
-Description-md5: 2f0e96de99b0c45671c6e3f5fcd9da79
-Description-en: Kbuild infrastructure for Linux 7.3.4+deb14
+Package: linux-kbuild-7.3.5+deb14
+Description-md5: f36426babbd94f7e51d90ed5a84c8e91
+Description-en: Kbuild infrastructure for Linux 7.3.5+deb14
  This package provides the kbuild infrastructure for the headers packages
  for Linux kernel version 7.3.
 
@@ -417023,130 +417209,130 @@ Description-en: miscellaneous tools from the Linux source tree
  Create profile of thermal zones * tmon: Monitor and test thermal
  management
 
-Package: linux-modules-7.3.4+deb14-amd64
-Description-md5: 126fd8bf4c770450f89ae0b43a4e335b
-Description-en: Linux 7.3.4 for 64-bit PCs (modules)
- This contains the kernel modules for Linux 7.3.4 on PCs with AMD64, Intel
+Package: linux-modules-7.3.5+deb14-amd64
+Description-md5: d66c2ba9486e7984857496b3048797ce
+Description-en: Linux 7.3.5 for 64-bit PCs (modules)
+ This contains the kernel modules for Linux 7.3.5 on PCs with AMD64, Intel
  64 or VIA Nano processors.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-amd64.
+ install linux-image-7.3.5+deb14-amd64.
 
-Package: linux-modules-7.3.4+deb14-arm64
-Description-md5: d587b97633e3c4d324ee7430f98d92fa
-Description-en: Linux 7.3.4 for 64-bit ARMv8 machines (modules)
- This contains the kernel modules for Linux 7.3.4 on 64-bit ARMv8 machines.
+Package: linux-modules-7.3.5+deb14-arm64
+Description-md5: e5fc223a60bdbd44f042a6f824dcb573
+Description-en: Linux 7.3.5 for 64-bit ARMv8 machines (modules)
+ This contains the kernel modules for Linux 7.3.5 on 64-bit ARMv8 machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-arm64.
+ install linux-image-7.3.5+deb14-arm64.
 
-Package: linux-modules-7.3.4+deb14-arm64-16k
-Description-md5: 0f9e6cfded8cb901e821f4ff9c24598d
-Description-en: Linux 7.3.4 for 64-bit ARMv8 machines with 16k pages (modules)
- This contains the kernel modules for Linux 7.3.4 on 64-bit ARMv8 machines
+Package: linux-modules-7.3.5+deb14-arm64-16k
+Description-md5: 30631bfaad4650ac1035729176536934
+Description-en: Linux 7.3.5 for 64-bit ARMv8 machines with 16k pages (modules)
+ This contains the kernel modules for Linux 7.3.5 on 64-bit ARMv8 machines
  with 16k pages.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-arm64-16k.
+ install linux-image-7.3.5+deb14-arm64-16k.
 
-Package: linux-modules-7.3.4+deb14-armmp
-Description-md5: b9789f126c1b63a46d0fc075e5b88e49
-Description-en: Linux 7.3.4 for ARMv7 multiplatform compatible SoCs (modules)
- This contains the kernel modules for Linux 7.3.4 on ARMv7 multiplatform
+Package: linux-modules-7.3.5+deb14-armmp
+Description-md5: ee263cdf45fa27f535afaa40a6c42dfe
+Description-en: Linux 7.3.5 for ARMv7 multiplatform compatible SoCs (modules)
+ This contains the kernel modules for Linux 7.3.5 on ARMv7 multiplatform
  kernel.  See https://wiki.debian.org/DebianKernel/ARMMP for details of
  supported platforms.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-armmp.
+ install linux-image-7.3.5+deb14-armmp.
 
-Package: linux-modules-7.3.4+deb14-armmp-lpae
-Description-md5: f92f70a5060c96aaf6e170fc1dec4b5c
-Description-en: Linux 7.3.4 for ARMv7 multiplatform compatible SoCs supporting LPAE (modules)
- This contains the kernel modules for Linux 7.3.4 on ARMv7 multiplatform
+Package: linux-modules-7.3.5+deb14-armmp-lpae
+Description-md5: 53bf971cb816ad1b6adf22ad2958c541
+Description-en: Linux 7.3.5 for ARMv7 multiplatform compatible SoCs supporting LPAE (modules)
+ This contains the kernel modules for Linux 7.3.5 on ARMv7 multiplatform
  kernel supporting LPAE. See https://wiki.debian.org/DebianKernel/ARMMP for
  details of supported platforms..
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-armmp-lpae.
+ install linux-image-7.3.5+deb14-armmp-lpae.
 
-Package: linux-modules-7.3.4+deb14-cloud-amd64
-Description-md5: 1f99ef9b870dafd83d054a731f40f35a
-Description-en: Linux 7.3.4 for x86-64 cloud (modules)
- This contains the kernel modules for Linux 7.3.4 on cloud platforms
+Package: linux-modules-7.3.5+deb14-cloud-amd64
+Description-md5: a94ffc58b965ce06f8488fe6b7ba0dc1
+Description-en: Linux 7.3.5 for x86-64 cloud (modules)
+ This contains the kernel modules for Linux 7.3.5 on cloud platforms
  including Amazon EC2, Microsoft Azure, and Google Compute Engine.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-cloud-amd64.
+ install linux-image-7.3.5+deb14-cloud-amd64.
 
-Package: linux-modules-7.3.4+deb14-cloud-arm64
-Description-md5: f720e96d5d03f74ac05ab135978ea0d3
-Description-en: Linux 7.3.4 for arm64 cloud (modules)
- This contains the kernel modules for Linux 7.3.4 on cloud platforms
+Package: linux-modules-7.3.5+deb14-cloud-arm64
+Description-md5: e683ff6b151f2ededcef05705e6c93a5
+Description-en: Linux 7.3.5 for arm64 cloud (modules)
+ This contains the kernel modules for Linux 7.3.5 on cloud platforms
  supporting arm64 virtual machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-cloud-arm64.
+ install linux-image-7.3.5+deb14-cloud-arm64.
 
-Package: linux-modules-7.3.4+deb14-loong64
-Description-md5: 29e0923137d0a4e40e6673b61fdf1fde
-Description-en: Linux 7.3.4 for 64-bit LoongArch platforms (modules)
- This contains the kernel modules for Linux 7.3.4 on 64-bit LoongArch
+Package: linux-modules-7.3.5+deb14-loong64
+Description-md5: e91408a6d940fdfd4cedac563cfc39ac
+Description-en: Linux 7.3.5 for 64-bit LoongArch platforms (modules)
+ This contains the kernel modules for Linux 7.3.5 on 64-bit LoongArch
  platforms.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-loong64.
+ install linux-image-7.3.5+deb14-loong64.
 
-Package: linux-modules-7.3.4+deb14-powerpc64le
-Description-md5: 391e7adbda0bc08f5ab15f7d376f77f2
-Description-en: Linux 7.3.4 for Little-endian 64-bit PowerPC with 4k pages (modules)
- This contains the kernel modules for Linux 7.3.4 on Little-endian 64-bit
+Package: linux-modules-7.3.5+deb14-powerpc64le
+Description-md5: 90271d661a5cedd52ca32cd117fe9833
+Description-en: Linux 7.3.5 for Little-endian 64-bit PowerPC with 4k pages (modules)
+ This contains the kernel modules for Linux 7.3.5 on Little-endian 64-bit
  PowerPC with 4k pages.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-powerpc64le.
+ install linux-image-7.3.5+deb14-powerpc64le.
 
-Package: linux-modules-7.3.4+deb14-powerpc64le-64k
-Description-md5: 920d1e095d3bdfbedcffa1e7f6c8cffc
-Description-en: Linux 7.3.4 for Little-endian 64-bit PowerPC with 64k pages (modules)
- This contains the kernel modules for Linux 7.3.4 on Little-endian 64-bit
+Package: linux-modules-7.3.5+deb14-powerpc64le-64k
+Description-md5: 800f32b46cc326d02e47f56ec109f648
+Description-en: Linux 7.3.5 for Little-endian 64-bit PowerPC with 64k pages (modules)
+ This contains the kernel modules for Linux 7.3.5 on Little-endian 64-bit
  PowerPC with 64k pages.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-powerpc64le-64k.
+ install linux-image-7.3.5+deb14-powerpc64le-64k.
 
-Package: linux-modules-7.3.4+deb14-riscv64
-Description-md5: 5ba896f9741fbf5fa252731cf6c4089a
-Description-en: Linux 7.3.4 for 64-bit RISC-V platforms (modules)
- This contains the kernel modules for Linux 7.3.4 on 64-bit RISC-V
+Package: linux-modules-7.3.5+deb14-riscv64
+Description-md5: 57b987efbff52b6f113cbba1de246ae8
+Description-en: Linux 7.3.5 for 64-bit RISC-V platforms (modules)
+ This contains the kernel modules for Linux 7.3.5 on 64-bit RISC-V
  platforms.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-riscv64.
+ install linux-image-7.3.5+deb14-riscv64.
 
-Package: linux-modules-7.3.4+deb14-rt-amd64
-Description-md5: 6d08cfbfaf474cf7fb44c32c7047d6a0
-Description-en: Linux 7.3.4 for 64-bit PCs (modules)
- This contains the kernel modules for Linux 7.3.4 on PCs with AMD64, Intel
+Package: linux-modules-7.3.5+deb14-rt-amd64
+Description-md5: e37cc16768f3601342015fc4b19dc3a8
+Description-en: Linux 7.3.5 for 64-bit PCs (modules)
+ This contains the kernel modules for Linux 7.3.5 on PCs with AMD64, Intel
  64 or VIA Nano processors.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-rt-amd64.
+ install linux-image-7.3.5+deb14-rt-amd64.
 
-Package: linux-modules-7.3.4+deb14-rt-arm64
-Description-md5: 09da99e18f0eca4368032de9bbbd4b7e
-Description-en: Linux 7.3.4 for 64-bit ARMv8 machines (modules)
- This contains the kernel modules for Linux 7.3.4 on 64-bit ARMv8 machines.
+Package: linux-modules-7.3.5+deb14-rt-arm64
+Description-md5: a76d92f8c7d1264c3461902e11d5ecc9
+Description-en: Linux 7.3.5 for 64-bit ARMv8 machines (modules)
+ This contains the kernel modules for Linux 7.3.5 on 64-bit ARMv8 machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-rt-arm64.
+ install linux-image-7.3.5+deb14-rt-arm64.
 
-Package: linux-modules-7.3.4+deb14-s390x
-Description-md5: cf26c0d78f1bb0d7bd1bce2e1963d3fc
-Description-en: Linux 7.3.4 for IBM zSeries (modules)
- This contains the kernel modules for Linux 7.3.4 on IBM zSeries.
+Package: linux-modules-7.3.5+deb14-s390x
+Description-md5: 7c01ed5b8ae43f67a9254fd488885bdd
+Description-en: Linux 7.3.5 for IBM zSeries (modules)
+ This contains the kernel modules for Linux 7.3.5 on IBM zSeries.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-s390x.
+ install linux-image-7.3.5+deb14-s390x.
 
 Package: linux-modules-armmp
 Description-md5: ef752b262ae2448cbd086c175fde3111
@@ -417424,32 +417610,32 @@ Description-en: Linux for 64-bit PCs (dummy package)
  This empty package is used to keep the installed versions of
  linux-headers-64-bit PCs and linux-image-64-bit PCs synchronised.
 
-Package: linux-binary-7.3.4+deb14-amd64
-Description-md5: 8d359c5231cc56310244e1be8daef6c6
-Description-en: Linux 7.3.4 for 64-bit PCs (kernel image)
- This package contains the kernel image for Linux 7.3.4 on PCs with AMD64,
+Package: linux-binary-7.3.5+deb14-amd64
+Description-md5: e79d638b11ef37000652d52d783fef53
+Description-en: Linux 7.3.5 for 64-bit PCs (kernel image)
+ This package contains the kernel image for Linux 7.3.5 on PCs with AMD64,
  Intel 64 or VIA Nano processors.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-amd64.
+ install linux-image-7.3.5+deb14-amd64.
 
-Package: linux-binary-7.3.4+deb14-cloud-amd64
-Description-md5: e25c4880784758ee95f0da70d81b675e
-Description-en: Linux 7.3.4 for x86-64 cloud (kernel image)
- This package contains the kernel image for Linux 7.3.4 on cloud platforms
+Package: linux-binary-7.3.5+deb14-cloud-amd64
+Description-md5: 3d675e9ebb4f95eede5c1cafd0e582ce
+Description-en: Linux 7.3.5 for x86-64 cloud (kernel image)
+ This package contains the kernel image for Linux 7.3.5 on cloud platforms
  including Amazon EC2, Microsoft Azure, and Google Compute Engine.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-cloud-amd64.
+ install linux-image-7.3.5+deb14-cloud-amd64.
 
-Package: linux-binary-7.3.4+deb14-rt-amd64
-Description-md5: f7890958f01a706e10f9577968414ebe
-Description-en: Linux 7.3.4 for 64-bit PCs (kernel image)
- This package contains the kernel image for Linux 7.3.4 on PCs with AMD64,
+Package: linux-binary-7.3.5+deb14-rt-amd64
+Description-md5: 7a4534b7a1fd6a51e3239b20279c9d14
+Description-en: Linux 7.3.5 for 64-bit PCs (kernel image)
+ This package contains the kernel image for Linux 7.3.5 on PCs with AMD64,
  Intel 64 or VIA Nano processors.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-rt-amd64.
+ install linux-image-7.3.5+deb14-rt-amd64.
 
 Package: linux-headers-amd64
 Description-md5: e6cd01c3f051de3860a1b10938a309d7
@@ -417469,22 +417655,22 @@ Description-en: Linux for 64-bit PCs (module development meta-package)
  This package depends on the architecture-specific header files for the
  latest Linux kernel rt-amd64 configuration.
 
-Package: linux-image-7.3.4+deb14-amd64
-Description-md5: e950ee05311fa2a9e0091a8feccfbdbd
-Description-en: Linux 7.3.4 for 64-bit PCs
- The Linux kernel 7.3.4 and modules for use on PCs with AMD64, Intel 64 or
+Package: linux-image-7.3.5+deb14-amd64
+Description-md5: a6f417bde8196bfb75ef784155f3a3b0
+Description-en: Linux 7.3.5 for 64-bit PCs
+ The Linux kernel 7.3.5 and modules for use on PCs with AMD64, Intel 64 or
  VIA Nano processors.
 
-Package: linux-image-7.3.4+deb14-cloud-amd64
-Description-md5: 26d79fb76e093d621356f790141f8719
-Description-en: Linux 7.3.4 for x86-64 cloud
- The Linux kernel 7.3.4 and modules for use on cloud platforms including
+Package: linux-image-7.3.5+deb14-cloud-amd64
+Description-md5: 4e3243a52f1e072b0cdf2f11346aab8a
+Description-en: Linux 7.3.5 for x86-64 cloud
+ The Linux kernel 7.3.5 and modules for use on cloud platforms including
  Amazon EC2, Microsoft Azure, and Google Compute Engine.
 
-Package: linux-image-7.3.4+deb14-rt-amd64
-Description-md5: 8b7b82ce9dfa4d880c6b5a9cbb7613c7
-Description-en: Linux 7.3.4 for 64-bit PCs, PREEMPT_RT
- The Linux kernel 7.3.4 and modules for use on PCs with AMD64, Intel 64 or
+Package: linux-image-7.3.5+deb14-rt-amd64
+Description-md5: 583c8f26f71db08eeedf34e93e86e883
+Description-en: Linux 7.3.5 for 64-bit PCs, PREEMPT_RT
+ The Linux kernel 7.3.5 and modules for use on PCs with AMD64, Intel 64 or
  VIA Nano processors.
  .
  This kernel is configured with PREEMPT_RT real time support.
@@ -417572,41 +417758,41 @@ Description-en: Linux for 64-bit ARMv8 machines (dummy package)
  linux-headers-64-bit ARMv8 machines and linux-image-64-bit ARMv8 machines
  synchronised.
 
-Package: linux-binary-7.3.4+deb14-arm64
-Description-md5: 10c895e7f44a81a580ef570bcbc4e8f0
-Description-en: Linux 7.3.4 for 64-bit ARMv8 machines (kernel image)
- This package contains the kernel image for Linux 7.3.4 on 64-bit ARMv8
+Package: linux-binary-7.3.5+deb14-arm64
+Description-md5: 20648c45a829be590598c2ce90165ed8
+Description-en: Linux 7.3.5 for 64-bit ARMv8 machines (kernel image)
+ This package contains the kernel image for Linux 7.3.5 on 64-bit ARMv8
  machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-arm64.
+ install linux-image-7.3.5+deb14-arm64.
 
-Package: linux-binary-7.3.4+deb14-arm64-16k
-Description-md5: 84ee3df0f4172c1297a813d022a904d1
-Description-en: Linux 7.3.4 for 64-bit ARMv8 machines with 16k pages (kernel image)
- This package contains the kernel image for Linux 7.3.4 on 64-bit ARMv8
+Package: linux-binary-7.3.5+deb14-arm64-16k
+Description-md5: b85c767eb985a65a1e5f1724c9ef7402
+Description-en: Linux 7.3.5 for 64-bit ARMv8 machines with 16k pages (kernel image)
+ This package contains the kernel image for Linux 7.3.5 on 64-bit ARMv8
  machines with 16k pages.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-arm64-16k.
+ install linux-image-7.3.5+deb14-arm64-16k.
 
-Package: linux-binary-7.3.4+deb14-cloud-arm64
-Description-md5: 493434322b5d014b15d23c65e542e9dd
-Description-en: Linux 7.3.4 for arm64 cloud (kernel image)
- This package contains the kernel image for Linux 7.3.4 on cloud platforms
+Package: linux-binary-7.3.5+deb14-cloud-arm64
+Description-md5: 2f74301b62449b352644822e3e893ec9
+Description-en: Linux 7.3.5 for arm64 cloud (kernel image)
+ This package contains the kernel image for Linux 7.3.5 on cloud platforms
  supporting arm64 virtual machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-cloud-arm64.
+ install linux-image-7.3.5+deb14-cloud-arm64.
 
-Package: linux-binary-7.3.4+deb14-rt-arm64
-Description-md5: c44ca32a03f1be2b86c7cf896c2617f2
-Description-en: Linux 7.3.4 for 64-bit ARMv8 machines (kernel image)
- This package contains the kernel image for Linux 7.3.4 on 64-bit ARMv8
+Package: linux-binary-7.3.5+deb14-rt-arm64
+Description-md5: 9efbd5fdeb6b02c203d37e6f031d73fe
+Description-en: Linux 7.3.5 for 64-bit ARMv8 machines (kernel image)
+ This package contains the kernel image for Linux 7.3.5 on 64-bit ARMv8
  machines.
  .
  This does not provide a complete kernel installation.  You should normally
- install linux-image-7.3.4+deb14-rt-arm64.
+ install linux-image-7.3.5+deb14-rt-arm64.
 
 Package: linux-headers-arm64
 Description-md5: 231f90302db24abcd69d22b4af8a1008
@@ -417632,27 +417818,27 @@ Description-en: Linux for 64-bit ARMv8 machines (module development meta-package
  This package depends on the architecture-specific header files for the
  latest Linux kernel rt-arm64 configuration.
 
-Package: linux-image-7.3.4+deb14-arm64
-Description-md5: 6b30eeb875ba3a198c972781b9997024
-Description-en: Linux 7.3.4 for 64-bit ARMv8 machines
- The Linux kernel 7.3.4 and modules for use on 64-bit ARMv8 machines.
+Package: linux-image-7.3.5+deb14-arm64
+Description-md5: a32875fa652450ea0cca706cf35e7794
+Description-en: Linux 7.3.5 for 64-bit ARMv8 machines
+ The Linux kernel 7.3.5 and modules for use on 64-bit ARMv8 machines.
 
-Package: linux-image-7.3.4+deb14-arm64-16k
-Description-md5: 9779c92e4f3fb5bde14a6e64b5a6a40e
-Description-en: Linux 7.3.4 for 64-bit ARMv8 machines with 16k pages
- The Linux kernel 7.3.4 and modules for use on 64-bit ARMv8 machines with
+Package: linux-image-7.3.5+deb14-arm64-16k
+Description-md5: f72794df53590f3f7b845d124ce06ce8
+Description-en: Linux 7.3.5 for 64-bit ARMv8 machines with 16k pages
+ The Linux kernel 7.3.5 and modules for use on 64-bit ARMv8 machines with
  16k pages.
 
-Package: linux-image-7.3.4+deb14-cloud-arm64
-Description-md5: ee59e09ab84ff64e20114c93a631485a
-Description-en: Linux 7.3.4 for arm64 cloud
- The Linux kernel 7.3.4 and modules for use on cloud platforms supporting
+Package: linux-image-7.3.5+deb14-cloud-arm64
+Description-md5: 06d70b2da0151c62526ce4e251277161
+Description-en: Linux 7.3.5 for arm64 cloud
+ The Linux kernel 7.3.5 and modules for use on cloud platforms supporting
  arm64 virtual machines.
 
-Package: linux-image-7.3.4+deb14-rt-arm64
-Description-md5: b40a4dd3ee8c9ec49097821c7f6faeaa
-Description-en: Linux 7.3.4 for 64-bit ARMv8 machines, PREEMPT_RT
- The Linux kernel 7.3.4 and modules for use on 64-bit ARMv8 machines.
+Package: linux-image-7.3.5+deb14-rt-arm64
+Description-md5: d79da88c89a1838f890104b9bc5a8427
+Description-en: Linux 7.3.5 for 64-bit ARMv8 machines, PREEMPT_RT
+ The Linux kernel 7.3.5 and modules for use on 64-bit ARMv8 machines.
  .
  This kernel is configured with PREEMPT_RT real time support.
 
@@ -421637,20 +421823,6 @@ Description-en: relative file load (within a multi-file Emacs package)
  This package provides functions which facilitate writing multi-file
  Emacs packages and facilitate running from the source tree without
  having to "install" code or fiddle with `load-path'.
-
-Package: loadlin
-Description-md5: 8658f2e73dfd4c4ff8b1a39e08879435
-Description-en: loader (running under DOS) for LINUX kernel images
- LOADLIN-1.6 is highly adaptable to different DOS configurations, and now
- has very few loading restrictions. It makes use of extended memory and
- also can load big kernels (bzImages) and ramdisk images (initrd)
- directly high.
- .
- LOADLIN also can load out of Virtual-86 mode (which is normal when
- using EMS drivers) if a VCPI server is present.
- .
- The loadlin package also includes the freeramdisk program, which can
- return memory to the system when a ramdisk is no longer needed.
 
 Package: loadwatch
 Description-md5: 1dfcb130ca929b18d33f35a15989ca48
@@ -440624,7 +440796,7 @@ Description-en: Runtime tools to handle MED files
   - medimport: a tool to convert a MED v2.1 or v2.2 file into a MED v2.3
     file
 
-Package: libmed11
+Package: libmed14
 Description-md5: 2f0d6f36c3259dd9231f7dde9469055f
 Description-en: Library to exchange meshed data (Fortran version)
  MED-fichier (Modélisation et Echanges de Données, in English Modelisation
@@ -440644,6 +440816,15 @@ Description-en: Development files for libmedc
  compile applications that use libmedC.
 
 Package: libmedc11t64
+Description-md5: 240c8fa72a78b0c954354b94f28bb7cf
+Description-en: Library to exchange meshed data (C version)
+ MED-fichier (Modélisation et Echanges de Données, in English Modelisation
+ and Data Exchange) is a library to store and exchange meshed data or
+ computation results. It uses the HDF5 file format to store the data.
+ .
+ This package contains the MED-fichier runtime library (C version).
+
+Package: libmedc14
 Description-md5: 240c8fa72a78b0c954354b94f28bb7cf
 Description-en: Library to exchange meshed data (C version)
  MED-fichier (Modélisation et Echanges de Données, in English Modelisation
@@ -457463,13 +457644,14 @@ Description-en: interface to the MySQL database for the Tcl language
  Tcl commands correspond to MySQL C-API functions.
 
 Package: mysqltuner
-Description-md5: 76ab7cb92f14af4121c62e139d1bfa8e
-Description-en: high-performance MySQL tuning script
- High-performance MySQL tuning script written in perl that provides a
- snapshot of a MySQL or MariaDB server's health. Based on the statistics
- gathered, specific recommendations are provided to increase the server's
- efficiency and performance. The script gives automated MySQL tuning on
- the level of what you would receive from a MySQL DBA.
+Description-md5: 369e67d35a129edb3435c4c87cf26588
+Description-en: high-performance MySQL/MariaDB tuning script
+ High-performance MySQL and MariaDB tuning script written in Perl that
+ provides a snapshot of a MySQL, MariaDB or Percona server's health. Based
+ on the statistics gathered, specific recommendations are provided to
+ increase the server's efficiency and performance. The script gives
+ automated MySQL tuning on the level of what you would receive from a
+ MySQL DBA.
  .
  Features:
  .
@@ -457489,9 +457671,9 @@ Description-en: high-performance MySQL tuning script
       memory, CPU, I/O and open file limits with server behaviour.
     * Vulnerability Checks: Cross-references installed versions against
       the bundled CVE database and reports known vulnerabilities.
-    * Output Formats: Generates human-readable text, JSON and interactive
-      HTML reports, and can be driven by automation via its CLI and MCP
-      server interface.
+    * Output Formats: Generates human-readable text, JSON, YAML and
+      interactive HTML reports, plus structured --agent-json output for
+      automation and AI agents.
 
 Package: python3-myst-nb
 Description-md5: 5dacf5eb5d72976c7d3156a47058d3ff
@@ -459448,6 +459630,15 @@ Description-en: Jupyter Notebook Tools for Sphinx -- Python 3
  automatically executed during the Sphinx build process.
  .
  This package installs the library for Python 3.
+
+Package: python3-nbsphinx-link
+Description-md5: c444b57beaa265ac6f7789299a24caa4
+Description-en: sphinx extension for including notebooks outside of sphinx root
+ Normally, Sphinx will only allow you to add files that are situated
+ inside the source directory, but you might want to include files from
+ another directory, for example a central 'examples' folder. For RST
+ files these can be linked with include directives inside another RST
+ file. For notebooks, there's nbsphinx-link.
 
 Package: nbtscan
 Description-md5: 6597759cb908a911f1a84fc25b51e436
@@ -467280,6 +467471,13 @@ Description-en: lightweight, unobtrusive customizable notification system
  .
  Node.js is an event-based server-side JavaScript engine.
 
+Package: node-amaro
+Description-md5: a7cd29431e34dbf0a073ea064153434d
+Description-en: Wrapper around SWC WebAssembly TypeScript parser for Node.js
+ Amaro provides a stable API around the SWC TypeScript parser and
+ type stripper, compiled to WebAssembly, together with the loaders
+ used by Node.js for type stripping and type transformation.
+
 Package: node-amdefine
 Description-md5: 551fc16b262053be0d9d13d5dd82dcb6
 Description-en: Asynchronous Module Definition (AMD) for Node.js
@@ -469218,9 +469416,9 @@ Description-en: Server-side jQuery implementation
  Node.js is an event-based server-side JavaScript engine.
 
 Package: node-chokidar
-Description-md5: 0c5596a9375d049de28bfb03e8ffc8d7
+Description-md5: bda0e4f95388ddd280c81b0c235f9505
 Description-en: minimal and efficient cross-platform file-watching library
- chokidar v4 is a complete rewrite that drops most of the optional
+ chokidar v5 is an ES module-only release that drops most of the optional
  dependencies of v3. It now only relies on readdirp (bundled in this
  package as a component).
  .
@@ -473830,6 +474028,24 @@ Description-en: convert Fluent (.ftl) files to JSON and back
  .
  Node.js is an event-based server-side JavaScript engine.
 
+Package: libjs-fullcalendar
+Description-md5: 33567cb22e5135e65700aa591f8b623f
+Description-en: full-sized drag-and-drop event calendar in JavaScript - browser version
+ FullCalendar is a JavaScript library for displaying and interacting with
+ event calendars in web applications. It supports multiple calendar views,
+ editable events, drag-and-drop interaction, recurring events, time zones,
+ and integration with modern frontend frameworks.
+ .
+ This package provides the browser bundles for direct use from web pages.
+
+Package: node-fullcalendar
+Description-md5: 4f5ebc3b0dbf99b16ffab5bae0b4d2e9
+Description-en: full-sized drag-and-drop event calendar in JavaScript
+ FullCalendar is a JavaScript library for displaying and interacting with
+ event calendars in web applications. It supports multiple calendar views,
+ editable events, drag-and-drop interaction, recurring events, time zones,
+ and integration with modern frontend frameworks.
+
 Package: node-function-bind
 Description-md5: 033a9d552c0700bebbb12c18dc928ca5
 Description-en: Implementation of Function.prototype.bind
@@ -478090,6 +478306,29 @@ Description-en: JSON parser with line number annotations
  This JSON parser attaches line number information to parsed objects and
  primitive values. Its error reports identify invalid JSON input, including
  the location of syntax errors.
+
+Package: node-maplibre-geojson-vt
+Description-md5: b829fbe2a102ba3520cd72094716cedc
+Description-en: JavaScript library for slicing GeoJSON into vector tiles
+ GeoJSON data is indexed and converted into tiles on demand, with geometry
+ simplified to match each zoom level. The resulting tiles use the JSON
+ equivalent of the vector tile specification.
+ .
+ The library supports point clustering, configurable tile buffers and feature
+ identifiers, and incremental updates to the tile index.
+
+Package: node-maplibre-vt-pbf
+Description-md5: 79cc44804116589b65a66477d4d8cd55
+Description-en: Mapbox vector tile encoder for Node.js
+ This library accepts decoded vector tiles and combines named tile layers
+ derived from GeoJSON. It encodes point, line and polygon geometry along
+ with feature IDs and properties as uncompressed Protocol Buffers data
+ in the Mapbox Vector Tile format.
+ .
+ For layers derived from GeoJSON, callers can set the tile format version
+ and coordinate extent. Structured properties are stored as JSON strings.
+ When re-encoding a decoded tile, callers can add a prefix to distinguish
+ those values from ordinary strings.
 
 Package: node-marijn-buildtool
 Description-md5: 8afe9566123409649504318477a16911
@@ -483129,6 +483368,21 @@ Description-en: rollup plugin to bundle third-party dependencies
  .
  Node.js is an event-based server-side JavaScript engine.
 
+Package: node-rollup-plugin-postcss
+Description-md5: cfc891c3f27e065731bf63315b78d032
+Description-en: Rollup plugin to process imported CSS with PostCSS
+ This Rollup plugin allows JavaScript modules to import CSS and other
+ stylesheet files, process them with PostCSS, and include the resulting styles
+ in the generated bundle.
+ .
+ It can inject CSS into the document at run time, extract CSS to a separate
+ file, load local PostCSS configuration, generate source maps, and minimise
+ output. It also supports CSS modules, named exports, CSS-in-JS parsing, and
+ custom PostCSS parsers, syntaxes, and stringifiers.
+ .
+ Built-in loaders allow Sass, Stylus, and Less files to be used in Rollup
+ projects, and custom loaders can be supplied for other stylesheet formats.
+
 Package: node-rollup-plugin-replace
 Description-md5: dda623729b8f07cf2820e10f0c40872e
 Description-en: Rollup plugin to make string substitutions while bundling
@@ -483265,6 +483519,34 @@ Description-en: library that matches paths against registered routes
  thing and does it well.
  .
  Node.js is an event-based server-side JavaScript engine.
+
+Package: libjs-rrule
+Description-md5: b6146484825070b5ca73a54b00d23ce4
+Description-en: JavaScript library for recurrence rules for calendar dates - browser version
+ rrule.js is a JavaScript library for working with recurring calendar
+ dates using rules based on the iCalendar RFC 5545 recurrence rule format.
+ It can generate dates from recurrence rules, query occurrences before,
+ after, or between dates, and combine rules with explicit inclusion and
+ exclusion dates.
+ .
+ The library supports parsing and serialising RRULE strings, recurrence
+ rule sets, timezone identifiers using the Intl API, and conversion between
+ rules and human-readable text.
+ .
+ This package provides the browser JavaScript library.
+
+Package: node-rrule
+Description-md5: 8db7bbaff0dbe0ff43617ba1999563f3
+Description-en: JavaScript library for recurrence rules for calendar dates
+ rrule.js is a JavaScript library for working with recurring calendar
+ dates using rules based on the iCalendar RFC 5545 recurrence rule format.
+ It can generate dates from recurrence rules, query occurrences before,
+ after, or between dates, and combine rules with explicit inclusion and
+ exclusion dates.
+ .
+ The library supports parsing and serialising RRULE strings, recurrence
+ rule sets, timezone identifiers using the Intl API, and conversion between
+ rules and human-readable text.
 
 Package: node-rtlcss
 Description-md5: 7d702ea27eb76a2ff5dc3dab0ff464af
@@ -485000,6 +485282,18 @@ Description-en: Temporary files, directories, and streams for Node.js
  mode, and supports automatic removal (if asked).
  .
  Node.js is an event-based server-side JavaScript engine.
+
+Package: node-temporal-polyfill
+Description-md5: a02de91b6d0c6ac8f7cf6b9baeefe41c
+Description-en: polyfill for the JavaScript Temporal date and time API
+ Temporal provides objects for dates, times, time zones and durations, with
+ support for date arithmetic, parsing and formatting. It distinguishes wall
+ clock dates and times from exact instants and supports multiple calendar
+ systems.
+ .
+ This implementation can install Temporal globally or expose it through local
+ imports. It also provides a function-based API and entry points with either
+ basic or extended calendar support.
 
 Package: node-tempy
 Description-md5: e84689df042c516a95a804ecdfff987f
@@ -528613,6 +528907,59 @@ Description-en: Symfony polyfill for the Iconv extension
  .
  Symfony is a PHP framework, a set of tools and a development methodology.
 
+Package: php-symfony-polyfill-intl-breakiterator
+Description-md5: b3ce6ff29e59dc3736783ccc35984239
+Description-en: Symfony polyfill for intl's IntlBreakIterator class
+ This component provides a partial, native PHP implementation of the
+ IntlBreakIterator class from the Intl extension.
+ .
+  * IntlBreakIterator::createWordInstance(), createCharacterInstance() and
+    createCodePointInstance()
+  * boundary navigation (first(), last(), next(), previous(), current(),
+    following(), preceding(), isBoundary()), iteration and getPartsIterator()
+  * IntlRuleBasedBreakIterator::getRuleStatus() and getRuleStatusVec()
+  * IntlCodePointBreakIterator::getLastCodePoint()
+ .
+ The Symfony Polyfill project backports features found in the latest PHP
+ versions and provides compatibility layers for some extensions and functions.
+ It is intended to be used when portability across PHP versions and extensions
+ is desired.
+ .
+ Symfony is a PHP framework, a set of tools and a development methodology.
+
+Package: php-symfony-polyfill-intl-char
+Description-md5: 7dd73a60bdd4bc81ff300138cec0d77f
+Description-en: Symfony polyfill for intl's IntlChar class
+ This component provides a partial, native PHP implementation of the IntlChar
+ class from the Intl extension: : the properties of code points from the
+ Unicode Character Database, like those the Unicode Bidirectional Algorithm
+ needs
+ .
+  * charDirection(), charMirror(), isMirrored() and getBidiPairedBracket()
+  * charType() and enumCharTypes(), and the predicates derived from the general
+    category, like ICU: isalpha(), isdigit(), isspace(), isWhitespace(),
+    ispunct(), isgraph(), isprint(), isIDStart(), isJavaIDPart()…
+  * hasBinaryProperty() for all the binary properties of ICU (emoji ones,
+    NFC_Inert, Segment_Starter… included), and isUAlphabetic(),
+    isULowercase(), isUUppercase() and isUWhiteSpace()
+  * getIntPropertyValue(), getIntPropertyMinValue() and getIntPropertyMaxValue()
+    for all the enumerated properties but the blocks and the scripts: the bidi
+    class, the general category, the combining classes, the decomposition type,
+    the East Asian width, the line, grapheme cluster, word and sentence breaks,
+    the joining type and group, the Hangul syllable type, the numeric type, the
+    normalization quick checks, the Indic categories, the vertical orientation…
+  * tolower(), toupper(), totitle() and foldCase(), the simple case mappings
+  * getCombiningClass(), charDigitValue(), digit(), forDigit(),
+    getNumericValue() and charAge()
+  * ord(), chr(), getUnicodeVersion() and all the constants of IntlChar
+ .
+ The Symfony Polyfill project backports features found in the latest PHP
+ versions and provides compatibility layers for some extensions and functions.
+ It is intended to be used when portability across PHP versions and extensions
+ is desired.
+ .
+ Symfony is a PHP framework, a set of tools and a development methodology.
+
 Package: php-symfony-polyfill-intl-grapheme
 Description-md5: 89d34bbf1cfa0d1902ea576d77cda21a
 Description-en: Symfony polyfill for intl's grapheme_* functions
@@ -538996,81 +539343,6 @@ Description-en: Fixture for creating PostgreSQL clusters and databases (Python 3
  .
  This package installs the library for Python 3.
 
-Package: libecpg-compat3
-Description-md5: 66ce228306ea5636e1cb757bd540255b
-Description-en: older version of run-time library for ECPG programs
- The libecpg_compat shared library is used by programs built with ecpg.
- (Embedded PostgreSQL for C).
- .
- PostgreSQL is an object-relational SQL database management system.
-
-Package: libecpg-dev
-Description-md5: 5eb928e68d1075508e3d6a4d7fc6f514
-Description-en: development files for ECPG (Embedded PostgreSQL for C)
- This package contains the necessary files to build ECPG (Embedded
- PostgreSQL for C) programs.  It includes the development libraries
- and the preprocessor program ecpg.
- .
- PostgreSQL is an object-relational SQL database management system.
- .
- Install this package if you want to write C programs with SQL statements
- embedded in them (rather than run by an external process).
-
-Package: libecpg6
-Description-md5: 51ed6df58b24baddae9952acb91903bd
-Description-en: run-time library for ECPG programs
- The libecpg shared library is used by programs built with ECPG
- (Embedded PostgreSQL for C).
- .
- PostgreSQL is an object-relational SQL database management system.
-
-Package: libpgtypes3
-Description-md5: 2ac7abe2c096dc5d10a97e724ec3699e
-Description-en: shared library libpgtypes for PostgreSQL 18
- The libpgtypes shared library is used by programs built with ecpg.
- (Embedded PostgreSQL for C).
- .
- PostgreSQL is an object-relational SQL database management system.
-
-Package: libpq-dev
-Description-md5: 7f4362b106aae6b219ccc880faa1f04c
-Description-en: header files for libpq5 (PostgreSQL library)
- Header files and static library for compiling C programs to link
- with the libpq library in order to communicate with a PostgreSQL
- database backend.
- .
- PostgreSQL is an object-relational SQL database management system.
-
-Package: libpq-oauth
-Description-md5: d5259e31d90f6d0ac8b8ed95bdbc16b7
-Description-en: PostgreSQL C client library - OAuth flow
- libpq-oauth is an optional module for libpq5 implementing the Device
- Authorization flow for OAuth clients (RFC 8628). It is maintained as
- its own shared library in order to isolate its dependency on libcurl.
- (End users who don't want the Curl dependency can simply choose not
- to install this module.)
- .
- If a connection string allows the use of OAuth, and the server asks
- for it, and a libpq client has not installed its own custom OAuth
- flow, libpq will attempt to delay-load this module using dlopen() and
- the following ABI. Failure to load results in a failed connection.
- .
- PostgreSQL is an object-relational SQL database management system.
-
-Package: libpq5
-Description-md5: da9bc59f7fd653cbf94d3bb2760708aa
-Description-en: PostgreSQL C client library
- libpq is a C library that enables user programs to communicate with
- the PostgreSQL database server.  The server can be on another machine
- and accessed through TCP/IP.  This version of libpq is compatible
- with servers from PostgreSQL 8.2 or later.
- .
- This package contains the run-time library, needed by packages using
- libpq. SSL certificate validation (the sslrootcert=system connection
- option) requires the ca-certificates package.
- .
- PostgreSQL is an object-relational SQL database management system.
-
 Package: postgresql-18
 Description-md5: dcb0488ab35080ca4e8e57faa4716e66
 Description-en: The World's Most Advanced Open Source Relational Database
@@ -539171,6 +539443,169 @@ Description-en: Graph database optimized for fast analysis and real-time data pr
  popular graph query languages today.
  .
  This package contains Apache AGE for PostgreSQL 18.
+
+Package: libecpg-compat3
+Description-md5: 66ce228306ea5636e1cb757bd540255b
+Description-en: older version of run-time library for ECPG programs
+ The libecpg_compat shared library is used by programs built with ecpg.
+ (Embedded PostgreSQL for C).
+ .
+ PostgreSQL is an object-relational SQL database management system.
+
+Package: libecpg-dev
+Description-md5: 5eb928e68d1075508e3d6a4d7fc6f514
+Description-en: development files for ECPG (Embedded PostgreSQL for C)
+ This package contains the necessary files to build ECPG (Embedded
+ PostgreSQL for C) programs.  It includes the development libraries
+ and the preprocessor program ecpg.
+ .
+ PostgreSQL is an object-relational SQL database management system.
+ .
+ Install this package if you want to write C programs with SQL statements
+ embedded in them (rather than run by an external process).
+
+Package: libecpg6
+Description-md5: 51ed6df58b24baddae9952acb91903bd
+Description-en: run-time library for ECPG programs
+ The libecpg shared library is used by programs built with ECPG
+ (Embedded PostgreSQL for C).
+ .
+ PostgreSQL is an object-relational SQL database management system.
+
+Package: libpgtypes3
+Description-md5: 3eed49215d1b6b5c246dd9d944919440
+Description-en: shared library libpgtypes for PostgreSQL 19
+ The libpgtypes shared library is used by programs built with ecpg.
+ (Embedded PostgreSQL for C).
+ .
+ PostgreSQL is an object-relational SQL database management system.
+
+Package: libpq-dev
+Description-md5: 7f4362b106aae6b219ccc880faa1f04c
+Description-en: header files for libpq5 (PostgreSQL library)
+ Header files and static library for compiling C programs to link
+ with the libpq library in order to communicate with a PostgreSQL
+ database backend.
+ .
+ PostgreSQL is an object-relational SQL database management system.
+
+Package: libpq-oauth
+Description-md5: d5259e31d90f6d0ac8b8ed95bdbc16b7
+Description-en: PostgreSQL C client library - OAuth flow
+ libpq-oauth is an optional module for libpq5 implementing the Device
+ Authorization flow for OAuth clients (RFC 8628). It is maintained as
+ its own shared library in order to isolate its dependency on libcurl.
+ (End users who don't want the Curl dependency can simply choose not
+ to install this module.)
+ .
+ If a connection string allows the use of OAuth, and the server asks
+ for it, and a libpq client has not installed its own custom OAuth
+ flow, libpq will attempt to delay-load this module using dlopen() and
+ the following ABI. Failure to load results in a failed connection.
+ .
+ PostgreSQL is an object-relational SQL database management system.
+
+Package: libpq5
+Description-md5: da9bc59f7fd653cbf94d3bb2760708aa
+Description-en: PostgreSQL C client library
+ libpq is a C library that enables user programs to communicate with
+ the PostgreSQL database server.  The server can be on another machine
+ and accessed through TCP/IP.  This version of libpq is compatible
+ with servers from PostgreSQL 8.2 or later.
+ .
+ This package contains the run-time library, needed by packages using
+ libpq. SSL certificate validation (the sslrootcert=system connection
+ option) requires the ca-certificates package.
+ .
+ PostgreSQL is an object-relational SQL database management system.
+
+Package: postgresql-19
+Description-md5: 3fc1a9b525e54e469cbc93e723b5bde3
+Description-en: The World's Most Advanced Open Source Relational Database
+ PostgreSQL, also known as Postgres, is a free and open-source relational
+ database management system (RDBMS) emphasizing extensibility and SQL
+ compliance. It features transactions with Atomicity, Consistency, Isolation,
+ Durability (ACID) properties, automatically updatable views, materialized
+ views, triggers, foreign keys, and stored procedures. It is designed to handle
+ a range of workloads, from single machines to data warehouses or Web services
+ with many concurrent users.
+ .
+ This package provides the database server for PostgreSQL 19.
+
+Package: postgresql-19-jit
+Description-md5: ba70fe24d79d026d82f033d933b71495
+Description-en: LLVM JIT support for PostgreSQL 19
+ PostgreSQL, also known as Postgres, is a free and open-source relational
+ database management system (RDBMS) emphasizing extensibility and SQL
+ compliance. It features transactions with Atomicity, Consistency, Isolation,
+ Durability (ACID) properties, automatically updatable views, materialized
+ views, triggers, foreign keys, and stored procedures. It is designed to handle
+ a range of workloads, from single machines to data warehouses or Web services
+ with many concurrent users.
+ .
+ This package provides LLVM-based query JITing for PostgreSQL 19.
+
+Package: postgresql-client-19
+Description-md5: 28dc0dd3d1151cdde2385b3f4f3008c5
+Description-en: front-end programs for PostgreSQL 19
+ This package contains client and administrative programs for
+ PostgreSQL: these are the interactive terminal client psql and
+ programs for creating and removing users and databases.
+ .
+ This is the client package for PostgreSQL 19. If you install
+ PostgreSQL 19 on a standalone machine, you need the server package
+ postgresql-19, too. On a network, you can install this package on
+ many client machines, while the server package may be installed on
+ only one machine.
+ .
+ PostgreSQL is an object-relational SQL database management system.
+
+Package: postgresql-doc-19
+Description-md5: 706bf0fe7cf9b8a1a4bdc4537caa284b
+Description-en: documentation for the PostgreSQL database management system
+ This package contains all README files, user manual, and examples for
+ PostgreSQL 19. The manual is in HTML format.
+ .
+ PostgreSQL is an object-relational SQL database management system.
+
+Package: postgresql-plperl-19
+Description-md5: b13d970a8c44baed344fbc15c356eac8
+Description-en: PL/Perl procedural language for PostgreSQL 19
+ PL/Perl enables an SQL developer to write procedural language functions
+ for PostgreSQL 19 in Perl.  You need this package if you have any
+ PostgreSQL 19 functions that use the languages plperl or plperlu.
+ .
+ PostgreSQL is an object-relational SQL database management system.
+
+Package: postgresql-plpython3-19
+Description-md5: d2c6e2b8ae3077477bfe7238fd6d5b4b
+Description-en: PL/Python 3 procedural language for PostgreSQL 19
+ PL/Python 3 enables an SQL developer to write procedural language functions
+ for PostgreSQL 19 in Python 3.  You need this package if you have any
+ PostgreSQL 19 functions that use the languages plpython3 or plpython3u.
+ .
+ PostgreSQL is an object-relational SQL database management system.
+
+Package: postgresql-pltcl-19
+Description-md5: 6487b63df515756be9a7ccfc153fe3d5
+Description-en: PL/Tcl procedural language for PostgreSQL 19
+ PL/Tcl enables an SQL developer to write procedural language functions
+ for PostgreSQL 19 in Tcl.  You need this package if you have any
+ PostgreSQL 19 functions that use the languages pltcl or pltclu.
+ .
+ PostgreSQL is an object-relational SQL database management system.
+
+Package: postgresql-server-dev-19
+Description-md5: f7d8a7c524f1ef8b000a9bd9ddfb651b
+Description-en: development files for PostgreSQL 19 server-side programming
+ Header files for compiling SPI code to link into PostgreSQL's backend; for
+ example, for C functions to be called from SQL.
+ .
+ This package also contains the Makefiles necessary for building add-on
+ modules of PostgreSQL, which would otherwise have to be built in the
+ PostgreSQL source-code tree.
+ .
+ PostgreSQL is an object-relational SQL database management system.
 
 Package: postgresql-autodoc
 Description-md5: ab1b963175f512696f442e2042b5f137
@@ -544926,34 +545361,6 @@ Description-en: Psensor server for monitoring hardware sensors remotely
  .
  It is also possible to connect to Psensor server with a browser, a simple
  Web page is displaying the information.
-
-Package: libpseudo
-Description-md5: f41b1741419145eeaea38b6e58e00fd6
-Description-en: advanced tool for simulating superuser privileges
- The pseudo utility offers a way to run commands in a virtualized "root"
- environment, allowing ordinary users to run commands which give the
- illusion of creating device nodes, changing file ownership, and otherwise doing
- things necessary for creating distribution packages or filesystems.
- .
- Pseudo has a lot of similarities to fakeroot but is a new implementation
- that improves on the problems seen using fakeroot. Pseudo is now
- extensively used by Poky as a replacement to fakeroot but can also be
- used standalone in many other use cases.
- .
- This package contains the LD_PRELOAD libraries.
-
-Package: pseudo
-Description-md5: e8ca5be20058441e3c154ed0d7778bc0
-Description-en: advanced tool for simulating superuser privileges
- The pseudo utility offers a way to run commands in a virtualized "root"
- environment, allowing ordinary users to run commands which give the
- illusion of creating device nodes, changing file ownership, and otherwise doing
- things necessary for creating distribution packages or filesystems.
- .
- Pseudo has a lot of similarities to fakeroot but is a new implementation
- that improves on the problems seen using fakeroot. Pseudo is now
- extensively used by Poky as a replacement to fakeroot but can also be
- used standalone in many other use cases.
 
 Package: psfex
 Description-md5: 074bbc17893606c2b25d989a20a6296e
@@ -557856,14 +558263,6 @@ Description-en: library to control QNAP QSW devices
  .
  This package is a dependency of Home Assistant.
 
-Package: python3-aioraven
-Description-md5: 9344c9ace2a85b9d631d3d18d92e0cfe
-Description-en: asynchronous communication with Rainforest RAVEn devices
- This package provides an ansynchronous library to communicate with Rainforest
- RAVEn devices.
- .
- This package is a dependency of Home Assistant.
-
 Package: python3-aiorecollect
 Description-md5: b458160f88fe93dde5bd2cb8284ea60a
 Description-en: asyncio-based library for the ReCollect Waste API
@@ -564256,9 +564655,9 @@ Description-en: Library with functions to iterate through the Crossref API (Pyth
  This package installs the library for Python 3.
 
 Package: python3-crownstone-cloud
-Description-md5: 172f6b6bac3a79d5b69366158e4e9589
+Description-md5: 2f4e399669e6aa6ba0dbcf09deb40ec7
 Description-en: get data from the cloud, and switch Crownstones
- This package provides provides an asynchronous Python library to get data from
+ This package provides an asynchronous Python library to get data from
  the cloud, and switch Crownstones. Functionality:
   * Async: using asyncio and aiohttp, optimized for speed.
   * Easy to use: sync all your Crownstone Cloud data with just one command!
@@ -572268,14 +572667,6 @@ Description-en: Asynchronous client for Home Assistant Analytics
  to the Home Assistant Analytics data, allowing developers to programmatically
  fetch analytics data related to the usage and distribution of Home Assistant
  installations.
-
-Package: python3-homeconnect
-Description-md5: e515b1781ce16e39c7ea5445e5d62b73
-Description-en: client for the BSH Home Connect REST API
- This package provides a simple Python client for the BSH Home Connect REST API
- implementing OAuth 2 authentication, REST calls, and SSE event stream parsing.
- .
- This package is a dependency of Home Assistant.
 
 Package: python3-homewizard-energy
 Description-md5: 5a9843ee1f269fe0fa72b121bd61e9b1
@@ -600255,13 +600646,12 @@ Description-en: Exact linear programming solver
  This package contains the command-line utilities.
 
 Package: qspeakers
-Description-md5: 2f01c405032c51bdee60265502d6353f
+Description-md5: d9e4ae5d3e9e00a48c1fb99acfba2434
 Description-en: loudspeaker design software
  QSpeakers is a simple graphical program that
- simulates common acoustical enclosures behaviour
- to help designing loudspeaker systems, based on
- the loudspeaker driver's Thiele / Small parameters
- and the chosen enclosure type.
+ displays loudspeaker frequency response curve
+ based on the loudspeaker driver's Thiele / Small
+ parameters and the enclosure type and dimentions.
  .
  This software is mostly useful for do-it-yourself
  loudspeaker enthusiasts, acoustics teaching, and
@@ -610680,7 +611070,7 @@ Description-en: Visualization of a Correlation Matrix
  color labels, layout, etc.
 
 Package: r-cran-covr
-Description-md5: a1ea83bce585b3828732e5135b9ce1ba
+Description-md5: 1eddaebee7edb02234e0b0cfdf4a9fe1
 Description-en: Test Coverage for Packages
  Track and report code coverage for your package and (optionally) upload the
  results to a coverage service like 'Codecov' <https://about.codecov.io> or
@@ -610688,7 +611078,7 @@ Description-en: Test Coverage for Packages
  of code being exercised by a set of tests. It is an indirect measure of test
  quality and completeness. This package is compatible with any testing
  methodology or framework and tracks coverage of both R code and compiled
- C/C++/FORTRAN code.
+ C, C++, Fortran and Rust code.
 
 Package: r-cran-cowplot
 Description-md5: 91c03cd119d11d548e095aab73125232
@@ -623374,42 +623764,6 @@ Description-en: redfish command-line client
   * For easy parsing, outputs all responses in JSON format unless verbose or
     status debug options were specified
 
-Package: redict
-Description-md5: a24100ff742656e1ccbdc703c57ae579
-Description-en: Persistent key-value database with network interface (metapackage)
- Redict is a distributed, in-memory key/value store (a remote dictionary, if you
- will). Redict is an independent fork of Redis OSS 7.2.4 licensed under the
- Lesser GNU General Public license (LGPL-3.0-only).
- .
- This package depends on the redict-server package.
-
-Package: redict-sentinel
-Description-md5: df8245b0b163b8977dcedb239669935f
-Description-en: Persistent key-value database with network interface (monitoring)
- Redict is a distributed, in-memory key/value store (a remote dictionary, if you
- will). Redict is an independent fork of Redis OSS 7.2.4 licensed under the
- Lesser GNU General Public license (LGPL-3.0-only).
- .
- This package contains the Redict Sentinel monitoring software.
-
-Package: redict-server
-Description-md5: 997f243540b72915804088154e0152f4
-Description-en: Persistent key-value database with network interface
- Redict is a distributed, in-memory key/value store (a remote dictionary, if you
- will). Redict is an independent fork of Redis OSS 7.2.4 licensed under the
- Lesser GNU General Public license (LGPL-3.0-only).
- .
- This package contains the Redict database server.
-
-Package: redict-tools
-Description-md5: 08dd10c9e48872ff63f1f1c31f20c871
-Description-en: Persistent key-value database with network interface (client)
- Redict is a distributed, in-memory key/value store (a remote dictionary, if you
- will). Redict is an independent fork of Redis OSS 7.2.4 licensed under the
- Lesser GNU General Public license (LGPL-3.0-only).
- .
- This package contains the command line client and other tools.
-
 Package: redir
 Description-md5: 2089a3403d126a5a0bcf29b22b68406d
 Description-en: Redirect TCP connections
@@ -632818,206 +633172,6 @@ Description-en: Utilities and templates for ROS 2 ament packages
  This package is a Python 3 helper library which provides various
  utilities for ament packages, such as templates for environment hooks.
 
-Package: python3-colcon-argcomplete
-Description-md5: e58cc7b841d994f6a973a195dc651748
-Description-en: Extension for colcon to provide command line completion
- This package is part of Robot OS version 2 (ROS2).
- It extends colcon, the meta build tool used in ROS2, by providing command
- line completion using argcomplete.
-
-Package: python3-colcon-bash
-Description-md5: 426586bd87a8b51675e638890ef24613
-Description-en: collective construction meta build tool - bash extension
- This package is part of ROS 2, the Robot Operating System.
- colcon is a meta build tool to improve the workflow of building, testing and
- using multiple software packages. It is the recommended tool for ROS 2 to set
- up workspaces and build packages from source, but can also handle old ROS 1
- workspaces.
- .
- This package provides the bash extension for colcon.
-
-Package: python3-colcon-cd
-Description-md5: 04a866a5030c8f2cd569ac2bbd4c5733
-Description-en: Extension for colcon to change the current working directory
- This package is part of ROS 2, the Robot Operating System.
- colcon is a meta build tool to improve the workflow of building, testing and
- using multiple software packages. It is the recommended tool for ROS 2 to set
- up workspaces and build packages from source, but can also handle old ROS 1
- workspaces.
- .
- This package provides a shell extension to change the current working directory
- to the source directory of any ROS package in the current workspace.
-
-Package: python3-colcon-cmake
-Description-md5: 59b853d7e67976d9c17164ff0cfe351d
-Description-en: collective construction meta build tool - CMake extension
- This package is part of ROS 2, the Robot Operating System.
- colcon is a meta build tool to improve the workflow of building, testing and
- using multiple software packages. It is the recommended tool for ROS 2 to set
- up workspaces and build packages from source, but can also handle old ROS 1
- workspaces.
- .
- This package provides the CMake extension for colcon.
-
-Package: colcon
-Description-md5: 9e5096ed7e7af4c9951a1696a626167b
-Description-en: collective construction meta build tool
- This package is part of ROS 2, the Robot Operating System.
- colcon is a meta build tool to improve the workflow of building, testing and
- using multiple software packages. It is the recommended tool for ROS 2 to set
- up workspaces and build packages from source, but can also handle old ROS 1
- workspaces.
- .
- This package installs the main colcon executable.
-
-Package: python3-colcon-core
-Description-md5: 1c3625c70673342b3a59d88b240e54d2
-Description-en: collective construction meta build tool - core library
- This package is part of ROS 2, the Robot Operating System.
- colcon is a meta build tool to improve the workflow of building, testing and
- using multiple software packages. It is the recommended tool for ROS 2 to set
- up workspaces and build packages from source, but can also handle old ROS 1
- workspaces.
- .
- This package installs the core library for Python 3.
-
-Package: python3-colcon-defaults
-Description-md5: 8a56936a584b054aa2b77e40fa2e1d08
-Description-en: Extension for colcon to provide custom default values
- This package is part of Robot OS version 2 (ROS2).
- It extends colcon, the meta build tool used in ROS2, by making it possible
- to provide custom default values for the command line arguments from a
- configuration file.
-
-Package: python3-colcon-devtools
-Description-md5: 734fff816e296112775b2e05a6c4803a
-Description-en: collective construction meta build tool - developer tools
- This package is part of ROS 2, the Robot Operating System.
- colcon is a meta build tool to improve the workflow of building, testing and
- using multiple software packages. It is the recommended tool for ROS 2 to set
- up workspaces and build packages from source, but can also handle old ROS 1
- workspaces.
- .
- This package provides developer tools for plugin system introspection.
-
-Package: python3-colcon-library-path
-Description-md5: 97baba6b9abacf807dc0a8f2d0a733b8
-Description-en: Extension for colcon to find shared libraries
- This package is part of Robot OS version 2 (ROS2).
- It extends colcon, the meta build tool used in ROS2, by setting
- an environment variable to find shared libraries at runtime.
-
-Package: python3-colcon-metadata
-Description-md5: c6f543e3779eadef38c71dbaad59ef19
-Description-en: Extension for colcon to fetch and manage package metadata
- This package is part of Robot OS version 2 (ROS2).
- It extends colcon, the meta build tool used in ROS2, by adding the ability to
- fetch and manage package metadata from repositories.
-
-Package: python3-colcon-notification
-Description-md5: 0384cbde1ddcb17f0bde97d14313bdc2
-Description-en: collective construction meta build tool - status notifications
- This package is part of ROS 2, the Robot Operating System.
- colcon is a meta build tool to improve the workflow of building, testing and
- using multiple software packages. It is the recommended tool for ROS 2 to set
- up workspaces and build packages from source, but can also handle old ROS 1
- workspaces.
- .
- This package provides desktop status notifications for colcon.
-
-Package: python3-colcon-output
-Description-md5: 9332b24bcddf10452b0aa5651cff97f3
-Description-en: Extension for colcon to customize the output in various ways
- This package is part of Robot OS version 2 (ROS2).
- It extends colcon, the meta build tool used in ROS2, by customizing the
- output in various ways.
-
-Package: python3-colcon-package-information
-Description-md5: 0860840394b47a4e5de119a3920a679c
-Description-en: collective construction meta build tool - package information
- This package is part of ROS 2, the Robot Operating System.
- colcon is a meta build tool to improve the workflow of building, testing and
- using multiple software packages. It is the recommended tool for ROS 2 to set
- up workspaces and build packages from source, but can also handle old ROS 1
- workspaces.
- .
- This package provides a plugin for package information.
-
-Package: python3-colcon-package-selection
-Description-md5: 87e1b156cf8d90e7ebcdc66b0ea36a95
-Description-en: Extension for colcon to select a subset of packages for processing
- This package is part of Robot OS version 2 (ROS2).
- It extends colcon, the meta build tool used in ROS2, by adding the possibility
- to select a subset of packages for processing.
-
-Package: python3-colcon-parallel-executor
-Description-md5: b9f3218d1f5ed1eb59ba8aecb990efac
-Description-en: collective construction meta build tool - parallel executor
- This package is part of ROS 2, the Robot Operating System.
- colcon is a meta build tool to improve the workflow of building, testing and
- using multiple software packages. It is the recommended tool for ROS 2 to set
- up workspaces and build packages from source, but can also handle old ROS 1
- workspaces.
- .
- This package provides a parallel executor to build multiple packages in
- parallel.
-
-Package: python3-colcon-pkg-config
-Description-md5: 1b7a0375fe003edc9318f8a7aedb7f1f
-Description-en: Extension for colcon to find pkg-config files
- This package is part of Robot OS version 2 (ROS2).
- It extends colcon, the meta build tool used in ROS2, by setting an environment
- variable to find pkg-config files.
-
-Package: python3-colcon-python-setup-py
-Description-md5: bf9a007fe4a85283f532f8d457e88805
-Description-en: Extension for colcon to identify packages with setup.py
- This package is part of Robot OS version 2 (ROS2).
- It extends colcon, the meta build tool used in ROS2, by identifying
- packages with a setup.py file by introspecting the arguments to the
- setup() function call of setuptools.
-
-Package: python3-colcon-recursive-crawl
-Description-md5: 69e409b3b222c2deb5df1c1bf5cf656f
-Description-en: collective construction meta build tool - recursive crawl extension
- This package is part of ROS 2, the Robot Operating System.
- colcon is a meta build tool to improve the workflow of building, testing and
- using multiple software packages. It is the recommended tool for ROS 2 to set
- up workspaces and build packages from source, but can also handle old ROS 1
- workspaces.
- .
- This package provides the recursive crawl extension to discover buildable
- packages in a source tree.
-
-Package: python3-colcon-ros
-Description-md5: 8829199bb13b6a2fdf631c5b24d34d47
-Description-en: collective construction meta build tool - ROS extension
- This package is part of ROS 2, the Robot Operating System.
- colcon is a meta build tool to improve the workflow of building, testing and
- using multiple software packages. It is the recommended tool for ROS 2 to set
- up workspaces and build packages from source, but can also handle old ROS 1
- workspaces.
- .
- This package provides specialized ROS support for colcon.
-
-Package: python3-colcon-test-result
-Description-md5: f90c4fb335845e48a4e7884f888a8c06
-Description-en: Extension for colcon to provide information about test results
- This package is part of Robot OS version 2 (ROS2).
- It extends colcon, the meta build tool used in ROS2, by providing information
- about test results.
-
-Package: python3-colcon-zsh
-Description-md5: 43762a73f91f39104cd21008715a675c
-Description-en: collective construction meta build tool - zsh extension
- This package is part of ROS 2, the Robot Operating System.
- colcon is a meta build tool to improve the workflow of building, testing and
- using multiple software packages. It is the recommended tool for ROS 2 to set
- up workspaces and build packages from source, but can also handle old ROS 1
- workspaces.
- .
- This package provides the zsh extension for colcon.
-
 Package: libosrf-memory-tools0d
 Description-md5: 87cc8319bbfcb8ea74aa4513a4e22fcc
 Description-en: OSRF testing tools for ROS 2
@@ -633849,6 +634003,72 @@ Description-en: RPM package checker
  binary rpm files.
  .
  The idea for rpmlint is from the lintian tool of the Debian project.
+
+Package: librpp-dev
+Description-md5: 7ec0eaee553cb53d0f0d863d7539c0e5
+Description-en: AMD ROCm Performance Primitives - CPU development files
+ ROCm Performance Primitives is a comprehensive high-performance
+ computer vision library designed for AMD processors with HIP, OpenCL,
+ and CPU backends. It offers a wide range of optimized functions for
+ image manipulation, augmentation, and pre-processing, leveraging the
+ capabilities of AMD hardware for accelerated performance.
+ .
+ This package contains development files for the CPU version.
+
+Package: librpp-hip-dev
+Description-md5: a5bfaa685aad92c76f5f1c6b92a07c41
+Description-en: AMD ROCm Performance Primitives - HIP development files
+ ROCm Performance Primitives is a comprehensive high-performance
+ computer vision library designed for AMD processors with HIP, OpenCL,
+ and CPU backends. It offers a wide range of optimized functions for
+ image manipulation, augmentation, and pre-processing, leveraging the
+ capabilities of AMD hardware for accelerated performance.
+ .
+ This package contains development files for the HIP version.
+
+Package: librpp-ocl-dev
+Description-md5: ba8d21380b1542ff13d4b71fb931ddc7
+Description-en: AMD ROCm Performance Primitives - OpenCL development files
+ ROCm Performance Primitives is a comprehensive high-performance
+ computer vision library designed for AMD processors with HIP, OpenCL,
+ and CPU backends. It offers a wide range of optimized functions for
+ image manipulation, augmentation, and pre-processing, leveraging the
+ capabilities of AMD hardware for accelerated performance.
+ .
+ This package contains development files for the OpenCL version.
+
+Package: librpp2
+Description-md5: a8fefef41456c8d57b36b9bebb214762
+Description-en: AMD ROCm Performance Primitives - CPU backend
+ ROCm Performance Primitives is a comprehensive high-performance
+ computer vision library designed for AMD processors with HIP, OpenCL,
+ and CPU backends. It offers a wide range of optimized functions for
+ image manipulation, augmentation, and pre-processing, leveraging the
+ capabilities of AMD hardware for accelerated performance.
+ .
+ This package contains the SIMD-based CPU version of the library.
+
+Package: librpp2-hip
+Description-md5: 8944890e19a4aa915e86f995dbdf727a
+Description-en: AMD ROCm Performance Primitives - HIP backend
+ ROCm Performance Primitives is a comprehensive high-performance
+ computer vision library designed for AMD processors with HIP, OpenCL,
+ and CPU backends. It offers a wide range of optimized functions for
+ image manipulation, augmentation, and pre-processing, leveraging the
+ capabilities of AMD hardware for accelerated performance.
+ .
+ This package contains the HIP version of the library.
+
+Package: librpp2-ocl
+Description-md5: f24e948c51dbc1d0accb5b0da39d649f
+Description-en: AMD ROCm Performance Primitives - OpenCL backend
+ ROCm Performance Primitives is a comprehensive high-performance
+ computer vision library designed for AMD processors with HIP, OpenCL,
+ and CPU backends. It offers a wide range of optimized functions for
+ image manipulation, augmentation, and pre-processing, leveraging the
+ capabilities of AMD hardware for accelerated performance.
+ .
+ This package contains the OpenCL version of the library.
 
 Package: python3-rpy2
 Description-md5: b378296fa6aaf034c92ad45d39cc8c6c
@@ -648094,8 +648314,8 @@ Description-en: Various utilities used in the Actix ecosystem - Rust source code
  Source code for Debianized Rust crate "actix-utils"
 
 Package: librust-actix-web-dev
-Description-md5: 77f64c6704da3ebaa9fa4f375e9173d2
-Description-en: Actix Web is a powerful, pragmatic, and extremely fast web framework for Rust - Rust source code
+Description-md5: dfd10bc3b9b01c2339f998edac03fb82
+Description-en: Powerful, pragmatic, and extremely fast web framework - Rust source code
  Source code for Debianized Rust crate "actix-web"
 
 Package: librust-actix-web-codegen-dev
@@ -648165,6 +648385,11 @@ Package: librust-aead-0.5-dev
 Description-md5: cb6ba517605ca74093d2d6b9a39bcb33
 Description-en: Traits for Authenticated Encryption with Associated Data (AEAD) algorithms, such as AES-GCM as ChaCha20Poly1305, which provide a high-level API - Rust source code
  Source code for Debianized Rust crate "aead"
+
+Package: librust-aead-stream-dev
+Description-md5: 774297e91989d79ef197c71bc63e915e
+Description-en: Generic implementation of the STREAM online authenticated encryption construction - Rust source code
+ Source code for Debianized Rust crate "aead-stream"
 
 Package: librust-aes-dev
 Description-md5: a477e5bd04f58d954e200f9d8be93199
@@ -654298,6 +654523,11 @@ Package: librust-dolby-vision-dev
 Description-md5: 8057cd20a4b0ce244769ca2ed579d44b
 Description-en: Dolby Vision metadata parsing and writing - Rust source code
  Source code for Debianized Rust crate "dolby_vision"
+
+Package: librust-domain-macros-dev
+Description-md5: 5f5f67981406d44f13427742de53bd2d
+Description-en: Procedural macros for the `domain` crate - Rust source code
+ Source code for Debianized Rust crate "domain-macros"
 
 Package: librust-dot-generator-dev
 Description-md5: 96ac794bea8f55b7027dd778b3da5581
@@ -662670,6 +662900,11 @@ Description-en: generator for random names suitable for containers, projects, ap
  A random name generator with names suitable for use in container instances,
  project names, application instances, etc.
 
+Package: librust-nanoexpr-dev
+Description-md5: c5d43f65b4d94e6d0b316e60122ed0af
+Description-en: Fast no_std mathematical expression parser and evaluator - Rust source code
+ Source code for Debianized Rust crate "nanoexpr"
+
 Package: librust-nanoid-dev
 Description-md5: a44e6d78c7c57cc96a022c9d8b68ffd8
 Description-en: Tiny, secure, URL-friendly, unique string ID generator for Rust - Rust source code
@@ -663532,6 +663767,11 @@ Package: librust-octocrab-dev
 Description-md5: 5d76196a37763b7dcbdaf5894bef2500
 Description-en: Modern, extensible GitHub API client - Rust source code
  Source code for Debianized Rust crate "octocrab"
+
+Package: librust-octseq-dev
+Description-md5: f5ede68cc1d376c4e6b7807964205d9f
+Description-en: Abstractions for types representing octet sequences - Rust source code
+ Source code for Debianized Rust crate "octseq"
 
 Package: librust-ofiles-dev
 Description-md5: 73f4fafae0722a7c0fcea13737e3c7d1
@@ -664674,6 +664914,11 @@ Package: librust-pest-meta-dev
 Description-md5: b1ea69b066ce5e49f61dec506fc1d4a1
 Description-en: Pest meta language parser and validator - Rust source code
  Source code for Debianized Rust crate "pest_meta"
+
+Package: librust-pest-stack-guard-dev
+Description-md5: 86d7234715f1ae765bc12bc469e11c21
+Description-en: Internal native stack probing for pest - Rust source code
+ Source code for Debianized Rust crate "pest_stack_guard"
 
 Package: librust-pest-vm-dev
 Description-md5: eea8ec0cf8dea04de7aeb744746b9ca6
@@ -669552,6 +669797,11 @@ Description-md5: 12847e7e8c13e49ced987eea4984730e
 Description-en: FreeType is a freely available software library to render fonts - Rust source code
  Source code for Debianized Rust crate "servo-freetype-sys"
 
+Package: librust-sev-dev
+Description-md5: 2c9498733da076b51ade777c21eedb80
+Description-en: AMD SEV - Rust source code
+ Source code for Debianized Rust crate "sev"
+
 Package: librust-sevenz-rust2-dev
 Description-md5: 02335273b952264ee99f4e773575430f
 Description-en: 7z decompressor/compressor written in pure Rust - Rust source code
@@ -670127,6 +670377,13 @@ Description-en: pure-rust Noise Protocol Framework implementation - Rust source 
  .
  This package contains the source for the Rust snow crate,
  for use with cargo.
+
+Package: snphost
+Description-md5: 1edb829109a2228cf9a922ba1bb0c5e6
+Description-en: Administrative utility for AMD SEV-SNP
+ This package contains the following binaries built from the Rust crate
+ "snphost":
+  - snphost
 
 Package: librust-so-dev
 Description-md5: e48aee113e56dfca18d0d4a572714b77
@@ -671149,7 +671406,7 @@ Description-en: string type optimized for hash operations - Rust source code
  for use with cargo.
 
 Package: librust-swc-core-dev
-Description-md5: 6468045de78ac07544cdcdb970146418
+Description-md5: 0a772efbd09e6827639ae4ad2175fdae
 Description-en: speedy web compiler - Rust source code
  swc is a typescript / javascript transpiler.
  It consumes JavaScript or TypeScript files
@@ -671164,18 +671421,24 @@ Description-en: speedy web compiler - Rust source code
  .
  This package contains the source for the Rust crates
  ast_nodes from_variant string_enum
- swc_allocator swc_atoms swc_common swc_config swc_config_macro swc_core
+ swc_allocator swc_atoms swc_common swc_compiler_base
+ swc_config swc_config_macro swc_core
  swc_css swc_css_ast swc_css_codegen swc_css_codegen_macros
  swc_css_compat swc_css_lints swc_css_minifier swc_css_modules
  swc_css_parser swc_css_prefixer swc_css_utils swc_css_visit
- swc_ecma_ast swc_ecma_loader swc_ecma_visit
- swc_eq_ignore_macros
+ swc_ecma_ast swc_ecma_codegen swc_ecma_codegen_macros swc_ecma_hooks
+ swc_ecma_loader swc_ecma_minifier swc_ecma_parser
+ swc_ecma_transforms_base swc_ecma_transforms_macros
+ swc_ecma_transforms_optimization swc_ecma_transforms_react
+ swc_ecma_transforms_typescript
+ swc_ecma_utils swc_ecma_visit
+ swc_eq_ignore_macros swc_error_reporters
  swc_html_ast swc_html_codegen swc_html_codegen_macros
  swc_html_parser swc_html_utils swc_html_visit
  swc_macros_common swc_malloc
  swc_plugin swc_plugin_macro swc_plugin_proxy swc_plugin_runner
  swc_sourcemap swc_trace_macro swc_transform_common
- swc_visit,
+ swc_ts_fast_strip swc_visit,
  for use with cargo.
 
 Package: librust-swhid-dev
@@ -672411,6 +672674,11 @@ Package: librust-tokio-test-dev
 Description-md5: 9f86058e1995e3176776ae3d30af71b9
 Description-en: Testing utilities for Tokio- and futures-based code - Rust source code
  Source code for Debianized Rust crate "tokio-test"
+
+Package: librust-tokio-tfo-dev
+Description-md5: 5a2f47eeb15c150aecd0a68ab896df1a
+Description-en: TCP Fast Open (TFO) in Rust for tokio - Rust source code
+ Source code for Debianized Rust crate "tokio-tfo"
 
 Package: librust-tokio-tungstenite-dev
 Description-md5: cad44114ecc19a2d47c0b12b35e06b00
@@ -676836,6 +677104,22 @@ Description-en: Open Source Mathematical Software
  .
  This package contains the main SageMath installation.
 
+Package: sagemath-dev
+Description-md5: 28d5eb79e25879999052330b374303a4
+Description-en: Open Source Mathematical Software - development files
+ SageMath is a free open-source mathematics software system licensed under the
+ GPL. It builds on top of many existing open-source packages: NumPy, SciPy,
+ matplotlib, Sympy, Maxima, GAP, FLINT, R and many more. Access their combined
+ power through a common, Python-based language or directly via interfaces or
+ wrappers.
+ .
+ Mission: Creating a viable free open source alternative to Magma, Maple,
+ Mathematica and Matlab.
+ .
+ This metapackage depends on the compilers, header files and tools needed
+ to compile Cython and Fortran code in SageMath, for example with %cython,
+ cython() or fortran().
+
 Package: sagemath-doc
 Description-md5: 849b923ce8b5348fd476090ec4309380
 Description-en: Open Source Mathematical Software - documentation
@@ -679273,13 +679557,6 @@ Description-en: fast filesystem-independent file recovery
  .
  scalpel is a complete rewrite of the Foremost 0.69 file carver and is
  useful for both digital forensics investigations and file recovery.
-
-Package: scamp
-Description-md5: b34690ac05b071ed2c3dacd1b48c536b
-Description-en: Compute astrometric and photometric solutions
- SCAMP reads SExtractor catalogs and computes astrometric and
- photometric solutions for any arbitrary sequence of FITS images in a
- completely automatic way.
 
 Package: libscamperfile0-dev
 Description-md5: 106ac3a584d9095b3087f7ecc2808f66
@@ -707486,7 +707763,7 @@ Description-en: Documentation for a supervisor
  This is the documentation package
 
 Package: supysonic
-Description-md5: 0a86558ac4edbcb3414bb018e26a4b8a
+Description-md5: d4928c0191be01323a333e52b77478a1
 Description-en: Python implementation of the Subsonic server API
  supysonic is a Python implementation of the Subsonic server API.
  Current supported features are:
@@ -707495,12 +707772,13 @@ Description-en: Python implementation of the Subsonic server API
   * streaming of various audio file formats
   * transcoding
   * user or random playlists
-  * cover arts (as image files in the same folder as music files)
+  * cover art
   * starred tracks/albums and ratings
-  * Last.FM scrobbling
- .
- The "Subsonic API" is a set of adhoc standards to browse, stream or download a
- music collection over HTTP.
+  * Last.fm scrobbling
+  * ListenBrainz scrobbling
+  * Jukebox mode
+  * internet radio stations
+  * chat
 
 Package: surankco
 Description-md5: 713e9eb3de12c80c60bcafd63bb396f3
@@ -732524,21 +732802,6 @@ Description-en: Fuzzy string matching in Python
    - Token set: A slightly more flexible approach. Tokenize both strings, but
      instead of immediately sorting and comparing, split the tokens into two
      groups: intersection and remainder.
-
-Package: theli
-Description-md5: 98f26275dc840451fb763f61f5d8912d
-Description-en: Astronomical image data reduction pipeline
- THELI is a powerful tool to reduce optical, near- and mid-infrared
- astronomical imaging data, supporting more than 100 different single-
- and multi-chip instruments at professional observatories world-wide. The
- graphical user interface and internal data model allow the user to
- concentrate on the highly automated data processing, without being
- side-tracked by the specific complexities and characteristics of optical
- and infrared instruments. THELI is fully scalable on multi-processor
- machines with shared memory, allowing fast processing also of large data
- sets. The integrated data viewer allows access to any products on drive
- as well as in memory. User-defined instruments can be added, making
- THELI interesting for amateur astronomers as well.
 
 Package: libthemedsupport
 Description-md5: 79d412e0bf7ec741c7f12c004839f78f
@@ -766247,6 +766510,104 @@ Description-en: window manager for GNU Emacs
  window managers.  In addition, you can save window configurations to a file
  and restore them at a later time.
 
+Package: fonts-wine
+Description-md5: 38d095887615d0e66d63309db67ed63a
+Description-en: Windows API implementation - fonts
+ Wine is a free MS-Windows API implementation.
+ .
+ This package links wine fonts into /usr/share/fonts for use by other programs.
+
+Package: libwine
+Description-md5: 3db6a8ba0d26a391d504eae7a2076cb6
+Description-en: Windows API implementation - library
+ Wine is a free MS-Windows API implementation.
+ .
+ This package provides the Wine library.
+
+Package: libwine-dev
+Description-md5: 7fb6480e82b394015397cc0a91e50ec9
+Description-en: Windows API implementation - development files
+ Wine is a free MS-Windows API implementation.
+ .
+ This package provides Wine's C header files and development libraries.
+
+Package: wine
+Description-md5: aaa17f910b7198338e5e3d08ce256208
+Description-en: Windows API implementation - standard suite
+ Wine is a free MS-Windows API implementation.
+ .
+ This package provides essential wrappers and convenience tools for the
+ standard Wine components. It also employs the Debian alternatives system to
+ provide the usual command names, e.g. "wine" instead of "wine-stable".
+
+Package: wine-binfmt
+Description-md5: a4770d2b8e84514d2e9b5393161be235
+Description-en: Register Wine as the interpreter for Windows executables
+ Wine is a free MS-Windows API implementation.
+ .
+ This package registers Wine as an interpreter for Windows executables, using
+ the kernel binfmt_misc module.  This causes Wine to be invoked automatically
+ whenever a Windows PE (Portable Executable) file is to be launched.
+ .
+ WARNING:  This increases the risk of inadvertently launching Windows
+ malware, so please make sure that you understand the security risks before
+ blindly installing this package.
+ .
+ This feature is probably most interesting for automatic software testing.
+ Desktop users usually don't need it, so don't install wine-binfmt unless you
+ know that you need it.  Refer to Wine's README.Debian for more information.
+
+Package: wine-common
+Description-md5: b4c01d1d4d2c25246b2b439cfadcb02f
+Description-en: Windows API implementation - common files
+ Wine is a free MS-Windows API implementation.
+ .
+ This package provides common files used by Wine.
+
+Package: wine32
+Description-md5: 6f28cbab79bb4fb84526de688bbbb0dc
+Description-en: Windows API implementation - 32-bit binary loader
+ Wine is a free MS-Windows API implementation.
+ .
+ This package provides the binary loader for 32-bit Windows applications.
+
+Package: wine32-preloader
+Description-md5: 119d146ee6d0a5c98595d4bc824e95a7
+Description-en: Windows API implementation - prelinked 32-bit binary loader
+ Wine is a free MS-Windows API implementation.
+ .
+ This package provides the prelinked loader for 32-bit Windows applications.
+
+Package: wine32-tools
+Description-md5: ad5c80d7c4e68fb2b9a14646e195ed9e
+Description-en: Windows API implementation - 32-bit developer tools
+ Wine is a free MS-Windows API implementation.
+ .
+ This package provides Wine's 32-bit developer tools. They are capable of
+ generating 32-bit results.
+
+Package: wine64
+Description-md5: 54c9838740378ccb14f94eb5ac802f63
+Description-en: Windows API implementation - 64-bit binary loader
+ Wine is a free MS-Windows API implementation.
+ .
+ This package provides the binary loader for 64-bit Windows applications.
+
+Package: wine64-preloader
+Description-md5: 69498f9ec1c6b32adf50641cc3a6ba4c
+Description-en: Windows API implementation - prelinked 64-bit binary loader
+ Wine is a free MS-Windows API implementation.
+ .
+ This package provides the prelinked loader for 64-bit Windows applications.
+
+Package: wine64-tools
+Description-md5: 7f1bd7babff1d0228d2a02bd58dedb25
+Description-en: Windows API implementation - 64-bit developer tools
+ Wine is a free MS-Windows API implementation.
+ .
+ This package provides Wine's 64-bit developer tools. They are capable of
+ generating both 32- and 64-bit results.
+
 Package: winff
 Description-md5: ebbf50da416eeebef2f81695479e5549
 Description-en: graphical video and audio batch converter using ffmpeg or avconv
@@ -771384,25 +771745,6 @@ Description-en: XSLT processor utility
  This package provides a command line utility to transform XML documents
  to other formats using XSLT templates.  It uses the Xalan XSLT processing
  library from the Apache Software Foundation.
-
-Package: xandikos
-Description-md5: 871d954a8cd14ee0558b791d0df477f5
-Description-en: Git-backed CalDAV/CardDAV server
- Xandikos is a standards-compliant CalDAV/CardDAV server that backs onto a
- Git repository.
- .
- It supports the following standards:
- .
-  * RFC4918/RFC2518 (Core WebDAV) - implemented, except for COPY/MOVE/LOCK
-  * RFC4791 (CalDAV) - fully implemented
-  * RFC6352 (CardDAV) - fully implemented
-  * RFC5397 (Current Principal) - fully implemented
-  * RFC3253 (Versioning Extensions) - partially implemented
-  * RFC3744 (Access Control) - partially implemented
-  * RFC5995 (POST to create members) - fully implemented
- .
- Xandikos (Ξανδικός) takes its name from the name of the February month in the
- ancient Macedonian calendar, used in Macedon in the first millennium BC.
 
 Package: xaos
 Description-md5: f83e0e40e328b62d7e02ea008135bed2
@@ -779632,141 +779974,6 @@ Description-en: External Sampling Profiler for R
  xrprof (formerly rtrace) is an external sampling profiler for R on
  Linux and Windows.
 
-Package: libxrt-alveo2
-Description-md5: 189f4864d8ed035e8df8ef3cc2faeb74
-Description-en: Xilinx Runtime (XRT) ALVEO - runtime libraries
- Xilinx Runtime library (XRT) is an open-source easy to
- use software stack that facilitates management and usage of
- field-programmable gate array (FPGA) / Adaptive Compute Acceleration
- Platform (ACAP) devices. Users use familiar programming languages
- like C/C++ or Python to write host code which uses XRT to interact
- with FPGA/ACAP device. XRT exports well defined set of software APIs
- that work across PCIe based datacenter platforms and ZYNQ UltraScale+
- MPSoC/Versal ACAP based embedded platforms. XRT is a combination of
- userspace and kernel driver components.
- .
- This package provides the runtime environment for XRT Alveo.
-
-Package: libxrt-dev
-Description-md5: 24499a11e7a87cd50954046e244f8c39
-Description-en: Xilinx Runtime (XRT) - development files
- Xilinx Runtime library (XRT) is an open-source easy to
- use software stack that facilitates management and usage of
- field-programmable gate array (FPGA) / Adaptive Compute Acceleration
- Platform (ACAP) devices. Users use familiar programming languages
- like C/C++ or Python to write host code which uses XRT to interact
- with FPGA/ACAP device. XRT exports well defined set of software APIs
- that work across PCIe based datacenter platforms and ZYNQ UltraScale+
- MPSoC/Versal ACAP based embedded platforms. XRT is a combination of
- userspace and kernel driver components.
- .
- This package provides the development environment for xrt.
-
-Package: libxrt-npu2
-Description-md5: ca0cecc3b069a1c1d34c259496a970a7
-Description-en: Xilinx Runtime (XRT) NPU - runtime libraries
- Xilinx Runtime library (XRT) is an open-source easy to
- use software stack that facilitates management and usage of
- field-programmable gate array (FPGA) / Adaptive Compute Acceleration
- Platform (ACAP) devices. Users use familiar programming languages
- like C/C++ or Python to write host code which uses XRT to interact
- with FPGA/ACAP device. XRT exports well defined set of software APIs
- that work across PCIe based datacenter platforms and ZYNQ UltraScale+
- MPSoC/Versal ACAP based embedded platforms. XRT is a combination of
- userspace and kernel driver components.
- .
- This package provides the runtime environment for XRT NPU.
-
-Package: libxrt-utils
-Description-md5: 39bc11fde49141bd9c1668a0a7db3562
-Description-en: Xilinx Runtime (XRT) - runtime -- utilities
- Xilinx Runtime library (XRT) is an open-source easy to
- use software stack that facilitates management and usage of
- field-programmable gate array (FPGA) / Adaptive Compute Acceleration
- Platform (ACAP) devices. Users use familiar programming languages
- like C/C++ or Python to write host code which uses XRT to interact
- with FPGA/ACAP device. XRT exports well defined set of software APIs
- that work across PCIe based datacenter platforms and ZYNQ UltraScale+
- MPSoC/Versal ACAP based embedded platforms. XRT is a combination of
- userspace and kernel driver components.
- .
- This package contains utilities from the xrt project.
-
-Package: libxrt-utils-alveo
-Description-md5: 564a46e01683500415c5c6e69aa8bc3b
-Description-en: Xilinx Runtime (XRT) ALVEO - runtime -- utilities
- Xilinx Runtime library (XRT) is an open-source easy to
- use software stack that facilitates management and usage of
- field-programmable gate array (FPGA) / Adaptive Compute Acceleration
- Platform (ACAP) devices. Users use familiar programming languages
- like C/C++ or Python to write host code which uses XRT to interact
- with FPGA/ACAP device. XRT exports well defined set of software APIs
- that work across PCIe based datacenter platforms and ZYNQ UltraScale+
- MPSoC/Versal ACAP based embedded platforms. XRT is a combination of
- userspace and kernel driver components.
- .
- This package contains a utilities from the XRT Alveo project.
-
-Package: libxrt-utils-npu
-Description-md5: c3e21ab31684e661384314f44df17c59
-Description-en: Xilinx Runtime (XRT) NPU - runtime -- utilities
- Xilinx Runtime library (XRT) is an open-source easy to
- use software stack that facilitates management and usage of
- field-programmable gate array (FPGA) / Adaptive Compute Acceleration
- Platform (ACAP) devices. Users use familiar programming languages
- like C/C++ or Python to write host code which uses XRT to interact
- with FPGA/ACAP device. XRT exports well defined set of software APIs
- that work across PCIe based datacenter platforms and ZYNQ UltraScale+
- MPSoC/Versal ACAP based embedded platforms. XRT is a combination of
- userspace and kernel driver components.
- .
- This package contains a utilities from the XRT NPU project.
-
-Package: libxrt2
-Description-md5: dee765945b9faa2de7093435b95d55a6
-Description-en: Xilinx Runtime (XRT) - runtime libraries
- Xilinx Runtime library (XRT) is an open-source easy to
- use software stack that facilitates management and usage of
- field-programmable gate array (FPGA) / Adaptive Compute Acceleration
- Platform (ACAP) devices. Users use familiar programming languages
- like C/C++ or Python to write host code which uses XRT to interact
- with FPGA/ACAP device. XRT exports well defined set of software APIs
- that work across PCIe based datacenter platforms and ZYNQ UltraScale+
- MPSoC/Versal ACAP based embedded platforms. XRT is a combination of
- userspace and kernel driver components.
- .
- This package provides the runtime environment for xrt.
-
-Package: python3-xrt
-Description-md5: c60680271716ae88b80d2c4d1178539e
-Description-en: Xilinx Runtime (XRT) - Python bindings
- Xilinx Runtime library (XRT) is an open-source easy to
- use software stack that facilitates management and usage of
- field-programmable gate array (FPGA) / Adaptive Compute Acceleration
- Platform (ACAP) devices. Users use familiar programming languages
- like C/C++ or Python to write host code which uses XRT to interact
- with FPGA/ACAP device. XRT exports well defined set of software APIs
- that work across PCIe based datacenter platforms and ZYNQ UltraScale+
- MPSoC/Versal ACAP based embedded platforms. XRT is a combination of
- userspace and kernel driver components.
- .
- This package provides Python bindings for XRT.
-
-Package: xrt-xocl-dkms
-Description-md5: de490f112116032d458aeafa06eac589
-Description-en: Xilinx Runtime (XRT) - runtime -- XOCL kernel driver
- Xilinx Runtime library (XRT) is an open-source easy to
- use software stack that facilitates management and usage of
- field-programmable gate array (FPGA) / Adaptive Compute Acceleration
- Platform (ACAP) devices. Users use familiar programming languages
- like C/C++ or Python to write host code which uses XRT to interact
- with FPGA/ACAP device. XRT exports well defined set of software APIs
- that work across PCIe based datacenter platforms and ZYNQ UltraScale+
- MPSoC/Versal ACAP based embedded platforms. XRT is a combination of
- userspace and kernel driver components.
- .
- This package contains the XOCL DKMS kernel drivers.
-
 Package: xscavenger
 Description-md5: febdea9497bd56d1d26718a25e4481c6
 Description-en: Lode-runner-like platform game for X
@@ -780632,6 +780839,35 @@ Description-en: semiempirical extended tight-binding program package
  surface area (SASA) is also available available in this version. Ground state
  calculations for the simplified Tamm-Danceoff approximation (sTDA) with the
  vTB model are currently not implemented.
+
+Package: xtds
+Description-md5: d3064b7338ac97c8fb0b618bb13acf12
+Description-en: analysis and simulation of molecular spectra (tensorial formalism)
+ XTDS is a suite of programs for the analysis and the simulation of
+ high-resolution molecular spectra, based on the tensorial formalism
+ developed in Dijon for spherical, symmetric and asymmetric top molecules.
+ It covers the C2v, C3v, C4v, D2h, Td and Oh symmetry groups through the
+ packages C2vTDS, C3vTDS, C3vsTDS, C4vTDS, D2hTDS, HTDS and STDS.
+ .
+ A graphical interface creates and runs the jobs (effective Hamiltonian
+ parameters, energy levels, line positions and intensities, spectrum
+ simulation, fit of the parameters to the experimental data) and plots
+ their results.
+ .
+ This package provides the graphical program xtds, the computation
+ programs, and run_xtds_job.py, which runs a job from the command line.
+
+Package: xtds-data
+Description-md5: eeb2946457e315a5b5bc8d9f40cca7ac
+Description-en: analysis and simulation of molecular spectra - data files
+ XTDS is a suite of programs for the analysis and the simulation of
+ high-resolution molecular spectra, based on the tensorial formalism
+ developed in Dijon for spherical, symmetric and asymmetric top molecules.
+ .
+ This package provides the architecture independent files of XTDS: the
+ graphical interface (Java classes), its help, and for each package the
+ parameter files, the experimental data and the example jobs of several
+ molecules, and the coupling coefficients of the GTD package.
 
 Package: xteddy
 Description-md5: 3486734a114efb044fb40482d98d96ed
@@ -784592,7 +784828,7 @@ Description-en: Command-line interface for Zabbix
  tasks in Zabbix monitoring system via the Zabbix API.
 
 Package: zam-plugins
-Description-md5: 265cb9155a083f922b3940a2ce2bf2e8
+Description-md5: 640c83addbc03ab0a8e3e22f0530acc2
 Description-en: Collection of LV2, CLAP, VST3, LADSPA, LINUX-VST and JACK plugins
  Plugins for high quality audio processing.
  .
@@ -784638,6 +784874,328 @@ Description-en: Collection of LV2, CLAP, VST3, LADSPA, LINUX-VST and JACK plugin
     Stereo reverb plugin
   * ZamGrains
     Looper and rhythm slicer
+  * ZamNoise
+    Noise reduction based on Gnome Wave Cleaner
+  * ZamEcho
+    Single parameter plugin suitable for DJ transition
+ .
+ This meta package of zam-plugins contains plugins for all supported frameworks.
+
+Package: zam-plugins-clap
+Description-md5: ad5d49fc86cecf6b211000c97352796a
+Description-en: Collection of CLAP plugins
+ Plugins for high quality audio processing.
+ .
+ The purpose of these plugins is to provide high quality DSP without
+ using an excessive amount of CPU.
+ .
+ There currently is no official documentation on how to use these plugins,
+ but anyone who is familiar with outboard gear should be able to work it out.
+  The default settings and almost every slider is calibrated to standard ranges.
+ .
+ Package contain these plugins:
+  * ZamAutoSat
+    Automatic saturator (mono)
+  * ZaMaximX2
+    Lightweight maximiser/limiter (stereo)
+  * ZamComp
+    Dynamic range compressor (mono)
+  * ZamCompX2
+    Dynamic range compressor (stereo)
+  * ZamDelay
+    Basic delay plugin (mono)
+  * ZamEQ2
+    Parametric equaliser (mono)
+  * ZamGate
+    Gate plugin (mono)
+  * ZamGateX2
+    Gate plugin (stereo)
+  * ZamGEQ31
+    31 band graphic equaliser (mono)
+  * ZamHeadX2
+    Acoustic HRTF stereo widener (stereo)
+  * ZamTube
+    Triode tube amp simulator (mono)
+  * ZaMultiComp
+    Multiband compressor (mono)
+  * ZaMultiCompX2
+    Multiband compressor (stereo)
+  * ZamDynamicEQ
+    Dynamic equaliser
+  * ZamPhono
+    A collection filters for restoring vinyl records.
+  * ZamVerb
+    Stereo reverb plugin
+  * ZamGrains
+    Looper and rhythm slicer
+  * ZamNoise
+    Noise reduction based on Gnome Wave Cleaner
+  * ZamEcho
+    Single parameter plugin suitable for DJ transition
+ .
+ This package provides the CLAP plugins.
+
+Package: zam-plugins-jack
+Description-md5: 704d83e667877deef0a5e6ace209e289
+Description-en: Collection of JACK standalone plugins
+ Plugins for high quality audio processing.
+ .
+ The purpose of these plugins is to provide high quality DSP without
+ using an excessive amount of CPU.
+ .
+ There currently is no official documentation on how to use these plugins,
+ but anyone who is familiar with outboard gear should be able to work it out.
+  The default settings and almost every slider is calibrated to standard ranges.
+ .
+ Package contain these plugins:
+  * ZamAutoSat
+    Automatic saturator (mono)
+  * ZaMaximX2
+    Lightweight maximiser/limiter (stereo)
+  * ZamComp
+    Dynamic range compressor (mono)
+  * ZamCompX2
+    Dynamic range compressor (stereo)
+  * ZamDelay
+    Basic delay plugin (mono)
+  * ZamEQ2
+    Parametric equaliser (mono)
+  * ZamGate
+    Gate plugin (mono)
+  * ZamGateX2
+    Gate plugin (stereo)
+  * ZamGEQ31
+    31 band graphic equaliser (mono)
+  * ZamHeadX2
+    Acoustic HRTF stereo widener (stereo)
+  * ZamTube
+    Triode tube amp simulator (mono)
+  * ZaMultiComp
+    Multiband compressor (mono)
+  * ZaMultiCompX2
+    Multiband compressor (stereo)
+  * ZamDynamicEQ
+    Dynamic equaliser
+  * ZamPhono
+    A collection filters for restoring vinyl records.
+  * ZamVerb
+    Stereo reverb plugin
+  * ZamGrains
+    Looper and rhythm slicer
+  * ZamNoise
+    Noise reduction based on Gnome Wave Cleaner
+  * ZamEcho
+    Single parameter plugin suitable for DJ transition
+ .
+ This package provides the standalone JACK clients.
+
+Package: zam-plugins-ladspa
+Description-md5: 8da7c55d62ab64e950a2b0554d37668c
+Description-en: Collection of LADSPA plugins
+ Plugins for high quality audio processing.
+ .
+ The purpose of these plugins is to provide high quality DSP without
+ using an excessive amount of CPU.
+ .
+ There currently is no official documentation on how to use these plugins,
+ but anyone who is familiar with outboard gear should be able to work it out.
+  The default settings and almost every slider is calibrated to standard ranges.
+ .
+ Package contain these plugins:
+  * ZamAutoSat
+    Automatic saturator (mono)
+  * ZaMaximX2
+    Lightweight maximiser/limiter (stereo)
+  * ZamComp
+    Dynamic range compressor (mono)
+  * ZamCompX2
+    Dynamic range compressor (stereo)
+  * ZamDelay
+    Basic delay plugin (mono)
+  * ZamEQ2
+    Parametric equaliser (mono)
+  * ZamGate
+    Gate plugin (mono)
+  * ZamGateX2
+    Gate plugin (stereo)
+  * ZamGEQ31
+    31 band graphic equaliser (mono)
+  * ZamTube
+    Triode tube amp simulator (mono)
+  * ZaMultiCompX2
+    Multiband compressor (stereo)
+  * ZamDynamicEQ
+    Dynamic equaliser
+  * ZamGrains
+    Looper and rhythm slicer
+  * ZamNoise
+    Noise reduction based on Gnome Wave Cleaner
+  * ZamEcho
+    Single parameter plugin suitable for DJ transition
+ .
+ This package provides the LADSPA plugins.
+
+Package: zam-plugins-lv2
+Description-md5: 4effccdd622aecd6e4463c8143b48eea
+Description-en: Collection of LV2 plugins
+ Plugins for high quality audio processing.
+ .
+ The purpose of these plugins is to provide high quality DSP without
+ using an excessive amount of CPU.
+ .
+ There currently is no official documentation on how to use these plugins,
+ but anyone who is familiar with outboard gear should be able to work it out.
+  The default settings and almost every slider is calibrated to standard ranges.
+ .
+ Package contain these plugins:
+  * ZamAutoSat
+    Automatic saturator (mono)
+  * ZaMaximX2
+    Lightweight maximiser/limiter (stereo)
+  * ZamComp
+    Dynamic range compressor (mono)
+  * ZamCompX2
+    Dynamic range compressor (stereo)
+  * ZamDelay
+    Basic delay plugin (mono)
+  * ZamEQ2
+    Parametric equaliser (mono)
+  * ZamGate
+    Gate plugin (mono)
+  * ZamGateX2
+    Gate plugin (stereo)
+  * ZamGEQ31
+    31 band graphic equaliser (mono)
+  * ZamHeadX2
+    Acoustic HRTF stereo widener (stereo)
+  * ZamTube
+    Triode tube amp simulator (mono)
+  * ZaMultiComp
+    Multiband compressor (mono)
+  * ZaMultiCompX2
+    Multiband compressor (stereo)
+  * ZamDynamicEQ
+    Dynamic equaliser
+  * ZamPhono
+    A collection filters for restoring vinyl records.
+  * ZamVerb
+    Stereo reverb plugin
+  * ZamGrains
+    Looper and rhythm slicer
+  * ZamNoise
+    Noise reduction based on Gnome Wave Cleaner
+  * ZamEcho
+    Single parameter plugin suitable for DJ transition
+ .
+ This package provides the LV2 plugins.
+
+Package: zam-plugins-vst
+Description-md5: a33a025e814b5c2184d2954c895148ed
+Description-en: Collection of LINUX-VST plugins
+ Plugins for high quality audio processing.
+ .
+ The purpose of these plugins is to provide high quality DSP without
+ using an excessive amount of CPU.
+ .
+ There currently is no official documentation on how to use these plugins,
+ but anyone who is familiar with outboard gear should be able to work it out.
+  The default settings and almost every slider is calibrated to standard ranges.
+ .
+ Package contain these plugins:
+  * ZamAutoSat
+    Automatic saturator (mono)
+  * ZaMaximX2
+    Lightweight maximiser/limiter (stereo)
+  * ZamComp
+    Dynamic range compressor (mono)
+  * ZamCompX2
+    Dynamic range compressor (stereo)
+  * ZamDelay
+    Basic delay plugin (mono)
+  * ZamEQ2
+    Parametric equaliser (mono)
+  * ZamGate
+    Gate plugin (mono)
+  * ZamGateX2
+    Gate plugin (stereo)
+  * ZamGEQ31
+    31 band graphic equaliser (mono)
+  * ZamHeadX2
+    Acoustic HRTF stereo widener (stereo)
+  * ZamTube
+    Triode tube amp simulator (mono)
+  * ZaMultiComp
+    Multiband compressor (mono)
+  * ZaMultiCompX2
+    Multiband compressor (stereo)
+  * ZamDynamicEQ
+    Dynamic equaliser
+  * ZamPhono
+    A collection filters for restoring vinyl records.
+  * ZamVerb
+    Stereo reverb plugin
+  * ZamGrains
+    Looper and rhythm slicer
+  * ZamNoise
+    Noise reduction based on Gnome Wave Cleaner
+  * ZamEcho
+    Single parameter plugin suitable for DJ transition
+ .
+ This package provides the LINUX-VST plugins.
+
+Package: zam-plugins-vst3
+Description-md5: 0115d0894a0d3b097dfabc3414c22f3b
+Description-en: Collection of VST3 plugins
+ Plugins for high quality audio processing.
+ .
+ The purpose of these plugins is to provide high quality DSP without
+ using an excessive amount of CPU.
+ .
+ There currently is no official documentation on how to use these plugins,
+ but anyone who is familiar with outboard gear should be able to work it out.
+  The default settings and almost every slider is calibrated to standard ranges.
+ .
+ Package contain these plugins:
+  * ZamAutoSat
+    Automatic saturator (mono)
+  * ZaMaximX2
+    Lightweight maximiser/limiter (stereo)
+  * ZamComp
+    Dynamic range compressor (mono)
+  * ZamCompX2
+    Dynamic range compressor (stereo)
+  * ZamDelay
+    Basic delay plugin (mono)
+  * ZamEQ2
+    Parametric equaliser (mono)
+  * ZamGate
+    Gate plugin (mono)
+  * ZamGateX2
+    Gate plugin (stereo)
+  * ZamGEQ31
+    31 band graphic equaliser (mono)
+  * ZamHeadX2
+    Acoustic HRTF stereo widener (stereo)
+  * ZamTube
+    Triode tube amp simulator (mono)
+  * ZaMultiComp
+    Multiband compressor (mono)
+  * ZaMultiCompX2
+    Multiband compressor (stereo)
+  * ZamDynamicEQ
+    Dynamic equaliser
+  * ZamPhono
+    A collection filters for restoring vinyl records.
+  * ZamVerb
+    Stereo reverb plugin
+  * ZamGrains
+    Looper and rhythm slicer
+  * ZamNoise
+    Noise reduction based on Gnome Wave Cleaner
+  * ZamEcho
+    Single parameter plugin suitable for DJ transition
+ .
+ This package provides the VST3 plugins.
 
 Package: zanshin
 Description-md5: 7ef5afdf8f14e0fbc094ee86648a8e3f

@@ -2067,26 +2067,26 @@ MD5sum: 49981a10ccc7698c3867033203ad2e88
 SHA256: 2ae4ddc99a558be663b157609d8653f7a84060b016848fbe11c27993332020b2
 
 Package: mysqltuner
-Version: 2.9.3-2
-Installed-Size: 1314
+Version: 2.9.4-1
+Installed-Size: 1396
 Maintainer: Cord Beermann <cord@debian.org>
 Architecture: all
 Depends: perl:any
-Recommends: default-mysql-server | virtual-mysql-server, libjson-perl, procps
-Description: high-performance MySQL tuning script
+Recommends: mariadb-server | virtual-mysql-server, procps
+Description: high-performance MySQL/MariaDB tuning script
 Multi-Arch: foreign
 Homepage: https://github.com/major/MySQLTuner-perl
 Commands: mysqltuner
-Description-md5: 76ab7cb92f14af4121c62e139d1bfa8e
+Description-md5: 369e67d35a129edb3435c4c87cf26588
 Tag: implemented-in::perl, interface::commandline, role::program,
  scope::utility, use::measuring, works-with::db,
  works-with::software:running
 database
 Priority: optional
-Filename: pool/main/m/mysqltuner/mysqltuner_2.9.3-2_all.deb
-Size: 297604
-MD5sum: e0d77dc1c303823403d0eedac5e795a6
-SHA256: e215cbb1b9c3e7286a67920ba35a0569378814d3c9e2ca00fc2dda9f1394e21b
+Filename: pool/main/m/mysqltuner/mysqltuner_2.9.4-1_all.deb
+Size: 327712
+MD5sum: 8efd1fd03063d98bd39e31ca30e185a7
+SHA256: 40c7f7fdf22dcbe18714755aa1891f9b8baec06e7b79a8368ee3973e51172d45
 
 Package: odyssey
 Version: 1.5.2-1
@@ -3782,6 +3782,118 @@ Size: 816656
 MD5sum: 21191ed1146d5524604e1b1df7713d78
 SHA256: 61ea2d32d383612e9491309aca0f8e5316081c9c8919ea02ca674cad5e6efdb9
 
+Package: postgresql-19
+Version: 19.0-2
+Installed-Size: 38313
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Architecture: amd64
+Provides: postgresql-contrib-19
+Depends: locales | locales-all, postgresql-client-19 (= 19.0-2), postgresql-common (>= 275~), ssl-cert, tzdata, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.43), libgssapi-krb5-2 (>= 1.14+dfsg), libicu78 (>= 78.1-1~), libldap2 (>= 2.6.2), liblz4-1 (>= 0.0~r130), libnuma1 (>= 2.0.11), libpam0g (>= 0.99.7.1), libpq5 (>= 17~~), libselinux1 (>= 3.1~), libssl3t64 (>= 3.4.0), libsystemd0, liburing2 (>= 2.5), libuuid1 (>= 2.16), libxml2-16 (>= 2.14.1), libxslt1.1 (>= 1.1.25), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
+Recommends: postgresql-19-jit, sysstat
+Breaks: dbconfig-common (<< 2.0.22~)
+Description: The World's Most Advanced Open Source Relational Database
+Homepage: http://www.postgresql.org/
+Description-md5: 3fc1a9b525e54e469cbc93e723b5bde3
+Postgresql-Catversion: 202610061-1905
+database
+Priority: optional
+Filename: pool/main/p/postgresql-19/postgresql-19_19.0-2_amd64.deb
+Size: 7871452
+MD5sum: 1dc45e270619041d465f63bb2737904d
+SHA256: 9df73b45604e5ff8b29447eddf4984b9662167614c4905cd7fec8820d155c927
+
+Package: postgresql-19-jit
+Source: postgresql-19
+Version: 19.0-2
+Installed-Size: 24923
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Architecture: amd64
+Provides: postgresql-19-jit-llvm (= 21)
+Depends: postgresql-19 (= 19.0-2), libc6 (>= 2.17), libgcc-s1 (>= 3.0), libllvm21 (>= 1:21.1.0), libstdc++6 (>= 5.2)
+Description: LLVM JIT support for PostgreSQL 19
+Homepage: http://www.postgresql.org/
+Description-md5: ba70fe24d79d026d82f033d933b71495
+database
+Priority: optional
+Filename: pool/main/p/postgresql-19/postgresql-19-jit_19.0-2_amd64.deb
+Size: 10414232
+MD5sum: 2352e2cab5375f747f1aee572ba2ee2a
+SHA256: 826435a6a13f98e0c730c30a59e1ebcfb72b59994175652da7e70d6b502eb2e1
+
+Package: postgresql-client-19
+Source: postgresql-19
+Version: 19.0-2
+Installed-Size: 11854
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Architecture: amd64
+Provides: postgresql-client
+Depends: libpq5 (>= 19.0), postgresql-client-common (>= 182~), sensible-utils, libc6 (>= 2.38), liblz4-1 (>= 0.0~r127), libreadline8t64 (>= 6.0), libssl3t64 (>= 3.0.0), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
+Suggests: postgresql-19, postgresql-doc-19
+Description: front-end programs for PostgreSQL 19
+Multi-Arch: foreign
+Homepage: http://www.postgresql.org/
+Description-md5: 28dc0dd3d1151cdde2385b3f4f3008c5
+database
+Priority: optional
+Filename: pool/main/p/postgresql-19/postgresql-client-19_19.0-2_amd64.deb
+Size: 2230844
+MD5sum: 21db4f51f03f6860dea48db8ce1ae20c
+SHA256: 8209eeb188576504231e3436376459d824608d5552f7705085d93a99122115d6
+
+Package: postgresql-plperl-19
+Source: postgresql-19
+Version: 19.0-2
+Installed-Size: 387
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Architecture: amd64
+Provides: postgresql-plperl
+Depends: perl, postgresql-19 (= 19.0-2), libc6 (>= 2.34), libperl5.44 (>= 5.44.0)
+Description: PL/Perl procedural language for PostgreSQL 19
+Homepage: http://www.postgresql.org/
+Description-md5: b13d970a8c44baed344fbc15c356eac8
+database
+Priority: optional
+Filename: pool/main/p/postgresql-19/postgresql-plperl-19_19.0-2_amd64.deb
+Size: 74812
+MD5sum: 26a4caa008cbec2b623413f7c9e7b0eb
+SHA256: 02e9c5c222f1d28735a07a0968b28738f89cb11745498fd82430e63d332e6d23
+
+Package: postgresql-plpython3-19
+Source: postgresql-19
+Version: 19.0-2
+Installed-Size: 482
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Architecture: amd64
+Provides: postgresql-plpython3
+Depends: postgresql-19 (= 19.0-2), libc6 (>= 2.14), libpython3.14 (>= 3.14.1)
+Description: PL/Python 3 procedural language for PostgreSQL 19
+Homepage: http://www.postgresql.org/
+Description-md5: d2c6e2b8ae3077477bfe7238fd6d5b4b
+database
+Priority: optional
+Filename: pool/main/p/postgresql-19/postgresql-plpython3-19_19.0-2_amd64.deb
+Size: 91756
+MD5sum: 2dfff1695eea4bfe918b66eb3721b054
+SHA256: 6909ba1bb0efda32ea77080ae9f5915de946afc0eab501912d6ae8937b5f7d8e
+
+Package: postgresql-pltcl-19
+Source: postgresql-19
+Version: 19.0-2
+Installed-Size: 209
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Architecture: amd64
+Provides: postgresql-pltcl
+Depends: postgresql-19 (= 19.0-2), libc6 (>= 2.4), libtcl8.6 (>= 8.6.0)
+Description: PL/Tcl procedural language for PostgreSQL 19
+Homepage: http://www.postgresql.org/
+Description-md5: 6487b63df515756be9a7ccfc153fe3d5
+database
+Priority: optional
+Filename: pool/main/p/postgresql-19/postgresql-pltcl-19_19.0-2_amd64.deb
+Size: 40280
+MD5sum: 8f1f65c2e660b7ceb7fec27e63aafd81
+SHA256: 5a331a3c0cdf494db80bac0e551971b22fc0079a27226786892a6b1605b00b7f
+
 Package: postgresql-autodoc
 Version: 1.41+20200921-1.1
 Installed-Size: 138
@@ -4368,74 +4480,6 @@ Filename: pool/main/r/recutils/recutils_1.9-4+b2_amd64.deb
 Size: 317500
 MD5sum: 185a5c6530c3e3128781a818ba179176
 SHA256: 4df4cb879b75267f4cb18fbcf7e37663e78e13c5f521f22a20ec8612b55a5a35
-
-Package: redict
-Version: 7.3.6+ds-3
-Installed-Size: 17
-Maintainer: Debian Redict Maintainers <team+redict@tracker.debian.org>
-Architecture: all
-Depends: redict-server (<< 7.3.6+ds-3.1~), redict-server (>= 7.3.6+ds-3)
-Description: Persistent key-value database with network interface (metapackage)
-Homepage: https://redict.io/
-Description-md5: a24100ff742656e1ccbdc703c57ae579
-database
-Priority: optional
-Filename: pool/main/r/redict/redict_7.3.6+ds-3_all.deb
-Size: 4664
-MD5sum: b927df04deb31831a32ed0209aa73b27
-SHA256: db00abf51b6810ae27fc450b18f90c6102f43ffb0e8c92dda782eb107fff1af5
-
-Package: redict-sentinel
-Source: redict
-Version: 7.3.6+ds-3
-Installed-Size: 62
-Maintainer: Debian Redict Maintainers <team+redict@tracker.debian.org>
-Architecture: amd64
-Depends: redict-tools (= 7.3.6+ds-3)
-Description: Persistent key-value database with network interface (monitoring)
-Homepage: https://redict.io/
-Description-md5: df8245b0b163b8977dcedb239669935f
-database
-Priority: optional
-Filename: pool/main/r/redict/redict-sentinel_7.3.6+ds-3_amd64.deb
-Size: 13320
-MD5sum: 83a468dc1f288bc7356c558ec2a988a9
-SHA256: fd02ca691cbed457d308c47d9b57c8f385cf0a5afc1d1819a316154e595b0ea3
-
-Package: redict-server
-Source: redict
-Version: 7.3.6+ds-3
-Installed-Size: 156
-Maintainer: Debian Redict Maintainers <team+redict@tracker.debian.org>
-Architecture: amd64
-Depends: redict-tools (= 7.3.6+ds-3)
-Description: Persistent key-value database with network interface
-Homepage: https://redict.io/
-Description-md5: 997f243540b72915804088154e0152f4
-database
-Priority: optional
-Filename: pool/main/r/redict/redict-server_7.3.6+ds-3_amd64.deb
-Size: 41404
-MD5sum: dba28b17baa5826400f9219d6991d782
-SHA256: 7578bd6a7268a6a4717f759ee6dac711b985248cae696be8fcc9fe8cadd337bd
-
-Package: redict-tools
-Source: redict
-Version: 7.3.6+ds-3
-Installed-Size: 6207
-Maintainer: Debian Redict Maintainers <team+redict@tracker.debian.org>
-Architecture: amd64
-Depends: systemd | systemd-standalone-sysusers | systemd-sysusers, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, libatomic1 (>= 4.8), libc6 (>= 2.38), libhiredict1.3.1 (>= 1.3.1), libjemalloc2 (>= 3.5.0), liblzf1 (>= 1.5), libssl3t64 (>= 3.0.0), libsystemd0
-Suggests: ruby-redis
-Description: Persistent key-value database with network interface (client)
-Homepage: https://redict.io/
-Description-md5: 08dd10c9e48872ff63f1f1c31f20c871
-database
-Priority: optional
-Filename: pool/main/r/redict/redict-tools_7.3.6+ds-3_amd64.deb
-Size: 1109124
-MD5sum: c845399cb33433b61ae2f0f1728a6d26
-SHA256: 941faf32f33bc66d5af0d01c0374bf19ae38a16117ca3853f468997955a01bf9
 
 Package: redis
 Version: 5:8.0.6-3

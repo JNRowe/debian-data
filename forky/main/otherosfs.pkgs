@@ -3241,6 +3241,106 @@ Size: 106952
 MD5sum: 3306ae96689b3ef246c32a4e566f6309
 SHA256: 5457f7337a43b6689d03538c898bf180ad89ae4fe081a39806ac5d991e74778d
 
+Package: wine
+Version: 10.0~repack-12.2
+Installed-Size: 197
+Maintainer: Debian Wine Party <debian-wine@lists.debian.org>
+Architecture: all
+Replaces: libwine (<< 5.5-6), wine-stable (<< 3.0.1ubuntu1~)
+Provides: wine
+Depends: wine64 (>= 10.0~repack-12.2) | wine32 (>= 10.0~repack-12.2), wine64 (<< 10.0~repack-12.2.1~) | wine32 (<< 10.0~repack-12.2.1~)
+Suggests: q4wine, winbind, fonts-wine, winetricks, playonlinux, wine-binfmt, dosbox (>= 0.74-4.2~), exe-thumbnailer | kio-extras
+Breaks: libwine (<< 5.5-6), wine-stable (<< 3.0.1ubuntu1~)
+Description: Windows API implementation - standard suite
+Multi-Arch: foreign
+Homepage: https://www.winehq.org
+Description-md5: aaa17f910b7198338e5e3d08ce256208
+Tag: game::TODO, interface::graphical, interface::x11, role::metapackage,
+ role::program, scope::application, uitoolkit::TODO, use::TODO,
+ use::converting, use::gameplaying, use::simulating, x11::application
+otherosfs
+Priority: optional
+Filename: pool/main/w/wine/wine_10.0~repack-12.2_all.deb
+Size: 130992
+MD5sum: c8f48e4f66bb268812e238dde190f5d2
+SHA256: 0e08c45b199a79808be4f43f6c2333bce64bc50000fa9feaeca7dcc7d3b16f8f
+
+Package: wine-binfmt
+Source: wine
+Version: 10.0~repack-12.2
+Installed-Size: 49
+Maintainer: Debian Wine Party <debian-wine@lists.debian.org>
+Architecture: all
+Depends: wine, binfmt-support | systemd
+Description: Register Wine as the interpreter for Windows executables
+Multi-Arch: foreign
+Homepage: https://www.winehq.org
+Description-md5: a4770d2b8e84514d2e9b5393161be235
+otherosfs
+Priority: optional
+Filename: pool/main/w/wine/wine-binfmt_10.0~repack-12.2_all.deb
+Size: 21848
+MD5sum: 59b63b4cb27d9c5013a7a66f8fbc5c63
+SHA256: ac5f435d4727a0c27e524c5ee8e8f5af254ea2101248c5da62286da884c9320f
+
+Package: wine-common
+Source: wine
+Version: 10.0~repack-12.2
+Installed-Size: 11068
+Maintainer: Debian Wine Party <debian-wine@lists.debian.org>
+Architecture: all
+Replaces: fonts-wine (<< 10.0~repack-8), libwine (<< 10.0~repack-8)
+Breaks: fonts-wine (<< 10.0~repack-8), libwine (<< 10.0~repack-8)
+Description: Windows API implementation - common files
+Multi-Arch: foreign
+Homepage: https://www.winehq.org
+Built-Using: unicode-cldr-core (= 48.2-2), unicode-data (= 17.0.0-2), unicode-idna (= 17.0.0-0.1)
+Description-md5: b4c01d1d4d2c25246b2b439cfadcb02f
+otherosfs
+Priority: optional
+Filename: pool/main/w/wine/wine-common_10.0~repack-12.2_all.deb
+Size: 1358536
+MD5sum: cbb828f39a34b97f5e17c0a9f70da105
+SHA256: 2aa13cbd66b7d55f6d89511ad448fb1eb41c85d8b0566703138d90bf88f23994
+
+Package: wine64
+Source: wine
+Version: 10.0~repack-12.2
+Installed-Size: 772
+Maintainer: Debian Wine Party <debian-wine@lists.debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.38), libwine (= 10.0~repack-12.2)
+Recommends: wine (= 10.0~repack-12.2)
+Suggests: wine32 (= 10.0~repack-12.2), wine64-preloader (= 10.0~repack-12.2)
+Description: Windows API implementation - 64-bit binary loader
+Multi-Arch: foreign
+Homepage: https://www.winehq.org
+Description-md5: 54c9838740378ccb14f94eb5ac802f63
+otherosfs
+Priority: optional
+Filename: pool/main/w/wine/wine64_10.0~repack-12.2_amd64.deb
+Size: 290104
+MD5sum: 6671b0e4293ed174c0f3f049ad1f2de6
+SHA256: da0c001206451664fd4152fa2c22577c8b4cf83c9a159d748e5a902d1928436b
+
+Package: wine64-preloader
+Source: wine
+Version: 10.0~repack-12.2
+Installed-Size: 64
+Maintainer: Debian Wine Party <debian-wine@lists.debian.org>
+Architecture: amd64
+Depends: wine64 (= 10.0~repack-12.2)
+Description: Windows API implementation - prelinked 64-bit binary loader
+Multi-Arch: foreign
+Homepage: https://www.winehq.org
+Description-md5: 69498f9ec1c6b32adf50641cc3a6ba4c
+otherosfs
+Priority: optional
+Filename: pool/main/w/wine/wine64-preloader_10.0~repack-12.2_amd64.deb
+Size: 26588
+MD5sum: 51d62e1043182177d009ce43ae7a1f34
+SHA256: df16181872bad77cda3ee05f0ba8e111d260b58f299e941e82ce63e84d5d8ce3
+
 Package: yabause
 Version: 0.9.15-3.1
 Installed-Size: 31
