@@ -4338,34 +4338,35 @@ MD5sum: 44b8f785bc0f6ac8d52c4c7cd3e1f2d9
 SHA256: b3bfe1bfe1aad1ad989eb1071661e347338afde6844e17806ba5ee3824ae5089
 
 Package: clamav
-Version: 1.4.6+dfsg-1
-Installed-Size: 19877
+Version: 1.4.7+dfsg-1
+Installed-Size: 20551
 Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: clamav-freshclam (>= 1.4.6+dfsg) | clamav-data, libc6 (>= 2.39), libclamav12 (>= 1.4.6), libcurl4t64 (>= 7.16.2), libgcc-s1 (>= 4.2), libjson-c5 (>= 0.15), libssl3t64 (>= 3.0.0), zlib1g (>= 1:1.2.3.4)
+Depends: clamav-freshclam (>= 1.4.7+dfsg) | clamav-data, libc6 (>= 2.39), libclamav12 (>= 1.4.7), libcurl4t64 (>= 7.16.2), libgcc-s1 (>= 4.2), libjson-c5 (>= 0.15), zlib1g (>= 1:1.2.3.4)
 Recommends: clamav-base
 Suggests: libclamunrar, clamav-doc
 Description: anti-virus utility for Unix - command-line interface
 Multi-Arch: foreign
 Homepage: https://www.clamav.net/
+Commands: clambc, clamscan, clamsubmit, sigtool
 Description-md5: fb7be82d5591a0f3facf827f0a60c5d6
 Tag: implemented-in::c, interface::commandline, role::program,
  scope::utility, security::antivirus, use::scanning, works-with::file,
  works-with::mail
 utils
 Priority: optional
-Filename: pool/main/c/clamav/clamav_1.4.6+dfsg-1_amd64.deb
-Size: 5839748
-MD5sum: 8a868d04e8b8be0a53415c83da066a84
-SHA256: 784e49d9b71e68cbfd8428d5d67a58d574a650da36cbf87afbdf3a6ba7455233
+Filename: pool/main/c/clamav/clamav_1.4.7+dfsg-1_amd64.deb
+Size: 6330616
+MD5sum: 43c16388c1bcc0f53becaca4e0990fbb
+SHA256: f7aa75eebc2fbae7a8c48a99e10a682c94cc35e4051d608c5fe83176f36bcd81
 
 Package: clamav-base
 Source: clamav
-Version: 1.4.6+dfsg-1
-Installed-Size: 161
+Version: 1.4.7+dfsg-1
+Installed-Size: 171
 Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
 Architecture: all
-Depends: logrotate, ucf, debconf (>= 0.5) | debconf-2.0, systemd | systemd-standalone-sysusers | systemd-sysusers, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles
+Depends: logrotate, systemd | systemd-standalone-tmpfiles | systemd-tmpfiles, ucf, debconf (>= 0.5) | debconf-2.0, systemd | systemd-standalone-sysusers | systemd-sysusers
 Recommends: clamav
 Description: anti-virus utility for Unix - base package
 Multi-Arch: foreign
@@ -4375,82 +4376,85 @@ Tag: interface::commandline, role::app-data, role::program,
  security::antivirus, use::scanning, works-with::file, works-with::mail
 utils
 Priority: optional
-Filename: pool/main/c/clamav/clamav-base_1.4.6+dfsg-1_all.deb
-Size: 100656
-MD5sum: 0ca9412d73790ce8c99267e9aa20a743
-SHA256: ac09ea64e38cc006550c1ee7db073449ddfdc98bb3f6913e697808ee690cfdd3
+Filename: pool/main/c/clamav/clamav-base_1.4.7+dfsg-1_all.deb
+Size: 104808
+MD5sum: efc16e0e3e8611bce8655be0d4304f6f
+SHA256: 1ecaa253e70bb94104c8c5e1dfe0dd2b96b96c9b71d8bc29103c2fbdb312297f
 
 Package: clamav-daemon
 Source: clamav
-Version: 1.4.6+dfsg-1
-Installed-Size: 1085
+Version: 1.4.7+dfsg-1
+Installed-Size: 1089
 Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: adduser, clamav-base (= 1.4.6+dfsg-1), clamav-freshclam (>= 1.4.6+dfsg) | clamav-data, dpkg (>= 1.16.1), procps (>= 1:3.3.2), ucf, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38), libclamav12 (>= 1.4.6), libcurl4t64 (>= 7.18.2), libncurses6 (>= 6), libsystemd0, libtinfo6 (>= 6), zlib1g (>= 1:1.2.0.2)
+Depends: adduser, clamav-base (= 1.4.7+dfsg-1), clamav-freshclam (>= 1.4.7+dfsg) | clamav-data, dpkg (>= 1.16.1), procps (>= 1:3.3.2), ucf, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38), libclamav12 (>= 1.4.7), libcurl4t64 (>= 7.18.2), libncurses6 (>= 6), libsystemd0, libtinfo6 (>= 6), zlib1g (>= 1:1.2.0.2)
 Recommends: clamdscan
 Suggests: libclamunrar, apparmor, clamav-doc, daemon
 Description: anti-virus utility for Unix - scanner daemon
 Homepage: https://www.clamav.net/
+Commands: clamconf, clamd, clamdtop, clamonacc
 Description-md5: dc258511e9e1f62ef33172c190a0fad6
 Tag: implemented-in::c, interface::commandline, interface::daemon,
  mail::filters, network::server, role::program, security::antivirus,
  uitoolkit::ncurses, use::scanning, works-with::file, works-with::mail
 utils
 Priority: optional
-Filename: pool/main/c/clamav/clamav-daemon_1.4.6+dfsg-1_amd64.deb
-Size: 233556
-MD5sum: 0c9807d1095beb59c8ddea2b31465adb
-SHA256: ecc1f5099f5f13f40269129957b073ed9c237f8da0d5bbe9db7cd2fcc529f4a5
+Filename: pool/main/c/clamav/clamav-daemon_1.4.7+dfsg-1_amd64.deb
+Size: 236340
+MD5sum: 0131bd4149c322e1df839989715cb29d
+SHA256: 43eedcd613c665064643215a756e461faa3be673f1304c5ea1252be991f23d33
 
 Package: clamav-freshclam
 Source: clamav
-Version: 1.4.6+dfsg-1
-Installed-Size: 401
+Version: 1.4.7+dfsg-1
+Installed-Size: 410
 Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
 Architecture: amd64
 Provides: clamav-data
-Depends: clamav-base (>= 1.4.6+dfsg-1), dpkg (>= 1.16.1), logrotate, procps (>= 1:3.3.2), ucf, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.34), libclamav12 (>= 1.4.6)
+Depends: clamav-base (>= 1.4.7+dfsg-1), dpkg (>= 1.16.1), logrotate, procps (>= 1:3.3.2), ucf, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.34), libclamav12 (>= 1.4.7)
 Recommends: ca-certificates
 Suggests: apparmor, clamav-doc
 Conflicts: clamav-data, libclamav2, libclamav3
 Description: anti-virus utility for Unix - virus database update utility
 Homepage: https://www.clamav.net/
+Commands: freshclam
 Description-md5: 82c68e4f7c984e3d6bdc720ae842fca8
 Tag: implemented-in::c, interface::commandline, interface::daemon,
  role::program, scope::utility, security::antivirus, use::downloading,
  works-with::file, works-with::mail
 utils
 Priority: optional
-Filename: pool/main/c/clamav/clamav-freshclam_1.4.6+dfsg-1_amd64.deb
-Size: 171624
-MD5sum: 43d2b4ad78995ded21840c98c77c3662
-SHA256: 5f7bb20cf13cbbc2d6c176a7eb3a47e0485ccc38b5874fcd3cf66bdbdd4f3859
+Filename: pool/main/c/clamav/clamav-freshclam_1.4.7+dfsg-1_amd64.deb
+Size: 175656
+MD5sum: afbefd871cda44bb4e14781054366a56
+SHA256: 5c68389678b41fc1d548fa439d10ffb31091ac879016a8fa5b48f4d1b708fea2
 
 Package: clamav-milter
 Source: clamav
-Version: 1.4.6+dfsg-1
-Installed-Size: 562
+Version: 1.4.7+dfsg-1
+Installed-Size: 571
 Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: adduser, clamav-base (>= 1.4.6+dfsg-1), clamav-freshclam (>= 1.4.6+dfsg) | clamav-data, dpkg (>= 1.16.1), logrotate, procps (>= 1:3.3.2), ucf, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38), libclamav12 (>= 1.4.6), libmilter1.0.1
+Depends: adduser, clamav-base (>= 1.4.7+dfsg-1), clamav-freshclam (>= 1.4.7+dfsg) | clamav-data, dpkg (>= 1.16.1), logrotate, procps (>= 1:3.3.2), ucf, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38), libclamav12 (>= 1.4.7), libmilter1.0.1
 Recommends: clamav-daemon
 Suggests: clamav-doc, daemon
 Description: anti-virus utility for Unix - sendmail integration
 Homepage: https://www.clamav.net/
+Commands: clamav-milter
 Description-md5: e47a1194215b5fbde13fb9217c44d83f
 Tag: implemented-in::c, interface::daemon, mail::filters, network::server,
  role::program, security::antivirus, use::scanning, works-with::mail
 utils
 Priority: optional
-Filename: pool/main/c/clamav/clamav-milter_1.4.6+dfsg-1_amd64.deb
-Size: 213156
-MD5sum: d55a3fe967439c6c95d3cea4ff2a9d8c
-SHA256: 018a95f3919641f7ebd492bbf27db07ede6e05f3f14cf065ef309f9510458149
+Filename: pool/main/c/clamav/clamav-milter_1.4.7+dfsg-1_amd64.deb
+Size: 217064
+MD5sum: bcb8e8d8ca7d5bed86f088114a32a3c4
+SHA256: a64e5ad334563b22a5ef7816212ffe8b508df4818bc8eb43cc74cd32295a538a
 
 Package: clamav-testfiles
 Source: clamav
-Version: 1.4.6+dfsg-1
-Installed-Size: 6498
+Version: 1.4.7+dfsg-1
+Installed-Size: 6506
 Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
 Architecture: all
 Description: anti-virus utility for Unix - test files
@@ -4461,28 +4465,29 @@ Tag: devel::testing-qa, interface::commandline, made-of::dictionary,
  role::app-data, role::program, security::antivirus, use::checking
 utils
 Priority: optional
-Filename: pool/main/c/clamav/clamav-testfiles_1.4.6+dfsg-1_all.deb
-Size: 2836908
-MD5sum: c22d3b658e2c15e46c7c8539840dab33
-SHA256: 2d0516fddd6cc66e59797ac946937f135a7b3ed403cae913d783d25945f9b89d
+Filename: pool/main/c/clamav/clamav-testfiles_1.4.7+dfsg-1_all.deb
+Size: 2838916
+MD5sum: dedfec782c682d423c554c8b64ed96b6
+SHA256: d7680cbcbcde304628ad1040154f88539b752f1774192049e4838eac7aa9b754
 
 Package: clamdscan
 Source: clamav
-Version: 1.4.6+dfsg-1
-Installed-Size: 237
+Version: 1.4.7+dfsg-1
+Installed-Size: 245
 Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: clamav-base (= 1.4.6+dfsg-1), libc6 (>= 2.38), libclamav12 (>= 1.4.6)
+Depends: clamav-base (= 1.4.7+dfsg-1), libc6 (>= 2.38), libclamav12 (>= 1.4.7)
 Suggests: clamav-daemon, clamav-doc
 Description: anti-virus utility for Unix - scanner client
 Homepage: https://www.clamav.net/
+Commands: clamdscan
 Description-md5: ad077e4c74b9870b6e7bb55aef11c547
 utils
 Priority: optional
-Filename: pool/main/c/clamav/clamdscan_1.4.6+dfsg-1_amd64.deb
-Size: 66536
-MD5sum: 6511f3aada84c01309916528fd0eb599
-SHA256: 2ff36501864316e0822c559345246df230911d8e370189ebb2263d5032f35bf7
+Filename: pool/main/c/clamav/clamdscan_1.4.7+dfsg-1_amd64.deb
+Size: 69684
+MD5sum: f0439918bc03669254615c63158dd2ad
+SHA256: aebaf522a99a7551a13c278eaff18d7a81bb8c3845fc05436e0b3164e34ec023
 
 Package: clamav-cvdupdate
 Version: 1.2.0-2
@@ -4924,8 +4929,8 @@ SHA256: 4af0463f7a57e2498db947c8f5fb9c93f009e05a05d5d8f731fcbcf6c179b60b
 
 Package: jsvc
 Source: commons-daemon
-Version: 1.0.15-12
-Installed-Size: 70
+Version: 1.6.1-2
+Installed-Size: 77
 Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Depends: libcommons-daemon-java, libc6 (>= 2.38)
@@ -4937,10 +4942,10 @@ Tag: devel::lang:java, interface::commandline, interface::daemon,
  role::program, scope::utility
 utils
 Priority: optional
-Filename: pool/main/c/commons-daemon/jsvc_1.0.15-12_amd64.deb
-Size: 22904
-MD5sum: fb0a935b964f91cbdd5e25a4f53bddc6
-SHA256: 02d94ad21bb37c0b570d3f005ada252dbce660732d6e82bb50505881d6049ba9
+Filename: pool/main/c/commons-daemon/jsvc_1.6.1-2_amd64.deb
+Size: 25448
+MD5sum: bb4f1508edce247954c1b3e93006aae8
+SHA256: 2bc2654fe32078aa2fef4c67a8bd0ccaf7bb722a4f34f469399e51bf09522568
 
 Package: composefs
 Version: 1.0.8-3
@@ -8068,58 +8073,58 @@ SHA256: 6d6f7990adca75b257132b94c54d3ff27ee6a3843d582c221f60499bd8e9a5f8
 
 Package: libdtk6core-bin
 Source: dtk6core
-Version: 6.7.52-1
+Version: 6.7.53-1
 Installed-Size: 784
 Maintainer: Debian Deepin Packaging Team <pkg-deepin-devel@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libdtkcore5-bin (<< 5.7.12-2~)
-Depends: libdtk6core6 (= 6.7.52-1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libqt6core6t64 (>= 6.11.2), libqt6dbus6 (>= 6.7.2), libqt6xml6 (>= 6.1.2), libstdc++6 (>= 13.1), qt6-base-private-abi (= 6.11.2)
+Depends: libdtk6core6 (= 6.7.53-1), libc6 (>= 2.34), libgcc-s1 (>= 3.0), libqt6core6t64 (>= 6.11.2), libqt6dbus6 (>= 6.7.2), libqt6xml6 (>= 6.1.2), libstdc++6 (>= 13.1), qt6-base-private-abi (= 6.11.2)
 Breaks: libdtkcore5-bin (<< 5.7.12-2~)
 Description: Deepin Qt6 Tool Kit Core library (utilities)
 Homepage: https://github.com/linuxdeepin/dtkcore
 Description-md5: af451dc961aebdef7dee0a7c0eb349ac
 utils
 Priority: optional
-Filename: pool/main/d/dtk6core/libdtk6core-bin_6.7.52-1_amd64.deb
-Size: 328164
-MD5sum: 8a635f91d61703f5c0f856e7c868c5cd
-SHA256: 2e51c8f1f38314e8c31229dcf340a924f6d89a2e7757b512f5b3a0dd457c41a9
+Filename: pool/main/d/dtk6core/libdtk6core-bin_6.7.53-1_amd64.deb
+Size: 328356
+MD5sum: f66a94ebc1364943b2553094074641a0
+SHA256: 7ad7291fca2fb44907674f386ea2dbd2407e669672c33e77c5c642ee1535017a
 
 Package: dtk6-exhibition
 Source: dtk6declarative
-Version: 6.7.52-2
+Version: 6.7.53-1
 Installed-Size: 21985
 Maintainer: Debian Deepin Packaging Team <pkg-deepin-devel@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libdtk6declarative6 (= 6.7.52-2), qml6-module-qtquick-controls2-styles-chameleon (= 6.7.52-2), libc6 (>= 2.34), libdtk6core6 (>= 6.0.31), libgcc-s1 (>= 3.3.1), libqt6core6t64 (>= 6.11.2), libqt6gui6 (>= 6.1.2), libqt6qml6 (>= 6.6.0), libqt6quick6 (>= 6.6.0), libqt6quickcontrols2-6 (>= 6.6.0), libstdc++6 (>= 5)
+Depends: libdtk6declarative6 (= 6.7.53-1), qml6-module-qtquick-controls2-styles-chameleon (= 6.7.53-1), libc6 (>= 2.34), libdtk6core6 (>= 6.0.31), libgcc-s1 (>= 3.3.1), libqt6core6t64 (>= 6.11.2), libqt6gui6 (>= 6.1.2), libqt6qml6 (>= 6.6.0), libqt6quick6 (>= 6.6.0), libqt6quickcontrols2-6 (>= 6.6.0), libstdc++6 (>= 5)
 Description: Deepin DTK6 QtQuick/QtQml widget library (example app)
 Homepage: https://github.com/linuxdeepin/dtkdeclarative
 Description-md5: 9d04ce9b93953b4ae0cc2717768a58d5
 utils
 Priority: optional
-Filename: pool/main/d/dtk6declarative/dtk6-exhibition_6.7.52-2_amd64.deb
-Size: 10565976
-MD5sum: de5fbe0bdd4de5b69684832a1cc6967d
-SHA256: 1e95843a48a1a5409526ad786af635a6309edecffac5f8400593e4c09388d542
+Filename: pool/main/d/dtk6declarative/dtk6-exhibition_6.7.53-1_amd64.deb
+Size: 10566160
+MD5sum: 199c208fa2bc1cadfef812d62d681fe6
+SHA256: 018ac494ce32c452e8254b8ce0355285b277258076459097d90c762172c0ca3b
 
 Package: libdtk6gui6-bin
 Source: dtk6gui
-Version: 6.7.52-1
+Version: 6.7.53-1
 Installed-Size: 299
 Maintainer: Debian Deepin Packaging Team <pkg-deepin-devel@lists.alioth.debian.org>
 Architecture: amd64
 Replaces: libdtkgui5-bin (<< 5.7.12-1~)
-Depends: libdtk6gui6 (= 6.7.52-1), libc6 (>= 2.38), libdtk6core6 (>= 6.0.31), libgcc-s1 (>= 3.0), libqt6concurrent6 (>= 6.1.2), libqt6core6t64 (>= 6.11.2), libqt6gui6 (>= 6.4.0), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 13.1), libx11-6
+Depends: libdtk6gui6 (= 6.7.53-1), libc6 (>= 2.38), libdtk6core6 (>= 6.0.31), libgcc-s1 (>= 3.0), libqt6concurrent6 (>= 6.1.2), libqt6core6t64 (>= 6.11.2), libqt6gui6 (>= 6.4.0), libqt6widgets6 (>= 6.1.2), libstdc++6 (>= 13.1), libx11-6
 Breaks: libdtkgui5-bin (<< 5.7.12-1~)
 Description: Deepin Qt6 Tool Kit Gui library (utilities)
 Homepage: https://github.com/linuxdeepin/dtkgui
 Description-md5: 0fc70afd4c07db990c06319d3068f69a
 utils
 Priority: optional
-Filename: pool/main/d/dtk6gui/libdtk6gui6-bin_6.7.52-1_amd64.deb
-Size: 73784
-MD5sum: 03855be0bcd46b4b1f51e40f1a1f5a5f
-SHA256: ffbeb5cc459d0cb6cf4baf11425b03bb6fa89295d29d7da7046b8cfb614ddf72
+Filename: pool/main/d/dtk6gui/libdtk6gui6-bin_6.7.53-1_amd64.deb
+Size: 74116
+MD5sum: 2413d55deddad9880afd408d6d72d780
+SHA256: ed5d7a26ac0eef2e0d2d6a40914710dd161ab351f22ce8e03d99d4a9ebea477a
 
 Package: dtmf2num
 Version: 0.1.1-3
@@ -11234,12 +11239,12 @@ MD5sum: 5602fdabc7037d39389668c551978b59
 SHA256: 10fdc1a7bd0dddbf884af9b3977f5a9e457f459e0194ba4a9fb53600d02d9054
 
 Package: firejail
-Version: 0.9.80-2
-Installed-Size: 1832
+Version: 0.9.82.2-1
+Installed-Size: 1725
 Maintainer: Reiner Herrmann <reiner@reiner-h.de>
 Architecture: amd64
 Depends: libapparmor1 (>= 2.10.95), libc6 (>= 2.38), libselinux1 (>= 3.1~)
-Recommends: firejail-profiles, iproute2, iptables, xauth, xdg-dbus-proxy, xpra | xserver-xephyr | xvfb
+Recommends: firejail-profiles, iproute2, iptables, xauth, xdg-dbus-proxy, xserver-xephyr | xvfb
 Description: sandbox to restrict the application environment
 Homepage: https://firejail.wordpress.com
 Commands: firecfg, firejail, firemon, jailcheck
@@ -11249,15 +11254,15 @@ Tag: implemented-in::c, interface::commandline, role::program,
  works-with::software:running
 utils
 Priority: optional
-Filename: pool/main/f/firejail/firejail_0.9.80-2_amd64.deb
-Size: 465892
-MD5sum: f7ea27165fd1d870a37d8560205466e8
-SHA256: 6dd459853761bbacc625a01d8e4a07939928ee29c372485333c448f70b91d7ed
+Filename: pool/main/f/firejail/firejail_0.9.82.2-1_amd64.deb
+Size: 443024
+MD5sum: 11254d02e0fa81f8f027c55126a399b1
+SHA256: faa5ac8857dde4acae7afb779b6d1c37a2e58c1fa0731ef5d9f96cb20fed028d
 
 Package: firejail-profiles
 Source: firejail
-Version: 0.9.80-2
-Installed-Size: 1842
+Version: 0.9.82.2-1
+Installed-Size: 1846
 Maintainer: Reiner Herrmann <reiner@reiner-h.de>
 Architecture: all
 Replaces: firejail (<< 0.9.46~rc1-1)
@@ -11269,10 +11274,10 @@ Description-md5: b4fc3350864d3ecc1fe47428f9cca3a2
 Tag: role::app-data
 utils
 Priority: optional
-Filename: pool/main/f/firejail/firejail-profiles_0.9.80-2_all.deb
-Size: 158280
-MD5sum: 084b5d991c24c29aff5bcd370d6a32d4
-SHA256: 1ad33b28c8b360756ada312bbd9483b045dbf7da86d50b13136adc3452253e21
+Filename: pool/main/f/firejail/firejail-profiles_0.9.82.2-1_all.deb
+Size: 160728
+MD5sum: 027361cf7dbf35c2fa6f23cfa58b93aa
+SHA256: b252e03535e17090d551afcddcc2ac1f91ea001ade62641aa486d0320b18126f
 
 Package: firetools
 Source: firetools (0.9.72-1)
@@ -12151,24 +12156,25 @@ SHA256: 79a2f8724ea9130c36fa6f35eceae673f8142dabb0e5b2c5f94c81cf529bb767
 
 Package: freetype2-demos
 Source: freetype
-Version: 2.14.3+dfsg-3
-Installed-Size: 1193
+Version: 2.15.0+dfsg-1
+Installed-Size: 1190
 Maintainer: Hugh McMaster <hmc@debian.org>
 Architecture: amd64
 Depends: libc6 (>= 2.38), libfreetype6 (>= 2.13.1), libpng16-16t64 (>= 1.6.46), libx11-6
 Description: Freetype 2 font engine demonstration programs
 Multi-Arch: foreign
 Homepage: https://freetype.org
+Commands: ftbench, ftdiff, ftdump, ftgamma, ftgrid, ftlint, ftmulti, ftsdf, ftstring, ftvalid, ftview, ttdebug
 Description-md5: 271d2b79221880dda637cc52f3cd4ce3
 Tag: devel::examples, devel::library, interface::commandline,
  interface::graphical, interface::x11, role::app-data, role::program,
  scope::utility, works-with::font, x11::application
 utils
 Priority: optional
-Filename: pool/main/f/freetype/freetype2-demos_2.14.3+dfsg-3_amd64.deb
-Size: 210944
-MD5sum: 72f1f86cf3aa4231c85133d0989c281c
-SHA256: 113028a9ad635b18c589914d4d8d7882a6eaad713768eae70b9e7ce31eb3f6dd
+Filename: pool/main/f/freetype/freetype2-demos_2.15.0+dfsg-1_amd64.deb
+Size: 211440
+MD5sum: 818505d80d570045d2bfea1099f88d12
+SHA256: 5ac02d36f986fb15ff4d2ea5aa8576c2ec8b3a558990334676197cadc40abfda
 
 Package: libfribidi-bin
 Source: fribidi (1.0.16-5)
@@ -17220,8 +17226,8 @@ MD5sum: f65ed26a32c120fd00337f48bacc8f83
 SHA256: 485a4a89c070893da3a620b82da56fe17b700e5dd6046978100d43194e698e1f
 
 Package: ibus-typing-booster
-Version: 2.31.3-1
-Installed-Size: 19227
+Version: 2.31.5-1
+Installed-Size: 19233
 Maintainer: Debian Input Method Team <debian-input-method@lists.debian.org>
 Architecture: all
 Depends: gir1.2-soup-3.0, ibus, libm17n-0, m17n-db, python3-dbus, python3-enchant, python3-packaging, python3-xdg, python3:any, dconf-gsettings-backend | gsettings-backend
@@ -17233,10 +17239,10 @@ Description-md5: 8df8727a23407ff87c1e854faf927e9d
 Tag: accessibility::input, implemented-in::python, role::plugin
 utils
 Priority: optional
-Filename: pool/main/i/ibus-typing-booster/ibus-typing-booster_2.31.3-1_all.deb
-Size: 13765512
-MD5sum: f7748a3ef125c35bd04a8e6582b1be82
-SHA256: 589f6ed4f38545301f11a58f52867c3c2eb2a16f201289561ef82efa87f98d10
+Filename: pool/main/i/ibus-typing-booster/ibus-typing-booster_2.31.5-1_all.deb
+Size: 13764356
+MD5sum: ff1a60734c06a5a5cc3b62f7bc0a0f5b
+SHA256: 1df5b68404c38754cb8bbb9045211cef9ec97a25ed969a867a4a88aa36868334
 
 Package: ibus-unikey
 Version: 0.7.0~beta1-3
@@ -19703,22 +19709,6 @@ Size: 1238984
 MD5sum: 69531bae79d712122066a70a32af7e5a
 SHA256: 98d1372834d17aa8ed1d5656f78b323d8f1430ab33c4d410063fd7cad196765f
 
-Package: kytos-utils
-Version: 2019.2-4
-Installed-Size: 143
-Maintainer: Debian QA Group <packages@qa.debian.org>
-Architecture: all
-Depends: python3-certifi, python3-chardet, python3-docopt, python3-idna, python3-jinja2, python3-markupsafe, python3-pathspec, python3-requests, python3-ruamel.yaml, python3-ruamel.yaml.clib, python3-urllib3, python3:any (>= 3.7~)
-Description: command line utilities to use with Kytos
-Homepage: https://github.com/kytos/kytos-utils
-Description-md5: 5bba83a0fe5af50163028db50a6436e9
-utils
-Priority: optional
-Filename: pool/main/k/kytos-utils/kytos-utils_2019.2-4_all.deb
-Size: 27456
-MD5sum: 7c21bdac1c9113c081c952d9e0bd89fb
-SHA256: f52f7fdf4787fdf87afadc34f2cc614ea9d46cc6cef486a339b9ab44fafe41c6
-
 Package: lablie
 Version: 0.6.1-4
 Installed-Size: 157
@@ -21604,20 +21594,20 @@ SHA256: dc4b3aa683d0abb9ebd9d8f92e87074cb445124991cdc183410714ab7177eb2a
 
 Package: libmspub-tools
 Source: libmspub
-Version: 0.1.5-1
-Installed-Size: 85
+Version: 0.1.6-1
+Installed-Size: 91
 Maintainer: Debian LibreOffice Maintainers <debian-openoffice@lists.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libmspub-0.1-1 (>= 0.1.5), librevenge-0.0-0, libstdc++6 (>= 13.1)
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libmspub-0.1-1 (>= 0.1.6), librevenge-0.0-0 (>= 0.0.6), libstdc++6 (>= 13.1)
 Description: library for parsing the mspub file structure -- tools
 Homepage: https://wiki.documentfoundation.org/DLP/Libraries/libmspub
 Description-md5: 5c0f4c021dc4968b465139c6ac4dcf22
 utils
 Priority: optional
-Filename: pool/main/libm/libmspub/libmspub-tools_0.1.5-1_amd64.deb
-Size: 45552
-MD5sum: 2ba9f433c7870658004c27957920d313
-SHA256: 50231da1d470573db4ed96a2d4e8650eb0d9030903bc554318c00d11f6408659
+Filename: pool/main/libm/libmspub/libmspub-tools_0.1.6-1_amd64.deb
+Size: 51968
+MD5sum: f8ec6e9d41ae4fb37f9ebafc8de0b512
+SHA256: 081240d9768970fc79260684514121026dd1a800d1778d5c15cf190d2b8b406f
 
 Package: mtp-tools
 Source: libmtp
@@ -23590,13 +23580,13 @@ MD5sum: 45ee712fee50ea890476bca22ac1ae74
 SHA256: 7b4358e64facdbae77ef30b3c855354a9930beaafc106f3b6e1d75c59505bb19
 
 Package: luit
-Version: 2.0.20250912-1
-Installed-Size: 135
+Version: 2.0.20260907-1
+Installed-Size: 138
 Maintainer: Thomas E. Dickey <dickey@invisible-island.net>
 Architecture: amd64
 Replaces: x11-utils (<< 7.7+6)
 Provides: luit
-Depends: libc6 (>= 2.38)
+Depends: libc6 (>= 2.38), zlib1g (>= 1:1.1.4)
 Breaks: x11-utils (<< 7.7+6)
 Description: locale and ISO 2022 support for Unicode terminals
 Multi-Arch: foreign
@@ -23604,10 +23594,10 @@ Homepage: https://invisible-island.net/luit/
 Description-md5: 1decf4c1f17a0c2e574b38d96eac1cd1
 utils
 Priority: optional
-Filename: pool/main/l/luit/luit_2.0.20250912-1_amd64.deb
-Size: 55236
-MD5sum: 33ea991e87345c67511078f7fb774650
-SHA256: 18fa9f3d5aa252ed0c434348fa28097e25577934feae0656601e57f243c7665c
+Filename: pool/main/l/luit/luit_2.0.20260907-1_amd64.deb
+Size: 57996
+MD5sum: a3e267204e7cb423f34fdaf307fb46f2
+SHA256: ed87f95f3f4f799633f316749a91c346f0b62c7d04351858e0e77922ad2b0400
 
 Package: lunar
 Version: 2.2-10
@@ -27643,20 +27633,20 @@ SHA256: 1266730a7451bfe6dc2137328ec5e0fc19488e673c138706321b12f4a3fe7f0c
 
 Package: osmo-mslookup-utils
 Source: osmo-hlr
-Version: 1.9.4+dfsg1-2
+Version: 1.9.5+dfsg1-1
 Installed-Size: 51
 Maintainer: Debian Mobcom Maintainers <Debian-mobcom-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Depends: libc6 (>= 2.34), libosmo-mslookup1 (= 1.9.4+dfsg1-2), libosmocore22 (>= 1.14.0), libtalloc2 (>= 2.0.4~git20101213)
+Depends: libc6 (>= 2.34), libosmo-mslookup1 (= 1.9.5+dfsg1-1), libosmocore22 (>= 1.14.0), libtalloc2 (>= 2.0.4~git20101213)
 Description: Utilities for Osmocom MS lookup
 Homepage: https://projects.osmocom.org/projects/osmo-hlr
 Description-md5: 49bc94ac7e3ff49ad2ff727892c8a2f4
 utils
 Priority: optional
-Filename: pool/main/o/osmo-hlr/osmo-mslookup-utils_1.9.4+dfsg1-2_amd64.deb
-Size: 17920
-MD5sum: dc6df0be8387397ea1c70b168aa249ef
-SHA256: 72f1a3e1a179ac70a6d94467fc2186e404623ce30aa15af1750dd6bccbbcfda9
+Filename: pool/main/o/osmo-hlr/osmo-mslookup-utils_1.9.5+dfsg1-1_amd64.deb
+Size: 17912
+MD5sum: 302b036c5a9213db1135380a9fce4ee0
+SHA256: 7931312c8324d423e33295bd0e67fe3f7db13678d8cb4e89383a6deb3d254969
 
 Package: osmo-trx
 Version: 1.8.0-1
@@ -36636,22 +36626,22 @@ SHA256: d634ca57e95b5b0644ec1583b95e9c6f931b8bb461691a532aae5c73b22ba1b0
 
 Package: vhost-device-vsock
 Source: rust-vhost-device-vsock
-Version: 0.3.0-2
-Installed-Size: 2858
+Version: 0.3.0-3
+Installed-Size: 2850
 Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
 Architecture: amd64
 Depends: libc6 (>= 2.34), libgcc-s1 (>= 4.2)
 Description: vhost-user device implementation that emulates a virtio-vsock device
 Homepage: https://github.com/rust-vmm/vhost-device
-Built-Using: rust-epoll (= 4.4.0-1), rust-nix (= 0.30.1-3), rustc (= 1.95.0+dfsg1-2)
+Built-Using: rust-epoll (= 4.4.0-1), rust-nix (= 0.30.1-3), rustc (= 1.98.1+dfsg1-1)
 Description-md5: a7a6bc6a67b0829ae8c0885f549ef806
-Static-Built-Using: rust-aho-corasick (= 1.1.4-2), rust-anstream (= 0.6.21-1), rust-anstyle (= 1.0.14-2), rust-anstyle-parse (= 0.2.7-1), rust-anstyle-query (= 1.1.5-1), rust-arc-swap (= 1.9.2-1), rust-bitflags (= 2.13.0-1), rust-bitflags-1 (= 1.3.2-8), rust-byteorder (= 1.5.0-1), rust-cfg-if (= 1.0.4-1), rust-chacha20 (= 0.10.1-1), rust-clap (= 4.6.5-1), rust-clap-builder (= 4.6.5-1), rust-clap-lex (= 1.1.0-1), rust-colorchoice (= 1.0.0-1), rust-cpufeatures (= 0.3.0-2), rust-env-filter (= 1.0.1-1), rust-env-logger (= 0.11.10-1), rust-epoll (= 4.4.0-1), rust-equivalent (= 1.0.1-1), rust-figment (= 0.10.19-3), rust-getrandom (= 0.4.2-3), rust-hashbrown (= 0.16.1-2), rust-indexmap (= 2.14.0-1), rust-is-terminal-polyfill (= 1.70.1-1), rust-itoa (= 1.0.18-1), rust-jiff (= 0.2.27-1), rust-libc (= 0.2.186-1), rust-log (= 0.4.32-1), rust-memchr (= 2.8.3-1), rust-memoffset (= 0.8.0-1), rust-nix (= 0.30.1-3), rust-rand (= 0.10.2+dfsg-1), rust-rand-core (= 0.10.0-2), rust-regex (= 1.13.1-1), rust-regex-automata (= 0.4.16-1), rust-regex-syntax (= 0.8.11+dfsg-1), rust-ryu (= 1.0.22-1), rust-serde (= 1.0.229-1), rust-serde-core (= 1.0.229-1), rust-serde-yaml (= 0.9.34-1), rust-strsim (= 0.11.1-1), rust-thiserror (= 2.0.18-1), rust-uncased (= 0.9.10-1), rust-unsafe-libyaml (= 0.2.11-1), rust-utf8parse (= 0.2.2-1), rust-uuid (= 1.23.1-1), rust-vhost (= 0.17.0-1), rust-vhost-user-backend (= 0.23.0-1), rust-virtio-bindings (= 0.2.7-1), rust-virtio-queue (= 0.18.0-1), rust-virtio-vsock (= 0.12.0-1), rust-vm-memory (= 0.18.0-1), rust-vmm-sys-util (= 0.15.0-3), rust-vsock (= 0.5.1-2), rustc (= 1.95.0+dfsg1-2)
+Static-Built-Using: rust-aho-corasick (= 1.1.5-1), rust-anstream (= 0.6.21-1), rust-anstyle (= 1.0.14-2), rust-anstyle-parse (= 0.2.7-1), rust-anstyle-query (= 1.1.5-1), rust-arc-swap (= 1.9.3-1), rust-bitflags (= 2.13.2-1), rust-bitflags-1 (= 1.3.2-8), rust-byteorder (= 1.5.0-1), rust-cfg-if (= 1.0.5-1), rust-chacha20 (= 0.10.2-1), rust-clap (= 4.6.7-1), rust-clap-builder (= 4.6.7-1), rust-clap-lex (= 1.1.1-1), rust-colorchoice (= 1.0.5-1), rust-cpufeatures (= 0.3.1-1), rust-env-filter (= 2.0.0-1), rust-env-logger (= 0.11.11-1), rust-epoll (= 4.4.0-1), rust-equivalent (= 1.0.3-1), rust-figment (= 0.10.19-3), rust-getrandom (= 0.4.2-3), rust-hashbrown (= 0.16.1-2), rust-indexmap (= 2.14.2-1), rust-is-terminal-polyfill (= 1.70.2-1), rust-itoa (= 1.0.18-1), rust-jiff (= 0.2.43-1), rust-jiff-core (= 0.1.5-1), rust-libc (= 0.2.186-1), rust-log (= 0.4.35-1), rust-memchr (= 2.8.3-1), rust-memoffset (= 0.8.0-1), rust-nix (= 0.30.1-3), rust-rand (= 0.10.3+ds-1), rust-rand-core (= 0.10.1-1), rust-regex (= 1.13.1-1), rust-regex-automata (= 0.4.18-1), rust-regex-syntax (= 0.8.11+dfsg-1), rust-ryu (= 1.0.23-1), rust-serde (= 1.0.229-1), rust-serde-core (= 1.0.229-1), rust-serde-yaml (= 0.9.34-1), rust-strsim (= 0.11.1-1), rust-thiserror (= 2.0.21-1), rust-uncased (= 0.9.10-1), rust-unsafe-libyaml (= 0.2.11-1), rust-utf8parse (= 0.2.2-1), rust-uuid (= 1.29.0-1), rust-vhost (= 0.18.1-1), rust-vhost-user-backend (= 0.24.1-1), rust-virtio-bindings (= 0.2.7-1), rust-virtio-queue (= 0.18.0-1), rust-virtio-vsock (= 0.12.0-1), rust-vm-memory (= 0.18.0-1), rust-vmm-sys-util (= 0.15.0-4), rust-vsock (= 0.5.5-1), rustc (= 1.98.1+dfsg1-1)
 utils
 Priority: optional
-Filename: pool/main/r/rust-vhost-device-vsock/vhost-device-vsock_0.3.0-2_amd64.deb
-Size: 945484
-MD5sum: ff974d1a69542b4fb1170131822e4d67
-SHA256: fd36382419cc174f00d9b1691486b581e13e8c1168dc339b86b2a65180a29ce7
+Filename: pool/main/r/rust-vhost-device-vsock/vhost-device-vsock_0.3.0-3_amd64.deb
+Size: 942164
+MD5sum: 89c547b75b043eae80fee945aa56b7df
+SHA256: b703680a3bffa109e415033db8335c83e9bd09edd7fd4a408d35bec3eee5b39f
 
 Package: vivid
 Source: rust-vivid
@@ -40588,24 +40578,6 @@ Size: 10884
 MD5sum: ece2d159b536c221843a690a5947ef2f
 SHA256: 410c338e70f37df4e732d3cd69b2259c50c1cdd3cc33f5065a27d1b4314b9eda
 
-Package: tea-cli
-Version: 0.11.1-2
-Installed-Size: 25910
-Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
-Architecture: amd64
-Depends: libc6 (>= 2.34)
-Description: command line tool to interact with Gitea
-Homepage: https://gitea.com/gitea/tea
-Built-Using: go-md2man-v2 (= 2.0.7-1), golang-1.27 (= 1.27.2-1), golang-blackfriday-v2 (= 2.1.0-1), golang-code-gitea-sdk (= 0.24.1-2), golang-gitea-noerw-unidiff-comments (= 0.0~git20220822.50f4daa+ds1-2), golang-github-42wim-httpsig (= 1.3.0-1), golang-github-adrg-xdg (= 0.5.3-1), golang-github-alecthomas-chroma-v2 (= 2.27.0-1), golang-github-araddon-dateparse (= 0.0~git20210429.6b43995-3), golang-github-atotto-clipboard (= 0.1.4-1), golang-github-aymanbagabas-go-osc52-v2 (= 2.0.1-1), golang-github-aymerick-douceur (= 0.2.0-3), golang-github-catppuccin-go (= 0.3.0-1), golang-github-cespare-xxhash-v2 (= 2.3.0-4), golang-github-charmbracelet-bubbles (= 0.21.0-2), golang-github-charmbracelet-bubbletea (= 1.3.10-2), golang-github-charmbracelet-colorprofile (= 0.4.3-1), golang-github-charmbracelet-glamour (= 1.0.0-1), golang-github-charmbracelet-huh (= 0.8.0+ds-3), golang-github-charmbracelet-lipgloss (= 1.1.0-1), golang-github-charmbracelet-x (= 0.0~git20251028.0cf22f8+ds-5), golang-github-clipperhouse-displaywidth (= 0.11.0+ds-4), golang-github-clipperhouse-uax29 (= 2.7.0-4), golang-github-cloudflare-circl (= 1.6.5-2), golang-github-cyphar-filepath-securejoin (= 0.5.2-2), golang-github-dlclark-regexp2-v2 (= 2.5.2+ds1-1), golang-github-dustin-go-humanize (= 1.0.1-1), golang-github-emirpasic-gods (= 1.18.1-1), golang-github-enescakir-emoji (= 1.0.0-3), golang-github-fatih-color (= 1.19.0-1), golang-github-go-fed-httpsig (= 1.1.0-3), golang-github-go-git-go-billy (= 5.9.1-1), golang-github-go-git-go-git (= 5.19.2-2), golang-github-golang-groupcache (= 0.0~git20210331.41bb18b-2), golang-github-gorilla-css (= 1.0.1-1), golang-github-hashicorp-go-version (= 1.8.0-1), golang-github-imdario-mergo (= 1.0.1-2), golang-github-jbenet-go-context (= 0.0~git20150711.d14ea06-4), golang-github-kevinburke-ssh-config (= 1.6.0-1), golang-github-lucasb-eyer-go-colorful (= 1.4.0-2), golang-github-mattn-go-colorable (= 0.1.16-1), golang-github-mattn-go-isatty (= 0.0.24-1), golang-github-mattn-go-runewidth (= 0.0.27-1), golang-github-microcosm-cc-bluemonday (= 1.0.27-1), golang-github-mitchellh-hashstructure (= 2.0.2-2), golang-github-muesli-ansi (= 0.0~git20211031.c9f0611-2), golang-github-muesli-cancelreader (= 0.2.2-2), golang-github-muesli-reflow (= 0.3.0-2), golang-github-muesli-termenv (= 0.16.0-1), golang-github-olekukonko-cat (= 0.0~git20250911.50322a0-1), golang-github-olekukonko-errors (= 1.3.0-1), golang-github-olekukonko-ll (= 0.1.8-2), golang-github-olekukonko-tablewriter (= 1.1.5-1), golang-github-pjbgf-sha1cd (= 0.3.0-2), golang-github-protonmail-go-crypto (= 1.5.2-1), golang-github-rivo-uniseg (= 0.4.7-1), golang-github-sergi-go-diff (= 1.4.0-2), golang-github-skeema-knownhosts (= 1.3.2-1), golang-github-skratchdot-open-golang (= 0.0~git20160302.0.75fb7ed-3), golang-github-src-d-gcfg (= 1.4.0-3), golang-github-urfave-cli-docs-v3 (= 3.1.0-1), golang-github-urfave-cli-v3 (= 3.10.1-1), golang-github-xanzy-ssh-agent (= 0.3.3-1), golang-github-xo-terminfo (= 0.0~git20220910.abceb7e-2), golang-github-yuin-goldmark (= 1.8.2-2), golang-github-yuin-goldmark-emoji (= 1.0.3-1), golang-go.crypto (= 1:0.57.0-2), golang-golang-x-net (= 1:0.60.0-1), golang-golang-x-oauth2 (= 0.37.0-1), golang-golang-x-sys (= 0.49.0+dfsg-1), golang-golang-x-term (= 0.47.0-1), golang-golang-x-text (= 0.43.0-1), golang-gopkg-warnings.v0 (= 0.1.2-2), golang-gopkg-yaml.v3 (= 3.0.5-1)
-Description-md5: 68a19f8c6fbbc21c20275d654923a169
-Static-Built-Using: go-md2man-v2 (= 2.0.7-1), golang-1.27 (= 1.27.2-1), golang-blackfriday-v2 (= 2.1.0-1), golang-code-gitea-sdk (= 0.24.1-2), golang-gitea-noerw-unidiff-comments (= 0.0~git20220822.50f4daa+ds1-2), golang-github-42wim-httpsig (= 1.3.0-1), golang-github-adrg-xdg (= 0.5.3-1), golang-github-alecthomas-chroma-v2 (= 2.27.0-1), golang-github-araddon-dateparse (= 0.0~git20210429.6b43995-3), golang-github-atotto-clipboard (= 0.1.4-1), golang-github-aymanbagabas-go-osc52-v2 (= 2.0.1-1), golang-github-aymerick-douceur (= 0.2.0-3), golang-github-catppuccin-go (= 0.3.0-1), golang-github-cespare-xxhash-v2 (= 2.3.0-4), golang-github-charmbracelet-bubbles (= 0.21.0-2), golang-github-charmbracelet-bubbletea (= 1.3.10-2), golang-github-charmbracelet-colorprofile (= 0.4.3-1), golang-github-charmbracelet-glamour (= 1.0.0-1), golang-github-charmbracelet-huh (= 0.8.0+ds-3), golang-github-charmbracelet-lipgloss (= 1.1.0-1), golang-github-charmbracelet-x (= 0.0~git20251028.0cf22f8+ds-5), golang-github-clipperhouse-displaywidth (= 0.11.0+ds-4), golang-github-clipperhouse-uax29 (= 2.7.0-4), golang-github-cloudflare-circl (= 1.6.5-2), golang-github-cyphar-filepath-securejoin (= 0.5.2-2), golang-github-dlclark-regexp2-v2 (= 2.5.2+ds1-1), golang-github-dustin-go-humanize (= 1.0.1-1), golang-github-emirpasic-gods (= 1.18.1-1), golang-github-enescakir-emoji (= 1.0.0-3), golang-github-fatih-color (= 1.19.0-1), golang-github-go-fed-httpsig (= 1.1.0-3), golang-github-go-git-go-billy (= 5.9.1-1), golang-github-go-git-go-git (= 5.19.2-2), golang-github-golang-groupcache (= 0.0~git20210331.41bb18b-2), golang-github-gorilla-css (= 1.0.1-1), golang-github-hashicorp-go-version (= 1.8.0-1), golang-github-imdario-mergo (= 1.0.1-2), golang-github-jbenet-go-context (= 0.0~git20150711.d14ea06-4), golang-github-kevinburke-ssh-config (= 1.6.0-1), golang-github-lucasb-eyer-go-colorful (= 1.4.0-2), golang-github-mattn-go-colorable (= 0.1.16-1), golang-github-mattn-go-isatty (= 0.0.24-1), golang-github-mattn-go-runewidth (= 0.0.27-1), golang-github-microcosm-cc-bluemonday (= 1.0.27-1), golang-github-mitchellh-hashstructure (= 2.0.2-2), golang-github-muesli-ansi (= 0.0~git20211031.c9f0611-2), golang-github-muesli-cancelreader (= 0.2.2-2), golang-github-muesli-reflow (= 0.3.0-2), golang-github-muesli-termenv (= 0.16.0-1), golang-github-olekukonko-cat (= 0.0~git20250911.50322a0-1), golang-github-olekukonko-errors (= 1.3.0-1), golang-github-olekukonko-ll (= 0.1.8-2), golang-github-olekukonko-tablewriter (= 1.1.5-1), golang-github-pjbgf-sha1cd (= 0.3.0-2), golang-github-protonmail-go-crypto (= 1.5.2-1), golang-github-rivo-uniseg (= 0.4.7-1), golang-github-sergi-go-diff (= 1.4.0-2), golang-github-skeema-knownhosts (= 1.3.2-1), golang-github-skratchdot-open-golang (= 0.0~git20160302.0.75fb7ed-3), golang-github-src-d-gcfg (= 1.4.0-3), golang-github-urfave-cli-docs-v3 (= 3.1.0-1), golang-github-urfave-cli-v3 (= 3.10.1-1), golang-github-xanzy-ssh-agent (= 0.3.3-1), golang-github-xo-terminfo (= 0.0~git20220910.abceb7e-2), golang-github-yuin-goldmark (= 1.8.2-2), golang-github-yuin-goldmark-emoji (= 1.0.3-1), golang-go.crypto (= 1:0.57.0-2), golang-golang-x-net (= 1:0.60.0-1), golang-golang-x-oauth2 (= 0.37.0-1), golang-golang-x-sys (= 0.49.0+dfsg-1), golang-golang-x-term (= 0.47.0-1), golang-golang-x-text (= 0.43.0-1), golang-gopkg-warnings.v0 (= 0.1.2-2), golang-gopkg-yaml.v3 (= 3.0.5-1)
-utils
-Priority: optional
-Filename: pool/main/t/tea-cli/tea-cli_0.11.1-2_amd64.deb
-Size: 7239324
-MD5sum: a34dc701f0dd5d380853d83eae522ba4
-SHA256: f596716dfc735e397fe8f58be159f3f15857def874a6be060f2cc52a6bb8d58c
-
 Package: termineter
 Version: 1.0.6-1
 Installed-Size: 343
@@ -40850,12 +40822,12 @@ MD5sum: f79caff1170271a73d666d68ce662eb8
 SHA256: 6030aeb42fbe230c0b18ac5a9e1aca377c88c788b4fc9710d7d01bc1984f58a8
 
 Package: timeshift
-Version: 25.12.4-1
-Installed-Size: 4481
+Version: 26.11.1-1
+Installed-Size: 4700
 Maintainer: Yanhao Mo <yanhaocs@gmail.com>
 Architecture: amd64
 Replaces: timeshift-btrfs
-Depends: cron | cron-daemon, psmisc, rsync, libc6 (>= 2.34), libcairo2 (>= 1.2.4), libgdk-pixbuf-2.0-0 (>= 2.22.0), libgee-0.8-2 (>= 0.8.3), libglib2.0-0t64 (>= 2.62.0), libgtk-3-0t64 (>= 3.16.2), libjson-glib-1.0-0 (>= 1.5.2), libvte-2.91-0, libxapp1 (>= 1.0.4)
+Depends: cron | cron-daemon, psmisc, rsync, xapp-symbolic-icons, libc6 (>= 2.34), libcairo2 (>= 1.2.4), libgdk-pixbuf-2.0-0 (>= 2.22.0), libgee-0.8-2 (>= 0.8.3), libglib2.0-0t64 (>= 2.76.0), libgtk-3-0t64 (>= 3.16.2), libjson-glib-1.0-0 (>= 1.5.2), libvte-2.91-0, libxapp1 (>= 1.0.4)
 Recommends: pkexec
 Breaks: util-linux (<< 2.37.2~)
 Description: System restore utility
@@ -40864,10 +40836,10 @@ Description-md5: 111bc23f71315a6e4f214d083796ab9c
 Tag: uitoolkit::gtk
 utils
 Priority: optional
-Filename: pool/main/t/timeshift/timeshift_25.12.4-1_amd64.deb
-Size: 769124
-MD5sum: 404f92e74fd2a277c5d0f3546e17a99e
-SHA256: 6119827d5b4348cfa7fbd83ca9f55d95d66ac775db2c38c4baa2f026a208ea3a
+Filename: pool/main/t/timeshift/timeshift_26.11.1-1_amd64.deb
+Size: 786168
+MD5sum: c4d8f865bfa53d8dffeabe77527980a6
+SHA256: 1cb4fd626806afedd1dbf3ffbb39ca5f016178268d4625b1d245bbae9874d3c8
 
 Package: timewarrior
 Source: timew
@@ -45474,21 +45446,21 @@ SHA256: 72ea05ecd064291f0ede5f47a3fe3c505a8f8038c24cc7a520faf1003d29cc30
 
 Package: libxgks2-data
 Source: xgks
-Version: 2.6.1+dfsg.2-20
+Version: 2.6.1+dfsg.2-21
 Installed-Size: 216
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Architecture: all
-Recommends: libxgks2t64 (= 2.6.1+dfsg.2-20)
+Recommends: libxgks2t64 (= 2.6.1+dfsg.2-21)
 Description: Font files for the X11 Graphical Kernel Subsystem
 Multi-Arch: foreign
 Homepage: http://xgks.sourceforge.net
 Description-md5: 4a5e9a075105982290f949b7887fe79e
 utils
 Priority: optional
-Filename: pool/main/x/xgks/libxgks2-data_2.6.1+dfsg.2-20_all.deb
-Size: 30968
-MD5sum: a5eac58b0404df807156b77ea4f3984e
-SHA256: 2dc60453e18577f135e030f6b318c9567933b23bb6af5e98fbb81ce4c6780ea8
+Filename: pool/main/x/xgks/libxgks2-data_2.6.1+dfsg.2-21_all.deb
+Size: 31032
+MD5sum: 6edbbe1cc389f118dfeac2cf08d67a85
+SHA256: 694dc7c59284b59b2e3ce153e9e48c8aa7ea7558a7db865d8744197401fa4e8a
 
 Package: xinput-calibrator
 Version: 0.8.0-1
