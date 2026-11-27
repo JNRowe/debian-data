@@ -1487,7 +1487,7 @@ SHA256: 5246136837f485889569ebc42dcc8c2e69e77dc027f5b064f14de53ef4cb79b1
 
 Package: hyperv-daemons
 Source: linux
-Version: 6.1.192-2
+Version: 6.1.192-3
 Installed-Size: 1395
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
@@ -1498,13 +1498,13 @@ Description-md5: b516988e720642544cdf35b86b38e2df
 Pre-Depends: init-system-helpers (>= 1.54~)
 admin
 Priority: optional
-Filename: pool/updates/main/l/linux/hyperv-daemons_6.1.192-2_amd64.deb
-Size: 1328412
-SHA256: c1a3708c026e699b4707c1c86ddd5f66370e0b71a1682b8e59fb2e97b6087c3b
+Filename: pool/updates/main/l/linux/hyperv-daemons_6.1.192-3_amd64.deb
+Size: 1328444
+SHA256: 07be982821537be95fe06efff2e89d56776e1bba2c7f24c0705348d129f30efd
 
 Package: linux-cpupower
 Source: linux
-Version: 6.1.192-2
+Version: 6.1.192-3
 Installed-Size: 1628
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
@@ -1514,13 +1514,13 @@ Homepage: https://www.kernel.org/
 Description-md5: 933c0dca9da98dc3dfe1a841e12197d1
 admin
 Priority: optional
-Filename: pool/updates/main/l/linux/linux-cpupower_6.1.192-2_amd64.deb
-Size: 1421216
-SHA256: e6bc65f990db3a7ddbd7c61a39a0d4ee6d711a4bd4f4c10dee0da182c4b1d862
+Filename: pool/updates/main/l/linux/linux-cpupower_6.1.192-3_amd64.deb
+Size: 1421132
+SHA256: 7e198b24c1deaf4f0eaba1a558282967cadb56823991dbb9ef0404c88ec805cc
 
 Package: usbip
-Source: linux (6.1.192-2)
-Version: 2.0+6.1.192-2
+Source: linux (6.1.192-3)
+Version: 2.0+6.1.192-3
 Installed-Size: 1446
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
 Architecture: amd64
@@ -1530,9 +1530,9 @@ Homepage: https://www.kernel.org/
 Description-md5: 84110e083527a27b37417dcab69e5ab7
 admin
 Priority: optional
-Filename: pool/updates/main/l/linux/usbip_2.0+6.1.192-2_amd64.deb
-Size: 1351900
-SHA256: e5c51065ea0548565866bd89258df085ff8749c5860a41cd57e0a4e5fb9eec0a
+Filename: pool/updates/main/l/linux/usbip_2.0+6.1.192-3_amd64.deb
+Size: 1351932
+SHA256: be228a73880cb3d3f55a136e7985ad3cdc4d475b08f48aae4b08a2f57f0914b0
 
 Package: lxd
 Version: 5.0.2-5+deb12u6
@@ -1790,6 +1790,63 @@ Priority: optional
 Filename: pool/updates/main/p/packagekit/packagekit_1.2.6-5+deb12u1_amd64.deb
 Size: 609620
 SHA256: 8e4c1b45cb33b5d8320f0c1d2323b707d5c8490d9bf0b186c40f96502870fef7
+
+Package: libpam-modules
+Source: pam
+Version: 1.5.2-6+deb12u3
+Installed-Size: 1033
+Maintainer: Sam Hartman <hartmans@debian.org>
+Architecture: amd64
+Replaces: libpam-umask, libpam0g-util
+Provides: libpam-mkhomedir, libpam-motd, libpam-umask
+Conflicts: libpam-mkhomedir, libpam-motd, libpam-umask
+Description: Pluggable Authentication Modules for PAM
+Homepage: http://www.linux-pam.org/
+Description-md5: 234b9429528430ead853cc8bbe97ffb4
+Multi-Arch: same
+Pre-Depends: libaudit1 (>= 1:2.2.1), libc6 (>= 2.34), libcrypt1 (>= 1:4.3.0), libdb5.3, libpam0g (>= 1.4.1), libselinux1 (>= 3.1~), debconf (>= 0.5) | debconf-2.0, libpam-modules-bin (= 1.5.2-6+deb12u3)
+admin
+Priority: required
+Filename: pool/updates/main/p/pam/libpam-modules_1.5.2-6+deb12u3_amd64.deb
+Size: 293236
+SHA256: 70df6c0f65623896680c3b1199b980fdac9f2274bdfcb24685eca1100644db1d
+
+Package: libpam-modules-bin
+Source: pam
+Version: 1.5.2-6+deb12u3
+Installed-Size: 228
+Maintainer: Sam Hartman <hartmans@debian.org>
+Architecture: amd64
+Replaces: libpam-modules (<< 1.5.2-5~)
+Depends: libaudit1 (>= 1:2.2.1), libc6 (>= 2.34), libcrypt1 (>= 1:4.3.0), libpam0g (>= 0.99.7.1), libselinux1 (>= 3.1~)
+Description: Pluggable Authentication Modules for PAM - helper binaries
+Homepage: http://www.linux-pam.org/
+Description-md5: 25d278fc7450d5202a9a137f71302e58
+Multi-Arch: foreign
+admin
+Priority: required
+Filename: pool/updates/main/p/pam/libpam-modules-bin_1.5.2-6+deb12u3_amd64.deb
+Size: 76004
+SHA256: 085074025fc11242d320d0aea861f614e075cf80a273024666b950ffe0411f51
+
+Package: libpam-runtime
+Source: pam
+Version: 1.5.2-6+deb12u3
+Installed-Size: 877
+Maintainer: Sam Hartman <hartmans@debian.org>
+Architecture: all
+Replaces: libpam0g-dev, libpam0g-util
+Depends: debconf (>= 0.5) | debconf-2.0, debconf (>= 1.5.19) | cdebconf, libpam-modules (>= 1.0.1-6)
+Conflicts: libpam0g-util
+Description: Runtime support for the PAM library
+Homepage: http://www.linux-pam.org/
+Description-md5: bc15ddbf92ee7965a8588141c54bb5a1
+Multi-Arch: foreign
+admin
+Priority: required
+Filename: pool/updates/main/p/pam/libpam-runtime_1.5.2-6+deb12u3_all.deb
+Size: 161408
+SHA256: 7781327aaebee1fc215eeb280385385122a424b964169ca48763f26390aba509
 
 Package: libpam-mysql
 Source: pam-mysql
