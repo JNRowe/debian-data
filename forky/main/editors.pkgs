@@ -3336,21 +3336,22 @@ SHA256: edf106afb1f6d50aee30079399500b54d98bb5167e903b3c8ace4a1bb9c16611
 
 Package: ledit
 Source: ledit (2.04-8)
-Version: 2.04-8+b31
+Version: 2.04-8+b32
 Installed-Size: 401
 Maintainer: Debian OCaml Maintainers <debian-ocaml-maint@lists.debian.org>
 Architecture: amd64
 Provides: readline-editor
+Depends: libcamlp-streams-ocaml-8fzy5, libstdlib-ocaml-4w2h8, ocaml-base-5.5.2
 Description: line editor for interactive programs
 Homepage: http://cristal.inria.fr/~ddr/ledit/
 Description-md5: 1f10287a364948723289d1e9c2700025
 Tag: implemented-in::ocaml, interface::shell, role::program, scope::utility
 editors
 Priority: optional
-Filename: pool/main/l/ledit/ledit_2.04-8+b31_amd64.deb
-Size: 61716
-MD5sum: 26b633bfd88817274a6c974b79b387a8
-SHA256: d80120e0adfd6c77ffc74f28c6ef42095668546a711870bf89e831893e12783a
+Filename: pool/main/l/ledit/ledit_2.04-8+b32_amd64.deb
+Size: 61768
+MD5sum: d7eb800d5ca7cde58f88c384e54ebc45
+SHA256: 0206315778f0eb45481ccc909de6262c6f1253c39148057dbcbfb61770f2200a
 
 Package: levee
 Version: 4.0-3
@@ -4569,6 +4570,39 @@ Size: 92180
 MD5sum: 72d65034ad7270bf9e70b64cfe9b898e
 SHA256: cbaed791d7da6041c76e38f03d3db361fe4707a2030e5281fbf797ed5b586a13
 
+Package: lua-promise-async
+Source: neovim-promise-async
+Version: 1.0.0-2
+Installed-Size: 34
+Maintainer: Debian Vim Maintainers <team+vim@tracker.debian.org>
+Architecture: all
+Depends: neovim-promise-async, lua-luv
+Description: Promise and async library for Lua
+Homepage: https://github.com/kevinhwang91/promise-async
+Description-md5: 6406aae27f020dc7cedb494da18dc982
+editors
+Priority: optional
+Filename: pool/main/n/neovim-promise-async/lua-promise-async_1.0.0-2_all.deb
+Size: 5556
+MD5sum: 520ae593b4414edd61fb15a774aad05c
+SHA256: 266a1ee1d7ab058f688f62b675f90712a479f73bf09805cfda7a1a46aa8df6e2
+
+Package: neovim-promise-async
+Version: 1.0.0-2
+Installed-Size: 49
+Maintainer: Debian Vim Maintainers <team+vim@tracker.debian.org>
+Architecture: all
+Depends: vim (>= 2:8.1.0693-2~) | neovim (>= 0.2.2-1~)
+Description: Asynchronous promise plugin for Vim
+Homepage: https://github.com/kevinhwang91/promise-async
+Description-md5: a790dda17630fd6c86050a30bf373ca1
+editors
+Priority: optional
+Filename: pool/main/n/neovim-promise-async/neovim-promise-async_1.0.0-2_all.deb
+Size: 7876
+MD5sum: d2f98aee970516c3de15613066edaed3
+SHA256: 186a704102e2e7c643dbf7d73856fadefe46980acc14d38037b4331af98a186a
+
 Package: neovim-qt
 Version: 0.2.20-1
 Installed-Size: 4489
@@ -5000,8 +5034,8 @@ SHA256: 3faeb94c62c629b244cbf44138a2915a1b83661f82fc2ede07aee9c768ad2993
 
 Package: elpa-org-publish-rss
 Source: org-publish-rss
-Version: 0.9-1
-Installed-Size: 49
+Version: 0.10-1
+Installed-Size: 54
 Maintainer: Debian Emacsen team <debian-emacsen@lists.debian.org>
 Architecture: all
 Depends: dh-elpa-helper, emacsen-common
@@ -5011,10 +5045,10 @@ Homepage: https://git.sr.ht/~taingram/org-publish-rss
 Description-md5: 28216f5a04f3eddd42ec5a4c316f7aec
 editors
 Priority: optional
-Filename: pool/main/o/org-publish-rss/elpa-org-publish-rss_0.9-1_all.deb
-Size: 11572
-MD5sum: d0ac10aa707e7cace7422676db41291f
-SHA256: 8a6e06366f6d24f8a369db83dd4e7bba3aa739f041a095ec08b6f425791341a9
+Filename: pool/main/o/org-publish-rss/elpa-org-publish-rss_0.10-1_all.deb
+Size: 13304
+MD5sum: 5b192509eb026f31ab4aa24db5a9476b
+SHA256: 6613d8b93f020fe7cf6fe99017aadd3aa68bd5cead04b444cda579b62ff36fc9
 
 Package: elpa-org-roam
 Source: org-roam
@@ -5390,6 +5424,25 @@ Filename: pool/main/p/pyim-el/elpa-pyim_5.3.6-1_all.deb
 Size: 192356
 MD5sum: a3af39a97118908a11b1c2f2e4decb25
 SHA256: 6e5709f65ce73eeafa7121e16b90f33a131343cbfbfcfec75b210c41cbd4a3d4
+
+Package: elpa-readline-completion
+Source: readline-completion-el
+Version: 0.1-1
+Installed-Size: 39
+Maintainer: Debian Emacsen team <debian-emacsen@lists.debian.org>
+Architecture: all
+Depends: elpa-compat (>= 31.1), dh-elpa-helper, emacsen-common
+Recommends: emacs
+Enhances: emacs
+Description: completion-at-point-function based on GNU Readline
+Homepage: https://codeberg.org/astoff/readline-completion.el
+Description-md5: 155ce942eee1f38546832dae57f18d0b
+editors
+Priority: optional
+Filename: pool/main/r/readline-completion-el/elpa-readline-completion_0.1-1_all.deb
+Size: 6892
+MD5sum: ea416d5463f4f67323fd80df6dc386ca
+SHA256: 2021b4d067d6a1543d7be91a79342584fa682b0572d24e44d313de8bdf9b129d
 
 Package: elpa-relint
 Source: relint-el
@@ -6847,8 +6900,8 @@ MD5sum: 75c05b51cd8b80bc86ecb82d23dc03a5
 SHA256: 5ddc6236e24957ae534a4d76d2b524b61f15308d370b511d54741fb71ea1efd5
 
 Package: vim-minimap
-Version: 0.0+git20250126-1
-Installed-Size: 93
+Version: 0.0+git20260325-1
+Installed-Size: 96
 Maintainer: Debian Vim Maintainers <team+vim@tracker.debian.org>
 Architecture: all
 Depends: vim (>= 2:8.1.0693-2~) | neovim (>= 0.2.2-1~), code-minimap
@@ -6857,10 +6910,10 @@ Homepage: https://github.com/wfxr/minimap.vim
 Description-md5: 893213a5c6fe59a0daa77029e763bbed
 editors
 Priority: optional
-Filename: pool/main/v/vim-minimap/vim-minimap_0.0+git20250126-1_all.deb
-Size: 16384
-MD5sum: 464c2bc80537004ac96e0074af9060aa
-SHA256: df9f9bddbffa4e762462c4a73c3b755f5746e345a4b4686e0b0de39f9760cda4
+Filename: pool/main/v/vim-minimap/vim-minimap_0.0+git20260325-1_all.deb
+Size: 16768
+MD5sum: 603de35d701e5cd453d7f7f07affc12b
+SHA256: bed37652080cd553a5470ae30feae4289c5fd23b9eea2b37541e8430f0135e40
 
 Package: vim-nftables
 Version: 0.20200629-10

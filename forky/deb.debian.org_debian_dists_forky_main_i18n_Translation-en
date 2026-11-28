@@ -10911,6 +10911,13 @@ Description-en: Apache Log4j - Logging Framework for Java
  configuration file, system properties, environment variables, the
  ThreadContext Map, and data present in the event.
 
+Package: libapache-logging-parent-java
+Description-md5: 84ad4cf7b4027565fb9cf52cbc518223
+Description-en: Maven metadata for the Apache Logging Services projects
+ This package contains the parent POM internally used by the Maven based
+ projects of the Apache Logging Services, such as Log4j. It holds the build
+ configuration shared by these projects.
+
 Package: libapache-mime4j-java
 Description-md5: ba0d5a7c68a38b8d325d379276963730
 Description-en: MIME and RFC822 parser for Java
@@ -13367,21 +13374,6 @@ Description-en: Light-weight rendering library for Linux (development files)
  C++-only
  .
  This package includes the development files for aquamarine.
-
-Package: libaquamarine14
-Description-md5: 85c33d010c3bd4bff44cda9378083f52
-Description-en: Light-weight rendering library for Linux (binary files)
- Aquamarine is a very light Linux rendering backend library.
- It provides basic abstractions for an application to render on a
- Wayland session (in a window) or a native DRM session.
- .
- It is agnostic of the rendering API (Vulkan/OpenGL) and designed
- to be lightweight, performant, and minimal.
- .
- Aquamarine provides no bindings for other languages. It is
- C++-only
- .
- This package includes the binaries for the aquamarine library.
 
 Package: libaquamarine15
 Description-md5: 85c33d010c3bd4bff44cda9378083f52
@@ -19514,20 +19506,23 @@ Description-en: automatic as-installed testing for Debian packages
  libraries you should install the autodep8 package.
 
 Package: autopkgtest-helper
-Description-md5: 8d20a6a77e5b79c592085d2b0537f25f
+Description-md5: 3f9767b61f169f4508d00078c3833310
 Description-en: shell library helper for autopkgtest
  A POSIX shell library for debian/tests scripts.
  .
  Available functions support:
  - test flows start a service, run the code under test against it,
    and clean up afterwards.
- - a fake CA to generate certificates
+ - throw-away CAs, intermediates and server or client certificates, also
+   expired or not yet valid ones, for tests of TLS
+ - temporary system users and groups, optionally with a known password
+ - reversible changes to configuration files and directories
  .
  The core provides a temporary working root with guaranteed teardown (also
  on failure and on signals), background daemon management, readiness
- polling instead of sleeping, free-port selection, throw-away CA and server
- certificates, and reversible changes to system files.  Log files of the
- daemons are printed and saved as autopkgtest artifacts when a test fails.
+ polling instead of sleeping, free-port selection, and reversible changes to
+ system files.  Log files of the daemons are printed and saved as autopkgtest
+ artifacts when a test fails.
  .
  The library is meant to be used for testing other software that depends on
  a service, not for testing the services themselves.
@@ -28585,34 +28580,6 @@ Description-en: Tools to create (and analyze) RIPE Atlas network measurements
  Blaeu is a set of Python programs to start distributed Internet measurements
  on the network of RIPE Atlas probes <https://atlas.ripe.net/>, and to analyze
  their results.
-
-Package: blag
-Description-md5: 82878453de6f36627c4e67c7ccb8a446
-Description-en: Blog-aware, static site generator
- Blag is a blog-aware, static site generator, written in Python. It supports
- the following features:
-   * Write content in Markdown
-   * Good looking default theme
-   * Theming support using Jinja2 templates
-   * Generation of Atom feeds for blog content
-   * Fenced code blocks and syntax highlighting using Pygments
-   * Integrated devserver
-   * Available on PyPI
-
-Package: blag-doc
-Description-md5: 2ee96a2007c10e7ff82d0b3ca26ade0b
-Description-en: Blog-aware, static site generator (documentation)
- Blag is a blog-aware, static site generator, written in Python. It supports
- the following features:
-   * Write content in Markdown
-   * Good looking default theme
-   * Theming support using Jinja2 templates
-   * Generation of Atom feeds for blog content
-   * Fenced code blocks and syntax highlighting using Pygments
-   * Integrated devserver
-   * Available on PyPI
- .
- This is the common documentation package.
 
 Package: fortune-anarchism
 Description-md5: 55d68a63ebf7964185e78bb2768142f8
@@ -64649,14 +64616,6 @@ Description-en: C source code utilities
   yyextract - extract grammar rules from yacc grammar
   yyref - yacc grammar reference program
 
-Package: cutycapt
-Description-md5: 587d01f88a000d91c99c6d072638061e
-Description-en: utility to capture WebKit's rendering of a web page
- CutyCapt is a small cross-platform command-line utility
- to capture WebKit's rendering of a web page
- into a variety of vector and bitmap formats,
- including SVG, PDF, PS, PNG, JPEG, TIFF, GIF, and BMP.
-
 Package: cuyo
 Description-md5: 0105a698b0c2e6c2c854e1c1aaa02059
 Description-en: Tetris-like game with very impressive effects
@@ -81623,16 +81582,6 @@ Description-en: library for working with nested data structures (Python3 version
  applications, such as machine learning models.
  .
  This package contains the Python 3 version of the library.
-
-Package: dm-writeboost-dkms
-Description-md5: f31e3a9e5e9bd1dcfc6fc960a5d44843
-Description-en: log-structured caching for Linux
- dm-writeboost is an OS-level IO controller that builds logs from in-coming
- writes (data and metadata) and then writes the logs sequentially similar
- to log-structured filesystem. As a further extension, dm-writeboost
- supports read-caching which also writes data sequentially.
- .
- This package provides DKMS kernel module for Linux Kernel 3.10+.
 
 Package: dm-zoned-tools
 Description-md5: 82835fb5d17ea1762ab44ca087aba237
@@ -102444,14 +102393,6 @@ Description-en: Client library for evolution address books
  Evolution is the integrated mail, calendar, task and address book
  distributed suite from Novell, Inc.
 
-Package: libebook-contacts-1.2-4t64
-Description-md5: fd8f6220cee9a3b2df95847a5d20af2b
-Description-en: Client library for evolution contacts books
- This package is a client library for evolution addressbooks.
- .
- Evolution is the integrated mail, calendar, task and address book
- distributed suite from Novell, Inc.
-
 Package: libebook-contacts-1.2-5
 Description-md5: fd8f6220cee9a3b2df95847a5d20af2b
 Description-en: Client library for evolution contacts books
@@ -119523,27 +119464,6 @@ Description-en: monospace font for pretty code listings and for the terminal
  Development Fund. If you like this font and want to see more sponsored and
  released freely, please consider donating to TUG's Libre Font Fund.
 
-Package: fonts-indic
-Description-md5: 86f57083c66e8e6716cb5a9cf9d56bdd
-Description-en: Meta package to install all Indian language fonts
- This metapackage merely depends on the various free Indian language font
- packages available in Debian. Use this if you want fonts for every Indian
- language.
- .
- The following metapackages will be pulled down as dependency which
- will in turn pull down real font packages.
-   * fonts-beng
-   * fonts-deva
-   * fonts-gujr
-   * fonts-guru
-   * fonts-knda
-   * fonts-mlym
-   * fonts-orya
-   * fonts-pagul
-   * fonts-taml
-   * fonts-telu
-   * fonts-uniol
-
 Package: fonts-inter
 Description-md5: 83766c49d307213df203d61d8d21c3f4
 Description-en: Inter font family
@@ -124825,16 +124745,6 @@ Description-en: TSCu family of non Unicode fonts for Tamil script
  Tamil is the widely used language in the Indian state of TamilNadu
  and Sri Lanka.
 
-Package: fonts-telu
-Description-md5: d212b865bab97b9871c6acc18594cc9a
-Description-en: Meta package to install all Telugu fonts
- This package allows you to install all available Telugu fonts
- in Debian.
- .
- This package installs following font packages:
-   * fonts-lohit-telu
-   * fonts-telu-extra
-
 Package: fonts-telu-extra
 Description-md5: 7d4366f6a9f7ae18a8b4231ce505bbfe
 Description-en: Free fonts for Telugu script
@@ -124844,36 +124754,6 @@ Description-en: Free fonts for Telugu script
  This package contains following fonts:
  * Pothana2000
  * Vemana2000
-
-Package: fonts-teluguvijayam
-Description-md5: b2eff10dbf07ca079b73ee2bdba7b836
-Description-en: TrueType fonts for Telugu script (te)
- This package provides following 20 fonts for Telugu script
- which is used in Indian states of Andhra Pradesh & Telangana:
- .
-  * Ponnala
-  * RaviPrakash
-  * LakkiReddy
-  * Potti Sriramulu
-  * Syamala Ramana
-  * Gidugu
-  * Gurajada
-  * Suravaram
-  * NTR
-  * Mandali
-  * NATS
-  * SrikrushnaDevaraya
-  * Peddana
-  * Timmana
-  * Tenali Ramakrishna
-  * Suranna
-  * Ramaraja
-  * Mallana
-  * Dhurjati
-  * Ramabhadra
- .
- These fonts are released by Departement of Information
- technology, Government of Andhra Pradesh.
 
 Package: fonts-the-neue-black
 Description-md5: a9ac9e4d9948bea4472bbc1bda559283
@@ -184822,15 +184702,6 @@ Description-md5: 1c82bce39837e0d562d0aa68ba812c33
 Description-en: topological sorting and pruning of DAG graphs (library)
  graphlib is a topological sorting library for sorting and pruning DAG graphs.
 
-Package: golang-github-ajg-form-dev
-Description-md5: a80271210c0982743cfafe7e1482eb90
-Description-en: Form Encoding & Decoding Package for Go
- This library is designed to allow seamless, high-fidelity encoding and
- decoding of arbitrary data in application/x-www-form-urlencoded format
- and as url.Values (http://golang.org/pkg/net/url/#Values). It is intended
- to be useful primarily in dealing with web forms and URI query strings,
- both of which natively employ said format.
-
 Package: golang-github-ajstarks-svgo-dev
 Description-md5: eff98073733a0621da1085b70a12e046
 Description-en: generating online histograms and plotting them with golang
@@ -185297,6 +185168,34 @@ Description-en: declarative flag parsing for Go using struct tags
  arguments to a program, and parses and sets them from a slice of
  arguments.
 
+Package: golang-github-anchore-bubbly-dev
+Description-md5: a4e0f455dfbaed89ded3832c3ffa4ae6
+Description-en: small collection of Bubble Tea TUI components and helpers (library)
+ Bubbly is a small collection of Bubble Tea TUI components and helpers.
+
+Package: golang-github-anchore-clio-dev
+Description-md5: 51f378d628b7d10b3c5e2c44cd113cbd
+Description-en: Bootstrap CLI application with batteries included (Library)
+ It offers an easy way to bootstrap your application by seamlessly
+ combining Cobra and Viper via Fangs for CLI argument parsing,
+ configuration files, and environment variable loading, while using
+ Partybus to provide deep execution stack visibility through an event bus.
+ .
+ It also equips your project with a pluggable logger interface, a built-in
+ redactor to sanitize sensitive output, and a generic UI interface
+ designed to adapt smoothly to TUI frameworks like Bubbletea.
+
+Package: golang-github-anchore-fangs-dev
+Description-md5: 750e3e5af3d9dbc1e196d7ed4ee34830
+Description-en: Lib for integrating Cobra and Viper (Library)
+ Anchore Go-based CLI tools use Cobra and Viper for building the basic CLI
+ handling and configuration, respectively. The use of these tools has
+ evolved over the years nd some patterns have emerged that seem to work
+ better than others and avoid some pitfalls.
+ .
+ This library uses some best practices we've found for integrating these
+ tools together in fairly simple ways.
+
 Package: golang-github-anchore-go-collections-dev
 Description-md5: 2d4f4622028e8847f60c9140327bcd0a
 Description-en: generic data structures for common collection operations (library)
@@ -185308,6 +185207,11 @@ Description-md5: 58c6a594ec0a65957437e2beef05170a
 Description-en: Detect and expand the user home dir without cgo (library)
  This is a Go library for detecting the user's home directory without the
  use of cgo, so the library can be used in cross-compilation environments.
+
+Package: golang-github-anchore-go-logger-dev
+Description-md5: f46042942d268a23a0bb50ab115007c7
+Description-en: Anchore's logging library (library)
+ Anchore's logging library with several output adapters. Used in syft.
 
 Package: golang-github-anchore-go-lzo-dev
 Description-md5: ce9f692607281f6d913ec6066f2194f2
@@ -193672,28 +193576,6 @@ Description-en: Go implementation of GNU Readline with syntax highlighting (libr
  .
  The github.com/gohxs/readline is unique in that it offers syntax highlighting.
 
-Package: golang-github-goji-param-dev
-Description-md5: aa750aa3e79de12b9902b4ec7b1f65e3
-Description-en: Rack / jQuery style parameter parsing for Go
- param deserializes parameter values into a given struct using
- magical reflection ponies.
- .
- Inspired by gorilla/schema, but uses Rails/jQuery style param encoding
- instead of their weird dotted syntax. In particular, this package was
- written with the intent of parsing the output of jQuery.param.
- .
- This package uses struct tags to guess what names things ought to have. If
- a struct value has a "param" tag defined, it will use that. If there is
- no "param" tag defined, the name part of the "json" tag will be used. If
- that is not defined, the name of the field itself will be used (no case
- transformation is performed).
- .
- If the name derived in this way is the string "-", param will refuse to
- set that value.
- .
- The parser is extremely strict, and will return an error if it has any
- difficulty whatsoever in parsing any parameter, or if there is any kind
-
 Package: golang-github-gokyle-fswatch-dev
 Description-md5: 54fae0f73d532b17740832f2e5263a34
 Description-en: simple UNIX file system watching library in Go
@@ -194294,14 +194176,6 @@ Description-en: provides low-level interface for accessing USB devices (library)
  gousb is an attempt at wrapping the libusb library into a Go-like binding.
  .
  gousb provides low-level interface for accessing USB devices.
-
-Package: golang-github-google-jsonapi-dev
-Description-md5: 84b3aa665e5b1c4b42335abdcfbc0ec3
-Description-en: jsonapi.org style payload serializer and deserializer
- Serializer/deserializer for JSON payloads that comply to the JSON API
- spec in Go. Struct tags are used to annotate the struct fields in an
- application and then this library reads and writes JSON API output based
- on the tagged fields.
 
 Package: golang-github-google-jsonschema-go-dev
 Description-md5: 0b24f47961b1e5d46260b19ee2576a80
@@ -195955,15 +195829,6 @@ Description-en: Client library for Apache Kafka
  producing and consuming messages, and a low-level API for controlling
  bytes on the wire when the high-level API is insufficient.
 
-Package: golang-github-icrowley-fake-dev
-Description-md5: c636b91a11cf72984177639062f8a648
-Description-en: fake data generator for Golang
- This package contains a fake data generator for Go (Golang), heavily
- inspired by the forgery and ffaker Ruby gems.  About Most data and
- methods are ported from forgery/ffaker Ruby gems.  For the list of
- available methods please look at https://godoc.org/github.com/icrowley/fake.
- Currently English and Russian languages are available.
-
 Package: golang-github-icza-gox-dev
 Description-md5: 4adf5bc6e0d5f699025bc2b08c905ddc
 Description-en: Minimalist extension to Go that complements the standard library (library)
@@ -195977,14 +195842,6 @@ Description-en: Fast and light wildcard pattern matching
  Two function are available MatchSimple and Match.
   * MatchSimple only covert * usage (he is a bit faster)
   * Match support full wildcard matching, * and ?
-
-Package: golang-github-igm-pubsub-dev
-Description-md5: ef1f7c301932342410a7f55fc079fbaa
-Description-en: simple PubSub mechanism for GO
- This package provides simple mechanism to implement publisher
- subscriber relation.
- .
- The GoDoc can be found here http://godoc.org/github.com/igm/pubsub
 
 Package: golang-github-iguanesolutions-go-systemd-dev
 Description-md5: 4df06bc84285103733f85aba177fbb12
@@ -197250,19 +197107,6 @@ Description-en: manage goroutines in golang applications (library)
    - a func registered with Go or Defer panics. the panic will be propagated to
      the goroutine that Wait runs in. there is no attempt, in case of a panic,
      to manage the state within the lifecycle package.
-
-Package: golang-github-joyent-gocommon-dev
-Description-md5: e14b8a7ae634c41c406e6a3ab37299ce
-Description-en: common Go library for Joyent's Triton and Manta
- The gocommon package collects common packages to interact with the
- Joyent Public Cloud and Joyent Manta services.
- The gocommon package is structured as follow:
-   - gocommon/client. Client for sending requests.
-   - gocommon/errors. Joyent specific errors.
-   - gocommon/http. HTTP client for sending requests.
-   - gocommon/jpc. This package provides common structures and functions
-                   across packages.
-   - gocommon/testing. Testing Suite for local testing.
 
 Package: golang-github-joyent-gosign-dev
 Description-md5: 5a61eedad770639ef796d853b78116f8
@@ -201073,11 +200917,6 @@ Description-en: client for NGINX Plus API for Go (library)
  .
  This client works against versions 4-9 of the NGINX Plus API.
 
-Package: golang-github-nicholas-fedor-shoutrrr-dev
-Description-md5: b1e33cfe6a3ac58b45dbdf0a2edc0dfc
-Description-en: Notification library for Watchtower (Go library)
- shoutrrr is a Go library for notifications inspired by caronc/apprise.
-
 Package: golang-github-nicksnyder-go-i18n.v2-dev
 Description-md5: 3a3f201330cff4f0d890dfdecabc6a2c
 Description-en: Translate Go program into multiple languages
@@ -204074,6 +203913,13 @@ Description-en: thread-safe progress bar for Golang applications
  In order to be OS agnostic it is not planned to support multi-line
  outputs.
 
+Package: golang-github-scylladb-go-set-dev
+Description-md5: 2d06bade52b7b82462c1a1201f387fa6
+Description-en: type-safe, zero-allocation sets for Go (library)
+ go-set is a type-safe, zero-allocation port of the excellent package
+ fatih/set. It contains sets for most of the basic types and you can generate
+ sets for your own types with ease.
+
 Package: golang-github-scylladb-termtables-dev
 Description-md5: c8826723f263b6f9bb3583dd58b1ba40
 Description-en: Fast and simple ASCII table generation.
@@ -204493,12 +204339,6 @@ Package: golang-github-shurcool-graphql-dev
 Description-md5: bd40c5ec2a0b22104494848d85558738
 Description-en: GraphQL client implementation (Go library)
  Package graphql provides a GraphQL client implementation for Go.
-
-Package: golang-github-shurcool-httpgzip-dev
-Description-md5: 4ed0e7ed7f63de5fd557e5a7c99a6f20
-Description-en: go library for use gzip compression when serving HTTP requests
- golang-github-shurcool-httpgzip-dev provides net/http-like primitives that use
- gzip compression when serving HTTP requests.
 
 Package: golang-github-shurcool-sanitized-anchor-name-dev
 Description-md5: b5160ed651eb70a4b9a651dab89c70ea
@@ -205543,13 +205383,6 @@ Description-en: XML Schema Definition (XSD) validation using Libxml2 (Go library
  strings it also exposes some fields of libxml2 return structs.
  .
  This package contains the Go library.
-
-Package: golang-github-terra-farm-udnssdk-dev
-Description-md5: 1b19453165f0f35235a544771949afde
-Description-en: ultradns SDK
- This package contains an UltraDNS SDK for Go. This is a golang SDK
- for the UltraDNS REST API. It's not feature complete, and currently
- is only known to be used for Terraform's ultradns provider.
 
 Package: golang-github-tetratelabs-wabin-dev
 Description-md5: 24d4f8c808b59fce0fa99e4adfbb8cf2
@@ -207295,30 +207128,6 @@ Description-en: Domain name parser on the Public Suffix List (library)
  (https://github.com/publicsuffix/list/blob/master/tests/tests.txt)
    * Unit: the unit test suite stresses the various single components of this
  package
-
-Package: golang-github-wildducktheories-go-csv-dev
-Description-md5: b6146e05aec16e7bc35d51e35945adf6
-Description-en: tools for manipulating CSV files
- This package contains a set of golang tools and libraries for
- manipulating CSV representations.
- .
- As a rule, most tools in this set assume CSV files that include a header
- record that describes the contents of each field.
- .
-  - csv-select - selects the specified fields from the header-prefixed,
-    CSV input stream
-  - uniquify - augments a partial key so that each record in the output
-    stream has a unique natural key
-  - surrogate-keys - augments the input stream so that each record in the
-    output stream has a surrogate key derived from the MD5 sum of the
-    natural key
-  - csv-to-json - converts a CSV stream into a JSON stream
-  - json-to-csv - converts a JSON stream into a CSV stream
-  - csv-sort - sorts a CSV stream according to the specified columns
-  - csv-join - joins two sorted CSV streams after matching on specified columns
-  - influx-line-format - convert a CSV stream into influx line format
-  - csv-use-tab - uses a table delimit while writing (default) or
-    reading (--on-read) a CSV stream
 
 Package: golang-github-will-rowe-nthash-dev
 Description-md5: 1d96326b093ce457e40e50bc99c6875c
@@ -270750,12 +270559,6 @@ Description-en: C++ graphics utility library for Hyprland - development files
  Hyprgraphics is a small C++ library with graphics / resource related utilities
  used across the hypr* ecosystem.
 
-Package: libhyprgraphics4
-Description-md5: c2d7555d6c3154fcaaeb349f66e65ef8
-Description-en: C++ graphics utility library for Hyprland - library
- Hyprgraphics is a small C++ library with graphics / resource related utilities
- used across the hypr* ecosystem.
-
 Package: libhyprgraphics5
 Description-md5: c2d7555d6c3154fcaaeb349f66e65ef8
 Description-en: C++ graphics utility library for Hyprland - library
@@ -280565,6 +280368,30 @@ Description-en: Deep Infrared Mosaicing Software
  the infrared, the dominance of the variable sky background in
  infrared data requires the dithering and recombination of many short
  carefully sky subtracted exposures to produce deep images.
+
+Package: hybrid-dev
+Description-md5: 3213ec9ce808db3926a66ada19254ea8
+Description-en: high-performance secure IRC server - development files
+ These are the headers used when writing modules for ircd-hybrid.
+ For more information on how to write these modules, see the ircd-hybrid
+ documentation or example_module.c in the source code for ircd-hybrid.
+ .
+ It also includes mbuild-hybrid, a shell script that simplifies building
+ and installation of such modules. This shell script is simplistic and
+ assumes a lot; if you possess clue, you will know what to do anyway.
+
+Package: ircd-hybrid
+Description-md5: 6d0ecd7f1095a9a8ad287cd1870f2be9
+Description-en: high-performance secure IRC server
+ ircd-hybrid is a stable, high-performance IRC server that features:
+ .
+  * SSL client support and server-to-server RSA encryption;
+  * Compressed server links;
+  * Channel exceptions (+e) and invitation exceptions (+I);
+  * New configuration file format;
+  * Halfops (+h) and anti-spam user mode +g;
+  * Dynamically loadable modules;
+  * Channel and nickname RESV's (reservations).
 
 Package: ircd-irc2
 Description-md5: c0464a4a31446446f9ff1ca05b32cd1e
@@ -294312,28 +294139,6 @@ Description-en: Checkers boardgame
   * Optional numeration of the board.
   * Internationalization support (English, German, Catalan, French and Spanish).
 
-Package: kchmviewer
-Description-md5: 7ca16d9580fc5de3f84374e0e3bb798a
-Description-en: CHM viewer for KDE
- KchmViewer is a chm (MS HTML help file format) viewer, written in C++.
- Unlike most existing CHM viewers for Unix, it uses Trolltech Qt widget
- library, and does not depend on KDE or GNOME. However, it may be compiled
- with full KDE support, including KDE widgets and KIO/KHTML.
- .
- The main advantage of KchmViewer is non-English language support. Unlike
- others, KchmViewer in most cases correctly detects help file encoding,
- correctly shows tables of context of Russian, Korean, Chinese and Japanese
- help files, and correctly searches in non-English help files (search for
- MBCS languages - ja/ko/ch is still in progress).
- .
- Completely safe and harmless. Does not support JavaScript in any way,
- optionally warns you before opening an external web page, or switching to
- another help file. Shows an appropriate image for every TOC entry.
- .
- KchmViewer Has complete chm index support, including multiple index entries,
- cross-links and parent/child entries in index as well as Persistent bookmarks
- support. Correctly detects and shows encoding of any valid chm file.
-
 Package: kclock
 Description-md5: 9ba83b625b23926418b852bfd88405d0
 Description-en: Clock for KDE Plasma Mobile
@@ -305682,6 +305487,15 @@ Description-en: Filters used by konwert for charset conversion
  These files are needed by konwert.
  .
  They are also probably useless without konwert itself.
+
+Package: kooha
+Description-md5: f119d860aa0667857c11073956c5cf0b
+Description-en: Elegantly record your screen
+ Kooha allows recording of the screen. It has the following features:
+  - recording of microphone / computer audio / both
+  - support for WebM, MP4, GIF, and Matroska formats
+  - recording a specific section or monitor
+  - experimental hardware-accelerated encoding
 
 Package: kookbook
 Description-md5: 23e7b671245bdba70b86bcf6e1253421
@@ -320296,6 +320110,15 @@ Description-en: library for bit arrays
  printed if you try to access a bit with index >= length. Arrays of
  length 0 are permitted. Indices must be >= 0.
 
+Package: libbits-dev
+Description-md5: 536bb95319204556eccef56d9584d953
+Description-en: succinct utilities to handle bits
+ Libbits is a C++ collection of basic data structures, including:
+  * bitvectors with rank/select queries;
+  * compact vectors (vectors of fixed-size integers);
+  * Elias-Fano sequences;
+  * integer codes (unary, binary, gamma, delta, Rice).
+
 Package: libblkio-dev
 Description-md5: cfe7a6864af3d8a494ae4d99b03c330a
 Description-en: Block device I/O library (development files)
@@ -320768,7 +320591,7 @@ Description-en: eBPF helper library (shared library)
  This package contains the shared library.
 
 Package: libbpp-core-dev
-Description-md5: cdb7982ac0345bfeaa2a4b3751d0553e
+Description-md5: 7013b2727e3881316c80308df1b8b2f9
 Description-en: Bio++ Core library development files
  Bio++ is a set of C++ libraries for Bioinformatics, including sequence
  analysis, phylogenetics, molecular evolution and population genetics.
@@ -320776,10 +320599,20 @@ Description-en: Bio++ Core library development files
  computer efficient. Bio++ intends to help programmers to write computer
  expensive programs, by providing them a set of re-usable tools.
  .
- This package contains the static library and the header files of the
- Bio++ core classes.
+ This package contains the header files of the Bio++ core classes.
 
 Package: libbpp-core4t64
+Description-md5: 41283ea0cba5f10d17a7daaeff42ea9f
+Description-en: Bio++ Core library
+ Bio++ is a set of C++ libraries for Bioinformatics, including sequence
+ analysis, phylogenetics, molecular evolution and population genetics.
+ Bio++ is Object Oriented and is designed to be both easy to use and
+ computer efficient. Bio++ intends to help programmers to write computer
+ expensive programs, by providing them a set of re-usable tools.
+ .
+ This package contains the dynamic library of the Bio++ core classes.
+
+Package: libbpp-core6
 Description-md5: 41283ea0cba5f10d17a7daaeff42ea9f
 Description-en: Bio++ Core library
  Bio++ is a set of C++ libraries for Bioinformatics, including sequence
@@ -320861,6 +320694,18 @@ Description-en: Bio++ Population Genetics library
  This package contains the dynamic library of the Bio++ Population
  Genetics classes.
 
+Package: libbpp-popgen9
+Description-md5: 82689ca0214decec392f833586dd1e21
+Description-en: Bio++ Population Genetics library
+ Bio++ is a set of C++ libraries for Bioinformatics, including sequence
+ analysis, phylogenetics, molecular evolution and population genetics.
+ Bio++ is Object Oriented and is designed to be both easy to use and
+ computer efficient. Bio++ intends to help programmers to write computer
+ expensive programs, by providing them a set of re-usable tools.
+ .
+ This package contains the dynamic library of the Bio++ Population
+ Genetics classes.
+
 Package: libbpp-qt-dev
 Description-md5: eb9edf0683eaa8ec7e5a7373c50364f4
 Description-en: Bio++ Qt Graphic classes library development files
@@ -320885,15 +320730,15 @@ Description-en: Bio++ Qt Graphic classes library
  Contains the Bio++ graphical classes developed with Qt.
 
 Package: libbpp-raa-dev
-Description-md5: c34daa6a999130ac182030f9e53a51f3
+Description-md5: 044d5f18ae2f8b10c2a4b458595dc45b
 Description-en: Bio++ Remote Acnuc Access library development files
  This library contains utilitary and classes to query public databases
  (GenBank, EMBL, SwissProt, etc) using acnuc.
  It is part of the Bio++ project.
  .
- This package contains header files and static library.
+ This package contains header files.
 
-Package: libbpp-raa4t64
+Package: libbpp-raa5
 Description-md5: 2fc64940ac4060090c42dd9bd3ab800a
 Description-en: Bio++ Remote Acnuc Access library
  This library contains utilitary and classes to query public databases
@@ -320903,7 +320748,7 @@ Description-en: Bio++ Remote Acnuc Access library
  This package contains the dynamic library.
 
 Package: libbpp-seq-dev
-Description-md5: 277fc09c00aacce05de693cc1624eff6
+Description-md5: 67385fb8cd306feacd028696928dd8a4
 Description-en: Bio++ Sequence library development files
  Bio++ is a set of C++ libraries for Bioinformatics, including sequence
  analysis, phylogenetics, molecular evolution and population genetics.
@@ -320911,8 +320756,8 @@ Description-en: Bio++ Sequence library development files
  computer efficient. Bio++ intends to help programmers to write computer
  expensive programs, by providing them a set of re-usable tools.
  .
- This package contains the static library and the header files of Bio++
- classes for sequence analysis classes.
+ This package contains the header files of Bio++ classes for sequence
+ analysis classes.
 
 Package: libbpp-seq12t64
 Description-md5: cf118c42cb51cd6712d33e4c5537ce2f
@@ -320925,8 +320770,19 @@ Description-en: Bio++ Sequence library
  .
  This package contains the Bio++ classes for sequence analysis.
 
+Package: libbpp-seq14
+Description-md5: cf118c42cb51cd6712d33e4c5537ce2f
+Description-en: Bio++ Sequence library
+ Bio++ is a set of C++ libraries for Bioinformatics, including sequence
+ analysis, phylogenetics, molecular evolution and population genetics.
+ Bio++ is Object Oriented and is designed to be both easy to use and
+ computer efficient. Bio++ intends to help programmers to write computer
+ expensive programs, by providing them a set of re-usable tools.
+ .
+ This package contains the Bio++ classes for sequence analysis.
+
 Package: libbpp-seq-omics-dev
-Description-md5: 0691977b662e1cda905f3c7fda528e1c
+Description-md5: 1e1d66ab91ee2b3705ac27cf3639bf14
 Description-en: Bio++ Sequence library: genomics components (development files)
  Bio++ is a set of C++ libraries for Bioinformatics, including sequence
  analysis, phylogenetics, molecular evolution and population genetics.
@@ -320934,10 +320790,22 @@ Description-en: Bio++ Sequence library: genomics components (development files)
  computer efficient. Bio++ intends to help programmers to write computer
  expensive programs, by providing them a set of re-usable tools.
  .
- This package contains the static library and the header files of the
- Bio++ classes dedicated to genomic sequencing.
+ This package contains the header files of the Bio++ classes dedicated to
+ genomic sequencing.
 
 Package: libbpp-seq-omics3t64
+Description-md5: 24bf0b8d0df837ea2ae82773ed44ee9e
+Description-en: Bio++ Sequence library: genomics components
+ Bio++ is a set of C++ libraries for Bioinformatics, including sequence
+ analysis, phylogenetics, molecular evolution and population genetics.
+ Bio++ is Object Oriented and is designed to be both easy to use and
+ computer efficient. Bio++ intends to help programmers to write computer
+ expensive programs, by providing them a set of re-usable tools.
+ .
+ This package contains the dynamic library of the Bio++ classes
+ dedicated to genomic sequencing.
+
+Package: libbpp-seq-omics4
 Description-md5: 24bf0b8d0df837ea2ae82773ed44ee9e
 Description-en: Bio++ Sequence library: genomics components
  Bio++ is a set of C++ libraries for Bioinformatics, including sequence
@@ -423274,30 +423142,6 @@ Description-en: QML binding for Lomiri's liblomiri-content-hub (Qt6)
  .
  QML bindings for liblomiri-content-hub (Qt6)
 
-Package: dekko
-Description-md5: 97b8d3416fea43850d2c13189f356318
-Description-en: Convergent email client
- Dekko is a much liked app for Ubuntu Touch's shell Lomiri. Ubuntu Touch
- is a mobile OS developed by the UBports Foundation. Lomiri is its
- operating environment optimized for touch based human-machine
- interaction, but also supports convergence (i.e. switching between
- tablet/phone and desktop mode).
- .
- Dekko is an convergent email client which supports the IMAP and SMTP
- protocols and lets you add multiple accounts.
-
-Package: lomiri-dekko-app
-Description-md5: 11b74a58894d7203d8a1f769024dacf1
-Description-en: Wrapper package around dekko, but with Lomiri namespacing
- Dekko is a much liked app for Ubuntu Touch's shell Lomiri. Ubuntu Touch
- is a mobile OS developed by the UBports Foundation. Lomiri is its
- operating environment optimized for touch based human-machine
- interaction, but also supports convergence (i.e. switching between
- tablet/phone and desktop mode).
- .
- This package provides a wrapper script for launching dekko as
- 'lomiri-dekko-app' from the command-line.
-
 Package: lomiri-dialer-app
 Description-md5: 45f374ea3bcf90b640d4ccbff34d1446
 Description-en: Dialer App for Lomiri Operating Environment
@@ -423762,19 +423606,6 @@ Description-en: Lomiri Transfer Indicator - Buteo plugin
  .
  This package provides a plugin for Lomiri Indicator Transfer informing about
  transfer activities of the Buteo Sync Framework daemon.
-
-Package: lomiri-keepassrx-app
-Description-md5: 5954e177cf0af5c4cc5571dffd35a7ff
-Description-en: Password manager compatible with KeePass for Lomiri
- KeePassRX is a password manager compatible with KeePass (.kdbx / .kdb)
- databases. Read-only access to entries, groups, TOTP/Steam codes, key
- files and attachments.
- .
- This app is built for Ubuntu Touch's shell Lomiri. Ubuntu Touch is
- a mobile OS developed by the UBports Foundation. Lomiri is its operating
- environment optimized for touch based human-machine interaction, but
- also supports convergence (i.e. switching between tablet/phone and
- desktop mode).
 
 Package: lomiri-keyboard
 Description-md5: 8e6bf90311b4e89e0b83a27c25a84bb7
@@ -425607,6 +425438,13 @@ Description-en: Weather App for Lomiri Operating Environment
  desktop mode).
  .
  This package provides Lomiri's Weather App.
+
+Package: lomiri-wifiscanner-app
+Description-md5: dad17686ab2b5c345e629de64fb5ec29
+Description-en: WiFi scanner app for Lomiri
+ Wifiscanner is a nifty app for Ubuntu Touch's shell, Lomiri.
+ It scans for 2.4GHz and 5GHz WiFi signals, and displays their
+ strength and channel number.
 
 Package: python3-londiste
 Description-md5: 8baa85b59f53c86c6ea2d3babba7d423
@@ -427915,6 +427753,15 @@ Description-en: luasql development files for the Lua language
  This package contains the development files of the luasql library
  (Sqlite3 backend), useful to create a statically linked binary
  (like a C application or a standalone Lua interpreter).
+
+Package: lua-std-normalize
+Description-md5: e6c37e65a5ffbd5fff332ca81b0d831d
+Description-en: Normalized Lua functions
+ This is a collection of normalized lua functions for Lua 5.1 (including
+ LuaJIT), 5.2, 5.3, 5.4 and 5.5. It provides the means to access
+ deterministic implementations of APIs that changes across different
+ Lua versions while preserving the the same semantics across all
+ supported host Lua implementations.
 
 Package: lua-struct
 Description-md5: 8fbc37aca3bcf40158f7038e7722a8e6
@@ -458952,16 +458799,6 @@ Description-en: consensus caller for nanopore sequencing data
  modifications, call SNPs and indels with respect to a reference genome
  and more.
 
-Package: nanopub
-Description-md5: 3633dc6e6ae028c7b209bde8bf005665
-Description-en: CLI tool to sign nanopublications
- nanopub-cli is a command-line tool
- to check, sign, and publish nanopublications.
- .
- A nanopublication is a small knowledge graph snippet
- with metadata that is treated
- as an independent (scientific) publication.
-
 Package: nanostat
 Description-md5: fbad1370cf6948ea26fb47aeeb5e4a03
 Description-en: statistics on long biological sequences
@@ -461410,6 +461247,19 @@ Description-en: Lua utility functions for Neovim
  It includes utilities for async execution, path handling and tests.
  .
  This is a neovim-only plugin.
+
+Package: lua-promise-async
+Description-md5: 6406aae27f020dc7cedb494da18dc982
+Description-en: Promise and async library for Lua
+ This library provides a promise-based API for asynchronous programming.
+ The goal of async is to port Promise & Async from JavaScript to Lua.
+
+Package: neovim-promise-async
+Description-md5: a790dda17630fd6c86050a30bf373ca1
+Description-en: Asynchronous promise plugin for Vim
+ This vim plugin provides a Promise-based API for asynchronous programming.
+ It simplifies writing non-blocking Vimscript code by allowing asynchronous
+ operations to be composed and chained using promises.
 
 Package: neovim-qt
 Description-md5: c8304be67d0d76179d43fc2e1f4ae4e6
@@ -467632,13 +467482,6 @@ Description-en: lightweight, unobtrusive customizable notification system
  An AngularJS module is also included; it's in the "ngAlertify.js" file.
  .
  Node.js is an event-based server-side JavaScript engine.
-
-Package: node-amaro
-Description-md5: a7cd29431e34dbf0a073ea064153434d
-Description-en: Wrapper around SWC WebAssembly TypeScript parser for Node.js
- Amaro provides a stable API around the SWC TypeScript parser and
- type stripper, compiled to WebAssembly, together with the loaders
- used by Node.js for type stripping and type transformation.
 
 Package: node-amdefine
 Description-md5: 551fc16b262053be0d9d13d5dd82dcb6
@@ -478426,6 +478269,15 @@ Description-en: JavaScript library for slicing GeoJSON into vector tiles
  .
  The library supports point clustering, configurable tile buffers and feature
  identifiers, and incremental updates to the tile index.
+
+Package: node-maplibre-gl-style-spec
+Description-md5: 2b25db9bd36fa1271481c1b25e86235a
+Description-en: MapLibre style specification and manipulation utilities
+ This library defines the JSON format used to describe MapLibre map styles.
+ It validates styles, evaluates filters and expressions, compares styles and
+ migrates older style documents.
+ .
+ Command-line tools provide style validation, formatting and migration.
 
 Package: node-maplibre-vt-pbf
 Description-md5: 79cc44804116589b65a66477d4d8cd55
@@ -506460,13 +506312,6 @@ Description-en: development libraries for OpenLDAP SLAPI plugin interface
  using the SLAPI interface.  It includes the headers and libraries needed
  to build such plugins.
 
-Package: openlp
-Description-md5: e1bb0aaa265da68d7f9e7aefb0baba27
-Description-en: Church lyrics projection application
- OpenLP is free church presentation software, or lyrics projection software,
- used to display slides of songs, Bible verses, videos, images, and even
- presentations for church worship using a computer and a data projector.
-
 Package: libopenmesh-apps
 Description-md5: a7ca969ed20e97c24a93651ca63ad444
 Description-en: Tools for representing and manipulating polygonal meshes
@@ -510205,9 +510050,9 @@ Description-en: Oracle/MySQL to PostgreSQL database schema converter
  to the database, scans it automatically and extracts its structure or data.
  It then generates SQL scripts you can load into PostgreSQL.
 
-Package: postgresql-18-orafce
-Description-md5: 2220553f428a324936e43de378b14ef6
-Description-en: Oracle support functions for PostgreSQL 18
+Package: postgresql-19-orafce
+Description-md5: 2456c2f1811dc3800c4d5fb388849a72
+Description-en: Oracle support functions for PostgreSQL 19
  This project implements some functions for compatibility with Oracle.
  The functionality was verified on Oracle 10g, and the module is
  useful for production work.
@@ -513097,176 +512942,6 @@ Description-en: Square, futuristic font family
  Its intuitive strokes ensure legibility at small sizes and quick
  glances, while angled cuts add charisma to big headlines.
 
-Package: libjs-oxigraph
-Description-md5: de19e50d49c54e96faa82c24ac475f8e
-Description-en: Oxigraph SPARQL database - JavaScript bindings for browsers
- Oxigraph is a graph database written in Rust
- implementing the SPARQL standard.
- .
- Oxigraph for JavaScript is an API on top of Oxigraph,
- offering a simple in-memory store
- with SPARQL 1.1 Query and SPARQL 1.1 Update capabilities.
- The store is also able to load RDF
- serialized in Turtle, TriG, N-Triples, N-Quads and RDF/XML.
- .
- Oxigraph implements the RDF/JS datamodel specification.
- .
- This package provides Oxigraph for JavaScript
- compiled with WebAssembly usable with Node.js -
- an event-based server-side JavaScript engine.
-
-Package: librust-oxigraph-dev
-Description-md5: 871c69461d17c64b261a2426e76a6999
-Description-en: SPARQL database and RDF toolkit - Rust source code
- Oxigraph is a graph database library
- implementing the SPARQL standard.
- Its goal is to provide a compliant, safe
- and fast on-disk graph database.
- It also provides a set of utility functions
- for reading, writing, and processing RDF files.
- .
- Oxigraph implements the following specifications:
-  * SPARQL 1.1 Query, SPARQL 1.1 Update, and SPARQL 1.1 Federated Query.
-  * Turtle, TriG, N-Triples, N-Quads, and RDF XML
-    RDF serialization formats for both data ingestion and retrieval.
-  * SPARQL Query Results XML Format,
-    SPARQL 1.1 Query Results JSON Format
-    and [SPARQL 1.1 Query Results CSV and TSV Formats.
- .
- Support for RDF 1.2 and SPARQL 1.2 is also available
- behind the rdf-12 feature.
- .
- This package contains the source for the Rust crate oxigraph,
- for use with cargo.
-
-Package: librust-oxrdf-dev
-Description-md5: c8793d7b9cf18985e4dbec147c0cbd1d
-Description-en: data structures related to RDF - Rust source code
- OxRDF is a simple library
- providing datastructures encoding RDF 1.1 concepts.
- It is intended to be a basic building block
- of other crates like Oxigraph or Spargebra.
- .
- Oxjsonld is a parser and serializer for the JSON-LD format.
- .
- OxRDF I/O is a set of parsers and serializers for RDF.
- .
- OxRdfXml is a parser and serializer for RDF/XML.
- .
- Oxttl is a set of parsers and serializers
- for Turtle, TriG, N-Triples, N-Quads and N3.
- .
- Support for RDF 1.2 is available
- behind the rdf-12 feature,
- except for the language N3 in Oxttl.
- .
- This package contains the source
- for the Rust crates oxjsonld, oxrdf, oxrdfio, oxrdfxml and oxttl,
- for use with cargo.
-
-Package: librust-oxrocksdb-sys-dev
-Description-md5: bf8d77d1e33bff2fceef42856116ad47
-Description-en: Rust bindings for RocksDB for Oxigraph - Rust source code
- oxrocksdb-sys provides RocksDB bindings for Oxigraph.
- .
- Oxigraph is a graph database library
- implementing the SPARQL standard.
- .
- This package contains the source for the Rust crate oxrocksdb-sys,
- for use with cargo.
-
-Package: librust-oxsdatatypes-dev
-Description-md5: 52e8ba83649824dfa5583606841e71f6
-Description-en: some XSD datatypes for SPARQL implementations - Rust source code
- oxsdatatypes is an implementation
- of some XML Schema Definition Language Datatypes.
- Its main aim is to ease the implementation of SPARQL and XPath.
- .
- This package contains the source for the Rust crate oxsdatatypes,
- for use with cargo.
-
-Package: librust-sparesults-dev
-Description-md5: 91f53d9bdc1ff0ea0f22b2fce8138686
-Description-en: SPARQL query results formats parsers and serializers - Rust source code
- Sparesults is a set of parsers and serializers
- for SPARQL query results formats.
- It is intended to be a building piece
- for SPARQL client and server implementations in Rust like Oxigraph.
- .
- It supports SPARQL Query Results XML Format (Second Edition),
- SPARQL 1.1 Query Results JSON Format
- and SPARQL 1.1 Query Results CSV and TSV Formats.
- .
- Support for SPARQL 1.2 is also available
- behind the sparql-12 feature.
- .
- This package contains the source for the Rust crate sparesults,
- for use with cargo.
-
-Package: librust-spargebra-dev
-Description-md5: 5d84d0de0da6c16187e78e46085d2225
-Description-en: SPARQL parser - Rust source code
- Spargebra is a SPARQL parser.
- It supports both SPARQL 1.1 Query and SPARQL 1.1 Update.
- This crate is intended to be a building piece
- for SPARQL implementations in Rust like Oxigraph.
- .
- sparopt is a work in progress SPARQL Query optimizer.
- .
- Support for SPARQL 1.2 is also available
- behind the sparql-12 feature.
- .
- This package contains the source
- for the Rust crates spargebra and sparopt,
- for use with cargo.
-
-Package: node-oxigraph
-Description-md5: b520d3b49c6a8277ae491dc39ac68e74
-Description-en: Oxigraph SPARQL database - JavaScript bindings for Node.js
- Oxigraph is a graph database written in Rust
- implementing the SPARQL standard.
- .
- Oxigraph for JavaScript is an API on top of Oxigraph,
- offering a simple in-memory store
- with SPARQL 1.1 Query and SPARQL 1.1 Update capabilities.
- The store is also able to load RDF
- serialized in Turtle, TriG, N-Triples, N-Quads and RDF/XML.
- .
- Oxigraph implements the RDF/JS datamodel specification.
- .
- This package provides Oxigraph for JavaScript
- compiled with WebAssembly,
- directly usable in modern web browsers that supports WeakRef.
-
-Package: oxigraph
-Description-md5: 2b388bec760e553ed4f6c1c0d97a647b
-Description-en: RDF graph CLI tool and SPARQL HTTP server
- Oxigraph CLI is a graph database
- implementing the SPARQL standard.
- It is packaged as a command-line tool
- allowing to manipulate RDF files and query them using SPARQL,
- and also allows to spawn a HTTP server on top of the database.
- .
- Oxigraph implements the following specifications:
-  * SPARQL 1.1 Query,
-    SPARQL 1.1 Update, and
-    SPARQL 1.1 Federated Query.
-  * Turtle, TriG, N-Triples, N-Quads, and RDF/XML
-    RDF serialization formats for both data ingestion and retrieval.
-  * SPARQL Query Results XML Format,
-    SPARQL 1.1 Query Results JSON Format and
-    SPARQL 1.1 Query Results CSV and TSV Formats.
-  * SPARQL 1.1 Protocol and
-    SPARQL 1.1 Graph Store HTTP Protocol.
- .
- SPARQL is an RDF query language -
- that is, a semantic query language for databases -
- able to retrieve and manipulate data
- stored in Resource Description Framework (RDF) format.
- .
- Resource Description Framework (RDF) is a standard model
- for data interchange on the Web.
-
 Package: oxref
 Description-md5: 5680beed26bda09d6f78efc6f8f48aaa
 Description-en: cross reference utility
@@ -513279,27 +512954,6 @@ Description-en: cross reference utility
  Oxref does not interpret the object files and libraries itself, but calls
  objdump(1) to do so. The output produced by objdump is then filtered by
  oxref, generating the cross reference listing.
-
-Package: oxrq
-Description-md5: 8f6b09e7f75da7dc2a9fdf92c10ceb51
-Description-en: CLI tool for running SPARQL queries over RDF data
- OxRQ is a simple command-line tool (oxrq) for running SPARQL queries
- over a stream of RDF data or a set of RDF files.
- It uses Oxigraph for all functionality.
- .
- This tool is primarily made for working with "one-off" queries
- over a set of RDF source files on the command-line.
- It can be used to query, edit and/or create new RDF data using SPARQL.
- .
- (It is loosely inspired by the workflow of AWK,
- and in some ways aims to be an alternative
- to the venerable rasqal and rapper tools.)
- .
- Resource Description Framework (RDF) is a standard model
- for data interchange on the Web.
- .
- SPARQL is an semantic query language for databases,
- able to retrieve and manipulate data stored in RDF format.
 
 Package: kde-style-oxygen-qt6
 Description-md5: 20b932e0a9e746ae01883e50975a8fba
@@ -513456,7 +513110,7 @@ Description-en: p11-glue proxy and trust modules
  This package contains the p11-kit proxy module and the system trust
  policy module.
 
-Package: libp4est-2.3
+Package: libp4est-2.8
 Description-md5: e80a50e228ca07830a64dd22d30e1642
 Description-en: Algorithms for Parallel Adaptive Mesh Refinement - shared library
  The p4est software library enables the dynamic management of a collection of
@@ -513474,7 +513128,7 @@ Description-en: Algorithms for Parallel Adaptive Mesh Refinement - development f
  .
  This package contains the development files.
 
-Package: libp4est-sc-2.3
+Package: libp4est-sc-2.8
 Description-md5: f3676b0f5475017514008ac7151ccff9
 Description-en: Algorithms for Parallel Adaptive Mesh Refinement - support library
  The p4est software library enables the dynamic management of a collection of
@@ -515027,31 +514681,6 @@ Description-en: Documentation for PAML
  .
  The source code comes with a series of PDF files to help with
  further insights for the working of, and with, PAML.
-
-Package: pampi
-Description-md5: 874effe8d19ff5e7d82f9e064c838b5b
-Description-en: Presentations with Markdown, Pandoc, Impress.
- PAMPI is a free software to create presentations easily.
- .
- presentations are written in text files,
-   - so they can be modified easily
-   - the files syntax (Markdown) is easily learnt
-   - many examples of usable Markdown are available at
-     https://enacit1.epfl.ch/markdown-pandoc
-  They are converted to web pages (HTML files)
-   - one can view them with a browser
-   - one can publish them online, grab them on a USB stick, etc.
- In PAMPI's interface, the Markdown file is displaied in the left
- side and on can view the result in the right side.
- .
- Every step of a presentation can be located in any position in a 3D
- space
-   - one provides its coordinates
-   - one can specify its zoom factor
-   - one can specify rotations
- Maths can be authored with KaTeX.
- .
- Here are many examples: https://en.wikibooks.org/wiki/LaTeX/Mathematics.
 
 Package: pamtester
 Description-md5: 312d15e77b318b92f3a0e9b75bf5c971
@@ -521133,18 +520762,6 @@ Description-en: JPEG 2000 decoder for pdf.js, compiled to WebAssembly
  pure JavaScript build of the same sources is included as a fallback for
  engines without WebAssembly support.
 
-Package: pdfjs-qcms
-Description-md5: 08d1252c9bece1090965cc8e437f1519
-Description-en: ICC colour management for pdf.js, compiled to WebAssembly
- This package contains the WebAssembly bindings that pdf.js uses for ICC
- colour management: they convert images from the ICC colour profile they
- embed into sRGB, which is what PDF files carrying CMYK or otherwise
- profiled images need in order to be displayed with the right colours.
- .
- The bindings are written in Rust on top of the qcms library and compiled
- to WebAssembly with wasm-bindgen, so that they can be loaded from
- JavaScript.
-
 Package: pdfjs-quickjs
 Description-md5: 50c80a5bd39d9284863afca59b3ca102
 Description-en: QuickJS sandbox for pdf.js, compiled to WebAssembly
@@ -522075,13 +521692,6 @@ Description-en: check for PEP 8 naming conventions (flake8 plugin for Python3)
  of the module.
  .
  This package contains the module for Python3.
-
-Package: pep8-simul
-Description-md5: 67b1ce5816741c4459e95b0efb68eb44
-Description-en: Pep/8 assembler and simulator
- The Pep/8 computer is a 16-bit complex instruction set
- computer (CISC). It is designed to teach computer
- architecture and assembly language programming principles.
 
 Package: python3-peptidebuilder
 Description-md5: 9d8dcf8e84f047bc502b102ffdbf4944
@@ -523591,7 +523201,7 @@ Description-en: Synchronize users and groups from LDAP/AD into PostgreSQL
  .
  It is meant to be started as a cron job.
 
-Package: postgresql-18-partman
+Package: postgresql-19-partman
 Description-md5: a32974adcc83c288fa52995a76bfaf56
 Description-en: PostgreSQL Partition Manager
  pg_partman is a PostgreSQL extension to create and manage both time-based and
@@ -523603,7 +523213,7 @@ Description-en: PostgreSQL Partition Manager
  automatically run partition maintenance without the need of an external
  scheduler (cron, etc) in most cases.
 
-Package: postgresql-18-pg-permissions
+Package: postgresql-19-pg-permissions
 Description-md5: 83aa80bb487d172f0e671112fb8c0986
 Description-en: see all permissions in a PostgreSQL database
  pg_permissions is a simple set of views to see all permissions in a PostgreSQL
@@ -523675,7 +523285,7 @@ Description-en: Rewrite PostgreSQL tables with less locking
   * Partition the table
   * Change order of columns
 
-Package: postgresql-18-roaringbitmap
+Package: postgresql-19-roaringbitmap
 Description-md5: c8ea3bdfb03bff4bcc7146c9f3fbcfbb
 Description-en: RoaringBitmap extension for PostgreSQL
  Roaring bitmaps are compressed bitmaps which tend to outperform conventional
@@ -523710,7 +523320,7 @@ Description-en: PostgreSQL anti-virus scanner based on ClamAV
  pg_snakeoil provides functions scanning PostgreSQL data for viruses using the
  ClamAV anti-virus engine.
 
-Package: postgresql-18-squeeze
+Package: postgresql-19-squeeze
 Description-md5: c4e46f3f42b907a308a40fc222a87101
 Description-en: PostgreSQL extension for automatic bloat cleanup
  The pg_squeeze PostgreSQL extension removes unused space from a table and
@@ -524003,7 +523613,7 @@ Description-en: PostgreSQL Extension Whitelisting
  extensions will get installed as if superuser. Privileges are dropped before
  handing the control back to the user.
 
-Package: postgresql-18-pgfaceting
+Package: postgresql-19-pgfaceting
 Description-md5: 204b8d2810e09126771b5e27ee71ae70
 Description-en: Faceted query acceleration for PostgreSQL using roaring bitmaps
  PostgreSQL extension to quickly calculate facet counts using inverted indexes
@@ -524167,6 +523777,18 @@ Description-en: OCaml type-safe bindings for PostgreSQL (development)
  PG'OCaml has over other PostgreSQL bindings for OCaml.
  .
  This package contains development files for PG'OCaml.
+
+Package: pgopher
+Description-md5: 13f2507bbce7321a5be19dec8dce10f5
+Description-en: simulation and fitting of molecular spectra
+ PGOPHER is a general purpose program for simulating and fitting
+ rotational, vibrational and electronic spectra. It handles linear
+ molecules, symmetric and asymmetric tops, including fine and hyperfine
+ structure, perturbations and multiphoton transitions, and fits molecular
+ constants to line positions, intensities and band contours.
+ .
+ This package provides the graphical program pgopher and the command line
+ program pgo.
 
 Package: postgresql-18-pgpcre
 Description-md5: 42e5370b3c7752183cb9e02b2a9ac14c
@@ -524457,7 +524079,7 @@ Description-en: HTTP client for PostgreSQL, retrieve a web page from inside the 
  PostgreSQL extension to make HTTP requests from within the database, returning
  results for usage in SQL queries.
 
-Package: postgresql-18-ogr-fdw
+Package: postgresql-19-ogr-fdw
 Description-md5: 5f6108f90edfb86f7c870551bc52f9e2
 Description-en: PostgreSQL foreign data wrapper for OGR
  OGR is the vector half of the GDAL spatial data access library. It allows
@@ -524519,9 +524141,9 @@ Description-en: Unit testing framework for PostgreSQL - documentation
  .
  This package contains the documentation for pgTAP.
 
-Package: postgresql-18-pgtap
-Description-md5: ba1aa569289f679f18f33fd3fd80a5b2
-Description-en: Unit testing framework extension for PostgreSQL 18
+Package: postgresql-19-pgtap
+Description-md5: cf06d6a5ed7fb2164c98fd39a11f9d3e
+Description-en: Unit testing framework extension for PostgreSQL 19
  pgTAP is a suite of database functions that make it easy to write
  TAP-emitting unit tests in psql scripts suitable for harvesting,
  analysis, and reporting by a TAP harness, such as those used in Perl
@@ -524529,7 +524151,7 @@ Description-en: Unit testing framework extension for PostgreSQL 18
  .
  TAP is the Test Anything Protocol (http://testanything.org/).
  .
- This package contains the extension for PostgreSQL 18.
+ This package contains the extension for PostgreSQL 19.
 
 Package: libpgtcl
 Description-md5: 0a071edc2fb4b55293485317e8770d65
@@ -535391,7 +535013,7 @@ Description-en: Stroke handling helper library for Plover
  working with steno stroke. It is a dependency for plover
  software.
 
-Package: postgresql-18-plpgsql-check
+Package: postgresql-19-plpgsql-check
 Description-md5: 1cd172a8d9dfc067f31fcfdcf2cc9f2b
 Description-en: plpgsql_check extension for PostgreSQL
  plpgsql_check is the next generation of plpgsql_lint for PL/pgsql source code.
@@ -554026,14 +553648,6 @@ Description-en: runtime module for Python extensions using SIP
  .
  PyQt5.sip is a runtime module, it is used by PyQt5 and other Python extension
  modules built with SIP.
-
-Package: python3-pyqt5.qtwebengine
-Description-md5: 07ead60d8bafcc7bd83f14feb257d296
-Description-en: Python 3 bindings for Qt5's WebEngine module
- The WebEngine module of PyQt5 provides a Chromium-based Web browser engine
- for PyQt5 applications.
- .
- This package contains the Python 3 version of this module.
 
 Package: pyqt6-dev
 Description-md5: 7738c7e01eb6d5b3a6183ab60076ecb7
@@ -586746,16 +586360,6 @@ Description-en: Rate limited wrapper for Python 3's thread safe queues
  in an unlimited loop, and putting the items in the queue doesn’t need
  to require blocking the main thread.
 
-Package: python3-raydriver
-Description-md5: ffda6b08dfd0d31e9399748f6f34ec75
-Description-en: Rust-native machine drivers for Rayforge
- raydriver provides machine-control drivers implemented in Rust and exposed
- to Python through PyO3. It supports GRBL, Marlin, and Smoothieware devices,
- with local serial and network transports as well as remote daemon access.
- .
- This package provides the Python 3 module and the raydriver command-line
- program.
-
 Package: python3-raygeo
 Description-md5: 207ae6913ee1f195d0e9fd42a2efd3cd
 Description-en: 2D/3D geometry library for Python
@@ -597361,31 +596965,25 @@ Description-en: performs SQL-like statements on tabular text data - Python 3.x
  This package provides the Python 3 version.
 
 Package: q2templates
-Description-md5: 50f28afecb971c0291718476ae38270c
-Description-en: Design template package for QIIME 2 Plugins
- QIIME 2 is a powerful, extensible, and decentralized microbiome analysis
- package with a focus on data and analysis transparency. QIIME 2 enables
- researchers to start an analysis with raw DNA sequence data and finish with
- publication-quality figures and statistical results.
+Description-md5: b5c65a8cc00ecdab8f4247b217e708ab
+Description-en: design template package for Rachis (formerly QIIME 2) plugins
+ Rachis is a powerful, extensible, and decentralized microbiome analysis
+ framework with a focus on data and analysis transparency.  It was formerly
+ known as the QIIME 2 Framework.  Rachis enables researchers to start an
+ analysis with raw DNA sequence data and finish with publication-quality
+ figures and statistical results.
  Key features:
   * Integrated and automatic tracking of data provenance
   * Semantic type system
   * Plugin system for extending microbiome analysis functionality
   * Support for multiple types of user interfaces (e.g. API, command line,
- graphical)
+    graphical)
  .
- QIIME 2 is a complete redesign and rewrite of the QIIME 1 microbiome analysis
- pipeline. QIIME 2 will address many of the limitations of QIIME 1, while
- retaining the features that makes QIIME 1 a powerful and widely-used analysis
- pipeline.
+ The framework provides the API and plugin architecture.  Analysis
+ functionality is made available through plugins, which are packaged
+ separately.
  .
- QIIME 2 currently supports an initial end-to-end microbiome analysis pipeline.
- New functionality will regularly become available through QIIME 2 plugins. You
- can view a list of plugins that are currently available on the QIIME 2 plugin
- availability page. The future plugins page lists plugins that are being
- developed.
- .
- This package provides templates for QIIME 2 plugins.
+ This package provides templates for Rachis plugins.
 
 Package: qabc
 Description-md5: 15c5cbd87a38ee2d1c72d1afb0c992a6
@@ -597716,7 +597314,7 @@ Description-en: Qt5 frontend for Breezy
  special dialogs and helper commands. Equivalents for core brz commands have
  the same names as CLI commands but with a prefix of "q".
 
-Package: libqbscore3.3
+Package: libqbscore3.4
 Description-md5: 0811f7ca5d99f9e873fc52232c622b8a
 Description-en: Qbs core library
  Qbs is a general purpose cross-platform build tool that aims at fast and
@@ -599697,19 +599295,6 @@ Description-en: Terminal Widget QML module
  lomiri-terminal-app.
  .
  This package contains the QML module and also a simple test application.
-
-Package: qmltermwidget-common
-Description-md5: d509a13dfcd5bbfa7b624561bf2249c0
-Description-en: Arch-independent files for the Terminal Widget QML module
- This project is a QML port of qtermwidget. It is written to be as close
- as possible to the upstream project in order to make cooperation
- possible.
- .
- At the moment this plugin is powering cool-retro-term and the
- lomiri-terminal-app.
- .
- This package contains architecture-independent files for the
- Terminal Widget QML module (such as color schemes, etc.).
 
 Package: qmmp
 Description-md5: 3187c7359c5129e0761f77ee2d4f1881
@@ -603379,6 +602964,31 @@ Description-en: Qt 6 Positioning - private development files
  building Qt 6 applications using Qt 6 Positioning library.
  .
  Use at your own risk.
+
+Package: qml6-module-termwidget
+Description-md5: 70305679958b6b39dc24f92dda2b8d2d
+Description-en: Terminal Widget QML module
+ This project is a QML port of qtermwidget. It is written to be as close
+ as possible to the upstream project in order to make cooperation
+ possible.
+ .
+ At the moment this plugin is powering cool-retro-term and the
+ lomiri-terminal-app.
+ .
+ This package contains the QML module.
+
+Package: qmltermwidget-common
+Description-md5: d509a13dfcd5bbfa7b624561bf2249c0
+Description-en: Arch-independent files for the Terminal Widget QML module
+ This project is a QML port of qtermwidget. It is written to be as close
+ as possible to the upstream project in order to make cooperation
+ possible.
+ .
+ At the moment this plugin is powering cool-retro-term and the
+ lomiri-terminal-app.
+ .
+ This package contains architecture-independent files for the
+ Terminal Widget QML module (such as color schemes, etc.).
 
 Package: libqt6quick3d6
 Description-md5: 4895322e2841afa45c49ca682ae2e77f
@@ -608059,99 +607669,6 @@ Description-en: Web communication library for Qt - Examples
  This package contains the examples for Qt's WebChannel submodule. Be sure to
  read README.Debian before trying to run them.
 
-Package: libqt5webengine-data
-Description-md5: 70c095a2d71cb4b25e0fa9ccae40143f
-Description-en: Web content engine library for Qt - Data
- QtWebEngine provides a Web browser engine that makes it easy to embed content
- from the World Wide Web into your Qt application.
- .
- This package contains the arch independent parts of QtWebEngine libraries.
-
-Package: libqt5webengine5
-Description-md5: 69d0d176121854ca8e3b3dcc1257f6c2
-Description-en: Web content engine library for Qt
- QtWebEngine provides a Web browser engine that makes it easy to embed content
- from the World Wide Web into your Qt application.
- .
- This package contains the QtWebEngine library.
-
-Package: libqt5webenginecore5
-Description-md5: f2a6911642d638a902d26f9a29d1147d
-Description-en: Web content engine library for Qt - Core
- QtWebEngine provides a Web browser engine that makes it easy to embed content
- from the World Wide Web into your Qt application.
- .
- This package contains the core QtWebEngine library.
-
-Package: libqt5webenginewidgets5
-Description-md5: 4b1e03a97de3f9c20a40549e15be1f98
-Description-en: Web content engine library for Qt - Widget
- QtWebEngine provides a Web browser engine that makes it easy to embed content
- from the World Wide Web into your Qt application.
- .
- This package contains the widget QtWebEngine library.
-
-Package: qml-module-qtwebengine
-Description-md5: d7a90d0e1507882a484cfe020c6edb00
-Description-en: Qt WebEngine QML module
- QtWebEngine provides a Web browser engine that makes it easy to embed content
- from the World Wide Web into your Qt application.
- .
- This package contains the WebEngine QML module for QtDeclarative.
-
-Package: qtwebengine5-dev
-Description-md5: ca428f55106bd624011815039ec6aee7
-Description-en: Web content engine library for Qt - development files
- QtWebEngine provides a Web browser engine that makes it easy to embed content
- from the World Wide Web into your Qt application.
- .
- This package contains the development files needed to build Qt 5 applications
- using QtWebEngine library.
-
-Package: qtwebengine5-dev-tools
-Description-md5: aec58b81e1ee18d26952b894f61836f5
-Description-en: Qt WebEngine tools
- Qt is a cross-platform C++ application framework. Qt's primary feature
- is its rich set of widgets that provide standard GUI functionality.
- .
- This package contains qwebengine_convert_dict tool which converts hunspell
- 'dic' dictionaries to binary 'bdic' format, which is required by spellchecker
- in Qt WebEngine.
-
-Package: qtwebengine5-doc
-Description-md5: aea2e434617e522bf114f4b91dbb4826
-Description-en: Qt 5 webengine documentation
- Qt is a cross-platform C++ application framework. Qt's primary feature
- is its rich set of widgets that provide standard GUI functionality.
- .
- This package contains the documentation for the Qt 5 webengine libraries.
-
-Package: qtwebengine5-doc-html
-Description-md5: bc301e7f0979f34ca40e0c8c2d6e387a
-Description-en: Qt 5 webengine HTML documentation
- Qt is a cross-platform C++ application framework. Qt's primary feature
- is its rich set of widgets that provide standard GUI functionality.
- .
- This package contains the HTML documentation for the Qt 5 webengine
- libraries.
-
-Package: qtwebengine5-examples
-Description-md5: d49ba4134642a53e70d7ca25167a8d26
-Description-en: Qt WebEngine - Examples
- QtWebEngine provides a Web browser engine that makes it easy to embed content
- from the World Wide Web into your Qt application.
- .
- This package contains the WebEngine examples.
-
-Package: qtwebengine5-private-dev
-Description-md5: 801a9dd4d85eb685deb90757d307feeb
-Description-en: Web content engine library for Qt - private development files
- QtWebEngine provides a Web browser engine that makes it easy to embed content
- from the World Wide Web into your Qt application.
- .
- This package contains the private development files needed to build
- Qt 5 applications using QtWebEngine library.
-
 Package: libqt5websockets5
 Description-md5: b84696a3848a9bbf8128e1a90e113caa
 Description-en: Qt 5 Web Sockets module
@@ -611922,15 +611439,6 @@ Description-en: GNU R data table back-end for 'dplyr'
  is to allow you to write 'dplyr' code that is automatically translated to
  the equivalent, but usually much faster, data.table code.
 
-Package: r-cran-dygraphs
-Description-md5: 9e45d553113f8f0192387e6598fdf244
-Description-en: GNU R interface to 'Dygraphs' interactive time series charting library
- An R interface to the 'dygraphs' JavaScript charting library
- (a copy of which is included in the package). Provides rich facilities
- for charting time-series data in R, including highly configurable
- series- and axis-display and interactive features like zoom/pan and
- series/point highlighting.
-
 Package: r-cran-dynamictreecut
 Description-md5: a91b83840b37399fbc50ff48f14f7352
 Description-en: Methods for Detection of Clusters in Hierarchical Clustering
@@ -613577,14 +613085,6 @@ Description-md5: fcea1b21202ed89c6b3e02129bc979cc
 Description-en: GNU R package for multivariate estimation using smoothing splines
  This package provides a structural multivariate function estimation
  using smoothing splines.
-
-Package: r-cran-gstat
-Description-md5: 90cd23a0a4ea9224f8e54b78f902b498
-Description-en: Spatial and Spatio-Temporal Geostatistical Modelling, Prediction and Simulation
- Variogram modelling; simple, ordinary and universal point or block
- (co)kriging; spatio-temporal kriging; sequential Gaussian or indicator
- (co)simulation; variogram and variogram map plotting utility functions;
- supports sf and stars.
 
 Package: r-cran-gsubfn
 Description-md5: 53b00069ba2bca6c8e983b4b2ad005bf
@@ -616414,16 +615914,6 @@ Description-en: Propensity Clustering and Decomposition
  other hand as a generalization of random multigraph models and conformity-
  based decompositions.
 
-Package: r-cran-prophet
-Description-md5: 30cab53fa58c2349e8055d2692970045
-Description-en: Automatic Forecasting Procedure
- Implements a procedure for forecasting time series data based on an
- additive model where non-linear trends are fit with yearly, weekly,
- and daily seasonality, plus holiday effects. It works best with time series
- that have strong seasonal effects and several seasons of historical data.
- Prophet is robust to missing data and shifts in the trend, and typically
- handles outliers well.
-
 Package: r-cran-proto
 Description-md5: 16fccdb1519cc34798e4668c0d4bfb56
 Description-en: Prototype Object-Based Programming
@@ -616713,12 +616203,6 @@ Description-en: GNU R package for genetic marker linkage analysis
  imputation. All of this may be done in the presence of covariates (such
  as sex, age or treatment). One may also fit higher-order QTL models by
  multiple imputation.
-
-Package: r-cran-quantmod
-Description-md5: 32aa9836c33b9a098b1ee275b160ddbb
-Description-en: GNU R package for quantitative financial modeling framework
- This package contains functions to specify, build, trade, and analyse
- quantitative financial trading strategies with R.
 
 Package: r-cran-quantreg
 Description-md5: 016299bcc49bf247cc69fbb561fdc2f7
@@ -617913,14 +617397,6 @@ Description-en: R Interface to Stan
  to quickly and accurately evaluate gradients without burdening the user with
  the need to derive the partial derivatives.
 
-Package: r-cran-rstanarm
-Description-md5: 9dc9b8ff1b5b4a00a6d0eec18e2efa56
-Description-en: GNU R bayesian applied regression modeling via stan
- Estimates previously compiled regression models using the 'rstan'
- package, which provides the R interface to the Stan C++ library for Bayesian
- estimation. Users specify models via the customary R syntax with a formula and
- data.frame plus some additional arguments for priors.
-
 Package: r-cran-rstantools
 Description-md5: f10a4e60017a0b09e27e21753a5fe56c
 Description-en: tools for developing GNU R packages interfacing with 'Stan'
@@ -618396,16 +617872,6 @@ Description-en: Easily Improve the User Experience of Your Shiny Apps in Seconds
  functions for both the end user and the developer. 'shinyjs' can also be used
  to easily call your own custom JavaScript functions from R.
 
-Package: r-cran-shinystan
-Description-md5: d1c7eb45b59ffe0b14162370048b984d
-Description-en: Interactive Visual and Numerical Diagnostics and Posterior Analysis for Bayesian Models
- A graphical user interface for interactive Markov chain Monte Carlo (MCMC)
- diagnostics and plots and tables helpful for analyzing a posterior sample. The
- interface is powered by the 'Shiny' web application framework from 'RStudio'
- and works with the output of MCMC programs written in any programming language
- (and has extended functionality for 'Stan' models fit using the 'rstan'
- and 'rstanarm' packages).
-
 Package: r-cran-shinythemes
 Description-md5: 19ed4f9ce9b09be754fa2f5fc9ae054f
 Description-en: Themes for Shiny
@@ -618525,14 +617991,6 @@ Description-en: GNU R sliding window functions
  For more advanced usage, an index can be used as a secondary vector
  that defines how sliding windows are to be created.
 
-Package: r-cran-smoother
-Description-md5: cc78e4de4c32adcea3cf9a13a6ba89c6
-Description-en: GNU R functions relating to the smoothing of numerical data
- A collection of methods for smoothing numerical data, commencing
- with a port of the Matlab gaussian window smoothing function. In
- addition, several functions typically used in smoothing of financial
- data are included.
-
 Package: r-cran-sn
 Description-md5: 0ccb2979748c941037de8abf57a96555
 Description-en: GNU R package providing skew-normal and skew-t distributions
@@ -618623,16 +618081,6 @@ Description-en: Space-Filling Random and Quasi-Random Sequences
  Sampler that Distributes Monte Carlo Errors as a Blue Noise in Screen
  Space" (2019) E. Heitz, B. Laurent, O. Victor, C. David and I. Jean-
  Claude, <doi:10.1145/3306307.3328191>.
-
-Package: r-cran-spacetime
-Description-md5: d680819bf1245bf1fe4a9f1b9283aaf8
-Description-en: Classes and Methods for Spatio-Temporal Data
- Classes and methods for spatio-temporal data, including space-time regular
- lattices, sparse lattices, irregular data, and trajectories; utility functions
- for plotting data as map sequences (lattice or animation) or multiple
- time series; methods for spatial and temporal selection and subsetting,
- as well as for spatial/temporal/spatio-temporal matching or aggregation,
- retrieving coordinates, print, summary, etc.
 
 Package: r-cran-spam
 Description-md5: be8271991e2423e35111f81177d03ecf
@@ -619682,12 +619130,6 @@ Description-en: Infrastructure for the Traveling Salesperson Problem
  is not included in the package and has to be obtained separately.
  Hahsler and Hornik (2007) <doi:10.18637/jss.v023.i02>.
 
-Package: r-cran-ttr
-Description-md5: 913131757467fe83b3fb84cb6608f968
-Description-en: GNU R package to construct technical trading rules
- This package contains functions and data to construct technical trading rules
- with R.
-
 Package: r-cran-tufte
 Description-md5: 344758864dc2c603dec8ef3d2fe22a89
 Description-en: Tufte's Styles for R Markdown Documents
@@ -620142,14 +619584,6 @@ Package: r-cran-xtable
 Description-md5: 96c932157b1a12d32048464b999ea109
 Description-en: Export Tables to LaTeX or HTML
  Coerce data to LaTeX and HTML tables.
-
-Package: r-cran-xts
-Description-md5: 256c1dea5ae9afae1d8d5fa33992841f
-Description-en: eXtensible Time Series
- Provide for uniform handling of R's different time-based data classes
- by extending zoo, maximizing native format information preservation
- and allowing for user level customization and extension, while simplifying
- cross-class interoperability.
 
 Package: r-cran-yaml
 Description-md5: 2c40b2538162e81383ca9508e291bf88
@@ -623256,6 +622690,14 @@ Description-en: Front-end using readline to "cook" input lines for other program
  works pretty well.
  .
  See the ledit and rlwrap packages for other programs of that kind.
+
+Package: elpa-readline-completion
+Description-md5: 155ce942eee1f38546832dae57f18d0b
+Description-en: completion-at-point-function based on GNU Readline
+ This package provides completions from GNU Readline.  It can be
+ used in a comint buffer, to get completions from the underlying
+ process (as you normally would in a regular terminal) or anywhere
+ else to get completions from Bash.
 
 Package: libreadosm-dev
 Description-md5: 15541fd6f144da0f81a6da425b14d498
@@ -648048,43 +647490,6 @@ Description-en: integration of Debian Ruby packages with Rubygems
  plain Rubygems and with Bundler. This also allows one to use Debian Ruby
  packages to satisfy dependencies in Rails 3 applications.
 
-Package: rudof
-Description-md5: 745d4a94eaf150aa0fb6a1c0d2e3b98b
-Description-en: RDF and knowledge graphs processing tool - CLI tool
- rudof is a Rust library and command-line tool
- that implements ShEx, SHACL and DCTAP
- and other technologies in the RDF ecosystem.
- .
- It can be used to validate RDF data
- represented with different syntaxes
- like Turtle, NTriples, to name a few,
- as well as RDF data available through SPARQL endpoints
- like Wikidata.
- rudof can also be used to convert
- between different RDF data validation technologies
- (like ShEx, SHACL, or DCTAP),
- and to generate UML like visualizations and HTML views.
- .
- Resource Description Framework (RDF) is a standard model
- for data interchange on the Web.
- .
- Shape Expressions (ShEx) is a data modelling language
- for defining schemas for RDF graphs.
- .
- Shapes Constraint Language (SHACL) is a data modelling language
- for describing constraints for RDF graphs.
- SHACL is a W3C recommendation.
- .
- Dublin Core Tabular Application Profiles (DCTAP) is a simple model
- for defining an application profiles
- i.e. metadata usage for a specific application.
- .
- Also covered is a draft implementation
- of PG-Schema with Property Constraints extension.
- .
- This package provides the command-line tools
- rudof and rudof_generate.
-
 Package: python3-ruff
 Description-md5: 2be4a6e595c596eb6925a18546c9f9a4
 Description-en: Fast linter for Python, written in Rust
@@ -649637,6 +649042,11 @@ Description-md5: 2c26313e40d0e6f296f3854cf2a2bb36
 Description-en: Global executor built on top of async-executor and async-io - Rust source code
  Source code for Debianized Rust crate "async-global-executor"
 
+Package: librust-async-graphql-value-dev
+Description-md5: c9dad28b7e673cd84a71fe6b1af80d2c
+Description-en: GraphQL value for async-graphql - Rust source code
+ Source code for Debianized Rust crate "async-graphql-value"
+
 Package: librust-async-h1-dev
 Description-md5: d7e3bbbaee06b76acce3ea52c827962c
 Description-en: Asynchronous HTTP 1.1 parser - Rust source code
@@ -650413,15 +649823,6 @@ Package: librust-binary-heap-plus-dev
 Description-md5: c198b74e4a74efbfa82426d39b829c5d
 Description-en: Enhanced version of std::collections::BinaryHeap - Rust source code
  Source code for Debianized Rust crate "binary-heap-plus"
-
-Package: librust-binary-install-dev
-Description-md5: 00ab75a6be525805b38dfdacfbb64d53
-Description-en: utils to find and install binaries - Rust source code
- binary-install is a utility library
- for finding and installing binaries from a path to a global cache.
- .
- This package contains the source for the Rust crate binary-install,
- for use with cargo.
 
 Package: librust-binary-merge-dev
 Description-md5: d69b9d352d561266b737024a5a7c64cc
@@ -655004,16 +654405,6 @@ Description-md5: 3e83b78af8757bae11dca6d59ea5a76b
 Description-en: Global, no_std-compatible destructors for all platforms that run after main (like C/C++ __attribute__((destructor))) - Rust source code
  Source code for Debianized Rust crate "dtor"
 
-Package: dtui
-Description-md5: e4cef1786f69303a373e85138fb55120
-Description-en: terminal UI for inspecting D-Bus services, objects and interfaces
- dtui is an interactive terminal user interface for exploring D-Bus.
- It lets you browse services and introspect objects, interfaces, methods
- and properties on the system or session bus.
- This package contains the following binaries built from the Rust crate
- "dtui":
-  - dtui
-
 Package: du-dust
 Description-md5: 5968b55566369d39a5b130953b956bde
 Description-en: du + rust = dust. Like du but more intuitive.
@@ -655659,8 +655050,8 @@ Description-en: Unopinionated library for obtaining configuration, data, cache, 
  Source code for Debianized Rust crate "etcetera"
 
 Package: librust-etherparse-dev
-Description-md5: 79fb00485be1fbbdae6fd67f85db697b
-Description-en: Parsing & writing a bunch of packet based protocols (EthernetII, IPv4, IPv6, UDP, TCP ...) - Rust source code
+Description-md5: 136c5abbeccb5f9c090887aec6dee4a1
+Description-en: Parsing & writing packet based protocols - Rust source code
  Source code for Debianized Rust crate "etherparse"
 
 Package: librust-ethnum-dev
@@ -660800,11 +660191,6 @@ Description-md5: 31a5a046a047172986bc144bfedb1adf
 Description-en: Implementation detail of the `konst` crate - Rust source code
  Source code for Debianized Rust crate "konst_proc_macros"
 
-Package: librust-ksni-dev
-Description-md5: 1c77e3c7f255e106b7453b9266a4fa69
-Description-en: The KDE/freedesktop StatusNotifierItem specification - Rust source code
- Source code for Debianized Rust crate "ksni"
-
 Package: librust-kstring-dev
 Description-md5: 64f13b30db0ee56269839ad72cbbf38b
 Description-en: Key String: optimized for map keys - Rust source code
@@ -662578,11 +661964,6 @@ Package: librust-md5-asm-dev
 Description-md5: 8c4576e59584fd4a381dde41eabb706d
 Description-en: Assembly implementation of MD5 compression function - Rust source code
  Source code for Debianized Rust crate "md5-asm"
-
-Package: librust-mdns-sd-dev
-Description-md5: b07b5bf9021cc6620b806cf1ad275454
-Description-en: MDNS Service Discovery library with no async runtime dependency - Rust source code
- Source code for Debianized Rust crate "mdns-sd"
 
 Package: librust-mediatype-dev
 Description-md5: bfa26e10cd789bbe25a23cfe90983e6e
@@ -670432,6 +669813,11 @@ Description-md5: 8d4e643dda393f352bbc4bb452c7dddd
 Description-en: Pre-allocated storage for a uniform data type - Rust source code
  Source code for Debianized Rust crate "slab"
 
+Package: librust-slabbin-dev
+Description-md5: b308008571922e8df68b6051a76f1179
+Description-en: Efficient slab allocator with stable addresses - Rust source code
+ Source code for Debianized Rust crate "slabbin"
+
 Package: librust-slice-group-by-dev
 Description-md5: 71b7d7dc54c0c411e608e705f044463e
 Description-en: iterators over groups in slices and strs - Rust source code
@@ -671114,8 +670500,8 @@ Description-en: StackVec: vector-like facade for stack-allocated arrays - Rust s
  debcargo for use with cargo and dh-cargo.
 
 Package: rust-stakeholder
-Description-md5: 8d31bc66135fe13220df38785697c481
-Description-en: a tool that generates impressive-looking terminal output
+Description-md5: 92848f7de59f728ec22faf50d2d7eaa3
+Description-en: tool that generates impressive-looking terminal output
  A CLI tool that generates absolutely meaningless but
  impressive-looking terminal output to convince everyone you're a
  coding genius without writing a single line of useful code.
@@ -674761,6 +674147,11 @@ Description-en: LS_COLORS manager with multiple themes
  translated to either truecolor (24-bit) ANSI codes or 8-bit codes for older
  terminal emulators.
 
+Package: librust-vkxml-dev
+Description-md5: d6011f18270548a2eb368a6e8c9aaa9d
+Description-en: Parse vulkan's XML API registry - Rust source code
+ Source code for Debianized Rust crate "vkxml"
+
 Package: librust-vlq-dev
 Description-md5: d74f28ec5f30693eb4702ca2a00cfc3d
 Description-en: sourcemap-style VLQ encoder and decoder - Rust source code
@@ -674900,6 +674291,11 @@ Package: librust-vulcano-number-dev
 Description-md5: 1d0c9b6662a63a4b50e79ac0bb4f0da0
 Description-en: Handling numbers - Rust source code
  Source code for Debianized Rust crate "vulcano-number"
+
+Package: librust-vulkano-macros-dev
+Description-md5: e4b653c21bedd6055d00abda0b807b37
+Description-en: Macros used by vulkano - Rust source code
+ Source code for Debianized Rust crate "vulkano-macros"
 
 Package: librust-wadl-dev
 Description-md5: 51430761a987b78505c7d0f9aee6891a
@@ -675861,16 +675257,6 @@ Description-md5: a3b4c6e09605885c9add0209a3190edd
 Description-en: API for D-Bus communication - Rust source code
  Source code for Debianized Rust crate "zbus"
 
-Package: librust-zbus-lockstep-dev
-Description-md5: de7f7c1f2f7d3d51998bddd47e18520e
-Description-en: Keep types in lockstep with DBus XML definitions - Rust source code
- Source code for Debianized Rust crate "zbus-lockstep"
-
-Package: librust-zbus-lockstep-macros-dev
-Description-md5: d0b8c7cfd76856451c6d22cd60bd6930
-Description-en: Macros to keep types in lockstep with DBus XML definitions - Rust source code
- Source code for Debianized Rust crate "zbus-lockstep-macros"
-
 Package: librust-zbus-macros-dev
 Description-md5: 55f79f4013784f77451b15d123f5e457
 Description-en: Proc-macros for zbus - Rust source code
@@ -675895,18 +675281,6 @@ Package: librust-zbus-xml-dev
 Description-md5: e9df5372d6530b8c55c0caef11176123
 Description-en: API to handle D-Bus introspection XML - Rust source code
  Source code for Debianized Rust crate "zbus_xml"
-
-Package: librust-zbus-xmlgen-dev
-Description-md5: ce4d9d22bbe4c146369de0722b86d69a
-Description-en: D-Bus XML interface code generator - Rust source code
- Source code for Debianized Rust crate "zbus_xmlgen"
-
-Package: zbus-xmlgen
-Description-md5: 0749478ca2edd86f8a6fce21d180b5d4
-Description-en: D-Bus XML interface code generator
- This package contains the following binaries built from the Rust crate
- "zbus_xmlgen":
-  - zbus-xmlgen
 
 Package: librust-zcheapstr-dev
 Description-md5: 577d551205f9c867914236ee54d1c3cf
@@ -676027,6 +675401,11 @@ Description-en: Systemd unit generator for zram devices
  This generator provides a simple and fast mechanism to configure swap
  on /dev/zram* devices. The main use case is create swap devices, but
  devices with a file system can be created too, see below.
+
+Package: librust-zruntime-dev
+Description-md5: 89e1d40177f1196b9892d1632f02dbba
+Description-en: Simple single-threaded Rust async runtime - Rust source code
+ Source code for Debianized Rust crate "zruntime"
 
 Package: librust-zstd-dev
 Description-md5: 563345d0a2b0bdc03c809621696bc975
@@ -686533,15 +685912,6 @@ Description-en: generates concise, unambiguous, URL-safe UUIDs for Python 3
  translating them to base57 using lowercase and uppercase letters and digits,
  and removing similar-looking characters such as l, 1, I, O and 0.
 
-Package: shortwave
-Description-md5: 16fab122f1b3a101a8cb34ac67abf2f1
-Description-en: listen to internet radio
- Shortwave is an internet radio player that provides access to a station
- database with over 30,000 stations. Saving favorite stations and download of
- single tracks is also possible. Additionally, shortwave features a miniplayer.
- .
- Shortwave is a GNOME Circle app.
-
 Package: shotcut
 Description-md5: 7e81fdac9e6aa16c46d802ed474d5125
 Description-en: video editor
@@ -696751,23 +696121,6 @@ Description-en: Very fast, header only or compiled, C++ logging library
  Various log targets:
  Rotating log files, Daily log files, Console logging, Linux syslog.
 
-Package: libspdlog1.15
-Description-md5: b2d503aa303f67bc884a02e53e082428
-Description-en: Very fast C++ logging library
- Features: Very fast - performance is the primary goal; Headers only; No
- dependencies - just copy and use; call style using the excellent cppformat
- library; ostream call style is supported too; Optional extremely fast
- asynchronous mode - using lockfree queues and other tricks to reach millions
- of calls/sec; Custom formatting; Multi/Single threaded loggers; Easily
- extendable with custom log targets (just implement a single function in the
- sink interface). Severity based filtering - threshold levels can be modified
- in runtime as well as in compile time.
- .
- Various log targets:
- Rotating log files, Daily log files, Console logging, Linux syslog.
- .
- This is the compiled version of the library.
-
 Package: libspdlog1.17
 Description-md5: b2d503aa303f67bc884a02e53e082428
 Description-en: Very fast C++ logging library
@@ -705419,16 +704772,6 @@ Description-md5: 471c5ea8fb06b3db4fe4e3c75e12ce34
 Description-en: download online streams into audio files
  This command-line tool can be used to record MP3 and Ogg Vorbis online
  radio-streams into track-separated audio files.
-
-Package: stremio
-Description-md5: 3e6d0cd1f014e8d07df374e59662d813
-Description-en: Modern media center (WebKitGTK client)
- Stremio is a modern media center for online video content.
- Features local and streaming content, subtitle management,
- and an extensible addon system.
- .
- This is the GTK4/libadwaita/WebKitGTK6 version, replacing the
- CEF-based renderer used before upstream release 1.0.0.
 
 Package: stress
 Description-md5: 748045f588ae8994a34afe01a60f071d
@@ -733572,17 +732915,6 @@ Description-en: Go language support for Thrift
  .
  This package provides the Go language support for Thrift.
 
-Package: libthrift-0.24.0
-Description-md5: 8be7a4bd1b401251d0b6bf259fce5c4d
-Description-en: Thrift C++ library
- Thrift is a software framework for the development of reliable and
- performant communication and data serialization.  It combines a software
- stack with code generation to build services that operate seamlessly
- across a number of different development languages.
- .
- This package contains the runtime libraries needed for C++ applications
- using Thrift.
-
 Package: libthrift-0.25.0
 Description-md5: 8be7a4bd1b401251d0b6bf259fce5c4d
 Description-en: Thrift C++ library
@@ -742269,8 +741601,8 @@ Description-en: Daemon binaries to be used by services
  Daemon binaries to be used by services.
 
 Package: trust-store-tests
-Description-md5: cbe1fc7ef8355606fcedcab2ef527b17
-Description-en: Test files for libtrust-store1
+Description-md5: 0620d0591710bcf9aee5a78c119326ee
+Description-en: Test files for trust-store
  Provides a common implementation of a trust store to be used by trusted
  helpers.
  .
@@ -745178,12 +744510,6 @@ Description-en: MIDI/TSE3MDL player/converter
  it provides text-based visual feedback and can stream an English
  representation of the contents of the file to standard output.
 
-Package: r-cran-tseries
-Description-md5: c4618718323302cc41ebcd8cb4c11169
-Description-en: GNU R package for time-series analysis and comp. finance
- This CRAN package provides additional time-series analysis functions, as
- well as several computational finance routines.
-
 Package: libts-bin
 Description-md5: 92087b86b746888590db96fdb46e2073
 Description-en: touch screen library utilities
@@ -745959,24 +745285,6 @@ Description-en: simple interprocess messaging system (turnstile suss backend int
  first log in and does not end until all their login sessions have finished.
  .
  See the dbus description for more information about D-Bus in general.
-
-Package: turtlefmt
-Description-md5: ba79d41abe30e4c5e0fdf6351efca0a8
-Description-en: auto formatter for RDF Turtle
- turtlefmt is an auto formatter for RDF Turtle.
- .
- For now, it...
-  * validates that the file is valid
-  * maintains consistent indentation and line jumps
-  * normalises string and IRI escapes
-    to reduce their number as much as possible
-  * enforces the use of `"` instead of `'` in literals
-  * uses literals short notation for booleans, integers, decimals and doubles
-    when it keeps the lexical representation unchanged
-  * uses `a` for `rdf:type` where possible
- .
- Resource Description Framework (RDF) is a standard model
- for data interchange on the Web.
 
 Package: tutka
 Description-md5: a030555aeddac862e6cfbffc6f0a360e
@@ -763556,18 +762864,6 @@ Description-en: high-level interactions between Wasm modules and JavaScript - CL
  .
  This package provides the command-line tool wasm-bindgen.
 
-Package: wasm-pack
-Description-md5: 94ab831f85be9aa6855c34b3cadb0f90
-Description-en: post-processor for rust-generated WebAssembly
- wasm-pack seeks to be a one-stop shop
- for building and working with rust-generated WebAssembly
- that you would like to interop with JavaScript,
- in the browser or with Node.js.
- wasm-pack helps you build rust-generated WebAssembly packages
- that you could publish to the npm registry,
- or otherwise use alongside any javascript packages
- in workflows that you already use, such as webpack.
-
 Package: librust-wasm-tools-dev
 Description-md5: fb62c8dd9b264f86da25a084fcab3dc6
 Description-en: low-level manipulation of WebAssembly modules - Rust source code
@@ -769688,16 +768984,6 @@ Description-en: common data files for libwreport
  .
  This package contains common wreport data files, such as variable metadata and
  BUFR and CREX decoding tables.
-
-Package: writeboost
-Description-md5: c9363feb50bcc8ebba1a44d80fa7001e
-Description-en: utility to manage mappings of dm-writeboost devices
- Writeboost is a utility to activate dm-writeboost device mappings.
- .
- dm-writeboost is an OS-level IO controller that builds logs from in-coming
- writes (data and metadata) and then writes the logs sequentially similar
- to log-structured filesystem. As a further extension, dm-writeboost
- supports read-caching which also writes data sequentially.
 
 Package: elpa-writegood-mode
 Description-md5: 5affbc79da4d8f65b50bcab3c3ead18c
